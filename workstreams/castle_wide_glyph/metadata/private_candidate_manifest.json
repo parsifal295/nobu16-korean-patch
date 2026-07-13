@@ -1,0 +1,69 @@
+{
+    "schema":  "nobu16.kr.wide-castle-wrapped-candidate-manifest.v1.public-sanitized.v1",
+    "candidate_id":  "sc-odawara-u-d792-wide-name-only-v0",
+    "status":  "private-noninstalled-runtime-probe",
+    "release_eligible":  false,
+    "redistributable":  false,
+    "runtime_verified":  false,
+    "message":  {
+                    "path":  "MSG_PK/SC/msgdata.bin",
+                    "size":  501741,
+                    "sha256":  "165353713703A2A1D72C24D6C9A7D5709F21FA3D2B641993BE786BA14B2B17CC",
+                    "stock_sha256":  "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+                    "semantic_changes":  {
+                                             "ids":  [
+                                                         9168
+                                                     ],
+                                             "after_codepoint":  "U+D792",
+                                             "shared_castle_suffix_id_9936_changed":  false
+                                         }
+                },
+    "font":  {
+                 "path":  "RES_SC/res_lang.bin",
+                 "size":  179188060,
+                 "sha256":  "AFBB287B5418FBCB44B083F7D77E5F53426AE7E1AB23C6B69F17EC98E0EB7258",
+                 "stock_sha256":  "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99",
+                 "link_entries_changed":  [
+                                              6,
+                                              7
+                                          ],
+                 "logical_glyph_codepoint":  "U+D792",
+                 "physical_records_appended_per_entry_table":  1,
+                 "all_other_link_entry_payloads_exact":  true
+             },
+    "audits":  {
+                   "wrapper":  {
+                                   "path":  "WRAPPER_AUDIT.json",
+                                   "sha256":  "F2724DABC2107B52F2AEAA4FA10C23E6F0F9DF8C4093D16D591F282E7B205288",
+                                   "status":  "PASS"
+                               },
+                   "harness_static":  {
+                                          "path":  "HARNESS_STATIC_AUDIT.json",
+                                          "sha256":  "A90DA1CA4A8D48F507AF50AF4A7C84C65474333CD9BF9E5C2B8BB70B1BF5FC12",
+                                          "status":  "PASS",
+                                          "harness_executed":  false
+                                      }
+               },
+    "harness":  {
+                    "path":  "../Invoke-WideCastleNameOnlyProbe.ps1",
+                    "sha256":  "6932705E955C6899E700A6D60CB5A83909A0F2EA01784F5821636F1FF4F61CF1",
+                    "actions":  [
+                                    "Status",
+                                    "Apply",
+                                    "Restore"
+                                ],
+                    "executed":  false
+                },
+    "scope":  {
+                  "installed_game_files_modified":  false,
+                  "game_launched":  false,
+                  "process_memory_access":  false,
+                  "executable_modified":  false,
+                  "registry_access":  false,
+                  "canonical_or_release_directory_modified":  false
+              },
+    "runtime_expectation":  "The wide bitmap contains the full Korean test label, while the separately composed shared Castle suffix remains unchanged. This candidate tests wide-quad orientation first; it is not a final translation layout.",
+    "public_metadata":  true,
+    "commercial_source_strings_included":  false,
+    "sanitized_from_sha256":  "234313C43DC99CE0BE2ABEFA1A09CDCEADCAC5B3F2FA357024DE77886BF3341A"
+}

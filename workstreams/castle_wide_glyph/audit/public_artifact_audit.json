@@ -1,0 +1,172 @@
+{
+    "schema":  "nobu16.kr.castle-wide-glyph-public-artifact-audit.v1",
+    "status":  "PASS",
+    "scope":  {
+                  "root":  "KR_PATCH_WORK/workstreams/castle_wide_glyph",
+                  "private_directory_excluded":  true,
+                  "audit_output_excluded_from_self_inventory":  "audit/public_artifact_audit.json",
+                  "complete_commercial_resources_allowed":  false
+              },
+    "checks":  {
+                   "file_count":  20,
+                   "total_size":  247325,
+                   "cjk_literal_or_escape_files":  [
+
+                                                   ],
+                   "forbidden_magic_or_payload_failures":  [
+
+                                                           ],
+                   "size_failures":  [
+
+                                     ],
+                   "json_failures":  [
+
+                                     ],
+                   "forbidden_metadata_key_failures":  [
+
+                                                       ],
+                   "approved_pixel_payload_count":  2
+               },
+    "files":  [
+                  {
+                      "path":  "Audit-PublicWorkstream.ps1",
+                      "size":  8443,
+                      "sha256":  "1143C844266A317522448CD59E9A50D265728E9753179DCA6141E9DA943F780C",
+                      "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
+                      "category":  "source"
+                  },
+                  {
+                      "path":  "Audit-WrappedCandidate.py",
+                      "size":  11762,
+                      "sha256":  "33CD22CF4DB3C5BEADDDAE342007C7B09F9B4842281304D5F58F31A298926EA1",
+                      "first_8_bytes_hex":  "23 21 2F 75 73 72 2F 62",
+                      "category":  "source"
+                  },
+                  {
+                      "path":  "Build-PrivateWrappedCandidate.ps1",
+                      "size":  3415,
+                      "sha256":  "9D3137FDD7D0B22BAFC7EB0303F55F092E8B304606AB3C582A04078ECC2BF8B1",
+                      "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
+                      "category":  "source"
+                  },
+                  {
+                      "path":  "Build-SingleGlyphCastleProbe.ps1",
+                      "size":  22590,
+                      "sha256":  "9AE9CEB9C76313B0DFC9E5C4B9D40F3C2203E98F44E43879D8C7B60815F2DD27",
+                      "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
+                      "category":  "source"
+                  },
+                  {
+                      "path":  "Invoke-WideCastleNameOnlyProbe.ps1",
+                      "size":  8689,
+                      "sha256":  "F445866B1A35BB042FBE1ED4E751DDF179D3D63F3A049D79F684717AF646233D",
+                      "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
+                      "category":  "source"
+                  },
+                  {
+                      "path":  "metadata/candidate_summary.json",
+                      "size":  7837,
+                      "sha256":  "CA4D6A88538BE1700356BA03F29FE4652F27CA77ED4256404739B661BD235A0D",
+                      "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "metadata/private_candidate_audit.json",
+                      "size":  11872,
+                      "sha256":  "D87DCA8D1FD97D8F94949B79B7DB6F606BFE527DDBAC173AFDE21AC06D128431",
+                      "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "metadata/private_candidate_manifest.json",
+                      "size":  3776,
+                      "sha256":  "14EEBD17A4DD4B29BFCB94DE261493A8A00DB64B08FA8BE2A4E6AF40B9A295EC",
+                      "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "metadata/private_harness_static_audit.json",
+                      "size":  1940,
+                      "sha256":  "FBB219FAECB777AC563D32EB9477B8A585359BA8396B0057E7C423450CA389F9",
+                      "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "metadata/proxy_reservation_9151_9542.json",
+                      "size":  79717,
+                      "sha256":  "4E9A487DF1E69AB0ADB51C6E69B3D59FDBAAEE9F718B5C6BB7CAD12CBD5B0E3B",
+                      "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "previews/preview_entry6_table0.png",
+                      "size":  11684,
+                      "sha256":  "1EF4B36BD6361FCE02A28D99332A101134A2983712A6A1CE1ECC547DF230321F",
+                      "first_8_bytes_hex":  "89 50 4E 47 0D 0A 1A 0A",
+                      "category":  "project-preview"
+                  },
+                  {
+                      "path":  "previews/preview_entry6_table1.png",
+                      "size":  11503,
+                      "sha256":  "BCB3713D3E306289830405B4B873456001F62408DB7AEE112B171D7FD9F8CA91",
+                      "first_8_bytes_hex":  "89 50 4E 47 0D 0A 1A 0A",
+                      "category":  "project-preview"
+                  },
+                  {
+                      "path":  "previews/preview_entry7_table0.png",
+                      "size":  7457,
+                      "sha256":  "0EC6EB4BA5C8588B9CE07A4FC0EF0C988598AE60709791581226CF01BC496E52",
+                      "first_8_bytes_hex":  "89 50 4E 47 0D 0A 1A 0A",
+                      "category":  "project-preview"
+                  },
+                  {
+                      "path":  "previews/preview_entry7_table1.png",
+                      "size":  7457,
+                      "sha256":  "0EC6EB4BA5C8588B9CE07A4FC0EF0C988598AE60709791581226CF01BC496E52",
+                      "first_8_bytes_hex":  "89 50 4E 47 0D 0A 1A 0A",
+                      "category":  "project-preview"
+                  },
+                  {
+                      "path":  "raster/glyph_pixels_entry_6.bin",
+                      "size":  11520,
+                      "sha256":  "CF7558B284EF9A3D3C26D73E7376F1AF1257D4AAA2FF0D555C8BF897F58F00E8",
+                      "first_8_bytes_hex":  "00 00 00 00 00 00 00 00",
+                      "category":  "project-raster-pixels"
+                  },
+                  {
+                      "path":  "raster/glyph_pixels_entry_7.bin",
+                      "size":  5120,
+                      "sha256":  "CA33DD93DE1DAC06A202FA44F8871C8292371904CE061E8527095BC6603A3768",
+                      "first_8_bytes_hex":  "00 00 00 00 00 00 00 00",
+                      "category":  "project-raster-pixels"
+                  },
+                  {
+                      "path":  "raster/raster_request.json",
+                      "size":  1138,
+                      "sha256":  "F6AD89B8E17B9C5A68395B988419B142E154ABC66750547C2132A2FAF7AEBE94",
+                      "first_8_bytes_hex":  "7B 0A 20 20 22 73 63 68",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "raster/raster_result.json",
+                      "size":  24030,
+                      "sha256":  "0B675D1E2B73E225BA988D359B4D0D7C08D870D394D8862AEC292A4B6AFC9598",
+                      "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "README.md",
+                      "size":  3228,
+                      "sha256":  "79C34FAB069535DCA734170FB90C05426F34D7C773E4D2B32359D5CBA37F51CC",
+                      "first_8_bytes_hex":  "23 20 EC 84 B1 20 EC 9D",
+                      "category":  "source"
+                  },
+                  {
+                      "path":  "Sanitize-PublicMetadata.ps1",
+                      "size":  4147,
+                      "sha256":  "92211D358C0A6A3C0A844345C1CC570F25916883C9EA1BF1501CA31F17BC2F6F",
+                      "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
+                      "category":  "source"
+                  }
+              ]
+}

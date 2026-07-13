@@ -1,0 +1,39 @@
+{
+    "schema":  "nobu16.kr.wide-castle-harness-static-audit.v1.public-sanitized.v1",
+    "status":  "PASS",
+    "harness":  "private-input/single_glyph_castle_probe/Invoke-WideCastleNameOnlyProbe.ps1",
+    "harness_sha256":  "6932705E955C6899E700A6D60CB5A83909A0F2EA01784F5821636F1FF4F61CF1",
+    "powershell_ast_parse":  {
+                                 "errors":  0,
+                                 "token_count":  1370
+                             },
+    "actions_declared":  [
+                             "Status",
+                             "Apply",
+                             "Restore"
+                         ],
+    "safety_properties":  {
+                              "fixed_two_file_scope":  true,
+                              "stock_and_probe_sha256_gates":  true,
+                              "unknown_installed_hash_refused":  true,
+                              "game_process_guard":  true,
+                              "verified_stock_backup_required":  true,
+                              "exclusive_operation_lock":  true,
+                              "journaled_progress":  true,
+                              "same_volume_atomic_replace":  true,
+                              "apply_failure_automatic_rollback":  true,
+                              "reverse_order_restore":  true,
+                              "launches_game":  false,
+                              "registry_access":  false,
+                              "process_memory_access":  false,
+                              "executable_modification":  false
+                          },
+    "forbidden_tokens_found":  [
+
+                               ],
+    "harness_executed":  false,
+    "apply_or_restore_executed":  false,
+    "public_metadata":  true,
+    "commercial_source_strings_included":  false,
+    "sanitized_from_sha256":  "A90DA1CA4A8D48F507AF50AF4A7C84C65474333CD9BF9E5C2B8BB70B1BF5FC12"
+}

@@ -1,0 +1,169 @@
+{
+    "schema":  "nobu16.kr.wide-castle-wrapped-candidate-audit.v1.public-sanitized.v1",
+    "status":  "PASS",
+    "candidate_kind":  "private-noninstalled-runtime-probe",
+    "message":  {
+                    "stock_wrapper":  {
+                                          "path":  "private-input/stock_wrappers/msgdata.SC.stock.bin",
+                                          "size":  267385,
+                                          "sha256":  "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E"
+                                      },
+                    "target_wrapper":  {
+                                           "path":  "private-input/single_glyph_castle_probe/wrapper_candidate/MSG_PK/SC/msgdata.bin",
+                                           "size":  501741,
+                                           "sha256":  "165353713703A2A1D72C24D6C9A7D5709F21FA3D2B641993BE786BA14B2B17CC"
+                                       },
+                    "wrapper_prefix_hex":  "01 01 C4 C1 FA 7F 00 00",
+                    "target_uncompressed_size":  499756,
+                    "target_compressed_size":  501717,
+                    "string_count":  29210,
+                    "changed_ids":  [
+                                        9168
+                                    ],
+                    "id_9168_after_codepoint":  "U+D792",
+                    "id_9936_shared_suffix_unchanged":  true,
+                    "raw_parse_rebuild_byte_identical":  true
+                },
+    "font_archive":  {
+                         "stock_archive":  {
+                                               "path":  "private-input/stock_wrappers/res_lang.SC.stock.bin",
+                                               "size":  160318119,
+                                               "sha256":  "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99"
+                                           },
+                         "target_archive":  {
+                                                "path":  "private-input/single_glyph_castle_probe/wrapper_candidate/RES_SC/res_lang.bin",
+                                                "size":  179188060,
+                                                "sha256":  "AFBB287B5418FBCB44B083F7D77E5F53426AE7E1AB23C6B69F17EC98E0EB7258"
+                                            },
+                         "link_entry_count":  42,
+                         "link_version":  1,
+                         "link_reserved":  0,
+                         "link_parse_rebuild_byte_identical":  true,
+                         "changed_entries":  [
+                                                 6,
+                                                 7
+                                             ],
+                         "unchanged_entry_payload_count":  40,
+                         "all_entry_trailers_and_gaps_exact":  true,
+                         "g1n":  [
+                                     {
+                                         "entry":  6,
+                                         "raw_path":  "private-input/single_glyph_castle_probe/candidate/SC_6.odawara-wide.g1n",
+                                         "raw_size":  25829480,
+                                         "raw_sha256":  "22E253653364A0F1F4FC6F597D2EBFA0B5B1B8A12B84F0380046C2C8106570A1",
+                                         "appended_records_by_table":  [
+                                                                           1,
+                                                                           1
+                                                                       ],
+                                         "changed_codepoints_by_table":  {
+                                                                             "0":  [
+                                                                                       "U+D792"
+                                                                                   ],
+                                                                             "1":  [
+                                                                                       "U+D792"
+                                                                                   ]
+                                                                         },
+                                         "new_record_metrics":  [
+                                                                    {
+                                                                        "table":  0,
+                                                                        "width":  240,
+                                                                        "height":  48,
+                                                                        "advance":  240,
+                                                                        "row_stride":  -120,
+                                                                        "pixel_size":  5760,
+                                                                        "atlas_pointer":  25283520
+                                                                    },
+                                                                    {
+                                                                        "table":  1,
+                                                                        "width":  240,
+                                                                        "height":  48,
+                                                                        "advance":  240,
+                                                                        "row_stride":  -120,
+                                                                        "pixel_size":  5760,
+                                                                        "atlas_pointer":  25289280
+                                                                    }
+                                                                ],
+                                         "old_maps_except_proxy_exact":  true,
+                                         "old_records_exact":  true,
+                                         "complete_stock_atlas_exact_prefix":  true
+                                     },
+                                     {
+                                         "entry":  7,
+                                         "raw_path":  "private-input/single_glyph_castle_probe/candidate/SC_7.odawara-wide.g1n",
+                                         "raw_size":  11776680,
+                                         "raw_sha256":  "E239E92F7F4E2AC866B9918D553EBE8FB657633B5875DA9B3664787EBD22C795",
+                                         "appended_records_by_table":  [
+                                                                           1,
+                                                                           1
+                                                                       ],
+                                         "changed_codepoints_by_table":  {
+                                                                             "0":  [
+                                                                                       "U+D792"
+                                                                                   ],
+                                                                             "1":  [
+                                                                                       "U+D792"
+                                                                                   ]
+                                                                         },
+                                         "new_record_metrics":  [
+                                                                    {
+                                                                        "table":  0,
+                                                                        "width":  160,
+                                                                        "height":  32,
+                                                                        "advance":  160,
+                                                                        "row_stride":  -80,
+                                                                        "pixel_size":  2560,
+                                                                        "atlas_pointer":  11237120
+                                                                    },
+                                                                    {
+                                                                        "table":  1,
+                                                                        "width":  160,
+                                                                        "height":  32,
+                                                                        "advance":  160,
+                                                                        "row_stride":  -80,
+                                                                        "pixel_size":  2560,
+                                                                        "atlas_pointer":  11239680
+                                                                    }
+                                                                ],
+                                         "old_maps_except_proxy_exact":  true,
+                                         "old_records_exact":  true,
+                                         "complete_stock_atlas_exact_prefix":  true
+                                     }
+                                 ]
+                     },
+    "harness":  {
+                    "path":  "private-input/single_glyph_castle_probe/Invoke-WideCastleNameOnlyProbe.ps1",
+                    "size":  8681,
+                    "sha256":  "6932705E955C6899E700A6D60CB5A83909A0F2EA01784F5821636F1FF4F61CF1",
+                    "required_safety_tokens_present":  true,
+                    "forbidden_process_launch_registry_tokens_found":  [
+
+                                                                       ],
+                    "executed_by_this_audit":  false
+                },
+    "scope":  {
+                  "installed_game_files_modified":  false,
+                  "game_launched":  false,
+                  "process_memory_access":  false,
+                  "executable_modified":  false,
+                  "registry_access":  false,
+                  "canonical_or_release_directory_modified":  false
+              },
+    "exact_change_claim":  {
+                               "message_ids_changed":  [
+                                                           9168
+                                                       ],
+                               "shared_castle_suffix_changed":  false,
+                               "font_link_entries_changed":  [
+                                                                 6,
+                                                                 7
+                                                             ],
+                               "font_codepoints_changed_per_entry_table":  [
+                                                                               "U+D792"
+                                                                           ],
+                               "font_records_appended_per_entry_table":  1,
+                               "all_other_link_entry_payloads_exact":  true
+                           },
+    "public_metadata":  true,
+    "commercial_source_strings_included":  false,
+    "sanitized_from_sha256":  "F2724DABC2107B52F2AEAA4FA10C23E6F0F9DF8C4093D16D591F282E7B205288"
+}

@@ -1,0 +1,133 @@
+{
+    "schema":  "nobu16.kr.single-wide-glyph-castle-probe.v0.public-sanitized.v1",
+    "status":  "offline-structural-candidate-only",
+    "runtime_verified":  false,
+    "installed_game_files_modified":  false,
+    "process_memory_access":  false,
+    "executable_modified":  false,
+    "registry_access":  false,
+    "source_range":  {
+                         "first_id":  9151,
+                         "last_id":  9542,
+                         "count":  392,
+                         "unique_text_count":  389,
+                         "parallel_sc_pinyin_first_id":  9543,
+                         "parallel_sc_pinyin_last_id":  9934,
+                         "suffix_ids":  [
+                                            9936,
+                                            9937,
+                                            9938,
+                                            9939,
+                                            9940
+                                        ],
+                         "suffix_pinyin_ids":  [
+                                                   9942,
+                                                   9943,
+                                                   9944,
+                                                   9945,
+                                                   9946
+                                               ]
+                     },
+    "probe":  {
+                  "message_id":  9168,
+                  "proxy":  "U+D792",
+                  "proxy_character":  "힒",
+                  "raster_text":  "오다와라성",
+                  "castle_suffix_id":  9936,
+                  "suffix_is_globally_shared":  true
+              },
+    "message_candidates":  [
+                               {
+                                   "path":  "private-input/single_glyph_castle_probe/candidate/msgdata.odawara-wide.name-only.raw",
+                                   "sha256":  "2F83D99CAFD4E0291A2C33DFAFC9AB79B4DB2FE37CD5FD8DD6C101B4D724C48E",
+                                   "size":  499756,
+                                   "changes":  [
+                                                   "id 9168: source name -\u003e one proxy character"
+                                               ],
+                                   "expected_visual_caveat":  "the separately appended shared Castle suffix remains and may still be vertical"
+                               },
+                               {
+                                   "path":  "private-input/single_glyph_castle_probe/candidate/msgdata.odawara-wide.global-castle-suffix-blank.raw",
+                                   "sha256":  "1BB969E8C564EC8F7CDAD93779B2CCB7DCC03A42DA5307BB7395431171A70D4A",
+                                   "size":  499756,
+                                   "changes":  [
+                                                   "id 9168: source name -\u003e one proxy character",
+                                                   "id 9936: Castle suffix -\u003e empty"
+                                               ],
+                                   "expected_visual_caveat":  "global diagnostic only: all other names using Castle suffix lose it"
+                               }
+                           ],
+    "fonts":  [
+                  {
+                      "entry":  6,
+                      "source":  "private-input/lang_fonts/SC_6.g1n",
+                      "source_sha256":  "414A8E98DCF0F52633CD039A74E97AE61A97D98A96684D450EBADD4C3C85CAEB",
+                      "target":  "private-input/single_glyph_castle_probe/candidate/SC_6.odawara-wide.g1n",
+                      "target_sha256":  "22E253653364A0F1F4FC6F597D2EBFA0B5B1B8A12B84F0380046C2C8106570A1",
+                      "source_size":  25817936,
+                      "target_size":  25829480,
+                      "source_atlas_length":  25283520,
+                      "target_atlas_length":  25295040,
+                      "table_0_old_records":  21898,
+                      "table_1_old_records":  100,
+                      "appended_records_per_table":  1,
+                      "composite_width":  240,
+                      "composite_height":  48,
+                      "signed_stride":  -120,
+                      "advance":  240,
+                      "pixels_per_table":  5760,
+                      "old_maps_except_proxy_exact":  true,
+                      "old_records_exact":  true,
+                      "stock_atlas_exact_prefix":  true
+                  },
+                  {
+                      "entry":  7,
+                      "source":  "private-input/lang_fonts/SC_7.g1n",
+                      "source_sha256":  "DADBE4EEA223FD48CEFA9A93A08EF1F2458B3BD543ADFCEBD6D888B9EE2AFBB0",
+                      "target":  "private-input/single_glyph_castle_probe/candidate/SC_7.odawara-wide.g1n",
+                      "target_sha256":  "E239E92F7F4E2AC866B9918D553EBE8FB657633B5875DA9B3664787EBD22C795",
+                      "source_size":  11771536,
+                      "target_size":  11776680,
+                      "source_atlas_length":  11237120,
+                      "target_atlas_length":  11242240,
+                      "table_0_old_records":  21898,
+                      "table_1_old_records":  100,
+                      "appended_records_per_table":  1,
+                      "composite_width":  160,
+                      "composite_height":  32,
+                      "signed_stride":  -80,
+                      "advance":  160,
+                      "pixels_per_table":  2560,
+                      "old_maps_except_proxy_exact":  true,
+                      "old_records_exact":  true,
+                      "stock_atlas_exact_prefix":  true
+                  }
+              ],
+    "proxy_reservation":  {
+                              "path":  "private-input/single_glyph_castle_probe/proxy_reservation_9151_9542.json",
+                              "sha256":  "040F6D6C2ADB8C654FDBE1267F05B0097E610775EFE0BD992DAC67DD1BA40335",
+                              "count":  392,
+                              "current_collision_count":  0
+                          },
+    "structural_checks":  {
+                              "unchanged_message_roundtrip_byte_exact":  true,
+                              "candidate_message_parse_roundtrip":  true,
+                              "source_font_hashes_pinned":  true,
+                              "proxy_was_unmapped_in_all_four_stock_maps":  true,
+                              "only_proxy_map_cell_added_per_table":  true,
+                              "one_record_appended_per_table":  true,
+                              "all_stock_records_preserved":  true,
+                              "complete_stock_atlas_preserved_as_exact_prefix":  true,
+                              "atlas_below_28_bit_limit":  true,
+                              "width_stride_capacity_valid":  true
+                          },
+    "unresolved_runtime_questions":  [
+                                         "whether the vertical label renderer draws a 240/160-pixel glyph quad without clipping or rotation",
+                                         "which of entries 6/7 and tables 0/1 the strategic map actually selects",
+                                         "whether the global suffix is drawn separately in the same label path",
+                                         "how the proxy-rendered bitmap scales in non-map UI contexts that reuse the canonical castle-name id"
+                                     ],
+    "public_metadata":  true,
+    "commercial_source_strings_included":  false,
+    "sanitized_from_sha256":  "F88B43BD41B0AC79708FAFEBB6A0DB72E0DF2A411A3877919091816E0C35189B"
+}

@@ -20,12 +20,15 @@
 /data/raw/
 /data/extracted/
 /data/work_templates/
+/data/work_templates_clean/
+/data/translations/
 /patches/
 /releases/
 
 # Generated full-catalog and build outputs
 /workstreams/msgui_full/catalog_v2/
 /workstreams/msgui_full/inventory/
+/workstreams/msgui_full/translator_packs/
 /workstreams/msgui_full/build_*/
 /workstreams/msgui_full/font_v3/build/
 /workstreams/msgui_full/font_v3/build_determinism_2/
@@ -35,8 +38,15 @@
 /workstreams/msgui_full/font_v4/build_determinism_2/
 /**/private/
 
+# Raw reverse-engineering dumps and machine-local report payloads
+/reports/*.txt
+/reports/*.json
+/reports/*.csv
+
 # Complete game resources and binary patch payloads must never enter Git
 *.bin
+!/workstreams/castle_wide_glyph/raster/glyph_pixels_entry_6.bin
+!/workstreams/castle_wide_glyph/raster/glyph_pixels_entry_7.bin
 *.g1n
 *.g1t
 *.bak

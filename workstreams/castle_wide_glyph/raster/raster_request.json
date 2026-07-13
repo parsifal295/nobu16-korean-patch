@@ -1,0 +1,54 @@
+{
+  "schema": "nobu16.kr.font-v4-raster-request.v1",
+  "codepoints": [
+    "U+B2E4",
+    "U+B77C",
+    "U+C131",
+    "U+C624",
+    "U+C640"
+  ],
+  "fonts": {
+    "sans": {
+      "path": "KR_PATCH_WORK/vendor/noto/NotoSansKR-wght.ttf",
+      "sha256": "194018E6B2B293A7964F037B25C0249CE1418BC9AB3C971060A03AA57861E252"
+    },
+    "serif": {
+      "path": "KR_PATCH_WORK/vendor/noto/NotoSerifKR-wght.ttf",
+      "sha256": "11F8D5DE6F1B79195EFBA3828AAA2EC95C1178F5AE976FB23C8D53250A9938F3"
+    }
+  },
+  "profiles": [
+    {
+      "entry": 6,
+      "table": 0,
+      "family": "Noto Serif KR",
+      "style": "Bold",
+      "raster_size": 46,
+      "cell": 48
+    },
+    {
+      "entry": 6,
+      "table": 1,
+      "family": "Noto Sans KR Medium",
+      "style": "Regular",
+      "raster_size": 46,
+      "cell": 48
+    },
+    {
+      "entry": 7,
+      "table": 0,
+      "family": "Noto Sans KR SemiBold",
+      "style": "Regular",
+      "raster_size": 32,
+      "cell": 32
+    },
+    {
+      "entry": 7,
+      "table": 1,
+      "family": "Noto Sans KR SemiBold",
+      "style": "Regular",
+      "raster_size": 32,
+      "cell": 32
+    }
+  ]
+}

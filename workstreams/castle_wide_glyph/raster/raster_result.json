@@ -1,0 +1,380 @@
+{
+    "schema":  "nobu16.kr.font-v4-raster-result.v1",
+    "request_sha256":  "F6AD89B8E17B9C5A68395B988419B142E154ABC66750547C2132A2FAF7AEBE94",
+    "rasterizer":  "System.Drawing GDI+ AntiAliasGridFit TextContrast=4 72DPI; 2x scratch full-ink extraction; centered 4bpp copy; oversize non-Hangul nearest-neighbor fit to 1px margin",
+    "codepoint_count":  5,
+    "codepoints":  [
+                       "U+B2E4",
+                       "U+B77C",
+                       "U+C131",
+                       "U+C624",
+                       "U+C640"
+                   ],
+    "payloads":  [
+                     {
+                         "entry":  6,
+                         "path":  "glyph_pixels_entry_6.bin",
+                         "size":  11520,
+                         "sha256":  "CF7558B284EF9A3D3C26D73E7376F1AF1257D4AAA2FF0D555C8BF897F58F00E8"
+                     },
+                     {
+                         "entry":  7,
+                         "path":  "glyph_pixels_entry_7.bin",
+                         "size":  5120,
+                         "sha256":  "CA33DD93DE1DAC06A202FA44F8871C8292371904CE061E8527095BC6603A3768"
+                     }
+                 ],
+    "profiles":  [
+                     {
+                         "entry":  6,
+                         "table":  0,
+                         "family":  "Noto Serif KR",
+                         "style":  "Bold",
+                         "raster_size":  46,
+                         "cell":  48,
+                         "glyph_count":  5,
+                         "minimum_margin":  1,
+                         "glyphs":  [
+                                        {
+                                            "codepoint":  "U+B2E4",
+                                            "character":  "다",
+                                            "ink_count":  599,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  43,
+                                                             "height":  45
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "2689997A4F48403AAB26D5CD082DDD04FCA53C90AD73F8AEE5D42EF1AFFFE660"
+                                        },
+                                        {
+                                            "codepoint":  "U+B77C",
+                                            "character":  "라",
+                                            "ink_count":  654,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  43,
+                                                             "height":  45
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "D500314DB3FA4B8DB4EC09C25C1D9DE2741F27BEF0505ED44229A3700CFA3A58"
+                                        },
+                                        {
+                                            "codepoint":  "U+C131",
+                                            "character":  "성",
+                                            "ink_count":  671,
+                                            "ink_bbox":  {
+                                                             "x":  5,
+                                                             "y":  1,
+                                                             "width":  37,
+                                                             "height":  45
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "F9D619491F9A787FFA3770B85D3846385025A4824241F1F5607639FC08128E97"
+                                        },
+                                        {
+                                            "codepoint":  "U+C624",
+                                            "character":  "오",
+                                            "ink_count":  531,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  7,
+                                                             "width":  43,
+                                                             "height":  34
+                                                         },
+                                            "minimum_margin":  2,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "E34BFA0F35FBBD48E5D9FFD1FEECBDF4746F82301AC49F0E5D9D094F40C2EF73"
+                                        },
+                                        {
+                                            "codepoint":  "U+C640",
+                                            "character":  "와",
+                                            "ink_count":  723,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  44,
+                                                             "height":  45
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "087479DE78E6C9790712E428086A3481BE92A4F60336B917C80FC6D7F1A7CB0F"
+                                        }
+                                    ]
+                     },
+                     {
+                         "entry":  6,
+                         "table":  1,
+                         "family":  "Noto Sans KR Medium",
+                         "style":  "Regular",
+                         "raster_size":  46,
+                         "cell":  48,
+                         "glyph_count":  5,
+                         "minimum_margin":  2,
+                         "glyphs":  [
+                                        {
+                                            "codepoint":  "U+B2E4",
+                                            "character":  "다",
+                                            "ink_count":  628,
+                                            "ink_bbox":  {
+                                                             "x":  4,
+                                                             "y":  2,
+                                                             "width":  39,
+                                                             "height":  43
+                                                         },
+                                            "minimum_margin":  2,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "3558DBF118371DA988A466845961F2A8946C09DFCA063E10B0DEC3563D19C8AD"
+                                        },
+                                        {
+                                            "codepoint":  "U+B77C",
+                                            "character":  "라",
+                                            "ink_count":  625,
+                                            "ink_bbox":  {
+                                                             "x":  4,
+                                                             "y":  2,
+                                                             "width":  39,
+                                                             "height":  43
+                                                         },
+                                            "minimum_margin":  2,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "3050EF88C108F59313695135040502F9DCFADBF77D8524F220E189D61A8565C3"
+                                        },
+                                        {
+                                            "codepoint":  "U+C131",
+                                            "character":  "성",
+                                            "ink_count":  661,
+                                            "ink_bbox":  {
+                                                             "x":  6,
+                                                             "y":  2,
+                                                             "width":  35,
+                                                             "height":  43
+                                                         },
+                                            "minimum_margin":  2,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "9F33D8EED012ED45CCB52298D5EAFA20FE6CF7522FE3F873E4B6A94E7EC48CDA"
+                                        },
+                                        {
+                                            "codepoint":  "U+C624",
+                                            "character":  "오",
+                                            "ink_count":  599,
+                                            "ink_bbox":  {
+                                                             "x":  4,
+                                                             "y":  6,
+                                                             "width":  39,
+                                                             "height":  35
+                                                         },
+                                            "minimum_margin":  4,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "5DF714EA558F06BAA05DFE07CE7FAFC0C3CD2CAD42C5BAE78CFAD15AF2444D06"
+                                        },
+                                        {
+                                            "codepoint":  "U+C640",
+                                            "character":  "와",
+                                            "ink_count":  663,
+                                            "ink_bbox":  {
+                                                             "x":  4,
+                                                             "y":  2,
+                                                             "width":  40,
+                                                             "height":  43
+                                                         },
+                                            "minimum_margin":  2,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  1152,
+                                            "pixel_sha256":  "75E74840C0B63690E94231EF236DC9E1A44A8F691D083A5F3A7B1963677D653A"
+                                        }
+                                    ]
+                     },
+                     {
+                         "entry":  7,
+                         "table":  0,
+                         "family":  "Noto Sans KR SemiBold",
+                         "style":  "Regular",
+                         "raster_size":  32,
+                         "cell":  32,
+                         "glyph_count":  5,
+                         "minimum_margin":  1,
+                         "glyphs":  [
+                                        {
+                                            "codepoint":  "U+B2E4",
+                                            "character":  "다",
+                                            "ink_count":  344,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  27,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "FE356D48E9E5BC91E65154A306BF6A6CAF07C2062068BAE39D8A74C24F35C196"
+                                        },
+                                        {
+                                            "codepoint":  "U+B77C",
+                                            "character":  "라",
+                                            "ink_count":  376,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  27,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "5CB1B7966F3031EB94C2C022A9F24DCD6970B30E717263E08CE4CDBA569CE2E8"
+                                        },
+                                        {
+                                            "codepoint":  "U+C131",
+                                            "character":  "성",
+                                            "ink_count":  381,
+                                            "ink_bbox":  {
+                                                             "x":  3,
+                                                             "y":  1,
+                                                             "width":  25,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "98C47B8631F78123DD2C18FEBF1D3FCF8AE8B744E41B72C0AFFEB651A7FA7394"
+                                        },
+                                        {
+                                            "codepoint":  "U+C624",
+                                            "character":  "오",
+                                            "ink_count":  333,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  3,
+                                                             "width":  27,
+                                                             "height":  25
+                                                         },
+                                            "minimum_margin":  2,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "D23E86932C6D2DF45A58F0CA663FD009616796A6A672D041336F72991C151CC1"
+                                        },
+                                        {
+                                            "codepoint":  "U+C640",
+                                            "character":  "와",
+                                            "ink_count":  403,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  28,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "0AE35AAEEB8A3C4B3759C593120356EF8078355B1ABEAD72AF8276DFFD87D687"
+                                        }
+                                    ]
+                     },
+                     {
+                         "entry":  7,
+                         "table":  1,
+                         "family":  "Noto Sans KR SemiBold",
+                         "style":  "Regular",
+                         "raster_size":  32,
+                         "cell":  32,
+                         "glyph_count":  5,
+                         "minimum_margin":  1,
+                         "glyphs":  [
+                                        {
+                                            "codepoint":  "U+B2E4",
+                                            "character":  "다",
+                                            "ink_count":  344,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  27,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "FE356D48E9E5BC91E65154A306BF6A6CAF07C2062068BAE39D8A74C24F35C196"
+                                        },
+                                        {
+                                            "codepoint":  "U+B77C",
+                                            "character":  "라",
+                                            "ink_count":  376,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  27,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "5CB1B7966F3031EB94C2C022A9F24DCD6970B30E717263E08CE4CDBA569CE2E8"
+                                        },
+                                        {
+                                            "codepoint":  "U+C131",
+                                            "character":  "성",
+                                            "ink_count":  381,
+                                            "ink_bbox":  {
+                                                             "x":  3,
+                                                             "y":  1,
+                                                             "width":  25,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "98C47B8631F78123DD2C18FEBF1D3FCF8AE8B744E41B72C0AFFEB651A7FA7394"
+                                        },
+                                        {
+                                            "codepoint":  "U+C624",
+                                            "character":  "오",
+                                            "ink_count":  333,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  3,
+                                                             "width":  27,
+                                                             "height":  25
+                                                         },
+                                            "minimum_margin":  2,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "D23E86932C6D2DF45A58F0CA663FD009616796A6A672D041336F72991C151CC1"
+                                        },
+                                        {
+                                            "codepoint":  "U+C640",
+                                            "character":  "와",
+                                            "ink_count":  403,
+                                            "ink_bbox":  {
+                                                             "x":  2,
+                                                             "y":  1,
+                                                             "width":  28,
+                                                             "height":  30
+                                                         },
+                                            "minimum_margin":  1,
+                                            "scaled_to_margin":  false,
+                                            "pixel_size":  512,
+                                            "pixel_sha256":  "0AE35AAEEB8A3C4B3759C593120356EF8078355B1ABEAD72AF8276DFFD87D687"
+                                        }
+                                    ]
+                     }
+                 ],
+    "process_memory_access":  false,
+    "registry_access":  false,
+    "installed_game_files_modified":  false
+}

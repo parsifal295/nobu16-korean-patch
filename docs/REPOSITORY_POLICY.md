@@ -8,7 +8,7 @@ It is not a mirror of the installed game and not an archive of experimental bina
 ## Tracked material
 
 - Source code for extraction, rebuilding, validation, installation, and restoration
-- Translation mappings and review metadata
+- Source-text-free translation overlays (`id`, pinned source hash, Korean target)
 - Public font recipes and OFL-licensed pinned font inputs
 - Architecture, safety, reverse-engineering, and runtime-QA reports
 - Tests and small deterministic fixtures that do not contain complete commercial resources
@@ -17,6 +17,7 @@ It is not a mirror of the installed game and not an archive of experimental bina
 ## Never tracked or redistributed
 
 - Complete KOEI TECMO game resources, executables, archives, or backups
+- Development translation batches or catalogs containing official EN/JP/SC/TC source text
 - Rebuilt `msg*.bin`, `res_lang.bin`, G1N/G1T payloads, or full extracted string tables
 - Ghidra project databases, caches, unpacked executables, or local application state
 - Runtime memory patchers, injectors, hooks, proxy DLLs, or process-attach tooling
