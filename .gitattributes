@@ -10,6 +10,9 @@
 *.jsonl text eol=lf
 *.csv text eol=lf
 
+# These are byte-pinned upstream OFL texts; do not rewrite their whitespace.
+workstreams/msgui_full/release_p4_vnext/inputs/font/licenses/*.txt text eol=lf -whitespace
+
 *.ttf binary
 *.png binary
 *.jpg binary

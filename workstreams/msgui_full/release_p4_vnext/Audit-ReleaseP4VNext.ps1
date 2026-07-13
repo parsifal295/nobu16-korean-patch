@@ -73,20 +73,24 @@ function Assert-NotArchive([string]$Path, [string]$Label) {
 function Assert-NoCompleteCommercialResource([string]$Path, [string]$Label) {
     $item = Get-Item -LiteralPath $Path
     $forbiddenSizes = @(
-        [int64]60829, [int64]87274,
-        [int64]160318119, [int64]180350761,
-        [int64]25817936, [int64]26628080,
-        [int64]11771536, [int64]12136240
+        [int64]60829, [int64]87274, [int64]114448,
+        [int64]160318119, [int64]180350761, [int64]181011663,
+        [int64]25817936, [int64]26628080, [int64]27082040,
+        [int64]11771536, [int64]12136240, [int64]12340600
     )
     $forbiddenHashes = @(
         'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82',
         '5E4B26FC465F4F0F4C046462714E7B677D7B479FDA6023086EF7F9A8817E6984',
+        'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746',
         '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99',
         '3BC57379D9AF95E83A77C96C1EE2D104AAF4A8BEA1733EA33FC3D1BCF056D1A9',
+        '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A',
         '414A8E98DCF0F52633CD039A74E97AE61A97D98A96684D450EBADD4C3C85CAEB',
         '951906C6870F60F9342E9A90DF8DBF920D555092D3E06B1B822A41448740DD61',
+        'F2C76E79ADE0024F237DA1061E0DCFFCC18CB7D4DCCB54B7C72BFDD0F9CAC996',
         'DADBE4EEA223FD48CEFA9A93A08EF1F2458B3BD543ADFCEBD6D888B9EE2AFBB0',
-        'C96704BF3A7FE1B29E3CB29361D1E56FCA8062CA73210CBCFCD73BE2E7C7CC66'
+        'C96704BF3A7FE1B29E3CB29361D1E56FCA8062CA73210CBCFCD73BE2E7C7CC66',
+        '769C94F7C9E8E7EA5BF47644A56328EF2B8761DC43F9E6D26E46C127C716BC1B'
     )
     if ($forbiddenSizes -contains [int64]$item.Length -or
         $forbiddenHashes -contains (Get-Sha256 $Path)) {
@@ -168,8 +172,8 @@ foreach ($relative in $expectedRelative | Where-Object { $_ -ne 'release_manifes
 }
 
 if ($manifest.schema -ne 'nobu16.korean-file-only-release.v2' -or
-    $manifest.release_id -ne 'msgui-p4-font-v4-v0.3' -or
-    $manifest.release_name -ne 'NOBU16 Korean MSGUI P4 / Font-v4 file-only v0.3' -or
+    $manifest.release_id -ne 'msgui-full-font-v4-v0.3' -or
+    $manifest.release_name -ne 'NOBU16 Korean MSGUI Full / Font-v4 file-only v0.3' -or
     (($manifest.release_eligible -eq $true -and $manifest.version -ne '0.3') -or
         ($manifest.release_eligible -eq $false -and $manifest.version -ne '0.3-dev')) -or
     $manifest.architecture -ne 'file-only-offline' -or
@@ -187,13 +191,17 @@ if ($manifest.schema -ne 'nobu16.korean-file-only-release.v2' -or
 $legacyReleaseId = [string]::Concat('msgui-', 'p', '3-font-', 'v', '3-v0', '.2')
 $legacyReleaseName = [string]::Concat('NOBU16 Korean MSGUI ', 'P', '3 / Font-', 'v', '3 file-only v0', '.2')
 $legacyBackupName = [string]::Concat('msgui_', 'p', '3_font_', 'v', '3_v0', '_2')
+$legacyP4ReleaseId = [string]::Concat('msgui-', 'p', '4-font-', 'v', '4-v0', '.3')
+$legacyP4ReleaseName = [string]::Concat('NOBU16 Korean MSGUI ', 'P', '4 / Font-', 'v', '4 file-only v0', '.3')
+$legacyP4BackupName = [string]::Concat('msgui_', 'p', '4_font_', 'v', '4_v0', '_3')
 $strictUtf8 = New-Object Text.UTF8Encoding($false, $true)
 foreach ($relative in $expectedRelative) {
     if ([IO.Path]::GetExtension($relative) -in @('.ps1', '.cs', '.md', '.bat', '.json', '.jsonl')) {
         $path = Join-Path $PackageRoot $relative.Replace('/', '\')
         $text = $strictUtf8.GetString([IO.File]::ReadAllBytes($path))
         if ($text.Contains($legacyReleaseId) -or $text.Contains($legacyReleaseName) -or
-            $text.Contains($legacyBackupName)) {
+            $text.Contains($legacyBackupName) -or $text.Contains($legacyP4ReleaseId) -or
+            $text.Contains($legacyP4ReleaseName) -or $text.Contains($legacyP4BackupName)) {
             throw "Package contains a legacy release identity: $relative"
         }
     }
@@ -209,7 +217,7 @@ $criticalPins = @{
     'RESTORE_ORIGINALS.bat' = '266|5E5F629256C6C9E4151F9C1F81E2F256CF9A51836A5F8ABD2E10780D8152AFAE'
     'VERIFY_PACKAGE.bat' = '271|176238C8C94925231B5B3FFB3505B45987CB90F75399046459847B517448B088'
     'tools/FileRecipeCore.cs' = '28466|04643FDDA1617663DB4B2812582C5F87FA9D55A46D1861F22570C7C1B7266B79'
-    'tools/Invoke-FileOnlyPatch.ps1' = '71729|7FA3DD0EADF7A6498D91F5F2C19C8D773C9C783D0F547756628E9DFC46174E32'
+    'tools/Invoke-FileOnlyPatch.ps1' = '76026|2C61610C93AAB03EB86F5A409FA0CFAFC9E814604469104E1A5A04C5518A382A'
     'tools/JsonKeyGuard.cs' = '11304|6A1ABEC0899A1D4256153E49E8204DAE343EC5D7887DB3047192A8168678DA60'
 }
 foreach ($relative in $criticalPaths) {

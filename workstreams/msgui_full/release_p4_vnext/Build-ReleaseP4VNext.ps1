@@ -3,6 +3,8 @@ param(
     [string]$OutputRoot,
     [string]$OfflineEvidencePath,
     [string]$RuntimeEvidencePath,
+    [string]$MessageSource,
+    [string]$FontPublicSource,
     [switch]$Overwrite,
     [switch]$CreateZip
 )
@@ -10,14 +12,20 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$ReleaseId = 'msgui-p4-font-v4-v0.3'
-$ReleaseFolderName = 'msgui_p4_file_only_v0.3-dev_2026-07-13'
+$ReleaseId = 'msgui-full-font-v4-v0.3'
+$ReleaseFolderName = 'msgui_full_file_only_v0.3-dev_2026-07-14'
 $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $KrPatchRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $PSScriptRoot))
 $GameRoot = Split-Path -Parent $KrPatchRoot
 $TemplateRoot = Join-Path $PSScriptRoot 'template'
-$MessageSource = Join-Path (Split-Path -Parent $PSScriptRoot) 'build_p4_0401_1100\public\message\msgui_sc.recipe.json'
-$FontPublicSource = Join-Path (Split-Path -Parent $PSScriptRoot) 'font_v4\build\public'
+if ([string]::IsNullOrWhiteSpace($MessageSource)) {
+    $MessageSource = Join-Path $PSScriptRoot 'inputs\message\msgui_sc.recipe.json'
+}
+if ([string]::IsNullOrWhiteSpace($FontPublicSource)) {
+    $FontPublicSource = Join-Path $PSScriptRoot 'inputs\font'
+}
+$MessageSource = [IO.Path]::GetFullPath($MessageSource)
+$FontPublicSource = [IO.Path]::GetFullPath($FontPublicSource)
 if (-not $OutputRoot) {
     $OutputRoot = Join-Path $KrPatchRoot "releases\$ReleaseFolderName"
 }
@@ -68,16 +76,22 @@ function Assert-OrdinaryLeaf([string]$Path, [string]$Label) {
 }
 
 function Assert-NoLegacyReleaseIdentity([string]$Root) {
-    $legacyReleaseId = [string]::Concat('msgui-', 'p', '3-font-', 'v', '3-v0', '.2')
-    $legacyReleaseName = [string]::Concat('NOBU16 Korean MSGUI ', 'P', '3 / Font-', 'v', '3 file-only v0', '.2')
-    $legacyBackupName = [string]::Concat('msgui_', 'p', '3_font_', 'v', '3_v0', '_2')
+    $legacyValues = @(
+        [string]::Concat('msgui-', 'p', '3-font-', 'v', '3-v0', '.2'),
+        [string]::Concat('NOBU16 Korean MSGUI ', 'P', '3 / Font-', 'v', '3 file-only v0', '.2'),
+        [string]::Concat('msgui_', 'p', '3_font_', 'v', '3_v0', '_2'),
+        [string]::Concat('msgui-', 'p', '4-font-', 'v', '4-v0', '.3'),
+        [string]::Concat('NOBU16 Korean MSGUI ', 'P', '4 / Font-', 'v', '4 file-only v0', '.3'),
+        [string]::Concat('msgui_', 'p', '4_font_', 'v', '4_v0', '_3')
+    )
     $strictUtf8 = New-Object Text.UTF8Encoding($false, $true)
     foreach ($file in @(Get-ChildItem -LiteralPath $Root -Recurse -File)) {
         if ([IO.Path]::GetExtension($file.Name) -in @('.ps1', '.cs', '.md', '.bat', '.json', '.jsonl')) {
             $text = $strictUtf8.GetString([IO.File]::ReadAllBytes($file.FullName))
-            if ($text.Contains($legacyReleaseId) -or $text.Contains($legacyReleaseName) -or
-                $text.Contains($legacyBackupName)) {
-                throw "Staging contains a legacy release identity: $($file.FullName)"
+            foreach ($legacyValue in $legacyValues) {
+                if ($text.Contains($legacyValue)) {
+                    throw "Staging contains a legacy release identity: $($file.FullName)"
+                }
             }
         }
     }
@@ -155,27 +169,29 @@ if ($message.schema -ne 'nobu16.file-only-msg-recipe.v1' -or
     $message.scope -ne 'msgui_catalog_v2' -or
     $message.language -ne 'SC' -or
     $message.file_only -ne $true -or
-    $operations.Count -ne 931 -or
-    $message.operation_index.count -ne 931 -or
+    $operations.Count -ne 3819 -or
+    $message.operation_index.count -ne 3819 -or
+    $message.operation_index.sorted_unique -ne $true -or
+    $message.operation_index.id_encoding -ne 'UTF-8 compact JSON integer array' -or
     $operationIdsSha256 -ne ([string]$message.operation_index.ids_sha256).ToUpperInvariant()) {
-    throw 'P4 message source recipe contract failed'
+    throw 'Full message source recipe contract failed'
 }
-if ([int64](Get-Item -LiteralPath $MessageSource).Length -ne 153571 -or
-    (Get-Sha256 $MessageSource) -ne 'E6CC464E01F9D86A8AC995FD47FBE1EF6AD51DCD67C05117A7BF8ECC573460D2') {
-    throw 'P4 message recipe does not match the pinned public artifact'
+if ([int64](Get-Item -LiteralPath $MessageSource).Length -ne 688338 -or
+    (Get-Sha256 $MessageSource) -ne '3F5CAC974C95B19B78319DBF97C2289FFF82B4ED23A4950013DB94C19A6948AB') {
+    throw 'Full message recipe does not match the pinned public artifact'
 }
 if ($message.version -ne '0.2-dev' -or
     [int64]$message.source.size -ne 60829 -or
     ([string]$message.source.sha256).ToUpperInvariant() -ne 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82' -or
-    [int64]$message.target.size -ne 87274 -or
-    ([string]$message.target.sha256).ToUpperInvariant() -ne '5E4B26FC465F4F0F4C046462714E7B677D7B479FDA6023086EF7F9A8817E6984' -or
-    $operationIdsSha256 -ne '7F95C3EDB26F6C53990B35C5C2C4C3552B4789E1F8BA4D140A77948C9B57E187') {
-    throw 'P4 message source/target pins are invalid'
+    [int64]$message.target.size -ne 114448 -or
+    ([string]$message.target.sha256).ToUpperInvariant() -ne 'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746' -or
+    $operationIdsSha256 -ne '0F336EAF33E34461C7D6CA7D8667B02DC103786595CF783139E16912D99461FD') {
+    throw 'Full message source/target pins are invalid'
 }
 for ($index = 0; $index -lt $operationIds.Count; $index++) {
     if (($index -gt 0 -and $operationIds[$index] -le $operationIds[$index - 1]) -or
         $operationIds[$index] -lt 0 -or $operationIds[$index] -ge 5100) {
-        throw "P4 operation index is not sorted/unique at $index"
+        throw "Full operation index is not sorted/unique at $index"
     }
 }
 if ($font.schema -ne 'nobu16.file-only-g1n-tail-recipe.v2' -or
@@ -183,40 +199,61 @@ if ($font.schema -ne 'nobu16.file-only-g1n-tail-recipe.v2' -or
     $font.process_memory_access -ne $false -or
     $font.registry_access -ne $false -or
     $font.payload_policy.commercial_original_bytes_in_public_payload -ne $false -or
-    $rasterCodepoints.Count -ne 354) {
+    $rasterCodepoints.Count -ne 562 -or
+    $rasterCodepointsSha256 -ne '72FA45F51EADB2827F220891D3A0FBDA0D46BC8A4673DE8AD1806E417372D7AC') {
     throw 'Font-v4 public recipe contract failed'
 }
-if ((Get-Sha256 (Join-Path $FontPublicSource 'recipe.json')) -ne
-        'EC4B9C68A1FF62DD06F53C55A30F45A3F12F62D1D1C7654196C780021288EA07' -or
-    (Get-Sha256 (Join-Path $FontPublicSource 'payload\glyph_pixels_entry_6.bin')) -ne
-        '7131812389A78D10296BF7B5786E1CA387960C6F4A6875E0E793BAAFB1A13082' -or
-    (Get-Sha256 (Join-Path $FontPublicSource 'payload\glyph_pixels_entry_7.bin')) -ne
-        'FD320B8D1ED831559B3F7C2E1F236D1D38376EDDC5EF59F345D99D7F93864EEC' -or
-    (Get-Sha256 (Join-Path $FontPublicSource 'metrics\glyphs.jsonl')) -ne
-        '514E46EDE2C7CB8027989EBE1B292664674226E3F555CD0B1BEE2C48A22E0EBE') {
-    throw 'Font-v4 recipe, glyph payload, or metrics do not match the pinned public artifacts'
+$fontRecipeSource = Join-Path $FontPublicSource 'recipe.json'
+$fontPayload6Source = Join-Path $FontPublicSource 'payload\glyph_pixels_entry_6.bin'
+$fontPayload7Source = Join-Path $FontPublicSource 'payload\glyph_pixels_entry_7.bin'
+$fontMetricsSource = Join-Path $FontPublicSource 'metrics\glyphs.jsonl'
+$fontSansLicenseSource = Join-Path $FontPublicSource 'licenses\OFL-NotoSansKR.txt'
+$fontSerifLicenseSource = Join-Path $FontPublicSource 'licenses\OFL-NotoSerifKR.txt'
+if ([int64](Get-Item -LiteralPath $fontRecipeSource).Length -ne 481533 -or
+    (Get-Sha256 $fontRecipeSource) -ne '561477D6312FF02DDD18C09CBF4A2802E00BFA42015B325CFE6F04BDED04C109' -or
+    [int64](Get-Item -LiteralPath $fontPayload6Source).Length -ne 1251072 -or
+    (Get-Sha256 $fontPayload6Source) -ne '53898FD6039F8CAD63BC85D50791DD3451D9EDCB69EB6F15EE08550EF50A91ED' -or
+    [int64](Get-Item -LiteralPath $fontPayload7Source).Length -ne 556032 -or
+    (Get-Sha256 $fontPayload7Source) -ne 'CD34058F3C85554900314394AB3C1CFD92DF6CA7007068F44F2D12968DCA168D' -or
+    [int64](Get-Item -LiteralPath $fontMetricsSource).Length -ne 691550 -or
+    (Get-Sha256 $fontMetricsSource) -ne '1AF2EF974E0E6E3670F2FF3AAC127C28717128C86573DF759EBCFF73C01A9074' -or
+    [int64](Get-Item -LiteralPath $fontSansLicenseSource).Length -ne 4388 -or
+    (Get-Sha256 $fontSansLicenseSource) -ne '1C05C68C34F9708415AADA51F17E1B0092D2CEA709BF4A94CD38114F9E73D7D9' -or
+    [int64](Get-Item -LiteralPath $fontSerifLicenseSource).Length -ne 4350 -or
+    (Get-Sha256 $fontSerifLicenseSource) -ne '5E0DA210FB04058A8C0087985D2D456B931C2579811A49655721D3CF0C36B6D6') {
+    throw 'Font-v4 recipe, glyph payload, metrics, or licenses do not match the pinned public artifacts'
 }
 if ($font.corpus.schema -ne 'nobu16.kr.font-v4-corpus-union.v1' -or
-    [int]$font.corpus.character_count -ne 387 -or
-    [int]$font.corpus.hangul_syllable_count -ne 342 -or
-    [int]$font.corpus.raster_codepoint_count -ne 354 -or
-    ([string]$font.corpus.raster_codepoints_sha256).ToUpperInvariant() -ne '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7' -or
+    [int]$font.corpus.source_non_whitespace_character_count -ne 645 -or
+    ([string]$font.corpus.source_non_whitespace_codepoints_sha256).ToUpperInvariant() -ne 'F279DD93CA82142767E7C24F9640E017C3F6FABDB0FDD63D0D52F24511EA5B01' -or
+    [int]$font.corpus.excluded_font_token_count -ne 19 -or
+    ([string]$font.corpus.excluded_font_tokens_sha256).ToUpperInvariant() -ne '6579C55EFF39DCA50D8152BCFE3686072DB1F07B185B50BAF363840F4C772E38' -or
+    ([string]$font.corpus.excluded_font_codepoints_sha256).ToUpperInvariant() -ne 'B88CD9A68EBB6FC6221D01FFE7F89AA014FECA46EF1A2B13CCDCC8730D36F2FF' -or
+    [int]$font.corpus.character_count -ne 626 -or
+    ([string]$font.corpus.union_codepoints_sha256).ToUpperInvariant() -ne 'BAD72B2E09A71127243F9966FB70B08A4613B01F4596EF0FF10169A88FA12DCF' -or
+    [int]$font.corpus.hangul_syllable_count -ne 523 -or
+    ([string]$font.corpus.hangul_codepoints_sha256).ToUpperInvariant() -ne '89E62D3B4438C8DF7541E10A9D4C90B8F37EB2DCB314789E3C446F3855794873' -or
+    [int]$font.corpus.non_hangul_character_count -ne 103 -or
+    [int]$font.corpus.non_hangul_fully_stock_covered_count -ne 64 -or
+    [int]$font.corpus.non_hangul_rasterized_count -ne 39 -or
+    [int]$font.corpus.raster_codepoint_count -ne 562 -or
+    ([string]$font.corpus.raster_codepoints_sha256).ToUpperInvariant() -ne '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' -or
     [int64]$font.languages.SC.stock_archive.size -ne 160318119 -or
     ([string]$font.languages.SC.stock_archive.sha256).ToUpperInvariant() -ne '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99' -or
-    [int64]$font.languages.SC.target_archive.size -ne 180350761 -or
-    ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant() -ne '3BC57379D9AF95E83A77C96C1EE2D104AAF4A8BEA1733EA33FC3D1BCF056D1A9') {
+    [int64]$font.languages.SC.target_archive.size -ne 181011663 -or
+    ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant() -ne '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A') {
     throw 'Font-v4 corpus or archive pins are invalid'
 }
 foreach ($entryNumber in @(6, 7)) {
     $entry = $font.languages.SC.entries.([string]$entryNumber)
     $tables = @($entry.tables)
     if ($tables.Count -ne 2 -or
-        @($tables[0].append_codepoints).Count -ne 342 -or
-        @($tables[1].append_codepoints).Count -ne 354 -or
-        ([string]$tables[0].append_codepoints_sha256).ToUpperInvariant() -ne '5254670AE29E925240BCC980155B78CFE2698094833B0D69B084715857B9D94D' -or
-        ([string]$tables[1].append_codepoints_sha256).ToUpperInvariant() -ne '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7' -or
-        [int]$entry.pixel_payload.glyph_count_by_table.'0' -ne 342 -or
-        [int]$entry.pixel_payload.glyph_count_by_table.'1' -ne 354) {
+        @($tables[0].append_codepoints).Count -ne 524 -or
+        @($tables[1].append_codepoints).Count -ne 562 -or
+        ([string]$tables[0].append_codepoints_sha256).ToUpperInvariant() -ne 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1' -or
+        ([string]$tables[1].append_codepoints_sha256).ToUpperInvariant() -ne '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' -or
+        [int]$entry.pixel_payload.glyph_count_by_table.'0' -ne 524 -or
+        [int]$entry.pixel_payload.glyph_count_by_table.'1' -ne 562) {
         throw "Font-v4 entry $entryNumber per-table contract is invalid"
     }
 }
@@ -233,7 +270,7 @@ if ($OfflineEvidencePath) {
             ([string]$message.target.sha256).ToUpperInvariant() -or
         ([string]$offlineEvidence.artifacts.font_target_sha256).ToUpperInvariant() -ne
             ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant()) {
-        throw 'Offline validation evidence does not match the current P4 targets'
+        throw 'Offline validation evidence does not match the current full targets'
     }
     Assert-TrueChecks $offlineEvidence @(
         'verify_passed', 'apply_passed', 'restore_passed', 'bad_stock_rejected',
@@ -260,13 +297,16 @@ if ($RuntimeEvidencePath) {
             ([string]$message.target.sha256).ToUpperInvariant() -or
         ([string]$runtimeEvidence.artifacts.font_target_sha256).ToUpperInvariant() -ne
             ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant()) {
-        throw 'Runtime validation evidence does not match the current P4 targets'
+        throw 'Runtime validation evidence does not match the current full targets'
     }
     Assert-TrueChecks $runtimeEvidence @(
-        'boot_completed', 'korean_ui_visible', 'castle_name_horizontal',
-        'missing_glyphs_checked',
+        'boot_completed', 'korean_ui_visible', 'missing_glyphs_checked',
         'clipping_checked', 'normal_exit', 'stock_restored_after_qa'
     ) 'runtime evidence'
+    $castleNameHorizontal = $runtimeEvidence.checks.PSObject.Properties['castle_name_horizontal']
+    if ($null -eq $castleNameHorizontal -or $castleNameHorizontal.Value -isnot [bool]) {
+        throw 'Runtime evidence check must be present and boolean: castle_name_horizontal'
+    }
     $screens = @($runtimeEvidence.screens)
     if ($screens.Count -lt 1 -or $screens.Count -gt 20 -or
         @($runtimeEvidence.scope.observed_labels).Count -lt 1 -or
@@ -366,7 +406,7 @@ try {
         [string]$offlineEvidence.validated_utc
     }
     else {
-        '2026-07-13T00:00:00Z'
+        '2026-07-14T00:00:00Z'
     }
     $evidence = [ordered]@{
         schema = 'nobu16.file-only-validation-evidence.v2'
@@ -478,7 +518,7 @@ try {
     $manifest = [ordered]@{
         schema = 'nobu16.korean-file-only-release.v2'
         release_id = $ReleaseId
-        release_name = 'NOBU16 Korean MSGUI P4 / Font-v4 file-only v0.3'
+        release_name = 'NOBU16 Korean MSGUI Full / Font-v4 file-only v0.3'
         version = if ($releaseEligible) { '0.3' } else { '0.3-dev' }
         architecture = 'file-only-offline'
         development_milestone = (-not $releaseEligible)
@@ -497,13 +537,13 @@ try {
         python_required_by_end_user = $false
         official_launcher_language = 'Simplified Chinese'
         target_files = @('MSG_PK/SC/msgui.bin', 'RES_SC/res_lang.bin')
-        backup_directory_name = 'msgui_p4_font_v4_v0_3'
+        backup_directory_name = 'msgui_full_font_v4_v0_3'
         transaction_journal = $true
         message = [ordered]@{
             recipe_path = 'components/message/msgui_sc.recipe.json'
             recipe_size = [int64](Get-Item -LiteralPath $messageRecipePath).Length
             recipe_sha256 = Get-Sha256 $messageRecipePath
-            recipe_shape_sha256 = '9B6EDAA4B01889251F0EECE361B6B336DBB408C8AFA1BFA84973E15732BB3E88'
+            recipe_shape_sha256 = '489D31EA78B3C00DFEE458B586D7169CE65E3FFB5C59C16FD571E1FBD1C2D464'
             operation_count = $operations.Count
             operation_ids_encoding = 'UTF-8 compact JSON integer array'
             operation_ids_sha256 = $operationIdsSha256
@@ -514,15 +554,15 @@ try {
             recipe_path = 'components/font/recipe.json'
             recipe_size = [int64](Get-Item -LiteralPath $fontRecipePath).Length
             recipe_sha256 = Get-Sha256 $fontRecipePath
-            recipe_shape_sha256 = '53652DD2518A8DC2EA0F85861E24AC886527F3F045281AE4381A05E6B626AA4E'
+            recipe_shape_sha256 = '3BE6D316FF28A8D921BAB068B20D04F3932795FB684CD0CF8DF4749BD72A0C8C'
             raster_codepoint_count = $rasterCodepoints.Count
             raster_codepoints_encoding = 'UTF-8 compact JSON string array'
             raster_codepoints_sha256 = $rasterCodepointsSha256
             append_codepoints_encoding = 'ASCII U+XXXX LF-delimited lines'
-            table0_append_count = 342
-            table1_append_count = 354
-            table0_codepoints_sha256 = '5254670AE29E925240BCC980155B78CFE2698094833B0D69B084715857B9D94D'
-            table1_codepoints_sha256 = '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7'
+            table0_append_count = 524
+            table1_append_count = 562
+            table0_codepoints_sha256 = 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1'
+            table1_codepoints_sha256 = '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229'
             stock = [ordered]@{ size = [int64]$font.languages.SC.stock_archive.size; sha256 = ([string]$font.languages.SC.stock_archive.sha256).ToUpperInvariant() }
             target = [ordered]@{ size = [int64]$font.languages.SC.target_archive.size; sha256 = ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant() }
             payloads = $payloadSpecs
@@ -577,8 +617,8 @@ if ($zipPath) {
     operation_count = $operations.Count
     operation_ids_sha256 = $operationIdsSha256
     raster_codepoint_count = $rasterCodepoints.Count
-    table0_append_count = 342
-    table1_append_count = 354
+    table0_append_count = 524
+    table1_append_count = 562
     zip_path = $zipPath
     zip_sha256 = if ($zipPath) { Get-Sha256 $zipPath } else { $null }
     sidecar_path = $sidecarPath

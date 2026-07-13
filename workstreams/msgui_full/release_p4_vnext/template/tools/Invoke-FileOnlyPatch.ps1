@@ -158,9 +158,9 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
     $fontShape = Get-JsonShapeSha256 $FontRecipe
     Assert-JsonStringLimits $MessageRecipe 'message recipe'
     Assert-JsonStringLimits $FontRecipe 'font recipe'
-    if ($messageShape -ne '9B6EDAA4B01889251F0EECE361B6B336DBB408C8AFA1BFA84973E15732BB3E88' -or
+    if ($messageShape -ne '489D31EA78B3C00DFEE458B586D7169CE65E3FFB5C59C16FD571E1FBD1C2D464' -or
         $messageShape -ne ([string]$Manifest.message.recipe_shape_sha256).ToUpperInvariant() -or
-        $fontShape -ne '53652DD2518A8DC2EA0F85861E24AC886527F3F045281AE4381A05E6B626AA4E' -or
+        $fontShape -ne '3BE6D316FF28A8D921BAB068B20D04F3932795FB684CD0CF8DF4749BD72A0C8C' -or
         $fontShape -ne ([string]$Manifest.font.recipe_shape_sha256).ToUpperInvariant()) {
         throw 'Recipe JSON schema contains missing, extra, or mistyped fields'
     }
@@ -173,21 +173,22 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         [int]$MessageRecipe.source.string_count -ne 5100 -or
         [int64]$MessageRecipe.source.size -ne 60829 -or
         ([string]$MessageRecipe.source.sha256).ToUpperInvariant() -ne 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82' -or
-        [int64]$MessageRecipe.target.size -ne 87274 -or
-        ([string]$MessageRecipe.target.sha256).ToUpperInvariant() -ne '5E4B26FC465F4F0F4C046462714E7B677D7B479FDA6023086EF7F9A8817E6984' -or
+        [int64]$MessageRecipe.target.size -ne 114448 -or
+        ([string]$MessageRecipe.target.sha256).ToUpperInvariant() -ne 'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746' -or
         [int64]$MessageRecipe.source.size -ne [int64]$Manifest.message.stock.size -or
         ([string]$MessageRecipe.source.sha256).ToUpperInvariant() -ne ([string]$Manifest.message.stock.sha256).ToUpperInvariant() -or
         [int64]$MessageRecipe.target.size -ne [int64]$Manifest.message.target.size -or
         ([string]$MessageRecipe.target.sha256).ToUpperInvariant() -ne ([string]$Manifest.message.target.sha256).ToUpperInvariant()) {
         throw 'Message recipe contract is invalid'
     }
-    if ((Get-Sha256 $MessageRecipePath) -ne 'E6CC464E01F9D86A8AC995FD47FBE1EF6AD51DCD67C05117A7BF8ECC573460D2' -or
+    if ([int64](Get-Item -LiteralPath $MessageRecipePath).Length -ne 688338 -or
+        (Get-Sha256 $MessageRecipePath) -ne '3F5CAC974C95B19B78319DBF97C2289FFF82B4ED23A4950013DB94C19A6948AB' -or
         (Get-Sha256 $MessageRecipePath) -ne ([string]$Manifest.message.recipe_sha256).ToUpperInvariant()) {
-        throw 'Message recipe bytes do not match the pinned P4 public artifact'
+        throw 'Message recipe bytes do not match the pinned full public artifact'
     }
 
     $operations = @($MessageRecipe.operations)
-    if ($operations.Count -ne 931 -or
+    if ($operations.Count -ne 3819 -or
         $operations.Count -ne [int]$Manifest.message.operation_count -or
         $operations.Count -ne [int]$MessageRecipe.operation_index.count -or
         $MessageRecipe.operation_index.sorted_unique -ne $true -or
@@ -206,7 +207,7 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         }
     }
     $idsSha256 = Get-CompactJsonSha256 $ids
-    if ($idsSha256 -ne '7F95C3EDB26F6C53990B35C5C2C4C3552B4789E1F8BA4D140A77948C9B57E187' -or
+    if ($idsSha256 -ne '0F336EAF33E34461C7D6CA7D8667B02DC103786595CF783139E16912D99461FD' -or
         $idsSha256 -ne ([string]$MessageRecipe.operation_index.ids_sha256).ToUpperInvariant() -or
         $idsSha256 -ne ([string]$Manifest.message.operation_ids_sha256).ToUpperInvariant()) {
         throw 'Message operation ID hash mismatch'
@@ -225,18 +226,24 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         $fontLanguage.stock_archive.path -ne 'RES_SC/res_lang.bin' -or
         [int64]$fontLanguage.stock_archive.size -ne 160318119 -or
         ([string]$fontLanguage.stock_archive.sha256).ToUpperInvariant() -ne '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99' -or
-        [int64]$fontLanguage.target_archive.size -ne 180350761 -or
-        ([string]$fontLanguage.target_archive.sha256).ToUpperInvariant() -ne '3BC57379D9AF95E83A77C96C1EE2D104AAF4A8BEA1733EA33FC3D1BCF056D1A9' -or
+        [int64]$fontLanguage.target_archive.size -ne 181011663 -or
+        ([string]$fontLanguage.target_archive.sha256).ToUpperInvariant() -ne '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A' -or
         [int64]$fontLanguage.stock_archive.size -ne [int64]$Manifest.font.stock.size -or
         ([string]$fontLanguage.stock_archive.sha256).ToUpperInvariant() -ne ([string]$Manifest.font.stock.sha256).ToUpperInvariant() -or
         [int64]$fontLanguage.target_archive.size -ne [int64]$Manifest.font.target.size -or
         ([string]$fontLanguage.target_archive.sha256).ToUpperInvariant() -ne ([string]$Manifest.font.target.sha256).ToUpperInvariant()) {
         throw 'Font recipe contract is invalid'
     }
-    if ((Get-Sha256 $FontRecipePath) -ne 'EC4B9C68A1FF62DD06F53C55A30F45A3F12F62D1D1C7654196C780021288EA07' -or
+    if ([int64](Get-Item -LiteralPath $FontRecipePath).Length -ne 481533 -or
+        (Get-Sha256 $FontRecipePath) -ne '561477D6312FF02DDD18C09CBF4A2802E00BFA42015B325CFE6F04BDED04C109' -or
         (Get-Sha256 $FontRecipePath) -ne ([string]$Manifest.font.recipe_sha256).ToUpperInvariant()) {
         throw 'Font recipe bytes do not match the pinned Font-v4 public artifact'
     }
+    $fontMetricsPath = Join-Path $PackageRoot 'components\font\metrics\glyphs.jsonl'
+    Assert-FileSpec $fontMetricsPath ([pscustomobject]@{
+        size = [int64]691550
+        sha256 = '1AF2EF974E0E6E3670F2FF3AAC127C28717128C86573DF759EBCFF73C01A9074'
+    }) 'font metrics'
     if ($FontRecipe.release_eligible -ne $false -or
         $FontRecipe.runtime_direct_lookup_verified -ne $false) {
         throw 'Packaged Font-v4 build recipe must remain the byte-exact public build artifact'
@@ -251,22 +258,41 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         $value = [Convert]::ToInt32($_.Substring(2), 16)
         $value -lt 0xAC00 -or $value -gt 0xD7A3
     })
+    [string[]]$table0Codepoints = @($hangulCodepoints + 'U+FF1F')
+    [string[]]$excludedCodepoints = @($FontRecipe.corpus.excluded_font_codepoints | ForEach-Object { [string]$_ })
+    [object[]]$excludedTokens = @($FontRecipe.corpus.excluded_font_tokens)
     if ($FontRecipe.corpus.schema -ne 'nobu16.kr.font-v4-corpus-union.v1' -or
-        [int]$FontRecipe.corpus.character_count -ne 387 -or
-        [int]$FontRecipe.corpus.hangul_syllable_count -ne 342 -or
-        [int]$FontRecipe.corpus.non_hangul_character_count -ne 45 -or
-        [int]$FontRecipe.corpus.non_hangul_fully_stock_covered_count -ne 33 -or
-        [int]$FontRecipe.corpus.non_hangul_rasterized_count -ne 12 -or
-        [int]$FontRecipe.corpus.raster_codepoint_count -ne 354 -or
-        $allowedCodepoints.Count -ne 354 -or
-        $hangulCodepoints.Count -ne 342 -or
-        $nonHangulCodepoints.Count -ne 12 -or
+        [int]$FontRecipe.corpus.source_non_whitespace_character_count -ne 645 -or
+        ([string]$FontRecipe.corpus.source_non_whitespace_codepoints_sha256).ToUpperInvariant() -ne 'F279DD93CA82142767E7C24F9640E017C3F6FABDB0FDD63D0D52F24511EA5B01' -or
+        $FontRecipe.corpus.font_exclusion_policy -ne 'exclude ESC command components, C0/C1 controls, and game PUA icons from G1N raster demand' -or
+        [int]$FontRecipe.corpus.excluded_font_token_count -ne 19 -or
+        $excludedCodepoints.Count -ne 19 -or
+        $excludedTokens.Count -ne 19 -or
+        (Get-CompactJsonSha256 $excludedCodepoints) -ne 'D57AC94676F232A3C86B6E8A7DD59366173F4BBA0D9AF6B4AB2BD7DAA31B9447' -or
+        (Get-CodepointLinesSha256 $excludedCodepoints) -ne 'B88CD9A68EBB6FC6221D01FFE7F89AA014FECA46EF1A2B13CCDCC8730D36F2FF' -or
+        ([string]$FontRecipe.corpus.excluded_font_codepoints_sha256).ToUpperInvariant() -ne 'B88CD9A68EBB6FC6221D01FFE7F89AA014FECA46EF1A2B13CCDCC8730D36F2FF' -or
+        (Get-CompactJsonSha256 $excludedTokens) -ne '6579C55EFF39DCA50D8152BCFE3686072DB1F07B185B50BAF363840F4C772E38' -or
+        ([string]$FontRecipe.corpus.excluded_font_tokens_sha256).ToUpperInvariant() -ne '6579C55EFF39DCA50D8152BCFE3686072DB1F07B185B50BAF363840F4C772E38' -or
+        [int]$FontRecipe.corpus.character_count -ne 626 -or
+        ([string]$FontRecipe.corpus.union_codepoints_sha256).ToUpperInvariant() -ne 'BAD72B2E09A71127243F9966FB70B08A4613B01F4596EF0FF10169A88FA12DCF' -or
+        [int]$FontRecipe.corpus.hangul_syllable_count -ne 523 -or
+        [int]$FontRecipe.corpus.non_hangul_character_count -ne 103 -or
+        [int]$FontRecipe.corpus.non_hangul_fully_stock_covered_count -ne 64 -or
+        [int]$FontRecipe.corpus.non_hangul_rasterized_count -ne 39 -or
+        [int]$FontRecipe.corpus.raster_codepoint_count -ne 562 -or
+        $allowedCodepoints.Count -ne 562 -or
+        $hangulCodepoints.Count -ne 523 -or
+        $nonHangulCodepoints.Count -ne 39 -or
+        $table0Codepoints.Count -ne 524 -or
         $allowedCodepoints.Count -ne [int]$Manifest.font.raster_codepoint_count -or
-        (Get-CompactJsonSha256 $allowedCodepoints) -ne '7EEE2CD1CD8C111108E23707CF80E48444611EB5239AEE700EF607679560B04F' -or
-        (Get-CompactJsonSha256 $hangulCodepoints) -ne '70FDC71001D91EC3B62FA1E4588B811372608FCFEA4C6E484B960CC9010DF4A6' -or
-        (Get-CodepointLinesSha256 $allowedCodepoints) -ne '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7' -or
-        (Get-CodepointLinesSha256 $hangulCodepoints) -ne '5254670AE29E925240BCC980155B78CFE2698094833B0D69B084715857B9D94D' -or
-        ([string]$FontRecipe.corpus.raster_codepoints_sha256).ToUpperInvariant() -ne '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7' -or
+        (Get-CompactJsonSha256 $allowedCodepoints) -ne '72FA45F51EADB2827F220891D3A0FBDA0D46BC8A4673DE8AD1806E417372D7AC' -or
+        (Get-CompactJsonSha256 $hangulCodepoints) -ne '490A2D1AF31CEE20B364AC4ED8F193698263329DADA2CF5B009F85B66C25A01C' -or
+        (Get-CompactJsonSha256 $table0Codepoints) -ne '11B6B5C61DA4815322084C06E61719DA9BB8D28734858FADE7E606D596E23F30' -or
+        (Get-CodepointLinesSha256 $allowedCodepoints) -ne '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' -or
+        (Get-CodepointLinesSha256 $hangulCodepoints) -ne '89E62D3B4438C8DF7541E10A9D4C90B8F37EB2DCB314789E3C446F3855794873' -or
+        (Get-CodepointLinesSha256 $table0Codepoints) -ne 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1' -or
+        ([string]$FontRecipe.corpus.hangul_codepoints_sha256).ToUpperInvariant() -ne '89E62D3B4438C8DF7541E10A9D4C90B8F37EB2DCB314789E3C446F3855794873' -or
+        ([string]$FontRecipe.corpus.raster_codepoints_sha256).ToUpperInvariant() -ne '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' -or
         (Get-CompactJsonSha256 $allowedCodepoints) -ne ([string]$Manifest.font.raster_codepoints_sha256).ToUpperInvariant()) {
         throw 'Font corpus contract is invalid'
     }
@@ -274,6 +300,16 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         if ($allowedCodepoints[$index] -notmatch '\AU\+[0-9A-F]{4,6}\z' -or
             ($index -gt 0 -and [string]::CompareOrdinal($allowedCodepoints[$index - 1], $allowedCodepoints[$index]) -ge 0)) {
             throw "Font corpus codepoint $index is invalid"
+        }
+    }
+    for ($index = 0; $index -lt $excludedCodepoints.Count; $index++) {
+        $token = $excludedTokens[$index]
+        Assert-ExactProperties $token @('codepoint', 'reason') "excluded font token $index"
+        if ($excludedCodepoints[$index] -notmatch '\AU\+[0-9A-F]{4}\z' -or
+            ($index -gt 0 -and [string]::CompareOrdinal($excludedCodepoints[$index - 1], $excludedCodepoints[$index]) -ge 0) -or
+            [string]$token.codepoint -ne $excludedCodepoints[$index] -or
+            [string]$token.reason -notin @('ui_control', 'ui_escape_sequence_component', 'game_private_icon')) {
+            throw "Excluded font token $index is invalid"
         }
     }
 
@@ -284,12 +320,12 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
     for ($contractIndex = 0; $contractIndex -lt 4; $contractIndex++) {
         $expectedEntry = if ($contractIndex -lt 2) { 6 } else { 7 }
         $expectedTable = $contractIndex % 2
-        $expectedCount = if ($expectedTable -eq 0) { 342 } else { 354 }
+        $expectedCount = if ($expectedTable -eq 0) { 524 } else { 562 }
         $expectedHash = if ($expectedTable -eq 0) {
-            '5254670AE29E925240BCC980155B78CFE2698094833B0D69B084715857B9D94D'
+            'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1'
         }
         else {
-            '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7'
+            '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229'
         }
         $contract = $appendContracts[$contractIndex]
         if ([int]$contract.entry -ne $expectedEntry -or [int]$contract.table -ne $expectedTable -or
@@ -311,13 +347,13 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         $manifestPayload = @($Manifest.font.payloads | Where-Object {
             [string]$_.path -eq $manifestPayloadPath
         })
-        $recordBytes = @(($hangulCodepoints.Count * 12), ($allowedCodepoints.Count * 12))
-        $pinnedPayloadSize = if ($entryNumber -eq 6) { 801792 } else { 356352 }
+        $recordBytes = @(($table0Codepoints.Count * 12), ($allowedCodepoints.Count * 12))
+        $pinnedPayloadSize = if ($entryNumber -eq 6) { 1251072 } else { 556032 }
         $pinnedPayloadHash = if ($entryNumber -eq 6) {
-            '7131812389A78D10296BF7B5786E1CA387960C6F4A6875E0E793BAAFB1A13082'
+            '53898FD6039F8CAD63BC85D50791DD3451D9EDCB69EB6F15EE08550EF50A91ED'
         }
         else {
-            'FD320B8D1ED831559B3F7C2E1F236D1D38376EDDC5EF59F345D99D7F93864EEC'
+            'CD34058F3C85554900314394AB3C1CFD92DF6CA7007068F44F2D12968DCA168D'
         }
         $pinnedStockSize = if ($entryNumber -eq 6) { 25817936 } else { 11771536 }
         $pinnedStockHash = if ($entryNumber -eq 6) {
@@ -326,23 +362,23 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         else {
             'DADBE4EEA223FD48CEFA9A93A08EF1F2458B3BD543ADFCEBD6D888B9EE2AFBB0'
         }
-        $pinnedTargetSize = if ($entryNumber -eq 6) { 26628080 } else { 12136240 }
+        $pinnedTargetSize = if ($entryNumber -eq 6) { 27082040 } else { 12340600 }
         $pinnedTargetHash = if ($entryNumber -eq 6) {
-            '951906C6870F60F9342E9A90DF8DBF920D555092D3E06B1B822A41448740DD61'
+            'F2C76E79ADE0024F237DA1061E0DCFFCC18CB7D4DCCB54B7C72BFDD0F9CAC996'
         }
         else {
-            'C96704BF3A7FE1B29E3CB29361D1E56FCA8062CA73210CBCFCD73BE2E7C7CC66'
+            '769C94F7C9E8E7EA5BF47644A56328EF2B8761DC43F9E6D26E46C127C716BC1B'
         }
         $pinnedCell = if ($entryNumber -eq 6) { 48 } else { 32 }
         $pinnedBytesPerGlyph = if ($entryNumber -eq 6) { 1152 } else { 512 }
-        $pinnedPayloadLengths = if ($entryNumber -eq 6) { @(393984, 407808) } else { @(175104, 181248) }
+        $pinnedPayloadLengths = if ($entryNumber -eq 6) { @(603648, 647424) } else { @(268288, 287744) }
         $pinnedRecordHashes = if ($entryNumber -eq 6) {
-            @('B388BBFA64C999A2E898E24B3BB213032FE37BA47A38A74FD4CA2921D170C3F2',
-              '793ED59B8401B729A9EFE1331CCA8293F271266AE1EF692BF84AE79334F1E952')
+            @('FFB02027E8254E6D0956C777914411D92BE0B1757A09F32D56CF6FD99F7FE23F',
+              'CCB4C974248A56E505233FCF0AFC0058AFC9D09A365EF7CED71BB3129A086F3F')
         }
         else {
-            @('17F1B16A954406D8612F18CA3D412433BB49C51B1594D7262E1AA46DB33D1540',
-              '5259BE5DB61FDAFB752AA116AB7587245BD4AAADE8284D33FEB4F36B6A243C47')
+            @('59D1FA3E13C34D1EEE9C698EB721DA2D215C030A892D78029D424743BB7039F8',
+              'DE1FBC1E7BC70E48591D7F58CA292A77E145CBF7CE30D6111BDF7AC34DEC7C3E')
         }
         if ([int]$entry.entry -ne $entryNumber -or $tables.Count -ne 2 -or
             [int64]$entry.stock.size -ne $pinnedStockSize -or
@@ -350,21 +386,21 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
             [int64]$entry.target.size -ne $pinnedTargetSize -or
             ([string]$entry.target.sha256).ToUpperInvariant() -ne $pinnedTargetHash -or
             [int]$entry.stock.atlas_offset -ne 534416 -or
-            [int]$entry.target.atlas_offset -ne 542768 -or
+            [int]$entry.target.atlas_offset -ne 547448 -or
             @($entry.stock.table_offsets).Count -ne 2 -or
             [int]$entry.stock.table_offsets[0] -ne 8296 -or
             [int]$entry.stock.table_offsets[1] -ne 402144 -or
             @($entry.target.table_offsets).Count -ne 2 -or
             [int]$entry.target.table_offsets[0] -ne 8296 -or
-            [int]$entry.target.table_offsets[1] -ne 406248 -or
+            [int]$entry.target.table_offsets[1] -ne 408432 -or
             [string]$entry.pixel_payload.file -ne $expectedPayload -or
             [int64]$entry.pixel_payload.size -ne $pinnedPayloadSize -or
             ([string]$entry.pixel_payload.sha256).ToUpperInvariant() -ne $pinnedPayloadHash -or
             [int]$entry.pixel_payload.cell -ne $pinnedCell -or
             [int]$entry.pixel_payload.bytes_per_glyph -ne $pinnedBytesPerGlyph -or
-            [int]$entry.pixel_payload.raster_union_codepoint_count -ne 354 -or
-            [int]$entry.pixel_payload.glyph_count_by_table.'0' -ne 342 -or
-            [int]$entry.pixel_payload.glyph_count_by_table.'1' -ne 354 -or
+            [int]$entry.pixel_payload.raster_union_codepoint_count -ne 562 -or
+            [int]$entry.pixel_payload.glyph_count_by_table.'0' -ne 524 -or
+            [int]$entry.pixel_payload.glyph_count_by_table.'1' -ne 562 -or
             $manifestPayload.Count -ne 1 -or
             [int64]$manifestPayload[0].size -ne [int64]$entry.pixel_payload.size -or
             ([string]$manifestPayload[0].sha256).ToUpperInvariant() -ne ([string]$entry.pixel_payload.sha256).ToUpperInvariant() -or
@@ -384,12 +420,14 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
             $table = $tables[$tableIndex]
             $changes = @($table.map_changes)
             [string[]]$expectedCodepoints = $(if ($tableIndex -eq 0) {
-                $hangulCodepoints
+                $table0Codepoints
             }
             else {
                 $allowedCodepoints
             })
             if ([int]$table.table -ne $tableIndex -or
+                [int]$table.source_offset -ne $(if ($tableIndex -eq 0) { 8296 } else { 402144 }) -or
+                [int]$table.target_offset -ne $(if ($tableIndex -eq 0) { 8296 } else { 408432 }) -or
                 [int]$table.source_record_count -ne $(if ($tableIndex -eq 0) { 21898 } else { 100 }) -or
                 [int]$table.target_record_count -ne ([int]$table.source_record_count + $expectedCodepoints.Count) -or
                 @($table.append_codepoints).Count -ne $expectedCodepoints.Count -or
@@ -397,7 +435,7 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
                 [int]$table.pixel_payload_offset -ne $(if ($tableIndex -eq 0) { 0 } else { $pinnedPayloadLengths[0] }) -or
                 [int]$table.pixel_payload_length -ne $pinnedPayloadLengths[$tableIndex] -or
                 ([string]$table.append_codepoints_sha256).ToUpperInvariant() -ne
-                    $(if ($tableIndex -eq 0) { '5254670AE29E925240BCC980155B78CFE2698094833B0D69B084715857B9D94D' } else { '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7' }) -or
+                    $(if ($tableIndex -eq 0) { 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1' } else { '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' }) -or
                 ([string]$table.appended_records_sha256).ToUpperInvariant() -ne $pinnedRecordHashes[$tableIndex] -or
                 ([string]$table.appended_records_hex).Length -ne ($recordBytes[$tableIndex] * 2)) {
                 throw "Font entry $entryNumber table $tableIndex structure is invalid"
@@ -427,7 +465,7 @@ function Assert-EvidenceContract($Manifest, $Evidence) {
         'passed', 'source_sha256', 'checks', 'artifacts', 'screens', 'scope'
     ) 'runtime evidence'
     if ($Evidence.schema -ne 'nobu16.file-only-validation-evidence.v2' -or
-        $Evidence.release_id -ne 'msgui-p4-font-v4-v0.3' -or
+        $Evidence.release_id -ne 'msgui-full-font-v4-v0.3' -or
         $Evidence.release_eligible -ne $Manifest.release_eligible -or
         $Evidence.offline.passed -ne $Manifest.install_restore_tested) {
         throw 'Validation evidence contract is invalid'
@@ -493,13 +531,16 @@ function Assert-EvidenceContract($Manifest, $Evidence) {
             'observed_labels', 'untested_areas'
         ) 'runtime evidence scope'
         foreach ($name in @(
-            'boot_completed', 'korean_ui_visible', 'castle_name_horizontal',
-            'missing_glyphs_checked',
+            'boot_completed', 'korean_ui_visible', 'missing_glyphs_checked',
             'clipping_checked', 'normal_exit', 'stock_restored_after_qa'
         )) {
             if ($Evidence.runtime.checks.$name -ne $true) {
                 throw "Runtime validation evidence is missing check: $name"
             }
+        }
+        $castleNameHorizontal = $Evidence.runtime.checks.PSObject.Properties['castle_name_horizontal']
+        if ($null -eq $castleNameHorizontal -or $castleNameHorizontal.Value -isnot [bool]) {
+            throw 'Runtime validation evidence check must be present and boolean: castle_name_horizontal'
         }
         if ([string]$Evidence.runtime.source_sha256 -notmatch '\A[0-9A-F]{64}\z' -or
             ([string]$Evidence.runtime.artifacts.message_target_sha256).ToUpperInvariant() -ne
@@ -635,20 +676,24 @@ function Assert-OrdinaryPath([string]$Path, [string]$Label) {
 function Assert-NoCommercialFullResource([string]$Path, [string]$Relative) {
     $item = Get-Item -LiteralPath $Path
     $forbiddenSizes = @(
-        [int64]60829, [int64]87274,
-        [int64]160318119, [int64]180350761,
-        [int64]25817936, [int64]26628080,
-        [int64]11771536, [int64]12136240
+        [int64]60829, [int64]87274, [int64]114448,
+        [int64]160318119, [int64]180350761, [int64]181011663,
+        [int64]25817936, [int64]26628080, [int64]27082040,
+        [int64]11771536, [int64]12136240, [int64]12340600
     )
     $forbiddenHashes = @(
         'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82',
         '5E4B26FC465F4F0F4C046462714E7B677D7B479FDA6023086EF7F9A8817E6984',
+        'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746',
         '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99',
         '3BC57379D9AF95E83A77C96C1EE2D104AAF4A8BEA1733EA33FC3D1BCF056D1A9',
+        '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A',
         '414A8E98DCF0F52633CD039A74E97AE61A97D98A96684D450EBADD4C3C85CAEB',
         '951906C6870F60F9342E9A90DF8DBF920D555092D3E06B1B822A41448740DD61',
+        'F2C76E79ADE0024F237DA1061E0DCFFCC18CB7D4DCCB54B7C72BFDD0F9CAC996',
         'DADBE4EEA223FD48CEFA9A93A08EF1F2458B3BD543ADFCEBD6D888B9EE2AFBB0',
-        'C96704BF3A7FE1B29E3CB29361D1E56FCA8062CA73210CBCFCD73BE2E7C7CC66'
+        'C96704BF3A7FE1B29E3CB29361D1E56FCA8062CA73210CBCFCD73BE2E7C7CC66',
+        '769C94F7C9E8E7EA5BF47644A56328EF2B8761DC43F9E6D26E46C127C716BC1B'
     )
     if ($forbiddenSizes -contains [int64]$item.Length) {
         throw "Package contains a file with a forbidden complete-resource size: $Relative"
@@ -724,8 +769,8 @@ function Test-Package {
             $manifest.development_milestone -eq $true -and
             $manifest.runtime_validation -eq 'pending'))
     if ($manifest.schema -ne 'nobu16.korean-file-only-release.v2' -or
-        $manifest.release_id -ne 'msgui-p4-font-v4-v0.3' -or
-        $manifest.release_name -ne 'NOBU16 Korean MSGUI P4 / Font-v4 file-only v0.3' -or
+        $manifest.release_id -ne 'msgui-full-font-v4-v0.3' -or
+        $manifest.release_name -ne 'NOBU16 Korean MSGUI Full / Font-v4 file-only v0.3' -or
         (($manifest.release_eligible -eq $true -and $manifest.version -ne '0.3') -or
             ($manifest.release_eligible -eq $false -and $manifest.version -ne '0.3-dev')) -or
         $manifest.architecture -ne 'file-only-offline' -or
@@ -750,21 +795,21 @@ function Test-Package {
         $manifest.message.operation_ids_encoding -ne 'UTF-8 compact JSON integer array' -or
         $manifest.font.raster_codepoints_encoding -ne 'UTF-8 compact JSON string array' -or
         $manifest.font.append_codepoints_encoding -ne 'ASCII U+XXXX LF-delimited lines' -or
-        [int]$manifest.font.raster_codepoint_count -ne 354 -or
-        ([string]$manifest.font.raster_codepoints_sha256).ToUpperInvariant() -ne '7EEE2CD1CD8C111108E23707CF80E48444611EB5239AEE700EF607679560B04F' -or
-        [int]$manifest.font.table0_append_count -ne 342 -or
-        [int]$manifest.font.table1_append_count -ne 354 -or
-        ([string]$manifest.font.table0_codepoints_sha256).ToUpperInvariant() -ne '5254670AE29E925240BCC980155B78CFE2698094833B0D69B084715857B9D94D' -or
-        ([string]$manifest.font.table1_codepoints_sha256).ToUpperInvariant() -ne '700D935F92E05FFD806A8AD267EE7A9A2F46C393E945890AECBEED887CEC5BB7' -or
+        [int]$manifest.font.raster_codepoint_count -ne 562 -or
+        ([string]$manifest.font.raster_codepoints_sha256).ToUpperInvariant() -ne '72FA45F51EADB2827F220891D3A0FBDA0D46BC8A4673DE8AD1806E417372D7AC' -or
+        [int]$manifest.font.table0_append_count -ne 524 -or
+        [int]$manifest.font.table1_append_count -ne 562 -or
+        ([string]$manifest.font.table0_codepoints_sha256).ToUpperInvariant() -ne 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1' -or
+        ([string]$manifest.font.table1_codepoints_sha256).ToUpperInvariant() -ne '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' -or
         @($manifest.font.payloads).Count -ne 2 -or
         @($manifest.files).Count -ne 16 -or
-        [int64]$manifest.message.recipe_size -ne 153571 -or
-        ([string]$manifest.message.recipe_sha256).ToUpperInvariant() -ne 'E6CC464E01F9D86A8AC995FD47FBE1EF6AD51DCD67C05117A7BF8ECC573460D2' -or
-        [int64]$manifest.font.recipe_size -ne 311007 -or
-        ([string]$manifest.font.recipe_sha256).ToUpperInvariant() -ne 'EC4B9C68A1FF62DD06F53C55A30F45A3F12F62D1D1C7654196C780021288EA07' -or
-        $manifest.backup_directory_name -ne 'msgui_p4_font_v4_v0_3' -or
-        [int]$manifest.message.operation_count -ne 931 -or
-        ([string]$manifest.message.operation_ids_sha256).ToUpperInvariant() -ne '7F95C3EDB26F6C53990B35C5C2C4C3552B4789E1F8BA4D140A77948C9B57E187') {
+        [int64]$manifest.message.recipe_size -ne 688338 -or
+        ([string]$manifest.message.recipe_sha256).ToUpperInvariant() -ne '3F5CAC974C95B19B78319DBF97C2289FFF82B4ED23A4950013DB94C19A6948AB' -or
+        [int64]$manifest.font.recipe_size -ne 481533 -or
+        ([string]$manifest.font.recipe_sha256).ToUpperInvariant() -ne '561477D6312FF02DDD18C09CBF4A2802E00BFA42015B325CFE6F04BDED04C109' -or
+        $manifest.backup_directory_name -ne 'msgui_full_font_v4_v0_3' -or
+        [int]$manifest.message.operation_count -ne 3819 -or
+        ([string]$manifest.message.operation_ids_sha256).ToUpperInvariant() -ne '0F336EAF33E34461C7D6CA7D8667B02DC103786595CF783139E16912D99461FD') {
         throw 'Release manifest contract is invalid'
     }
     $expectedPaths = @(
@@ -793,11 +838,11 @@ function Test-Package {
         'APPLY_KOREAN_PATCH.bat' = 1024
         'components\font\licenses\OFL-NotoSansKR.txt' = 8192
         'components\font\licenses\OFL-NotoSerifKR.txt' = 8192
-        'components\font\metrics\glyphs.jsonl' = 443134
-        'components\font\payload\glyph_pixels_entry_6.bin' = 801792
-        'components\font\payload\glyph_pixels_entry_7.bin' = 356352
-        'components\font\recipe.json' = 311007
-        'components\message\msgui_sc.recipe.json' = 153571
+        'components\font\metrics\glyphs.jsonl' = 691550
+        'components\font\payload\glyph_pixels_entry_6.bin' = 1251072
+        'components\font\payload\glyph_pixels_entry_7.bin' = 556032
+        'components\font\recipe.json' = 481533
+        'components\message\msgui_sc.recipe.json' = 688338
         'FILE_ONLY_POLICY_KO.md' = 32768
         'README_KO.md' = 32768
         'RESTORE_ORIGINALS.bat' = 1024
@@ -854,16 +899,22 @@ function Test-Package {
     if ($actual.Count -ne $listed.Count) {
         throw 'Package inventory count does not match the release manifest'
     }
-    $legacyReleaseId = [string]::Concat('msgui-', 'p', '3-font-', 'v', '3-v0', '.2')
-    $legacyReleaseName = [string]::Concat('NOBU16 Korean MSGUI ', 'P', '3 / Font-', 'v', '3 file-only v0', '.2')
-    $legacyBackupName = [string]::Concat('msgui_', 'p', '3_font_', 'v', '3_v0', '_2')
+    $legacyValues = @(
+        [string]::Concat('msgui-', 'p', '3-font-', 'v', '3-v0', '.2'),
+        [string]::Concat('NOBU16 Korean MSGUI ', 'P', '3 / Font-', 'v', '3 file-only v0', '.2'),
+        [string]::Concat('msgui_', 'p', '3_font_', 'v', '3_v0', '_2'),
+        [string]::Concat('msgui-', 'p', '4-font-', 'v', '4-v0', '.3'),
+        [string]::Concat('NOBU16 Korean MSGUI ', 'P', '4 / Font-', 'v', '4 file-only v0', '.3'),
+        [string]::Concat('msgui_', 'p', '4_font_', 'v', '4_v0', '_3')
+    )
     $strictUtf8 = New-Object Text.UTF8Encoding($false, $true)
     foreach ($file in $actual) {
         if ([IO.Path]::GetExtension($file.Name) -in @('.ps1', '.cs', '.md', '.bat', '.json', '.jsonl')) {
             $text = $strictUtf8.GetString([IO.File]::ReadAllBytes($file.FullName))
-            if ($text.Contains($legacyReleaseId) -or $text.Contains($legacyReleaseName) -or
-                $text.Contains($legacyBackupName)) {
-                throw "Package contains a legacy release identity: $($file.FullName)"
+            foreach ($legacyValue in $legacyValues) {
+                if ($text.Contains($legacyValue)) {
+                    throw "Package contains a legacy release identity: $($file.FullName)"
+                }
             }
         }
     }
@@ -1167,7 +1218,7 @@ Assert-OrdinaryPath (Join-Path $ResolvedGameRoot 'RES_SC') 'SC font directory'
 Assert-OrdinaryPath $FontPath 'SC font resource'
 
 $BackupParent = Join-Path $ResolvedGameRoot 'KR_PATCH_BACKUP'
-$BackupRoot = Join-Path $BackupParent 'msgui_p4_font_v4_v0_3'
+$BackupRoot = Join-Path $BackupParent 'msgui_full_font_v4_v0_3'
 $MessageBackup = Join-Path $BackupRoot 'message_sc.stock.bak'
 $FontBackup = Join-Path $BackupRoot 'font_sc.stock.bak'
 $StatePath = Join-Path $BackupRoot 'install_state.json'
@@ -1227,7 +1278,7 @@ if ($Action -eq 'Apply') {
 
     $state = [ordered]@{
         schema = 'nobu16.file-only-install-state.v1'
-        release_id = 'msgui-p4-font-v4-v0.3'
+        release_id = 'msgui-full-font-v4-v0.3'
         release_manifest_sha256 = Get-Sha256 $ManifestPath
         status = 'apply_ready'
         game_root = $ResolvedGameRoot

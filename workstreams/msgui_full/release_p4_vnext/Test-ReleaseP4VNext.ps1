@@ -11,26 +11,39 @@ $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $KrPatchRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $PSScriptRoot))
 $GameRoot = Split-Path -Parent $KrPatchRoot
 if (-not $PackageRoot) {
-    $PackageRoot = Join-Path $KrPatchRoot 'releases\msgui_p4_file_only_v0.3-dev_2026-07-13'
+    $PackageRoot = Join-Path $KrPatchRoot 'releases\msgui_full_file_only_v0.3-dev_2026-07-14'
 }
 if (-not $EvidenceOutput) {
-    $EvidenceOutput = Join-Path $KrPatchRoot 'reports\release_p4_vnext_offline_validation_2026-07-13.json'
+    $EvidenceOutput = Join-Path $KrPatchRoot 'reports\release_full_v0.3_offline_validation_2026-07-14.json'
 }
 $PackageRoot = [IO.Path]::GetFullPath($PackageRoot)
 $EvidenceOutput = [IO.Path]::GetFullPath($EvidenceOutput)
 $Installer = Join-Path $PackageRoot 'tools\Invoke-FileOnlyPatch.ps1'
 $StockMessage = Join-Path $GameRoot 'MSG_PK\SC\msgui.bin'
 $StockFont = Join-Path $GameRoot 'RES_SC\res_lang.bin'
-$TargetMessageSource = Join-Path $KrPatchRoot 'workstreams\msgui_full\build_p4_0401_1100\private\message_recipe_repro\recipe_rebuilt_1.msgui.bin'
-$TargetFontSource = Join-Path $KrPatchRoot 'workstreams\msgui_full\font_v4\build\private\candidate\res_lang.SC.font-v4.bin'
+$TargetMessageSource = Join-Path $KrPatchRoot 'tmp\checkpoint_5099\final_build_i\MSG_PK\SC\msgui.bin'
+$TargetFontSource = Join-Path $KrPatchRoot 'tmp\checkpoint_5099\font_final_5099_m\private\candidate\res_lang.SC.font-v4.bin'
+$RuntimeProbeScreen = Join-Path $KrPatchRoot 'reports\screenshots\msgui_p3_01_main_menu.png'
 $PowerShellExe = 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe'
 
+$ReleaseId = 'msgui-full-font-v4-v0.3'
+$ReleaseName = 'NOBU16 Korean MSGUI Full / Font-v4 file-only v0.3'
+$BackupDirectoryName = 'msgui_full_font_v4_v0_3'
 $StockMessageHash = 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82'
-$TargetMessageHash = '5E4B26FC465F4F0F4C046462714E7B677D7B479FDA6023086EF7F9A8817E6984'
-$TargetMessageSize = 87274L
+$TargetMessageHash = 'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746'
+$TargetMessageSize = 114448L
 $StockFontHash = '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99'
-$TargetFontHash = '3BC57379D9AF95E83A77C96C1EE2D104AAF4A8BEA1733EA33FC3D1BCF056D1A9'
-$TargetFontSize = 180350761L
+$TargetFontHash = '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A'
+$TargetFontSize = 181011663L
+$RuntimeProbeScreenHash = 'D9605F4C4FA45B2D1E53DFCDAA3C4B1380EEC3D66AAA17EC759FF0DCB0D94454'
+$ExpectedOperationCount = 3819
+$ExpectedOperationIdsHash = '0F336EAF33E34461C7D6CA7D8667B02DC103786595CF783139E16912D99461FD'
+$ExpectedRasterCodepointCount = 562
+$ExpectedRasterCodepointsHash = '72FA45F51EADB2827F220891D3A0FBDA0D46BC8A4673DE8AD1806E417372D7AC'
+$ExpectedTable0AppendCount = 524
+$ExpectedTable1AppendCount = 562
+$ExpectedTable0CodepointsHash = 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1'
+$ExpectedTable1CodepointsHash = '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229'
 
 function Get-Sha256([string]$Path) {
     return (Get-FileHash -Algorithm SHA256 -LiteralPath $Path).Hash.ToUpperInvariant()
@@ -132,7 +145,10 @@ function Insert-AfterFirst([string]$Text, [string]$Needle, [string]$Insertion) {
     return $Text.Insert($index + $Needle.Length, "`n" + $Insertion)
 }
 
-foreach ($path in @($PackageRoot, $Installer, $StockMessage, $StockFont, $TargetMessageSource, $TargetFontSource)) {
+foreach ($path in @(
+    $PackageRoot, $Installer, $StockMessage, $StockFont,
+    $TargetMessageSource, $TargetFontSource, $RuntimeProbeScreen
+)) {
     if (-not (Test-Path -LiteralPath $path)) { throw "Required test input is missing: $path" }
 }
 if (@(Get-Process -Name NOBU16,NOBU16PK,NOBU16PK_EN,NOBU16_Launcher -ErrorAction SilentlyContinue).Count -ne 0) {
@@ -140,14 +156,15 @@ if (@(Get-Process -Name NOBU16,NOBU16PK,NOBU16PK_EN,NOBU16_Launcher -ErrorAction
 }
 Assert-Hash $StockMessage $StockMessageHash 'installed stock message before tests'
 Assert-Hash $StockFont $StockFontHash 'installed stock font before tests'
-Assert-Size $TargetMessageSource $TargetMessageSize 'canonical P4 target message'
-Assert-Hash $TargetMessageSource $TargetMessageHash 'canonical P4 target message'
+Assert-Size $TargetMessageSource $TargetMessageSize 'canonical full target message'
+Assert-Hash $TargetMessageSource $TargetMessageHash 'canonical full target message'
 Assert-Size $TargetFontSource $TargetFontSize 'canonical Font-v4 target archive'
 Assert-Hash $TargetFontSource $TargetFontHash 'canonical Font-v4 target archive'
+Assert-Hash $RuntimeProbeScreen $RuntimeProbeScreenHash 'runtime contract probe screenshot'
 $installedMessageBefore = Get-Sha256 $StockMessage
 $installedFontBefore = Get-Sha256 $StockFont
 
-$tempParent = [IO.Path]::GetFullPath((Join-Path $KrPatchRoot 'tmp\release_p4_vnext_tests'))
+$tempParent = [IO.Path]::GetFullPath((Join-Path $KrPatchRoot 'tmp\release_full_v0.3_tests'))
 [IO.Directory]::CreateDirectory($tempParent) | Out-Null
 $testRoot = Join-Path $tempParent ([Guid]::NewGuid().ToString('N'))
 [IO.Directory]::CreateDirectory($testRoot) | Out-Null
@@ -155,6 +172,7 @@ $fixture = Join-Path $testRoot 'game'
 $fixtureMessage = Join-Path $fixture 'MSG_PK\SC\msgui.bin'
 $fixtureFont = Join-Path $fixture 'RES_SC\res_lang.bin'
 $helper = $null
+$runtimeProbeOutputs = New-Object 'System.Collections.Generic.List[string]'
 
 $checks = [ordered]@{
     verify_passed = $false
@@ -170,7 +188,8 @@ $checks = [ordered]@{
     untrusted_installer_not_executed = $false
     installed_game_files_unchanged = $false
     development_gate_refused = $false
-    castle_name_runtime_gate_refused = $false
+    castle_name_vertical_accepted = $false
+    required_runtime_gates_refused = $false
 }
 
 try {
@@ -181,6 +200,25 @@ try {
 
     $verify = Invoke-Package $PackageRoot 'Verify' $null $false
     if ($verify.exit_code -ne 0) { throw "Package Verify failed: $($verify.output)" }
+    $manifest = Get-Content -LiteralPath (Join-Path $PackageRoot 'release_manifest.json') -Raw -Encoding UTF8 |
+        ConvertFrom-Json
+    if ($manifest.release_id -ne $ReleaseId -or
+        $manifest.release_name -ne $ReleaseName -or
+        $manifest.backup_directory_name -ne $BackupDirectoryName -or
+        [int]$manifest.message.operation_count -ne $ExpectedOperationCount -or
+        ([string]$manifest.message.operation_ids_sha256).ToUpperInvariant() -ne $ExpectedOperationIdsHash -or
+        [int]$manifest.font.raster_codepoint_count -ne $ExpectedRasterCodepointCount -or
+        ([string]$manifest.font.raster_codepoints_sha256).ToUpperInvariant() -ne $ExpectedRasterCodepointsHash -or
+        [int]$manifest.font.table0_append_count -ne $ExpectedTable0AppendCount -or
+        [int]$manifest.font.table1_append_count -ne $ExpectedTable1AppendCount -or
+        ([string]$manifest.font.table0_codepoints_sha256).ToUpperInvariant() -ne $ExpectedTable0CodepointsHash -or
+        ([string]$manifest.font.table1_codepoints_sha256).ToUpperInvariant() -ne $ExpectedTable1CodepointsHash -or
+        [int64]$manifest.message.target.size -ne $TargetMessageSize -or
+        ([string]$manifest.message.target.sha256).ToUpperInvariant() -ne $TargetMessageHash -or
+        [int64]$manifest.font.target.size -ne $TargetFontSize -or
+        ([string]$manifest.font.target.sha256).ToUpperInvariant() -ne $TargetFontHash) {
+        throw 'Package manifest does not match the final full v0.3 contract'
+    }
     $checks.verify_passed = $true
 
     $developmentGate = Invoke-Package $PackageRoot 'Apply' $fixture $false
@@ -195,7 +233,7 @@ try {
     Assert-Hash $fixtureFont $TargetFontHash 'isolated apply font'
     Assert-Size $fixtureMessage $TargetMessageSize 'isolated apply message'
     Assert-Size $fixtureFont $TargetFontSize 'isolated apply font'
-    $backupRoot = Join-Path $fixture 'KR_PATCH_BACKUP\msgui_p4_font_v4_v0_3'
+    $backupRoot = Join-Path $fixture ("KR_PATCH_BACKUP\" + $BackupDirectoryName)
     Assert-Hash (Join-Path $backupRoot 'message_sc.stock.bak') $StockMessageHash 'message backup'
     Assert-Hash (Join-Path $backupRoot 'font_sc.stock.bak') $StockFontHash 'font backup'
     $state = Get-Content -LiteralPath (Join-Path $backupRoot 'install_state.json') -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -255,7 +293,7 @@ try {
 
     $tamperResults = @()
 
-    $renamedRoot = Join-Path $testRoot 'tamper_complete_p4_resource_at_allowed_path'
+    $renamedRoot = Join-Path $testRoot 'tamper_complete_full_resource_at_allowed_path'
     Copy-Package $renamedRoot
     $leakPath = Join-Path $renamedRoot 'components\message\msgui_sc.recipe.json'
     Copy-Item -LiteralPath $TargetMessageSource -Destination $leakPath
@@ -396,7 +434,7 @@ try {
     $raw = [IO.File]::ReadAllText($builderProbeEvidence, [Text.Encoding]::UTF8)
     $raw = Insert-AfterFirst $raw '"passed":  true,' '    "passed":  true,'
     [IO.File]::WriteAllText($builderProbeEvidence, $raw, $Utf8NoBom)
-    $builderProbeOutput = Join-Path $KrPatchRoot ('releases\.p4_vnext_json_guard_probe_' + [Guid]::NewGuid().ToString('N'))
+    $builderProbeOutput = Join-Path $KrPatchRoot ('releases\.full_v0.3_json_guard_probe_' + [Guid]::NewGuid().ToString('N'))
     $previousPreference = $ErrorActionPreference
     try {
         $ErrorActionPreference = 'Continue'
@@ -421,11 +459,11 @@ try {
         throw 'Builder accepted duplicate JSON keys before ConvertFrom-Json'
     }
 
-    Assert-Hash $StockMessage $installedMessageBefore 'installed message before castle-name gate probe'
-    Assert-Hash $StockFont $installedFontBefore 'installed font before castle-name gate probe'
+    Assert-Hash $StockMessage $installedMessageBefore 'installed message before runtime gate probes'
+    Assert-Hash $StockFont $installedFontBefore 'installed font before runtime gate probes'
     $checks.installed_game_files_unchanged = $true
 
-    $runtimeGateOfflineEvidence = Join-Path $testRoot 'castle_gate_offline_evidence.json'
+    $runtimeGateOfflineEvidence = Join-Path $testRoot 'runtime_gate_offline_evidence.json'
     $runtimeGateOffline = [ordered]@{
         schema = 'nobu16.file-only-offline-validation.v2'
         passed = $true
@@ -440,7 +478,7 @@ try {
         }
     }
     Write-Json $runtimeGateOfflineEvidence $runtimeGateOffline 20
-    $runtimeGateEvidence = Join-Path $testRoot 'castle_gate_runtime_evidence.json'
+    $runtimeGateEvidence = Join-Path $testRoot 'runtime_gate_evidence.json'
     $runtimeGate = [ordered]@{
         schema = 'nobu16.file-only-runtime-validation.v2'
         passed = $true
@@ -458,12 +496,21 @@ try {
             normal_exit = $true
             stock_restored_after_qa = $true
         }
-        screens = @()
-        scope = [ordered]@{ observed_labels = @(); untested_areas = @() }
+        screens = @(
+            [ordered]@{
+                file = [IO.Path]::GetFileName($RuntimeProbeScreen)
+                sha256 = $RuntimeProbeScreenHash
+            }
+        )
+        scope = [ordered]@{
+            observed_labels = @('synthetic vertical-acceptance contract probe')
+            untested_areas = @('fixture only; not final runtime evidence')
+        }
     }
     Write-Json $runtimeGateEvidence $runtimeGate 20
     $runtimeGateOutput = Join-Path $KrPatchRoot `
-        ('releases\.p4_vnext_castle_gate_probe_' + [Guid]::NewGuid().ToString('N'))
+        ('releases\.full_v0.3_vertical_acceptance_probe_' + [Guid]::NewGuid().ToString('N'))
+    [void]$runtimeProbeOutputs.Add($runtimeGateOutput)
     $previousPreference = $ErrorActionPreference
     try {
         $ErrorActionPreference = 'Continue'
@@ -476,12 +523,50 @@ try {
     finally {
         $ErrorActionPreference = $previousPreference
     }
-    if ($runtimeGateExit -eq 0 -or
-        -not $runtimeGateText.Contains('castle_name_horizontal') -or
-        (Test-Path -LiteralPath $runtimeGateOutput)) {
-        throw 'Builder accepted runtime evidence while castle names remain vertical'
+    if ($runtimeGateExit -ne 0 -or -not (Test-Path -LiteralPath $runtimeGateOutput -PathType Container)) {
+        throw "Builder rejected non-blocking vertical castle-name evidence: $runtimeGateText"
     }
-    $checks.castle_name_runtime_gate_refused = $true
+    $runtimeManifest = Get-Content -LiteralPath (Join-Path $runtimeGateOutput 'release_manifest.json') `
+        -Raw -Encoding UTF8 | ConvertFrom-Json
+    $runtimePackagedEvidence = Get-Content -LiteralPath (Join-Path $runtimeGateOutput 'VALIDATION_EVIDENCE.json') `
+        -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($runtimeManifest.release_id -ne $ReleaseId -or
+        $runtimeManifest.release_eligible -ne $true -or
+        $runtimeManifest.runtime_validation -ne 'passed' -or
+        $runtimePackagedEvidence.runtime.passed -ne $true -or
+        $runtimePackagedEvidence.runtime.checks.castle_name_horizontal -ne $false) {
+        throw 'Vertical castle-name acceptance probe produced an invalid release contract'
+    }
+    $checks.castle_name_vertical_accepted = $true
+
+    $requiredRuntimeGates = @(
+        'boot_completed', 'korean_ui_visible', 'missing_glyphs_checked',
+        'clipping_checked', 'normal_exit', 'stock_restored_after_qa'
+    )
+    foreach ($requiredGate in $requiredRuntimeGates) {
+        $runtimeGate.checks[$requiredGate] = $false
+        Write-Json $runtimeGateEvidence $runtimeGate 20
+        $requiredGateOutput = Join-Path $KrPatchRoot `
+            ('releases\.full_v0.3_required_gate_probe_' + [Guid]::NewGuid().ToString('N'))
+        [void]$runtimeProbeOutputs.Add($requiredGateOutput)
+        $previousPreference = $ErrorActionPreference
+        try {
+            $ErrorActionPreference = 'Continue'
+            $requiredGateText = & $PowerShellExe -NoLogo -NoProfile -ExecutionPolicy Bypass -File `
+                (Join-Path $PSScriptRoot 'Build-ReleaseP4VNext.ps1') -OutputRoot $requiredGateOutput `
+                -OfflineEvidencePath $runtimeGateOfflineEvidence `
+                -RuntimeEvidencePath $runtimeGateEvidence 2>&1 | Out-String
+            $requiredGateExit = $LASTEXITCODE
+        }
+        finally {
+            $ErrorActionPreference = $previousPreference
+        }
+        $runtimeGate.checks[$requiredGate] = $true
+        if ($requiredGateExit -eq 0 -or (Test-Path -LiteralPath $requiredGateOutput)) {
+            throw "Builder accepted false required runtime gate ${requiredGate}: $requiredGateText"
+        }
+    }
+    $checks.required_runtime_gates_refused = $true
 
     Assert-Hash $StockMessage $installedMessageBefore 'installed message after tests'
     Assert-Hash $StockFont $installedFontBefore 'installed font after tests'
@@ -500,9 +585,9 @@ try {
             powershell_version = [string]$PSVersionTable.PSVersion
         }
         leak_regressions = @(
-            'complete P4 msgui substituted into an allowlisted recipe path rejected',
-            'complete P4 msgui embedded as ignored base64 JSON field rejected',
-            'unlisted hostile nested ZIP containing complete P4 msgui rejected',
+            'complete full msgui substituted into an allowlisted recipe path rejected',
+            'complete full msgui embedded as ignored base64 JSON field rejected',
+            'unlisted hostile nested ZIP containing complete full msgui rejected',
             'hostile ZIP traversal member rejected by the standalone audit',
             'direct duplicate manifest key rejected before ConvertFrom-Json',
             'nested duplicate evidence key rejected before ConvertFrom-Json',
@@ -518,6 +603,17 @@ try {
 finally {
     if ($null -ne $helper) {
         try { Stop-Process -Id $helper.Id -Force -ErrorAction SilentlyContinue } catch { }
+    }
+    $releasesRoot = [IO.Path]::GetFullPath((Join-Path $KrPatchRoot 'releases'))
+    $releasePrefix = $releasesRoot.TrimEnd('\') + '\'
+    foreach ($probePath in @($runtimeProbeOutputs)) {
+        $probeFull = [IO.Path]::GetFullPath($probePath)
+        if (-not $probeFull.StartsWith($releasePrefix, [StringComparison]::OrdinalIgnoreCase)) {
+            throw "Runtime probe output escaped the releases directory: $probeFull"
+        }
+        if (Test-Path -LiteralPath $probeFull -PathType Container) {
+            Remove-Item -LiteralPath $probeFull -Recurse -Force
+        }
     }
     $testRootFull = [IO.Path]::GetFullPath($testRoot)
     $tempPrefix = $tempParent.TrimEnd('\') + '\'
