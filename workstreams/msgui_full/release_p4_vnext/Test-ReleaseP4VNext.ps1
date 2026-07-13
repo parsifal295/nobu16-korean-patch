@@ -21,8 +21,8 @@ $EvidenceOutput = [IO.Path]::GetFullPath($EvidenceOutput)
 $Installer = Join-Path $PackageRoot 'tools\Invoke-FileOnlyPatch.ps1'
 $StockMessage = Join-Path $GameRoot 'MSG_PK\SC\msgui.bin'
 $StockFont = Join-Path $GameRoot 'RES_SC\res_lang.bin'
-$TargetMessageSource = Join-Path $KrPatchRoot 'tmp\checkpoint_5099\final_build_i\MSG_PK\SC\msgui.bin'
-$TargetFontSource = Join-Path $KrPatchRoot 'tmp\checkpoint_5099\font_final_5099_m\private\candidate\res_lang.SC.font-v4.bin'
+$TargetMessageSource = Join-Path $KrPatchRoot 'tmp\translation_qa\build_a\MSG_PK\SC\msgui.bin'
+$TargetFontSource = Join-Path $KrPatchRoot 'tmp\translation_qa\font_build_a\private\candidate\res_lang.SC.font-v4.bin'
 $RuntimeProbeScreen = Join-Path $KrPatchRoot 'reports\screenshots\msgui_p3_01_main_menu.png'
 $PowerShellExe = 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe'
 
@@ -30,20 +30,20 @@ $ReleaseId = 'msgui-full-font-v4-v0.3'
 $ReleaseName = 'NOBU16 Korean MSGUI Full / Font-v4 file-only v0.3'
 $BackupDirectoryName = 'msgui_full_font_v4_v0_3'
 $StockMessageHash = 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82'
-$TargetMessageHash = 'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746'
-$TargetMessageSize = 114448L
+$TargetMessageHash = '50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5'
+$TargetMessageSize = 114770L
 $StockFontHash = '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99'
-$TargetFontHash = '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A'
-$TargetFontSize = 181011663L
+$TargetFontHash = '9E0FFEAFCF3C50060E1E223988FD01BA2470987FB97A3B6DA75E0B7E3591AE9A'
+$TargetFontSize = 181015052L
 $RuntimeProbeScreenHash = 'D9605F4C4FA45B2D1E53DFCDAA3C4B1380EEC3D66AAA17EC759FF0DCB0D94454'
-$ExpectedOperationCount = 3819
-$ExpectedOperationIdsHash = '0F336EAF33E34461C7D6CA7D8667B02DC103786595CF783139E16912D99461FD'
-$ExpectedRasterCodepointCount = 562
-$ExpectedRasterCodepointsHash = '72FA45F51EADB2827F220891D3A0FBDA0D46BC8A4673DE8AD1806E417372D7AC'
-$ExpectedTable0AppendCount = 524
-$ExpectedTable1AppendCount = 562
-$ExpectedTable0CodepointsHash = 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1'
-$ExpectedTable1CodepointsHash = '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229'
+$ExpectedOperationCount = 3836
+$ExpectedOperationIdsHash = 'AFA976644E825BE78093E5FBCBA7D378F86AC461E3500A610B61E9CB3BD15B5C'
+$ExpectedRasterCodepointCount = 563
+$ExpectedRasterCodepointsHash = '1C2130490AC347C12E5E72A8AF9837740990D5EBEA5EBACB72AEA0DC6C4995D0'
+$ExpectedTable0AppendCount = 525
+$ExpectedTable1AppendCount = 563
+$ExpectedTable0CodepointsHash = 'B5014FFDD6BC462BFC66B1F8405AE78E64D25DA7805504FB26DF61DB54D4BE31'
+$ExpectedTable1CodepointsHash = 'E2A1D94BC03CE230C55B11B1B8FF7AD766D1C8B83549D5AACB410E3374AD739E'
 
 function Get-Sha256([string]$Path) {
     return (Get-FileHash -Algorithm SHA256 -LiteralPath $Path).Hash.ToUpperInvariant()

@@ -13,10 +13,10 @@
     "string_count": 5100
   },
   "target": {
-    "size": 114448,
-    "sha256": "E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746",
-    "raw_size": 113976,
-    "raw_sha256": "FDE98D7CE4AE27F75DE14F10967A82C6ED5A556BB97382DB1D131C8904DACC24"
+    "size": 114770,
+    "sha256": "50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5",
+    "raw_size": 114296,
+    "raw_sha256": "4C366E7DE38C82609BB2910D7D0BA6000E6BD63EB2651A981A5D1D15A43DCF3A"
   },
   "operations": [
     {
@@ -10802,12 +10802,12 @@
     {
       "id": 2405,
       "source_utf16le_sha256": "0E6CBC7664B62E44B1D231B46D30641FEEB644E86A18F17A84BC1C480AAA4866",
-      "replacement": "외양 가재 1"
+      "replacement": "도자마 가재 1"
     },
     {
       "id": 2406,
       "source_utf16le_sha256": "29B1EB9AD9B9373918486B17095D6173E6862D9214C0915A2B820E646160F3E9",
-      "replacement": "외양 가재 2"
+      "replacement": "도자마 가재 2"
     },
     {
       "id": 2407,
@@ -10862,7 +10862,7 @@
     {
       "id": 2421,
       "source_utf16le_sha256": "756CD69BF1FA7759B7C90DB347954C32C18ACD96DCA774DEA8D37CF19EAAD1AE",
-      "replacement": "외양"
+      "replacement": "도자마"
     },
     {
       "id": 2422,
@@ -10872,7 +10872,7 @@
     {
       "id": 2423,
       "source_utf16le_sha256": "A5179A2C653598EA30235DB2DE507700877047A627F814A47FD1B87EDDF3E41D",
-      "replacement": "외양 가재 임명"
+      "replacement": "도자마 가재 임명"
     },
     {
       "id": 2424,
@@ -11225,6 +11225,21 @@
       "replacement": "총사기 상승"
     },
     {
+      "id": 2498,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "성명 표시"
+    },
+    {
+      "id": 2499,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "성-이름"
+    },
+    {
+      "id": 2500,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "이름-성"
+    },
+    {
       "id": 2501,
       "source_utf16le_sha256": "E5B729E00DB8AA20CB7556F55BA58110CF1314BD8E145EAD0007FCCA3EE2ED27",
       "replacement": "보급 군량 수입"
@@ -11487,7 +11502,7 @@
     {
       "id": 2559,
       "source_utf16le_sha256": "E463F7733F781DCD0A30DA34B70CEBA32CEC732F870A7FC8D9AC94F7B418191E",
-      "replacement": "외양 가재"
+      "replacement": "도자마 가재"
     },
     {
       "id": 2560,
@@ -14172,7 +14187,7 @@
     {
       "id": 3235,
       "source_utf16le_sha256": "39BC1FB9AD9694C7F6C1B51D032206F086AE146FA7A88E88C5676D72AC71B821",
-      "replacement": "출진 중인 %s을(를) %s 지행에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?"
+      "replacement": "%s은(는) 출진 중인 무장입니다. %s의 지행을 해제하면 부대에서 이탈합니다. 계속하시겠습니까?"
     },
     {
       "id": 3236,
@@ -14187,12 +14202,12 @@
     {
       "id": 3238,
       "source_utf16le_sha256": "FBC7D8291E75A94DE639E2C5D4BB1E4D038654AF6208E5F311F7FBBA481D4DB5",
-      "replacement": "출진 중인 %s을(를) %s의 대관에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?"
+      "replacement": "%s은(는) 출진 중인 무장입니다. %s을(를) 대관직에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?"
     },
     {
       "id": 3239,
       "source_utf16le_sha256": "039104B7ECA6E3784332E512A6C6E6972740F0DF9CE55416039A6A18898B30E3",
-      "replacement": "출진 중인 %s을(를) %s의 성주에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?"
+      "replacement": "%s은(는) 출진 중인 무장입니다. %s을(를) 성주직에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?"
     },
     {
       "id": 3240,
@@ -15592,7 +15607,7 @@
     {
       "id": 3521,
       "source_utf16le_sha256": "C28E0822871C2B588A5515395BDDEC70BC952CDB873204845E5AC814FA5362A1",
-      "replacement": "자세력의 다이묘입니다"
+      "replacement": "본가의 다이묘입니다"
     },
     {
       "id": 3522,
@@ -15852,12 +15867,12 @@
     {
       "id": 3573,
       "source_utf16le_sha256": "98AEE78B9BA2CB146E9316FEBF63B2326A22B1CA0D05FCCCB78557E5D9222FFA",
-      "replacement": "자세력을 혐오하는 무장입니다"
+      "replacement": "본가를 혐오하는 무장입니다"
     },
     {
       "id": 3574,
       "source_utf16le_sha256": "2E28DF65E6F36D8149A310EBE26FE4448539328A6951D5E1FCFB3DF878FC5487",
-      "replacement": "자세력과 인연이 있는 무장입니다"
+      "replacement": "본가와 인연이 있는 무장입니다"
     },
     {
       "id": 3575,
@@ -16137,17 +16152,17 @@
     {
       "id": 3630,
       "source_utf16le_sha256": "25372228AECCBD18003D993B85960B73900BED9D19030FFFB85B17EF81738407",
-      "replacement": "%s을(를) %s의 영주에서 해임합니다.\n계속하시겠습니까?"
+      "replacement": "%s을(를) %s의 영주직에서 해임합니다.\n계속하시겠습니까?"
     },
     {
       "id": 3631,
       "source_utf16le_sha256": "558C02224AE57F9C7B8E05044D4654D8E2F5AA810BAFDEDC0CA91035B8FDCBE0",
-      "replacement": "%s을(를) %s의 성주에서 해임합니다.\n성하 방침이 설정되어 있으면 해제됩니다.\n계속하시겠습니까?"
+      "replacement": "%s을(를) %s의 성주직에서 해임합니다.\n성하 방침이 설정되어 있으면 해제됩니다.\n계속하시겠습니까?"
     },
     {
       "id": 3632,
       "source_utf16le_sha256": "36754B025DD8C1F7E6395034962921FAFB14B56C720AA1C4BD020B71A04A5153",
-      "replacement": "%s을(를) %s의 대관에서 해임합니다.\n계속하시겠습니까?"
+      "replacement": "%s을(를) %s의 대관직에서 해임합니다.\n계속하시겠습니까?"
     },
     {
       "id": 3633,
@@ -16425,6 +16440,11 @@
       "replacement": "선택 중인 적 성을 향해 출진합니다."
     },
     {
+      "id": 3688,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "내구가 최대입니다."
+    },
+    {
       "id": 3689,
       "source_utf16le_sha256": "F5F669B53B10CF760C30AB9DDDF4DCA8B1092E285DBADF46B5448D96FE0C30AE",
       "replacement": "원군을 요청할 수 있도록 국인중을 회유합니다."
@@ -16433,6 +16453,11 @@
       "id": 3690,
       "source_utf16le_sha256": "86E514EE198C95B8908BD4C638CD5AC9CFC34B4E28040DDA92F6AFEA4BF6F977",
       "replacement": "국인중을 세력 산하로 포섭합니다."
+    },
+    {
+      "id": 3691,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "선택 중인 부대를 출진 중인 부대의 목표로 설정합니다."
     },
     {
       "id": 3692,
@@ -16517,7 +16542,7 @@
     {
       "id": 3708,
       "source_utf16le_sha256": "35BE3E4EB19E73C13262C625F48BCF6BEE04A378B5287415A397E145397957A9",
-      "replacement": "시나리오 “%s” 시작 시 신분을 설정할 수 있습니다.\n※신분을 변경하면 군단장·성주·영주에서 해임될 수 있습니다."
+      "replacement": "시나리오 “%s” 시작 시 신분을 설정할 수 있습니다.\n※신분을 변경하면 군단장직·성주직·영주직에서 해임될 수 있습니다."
     },
     {
       "id": 3709,
@@ -16548,6 +16573,11 @@
       "id": 3714,
       "source_utf16le_sha256": "C0E994895F8E582EF39A8388312F52A2801C57480A26B5476566941F1E6B7AD0",
       "replacement": "금전 %d"
+    },
+    {
+      "id": 3715,
+      "source_utf16le_sha256": "BDFA8CDC5446CC8E059FAB3A76466EEBA9BC6552224B7ADA68D72DBBF2986929",
+      "replacement": "군량 %d"
     },
     {
       "id": 3716,
@@ -16780,6 +16810,26 @@
       "replacement": "시나리오 “%s” 시작 시 이 무장은 등장 전입니다.\n설정한 신분은 원복할 때 반영됩니다."
     },
     {
+      "id": 3769,
+      "source_utf16le_sha256": "AD7ED6C39F1B1DF2377BA4CB2A239DC70546BB4694ED0BA1ECC9E3A9D592E3DA",
+      "replacement": "시나리오 “%s” 시작 시의 소재지가 표시됩니다.\n※상황에 따라 소속 군단의 본거지에 등장합니다."
+    },
+    {
+      "id": 3770,
+      "source_utf16le_sha256": "547D299F9EBF3F78B43D19D8F2BF49742478391729E46FBDC2F83BA463E69B3B",
+      "replacement": "시나리오 “%s” 시작 시 이 무장은 국인중입니다."
+    },
+    {
+      "id": 3771,
+      "source_utf16le_sha256": "473CCC3FB1610F2264785F8EE30E169D4733AE8ABFE7BC3C295544E01BCC9EAD",
+      "replacement": "시나리오 “%s” 시작 시 이 무장은 낭인입니다."
+    },
+    {
+      "id": 3772,
+      "source_utf16le_sha256": "9510EE3EA77DB934802B219797322BE036DB6B3D6A24A3AF7150A45CD095E1F4",
+      "replacement": "시나리오 “%s” 시작 시 이 무장은 아직 등장하지 않았습니다."
+    },
+    {
       "id": 3773,
       "source_utf16le_sha256": "02CA27A6FE6CBE269097E3377A475074881E8C498423AAB7360F7E80ADC44763",
       "replacement": "시나리오 “%s” 시작 시 이 무장은 이미 사망했습니다."
@@ -16820,6 +16870,11 @@
       "replacement": "봉행 특성을 설정합니다."
     },
     {
+      "id": 3781,
+      "source_utf16le_sha256": "017DF7DC9B9663CB517A3625351B515C4BAA0FA7F66A55F57AD34DAFB84C9382",
+      "replacement": "출신을 설정합니다."
+    },
+    {
       "id": 3782,
       "source_utf16le_sha256": "440F769EEB4F39403929BD024F9A9CFAB3D665AB4CD39B2B45C47DB5E5C28A86",
       "replacement": "%s 탭의 편집 내용을 초기화합니다."
@@ -16828,6 +16883,11 @@
       "id": 3783,
       "source_utf16le_sha256": "6DAEBBBB5601F6FE2A89EB286BFE4D2AACA9FF161CBD6ACA0ABBAF181A584DE2",
       "replacement": "%s의 모든 편집 내용을 초기화합니다."
+    },
+    {
+      "id": 3784,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "무장 명감에서 %s의 정보를 볼 수 있습니다."
     },
     {
       "id": 3785,
@@ -16862,7 +16922,7 @@
     {
       "id": 3791,
       "source_utf16le_sha256": "405BE4B2CC9D43DB76D60DFC9C86BC5C6D0D1AE5AB0C9E6D50BCA5750AC3768A",
-      "replacement": "본가에 종속된 세력이 있으면 외양 가재를 임명할 수 있습니다."
+      "replacement": "본가에 종속된 세력이 있으면 도자마 가재를 임명할 수 있습니다."
     },
     {
       "id": 3792,
@@ -16987,7 +17047,7 @@
     {
       "id": 3817,
       "source_utf16le_sha256": "DC8445001C4729CAFC7BA18604114D1884585A052A116F2C10A4121A98791B63",
-      "replacement": "외양 가재를 임명할 수 있습니다."
+      "replacement": "도자마 가재를 임명할 수 있습니다."
     },
     {
       "id": 3818,
@@ -17173,6 +17233,11 @@
       "id": 3854,
       "source_utf16le_sha256": "69CD19BCD0864F3199C33F398B50DDC90E07C45BD37D455DBF84703FC2DD57A1",
       "replacement": "선택 중인 방위 거점입니다."
+    },
+    {
+      "id": 3855,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "%s와(과) %s이(가) 선택되어 있습니다.\n해제됩니다. 계속하시겠습니까?"
     },
     {
       "id": 3856,
@@ -17492,7 +17557,7 @@
     {
       "id": 3919,
       "source_utf16le_sha256": "CE8C745152CB170AE348855B4602EF9636838A897F7EBE0DB20EF08401F28495",
-      "replacement": "%s은(는) %s와(과)의 약정을 이행해\n지행으로 수여하면 %d년간 소령을 안도합니다.\n계속하시겠습니까?"
+      "replacement": "%s은(는) %s와(과) 맺은 약정을 이행해\n지행으로 수여하면 %d년간 소령을 안도합니다.\n계속하시겠습니까?"
     },
     {
       "id": 3920,
@@ -17605,6 +17670,11 @@
       "replacement": "명소가 있는 %s"
     },
     {
+      "id": 3942,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "명소가 있는 %s"
+    },
+    {
       "id": 3943,
       "source_utf16le_sha256": "4AB158887F2DB087C4139A77B60A899595DF6CEF84D279617FB1E6E9E06FFAF6",
       "replacement": "%s의 %s"
@@ -17637,12 +17707,12 @@
     {
       "id": 3949,
       "source_utf16le_sha256": "D91770AB34B1EA5D80F5B3E71FA37392BA91FEF6899359EC07E8658EE8DA885A",
-      "replacement": "자세력과의 외교가 금지될 세력을 지도에서 확인합니다"
+      "replacement": "본가와의 외교가 금지될 세력을 지도에서 확인합니다"
     },
     {
       "id": 3950,
       "source_utf16le_sha256": "6BEFB76B2A52D7530FEBF4F6C62B63E16A0117317D73174BF47D64967F65BBC5",
-      "replacement": "자세력과의 동맹을 파기할 세력을 지도에서 확인합니다"
+      "replacement": "본가와의 동맹을 파기할 세력을 지도에서 확인합니다"
     },
     {
       "id": 3951,
@@ -17662,7 +17732,7 @@
     {
       "id": 3954,
       "source_utf16le_sha256": "EFFC3962636A4E3193FE90C7D211911C8F7EA924714181CB099052FF333AC873",
-      "replacement": "%s와(과)의 동맹을 파기할 세력을 지도에서 선택합니다"
+      "replacement": "%s와(과) 맺은 동맹을 파기할 세력을 지도에서 선택합니다"
     },
     {
       "id": 3955,
@@ -17697,7 +17767,7 @@
     {
       "id": 3961,
       "source_utf16le_sha256": "7E38134DF0A05B81C8C58F629D253CE218DE645A4172544D2BC1B31124CA8E07",
-      "replacement": "성주에서 강등되는 것을 받아들이지 않습니다"
+      "replacement": "성주직에서 강등되는 것을 받아들이지 않습니다"
     },
     {
       "id": 3962,
@@ -17712,17 +17782,17 @@
     {
       "id": 3964,
       "source_utf16le_sha256": "81E876AD747812DE9AE057628D9B34FCFD50395383FD72A86B2B7BED08A5CB29",
-      "replacement": "자세력이 요구할 수 있는 영지가 없습니다"
+      "replacement": "본가가 요구할 수 있는 영지가 없습니다"
     },
     {
       "id": 3965,
       "source_utf16le_sha256": "B78195345F89BECF37625C5DC4C28B57E827476396A8344E93A3FB5FA904FEBC",
-      "replacement": "자세력이 반환을 요구할 수 있는 영지가 없습니다"
+      "replacement": "본가가 반환을 요구할 수 있는 영지가 없습니다"
     },
     {
       "id": 3966,
       "source_utf16le_sha256": "52D9BEAB921EB0C07CA8040BE773B1101BD33927568B816BA90B0946076B186D",
-      "replacement": "자세력의 성이 원래 보유한 영지의 반환을 요구합니다"
+      "replacement": "본가의 성이 원래 보유한 영지의 반환을 요구합니다"
     },
     {
       "id": 3967,
@@ -17772,12 +17842,12 @@
     {
       "id": 3976,
       "source_utf16le_sha256": "68A8BF829627C4F57582E90D2F180B53343F8808BDA55B8EAE23A4219F30741C",
-      "replacement": "자세력의 영지입니다"
+      "replacement": "본가의 영지입니다"
     },
     {
       "id": 3977,
       "source_utf16le_sha256": "C6946EC7E57BB322AD97AD6086D764CCA5235DA7E735C76360CD688E80434D30",
-      "replacement": "자세력과 인접하지 않은 영지는 선택할 수 없습니다"
+      "replacement": "본가와 인접하지 않은 영지는 선택할 수 없습니다"
     },
     {
       "id": 3978,
@@ -17822,12 +17892,27 @@
     {
       "id": 3986,
       "source_utf16le_sha256": "9C1BECEC102ED1DFDE89A6A42F60ED98A583AB3C9B99CDCE1FA60D0658E12DA3",
-      "replacement": "종속 대상을 자세력으로 변경합니다"
+      "replacement": "종속 대상을 본가로 변경합니다"
     },
     {
       "id": 3987,
       "source_utf16le_sha256": "34EC04A1890C0A57AEC8B01A29490A7FB6EA79300373D798AD62299984E1146D",
       "replacement": "%s을(를) %s의 성주로 임명하면\n약 %d개월간 소령 안도 상태가 됩니다.\n계속하시겠습니까?"
+    },
+    {
+      "id": 3988,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "동맹 파기를 요구합니다."
+    },
+    {
+      "id": 3989,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "외교 금지를 요구합니다."
+    },
+    {
+      "id": 3990,
+      "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "replacement": "종속 대상을 본가로 변경할 것을 요구합니다."
     },
     {
       "id": 3991,
@@ -17862,7 +17947,7 @@
     {
       "id": 3997,
       "source_utf16le_sha256": "66925F264A2497E1D416F027514B2D4349D9F137F69FBE02D604A577C6CC98B0",
-      "replacement": "자세력에 종속할 것을 요구합니다"
+      "replacement": "본가에 종속할 것을 요구합니다"
     },
     {
       "id": 3998,
@@ -17932,7 +18017,7 @@
     {
       "id": 4011,
       "source_utf16le_sha256": "0F89B80C5CEB3E84CB85C0D23D92B2E2A2F6866672587B8D387720D67EEA32E9",
-      "replacement": "이미 외양 가재로 임명했습니다."
+      "replacement": "이미 도자마 가재로 임명했습니다."
     },
     {
       "id": 4012,
@@ -17992,7 +18077,7 @@
     {
       "id": 4023,
       "source_utf16le_sha256": "94AB4697E1064BBB277639FC07F30B5548A350E1BF5638297BE91235FF6A3209",
-      "replacement": "본거지를 %s로 옮기면\n%s와(과)의 약정을 깨 강한 불만을 삽니다.\n계속하시겠습니까?"
+      "replacement": "본거지를 %s로 옮기면\n%s와(과) 맺은 약정을 깨 강한 불만을 삽니다.\n계속하시겠습니까?"
     },
     {
       "id": 4024,
@@ -19116,9 +19201,9 @@
     }
   ],
   "operation_index": {
-    "count": 3819,
+    "count": 3836,
     "id_encoding": "UTF-8 compact JSON integer array",
-    "ids_sha256": "0F336EAF33E34461C7D6CA7D8667B02DC103786595CF783139E16912D99461FD",
+    "ids_sha256": "AFA976644E825BE78093E5FBCBA7D378F86AC461E3500A610B61E9CB3BD15B5C",
     "sorted_unique": true
   },
   "payload_policy": {
@@ -19133,6 +19218,6 @@
     "byte_identical_to_pinned_target": true,
     "table_parse_roundtrip": true,
     "wrapper_decompress_roundtrip": true,
-    "build_manifest_sha256": "1C5036918CCD1ACCC22FC88229CC0D6DE3BA2FBAB6A17138499A89233A14A969"
+    "build_manifest_sha256": "C14655DB133528AE1F8733E17C26BEE533F3E3716A23B1DC28E0B389891A912E"
   }
 }

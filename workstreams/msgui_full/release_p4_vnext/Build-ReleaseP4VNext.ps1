@@ -169,23 +169,25 @@ if ($message.schema -ne 'nobu16.file-only-msg-recipe.v1' -or
     $message.scope -ne 'msgui_catalog_v2' -or
     $message.language -ne 'SC' -or
     $message.file_only -ne $true -or
-    $operations.Count -ne 3819 -or
-    $message.operation_index.count -ne 3819 -or
+    $operations.Count -ne 3836 -or
+    $message.operation_index.count -ne 3836 -or
     $message.operation_index.sorted_unique -ne $true -or
     $message.operation_index.id_encoding -ne 'UTF-8 compact JSON integer array' -or
     $operationIdsSha256 -ne ([string]$message.operation_index.ids_sha256).ToUpperInvariant()) {
     throw 'Full message source recipe contract failed'
 }
-if ([int64](Get-Item -LiteralPath $MessageSource).Length -ne 688338 -or
-    (Get-Sha256 $MessageSource) -ne '3F5CAC974C95B19B78319DBF97C2289FFF82B4ED23A4950013DB94C19A6948AB') {
+if ([int64](Get-Item -LiteralPath $MessageSource).Length -ne 691848 -or
+    (Get-Sha256 $MessageSource) -ne '397EA229DD601EC11C89285BE1ABF3BEC7DA17C7ADE723300B0B37A98B6EB648') {
     throw 'Full message recipe does not match the pinned public artifact'
 }
 if ($message.version -ne '0.2-dev' -or
     [int64]$message.source.size -ne 60829 -or
     ([string]$message.source.sha256).ToUpperInvariant() -ne 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82' -or
-    [int64]$message.target.size -ne 114448 -or
-    ([string]$message.target.sha256).ToUpperInvariant() -ne 'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746' -or
-    $operationIdsSha256 -ne '0F336EAF33E34461C7D6CA7D8667B02DC103786595CF783139E16912D99461FD') {
+    [int64]$message.target.size -ne 114770 -or
+    ([string]$message.target.sha256).ToUpperInvariant() -ne '50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5' -or
+    [int64]$message.target.raw_size -ne 114296 -or
+    ([string]$message.target.raw_sha256).ToUpperInvariant() -ne '4C366E7DE38C82609BB2910D7D0BA6000E6BD63EB2651A981A5D1D15A43DCF3A' -or
+    $operationIdsSha256 -ne 'AFA976644E825BE78093E5FBCBA7D378F86AC461E3500A610B61E9CB3BD15B5C') {
     throw 'Full message source/target pins are invalid'
 }
 for ($index = 0; $index -lt $operationIds.Count; $index++) {
@@ -199,8 +201,8 @@ if ($font.schema -ne 'nobu16.file-only-g1n-tail-recipe.v2' -or
     $font.process_memory_access -ne $false -or
     $font.registry_access -ne $false -or
     $font.payload_policy.commercial_original_bytes_in_public_payload -ne $false -or
-    $rasterCodepoints.Count -ne 562 -or
-    $rasterCodepointsSha256 -ne '72FA45F51EADB2827F220891D3A0FBDA0D46BC8A4673DE8AD1806E417372D7AC') {
+    $rasterCodepoints.Count -ne 563 -or
+    $rasterCodepointsSha256 -ne '1C2130490AC347C12E5E72A8AF9837740990D5EBEA5EBACB72AEA0DC6C4995D0') {
     throw 'Font-v4 public recipe contract failed'
 }
 $fontRecipeSource = Join-Path $FontPublicSource 'recipe.json'
@@ -209,14 +211,14 @@ $fontPayload7Source = Join-Path $FontPublicSource 'payload\glyph_pixels_entry_7.
 $fontMetricsSource = Join-Path $FontPublicSource 'metrics\glyphs.jsonl'
 $fontSansLicenseSource = Join-Path $FontPublicSource 'licenses\OFL-NotoSansKR.txt'
 $fontSerifLicenseSource = Join-Path $FontPublicSource 'licenses\OFL-NotoSerifKR.txt'
-if ([int64](Get-Item -LiteralPath $fontRecipeSource).Length -ne 481533 -or
-    (Get-Sha256 $fontRecipeSource) -ne '561477D6312FF02DDD18C09CBF4A2802E00BFA42015B325CFE6F04BDED04C109' -or
-    [int64](Get-Item -LiteralPath $fontPayload6Source).Length -ne 1251072 -or
-    (Get-Sha256 $fontPayload6Source) -ne '53898FD6039F8CAD63BC85D50791DD3451D9EDCB69EB6F15EE08550EF50A91ED' -or
-    [int64](Get-Item -LiteralPath $fontPayload7Source).Length -ne 556032 -or
-    (Get-Sha256 $fontPayload7Source) -ne 'CD34058F3C85554900314394AB3C1CFD92DF6CA7007068F44F2D12968DCA168D' -or
-    [int64](Get-Item -LiteralPath $fontMetricsSource).Length -ne 691550 -or
-    (Get-Sha256 $fontMetricsSource) -ne '1AF2EF974E0E6E3670F2FF3AAC127C28717128C86573DF759EBCFF73C01A9074' -or
+if ([int64](Get-Item -LiteralPath $fontRecipeSource).Length -ne 482506 -or
+    (Get-Sha256 $fontRecipeSource) -ne '6E88317D4A48EF38EDE015E8D61FE48625D8CC2B758B2B2760374021511BC7DE' -or
+    [int64](Get-Item -LiteralPath $fontPayload6Source).Length -ne 1253376 -or
+    (Get-Sha256 $fontPayload6Source) -ne '96AEB284CA78BB78977F75F5B9944443A61E063BD2132797416921F2A68CECA1' -or
+    [int64](Get-Item -LiteralPath $fontPayload7Source).Length -ne 557056 -or
+    (Get-Sha256 $fontPayload7Source) -ne '2811C30E0CBFEA3BBBA895296F7EC4A5FCCBC7E4ADA29C61DFDF222E8FE862D2' -or
+    [int64](Get-Item -LiteralPath $fontMetricsSource).Length -ne 692823 -or
+    (Get-Sha256 $fontMetricsSource) -ne 'B82DB6950D0AD2DC119AEEFC748EE999E6A3D0B6BD9CA92FA41D3CAAC84966AD' -or
     [int64](Get-Item -LiteralPath $fontSansLicenseSource).Length -ne 4388 -or
     (Get-Sha256 $fontSansLicenseSource) -ne '1C05C68C34F9708415AADA51F17E1B0092D2CEA709BF4A94CD38114F9E73D7D9' -or
     [int64](Get-Item -LiteralPath $fontSerifLicenseSource).Length -ne 4350 -or
@@ -225,35 +227,35 @@ if ([int64](Get-Item -LiteralPath $fontRecipeSource).Length -ne 481533 -or
 }
 if ($font.corpus.schema -ne 'nobu16.kr.font-v4-corpus-union.v1' -or
     [int]$font.corpus.source_non_whitespace_character_count -ne 645 -or
-    ([string]$font.corpus.source_non_whitespace_codepoints_sha256).ToUpperInvariant() -ne 'F279DD93CA82142767E7C24F9640E017C3F6FABDB0FDD63D0D52F24511EA5B01' -or
-    [int]$font.corpus.excluded_font_token_count -ne 19 -or
-    ([string]$font.corpus.excluded_font_tokens_sha256).ToUpperInvariant() -ne '6579C55EFF39DCA50D8152BCFE3686072DB1F07B185B50BAF363840F4C772E38' -or
-    ([string]$font.corpus.excluded_font_codepoints_sha256).ToUpperInvariant() -ne 'B88CD9A68EBB6FC6221D01FFE7F89AA014FECA46EF1A2B13CCDCC8730D36F2FF' -or
-    [int]$font.corpus.character_count -ne 626 -or
-    ([string]$font.corpus.union_codepoints_sha256).ToUpperInvariant() -ne 'BAD72B2E09A71127243F9966FB70B08A4613B01F4596EF0FF10169A88FA12DCF' -or
-    [int]$font.corpus.hangul_syllable_count -ne 523 -or
-    ([string]$font.corpus.hangul_codepoints_sha256).ToUpperInvariant() -ne '89E62D3B4438C8DF7541E10A9D4C90B8F37EB2DCB314789E3C446F3855794873' -or
-    [int]$font.corpus.non_hangul_character_count -ne 103 -or
-    [int]$font.corpus.non_hangul_fully_stock_covered_count -ne 64 -or
+    ([string]$font.corpus.source_non_whitespace_codepoints_sha256).ToUpperInvariant() -ne '1E147FF847CE0A8EB85D18F086BCDB91D730465989E885BA996CE65E3DC78D92' -or
+    [int]$font.corpus.excluded_font_token_count -ne 20 -or
+    ([string]$font.corpus.excluded_font_tokens_sha256).ToUpperInvariant() -ne '9BCD0B18E34536D90B032B09A8E597B5693FC45304DAF4F921166043FA3EF226' -or
+    ([string]$font.corpus.excluded_font_codepoints_sha256).ToUpperInvariant() -ne '7D1FB6ABD2B901679DBE8DCB24B9B865BE555A67686611ACB7B23551A4E6D483' -or
+    [int]$font.corpus.character_count -ne 625 -or
+    ([string]$font.corpus.union_codepoints_sha256).ToUpperInvariant() -ne '12C07793C42663D6EDCC4120DD71BD0DBB1A1A23DB87E1465108C0CD464219A7' -or
+    [int]$font.corpus.hangul_syllable_count -ne 524 -or
+    ([string]$font.corpus.hangul_codepoints_sha256).ToUpperInvariant() -ne 'C6213263B1AF08298CEC91C46E0381592CD5E78D27E4D0A3719D92CC555A8EDF' -or
+    [int]$font.corpus.non_hangul_character_count -ne 101 -or
+    [int]$font.corpus.non_hangul_fully_stock_covered_count -ne 62 -or
     [int]$font.corpus.non_hangul_rasterized_count -ne 39 -or
-    [int]$font.corpus.raster_codepoint_count -ne 562 -or
-    ([string]$font.corpus.raster_codepoints_sha256).ToUpperInvariant() -ne '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' -or
+    [int]$font.corpus.raster_codepoint_count -ne 563 -or
+    ([string]$font.corpus.raster_codepoints_sha256).ToUpperInvariant() -ne 'E2A1D94BC03CE230C55B11B1B8FF7AD766D1C8B83549D5AACB410E3374AD739E' -or
     [int64]$font.languages.SC.stock_archive.size -ne 160318119 -or
     ([string]$font.languages.SC.stock_archive.sha256).ToUpperInvariant() -ne '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99' -or
-    [int64]$font.languages.SC.target_archive.size -ne 181011663 -or
-    ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant() -ne '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A') {
+    [int64]$font.languages.SC.target_archive.size -ne 181015052 -or
+    ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant() -ne '9E0FFEAFCF3C50060E1E223988FD01BA2470987FB97A3B6DA75E0B7E3591AE9A') {
     throw 'Font-v4 corpus or archive pins are invalid'
 }
 foreach ($entryNumber in @(6, 7)) {
     $entry = $font.languages.SC.entries.([string]$entryNumber)
     $tables = @($entry.tables)
     if ($tables.Count -ne 2 -or
-        @($tables[0].append_codepoints).Count -ne 524 -or
-        @($tables[1].append_codepoints).Count -ne 562 -or
-        ([string]$tables[0].append_codepoints_sha256).ToUpperInvariant() -ne 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1' -or
-        ([string]$tables[1].append_codepoints_sha256).ToUpperInvariant() -ne '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229' -or
-        [int]$entry.pixel_payload.glyph_count_by_table.'0' -ne 524 -or
-        [int]$entry.pixel_payload.glyph_count_by_table.'1' -ne 562) {
+        @($tables[0].append_codepoints).Count -ne 525 -or
+        @($tables[1].append_codepoints).Count -ne 563 -or
+        ([string]$tables[0].append_codepoints_sha256).ToUpperInvariant() -ne 'B5014FFDD6BC462BFC66B1F8405AE78E64D25DA7805504FB26DF61DB54D4BE31' -or
+        ([string]$tables[1].append_codepoints_sha256).ToUpperInvariant() -ne 'E2A1D94BC03CE230C55B11B1B8FF7AD766D1C8B83549D5AACB410E3374AD739E' -or
+        [int]$entry.pixel_payload.glyph_count_by_table.'0' -ne 525 -or
+        [int]$entry.pixel_payload.glyph_count_by_table.'1' -ne 563) {
         throw "Font-v4 entry $entryNumber per-table contract is invalid"
     }
 }
@@ -543,7 +545,7 @@ try {
             recipe_path = 'components/message/msgui_sc.recipe.json'
             recipe_size = [int64](Get-Item -LiteralPath $messageRecipePath).Length
             recipe_sha256 = Get-Sha256 $messageRecipePath
-            recipe_shape_sha256 = '489D31EA78B3C00DFEE458B586D7169CE65E3FFB5C59C16FD571E1FBD1C2D464'
+            recipe_shape_sha256 = 'C0CDAEA364C01F3A9C7A7EB0938DB711FA6B4BC97606A2F17E9BB408F5060756'
             operation_count = $operations.Count
             operation_ids_encoding = 'UTF-8 compact JSON integer array'
             operation_ids_sha256 = $operationIdsSha256
@@ -554,15 +556,15 @@ try {
             recipe_path = 'components/font/recipe.json'
             recipe_size = [int64](Get-Item -LiteralPath $fontRecipePath).Length
             recipe_sha256 = Get-Sha256 $fontRecipePath
-            recipe_shape_sha256 = '3BE6D316FF28A8D921BAB068B20D04F3932795FB684CD0CF8DF4749BD72A0C8C'
+            recipe_shape_sha256 = '57C5B2FABA9047B7C3E8CE4517E595D9D316C66268AE62271C08C849560F8705'
             raster_codepoint_count = $rasterCodepoints.Count
             raster_codepoints_encoding = 'UTF-8 compact JSON string array'
             raster_codepoints_sha256 = $rasterCodepointsSha256
             append_codepoints_encoding = 'ASCII U+XXXX LF-delimited lines'
-            table0_append_count = 524
-            table1_append_count = 562
-            table0_codepoints_sha256 = 'D8DDD31D385CB364EACCE677A4FE22752CEFD16DDE65DE92C2189C9959F734E1'
-            table1_codepoints_sha256 = '1853386D46EAAAD385E909AE04BCC88DF1B42FCAAD741B87C9EBA1467BFE4229'
+            table0_append_count = 525
+            table1_append_count = 563
+            table0_codepoints_sha256 = 'B5014FFDD6BC462BFC66B1F8405AE78E64D25DA7805504FB26DF61DB54D4BE31'
+            table1_codepoints_sha256 = 'E2A1D94BC03CE230C55B11B1B8FF7AD766D1C8B83549D5AACB410E3374AD739E'
             stock = [ordered]@{ size = [int64]$font.languages.SC.stock_archive.size; sha256 = ([string]$font.languages.SC.stock_archive.sha256).ToUpperInvariant() }
             target = [ordered]@{ size = [int64]$font.languages.SC.target_archive.size; sha256 = ([string]$font.languages.SC.target_archive.sha256).ToUpperInvariant() }
             payloads = $payloadSpecs
@@ -617,8 +619,8 @@ if ($zipPath) {
     operation_count = $operations.Count
     operation_ids_sha256 = $operationIdsSha256
     raster_codepoint_count = $rasterCodepoints.Count
-    table0_append_count = 524
-    table1_append_count = 562
+    table0_append_count = 525
+    table1_append_count = 563
     zip_path = $zipPath
     zip_sha256 = if ($zipPath) { Get-Sha256 $zipPath } else { $null }
     sidecar_path = $sidecarPath
