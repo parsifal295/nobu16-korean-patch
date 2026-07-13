@@ -22,14 +22,19 @@ $Python = (Get-Command python).Source
   --meta workstreams/msgui_full/catalog_v2/msgui.meta.json `
   --catalog workstreams/msgui_full/catalog_v2/msgui.catalog.jsonl `
   --translations data/translations `
-  --max-id 3900 `
-  --overlay-id msgui_ko_0001_3900.v0.1 `
-  --output data/public/msgui_ko_0001_3900.v0.1.json
+  --max-id 5099 `
+  --overlay-id msgui_ko_0000_5099.v0.1 `
+  --output data/public/msgui_ko_0000_5099.v0.1.json
 ```
 
 The exporter verifies any development `source_en` text and supplied SC hash against the
 private catalog before removing source text from the output. Repeating the command with the
 same inputs must produce the same SHA-256.
+
+The catalog contains exactly 5,100 rows with real IDs `0` through `5099`; ID `5100` does not
+exist. The overlay is sparse, so its last operation can be below `5099` when the remaining
+catalog rows are canonical empty. The filename records the fully audited catalog range, not
+a promise that empty rows are rewritten.
 
 ## Merge in a clean workspace
 
@@ -40,7 +45,7 @@ local ignored catalog. Then merge the public overlay:
 & $Python tools/msgui_catalog_v2.py merge-overlay `
   --meta workstreams/msgui_full/catalog_v2/msgui.meta.json `
   --catalog workstreams/msgui_full/catalog_v2/msgui.catalog.jsonl `
-  --overlay data/public/msgui_ko_0001_3900.v0.1.json `
+  --overlay data/public/msgui_ko_0000_5099.v0.1.json `
   --output tmp/msgui.catalog.ko.jsonl `
   --game-root ..
 ```
