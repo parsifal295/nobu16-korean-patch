@@ -39,10 +39,25 @@
 
 ## 보존한 로컬 전용 자료
 
-- `tmp/single_glyph_castle_probe`: 실제 지도 판정을 기다리는 완성 후보. Git 제외.
 - `workstreams/msgui_full/font_v4/build`: 최신 direct-Hangul 폰트 후보. Git 제외.
 - `workstreams/msgui_full/catalog_v2`: 상용 다국어 원문이 든 개발 카탈로그. Git 제외.
 - P3/P4/v0.3 frozen release 증거. `releases/` 전체는 Git 제외.
+
+## 성 이름 실험 보류 후 추가 정리
+
+성 이름 세로 표시를 알려진 제한으로 수용한 뒤, 공개 소스에서 다시 만들 수 있는
+wide-glyph 완성 후보와 시험 백업을 삭제했다. 삭제 직전 세 설치 파일의 stock 해시와
+실행 중 게임 프로세스 0개를 다시 확인했다.
+
+- `workstreams/castle_wide_glyph/private`: 179,689,801바이트
+- `tmp/single_glyph_castle_probe`: 256,642,203바이트
+- `backups/single_glyph_castle_ab_probe`: 160,587,638바이트
+- `backups/single_glyph_castle_name_only_wrapper`: 160,586,736바이트
+- 추가 삭제 합계: 757,506,378바이트
+- 추가 정리 후 작업 트리: 841,726,004바이트(약 0.784 GiB, Git 메타데이터 제외)
+
+빌드·감사 소스, Noto 기반 프로젝트 소유 픽셀, 구조 메타데이터, A/B 실행 보고서는
+Git에 남아 있으므로 필요하면 정품 stock 파일에서 후보를 재생성할 수 있다.
 
 ## 번역 자산 정리
 
