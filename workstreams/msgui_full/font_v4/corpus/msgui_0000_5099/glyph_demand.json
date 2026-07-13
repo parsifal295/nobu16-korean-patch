@@ -2,9 +2,9 @@
   "schema": "nobu16.kr.glyph-demand.v1",
   "source": "buildable ko strings in msgui catalog v2",
   "source_non_whitespace_character_count": 645,
-  "source_non_whitespace_codepoints_sha256": "F279DD93CA82142767E7C24F9640E017C3F6FABDB0FDD63D0D52F24511EA5B01",
+  "source_non_whitespace_codepoints_sha256": "1E147FF847CE0A8EB85D18F086BCDB91D730465989E885BA996CE65E3DC78D92",
   "font_exclusion_policy": "exclude ESC command components, C0/C1 controls, and game PUA icons from G1N raster demand",
-  "excluded_font_token_count": 19,
+  "excluded_font_token_count": 20,
   "excluded_font_tokens": [
     {
       "codepoint": "U+001B",
@@ -12,6 +12,10 @@
     },
     {
       "codepoint": "U+0051",
+      "reason": "ui_escape_sequence_component"
+    },
+    {
+      "codepoint": "U+0052",
       "reason": "ui_escape_sequence_component"
     },
     {
@@ -83,8 +87,8 @@
       "reason": "game_private_icon"
     }
   ],
-  "excluded_font_tokens_sha256": "6579C55EFF39DCA50D8152BCFE3686072DB1F07B185B50BAF363840F4C772E38",
-  "character_count": 626,
+  "excluded_font_tokens_sha256": "9BCD0B18E34536D90B032B09A8E597B5693FC45304DAF4F921166043FA3EF226",
+  "character_count": 625,
   "characters": [
     "!",
     "%",
@@ -112,7 +116,6 @@
     "C",
     "D",
     "E",
-    "F",
     "G",
     "H",
     "I",
@@ -122,7 +125,6 @@
     "N",
     "O",
     "P",
-    "R",
     "S",
     "T",
     "U",
@@ -403,6 +405,7 @@
     "보",
     "복",
     "본",
+    "볼",
     "봄",
     "봉",
     "부",
@@ -740,7 +743,6 @@
     "U+0043",
     "U+0044",
     "U+0045",
-    "U+0046",
     "U+0047",
     "U+0048",
     "U+0049",
@@ -750,7 +752,6 @@
     "U+004E",
     "U+004F",
     "U+0050",
-    "U+0052",
     "U+0053",
     "U+0054",
     "U+0055",
@@ -1031,6 +1032,7 @@
     "U+BCF4",
     "U+BCF5",
     "U+BCF8",
+    "U+BCFC",
     "U+BD04",
     "U+BD09",
     "U+BD80",
@@ -1341,7 +1343,7 @@
     "U+FF1F",
     "U+FF5E"
   ],
-  "hangul_syllable_count": 523,
+  "hangul_syllable_count": 524,
   "hangul_syllables": [
     "가",
     "각",
@@ -1568,6 +1570,7 @@
     "보",
     "복",
     "본",
+    "볼",
     "봄",
     "봉",
     "부",
@@ -2093,6 +2096,7 @@
     "U+BCF4",
     "U+BCF5",
     "U+BCF8",
+    "U+BCFC",
     "U+BD04",
     "U+BD09",
     "U+BD80",

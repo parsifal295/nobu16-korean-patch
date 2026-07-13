@@ -33,6 +33,49 @@ class InvariantTests(unittest.TestCase):
         self.assertTrue(catalog.compare_invariants(source, "한 줄", set()))
         self.assertEqual([], catalog.compare_invariants(source, "한 줄", {"line_breaks"}))
 
+    def test_jp_reference_override_preserves_printf_and_line_break_contract(self) -> None:
+        source_sc = " "
+        references = {"JP": "%s와 %s가 선택됨\n해제 확인"}
+        replacement = "%s와(과) %s이(가) 선택되어 있습니다.\n해제하시겠습니까?"
+        overrides = {"printf:JP", "line_breaks:JP"}
+        self.assertEqual(
+            [],
+            catalog.compare_invariants(
+                source_sc, replacement, overrides, references
+            ),
+        )
+        issues = catalog.compare_invariants(
+            source_sc, "%s 하나만 남음", overrides, references
+        )
+        self.assertTrue(any(issue.startswith("printf:") for issue in issues))
+        self.assertTrue(any(issue.startswith("line_breaks:") for issue in issues))
+
+    def test_unknown_or_unpinned_override_is_rejected(self) -> None:
+        issues = catalog.compare_invariants(" ", "%s", {"printf:XX"}, {})
+        self.assertTrue(any("unsupported invariant override" in issue for issue in issues))
+
+
+class TranslationStateTests(unittest.TestCase):
+    def test_whitespace_only_noop_is_never_buildable(self) -> None:
+        structural = {language: " " for language in catalog.LANGUAGES}
+        asymmetric = {language: " " for language in catalog.LANGUAGES}
+        asymmetric["JP"] = "表示文"
+        self.assertEqual(
+            ("empty", ""),
+            catalog.canonical_translation_state(structural, "translated", "\u3000"),
+        )
+        self.assertEqual(
+            ("untranslated", ""),
+            catalog.canonical_translation_state(asymmetric, "translated", " "),
+        )
+
+    def test_real_translation_keeps_requested_status(self) -> None:
+        source = {language: " " for language in catalog.LANGUAGES}
+        self.assertEqual(
+            ("reviewed", "성명 표시"),
+            catalog.canonical_translation_state(source, "reviewed", "성명 표시"),
+        )
+
 
 class GlyphDemandTests(unittest.TestCase):
     def test_ui_escape_sequences_are_not_font_glyphs(self) -> None:
@@ -95,6 +138,15 @@ class CurrentArtifactTests(unittest.TestCase):
             self.assertLessEqual(set(entry), allowed)
             self.assertNotIn("source_en", entry)
             self.assertNotIn("source_sc", entry)
+            self.assertTrue(entry["ko"].strip(), f"whitespace-only public row: {entry['id']}")
+
+        by_id = {entry["id"]: entry for entry in overlay["entries"]}
+        self.assertEqual("성명 표시", by_id[2498]["ko"])
+        self.assertEqual(["printf:JP"], by_id[3784]["invariant_overrides"])
+        self.assertEqual(
+            ["printf:JP", "line_breaks:JP"],
+            by_id[3855]["invariant_overrides"],
+        )
 
     def test_operation_index_tampering_is_rejected(self) -> None:
         operation_ids = [7]

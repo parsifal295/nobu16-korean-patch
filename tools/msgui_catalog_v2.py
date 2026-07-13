@@ -35,6 +35,16 @@ OVERLAY_SCHEMA = "nobu16.kr.msgui-translation-overlay.v1"
 LANGUAGES = ("EN", "JP", "SC", "TC")
 BUILDABLE_STATUSES = frozenset(("translated", "reviewed"))
 VALID_STATUSES = frozenset(("empty", "untranslated", "draft", "translated", "reviewed"))
+INVARIANT_KEYS = (
+    "printf",
+    "unknown_percent_count",
+    "esc",
+    "pua",
+    "other_controls",
+    "line_breaks",
+)
+REFERENCE_OVERRIDE_LANGUAGES = frozenset(("EN", "JP", "TC"))
+LEGACY_INVARIANT_OVERRIDES = frozenset(("line_breaks",))
 
 # C printf conversions used by the game's UI strings.  The exact ordered token
 # sequence is invariant because changing it can mismatch the native varargs.
@@ -149,14 +159,80 @@ def invariants(text: str) -> dict[str, Any]:
     }
 
 
-def compare_invariants(source: str, replacement: str, overrides: set[str]) -> list[str]:
+def supported_invariant_overrides() -> set[str]:
+    """Return explicit, reviewable invariant override tokens.
+
+    ``key:LANG`` never disables a check.  It changes the authoritative source
+    for exactly one invariant from SC to a named stock-language string.  This
+    is needed for a small number of official SC whitespace/internal-key slots
+    whose visible UI contract survives in JP.  The legacy ``line_breaks``
+    token remains readable for older reviewed catalogs, but new work should
+    always use a language-qualified token.
+    """
+
+    return set(LEGACY_INVARIANT_OVERRIDES) | {
+        f"{key}:{language}"
+        for key in INVARIANT_KEYS
+        for language in REFERENCE_OVERRIDE_LANGUAGES
+    }
+
+
+def compare_invariants(
+    source: str,
+    replacement: str,
+    overrides: set[str],
+    reference_sources: dict[str, str] | None = None,
+) -> list[str]:
     before = invariants(source)
     after = invariants(replacement)
     issues: list[str] = []
-    for key in ("printf", "unknown_percent_count", "esc", "pua", "other_controls", "line_breaks"):
-        if key not in overrides and before[key] != after[key]:
-            issues.append(f"{key}: source={before[key]!r}, ko={after[key]!r}")
+    unsupported = sorted(overrides - supported_invariant_overrides())
+    if unsupported:
+        issues.append(f"unsupported invariant override(s): {unsupported!r}")
+    for key in INVARIANT_KEYS:
+        if key in overrides:
+            # Backward-compatible reviewed exception.  New batches use the
+            # source-qualified form below so the expected value is still
+            # independently pinned to a stock string.
+            continue
+        qualified = sorted(
+            token for token in overrides if token.startswith(f"{key}:")
+        )
+        if len(qualified) > 1:
+            issues.append(f"{key}: multiple reference overrides {qualified!r}")
+            continue
+        expected = before[key]
+        expected_label = "SC"
+        if qualified:
+            language = qualified[0].split(":", 1)[1]
+            if reference_sources is None or not isinstance(reference_sources.get(language), str):
+                issues.append(f"{key}: missing stock {language} reference source")
+                continue
+            expected = invariants(reference_sources[language])[key]
+            expected_label = language
+        if expected != after[key]:
+            issues.append(f"{key}: {expected_label}={expected!r}, ko={after[key]!r}")
     return issues
+
+
+def canonical_translation_state(
+    source: dict[str, str], status: str, ko: str
+) -> tuple[str, str]:
+    """Canonicalize whitespace-only no-ops before they can become buildable.
+
+    A translation containing only Unicode whitespace is never a translation.
+    Fully structural source rows become ``empty``; asymmetric rows (for
+    example SC whitespace with JP text) become ``untranslated``.  Activating
+    an asymmetric row requires real text and, where applicable, an explicit
+    source-qualified invariant override.
+    """
+
+    if ko.strip():
+        return status, ko
+    canonical_status = (
+        "empty" if all(not source[language].strip() for language in LANGUAGES) else "untranslated"
+    )
+    return canonical_status, ""
 
 
 def renderable_characters(text: str) -> list[str]:
@@ -259,7 +335,7 @@ def cmd_init(args: argparse.Namespace) -> int:
                 "notes": f"seeded from {seed['path']} version {seed['version']}",
             }
             priority = "p0"
-        elif all(text == "" for text in source.values()):
+        elif all(not text.strip() for text in source.values()):
             ko = ""
             status = "empty"
             fully_empty += 1
@@ -384,25 +460,31 @@ def validate_catalog(
             if not isinstance(overrides_value, list) or not all(isinstance(v, str) for v in overrides_value):
                 raise CatalogError("invariant_overrides must be a string list")
             overrides = set(overrides_value)
-            allowed_overrides = {"line_breaks"}
-            if overrides - allowed_overrides:
-                raise CatalogError(f"unsupported invariant override(s): {sorted(overrides - allowed_overrides)}")
+            if overrides - supported_invariant_overrides():
+                raise CatalogError(
+                    f"unsupported invariant override(s): "
+                    f"{sorted(overrides - supported_invariant_overrides())}"
+                )
             if overrides and status != "reviewed":
                 raise CatalogError("invariant overrides require reviewed status")
             if status == "empty":
-                if ko or any(source[language] for language in LANGUAGES):
-                    raise CatalogError("empty status requires every source and ko to be empty")
+                if ko or any(source[language].strip() for language in LANGUAGES):
+                    raise CatalogError(
+                        "empty status requires every source and ko to be whitespace-empty"
+                    )
             elif status in BUILDABLE_STATUSES:
-                if not ko:
-                    raise CatalogError("buildable status requires a Korean translation")
-                invariant_issues = compare_invariants(source["SC"], ko, overrides)
+                if not ko.strip():
+                    raise CatalogError("buildable status requires a non-whitespace Korean translation")
+                invariant_issues = compare_invariants(
+                    source["SC"], ko, overrides, source
+                )
                 if invariant_issues:
                     raise CatalogError("invariant mismatch: " + "; ".join(invariant_issues))
                 buildable_ids.append(entry_id)
                 raw_non_whitespace.update(char for char in ko if not char.isspace())
                 glyphs.update(renderable_characters(ko))
             elif status == "untranslated" and ko:
-                warnings.append(f"id {entry_id}: untranslated row contains draft text")
+                raise CatalogError("untranslated status requires canonical empty ko")
         except (CatalogError, KeyError, TypeError, ValueError) as exc:
             errors.append(f"row {row_number}: {exc}")
 
@@ -486,23 +568,32 @@ def cmd_merge_batch(args: argparse.Namespace) -> int:
         if expected_sc_hash is not None and str(expected_sc_hash).upper() != row["source_utf16le_sha256"]["SC"]:
             raise CatalogError(f"id {entry_id}: SC source hash mismatch")
         status = item.get("status", defaults.get("status", "translated"))
-        if status not in BUILDABLE_STATUSES:
-            raise CatalogError(f"id {entry_id}: batch status must be translated or reviewed")
+        if status not in VALID_STATUSES:
+            raise CatalogError(f"id {entry_id}: invalid batch status {status!r}")
+        ko = item.get("ko")
+        if not isinstance(ko, str) or "\x00" in ko:
+            raise CatalogError(f"id {entry_id}: invalid Korean translation")
+        status, ko = canonical_translation_state(row["source"], status, ko)
+        if ko and status not in BUILDABLE_STATUSES:
+            raise CatalogError(f"id {entry_id}: non-empty batch text must be translated or reviewed")
         if row["status"] == "reviewed" and status != "reviewed" and not args.allow_downgrade:
             raise CatalogError(f"id {entry_id}: refusing to downgrade reviewed translation")
-        ko = item.get("ko")
-        if not isinstance(ko, str) or not ko or "\x00" in ko:
-            raise CatalogError(f"id {entry_id}: invalid Korean translation")
         overrides = item.get("invariant_overrides", defaults.get("invariant_overrides", []))
         if not isinstance(overrides, list) or not all(isinstance(value, str) for value in overrides):
             raise CatalogError(f"id {entry_id}: invariant_overrides must be a string list")
         if overrides and status != "reviewed":
             raise CatalogError(f"id {entry_id}: invariant overrides require reviewed status")
-        problems = compare_invariants(row["source"]["SC"], ko, set(overrides))
-        if problems:
-            raise CatalogError(f"id {entry_id}: invariant mismatch: {'; '.join(problems)}")
+        if status in BUILDABLE_STATUSES:
+            problems = compare_invariants(
+                row["source"]["SC"], ko, set(overrides), row["source"]
+            )
+            if problems:
+                raise CatalogError(f"id {entry_id}: invariant mismatch: {'; '.join(problems)}")
 
-        before = {key: row.get(key) for key in ("ko", "status", "priority", "context", "review")}
+        before = {
+            key: row.get(key)
+            for key in ("ko", "status", "priority", "context", "review", "invariant_overrides")
+        }
         row["ko"] = ko
         row["status"] = status
         row["priority"] = item.get("priority", defaults.get("priority", row.get("priority", "")))
@@ -525,7 +616,10 @@ def cmd_merge_batch(args: argparse.Namespace) -> int:
                 "notes": str(review.get("notes", "")),
             }
         row["invariant_overrides"] = overrides
-        after = {key: row.get(key) for key in ("ko", "status", "priority", "context", "review")}
+        after = {
+            key: row.get(key)
+            for key in ("ko", "status", "priority", "context", "review", "invariant_overrides")
+        }
         if before != after:
             changed.append({"id": entry_id, "before": before, "after": after})
 
@@ -603,14 +697,16 @@ def cmd_merge_overlay(args: argparse.Namespace) -> int:
         if row["status"] == "reviewed" and status != "reviewed" and not args.allow_downgrade:
             raise CatalogError(f"id {entry_id}: refusing to downgrade reviewed translation")
         ko = item.get("ko")
-        if not isinstance(ko, str) or not ko or "\x00" in ko:
+        if not isinstance(ko, str) or not ko.strip() or "\x00" in ko:
             raise CatalogError(f"id {entry_id}: invalid Korean translation")
         overrides = item.get("invariant_overrides", defaults.get("invariant_overrides", []))
         if not isinstance(overrides, list) or not all(isinstance(value, str) for value in overrides):
             raise CatalogError(f"id {entry_id}: invariant_overrides must be a string list")
         if overrides and status != "reviewed":
             raise CatalogError(f"id {entry_id}: invariant overrides require reviewed status")
-        problems = compare_invariants(row["source"]["SC"], ko, set(overrides))
+        problems = compare_invariants(
+            row["source"]["SC"], ko, set(overrides), row["source"]
+        )
         if problems:
             raise CatalogError(f"id {entry_id}: invariant mismatch: {'; '.join(problems)}")
 

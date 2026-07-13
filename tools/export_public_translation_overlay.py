@@ -64,12 +64,14 @@ def export(args: argparse.Namespace) -> int:
     by_id = {int(row["id"]): row for row in rows}
     merged: dict[int, dict[str, Any]] = {}
     sources: list[dict[str, Any]] = []
+    skipped_whitespace_total = 0
 
     for path, batch in load_batches(args.translations.resolve()):
         defaults = batch.get("defaults", {}) if batch.get("schema") == catalog.BATCH_SCHEMA else {}
         if not isinstance(defaults, dict):
             raise catalog.CatalogError(f"{path.name}: defaults must be an object")
         accepted = 0
+        skipped_whitespace = 0
         for item in batch.get("entries", []):
             entry_id = int(item["id"])
             if args.max_id is not None and entry_id > args.max_id:
@@ -90,15 +92,31 @@ def export(args: argparse.Namespace) -> int:
             if supplied_hash is not None and str(supplied_hash).upper() != sc_hash:
                 raise catalog.CatalogError(f"{path.name}: id {entry_id} SC source hash mismatch")
             ko = item.get("ko")
-            if not isinstance(ko, str) or not ko or "\x00" in ko:
+            if not isinstance(ko, str) or "\x00" in ko:
                 raise catalog.CatalogError(f"{path.name}: id {entry_id} invalid Korean text")
             status = item.get("status", defaults.get("status", "translated"))
+            if status not in catalog.VALID_STATUSES:
+                raise catalog.CatalogError(f"{path.name}: id {entry_id} invalid status")
+            status, ko = catalog.canonical_translation_state(row["source"], status, ko)
+            if not ko:
+                overrides = item.get(
+                    "invariant_overrides", defaults.get("invariant_overrides", [])
+                )
+                if overrides:
+                    raise catalog.CatalogError(
+                        f"{path.name}: id {entry_id} whitespace row cannot carry invariant overrides"
+                    )
+                skipped_whitespace += 1
+                skipped_whitespace_total += 1
+                continue
             if status not in catalog.BUILDABLE_STATUSES:
                 raise catalog.CatalogError(f"{path.name}: id {entry_id} status is not buildable")
             overrides = item.get("invariant_overrides", defaults.get("invariant_overrides", []))
             if not isinstance(overrides, list) or not all(isinstance(value, str) for value in overrides):
                 raise catalog.CatalogError(f"{path.name}: id {entry_id} invalid invariant overrides")
-            problems = catalog.compare_invariants(row["source"]["SC"], ko, set(overrides))
+            problems = catalog.compare_invariants(
+                row["source"]["SC"], ko, set(overrides), row["source"]
+            )
             if problems:
                 raise catalog.CatalogError(
                     f"{path.name}: id {entry_id} invariant mismatch: {'; '.join(problems)}"
@@ -122,7 +140,12 @@ def export(args: argparse.Namespace) -> int:
             accepted += 1
         if accepted:
             sources.append(
-                {"file": path.name, "sha256": sha256_file(path), "accepted_entries": accepted}
+                {
+                    "file": path.name,
+                    "sha256": sha256_file(path),
+                    "accepted_entries": accepted,
+                    "skipped_whitespace_entries": skipped_whitespace,
+                }
             )
 
     stock_sc = meta["source_files"]["SC"]
@@ -133,6 +156,7 @@ def export(args: argparse.Namespace) -> int:
         "resource": "msgui",
         "base_language": "SC",
         "entry_count": len(ordered),
+        "skipped_whitespace_entry_count": skipped_whitespace_total,
         "distribution_policy": {
             "contains_commercial_source_text": False,
             "contains_complete_game_resource": False,
@@ -158,6 +182,7 @@ def export(args: argparse.Namespace) -> int:
         "output_sha256": output_sha,
         "contains_commercial_source_text": False,
         "source_batch_count": len(sources),
+        "skipped_whitespace_entry_count": skipped_whitespace_total,
     }
     if args.report:
         atomic_json(args.report.resolve(), report)
