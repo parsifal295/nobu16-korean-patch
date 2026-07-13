@@ -1,0 +1,63 @@
+{
+  "schema": "nobu16.kr.wide-castle-ab-harness-contract.v1",
+  "status": "static-contract-only",
+  "runtime_verified": false,
+  "commercial_source_strings_included": false,
+  "harness": "Invoke-WideCastleNameOnlyProbe.ps1",
+  "actions": [
+    "Status",
+    "ApplyMessageOnly",
+    "ApplyFontOnly",
+    "ApplyBoth",
+    "Restore"
+  ],
+  "combinations": {
+    "stock": {
+      "message": "stock",
+      "font": "stock"
+    },
+    "message-only": {
+      "message": "probe",
+      "font": "stock"
+    },
+    "font-only": {
+      "message": "stock",
+      "font": "probe"
+    },
+    "both": {
+      "message": "probe",
+      "font": "probe"
+    }
+  },
+  "fixed_targets": [
+    {
+      "path": "MSG_PK/SC/msgdata.bin",
+      "stock_sha256": "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+      "probe_sha256": "165353713703A2A1D72C24D6C9A7D5709F21FA3D2B641993BE786BA14B2B17CC"
+    },
+    {
+      "path": "RES_SC/res_lang.bin",
+      "stock_sha256": "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99",
+      "probe_sha256": "AFBB287B5418FBCB44B083F7D77E5F53426AE7E1AB23C6B69F17EC98E0EB7258"
+    }
+  ],
+  "safety": {
+    "fixed_target_count": 2,
+    "unknown_hashes_refused": true,
+    "running_game_refused": true,
+    "stock_backups_hash_verified": true,
+    "restore_requires_private_candidate": false,
+    "operation_lock": true,
+    "journaled_atomic_replace": true,
+    "automatic_rollback": true,
+    "game_launch": false,
+    "registry_access": false,
+    "process_memory_access": false,
+    "executable_modification": false
+  },
+  "private_inputs": {
+    "directory": "private/wrapper_candidate",
+    "git_ignored": true,
+    "redistributable": false
+  }
+}

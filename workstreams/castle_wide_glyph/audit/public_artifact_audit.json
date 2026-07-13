@@ -8,8 +8,8 @@
                   "complete_commercial_resources_allowed":  false
               },
     "checks":  {
-                   "file_count":  20,
-                   "total_size":  247325,
+                   "file_count":  23,
+                   "total_size":  268865,
                    "cjk_literal_or_escape_files":  [
 
                                                    ],
@@ -58,10 +58,17 @@
                   },
                   {
                       "path":  "Invoke-WideCastleNameOnlyProbe.ps1",
-                      "size":  8689,
-                      "sha256":  "F445866B1A35BB042FBE1ED4E751DDF179D3D63F3A049D79F684717AF646233D",
+                      "size":  17207,
+                      "sha256":  "FC7B05BA40A78AA890533137BAA638DEB92D2A473B0C58BB74D08962EB2C90C5",
                       "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
                       "category":  "source"
+                  },
+                  {
+                      "path":  "metadata/ab_harness_contract.json",
+                      "size":  1697,
+                      "sha256":  "30A774D1ACA1C76720BB990FB3D9B8DF2318BB7042E283D2708E7412C14123BA",
+                      "first_8_bytes_hex":  "7B 0A 20 20 22 73 63 68",
+                      "category":  "metadata"
                   },
                   {
                       "path":  "metadata/candidate_summary.json",
@@ -95,6 +102,13 @@
                       "path":  "metadata/proxy_reservation_9151_9542.json",
                       "size":  79717,
                       "sha256":  "4E9A487DF1E69AB0ADB51C6E69B3D59FDBAAEE9F718B5C6BB7CAD12CBD5B0E3B",
+                      "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
+                      "category":  "metadata"
+                  },
+                  {
+                      "path":  "metadata/wide_castle_ab_harness_static_audit.json",
+                      "size":  2803,
+                      "sha256":  "142324903EDB678A94D75CE28236480BD351133F7A69094F05B8783B64700CF3",
                       "first_8_bytes_hex":  "7B 0D 0A 20 20 20 20 22",
                       "category":  "metadata"
                   },
@@ -156,8 +170,8 @@
                   },
                   {
                       "path":  "README.md",
-                      "size":  3228,
-                      "sha256":  "79C34FAB069535DCA734170FB90C05426F34D7C773E4D2B32359D5CBA37F51CC",
+                      "size":  4048,
+                      "sha256":  "A6A928D2F15F1C5FACEC20CE7B5705B2F4EC658D048EB41766D1CEC197347B54",
                       "first_8_bytes_hex":  "23 20 EC 84 B1 20 EC 9D",
                       "category":  "source"
                   },
@@ -165,6 +179,13 @@
                       "path":  "Sanitize-PublicMetadata.ps1",
                       "size":  4147,
                       "sha256":  "92211D358C0A6A3C0A844345C1CC570F25916883C9EA1BF1501CA31F17BC2F6F",
+                      "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
+                      "category":  "source"
+                  },
+                  {
+                      "path":  "Test-WideCastleABHarness.ps1",
+                      "size":  7702,
+                      "sha256":  "320D00E92ADE2DC3FAFAC1F67E1D149ED2093FDA3AA478569149740A92FBB64E",
                       "first_8_bytes_hex":  "70 61 72 61 6D 28 0A 20",
                       "category":  "source"
                   }

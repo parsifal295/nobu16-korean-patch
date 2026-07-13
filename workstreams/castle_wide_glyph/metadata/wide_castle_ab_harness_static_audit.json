@@ -1,0 +1,55 @@
+{
+    "schema":  "nobu16.kr.wide-castle-ab-harness-static-audit.v2",
+    "status":  "PASS",
+    "harness":  "Invoke-WideCastleNameOnlyProbe.ps1",
+    "harness_sha256":  "FC7B05BA40A78AA890533137BAA638DEB92D2A473B0C58BB74D08962EB2C90C5",
+    "static_only":  true,
+    "harness_executed":  false,
+    "mutating_actions_executed":  false,
+    "commercial_source_strings_included":  false,
+    "powershell_ast":  {
+                           "parse_error_count":  0,
+                           "token_count":  2557,
+                           "command_count":  33
+                       },
+    "actions":  [
+                    "ApplyBoth",
+                    "ApplyFontOnly",
+                    "ApplyMessageOnly",
+                    "Restore",
+                    "Status"
+                ],
+    "fixed_targets":  [
+                          {
+                              "path":  "MSG_PK/SC/msgdata.bin",
+                              "stock_sha256":  "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+                              "probe_sha256":  "165353713703A2A1D72C24D6C9A7D5709F21FA3D2B641993BE786BA14B2B17CC"
+                          },
+                          {
+                              "path":  "RES_SC/res_lang.bin",
+                              "stock_sha256":  "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99",
+                              "probe_sha256":  "AFBB287B5418FBCB44B083F7D77E5F53426AE7E1AB23C6B69F17EC98E0EB7258"
+                          }
+                      ],
+    "safety_properties":  {
+                              "fixed_two_file_scope":  true,
+                              "stock_and_probe_sha256_gates":  true,
+                              "unknown_installed_hash_refused":  true,
+                              "running_game_refused_for_every_action":  true,
+                              "verified_stock_backups_required":  true,
+                              "exclusive_operation_lock":  true,
+                              "journaled_progress":  true,
+                              "interrupted_journal_reconciled_from_known_hashes":  true,
+                              "same_volume_atomic_replace":  true,
+                              "apply_failure_automatic_rollback":  true,
+                              "restore_converges_to_stock_without_private_candidate":  true,
+                              "private_candidate_not_redistributed":  true,
+                              "launches_game":  false,
+                              "registry_access":  false,
+                              "process_memory_access":  false,
+                              "executable_modification":  false
+                          },
+    "failures":  [
+
+                 ]
+}

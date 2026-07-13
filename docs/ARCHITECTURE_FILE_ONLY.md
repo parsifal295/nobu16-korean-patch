@@ -1,6 +1,6 @@
 # Korean patch architecture: file-only, distributable release
 
-Status: **layout route reopened / release blocked** (2026-07-14)
+Status: **SC route accepted with a documented vertical-map-label limitation** (2026-07-14)
 
 ## Hard boundary
 
@@ -14,34 +14,29 @@ Their code and payloads are not valid release inputs.
 
 ## Candidate renderer route
 
-The official Simplified-Chinese executable path remains the direct-Unicode
-candidate because its G1N font tables accept added Korean glyphs and its common
-menus render Korean without an executable or runtime patch. It is **not yet an
-accepted complete layout route**. Runtime observation on 2026-07-14 showed
-that strategic-map castle names still use vertical writing even though the
-common UI is horizontal. The earlier blanket statement that the SC/TC path
-already provided horizontal CJK layout was therefore incorrect.
-
-Korean text and glyphs may continue to be built against the corresponding
-message/font resources for development, but no public release may be marked
-eligible until a file-only solution makes strategic-map castle labels
-horizontal on the stock executable.
+The official Simplified-Chinese executable path is the accepted direct-Unicode
+route because its G1N font tables accept added Korean glyphs and its common
+menus render Korean without an executable or runtime patch. Runtime observation
+on 2026-07-14 showed that strategic-map castle names still use vertical writing
+even though the common UI is horizontal. This is a documented display
+limitation, not a release blocker. The user explicitly accepted vertical castle
+labels on 2026-07-14 so translation coverage and a distributable patch can take
+priority.
 
 The patch does not change unofficial emulator configuration. The official game
 launcher was verified to expose Japanese, Traditional Chinese, Simplified
 Chinese, and English in its language selector. Validation and the release guide
-will use the official Simplified-Chinese configuration path only if the SC
-resource candidate passes boot and the complete screen-layout gate below.
+will use the official Simplified-Chinese configuration path after the SC
+resource candidate passes the runtime and restoration gates below.
 
-## Mandatory layout gate
+## Mandatory runtime gate
 
-Runtime evidence must explicitly record `castle_name_horizontal=true` from an
-actual strategic-map screen. Main-menu, officer-edit, and ordinary-window
-captures do not satisfy this gate. The same run must also check long Korean
-officer names, map overlap/clipping, missing glyphs, and restore of every
-modified file to its exact stock hash. Until that evidence exists, release
-manifests must declare `release_eligible=false` and a public release ZIP must
-not be produced.
+Runtime evidence must record successful boot on the SC route, visible Korean UI,
+missing-glyph and clipping checks on representative screens, normal exit, and
+restoration of every modified file to its exact stock hash. Strategic-map castle
+names must be checked and recorded as `vertical_known_limitation=true`; they do
+not need to be horizontal. Long Korean officer names and map overlap remain QA
+items, but a vertical castle label alone must not force `release_eligible=false`.
 
 ## Rejected English workarounds
 
