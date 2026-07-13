@@ -20,6 +20,8 @@
 - `와(과)의` 3개(ID 3919, 3954, 4023)를 `와(과) 맺은` 문형으로 교정했다.
 - 외교·종속 문맥의 `当家`/`本家` 12개를 `본가`로 통일하고 데이터 분류 용어
   `自勢力=자세력`과 구분했다.
+- 실제 시나리오 선택 화면에서 연도 뒤에 붙는 ID 591을 `%2d개월`에서 `%2d월`로
+  교정해 `1543년9개월` 같은 날짜 오역을 제거했다.
 
 SC에 printf/개행 정보가 없는 비대칭 슬롯은 검사를 끄지 않았다. `printf:JP` 및
 `line_breaks:JP` override가 해당 불변식을 JP stock 문자열과 다시 비교하도록 validator를
@@ -40,18 +42,18 @@ SC에 printf/개행 정보가 없는 비대칭 슬롯은 검사를 끄지 않았
 ## 결정성 검증 결과
 
 - 공개 overlay: 3,951개, SHA-256
-  `FDB325F3729E8853705F77A54ED248AFAA3C9E247457664749082A13A57BB477`
+  `65994E73624B90951D64369D20097CE46ACAFCDBD0C2EFA18B40975126F3F8C6`
 - 전체 catalog 상태: `empty=1038`, `untranslated=111`, `translated=3934`,
   `reviewed=17`; 오류·경고 0개
 - 독립 메시지 빌드 2회: 세 파일(`msgui.bin`, manifest, glyph demand) byte-exact
 - 메시지 operation: 3,836개, ID 배열 SHA-256
   `AFA976644E825BE78093E5FBCBA7D378F86AC461E3500A610B61E9CB3BD15B5C`
-- 대상 `msgui.bin`: 114,770바이트, SHA-256
-  `50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5`
-- 대상 raw: 114,296바이트, SHA-256
-  `4C366E7DE38C82609BB2910D7D0BA6000E6BD63EB2651A981A5D1D15A43DCF3A`
-- 공개 message recipe: 691,848바이트, SHA-256
-  `397EA229DD601EC11C89285BE1ABF3BEC7DA17C7ADE723300B0B37A98B6EB648`
+- 대상 `msgui.bin`: 114,766바이트, SHA-256
+  `690C2C479EA987ED66128CECF11F177CB1C8CBEC864FA5FB94D9D6945838CB58`
+- 대상 raw: 114,292바이트, SHA-256
+  `CB32EED60CB079174801D2D0A15E7347D3A1330F151294B357C8CC22C47155EE`
+- 공개 message recipe: 691,845바이트, SHA-256
+  `F41172E247DF024D1170E289D9A0AE4B03387037FDE713B75DEB67623526654F`
 
 ## 폰트 수요 및 재빌드
 

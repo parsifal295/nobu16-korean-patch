@@ -173,18 +173,18 @@ function Assert-RecipeContracts($Manifest, $MessageRecipe, $FontRecipe) {
         [int]$MessageRecipe.source.string_count -ne 5100 -or
         [int64]$MessageRecipe.source.size -ne 60829 -or
         ([string]$MessageRecipe.source.sha256).ToUpperInvariant() -ne 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82' -or
-        [int64]$MessageRecipe.target.size -ne 114770 -or
-        ([string]$MessageRecipe.target.sha256).ToUpperInvariant() -ne '50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5' -or
-        [int64]$MessageRecipe.target.raw_size -ne 114296 -or
-        ([string]$MessageRecipe.target.raw_sha256).ToUpperInvariant() -ne '4C366E7DE38C82609BB2910D7D0BA6000E6BD63EB2651A981A5D1D15A43DCF3A' -or
+        [int64]$MessageRecipe.target.size -ne 114766 -or
+        ([string]$MessageRecipe.target.sha256).ToUpperInvariant() -ne '690C2C479EA987ED66128CECF11F177CB1C8CBEC864FA5FB94D9D6945838CB58' -or
+        [int64]$MessageRecipe.target.raw_size -ne 114292 -or
+        ([string]$MessageRecipe.target.raw_sha256).ToUpperInvariant() -ne 'CB32EED60CB079174801D2D0A15E7347D3A1330F151294B357C8CC22C47155EE' -or
         [int64]$MessageRecipe.source.size -ne [int64]$Manifest.message.stock.size -or
         ([string]$MessageRecipe.source.sha256).ToUpperInvariant() -ne ([string]$Manifest.message.stock.sha256).ToUpperInvariant() -or
         [int64]$MessageRecipe.target.size -ne [int64]$Manifest.message.target.size -or
         ([string]$MessageRecipe.target.sha256).ToUpperInvariant() -ne ([string]$Manifest.message.target.sha256).ToUpperInvariant()) {
         throw 'Message recipe contract is invalid'
     }
-    if ([int64](Get-Item -LiteralPath $MessageRecipePath).Length -ne 691848 -or
-        (Get-Sha256 $MessageRecipePath) -ne '397EA229DD601EC11C89285BE1ABF3BEC7DA17C7ADE723300B0B37A98B6EB648' -or
+    if ([int64](Get-Item -LiteralPath $MessageRecipePath).Length -ne 691845 -or
+        (Get-Sha256 $MessageRecipePath) -ne 'F41172E247DF024D1170E289D9A0AE4B03387037FDE713B75DEB67623526654F' -or
         (Get-Sha256 $MessageRecipePath) -ne ([string]$Manifest.message.recipe_sha256).ToUpperInvariant()) {
         throw 'Message recipe bytes do not match the pinned full public artifact'
     }
@@ -678,7 +678,7 @@ function Assert-OrdinaryPath([string]$Path, [string]$Label) {
 function Assert-NoCommercialFullResource([string]$Path, [string]$Relative) {
     $item = Get-Item -LiteralPath $Path
     $forbiddenSizes = @(
-        [int64]60829, [int64]87274, [int64]114448, [int64]114770,
+        [int64]60829, [int64]87274, [int64]114448, [int64]114766, [int64]114770,
         [int64]160318119, [int64]180350761, [int64]181011663, [int64]181015052,
         [int64]25817936, [int64]26628080, [int64]27082040, [int64]27084368,
         [int64]11771536, [int64]12136240, [int64]12340600, [int64]12341648
@@ -688,6 +688,7 @@ function Assert-NoCommercialFullResource([string]$Path, [string]$Relative) {
         '5E4B26FC465F4F0F4C046462714E7B677D7B479FDA6023086EF7F9A8817E6984',
         'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746',
         '50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5',
+        '690C2C479EA987ED66128CECF11F177CB1C8CBEC864FA5FB94D9D6945838CB58',
         '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99',
         '3BC57379D9AF95E83A77C96C1EE2D104AAF4A8BEA1733EA33FC3D1BCF056D1A9',
         '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A',
@@ -809,8 +810,8 @@ function Test-Package {
         ([string]$manifest.font.table1_codepoints_sha256).ToUpperInvariant() -ne 'E2A1D94BC03CE230C55B11B1B8FF7AD766D1C8B83549D5AACB410E3374AD739E' -or
         @($manifest.font.payloads).Count -ne 2 -or
         @($manifest.files).Count -ne 16 -or
-        [int64]$manifest.message.recipe_size -ne 691848 -or
-        ([string]$manifest.message.recipe_sha256).ToUpperInvariant() -ne '397EA229DD601EC11C89285BE1ABF3BEC7DA17C7ADE723300B0B37A98B6EB648' -or
+        [int64]$manifest.message.recipe_size -ne 691845 -or
+        ([string]$manifest.message.recipe_sha256).ToUpperInvariant() -ne 'F41172E247DF024D1170E289D9A0AE4B03387037FDE713B75DEB67623526654F' -or
         [int64]$manifest.font.recipe_size -ne 482506 -or
         ([string]$manifest.font.recipe_sha256).ToUpperInvariant() -ne '6E88317D4A48EF38EDE015E8D61FE48625D8CC2B758B2B2760374021511BC7DE' -or
         $manifest.backup_directory_name -ne 'msgui_full_font_v4_v0_3' -or
@@ -848,7 +849,7 @@ function Test-Package {
         'components\font\payload\glyph_pixels_entry_6.bin' = 1253376
         'components\font\payload\glyph_pixels_entry_7.bin' = 557056
         'components\font\recipe.json' = 482506
-        'components\message\msgui_sc.recipe.json' = 691848
+        'components\message\msgui_sc.recipe.json' = 691845
         'FILE_ONLY_POLICY_KO.md' = 32768
         'README_KO.md' = 32768
         'RESTORE_ORIGINALS.bat' = 1024

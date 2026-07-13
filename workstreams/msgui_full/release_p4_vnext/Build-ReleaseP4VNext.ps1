@@ -176,17 +176,17 @@ if ($message.schema -ne 'nobu16.file-only-msg-recipe.v1' -or
     $operationIdsSha256 -ne ([string]$message.operation_index.ids_sha256).ToUpperInvariant()) {
     throw 'Full message source recipe contract failed'
 }
-if ([int64](Get-Item -LiteralPath $MessageSource).Length -ne 691848 -or
-    (Get-Sha256 $MessageSource) -ne '397EA229DD601EC11C89285BE1ABF3BEC7DA17C7ADE723300B0B37A98B6EB648') {
+if ([int64](Get-Item -LiteralPath $MessageSource).Length -ne 691845 -or
+    (Get-Sha256 $MessageSource) -ne 'F41172E247DF024D1170E289D9A0AE4B03387037FDE713B75DEB67623526654F') {
     throw 'Full message recipe does not match the pinned public artifact'
 }
 if ($message.version -ne '0.2-dev' -or
     [int64]$message.source.size -ne 60829 -or
     ([string]$message.source.sha256).ToUpperInvariant() -ne 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82' -or
-    [int64]$message.target.size -ne 114770 -or
-    ([string]$message.target.sha256).ToUpperInvariant() -ne '50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5' -or
-    [int64]$message.target.raw_size -ne 114296 -or
-    ([string]$message.target.raw_sha256).ToUpperInvariant() -ne '4C366E7DE38C82609BB2910D7D0BA6000E6BD63EB2651A981A5D1D15A43DCF3A' -or
+    [int64]$message.target.size -ne 114766 -or
+    ([string]$message.target.sha256).ToUpperInvariant() -ne '690C2C479EA987ED66128CECF11F177CB1C8CBEC864FA5FB94D9D6945838CB58' -or
+    [int64]$message.target.raw_size -ne 114292 -or
+    ([string]$message.target.raw_sha256).ToUpperInvariant() -ne 'CB32EED60CB079174801D2D0A15E7347D3A1330F151294B357C8CC22C47155EE' -or
     $operationIdsSha256 -ne 'AFA976644E825BE78093E5FBCBA7D378F86AC461E3500A610B61E9CB3BD15B5C') {
     throw 'Full message source/target pins are invalid'
 }
@@ -397,8 +397,10 @@ try {
         [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String(
             '6rCc67CcIOuniOydvOyKpO2GpCDigJQg7Iuk7KCcIOqyjOyehCDtmZTrqbQg6rKA7IiYIOyghOydtOuvgOuhnCDsoJXsi50g67Cw7Y+sIOuwjyDsnbzrsJgg7ISk7LmY6rCAIOywqOuLqOuQqA=='))
     }
+    $releaseVersion = if ($releaseEligible) { 'v0.3' } else { 'v0.3-dev' }
     $readme = [IO.File]::ReadAllText((Join-Path $TemplateRoot 'README_KO.md.in'), [Text.Encoding]::UTF8)
     $readme = $readme.Replace('{{RELEASE_STATUS}}', $status)
+    $readme = $readme.Replace('{{RELEASE_VERSION}}', $releaseVersion)
     [IO.File]::WriteAllText((Join-Path $staging 'README_KO.md'), $readme, $Utf8NoBom)
 
     $evidenceGeneratedUtc = if ($runtimeValidated) {

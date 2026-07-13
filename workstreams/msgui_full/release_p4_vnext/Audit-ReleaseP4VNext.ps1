@@ -73,7 +73,7 @@ function Assert-NotArchive([string]$Path, [string]$Label) {
 function Assert-NoCompleteCommercialResource([string]$Path, [string]$Label) {
     $item = Get-Item -LiteralPath $Path
     $forbiddenSizes = @(
-        [int64]60829, [int64]87274, [int64]114448, [int64]114770,
+        [int64]60829, [int64]87274, [int64]114448, [int64]114766, [int64]114770,
         [int64]160318119, [int64]180350761, [int64]181011663, [int64]181015052,
         [int64]25817936, [int64]26628080, [int64]27082040, [int64]27084368,
         [int64]11771536, [int64]12136240, [int64]12340600, [int64]12341648
@@ -83,6 +83,7 @@ function Assert-NoCompleteCommercialResource([string]$Path, [string]$Label) {
         '5E4B26FC465F4F0F4C046462714E7B677D7B479FDA6023086EF7F9A8817E6984',
         'E119ED2375389FB8B05984534E0BC190788B5DC2B94EABFF9E6AF1B591C11746',
         '50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5',
+        '690C2C479EA987ED66128CECF11F177CB1C8CBEC864FA5FB94D9D6945838CB58',
         '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99',
         '3BC57379D9AF95E83A77C96C1EE2D104AAF4A8BEA1733EA33FC3D1BCF056D1A9',
         '02F0D4E09F8F1B13CD90D23A92F75302F49E34059CB659C4E59C1569EE2D3A8A',
@@ -192,6 +193,22 @@ if ($manifest.schema -ne 'nobu16.korean-file-only-release.v2' -or
     throw 'Manifest fails the standalone pre-execution safety contract'
 }
 
+$readmePath = Join-Path $PackageRoot 'README_KO.md'
+$strictReadmeUtf8 = New-Object Text.UTF8Encoding($false, $true)
+$readmeText = [IO.File]::ReadAllText($readmePath, $strictReadmeUtf8)
+$expectedReadmeSuffix = if ($manifest.release_eligible -eq $true) {
+    'MSGUI / Font-v4 v0.3'
+}
+else {
+    'MSGUI / Font-v4 v0.3-dev'
+}
+$firstReadmeLine = [IO.File]::ReadAllLines($readmePath, $strictReadmeUtf8)[0]
+if (-not $firstReadmeLine.EndsWith($expectedReadmeSuffix, [StringComparison]::Ordinal) -or
+    $readmeText.Contains('{{RELEASE_STATUS}}') -or
+    $readmeText.Contains('{{RELEASE_VERSION}}')) {
+    throw 'README release identity does not match the manifest release gate'
+}
+
 $legacyReleaseId = [string]::Concat('msgui-', 'p', '3-font-', 'v', '3-v0', '.2')
 $legacyReleaseName = [string]::Concat('NOBU16 Korean MSGUI ', 'P', '3 / Font-', 'v', '3 file-only v0', '.2')
 $legacyBackupName = [string]::Concat('msgui_', 'p', '3_font_', 'v', '3_v0', '_2')
@@ -221,7 +238,7 @@ $criticalPins = @{
     'RESTORE_ORIGINALS.bat' = '266|5E5F629256C6C9E4151F9C1F81E2F256CF9A51836A5F8ABD2E10780D8152AFAE'
     'VERIFY_PACKAGE.bat' = '271|176238C8C94925231B5B3FFB3505B45987CB90F75399046459847B517448B088'
     'tools/FileRecipeCore.cs' = '28466|04643FDDA1617663DB4B2812582C5F87FA9D55A46D1861F22570C7C1B7266B79'
-    'tools/Invoke-FileOnlyPatch.ps1' = '76603|79DF6A85D43D9467EF53E508852F3D0A9CA09618766CC9AEE33E80A49BD5D01A'
+    'tools/Invoke-FileOnlyPatch.ps1' = '76694|658946D286E138C2686AE05DF3C297491AC16691A27FCF68FBB7D60527E35D13'
     'tools/JsonKeyGuard.cs' = '11304|6A1ABEC0899A1D4256153E49E8204DAE343EC5D7887DB3047192A8168678DA60'
 }
 foreach ($relative in $criticalPaths) {

@@ -21,7 +21,7 @@ $EvidenceOutput = [IO.Path]::GetFullPath($EvidenceOutput)
 $Installer = Join-Path $PackageRoot 'tools\Invoke-FileOnlyPatch.ps1'
 $StockMessage = Join-Path $GameRoot 'MSG_PK\SC\msgui.bin'
 $StockFont = Join-Path $GameRoot 'RES_SC\res_lang.bin'
-$TargetMessageSource = Join-Path $KrPatchRoot 'tmp\translation_qa\build_a\MSG_PK\SC\msgui.bin'
+$TargetMessageSource = Join-Path $KrPatchRoot 'tmp\translation_qa_datefix\build_a\MSG_PK\SC\msgui.bin'
 $TargetFontSource = Join-Path $KrPatchRoot 'tmp\translation_qa\font_build_a\private\candidate\res_lang.SC.font-v4.bin'
 $RuntimeProbeScreen = Join-Path $KrPatchRoot 'reports\screenshots\msgui_p3_01_main_menu.png'
 $PowerShellExe = 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe'
@@ -30,8 +30,8 @@ $ReleaseId = 'msgui-full-font-v4-v0.3'
 $ReleaseName = 'NOBU16 Korean MSGUI Full / Font-v4 file-only v0.3'
 $BackupDirectoryName = 'msgui_full_font_v4_v0_3'
 $StockMessageHash = 'C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82'
-$TargetMessageHash = '50875851C3F87F7D83DC5C1AF41D93D4E14043FE841D28A429644F60CDD13BA5'
-$TargetMessageSize = 114770L
+$TargetMessageHash = '690C2C479EA987ED66128CECF11F177CB1C8CBEC864FA5FB94D9D6945838CB58'
+$TargetMessageSize = 114766L
 $StockFontHash = '916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99'
 $TargetFontHash = '9E0FFEAFCF3C50060E1E223988FD01BA2470987FB97A3B6DA75E0B7E3591AE9A'
 $TargetFontSize = 181015052L
@@ -218,6 +218,21 @@ try {
         [int64]$manifest.font.target.size -ne $TargetFontSize -or
         ([string]$manifest.font.target.sha256).ToUpperInvariant() -ne $TargetFontHash) {
         throw 'Package manifest does not match the final full v0.3 contract'
+    }
+    $packageReadme = [IO.File]::ReadAllText((Join-Path $PackageRoot 'README_KO.md'), [Text.Encoding]::UTF8)
+    $expectedPackageSuffix = if ($manifest.release_eligible -eq $true) {
+        'MSGUI / Font-v4 v0.3'
+    }
+    else {
+        'MSGUI / Font-v4 v0.3-dev'
+    }
+    $packageReadmeFirstLine = [IO.File]::ReadAllLines(
+        (Join-Path $PackageRoot 'README_KO.md'), [Text.Encoding]::UTF8
+    )[0]
+    if (-not $packageReadmeFirstLine.EndsWith($expectedPackageSuffix, [StringComparison]::Ordinal) -or
+        $packageReadme.Contains('{{RELEASE_STATUS}}') -or
+        $packageReadme.Contains('{{RELEASE_VERSION}}')) {
+        throw 'Package README release identity does not match the manifest'
     }
     $checks.verify_passed = $true
 
@@ -536,6 +551,15 @@ try {
         $runtimePackagedEvidence.runtime.passed -ne $true -or
         $runtimePackagedEvidence.runtime.checks.castle_name_horizontal -ne $false) {
         throw 'Vertical castle-name acceptance probe produced an invalid release contract'
+    }
+    $runtimeReadme = [IO.File]::ReadAllText((Join-Path $runtimeGateOutput 'README_KO.md'), [Text.Encoding]::UTF8)
+    $runtimeReadmeFirstLine = [IO.File]::ReadAllLines(
+        (Join-Path $runtimeGateOutput 'README_KO.md'), [Text.Encoding]::UTF8
+    )[0]
+    if (-not $runtimeReadmeFirstLine.EndsWith('MSGUI / Font-v4 v0.3', [StringComparison]::Ordinal) -or
+        $runtimeReadme.Contains('{{RELEASE_STATUS}}') -or
+        $runtimeReadme.Contains('{{RELEASE_VERSION}}')) {
+        throw 'Release-eligible probe README retained a development or template identity'
     }
     $checks.castle_name_vertical_accepted = $true
 
