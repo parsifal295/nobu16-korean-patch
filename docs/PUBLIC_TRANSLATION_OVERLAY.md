@@ -22,9 +22,9 @@ $Python = (Get-Command python).Source
   --meta workstreams/msgui_full/catalog_v2/msgui.meta.json `
   --catalog workstreams/msgui_full/catalog_v2/msgui.catalog.jsonl `
   --translations data/translations `
-  --max-id 2700 `
-  --overlay-id msgui_ko_0001_2700.v0.1 `
-  --output data/public/msgui_ko_0001_2700.v0.1.json
+  --max-id 3000 `
+  --overlay-id msgui_ko_0001_3000.v0.1 `
+  --output data/public/msgui_ko_0001_3000.v0.1.json
 ```
 
 The exporter verifies any development `source_en` text and supplied SC hash against the
@@ -40,7 +40,7 @@ local ignored catalog. Then merge the public overlay:
 & $Python tools/msgui_catalog_v2.py merge-overlay `
   --meta workstreams/msgui_full/catalog_v2/msgui.meta.json `
   --catalog workstreams/msgui_full/catalog_v2/msgui.catalog.jsonl `
-  --overlay data/public/msgui_ko_0001_2700.v0.1.json `
+  --overlay data/public/msgui_ko_0001_3000.v0.1.json `
   --output tmp/msgui.catalog.ko.jsonl `
   --game-root ..
 ```
