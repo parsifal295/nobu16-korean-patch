@@ -1,9 +1,9 @@
 {
   "schema": "nobu16.kr.msgui-translation-overlay.v1",
-  "overlay_id": "msgui_ko_0001_2400.v0.1",
+  "overlay_id": "msgui_ko_0001_2700.v0.1",
   "resource": "msgui",
   "base_language": "SC",
-  "entry_count": 2266,
+  "entry_count": 2544,
   "distribution_policy": {
     "contains_commercial_source_text": false,
     "contains_complete_game_resource": false,
@@ -137,6 +137,21 @@
       "file": "msgui_core_ui_terms_2301_2400.v0.1.json",
       "sha256": "A7FA4311B2B7BDDBDB525424663BE94069719C23B8101498719279168C83A68F",
       "accepted_entries": 100
+    },
+    {
+      "file": "msgui_core_ui_terms_2401_2500.v0.1.json",
+      "sha256": "84B4748BBA070531CCE84202072F4FB4A4C1E1A7B7006655C15948A7023A72F4",
+      "accepted_entries": 100
+    },
+    {
+      "file": "msgui_core_ui_terms_2501_2600.v0.1.json",
+      "sha256": "64CB32EB5CB13DEBF3B16CDA3446571481241D11A91BB82339A12AE85890B18F",
+      "accepted_entries": 100
+    },
+    {
+      "file": "msgui_core_ui_terms_2601_2700.v0.1.json",
+      "sha256": "EFF9DDC41BBFF817D93E3E8F46B8FB5657F9935A172B3A7118686C373B268EED",
+      "accepted_entries": 78
     }
   ],
   "entries": [
@@ -13725,6 +13740,1674 @@
       "id": 2400,
       "source_sc_utf16le_sha256": "590D8C8ED1900D1410B7F035171B8BCAD27CE17D039F590A6610361D853715F0",
       "ko": "군단 전략",
+      "priority": "p2"
+    },
+    {
+      "id": 2401,
+      "source_sc_utf16le_sha256": "D164CC59353B57AB8DBE2AD37EE538028F54F765D362CB478DE07EE8005CE617",
+      "ko": "공투",
+      "priority": "p2"
+    },
+    {
+      "id": 2402,
+      "source_sc_utf16le_sha256": "2273BFA5B116FC4518BD3A8A1078B87014392D31832133F8678249A9A5E3ADBA",
+      "ko": "광역",
+      "priority": "p2"
+    },
+    {
+      "id": 2403,
+      "source_sc_utf16le_sha256": "6A1EB4EDE0FFC3EE387F73E78A57E20FC6EC5E4A9C66CE4FFF8363FB567C4CC9",
+      "ko": "원군",
+      "priority": "p2"
+    },
+    {
+      "id": 2404,
+      "source_sc_utf16le_sha256": "963737150AA6C4B74DBEAFB08A1C0F180A4F9D230E61498601801D6D2D8D14E7",
+      "ko": "%s LV+%d",
+      "priority": "p2"
+    },
+    {
+      "id": 2405,
+      "source_sc_utf16le_sha256": "0E6CBC7664B62E44B1D231B46D30641FEEB644E86A18F17A84BC1C480AAA4866",
+      "ko": "외양 가재 1",
+      "priority": "p2"
+    },
+    {
+      "id": 2406,
+      "source_sc_utf16le_sha256": "29B1EB9AD9B9373918486B17095D6173E6862D9214C0915A2B820E646160F3E9",
+      "ko": "외양 가재 2",
+      "priority": "p2"
+    },
+    {
+      "id": 2407,
+      "source_sc_utf16le_sha256": "44D9B2EA03CB62F899A1035BAD295EBD259854A66D613EA3CB3171F8D2012E11",
+      "ko": "자동 임명",
+      "priority": "p2"
+    },
+    {
+      "id": 2408,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2409,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2410,
+      "source_sc_utf16le_sha256": "9E9D34C962103D83340B01E10CD5F148AC0DAE841F3440D8977A77D0497108FE",
+      "ko": "체력 일시 최대",
+      "priority": "p2"
+    },
+    {
+      "id": 2411,
+      "source_sc_utf16le_sha256": "F80F0326F7253D0CF7D4A4B7F65692159A6ED9017945548855B7BF89ED0A663A",
+      "ko": "교섭치",
+      "priority": "p2"
+    },
+    {
+      "id": 2412,
+      "source_sc_utf16le_sha256": "AE91255DECB903F4BA85576443920D883786FC5911D63F50542D0D0AB2E76582",
+      "ko": "양동",
+      "priority": "p2"
+    },
+    {
+      "id": 2413,
+      "source_sc_utf16le_sha256": "5FFFCEE03F600B589C6BDEA05F902DE1512D40B9DE42620C5125CEA979412E1C",
+      "ko": "축성 명수",
+      "priority": "p2"
+    },
+    {
+      "id": 2414,
+      "source_sc_utf16le_sha256": "487021DD3532A967F138201D67686AB9444B4BE2AF79E2D7D36879AC24960CE5",
+      "ko": "게임 중 편집",
+      "priority": "p2"
+    },
+    {
+      "id": 2415,
+      "source_sc_utf16le_sha256": "A8EA5E8377ACB3D823E5B3E250ABFB145E980D79CD9A4A4948797422E95E2A1A",
+      "ko": "기마 LV 상승",
+      "priority": "p2"
+    },
+    {
+      "id": 2416,
+      "source_sc_utf16le_sha256": "031C9E5B313DDE7FE0F945586C86C11F103AE1881DEAE171A5981E228F8BB1F2",
+      "ko": "기마 LV 하락",
+      "priority": "p2"
+    },
+    {
+      "id": 2417,
+      "source_sc_utf16le_sha256": "35C48AA45524433FDC29CA326EA33F4602CFE6C5AA4E9044FAF5D8D9C794C5F6",
+      "ko": "철포 LV 상승",
+      "priority": "p2"
+    },
+    {
+      "id": 2418,
+      "source_sc_utf16le_sha256": "3EDA1AE3C000F6620CCDC8EBA2263EE772AA5DF603140D58EF6E89EB3E3C5051",
+      "ko": "철포 LV 하락",
+      "priority": "p2"
+    },
+    {
+      "id": 2419,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2420,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2421,
+      "source_sc_utf16le_sha256": "756CD69BF1FA7759B7C90DB347954C32C18ACD96DCA774DEA8D37CF19EAAD1AE",
+      "ko": "외양",
+      "priority": "p2"
+    },
+    {
+      "id": 2422,
+      "source_sc_utf16le_sha256": "53060BC325B36AD6397F0C8D745FF75280959660CEEB82F135D37767C1163263",
+      "ko": "가재 임명",
+      "priority": "p2"
+    },
+    {
+      "id": 2423,
+      "source_sc_utf16le_sha256": "A5179A2C653598EA30235DB2DE507700877047A627F814A47FD1B87EDDF3E41D",
+      "ko": "외양 가재 임명",
+      "priority": "p2"
+    },
+    {
+      "id": 2424,
+      "source_sc_utf16le_sha256": "961127A7E86958C88B02435FFC2F693B1A34E47C4F16D32568B72206A2D55E75",
+      "ko": "봉행 임명",
+      "priority": "p2"
+    },
+    {
+      "id": 2425,
+      "source_sc_utf16le_sha256": "070122A167ADC98DA42DF14A60E9C9369169EC91B4A104BC208BAECB2EEC8B19",
+      "ko": "증설",
+      "priority": "p2"
+    },
+    {
+      "id": 2426,
+      "source_sc_utf16le_sha256": "AD8BB4E627551002467438D2C21B6C6F5BB3EA9B7A6A54FF6DF93CBC8D57107C",
+      "ko": "신규 직분",
+      "priority": "p2"
+    },
+    {
+      "id": 2427,
+      "source_sc_utf16le_sha256": "445D62FE3A3C2C98DD0D5943E7ED8613149E64BA6C3D98BC4CDF5EE94DFDE6AD",
+      "ko": "신규 영지",
+      "priority": "p2"
+    },
+    {
+      "id": 2428,
+      "source_sc_utf16le_sha256": "154A4C3ED0950B2D2C2882E48E7DFEA5EABE26580524D36E6F99F3FB61210475",
+      "ko": "발령 가능 세력",
+      "priority": "p2"
+    },
+    {
+      "id": 2429,
+      "source_sc_utf16le_sha256": "F6797721580B34DC991C5C32B067E3269D588B5CEE2A5D135BB85ADF70C3505D",
+      "ko": "성주 확약",
+      "priority": "p2"
+    },
+    {
+      "id": 2430,
+      "source_sc_utf16le_sha256": "8CACBD0C4A58C51896C8A298D1C7643015B9B320078CA671A7200BE19CAE81DA",
+      "ko": "전선",
+      "priority": "p2"
+    },
+    {
+      "id": 2431,
+      "source_sc_utf16le_sha256": "471248A38001FF4D59DE466F9FD66A96885E9F86273537237DCDEBCCEF507466",
+      "ko": "후방",
+      "priority": "p2"
+    },
+    {
+      "id": 2432,
+      "source_sc_utf16le_sha256": "6239169DA1E64CE159A81C8FE849EC84A1DDF067154B8BAA23E089988C310561",
+      "ko": "상업 도시",
+      "priority": "p2"
+    },
+    {
+      "id": 2433,
+      "source_sc_utf16le_sha256": "DDA6AAC7372311353AE9200BBE2FF7E5506664BA68E71AF384B1619715F2C813",
+      "ko": "농업 도시",
+      "priority": "p2"
+    },
+    {
+      "id": 2434,
+      "source_sc_utf16le_sha256": "5C6886186211A1833B3D8E1CB9CA49BEAD4CA606184728785B70DFC8EF49423D",
+      "ko": "명소·사찰",
+      "priority": "p2"
+    },
+    {
+      "id": 2435,
+      "source_sc_utf16le_sha256": "59CD2E72A53CE92BE9F446ECDA020160D97513F8E0999B068CD7D9C7296878DC",
+      "ko": "명소·신사",
+      "priority": "p2"
+    },
+    {
+      "id": 2436,
+      "source_sc_utf16le_sha256": "284B51D0784C58A73EAAF24D08638F9E8D1462BD130F0220430B4E90941CBB7E",
+      "ko": "요리키",
+      "priority": "p2"
+    },
+    {
+      "id": 2437,
+      "source_sc_utf16le_sha256": "8BB5D8C3F343F86D5B4CD65C34D24DC00483260947F9A997CA25A17752312A9B",
+      "ko": "외교 금지",
+      "priority": "p2"
+    },
+    {
+      "id": 2438,
+      "source_sc_utf16le_sha256": "50C7DE6A0761D614EB6E8D683649696114071EAEB15B3698301400E3E432D345",
+      "ko": "종속 이적",
+      "priority": "p2"
+    },
+    {
+      "id": 2439,
+      "source_sc_utf16le_sha256": "B8DF3DB0803C13D57A0C40BC6465EF0F5F1C0BEBD1130D1FE7A9071795FC23D4",
+      "ko": "성주 항복",
+      "priority": "p2"
+    },
+    {
+      "id": 2440,
+      "source_sc_utf16le_sha256": "6F9F3CB9C63ADF35277FF3F4E31DB756CC46D2CD16161A76292AC3C39C907338",
+      "ko": "심경",
+      "priority": "p2"
+    },
+    {
+      "id": 2441,
+      "source_sc_utf16le_sha256": "E6380B010F759FE0F7F3308528A1C421DC0BB58D1C676280093CC67B618E204B",
+      "ko": "적극",
+      "priority": "p2"
+    },
+    {
+      "id": 2442,
+      "source_sc_utf16le_sha256": "43CD259F2494787689D50DA9666CBBA989973F1B22298C6910E7B5A7D89B8F4E",
+      "ko": "관심",
+      "priority": "p2"
+    },
+    {
+      "id": 2443,
+      "source_sc_utf16le_sha256": "3DCD89E4166748495D945FFE979B031077646EC92C5267E2FA8E6A1EA3EE6873",
+      "ko": "중립",
+      "priority": "p2"
+    },
+    {
+      "id": 2444,
+      "source_sc_utf16le_sha256": "6EE362B459A437024B4FC644BD94D0248C926675A3DBDAC332E8D1FD3B1243F6",
+      "ko": "신중",
+      "priority": "p2"
+    },
+    {
+      "id": 2445,
+      "source_sc_utf16le_sha256": "1C6AA6D366AFCA9CC11B44C60D4B15127891182BAF73CD9292C35EDBBF03E4C2",
+      "ko": "소극",
+      "priority": "p2"
+    },
+    {
+      "id": 2446,
+      "source_sc_utf16le_sha256": "E5FD7D4A9F623933689F4BF58AAE3AFF8BD610A82197134F26BDB8A9899F383E",
+      "ko": "가보 - %s",
+      "priority": "p2"
+    },
+    {
+      "id": 2447,
+      "source_sc_utf16le_sha256": "74D5FA87553865BA30E6722CF94E5A2406DBE231A98E2D0C7BC7146A2A9F80CC",
+      "ko": "가보 “%s”",
+      "priority": "p2"
+    },
+    {
+      "id": 2448,
+      "source_sc_utf16le_sha256": "86758AB128B84345CC985DC83D2F7814922419704F1D3006185A2700A370C66F",
+      "ko": "화기",
+      "priority": "p2"
+    },
+    {
+      "id": 2449,
+      "source_sc_utf16le_sha256": "25168A05AE978DA64516074D2ACFD66521127FCB926B75584B4A747643AA9980",
+      "ko": "도검",
+      "priority": "p2"
+    },
+    {
+      "id": 2450,
+      "source_sc_utf16le_sha256": "251E1641B23C89F6B1AB78D5F73BFD5D20F6067B0A088CBA3FCE3C9A3363ABF0",
+      "ko": "병법서",
+      "priority": "p2"
+    },
+    {
+      "id": 2451,
+      "source_sc_utf16le_sha256": "1F3CD6F511B5A76E70FCFEB091EB4EF05405FC763A9488902480AA1BC1E3C67A",
+      "ko": "지행 수여%s",
+      "priority": "p2"
+    },
+    {
+      "id": 2452,
+      "source_sc_utf16le_sha256": "B615F6CD4A89511DEF1734C7E437371667841BA4E0B5DD4BA5ACE11D9F07FD07",
+      "ko": "지행 확약%s",
+      "priority": "p2"
+    },
+    {
+      "id": 2453,
+      "source_sc_utf16le_sha256": "7A148027BCE0604BD077E72B99E40C320D9444C60D8DC950D3CA466E18A53259",
+      "ko": "성주 확약%s",
+      "priority": "p2"
+    },
+    {
+      "id": 2454,
+      "source_sc_utf16le_sha256": "084545CF13E993A16125739AD489234847D5F74303349159A91FC3451814457B",
+      "ko": "%s 소속",
+      "priority": "p2"
+    },
+    {
+      "id": 2455,
+      "source_sc_utf16le_sha256": "2BBD30CF728897324A38A7E945F2ACEB7CDE7BF966AE8DF508E22A1AC15E919A",
+      "ko": "%s의 요리키",
+      "priority": "p2"
+    },
+    {
+      "id": 2456,
+      "source_sc_utf16le_sha256": "7C032C274AE416B5AB70715CEA318D844CC531930738B982573E6A023491CADC",
+      "ko": "우선",
+      "priority": "p2"
+    },
+    {
+      "id": 2457,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2458,
+      "source_sc_utf16le_sha256": "84645F8138B4B0811BF10720D6A3F6B1077463EA68BF0C51CCD03D5E5C8C6F7C",
+      "ko": "교섭 조건",
+      "priority": "p2"
+    },
+    {
+      "id": 2459,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2460,
+      "source_sc_utf16le_sha256": "F3C77158FE080F7990C4EC28EC54F96A0B525E4D39ABEC56DB6FBDD825E2F088",
+      "ko": "봉행 임명 완료",
+      "priority": "p2"
+    },
+    {
+      "id": 2461,
+      "source_sc_utf16le_sha256": "902E4440A3EE2202862A59C6252E00454AE54A6D010B9080E5BB486A8B7C8649",
+      "ko": "가재 임명 완료",
+      "priority": "p2"
+    },
+    {
+      "id": 2462,
+      "source_sc_utf16le_sha256": "F29F855B5C3268F7A857465D3D11AB60BCB977A0418915EFB7F717D16D2A698B",
+      "ko": "이명",
+      "priority": "p2"
+    },
+    {
+      "id": 2463,
+      "source_sc_utf16le_sha256": "AA3D05954B1DE6D8B96F9CEB8C5D584326B4524D76754E2013996B8AE3F85FE4",
+      "ko": "제압 수여",
+      "priority": "p2"
+    },
+    {
+      "id": 2464,
+      "source_sc_utf16le_sha256": "0A07E1068AC173C258A9E9895D4F7F0B9615CEB2FE27984266ABE34791C36B29",
+      "ko": "전투 수여",
+      "priority": "p2"
+    },
+    {
+      "id": 2465,
+      "source_sc_utf16le_sha256": "639B8E2ED214643F8E7D787BAF6EA5EE4783EC848155E83A46BC5037BDED3314",
+      "ko": "조략 수여",
+      "priority": "p2"
+    },
+    {
+      "id": 2466,
+      "source_sc_utf16le_sha256": "7A932C7B4587B7420AF1832370F4B7BF8C3FE6023320E38D10FD39F00D0746AC",
+      "ko": "내정 수여",
+      "priority": "p2"
+    },
+    {
+      "id": 2467,
+      "source_sc_utf16le_sha256": "4A94060CEDF13D25971F6E2282F96F55C1B1351E187C37D081D078535450E1C8",
+      "ko": "수여 수",
+      "priority": "p2"
+    },
+    {
+      "id": 2468,
+      "source_sc_utf16le_sha256": "A8A4C271A5A4AC7465F67402E97C4466FCB3A7C1315EBC7027485F9C12BD2875",
+      "ko": "보유 조건",
+      "priority": "p2"
+    },
+    {
+      "id": 2469,
+      "source_sc_utf16le_sha256": "89DE10C911C928997BCEAA51F5D542B1BD98E5E233E065A8D3A4BFACF11BEC64",
+      "ko": "발현 LV",
+      "priority": "p2"
+    },
+    {
+      "id": 2470,
+      "source_sc_utf16le_sha256": "BD990D7A307EA942CC93B2E0A646E0F7AAD2AFBAAAB78A4F55C2D7CA41543B1E",
+      "ko": "\u001bC1+\u001bCZ %s",
+      "priority": "p2"
+    },
+    {
+      "id": 2471,
+      "source_sc_utf16le_sha256": "CCD8B485458953BB49EB6B6FDA45D40181A3C4DD20551DFF7A0FFEC462BD4B7F",
+      "ko": "\u001bC2-\u001bCZ %s",
+      "priority": "p2"
+    },
+    {
+      "id": 2472,
+      "source_sc_utf16le_sha256": "AB5C086AF8D7C31F181D83C39E96403A8517EB09E7BB177A753F9EB7E8CFE536",
+      "ko": "방위 무장",
+      "priority": "p2"
+    },
+    {
+      "id": 2473,
+      "source_sc_utf16le_sha256": "B0BBD14C7C310B81FC0184D76AEAB654B218B3592798D1A4BF0D152B1B52BE3F",
+      "ko": "구획",
+      "priority": "p2"
+    },
+    {
+      "id": 2474,
+      "source_sc_utf16le_sha256": "68FDDD020E4E6F390D376D852E5B7E2B015890B3A260122D2FFA28772EBE6A05",
+      "ko": "방위 병력",
+      "priority": "p2"
+    },
+    {
+      "id": 2475,
+      "source_sc_utf16le_sha256": "C5FD047F46341FB383A2AC7E22C5D7CEB6EDD8924B32118C41BFF5D9BBF32459",
+      "ko": "저장 상한",
+      "priority": "p2"
+    },
+    {
+      "id": 2476,
+      "source_sc_utf16le_sha256": "156508BE5136A49756687F364421F3629F5A8CF11EE2D70A5745F1BE8A4A7A1C",
+      "ko": "성주 이상",
+      "priority": "p2"
+    },
+    {
+      "id": 2477,
+      "source_sc_utf16le_sha256": "7884A24BBBEBAEACC754675435CC2714136F6B9A4D776366C6EDDB17118A51E8",
+      "ko": "세력 편집",
+      "priority": "p2"
+    },
+    {
+      "id": 2478,
+      "source_sc_utf16le_sha256": "4FE4360D70411EE8BB5D3846E381E13D5DFA2A571D890B6DF7B9B39B7EB5332D",
+      "ko": "외교 편집",
+      "priority": "p2"
+    },
+    {
+      "id": 2479,
+      "source_sc_utf16le_sha256": "26DE362E147248156A8C52C9088032B489A36F2E4CF946163D1D6C788AA7035A",
+      "ko": "성 편집",
+      "priority": "p2"
+    },
+    {
+      "id": 2480,
+      "source_sc_utf16le_sha256": "373F578311E8C0296CB95B8CB6AAB74E5D60A93BC58438355802C602EAA615C2",
+      "ko": "부대 편집",
+      "priority": "p2"
+    },
+    {
+      "id": 2481,
+      "source_sc_utf16le_sha256": "7355D1E3FA1CE3701C0FDAB0300F81BD075662E84FE239B773085E25FE70BF7A",
+      "ko": "영지 변경",
+      "priority": "p2"
+    },
+    {
+      "id": 2482,
+      "source_sc_utf16le_sha256": "FE8B29995FC869B25F0C5424B05889ECE90BE9406CD51AB62C8790BDA0DC5986",
+      "ko": "신규 세력 생성",
+      "priority": "p2"
+    },
+    {
+      "id": 2483,
+      "source_sc_utf16le_sha256": "C408281F1B675D9091CFE2144400DE506674F0D38D52B9346D8294625BE61314",
+      "ko": "다이묘 변경",
+      "priority": "p2"
+    },
+    {
+      "id": 2484,
+      "source_sc_utf16le_sha256": "0DC18BAA5B1EF974C3F200E27ADED825DE7CF57BBCB51D38D4D3C3410BA22E3E",
+      "ko": "명소",
+      "priority": "p2"
+    },
+    {
+      "id": 2485,
+      "source_sc_utf16le_sha256": "4CB04A3B3EBC2433EEDE980081B3A4D6951DC537D2562B55DB768354B8D5269C",
+      "ko": "지행 수여",
+      "priority": "p2"
+    },
+    {
+      "id": 2486,
+      "source_sc_utf16le_sha256": "D165F8783B70DE1A6E05EEA9141C8BE2F125322B7390B1E5896B744DC0A3F2DB",
+      "ko": "%s의 소령 안도",
+      "priority": "p2"
+    },
+    {
+      "id": 2487,
+      "source_sc_utf16le_sha256": "D165F8783B70DE1A6E05EEA9141C8BE2F125322B7390B1E5896B744DC0A3F2DB",
+      "ko": "%s의 소령 안도",
+      "priority": "p2"
+    },
+    {
+      "id": 2488,
+      "source_sc_utf16le_sha256": "4F8C3ABBD5DEBF76AEBF7EDDF0C031F5E04EBEB644BA58B551785BC8DA8BF5DA",
+      "ko": "설비 내구 상승",
+      "priority": "p2"
+    },
+    {
+      "id": 2489,
+      "source_sc_utf16le_sha256": "48957CF9D335ED9ADC3D7723AE8CB8FD2C233294A79B7C69344260CF0392E311",
+      "ko": "설비 내구 하락",
+      "priority": "p2"
+    },
+    {
+      "id": 2490,
+      "source_sc_utf16le_sha256": "95C0BDF8F843B64E400C5C594B93970917F7583FC1B44AA8CB3762A898022376",
+      "ko": "제압 공적",
+      "priority": "p2"
+    },
+    {
+      "id": 2491,
+      "source_sc_utf16le_sha256": "A67FB667461FFEC0C0C836F5D8EA714047F3B73291D16A497FB828F9C249AAAF",
+      "ko": "전투 공적",
+      "priority": "p2"
+    },
+    {
+      "id": 2492,
+      "source_sc_utf16le_sha256": "1E675F3BA586ADAA600D1AF24A412E4F001C0D99BBEC342C953DDED2618510F7",
+      "ko": "조략 공적",
+      "priority": "p2"
+    },
+    {
+      "id": 2493,
+      "source_sc_utf16le_sha256": "807B41FDC3ED899AE135AB5C2BD8013D52BD4AAD93EB003CA936F7D53D5C2002",
+      "ko": "내정 공적",
+      "priority": "p2"
+    },
+    {
+      "id": 2494,
+      "source_sc_utf16le_sha256": "3208170B3161484E1EB343226DD0140B89E00BB276A3CD509C3D3B1D6E827024",
+      "ko": "음성 언어",
+      "priority": "p2"
+    },
+    {
+      "id": 2495,
+      "source_sc_utf16le_sha256": "71D7CA60D5A197971C2695FA0B097F8168ECAB70581B54D7ED9932FCB374A06C",
+      "ko": "일본어",
+      "priority": "p2"
+    },
+    {
+      "id": 2496,
+      "source_sc_utf16le_sha256": "F57E3E31855A0E1E4CFC3E38F96831D46BADCA14E8D91C43AD4B200AD508C862",
+      "ko": "영어",
+      "priority": "p2"
+    },
+    {
+      "id": 2497,
+      "source_sc_utf16le_sha256": "F39F4074CEFA8951DF6BB20EBCF9BBACA385E65DAF02938944894C36E1491C75",
+      "ko": "총사기 상승",
+      "priority": "p2"
+    },
+    {
+      "id": 2498,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2499,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2500,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2501,
+      "source_sc_utf16le_sha256": "E5B729E00DB8AA20CB7556F55BA58110CF1314BD8E145EAD0007FCCA3EE2ED27",
+      "ko": "보급 군량 수입",
+      "priority": "p2"
+    },
+    {
+      "id": 2502,
+      "source_sc_utf16le_sha256": "BEE5DCDCFDB434C0DE0EDCB890D63ED34D8B275D69A6348D2E6C8FF5C83482B2",
+      "ko": "총사기",
+      "priority": "p2"
+    },
+    {
+      "id": 2503,
+      "source_sc_utf16le_sha256": "ACAB9E97BE75BFC00164B3DF56FA49D5A65615F8622097525FBC06822A6418BE",
+      "ko": "연수 선택",
+      "priority": "p2"
+    },
+    {
+      "id": 2504,
+      "source_sc_utf16le_sha256": "A4977EB057542C036BA77856C2418E5D72B4C75D10F9FD52714579533DDBEACF",
+      "ko": "금전 선택",
+      "priority": "p2"
+    },
+    {
+      "id": 2505,
+      "source_sc_utf16le_sha256": "C5AD2CAC02CAC1D77E4BA8F0C12CF05554C6B1804BDB6ED59342E3C789FF96BD",
+      "ko": "영지 양도",
+      "priority": "p2"
+    },
+    {
+      "id": 2506,
+      "source_sc_utf16le_sha256": "FE7C54C008BFA807C5D5A2A3472C313CFF9A4525BF67D93B0C320DDE95D3616E",
+      "ko": "영지 반환",
+      "priority": "p2"
+    },
+    {
+      "id": 2507,
+      "source_sc_utf16le_sha256": "69517944AE65EEAB8C43523E7BAFF2F27F3CFFBB9B16314547FC2729DCE3CE32",
+      "ko": "1월",
+      "priority": "p2"
+    },
+    {
+      "id": 2508,
+      "source_sc_utf16le_sha256": "2F36BE80C7764487F1FCE19A0EA817C21A6511E3B9874418137003688655E10B",
+      "ko": "2월",
+      "priority": "p2"
+    },
+    {
+      "id": 2509,
+      "source_sc_utf16le_sha256": "BD071035D97AC5C3DD61423373C2E1C3FD795907EBAE4731A0BB722728745481",
+      "ko": "3월",
+      "priority": "p2"
+    },
+    {
+      "id": 2510,
+      "source_sc_utf16le_sha256": "22012379556D517616E68F9651337F05BC3F39D210361AEA0E29C006DAE8C81A",
+      "ko": "4월",
+      "priority": "p2"
+    },
+    {
+      "id": 2511,
+      "source_sc_utf16le_sha256": "95437F5F88D0CA4ECE3B06E6F80A45C6451A84C921F909D78D7315CC154FEA03",
+      "ko": "5월",
+      "priority": "p2"
+    },
+    {
+      "id": 2512,
+      "source_sc_utf16le_sha256": "5247D9EED36EEEA6DDAFCE5221BE51A4FE3A66FE6481D45B463CC49AFAB67A07",
+      "ko": "6월",
+      "priority": "p2"
+    },
+    {
+      "id": 2513,
+      "source_sc_utf16le_sha256": "78B387F48978FD5B020C29E5069AFEAABE80F66748B235CABE4B573114EE6849",
+      "ko": "7월",
+      "priority": "p2"
+    },
+    {
+      "id": 2514,
+      "source_sc_utf16le_sha256": "D1AA7D6305511B7D04B2C67154E95AE3D1F9025355E4F5BAA0131181BAACD8DC",
+      "ko": "8월",
+      "priority": "p2"
+    },
+    {
+      "id": 2515,
+      "source_sc_utf16le_sha256": "4233F1D4BBD13A68DF32D305ABDCB24703EFA3F8C4678BA403B3619B49A87168",
+      "ko": "9월",
+      "priority": "p2"
+    },
+    {
+      "id": 2516,
+      "source_sc_utf16le_sha256": "A7CB69976769FACA855B3879C0DB3C1F3C0CABBE2F2624C96C9BE0A8DC9B9736",
+      "ko": "10월",
+      "priority": "p2"
+    },
+    {
+      "id": 2517,
+      "source_sc_utf16le_sha256": "77595AE6895A2D8E1A19861B1A1378EC534F52F4184585DB833CCADCFC86104A",
+      "ko": "11월",
+      "priority": "p2"
+    },
+    {
+      "id": 2518,
+      "source_sc_utf16le_sha256": "3986C90B0592D3701CEAC47434B8BCBA45B4056182FC355FCCAF76D6852FA148",
+      "ko": "12월",
+      "priority": "p2"
+    },
+    {
+      "id": 2519,
+      "source_sc_utf16le_sha256": "4EC768FD816EAD0A42081B8F0FB61AD4E2C0489235C0CFFCA1BB61FD663DDE17",
+      "ko": "우수",
+      "priority": "p2"
+    },
+    {
+      "id": 2520,
+      "source_sc_utf16le_sha256": "2976009B2CDB26A9DEDB78481A34045468A94DD0422EBEB3DF1B9CFE27574803",
+      "ko": "양호",
+      "priority": "p2"
+    },
+    {
+      "id": 2521,
+      "source_sc_utf16le_sha256": "4CE7BCF6E148D5048B8EBB6760EF1B0B11F67AC0A1D1AAD41E31087A1B6A1DB7",
+      "ko": "보통",
+      "priority": "p2"
+    },
+    {
+      "id": 2522,
+      "source_sc_utf16le_sha256": "3564176E6F93680F0A74B94F30F82C48F9B84727DFD76B1A72260BFA27C7C97D",
+      "ko": "재임명 불가",
+      "priority": "p2"
+    },
+    {
+      "id": 2523,
+      "source_sc_utf16le_sha256": "8F4540F31E0D3100EB51C51BE84280B143F21D5339D6869B8C6ACACF84B2DAED",
+      "ko": "공성전 준비",
+      "priority": "p2"
+    },
+    {
+      "id": 2524,
+      "source_sc_utf16le_sha256": "40BBD9AE7F3AF30A7520A99E084C2F36B79483990E3D765226DAC4C001344492",
+      "ko": "교섭치 %s％",
+      "priority": "p2"
+    },
+    {
+      "id": 2525,
+      "source_sc_utf16le_sha256": "E6C3A0CDD66E3164B30BF13DFCD15091ED4CF329C66EF24FF4752764AE59265F",
+      "ko": "Κ",
+      "priority": "p2"
+    },
+    {
+      "id": 2526,
+      "source_sc_utf16le_sha256": "F57BF10873F12A4AD964CAE41CC910238ADF7F505736C420A39883212CFFBAC6",
+      "ko": "Λ",
+      "priority": "p2"
+    },
+    {
+      "id": 2527,
+      "source_sc_utf16le_sha256": "17889CF59ED2F9A737C31D76D9A15B0BA103F4A81402F7CE70669A9461B12DB1",
+      "ko": "Μ",
+      "priority": "p2"
+    },
+    {
+      "id": 2528,
+      "source_sc_utf16le_sha256": "F63B03FBA1806779445C9DA78ECF411C001254EC0C24383A2CF8C48D1BAFEAD6",
+      "ko": "Ν",
+      "priority": "p2"
+    },
+    {
+      "id": 2529,
+      "source_sc_utf16le_sha256": "82EA09D4781D0E01352CDB4B053CD2D12E1401DC54E3FBA5F5D58BC255D53DCD",
+      "ko": "특별 보상",
+      "priority": "p2"
+    },
+    {
+      "id": 2530,
+      "source_sc_utf16le_sha256": "40AA7C7BFCDD03725ADE4338FB978775425A256BFEA8532C484BE9D24D357FE4",
+      "ko": "감장 +%d",
+      "priority": "p2"
+    },
+    {
+      "id": 2531,
+      "source_sc_utf16le_sha256": "B4613E575586159FF8F766ECC672CA1B2E380404F5E6839CDE511269BB6A8604",
+      "ko": "×%d",
+      "priority": "p2"
+    },
+    {
+      "id": 2532,
+      "source_sc_utf16le_sha256": "D252FF00375972EF010E4C8ADC4FE57F3E2732952A1C3E3E5DD655C8D10D5F2F",
+      "ko": "%d일～",
+      "priority": "p2"
+    },
+    {
+      "id": 2533,
+      "source_sc_utf16le_sha256": "39C865B293133DE2DC930A769F607B479BAA801D7D29295F2AFF29296789DB3F",
+      "ko": "지원 대상",
+      "priority": "p2"
+    },
+    {
+      "id": 2534,
+      "source_sc_utf16le_sha256": "E208A1060936E0B85631846E167D39BD82A019A8F4ED248C6192E8EEAC175FA5",
+      "ko": "1단계 완화",
+      "priority": "p2"
+    },
+    {
+      "id": 2535,
+      "source_sc_utf16le_sha256": "1D7738101959FB32E04EE133B2A297BED35E3BE24401E2A9F39D97C7AC036B54",
+      "ko": "2단계 완화",
+      "priority": "p2"
+    },
+    {
+      "id": 2536,
+      "source_sc_utf16le_sha256": "AB0605981ECA695BF39E726B89280643005B4E046C1AD3128B31A5F7B34A985E",
+      "ko": "무효",
+      "priority": "p2"
+    },
+    {
+      "id": 2537,
+      "source_sc_utf16le_sha256": "2B364BCD40F836FC6F620262153CCE5BC90AB7D6DBF7FA0136CAF24A56E05F7F",
+      "ko": "감장",
+      "priority": "p2"
+    },
+    {
+      "id": 2538,
+      "source_sc_utf16le_sha256": "3498D70E0B1DE2384988D278DFC6CA2AB4E91F295A22AD758D939DC5D6307B28",
+      "ko": "감장 수여",
+      "priority": "p2"
+    },
+    {
+      "id": 2539,
+      "source_sc_utf16le_sha256": "F57F0FD09C6E1C0A09325BE85ABE7A0FC81FC148AF2CFF8710459B4CFB33FD13",
+      "ko": "정책 3",
+      "priority": "p2"
+    },
+    {
+      "id": 2540,
+      "source_sc_utf16le_sha256": "274DFFF2A32F91985371E063B7A38729CD010B6D6819BB332C89E1BF7555B569",
+      "ko": "이동 중",
+      "priority": "p2"
+    },
+    {
+      "id": 2541,
+      "source_sc_utf16le_sha256": "9AD89F687174125FA63CBC018029BA566E27C5CD05A8CADD116431910FCDC3F1",
+      "ko": "귀환 중",
+      "priority": "p2"
+    },
+    {
+      "id": 2542,
+      "source_sc_utf16le_sha256": "4BA132651B35643DC566B92718F5B97548CEB654655BD0BA994EF7F2EBED26BC",
+      "ko": "보정",
+      "priority": "p2"
+    },
+    {
+      "id": 2543,
+      "source_sc_utf16le_sha256": "885A78E5853E4FF15C8A3D525095FA114F46032A8D06DAC96B18C60464FB59C3",
+      "ko": "포상",
+      "priority": "p2"
+    },
+    {
+      "id": 2544,
+      "source_sc_utf16le_sha256": "9BAFC42B9B391CDA1C7B56D7586B54B8393FA174F2300FFADD34074582466B61",
+      "ko": "아군 세력",
+      "priority": "p2"
+    },
+    {
+      "id": 2545,
+      "source_sc_utf16le_sha256": "658C06CA2B6124FD1C11844930BF4687F1F742F093F8C781294DEB12C1ED58E1",
+      "ko": "인접 세력",
+      "priority": "p2"
+    },
+    {
+      "id": 2546,
+      "source_sc_utf16le_sha256": "D0875EDBE076C0A73532FB5C3F30F9AEB76A56B989A5AE6CFE753A00E8169A2A",
+      "ko": "관위 %s 이상인 세력",
+      "priority": "p2"
+    },
+    {
+      "id": 2547,
+      "source_sc_utf16le_sha256": "B6044F66482E8EDD2BC5C8447BBCEB515D93BF0E444D92CF2FC78E88BE978427",
+      "ko": "한정",
+      "priority": "p2"
+    },
+    {
+      "id": 2548,
+      "source_sc_utf16le_sha256": "A7AC91A4613DC43BCB7F9F08A9F45146F22EBBF1F774C6B0696F3B4181403997",
+      "ko": "공적",
+      "priority": "p2"
+    },
+    {
+      "id": 2549,
+      "source_sc_utf16le_sha256": "A7066BE9B6D373EA6444D88FAD188011BEF1A5EBA2B38A84367E16F062A12660",
+      "ko": "방책",
+      "priority": "p2"
+    },
+    {
+      "id": 2550,
+      "source_sc_utf16le_sha256": "573BB438BB2470FB99B02F576503F635D3D7D4C55597F2CC90DCF69BD5A6D587",
+      "ko": "보급",
+      "priority": "p2"
+    },
+    {
+      "id": 2551,
+      "source_sc_utf16le_sha256": "709FF5F73C6371EE81AB66DC3DE387C3CD418F131591016CB5565079532B2110",
+      "ko": "제안",
+      "priority": "p2"
+    },
+    {
+      "id": 2552,
+      "source_sc_utf16le_sha256": "2C6B27D911F935608FBBA5773C8373771C669CB8E0176FFAD2C1793859092F6D",
+      "ko": "설비 없음",
+      "priority": "p2"
+    },
+    {
+      "id": 2553,
+      "source_sc_utf16le_sha256": "77DE032B7A6B1C0C950CF34C793CD0C4F8B510350D90381A3700DF2E9CEDDCA6",
+      "ko": "신사",
+      "priority": "p2"
+    },
+    {
+      "id": 2554,
+      "source_sc_utf16le_sha256": "62594983AEED3097F4EBB271FEA974CCBB2559DB02A00F6439ADE758D3CFB37A",
+      "ko": "최대 방어 병력",
+      "priority": "p2"
+    },
+    {
+      "id": 2555,
+      "source_sc_utf16le_sha256": "AD9541BCF7D946B906450C6EF6FAB0E1C57C424EBC2609065AAB9D1A9A29CF7B",
+      "ko": "공성전 가능",
+      "priority": "p2"
+    },
+    {
+      "id": 2556,
+      "source_sc_utf16le_sha256": "002784D6324169A7141ED911AE43359B6368656CCFCD4098E013E68197A5CA2F",
+      "ko": "최대 보급 군량",
+      "priority": "p2"
+    },
+    {
+      "id": 2557,
+      "source_sc_utf16le_sha256": "5288D68361E784F26DE36B5A1A4560268C4A6C20BE4A4017E227FF21567EE00E",
+      "ko": "방책 수",
+      "priority": "p2"
+    },
+    {
+      "id": 2558,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2559,
+      "source_sc_utf16le_sha256": "E463F7733F781DCD0A30DA34B70CEBA32CEC732F870A7FC8D9AC94F7B418191E",
+      "ko": "외양 가재",
+      "priority": "p2"
+    },
+    {
+      "id": 2560,
+      "source_sc_utf16le_sha256": "574A835D6AD6E235914826BA3992D870408002EECAD865A20F93CB0B59EAC5D8",
+      "ko": "성 역할 1",
+      "priority": "p2"
+    },
+    {
+      "id": 2561,
+      "source_sc_utf16le_sha256": "2935E964B86C668BEF24C616158E788D02C92AB4AD1150C7462DB2E0651150B8",
+      "ko": "성 역할 2",
+      "priority": "p2"
+    },
+    {
+      "id": 2562,
+      "source_sc_utf16le_sha256": "E64EA4A70263E37B821149E02508DC9AB0225C9DD9B978EC39B8B79163ED6651",
+      "ko": "공성전 가능",
+      "priority": "p2"
+    },
+    {
+      "id": 2563,
+      "source_sc_utf16le_sha256": "EDE1AD8A7904C32194395B275DA6C6E54EEF39F61E458CB5B3D86A31B135D04C",
+      "ko": "장점",
+      "priority": "p2"
+    },
+    {
+      "id": 2564,
+      "source_sc_utf16le_sha256": "5BB698A73F83B04D013EC86B1AA6794FB69FE2EB125660ABF2D52096500401A9",
+      "ko": "단점",
+      "priority": "p2"
+    },
+    {
+      "id": 2565,
+      "source_sc_utf16le_sha256": "F052888AF6355AAE58E0CE4D749D6C0D63EDF49022DAAB8770E39CA4BD386746",
+      "ko": "미해금",
+      "priority": "p2"
+    },
+    {
+      "id": 2566,
+      "source_sc_utf16le_sha256": "EDC4C81639FF02477AB3E356DEA61E2B7D423B12446303BFAA0DE353AB0FE1A2",
+      "ko": "미실시",
+      "priority": "p2"
+    },
+    {
+      "id": 2567,
+      "source_sc_utf16le_sha256": "D0FCA22B92639C84EFE3329323F857A4412BC6A84470895A85C447BB57A29FA9",
+      "ko": "발령 상태",
+      "priority": "p2"
+    },
+    {
+      "id": 2568,
+      "source_sc_utf16le_sha256": "2A68B174E918DFD1881E965694DE252CB2AA3BFAC7AA705A3EE60CD878DCF146",
+      "ko": "（상시 발동）",
+      "priority": "p2"
+    },
+    {
+      "id": 2569,
+      "source_sc_utf16le_sha256": "C38A24B2FC3F23F40B7DF08474836B3551BF4077FB55ECC472D6DD4FE7E80DF1",
+      "ko": "（수동 발동）",
+      "priority": "p2"
+    },
+    {
+      "id": 2570,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2571,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2572,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2573,
+      "source_sc_utf16le_sha256": "F83CC44A88A1E25901ACF839A06F22EDB018DFACDA028BEFE435D39E3E18C4FF",
+      "ko": "명소/상위 취락 보기",
+      "priority": "p2"
+    },
+    {
+      "id": 2574,
+      "source_sc_utf16le_sha256": "CE581432269E46AC19144E89F4B18EE4BA8DB487DBDACD4C8A4C9F6E2ADC9E46",
+      "ko": "명소/상위 취락 보기 전환",
+      "priority": "p2"
+    },
+    {
+      "id": 2575,
+      "source_sc_utf16le_sha256": "331B753CEDE48AE83465667BC11F49FC3A3D19748C501B208902B45582F51FB3",
+      "ko": "명소 보기",
+      "priority": "p2"
+    },
+    {
+      "id": 2576,
+      "source_sc_utf16le_sha256": "CF2A47398F6B3FFFF94C40439D0247EBFCD66F1D0A07202437DDA4392756030E",
+      "ko": "가문 문양 선택",
+      "priority": "p2"
+    },
+    {
+      "id": 2577,
+      "source_sc_utf16le_sha256": "C40BCC4884A0EA22206551ED2D6E5675A7E0DB2A4D7878C9BF1FF4A886401BE5",
+      "ko": "수동",
+      "priority": "p2"
+    },
+    {
+      "id": 2578,
+      "source_sc_utf16le_sha256": "FCC1654E899FC4B00D0A9D70EABC449182D998E4F341F67115FAA4DD0ED51921",
+      "ko": "상시",
+      "priority": "p2"
+    },
+    {
+      "id": 2579,
+      "source_sc_utf16le_sha256": "4DF75AE15C27F0B17B4C50B6AC38D4183EB1BD57D1A6569AAF277A9CE72C7A62",
+      "ko": "이명 선택",
+      "priority": "p2"
+    },
+    {
+      "id": 2580,
+      "source_sc_utf16le_sha256": "B028A4F4CFCBE32930A535A08FFF6E43FB3FC667AEA592858BAFFF646454B656",
+      "ko": "동요",
+      "priority": "p2"
+    },
+    {
+      "id": 2581,
+      "source_sc_utf16le_sha256": "41042EBFC32BF72EC76D2D84DE3DB44156AF4498D5DE90476B259D4788ED00D7",
+      "ko": "해운 보급",
+      "priority": "p2"
+    },
+    {
+      "id": 2582,
+      "source_sc_utf16le_sha256": "6ECCA047DA656A7162FEBE6EEECF90A150FF229D36DC37A1D7EF1F1E5146CD78",
+      "ko": "보급 군량 보충",
+      "priority": "p2"
+    },
+    {
+      "id": 2583,
+      "source_sc_utf16le_sha256": "D87EE8A87FD299BBBA825D48C6A17DA2F1AE1A9565812AEA168C7826D0A8270E",
+      "ko": "위압",
+      "priority": "p2"
+    },
+    {
+      "id": 2584,
+      "source_sc_utf16le_sha256": "9E4BC5DA03B3D7B62F6462573CC1F35230D352523C8E33C7356699603D15DDFD",
+      "ko": "%s을(를) %s와 함께 포섭",
+      "priority": "p2"
+    },
+    {
+      "id": 2585,
+      "source_sc_utf16le_sha256": "2602FF719E275A2D04BAF1DB2C058D573665CB2CBF1A7828D3668FBAC93789A9",
+      "ko": "휴대 군량 감소",
+      "priority": "p2"
+    },
+    {
+      "id": 2586,
+      "source_sc_utf16le_sha256": "130D14C2A191D405F9C2B2E9BB9E9436FE6E89460080015C991346435DFA62C9",
+      "ko": "다음 출진 시 부대 능력 상승",
+      "priority": "p2"
+    },
+    {
+      "id": 2587,
+      "source_sc_utf16le_sha256": "363EDB054EFD52448A8F46306A42C48CABBC763549EEE93069A29730F07153C3",
+      "ko": "모든 취락을 장악한 군",
+      "priority": "p2"
+    },
+    {
+      "id": 2588,
+      "source_sc_utf16le_sha256": "88F5101C68BB0D6A8DB38A683D02459A117B9AEBCF4B6710CDDB4EF1504F4AEF",
+      "ko": "○○",
+      "priority": "p2"
+    },
+    {
+      "id": 2589,
+      "source_sc_utf16le_sha256": "981F9BAF377D0199A2ECEA5C2420B6FCDF134AF7E01839A22FB4F5BD7AD324FC",
+      "ko": "%s 부대 등 %d개 부대",
+      "priority": "p2"
+    },
+    {
+      "id": 2590,
+      "source_sc_utf16le_sha256": "658EDC1E937FBC4EA042B672A5B0AE56D686902913E9796BA4AC9F5A729D5E4D",
+      "ko": "상시 성장형",
+      "priority": "p2"
+    },
+    {
+      "id": 2591,
+      "source_sc_utf16le_sha256": "062B501E6B223FBC20835BC494C4AB41C13EE5F5EF6773FE9C3D19C6FFBF6B17",
+      "ko": "발동 유형",
+      "priority": "p2"
+    },
+    {
+      "id": 2592,
+      "source_sc_utf16le_sha256": "1394CD7C9C6B76B7AF446BFEC35D0024A7076D5615D732321736166BD2F4B792",
+      "ko": "%d일 이상",
+      "priority": "p2"
+    },
+    {
+      "id": 2593,
+      "source_sc_utf16le_sha256": "AD53DA22CBBB6D66B398968B7AC45293C0B5BAFFB8721B8F75A4F7D0109FD075",
+      "ko": "포진 지점",
+      "priority": "p2"
+    },
+    {
+      "id": 2594,
+      "source_sc_utf16le_sha256": "2F1A00DE1FA368468813E8769EE826386207EF07C873FE632F89F96DAED13E14",
+      "ko": "협공 무효",
+      "priority": "p2"
+    },
+    {
+      "id": 2595,
+      "source_sc_utf16le_sha256": "DE1048F8E2FF54DE2D61A416B532E63FEBA2EFAECF1BF9790613223AF5EB187A",
+      "ko": "%s：%s",
+      "priority": "p2"
+    },
+    {
+      "id": 2596,
+      "source_sc_utf16le_sha256": "100B6EB0C91F04C04B141468CFCB16DBF915FF850D98768E2E5D78D748101A37",
+      "ko": "“적대”가 아닌 인접 세력",
+      "priority": "p2"
+    },
+    {
+      "id": 2597,
+      "source_sc_utf16le_sha256": "E76F65572190099875AD47BB36D24BD163CF5F747551B71D88EF747FAE1BB2BD",
+      "ko": "군대/성대가 다스리는 군",
+      "priority": "p2"
+    },
+    {
+      "id": 2598,
+      "source_sc_utf16le_sha256": "E4F9B251793D7221BBACCAAFD71CDE00550BDB01E6DB961554F6C576E218E232",
+      "ko": "다이묘 군단의 통치 범위 내 성",
+      "priority": "p2"
+    },
+    {
+      "id": 2599,
+      "source_sc_utf16le_sha256": "8174E95BC71ECB754D7CA12DDF604BC3D25CFDD19F8E665D8FB9B06495515EF0",
+      "ko": "：%s",
+      "priority": "p2"
+    },
+    {
+      "id": 2600,
+      "source_sc_utf16le_sha256": "4AE18EA21E2CF584F04E15560422E7AB9E7351C526717B055D4CFE167EB535C2",
+      "ko": "（타세력）",
+      "priority": "p2"
+    },
+    {
+      "id": 2601,
+      "source_sc_utf16le_sha256": "ADDB21142DF54B220F3F68A1BDD43F3C2EFA02426018F995933C042D67118F3C",
+      "ko": "(자세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2602,
+      "source_sc_utf16le_sha256": "75EEF4DAB5BA3B1CAB68FF87776122420275B757A261F9A1CC5D4C568D074DCA",
+      "ko": "병력 회복 속도",
+      "priority": "p2"
+    },
+    {
+      "id": 2603,
+      "source_sc_utf16le_sha256": "49076CE10EE966C4C1F3CF29370CD8E205CE331EB204C3A05878B325148710DE",
+      "ko": "건의·내정 속도",
+      "priority": "p2"
+    },
+    {
+      "id": 2604,
+      "source_sc_utf16le_sha256": "0E3D39A90FA207055627D4C32BF9AC3A4A93E4C5F6FEAF1BD7A1BD9FD40DC2BD",
+      "ko": "계략 성공률",
+      "priority": "p2"
+    },
+    {
+      "id": 2605,
+      "source_sc_utf16le_sha256": "777CB0FCBA5499C0822FE2900345292E2EEB9D499EDDFE41E9FA1D76D499E080",
+      "ko": "전투/공성전 AI 레벨",
+      "priority": "p2"
+    },
+    {
+      "id": 2606,
+      "source_sc_utf16le_sha256": "970F519C2CADBCEFB1E81694F904BC6229DD2A8300E98C6D0D4FC4BFCA584140",
+      "ko": "느림",
+      "priority": "p2"
+    },
+    {
+      "id": 2607,
+      "source_sc_utf16le_sha256": "4F244FBB27C1A5ED00F28F46A349D11AE0B9EAAA53836F498F7D462E68D6ACDC",
+      "ko": "빠름",
+      "priority": "p2"
+    },
+    {
+      "id": 2608,
+      "source_sc_utf16le_sha256": "4A5231041A5918604ADCC54BA501C1E33B305A3A7A00F10C495D9FC092FB82FF",
+      "ko": "강함",
+      "priority": "p2"
+    },
+    {
+      "id": 2609,
+      "source_sc_utf16le_sha256": "3A7B61CBAD773DAAEBE0B56E523D12114468EAA4F004A8410EA0984414E3367B",
+      "ko": "보급 군량 %+d/월",
+      "priority": "p2"
+    },
+    {
+      "id": 2610,
+      "source_sc_utf16le_sha256": "01DA33C0E49F9496D5EF2BF1131959BB9E52EFE5AE95B65AD12A62B1F909DA68",
+      "ko": "%d％(LV%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 2611,
+      "source_sc_utf16le_sha256": "77D0B783EC74E671B738B48BF605D69A3E4F5E6F5C35E58DEDD29ECA653D536D",
+      "ko": "제안 중",
+      "priority": "p2"
+    },
+    {
+      "id": 2612,
+      "source_sc_utf16le_sha256": "6EACEC0F9D23DDF6CC6E453829E42ECA2121D508C68FDECF9EA80915EE463A1D",
+      "ko": "소목표 건의",
+      "priority": "p2"
+    },
+    {
+      "id": 2613,
+      "source_sc_utf16le_sha256": "A54DC7732A0C51424283D6474B04CDE5B99BD894D90C66FD4327998CEC3B4125",
+      "ko": "임의의 %s",
+      "priority": "p2"
+    },
+    {
+      "id": 2614,
+      "source_sc_utf16le_sha256": "B9E827D94620A65004E1495BEF8E483194E1EA83F4C8A5D0E5C35D8EC947A280",
+      "ko": "방침 목표",
+      "priority": "p2"
+    },
+    {
+      "id": 2615,
+      "source_sc_utf16le_sha256": "ACCF2E96FDDD0B55F2FA98DA8DE12536C3B75B6CAC7B5AFB3C1B077F95349CFC",
+      "ko": "군 영역",
+      "priority": "p2"
+    },
+    {
+      "id": 2616,
+      "source_sc_utf16le_sha256": "E608298BA3896301B73B7A2DE1FA20528F0FF643B6A59FFA720ABE52EDC1D3A7",
+      "ko": "사망년",
+      "priority": "p2"
+    },
+    {
+      "id": 2617,
+      "source_sc_utf16le_sha256": "BEC8A4CE7538518FAA0BDDE2EDEE89A551F45E16C907EEB98425C68D76BD7004",
+      "ko": "종군처",
+      "priority": "p2"
+    },
+    {
+      "id": 2618,
+      "source_sc_utf16le_sha256": "28E3A7F1BBA8214CC633555CCDF5009FD1DFFF92C57978F846730AAC2DA08FB6",
+      "ko": "안도 연수 선택",
+      "priority": "p2"
+    },
+    {
+      "id": 2619,
+      "source_sc_utf16le_sha256": "3AD8F3E070587E1CB38471CF855562219C212D1289CD2DF5239F429E9CA1B357",
+      "ko": "장악 상태",
+      "priority": "p2"
+    },
+    {
+      "id": 2620,
+      "source_sc_utf16le_sha256": "BD804DD0FF25DA23E04816652F2B8F7267829FBFBEB5584322580434F7306652",
+      "ko": "미장악",
+      "priority": "p2"
+    },
+    {
+      "id": 2621,
+      "source_sc_utf16le_sha256": "4496E66A5D5D5D3C7623DC690EA265A606D52B730F2E280D08C88A607A04D336",
+      "ko": "모든 군이 개발 완료된 성",
+      "priority": "p2"
+    },
+    {
+      "id": 2622,
+      "source_sc_utf16le_sha256": "57F836EDAD55B6D3877C8D1C9752DB63D2ACAED0668BDCD03FCBB048128DFD7C",
+      "ko": "특성 “%s” 1년간 부여",
+      "priority": "p2"
+    },
+    {
+      "id": 2623,
+      "source_sc_utf16le_sha256": "ABEF04F4178175048277A9B8CD89531F8EE407FBD33225882EA34AA6617B62F0",
+      "ko": "항복 조건",
+      "priority": "p2"
+    },
+    {
+      "id": 2624,
+      "source_sc_utf16le_sha256": "A2A1406229188F9862F35C556ED618939805FCA2EB04E8ABD2753950A650FA1B",
+      "ko": "본성",
+      "priority": "p2"
+    },
+    {
+      "id": 2625,
+      "source_sc_utf16le_sha256": "80EFA77658F09D477B3DE78A63BA099E5A162E73A8263E44F5F8D4D33D58BDFF",
+      "ko": "상점으로",
+      "priority": "p2"
+    },
+    {
+      "id": 2626,
+      "source_sc_utf16le_sha256": "16F75AAA666DE4B06841D6D2789767FF78DF3749517B47A66B459BBA6A70D3CF",
+      "ko": "사용자 설정",
+      "priority": "p2"
+    },
+    {
+      "id": 2627,
+      "source_sc_utf16le_sha256": "14F831381A56C1851F32B87823B33F7857D6E5FA27AD216BC069963580B13EDC",
+      "ko": "확인 메시지 표시",
+      "priority": "p2"
+    },
+    {
+      "id": 2628,
+      "source_sc_utf16le_sha256": "B8CB43FE402D9D224FF2BF7E23ED66110236DD84943B9B7053DB1CF836593F72",
+      "ko": "금전 수입(자세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2629,
+      "source_sc_utf16le_sha256": "1C5E6D23515903641580F03DFFF50AD2EAD7B9951DEAE8D48123C2D9AE93CB2F",
+      "ko": "군량 수입(자세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2630,
+      "source_sc_utf16le_sha256": "138D35677A39E5DEFE125B548D7AF45258E6C0C79C9DBE193CA28AB4E400E157",
+      "ko": "병력 회복 속도(타세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2631,
+      "source_sc_utf16le_sha256": "199EC98634869E4C7C5D7F704C0B032845CDD3E3D7E3688E9B4F19D1C09F1C91",
+      "ko": "병력 회복 속도(자세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2632,
+      "source_sc_utf16le_sha256": "8F29BCA2939CEDABBF60B2F143F726E8AC2A945DBE2E0D62CF477D25E7533410",
+      "ko": "건의·내정 속도(타세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2633,
+      "source_sc_utf16le_sha256": "77992CF8C0AB0430769FFB7A39EBDB27AB9C5267AB8E63C983E1CF3205BCA7FB",
+      "ko": "건의·내정 속도(자세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2634,
+      "source_sc_utf16le_sha256": "6CB7EFDBA84BE55E329E6A501DD38DB9FACDB30BFE41D323D423C763B75C300E",
+      "ko": "계략 성공률(타세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2635,
+      "source_sc_utf16le_sha256": "67B5570595A674ECDFE87A00FE8D340025A2312FDE0CACB28468B2D8FCD1BB79",
+      "ko": "계략 성공률(자세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2636,
+      "source_sc_utf16le_sha256": "7F5A6FB8C7A2A24B60191F5C6427D11B5CBB5E2E42FB5BA726FDCAD0EF6385EB",
+      "ko": "노동력(타세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2637,
+      "source_sc_utf16le_sha256": "7122CDA41989754BCB61CB5C1264A1D56383BB2D43491286B58A958E6EB38C7B",
+      "ko": "노동력(자세력)",
+      "priority": "p2"
+    },
+    {
+      "id": 2638,
+      "source_sc_utf16le_sha256": "93BC75790A1DB9B18C9BEFD212A2DBB33E424F50BA50227A2D3F3B3CA343D1E2",
+      "ko": "명소 “%s” %s",
+      "priority": "p2"
+    },
+    {
+      "id": 2639,
+      "source_sc_utf16le_sha256": "E0D1A659612CC21AF13C6EEB995953D2F7580C9E365421FE6AB0B9A6DAE52D73",
+      "ko": "재건",
+      "priority": "p2"
+    },
+    {
+      "id": 2640,
+      "source_sc_utf16le_sha256": "EDEF9A181097FBE2251418CC454776A774E90C7486BCDC6ADCAB4628E14A9436",
+      "ko": "번영",
+      "priority": "p2"
+    },
+    {
+      "id": 2641,
+      "source_sc_utf16le_sha256": "863E575460D29630839DCB4F3B2CD834B76792A079F4D36E01A44E121778F72F",
+      "ko": "명소 “%s” LV%d→LV%d",
+      "priority": "p2"
+    },
+    {
+      "id": 2642,
+      "source_sc_utf16le_sha256": "F0FCE5FF6E9D68A232E428E68094E768FC9767A553A8E7D5C77F449D5FA4B5AE",
+      "ko": "봉행 필터",
+      "priority": "p2"
+    },
+    {
+      "id": 2643,
+      "source_sc_utf16le_sha256": "1D06EF34668A4DEEDED40F3751DF8FE6B94B150F89D1D9D9D848DB6D99C3801A",
+      "ko": "가재 필터",
+      "priority": "p2"
+    },
+    {
+      "id": 2644,
+      "source_sc_utf16le_sha256": "CA1195C61EB8C186C5003187BEF90D9D105D51CB3F7AB22F03265920CC73C5FD",
+      "ko": "고정",
+      "priority": "p2"
+    },
+    {
+      "id": 2645,
+      "source_sc_utf16le_sha256": "DABC0EA52B7F120992D820986D6BC31466205046D33B113F5D0B667A97905588",
+      "ko": "아트북 1",
+      "priority": "p2"
+    },
+    {
+      "id": 2646,
+      "source_sc_utf16le_sha256": "8FB5ACCC945AE50CC2BACC6F9725F0018093753435006C9002F4A326533A2AA0",
+      "ko": "아트북 2",
+      "priority": "p2"
+    },
+    {
+      "id": 2647,
+      "source_sc_utf16le_sha256": "F88FE0BEF88A5F01E6BF9BCAAABFDF16BA063B4F7133FC576D37CCFED33F5D2E",
+      "ko": "메모리얼 북",
+      "priority": "p2"
+    },
+    {
+      "id": 2648,
+      "source_sc_utf16le_sha256": "BD86667CC84DB6EA4FBFA5CC4C6FB5B48D87E7F5D5B4021A78FE33D2BF3BB46C",
+      "ko": "%d 남음",
+      "priority": "p2"
+    },
+    {
+      "id": 2649,
+      "source_sc_utf16le_sha256": "CD256CB1EBF6E46ACD3370E237C39E29DC6F773A9D625DEBC445B41F6F236B14",
+      "ko": "변경",
+      "priority": "p2"
+    },
+    {
+      "id": 2650,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2651,
+      "source_sc_utf16le_sha256": "06644C71A63EB97D13530A4B47695707041AABA5B16F7A144673DEEE831DDE49",
+      "ko": "개발률 25％ 이상인 성",
+      "priority": "p2"
+    },
+    {
+      "id": 2652,
+      "source_sc_utf16le_sha256": "528CDA76A759E581AC0C69915F94CEB709CB5981EFEF94F9A54ADCBC9FF4B7B6",
+      "ko": "무장 5명 이상인 성",
+      "priority": "p2"
+    },
+    {
+      "id": 2653,
+      "source_sc_utf16le_sha256": "4BD5C2E3605E40A9D40AB7E958BDB03603122C7D2F178DDEC110AECDC6374D19",
+      "ko": "능력 상승량",
+      "priority": "p2"
+    },
+    {
+      "id": 2654,
+      "source_sc_utf16le_sha256": "A23654558AB45004A5E09ACE7237DD1C9CE1D6D0FDE6C17D18A0E2E29039CFD0",
+      "ko": "혼인/중재",
+      "priority": "p2"
+    },
+    {
+      "id": 2655,
+      "source_sc_utf16le_sha256": "8EEFBAABE109A7920A9A68FB1A6ACFF777F7D25DAE9D29FAC982168B47AA54A7",
+      "ko": "중재 등",
+      "priority": "p2"
+    },
+    {
+      "id": 2656,
+      "source_sc_utf16le_sha256": "28A72803795B198708FBD4EBC8F1328E35A8407EF565CDE1F4AE0FC804501478",
+      "ko": "출신 또는 자질",
+      "priority": "p2"
+    },
+    {
+      "id": 2657,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2658,
+      "source_sc_utf16le_sha256": "A23654558AB45004A5E09ACE7237DD1C9CE1D6D0FDE6C17D18A0E2E29039CFD0",
+      "ko": "혼인/중재",
+      "priority": "p2"
+    },
+    {
+      "id": 2659,
+      "source_sc_utf16le_sha256": "46799DD08D55D37CF3B9A03547CA5BE1A49DD18666194D4AF5C9C9F326DB5297",
+      "ko": "사용 안 함",
+      "priority": "p2"
+    },
+    {
+      "id": 2660,
+      "source_sc_utf16le_sha256": "D0A9FF2064199EA608AC8A49A9B3DA0AE0C5E522ED97FDF66D5ABED96C1D86B9",
+      "ko": "표시",
+      "priority": "p2"
+    },
+    {
+      "id": 2661,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2662,
+      "source_sc_utf16le_sha256": "A9D8C691FDCE9BB6AEFC25FD481BF0E5B9D8014DE36E1B7873998174BCA21A22",
+      "ko": "不要",
+      "priority": "p2"
+    },
+    {
+      "id": 2663,
+      "source_sc_utf16le_sha256": "A9D8C691FDCE9BB6AEFC25FD481BF0E5B9D8014DE36E1B7873998174BCA21A22",
+      "ko": "不要",
+      "priority": "p2"
+    },
+    {
+      "id": 2664,
+      "source_sc_utf16le_sha256": "A9D8C691FDCE9BB6AEFC25FD481BF0E5B9D8014DE36E1B7873998174BCA21A22",
+      "ko": "不要",
+      "priority": "p2"
+    },
+    {
+      "id": 2687,
+      "source_sc_utf16le_sha256": "3A64C4AFA4D69BB5C53724EC11251ED6A1813F425EC43E8C8F9E2A44C8787AF9",
+      "ko": "증가",
+      "priority": "p2"
+    },
+    {
+      "id": 2688,
+      "source_sc_utf16le_sha256": "37517A63285CB678CBDC5FA0F42C5905541A82FE5C6131C1FFE07CEDFF524351",
+      "ko": "감소",
+      "priority": "p2"
+    },
+    {
+      "id": 2689,
+      "source_sc_utf16le_sha256": "485F073D23856EA497A80F1893BAC3CADE93CBDCD7A2E07AE056F3E4C1425F1C",
+      "ko": "LV 상승 조건",
+      "priority": "p2"
+    },
+    {
+      "id": 2690,
+      "source_sc_utf16le_sha256": "2BC40F3FCD35EB37CAD4A1F9189C0D5C0D85022C683AFC6F1881269ECEC99B2B",
+      "ko": "%s%s",
+      "priority": "p2"
+    },
+    {
+      "id": 2691,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2692,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2693,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2694,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2695,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2696,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2697,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2698,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2699,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
+      "priority": "p2"
+    },
+    {
+      "id": 2700,
+      "source_sc_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "ko": " ",
       "priority": "p2"
     }
   ]
