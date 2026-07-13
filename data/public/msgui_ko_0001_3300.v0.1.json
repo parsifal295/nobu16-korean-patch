@@ -1,9 +1,9 @@
 {
   "schema": "nobu16.kr.msgui-translation-overlay.v1",
-  "overlay_id": "msgui_ko_0001_3000.v0.1",
+  "overlay_id": "msgui_ko_0001_3300.v0.1",
   "resource": "msgui",
   "base_language": "SC",
-  "entry_count": 2793,
+  "entry_count": 3092,
   "distribution_policy": {
     "contains_commercial_source_text": false,
     "contains_complete_game_resource": false,
@@ -167,6 +167,21 @@
       "file": "msgui_core_ui_terms_2901_3000.v0.1.json",
       "sha256": "0F28FAC4705E99D9AC9B263D265968D4CB6338768D8D12C9EBF53E53CDBB2905",
       "accepted_entries": 100
+    },
+    {
+      "file": "msgui_core_ui_terms_3001_3100.v0.1.json",
+      "sha256": "4559E29F8C2686519B1E28D97AF5A4FC222D74B205EEA69A82B679889BCE630F",
+      "accepted_entries": 100
+    },
+    {
+      "file": "msgui_core_ui_terms_3101_3200.v0.1.json",
+      "sha256": "E1A00E54EAFCC130C095D34D5FB84AF0DE971FC49B36F4735115E9331E006DDC",
+      "accepted_entries": 100
+    },
+    {
+      "file": "msgui_core_ui_terms_3201_3300.v0.1.json",
+      "sha256": "045918C7D58F63BC77BBE853213AF4DF1392198F2C5D10CF7E7712179CE2A0E7",
+      "accepted_entries": 99
     }
   ],
   "entries": [
@@ -16917,6 +16932,1800 @@
       "id": 3000,
       "source_sc_utf16le_sha256": "934200F97624AD6AB12007394B161AA7D9F8862880AFE2F75CCEBE4A94C3732E",
       "ko": "무장을 정렬합니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3001,
+      "source_sc_utf16le_sha256": "A06E4CA7CEA52ED0AA0776617F083396FEA8D435A7C15FE493658745F286636F",
+      "ko": "지행 무장을 해임합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3002,
+      "source_sc_utf16le_sha256": "9B0ACACAC51727E567BD603985E5D78D07755C1A289CDBB75E9F3CE4EA335949",
+      "ko": "효과를 가진 군이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3003,
+      "source_sc_utf16le_sha256": "4917619BD62AFB1D3CF7060D3233164175A72FCC7A037BAB9213C5201B4B60A0",
+      "ko": "공략 방침 변경을 확정합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3004,
+      "source_sc_utf16le_sha256": "F9F06473D5BEC13C7F9B5FB6F3679158F06A5256EDA954EFCB38C21D9B2E871E",
+      "ko": "아직 아무것도 변경하지 않았습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3005,
+      "source_sc_utf16le_sha256": "F197274412B837A0B580B33DA48A8B8830356223B3807D77BC57253C6B45BE5B",
+      "ko": "등용에 실패한 무장이 선택되어 있습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3006,
+      "source_sc_utf16le_sha256": "C9CD4D801417BA10A969F6D873BE6F7E9FFCF09B5AD19251A27091CEE85CFCA9",
+      "ko": "16세 미만인 무장은 처단할 수 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3007,
+      "source_sc_utf16le_sha256": "C19E2C221CADDCCD8030DC12F2DAA7C7022710227838B3184A6418C653C94636",
+      "ko": "게임의 각종 설정을 변경합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3008,
+      "source_sc_utf16le_sha256": "19CA492AEC80290DB0F35FE8610C5F7095384D06C756C83107CCB91A2360A8F1",
+      "ko": "데모 플레이를 시작합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3009,
+      "source_sc_utf16le_sha256": "74F21EBC788808421D89B2DC21BECD62C075B716074B5EA39F353406BA6514BE",
+      "ko": "매뉴얼을 표시합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3010,
+      "source_sc_utf16le_sha256": "1DF4511BA37936FC4923B6BEF259C94449D793865BE629A8F90482FB129E92A6",
+      "ko": "버전 정보를 표시합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3011,
+      "source_sc_utf16le_sha256": "A1FBE89D8083FC5FA8762B371CF61401129D4D5A3DBC078151F8E26764FC404B",
+      "ko": "금전 부족",
+      "priority": "p2"
+    },
+    {
+      "id": 3012,
+      "source_sc_utf16le_sha256": "D52B3E0199A59B68F88077F36B428D9EAE84D3EAF198BE0652E67C0DBDFC3728",
+      "ko": "지행 무장이 없는 군이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3013,
+      "source_sc_utf16le_sha256": "1F55C14F58D7B61E49BBA5ADCF6ABA0243304637D8B0CF595AA643E552CB07BF",
+      "ko": "미지행 군에 군량 생산 효과를 우선하여 임명합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3014,
+      "source_sc_utf16le_sha256": "4C7C8BAB3FC01872AEEC34D10C8E40A088C15F71B0C18E0A78D0CBDF9156F31A",
+      "ko": "미지행 군에 금전 수입 효과를 우선하여 임명합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3015,
+      "source_sc_utf16le_sha256": "EC76B6A7CAD53286446EAD277601BBEA0BB3016B59B4EA1EE5551F411B3B91F2",
+      "ko": "미지행 군에 병력 상승 효과를 우선하여 임명합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3016,
+      "source_sc_utf16le_sha256": "24F481871A6741EFDFA7C4ABDFDCEA9B4214AEF41726F2B129C3FBACE3AFD08C",
+      "ko": "미지행 군에 군마 생산 효과를 우선하여 임명합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3017,
+      "source_sc_utf16le_sha256": "B08B7FD8413E9F4C14BF66657688232E09D3CF8C6AA812D1946577D81E9A1716",
+      "ko": "미지행 군에 철포 생산 효과를 우선하여 임명합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3018,
+      "source_sc_utf16le_sha256": "148D48F37705FCC8A48B395CCA1530D71BA9FE3DB5844B24B5A7B21EA361B100",
+      "ko": "선택한 가보가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3019,
+      "source_sc_utf16le_sha256": "130AE700BC70C9953B318E2F150F3EA96D95C57BF86B51A29E6D7F8EA94A5456",
+      "ko": "선택한 무장이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3020,
+      "source_sc_utf16le_sha256": "89D0DB64D6E81315152C0BB280FF7DB4606401FC13F4DE5A5A69D53D800468F5",
+      "ko": "선택한 관직이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3021,
+      "source_sc_utf16le_sha256": "DA9B02C888A1EDC5BEF5E3F3BF9F7859566AC1528E342A032D52CDCE0E4C6BF3",
+      "ko": "정책 효과를 획득합니다.\n획득 비용: %d\n추가 유지비: %d/월",
+      "priority": "p2"
+    },
+    {
+      "id": 3022,
+      "source_sc_utf16le_sha256": "C7129541E173C63AFB859BCDACC72508514E5806FD3D46D74328096D52E88D0D",
+      "ko": "자세력을 노린 계략을 간파합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3023,
+      "source_sc_utf16le_sha256": "9CE3F14881734268109FFE0C3814F1BFD82A4A98C6F2C50BC63C5EE036677058",
+      "ko": "모든 미지행 군에 고르게 임명합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3024,
+      "source_sc_utf16le_sha256": "0B79A91BE427807EF57DCCB4FB0816F364173FD29742C9331B54DFDFEE4FDED0",
+      "ko": "무장부터 선택합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3025,
+      "source_sc_utf16le_sha256": "ECEEB611413428F6354163F239E8A2D96BF419B8E64ED9ECE6ED6A152A40B5BF",
+      "ko": "군부터 선택합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3026,
+      "source_sc_utf16le_sha256": "1CDCF1690E010B96390F153C08E99FA30DDB9049AF466BEAEDF3239BD4FAE5C5",
+      "ko": "군 정보 목록을 엽니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3027,
+      "source_sc_utf16le_sha256": "09C28F873F767EE90073A8C50BA7E1AC5BEDAE9F3C9A20D0E37420FF1C7811CF",
+      "ko": "일괄 임명·해임합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3028,
+      "source_sc_utf16le_sha256": "175A0F30D138A2F73D26016E461644BFDB8B22453ECC7796090E40C9738A1109",
+      "ko": "군 특성 효과로 대상 군을 선별합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3029,
+      "source_sc_utf16le_sha256": "C84A2CD1CAB9EC3D866F261118DF5EA965F4738986AA3348A22F809134628976",
+      "ko": "명령을 종료합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3030,
+      "source_sc_utf16le_sha256": "BE0157B118B6BC749B115FFCE9105FC598CA6F3CD5040BA1FF3F4D7F0CEE2169",
+      "ko": "무장 선택으로 돌아갑니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3031,
+      "source_sc_utf16le_sha256": "AEA3BD2F428918192E52AF72226DCC972497901BE62125DD2BBF9D2520865568",
+      "ko": "모든 군의 지행 무장을 해임합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3032,
+      "source_sc_utf16le_sha256": "FA8A7F99E953BF35A71E516EB04484614E6E7AED95D33FCB964B4A2B4700E8CB",
+      "ko": "전투 중에는 저장하거나 불러올 수 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3033,
+      "source_sc_utf16le_sha256": "FA1CDB1ADE3B7F069DC76707D6C27ECF641A4C0E48EB9C4799369D7F11613665",
+      "ko": "정책의 진형 LV가 부족합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3034,
+      "source_sc_utf16le_sha256": "FDDCD8538886B9CD408E451B84A0566670FE389CA876CE6503A0032B3CA2BAA4",
+      "ko": "대기 부대가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3035,
+      "source_sc_utf16le_sha256": "765741B29AF83DC41A1BF7DB39A72A0E404A5561949ADEDBAA6ECD02DD56BAAD",
+      "ko": "난이도 변경과 기타 설정은 여기서 할 수 있습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3036,
+      "source_sc_utf16le_sha256": "0792D84671AEF1380188B30E428EF6704561DD63F58480A3B4C5D7092EFAF172",
+      "ko": "생성한 등록 무장이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3037,
+      "source_sc_utf16le_sha256": "FC046235BC3DB07573632C7F256CDC4FC688551B899AC9596C89A8B233DC2DF7",
+      "ko": "플레이 중인 세력이 독립했습니다.\n시나리오를 계속할 세력을 선택하십시오.",
+      "priority": "p2"
+    },
+    {
+      "id": 3038,
+      "source_sc_utf16le_sha256": "96C41E17C3DEB08E0614AC08AA6D74B26A76B142933CDCB4B4CBA5371D92E352",
+      "ko": "\u001bCB%s\u001bCZ 세력으로 계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3039,
+      "source_sc_utf16le_sha256": "1D1C8A5BD171AF2012689AE940E5FF8985E6AD989F9DB77306FAA6D511E4D717",
+      "ko": "모든 항목을 설정해야 합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3040,
+      "source_sc_utf16le_sha256": "EA0F4BC3FC4237345648779CC01C6C971A66EADE9798FEDBDA23A234A06EE6ED",
+      "ko": "조건을 충족하지 않았습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3041,
+      "source_sc_utf16le_sha256": "1C50DCA48627E99D733B586F25BEE268264DE012F35D3A32282F193818ADF7C4",
+      "ko": "새 휘하 군단을 창설합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3042,
+      "source_sc_utf16le_sha256": "10CE89160F55606F67188C5F8ABCBB754798224104C123AE08638571629B6E82",
+      "ko": "휘하 군단의 방침·성·무장을 변경합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3043,
+      "source_sc_utf16le_sha256": "24DD7654DDF4AF6AD61B27EB35A93BFB847E2C12ABA8B055C7D25C117E1203FA",
+      "ko": "휘하 군단을 해산합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3044,
+      "source_sc_utf16le_sha256": "6A5D004813428BF4C38A421D8F2E6C921EDAE2105C1EE6E20B4F53CD5B0242D3",
+      "ko": "무장의 소속 성을 변경합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3045,
+      "source_sc_utf16le_sha256": "BBA0750130EBD526C319DF7F6BDE6B09306B2A6761FE0C699FC53D2632D055C4",
+      "ko": "전봉하려면 성이 2개 이상 필요합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3046,
+      "source_sc_utf16le_sha256": "5C4216E3366F97B10573E3B8D42E3E7BF4465D4EE5659BDE1029871BA21D057D",
+      "ko": "무장을 자동으로 배속합니다.\n계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3047,
+      "source_sc_utf16le_sha256": "04A9C5631950261705F8AF65589BE5C02A03B32A484F396B0239A160CB9C7BC4",
+      "ko": "무장을 이동하거나 소환합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3048,
+      "source_sc_utf16le_sha256": "699E320462C54A99CC83D87CC86A0AEC377CEB933C95B4C707262D45969A8E7E",
+      "ko": "위풍이란?",
+      "priority": "p2"
+    },
+    {
+      "id": 3049,
+      "source_sc_utf16le_sha256": "5050271E56062B45A0DF50D2643A405AE8DFAFC38A02C6B65AAC2B2A4DA38942",
+      "ko": "건의와 주명",
+      "priority": "p2"
+    },
+    {
+      "id": 3050,
+      "source_sc_utf16le_sha256": "6F0294DEADBAD6BFBE8F4D3FAD1276A155C41E4ED1AB232B257AC06BF4B67208",
+      "ko": "조정과 관직에 대하여",
+      "priority": "p2"
+    },
+    {
+      "id": 3051,
+      "source_sc_utf16le_sha256": "7688ACE68749D67FB771084435152F2604F16DCE747A9AE463C1925EFE7C3211",
+      "ko": "%s의 병력이 상한을 초과하여 %d 증가했습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3052,
+      "source_sc_utf16le_sha256": "80A21AB19C55BF19020C6401990E902ACADE5B397D5B12D29752168C21674F36",
+      "ko": "처우를 결정할 무장을 선택하지 않았습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3053,
+      "source_sc_utf16le_sha256": "C7CFF02F448C19E14449C06E906E0F38628490DD319E758BF74A1DBFC2B795F7",
+      "ko": "이 내용으로 거래를 확정합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3054,
+      "source_sc_utf16le_sha256": "0D15850EA31094578BA331D292C71A309625E53DF5CE97F93F0288FA91EBC4FF",
+      "ko": "지행 무장을 해임할 수 있는 군이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3055,
+      "source_sc_utf16le_sha256": "66C32C21EC729E5033916842BDB3C85D689DD28046FC2DE0ED3B8F10D2D5F8D7",
+      "ko": "세력 전체에 관한 명령을 내립니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3056,
+      "source_sc_utf16le_sha256": "E22081B07C23DA0D3258A0451F1828EC0A9866CE839AD9311B266F8014552464",
+      "ko": "무장에게 토지를 맡겨 생산력을 높입니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3057,
+      "source_sc_utf16le_sha256": "09663E5D1F56F793625055143766CA98000D0D67411B5C10A81B701340F59012",
+      "ko": "목표를 선택해 출진합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3058,
+      "source_sc_utf16le_sha256": "92AC809724AE341734AB940B8F913FC1A9A7BADBD62E1BB0B1202C88ABDD6C31",
+      "ko": "다른 세력과 교섭합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3059,
+      "source_sc_utf16le_sha256": "CF4CE30885868C4991D57C3C56481677E7A87D197419E4C07065782695933665",
+      "ko": "부대 정보를 확인합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3060,
+      "source_sc_utf16le_sha256": "D5BE6A5519244E5F7179901A8FC063B4D71AF833987656112D7E35614E8A24B5",
+      "ko": "부대를 %s에 귀환시킵니다.\n귀환 후 무장과 병사는 원래 소속지로 이동합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3061,
+      "source_sc_utf16le_sha256": "0596B602129101775DA52EB6934252B0EA7266ACEA3AEBA40FA63B2B2A6F0E62",
+      "ko": "부대의 목표를 변경합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3062,
+      "source_sc_utf16le_sha256": "EC5E4B1EEC308B281A8A15713241B8F23D7058308B0A6D4F4C66A5BB616386B8",
+      "ko": "위신을 건 전투를 벌입니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3063,
+      "source_sc_utf16le_sha256": "7A00FEDC61F3333A93551746885A9F0F2FDACFFB537F0303B447A9697555FFE3",
+      "ko": "부대를 해산하고 무장과 병사를 원래 소속지로 귀환시킵니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3064,
+      "source_sc_utf16le_sha256": "60A5651975B759C59961E5839529E956B0C4BE9BAAAE72E29A46E3BB65107424",
+      "ko": "소속 무장 정보를 확인합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3065,
+      "source_sc_utf16le_sha256": "6F9C82CA5EA45871F591EA1F27C6B8F43F2156927015E5293D9D8EB0FD554749",
+      "ko": "성 정보를 확인합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3066,
+      "source_sc_utf16le_sha256": "B177BF9449D53DFCBC4E8FE2EB3ABD6B3689D23D7282EAA1377267926A0BC9CF",
+      "ko": "두 성 사이에서 무장을 이동합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3067,
+      "source_sc_utf16le_sha256": "EABA9229420849E0FE0C4B9E73A7AABE5EC5C89FBD88CA6CA8DA7632B67A1CD4",
+      "ko": "다른 모든 성에서 이 성으로 이동할\n무장을 선택합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3068,
+      "source_sc_utf16le_sha256": "6DA95215648838DE4E86C0A011281D2305033E027E47891277C9C55D2154209C",
+      "ko": "이 성에서 부대를 편성해 출진합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3069,
+      "source_sc_utf16le_sha256": "BE8208C2D3FECAB265FFE188EB9DF5D164AC313395393733D3CF6F731417F865",
+      "ko": "군 정보를 확인합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3070,
+      "source_sc_utf16le_sha256": "188BE360435F5B270777504CA07F9740E867140A01425E07A8CDF7F2B69BC7E3",
+      "ko": "이 토지를 맡길 무장을 선택합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3071,
+      "source_sc_utf16le_sha256": "577B2BFA7589263F35A4C8548853B23852F97764EA0E6A075401E6CFF000D0CA",
+      "ko": "국인중 정보를 확인합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3072,
+      "source_sc_utf16le_sha256": "2CE91EB107E0406BBAF3380D6B548A7E0D2B3EEE7E63FB361C039352B341059C",
+      "ko": "국인중을 자세력 부대로 출진시킵니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3073,
+      "source_sc_utf16le_sha256": "6B4F9EE43767FFB9DF45DAB68AF36F10F775ECB35493EAD0D62F6541DF6EC5DF",
+      "ko": "정책 “%s”로 해금: 미해금",
+      "priority": "p2"
+    },
+    {
+      "id": 3074,
+      "source_sc_utf16le_sha256": "A0CE7F714CC075C486AC3B9380F895DB440287C3DF3A575AEA890CF4CDC8EC82",
+      "ko": "자세력을 컴퓨터에 맡깁니다.\n데모 플레이를 시작하면 중간에 해제할 수 없으며\n업적을 획득할 수 없습니다.\n\n데모 플레이를 시작하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3075,
+      "source_sc_utf16le_sha256": "15DA6FEBA161E192423CF1DD31E88278CB0513C2869154379A97E17948CE6687",
+      "ko": "군단에 배분할 물자를 설정합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3076,
+      "source_sc_utf16le_sha256": "5798C03C19D42A632288D6A81AD87365AF366EBFA131D2BEEC4FCC9B7C55B92A",
+      "ko": "다이묘 군단에 매월 상납할 물자를 설정합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3077,
+      "source_sc_utf16le_sha256": "AD412DF308D4D04E084EB9EC265CB1F3DEF327F7A1135E0054BC74556A56D502",
+      "ko": "상대가 자세력의 무장이 되도록 설득합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3078,
+      "source_sc_utf16le_sha256": "A52F124486FBBF1300E53B3106A8397284745F63382B92629810452165067817",
+      "ko": "상대에게 자결을 명해 처단합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3079,
+      "source_sc_utf16le_sha256": "0E9C0328B0E681ADEDE8B0BE55523B10A40F68062D3DCE59A2AE165347FD597E",
+      "ko": "포획한 무장을 아무 조치 없이 방면합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3080,
+      "source_sc_utf16le_sha256": "9CAB1C1931797752F0A46D40E65028A325008D539D97982C30615C543A5316D2",
+      "ko": "모든 무장을 선택 상태로 전환합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3081,
+      "source_sc_utf16le_sha256": "AF7456F4E9D5C2A882180228ECBA8F89BA5FDAB5DE8FE6D95DB861FF1744ECCC",
+      "ko": "모든 무장의 선택을 해제합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3082,
+      "source_sc_utf16le_sha256": "F27952B3169A4A834B9A3070F1D3EE284101DDCFBB5EF9CCFA313036242AAD89",
+      "ko": "영주로 임명할 수 있는 무장이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3083,
+      "source_sc_utf16le_sha256": "3295168AE8453BA6CF597DE7945392E2F0E6259EE62B570CF7FB9026B6BB212E",
+      "ko": "자세력을 컴퓨터에 맡깁니다.\n데모 플레이를 시작하면 중간에 해제할 수 없으며\n트로피를 획득할 수 없습니다.\n\n데모 플레이를 시작하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3084,
+      "source_sc_utf16le_sha256": "842EDE4B484E4687A8F9B1A7F47DE6336CC6FE4D6765DF4AD02DCD33AF8C58A2",
+      "ko": "자세력을 컴퓨터에 맡깁니다.\n데모 플레이를 시작하면\n중간에 해제할 수 없습니다.\n\n데모 플레이를 시작하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3085,
+      "source_sc_utf16le_sha256": "50003D755C215498609D71449B0AF1ACE267B8B91996667C22459AE2D96B4501",
+      "ko": "다이묘 선택 시 설정할 수 있습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3086,
+      "source_sc_utf16le_sha256": "8FCD1CA32724787A13F065CC1C423401B557723BB46220AE4EF32844C903FE9F",
+      "ko": "부모에게 물려받은 재능을 발휘하여 일족의 번영에 크게 공헌했다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3087,
+      "source_sc_utf16le_sha256": "D70B45F862F237649A2BB0114F7B4C4EB9E1CC67D9B7E4B26B03B9E570B6528A",
+      "ko": "선대가 사망한 뒤 재능을 인정받아 후계자가 되었으며, 일족의 번영에 크게 공헌했다고 한다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3088,
+      "source_sc_utf16le_sha256": "9CF0B81D1174332E8FAE55CEA8574DFC1C57152A74A87A204AF2E5C9263335B8",
+      "ko": "설정을 초기화합니다.\n※표시 설정은 변경되지 않습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3089,
+      "source_sc_utf16le_sha256": "15239057DC11FB09412E2C4DEA7BE3250B21661C71CD952262ADAA41BAEC05B5",
+      "ko": "설정을 초기화합니다.\n※다음 설정은 변경되지 않습니다.\n　표시 설정\n　난이도 설정\n　시나리오 설정\n　튜토리얼 표시, 수명,\n　공주 무장, 초기 외교 상태",
+      "priority": "p2"
+    },
+    {
+      "id": 3090,
+      "source_sc_utf16le_sha256": "B505FFFCE5DAE3F033FDCA3E5EC29C8A06A36189F8270741EAFF93231F7F92E0",
+      "ko": "더 많은 지행 군을 맡을 수 있는 무장이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3091,
+      "source_sc_utf16le_sha256": "AFD8FA108A1FF03450ED7AD3A902CEB6B6DF1966CA48D5C9B474C93867012333",
+      "ko": "발생한 이벤트가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3092,
+      "source_sc_utf16le_sha256": "93C5094E478637CA4B34A8C8D66782BD8909FE1504CF013A25476762BCC30597",
+      "ko": "맹약에 따라 앞으로 %d일 동안 변경할 수 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3093,
+      "source_sc_utf16le_sha256": "068A9F991FB1ED42970C91A2390108706A59D55612754F69F83D988F120F9C22",
+      "ko": "남은 세력이 아군이거나 정전 중이어서 선택할 수 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3094,
+      "source_sc_utf16le_sha256": "2C437C1F3212789878F9B985D2AED86AF520FDD660C5CAAE66DA6A4A6C7D2957",
+      "ko": "건의가 우선 공략 대상으로 삼을 성을 선택합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3095,
+      "source_sc_utf16le_sha256": "92A01B6F5318B50B3B4C4834431BA5F206D66F58EB113C4BFAFE2D90B7A6A353",
+      "ko": "먼저 공략할 세력을 선택하십시오.",
+      "priority": "p2"
+    },
+    {
+      "id": 3096,
+      "source_sc_utf16le_sha256": "289B648C291C8896D5EEC6AC8FE0E8384C3DA01ED739625B85C0F7EBCC53A44A",
+      "ko": "다이묘 군단이 적 성과 인접하지 않습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3097,
+      "source_sc_utf16le_sha256": "287824BF26F3A1942624B0A99F3A94268C055F105840EA63486F844D94C081DE",
+      "ko": "다이묘 군단이 공략 성 이외의 적 성과 인접하지 않습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3098,
+      "source_sc_utf16le_sha256": "4128557AB5E6966001EB8CB0B4853433773D997E2716E57ED1CFD235397380F8",
+      "ko": "기간 %d일",
+      "priority": "p2"
+    },
+    {
+      "id": 3099,
+      "source_sc_utf16le_sha256": "564254EB25693EEEEDD0F0B2B931C7724202EEFEB23F8EBD32EC02BE9EC4D9D3",
+      "ko": "%s의 군 특성 “%s”가 약 %d일분 성장했습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3100,
+      "source_sc_utf16le_sha256": "6E58BE99EBC49A3A3A96E7C61694BE5ADE78692F0054F073A5349F949070B6AD",
+      "ko": "보유 금전 %d→%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3101,
+      "source_sc_utf16le_sha256": "7FC31A48BBAB37D247C64F26205A87B0674CA30B70379C8E9FE1B475C2B04F14",
+      "ko": "금전 수입 %d→%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3102,
+      "source_sc_utf16le_sha256": "DF8B58BDC64E2DBDFF7D5906191F0A2F1AB53355E7D1397D1DE221F07C881780",
+      "ko": "비용 %d％",
+      "priority": "p2"
+    },
+    {
+      "id": 3103,
+      "source_sc_utf16le_sha256": "D7608C837835263AEFBA248C3FC0EEC71B3EDE94979E15A65B4C45054963931E",
+      "ko": "영향으로 민충 상한 %d 감소",
+      "priority": "p2"
+    },
+    {
+      "id": 3104,
+      "source_sc_utf16le_sha256": "1AC421B22F360EAB25F38C4E1C63B5D6986A0A1B049A393E365A352961ABCB8D",
+      "ko": "영향에 따른 민충 상한 감소 무효",
+      "priority": "p2"
+    },
+    {
+      "id": 3105,
+      "source_sc_utf16le_sha256": "01711CBF216173035AD4B95E2ADE86FE45C3413D96BCF195ACC647DF9BABACDE",
+      "ko": "상승하는 능력 종류가 2개로 증가",
+      "priority": "p2"
+    },
+    {
+      "id": 3106,
+      "source_sc_utf16le_sha256": "77ADFB11B0EF38E796A7FE0B32A825A122ECD51658F7F66E3C77E8A172A847DC",
+      "ko": "상승하는 능력 종류가 3개로 증가",
+      "priority": "p2"
+    },
+    {
+      "id": 3107,
+      "source_sc_utf16le_sha256": "E1AF5F63DC55C7F2813822BCD001412C7782B3F4CC40F0098A69BF132A0E03DD",
+      "ko": "상승하는 능력 종류가 4개로 증가",
+      "priority": "p2"
+    },
+    {
+      "id": 3108,
+      "source_sc_utf16le_sha256": "087E866B454D6047706C7C0710F6025809E5290C9309B17155851746AE187571",
+      "ko": "영향에 따른 우호도 감소 무효",
+      "priority": "p2"
+    },
+    {
+      "id": 3109,
+      "source_sc_utf16le_sha256": "76ECA36E8B93E26B49D637FBF30FDBF95CD4BC48D0E823083E872BFF532DC7E8",
+      "ko": "영향으로 악명 %d",
+      "priority": "p2"
+    },
+    {
+      "id": 3110,
+      "source_sc_utf16le_sha256": "086F160DAA726E4BBD539C3F666E175119C1607C0481362967187B9E176FF275",
+      "ko": "획득 군량 +%d％",
+      "priority": "p2"
+    },
+    {
+      "id": 3111,
+      "source_sc_utf16le_sha256": "586A063FA9D57FB218AEC08E82B09F8015D2A0B6A68B09CCA2690FF0B8E8CA21",
+      "ko": "악명 %d",
+      "priority": "p2"
+    },
+    {
+      "id": 3112,
+      "source_sc_utf16le_sha256": "E7969BEBFD705D1E1CF869DD49C3850F76B5F6A9E89FF1A1CF37B06BC7F2BEC8",
+      "ko": "충성 +%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3113,
+      "source_sc_utf16le_sha256": "931F3659375381AD70C260A2D8F063774D553282B5C522559431BA537D614BEA",
+      "ko": "획득 물자 +%d％",
+      "priority": "p2"
+    },
+    {
+      "id": 3114,
+      "source_sc_utf16le_sha256": "C878BB2A92FD1165733B7DFD8D3D97947D756F41A1690359B0900CE5346E1D0F",
+      "ko": "대상 군(%s)의 민충 상한 %d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3115,
+      "source_sc_utf16le_sha256": "4E9EE77A7882AB86007E306EE62E9095C722375E1D39EF3990209B2398C0932A",
+      "ko": "%s, %d일간 출진·이동 불가",
+      "priority": "p2"
+    },
+    {
+      "id": 3116,
+      "source_sc_utf16le_sha256": "908BAEC5E426EDBD09BA4B0B1790BEFF081B3961688F1506C4E4605498E0D9C8",
+      "ko": "%s 소속 %d개 군의 민충 상한 %d(최저치: %d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3117,
+      "source_sc_utf16le_sha256": "33F8E1E7D51A84CE3E33421E757DC00D2F7BF0D0AB830DA889183D5BAA13268B",
+      "ko": "%s의 우호도 “%s”→“%s”",
+      "priority": "p2"
+    },
+    {
+      "id": 3118,
+      "source_sc_utf16le_sha256": "D6CE3434AAD1E5132B04CFCB745A068E74F70F6D3B4273696FE5850CD5C690AD",
+      "ko": "%s 소속 무장을 모두 석방",
+      "priority": "p2"
+    },
+    {
+      "id": 3119,
+      "source_sc_utf16le_sha256": "4805F20642F6394B8DBF28C4CEADB502CFA1320DB91AEAA4334CD47961803912",
+      "ko": "귀성하는 부대의 병력 %d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3120,
+      "source_sc_utf16le_sha256": "70F6792FD5CC50772DE12893BF31318F1FAA607E9859D06A87D5484F25A36A50",
+      "ko": "군량 %d, %s에 양도(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3121,
+      "source_sc_utf16le_sha256": "F3A298FEC215AA4367A08535DB7961AAAEC2BADD948E050957F0A80DB9F3EE00",
+      "ko": "%s의 병력 -%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3122,
+      "source_sc_utf16le_sha256": "33A3AE94F3828D2CF5FC37B73D7C9279BD29D212EACD9B313FE1C07A8BB52F48",
+      "ko": "실패 시 악명 +%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3123,
+      "source_sc_utf16le_sha256": "F49BF05480362F6D0B3AA23F8A9FF44A44B93596F68810CDEA9D56CBED01D70C",
+      "ko": "실패 시 %s의 우호도 “%s”→“%s”",
+      "priority": "p2"
+    },
+    {
+      "id": 3124,
+      "source_sc_utf16le_sha256": "32EB777A576755867FCF3B4334B5D72B0DB179B65321CBC296C79A2868A247BB",
+      "ko": "설정 내용을 폐기하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3125,
+      "source_sc_utf16le_sha256": "D30FCE1508BBFD264F2D9B973FA4695F64D337D86C93B92C8C2D4551DCE45671",
+      "ko": "대상 군(%s)의 민충 상한 %d",
+      "priority": "p2"
+    },
+    {
+      "id": 3126,
+      "source_sc_utf16le_sha256": "0434EE2B51F42403E73D9749EF7C0A2C487307B5A732841DDB653DAF9530DD47",
+      "ko": "성공 시 %s 등용",
+      "priority": "p2"
+    },
+    {
+      "id": 3127,
+      "source_sc_utf16le_sha256": "9FD1F9B0EDE1DFD4C22F7DCD5EDED03C09DAF4E65C8E34621F09D47B5F6C3740",
+      "ko": "대상 군(%s)의 치수 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3128,
+      "source_sc_utf16le_sha256": "EC792051DA6FA044DF62E1400CABB611F4259F783C79D5B465D26102B276F0AA",
+      "ko": "참가 무장 %d명의 공훈 +%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3129,
+      "source_sc_utf16le_sha256": "09D05FEE66D24C8DD44F0EA3644B7D47BB0F9B6C0CEC1572C75E540836993E25",
+      "ko": "참가 무장 %d명의 무용 경험 +%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3130,
+      "source_sc_utf16le_sha256": "05CE40862CCE0D613328CDEC4773882AD6AF215BA85674B8403CD58562A7D99E",
+      "ko": "성공 시 %s의 %s 포섭",
+      "priority": "p2"
+    },
+    {
+      "id": 3131,
+      "source_sc_utf16le_sha256": "01EE7E706DB3CB7D1D45D44F548CB829336A3837DF7CBC9C91EE795AA4BD3D07",
+      "ko": "성공 시 %s의 종속도 “%s”→“%s”",
+      "priority": "p2"
+    },
+    {
+      "id": 3132,
+      "source_sc_utf16le_sha256": "A8ECA7EAE4F88C551AD588B20FFF0EFC0F59B28C851B11A12A2915B9F9D69E61",
+      "ko": "성공 시 %s의 군을 지배",
+      "priority": "p2"
+    },
+    {
+      "id": 3133,
+      "source_sc_utf16le_sha256": "4EA9F3BD9476B612CD22CF480834A005A5562B8D1728E91E52CCB3715B039736",
+      "ko": "성공 시 %s의 %s 등용",
+      "priority": "p2"
+    },
+    {
+      "id": 3134,
+      "source_sc_utf16le_sha256": "81DB539998FC2237DDFB5DD1D55A44975C3F90F85FB05CDE2376BD7BD3F7641B",
+      "ko": "%s의 능력 중 %d종 성장",
+      "priority": "p2"
+    },
+    {
+      "id": 3135,
+      "source_sc_utf16le_sha256": "D8060FA11524C946F8B888E4C68334DFD0B945D8AF427BF43894674C3D82104D",
+      "ko": "%s의 모든 능력 성장",
+      "priority": "p2"
+    },
+    {
+      "id": 3136,
+      "source_sc_utf16le_sha256": "7F715749466D5050686FD8C45CD6C93262CE23BF5E51B7C365F559017576434F",
+      "ko": "%s, %d일간 군량 구매 불가",
+      "priority": "p2"
+    },
+    {
+      "id": 3137,
+      "source_sc_utf16le_sha256": "799A64ECFB1DD0303DF435F3A216CF2E1C9453DD6D0D824F5E3098A8E2AC0DE1",
+      "ko": "즉시 실행",
+      "priority": "p2"
+    },
+    {
+      "id": 3138,
+      "source_sc_utf16le_sha256": "24BB935CCD9331C24DC1C06AD76D6A5BB2E183481CDB903FC00B3291732B9BB9",
+      "ko": "성공 시 %s의 %s 내구도 %d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3139,
+      "source_sc_utf16le_sha256": "1FF3E52F61D8BD354FE0439CD0378DE64433234FB93B8A60C1FAA79FE2496D6F",
+      "ko": "성공 시 %s의 %s 병력 %d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3140,
+      "source_sc_utf16le_sha256": "3C420262BED4959249F0B3AE94AC3D44EA16E0CAF7481BF8053BFE726017D72D",
+      "ko": "%s에 파견 중인 원군(병력 %d)을 귀성시킴",
+      "priority": "p2"
+    },
+    {
+      "id": 3141,
+      "source_sc_utf16le_sha256": "DCBC3A11E453C04C00DB5A0AF3F552C2AAD732C52F6D0AD1C918E3EF1E74A900",
+      "ko": "비용 %d",
+      "priority": "p2"
+    },
+    {
+      "id": 3142,
+      "source_sc_utf16le_sha256": "9A7A94927FA6B0741A3831EC7524D8F95F39BEA7033AB61587F10B10C2C83840",
+      "ko": "성공 시 %s와 %s의 동맹 파기",
+      "priority": "p2"
+    },
+    {
+      "id": 3143,
+      "source_sc_utf16le_sha256": "17A83E099546DD78A2DD0EE27FAC40A7CAE31624B7E5D3225F53AF0CD64B4585",
+      "ko": "%s에서 출진한 모든 부대를 즉시 귀성시킴",
+      "priority": "p2"
+    },
+    {
+      "id": 3144,
+      "source_sc_utf16le_sha256": "05F8658FC93B639DD5E20FD6666FAB6B1A1978FF279808E58BD1A80FF32B4EC8",
+      "ko": "%s와 %s 사이에 새 가도 건설",
+      "priority": "p2"
+    },
+    {
+      "id": 3145,
+      "source_sc_utf16le_sha256": "990C12D90990A5E3B3C17EB873AE24FC001C58A570177A946B85075DDE77DBC2",
+      "ko": "성공 시 주변의 비적대 %d개 세력과 우호도 상승",
+      "priority": "p2"
+    },
+    {
+      "id": 3146,
+      "source_sc_utf16le_sha256": "0C101F847A356F48F6C93C8C5CDE6CE28FE97568B647236B3492504E5CAB7964",
+      "ko": "%s와의 외교 관계 파기",
+      "priority": "p2"
+    },
+    {
+      "id": 3147,
+      "source_sc_utf16le_sha256": "B24BFD277724C1B72F054645196A9535D7DE9EB634A55894F13FB4637A01605D",
+      "ko": "성공 시 악명 상승 없음",
+      "priority": "p2"
+    },
+    {
+      "id": 3148,
+      "source_sc_utf16le_sha256": "98121CAE902303BF37F37D75CADE69154133BB2298279995D843EB7863A449CA",
+      "ko": "성공 시 금전 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3149,
+      "source_sc_utf16le_sha256": "94FB7E7F50674022A12B46D0DFD5E2AFC14CAD1FFD948B3E544F3BA498A140AA",
+      "ko": "성공 시 군량 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3150,
+      "source_sc_utf16le_sha256": "55A79B1DCEFB6667105144B7488D6379302664124BD3EF9864CDC7CDA3285C1C",
+      "ko": "성공 시 군마 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3151,
+      "source_sc_utf16le_sha256": "6EF8989641E90F38643FF9C3CE52212BC6E475B130091BF6BFF805B83828215C",
+      "ko": "성공 시 철포 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3152,
+      "source_sc_utf16le_sha256": "7E04ABB0C52AFC416DCC85907FB617645DC355699E97665F3F800DD325EAC341",
+      "ko": "대상 군(%s)의 군 특성 LV +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3153,
+      "source_sc_utf16le_sha256": "69730A4CF2DFFB2F4D87C9384FE827C167710C2DA552EC43A42FC34EEF3C46FB",
+      "ko": "대상 군(%s)의 군 특성 변경 “%s”→“%s”",
+      "priority": "p2"
+    },
+    {
+      "id": 3154,
+      "source_sc_utf16le_sha256": "5513C1270FE212081734DC2C6BA4D8EA4E3D472F32CE448B94FB0D3C31BE0ED3",
+      "ko": "군량 수입 %d→%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3155,
+      "source_sc_utf16le_sha256": "F2314C94BAFBE3959CF0AC06DB9A2692D5ECDAD1288473152FC3AA17D584412E",
+      "ko": "군마 수입 %d→%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3156,
+      "source_sc_utf16le_sha256": "41B19DCA3233E48CF03AE212F45C7D09A5B9658A1B419CD4D7DEE9B244579181",
+      "ko": "철포 수입 %d→%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3157,
+      "source_sc_utf16le_sha256": "0DC1AB0AE98D242C63D38C608B02BD54A87EF7B86653D67F7F51344CD4F31056",
+      "ko": "%s의 최대 병력 %d→%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3158,
+      "source_sc_utf16le_sha256": "DC7F5D27C01ED22C1019A8331C3676987F42B08C99908586190465BD4B377B05",
+      "ko": "%s의 병력 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3159,
+      "source_sc_utf16le_sha256": "05F12C9C0DFEFD7BC20AD323EDF63A2D9A836D5A6B557B8B79B7979974E00BC3",
+      "ko": "%s의 대상 군(%s)이 본가에 가담",
+      "priority": "p2"
+    },
+    {
+      "id": 3160,
+      "source_sc_utf16le_sha256": "31E2528E34EFA75A40EF1A86F194A3C3212A9A3F373DE283B9FC86A3FE35AE75",
+      "ko": "성공 시 대상 군(%s)의 군 특성 변경 “%s”→“%s”",
+      "priority": "p2"
+    },
+    {
+      "id": 3161,
+      "source_sc_utf16le_sha256": "9A9C91686F40D73053EE7D3B4892009913FEEA67BF429519BB7873A24050248F",
+      "ko": "대상 군(%s)의 민충 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3162,
+      "source_sc_utf16le_sha256": "DCDB587A9D1D1400A738C2FBA29D6176DC7AAEB7D9F034DC0ED2E5B7E9CD0F6F",
+      "ko": "드물게 가보 획득",
+      "priority": "p2"
+    },
+    {
+      "id": 3163,
+      "source_sc_utf16le_sha256": "C7DA18287A8F78B92F13D589A506B42248B373EC6518E261BF217EB731BC12CE",
+      "ko": "성공 시 금전 외 물자 중 하나를 %d～%d 획득",
+      "priority": "p2"
+    },
+    {
+      "id": 3164,
+      "source_sc_utf16le_sha256": "84E7AF5BF43B2942613156EC5964EF40BB72EB775829D4C4F87F5834E751CDB0",
+      "ko": "영향에 따른 민충 감소를 %d％ 경감",
+      "priority": "p2"
+    },
+    {
+      "id": 3165,
+      "source_sc_utf16le_sha256": "D57E45EF5CC3800AE2730D752A34D8F3FEF73A28D402024DBE5C67A4B2572E94",
+      "ko": "대상 군(%s)의 군 특성 LV 저하(LV%d→LV%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3166,
+      "source_sc_utf16le_sha256": "F3A9E558014450BFF08A152958FF5CA69826787D8D43F8D5E54E96DEFF724FF6",
+      "ko": "이미 부대를 출진시켰습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3167,
+      "source_sc_utf16le_sha256": "40E487365161943B0F595C8F5157CFD55FA6B59B5BAD1BCCF157B7AF0D8C47B7",
+      "ko": "종속도가 부족합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3168,
+      "source_sc_utf16le_sha256": "29107A51B27EB09BE09003788F2614545A04846F11FBB2B974C51FCB46A41058",
+      "ko": "획득 금전 +%d％",
+      "priority": "p2"
+    },
+    {
+      "id": 3169,
+      "source_sc_utf16le_sha256": "19E63450E42A78A0810B651EA9D40CBB69582EF78A452613F61D2A734D2C27B3",
+      "ko": "악명 증가량 경감",
+      "priority": "p2"
+    },
+    {
+      "id": 3170,
+      "source_sc_utf16le_sha256": "AFEF6F9C85D577AF63BD4F5F432E3625E1F897F9052A27C36C2BB064B86A24FB",
+      "ko": "악명 감소",
+      "priority": "p2"
+    },
+    {
+      "id": 3171,
+      "source_sc_utf16le_sha256": "193270389DE317071DA8F3816560A0E81E11EF86C6F21DA89856D2D3174624D0",
+      "ko": "우호도 감소 없음",
+      "priority": "p2"
+    },
+    {
+      "id": 3172,
+      "source_sc_utf16le_sha256": "2C466E74C068CC8E3074A141FDAB0D779E3A2F9EE1F84FF64B41CEAE65D395B7",
+      "ko": "공략 방침을 정합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3173,
+      "source_sc_utf16le_sha256": "AC12FD8C10EFEE4AC073F082ED3D2B25B10E0461C00138B682AB1F58433057C6",
+      "ko": "달성 시 %s의 공훈 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3174,
+      "source_sc_utf16le_sha256": "04A9CB552BE6A0B39C829DB5A358B37F69171F7E6D71A59417C91394E5743EE6",
+      "ko": "이 이벤트로 인한 변화는 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3175,
+      "source_sc_utf16le_sha256": "7239DF4FBA22C45FD936465B991C7D6C41049101F3771EC575F087B2D4511F2C",
+      "ko": "게임을 종료하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3176,
+      "source_sc_utf16le_sha256": "6D22DB262B944B151918585762BF7B8ADC63BB86EA94BE6E4FF77E2D01098BEB",
+      "ko": "교체할 대기 부대가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3177,
+      "source_sc_utf16le_sha256": "3B98F87595E83ABC35B9E384A193CEB98891BCA854653BE938A91AE32E8A2973",
+      "ko": "%s에서 공훈을 획득한 가신이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3178,
+      "source_sc_utf16le_sha256": "903763415F470EA51E1CB9151DA42F6DE42F62876236ACEDF301E4832639E021",
+      "ko": "주명을 실행하려면 가신이 1명 이상 필요합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3179,
+      "source_sc_utf16le_sha256": "64D635BD5CB364871DBDD85F0E0AE3F18D9E59CE844046C022B33C8C5276C146",
+      "ko": "주명을 실행하려면 건의 목록에\n빈칸이 1개 이상 필요합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3180,
+      "source_sc_utf16le_sha256": "3F6230AD3E80E89FE6C77DCF383A1EE4FD84B9D9B822CE76E7CFB1BB8127077B",
+      "ko": "대상이 될 %s이(가) 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3181,
+      "source_sc_utf16le_sha256": "624717809D840CDE3366A77B29005185D44F19723C132F29CB9FF9D8E5659A0C",
+      "ko": "비용이 부족합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3182,
+      "source_sc_utf16le_sha256": "156BE8FE3D19D0E5A30711CBE6C5466BB070438423AE7DCED9B1C79C4C1B8845",
+      "ko": "성을 %d개 더 지배하면 실행할 수 있습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3183,
+      "source_sc_utf16le_sha256": "E29363C3EF81DB0B6BD17036DD640C66B4E3D8D6B474F362399FC2F453A4F477",
+      "ko": "이 주명을 실행할 수 있는 무장이 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3184,
+      "source_sc_utf16le_sha256": "5577E120BBB0C7A6C671639F8FDC30FA11F9DFD76268BB5E0FF946BB9769268C",
+      "ko": "교전 중이므로 실행할 수 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3185,
+      "source_sc_utf16le_sha256": "E9D0F094C96ECE7C6C150A7606204B11BF0F128A29642D0F6CF5E1D2DB66F0C3",
+      "ko": "본가를 공격하는 적이 없어\n퇴각할 이유가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3186,
+      "source_sc_utf16le_sha256": "508F4AB8C504BCE8571C8BA2A701B0B8445AA468DD2278763CF1103893ECDAE0",
+      "ko": "서둘러 복구할 필요가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3187,
+      "source_sc_utf16le_sha256": "DA6AB605B7A4375812FD3E4CFF95903678EE5E7DD978F22D516B2F508B40309B",
+      "ko": "기간 -%d％",
+      "priority": "p2"
+    },
+    {
+      "id": 3188,
+      "source_sc_utf16le_sha256": "BA27DBB323E4270AC6BEB614900FDD2F509AAF4AE48765FCD96A92492FFA7A96",
+      "ko": "전투의 흐름",
+      "priority": "p2"
+    },
+    {
+      "id": 3189,
+      "source_sc_utf16le_sha256": "0690DA5F6882351A5F1835FB7C279C1AE78E0A01B8670FDAB19A4B7968C13B4D",
+      "ko": "군평정",
+      "priority": "p2"
+    },
+    {
+      "id": 3190,
+      "source_sc_utf16le_sha256": "F79FB67F203574B3B37BEB394D624B42730365355F5CE1A8994A255602212F04",
+      "ko": "전투",
+      "priority": "p2"
+    },
+    {
+      "id": 3191,
+      "source_sc_utf16le_sha256": "CAACDC444C1E52A13A5A0C6CAEAACAB7F5F17FF3ED3F398906E3334188F0CCA3",
+      "ko": "전투에서 승리",
+      "priority": "p2"
+    },
+    {
+      "id": 3192,
+      "source_sc_utf16le_sha256": "D7C9DC7765A90EBE9836776C1C0E3DF2284011EC0FCD6505F3108C5C819F92C1",
+      "ko": "%s의 군 특성 “%s” LV +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3193,
+      "source_sc_utf16le_sha256": "07B4BD7A7E0CF633956261E2DDAE279F6316D43E35AEB2C0788E4EFE5E8C547F",
+      "ko": "%s 소속 무장 포박 불가",
+      "priority": "p2"
+    },
+    {
+      "id": 3194,
+      "source_sc_utf16le_sha256": "944022E1ECC83BA1BED733FED797AD7FD5C138FDDAF24DB0CC67CE8489E567D0",
+      "ko": "전령이 부족합니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3195,
+      "source_sc_utf16le_sha256": "13FAAFDDC897ECFD5BDDD42D04C02D174C20F88A54F49A6190B888DBB1B521EF",
+      "ko": "위신이 %d단계에 도달하면 해금",
+      "priority": "p2"
+    },
+    {
+      "id": 3196,
+      "source_sc_utf16le_sha256": "E25C384DB716A77A6FC3743A9C1EE27ED64369DAAF1A977BD97C6737B0E52BC4",
+      "ko": "대상 군(%s)의 민충 상한 +%d(%d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3197,
+      "source_sc_utf16le_sha256": "CBA42EDAC84D05C8F7607CC818110C6514694CF5BF359CEE7F99D4D52E59654C",
+      "ko": "%s 소속 %d개 군의 민충 상한 +%d(최저치: %d→%d)",
+      "priority": "p2"
+    },
+    {
+      "id": 3198,
+      "source_sc_utf16le_sha256": "3762329D9D708F53A72B9355AAFF09958675D1D1BD35DAF4145435D942066128",
+      "ko": "국인중이란?",
+      "priority": "p2"
+    },
+    {
+      "id": 3199,
+      "source_sc_utf16le_sha256": "73886B37F36B7EF990D6D768E185BD073A2414D4C8CC44644996E4ADF3510A36",
+      "ko": "출진 중인 부대가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3200,
+      "source_sc_utf16le_sha256": "0D2E7273473BF99B6AC0C5E8970EBBC019240DEA7DCFB2445258C2AF76F16F6A",
+      "ko": "공주가 없습니다.",
+      "priority": "p2"
+    },
+    {
+      "id": 3201,
+      "source_sc_utf16le_sha256": "753584BA4112727E32519E648BC1B7DD46975709D7D1C7718F0CB208C9D8AC54",
+      "ko": "가보를 보유한 무장이 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3202,
+      "source_sc_utf16le_sha256": "A34DB33D9398BD77F5C8442A002198EAA6597515E695D4EF733B7FD455991123",
+      "ko": "종속된 국인중이 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3203,
+      "source_sc_utf16le_sha256": "6EA8E4C3ABC501E1920F8638C4F140043684E69233D8923692F993FB8EE78E5F",
+      "ko": "관직을 보유한 무장이 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3204,
+      "source_sc_utf16le_sha256": "80E4E8DA6FE6377F7F49EEF1ABE5003D6BA0F739494F72A9BFCAEAA6ACDF6468",
+      "ko": "내보낼 때 일부 항목의 설정이 무효화됩니다.\n내보내시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3205,
+      "source_sc_utf16le_sha256": "F764F0809C0946D2750D29D8964F41AE795066B720B30DE3F5E4AC9E0F405BFB",
+      "ko": "등록 무장 %d명을 내보냈습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3206,
+      "source_sc_utf16le_sha256": "76B64669E985B2F5D8F5230EF2484D9DE041B28F666758D23DDEBAFB38673ADC",
+      "ko": "선택한 등록 무장을 삭제하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3207,
+      "source_sc_utf16le_sha256": "DFAE86B61170118784ED49186A43AB7EC39D6DDCDE9E59CD1BBC84252832E14C",
+      "ko": "선택한 등록 무장과의 인간관계가\n모두 무효화됩니다. 계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3208,
+      "source_sc_utf16le_sha256": "D1DB1DC20436B2A0C2878D537DEBD9FDBC96A704769087694A6DDA817FDAECA4",
+      "ko": "등록 무장 %d명의 데이터를 삭제했습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3209,
+      "source_sc_utf16le_sha256": "50631E27944ACF03FC5516DEB799ADCB34FEAFDC905FB99D7940898F3F5FE3B5",
+      "ko": "정책을 강화해 세력을 성장시킵니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3210,
+      "source_sc_utf16le_sha256": "E3175B88565C9850CCFBED32F4099FF1BD7D242AA6A3AB249F46319512DBC23C",
+      "ko": "동맹이나 원군 교섭을 위해 타 세력의 신용을 높입니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3211,
+      "source_sc_utf16le_sha256": "6187DEF719C611FF9874581B2F9FA0827BC4D95AB3D0C9EA770EFFFEA748E1B3",
+      "ko": "신용을 소모해 동맹이나 정전을 맺습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3212,
+      "source_sc_utf16le_sha256": "7F8A95E95941861DA349C424E051B90B7037C0A73B8903BC09EAEA88F1BE4BB4",
+      "ko": "직위를 보유한 무장이 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3213,
+      "source_sc_utf16le_sha256": "C4CC1473786EEF612F9F69164C0A336E5B2871E651B307A1FD5EBB37318D2285",
+      "ko": "노동력이 부족합니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3214,
+      "source_sc_utf16le_sha256": "38B8D161940AADC3A08278CCB9ABC098048DD9C2C47FDDA9B24E7B1997CC258C",
+      "ko": "성이 교전 중이므로 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3215,
+      "source_sc_utf16le_sha256": "A12ADF2BD22757778D804AD31085D7A1523887892D3B52C264AFB11D27A9A915",
+      "ko": "소속 성을 제압하지 않아 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3216,
+      "source_sc_utf16le_sha256": "8537C1471B48F31F49347B57945DE5CBDAC8E6A5BA2CC9B55EF7F60E6956A3CE",
+      "ko": "이미 가신에게 수여했으므로 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3217,
+      "source_sc_utf16le_sha256": "C4262AAAB827E0FB7F51B21C1DCE1856DD3EA39A364D1A185C506BE83D198BE4",
+      "ko": "조정에 헌금해 신용을 높이고 관직을 받습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3218,
+      "source_sc_utf16le_sha256": "AF41643F50B1EFC36989051099D0F21ABE2F47F9952C086A04D260CF3A429802",
+      "ko": "각 다이묘를 막부 직위에 임명해 외교 자세를 개선합니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3219,
+      "source_sc_utf16le_sha256": "D8FC67C1144F1502CAA4DA23C8EFCDB726D4B94BF3DEFFFFCDAC12367664DDAB",
+      "ko": "대관으로 임명할 수 있는 무장이 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3220,
+      "source_sc_utf16le_sha256": "5C289E45550E410EF215DFC6A2B0BC8D4C929092224CAC1E16AAC4173025D045",
+      "ko": "취락을 건설할 수 있는 군이 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3221,
+      "source_sc_utf16le_sha256": "2E7A88C14A755C0C96209A873CD5D0A5E0EF578A63A6DE87717F6ABC46D296FA",
+      "ko": "다이묘 직할군이 아니므로 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3222,
+      "source_sc_utf16le_sha256": "1D33215CF3D696554FD7E27C5905FB0FF6C5074BA1256121492EC5FE5310B7C3",
+      "ko": "건설할 취락을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3223,
+      "source_sc_utf16le_sha256": "B2F2EB7C4AFB3775A91B83BB6C762AA07D0D69F0D0687D377E03B723D3F69C2C",
+      "ko": "%s의 취락 “%s” 철거를 진행하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3224,
+      "source_sc_utf16le_sha256": "C8AE0A61BA897FE681DF999954D886EECC39FF0CF36B5EC141DEBA1CC6D964A6",
+      "ko": "성하 시설을 건설합니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3225,
+      "source_sc_utf16le_sha256": "768D91F0EF162FFD4FF3EC11D3539082CB59AFFDBC235D2E4DCF06F89A9CE198",
+      "ko": "다이묘 직할군은 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3226,
+      "source_sc_utf16le_sha256": "B71F4C78FA430CF65619289E6AD88626AD840C4B3C52A704289CBB78BDAF66A7",
+      "ko": "다이묘 직할군이 아니므로 대관을 임명할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3227,
+      "source_sc_utf16le_sha256": "5BCE6D7DCFCBE3DEBD77AEEEDEC4FCB505B0A32A8D588C726787D4361F1C9340",
+      "ko": "군 선택으로 돌아갑니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3228,
+      "source_sc_utf16le_sha256": "EFB23703EA844911B0245238DBD89B5C007F68307494D40A8E1237124A209992",
+      "ko": "정책 “%s” LV%d에서 해금",
+      "priority": "p2"
+    },
+    {
+      "id": 3229,
+      "source_sc_utf16le_sha256": "97B4F3DAFE1086B40C204F320F48CB212BA1BFDA71D33372304FCFB2D6531203",
+      "ko": "위신 %d 이상",
+      "priority": "p2"
+    },
+    {
+      "id": 3230,
+      "source_sc_utf16le_sha256": "4DAB2704318A1DDB157F5BAAF135AF900567304C768E6C0F78365F98511F3FF9",
+      "ko": "취락 “%s” 건설",
+      "priority": "p2"
+    },
+    {
+      "id": 3231,
+      "source_sc_utf16le_sha256": "19F4A25743E29F53BE545B6ED868AC6B63002C9A9D3FD0143920127E77F515DB",
+      "ko": "다이묘가 직접 다스리므로 대관을 임명할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3232,
+      "source_sc_utf16le_sha256": "62BFBCED94EBF01B16844D9CB51F09003BAF4B8462182E321311A379DC21D57D",
+      "ko": "새 성을 획득하면 실행할 수 있습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3233,
+      "source_sc_utf16le_sha256": "DDB2D386C84E79C8E424936A3E19C1F4212079DDFE8E369AC513811CCD6DA732",
+      "ko": "본거지가 공격받고 있어 대관을 변경할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3234,
+      "source_sc_utf16le_sha256": "6BEA6CFE266E4EBF83463D0616DD58F5C1CDDC7CD7F8B01F112C9C38A6989535",
+      "ko": "%s은(는) %s의 대관이므로 해임됩니다.\n계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3235,
+      "source_sc_utf16le_sha256": "39BC1FB9AD9694C7F6C1B51D032206F086AE146FA7A88E88C5676D72AC71B821",
+      "ko": "출진 중인 %s을(를) %s 지행에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3236,
+      "source_sc_utf16le_sha256": "91F823EA8755329159D43E8283A205C2DA2549399DAB1270B3026C6CAF760225",
+      "ko": "%s은(는) %s의 영주이므로 해임됩니다.\n계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3237,
+      "source_sc_utf16le_sha256": "603C23F08BCEFBA8A0783164A54CBEEBA9079133AB84C210AEF22CB6F2E841C5",
+      "ko": "%s은(는) %s의 성주이므로 해임됩니다.\n계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3238,
+      "source_sc_utf16le_sha256": "FBC7D8291E75A94DE639E2C5D4BB1E4D038654AF6208E5F311F7FBBA481D4DB5",
+      "ko": "출진 중인 %s을(를) %s의 대관에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3239,
+      "source_sc_utf16le_sha256": "039104B7ECA6E3784332E512A6C6E6972740F0DF9CE55416039A6A18898B30E3",
+      "ko": "출진 중인 %s을(를) %s의 성주에서 해임하면 부대에서 이탈합니다. 계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3240,
+      "source_sc_utf16le_sha256": "5EF028EE203770486263590FDF0099C21383E8C29CF384404B91BF6534B921A0",
+      "ko": "앞으로 %d 달성 시 성하 시설 “%s” 건설 가능",
+      "priority": "p2"
+    },
+    {
+      "id": 3241,
+      "source_sc_utf16le_sha256": "A62018CE4118F55484494A45180B8B246BEBC06F9E522186E31293809DB37A6E",
+      "ko": "신분이 %s 이상이면 지행 가능",
+      "priority": "p2"
+    },
+    {
+      "id": 3242,
+      "source_sc_utf16le_sha256": "E8C4EFFF4F54414801CB954B524CD8E0A11E4DD264AA6CB3A796E8F8AF8560E8",
+      "ko": "석고가 같거나 더 높은 %s의 성주를 맡고 있습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3243,
+      "source_sc_utf16le_sha256": "0D27364598069B0FD0118FC1985F591094F8F1956E2F1182A92BD29244FF4229",
+      "ko": "취락을 건설할 군을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3244,
+      "source_sc_utf16le_sha256": "C1DC363ABBCDC0816005AE069BF50A39E540D01062E12CE654E28D44815563D4",
+      "ko": "성명에 입력하지 않은 항목이 있습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3245,
+      "source_sc_utf16le_sha256": "CC1D0D6405FD26549D6336C847022D9BE8998BC2E3CAF2944DFE04D03B0DD2F3",
+      "ko": "성명에 사용할 수 없는 문자가 포함되어 있습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3246,
+      "source_sc_utf16le_sha256": "D22C6EE227C7BBB113A6D565C434E74802C3AB162C5CEE50FF4755819FB5FB95",
+      "ko": "성명은 합쳐서 최대 %d자까지 입력할 수 있습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3247,
+      "source_sc_utf16le_sha256": "438DB1705D9D3D45713E6FE91AB0A199EECC8F7EF74EBFB191EFF84486BCD90E",
+      "ko": "변경한 항목이 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3248,
+      "source_sc_utf16le_sha256": "E7B9BABEFFEE71E7D5893B2F037DD3AF33103B02C67CCF7CD30CBF839BD64850",
+      "ko": "열전에 사용할 수 없는 문자가 포함되어 있습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3249,
+      "source_sc_utf16le_sha256": "1C11C7F978CAEB3E0A8A6819981C3EADF1776EC442E0C7FBF6A38C08F58B2460",
+      "ko": "변경하지 않고 돌아가시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3250,
+      "source_sc_utf16le_sha256": "7CF257FBB1744C93EE87A4AD18F6F4F8CEB4CCF8B152234BED2A046B939D602D",
+      "ko": "성이 있는 군에는 취락을 건설할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3251,
+      "source_sc_utf16le_sha256": "B79EBAF6E3047BB12DB564D5288302690132ECFE24C0E1B0DFD24EC179B9283B",
+      "ko": "현재 본거지는 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3252,
+      "source_sc_utf16le_sha256": "9F3BE521E39DD529A0E4026F17B23426480D717A1DB8C23264285915DB01EB7C",
+      "ko": "타 세력의 성은 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3253,
+      "source_sc_utf16le_sha256": "FD7270E439AD710E88793015567F316F2E3B2F2488C9DAEC157C7B8742628120",
+      "ko": "친선할 세력을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3254,
+      "source_sc_utf16le_sha256": "A6BEE6A9FAE47DDC18CE2DA50F0A266A95AF923947CDDDBCF79B2D0D4E09F703",
+      "ko": "교섭할 세력을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3255,
+      "source_sc_utf16le_sha256": "4D2A4FE1BC31024DB80A6C8C042EFBB01B4280FD2FC4460B133FE45CD2EB5E24",
+      "ko": "직위를 수여할 세력을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3256,
+      "source_sc_utf16le_sha256": "4F103B77ABF347015F3CFE0A3981C0A9AED31A6EEBEDF2E8C70F7A50BCE79C0F",
+      "ko": "정전할 세력을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3257,
+      "source_sc_utf16le_sha256": "505C989F9F2E23AB1D3BDFF8E12B8D9FE59FE654053F351B54A028076B6C0546",
+      "ko": "원군의 목표 성을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3258,
+      "source_sc_utf16le_sha256": "EBE6675E0C55F11F96237A1E8A730549E0C98ACD974BE994EB32D32AC5EAF7AA",
+      "ko": "국인중은 원군으로 보낼 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3259,
+      "source_sc_utf16le_sha256": "44703854DC9976E114143ED8A122ADC1AADB1A94C2C47F85CBBA4117C13A661C",
+      "ko": "%d년 %d월, %s이(가) 전국을 통일했습니다.\n시작 메뉴로 돌아갑니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3261,
+      "source_sc_utf16le_sha256": "A819DADD3D0712ADAA1A92D7CB71438ECBCD78C3413AE48F5F9D902FC912A4ED",
+      "ko": "출진 취소",
+      "priority": "p2"
+    },
+    {
+      "id": 3262,
+      "source_sc_utf16le_sha256": "B18E4AC158FE048672F77428EA9AE2A86DD961475D2A53F7ED30B8F2DABAD7DD",
+      "ko": "%s 건설 완료",
+      "priority": "p2"
+    },
+    {
+      "id": 3263,
+      "source_sc_utf16le_sha256": "9985B19B1312C20E025B0449B293BEB25C02D1C2368BCA699AD1F5EF2F941EC9",
+      "ko": "%s(LV%d) 증축 완료",
+      "priority": "p2"
+    },
+    {
+      "id": 3264,
+      "source_sc_utf16le_sha256": "60B0AC96B5F3127AAC3B8D676E20E1CC315B3783F2CEA5BEDC5A64029A174828",
+      "ko": "선택 취소",
+      "priority": "p2"
+    },
+    {
+      "id": 3265,
+      "source_sc_utf16le_sha256": "56554CA92C132E775061B8BB3A8837B7BD006886EBD7F585906225741550529F",
+      "ko": "모든 부대에 귀환 명령을 내립니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3266,
+      "source_sc_utf16le_sha256": "6BC0F7393BFADBADC7AF88F762C5CC500BBC19C1DF80201B535F8AD7FEEB24AA",
+      "ko": "모든 부대를 해산합니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3267,
+      "source_sc_utf16le_sha256": "5B8C951A99DA53D159A34AF40951A7A870D4F630099138D28AC7E3B3B5FC40F5",
+      "ko": "『노부나가의 야망·대지 파워업키트』 등록 무장 데이터가 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3268,
+      "source_sc_utf16le_sha256": "8717A733071DCBD32C2FFA6473AB0B5D9CC20EDD83A9146C9AA2BC57B569ED49",
+      "ko": "등록 무장 데이터가 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3269,
+      "source_sc_utf16le_sha256": "732316CDEDDD04CCFFAA46A427DFC172B65A433C8398549D57F7A8C1CE55CF7D",
+      "ko": "불러올 무장 데이터가 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3270,
+      "source_sc_utf16le_sha256": "E4A195CD073A6EA276182A3551CF120291BD3B672542A8860D7E14078212C5C1",
+      "ko": "내보낼 무장 데이터가 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3271,
+      "source_sc_utf16le_sha256": "030682B7C0186FFB96EE9CCA3D2C273C99EC1968B80F423033DD738CAF52219C",
+      "ko": "등록 가능한 무장 수가 상한에 도달했습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3272,
+      "source_sc_utf16le_sha256": "E0943CE190EBD7AA2059E4BB2F1C80F05E403527EBDF14FC218EA7B3D201BB24",
+      "ko": "모든 대관을 해임해 다이묘와 동행시키시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3273,
+      "source_sc_utf16le_sha256": "44658D58340583D13551CAF7575A3D20CD71E899A98DADB9BF3C18057257B4CD",
+      "ko": "맡은 군을 지행으로 주어 %s에 남길 무장을 선택하십시오  ",
+      "priority": "p2"
+    },
+    {
+      "id": 3274,
+      "source_sc_utf16le_sha256": "153C7B171B894A2D3F0F3581574311BD4F314405EDB2E809EB9EFBE292FE62A2",
+      "ko": "%s 등 %d군",
+      "priority": "p2"
+    },
+    {
+      "id": 3275,
+      "source_sc_utf16le_sha256": "C9C4E6C73818FF168632D360C31CB6D5BF3D0D54B287A79E7F7FDA0EC10FEE95",
+      "ko": "군마다 %d",
+      "priority": "p2"
+    },
+    {
+      "id": 3276,
+      "source_sc_utf16le_sha256": "8279FAE8799E7D276072096ADB402582EC67ACDBD03C5012E840051A1F155D9C",
+      "ko": "%s 등",
+      "priority": "p2"
+    },
+    {
+      "id": 3277,
+      "source_sc_utf16le_sha256": "25758169DF594F432A766A1893ECF7BCE6618D727CD207BA12522CEAD9309A24",
+      "ko": "%d성",
+      "priority": "p2"
+    },
+    {
+      "id": 3278,
+      "source_sc_utf16le_sha256": "B80C589F320AC7A4899CD8C0D1DA362822202A26BF4E24B75E4F2CC2367F5B0D",
+      "ko": "%d명",
+      "priority": "p2"
+    },
+    {
+      "id": 3279,
+      "source_sc_utf16le_sha256": "31A1332F98B176226DB4A464D3466E46B67218A2CCCA8980CC9645FDDC50E0FD",
+      "ko": "%s, %s",
+      "priority": "p2"
+    },
+    {
+      "id": 3280,
+      "source_sc_utf16le_sha256": "810D1B53B465578433A1C5322F43D815E679B8DD7BD51117D2B4511D966CE6DE",
+      "ko": "%d→%d",
+      "priority": "p2"
+    },
+    {
+      "id": 3281,
+      "source_sc_utf16le_sha256": "B61AFDF5335A688EB6C28E5991E2FD4CC9DAF24A25C3095208947A169255E6AE",
+      "ko": "%s을(를) 거부하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3282,
+      "source_sc_utf16le_sha256": "274C957C8AA4320CA1D2D5DE8963B60D28F1B6BDD3A21306755FC3AEFC700B4C",
+      "ko": "본거지 이전 시 다음을 실행합니다. 계속하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3283,
+      "source_sc_utf16le_sha256": "78FE3A6AAA14BF171A9008BC4B338A3B1DF903A9A75E5077F8D1F85CDCCE1A0F",
+      "ko": "·%s의 본거지 시설 폐기",
+      "priority": "p2"
+    },
+    {
+      "id": 3284,
+      "source_sc_utf16le_sha256": "4D600D16434D8C3E735F43A9DA6BD80ED6BA9186F1840AE4DCAFF94B4FCDD79F",
+      "ko": "·%s 해산",
+      "priority": "p2"
+    },
+    {
+      "id": 3285,
+      "source_sc_utf16le_sha256": "F00B091534D4F837DE91FE1ED9C4284C0E0A15DC814BEF53FB17FFE8CEF16044",
+      "ko": "%s이(가) 먼저 공성을 시작했으므로 변경할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3286,
+      "source_sc_utf16le_sha256": "ABABD66019D26A384FC5FF602331F4788025FB3492FDC6D23E011BE250FB5F8D",
+      "ko": "%s 약정(친선 %d개월)",
+      "priority": "p2"
+    },
+    {
+      "id": 3287,
+      "source_sc_utf16le_sha256": "BEEC02FCB948C8782EB6E044FA28AC57BF275E132877E08E2F8066677A793295",
+      "ko": "친선 금전 수입(+%d/월)",
+      "priority": "p2"
+    },
+    {
+      "id": 3288,
+      "source_sc_utf16le_sha256": "809042BD1B51E31C30285E4C843B4AFA9327A36FA0E05D16DA2C784398F9739D",
+      "ko": "공략 목표 성을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3289,
+      "source_sc_utf16le_sha256": "E879E1E0DDF87917AE8563733E710127EB149F5804466450C43E5646FD3FA31B",
+      "ko": "%s 공략을 위한 군비 거점을 선택하십시오",
+      "priority": "p2"
+    },
+    {
+      "id": 3290,
+      "source_sc_utf16le_sha256": "5CAE5008E13D3FA0F9E36838E86FB502BFEA8E3C21FD13363382AD23F30088AD",
+      "ko": "자세력의 군이 아니므로 원군을 출진시킬 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3291,
+      "source_sc_utf16le_sha256": "2F040F3E5952C5940677593EE31CD0EEC34C24FB9C06D321344BDC5708E6B1A3",
+      "ko": "취락 “%s”은(는) 특수 시설이므로 철거할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3292,
+      "source_sc_utf16le_sha256": "4356DD58089FFA45D3B49BA4699DC612E988496BCF298AA73B021DD06510E677",
+      "ko": "성 선택으로 돌아갑니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3293,
+      "source_sc_utf16le_sha256": "E2EE3356D3486E0C9D5B68FD05741DEB21E81BE800E780E03AC897D85A6D5773",
+      "ko": "필수 능력을 충족하지 않아 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3294,
+      "source_sc_utf16le_sha256": "5D6C010A692C9000F2D6F766535FEA243E798A5C516E79D10DA18042A951D7DE",
+      "ko": "취락 “%s”을(를) 건설하시겠습니까?",
+      "priority": "p2"
+    },
+    {
+      "id": 3295,
+      "source_sc_utf16le_sha256": "1AF1EAEC7ACA68CDC5D78FCA7C72AD4568AD25CA623F8773DECC6ED31637975E",
+      "ko": "%s에서 취락 “%s”을(를) 철거했습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3296,
+      "source_sc_utf16le_sha256": "010ADBDF733C839E9BF9EF2DD93D38CB0A9C22121244B4DA4DB5615190C5B143",
+      "ko": "목표 성은 최대 %d성까지입니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3297,
+      "source_sc_utf16le_sha256": "3BCC230DBA6D901AD25926EC097A81CA1BF06DCF99D3F8161C90A2FC17BEC3DA",
+      "ko": "군비 거점이 최소 1성 필요합니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3298,
+      "source_sc_utf16le_sha256": "14F73F04C1FF2176BAE81B383A31E71B23729258B8C0654D8C2B9C77AAA15AFF",
+      "ko": "다른 군단의 성입니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3299,
+      "source_sc_utf16le_sha256": "6F5E3A6772A551448CFB23626E8D2BF4B60D640F8365DD9571DDA3083FA847ED",
+      "ko": "이미 취락 건설 중이므로 선택할 수 없습니다",
+      "priority": "p2"
+    },
+    {
+      "id": 3300,
+      "source_sc_utf16le_sha256": "692C1E4E704A31A2EC5A2113675A4C398202706B037CA54AA9A03AB04C09E865",
+      "ko": "직할지의 지휘를 무장에게 맡깁니다",
       "priority": "p2"
     }
   ]
