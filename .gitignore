@@ -1,0 +1,66 @@
+# Local workspaces and volatile state
+/tmp/
+/backups/
+/logs/
+/.pytest_cache/
+/**/__pycache__/
+*.py[cod]
+
+# Reverse-engineering databases and caches
+/ghidra_headless/
+/ghidra_appdata/
+/ghidra_localappdata/
+/ghidra_game/
+/ghidra_user/
+
+# Third-party reference checkouts and build products
+/reference/
+
+# Extracted commercial data and legacy complete patch trees
+/data/raw/
+/data/extracted/
+/data/work_templates/
+/patches/
+/releases/
+
+# Generated full-catalog and build outputs
+/workstreams/msgui_full/catalog_v2/
+/workstreams/msgui_full/inventory/
+/workstreams/msgui_full/build_*/
+/workstreams/msgui_full/font_v3/build/
+/workstreams/msgui_full/font_v3/build_determinism_2/
+/workstreams/msgui_full/font_v3/root_selftest/
+/workstreams/msgui_full/font_v3/testdata/
+/workstreams/msgui_full/font_v4/build/
+/workstreams/msgui_full/font_v4/build_determinism_2/
+/**/private/
+
+# Complete game resources and binary patch payloads must never enter Git
+*.bin
+*.g1n
+*.g1t
+*.bak
+*.orig
+*.rep
+*.gpr
+*.reg
+*.7z
+*.zip
+*.tar
+*.tar.gz
+
+# Generated font files are ignored except the pinned OFL build inputs
+*.ttf
+!/vendor/noto/*.ttf
+
+# Editor and OS noise
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+*.user
+*.suo
+*.pdb
+obj/
+bin/
