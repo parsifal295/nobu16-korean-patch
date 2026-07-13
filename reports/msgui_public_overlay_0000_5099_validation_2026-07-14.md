@@ -60,7 +60,7 @@ ID 979를 `한정`으로 통일했다.
 - 전체 카탈로그 validation: `valid=true`, 오류 0, 경고 0
 - buildable: 4,062개
 - 독립 출력 경로 두 곳의 `msgui.bin`, manifest, glyph demand: 각각 동일
-- 회귀 테스트: 6/6 통과
+- 회귀 테스트: 7/7 통과
 
 최종 빌드 결과:
 
@@ -71,14 +71,23 @@ ID 979를 `한정`으로 통일했다.
 - target raw table SHA-256:
   `FDE98D7CE4AE27F75DE14F10967A82C6ED5A556BB97382DB1D131C8904DACC24`
 - 실제 변경 문자열: 3,819개
-- 요구 글리프: 645개, 그중 완성형 한글 523개
+- 번역 문자열의 비공백 원문자 집합: 645개
+- 폰트 제외 토큰: 19개(`ESC` 제어 1, ESC 명령 구성문자 2, 게임 PUA 아이콘 16)
+- 실제 G1N 폰트 요구 글리프: 626개, 그중 완성형 한글 523개
 - build manifest SHA-256:
-  `64BB5C88C687885F3B740A4D3198F6C8F284E6004E8F32ECB78CE68229B779F8`
+  `1C5036918CCD1ACCC22FC88229CC0D6DE3BA2FBAB6A17138499A89233A14A969`
 - glyph demand SHA-256:
-  `00E4D60AFC7A4D0AE30C9EAD09E820D6C3ED141E20E5AC3383CB6BD3D307B80F`
+  `AA12D687C85D69D2D011FCBBFAD1B54D972223C01F8A3D47ABDD7FF6FA4EEB05`
+
+초기 645자 집합에는 화면 글리프가 아닌 게임 제어 토큰이 섞여 있었다. 이를 삭제로
+숨기지 않고 `glyph_demand.json`에 원문자 645개와 제외 19개의 코드포인트·사유·해시를
+함께 기록했다. 제외 코드포인트 LF 해시는
+`B88CD9A68EBB6FC6221D01FFE7F89AA014FECA46EF1A2B13CCDCC8730D36F2FF`,
+사유 행 compact JSON 해시는
+`6579C55EFF39DCA50D8152BCFE3686072DB1F07B185B50BAF363840F4C772E38`이다.
 
 ID 1–3900 공개 체크포인트와 비교하면 공개 엔트리는 370개, 실제 변경 문자열은 352개,
-요구 글리프는 20개, 완성형 한글은 13개 늘었다.
+필터 전 비공백 원문자 집합은 20개, 완성형 한글은 13개 늘었다.
 
 ## 설치본 불변
 

@@ -34,6 +34,30 @@ class InvariantTests(unittest.TestCase):
         self.assertEqual([], catalog.compare_invariants(source, "한 줄", {"line_breaks"}))
 
 
+class GlyphDemandTests(unittest.TestCase):
+    def test_ui_escape_sequences_are_not_font_glyphs(self) -> None:
+        rows = [{"status": "translated", "ko": "\x1bCQ\ue024\x1bCZ 한"}]
+        demand = catalog.glyph_demand(rows)
+        self.assertEqual(["U+D55C"], demand["codepoints"])
+        self.assertEqual(6, demand["source_non_whitespace_character_count"])
+        self.assertEqual(5, demand["excluded_font_token_count"])
+        self.assertEqual(
+            {
+                "U+001B": "ui_control",
+                "U+0043": "ui_escape_sequence_component",
+                "U+0051": "ui_escape_sequence_component",
+                "U+005A": "ui_escape_sequence_component",
+                "U+E024": "game_private_icon",
+            },
+            {row["codepoint"]: row["reason"] for row in demand["excluded_font_tokens"]},
+        )
+        self.assertNotIn("U+001B", demand["codepoints"])
+        self.assertNotIn("U+0043", demand["codepoints"])
+        self.assertNotIn("U+0051", demand["codepoints"])
+        self.assertNotIn("U+005A", demand["codepoints"])
+        self.assertNotIn("U+E024", demand["codepoints"])
+
+
 class CurrentArtifactTests(unittest.TestCase):
     def test_current_p3_catalog_is_valid(self) -> None:
         root = PROJECT_ROOT / "KR_PATCH_WORK" / "workstreams" / "msgui_full" / "catalog_v2"

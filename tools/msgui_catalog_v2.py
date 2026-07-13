@@ -159,6 +159,42 @@ def compare_invariants(source: str, replacement: str, overrides: set[str]) -> li
     return issues
 
 
+def renderable_characters(text: str) -> list[str]:
+    """Return font glyphs, excluding whitespace, UI controls, and game PUA icons."""
+    consumed_esc = {
+        index
+        for match in ESC_RE.finditer(text)
+        for index in range(match.start(), match.end())
+    }
+    return [
+        char
+        for index, char in enumerate(text)
+        if index not in consumed_esc
+        and not char.isspace()
+        and not (ord(char) < 0x20 or 0x7F <= ord(char) <= 0x9F)
+        and not (0xE000 <= ord(char) <= 0xF8FF)
+    ]
+
+
+def font_exclusion_reason(char: str) -> str:
+    codepoint = ord(char)
+    if 0xE000 <= codepoint <= 0xF8FF:
+        return "game_private_icon"
+    if codepoint < 0x20 or 0x7F <= codepoint <= 0x9F:
+        return "ui_control"
+    return "ui_escape_sequence_component"
+
+
+def font_exclusion_inventory(raw_characters: set[str], font_characters: set[str]) -> list[dict[str, str]]:
+    return [
+        {
+            "codepoint": f"U+{ord(char):04X}",
+            "reason": font_exclusion_reason(char),
+        }
+        for char in sorted(raw_characters - font_characters, key=ord)
+    ]
+
+
 def load_seed_catalogs(paths: Sequence[Path]) -> dict[int, dict[str, Any]]:
     seeds: dict[int, dict[str, Any]] = {}
     for path in paths:
@@ -310,6 +346,7 @@ def validate_catalog(
     ids: set[int] = set()
     buildable_ids: list[int] = []
     glyphs: set[str] = set()
+    raw_non_whitespace: set[str] = set()
 
     if len(rows) != expected_count:
         errors.append(f"row count {len(rows)} != {expected_count}")
@@ -362,7 +399,8 @@ def validate_catalog(
                 if invariant_issues:
                     raise CatalogError("invariant mismatch: " + "; ".join(invariant_issues))
                 buildable_ids.append(entry_id)
-                glyphs.update(char for char in ko if not char.isspace())
+                raw_non_whitespace.update(char for char in ko if not char.isspace())
+                glyphs.update(renderable_characters(ko))
             elif status == "untranslated" and ko:
                 warnings.append(f"id {entry_id}: untranslated row contains draft text")
         except (CatalogError, KeyError, TypeError, ValueError) as exc:
@@ -371,6 +409,7 @@ def validate_catalog(
     missing_ids = sorted(set(range(expected_count)) - ids)
     if missing_ids:
         errors.append(f"missing ids: {missing_ids[:20]}")
+    exclusions = font_exclusion_inventory(raw_non_whitespace, glyphs)
     return {
         "schema": "nobu16.kr.msgui-catalog-validation.v2",
         "valid": not errors,
@@ -381,6 +420,9 @@ def validate_catalog(
         "buildable_ids": buildable_ids,
         "required_glyph_count": len(glyphs),
         "required_codepoints": [f"U+{ord(char):04X}" for char in sorted(glyphs, key=ord)],
+        "source_non_whitespace_character_count": len(raw_non_whitespace),
+        "excluded_font_token_count": len(exclusions),
+        "excluded_font_tokens": exclusions,
         "errors": errors,
         "warnings": warnings,
     }
@@ -695,16 +737,27 @@ def cmd_export_batch(args: argparse.Namespace) -> int:
 
 
 def glyph_demand(rows: Sequence[dict[str, Any]]) -> dict[str, Any]:
-    chars = sorted(
-        {
-            char
-            for row in rows
-            if row["status"] in BUILDABLE_STATUSES
-            for char in row["ko"]
-            if not char.isspace()
-        },
-        key=ord,
-    )
+    raw_chars = {
+        char
+        for row in rows
+        if row["status"] in BUILDABLE_STATUSES
+        for char in row["ko"]
+        if not char.isspace()
+    }
+    font_chars = {
+        char
+        for row in rows
+        if row["status"] in BUILDABLE_STATUSES
+        for char in renderable_characters(row["ko"])
+    }
+    chars = sorted(font_chars, key=ord)
+    exclusions = font_exclusion_inventory(raw_chars, font_chars)
+    exclusions_blob = json.dumps(
+        exclusions, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+    ).encode("utf-8")
+    source_codepoint_lines = "".join(
+        f"U+{ord(char):04X}\n" for char in sorted(raw_chars, key=ord)
+    ).encode("ascii")
     hangul_syllables = [char for char in chars if 0xAC00 <= ord(char) <= 0xD7A3]
     hangul_jamo = [
         char
@@ -717,6 +770,12 @@ def glyph_demand(rows: Sequence[dict[str, Any]]) -> dict[str, Any]:
     return {
         "schema": "nobu16.kr.glyph-demand.v1",
         "source": "buildable ko strings in msgui catalog v2",
+        "source_non_whitespace_character_count": len(raw_chars),
+        "source_non_whitespace_codepoints_sha256": sha256_bytes(source_codepoint_lines),
+        "font_exclusion_policy": "exclude ESC command components, C0/C1 controls, and game PUA icons from G1N raster demand",
+        "excluded_font_token_count": len(exclusions),
+        "excluded_font_tokens": exclusions,
+        "excluded_font_tokens_sha256": sha256_bytes(exclusions_blob),
         "character_count": len(chars),
         "characters": chars,
         "codepoints": [f"U+{ord(char):04X}" for char in chars],
@@ -812,6 +871,11 @@ def cmd_build(args: argparse.Namespace) -> int:
         "changed": changed,
         "glyph_demand": {
             "path": "glyph_demand.json",
+            "source_non_whitespace_character_count": demand["source_non_whitespace_character_count"],
+            "source_non_whitespace_codepoints_sha256": demand["source_non_whitespace_codepoints_sha256"],
+            "excluded_font_token_count": demand["excluded_font_token_count"],
+            "excluded_font_tokens": demand["excluded_font_tokens"],
+            "excluded_font_tokens_sha256": demand["excluded_font_tokens_sha256"],
             "character_count": demand["character_count"],
             "hangul_syllable_count": demand["hangul_syllable_count"],
         },

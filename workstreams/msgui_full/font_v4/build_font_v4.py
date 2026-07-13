@@ -28,8 +28,9 @@ from typing import Any, Iterable
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parents[3]
 TOOLS_DIR = PROJECT_ROOT / "KR_PATCH_WORK" / "tools"
-DEFAULT_DEMAND_ROOT = PROJECT_ROOT / "KR_PATCH_WORK" / "workstreams" / "msgui_full"
+DEFAULT_DEMAND_ROOT = SCRIPT_DIR / "corpus"
 DEFAULT_OUTPUT_ROOT = SCRIPT_DIR / "build"
+DEFAULT_P3_REGRESSION_DEMAND = SCRIPT_DIR / "regression" / "p3_226.glyph_demand.json"
 STOCK_ARCHIVE = PROJECT_ROOT / "RES_SC" / "res_lang.bin"
 STOCK_ARCHIVE_SHA256 = "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99"
 FONT_LOCKS = {
@@ -63,19 +64,13 @@ SEED_RASTER_V2_PAYLOAD_SHA256 = {
     7: "3452CB489C9C7D59DDEFD0E0BBCAC75C9B3B498A5E71844ED5227E6A21B7C263",
 }
 P3_REGRESSION = {
-    "demand_relative_path": "KR_PATCH_WORK/workstreams/msgui_full/build_p3_core_terms/glyph_demand.json",
     "demand_sha256": "43C23F44A9794A1461BA84AEB919FDC661B97D285BA96AE3102F8A3842C5D8DA",
-    "metrics_relative_path": "KR_PATCH_WORK/workstreams/msgui_full/font_v3/build/public/metrics/glyphs.jsonl",
+    "hangul_codepoints_sha256": "84F03DA3AB06733F6C44B58A39C6C4E0953FB18881D9E87125AA40E1CEF301CA",
     "metrics_sha256": "9AB29BC75F3A14FC40A240BCDE40C3076A759B7B8A255E04A9630F5D71176D7D",
+    "metrics_row_count": 904,
     "pixels": {
-        6: {
-            "relative_path": "KR_PATCH_WORK/workstreams/msgui_full/font_v3/build/public/payload/glyph_pixels_entry_6.bin",
-            "sha256": "BBBEE931A8F856C220BFC1489BC8DF5B026C687E78C64A926A750DAC3B68F96B",
-        },
-        7: {
-            "relative_path": "KR_PATCH_WORK/workstreams/msgui_full/font_v3/build/public/payload/glyph_pixels_entry_7.bin",
-            "sha256": "A3319739970E41A39FBDCE1FE6DB4AF7EE91A8F165C8F741DBC524653442B3B1",
-        },
+        6: {"sha256": "BBBEE931A8F856C220BFC1489BC8DF5B026C687E78C64A926A750DAC3B68F96B", "size": 520704},
+        7: {"sha256": "A3319739970E41A39FBDCE1FE6DB4AF7EE91A8F165C8F741DBC524653442B3B1", "size": 231424},
     },
 }
 
@@ -179,6 +174,62 @@ def validate_demand(path: Path) -> dict[str, Any]:
         if ord(character) != codepoint:
             raise ValueError(f"{path}: character/codepoint mismatch for {character!r}")
 
+    excluded_value = value.get("excluded_font_tokens")
+    if excluded_value is None:
+        if any(
+            key in value
+            for key in (
+                "source_non_whitespace_character_count",
+                "source_non_whitespace_codepoints_sha256",
+                "font_exclusion_policy",
+                "excluded_font_token_count",
+                "excluded_font_tokens_sha256",
+            )
+        ):
+            raise ValueError(f"{path}: incomplete font-exclusion inventory")
+        excluded_codepoints: list[int] = []
+        excluded_font_tokens: list[dict[str, str]] = []
+        source_codepoints = list(codepoints)
+        source_codepoints_sha256 = sha256_bytes(
+            "".join(f"{canonical_cp(cp)}\n" for cp in source_codepoints).encode("ascii")
+        )
+    else:
+        excluded_rows = require_list(excluded_value, f"{path}: excluded_font_tokens")
+        excluded_codepoints = []
+        excluded_font_tokens = []
+        allowed_reasons = {"ui_control", "ui_escape_sequence_component", "game_private_icon"}
+        for index, row in enumerate(excluded_rows):
+            if not isinstance(row, dict) or set(row) != {"codepoint", "reason"}:
+                raise ValueError(f"{path}: excluded_font_tokens[{index}] has invalid keys")
+            excluded_codepoints.append(
+                parse_canonical_cp(row["codepoint"], f"{path}: excluded_font_tokens[{index}].codepoint")
+            )
+            if row["reason"] not in allowed_reasons:
+                raise ValueError(f"{path}: excluded_font_tokens[{index}] has invalid reason")
+            excluded_font_tokens.append({"codepoint": row["codepoint"], "reason": row["reason"]})
+        if excluded_codepoints != sorted(set(excluded_codepoints)):
+            raise ValueError(f"{path}: excluded font codepoints must be unique and strictly ascending")
+        if set(excluded_codepoints) & set(codepoints):
+            raise ValueError(f"{path}: excluded font codepoints overlap raster-demand codepoints")
+        source_codepoints = sorted(codepoints + excluded_codepoints)
+        excluded_tokens_sha256 = sha256_bytes(
+            json.dumps(
+                excluded_font_tokens, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+            ).encode("utf-8")
+        )
+        source_codepoints_sha256 = sha256_bytes(
+            "".join(f"{canonical_cp(cp)}\n" for cp in source_codepoints).encode("ascii")
+        )
+        if (
+            value.get("source_non_whitespace_character_count") != len(source_codepoints)
+            or value.get("excluded_font_token_count") != len(excluded_codepoints)
+            or value.get("source_non_whitespace_codepoints_sha256") != source_codepoints_sha256
+            or value.get("excluded_font_tokens_sha256") != excluded_tokens_sha256
+            or value.get("font_exclusion_policy")
+            != "exclude ESC command components, C0/C1 controls, and game PUA icons from G1N raster demand"
+        ):
+            raise ValueError(f"{path}: font-exclusion inventory metadata mismatch")
+
     syllables = require_list(value.get("hangul_syllables"), f"{path}: hangul_syllables")
     syllable_text = require_list(value.get("hangul_syllable_codepoints"), f"{path}: hangul_syllable_codepoints")
     if value.get("hangul_syllable_count") != len(syllables) or len(syllables) != len(syllable_text):
@@ -207,6 +258,12 @@ def validate_demand(path: Path) -> dict[str, Any]:
         "source": value.get("source"),
         "character_count": len(codepoints),
         "hangul_syllable_count": len(syllable_codepoints),
+        "source_non_whitespace_character_count": len(source_codepoints),
+        "source_non_whitespace_codepoints_sha256": source_codepoints_sha256,
+        "excluded_font_token_count": len(excluded_codepoints),
+        "excluded_font_tokens": excluded_font_tokens,
+        "source_codepoints": source_codepoints,
+        "excluded_codepoints": excluded_codepoints,
         "codepoints": codepoints,
         "hangul_syllable_codepoints": syllable_codepoints,
     }
@@ -218,6 +275,20 @@ def demand_union(paths: Iterable[Path]) -> dict[str, Any]:
         raise ValueError("no glyph_demand.json inputs found")
     sources = [validate_demand(path) for path in unique_paths]
     all_codepoints = sorted({cp for source in sources for cp in source["codepoints"]})
+    all_source_codepoints = sorted({cp for source in sources for cp in source["source_codepoints"]})
+    excluded_codepoints = sorted(set(all_source_codepoints) - set(all_codepoints))
+    exclusion_reasons: dict[int, str] = {}
+    for source in sources:
+        for row in source["excluded_font_tokens"]:
+            codepoint = parse_canonical_cp(row["codepoint"], "excluded font token union")
+            previous = exclusion_reasons.get(codepoint)
+            if previous is not None and previous != row["reason"]:
+                raise ValueError(f"excluded font token reason conflict for {canonical_cp(codepoint)}")
+            exclusion_reasons[codepoint] = row["reason"]
+    excluded_font_tokens = [
+        {"codepoint": canonical_cp(cp), "reason": exclusion_reasons[cp]}
+        for cp in excluded_codepoints
+    ]
     hangul = sorted({cp for source in sources for cp in source["hangul_syllable_codepoints"]})
     filtered = [cp for cp in all_codepoints if 0xAC00 <= cp <= 0xD7A3]
     if hangul != filtered:
@@ -225,15 +296,31 @@ def demand_union(paths: Iterable[Path]) -> dict[str, Any]:
     non_hangul = [cp for cp in all_codepoints if cp not in set(hangul)]
     canonical_lines = "".join(f"{canonical_cp(cp)}\n" for cp in all_codepoints).encode("ascii")
     hangul_lines = "".join(f"{canonical_cp(cp)}\n" for cp in hangul).encode("ascii")
+    source_lines = "".join(f"{canonical_cp(cp)}\n" for cp in all_source_codepoints).encode("ascii")
+    excluded_lines = "".join(f"{canonical_cp(cp)}\n" for cp in excluded_codepoints).encode("ascii")
+    excluded_tokens_blob = json.dumps(
+        excluded_font_tokens, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+    ).encode("utf-8")
     return {
-        "sources": [{key: source[key] for key in ("path", "sha256", "source", "character_count", "hangul_syllable_count")} for source in sources],
+        "sources": [{key: source[key] for key in (
+            "path", "sha256", "source", "source_non_whitespace_character_count",
+            "excluded_font_token_count", "character_count", "hangul_syllable_count",
+        )} for source in sources],
         "codepoints": all_codepoints,
+        "source_codepoints": all_source_codepoints,
+        "excluded_codepoints": excluded_codepoints,
+        "excluded_font_tokens": excluded_font_tokens,
         "hangul": hangul,
         "non_hangul": non_hangul,
         "codepoint_count": len(all_codepoints),
+        "source_codepoint_count": len(all_source_codepoints),
+        "excluded_codepoint_count": len(excluded_codepoints),
         "hangul_count": len(hangul),
         "non_hangul_count": len(non_hangul),
         "union_sha256": sha256_bytes(canonical_lines),
+        "source_union_sha256": sha256_bytes(source_lines),
+        "excluded_codepoints_sha256": sha256_bytes(excluded_lines),
+        "excluded_font_tokens_sha256": sha256_bytes(excluded_tokens_blob),
         "hangul_sha256": sha256_bytes(hangul_lines),
     }
 
@@ -462,46 +549,65 @@ def metric_blob(
     return ("\n".join(lines) + "\n").encode("utf-8")
 
 
+def preflight_p3_regression_demand(path: Path, raster_codepoints: list[int]) -> dict[str, Any]:
+    require_hash(path, P3_REGRESSION["demand_sha256"], "tracked P3 glyph-demand regression fixture")
+    demand = validate_demand(path)
+    p3_codepoints = demand["hangul_syllable_codepoints"]
+    canonical_lines = "".join(f"{canonical_cp(cp)}\n" for cp in p3_codepoints).encode("ascii")
+    if (
+        demand["character_count"] != 238
+        or len(p3_codepoints) != 226
+        or sha256_bytes(canonical_lines) != P3_REGRESSION["hangul_codepoints_sha256"]
+    ):
+        raise ValueError("P3 regression fixture is not the pinned 238-character/226-Hangul corpus")
+    missing = sorted(set(p3_codepoints) - set(raster_codepoints))
+    if missing:
+        preview = ", ".join(canonical_cp(codepoint) for codepoint in missing[:8])
+        raise ValueError(f"current raster corpus lost pinned P3 Hangul: {preview}")
+    return demand
+
+
 def validate_p3_regression(
     full_pixels: dict[int, bytes],
     full_result: dict[str, Any],
     raster_codepoints: list[int],
+    p3_demand: dict[str, Any],
 ) -> dict[str, Any]:
-    demand_path = PROJECT_ROOT / P3_REGRESSION["demand_relative_path"]
-    require_hash(demand_path, P3_REGRESSION["demand_sha256"], "P3 glyph demand regression input")
-    p3_demand = validate_demand(demand_path)
     p3_codepoints = p3_demand["hangul_syllable_codepoints"]
-    if len(p3_codepoints) != 226:
-        raise ValueError("P3 regression corpus is not the pinned 226-Hangul set")
 
     payload_results = []
     for entry in (6, 7):
-        lock = P3_REGRESSION["pixels"][entry]
-        reference_path = PROJECT_ROOT / lock["relative_path"]
-        require_hash(reference_path, lock["sha256"], f"P3 entry {entry} public pixels")
         selected = extract_selected_blocks(full_pixels[entry], raster_codepoints, p3_codepoints, entry)
-        reference = reference_path.read_bytes()
-        if selected != reference:
+        selected_sha256 = sha256_bytes(selected)
+        expected = P3_REGRESSION["pixels"][entry]
+        if len(selected) != expected["size"] or selected_sha256 != expected["sha256"]:
             raise ValueError(f"entry {entry}: shared P3 226-Hangul raster pixels drifted")
         payload_results.append({
             "entry": entry,
             "shared_hangul_count": len(p3_codepoints),
-            "reference_sha256": lock["sha256"],
-            "selected_sha256": sha256_bytes(selected),
+            "reference_size": expected["size"],
+            "selected_size": len(selected),
+            "reference_sha256": expected["sha256"],
+            "selected_sha256": selected_sha256,
             "byte_exact": True,
         })
 
-    metrics_path = PROJECT_ROOT / P3_REGRESSION["metrics_relative_path"]
-    require_hash(metrics_path, P3_REGRESSION["metrics_sha256"], "P3 public glyph metrics")
     selected_metrics = metric_blob(full_result, set(p3_codepoints))
-    if selected_metrics != metrics_path.read_bytes():
+    selected_metrics_sha256 = sha256_bytes(selected_metrics)
+    selected_metric_rows = selected_metrics.count(b"\n")
+    if (
+        selected_metric_rows != P3_REGRESSION["metrics_row_count"]
+        or selected_metrics_sha256 != P3_REGRESSION["metrics_sha256"]
+    ):
         raise ValueError("shared P3 226-Hangul raster metrics drifted")
     return {
+        "p3_demand_path": p3_demand["path"],
         "p3_demand_sha256": P3_REGRESSION["demand_sha256"],
         "shared_hangul_count": len(p3_codepoints),
         "payloads": payload_results,
         "metrics_reference_sha256": P3_REGRESSION["metrics_sha256"],
-        "metrics_selected_sha256": sha256_bytes(selected_metrics),
+        "metrics_selected_sha256": selected_metrics_sha256,
+        "metrics_row_count": selected_metric_rows,
         "metrics_byte_exact": True,
     }
 
@@ -530,32 +636,40 @@ def candidate_coverage_proof(
     return result
 
 
-def table0_stock_preservation_proof(
+def stock_owned_non_hangul_preservation_proof(
     stock_entries: dict[int, bytes],
     candidates: dict[int, bytes],
-    rasterized_non_hangul: list[int],
+    demanded_non_hangul: list[int],
 ) -> list[dict[str, Any]]:
     result = []
     for entry in (6, 7):
         stock_layout = BASE.parse_layout(stock_entries[entry], f"SC entry {entry} stock preservation")
         target_layout = BASE.parse_layout(candidates[entry], f"SC entry {entry} target preservation")
-        rows = []
-        for cp in rasterized_non_hangul:
-            before = mapped_glyph_proof(stock_entries[entry], stock_layout, 0, cp)
-            after = mapped_glyph_proof(candidates[entry], target_layout, 0, cp)
-            if before != after:
-                raise ValueError(f"entry {entry} table 0 U+{cp:04X}: stock-owned glyph changed")
-            rows.append(before)
-        result.append({
-            "entry": entry,
-            "table": 0,
-            "codepoint_count": len(rasterized_non_hangul),
-            "codepoints": [canonical_cp(cp) for cp in rasterized_non_hangul],
-            "ordinal_record_pixels_byte_exact": True,
-            "proof_rows_sha256": sha256_bytes(
-                json.dumps(rows, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
-            ),
-        })
+        for table in (0, 1):
+            table_offset = stock_layout["table_offsets"][table]
+            stock_owned = [
+                cp for cp in demanded_non_hangul
+                if BASE.read_u16(stock_entries[entry], table_offset + 2 * cp) != 0
+            ]
+            rows = []
+            for cp in stock_owned:
+                before = mapped_glyph_proof(stock_entries[entry], stock_layout, table, cp)
+                after = mapped_glyph_proof(candidates[entry], target_layout, table, cp)
+                if before != after:
+                    raise ValueError(
+                        f"entry {entry} table {table} U+{cp:04X}: stock-owned glyph changed"
+                    )
+                rows.append(before)
+            result.append({
+                "entry": entry,
+                "table": table,
+                "codepoint_count": len(stock_owned),
+                "codepoints": [canonical_cp(cp) for cp in stock_owned],
+                "ordinal_record_pixels_byte_exact": True,
+                "proof_rows_sha256": sha256_bytes(
+                    json.dumps(rows, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+                ),
+            })
     return result
 
 
@@ -924,6 +1038,8 @@ def build(args: argparse.Namespace) -> int:
     rasterized_non_hangul = [cp for cp in raster_codepoints if cp not in set(union["hangul"])]
     fully_stock_covered_non_hangul = [cp for cp in union["non_hangul"] if cp not in set(rasterized_non_hangul)]
     raster_lines = "".join(f"{canonical_cp(cp)}\n" for cp in raster_codepoints).encode("ascii")
+    p3_demand_path = Path(args.p3_regression_demand).resolve()
+    p3_demand = preflight_p3_regression_demand(p3_demand_path, raster_codepoints)
 
     output_root = Path(args.output_root).resolve()
     if output_root == PROJECT_ROOT or output_root == stock_path.parent:
@@ -971,7 +1087,7 @@ def build(args: argparse.Namespace) -> int:
             "full_corpus_seed_blocks_exact": True,
         })
 
-    p3_regression = validate_p3_regression(full_pixels, full_result, raster_codepoints)
+    p3_regression = validate_p3_regression(full_pixels, full_result, raster_codepoints, p3_demand)
 
     candidates: dict[int, bytes] = {}
     entry_recipes: dict[str, Any] = {}
@@ -1004,8 +1120,8 @@ def build(args: argparse.Namespace) -> int:
     private_archive_path = private_root / "candidate" / "res_lang.SC.font-v4.bin"
     atomic_write(private_archive_path, candidate_archive)
     complete_coverage = candidate_coverage_proof(candidates, union["codepoints"])
-    table0_preservation = table0_stock_preservation_proof(
-        stock_entries, candidates, rasterized_non_hangul
+    stock_owned_preservation = stock_owned_non_hangul_preservation_proof(
+        stock_entries, candidates, union["non_hangul"]
     )
 
     for key, target_name in (("sans", "OFL-NotoSansKR.txt"), ("serif", "OFL-NotoSerifKR.txt")):
@@ -1049,10 +1165,18 @@ def build(args: argparse.Namespace) -> int:
         "installed_game_files_modified": False,
         "release_eligible": False,
         "runtime_direct_lookup_verified": False,
-        "release_blocker": "P4 font-v4 candidate requires in-game SC runtime render/exit validation before release eligibility",
+        "release_blocker": "font-v4 candidate requires in-game SC runtime render/exit validation before release eligibility",
         "corpus": {
             "schema": "nobu16.kr.font-v4-corpus-union.v1",
             "sources": union["sources"],
+            "source_non_whitespace_character_count": union["source_codepoint_count"],
+            "source_non_whitespace_codepoints_sha256": union["source_union_sha256"],
+            "font_exclusion_policy": "exclude ESC command components, C0/C1 controls, and game PUA icons from G1N raster demand",
+            "excluded_font_token_count": union["excluded_codepoint_count"],
+            "excluded_font_tokens": union["excluded_font_tokens"],
+            "excluded_font_tokens_sha256": union["excluded_font_tokens_sha256"],
+            "excluded_font_codepoints": [canonical_cp(cp) for cp in union["excluded_codepoints"]],
+            "excluded_font_codepoints_sha256": union["excluded_codepoints_sha256"],
             "character_count": union["codepoint_count"],
             "hangul_syllable_count": union["hangul_count"],
             "non_hangul_character_count": union["non_hangul_count"],
@@ -1143,6 +1267,11 @@ def build(args: argparse.Namespace) -> int:
             "nfc": True,
             "unique_sorted_bmp_codepoints": True,
             "source_count": len(union["sources"]),
+            "source_non_whitespace_character_count": union["source_codepoint_count"],
+            "excluded_font_token_count": union["excluded_codepoint_count"],
+            "excluded_font_tokens": union["excluded_font_tokens"],
+            "excluded_font_tokens_sha256": union["excluded_font_tokens_sha256"],
+            "excluded_font_codepoints_sha256": union["excluded_codepoints_sha256"],
             "union_character_count": union["codepoint_count"],
             "raster_hangul_count": union["hangul_count"],
             "raster_codepoint_count": len(raster_codepoints),
@@ -1165,7 +1294,7 @@ def build(args: argparse.Namespace) -> int:
         },
         "entries": entry_validations,
         "per_table_append_contract": per_table_append_contract,
-        "table0_stock_owned_non_hangul_preservation": table0_preservation,
+        "stock_owned_non_hangul_preservation": stock_owned_preservation,
         "complete_demand_coverage": {
             "demanded_character_count": union["codepoint_count"],
             "all_four_maps_nonzero_nonblank": True,
@@ -1219,6 +1348,14 @@ def build(args: argparse.Namespace) -> int:
         "file_only": True,
         "corpus": {
             "sources": union["sources"],
+            "source_non_whitespace_character_count": union["source_codepoint_count"],
+            "source_non_whitespace_codepoints_sha256": union["source_union_sha256"],
+            "font_exclusion_policy": "exclude ESC command components, C0/C1 controls, and game PUA icons from G1N raster demand",
+            "excluded_font_token_count": union["excluded_codepoint_count"],
+            "excluded_font_tokens": union["excluded_font_tokens"],
+            "excluded_font_tokens_sha256": union["excluded_font_tokens_sha256"],
+            "excluded_font_codepoints": [canonical_cp(cp) for cp in union["excluded_codepoints"]],
+            "excluded_font_codepoints_sha256": union["excluded_codepoints_sha256"],
             "character_count": union["codepoint_count"],
             "hangul_syllable_count": union["hangul_count"],
             "non_hangul_character_count": union["non_hangul_count"],
@@ -1236,6 +1373,15 @@ def build(args: argparse.Namespace) -> int:
             "builder": {"path": relative_project_path(Path(__file__)), "sha256": sha256_file(Path(__file__))},
             "rasterizer": {"path": relative_project_path(SCRIPT_DIR / "rasterize_font_v4.ps1"), "sha256": sha256_file(SCRIPT_DIR / "rasterize_font_v4.ps1")},
             "generic_g1n_rebuilder": {"path": relative_project_path(TOOLS_DIR / "build_file_only_font_recipe.py"), "sha256": sha256_file(TOOLS_DIR / "build_file_only_font_recipe.py")},
+            "p3_regression": {
+                "demand": {"path": p3_demand["path"], "sha256": P3_REGRESSION["demand_sha256"]},
+                "hangul_codepoints_sha256": P3_REGRESSION["hangul_codepoints_sha256"],
+                "pixel_payloads": {
+                    str(entry): dict(P3_REGRESSION["pixels"][entry]) for entry in (6, 7)
+                },
+                "metrics_sha256": P3_REGRESSION["metrics_sha256"],
+                "metrics_row_count": P3_REGRESSION["metrics_row_count"],
+            },
         },
         "outputs": {
             "public_recipe": {"path": "public/recipe.json", "sha256": sha256_file(recipe_path)},
@@ -1257,7 +1403,7 @@ def build(args: argparse.Namespace) -> int:
             "clean_recipe_reproduction_exact": True,
             "generic_v2_recipe_replay_archive_byte_identical": True,
             "all_demanded_glyphs_nonzero_nonblank_in_four_maps": True,
-            "table0_stock_owned_non_hangul_exact": True,
+            "stock_owned_non_hangul_exact_in_all_tables": True,
         },
         "safety": {
             "installed_game_files_modified": False,
@@ -1275,6 +1421,8 @@ def build(args: argparse.Namespace) -> int:
 
     print(f"output_root={output_root}")
     print(f"demand_sources={len(union['sources'])}")
+    print(f"source_non_whitespace_characters={union['source_codepoint_count']}")
+    print(f"excluded_font_tokens={union['excluded_codepoint_count']}")
     print(f"characters={union['codepoint_count']}")
     print(f"hangul_raster_glyphs={union['hangul_count']}")
     print(f"raster_codepoints={len(raster_codepoints)}")
@@ -1293,7 +1441,7 @@ def build(args: argparse.Namespace) -> int:
     print("append_tail_validation=OK")
     print("generic_file_only_recipe_v2_replay=OK")
     print("p3_226_hangul_regression=OK")
-    print("all_387_glyphs_four_maps_nonzero_nonblank=OK")
+    print(f"all_{union['codepoint_count']}_demanded_glyphs_four_maps_nonzero_nonblank=OK")
     print("installed_game_files_modified=False")
     print("process_memory_access=False")
     print("registry_access=False")
@@ -1305,6 +1453,7 @@ def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser(description=__doc__)
     result.add_argument("--demand-root", default=str(DEFAULT_DEMAND_ROOT))
     result.add_argument("--demand-file", action="append", help="Use only these demand files; repeatable. Default scans demand-root/*/glyph_demand.json.")
+    result.add_argument("--p3-regression-demand", default=str(DEFAULT_P3_REGRESSION_DEMAND))
     result.add_argument("--stock-archive", default=str(STOCK_ARCHIVE))
     result.add_argument("--output-root", default=str(DEFAULT_OUTPUT_ROOT))
     result.add_argument(
