@@ -108,12 +108,20 @@ def export(args: argparse.Namespace) -> int:
                     )
                 skipped_whitespace += 1
                 skipped_whitespace_total += 1
+                # Batches are applied in deterministic filename order.  A
+                # later canonical blank explicitly withdraws an earlier
+                # translation for the same id instead of leaving stale text.
+                merged.pop(entry_id, None)
                 continue
             if status not in catalog.BUILDABLE_STATUSES:
                 raise catalog.CatalogError(f"{path.name}: id {entry_id} status is not buildable")
             overrides = item.get("invariant_overrides", defaults.get("invariant_overrides", []))
             if not isinstance(overrides, list) or not all(isinstance(value, str) for value in overrides):
                 raise catalog.CatalogError(f"{path.name}: id {entry_id} invalid invariant overrides")
+            if overrides and status != "reviewed":
+                raise catalog.CatalogError(
+                    f"{path.name}: id {entry_id} invariant overrides require reviewed status"
+                )
             problems = catalog.compare_invariants(
                 row["source"]["SC"], ko, set(overrides), row["source"]
             )

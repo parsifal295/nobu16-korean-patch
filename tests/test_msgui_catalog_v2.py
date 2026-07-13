@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -13,6 +15,7 @@ sys.path.insert(0, str(TOOLS))
 
 import msgui_catalog_v2 as catalog  # noqa: E402
 import build_file_only_msg_recipe as message_recipe  # noqa: E402
+import export_public_translation_overlay as overlay_exporter  # noqa: E402
 
 
 class InvariantTests(unittest.TestCase):
@@ -28,10 +31,12 @@ class InvariantTests(unittest.TestCase):
         self.assertTrue(any(issue.startswith("esc:") for issue in issues))
         self.assertTrue(any(issue.startswith("pua:") for issue in issues))
 
-    def test_only_reviewed_line_breaks_may_be_overridden_by_merge_policy(self) -> None:
+    def test_unqualified_line_break_override_is_rejected(self) -> None:
         source = "첫 줄\n둘째 줄"
         self.assertTrue(catalog.compare_invariants(source, "한 줄", set()))
-        self.assertEqual([], catalog.compare_invariants(source, "한 줄", {"line_breaks"}))
+        issues = catalog.compare_invariants(source, "한 줄", {"line_breaks"})
+        self.assertTrue(any("unsupported invariant override" in issue for issue in issues))
+        self.assertTrue(any(issue.startswith("line_breaks:") for issue in issues))
 
     def test_jp_reference_override_preserves_printf_and_line_break_contract(self) -> None:
         source_sc = " "
@@ -75,6 +80,101 @@ class TranslationStateTests(unittest.TestCase):
             ("reviewed", "성명 표시"),
             catalog.canonical_translation_state(source, "reviewed", "성명 표시"),
         )
+
+    def test_zero_width_or_combining_only_text_is_not_buildable(self) -> None:
+        source = {language: " " for language in catalog.LANGUAGES}
+        source["JP"] = "表示文"
+        for invisible in ("\u200b", "\ufeff", "\u0301"):
+            self.assertFalse(catalog.has_semantic_text(invisible))
+            self.assertEqual(
+                ("untranslated", ""),
+                catalog.canonical_translation_state(source, "translated", invisible),
+            )
+        self.assertTrue(catalog.has_semantic_text("\ue024"))
+
+
+class PublicOverlayExporterTests(unittest.TestCase):
+    @staticmethod
+    def fixture() -> tuple[dict[str, object], list[dict[str, object]]]:
+        source = {"EN": "Source", "JP": "表示", "SC": "来源", "TC": "來源"}
+        meta = {
+            "string_count": 1,
+            "source_files": {
+                "SC": {"sha256": "1" * 64, "raw_sha256": "2" * 64}
+            },
+        }
+        rows = [
+            {
+                "id": 0,
+                "source": source,
+                "source_utf16le_sha256": {
+                    language: catalog.text_hash(text) for language, text in source.items()
+                },
+            }
+        ]
+        return meta, rows
+
+    @staticmethod
+    def args(root: Path) -> argparse.Namespace:
+        return argparse.Namespace(
+            meta=root / "meta.json",
+            catalog=root / "catalog.jsonl",
+            translations=root / "translations",
+            overlay_id="test-overlay",
+            max_id=None,
+            output=root / "public.json",
+            report=None,
+        )
+
+    def test_exporter_requires_reviewed_status_for_overrides(self) -> None:
+        meta, rows = self.fixture()
+        batch = {
+            "schema": catalog.BATCH_SCHEMA,
+            "entries": [
+                {
+                    "id": 0,
+                    "ko": "번역",
+                    "status": "translated",
+                    "invariant_overrides": ["printf:JP"],
+                }
+            ],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            batch_path = root / "01.json"
+            batch_path.write_text("{}", encoding="utf-8")
+            with mock.patch.object(catalog, "load_catalog", return_value=(meta, rows)), mock.patch.object(
+                overlay_exporter, "load_batches", return_value=[(batch_path, batch)]
+            ):
+                with self.assertRaises(catalog.CatalogError):
+                    overlay_exporter.export(self.args(root))
+
+    def test_later_blank_batch_withdraws_earlier_translation(self) -> None:
+        meta, rows = self.fixture()
+        first = {
+            "schema": catalog.BATCH_SCHEMA,
+            "entries": [{"id": 0, "ko": "번역", "status": "translated"}],
+        }
+        second = {
+            "schema": catalog.BATCH_SCHEMA,
+            "entries": [{"id": 0, "ko": " ", "status": "translated"}],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            first_path = root / "01.json"
+            second_path = root / "02.json"
+            first_path.write_text("{}", encoding="utf-8")
+            second_path.write_text("{}", encoding="utf-8")
+            with mock.patch.object(catalog, "load_catalog", return_value=(meta, rows)), mock.patch.object(
+                overlay_exporter,
+                "load_batches",
+                return_value=[(first_path, first), (second_path, second)],
+            ):
+                overlay_exporter.export(self.args(root))
+            exported = json.loads((root / "public.json").read_text(encoding="utf-8"))
+            self.assertEqual(0, exported["entry_count"])
+            self.assertEqual([], exported["entries"])
+            self.assertEqual(1, exported["skipped_whitespace_entry_count"])
 
 
 class GlyphDemandTests(unittest.TestCase):
@@ -138,7 +238,10 @@ class CurrentArtifactTests(unittest.TestCase):
             self.assertLessEqual(set(entry), allowed)
             self.assertNotIn("source_en", entry)
             self.assertNotIn("source_sc", entry)
-            self.assertTrue(entry["ko"].strip(), f"whitespace-only public row: {entry['id']}")
+            self.assertTrue(
+                catalog.has_semantic_text(entry["ko"]),
+                f"non-semantic public row: {entry['id']}",
+            )
 
         by_id = {entry["id"]: entry for entry in overlay["entries"]}
         self.assertEqual("성명 표시", by_id[2498]["ko"])

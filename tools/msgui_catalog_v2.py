@@ -19,6 +19,7 @@ import json
 import os
 import re
 import tempfile
+import unicodedata
 from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable, Sequence
@@ -44,7 +45,9 @@ INVARIANT_KEYS = (
     "line_breaks",
 )
 REFERENCE_OVERRIDE_LANGUAGES = frozenset(("EN", "JP", "TC"))
-LEGACY_INVARIANT_OVERRIDES = frozenset(("line_breaks",))
+NON_SEMANTIC_UNICODE_CATEGORIES = frozenset(
+    ("Cc", "Cf", "Cs", "Mn", "Me", "Zl", "Zp", "Zs", "Cn")
+)
 
 # C printf conversions used by the game's UI strings.  The exact ordered token
 # sequence is invariant because changing it can mismatch the native varargs.
@@ -165,12 +168,12 @@ def supported_invariant_overrides() -> set[str]:
     ``key:LANG`` never disables a check.  It changes the authoritative source
     for exactly one invariant from SC to a named stock-language string.  This
     is needed for a small number of official SC whitespace/internal-key slots
-    whose visible UI contract survives in JP.  The legacy ``line_breaks``
-    token remains readable for older reviewed catalogs, but new work should
-    always use a language-qualified token.
+    whose visible UI contract survives in JP.  Unqualified tokens are rejected
+    because they would disable a contract check instead of changing its pinned
+    stock-language authority.
     """
 
-    return set(LEGACY_INVARIANT_OVERRIDES) | {
+    return {
         f"{key}:{language}"
         for key in INVARIANT_KEYS
         for language in REFERENCE_OVERRIDE_LANGUAGES
@@ -190,11 +193,6 @@ def compare_invariants(
     if unsupported:
         issues.append(f"unsupported invariant override(s): {unsupported!r}")
     for key in INVARIANT_KEYS:
-        if key in overrides:
-            # Backward-compatible reviewed exception.  New batches use the
-            # source-qualified form below so the expected value is still
-            # independently pinned to a stock string.
-            continue
         qualified = sorted(
             token for token in overrides if token.startswith(f"{key}:")
         )
@@ -215,6 +213,23 @@ def compare_invariants(
     return issues
 
 
+def has_semantic_text(text: str) -> bool:
+    """Return whether text contains a visible token or a private-use icon.
+
+    ``str.strip`` intentionally does not remove format characters such as
+    U+200B ZERO WIDTH SPACE.  Treating those characters (or a combining mark
+    without a base) as a translation would recreate the blank/no-op bug this
+    catalog gate is meant to prevent.  Private-use codepoints remain semantic
+    because the game uses them for visible UI icons.
+    """
+
+    return any(
+        not character.isspace()
+        and unicodedata.category(character) not in NON_SEMANTIC_UNICODE_CATEGORIES
+        for character in text
+    )
+
+
 def canonical_translation_state(
     source: dict[str, str], status: str, ko: str
 ) -> tuple[str, str]:
@@ -227,10 +242,12 @@ def canonical_translation_state(
     source-qualified invariant override.
     """
 
-    if ko.strip():
+    if has_semantic_text(ko):
         return status, ko
     canonical_status = (
-        "empty" if all(not source[language].strip() for language in LANGUAGES) else "untranslated"
+        "empty"
+        if all(not has_semantic_text(source[language]) for language in LANGUAGES)
+        else "untranslated"
     )
     return canonical_status, ""
 
@@ -335,7 +352,7 @@ def cmd_init(args: argparse.Namespace) -> int:
                 "notes": f"seeded from {seed['path']} version {seed['version']}",
             }
             priority = "p0"
-        elif all(not text.strip() for text in source.values()):
+        elif all(not has_semantic_text(text) for text in source.values()):
             ko = ""
             status = "empty"
             fully_empty += 1
@@ -468,13 +485,13 @@ def validate_catalog(
             if overrides and status != "reviewed":
                 raise CatalogError("invariant overrides require reviewed status")
             if status == "empty":
-                if ko or any(source[language].strip() for language in LANGUAGES):
+                if ko or any(has_semantic_text(source[language]) for language in LANGUAGES):
                     raise CatalogError(
                         "empty status requires every source and ko to be whitespace-empty"
                     )
             elif status in BUILDABLE_STATUSES:
-                if not ko.strip():
-                    raise CatalogError("buildable status requires a non-whitespace Korean translation")
+                if not has_semantic_text(ko):
+                    raise CatalogError("buildable status requires semantic Korean text")
                 invariant_issues = compare_invariants(
                     source["SC"], ko, overrides, source
                 )
@@ -697,7 +714,7 @@ def cmd_merge_overlay(args: argparse.Namespace) -> int:
         if row["status"] == "reviewed" and status != "reviewed" and not args.allow_downgrade:
             raise CatalogError(f"id {entry_id}: refusing to downgrade reviewed translation")
         ko = item.get("ko")
-        if not isinstance(ko, str) or not ko.strip() or "\x00" in ko:
+        if not isinstance(ko, str) or not has_semantic_text(ko) or "\x00" in ko:
             raise CatalogError(f"id {entry_id}: invalid Korean translation")
         overrides = item.get("invariant_overrides", defaults.get("invariant_overrides", []))
         if not isinstance(overrides, list) or not all(isinstance(value, str) for value in overrides):
@@ -776,7 +793,7 @@ def cmd_export_batch(args: argparse.Namespace) -> int:
                 "empty"
                 if row["source"][language] == ""
                 else "whitespace"
-                if row["source"][language].strip() == ""
+                if not has_semantic_text(row["source"][language])
                 else "text"
             )
             for language in LANGUAGES
