@@ -1,0 +1,181 @@
+{
+  "schema": "nobu16.kr.castle-name-human-review-proposal.v0.2",
+  "proposal_id": "castle-names-9151-9249-review-v0.2",
+  "base_overlay": {
+    "path": "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.1.json",
+    "sha256": "465F0CA873E310C20FAF9DF7D247B4A5025991774E1C4F8F320BC4125A93AE13",
+    "modified_by_this_review": false
+  },
+  "official_game_inputs": {
+    "comparison": "official EN display name plus official JP display name and reading at the same msgdata id",
+    "private_alignment_sha256": "6169A149F4F52D368751E0EE7B802B57704E76A1E747C0A98628596C43BA7E8F",
+    "jp_msgdata_wrapper_sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+    "commercial_source_text_in_this_proposal": false
+  },
+  "scope": {
+    "first_id": 9151,
+    "last_id": 9249,
+    "reviewed_count": 99,
+    "contiguous": true
+  },
+  "review_policy": {
+    "long_vowels": "do_not_duplicate_japanese_long_vowels_in_korean",
+    "geographic_tsu": "propose_standard_korean_쓰_for_japanese_つ_in_place_names",
+    "compound_spacing": "prefer_attested_korean_place_name_compounding_over_mechanical_EN_word_boundaries",
+    "source_priority": [
+      "official_game_JP_reading",
+      "official_game_EN_romanization",
+      "Korean_language_authority_or_official_Korean_tourism_usage",
+      "mechanical_transliteration"
+    ],
+    "personal_name_style_is_out_of_scope": true
+  },
+  "summary": {
+    "accepted_as_is_count": 89,
+    "change_proposed_count": 10,
+    "independent_high_confidence_change_count": 1,
+    "geographic_style_gated_change_count": 9
+  },
+  "accepted_as_is_ids": [
+    9151, 9152, 9153, 9154, 9155, 9156, 9157, 9158, 9159, 9160,
+    9161, 9162, 9163, 9164, 9166, 9167, 9168, 9171, 9172, 9173,
+    9174, 9175, 9176, 9177, 9178, 9179, 9180, 9181, 9182, 9183,
+    9184, 9186, 9187, 9188, 9189, 9190, 9191, 9192, 9193, 9194,
+    9195, 9196, 9198, 9199, 9201, 9203, 9204, 9205, 9206, 9207,
+    9208, 9209, 9211, 9212, 9213, 9214, 9215, 9216, 9217, 9218,
+    9219, 9220, 9221, 9222, 9223, 9224, 9225, 9226, 9227, 9229,
+    9230, 9231, 9232, 9233, 9234, 9235, 9237, 9238, 9239, 9240,
+    9241, 9242, 9243, 9244, 9245, 9246, 9247, 9248, 9249
+  ],
+  "long_vowel_reviewed_and_retained_ids": [
+    9154, 9161, 9171, 9177, 9190, 9202, 9204, 9212, 9213, 9215,
+    9226, 9231, 9244
+  ],
+  "compound_spacing_review": [
+    {
+      "id": 9196,
+      "proposed_ko": "이가 우에노",
+      "decision": "retain_space"
+    },
+    {
+      "id": 9202,
+      "proposed_ko": "빗추 다카마쓰",
+      "decision": "retain_regional_qualifier_space"
+    },
+    {
+      "id": 9204,
+      "proposed_ko": "요시다 고리야마",
+      "decision": "retain_attested_space"
+    },
+    {
+      "id": 9210,
+      "proposed_ko": "갓산토다",
+      "decision": "remove_mechanical_EN_space"
+    }
+  ],
+  "changes": [
+    {
+      "id": 9165,
+      "draft_ko": "우츠노미야",
+      "proposed_ko": "우쓰노미야",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_utsunomiya"]
+    },
+    {
+      "id": 9169,
+      "draft_ko": "츠츠지가사키",
+      "proposed_ko": "쓰쓰지가사키",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "kofu_official_brochure"]
+    },
+    {
+      "id": 9170,
+      "draft_ko": "가츠라오",
+      "proposed_ko": "가쓰라오",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9185,
+      "draft_ko": "마츠쿠라",
+      "proposed_ko": "마쓰쿠라",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_matsukura"]
+    },
+    {
+      "id": 9197,
+      "draft_ko": "츠츠이",
+      "proposed_ko": "쓰쓰이",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9200,
+      "draft_ko": "츠야마",
+      "proposed_ko": "쓰야마",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_castle_name_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_tsuyama_castle"]
+    },
+    {
+      "id": 9202,
+      "draft_ko": "빗추 다카마츠",
+      "proposed_ko": "빗추 다카마쓰",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_castle_name_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "okayama_bicchu_takamatsu"]
+    },
+    {
+      "id": 9210,
+      "draft_ko": "갓산 도다",
+      "proposed_ko": "갓산토다",
+      "reason_codes": ["established_korean_compound", "remove_mechanical_EN_space"],
+      "confidence": "high",
+      "merge_gate": "none",
+      "evidence_keys": ["jnto_gassantoda"]
+    },
+    {
+      "id": 9228,
+      "draft_ko": "고마츠",
+      "proposed_ko": "고마쓰",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_komatsu"]
+    },
+    {
+      "id": 9236,
+      "draft_ko": "니혼마츠",
+      "proposed_ko": "니혼마쓰",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_castle_name_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_nihonmatsu_castle"]
+    }
+  ],
+  "external_evidence": {
+    "nikl_tsu": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=275072&searchCondition=&searchKeyword=",
+    "nikl_long_vowels": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=329857",
+    "jnto_utsunomiya": "https://www.japan.travel/ko/destinations/kanto/tochigi/utsunomiya-area/",
+    "kofu_official_brochure": "https://partners-pamph.jnto.go.jp/simg/pamph/1213.pdf",
+    "jnto_matsukura": "https://www.japan.travel/ko/spot/721/",
+    "jnto_tsuyama_castle": "https://www.japan.travel/ko/spot/899/",
+    "okayama_bicchu_takamatsu": "https://www.city.okayama.jp/shisei/0000027717.html",
+    "jnto_gassantoda": "https://www.japan.travel/ko/spot/934/",
+    "jnto_komatsu": "https://www.japan.travel/ko/kr/japan-magazine/2403_go-beyond-japans-major-cities-hokuriku-shinkansen/",
+    "jnto_nihonmatsu_castle": "https://www.japan.travel/ko/spot/1755/"
+  },
+  "merge_status": "proposal_only_not_applied"
+}

@@ -1,0 +1,66 @@
+import json
+import pathlib
+import subprocess
+import sys
+import unittest
+
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+PROGRESS = ROOT / "data" / "public" / "translation_progress.v0.1.json"
+
+EXPECTED_STRING_TARGETS = {
+    "MSG_PK/SC/msgui.bin": (5100, 4037),
+    "MSG_PK/SC/msgev.bin": (17910, 12906),
+    "MSG_PK/SC/msgdata.bin": (29210, 25534),
+    "MSG_PK/SC/msgbre.bin": (3000, 2217),
+    "MSG_PK/SC/msgire.bin": (122, 122),
+    "MSG_PK/SC/msgstf.bin": (20, 8),
+    "MSG/SC/strdata.bin": (32311, 26690),
+    "MSG/SC/ev_strdata.bin": (17868, 11687),
+}
+
+
+class ReadmeProgressTests(unittest.TestCase):
+    def test_pinned_string_inventory_is_complete(self):
+        payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
+        actual = {
+            resource["path"]: (
+                resource["total_slots"],
+                resource["translation_target_total"],
+            )
+            for resource in payload["resources"]
+            if resource["kind"] == "strings"
+        }
+        self.assertEqual(actual, EXPECTED_STRING_TARGETS)
+        self.assertEqual(sum(target for _, target in actual.values()), 83201)
+        self.assertEqual(payload["completed_statuses"], ["translated", "reviewed"])
+
+    def test_msggame_record_counts_are_explicit_but_excluded(self):
+        payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
+        actual = {
+            resource["path"]: resource["record_total"]
+            for resource in payload["resources"]
+            if resource["kind"] == "records"
+        }
+        self.assertEqual(
+            actual,
+            {
+                "MSG_PK/SC/msggame.bin": 21581,
+                "MSG/SC/msggame.bin": 19152,
+            },
+        )
+
+    def test_readme_progress_is_current(self):
+        result = subprocess.run(
+            [sys.executable, "-B", "tools/update_readme_progress.py", "--check"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+
+if __name__ == "__main__":
+    unittest.main()
