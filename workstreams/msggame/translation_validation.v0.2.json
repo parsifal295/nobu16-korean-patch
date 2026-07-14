@@ -1,0 +1,160 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/translation_alignment_evidence.v0.2.json",
+      "sha256": "999AB9BC14792A108588FF7DE20BB6F71D350904E6F868E08677847ECDCDE319",
+      "size": 663558
+    },
+    "overlay": {
+      "path": "public/msggame_ko_system_messages_b02r0198_0297.v0.2.json",
+      "sha256": "2330BAFAE23D4C3BF6E16B47CBF9EA9CE05489337FF101441964C01CD046F0DD",
+      "size": 36584
+    },
+    "review_index": {
+      "path": "review/translation_review_index.v0.2.json",
+      "sha256": "5CD21EEC768361F5ABEA3884A9E2EBBC1B2FE1629B903634B3BACA5C07B42A40",
+      "size": 63666
+    }
+  },
+  "batch_id": "msggame_pk_system_messages_b02r0198_0297.v0.2",
+  "generator": {
+    "path": "build_translation_batch2.py",
+    "sha256": "FCCED66F2870D7AC84960EE82C7A7E1EF49F27E376887CDC6DAB64B6CB75E728"
+  },
+  "offline_binary_validation": {
+    "entry_count": 150,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "opaque_record_bytecode_preserved": true,
+    "raw_parse_rebuild_byte_exact": true,
+    "record_coordinates_preserved": true,
+    "skipped_candidates_unchanged": true,
+    "target_packed_sha256": "D0C7A5CBF2014C035D4B620EB468F2871ED279D57078C009F7A0D5C23CBBB7D5",
+    "target_packed_size": 1083281,
+    "target_raw_sha256": "72E1586EFBD0A689567C232ED3FDC09A121FBA8CC3A447A3A90F5651E628DC8B",
+    "target_raw_size": 1079024,
+    "top_level_offsets_recomputed_and_aligned": true
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 150,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "escape_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "bracket_sequence_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "byte_identical_offline_binary_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "process_memory_access": false,
+    "progress_manifest_modified": false,
+    "registry_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msggame-translation-generation-validation.v1",
+  "scope": {
+    "first_coordinate": [
+      2,
+      198,
+      0
+    ],
+    "last_coordinate": [
+      2,
+      297,
+      0
+    ],
+    "next_coordinate": [
+      2,
+      298,
+      0
+    ],
+    "selected_coordinates_sha256": "461DBDDD96FC252084440773D40F52E80C924C72D0CCC65767DCA86BDC3BAD36",
+    "selected_literal_count": 150,
+    "selected_record_count": 100
+  },
+  "selection": {
+    "all_linguistic_literals_in_scanned_records_selected": true,
+    "natural_scan_record_boundaries": true,
+    "nonlinguistic_visible_candidate_skips": 3,
+    "scanned_visible_candidate_count": 153,
+    "skipped_candidates": [
+      {
+        "coordinate": [
+          2,
+          210,
+          2
+        ],
+        "reason": "nonlinguistic_numeric_delta_prefix"
+      },
+      {
+        "coordinate": [
+          2,
+          213,
+          2
+        ],
+        "reason": "nonlinguistic_numeric_delta_prefix"
+      },
+      {
+        "coordinate": [
+          2,
+          214,
+          2
+        ],
+        "reason": "nonlinguistic_numeric_delta_prefix"
+      }
+    ],
+    "stable_sc_coordinate_order": true
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN",
+      "TC"
+    ],
+    "literal_shapes_assumed_aligned": false,
+    "manual_same_record_semantic_crosschecks": 100,
+    "record_coordinates_aligned": true,
+    "record_reference_count": 400
+  },
+  "source_free_scan": {
+    "msggame_ko_system_messages_b02r0198_0297.v0.2.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "translation_alignment_evidence.v0.2.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "translation_review_index.v0.2.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 150,
+    "runtime_reviewed": 0,
+    "translated_draft": 150
+  }
+}
