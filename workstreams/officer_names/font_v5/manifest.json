@@ -1,0 +1,291 @@
+{
+  "corpus": {
+    "character_count": 655,
+    "excluded_font_codepoints": [
+      "U+001B",
+      "U+0051",
+      "U+0052",
+      "U+005A",
+      "U+E008",
+      "U+E00D",
+      "U+E00E",
+      "U+E00F",
+      "U+E015",
+      "U+E018",
+      "U+E019",
+      "U+E01C",
+      "U+E020",
+      "U+E021",
+      "U+E022",
+      "U+E023",
+      "U+E024",
+      "U+E025",
+      "U+E028",
+      "U+E029"
+    ],
+    "excluded_font_codepoints_sha256": "7D1FB6ABD2B901679DBE8DCB24B9B865BE555A67686611ACB7B23551A4E6D483",
+    "excluded_font_token_count": 20,
+    "excluded_font_tokens": [
+      {
+        "codepoint": "U+001B",
+        "reason": "ui_control"
+      },
+      {
+        "codepoint": "U+0051",
+        "reason": "ui_escape_sequence_component"
+      },
+      {
+        "codepoint": "U+0052",
+        "reason": "ui_escape_sequence_component"
+      },
+      {
+        "codepoint": "U+005A",
+        "reason": "ui_escape_sequence_component"
+      },
+      {
+        "codepoint": "U+E008",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E00D",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E00E",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E00F",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E015",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E018",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E019",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E01C",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E020",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E021",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E022",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E023",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E024",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E025",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E028",
+        "reason": "game_private_icon"
+      },
+      {
+        "codepoint": "U+E029",
+        "reason": "game_private_icon"
+      }
+    ],
+    "excluded_font_tokens_sha256": "9BCD0B18E34536D90B032B09A8E597B5693FC45304DAF4F921166043FA3EF226",
+    "font_exclusion_policy": "exclude ESC command components, C0/C1 controls, and game PUA icons from G1N raster demand",
+    "hangul_codepoints_sha256": "FED2FF90DA23958D2F49A8E837EEBCA9CAB85425FB94C362C200CA6D581D7652",
+    "hangul_syllable_count": 554,
+    "non_hangul_character_count": 101,
+    "non_hangul_fully_stock_covered_count": 62,
+    "non_hangul_rasterized_count": 39,
+    "per_table_append_contract": [
+      {
+        "codepoints_sha256": "DD42497223164C51A0376537C9642378123AC827C7673C65F3D646E12902DB78",
+        "count": 555,
+        "entry": 6,
+        "table": 0
+      },
+      {
+        "codepoints_sha256": "2C2547A58F7B80C7221446221B8BFF3EBA1FAACC4E1162A67EF17EF9A0D4A918",
+        "count": 593,
+        "entry": 6,
+        "table": 1
+      },
+      {
+        "codepoints_sha256": "DD42497223164C51A0376537C9642378123AC827C7673C65F3D646E12902DB78",
+        "count": 555,
+        "entry": 7,
+        "table": 0
+      },
+      {
+        "codepoints_sha256": "2C2547A58F7B80C7221446221B8BFF3EBA1FAACC4E1162A67EF17EF9A0D4A918",
+        "count": 593,
+        "entry": 7,
+        "table": 1
+      }
+    ],
+    "raster_codepoint_count": 593,
+    "raster_codepoints_sha256": "2C2547A58F7B80C7221446221B8BFF3EBA1FAACC4E1162A67EF17EF9A0D4A918",
+    "source_non_whitespace_character_count": 675,
+    "source_non_whitespace_codepoints_sha256": "52DF06B3103EF73673BB96970F8E81220DEE577056088160A213CB143935D58D",
+    "sources": [
+      {
+        "character_count": 125,
+        "excluded_font_token_count": 0,
+        "hangul_syllable_count": 125,
+        "path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/corpus/msgev_officer_names_0000_2399/glyph_demand.json",
+        "sha256": "A4AB899D785F461AB9CE09174FB503373012D4EC8E8ACBE8CCBF08BDA8BE8754",
+        "source": "Korean names in the source-free public msgev officer overlay",
+        "source_non_whitespace_character_count": 125
+      },
+      {
+        "character_count": 625,
+        "excluded_font_token_count": 20,
+        "hangul_syllable_count": 524,
+        "path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/corpus/msgui_0000_5099/glyph_demand.json",
+        "sha256": "7DBF97C2AC889F2FB33856A1A8096A1DB091C4D25DB411E73E95E5D0FB7E0D16",
+        "source": "buildable ko strings in msgui catalog v2",
+        "source_non_whitespace_character_count": 645
+      }
+    ],
+    "union_codepoints_sha256": "25B07F5B7943D33367C18ACC071747555363378AA19A979F11F94B7E882265A4"
+  },
+  "determinism": {
+    "all_demanded_glyphs_nonzero_nonblank_in_four_maps": true,
+    "clean_recipe_reproduction_exact": true,
+    "codepoints_unique_sorted": true,
+    "full_corpus_seed_blocks_exact": true,
+    "generic_v2_recipe_replay_archive_byte_identical": true,
+    "input_paths_and_hashes_sorted": true,
+    "p3_226_hangul_pixels_and_metrics_exact": true,
+    "raster_v2_seed_hash_regression_exact": true,
+    "stock_owned_non_hangul_exact_in_all_tables": true
+  },
+  "file_only": true,
+  "inputs": {
+    "builder": {
+      "path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/build_font_v5.py",
+      "sha256": "1ABFE6D14C662102922FE89ED783CA62999AC3212C3D3853318483AF422BC8C8"
+    },
+    "fonts": {
+      "sans": {
+        "path": "KR_PATCH_WORK/vendor/noto/NotoSansKR-wght.ttf",
+        "sha256": "194018E6B2B293A7964F037B25C0249CE1418BC9AB3C971060A03AA57861E252"
+      },
+      "serif": {
+        "path": "KR_PATCH_WORK/vendor/noto/NotoSerifKR-wght.ttf",
+        "sha256": "11F8D5DE6F1B79195EFBA3828AAA2EC95C1178F5AE976FB23C8D53250A9938F3"
+      }
+    },
+    "generic_g1n_rebuilder": {
+      "path": "KR_PATCH_WORK/tools/build_file_only_font_recipe.py",
+      "sha256": "84471EBCCE14C2BD6C56C62B8758CA16BD604D6106FFC7C449D237774424EE33"
+    },
+    "p3_regression": {
+      "demand": {
+        "path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/regression/p3_226.glyph_demand.json",
+        "sha256": "43C23F44A9794A1461BA84AEB919FDC661B97D285BA96AE3102F8A3842C5D8DA"
+      },
+      "hangul_codepoints_sha256": "84F03DA3AB06733F6C44B58A39C6C4E0953FB18881D9E87125AA40E1CEF301CA",
+      "metrics_row_count": 904,
+      "metrics_sha256": "9AB29BC75F3A14FC40A240BCDE40C3076A759B7B8A255E04A9630F5D71176D7D",
+      "pixel_payloads": {
+        "6": {
+          "sha256": "BBBEE931A8F856C220BFC1489BC8DF5B026C687E78C64A926A750DAC3B68F96B",
+          "size": 520704
+        },
+        "7": {
+          "sha256": "A3319739970E41A39FBDCE1FE6DB4AF7EE91A8F165C8F741DBC524653442B3B1",
+          "size": 231424
+        }
+      }
+    },
+    "rasterizer": {
+      "path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/rasterize_font_v5.ps1",
+      "sha256": "23DC61F8DE8EBF8AFDABC3364EBAF624F286E718E341F15A203616AAFD8C8CBF"
+    },
+    "stock_archive": {
+      "path": "RES_SC/res_lang.bin",
+      "sha256": "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99"
+    }
+  },
+  "outputs": {
+    "private_candidate_archive": {
+      "distribution_forbidden": true,
+      "path": "private/candidate/res_lang.SC.font-v5.bin",
+      "sha256": "51D8B781D731D0EDA583EC8AD194DBDA470B9B85884C0390BEE194B897DAC5DB"
+    },
+    "public_metrics": {
+      "path": "public/metrics/glyphs.jsonl",
+      "sha256": "FDB468457B00D47CD86B6DD95B0E4C8E38A0DAB1A724FE9DE297233D14C813B8"
+    },
+    "public_payload_inventory": [
+      {
+        "origin": "generated OFL Noto glyph pixels",
+        "path": "payload/glyph_pixels_entry_6.pixels",
+        "sha256": "DB3D740B35C3F5F12BAFA2C1E0040372C1DD95D6B39573881DC6288AFAA3E67F",
+        "size": 1322496
+      },
+      {
+        "origin": "generated OFL Noto glyph pixels",
+        "path": "payload/glyph_pixels_entry_7.pixels",
+        "sha256": "FA311FFC8E98343CE4E74FC4B4F2C10369E1FCFBB8C672B2C022DFF9AAA7237F",
+        "size": 587776
+      },
+      {
+        "origin": "SIL Open Font License text",
+        "path": "licenses/OFL-NotoSansKR.txt",
+        "sha256": "1C05C68C34F9708415AADA51F17E1B0092D2CEA709BF4A94CD38114F9E73D7D9",
+        "size": 4388
+      },
+      {
+        "origin": "SIL Open Font License text",
+        "path": "licenses/OFL-NotoSerifKR.txt",
+        "sha256": "5E0DA210FB04058A8C0087985D2D456B931C2579811A49655721D3CF0C36B6D6",
+        "size": 4350
+      },
+      {
+        "origin": "generated OFL Noto glyph metrics",
+        "path": "metrics/glyphs.jsonl",
+        "sha256": "FDB468457B00D47CD86B6DD95B0E4C8E38A0DAB1A724FE9DE297233D14C813B8",
+        "size": 731013
+      }
+    ],
+    "public_recipe": {
+      "path": "public/recipe.json",
+      "sha256": "1AF9ECD80228502A6FB8C4A54F7122164890A50C7D435F420DE3A09F900A9CB3"
+    },
+    "validation": {
+      "path": "validation.json",
+      "sha256": "3A90530DAECB0F9CBD66ECF22BB120237D799CA4C971CE08040A37C21E441F77"
+    }
+  },
+  "release_eligible": false,
+  "runtime_verified": false,
+  "safety": {
+    "commercial_full_resources_in_public_tree": false,
+    "installed_game_files_modified": false,
+    "private_candidate_distribution_forbidden": true,
+    "process_memory_access": false,
+    "registry_access": false,
+    "runtime_patch_features": []
+  },
+  "schema": "nobu16.kr.font-v5-build-manifest.v1",
+  "target_language": "SC"
+}

@@ -1,0 +1,252 @@
+{
+  "determinism": {
+    "exact": true,
+    "file_count": 23,
+    "inventory_sha256": "0941B97B3AD9ED49655E53D6C84209E5A22F25D9F6342A6D3B5EEF9FD0D56F3B",
+    "private_validation_file_count": 15,
+    "public_file_count": 6
+  },
+  "msgui_regression": {
+    "all_codepoints_present_in_v5_union": true,
+    "character_count": 625,
+    "font_v4_demand_sha256": "7DBF97C2AC889F2FB33856A1A8096A1DB091C4D25DB411E73E95E5D0FB7E0D16",
+    "hangul_syllable_count": 524,
+    "missing_count_across_all_four_maps": 0,
+    "p3_226_pixels_and_metrics_byte_exact": true
+  },
+  "officer_overlay": {
+    "ascii_space_occurrence_count": 2167,
+    "corrected_name_regressions": [
+      {
+        "id": 162,
+        "ko": "안요지 우지타네"
+      },
+      {
+        "id": 231,
+        "ko": "이즈모노 오쿠니"
+      },
+      {
+        "id": 516,
+        "ko": "오카모토 겐이츠"
+      },
+      {
+        "id": 1179,
+        "ko": "조슌인"
+      },
+      {
+        "id": 1302,
+        "ko": "치지와 미게루"
+      },
+      {
+        "id": 1584,
+        "ko": "네고로 긴세키사이"
+      },
+      {
+        "id": 1666,
+        "ko": "반 단에몬"
+      },
+      {
+        "id": 1674,
+        "ko": "히코츠루"
+      },
+      {
+        "id": 1739,
+        "ko": "호조 겐안"
+      },
+      {
+        "id": 1752,
+        "ko": "호조인 인에이"
+      },
+      {
+        "id": 1831,
+        "ko": "마에다 겐이"
+      },
+      {
+        "id": 2134,
+        "ko": "유지 사다토키"
+      }
+    ],
+    "entry_count": 2207,
+    "famous_runtime_qa_names": [
+      {
+        "id": 106,
+        "ko": "아츠지 사다유키"
+      },
+      {
+        "id": 216,
+        "ko": "이시다 미츠나리"
+      },
+      {
+        "id": 558,
+        "ko": "오다 노부나가"
+      }
+    ],
+    "id_range": [
+      0,
+      2206
+    ],
+    "longest_runtime_qa_names": [
+      {
+        "character_count_including_space": 11,
+        "id": 239,
+        "ko": "이타베오카 고세츠사이"
+      },
+      {
+        "character_count_including_space": 11,
+        "id": 1681,
+        "ko": "히토츠야나기 나오모리"
+      },
+      {
+        "character_count_including_space": 11,
+        "id": 1885,
+        "ko": "마츠다이라 다다아키라"
+      }
+    ],
+    "missing_ascii_space_count_across_all_four_maps": 0,
+    "missing_hangul_count_across_all_four_maps": 0,
+    "only_precomposed_hangul_and_ascii_space": true,
+    "sha256": "2625B8261527217EB3592D6B6BD03BE38A666998D32C944D29917FD4598B63BC",
+    "unique_hangul_syllable_count": 125
+  },
+  "outputs": {
+    "manifest_sha256": "E0DD28F40C0626283FEE68A664A8F16467B044E593A43E2E698CA2250769D708",
+    "metrics_sha256": "FDB468457B00D47CD86B6DD95B0E4C8E38A0DAB1A724FE9DE297233D14C813B8",
+    "private_candidate_archive_sha256": "51D8B781D731D0EDA583EC8AD194DBDA470B9B85884C0390BEE194B897DAC5DB",
+    "private_candidate_distribution_forbidden": true,
+    "public_payload_inventory": {
+      "exact_artifact_set": true,
+      "inventory_sha256": "E55FE932E8838CC1DE34DA57C065917F1350543E9263C365A9021AC96D1083E6",
+      "non_recipe_artifact_count": 5,
+      "paths": [
+        "licenses/OFL-NotoSansKR.txt",
+        "licenses/OFL-NotoSerifKR.txt",
+        "metrics/glyphs.jsonl",
+        "payload/glyph_pixels_entry_6.pixels",
+        "payload/glyph_pixels_entry_7.pixels"
+      ],
+      "size_and_sha256_exact": true
+    },
+    "recipe_sha256": "1AF9ECD80228502A6FB8C4A54F7122164890A50C7D435F420DE3A09F900A9CB3",
+    "validation_sha256": "3A90530DAECB0F9CBD66ECF22BB120237D799CA4C971CE08040A37C21E441F77"
+  },
+  "passed": true,
+  "release_eligible": false,
+  "release_tree": {
+    "commercial_full_resources_present": false,
+    "forbidden_full_resource_file_count": 0,
+    "generated_pixel_payloads_present": [
+      "payload/glyph_pixels_entry_6.pixels",
+      "payload/glyph_pixels_entry_7.pixels"
+    ],
+    "private_directory_count": 0,
+    "public_file_count": 6,
+    "public_inventory_sha256": "2DEF73303BCE44531D2533CD6164E7CD8DD479BE7D31F98CE2F42703F94FA5B4"
+  },
+  "runtime_verified": false,
+  "safety": {
+    "build_outputs_confined_to_ignored_tmp": true,
+    "full_res_lang_present_in_release_tree": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_access": false,
+    "runtime_patch_features": []
+  },
+  "schema": "nobu16.kr.font-v5-verification.v1",
+  "union": {
+    "all_four_maps_nonzero_nonblank_for_nonspace_demand": true,
+    "character_count": 655,
+    "codepoints_sha256": "25B07F5B7943D33367C18ACC071747555363378AA19A979F11F94B7E882265A4",
+    "hangul_codepoints_sha256": "FED2FF90DA23958D2F49A8E837EEBCA9CAB85425FB94C362C200CA6D581D7652",
+    "hangul_syllable_count": 554,
+    "tables": [
+      {
+        "ascii_space_ordinal_nonzero": true,
+        "ascii_space_proof": {
+          "nonzero_pixel_bytes": 0,
+          "ordinal": 69,
+          "pixel_length": 576,
+          "pixel_sha256": "1A0295F4BF5986C5F74ECA9153A6A4CB10B073A01A76BA4A457FD862C78966A4",
+          "record_sha256": "88877A3F4FF28513CDA5CDAA55880AAFBE155DA2F06FA32451EB39776546FDBA"
+        },
+        "ascii_space_required": true,
+        "ascii_space_stock_record_pixels_preserved": true,
+        "entry": 6,
+        "msgui_missing_count": 0,
+        "msgui_nonzero_nonblank_count": 625,
+        "msgui_proof_sha256": "D5B65D70FD01725AC89088BBB664CBC2E686E6A6ED977B44008509FFC0E5E50C",
+        "msgui_required_count": 625,
+        "officer_hangul_missing_count": 0,
+        "officer_hangul_nonzero_nonblank_count": 125,
+        "officer_hangul_proof_sha256": "ED4BC3020550728503F1D789CB698199979DF4979F2452BF68E47667E73D7C09",
+        "officer_hangul_required_count": 125,
+        "table": 0
+      },
+      {
+        "ascii_space_ordinal_nonzero": true,
+        "ascii_space_proof": {
+          "nonzero_pixel_bytes": 0,
+          "ordinal": 5,
+          "pixel_length": 1152,
+          "pixel_sha256": "4CF9816ED1062189FF0C8D427FBA5E912CC68FC9AF76CF7F08FD255977DE3B33",
+          "record_sha256": "9EAD97770F080388D54B6A66767EBC83BED7AC60A38BADD7E85797057ABDA4FE"
+        },
+        "ascii_space_required": true,
+        "ascii_space_stock_record_pixels_preserved": true,
+        "entry": 6,
+        "msgui_missing_count": 0,
+        "msgui_nonzero_nonblank_count": 625,
+        "msgui_proof_sha256": "FB90DFE8FC9AA253A803CF0C00F7647FCA1CD7CDCC4E16ECE8891E1C5A96E97E",
+        "msgui_required_count": 625,
+        "officer_hangul_missing_count": 0,
+        "officer_hangul_nonzero_nonblank_count": 125,
+        "officer_hangul_proof_sha256": "FA853DFB83283826B52E3A768E40F4C609B00A413C96F90A3F3C6FC9682124E2",
+        "officer_hangul_required_count": 125,
+        "table": 1
+      },
+      {
+        "ascii_space_ordinal_nonzero": true,
+        "ascii_space_proof": {
+          "nonzero_pixel_bytes": 0,
+          "ordinal": 69,
+          "pixel_length": 256,
+          "pixel_sha256": "5341E6B2646979A70E57653007A1F310169421EC9BDD9F1A5648F75ADE005AF1",
+          "record_sha256": "CCC1532C2C7A0389EFA3C031DE46B32FA6A3856AC045B0837EDF377A7060C8A6"
+        },
+        "ascii_space_required": true,
+        "ascii_space_stock_record_pixels_preserved": true,
+        "entry": 7,
+        "msgui_missing_count": 0,
+        "msgui_nonzero_nonblank_count": 625,
+        "msgui_proof_sha256": "2080DA12F133D0808A9043C08BD0A0B6B8F0FF7314EE55BDF7C551699EB0B3A3",
+        "msgui_required_count": 625,
+        "officer_hangul_missing_count": 0,
+        "officer_hangul_nonzero_nonblank_count": 125,
+        "officer_hangul_proof_sha256": "061706A4B6A909277180E4A7D519E6866BE4B3F7B55DC291CCFA21FDC6FFC6F8",
+        "officer_hangul_required_count": 125,
+        "table": 0
+      },
+      {
+        "ascii_space_ordinal_nonzero": true,
+        "ascii_space_proof": {
+          "nonzero_pixel_bytes": 0,
+          "ordinal": 5,
+          "pixel_length": 512,
+          "pixel_sha256": "076A27C79E5ACE2A3D47F9DD2E83E4FF6EA8872B3C2218F66C92B89B55F36560",
+          "record_sha256": "51FE852E11850197359F4A3EBE8240CF8E1EF91B3E3AC7D8B444B344EA515DF8"
+        },
+        "ascii_space_required": true,
+        "ascii_space_stock_record_pixels_preserved": true,
+        "entry": 7,
+        "msgui_missing_count": 0,
+        "msgui_nonzero_nonblank_count": 625,
+        "msgui_proof_sha256": "71E10B805658761A383D963A9DE07C052E93B6F63C5C46D5F9BFB7710DB9EB9B",
+        "msgui_required_count": 625,
+        "officer_hangul_missing_count": 0,
+        "officer_hangul_nonzero_nonblank_count": 125,
+        "officer_hangul_proof_sha256": "9FA72A1F22465103FB1F24FF56030EB7EB3E376148F600BA75B960E701425496",
+        "officer_hangul_required_count": 125,
+        "table": 1
+      }
+    ]
+  }
+}
