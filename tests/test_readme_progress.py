@@ -71,10 +71,12 @@ class ReadmeProgressTests(unittest.TestCase):
                 "msggame_ko_system_messages_b02r0566_0665.v0.4.json",
                 "workstreams/msggame/public/"
                 "msggame_ko_system_messages_b02r0666_b04r0075.v0.5.json",
+                "workstreams/msggame/public/"
+                "msggame_ko_system_messages_b04r0076_b06r0559.v0.6.json",
             ],
             {"translated", "reviewed"},
         )
-        self.assertEqual(750, len(coverage))
+        self.assertEqual(900, len(coverage))
         self.assertEqual(coverage, completed)
 
     def test_readme_progress_is_current(self):
