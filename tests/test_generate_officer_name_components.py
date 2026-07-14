@@ -54,9 +54,31 @@ def wrap_raw(raw: bytes) -> bytes:
 
 class OfficerComponentFixture(unittest.TestCase):
     texts = {
-        "SC": ["织田", "信长", "小田", "信忠", "织田", "甲", "乙丙", "甲乙", "丙", "保留"],
-        "EN": ["Oda", "Nobunaga", "Oda", "Nobutada", "Oda", "S", "G", "S", "G", "Keep"],
-        "JP": ["織田", "信長", "小田", "信忠", "織田", "甲", "乙丙", "甲乙", "丙", "保持"],
+        "SC": [
+            "SC_S",
+            "SC_G",
+            "SC_ALT",
+            "SC_G2",
+            "SC_S",
+            "A",
+            "BC",
+            "AB",
+            "C",
+            "KEEP_SC",
+        ],
+        "EN": ["SUR", "GIV", "ALT", "GIV2", "SUR", "S", "G", "S", "G", "KEEP_EN"],
+        "JP": [
+            "JP_S",
+            "JP_G",
+            "JP_ALT",
+            "JP_G2",
+            "JP_S",
+            "J",
+            "KL",
+            "JK",
+            "L",
+            "KEEP_JP",
+        ],
     }
 
     def setUp(self) -> None:
@@ -73,14 +95,14 @@ class OfficerComponentFixture(unittest.TestCase):
         self.full_entries = [
             {
                 "id": 0,
-                "source": {"SC": "织田信长", "EN": "Nobunaga Oda", "JP": "織田信長"},
-                "ko": "오다 노부나가",
+                "source": {"SC": "SC_SSC_G", "EN": "GIV SUR", "JP": "JP_SJP_G"},
+                "ko": "TARGET_LEFT TARGET_RIGHT",
                 "status": "translated",
             },
             {
                 "id": 1,
-                "source": {"SC": "甲乙丙", "EN": "G S", "JP": "甲乙丙"},
-                "ko": "가 나",
+                "source": {"SC": "ABC", "EN": "G S", "JP": "JKL"},
+                "ko": "LEFT RIGHT",
                 "status": "translated",
             },
         ]
@@ -197,9 +219,9 @@ class OfficerComponentFixture(unittest.TestCase):
         public = json.loads((first_root / "public.json").read_text(encoding="utf-8"))
         self.assertEqual([0, 1, 4], [entry["id"] for entry in private["entries"]])
         self.assertNotIn(2, [entry["id"] for entry in private["entries"]])
-        self.assertEqual("오다 ", private["entries"][0]["ko"])
+        self.assertEqual("TARGET_LEFT ", private["entries"][0]["ko"])
         self.assertTrue(private["entries"][0]["allow_edge_whitespace_change"])
-        self.assertEqual("노부나가", private["entries"][1]["ko"])
+        self.assertEqual("TARGET_RIGHT", private["entries"][1]["ko"])
         self.assertNotIn("allow_edge_whitespace_change", private["entries"][1])
         self.assertEqual([0, 1, 4], [entry["id"] for entry in public["entries"]])
         self.assertEqual(3, public["entry_count"])
@@ -244,7 +266,7 @@ class OfficerComponentFixture(unittest.TestCase):
         public_blob = (first_root / "public.json").read_bytes()
         self.assertEqual(0, components.count_cjk_unified(public_blob.decode("utf-8")))
         self.assertFalse(components.contains_source_original_fields(public))
-        for source_text in ("织田", "信长", "織田", "信長", "Oda", "Nobunaga"):
+        for source_text in ("SC_S", "SC_G", "JP_S", "JP_G", "SUR", "GIV"):
             self.assertNotIn(source_text.encode("utf-8"), public_blob)
 
         jsonl_root = self.root / "jsonl-run"
@@ -277,7 +299,7 @@ class OfficerComponentFixture(unittest.TestCase):
             {
                 **self.full_entries[0],
                 "id": 1,
-                "ko": "오타 노부나가",
+                "ko": "OTHER_LEFT TARGET_RIGHT",
             },
         ]
         private, report = components.analyze_components(
@@ -304,7 +326,7 @@ class OfficerComponentFixture(unittest.TestCase):
         }
         expected = {
             0: {
-                "ko": "오다 노부나가",
+                "ko": "TARGET_LEFT TARGET_RIGHT",
                 "surname_ids": [0, 4],
                 "given_ids": [1],
             }
@@ -338,7 +360,7 @@ class OfficerComponentFixture(unittest.TestCase):
             json.loads(line)
             for line in jsonl["SC"].read_text(encoding="utf-8").splitlines()
         ]
-        rows[0]["text"] = "다른 값"
+        rows[0]["text"] = "STALE_VALUE"
         jsonl["SC"].write_text(
             "".join(
                 json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n"

@@ -1,0 +1,103 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/alignment_evidence.v0.7.json",
+      "sha256": "E4AE64791A6130C7E2D556A9C9C4394646C7D0E07D824BCC9F26A745FB9E8559",
+      "size": 269969
+    },
+    "overlay": {
+      "path": "public/msgev_ko_historical_events_3819_3929.v0.7.json",
+      "sha256": "8B121FE9A3D78EC0C936732A801F1710FE4D4334AC322F9954066C10B097D392",
+      "size": 33717
+    },
+    "review_index": {
+      "path": "review/review_index.v0.7.json",
+      "sha256": "74F9F475F31819A087D8C2E86F1564DEAE390197B8616E4CCE17A60F5E0D037B",
+      "size": 36344
+    }
+  },
+  "batch_id": "msgev_historical_events_3819_3929.v0.7",
+  "font_integration": {
+    "current_font_or_installer_must_not_include_batch7": true,
+    "state": "deferred_not_computed"
+  },
+  "generator": {
+    "path": "build_event_dialogue_batch7.py",
+    "sha256": "403EAF9B02BC1B254C0487AAAA702B7AE8624D6BFC30E0791BD9A6A76422AFA4"
+  },
+  "layout_heuristic": {
+    "entries_over_32": [],
+    "max_authored_line_codepoints_excluding_esc": 32,
+    "runtime_layout_review_required": true
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 111,
+    "custom_bracket_placeholder_checks": 111,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "custom_bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "existing_v01_v02_v03_v04_v05_v06_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "root_readme_or_progress_modified": false
+  },
+  "schema": "nobu16.kr.event-dialogue-generation-validation.v7",
+  "scope": {
+    "end_id": 3929,
+    "excluded_internal_entry_count": 0,
+    "excluded_internal_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+    "selected_entry_count": 111,
+    "selected_ids_sha256": "B8005BDB3A086DD92B4CD22B2F342E76DBA28B35172621DEDE13533DAA6BA08C",
+    "start_id": 3819
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks": 111,
+    "selected_reference_hash_count": 333,
+    "string_count_each": 17910
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 111,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 13,
+    "translated_draft": 111
+  }
+}
