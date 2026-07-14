@@ -1,0 +1,60 @@
+# 노부나가의 야망 신생 PK 장수명 한글화 v0.1 (`@PACKAGE_MODE@`)
+
+이 패키지는 네 파일을 하나의 파일 전용 거래로 적용·복원한다.
+
+- `MSG_PK/SC/msgui.bin`
+- `MSG_PK/SC/msgdata.bin`
+- `MSG_PK/SC/msgev.bin`
+- `RES_SC/res_lang.bin`
+
+메모리 패치, 프로세스 연결, DLL 주입, 후킹, EXE 수정, 레지스트리 접근을 하지 않는다.
+공식 파일 완성본도 포함하지 않으며, 설치 시 사용자의 고정 stock 파일과 공개 레시피·프로젝트
+생성 글리프 픽셀로 네 target을 재구성한다.
+
+## 적용과 복원
+
+게임과 런처를 완전히 닫고 패키지 폴더를 게임 루트 안에 둔 뒤
+`APPLY_KOREAN_PATCH.bat`를 실행한다. 다른 위치라면 PowerShell에서 다음처럼 게임 루트를
+명시한다.
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\Invoke-OfficerNamesFileOnlyPatch.ps1 `
+  -Action Apply -GameRoot 'F:\Games\NOBU16' -AllowDevelopmentMilestone
+```
+
+원복은 `RESTORE_ORIGINALS.bat` 또는 같은 스크립트의 `-Action Restore`를 사용한다. 네 파일 중
+하나라도 준비·교체·검증에 실패하면 그 거래에서 이미 바뀐 파일을 모두 이전 해시 상태로
+되돌린다.
+
+기존 3명 장수명 probe와 Font-v4가 적용된 정확한 predecessor 해시도 지원한다. 설치기는
+`KR_PATCH_BACKUP` 안에서 stock 크기와 SHA-256이 모두 일치하고 reparse point가 아닌 백업만
+채택한다. predecessor를 네 파일 stock으로 원자 정규화한 뒤 최종 네 파일을 적용하며, 최종
+적용이 실패하면 시작 predecessor 벡터 복원을 시도한다. 임의 중간 파일이나 해시가 다른
+백업은 거부한다.
+
+정규화 직후나 최종 적용 도중 전원 중단·강제종료가 발생해도 시작 벡터를 잃지 않도록,
+설치기는 별도의 durable migration 저널에 네 snapshot의 고정 경로·크기·SHA-256을 기록한다.
+다음 실행에서는 내부 거래 저널을 먼저 복구한 뒤, 상위 migration 저널로 시작 predecessor를
+복원하거나 이미 완성된 final 벡터를 확정한다.
+
+원복은 최종 target 벡터와 고정 predecessor 벡터에서 모두 가능하다. 어느 경우든 네 파일을
+정확한 stock 백업으로 한 거래에서 복원한다. 리소스별로는 알려진 해시라도 서로 임의로 섞은
+네 파일 벡터는 적용·원복·실패 복구 입력으로 인정하지 않는다.
+
+## 실행 전제와 ERROR:-9001
+
+이 작업에서 검증한 게임 사본은 Steam 입수본이 아니다. 설치기는 Steam 경로, 클라이언트,
+app manifest를 전혀 가정하지 않고 게임 루트 구조와 고정 파일 해시만 사용한다.
+
+게임 EXE를 직접 실행할 때는 프로세스의 working directory(바로가기의 `시작 위치`)를 반드시
+게임 설치 루트로 지정한다. 다른 디렉터리에서 직접 시작하면 리소스가 정상이어도
+`ERROR:-9001`이 발생할 수 있다. 패치 검증에서도 이 오류를 리소스 손상의 증거로 단정하지
+않는다.
+
+## 고정 정보
+
+- 언어 경로: 공식 간체중문(`SC`)
+- 패키지 모드: `@PACKAGE_MODE@`
+- Font-v5 target: `@FONT_TARGET_SHA256@` / `@FONT_TARGET_SIZE@` bytes
+- `development`는 실기 검증 전 산출물이며 `-AllowDevelopmentMilestone`이 필요하다.
+- `release-candidate`는 최종 네 리소스 recipe E2E와 runtime QA 증명의 파일 해시까지 고정한 뒤에만 생성된다.
