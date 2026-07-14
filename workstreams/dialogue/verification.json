@@ -1,0 +1,197 @@
+{
+  "batch_id": "msgev_event_opening_3202_3229.v0.1",
+  "determinism": {
+    "generator_a_b_final_byte_identical": true,
+    "standalone_recipe_a_b_byte_identical": true
+  },
+  "draft_review_state": {
+    "automated_draft": 28,
+    "human_review_required": 28,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 9
+  },
+  "entry_count": 28,
+  "events": [
+    {
+      "end_id": 3214,
+      "event_id": "kai_sagami_suruga_alliance",
+      "start_id": 3202,
+      "title_ko": "카이·사가미·스루가 삼국동맹"
+    },
+    {
+      "end_id": 3229,
+      "event_id": "battle_of_itsukushima",
+      "start_id": 3215,
+      "title_ko": "이쓰쿠시마 전투"
+    }
+  ],
+  "font_integration": {
+    "baseline": {
+      "logical_path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/public/metrics/glyphs.jsonl",
+      "sha256": "FDB468457B00D47CD86B6DD95B0E4C8E38A0DAB1A724FE9DE297233D14C813B8",
+      "size": 731013,
+      "unique_hangul": 554
+    },
+    "dialogue_unique_hangul": 270,
+    "missing_codepoints": [
+      "U+AC14",
+      "U+AE4A",
+      "U+AE7C",
+      "U+AF2D",
+      "U+AF3C",
+      "U+AF80",
+      "U+B07C",
+      "U+B0B3",
+      "U+B1CC",
+      "U+B234",
+      "U+B2E5",
+      "U+B2F7",
+      "U+B538",
+      "U+B545",
+      "U+B5A8",
+      "U+B6AB",
+      "U+B800",
+      "U+BA39",
+      "U+BC24",
+      "U+BE5B",
+      "U+C12C",
+      "U+C2A8",
+      "U+C2DD",
+      "U+C313",
+      "U+C4F8",
+      "U+C554",
+      "U+C600",
+      "U+C783",
+      "U+C7A6",
+      "U+C82F",
+      "U+C84C",
+      "U+C8FD",
+      "U+C954",
+      "U+C9DD",
+      "U+C9F8",
+      "U+CC99",
+      "U+CF1C",
+      "U+D2BF",
+      "U+D2C8",
+      "U+D600"
+    ],
+    "missing_hangul": "갔깊깼꼭꼼꾀끼낳뇌눴닥닷딸땅떨뚫렀먹밤빛섬슨식쌓쓸암였잃잦젯졌죽쥔짝째척켜튿틈혀",
+    "missing_hangul_count": 40,
+    "release_blocked_until_font_vnext": true
+  },
+  "generated_artifacts": [
+    {
+      "a_b_final_byte_identical": true,
+      "path": "public/msgev_ko_event_opening_3202_3229.v0.1.json",
+      "sha256": "98C77E79256EE7B5A5CAAFAF95FDC1467F20A90F8E508E3EE975629B4EFD1C7F",
+      "size": 8668
+    },
+    {
+      "a_b_final_byte_identical": true,
+      "path": "evidence/alignment_evidence.v0.1.json",
+      "sha256": "7AE5DF4851B4BF288C6E3EF42399A2F3F1FBD04F287E59931EA722C0AF89A37C",
+      "size": 65870
+    },
+    {
+      "a_b_final_byte_identical": true,
+      "path": "review/review_index.v0.1.json",
+      "sha256": "2DE2BE324877ED3E6D298BE4E63AC0D4F15A09C588E5A2D79B8BA402B8C69BEC",
+      "size": 9739
+    },
+    {
+      "a_b_final_byte_identical": true,
+      "path": "validation.json",
+      "sha256": "38C9294159DFDFD4CA6508EEA86B19BF175D9BB82DF7C3290AEDDBDD69823D44",
+      "size": 3631
+    }
+  ],
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 28,
+    "failures": 0
+  },
+  "resource": "MSG_PK/SC/msgev.bin",
+  "safety": {
+    "complete_commercial_resource_in_workstream": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false
+  },
+  "schema": "nobu16.kr.event-dialogue-verification.v1",
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks_recorded": 28,
+    "selected_id_hashes_verified": 84,
+    "string_count_each": 17910
+  },
+  "source_free_scan": [
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "public/msgev_ko_event_opening_3202_3229.v0.1.json"
+    },
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "evidence/alignment_evidence.v0.1.json"
+    },
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "review/review_index.v0.1.json"
+    },
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "validation.json"
+    }
+  ],
+  "standalone_file_only_build": {
+    "installed_game_files_modified": false,
+    "operations": 28,
+    "outputs": [
+      {
+        "a_b_byte_identical": true,
+        "path": "MSG_PK/SC/msgev.bin",
+        "sha256": "522C97F1C90C2052A31319DAEBBD9C58471FE33CBB07B3865F29E9439210F7F5",
+        "size": 754328
+      },
+      {
+        "a_b_byte_identical": true,
+        "path": "msgev.build-manifest.json",
+        "sha256": "61FC8C1A3A021794F5203BDEC612D1615FA62133DF7001A245FA37BB29E9C73D",
+        "size": 13477
+      },
+      {
+        "a_b_byte_identical": true,
+        "path": "msgev_sc.recipe.json",
+        "sha256": "1F4F4FE3AFD96BCF503FE3CA4A7A373F979CF5F182FDA44D88FECD4170CA78F3",
+        "size": 9637
+      }
+    ]
+  },
+  "strict_schema": {
+    "artifacts_checked": [
+      "overlay",
+      "alignment_evidence",
+      "review_index",
+      "validation"
+    ],
+    "duplicate_or_case_colliding_keys_rejected": true,
+    "passed": true,
+    "unexpected_keys_rejected": true
+  },
+  "verifier": {
+    "path": "verify_event_dialogue_batch.py",
+    "sha256": "D2D997A77FDB4A7D9AB6D39F26CBE0490A5092A55D25D419D1530D467DD296F2"
+  }
+}

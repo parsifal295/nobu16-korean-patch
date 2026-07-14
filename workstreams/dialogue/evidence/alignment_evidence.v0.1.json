@@ -1,0 +1,1868 @@
+{
+  "alignment_basis": [
+    "same_resource_role",
+    "same_17910_entry_count",
+    "same_numeric_string_ids",
+    "manual_semantic_crosscheck_of_selected_entries",
+    "event_boundaries_crosschecked_in_sc_jp_en"
+  ],
+  "batch_id": "msgev_event_opening_3202_3229.v0.1",
+  "boundary_anchors": [
+    {
+      "hashes": {
+        "EN": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "JP": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "SC": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "id": 3201,
+      "role": "empty_before_first_event"
+    },
+    {
+      "hashes": {
+        "EN": "41C0019CD903DF42961E269009C3067E8A4F504AFD8B0D17A0CFAD34C7D623CE",
+        "JP": "4BDFEAF56DC981D976E02B4DFF695AE2AAAA4A55EFDDF3BC9220D3597C12D28A",
+        "SC": "7C320DDC60E2096F40FDED6825765B81CF1DE4E65EADB8097B959719B8D7DBD0"
+      },
+      "id": 3202,
+      "role": "first_selected_entry"
+    },
+    {
+      "hashes": {
+        "EN": "7092E5440ECDC44C6CABFCA0736AB538FE46324EC3A9BA986D4C4FB14E72FC64",
+        "JP": "7AE7B28FE8698D93061A6E002D73C2F23458F8F6A8024C019D2C606A6589CD70",
+        "SC": "6E37168E0745776CFFE98ED41D77222566A8273258F12F8AADA3610A1C8036E4"
+      },
+      "id": 3214,
+      "role": "first_event_last_entry"
+    },
+    {
+      "hashes": {
+        "EN": "B392A7CFCBCC852E731E6AA39C4544C27525A9C0C142F13D17A0CA87BFA2CE8D",
+        "JP": "CBD7B985DB67B2B0074B5B363A807D6B2C66D6E00C0BBFEA200E005D10E62765",
+        "SC": "6104339A41E19EC19595C13776B0DA4E4ED7E848E2C404AA55DFC95E18F9613E"
+      },
+      "id": 3215,
+      "role": "second_event_first_entry"
+    },
+    {
+      "hashes": {
+        "EN": "788974FB576ACF3D966C0452415FF98DA04423F6830D560F55F93FBF5AB42044",
+        "JP": "2B0427732C7361D1B480EC9EFC4CB7D55C9A7857DD7E9329FE1C997184E6D613",
+        "SC": "E93E08905057A89115F8842AF495953DDA6311AC1C91419F7A88354F30047D63"
+      },
+      "id": 3229,
+      "role": "second_event_last_entry"
+    },
+    {
+      "hashes": {
+        "EN": "102688717C18A24F13277E26B24C3E74334B590CE3488667A8C5DF8434C33D34",
+        "JP": "FE21DD2E7546D735E839020888CA1BC2D11302F35D0173F9ED1681D9570A081C",
+        "SC": "91F86DAB62A617DF6278B3ECD2C47659FAFB12AA8649F05BA3714375F7A0A45F"
+      },
+      "id": 3230,
+      "role": "next_event_first_entry_excluded"
+    }
+  ],
+  "contains_commercial_source_text": false,
+  "entries": [
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3202,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "41C0019CD903DF42961E269009C3067E8A4F504AFD8B0D17A0CFAD34C7D623CE"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4BDFEAF56DC981D976E02B4DFF695AE2AAAA4A55EFDDF3BC9220D3597C12D28A"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7C320DDC60E2096F40FDED6825765B81CF1DE4E65EADB8097B959719B8D7DBD0"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3203,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D141770BFFAF76C678FF60E383AF1A72445711A50E800A611E3A0CE6C27BBF1C"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DF11D7B5827055DD36547021179FD141B6EAD6FF34A7B0DA1E28EAB261A7F711"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D8ED6E2ED1B6293FF1B56DDC0D4DBC0FA892E8503E041322AA7F314D3E2D6AFA"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3204,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8B2962B9736EF07F1BA9351440A47FFAF6704C452F3ED9E5F0C5802F8565ADB5"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D78C5C62C61BA4BEF6386E03983EBFEE0F721439B506B3A849D5A69E038581ED"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B97207FDE97EDF85CC7991FA82F002BA7640D1C8FB16278FE4ABB7E368302D4A"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3205,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "892384BE954D87666D35BDCCC322075A3E3BBF2A3DA4B35DE95EFB7DBDA3D7DF"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "53247E0D33D43CA88D52F334825C2D49B5DFA84D5284EF132B3103D35DB2BA27"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CF8988ADE8AC4F5F01655C89D72CA342ABB6111DB7D0B0F84DB1D7F69080858E"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3206,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A3799A134582610D6BBB5E432EB2686AB05E4298116FEE0062D39B446A9914BE"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2873DA314DEBBC98728104738C15B2C3DE7666B65786EABE9C8A8BCCC41B6B7A"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DBC23B933646434D33443D7EFF997AD27F415A64BBD93E07EC9A360AD32F8BB7"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3207,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2BECFE62D6DD8D33F57773B55D9063FBA9766CF3B30B3D835B6E238DB2145D71"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CDBA354FAF811095985D7DBA53B4609288E37A8508044BBA811B7B8FB62A2738"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "35CF161954A99237F4D435C3D5341526EDC778E05F527C6B8CFF7C222AFC8E56"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3208,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "87972415A2E9C47D22A6EDBCFC2239AF3202CCCE8552633898E1BF47B065C03D"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E5E06EC5A56F0320226E3C458F13A50EA181302A3FF22339E7EE91718856682F"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C2E300BA2282B44EC9F536DC7B40310C961BF1701A33329F51FC3F72D4D73CC6"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3209,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F80DFB8897EF4E7894EC6B9710B1ABF6C3417687CAF0D01E8494F435D4640F51"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AE18CE448143C0F2E9761A00919FA148E9A0425AC89C6888452CD4222DAD691F"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5B600EC79094995BC59AFA7FA9CAF6E9B9CFAA57E965D46E3847684F290C3948"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3210,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "ED9177AA2ABA34F514693259A0B4EC40DD0E9E9D52F0536B6FE877F19CD6A8AB"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E83FD7819D901788E0AB7BCB4CEB7A90E0A7721E929641671F9B780735540B88"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "19AD19AEFBDF2DF23B8FA1871EBE8887A37004A9F072327E50161B91DE0F6B01"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3211,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "27365D697550DA45501F084C8AD92E92145B0C62AB60C8568E0D848F8BB55278"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6658C2D9110003946FAA221591539A1E347EB9B718699753F82C3206EFFB5EF2"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A644508F57BA461B032231B3CCA82DE379DAF4C390E6ADF1C44AC1F44568096C"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3212,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "69EEDF0B5B8289BB778296F0E7AC53A86EA4AE313EB69407976098871F255DF0"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2A7357E72D990FAB1FBC48FEDD76C997804D1602C1E4C6DB12C7859252303EDA"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "45B8C0961B99BF4459A3CCBA76444507D78B05E8F29C524EDE22099B0F366EF8"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3213,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3FA506ADDA5E93F24A563F8ACCD26A424C62335D943917BCD98548064F62D4BB"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "34264D5EA1DDE52B866DD0615C93CB03C6AF8F595B2EC233495896457AFFBE92"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5DDB1987DD13CDCE8C41EB6E963DA120799F04ACA0F24A7C0823B99ED06BFF41"
+        }
+      }
+    },
+    {
+      "event_id": "kai_sagami_suruga_alliance",
+      "id": 3214,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7092E5440ECDC44C6CABFCA0736AB538FE46324EC3A9BA986D4C4FB14E72FC64"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7AE7B28FE8698D93061A6E002D73C2F23458F8F6A8024C019D2C606A6589CD70"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6E37168E0745776CFFE98ED41D77222566A8273258F12F8AADA3610A1C8036E4"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3215,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B392A7CFCBCC852E731E6AA39C4544C27525A9C0C142F13D17A0CA87BFA2CE8D"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CBD7B985DB67B2B0074B5B363A807D6B2C66D6E00C0BBFEA200E005D10E62765"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6104339A41E19EC19595C13776B0DA4E4ED7E848E2C404AA55DFC95E18F9613E"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3216,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0CBAEAF793580C0943953165F54F3274A8BD21941053A0FC1E3C72EB7601F775"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0B15C30CE4A59F698E7403416C484B7960D0F362C5440E9EE7408E8B67F9FA5F"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AD4CD906BBF752F45BF97114BF07CC2D9ACAA5680413AF3043252998A675A4F5"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3217,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E83F220B07C81F5C82ACB1631BB34161E73DC75EA22FE8215C7CCD57A493183A"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5862F6882FA67BA690B8396609B92F9B323310C13790FA257F4883EF253C5188"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B6308440E51A1589F2EC6D644CC829866196F3D979F30CEC741B904D1570B767"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3218,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DF876A6B8CE08377385F91A76458562857F47AC2BC6AA446A7A81E8185DFC34C"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "892B83C36183900675D140100BAF6CB377B5DA90A5354FFE470F0883DE8288AC"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BA4C81300C27337CDDCF4BFF325832CEF1B6BB2DAA2402617F5C28722C0298A4"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3219,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B2324954A741F5E7F34F690DFCDF72C3B17D314CA15CBB61C5A9337D034BDB18"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E14842DB599A37C95390CC09CA55F234C555E7B112929876F753E8FB7659A220"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "40CF580E941DFC538F1C92EB275E8669F600ABDC22646CE08D026D66D8DC6D79"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3220,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9A4DABE394F0FB2A3CE348EF5BFC7A7EC613F0294D657651449B5F9043DDB06E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BCD9FC76215BF5AADEF498460A81DE22614A30447FFF6C18C051F0D67FB27FC6"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "20B8B8097931736A23DF64D06BA2DB10080187EF5801D11AEC92F78CAEA23290"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3221,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "326143C52B7284F1534BAE8788F4F6449EF83323E3D632C7D0A41587835BE8A8"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BBF9EA6986338AC440BA4083EF03AC0B02124E5B4EEFA762B2A68F269B805AE7"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B4F21E7F76C1C0426BCDB8F31C489EAB060CBA2CEDFAED446F6236062C1A78DB"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3222,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F30B296CC848CF0BDFC84774951F2E2E2C0D0C0B14FCFEE58DBBDEF13B4ABE33"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B41C82A00E79B528C5370FA5C21D9BE734763A1A2C47CF23C42B742F6257895F"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C73F7B1596A79C88230752FF5289089DF945CB9EFF1E1032D9B0CF91E2006B24"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3223,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2B25B1A4D1BDC950472649AE2DA41DAEB0CD763F13F02AFE06368A4B5C7CE8BB"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "626910DCAA1CFC8EAB321E1C6523083D5C398724EA67EAE43D4A6024419B4397"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B97B5FCB395B88A1F9AD8AB988D5584EEDB32C2FC79620E6E9AB6DB1CCBB602F"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3224,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A0E9F6F95DE57DE985A4DB529495EA4ED9377BA07AD04A2D5BFC629667A3BE0E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E5DBCF6E978DF300E37CB8DB350E2A09799B2C1E7FBF8B89DAF0BEE8A1238EE3"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D6F48BE7CC142E644D5B23237462786A157944D82E9966D40AE38F05BA4ED8DB"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3225,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "58DBB587A611E10FA0F956274165ABF561DDDABAB034D8A666FEE77703A2F004"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "82D35E2763B3712C4D6AEDA9868192BD163FCF29BCCFDF41196E517D9048CBC9"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6E9B1AEC8D2B36CAC8A8D5BE228E8E3E599F446596A0AF00867043FBB5D58699"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3226,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "99C519B73A759B4B836B480224145F5157F967DA2507F052F9DAFD1C0684A6D5"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C1BFC3B87FEED5CA66011B67FAC7358FD088E5D127FE9630D1D976944561CD29"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E5ED35A0644B3BA0F9391BC0DA77E4C69AA741A4B6B192F2CEDA705503C7B04D"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3227,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "72F2B4C0B4F1DD70E8F84492C7AB36EFFDBEE8D40EB9A4E77DAFA692F89B3BEC"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DC92F4B738C1566CB63050259553D29E28FED3F5245A4C472CDE0A1886B2C802"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7FB353215D65AA3A0483F0E0267A60182C06115CF6A86AD50669C88C43A856A1"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3228,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "EC901945432692800B28FCE9C3B012D441621CB0FE566A1BEDD3A1BAD6593BAE"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B57449E124777C78C7011BD5275D6AFD9907D704AA7B4925FAE9EC287EE5B129"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8DE7B0DBFA916EDCDB516644F8C82D907C79F94E106130B123469FC8018AF8FE"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_itsukushima",
+      "id": 3229,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "788974FB576ACF3D966C0452415FF98DA04423F6830D560F55F93FBF5AB42044"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2B0427732C7361D1B480EC9EFC4CB7D55C9A7857DD7E9329FE1C997184E6D613"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E93E08905057A89115F8842AF495953DDA6311AC1C91419F7A88354F30047D63"
+        }
+      }
+    }
+  ],
+  "entry_count": 28,
+  "event_ranges": [
+    {
+      "end_id": 3214,
+      "event_id": "kai_sagami_suruga_alliance",
+      "start_id": 3202,
+      "title_ko": "카이·사가미·스루가 삼국동맹"
+    },
+    {
+      "end_id": 3229,
+      "event_id": "battle_of_itsukushima",
+      "start_id": 3215,
+      "title_ko": "이쓰쿠시마 전투"
+    }
+  ],
+  "resource": "msgev",
+  "schema": "nobu16.kr.event-dialogue-alignment-evidence.v1",
+  "source_files": {
+    "EN": {
+      "logical_path": "MSG_PK/EN/msgev.bin",
+      "packed_sha256": "95CDB15F1AED529C95ADDE784A750059E90060A44DF1EA208EB4A56E2F685640",
+      "raw_sha256": "806A34770ABA15550033E0B2D51CFA849E3C9367B61BC0BA05C37B87F13475EF",
+      "raw_size": 1868232,
+      "size": 758160,
+      "string_count": 17910
+    },
+    "JP": {
+      "logical_path": "MSG_PK/JP/msgev.bin",
+      "packed_sha256": "03426B59D32EB628021DE43BC02FF82B56B04D97C25CE37F735630EA7C4E2002",
+      "raw_sha256": "4A916CA6837C4F8FC2D8B6254ECBEF26339558D2DDFEBF5A1637F8426F5918DE",
+      "raw_size": 890428,
+      "size": 555784,
+      "string_count": 17910
+    },
+    "SC": {
+      "logical_path": "MSG_PK/SC/msgev.bin",
+      "packed_sha256": "7221A53E6E5CF493A3FAFFFCE35280E8147898120EEC59E460A2429AA265C1F9",
+      "raw_sha256": "99E0338A64FF4140AD6E27503B1BF138AC44F5B68F01973ED61D0C949619DC91",
+      "raw_size": 750584,
+      "size": 522918,
+      "string_count": 17910
+    }
+  }
+}

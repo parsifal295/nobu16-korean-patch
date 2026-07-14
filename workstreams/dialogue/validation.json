@@ -1,0 +1,143 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/alignment_evidence.v0.1.json",
+      "sha256": "7AE5DF4851B4BF288C6E3EF42399A2F3F1FBD04F287E59931EA722C0AF89A37C",
+      "size": 65870
+    },
+    "overlay": {
+      "path": "public/msgev_ko_event_opening_3202_3229.v0.1.json",
+      "sha256": "98C77E79256EE7B5A5CAAFAF95FDC1467F20A90F8E508E3EE975629B4EFD1C7F",
+      "size": 8668
+    },
+    "review_index": {
+      "path": "review/review_index.v0.1.json",
+      "sha256": "2DE2BE324877ED3E6D298BE4E63AC0D4F15A09C588E5A2D79B8BA402B8C69BEC",
+      "size": 9739
+    }
+  },
+  "batch_id": "msgev_event_opening_3202_3229.v0.1",
+  "event_count": 2,
+  "font_integration": {
+    "baseline": {
+      "logical_path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/public/metrics/glyphs.jsonl",
+      "sha256": "FDB468457B00D47CD86B6DD95B0E4C8E38A0DAB1A724FE9DE297233D14C813B8",
+      "size": 731013,
+      "unique_hangul": 554
+    },
+    "dialogue_unique_hangul": 270,
+    "missing_codepoints": [
+      "U+AC14",
+      "U+AE4A",
+      "U+AE7C",
+      "U+AF2D",
+      "U+AF3C",
+      "U+AF80",
+      "U+B07C",
+      "U+B0B3",
+      "U+B1CC",
+      "U+B234",
+      "U+B2E5",
+      "U+B2F7",
+      "U+B538",
+      "U+B545",
+      "U+B5A8",
+      "U+B6AB",
+      "U+B800",
+      "U+BA39",
+      "U+BC24",
+      "U+BE5B",
+      "U+C12C",
+      "U+C2A8",
+      "U+C2DD",
+      "U+C313",
+      "U+C4F8",
+      "U+C554",
+      "U+C600",
+      "U+C783",
+      "U+C7A6",
+      "U+C82F",
+      "U+C84C",
+      "U+C8FD",
+      "U+C954",
+      "U+C9DD",
+      "U+C9F8",
+      "U+CC99",
+      "U+CF1C",
+      "U+D2BF",
+      "U+D2C8",
+      "U+D600"
+    ],
+    "missing_hangul": "갔깊깼꼭꼼꾀끼낳뇌눴닥닷딸땅떨뚫렀먹밤빛섬슨식쌓쓸암였잃잦젯졌죽쥔짝째척켜튿틈혀",
+    "missing_hangul_count": 40,
+    "release_blocked_until_font_vnext": true
+  },
+  "generator": {
+    "path": "build_event_dialogue_batch.py",
+    "sha256": "D5C205F853090C97E16E903D7EE92BEB54A559B9B7DEEE2B7732EE5B8E3881C3"
+  },
+  "layout_heuristic": {
+    "entries_over_24": [],
+    "max": 24,
+    "metric": "unicode_codepoints_per_authored_line_excluding_esc_sequences",
+    "runtime_layout_review_still_required": true
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 28,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints"
+    ]
+  },
+  "schema": "nobu16.kr.event-dialogue-generation-validation.v1",
+  "selected_entry_count": 28,
+  "selected_ids_sha256": "D5AA3D9B293CFD794F5C58B54955B854DA0074744F041F04D878331F23171BF1",
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "selected_entries_semantically_crosschecked": 28,
+    "string_count_each": 17910
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "strict_schema": {
+    "artifacts_checked": [
+      "overlay",
+      "alignment_evidence",
+      "review_index"
+    ],
+    "duplicate_or_case_colliding_keys_rejected": true,
+    "passed": true,
+    "unexpected_keys_rejected": true
+  },
+  "translation_status": {
+    "automated_draft": 28,
+    "entries_with_specific_uncertainty_flags": 9,
+    "human_review_required": 28,
+    "reviewed": 0,
+    "runtime_reviewed": 0,
+    "translated_draft": 28
+  }
+}
