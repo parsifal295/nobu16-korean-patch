@@ -20,7 +20,7 @@ EXPECTED_STRING_TARGETS = {
     "MSG_PK/SC/msggame.bin": (25598, 16482),
     "MSG/SC/msggame.bin": (21225, 12268),
     "MSG/SC/strdata.bin": (32311, 26690),
-    "MSG/SC/ev_strdata.bin": (17868, 11199),
+    "MSG/SC/ev_strdata.bin": (17868, 11158),
 }
 
 
@@ -36,7 +36,7 @@ class ReadmeProgressTests(unittest.TestCase):
             if resource["kind"] == "strings"
         }
         self.assertEqual(actual, EXPECTED_STRING_TARGETS)
-        self.assertEqual(sum(target for _, target in actual.values()), 111463)
+        self.assertEqual(sum(target for _, target in actual.values()), 111422)
         self.assertEqual(payload["completed_statuses"], ["translated", "reviewed"])
 
     def test_msggame_record_and_literal_counts_are_explicit_and_included(self):
