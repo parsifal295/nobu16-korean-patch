@@ -1,0 +1,104 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "alignment_evidence.v0.6.json",
+      "sha256": "3E01B114901D3BE70497082514E02C8D5079AB6868974F55C783349103037841",
+      "size": 101131
+    },
+    "overlay": {
+      "path": "msgbre_ko_biographies_0566_0610.v0.6.json",
+      "sha256": "0FB3F6F777E5110507EB4782C5B7C5E2B61EC50FBF9E8314E5FF2491C9D6ACD2",
+      "size": 18744
+    },
+    "review_index": {
+      "path": "review_index.v0.6.json",
+      "sha256": "37A371AEB1E2663CC5E1CA232951D820F92A344AF96774B57275B01F033CDB8B",
+      "size": 12839
+    }
+  },
+  "batch_id": "msgbre_biographies_0566_0610.v0.6",
+  "generator": {
+    "path": "build_msgbre_batch6.py",
+    "sha256": "9458BD793EAEC8FC33A1D1324E97B18A3E1B79E07E0C891FE029E3699A969A6B"
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 45,
+    "custom_bracket_placeholder_checks": 45,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "custom_bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "common_builder_modified": false,
+    "existing_v01_to_v05_artifacts_modified": false,
+    "existing_v01_v02_v03_v04_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msgbre-generation-validation.v6",
+  "scope": {
+    "end_id": 610,
+    "natural_boundary": {
+      "next_start_id": 611,
+      "officer_name_ids_crosschecked": 47,
+      "previous_batch_end_id": 565,
+      "selection_policy": "fixed_contiguous_parallel_slice"
+    },
+    "next_start_id": 611,
+    "selected_ids_sha256": "DEEBCA2F736CE4C85AC57FB7F12C171736D21D7B447D2E6C54BC4116B61ED3EA",
+    "selected_nonempty_entry_count": 45,
+    "start_id": 566
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks": 45,
+    "selected_nonempty_in_all_languages": 45,
+    "selected_reference_hash_count": 135,
+    "string_count_each": 3000
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 45,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 7,
+    "translated_draft": 45
+  }
+}
