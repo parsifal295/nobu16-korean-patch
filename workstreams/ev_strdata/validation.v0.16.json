@@ -1,0 +1,354 @@
+{
+  "artifacts": {
+    "evidence/alignment_evidence.v0.16.json": {
+      "sha256": "2B7BFC4D520C1B232479F04755D945C13E024694D18EFED88373BD108786E256",
+      "size": 588940
+    },
+    "public/ev_strdata_ko_labels_and_narration_3007_3276.v0.16.json": {
+      "sha256": "BB693C67252DAB581582D0F842C6DCE5468663131892A2FF62EB17F750F96C12",
+      "size": 40235
+    },
+    "review/review_index.v0.16.json": {
+      "sha256": "E4405EF646BA45C3A213F59418A2C3CD9D7CBBC8547852250944CE2E807078FA",
+      "size": 55413
+    }
+  },
+  "batch_id": "ev-strdata-labels-narration-3007-3276-v0.16",
+  "deferred_internal_groups": [
+    {
+      "classification": "dummy_placeholder",
+      "count": 94,
+      "excluded_from_overlay_and_translation_progress": true,
+      "ids": [
+        3105,
+        3106,
+        3107,
+        3108,
+        3109,
+        3110,
+        3111,
+        3112,
+        3113,
+        3114,
+        3115,
+        3118,
+        3119,
+        3120,
+        3121,
+        3122,
+        3123,
+        3124,
+        3125,
+        3126,
+        3127,
+        3128,
+        3129,
+        3130,
+        3131,
+        3132,
+        3133,
+        3134,
+        3135,
+        3136,
+        3137,
+        3138,
+        3139,
+        3140,
+        3141,
+        3142,
+        3143,
+        3144,
+        3145,
+        3146,
+        3147,
+        3148,
+        3149,
+        3150,
+        3151,
+        3152,
+        3153,
+        3154,
+        3155,
+        3156,
+        3157,
+        3158,
+        3159,
+        3160,
+        3161,
+        3162,
+        3163,
+        3164,
+        3165,
+        3166,
+        3167,
+        3168,
+        3169,
+        3170,
+        3171,
+        3172,
+        3173,
+        3174,
+        3175,
+        3176,
+        3177,
+        3178,
+        3179,
+        3180,
+        3181,
+        3182,
+        3183,
+        3184,
+        3185,
+        3186,
+        3187,
+        3188,
+        3189,
+        3190,
+        3191,
+        3192,
+        3193,
+        3194,
+        3195,
+        3196,
+        3197,
+        3198,
+        3199,
+        3200
+      ],
+      "ids_sha256": "E0DC069741079E4E6B7E20C2DBCAF993FF2E399C78D5B609CA527FFD20C38E06",
+      "ordered_reference_hashes_sha256": "92294D393ADE01EF40D12EEFE3BCB0F0F686C8803150F706C3027D55C0AC1BC8",
+      "reason": "dummy_placeholder_not_display_text",
+      "status": "deferred"
+    },
+    {
+      "classification": "actor_reference",
+      "count": 1,
+      "excluded_from_overlay_and_translation_progress": true,
+      "ids": [
+        3116
+      ],
+      "ids_sha256": "3A64813075A425CE11D35A881A3194FFB9078639058FEDF2E1DB93ECE6E8C902",
+      "ordered_reference_hashes_sha256": "F614574998A9328E6B9A6BF7DC760C296C1DA25CBA9221766BC8201401CA13DC",
+      "reason": "runtime_actor_reference_not_display_text",
+      "status": "deferred"
+    },
+    {
+      "classification": "empty_slot",
+      "count": 1,
+      "excluded_from_overlay_and_translation_progress": true,
+      "ids": [
+        3201
+      ],
+      "ids_sha256": "B7EBFC2CA74F5D50D45C0E79DD925AEE93A3AB660E8696848AA8733553072402",
+      "ordered_reference_hashes_sha256": "FA33EA0904E6D842F16C84C86DB90F69C2158C45990717E771FB4F1A52F54A07",
+      "reason": "empty_string_slot_not_display_text",
+      "status": "deferred"
+    }
+  ],
+  "generator": {
+    "path": "build_ev_strdata_batch16.py",
+    "sha256": "ABF5E174527DD83BF5D01474282E3B1A8915ED07B6C291E3283F8318C194A83A"
+  },
+  "offline_binary_build": {
+    "files": {
+      "MSG/SC/ev_strdata.bin": {
+        "sha256": "F97764F74B1560989902613C76F48844FE750B0DE5318AFBF3C141F47CFDBA0F",
+        "size": 668408
+      },
+      "ev_strdata.build-manifest.json": {
+        "sha256": "618D6DF5C1F8AC681A570D4C29457E7EB01EFD64716BD0470CEB55CD977953D7",
+        "size": 65488
+      },
+      "ev_strdata_sc.recipe.json": {
+        "sha256": "95C37A88DE5EEB780889C8AB6F812189DE8AF3C54764A1E6E0C0974756D85FFC",
+        "size": 42071
+      }
+    },
+    "installed_target_written": false,
+    "manifest_sha256": "618D6DF5C1F8AC681A570D4C29457E7EB01EFD64716BD0470CEB55CD977953D7",
+    "operations": 174,
+    "overlay_entries": 174,
+    "recipe_sha256": "95C37A88DE5EEB780889C8AB6F812189DE8AF3C54764A1E6E0C0974756D85FFC",
+    "target_sha256": "F97764F74B1560989902613C76F48844FE750B0DE5318AFBF3C141F47CFDBA0F"
+  },
+  "passed": true,
+  "previous_deferred_overlap": {
+    "current_deferred_entry_count": 96,
+    "overlap_detected": false,
+    "overlap_entry_count": 0,
+    "overlap_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+    "previous_batch_id": "ev-strdata-character-speaker-labels-2780-2971-v0.15",
+    "previous_deferred_entry_count": 43,
+    "previous_deferred_ids_sha256": "2B95F92D5D9B8AB6E96DEB1A412CB34957B24978FFF2C089254A42C3CE265245"
+  },
+  "raw_format": {
+    "binary_builder_state": "enabled_offline_output_only",
+    "lz4_wrapper_decompression": "OK",
+    "message_table_parser": "tools/nobu16_msg_table.py",
+    "raw_parse_rebuild_byte_exact_languages": [
+      "SC",
+      "JP",
+      "TC"
+    ]
+  },
+  "repeated_source_policy": {
+    "failures": 0,
+    "repeated_source_id_groups": [
+      [
+        3014,
+        3073
+      ],
+      [
+        3027,
+        3061
+      ],
+      [
+        3029,
+        3058
+      ],
+      [
+        3034,
+        3060
+      ],
+      [
+        3035,
+        3070
+      ],
+      [
+        3038,
+        3057
+      ],
+      [
+        3041,
+        3066
+      ],
+      [
+        3049,
+        3067
+      ]
+    ],
+    "same_source_same_translation_required": true,
+    "translated_repeated_source_group_count": 8,
+    "translated_unique_source_hash_count": 166
+  },
+  "replacement_invariants": {
+    "checked": 174,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "executable_modified": false,
+    "existing_v01_through_v015_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "official_source_text_exposed_in_public_artifacts": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_or_progress_modified": false
+  },
+  "schema": "nobu16.kr.ev-strdata-generation-validation.v16",
+  "scope": {
+    "deferred_ids_sha256": "06BD88F03E814D81DC107F52B4F1B1452FF8461677854C550FAB5BC1DDD94D00",
+    "deferred_internal_entry_count": 96,
+    "end_id": 3276,
+    "functional_class_counts": {
+      "generic_speaker_label": 1,
+      "historical_event_narration": 75,
+      "named_character_label": 97,
+      "place_label": 1
+    },
+    "inspected_entry_count": 270,
+    "inspected_ids_sha256": "E38293552A963D3D3124111ED530C7C40F13E20EA9CDC35583BCB2ED5CCC0DFE",
+    "next_display_id": 3277,
+    "sc_display_translation_target_count": 11687,
+    "start_id": 3007,
+    "total_string_slots": 17868,
+    "translated_display_entry_count": 174,
+    "translated_ids_sha256": "C8227A840BE0A276B9951422CEECD1B604428EF3A2ECDCE9E2C2880684FD41D9",
+    "translated_label_count": 99,
+    "translated_narration_count": 75
+  },
+  "source_alignment": {
+    "english_reference_available": false,
+    "languages": [
+      "SC",
+      "JP",
+      "TC"
+    ],
+    "ordered_all_reference_hashes_sha256": "61D924E0F885AF6CBD8301D98F857D527CA3F0B503C30DF2DAC58F5846F47DAF",
+    "ordered_sc_source_hashes_sha256": "B10D37DF5F2429662BA8212532AB12F77757D5DCC3F320CEED5DCCC524375C87",
+    "source_files": {
+      "JP": {
+        "display_nonempty_count": 13283,
+        "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+        "raw_sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+        "raw_size": 789260,
+        "relative_path": "MSG/JP/ev_strdata.bin",
+        "size": 496819,
+        "string_count": 17868
+      },
+      "SC": {
+        "display_nonempty_count": 11687,
+        "packed_sha256": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+        "raw_sha256": "482B25ACFBF219E85EF9F9A073745414B3FC97705BABB4FAF4AAC3BB68248DAD",
+        "raw_size": 662228,
+        "relative_path": "MSG/SC/ev_strdata.bin",
+        "size": 461651,
+        "string_count": 17868
+      },
+      "TC": {
+        "display_nonempty_count": 11687,
+        "packed_sha256": "9E9346B942CAFA99432D675F6BA74DD04D48F56095F35F46392697011D9CFEF3",
+        "raw_sha256": "8918886EC8BB8B58317189F7ABAF48EBC761633CC263F0641ED5213050D1B352",
+        "raw_size": 650756,
+        "relative_path": "MSG/TC/ev_strdata.bin",
+        "size": 460929,
+        "string_count": 17868
+      }
+    },
+    "string_count_each": 17868,
+    "traditional_chinese_used_as_third_reference": true,
+    "translated_ids_nonempty_in_all_references": 174,
+    "translated_reference_hash_count": 522
+  },
+  "source_free_scan": {
+    "evidence/alignment_evidence.v0.16.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "public/ev_strdata_ko_labels_and_narration_3007_3276.v0.16.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review/review_index.v0.16.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "translation": {
+    "exact_sc_hashes_emitted": 174,
+    "narration_runtime_layout_review_flag_count": 75,
+    "source_text_embedded": false,
+    "translation_map_entry_count": 174,
+    "translation_map_sha256": "E831726760DE4C90F1D326EC78E557959397AD6841005C5F22790155303D5D5B",
+    "uncertain_reading_review_flag_count": 6
+  }
+}
