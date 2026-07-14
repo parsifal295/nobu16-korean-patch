@@ -26,7 +26,13 @@
       "translation_target_total": 12906,
       "overlay_globs": [
         "data/public/msgev_ko_officer_names_0000_2399.v0.1.json",
-        "workstreams/dialogue/public/*.json"
+        "workstreams/dialogue/public/msgev_ko_event_opening_3202_3229.v0.1.json",
+        "workstreams/dialogue/public/msgev_ko_event_continuation_3230_3308.v0.2.json",
+        "workstreams/dialogue/public/msgev_ko_event_endings_3311_3440.v0.3.json",
+        "workstreams/dialogue/public/msgev_ko_historical_events_3441_3564.v0.4.json",
+        "workstreams/dialogue/public/msgev_ko_historical_events_3565_3688.v0.5.json",
+        "workstreams/dialogue/public/msgev_ko_historical_events_3689_3818.v0.6.json",
+        "workstreams/dialogue/public/msgev_ko_historical_events_3819_3929.v0.7.json"
       ],
       "note": "장수명 2,207개 + 이벤트 대사 배치"
     },
@@ -105,9 +111,10 @@
       "translation_target_total": 11687,
       "overlay_globs": [
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0000_0149.v0.1.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0150_0349.v0.2.json"
+        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0150_0349.v0.2.json",
+        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0350_0549.v0.3.json"
       ],
-      "note": "파일 선두 장수 전체 이름표 ID 0–349, 350개; 다음 ID 350"
+      "note": "파일 선두 장수 전체 이름표 ID 0–549, 550개; 다음 ID 550"
     },
     {
       "path": "RES_SC/res_lang.bin",
