@@ -58,8 +58,10 @@
       "total_slots": 122,
       "stock_visible_nonblank": 122,
       "translation_target_total": 122,
-      "overlay_globs": [],
-      "note": "미착수"
+      "overlay_globs": [
+        "workstreams/small_message_tables/public/msgire_ko_0000_0121.v0.1.json"
+      ],
+      "note": "물품·명물 설명 122개 번역 완료"
     },
     {
       "path": "MSG_PK/SC/msgstf.bin",
@@ -67,8 +69,10 @@
       "total_slots": 20,
       "stock_visible_nonblank": 8,
       "translation_target_total": 8,
-      "overlay_globs": [],
-      "note": "미착수"
+      "overlay_globs": [
+        "workstreams/small_message_tables/public/msgstf_ko_0000_0007.v0.1.json"
+      ],
+      "note": "크레디트 직책·분야 8개 완료; 빈 구조 슬롯 12개 제외"
     },
     {
       "path": "MSG_PK/SC/msggame.bin",

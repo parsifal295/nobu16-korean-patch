@@ -1,0 +1,154 @@
+{
+  "ab_build_byte_identical": true,
+  "artifacts": [
+    {
+      "path": "MSG_PK/SC/msgire.bin",
+      "sha256": "045B6ADDD7CF01401A3C10FA69A737B6C32259FA95007584E6A3E32CF2142D2A",
+      "size": 23136
+    },
+    {
+      "path": "MSG_PK/SC/msgstf.bin",
+      "sha256": "C4A18BC5F7F7FCB8D9913D1AABC0C775059B09CE41261AFE38FB23F15146C195",
+      "size": 16289
+    },
+    {
+      "path": "msgire.build-manifest.json",
+      "sha256": "AF4D3995DF60581B548EE2E81183C147C990E2712ABEEF892A25C9B2221D908D",
+      "size": 63901
+    },
+    {
+      "path": "msgire_sc.recipe.json",
+      "sha256": "3971101450F306EC94258D6181D395BEBD26BD3B8764C3AA099A8CBB2AEF8ADB",
+      "size": 47472
+    },
+    {
+      "path": "msgstf.build-manifest.json",
+      "sha256": "B6B74ABB6758AA02471C1CFA570ED2B8EAA0F84E181113F334805CE064E155A4",
+      "size": 15430
+    },
+    {
+      "path": "msgstf_sc.recipe.json",
+      "sha256": "2AD998D674C1600B339B7239C1BD528E318C3C48D524DF4A036082885B638602",
+      "size": 14281
+    }
+  ],
+  "control_whitespace_placeholder_invariants": "OK",
+  "executable_modified": false,
+  "file_only": true,
+  "han_kana_source_leak_count": 0,
+  "installed_game_files_modified": false,
+  "process_memory_access": false,
+  "registry_modified": false,
+  "resources": [
+    {
+      "overlay": "workstreams/small_message_tables/public/msgire_ko_0000_0121.v0.1.json",
+      "overlay_sha256": "4DEC23040A1E7B13AE31937545C90D74E783FFBF1140DDF668978C1032AEC4D7",
+      "resource": "MSG_PK/SC/msgire.bin",
+      "structural_empty_ids": [],
+      "total_string_slots": 122,
+      "translated_count": 122,
+      "translation_target_count": 122
+    },
+    {
+      "overlay": "workstreams/small_message_tables/public/msgstf_ko_0000_0007.v0.1.json",
+      "overlay_sha256": "1AFB95F0D7B9F5F5CF23CFF1FCCE08CEC8A42FC5BF3A497AA76E8099F31D8CD4",
+      "resource": "MSG_PK/SC/msgstf.bin",
+      "structural_empty_ids": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "total_string_slots": 20,
+      "translated_count": 8,
+      "translation_target_count": 8
+    }
+  ],
+  "schema": "nobu16.kr.small-message-validation.v1",
+  "shared_common_message_builder_reused": true,
+  "source_checks": {
+    "MSG_PK/SC/msgire.bin": {
+      "display_nonempty_count": 122,
+      "packed_sha256": "F275691D4B583C2A54BB4422F290504D3D27710E1B8CC9E0A4C91E7A49195D96",
+      "raw_sha256": "0FEDF372903B72B32F111CEAE52914E14D4234D6428766A31E4A13CC76DB3F54",
+      "reference_languages": {
+        "EN": {
+          "display_nonempty_count": 122,
+          "packed_sha256": "82B99F96C5DEC0EE7251A9A5A9AF3AD38D8B9C12E4E5282F297FEB1C9DB719D7",
+          "raw_sha256": "271325456E72B511B7991819A97F8725C5EA35790E263FFC7CE35BA1AB0F636C",
+          "total_string_slots": 122
+        },
+        "JP": {
+          "display_nonempty_count": 122,
+          "packed_sha256": "2856E5DDAF36DD170833B306A4C9C9293AB6E0DC55761086BEDDED90772CB040",
+          "raw_sha256": "242CE228115746AA1153CDE617C300754D2F82BCAEC5683C70191A88F0BFE94F",
+          "total_string_slots": 122
+        },
+        "SC": {
+          "display_nonempty_count": 122,
+          "packed_sha256": "F275691D4B583C2A54BB4422F290504D3D27710E1B8CC9E0A4C91E7A49195D96",
+          "raw_sha256": "0FEDF372903B72B32F111CEAE52914E14D4234D6428766A31E4A13CC76DB3F54",
+          "total_string_slots": 122
+        }
+      },
+      "structural_empty_ids": [],
+      "total_string_slots": 122
+    },
+    "MSG_PK/SC/msgstf.bin": {
+      "display_nonempty_count": 8,
+      "packed_sha256": "956B37C34E28E0DB04ABB5F0602A1111560358BF58A3A39CCB45468CC5BE290A",
+      "raw_sha256": "83AE1BCC142286EAEA73327A7670EB77BFD6E6EB4520BCDE0914CBFA3C529B75",
+      "reference_languages": {
+        "EN": {
+          "display_nonempty_count": 8,
+          "packed_sha256": "D666D3B27DACE160E6353D48F0817BB861E1A9E4997EDAE263EF41A5409E64EC",
+          "raw_sha256": "5AA69F346D44C77C3230B1CB3FCB21F6977DC6F286FCC3F3CEEB713CD8544488",
+          "total_string_slots": 20
+        },
+        "JP": {
+          "display_nonempty_count": 8,
+          "packed_sha256": "2138888A6ECB8E49E1C72E60BDD1A18AE577E32C2A72EDC11A813F48F006D96B",
+          "raw_sha256": "6D06572BB5AFDAC041DF50A789FD0405F3B5C7844FA502329C8E4D27C8BE1620",
+          "total_string_slots": 20
+        },
+        "SC": {
+          "display_nonempty_count": 8,
+          "packed_sha256": "956B37C34E28E0DB04ABB5F0602A1111560358BF58A3A39CCB45468CC5BE290A",
+          "raw_sha256": "83AE1BCC142286EAEA73327A7670EB77BFD6E6EB4520BCDE0914CBFA3C529B75",
+          "total_string_slots": 20
+        }
+      },
+      "structural_empty_ids": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "total_string_slots": 20
+    }
+  },
+  "source_text_free_public_overlays": true,
+  "stock_language_alignment": [
+    "SC",
+    "EN",
+    "JP"
+  ],
+  "translated_count": 130,
+  "translation_target_count": 130
+}
