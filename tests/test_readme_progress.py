@@ -15,6 +15,8 @@ EXPECTED_STRING_TARGETS = {
     "MSG_PK/SC/msgbre.bin": (3000, 2217),
     "MSG_PK/SC/msgire.bin": (122, 122),
     "MSG_PK/SC/msgstf.bin": (20, 8),
+    "MSG_PK/SC/msggame.bin": (25598, 16482),
+    "MSG/SC/msggame.bin": (21225, 12268),
     "MSG/SC/strdata.bin": (32311, 26690),
     "MSG/SC/ev_strdata.bin": (17868, 11687),
 }
@@ -32,21 +34,25 @@ class ReadmeProgressTests(unittest.TestCase):
             if resource["kind"] == "strings"
         }
         self.assertEqual(actual, EXPECTED_STRING_TARGETS)
-        self.assertEqual(sum(target for _, target in actual.values()), 83201)
+        self.assertEqual(sum(target for _, target in actual.values()), 111951)
         self.assertEqual(payload["completed_statuses"], ["translated", "reviewed"])
 
-    def test_msggame_record_counts_are_explicit_but_excluded(self):
+    def test_msggame_record_and_literal_counts_are_explicit_and_included(self):
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
         actual = {
-            resource["path"]: resource["record_total"]
+            resource["path"]: (
+                resource["record_total"],
+                resource["total_slots"],
+                resource["translation_target_total"],
+            )
             for resource in payload["resources"]
-            if resource["kind"] == "records"
+            if resource["path"].endswith("msggame.bin")
         }
         self.assertEqual(
             actual,
             {
-                "MSG_PK/SC/msggame.bin": 21581,
-                "MSG/SC/msggame.bin": 19152,
+                "MSG_PK/SC/msggame.bin": (21581, 25598, 16482),
+                "MSG/SC/msggame.bin": (19152, 21225, 12268),
             },
         )
 
