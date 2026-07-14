@@ -32,61 +32,114 @@ TITLE_WORDS = frozenset(("Lady", "Hime"))
 DUMMY_BY_LANGUAGE = {"SC": "dummy", "JP": "ダミー", "EN": "dummy"}
 ALTERNATE_SURNAME_READING_IDS = frozenset((45,))
 MANUAL_OVERRIDES: dict[int, dict[str, Any]] = {
-    # Confirmed name corrections are pinned to every aligned source string so
-    # an id shift or a different game-data revision fails closed instead of
-    # silently applying the Korean name to the wrong officer.
+    # Confirmed name corrections are pinned to the UTF-16LE SHA-256 of every
+    # aligned source string.  This keeps official source text out of the public
+    # repository while an id shift or a different data revision still fails
+    # closed instead of applying the Korean name to the wrong officer.
     162: {
-        "source": {"SC": "安养寺氏种", "JP": "安養寺氏種", "EN": "Ujitane Anyªji"},
+        "source_utf16le_sha256": {
+            "SC": "26D1E882F844754234204C6DB71441E0DA9F993BD10D3B6444CA56ADA25B5C12",
+            "JP": "5CE98E35098A46A20944695CBE20FDC156B0A4B76B9CFC2EAA774DBC341FC2AA",
+            "EN": "290522998EEF511024DF75963C32FC49DB862EBEA6A1DBB1C24D192358800F04",
+        },
         "ko": "안요지 우지타네",
     },
     231: {
-        "source": {"SC": "出云阿国", "JP": "出雲阿国", "EN": "Okuni Izumo"},
+        "source_utf16le_sha256": {
+            "SC": "A0FF66786B28DD9036573078F9BDC05FE2E22E02B7621CABA4C84472FCDF0476",
+            "JP": "7033A719802DD1EAD70BC843F08280A56E831D0DA844A0ED9A2493DC51BEE0E2",
+            "EN": "EFC1A344E48C65359A0694E0452F4E3BFE36C83F88FAD4BFF5A2F6A93F77A4BB",
+        },
         "ko": "이즈모노 오쿠니",
     },
     516: {
-        "source": {"SC": "冈本显逸", "JP": "岡本顕逸", "EN": "Kenitsu Okamoto"},
+        "source_utf16le_sha256": {
+            "SC": "89449A88D79332F46DE12D518C5D2D098A27C16DA63EE0928FD5D61F6CB264C2",
+            "JP": "0FA995CC81406F6D4BE096E01F6861CA2DBBB48D76E4CDD677EB21461E7F593F",
+            "EN": "F4F25527B7D9FA5DBFDD85C2C5BF59E6DA14313424A00301F9FB0C024C4B5F37",
+        },
         "ko": "오카모토 겐이츠",
     },
-    # The EN localization splits 小松 into two pseudo-words ("Ko Matsu").
-    # It is a single historical name, not a surname/given-name pair.
+    # The EN localization splits one mononym into two pseudo-words.  It is a
+    # single historical name, not a surname/given-name pair.
     843: {
-        "source": {"SC": "小松", "JP": "小松", "EN": "Ko Matsu"},
+        "source_utf16le_sha256": {
+            "SC": "47FDCA41A77C5919987B500502B74F21B119B916500EC7ADF1E2DE811AEA5416",
+            "JP": "47FDCA41A77C5919987B500502B74F21B119B916500EC7ADF1E2DE811AEA5416",
+            "EN": "6CDB4AA898158792D423FABF75C5FF358209D13CB4FDFA5064ECD1BC421DC3B9",
+        },
         "ko": "고마츠",
     },
     1179: {
-        "source": {"SC": "藏春院", "JP": "蔵春院", "EN": "Zªshunin"},
+        "source_utf16le_sha256": {
+            "SC": "9A3BCB8FDFCE14A1CD146EEC59BB9BA3775E28E1ABFBE378B9BE43B3D0CDF329",
+            "JP": "2BAF0BAAF691256710659875994B1DE5E43492FE36762AFFD4322E31F1C7C9CD",
+            "EN": "AAA901FA736EDC10D27DFBA239F7C0425CFC1ACE53764F2435E648C3161A0C61",
+        },
         "ko": "조슌인",
     },
     1302: {
-        "source": {"SC": "千千石米格尔", "JP": "千々石ミゲル", "EN": "Migeru Chidiwa"},
+        "source_utf16le_sha256": {
+            "SC": "FD30EDC2A21FFF3B418AF7CF2DA39A7CDCB1783CB7CE946CBA80680BDCC2DAD7",
+            "JP": "F4992B02919615843D21EE0CAE65A8D04B8A686C5DAB2D750E8824F5AF86D519",
+            "EN": "EB8CC352CB68B2933665F46BFD071709A3A52740F154C6CD3964297923C46934",
+        },
         "ko": "치지와 미게루",
     },
     1584: {
-        "source": {"SC": "根来金石斋", "JP": "根来金石斎", "EN": "Kinkokusai Negoro"},
+        "source_utf16le_sha256": {
+            "SC": "4788768F37EC801BD78BBA5FF456A22368FC29D680010B07907E5504BA3B8ED7",
+            "JP": "F66431DDBA42A1692566AC508271CD847126173CBDDEF4A33C8183A6126BF2CB",
+            "EN": "DE958ABDFD7943A6BD249F96F94B293CBEF11BC59E66AA6F7497535B8A1E0B6B",
+        },
         "ko": "네고로 긴세키사이",
     },
     1666: {
-        "source": {"SC": "塙团右卫门", "JP": "塙団右衛門", "EN": "Danemon Ban"},
+        "source_utf16le_sha256": {
+            "SC": "F98518D35CC179D959703DDED0DB5641138F707FEC5D1040A25D37619FE46EFD",
+            "JP": "6EB3CFF727ED9CE45AA57135252369DE9D2282CDEEE9B8E1DB0FE5DBDC193A4E",
+            "EN": "03B0A77882108ED593581B64C7535E541232F1F516A3FB6C837C2BD855431A23",
+        },
         "ko": "반 단에몬",
     },
     1674: {
-        "source": {"SC": "彦鹤", "JP": "彦鶴", "EN": "Hiko Tsuru"},
+        "source_utf16le_sha256": {
+            "SC": "58C18A628C36ADE7E510795355F83F6BC471CA4CDB10C76ECD0CA59CE5C10104",
+            "JP": "0D7A4450FAAD7A66EC08F19ECA3AF69020C30058DE6024747D64F50F4E800F56",
+            "EN": "A2FB974D5B35FA429BF8461C86D49388E0AF863B0F1A8789E58C08DD27917029",
+        },
         "ko": "히코츠루",
     },
     1739: {
-        "source": {"SC": "北条幻庵", "JP": "北条幻庵", "EN": "Genan Hªjª"},
+        "source_utf16le_sha256": {
+            "SC": "931515DB718832607B0736A5F7BC6954B3225924A126FBC7F6D9484ED656107D",
+            "JP": "931515DB718832607B0736A5F7BC6954B3225924A126FBC7F6D9484ED656107D",
+            "EN": "ED98BE49C31E01974BFBA55A50435D0CC4F3EAEBD27650AEDF637D81D7CDA2B5",
+        },
         "ko": "호조 겐안",
     },
     1752: {
-        "source": {"SC": "宝藏院胤荣", "JP": "宝蔵院胤栄", "EN": "Inei Hªzªin"},
+        "source_utf16le_sha256": {
+            "SC": "ADFD31C0C1869881F3B5599DE9A0EFF9A3A55A5D40F811C2B0FC77568F731895",
+            "JP": "CD536F30DA726B430B8CBAF2CEE3D3F5F40D73EB9B6B8A35858D4038AC438A8A",
+            "EN": "FFA2B7B1FC9FAC55A2E964BB471417A04E6EB28946ABE8E86CBD257772741351",
+        },
         "ko": "호조인 인에이",
     },
     1831: {
-        "source": {"SC": "前田玄以", "JP": "前田玄以", "EN": "Geni Maeda"},
+        "source_utf16le_sha256": {
+            "SC": "F11979FD9EF3B7E13134BC34D75EE4D3859EE5EBECFFBFF0E65F6D62FD0D3410",
+            "JP": "F11979FD9EF3B7E13134BC34D75EE4D3859EE5EBECFFBFF0E65F6D62FD0D3410",
+            "EN": "71D412456DF45739A3B7D13281A1F32024E5073B7109E894BAB3D91B7CEDB676",
+        },
         "ko": "마에다 겐이",
     },
     2134: {
-        "source": {"SC": "汤地定时", "JP": "湯地定時", "EN": "Sadatoki Yudi"},
+        "source_utf16le_sha256": {
+            "SC": "E8CF56EE524F987C996A8258A4090068C42BAEA25534346BC980842CB53D905D",
+            "JP": "EBEFA1F7530A01FADF4E5767B88AB09872F4A9A78F0D0D13A9DFE0C6B9434EDA",
+            "EN": "2C2F396EC179218EB6B3EBEEF25293F4FD4C359847782BAB911DB7E348CCC7C0",
+        },
         "ko": "유지 사다토키",
     },
 }
@@ -190,14 +243,30 @@ def pinned_manual_override(
     override = MANUAL_OVERRIDES.get(entry_id)
     if override is None:
         return None
-    expected = override.get("source")
+    expected = override.get("source_utf16le_sha256")
+    languages = ("SC", "JP", "EN")
+    if (
+        not isinstance(expected, dict)
+        or set(expected) != set(languages)
+        or any(
+            not isinstance(expected.get(language), str)
+            or re.fullmatch(r"[0-9A-F]{64}", expected[language]) is None
+            for language in languages
+        )
+    ):
+        raise OfficerNameError(f"manual override source pin is invalid at id {entry_id}")
     actual = {"SC": sc_name, "JP": jp_name, "EN": en_name}
-    if expected != actual:
+    actual_pins = {
+        language: hashlib.sha256(actual[language].encode("utf-16le"))
+        .hexdigest()
+        .upper()
+        for language in languages
+    }
+    if expected != actual_pins:
         mismatched = ", ".join(
             language
-            for language in ("SC", "JP", "EN")
-            if not isinstance(expected, dict)
-            or expected.get(language) != actual[language]
+            for language in languages
+            if expected[language] != actual_pins[language]
         )
         raise OfficerNameError(
             f"manual override source pin differs at id {entry_id}: {mismatched}"

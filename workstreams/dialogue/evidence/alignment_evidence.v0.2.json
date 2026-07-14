@@ -1,0 +1,5053 @@
+{
+  "alignment_basis": [
+    "same_resource_role",
+    "same_17910_entry_count",
+    "same_numeric_string_ids",
+    "manual_semantic_crosscheck_of_selected_entries",
+    "event_boundaries_crosschecked_in_sc_jp_en"
+  ],
+  "batch_id": "msgev_event_continuation_3230_3308.v0.2",
+  "boundary_anchors": [
+    {
+      "hashes": {
+        "EN": "788974FB576ACF3D966C0452415FF98DA04423F6830D560F55F93FBF5AB42044",
+        "JP": "2B0427732C7361D1B480EC9EFC4CB7D55C9A7857DD7E9329FE1C997184E6D613",
+        "SC": "E93E08905057A89115F8842AF495953DDA6311AC1C91419F7A88354F30047D63"
+      },
+      "id": 3229,
+      "role": "previous_batch_last_entry_excluded"
+    },
+    {
+      "hashes": {
+        "EN": "102688717C18A24F13277E26B24C3E74334B590CE3488667A8C5DF8434C33D34",
+        "JP": "FE21DD2E7546D735E839020888CA1BC2D11302F35D0173F9ED1681D9570A081C",
+        "SC": "91F86DAB62A617DF6278B3ECD2C47659FAFB12AA8649F05BA3714375F7A0A45F"
+      },
+      "id": 3230,
+      "role": "first_selected_entry"
+    },
+    {
+      "hashes": {
+        "EN": "7799167DB904E6EE762E3E1AAA12D3C24D9120737E0394CFD370B88F20D21B7B",
+        "JP": "86AE9CCEA7AAB04F5508B1BCC07F42332F36D4A6916D032001FF2D198C0E8FD4",
+        "SC": "71BFD5623BBDA49F1028AEE75646C6AA01821DF6B18F4E5DD20CBF9360D15338"
+      },
+      "id": 3244,
+      "role": "first_event_last_entry"
+    },
+    {
+      "hashes": {
+        "EN": "5577D6AB760871E4C17AB2411A5FE4D3E2F62E21ABBDDB7C0FABB189861FFDB9",
+        "JP": "AFB73E5B6AA3C0077E9065E05CC070425E0D0990D83968E9104EBF68F502FF0E",
+        "SC": "07178AA9EA8DC094B60F5E50361343C0ADE02756A67233C39747BE3A6A810D09"
+      },
+      "id": 3245,
+      "role": "second_event_first_entry"
+    },
+    {
+      "hashes": {
+        "EN": "2BB20454A47F0399AC5F847B74A5ADBA8E00768CF7A507E280EFA5BAFD670E2F",
+        "JP": "F3A815B7252521CA2A5539CF5CCA70AF840796A71308B6DB151B2CE9F9BAA4BB",
+        "SC": "6DCA2B31B8D25AC0F04F942F148D2411C85BE1055847008CD73F045A0D10B46D"
+      },
+      "id": 3260,
+      "role": "second_event_last_entry"
+    },
+    {
+      "hashes": {
+        "EN": "0C3A20E40D0F57F2496A9EB0065B552DCE59F1F77499DD90179043DEABF4C0A1",
+        "JP": "96E5852B1C2065B2AA7F9DF765AF408F8A1C8463ECC1023934405804125F1477",
+        "SC": "E09E6ECCFBC6BD52D0E703A358EA68BB793F8A4F41FA32FF4B2A2198D3B14281"
+      },
+      "id": 3261,
+      "role": "third_event_first_entry"
+    },
+    {
+      "hashes": {
+        "EN": "2AFF00AC9973D4E73EFC28041AF1C794D62999233749829C81BF62039B70E2B7",
+        "JP": "25908BFCDD636AC4106BFEACF28851933A3600A76F1816F9906EF9E9A72E336B",
+        "SC": "0B8863734F38220F4BB9A9FF8152C328F9A67EDBB4ACC22D26C9D128CFFBCB6B"
+      },
+      "id": 3276,
+      "role": "third_event_last_entry"
+    },
+    {
+      "hashes": {
+        "EN": "17DEFE45C18F46EC82243A8F23106FB2B22564014DF1D6F758B2B22579C54453",
+        "JP": "C3F0362A6ED7646A2B60FFFF97ADFC592FCAAC7F159674C76DF345B242E70789",
+        "SC": "827C30CED92044331CC48B1B214A13C18943FC5EAF283FE301321EEDC6306687"
+      },
+      "id": 3277,
+      "role": "fourth_event_first_entry"
+    },
+    {
+      "hashes": {
+        "EN": "CB256343A46F3B0E23BE1C53E74596855A45C27FA03F1513168EB4E2A68718EA",
+        "JP": "6303793DE78F8A079D613A4F27BCFF95623E2BD43517327C0B433E4E59783F57",
+        "SC": "BE94CFCB46CBFCA094EB45D412833E26C4C8F282F20AA995E58380B48CCDE0ED"
+      },
+      "id": 3286,
+      "role": "fourth_event_last_entry"
+    },
+    {
+      "hashes": {
+        "EN": "87AE9B3722938C335B8102E6F6531ED969B90BD530CC4190EDE179D2E579592F",
+        "JP": "D5DFBDB54EA3F99DC605D43CDF431400B1ED71D6E0D80B9B2D02E4F8CA65DFBF",
+        "SC": "68E3E2320486B996AAFBDA622014F61D4EFDB63484D3B795279485FD7FE31C60"
+      },
+      "id": 3287,
+      "role": "fifth_event_first_entry"
+    },
+    {
+      "hashes": {
+        "EN": "3332FE484C194764D0A1F1F5F3EC2ABE7F7EACFC7152AD73FA64E472B35C1917",
+        "JP": "509912C5FEFC87EEA06C6B5E256DEA0A123A0ED7D4BD90D773374E2C6FA50082",
+        "SC": "8B423B429D891F71D31D9BC4F61827D3F6153DC19649CCD134D67F91B99D9E35"
+      },
+      "id": 3308,
+      "role": "last_selected_entry"
+    },
+    {
+      "hashes": {
+        "EN": "1ADF2210FE0E6BBA9A17DBC891A42803787522978EF620C91213652C52719878",
+        "JP": "1ADF2210FE0E6BBA9A17DBC891A42803787522978EF620C91213652C52719878",
+        "SC": "1ADF2210FE0E6BBA9A17DBC891A42803787522978EF620C91213652C52719878"
+      },
+      "id": 3309,
+      "role": "next_event_key_first_entry_excluded"
+    }
+  ],
+  "contains_commercial_source_text": false,
+  "entries": [
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3230,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "102688717C18A24F13277E26B24C3E74334B590CE3488667A8C5DF8434C33D34"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FE21DD2E7546D735E839020888CA1BC2D11302F35D0173F9ED1681D9570A081C"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "91F86DAB62A617DF6278B3ECD2C47659FAFB12AA8649F05BA3714375F7A0A45F"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3231,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "978E8C5CC3ACBDEE840D5E6F523D3BC8B6AAB621ADDDB45C24688925769F155C"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "93077864EAF725A98DF3437B520F72147F2FBD7BB934F5BC5F7C6CF4A2C73890"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BB443CD4B889C8857A1D773F84BF57930CEAECB3F3158C9263555F56982269FE"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3232,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3332BB9454DD435E1CEB6C9DC186460C870485D02E1890D680E3B5E0B384C135"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DEFBB3B3C3EE467FF19AD467BA630AB7099A81970EB15BA2F13CBA3B2D6794B1"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4E4A42C510C0769DBF56DD67B9AACB3CC3394FBF7076EE15090132D5B3867D28"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3233,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "08BDF5BC52E3DE3D4229392FCE93B92FB34C4A472B98B9A6C0C39E286181B91B"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B50C8043FB650185EA8A86EB1C17417F4E464172BD72FB5D653B59C07B6AA7D2"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "575E6F1CB9AAF323C84A61EC25F76ACD3F2774FCD0FFB3203200746E57E2F8A2"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3234,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8BE09989BF2FB4CCA4B834818C91E63DF93D0C7E6A35B9144945EDE6719C1FE2"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7C4BE6E0DF684C4E9F24517F67F5868CE92F2DE5F6B140D688FB2D9315756362"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "EAE0596CDD9A8F1B017CBBBEC2795AC398156FC092F92742AE9910E6AADFF666"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3235,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "374E24917AA9FE82BC9073A75C12FC6AEB2281A4D221FFF98B59AD3EBBC19B38"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "737B64D1B24561774AF35F79A46306F5FD5CD75D8C8F6B8AADAB6B3A804B0D12"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "10055CBE60C1F0BEC019311556AF3018DA53F785DDF4519281E88CEF58A3F25A"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3236,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5B3455D96620760C5E96F366A231E326737A144D914E502B53A74D2A3F4B9BDE"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "75F4C509E4DB503D2EF307A9BC1C26D9318A95F8FC2E67706B36431078F4FB0C"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FD315267316ADF21F957296256A45AB2B7429DAEC47C1611F33FF48C80842BCF"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3237,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "ED8A7CA32A2253D8F040AAFDC11E2D083A2DA3980FDF685076E294A0EE67DDE8"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "91566A7E99E4152B388991DE4A5F0CA5D933754DF8906CA68F08DCCA2AA023F4"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "70F2A064EBA63D0C049D0801CB35EE2F766A704141B88FC2FB51DC75DFA18C86"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3238,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "720E1868EDC2C3597DF7FB5FBF60241C25A27535D7EE9315F976217208A17B1E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "08A81A7CC1640B7BA922830E95B10970E525556D87CDD7C7F7E7A29A1563E7B8"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6366590F25ACCF875864104387A75D4D22BFCC4A3AC971CDC19A6DD3D31334B7"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3239,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8539EDC1A5824BB43B8AFF0A91F8F40B2C029E8857588D6D46E00F593894EF0E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "74965605C205192051E5F6CD16C31583222C1FFF324EA2DA0027C0E539ED101C"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8F6E0A67B7938D16282D68802FD17C5AE629306BC3FD61A4E32D2CD76C6ECAC5"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3240,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E80E34B63B8C2A3874BE5E22CB2328FAC31B6585A88EBB27E2766F1C465A58D0"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FEAB245AABEFF82B88BDD5F2160FB5176F0DC0FEBA1F183CDE59709390508F5B"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F6A3180DB6C1008F1F61DB01890938715BB025A7EBAE5AB81ADDCECBF37361C4"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3241,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9DA6BCD244C5EDB7100FDF46C860AFFC4EE37172E0D8E90460B0366035AFA5B3"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9EF5324932EE807E1114577FF38503C536179B767BCAA6B0B5A9850ECC06106E"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2A19F33BFE2E5B94AA790ED8F7CD663EDC47557FB31C811A495144A16FEAA714"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3242,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FC2D9E0D247E46CDC3DBF40BB9A2CBE9399B5C173883F2F44235514FB7706A88"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4C00C9E37F24BF159211B0E9F8CAA2ED74F7CD7280CA317E305E9509EE3D41F3"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5A41B128AC4F53438D97D152D414603552BD4BDD7D947D8541A6BFADC3368487"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3243,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C2A05C2FCEAE2D8D7543DD73566B1BD46571503D9558B49DE3EC778FDCA137DD"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E39A5FFE941CAB560411553000B8D62A12458FD3B7A9CFBCD20B47819ED6DB24"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "858F63195BDD3AE6542A08D10391994B64A340B7FD3003918497D1E41F968C6B"
+        }
+      }
+    },
+    {
+      "event_id": "retreat_from_kanegasaki",
+      "id": 3244,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7799167DB904E6EE762E3E1AAA12D3C24D9120737E0394CFD370B88F20D21B7B"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "86AE9CCEA7AAB04F5508B1BCC07F42332F36D4A6916D032001FF2D198C0E8FD4"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "71BFD5623BBDA49F1028AEE75646C6AA01821DF6B18F4E5DD20CBF9360D15338"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3245,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5577D6AB760871E4C17AB2411A5FE4D3E2F62E21ABBDDB7C0FABB189861FFDB9"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AFB73E5B6AA3C0077E9065E05CC070425E0D0990D83968E9104EBF68F502FF0E"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "07178AA9EA8DC094B60F5E50361343C0ADE02756A67233C39747BE3A6A810D09"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3246,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "13F64FC5DF711190E5CA9B31DCEF352949C1266BF07244D0CA5B9E9EB8F2E632"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2D1FF5ED6C50FB96D46989D7ACC4F18EAED9E448E6A1B1D2A034B2EE40DEB970"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "349E5FA471A01C5B038DA336A078B46F5C5885A2D22F55F6186B44FC10BF2C75"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3247,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39B9EB350D116238647B7AFDC3634AC2AB6976E05608080863F61094909C760A"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7FADD2B11D054A429727C146F7AB16B2B8D926FA5AAD8CE215C9153D14C5598C"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FFC5BF780499B8113C4C1A7253E5937D4AE383F9E710E00D94E44D83D2239FF3"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3248,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A6119B234BF2FEDB3C1619D60F3BE619684A866B9F3E8B1FE4524E4FBC3C4514"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1FE6B4201D0B864E5DD4ADAEB3CAB34F9ADD504DB040BC50244A8D55522B4D03"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "003F216E25B32BF64FDA987108DD44EF93A869229355CF92438ADE50B018D52C"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3249,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BEBF142D663BBFEF206D7779223256D1F8A5C0798BDF68B1316D6A472EE457CD"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "EB592648F40E87B3FB70750001BD6D5296FD1CD5BCEFC5B523627D8785C9E433"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0F0F2D1CE67665AA118403999CAC2303CDE3B7FB4B9085DB017DDA2295E7BA42"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3250,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C790138E58004EC304E961B4AF4CE645EDB45A7B1E7D1D40E96C19C3AFAD923E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2B4231FAA34FAB8AA15BDE9F301BACDE6CBA18D3EA1566B9CC637C2919D5C81A"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DF9CBDE0B40854BDA051A34356191FFC1A754302FA4724BE724995333CCBF854"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3251,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "65970416B4DD70ABC61A658C3D0D27A07BD0BFEB5166FDDF8628B0C012B54C1B"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F180BE67CA240F3A3659CCE8AED4E1A882537342F5EEF850217C030C0E27B8EF"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CE92536E4118A0236BF4CB0DAACA11858F2A3B0F1BF41A667EC05CE3E8FB430A"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3252,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3FBFEDA3C08E5B68107407A4DFC301712D449B7A3F567D13EE488F1D6F558A98"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "489276F6D3415FAA90DC7D0F9B38281AF7395DD3706E51792DBF92A85F7D4F88"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C6565ABCE0A95CD6D3E898552C1693136279483C7DB0D45211D588CE3468D134"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3253,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5DB86AB285D6FD02051B1893D9782589FE52E44BED5AF5E8A32771E66CF25646"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C855E2F046101D1C3CDF89D3EEF383B284106AA7B56743EECD63E87B11F641FB"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E633D9FF96EBCCD00CDB032181C71B8F39DBCE3418D423D37CC4EB65A4BB9373"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3254,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "ABD18466145D2D8CD2E4ED42B499B6ABE656679A0E29283680D9220F48B8BE69"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "302A883677801AF3986B2130F066029DE40A3DAC14846EB0CB65D150573583A1"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "393AC07C559D7D207BDCF4149B57FD9B368336558BAEC106A0E7C5D0AACAAF24"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3255,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "74F1B6448D5B1736799D80F92C7DDC62711411BA610D609C6D6B046AEFAB6BD8"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CEDD6F916BF0208A5D17C592155449BDCF0A34B2FC919FF071ADFA869E14DB25"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9697BB3A78248A8FD072AC11A690E4BA94175E71678A64FCFC5B0715B483D0B1"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3256,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3ADF05D141204C8B08AC8B5246F85523E5F127869F6351A3677EB134221C42AF"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "755E95F6A806202F0D9B845ECBC8EFDC1B6C794C5CDE6D13299C4952B607EF47"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "20125301641A2A3E194FD934809C1C9E34593441D86C7AF07F5E53E6BB9A4B34"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3257,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3132A7570DDE39394CDD6662AAD87D9367BE9CA42428E01F56F690107FFB3F6A"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AEA39D2A37C825F0080099ED12692FE212669C1AA228FD6CCA0EFCFD9071CE76"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0373BD87E6A5B25F2A69894471249DB2FEBEFAED3729A82BBBEE82F3ED4EF3CE"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3258,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B14FF14ED7E5564BC84CCA93DA1F808F78DD408901A97DBCF2939EA6032953AD"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "59F1E47657003F40F98954DBCCA01F3A98C98F0971F27A7BFB216EC5C972433B"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "497CB32AFA650F6B385ECD8534DE5014D71245712CD58B8C78422AF0E6C5200E"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3259,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7E5F35F2D6D0912C87012500F7B113C6C1CEA3BA631CBC8F449D67B2A3DEF85E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "149777C63B11A44C3261CC9BBCEA563C5B309754B64A6BFD0A586D4CDC879D5F"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "75F58C6474223A205A05742B90CFA87005424E72D48959B702ED07A1A7F639A4"
+        }
+      }
+    },
+    {
+      "event_id": "burning_of_mount_hiei",
+      "id": 3260,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2BB20454A47F0399AC5F847B74A5ADBA8E00768CF7A507E280EFA5BAFD670E2F"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F3A815B7252521CA2A5539CF5CCA70AF840796A71308B6DB151B2CE9F9BAA4BB"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6DCA2B31B8D25AC0F04F942F148D2411C85BE1055847008CD73F045A0D10B46D"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3261,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0C3A20E40D0F57F2496A9EB0065B552DCE59F1F77499DD90179043DEABF4C0A1"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "96E5852B1C2065B2AA7F9DF765AF408F8A1C8463ECC1023934405804125F1477"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E09E6ECCFBC6BD52D0E703A358EA68BB793F8A4F41FA32FF4B2A2198D3B14281"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3262,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "91BD4EDA6B056A9F0140C1982D68A5846902C55BC42DCC1AD06E896B077458EC"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "37322D0A73F34FDCEB04A89CC9BC18B714A8DBD429EA66129DE409F52EC82A15"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E748B78D812404A745C6BAE5588155E3C6511A20AE6B205B026FAFE6D9A4340F"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3263,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8D5C049E99B6B5FF321581B75BFE64CC8C8703179BC6936528C2D091E0E34D2C"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7DF96E2032D399E1D005640EAA932654DD5504D177D0658B2A5F169C01714C36"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "08CC970B3328C313F46A93E41FD7D26BE4B8D340F6C80EBF00BC43BC69DC109B"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3264,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DD20ADF3B1D690B2C00CBE6CF032720A7278BB4541A07D777A3F5CD5647D940F"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B836B7D942B4486C34A790A7975E2E0021F8BA08BDB49188F673A9B4127176C4"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "60846D84FF44AB7B26825841635BCF357892E4250D023088C6188D6D76548BA5"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3265,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F8BD65C00B9BB3A432F777066C2A03DF4F245C2ED437A34A4CBD3DBE7483B6AD"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2EC1DEAA86FB952F8FCACA5B5487DDB5C5494130BB2FA535910BB1BB6629A0AC"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5D6F1926E8D52B5CC2CE8007D351828C5C0676FF14FD14B08F46ADB9884009F5"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3266,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "484B4BEA16DBF7496B70A90D0911C0D16F9254A1206A2B47DA908444FD79F7F8"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BEBB68F45662B49F2A97BC9D1D1F4D3F0E60C5DB37763918F3A02094C68D5757"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5BA60CD22FD18C716FAB1083F7074A24F906F18A1453C784736DEF5013F7F341"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3267,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "88B2FA1D3316DB35BD57182E621389A9E99CEB396A70CBF59784BD949BEA4F53"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A6052B509F7244E2E1B5C9D5DF8ED5E071CA840781F34E3E62D3ED8C1FC3FD13"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "001ED2F15C3B98778DA22ED2C04C505E7185A77BB493561F207F30BB07D41B09"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3268,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B5EE909F22BAB74500DFE123A9FEFF7EE169E7C6B5CD457C684482D0C1DE52FE"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "25F81466B3B53857F1129BD9F371EB449862DEFB05F913D9726C5387927CFCA5"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1014BC0D7A06596842CDB5A16068E94B399B75E644FF728B2416C9BD032E37E9"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3269,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A87D921B2D882B828DBB8207060401FBB168C76876557DC2FFF635198A991823"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "817E599276EDE1210F2F514158359917545B4AA006357184731FF48663D3DD48"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCB",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F9510F7A5387A4EE80A190D24A155C3F3F2FBBECE3BF38E670229C2EC48C58BA"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3270,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "388BE854B5BCDE5E3BC386DAD1B3A9FB931608849D712041D796737AD00C81DF"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FC707C4F398E2AB6FFF6D107DE6A1D734F6F23AB5DE1E5252B8ED89FA0D8E490"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D78291E891347631B5AD1F6EAD76D5B49DEB85E041A78C203AC7B0BB362ACEC8"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3271,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A0679E1EFCA9F341DF46335E1D3B07E61131437F868F545F39F73EB19DA7D5A1"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "236718D8A549AFFC57993862F56D742B885F14AB18910B62B494A09FD61BE5B0"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9C605BE45C49B11087638EC6FA5055E6444A452EE6A5D7C437CD66E4C1F4920A"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3272,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5EFEBDEE975DE2C625CEF6BE902424A978D8C4C0384EA45F22F83F6F0A6438C3"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F2702107FA5FD697391741DD18952958FE87EB0A59B5BB5516F0B1D1845F8422"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2ED2571E51C445F9C6253254DECD7F6C8D4965E2AB7E461A979DF6F9387D0FA9"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3273,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7FADF2120EE04646BC6890C13FB042DCB7C22781C1D4CC8271836DCEE0887CBE"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "68B3CEC546D9B3225D1156A05D90DB69B642FA8DBFC2A4E637F85CB96C53B7A9"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FA22E2DB24B85B756E15AF650E3CE65AE46DBC447AE083F6A1B1E315233DF733"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3274,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "27AAB79A1F2D18047CB934196650296D3BE25970C993D1EEC82ED68CCD818B23"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "11615879A863ABF07ED9067221456A2DDC3DEC0E127F10A97BE679510A38BB96"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7053F77CE60F033A59110C72B8E47970838FB87D331C53D49A86ADFEF28D3599"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3275,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1491DE020C23221DC75EF09EDC5B871303CA60E050B860DDF50F45231BF0060F"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "971438DA825BBE218A4968549D68F7E479255882DE6E1663BC04169853CFFAD1"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "06D038485175E274BEABC7B9664F36A3593484375E1B49DA541C5056CF70A71D"
+        }
+      }
+    },
+    {
+      "event_id": "battle_of_mikatagahara",
+      "id": 3276,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2AFF00AC9973D4E73EFC28041AF1C794D62999233749829C81BF62039B70E2B7"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "25908BFCDD636AC4106BFEACF28851933A3600A76F1816F9906EF9E9A72E336B"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0B8863734F38220F4BB9A9FF8152C328F9A67EDBB4ACC22D26C9D128CFFBCB6B"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3277,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "17DEFE45C18F46EC82243A8F23106FB2B22564014DF1D6F758B2B22579C54453"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C3F0362A6ED7646A2B60FFFF97ADFC592FCAAC7F159674C76DF345B242E70789"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "827C30CED92044331CC48B1B214A13C18943FC5EAF283FE301321EEDC6306687"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3278,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E678F04794BD14FEC77DDCC413A3FD677D8B93A22C25E0CF6822336A255991FB"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "60FA2E6AAB0FE45E8BCDD20CDD493DCF9BC6275B5E4E506B328846E0DFCE1DC8"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "42B7A81F5E93807189F829E04C0B445989CED26793C29D5CEB69929DAE15B037"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3279,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8F825BECF7454456FC0A3E49A2BF621A75BECA07ACAEC2B6A3ECBBD83CEE5104"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E8A63B81D03CEAB3BD820A95BB262D814D8D4D7154113EE1BD7FCE1CF2721CCC"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "17B80D362C093F492F65610A0BF2CDA6AD0B0B7719776F6D861C91CA5581AA9A"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3280,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "93DC77CA02048C1ADE979960D80311678B86E794F5CCE91B7AAC55466A3F6C43"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "50F3DAAEB6DA9B973D8A4254E0DE6C299E314B3EFE621DACEC0436B3A8E3ADA6"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4A05DE4C0CE4193ED7AE2666206BF22901D247462D00EDB5D875F1D9CD699800"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3281,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "74D1DDFFB9064E4E11A3F151198F08A9B8CCEBA479BC4DF59E00875257AB17A0"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0FD4DBF932A28F40CDB98908A043A7689EEF5320B1F5D05B458ED26316531C91"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C83FA8C31E1CFD162F14C226CD9C99DDB91594C210377C4383FBC14B4AF61BA3"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3282,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6B2FB14A1130E9DCFDEA6C11B3366C73012517E81BD8112A14F15D5C68CB2CE7"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "292912E6B6809BE808F781230DE91CEF9C538BB6F06EF3A910220C387ABBAA13"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "31EF21BB91C2D399969DFB7442847CD0D413D99665EC0039998CAC23E88F9D6B"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3283,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "644F00B409A46576BA06E24EE16E181D74AFAA279CF5DEAE42AA3BEA804AB757"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E1F780EADAA9A849EEF36B5D130CADA8603F2051902321FABCE7976B9A7B7244"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0EBBFA33412002601051AC2E09763776F5580AE1EEDB42CEC0843955CF4A2D9E"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3284,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C0BC21A23B8C270BC4A5C83A1EE35F722EDE1B399C7D552884216637338F2E3C"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D9E4A547EDC473A0B92CC96B3FCA0F846A332D208BA001B81EB2CB640FC14548"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2C9033E6DB356A46532A1A5D5C26AAECAFB0DFA30CE12D296D407D4C680FC739"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3285,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "90DB64FD1644B268685AB81B3A1FB57F4260E90627C0870CE237C891997A9415"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FBAA2D2F32602A20402B52147CBB87F73A7E6C4A497F834886AC2A2DA62F57D2"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C2F09D462927DE01C631460C7652F7AF2F3002C121E59CD39CACAA9BD936300E"
+        }
+      }
+    },
+    {
+      "event_id": "xavier_arrives_in_japan",
+      "id": 3286,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CB256343A46F3B0E23BE1C53E74596855A45C27FA03F1513168EB4E2A68718EA"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6303793DE78F8A079D613A4F27BCFF95623E2BD43517327C0B433E4E59783F57"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BE94CFCB46CBFCA094EB45D412833E26C4C8F282F20AA995E58380B48CCDE0ED"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3287,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "87AE9B3722938C335B8102E6F6531ED969B90BD530CC4190EDE179D2E579592F"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D5DFBDB54EA3F99DC605D43CDF431400B1ED71D6E0D80B9B2D02E4F8CA65DFBF"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "68E3E2320486B996AAFBDA622014F61D4EFDB63484D3B795279485FD7FE31C60"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3288,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AF4547686B4F3DB6DF0879615039DD82C6EF861D35332851057EE04856B4294B"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F1EC7C89217B471A8B3830167084B3CB49AF4B78AD702BB3605DFE423D90BED1"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D0DE76E28DA145158ACB41DF2B73B8F10390EBF320ACAA9668E291A5E80657FE"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3289,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "769081960467A72AFCCA194288F45952668C2E087E1C0521CF58EA483E2C81BF"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "BBE473BB318C79B998CBBB13A784B3035AE235A890C89D347FB2465E30C0516E"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "92304A532E1260E383EBE12716B247414FC964CAE10732A6ED2432F4A7777838"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3290,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39BF643F32CE0D8E056F6DBB66300C51B77320D33C9CFF962A236F468D738B76"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "994ECC97A216FBD62FF3A43206CDC043976B7512B0C6700E15D74F13C409CD97"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C79AAD71E35449BF17568D3B6E9EEBC0849579FC25F1DE3709EC01610660A40C"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3291,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "76848704A126D8F892EE2E8FBC201EF58D8CC9E353E1FBA5D4D7709E7FE94702"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "87D8A5C26B42C5D8AF9D8744DBCAF6936A37E66AFE7C7E53CD0EC517989DE965"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "884443E05F09F95E972F949FA749B92845E9A7B830114C2B9BB599F0D6F21757"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3292,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "170C3A87EF598596E0911ED02AC6E4C95863973CAEDCABD220B0610F6197011E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "DA72F7E5B63858F0EB554CAA41B7063B14F9E6D6EA545F638556DDF585D509D1"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4FE4ABA9B987B041D9DB6A986746843123C94B04948A50EB1FD9F93BDAA77BB3"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3293,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B6B217BBF1AF40DCF3D6AECB80C94E62E6253268C4FA6EB0400C5DC2C5D844F8"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7AE35029C1ABB4050E8EFCFA2045BBBC9124FF24829165329A5A92923B2ABF11"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9FBC87CF6B9EC9A731C9E04BC0B6EE150C228CA47E6C09A0297733766D5FCC7A"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3294,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "529B493680975E43D772153206044441A602DCD9F57FA45E0DF7F4949956628F"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2C63B0E0AFA9B0AD36F89F83C1DEF997DB560AFC07E0714990B425B7AB814334"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A68465193B54501A5653E980D2030CBB4BF171B37A191519B1DFC2C9140FF21B"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3295,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "95200B203CC54D0E8BC267CC88EB5AA6B027F0C71E786350B81B52443BDC70E9"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "181885C799E8DACB11D453140D1440258A700702EDC6AB5E4E28F197CAD39F29"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "081666DB121EC22F89F20793657B0EB078244238D24944D85A644F69659B5BD7"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3296,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "38751D9C5242E04CAFC24F6CB9F52F2285AB1C1CC2FCF14026B80E337F59F80A"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3E54C467C1F84CC0D41C1344C57101F0D178BCB79A411F37666D1909BAEBE030"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8AF8B22EB2A141E926CB4F361DCB50BBBB02BFAB7641E162D7B12EA1AB18F6AE"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3297,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CDDDA6B064F142411BB97B471BBA8B1AE94A677D2DA7359DFD294235BB5325BB"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C744998BE382F6571A2861CBEBE8F1C6A37F4857CFB56C775F1BC0E2FBEA111A"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "27BAC936DA5F0B838323BA29D044359F7D2DC0DFCCC17A292BA208648B53DA23"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3298,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "973AB154602F2025B0489B075B58E72D1EABC94535CD32741C5322FA8423997A"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5EE340A3D1C0A8679D384177C2925929985F196B02D91097AC446BA8C280B2DC"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C44AA04F416273CD7E2D86A26090F9F601E18AC86D01BFBDB2F527B466D688F0"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3299,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F47349DEA570591428371E5F75A623D2607F5FDD75A63B88F26A7438EAE1468A"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "089FF73FF5AAD8D4790297707D9E8BFFCF74EC3D12894F24C893B769AEA3E1F3"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F440BFA9919F7D0DD2E4C7C99F1102A2EB10690755AD4E35471188C33C33CF20"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3300,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "86F964D0E08F099F3D94B5CCA447C4FC4E63E0DCD9C629049128617B01AC1F7B"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9B7F67FA3553E65B62D111CEF35653C714CC2B24E0D3BA29DE64E2FF0D2F4A66"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C97EF67ACEBC34900E9DBBC3303E0216474731D653B21E2D8641FE3B349C689B"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3301,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F196596FAC1B854B56694A113F2C40C91842327CD80E0EC987C5B851D49AFE65"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7FCCC9FF57183E61274DE0C2DFEF30A443AC4A276ED86C58A093F2278F730C73"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "77E27772576C202927D75C617A6BA193EEE610468C4DD8A3CDBCB4C33486F4D7"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3302,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "35900ED4EF0ABCF95FBA194192FDB2694A37373AC2AC0047548B84CC33FEBF01"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F79860A8E0614EB945E6CEF4FAE510BBEBC9AB39A70B8D86A0353C7AD63DD69B"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3B5BF0D717AE07E55E1855E1B0C621BD37FD3CA61777B55615732D18B4F35F9C"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3303,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "331A47F7D3AE0054ECCA2573E962F9912BDC2F12E60C2FA84F26C1B8F818130E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "493639A2A761B9A1DFB0E1B853F388D6E1193A57AD93A10E5811C7B99F0CFD85"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6141F872D07F1FF8C368E2043EACABCF22579B87CB2DC510200A1E3DB328F81E"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3304,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "00419DFBE08082A0FA359D4A46B0A1F1A21982A0A2A9BC17F087482760BAFF5B"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F2BBBB0CC70CF4EA529A7277DF6DA560131DAC94861CD573561CDF44B3958360"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "03895B60B5C6E6F6F7A0B14A87F142068002025840B6D2D52D88790C2A9E86F6"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3305,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "19EC52FED4A055787ACF88472CF955934590D1FDF32A69DE26EB1892406E8E1E"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7B5B650517222B8ADA7594F0876EF77B1EBB367594E118975BF56906BE04FBA2"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B69A3AECBAE276AE91D194605F2C72198C98339FC403973FE88A29CC0D9814D7"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3306,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B7B8C373B2552B6B62466956705357DA656BC9FCC8C4708F54230A4FC1B0E3FD"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "50F727D1C7F91253F3E3AC335479839F76F477837293752230399B55645DDEC5"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "516839D87F931F29D4BA24906D1C525AEDC7136CF7D806A56CA3790D762F437B"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3307,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "EF85919FBB2EBC70D2863DBABC0CE8623C172312E6DD214D158343E64000E5DE"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A1A9539C054A0EF9FA5C0D50C8A6F6303D44B361A1571B03273CF4838BBB3AA6"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ",
+              "\u001bCC",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "01D0D4A941DEAE0E29F669CC27740818BE0272D0B2FA312545F5B14EA2A35CFC"
+        }
+      }
+    },
+    {
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "id": 3308,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3332FE484C194764D0A1F1F5F3EC2ABE7F7EACFC7152AD73FA64E472B35C1917"
+        },
+        "JP": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "509912C5FEFC87EEA06C6B5E256DEA0A123A0ED7D4BD90D773374E2C6FA50082"
+        },
+        "SC": {
+          "structure": {
+            "control_count": 0,
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [
+              "\n",
+              "\n"
+            ],
+            "printf": [],
+            "pua": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8B423B429D891F71D31D9BC4F61827D3F6153DC19649CCD134D67F91B99D9E35"
+        }
+      }
+    }
+  ],
+  "entry_count": 79,
+  "event_ranges": [
+    {
+      "end_id": 3244,
+      "event_id": "retreat_from_kanegasaki",
+      "start_id": 3230,
+      "title_ko": "가네가사키 퇴각"
+    },
+    {
+      "end_id": 3260,
+      "event_id": "burning_of_mount_hiei",
+      "start_id": 3245,
+      "title_ko": "히에이산 소각"
+    },
+    {
+      "end_id": 3276,
+      "event_id": "battle_of_mikatagahara",
+      "start_id": 3261,
+      "title_ko": "미카타가하라 전투"
+    },
+    {
+      "end_id": 3286,
+      "event_id": "xavier_arrives_in_japan",
+      "start_id": 3277,
+      "title_ko": "프란치스코 하비에르의 일본 도래"
+    },
+    {
+      "end_id": 3308,
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "start_id": 3287,
+      "title_ko": "기후와 천하포무 명명"
+    }
+  ],
+  "resource": "msgev",
+  "schema": "nobu16.kr.event-dialogue-alignment-evidence.v1",
+  "source_files": {
+    "EN": {
+      "logical_path": "MSG_PK/EN/msgev.bin",
+      "packed_sha256": "95CDB15F1AED529C95ADDE784A750059E90060A44DF1EA208EB4A56E2F685640",
+      "raw_sha256": "806A34770ABA15550033E0B2D51CFA849E3C9367B61BC0BA05C37B87F13475EF",
+      "raw_size": 1868232,
+      "size": 758160,
+      "string_count": 17910
+    },
+    "JP": {
+      "logical_path": "MSG_PK/JP/msgev.bin",
+      "packed_sha256": "03426B59D32EB628021DE43BC02FF82B56B04D97C25CE37F735630EA7C4E2002",
+      "raw_sha256": "4A916CA6837C4F8FC2D8B6254ECBEF26339558D2DDFEBF5A1637F8426F5918DE",
+      "raw_size": 890428,
+      "size": 555784,
+      "string_count": 17910
+    },
+    "SC": {
+      "logical_path": "MSG_PK/SC/msgev.bin",
+      "packed_sha256": "7221A53E6E5CF493A3FAFFFCE35280E8147898120EEC59E460A2429AA265C1F9",
+      "raw_sha256": "99E0338A64FF4140AD6E27503B1BF138AC44F5B68F01973ED61D0C949619DC91",
+      "raw_size": 750584,
+      "size": 522918,
+      "string_count": 17910
+    }
+  }
+}

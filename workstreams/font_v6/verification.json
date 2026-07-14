@@ -1,0 +1,180 @@
+{
+  "corpus": {
+    "character_count": 700,
+    "excluded_font_token_count": 20,
+    "font_v5_added_hangul_count": 45,
+    "font_v5_added_hangul_sha256": "39CA8C717F71F1F949699B3EDFDDA3D07DEC82AB8C67F311FE13F8D0CA4711A6",
+    "hangul_codepoints_sha256": "AC38EE12A7C19033281E76ABB4FB0E7CF9466EE6D0C7AFAB00F1FDAA57FEF4EF",
+    "hangul_syllable_count": 599,
+    "non_hangul_character_count": 101,
+    "per_table_append_contract": [
+      {
+        "codepoints_sha256": "26CFE8A693AA88688F55C15A971900372EE48AEBD51325CFFFE9CC57820E1905",
+        "count": 600,
+        "entry": 6,
+        "table": 0
+      },
+      {
+        "codepoints_sha256": "3E60696B9F4F9A1BFDCBD66171C4D064847F80C63D50E29A87FF0B4B9C335672",
+        "count": 638,
+        "entry": 6,
+        "table": 1
+      },
+      {
+        "codepoints_sha256": "26CFE8A693AA88688F55C15A971900372EE48AEBD51325CFFFE9CC57820E1905",
+        "count": 600,
+        "entry": 7,
+        "table": 0
+      },
+      {
+        "codepoints_sha256": "3E60696B9F4F9A1BFDCBD66171C4D064847F80C63D50E29A87FF0B4B9C335672",
+        "count": 638,
+        "entry": 7,
+        "table": 1
+      }
+    ],
+    "raster_codepoint_count": 638,
+    "raster_codepoints_sha256": "3E60696B9F4F9A1BFDCBD66171C4D064847F80C63D50E29A87FF0B4B9C335672",
+    "source_count": 4,
+    "source_non_whitespace_character_count": 720,
+    "sources": [
+      {
+        "character_count": 88,
+        "excluded_font_token_count": 0,
+        "hangul_syllable_count": 88,
+        "path": "KR_PATCH_WORK/workstreams/font_v6/corpus/msgdata_castle_names_9151_9542/glyph_demand.json",
+        "sha256": "C7DDF8106E6634FEB50940B8646D27A64A91EADD67546B5F1C60D31A6B76B79B",
+        "source": "Korean names in the source-free public msgdata castle-name overlay",
+        "source_non_whitespace_character_count": 88
+      },
+      {
+        "character_count": 285,
+        "excluded_font_token_count": 5,
+        "hangul_syllable_count": 270,
+        "path": "KR_PATCH_WORK/workstreams/font_v6/corpus/msgev_dialogue_3202_3229/glyph_demand.json",
+        "sha256": "71921713787E57A0BCEB429AB11764379CEABBDC78A82BC52EB2DCC10DC07570",
+        "source": "Korean text in the source-free public msgev dialogue overlay",
+        "source_non_whitespace_character_count": 290
+      },
+      {
+        "character_count": 125,
+        "excluded_font_token_count": 0,
+        "hangul_syllable_count": 125,
+        "path": "KR_PATCH_WORK/workstreams/font_v6/corpus/msgev_officer_names_0000_2399/glyph_demand.json",
+        "sha256": "A4AB899D785F461AB9CE09174FB503373012D4EC8E8ACBE8CCBF08BDA8BE8754",
+        "source": "Korean names in the source-free public msgev officer overlay",
+        "source_non_whitespace_character_count": 125
+      },
+      {
+        "character_count": 625,
+        "excluded_font_token_count": 20,
+        "hangul_syllable_count": 524,
+        "path": "KR_PATCH_WORK/workstreams/font_v6/corpus/msgui_0000_5099/glyph_demand.json",
+        "sha256": "7DBF97C2AC889F2FB33856A1A8096A1DB091C4D25DB411E73E95E5D0FB7E0D16",
+        "source": "buildable ko strings in msgui catalog v2",
+        "source_non_whitespace_character_count": 645
+      }
+    ],
+    "union_codepoints_sha256": "64DBBA110E35B359709008E07D8A584B445B9EFD952EB54FB122D9A73EBBFFA9"
+  },
+  "determinism": {
+    "exact": true,
+    "file_count": 23,
+    "inventory_sha256": "BE74A13BFF3BFDE1A79D29ACD58C30EAD083EB438F30705231EA0E3A650C211F",
+    "private_validation_file_count": 15,
+    "public_file_count": 6
+  },
+  "direct_coverage": {
+    "all_four_maps_nonzero_nonblank": true,
+    "ascii_space_preserved": true,
+    "stock_owned_non_hangul_preserved": true,
+    "tables": [
+      {
+        "ascii_space_stock_record_pixels_preserved": true,
+        "codepoints_sha256": "64DBBA110E35B359709008E07D8A584B445B9EFD952EB54FB122D9A73EBBFFA9",
+        "demanded_count": 700,
+        "entry": 6,
+        "nonzero_nonblank_count": 700,
+        "proof_rows_sha256": "865F6469B4CF82581C244ADD46E0CFD10955E1607CFA391CA1273BFC2CED6D9D",
+        "stock_owned_non_hangul_preserved_count": 100,
+        "table": 0
+      },
+      {
+        "ascii_space_stock_record_pixels_preserved": true,
+        "codepoints_sha256": "64DBBA110E35B359709008E07D8A584B445B9EFD952EB54FB122D9A73EBBFFA9",
+        "demanded_count": 700,
+        "entry": 6,
+        "nonzero_nonblank_count": 700,
+        "proof_rows_sha256": "03612585AA1085811F7A64E8736D60515F4C4E7620ED181344800FD5556FA47C",
+        "stock_owned_non_hangul_preserved_count": 62,
+        "table": 1
+      },
+      {
+        "ascii_space_stock_record_pixels_preserved": true,
+        "codepoints_sha256": "64DBBA110E35B359709008E07D8A584B445B9EFD952EB54FB122D9A73EBBFFA9",
+        "demanded_count": 700,
+        "entry": 7,
+        "nonzero_nonblank_count": 700,
+        "proof_rows_sha256": "AD9BBCA614562B08CE22C61DAF216AFDAFB7BDF4B96C36ECA2CA4704DFEC9EB2",
+        "stock_owned_non_hangul_preserved_count": 100,
+        "table": 0
+      },
+      {
+        "ascii_space_stock_record_pixels_preserved": true,
+        "codepoints_sha256": "64DBBA110E35B359709008E07D8A584B445B9EFD952EB54FB122D9A73EBBFFA9",
+        "demanded_count": 700,
+        "entry": 7,
+        "nonzero_nonblank_count": 700,
+        "proof_rows_sha256": "A891DA2B9CBAAC9DF9A0C3E1C6736E9140B82D3928D5F5401E9D957B35081E1C",
+        "stock_owned_non_hangul_preserved_count": 62,
+        "table": 1
+      }
+    ]
+  },
+  "outputs": {
+    "manifest_sha256": "B291A43AB914C7342EF4934A7749973BA7B1769049294FD63BA31F02F914A4E4",
+    "metrics_sha256": "8DFF1D72BCE19747847022EF2616984351FF0E14720D3E6AAE5ADA3D6FC045B3",
+    "private_candidate_archive_sha256": "EEB5C74808D1C16199347D6629583E6289B7A020C329612A286801166DA0CD83",
+    "private_candidate_distribution_forbidden": true,
+    "public_payload_inventory": {
+      "exact_artifact_set": true,
+      "inventory_sha256": "22FCC7A684BA4F4B52EDF81B720622BF4F5D150CF0B23876D7723E5A96EF570F",
+      "metrics_row_count": 2476,
+      "non_recipe_artifact_count": 5,
+      "paths": [
+        "licenses/OFL-NotoSansKR.txt",
+        "licenses/OFL-NotoSerifKR.txt",
+        "metrics/glyphs.jsonl",
+        "payload/glyph_pixels_entry_6.pixels",
+        "payload/glyph_pixels_entry_7.pixels"
+      ],
+      "pixel_payload_sizes": {
+        "payload/glyph_pixels_entry_6.pixels": 1426176,
+        "payload/glyph_pixels_entry_7.pixels": 633856
+      },
+      "size_and_sha256_exact": true
+    },
+    "recipe_sha256": "3C41DBDBB97315BB81D2C6E3651BB8414BB916C748D7186C935E6092C76C3390",
+    "validation_sha256": "D595D0EC75F7EED2496A9A5F68E4136A4FF958E757C1E343A76D6E6C12D2BE27"
+  },
+  "passed": true,
+  "release_eligible": false,
+  "release_tree": {
+    "commercial_full_resources_present": false,
+    "exact_release_file_inventory": true,
+    "forbidden_full_resource_file_count": 0,
+    "private_directory_count": 0,
+    "public_file_count": 6,
+    "public_inventory_sha256": "3264E2492195AB1CCE4B1CAA7FE88C837D53F5A2D1BE513A7034DC3993F368B2"
+  },
+  "runtime_verified": false,
+  "safety": {
+    "build_outputs_confined_to_ignored_tmp": true,
+    "full_res_lang_present_in_release_tree": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_access": false,
+    "runtime_patch_features": []
+  },
+  "schema": "nobu16.kr.font-v6-verification.v1"
+}

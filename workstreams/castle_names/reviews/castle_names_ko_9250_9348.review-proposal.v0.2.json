@@ -1,0 +1,218 @@
+{
+  "schema": "nobu16.kr.castle-name-human-review-proposal.v0.2",
+  "proposal_id": "castle-names-9250-9348-review-v0.2",
+  "base_overlay": {
+    "path": "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.1.json",
+    "sha256": "465F0CA873E310C20FAF9DF7D247B4A5025991774E1C4F8F320BC4125A93AE13",
+    "modified_by_this_review": false
+  },
+  "official_game_inputs": {
+    "comparison": "official EN display name plus official JP display name and reading at the same msgdata id",
+    "private_alignment_sha256": "6169A149F4F52D368751E0EE7B802B57704E76A1E747C0A98628596C43BA7E8F",
+    "en_msgdata_wrapper_sha256": "15142A9D252F1759364FEE5D090B0802C51D8355B2A24A1DC6F1300FBF1EC5E1",
+    "jp_msgdata_wrapper_sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+    "commercial_source_text_in_this_proposal": false
+  },
+  "scope": {
+    "first_id": 9250,
+    "last_id": 9348,
+    "reviewed_count": 99,
+    "contiguous": true
+  },
+  "review_policy": {
+    "long_vowels": "do_not_duplicate_japanese_long_vowels_unless_established_korean_usage_supports_the_form",
+    "geographic_tsu": "propose_standard_korean_쓰_for_japanese_tsu_in_place_names",
+    "compound_spacing": "prefer_attested_korean_place_name_compounding_over_mechanical_EN_word_boundaries",
+    "source_priority": [
+      "official_game_JP_reading",
+      "official_game_EN_romanization",
+      "Korean_language_authority_or_official_Korean_tourism_usage",
+      "mechanical_transliteration"
+    ],
+    "personal_name_style_is_out_of_scope": true
+  },
+  "summary": {
+    "accepted_as_is_count": 91,
+    "change_proposed_count": 8,
+    "independent_change_count": 4,
+    "independent_high_confidence_change_count": 3,
+    "geographic_style_gated_change_count": 4,
+    "high_confidence_change_count": 3,
+    "medium_confidence_change_count": 5
+  },
+  "accepted_as_is_ids": [
+    9250, 9251, 9252, 9253, 9254, 9255, 9257, 9258, 9259, 9260,
+    9261, 9262, 9263, 9264, 9265, 9266, 9267, 9268, 9269, 9270,
+    9271, 9272, 9273, 9274, 9275, 9276, 9277, 9278, 9279, 9280,
+    9281, 9282, 9284, 9285, 9286, 9287, 9288, 9289, 9290, 9291,
+    9292, 9293, 9294, 9295, 9296, 9297, 9299, 9300, 9301, 9302,
+    9303, 9305, 9306, 9307, 9308, 9309, 9310, 9311, 9312, 9313,
+    9314, 9315, 9317, 9318, 9319, 9320, 9321, 9322, 9323, 9324,
+    9325, 9326, 9327, 9328, 9329, 9330, 9331, 9332, 9333, 9335,
+    9336, 9337, 9338, 9339, 9341, 9342, 9343, 9344, 9345, 9347,
+    9348
+  ],
+  "long_vowel_reviewed_and_retained_ids": [
+    9260, 9264, 9274, 9277, 9278, 9280, 9284, 9285, 9289, 9290,
+    9295, 9300, 9305, 9307, 9310, 9317, 9321, 9334, 9335, 9347
+  ],
+  "double_i_review": [
+    {
+      "id": 9256,
+      "draft_ko": "시이즈",
+      "proposed_ko": "시즈",
+      "decision": "collapse_unattested_long_vowel",
+      "evidence_keys": ["nikl_long_vowels"]
+    },
+    {
+      "id": 9277,
+      "proposed_ko": "이이노다이라",
+      "decision": "retain_provisionally_as_proper_name_unit"
+    },
+    {
+      "id": 9304,
+      "draft_ko": "이이야마",
+      "proposed_ko": "이야마",
+      "decision": "use_official_korean_tourism_form",
+      "evidence_keys": ["jnto_iiyama"]
+    },
+    {
+      "id": 9305,
+      "proposed_ko": "이이다",
+      "decision": "retain_attested_korean_form",
+      "evidence_keys": ["jnto_iida"]
+    },
+    {
+      "id": 9347,
+      "proposed_ko": "이이모리야마",
+      "decision": "retain_attested_korean_form",
+      "evidence_keys": ["jnto_iimori"]
+    }
+  ],
+  "compound_spacing_review": [
+    {
+      "id": 9278,
+      "proposed_ko": "고리 니시야마",
+      "decision": "retain_regional_qualifier_space"
+    },
+    {
+      "id": 9280,
+      "proposed_ko": "소마 나카무라",
+      "decision": "retain_regional_qualifier_space"
+    },
+    {
+      "id": 9306,
+      "proposed_ko": "기소 후쿠시마",
+      "decision": "retain_official_korean_space",
+      "evidence_keys": ["jnto_kiso_fukushima"]
+    },
+    {
+      "id": 9315,
+      "proposed_ko": "히다 다카야마",
+      "decision": "retain_regional_qualifier_space"
+    },
+    {
+      "id": 9331,
+      "proposed_ko": "단바 가메야마",
+      "decision": "retain_regional_qualifier_space"
+    },
+    {
+      "id": 9334,
+      "proposed_ko": "구조하치만",
+      "decision": "remove_mechanical_EN_space",
+      "evidence_keys": ["jnto_gujo_hachiman_castle"]
+    },
+    {
+      "id": 9346,
+      "proposed_ko": "야마토코리야마",
+      "decision": "use_attested_korean_compound",
+      "evidence_keys": ["jnto_yamato_koriyama", "nara_yamato_koriyama"]
+    }
+  ],
+  "changes": [
+    {
+      "id": 9256,
+      "draft_ko": "시이즈",
+      "proposed_ko": "시즈",
+      "reason_codes": ["standard_korean_long_vowel", "remove_duplicated_long_vowel"],
+      "confidence": "medium",
+      "merge_gate": "confirm_obscure_place_long_vowel",
+      "evidence_keys": ["nikl_long_vowels"]
+    },
+    {
+      "id": 9283,
+      "draft_ko": "츠루가오카",
+      "proposed_ko": "쓰루가오카",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9298,
+      "draft_ko": "이와츠키",
+      "proposed_ko": "이와쓰키",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9304,
+      "draft_ko": "이이야마",
+      "proposed_ko": "이야마",
+      "reason_codes": ["official_korean_usage", "remove_duplicated_long_vowel"],
+      "confidence": "high",
+      "merge_gate": "none",
+      "evidence_keys": ["nikl_long_vowels", "jnto_iiyama"]
+    },
+    {
+      "id": 9316,
+      "draft_ko": "마츠나미",
+      "proposed_ko": "마쓰나미",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9334,
+      "draft_ko": "구조 하치만",
+      "proposed_ko": "구조하치만",
+      "reason_codes": ["established_korean_compound", "remove_mechanical_EN_space", "official_castle_name_usage"],
+      "confidence": "high",
+      "merge_gate": "none",
+      "evidence_keys": ["jnto_gujo_hachiman_castle"]
+    },
+    {
+      "id": 9340,
+      "draft_ko": "마츠가시마",
+      "proposed_ko": "마쓰가시마",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9346,
+      "draft_ko": "야마토 고리야마",
+      "proposed_ko": "야마토코리야마",
+      "reason_codes": ["established_korean_compound", "remove_mechanical_EN_space", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "none",
+      "evidence_keys": ["jnto_yamato_koriyama", "nara_yamato_koriyama"]
+    }
+  ],
+  "external_evidence": {
+    "nikl_tsu": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=275072&searchCondition=&searchKeyword=",
+    "nikl_long_vowels": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=329857",
+    "jnto_iiyama": "https://www.japan.travel/ko/kr/japan-magazine/2309_shinrin-yoku-the-japanese-art-of-forest-bathing/",
+    "jnto_iida": "https://www.japan.travel/ko/kr/japan-magazine/2402_sakura-and-beyond-famous-japanese-flowers-to-check-out/",
+    "jnto_kiso_fukushima": "https://www.japan.travel/ko/destinations/hokuriku-shinetsu/nagano/kiso/",
+    "jnto_gujo_hachiman_castle": "https://www.japan.travel/ko/spot/1266/",
+    "jnto_yamato_koriyama": "https://www.japan.travel/ko/spot/1995/",
+    "nara_yamato_koriyama": "https://www.pref.nara.jp/secure/116801/%E5%A5%88%E3%81%AE%E8%89%AF%E3%80%80%E7%AC%AC2%E5%8F%B7%E3%80%80%E3%83%8F%E3%83%B3%E3%82%B0%E3%83%AB.pdf",
+    "jnto_iimori": "https://www.japan.travel/ko/spot/1760/"
+  },
+  "merge_status": "proposal_only_not_applied"
+}

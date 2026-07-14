@@ -101,8 +101,8 @@ dummy이며, 그 뒤의 부족 두목·이벤트 화자·일반 NPC는 장수명
 
 `full_v0.1/public/`에는 완성 게임 리소스를 두지 않는다. 두 리소스의 source-free
 manifest와 recipe만 두며, 공개 `msgev`·`msgdata` recipe가 격리된 stock에서 각 tmp 빌드
-target을 바이트 단위로 재생하는지 검증했다. 상세 수치와 해시는
-`reports/officer_name_components_2026-07-14.md`에 기록한다. 이 산출 시점에는 전체 음역을
+target을 바이트 단위로 재생하는지 검증했다. 공개 가능한 수치와 해시는 각 manifest와
+validation에, 실행 상세 로그는 로컬 QA 자료에 기록한다. 이 산출 시점에는 전체 음역을
 런타임 검수 전 초안으로 분류했으며, 이후 Font-v5와 네 파일 설치·복원 거래를 통합해 아래
 RC 검수를 진행했다.
 

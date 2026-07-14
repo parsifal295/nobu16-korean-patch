@@ -1,0 +1,96 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/alignment_evidence.v0.3.json",
+      "sha256": "730FD461C3FD01AAC98DA548F462090261245A001296D8D36FCF57F22E9974F3",
+      "size": 273740
+    },
+    "overlay": {
+      "path": "public/msgev_ko_event_endings_3311_3440.v0.3.json",
+      "sha256": "482239403E31932E9FD735C4C6F08228F650147B0A9D523431B5F4D17CBBF1FF",
+      "size": 33997
+    },
+    "review_index": {
+      "path": "review/review_index.v0.3.json",
+      "sha256": "5C834F7C2D130E3AC1A246CFDFC73A7248C3078F122FA7AEB60230AB3E5B7AAD",
+      "size": 37056
+    }
+  },
+  "batch_id": "msgev_event_endings_3311_3440.v0.3",
+  "font_integration": {
+    "current_font_v6_or_installer_must_not_include_batch3": true,
+    "state": "deferred_not_computed"
+  },
+  "generator": {
+    "path": "build_event_dialogue_batch3.py",
+    "sha256": "74F118FD618D136345440B7C4C1B7F0962495FFA03940F273EF35E615196DE74"
+  },
+  "layout_heuristic": {
+    "entries_over_30": [
+      3358
+    ],
+    "max_authored_line_codepoints_excluding_esc": 32,
+    "runtime_layout_review_required": true
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 114,
+    "custom_bracket_placeholder_checks": 114,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "custom_bracket_placeholders_in_order"
+    ]
+  },
+  "safety": {
+    "existing_v01_or_v02_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false
+  },
+  "schema": "nobu16.kr.event-dialogue-generation-validation.v3",
+  "scope": {
+    "end_id": 3440,
+    "excluded_internal_entry_count": 18,
+    "excluded_internal_ids_sha256": "CBD6A8F8CB20A423BE5D38411A6AB667ACECB736DCE08404B714ABDC1882D9FA",
+    "selected_entry_count": 114,
+    "selected_ids_sha256": "6D6ED8D121600CAABBE6753F3463CADEC532784411DCD21CF62575BC184643E8",
+    "start_id": 3309
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks": 114,
+    "selected_reference_hash_count": 342,
+    "string_count_each": 17910
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 114,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 10,
+    "translated_draft": 114
+  }
+}
