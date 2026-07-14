@@ -40,9 +40,12 @@
         "workstreams/dialogue/public/msgev_ko_historical_events_4418_4556.v0.12.json",
         "workstreams/dialogue/public/msgev_ko_historical_events_4557_4690.v0.13.json",
         "workstreams/dialogue/public/msgev_ko_historical_events_4691_4838.v0.14.json",
-        "workstreams/dialogue/public/msgev_ko_historical_events_4839_4976.v0.15.json"
+        "workstreams/dialogue/public/msgev_ko_historical_events_4839_4976.v0.15.json",
+        "workstreams/dialogue/public/msgev_ko_historical_events_4977_5108.v0.16.json",
+        "workstreams/dialogue/public/msgev_ko_historical_events_5109_5237.v0.17.json",
+        "workstreams/dialogue/public/msgev_ko_historical_events_5238_5358.v0.18.json"
       ],
-      "note": "장수명 2,207개 + 이벤트 대사 1,757개; 다음 ID 4977"
+      "note": "장수명 2,207개 + 이벤트 대사 2,139개; 다음 ID 5359"
     },
     {
       "path": "MSG_PK/SC/msgdata.bin",
@@ -108,9 +111,13 @@
         "workstreams/msggame/public/msggame_ko_system_messages_b02r0566_0665.v0.4.json",
         "workstreams/msggame/public/msggame_ko_system_messages_b02r0666_b04r0075.v0.5.json",
         "workstreams/msggame/public/msggame_ko_system_messages_b04r0076_b06r0559.v0.6.json",
-        "workstreams/msggame/public/msggame_ko_system_messages_b06r0560_0947.v0.7.json"
+        "workstreams/msggame/public/msggame_ko_system_messages_b06r0560_0947.v0.7.json",
+        "workstreams/msggame/public/msggame_ko_system_messages_b06r0948_1205.v0.8.json",
+        "workstreams/msggame/public/msggame_ko_system_messages_b06r1209_1384.v0.9.json",
+        "workstreams/msggame/public/msggame_ko_system_messages_b06r1385_1514.v0.10.json",
+        "workstreams/msggame/public/msggame_ko_system_messages_b06r1515_1677.v0.11.json"
       ],
-      "note": "좌표 기반 1,050개 초벌; 다음 좌표 (6,948,0), 블록 0 문법 조각 93개와 이전 비언어 형식 5개 문맥 검수 보류"
+      "note": "좌표 기반 1,650개 초벌; 다음 좌표 (6,1677,1), 블록 0 문법 조각 93개와 이전 비언어 형식 5개 문맥 검수 보류"
     },
     {
       "path": "MSG/SC/msggame.bin",
@@ -136,7 +143,7 @@
       "kind": "strings",
       "total_slots": 17868,
       "stock_visible_nonblank": 11687,
-      "translation_target_total": 11158,
+      "translation_target_total": 11139,
       "overlay_globs": [
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0000_0149.v0.1.json",
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0150_0349.v0.2.json",
@@ -152,9 +159,12 @@
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_2150_2206.v0.12.json",
         "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2207_2406.v0.13.json",
         "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2407_2580.v0.14.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2780_2971.v0.15.json"
+        "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2780_2971.v0.15.json",
+        "workstreams/ev_strdata/public/ev_strdata_ko_labels_and_narration_3007_3276.v0.16.json",
+        "workstreams/ev_strdata/public/ev_strdata_ko_events_and_endings_3277_3484.v0.17.json",
+        "workstreams/ev_strdata/public/ev_strdata_ko_historical_events_3485_3661.v0.18.json"
       ],
-      "note": "장수명 2,207개 + 이벤트 라벨 365개 완료; 기존 code placeholder 488개와 추가 내부 참조·역할 키 41개는 대상 제외; 다음 실제 표시 후보 ID 3007"
+      "note": "장수명 2,207개 + 이벤트 라벨·서술 906개 완료; 기존 code placeholder 488개와 추가 내부 참조·역할·이벤트 키 60개는 대상 제외; 다음 실제 표시 후보 ID 3662"
     },
     {
       "path": "RES_SC/res_lang.bin",
