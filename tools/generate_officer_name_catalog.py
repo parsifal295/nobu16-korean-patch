@@ -31,10 +31,64 @@ CUSTOM_ROMAJI = str.maketrans({"ª": "o", "¥": "O", "¨": "u"})
 TITLE_WORDS = frozenset(("Lady", "Hime"))
 DUMMY_BY_LANGUAGE = {"SC": "dummy", "JP": "ダミー", "EN": "dummy"}
 ALTERNATE_SURNAME_READING_IDS = frozenset((45,))
-ID_OVERRIDES = {
+MANUAL_OVERRIDES: dict[int, dict[str, Any]] = {
+    # Confirmed name corrections are pinned to every aligned source string so
+    # an id shift or a different game-data revision fails closed instead of
+    # silently applying the Korean name to the wrong officer.
+    162: {
+        "source": {"SC": "安养寺氏种", "JP": "安養寺氏種", "EN": "Ujitane Anyªji"},
+        "ko": "안요지 우지타네",
+    },
+    231: {
+        "source": {"SC": "出云阿国", "JP": "出雲阿国", "EN": "Okuni Izumo"},
+        "ko": "이즈모노 오쿠니",
+    },
+    516: {
+        "source": {"SC": "冈本显逸", "JP": "岡本顕逸", "EN": "Kenitsu Okamoto"},
+        "ko": "오카모토 겐이츠",
+    },
     # The EN localization splits 小松 into two pseudo-words ("Ko Matsu").
     # It is a single historical name, not a surname/given-name pair.
-    843: "고마츠",
+    843: {
+        "source": {"SC": "小松", "JP": "小松", "EN": "Ko Matsu"},
+        "ko": "고마츠",
+    },
+    1179: {
+        "source": {"SC": "藏春院", "JP": "蔵春院", "EN": "Zªshunin"},
+        "ko": "조슌인",
+    },
+    1302: {
+        "source": {"SC": "千千石米格尔", "JP": "千々石ミゲル", "EN": "Migeru Chidiwa"},
+        "ko": "치지와 미게루",
+    },
+    1584: {
+        "source": {"SC": "根来金石斋", "JP": "根来金石斎", "EN": "Kinkokusai Negoro"},
+        "ko": "네고로 긴세키사이",
+    },
+    1666: {
+        "source": {"SC": "塙团右卫门", "JP": "塙団右衛門", "EN": "Danemon Ban"},
+        "ko": "반 단에몬",
+    },
+    1674: {
+        "source": {"SC": "彦鹤", "JP": "彦鶴", "EN": "Hiko Tsuru"},
+        "ko": "히코츠루",
+    },
+    1739: {
+        "source": {"SC": "北条幻庵", "JP": "北条幻庵", "EN": "Genan Hªjª"},
+        "ko": "호조 겐안",
+    },
+    1752: {
+        "source": {"SC": "宝藏院胤荣", "JP": "宝蔵院胤栄", "EN": "Inei Hªzªin"},
+        "ko": "호조인 인에이",
+    },
+    1831: {
+        "source": {"SC": "前田玄以", "JP": "前田玄以", "EN": "Geni Maeda"},
+        "ko": "마에다 겐이",
+    },
+    2134: {
+        "source": {"SC": "汤地定时", "JP": "湯地定時", "EN": "Sadatoki Yudi"},
+        "ko": "유지 사다토키",
+    },
 }
 
 
@@ -125,6 +179,33 @@ def read_jsonl(path: Path) -> list[str]:
     if len(rows) < OFFICER_SLOT_LIMIT:
         raise OfficerNameError(f"{path} has only {len(rows)} rows")
     return rows
+
+
+def pinned_manual_override(
+    entry_id: int,
+    sc_name: str,
+    jp_name: str,
+    en_name: str,
+) -> str | None:
+    override = MANUAL_OVERRIDES.get(entry_id)
+    if override is None:
+        return None
+    expected = override.get("source")
+    actual = {"SC": sc_name, "JP": jp_name, "EN": en_name}
+    if expected != actual:
+        mismatched = ", ".join(
+            language
+            for language in ("SC", "JP", "EN")
+            if not isinstance(expected, dict)
+            or expected.get(language) != actual[language]
+        )
+        raise OfficerNameError(
+            f"manual override source pin differs at id {entry_id}: {mismatched}"
+        )
+    korean = override.get("ko")
+    if not isinstance(korean, str) or not korean:
+        raise OfficerNameError(f"manual override Korean name is invalid at id {entry_id}")
+    return korean
 
 
 class ReadingTableParser(HTMLParser):
@@ -566,8 +647,14 @@ def build_catalog(args: argparse.Namespace) -> dict[str, Any]:
             korean = ""
             method = "unresolved"
             error = str(exc)
-        if entry_id in ID_OVERRIDES:
-            korean = ID_OVERRIDES[entry_id]
+        override = pinned_manual_override(
+            entry_id,
+            sc[entry_id],
+            jp[entry_id],
+            en[entry_id],
+        )
+        if override is not None:
+            korean = override
             method = "manual_override"
             error = None
         method_counts[method] = method_counts.get(method, 0) + 1
