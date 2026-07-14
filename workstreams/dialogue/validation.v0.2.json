@@ -1,0 +1,130 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/alignment_evidence.v0.2.json",
+      "sha256": "73A2B18423C1E7A6081F2500218A260EA04A0411F07729BF5344443F9ADAD033",
+      "size": 179266
+    },
+    "overlay": {
+      "path": "public/msgev_ko_event_continuation_3230_3308.v0.2.json",
+      "sha256": "2EF36C22207A8B9A1CBFDB1212A8DBA2A8C49EDAF2D68BF95DDFB07404CDA637",
+      "size": 23196
+    },
+    "review_index": {
+      "path": "review/review_index.v0.2.json",
+      "sha256": "F90BDE5F561C489D2251A0EB6CF81FA5B4B04E4C8030682AFEC77A7B86073B7A",
+      "size": 26175
+    }
+  },
+  "batch_id": "msgev_event_continuation_3230_3308.v0.2",
+  "event_count": 5,
+  "font_followup": {
+    "font_v5_missing_hangul": "갓갔갖갚겉겪곧골곱굳궤깐꼈꼭끈끼넓뇌눈님닦닭답덕던뎠됐듣디땅떤떨떻똑랜랬랴런렀렇륙맙멈몇묶붙빗뿐섰셔셨숭슨슭식싶싸쌓씀씩알앓암엇였옛옥웃잊젊졌짜찌찬춘킨틀틈팥퍼푼풀프혔횡휩",
+    "font_v5_missing_hangul_count": 86,
+    "font_v5_missing_hangul_sha256": "C4253D1F677195C068C0837FE066EDF2471D706435EF8440CD1E6229D520A029",
+    "hangul_syllable_count": 423,
+    "hangul_syllables_sha256": "B90AF2EF488F123B100C3C179392C3CEF1C2A1DFB8CED736089622E88D1CCE36",
+    "integration_state": "deferred_to_later_font_revision",
+    "must_not_enter_current_font_v6_or_installer": true,
+    "pinned_font_v5_metrics": {
+      "logical_path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/public/metrics/glyphs.jsonl",
+      "sha256": "FDB468457B00D47CD86B6DD95B0E4C8E38A0DAB1A724FE9DE297233D14C813B8",
+      "size": 731013
+    },
+    "renderable_character_count": 442,
+    "renderable_codepoints_sha256": "B719BDB861E2890BC860DDCEBD01226D48CEB2990C6449B9221545B44D82166C"
+  },
+  "generator": {
+    "dependencies": {
+      "build_common_message_overlay.py": "FC999CBC9C3BB30519BD797E06FDFE05EB4E024455EDC0149554FE649DBEAA84",
+      "build_event_dialogue_batch.py": "D5C205F853090C97E16E903D7EE92BEB54A559B9B7DEEE2B7732EE5B8E3881C3"
+    },
+    "path": "build_event_dialogue_batch2.py",
+    "sha256": "6F338A7215EDC125CAAED9D211094714DA6BFEC757EB21D6CE2014159CBBC3B0"
+  },
+  "layout_heuristic": {
+    "entries_over_24": [
+      3230,
+      3231,
+      3232,
+      3233,
+      3234,
+      3237,
+      3238,
+      3240,
+      3246,
+      3254,
+      3255,
+      3256,
+      3257,
+      3261,
+      3263,
+      3266,
+      3269,
+      3274,
+      3275,
+      3279
+    ],
+    "max": 28,
+    "metric": "unicode_codepoints_per_authored_line_excluding_esc_sequences",
+    "runtime_layout_review_still_required": true
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 79,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints"
+    ]
+  },
+  "schema": "nobu16.kr.event-dialogue-generation-validation.v2",
+  "selected_entry_count": 79,
+  "selected_ids_sha256": "A21B855643BEEE250C32B44844D60F26DFEC089E603D163A34FCD224C63B2071",
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "selected_entries_semantically_crosschecked": 79,
+    "string_count_each": 17910
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "strict_schema": {
+    "artifacts_checked": [
+      "overlay",
+      "alignment_evidence",
+      "review_index"
+    ],
+    "duplicate_or_case_colliding_keys_rejected": true,
+    "passed": true,
+    "unexpected_keys_rejected": true
+  },
+  "translation_status": {
+    "automated_draft": 79,
+    "entries_with_specific_uncertainty_flags": 14,
+    "human_review_required": 79,
+    "reviewed": 0,
+    "runtime_reviewed": 0,
+    "translated_draft": 79
+  }
+}

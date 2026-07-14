@@ -1,0 +1,179 @@
+{
+  "batch_id": "msgev_event_continuation_3230_3308.v0.2",
+  "determinism": {
+    "generator_a_b_final_byte_identical": true,
+    "standalone_recipe_a_b_byte_identical": true
+  },
+  "draft_review_state": {
+    "automated_draft": 79,
+    "human_review_required": 79,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 14
+  },
+  "entry_count": 79,
+  "events": [
+    {
+      "end_id": 3244,
+      "event_id": "retreat_from_kanegasaki",
+      "start_id": 3230,
+      "title_ko": "가네가사키 퇴각"
+    },
+    {
+      "end_id": 3260,
+      "event_id": "burning_of_mount_hiei",
+      "start_id": 3245,
+      "title_ko": "히에이산 소각"
+    },
+    {
+      "end_id": 3276,
+      "event_id": "battle_of_mikatagahara",
+      "start_id": 3261,
+      "title_ko": "미카타가하라 전투"
+    },
+    {
+      "end_id": 3286,
+      "event_id": "xavier_arrives_in_japan",
+      "start_id": 3277,
+      "title_ko": "프란치스코 하비에르의 일본 도래"
+    },
+    {
+      "end_id": 3308,
+      "event_id": "naming_of_gifu_and_tenka_fubu",
+      "start_id": 3287,
+      "title_ko": "기후와 천하포무 명명"
+    }
+  ],
+  "font_followup": {
+    "font_v5_missing_hangul": "갓갔갖갚겉겪곧골곱굳궤깐꼈꼭끈끼넓뇌눈님닦닭답덕던뎠됐듣디땅떤떨떻똑랜랬랴런렀렇륙맙멈몇묶붙빗뿐섰셔셨숭슨슭식싶싸쌓씀씩알앓암엇였옛옥웃잊젊졌짜찌찬춘킨틀틈팥퍼푼풀프혔횡휩",
+    "font_v5_missing_hangul_count": 86,
+    "font_v5_missing_hangul_sha256": "C4253D1F677195C068C0837FE066EDF2471D706435EF8440CD1E6229D520A029",
+    "hangul_syllable_count": 423,
+    "hangul_syllables_sha256": "B90AF2EF488F123B100C3C179392C3CEF1C2A1DFB8CED736089622E88D1CCE36",
+    "integration_state": "deferred_to_later_font_revision",
+    "must_not_enter_current_font_v6_or_installer": true,
+    "pinned_font_v5_metrics": {
+      "logical_path": "KR_PATCH_WORK/workstreams/officer_names/font_v5/public/metrics/glyphs.jsonl",
+      "sha256": "FDB468457B00D47CD86B6DD95B0E4C8E38A0DAB1A724FE9DE297233D14C813B8",
+      "size": 731013
+    },
+    "renderable_character_count": 442,
+    "renderable_codepoints_sha256": "B719BDB861E2890BC860DDCEBD01226D48CEB2990C6449B9221545B44D82166C"
+  },
+  "generated_artifacts": [
+    {
+      "a_b_final_byte_identical": true,
+      "path": "public/msgev_ko_event_continuation_3230_3308.v0.2.json",
+      "sha256": "2EF36C22207A8B9A1CBFDB1212A8DBA2A8C49EDAF2D68BF95DDFB07404CDA637",
+      "size": 23196
+    },
+    {
+      "a_b_final_byte_identical": true,
+      "path": "evidence/alignment_evidence.v0.2.json",
+      "sha256": "73A2B18423C1E7A6081F2500218A260EA04A0411F07729BF5344443F9ADAD033",
+      "size": 179266
+    },
+    {
+      "a_b_final_byte_identical": true,
+      "path": "review/review_index.v0.2.json",
+      "sha256": "F90BDE5F561C489D2251A0EB6CF81FA5B4B04E4C8030682AFEC77A7B86073B7A",
+      "size": 26175
+    },
+    {
+      "a_b_final_byte_identical": true,
+      "path": "validation.v0.2.json",
+      "sha256": "D235D88BADEAC9159F1E3684BAA0F3FED35E1F4E2C3FCEA499C1E2AD85685F31",
+      "size": 4014
+    }
+  ],
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 79,
+    "failures": 0
+  },
+  "resource": "MSG_PK/SC/msgev.bin",
+  "safety": {
+    "complete_commercial_resource_in_workstream": false,
+    "current_font_v6_or_installer_modified": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false
+  },
+  "schema": "nobu16.kr.event-dialogue-verification.v2",
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks_recorded": 79,
+    "selected_id_hashes_verified": 237,
+    "string_count_each": 17910
+  },
+  "source_free_scan": [
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "public/msgev_ko_event_continuation_3230_3308.v0.2.json"
+    },
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "evidence/alignment_evidence.v0.2.json"
+    },
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "review/review_index.v0.2.json"
+    },
+    {
+      "cjk_unified_count": 0,
+      "kana_count": 0,
+      "passed": true,
+      "path": "validation.v0.2.json"
+    }
+  ],
+  "standalone_file_only_build": {
+    "installed_game_files_modified": false,
+    "operations": 79,
+    "outputs": [
+      {
+        "a_b_byte_identical": true,
+        "path": "MSG_PK/SC/msgev.bin",
+        "sha256": "853607541A04521F4233A20EF2FD555ADF8B2BA813141FF7E825E9D31C03F6D7",
+        "size": 755942
+      },
+      {
+        "a_b_byte_identical": true,
+        "path": "msgev.build-manifest.json",
+        "sha256": "88AF4BEA4BD4FED25AC9193A62EEB8196B1B3F7D591B56DD24D74E1F8ACEFB0D",
+        "size": 35145
+      },
+      {
+        "a_b_byte_identical": true,
+        "path": "msgev_sc.recipe.json",
+        "sha256": "1A014C9330F334F1BEF2642E68F4E82D76B354C68E101E01983DF69FFA5AB633",
+        "size": 24466
+      }
+    ],
+    "pinned_stock_sha256_before_after": "7221A53E6E5CF493A3FAFFFCE35280E8147898120EEC59E460A2429AA265C1F9"
+  },
+  "strict_schema": {
+    "artifacts_checked": [
+      "overlay",
+      "alignment_evidence",
+      "review_index",
+      "validation"
+    ],
+    "duplicate_or_case_colliding_keys_rejected": true,
+    "passed": true,
+    "unexpected_keys_rejected": true
+  },
+  "verifier": {
+    "path": "verify_event_dialogue_batch2.py",
+    "sha256": "F2636F727079D7846254CE77E68FA65E9630491B98201AE553B6F8041C034101"
+  }
+}
