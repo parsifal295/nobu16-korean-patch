@@ -41,4 +41,4 @@ private/wrapper_candidate/RES_SC/res_lang.bin
 
 `Audit-PublicWorkstream.ps1`은 `private/`를 제외한 공개 트리에서 완전한 상용 리소스 형식, 허용하지 않은 바이너리, 원문 메타데이터, 비정상 크기를 검사한다.
 
-실행 A/B와 순정 복원 결과는 `reports/wide_castle_ab_runtime_2026-07-14.md`에 기록한다.
+실행 A/B와 순정 복원 상세 로그는 공개 저장소에 넣지 않고 로컬 QA 자료로 보관한다.

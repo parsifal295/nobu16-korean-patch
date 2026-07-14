@@ -59,7 +59,7 @@ $Root = (Resolve-Path '.').Path
 - 비공개 후보 archive SHA-256: `73E3759BF1886E95C769A95EB212F7ED34B7546E9A3DFA1EB49F542A7018E6B7`
 - 두 독립 빌드의 공개 7개 파일, manifest, 비공개 후보 archive가 모두 SHA 단위로 일치했다.
 - 간체중문 실제 게임 화면에서 한글 직접 조회와 대표 글리프 렌더링을 확인했다.
-  근거는 `reports/msgui_p3_runtime_pass_2026-07-13.json`이다.
+  상세 화면 근거는 공개 저장소에서 제외한 로컬 런타임 QA 자료에 보관한다.
 - 결정론 빌드 산출물인 `build/public/recipe.json`과 `validation.json`은 런타임 전
   상태의 불변 입력으로 유지한다. vNext 배포 조립 단계가 고정된 런타임 근거를
   검증한 뒤 별도 배포 manifest에서만 런타임 게이트를 승격한다.

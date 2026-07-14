@@ -22,8 +22,8 @@
 - 공개 저장소와 배포본에는 상용 원문이나 완성된 게임 리소스를 넣지 않는다. 공개
   오버레이는 숫자 ID, 순정 문자열 해시, 프로젝트가 작성한 한국어만 담는다.
 
-설계 원칙은 [파일 전용 아키텍처](docs/ARCHITECTURE_FILE_ONLY.md)와
-[배포 정책](docs/DISTRIBUTION_POLICY.md)에 정리되어 있다.
+파일 전용·상용 원문 비공개·완전 복원 원칙은 이 공개 README와 각 작업선 README에만
+요약한다. 역공학 메모와 내부 조사 문서는 로컬 작업 자료로 두고 공개 저장소에서 제외한다.
 
 ## 지금까지 된 것
 
@@ -71,8 +71,8 @@
   폴더에서 실행하면 순정 파일에서도 `ERROR:-9001`이 재현됐다. 이 오류가 보이면 패치
   손상을 의심하기 전에 작업 폴더부터 확인한다.
 
-자세한 재현 기록은 [`ERROR:-9001` 작업 폴더 보고서](reports/error_9001_working_directory_2026-07-14.md)와
-[성 이름 배치 조사](reports/castle_name_layout_file_only_probe_2026-07-14.md)에 있다.
+두 조건은 로컬 런타임 QA에서 재현해 확인했으며, 상세 조사 로그와 스크린샷은 공개
+저장소가 아닌 내부 작업 자료로 보관한다.
 
 ## 가장 빠르게 기여하는 법
 
@@ -110,12 +110,10 @@ python -B tools/generate_public_overlay_glyph_demand.py castle --check
 | `workstreams/` | UI, 장수명, 성 이름, 대사, 글꼴, 설치기 후보별 독립 작업선 |
 | `tools/` | 추출·생성·레시피 재생·감사·안전 적용/복원 도구 |
 | `tests/` | 포맷, 중복 키, 결정성, 배포 안전장치 회귀 테스트 |
-| `docs/` | 아키텍처와 저장소·배포 정책 |
-| `reports/` | 정적 분석, 런타임 QA, 실패 재현 기록 |
 | `vendor/noto/` | 고정 Noto KR 입력과 SIL OFL 라이선스 |
 
-`tmp/`, `backups/`, Ghidra 프로젝트, 추출 원문, 완성 `msg*.bin`, `res_lang.bin`, G1N/G1T,
-로컬 빌드 후보는 공개 추적 대상이 아니다.
+`tmp/`, `backups/`, `docs/`, `reports/`, `ghidra_scripts/`, Ghidra 프로젝트, 추출 원문,
+완성 `msg*.bin`, `res_lang.bin`, G1N/G1T, 로컬 빌드 후보는 공개 추적 대상이 아니다.
 
 ## 공개·배포 원칙
 
@@ -129,5 +127,5 @@ python -B tools/generate_public_overlay_glyph_demand.py castle --check
 - 설치기는 게임과 런처가 실행 중이면 중단하고, 미지원·혼합 해시 상태를 임의로 덮어쓰지
   않아야 한다.
 
-공개 기여 전에는 [저장소 정책](docs/REPOSITORY_POLICY.md)을 읽고 `git status --ignored`로
-상용 원문·전체 리소스·로컬 백업이 staged되지 않았는지 확인한다.
+공개 기여 전에는 `git status --ignored`로 상용 원문·전체 리소스·내부 문서·로컬 백업이
+staged되지 않았는지 확인한다.
