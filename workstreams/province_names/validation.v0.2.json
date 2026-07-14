@@ -1,0 +1,86 @@
+{
+  "artifact": {
+    "path": "public/province_names_ko_13975_14046.v0.2.json",
+    "sha256": "2EF65EBDEF21521857477EA180E7FBC7AB92F1626FC69D06BD6262E97BFDBDF5"
+  },
+  "inputs": {
+    "stock_resources": [
+      {
+        "language": "SC",
+        "logical_path": "MSG_PK/SC/msgdata.bin",
+        "province_block": {
+          "entry_count": 72,
+          "first_id": 13975,
+          "last_id": 14046,
+          "nonempty_count": 72,
+          "sha256": "9F83E0D9641420A4EE6193FDDDFA7469C378984F7E634A4F7039A424C0A1F399",
+          "unique_source_label_count": 72
+        },
+        "raw_sha256": "1290BCDF6B00C6E4516061888C618BC66A246375E271C9D1330A9D168037FBCF",
+        "raw_size": 499760,
+        "string_count": 29210,
+        "unchanged_parse_rebuild_byte_exact": true,
+        "wrapper_sha256": "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+        "wrapper_size": 267385
+      },
+      {
+        "language": "EN",
+        "logical_path": "MSG_PK/EN/msgdata.bin",
+        "province_block": {
+          "entry_count": 72,
+          "first_id": 13975,
+          "last_id": 14046,
+          "nonempty_count": 72,
+          "sha256": "6C4D46DDC4209318E0E5CAAD2B24BD788385B52B8CA6EDD53A300C0D6859698E",
+          "unique_source_label_count": 72
+        },
+        "raw_sha256": "DA913D870DA3C13F108E8E6727C9A8881B9E13A83F8EB7F02DD3C55D1D444B32",
+        "raw_size": 744236,
+        "string_count": 29210,
+        "unchanged_parse_rebuild_byte_exact": true,
+        "wrapper_sha256": "15142A9D252F1759364FEE5D090B0802C51D8355B2A24A1DC6F1300FBF1EC5E1",
+        "wrapper_size": 267550
+      },
+      {
+        "language": "JP",
+        "logical_path": "MSG_PK/JP/msgdata.bin",
+        "province_block": {
+          "entry_count": 72,
+          "first_id": 13975,
+          "last_id": 14046,
+          "nonempty_count": 72,
+          "sha256": "39F8682D2FE875EFEEC8789F0EBE407AAF59683555686A4B86B6CF3C4893EB1E",
+          "unique_source_label_count": 72
+        },
+        "raw_sha256": "119F10F28DAEEFFA7B231764BB5747A8837DEB487E4595504ADE2A77023148A0",
+        "raw_size": 431044,
+        "string_count": 29210,
+        "unchanged_parse_rebuild_byte_exact": true,
+        "wrapper_sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+        "wrapper_size": 273734
+      }
+    ],
+    "v0.1_overlay": {
+      "entry_count": 72,
+      "path": "public/province_names_ko_13975_14046.v0.1.json",
+      "sha256": "976BCC97AC4BFE4749F5769AFB79EE6BFCC4930D02A13666630EBB03EC680D1B"
+    }
+  },
+  "result": {
+    "all_entry_statuses_reviewed": true,
+    "all_source_labels_nonempty": true,
+    "all_source_labels_unique_within_each_language": true,
+    "changed_from_v0.1": 0,
+    "geographic_tsu_policy": "쓰",
+    "japanese_long_vowels": "not_duplicated",
+    "reviewed_entry_count": 72,
+    "same_ids_compared_in_sc_en_jp": true
+  },
+  "schema": "nobu16.kr.province-names.validation.v0.2",
+  "scope": {
+    "entry_count": 72,
+    "first_id": 13975,
+    "last_id": 14046
+  },
+  "source_text_free": true
+}
