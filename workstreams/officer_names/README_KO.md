@@ -61,3 +61,23 @@ python tools/build_common_message_overlay.py build `
 
 `probe_v0.1/public/`에는 완성 게임 리소스가 아니라 결정적으로 재생성된 manifest와
 공개 레시피만 고정한다.
+
+## 전체 장수명 초안 v0.1
+
+실제 장수 슬롯은 `msgev` ID `0..2206`의 연속 2,207개다. ID `2207..2399`는 언어별
+dummy이며, 그 뒤의 부족 두목·이벤트 화자·일반 NPC는 장수명 패치에서 제외한다.
+
+`tools/generate_officer_name_catalog.py`는 정렬된 비공개 SC/JP/EN JSONL과 비공개
+후리가나 QA 자료를 읽어 한국어 초안을 만든다. 후리가나와 게임 EN 독음이 일치하는
+경우만 교차 확정하고, 불일치하면 공식 EN 독음을 우선한다. `tools/export_common_message_overlay.py`
+는 비공개 원문을 stock 파일과 다시 대조한 뒤 ID·원문 해시·한국어만 포함한 공개
+오버레이를 내보낸다.
+
+공개 산출물은 다음과 같다.
+
+- `data/public/msgev_ko_officer_names_0000_2399.v0.1.json`
+- `full_v0.1/public/msgev.build-manifest.json`
+- `full_v0.1/public/msgev_sc.recipe.json`
+
+전체 음역은 아직 런타임 검수 전 초안이다. 전체 글자용 폰트 v5와 `msgdata` 분리 이름
+동기화를 마친 뒤 설치본에 적용한다.

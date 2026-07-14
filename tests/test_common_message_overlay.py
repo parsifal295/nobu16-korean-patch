@@ -253,6 +253,23 @@ class CommonMessageOverlayFixture(unittest.TestCase):
                         self.game_root, path, self.root / f"out-{label}"
                     )
 
+    def test_edge_whitespace_change_requires_explicit_opt_in(self) -> None:
+        overlay = self.overlay()
+        overlay["entries"][0]["ko"] = "김 "  # type: ignore[index]
+        denied = self.write_overlay(overlay, "edge-denied.json")
+        with self.assertRaisesRegex(
+            common.CommonMessageOverlayError,
+            "trailing_whitespace",
+        ):
+            common.build_overlay(self.game_root, denied, self.root / "edge-denied")
+
+        overlay["entries"][0]["allow_edge_whitespace_change"] = True  # type: ignore[index]
+        allowed = self.write_overlay(overlay, "edge-allowed.json")
+        result = common.build_overlay(self.game_root, allowed, self.root / "edge-allowed")
+        target = Path(result["target_path"]).read_bytes()
+        _, target_raw = common.decompress_wrapper(target)
+        self.assertEqual("김 ", parse_message_table(target_raw).texts[1])
+
     def test_literal_percent_is_not_reported_as_unknown(self) -> None:
         tokens, unknown = common.printf_tokens("진행률 100%% / %s")
         self.assertEqual(["%%", "%s"], tokens)

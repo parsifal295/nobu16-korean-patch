@@ -79,7 +79,8 @@ STOCK_KEYS = {
 }
 DEFAULT_KEYS = {"status"}
 ENTRY_REQUIRED_KEYS = {"id", "source_sc_utf16le_sha256", "ko"}
-ENTRY_ALLOWED_KEYS = ENTRY_REQUIRED_KEYS | {"status"}
+ENTRY_ALLOWED_KEYS = ENTRY_REQUIRED_KEYS | {"status", "allow_edge_whitespace_change"}
+EDGE_WHITESPACE_INVARIANTS = frozenset(("leading_whitespace", "trailing_whitespace"))
 
 
 class CommonMessageOverlayError(ValueError):
@@ -244,12 +245,18 @@ def message_invariants(text: str) -> dict[str, Any]:
     }
 
 
-def invariant_mismatches(source: str, replacement: str) -> list[str]:
+def invariant_mismatches(
+    source: str,
+    replacement: str,
+    *,
+    allow_edge_whitespace_change: bool = False,
+) -> list[str]:
     before = message_invariants(source)
     after = message_invariants(replacement)
     return [
         f"{key}: source={before[key]!r}, ko={after[key]!r}"
         for key in before
+        if not (allow_edge_whitespace_change and key in EDGE_WHITESPACE_INVARIANTS)
         if before[key] != after[key]
     ]
 
@@ -341,6 +348,11 @@ def validate_overlay_shape(overlay: dict[str, Any]) -> tuple[str, dict[str, Any]
             raise CommonMessageOverlayError(
                 f"{label}.status must be one of {sorted(BUILDABLE_STATUSES)!r}"
             )
+        allow_edge_whitespace_change = entry.get("allow_edge_whitespace_change", False)
+        if type(allow_edge_whitespace_change) is not bool:
+            raise CommonMessageOverlayError(
+                f"{label}.allow_edge_whitespace_change must be a JSON boolean"
+            )
         ids.append(entry_id)
         normalized.append(
             {
@@ -348,6 +360,7 @@ def validate_overlay_shape(overlay: dict[str, Any]) -> tuple[str, dict[str, Any]
                 "source_sc_utf16le_sha256": source_hash,
                 "ko": replacement,
                 "status": status,
+                "allow_edge_whitespace_change": allow_edge_whitespace_change,
             }
         )
 
@@ -434,7 +447,11 @@ def build_overlay(game_root: Path, overlay_path: Path, output_root: Path) -> dic
                 f"expected {entry['source_sc_utf16le_sha256']}"
             )
         replacement = str(entry["ko"])
-        problems = invariant_mismatches(source, replacement)
+        problems = invariant_mismatches(
+            source,
+            replacement,
+            allow_edge_whitespace_change=bool(entry["allow_edge_whitespace_change"]),
+        )
         if problems:
             raise CommonMessageOverlayError(
                 f"id {entry_id} invariant mismatch: {'; '.join(problems)}"
