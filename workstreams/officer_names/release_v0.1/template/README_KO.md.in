@@ -19,7 +19,7 @@
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\Invoke-OfficerNamesFileOnlyPatch.ps1 `
-  -Action Apply -GameRoot 'F:\Games\NOBU16' -AllowDevelopmentMilestone
+  -Action Apply -GameRoot '<게임 설치 폴더>' -AllowDevelopmentMilestone
 ```
 
 원복은 `RESTORE_ORIGINALS.bat` 또는 같은 스크립트의 `-Action Restore`를 사용한다. 네 파일 중
