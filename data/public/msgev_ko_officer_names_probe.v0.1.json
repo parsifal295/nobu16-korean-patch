@@ -1,0 +1,38 @@
+{
+  "schema": "nobu16.kr.common-message-overlay.v1",
+  "overlay_id": "msgev-officer-names-probe-v0.1",
+  "resource": "MSG_PK/SC/msgev.bin",
+  "base_language": "SC",
+  "entry_count": 3,
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "stock_sc": {
+    "size": 522918,
+    "packed_sha256": "7221A53E6E5CF493A3FAFFFCE35280E8147898120EEC59E460A2429AA265C1F9",
+    "raw_size": 750584,
+    "raw_sha256": "99E0338A64FF4140AD6E27503B1BF138AC44F5B68F01973ED61D0C949619DC91",
+    "string_count": 17910
+  },
+  "defaults": {
+    "status": "translated"
+  },
+  "entries": [
+    {
+      "id": 106,
+      "source_sc_utf16le_sha256": "3FFCC14FD5D145A6D69329E70E35CB01D831B3E5585EB96D5C4D8706133956F4",
+      "ko": "아츠지 사다유키"
+    },
+    {
+      "id": 216,
+      "source_sc_utf16le_sha256": "245BB7EF772BE12FD4FD2FABB07ED84BBBDEE89432F3ACAB69D5E70DD156CF45",
+      "ko": "이시다 미츠나리"
+    },
+    {
+      "id": 558,
+      "source_sc_utf16le_sha256": "05C303F18D4887B8A15DD6B9A1FB12C6FC736A419EDC7FBCBB06A2FACF62F09D",
+      "ko": "오다 노부나가"
+    }
+  ]
+}

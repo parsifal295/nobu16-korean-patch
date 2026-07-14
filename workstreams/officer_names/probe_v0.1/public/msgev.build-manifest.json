@@ -1,0 +1,66 @@
+{
+  "base_language": "SC",
+  "changed": [
+    {
+      "id": 106,
+      "replacement": "아츠지 사다유키",
+      "replacement_utf16le_sha256": "058446F36CE2ABB61206C49A9AF6376BA792075AC8B12AB680E7C751FDB58E68",
+      "source_utf16le_sha256": "3FFCC14FD5D145A6D69329E70E35CB01D831B3E5585EB96D5C4D8706133956F4",
+      "status": "translated"
+    },
+    {
+      "id": 216,
+      "replacement": "이시다 미츠나리",
+      "replacement_utf16le_sha256": "C53D73704745D1370D6EEB195E6D58285422DDAF8F086B368C588B9CFDAD2D7C",
+      "source_utf16le_sha256": "245BB7EF772BE12FD4FD2FABB07ED84BBBDEE89432F3ACAB69D5E70DD156CF45",
+      "status": "translated"
+    },
+    {
+      "id": 558,
+      "replacement": "오다 노부나가",
+      "replacement_utf16le_sha256": "0DA10D8CA7AD553251E3275B7423745F4CBF2B41FB1FDC8742688C670E57F8D0",
+      "source_utf16le_sha256": "05C303F18D4887B8A15DD6B9A1FB12C6FC736A419EDC7FBCBB06A2FACF62F09D",
+      "status": "translated"
+    }
+  ],
+  "changed_count": 3,
+  "commercial_source_text_included": false,
+  "executable_modified": false,
+  "file_only": true,
+  "installed_game_files_modified": false,
+  "operation_index": {
+    "count": 3,
+    "id_encoding": "UTF-8 compact JSON integer array",
+    "ids_sha256": "7E45B48C74804AE0E279FEAEF3C069A9CAE0FEDC7DF4D9F017534EB28873E8AF",
+    "sorted_unique": true
+  },
+  "overlay_entry_count": 3,
+  "overlay_id": "msgev-officer-names-probe-v0.1",
+  "overlay_schema": "nobu16.kr.common-message-overlay.v1",
+  "overlay_sha256": "8B08DD19C7A62E8F9128919F41D184C4FF7676A2C450426A9A98509979EE740B",
+  "process_memory_access": false,
+  "registry_modified": false,
+  "resource": "MSG_PK/SC/msgev.bin",
+  "schema": "nobu16.kr.common-message-build-manifest.v1",
+  "source": {
+    "raw_sha256": "99E0338A64FF4140AD6E27503B1BF138AC44F5B68F01973ED61D0C949619DC91",
+    "raw_size": 750584,
+    "relative_path": "MSG_PK/SC/msgev.bin",
+    "sha256": "7221A53E6E5CF493A3FAFFFCE35280E8147898120EEC59E460A2429AA265C1F9",
+    "size": 522918,
+    "string_count": 17910
+  },
+  "target": {
+    "raw_sha256": "A1FBDC5D5CA5D258CE17217014B68196B690B8DD8930398AAAC4F0B7C1B9D0F4",
+    "raw_size": 750608,
+    "sha256": "AFE9F0CCA5518F6BA04B44449971C004A9D674F0663DAF310780988C4A1977B9",
+    "size": 753577
+  },
+  "verification": {
+    "replacement_invariants": "OK",
+    "source_string_hashes": "OK",
+    "stock_pins": "OK",
+    "table_parse_roundtrip": "OK",
+    "wrapper_decompress_roundtrip": "OK"
+  }
+}

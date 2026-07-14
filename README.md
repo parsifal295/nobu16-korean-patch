@@ -68,12 +68,25 @@
 현재 공개 오버레이는 `data/public/msgui_ko_0000_5099.v0.1.json`이며 상용 영문·중문
 원문을 포함하지 않는다.
 
+사용자 검수 우선순위에 따라 후속 작업은 장수명부터 진행한다. 첫 파일 전용 검증 묶음은
+`아츠지 사다유키`, `이시다 미츠나리`, `오다 노부나가` 세 명이다. `msgdata`의 분리된
+성·이름 슬롯 9개와 `msgev`의 합성명 슬롯 3개를 함께 바꾸며, 공개 오버레이에는 숫자 ID,
+stock SC 문자열의 UTF-16LE SHA-256, 프로젝트가 작성한 한국어만 들어간다. 2026-07-14
+실제 게임의 실존 무장 편집 화면에서 `아츠지` / `사다유키` 분리 입력칸과
+`아츠지 사다유키` 합성명이 모두 정상 표시됨을 확인했다.
+
+관련 파일은 `data/public/*_ko_officer_names_probe.v0.1.json`과
+`workstreams/officer_names/probe_v0.1/public/`에 있다. 이 묶음은 다중 메시지 리소스
+설치기를 완성하기 전의 개발 검증본이며 최종 배포본은 아니다.
+
 ## 기준 파일
 
 - `MSG_PK/SC/msgui.bin` stock SHA-256:
   `C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82`
 - `MSG_PK/SC/msgdata.bin` stock SHA-256:
   `0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E`
+- `MSG_PK/SC/msgev.bin` stock SHA-256:
+  `7221A53E6E5CF493A3FAFFFCE35280E8147898120EEC59E460A2429AA265C1F9`
 - `RES_SC/res_lang.bin` stock SHA-256:
   `916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99`
 

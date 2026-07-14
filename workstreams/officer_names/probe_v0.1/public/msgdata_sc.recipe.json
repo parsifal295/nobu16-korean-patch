@@ -1,0 +1,88 @@
+{
+  "export_verification": {
+    "build_manifest_sha256": "52A4A532625C889B7276C88AF9EE49B02CC3CAC8B1617F4CAD337ABE042AC506",
+    "byte_identical_to_pinned_target": true,
+    "table_parse_roundtrip": true,
+    "wrapper_decompress_roundtrip": true
+  },
+  "file_only": true,
+  "language": "SC",
+  "operation_index": {
+    "count": 9,
+    "id_encoding": "UTF-8 compact JSON integer array",
+    "ids_sha256": "516985963022FC0A38093EBAF88E7BC687FEF7838154033D37698A741FA91BB4",
+    "sorted_unique": true
+  },
+  "operations": [
+    {
+      "id": 84,
+      "replacement": "오다 ",
+      "source_utf16le_sha256": "20A1967FBC661E340F03C79581BBD80CCBEF447AEB3B510189F7CEEFCEFB9B4F"
+    },
+    {
+      "id": 385,
+      "replacement": "아츠지 ",
+      "source_utf16le_sha256": "B2CF19CAC113A11344E84EBBA1665D43995A2E0140617B0C0B717A66A6A9351B"
+    },
+    {
+      "id": 688,
+      "replacement": "이시다 ",
+      "source_utf16le_sha256": "7D095FD2C798F13F7EF51DC322AE9E8834CEEE034A7BCA7ADB07FEA4BE5D5048"
+    },
+    {
+      "id": 1266,
+      "replacement": "노부나가",
+      "source_utf16le_sha256": "E61D3D8BB8C23FB55801218B8452CEAB7187E4B4BBFF9312A7C781C2192E6FB4"
+    },
+    {
+      "id": 1480,
+      "replacement": "사다유키",
+      "source_utf16le_sha256": "C1CB6B93EECBAD7358E03E143300D90E16F58ED54678D1829BE7F7B03390CA41"
+    },
+    {
+      "id": 1487,
+      "replacement": "미츠나리",
+      "source_utf16le_sha256": "65B972B6A6C97719A2A688BF2D4E353C208373118F00E7B9847C6663000FD0DE"
+    },
+    {
+      "id": 7039,
+      "replacement": "사다유키",
+      "source_utf16le_sha256": "C1CB6B93EECBAD7358E03E143300D90E16F58ED54678D1829BE7F7B03390CA41"
+    },
+    {
+      "id": 7599,
+      "replacement": "미츠나리",
+      "source_utf16le_sha256": "65B972B6A6C97719A2A688BF2D4E353C208373118F00E7B9847C6663000FD0DE"
+    },
+    {
+      "id": 11235,
+      "replacement": "이시다 ",
+      "source_utf16le_sha256": "7D095FD2C798F13F7EF51DC322AE9E8834CEEE034A7BCA7ADB07FEA4BE5D5048"
+    }
+  ],
+  "payload_policy": {
+    "contains_complete_source": false,
+    "contains_complete_target": false,
+    "contains_executable_bytes": false,
+    "development_catalog_included": false,
+    "source_text_is_stored_as_hash_only": true,
+    "stock_file_is_required_at_apply_time": true
+  },
+  "schema": "nobu16.file-only-msg-recipe.v1",
+  "scope": "common_message_overlay_v1",
+  "source": {
+    "raw_sha256": "1290BCDF6B00C6E4516061888C618BC66A246375E271C9D1330A9D168037FBCF",
+    "raw_size": 499760,
+    "relative_path": "MSG_PK/SC/msgdata.bin",
+    "sha256": "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+    "size": 267385,
+    "string_count": 29210
+  },
+  "target": {
+    "raw_sha256": "DB90E8D2031136747575B976912E91DA0C6B9A14CD53550CF82B301430C42BB3",
+    "raw_size": 499796,
+    "sha256": "4BC5079DA4ADF787BFCF5D7B2479F659E6F57BFB13572A6B696D26CB45F5063F",
+    "size": 501781
+  },
+  "version": "1"
+}

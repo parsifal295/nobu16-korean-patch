@@ -1,0 +1,68 @@
+{
+  "schema": "nobu16.kr.common-message-overlay.v1",
+  "overlay_id": "msgdata-officer-names-probe-v0.1",
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "base_language": "SC",
+  "entry_count": 9,
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "stock_sc": {
+    "size": 267385,
+    "packed_sha256": "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+    "raw_size": 499760,
+    "raw_sha256": "1290BCDF6B00C6E4516061888C618BC66A246375E271C9D1330A9D168037FBCF",
+    "string_count": 29210
+  },
+  "defaults": {
+    "status": "translated"
+  },
+  "entries": [
+    {
+      "id": 84,
+      "source_sc_utf16le_sha256": "20A1967FBC661E340F03C79581BBD80CCBEF447AEB3B510189F7CEEFCEFB9B4F",
+      "ko": "오다 "
+    },
+    {
+      "id": 385,
+      "source_sc_utf16le_sha256": "B2CF19CAC113A11344E84EBBA1665D43995A2E0140617B0C0B717A66A6A9351B",
+      "ko": "아츠지 "
+    },
+    {
+      "id": 688,
+      "source_sc_utf16le_sha256": "7D095FD2C798F13F7EF51DC322AE9E8834CEEE034A7BCA7ADB07FEA4BE5D5048",
+      "ko": "이시다 "
+    },
+    {
+      "id": 1266,
+      "source_sc_utf16le_sha256": "E61D3D8BB8C23FB55801218B8452CEAB7187E4B4BBFF9312A7C781C2192E6FB4",
+      "ko": "노부나가"
+    },
+    {
+      "id": 1480,
+      "source_sc_utf16le_sha256": "C1CB6B93EECBAD7358E03E143300D90E16F58ED54678D1829BE7F7B03390CA41",
+      "ko": "사다유키"
+    },
+    {
+      "id": 1487,
+      "source_sc_utf16le_sha256": "65B972B6A6C97719A2A688BF2D4E353C208373118F00E7B9847C6663000FD0DE",
+      "ko": "미츠나리"
+    },
+    {
+      "id": 7039,
+      "source_sc_utf16le_sha256": "C1CB6B93EECBAD7358E03E143300D90E16F58ED54678D1829BE7F7B03390CA41",
+      "ko": "사다유키"
+    },
+    {
+      "id": 7599,
+      "source_sc_utf16le_sha256": "65B972B6A6C97719A2A688BF2D4E353C208373118F00E7B9847C6663000FD0DE",
+      "ko": "미츠나리"
+    },
+    {
+      "id": 11235,
+      "source_sc_utf16le_sha256": "7D095FD2C798F13F7EF51DC322AE9E8834CEEE034A7BCA7ADB07FEA4BE5D5048",
+      "ko": "이시다 "
+    }
+  ]
+}
