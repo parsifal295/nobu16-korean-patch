@@ -76,8 +76,25 @@ dummy이며, 그 뒤의 부족 두목·이벤트 화자·일반 NPC는 장수명
 공개 산출물은 다음과 같다.
 
 - `data/public/msgev_ko_officer_names_0000_2399.v0.1.json`
+- `data/public/msgdata_ko_officer_names_0000_2399.v0.1.json`
 - `full_v0.1/public/msgev.build-manifest.json`
 - `full_v0.1/public/msgev_sc.recipe.json`
+- `full_v0.1/public/msgdata.build-manifest.json`
+- `full_v0.1/public/msgdata_sc.recipe.json`
 
-전체 음역은 아직 런타임 검수 전 초안이다. 전체 글자용 폰트 v5와 `msgdata` 분리 이름
-동기화를 마친 뒤 설치본에 적용한다.
+`tools/generate_officer_name_components.py`는 full `msgev` 이름을 SC/JP/EN 세 언어가 모두
+일치하는 성·이름 조각으로만 분해한다. 동일한 영문 독음만으로 다른 한자 성을 한꺼번에
+치환하지 않으며, 복수 후보와 번역 충돌은 적용하지 않는다. 이 기준으로 2,207명 중
+2,152명의 `msgdata` 분리 슬롯을 확정했고, 성 1,051개와 이름 2,781개를 합쳐 총 3,832개
+슬롯을 공개 오버레이에 수록했다. 성에는 합성 표시용 후행 ASCII 공백과
+`allow_edge_whitespace_change=true`를 넣고, 이름에는 공백을 넣지 않았다.
+
+나머지 55명은 단일명·칭호처럼 두 조각으로 나뉘지 않거나, 세 언어 exact pair가 없거나,
+후보 간 표기가 충돌해 `msgdata` 동기화에서만 보수적으로 제외했다. 이 55명도 full
+`msgev` 오버레이에는 이미 모두 번역되어 있으므로 전체 이름 번역에서 누락된 것은 아니다.
+
+`full_v0.1/public/`에는 완성 게임 리소스를 두지 않는다. 두 리소스의 source-free
+manifest와 recipe만 두며, 공개 `msgdata` recipe가 격리된 stock에서 tmp 빌드 target을
+바이트 단위로 재생하는지 검증했다. 상세 수치와 해시는
+`reports/officer_name_components_2026-07-14.md`에 기록한다. 전체 음역은 아직 런타임 검수
+전 초안이며, 폰트와 다중 리소스 설치·복원 통합 후 실제 화면 검수를 진행한다.
