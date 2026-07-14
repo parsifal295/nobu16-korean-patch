@@ -1,0 +1,158 @@
+{
+  "artifacts": {
+    "evidence/alignment_evidence.v0.2.json": {
+      "sha256": "237BE36ACBA9DFF542D1BACC420F53742FE9A9DE7D0FE4062201C435F7C0561C",
+      "size": 652886
+    },
+    "public/ev_strdata_ko_officer_names_0150_0349.v0.2.json": {
+      "sha256": "2F2A31E5F1871D48B9E93CECB9C6D04CF6C9B65C96CA6B5C407072DD2E5941E1",
+      "size": 34521
+    },
+    "review/review_index.v0.2.json": {
+      "sha256": "98909C907274E5CD2604A26E50B70997E9184184EED7D4005B32F1F40605584A",
+      "size": 48469
+    }
+  },
+  "batch_id": "ev-strdata-officer-names-0150-0349-v0.2",
+  "generator": {
+    "path": "build_ev_strdata_batch2.py",
+    "sha256": "86DD7B98FBB48F87C5450B558A42E28007FEB72B75333E36D574E4F504ACE09B"
+  },
+  "offline_binary_build": {
+    "files": {
+      "MSG/SC/ev_strdata.bin": {
+        "sha256": "B23AA22E1FDD4F8B660DABAF142F1E7A6D2D1C4EAE504F95935F5B0136202B4C",
+        "size": 666449
+      },
+      "ev_strdata.build-manifest.json": {
+        "sha256": "B0C58ABADCCC4ABF5AE97E3A9DD12943A7A3E34C58DED9BEC88B7F5EF0EB5FFE",
+        "size": 63414
+      },
+      "ev_strdata_sc.recipe.json": {
+        "sha256": "A0231531BD8FD397A5CBDEE840565725BA72C1EECCC512031EA6534A01242389",
+        "size": 36517
+      }
+    },
+    "installed_target_written": false,
+    "manifest_sha256": "B0C58ABADCCC4ABF5AE97E3A9DD12943A7A3E34C58DED9BEC88B7F5EF0EB5FFE",
+    "operations": 200,
+    "overlay_entries": 200,
+    "recipe_sha256": "A0231531BD8FD397A5CBDEE840565725BA72C1EECCC512031EA6534A01242389",
+    "target_sha256": "B23AA22E1FDD4F8B660DABAF142F1E7A6D2D1C4EAE504F95935F5B0136202B4C"
+  },
+  "passed": true,
+  "raw_format": {
+    "binary_builder_state": "enabled_offline_output_only",
+    "lz4_wrapper_decompression": "OK",
+    "message_table_parser": "tools/nobu16_msg_table.py",
+    "raw_parse_rebuild_byte_exact_languages": [
+      "SC",
+      "JP",
+      "TC"
+    ]
+  },
+  "replacement_invariants": {
+    "checked": 200,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "executable_modified": false,
+    "existing_v01_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "official_source_text_exposed_in_public_artifacts": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_or_progress_modified": false
+  },
+  "schema": "nobu16.kr.ev-strdata-generation-validation.v2",
+  "scope": {
+    "end_id": 349,
+    "next_start_id": 350,
+    "sc_display_translation_target_count": 11687,
+    "selected_display_entry_count": 200,
+    "selected_ids_sha256": "9AEF4DFBF4E5D7E7C4C2A863F85F5E2C475D8BD68C13097BFA82A86CC71C2036",
+    "start_id": 150,
+    "total_string_slots": 17868
+  },
+  "source_alignment": {
+    "english_reference_available": false,
+    "languages": [
+      "SC",
+      "JP",
+      "TC"
+    ],
+    "selected_ids_nonempty_in_all_references": 200,
+    "selected_reference_hash_count": 600,
+    "source_files": {
+      "JP": {
+        "display_nonempty_count": 13283,
+        "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+        "raw_sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+        "raw_size": 789260,
+        "relative_path": "MSG/JP/ev_strdata.bin",
+        "size": 496819,
+        "string_count": 17868
+      },
+      "SC": {
+        "display_nonempty_count": 11687,
+        "packed_sha256": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+        "raw_sha256": "482B25ACFBF219E85EF9F9A073745414B3FC97705BABB4FAF4AAC3BB68248DAD",
+        "raw_size": 662228,
+        "relative_path": "MSG/SC/ev_strdata.bin",
+        "size": 461651,
+        "string_count": 17868
+      },
+      "TC": {
+        "display_nonempty_count": 11687,
+        "packed_sha256": "9E9346B942CAFA99432D675F6BA74DD04D48F56095F35F46392697011D9CFEF3",
+        "raw_sha256": "8918886EC8BB8B58317189F7ABAF48EBC761633CC263F0641ED5213050D1B352",
+        "raw_size": 650756,
+        "relative_path": "MSG/TC/ev_strdata.bin",
+        "size": 460929,
+        "string_count": 17868
+      }
+    },
+    "string_count_each": 17868,
+    "traditional_chinese_used_as_third_reference": true
+  },
+  "source_free_scan": {
+    "evidence/alignment_evidence.v0.2.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "public/ev_strdata_ko_officer_names_0150_0349.v0.2.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review/review_index.v0.2.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "translation_reuse": {
+    "exact_sc_hash_matches": 200,
+    "mismatches": 0,
+    "seed_relative_path": "data/public/msgev_ko_officer_names_0000_2399.v0.1.json",
+    "seed_sha256": "2625B8261527217EB3592D6B6BD03BE38A666998D32C944D29917FD4598B63BC"
+  }
+}
