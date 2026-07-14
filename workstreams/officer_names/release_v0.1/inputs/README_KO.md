@@ -13,12 +13,12 @@
 exact size+SHA-256과 target 해시를 모두 고정 검증한 뒤, 설치된 predecessor 상태를 식별하는
 마이그레이션 핀으로만 읽는다.
 
-12건 교정과 Font-v5 재생성이 끝난 뒤에만 실제 `final_pins.json`을 만든다. 이 파일은
+12건 교정과 Font-v5 재생성을 마친 뒤 실제 `final_pins.json`을 만들었다. 이 파일은
 `nobu16.officer-names-final-pins.v1` 스키마로 네 리소스 각각의 stock, 최종 target, 최종 recipe
 SHA-256과 Font-v5의 두 OFL 라이선스, `metrics/glyphs.jsonl`, 두 `.pixels` 파일의 정확한 상대
 경로·크기·SHA-256을 담는다. Font-v5 recipe도 같은 다섯 파일을 정확히 열거해야 하며, 공개
-루트에 여섯 번째 파일이 섞이면 빌드를 거부한다. 현재는 의도적으로 `final_pins.json`이 없으므로
-빌더가 fail-closed한다. 임시 해시나 빈 문자열을 넣은 자리표시자 파일을 만들지 않는다.
+루트에 여섯 번째 파일이 섞이면 빌드를 거부한다. 임시 해시나 빈 문자열을 넣은 자리표시자 파일을
+만들지 않는다.
 `font_artifacts` 배열 순서는 라이선스 두 파일, metrics, entry 6 pixels, entry 7 pixels의 위 고정
 경로 순서여야 한다.
 
@@ -30,8 +30,8 @@ SHA-256과 Font-v5의 두 OFL 라이선스, `metrics/glyphs.jsonl`, 두 `.pixels
 - `runtime_qa.json`: 같은 최종 target 네 해시, `working_directory=game_root`,
   `error_9001_observed=false`인 실기 통과 증명
 
-이 세 파일도 현재는 의도적으로 만들지 않는다. runtime QA 전에는
-`-Mode ReleaseCandidate`가 출력 폴더 생성 전에 반드시 실패해야 한다.
+세 파일은 recipe E2E와 실제 게임 runtime QA 통과 뒤 작성한다. 하나라도 없거나 검토한 크기·
+SHA-256과 다르면 `-Mode ReleaseCandidate`는 출력 폴더 생성 전에 반드시 실패한다.
 
 완성 게임 리소스, 공식 원문 전체, EXE/DLL, 메모리 패치 코드는 이 입력 트리와 배포본에
 포함하지 않는다.

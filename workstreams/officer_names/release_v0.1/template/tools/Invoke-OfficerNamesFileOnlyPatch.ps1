@@ -441,7 +441,10 @@ function Assert-Package {
             [pscustomobject]@{ actual = $manifest.validation.runtime_qa; embedded = $embeddedRuntimeQa; label = 'runtime QA attestation' }
         )) {
             Assert-ExactObjectProperties $pair.actual @('path', 'sha256', 'size') $pair.label
-            Assert-HashSpec $pair.actual $pair.label
+            Assert-HashSpec ([pscustomobject]@{
+                size = $pair.actual.size
+                sha256 = $pair.actual.sha256
+            }) $pair.label
             if ([string]$pair.actual.path -cne [string]$pair.embedded.path -or
                 [int64]$pair.actual.size -ne [int64]$pair.embedded.size -or
                 ([string]$pair.actual.sha256).ToUpperInvariant() -ne ([string]$pair.embedded.sha256).ToUpperInvariant()) {

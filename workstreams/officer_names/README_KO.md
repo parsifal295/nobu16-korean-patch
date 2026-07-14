@@ -102,6 +102,27 @@ dummy이며, 그 뒤의 부족 두목·이벤트 화자·일반 NPC는 장수명
 `full_v0.1/public/`에는 완성 게임 리소스를 두지 않는다. 두 리소스의 source-free
 manifest와 recipe만 두며, 공개 `msgev`·`msgdata` recipe가 격리된 stock에서 각 tmp 빌드
 target을 바이트 단위로 재생하는지 검증했다. 상세 수치와 해시는
-`reports/officer_name_components_2026-07-14.md`에 기록한다. 전체 음역은 아직 런타임 검수
-전 초안이며, 교정본 글자 수요로 font v5를 다시 빌드해 고정하고 4파일 설치·복원 거래를
-통합한 뒤 실제 화면 검수를 진행한다.
+`reports/officer_name_components_2026-07-14.md`에 기록한다. 이 산출 시점에는 전체 음역을
+런타임 검수 전 초안으로 분류했으며, 이후 Font-v5와 네 파일 설치·복원 거래를 통합해 아래
+RC 검수를 진행했다.
+
+## 장수명 RC v0.1
+
+Font-v5는 장수명에 필요한 한글 125자를 포함하고 네 글꼴 테이블의 누락이 0자인 상태로
+고정했다. 최종 배포 설치기는 아래 네 파일만 한 거래로 적용·원복한다.
+
+1. `MSG_PK/SC/msgui.bin`
+2. `MSG_PK/SC/msgdata.bin`
+3. `MSG_PK/SC/msgev.bin`
+4. `RES_SC/res_lang.bin`
+
+실제 비 Steam 설치본을 게임 루트 작업 폴더에서 실행해 장수 편집 화면과 `오다 노부나가`의
+성·이름 분리 칸, 우측 전체 이름 렌더링을 확인했다. 승인 실행에서는 `ERROR:-9001`이 없었고,
+종료 뒤 네 설치 파일도 최종 target SHA-256과 일치했다. 직접 실행할 때는 게임 루트를 작업
+폴더로 지정해야 한다.
+
+배포 폴더는 `releases/officer_names_file_only_v0.1-rc`, ZIP은 같은 이름의 `.zip`이다.
+ZIP SHA-256은 `F41147A2010C563E1E47987D00FABF174B8CBA4F1BC66A9BDE31857F98682824`이며,
+새 디렉터리에 압축을 풀어 자체 검증기를 다시 실행했다. recipe E2E, runtime QA, RC 격리
+적용·원복 결과는 `release_v0.1/QA_REPORT_KO.md`에 기록한다. 이 RC는 2,207개 장수명 초안의
+배포·폰트·설치 경로를 검증한 것이며, 역사 인명 표기의 사람 전수 교정은 계속 진행한다.

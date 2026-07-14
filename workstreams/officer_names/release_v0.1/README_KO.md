@@ -5,13 +5,15 @@
 코어와 strict JSON guard를 SHA-256으로 검증한 뒤 결과 패키지의 `tools/`에 복사한다. 기존
 workstream 파일은 수정하지 않는다.
 
-현재 `inputs/final_pins.json`은 의도적으로 없다. 12건 장수명 교정과 Font-v5 재생성이 끝난
-뒤 실제 최종 recipe/target SHA-256을 검토해 이 파일을 만들기 전에는 빌더가 staging이나
-manifest를 만들지 않는다. 입력 계약은 `inputs/README_KO.md`를 따른다.
+12건 장수명 교정과 Font-v5 재생성을 마친 최종 recipe/target SHA-256은
+`inputs/final_pins.json`에 고정했다. 네 리소스 E2E와 실제 게임 검수 결과는 각각
+`inputs/four_resource_recipe_e2e.json`, `inputs/runtime_qa.json`에 기록하며, 두 증명의
+크기·SHA-256은 `inputs/candidate_pins.json`으로 다시 고정한다. 상세 기록은
+`QA_REPORT_KO.md`에 있다. 입력 계약은 `inputs/README_KO.md`를 따른다.
 
-빌드는 `Development`와 `ReleaseCandidate`를 분리한다. 기본값은 `Development`이며 실기 검증
-전에는 이 모드만 허용한다. `ReleaseCandidate`는 최종 네 리소스 recipe E2E와 실제 게임 runtime
-QA의 통과 증명 파일을 별도 SHA-256 핀으로 모두 검증하지 못하면 출력 폴더 생성 전에 실패한다.
+빌드는 `Development`와 `ReleaseCandidate`를 분리한다. 기본값은 `Development`다.
+`ReleaseCandidate`는 최종 네 리소스 recipe E2E와 실제 게임 runtime QA의 통과 증명 파일을
+별도 SHA-256 핀으로 모두 검증하지 못하면 출력 폴더 생성 전에 실패한다.
 
 설치기는 다음 네 고정 파일만 다룬다.
 
