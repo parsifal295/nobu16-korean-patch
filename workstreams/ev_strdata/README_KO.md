@@ -14,6 +14,17 @@
 넘어서 계속된다. Batch 1은 요청된 배치 상한인 150개에서 끊었다. 번역은 기존
 장수명 오버레이와 SC UTF-16LE 해시가 정확히 일치한 항목만 재사용했다.
 
+## Batch 2 범위
+
+- 범위: ID `150`–`349`
+- 번역 수: 연속 표시 문자열 `200`개
+- 누적 번역 수: ID `0`–`349`, `350`개
+- 내용: 장수 전체 이름표 후속 구간
+- 다음 시작 ID: `350`
+
+Batch 2도 기존 장수명 오버레이와 SC UTF-16LE 해시가 정확히 일치한 200개만
+재사용했다. 200개 전부 SC·JP·TC에서 같은 ID가 표시 문자열임을 확인했다.
+
 ## 언어 정렬
 
 설치본 `MSG` 트리에는 `SC`, `JP`, `TC`만 있고 `EN/ev_strdata.bin`은 없다.
@@ -29,6 +40,12 @@
 - `validation.v0.1.json`: 원본 핀, A/B 결정성, 불변 조건, 안전성 결과
 - `build_ev_strdata_batch1.py`: 결정적 생성 및 오프라인 바이너리 빌드 검증기
 - `tests/test_ev_strdata_batch1.py`: 공개 산출물과 설치본 불변 회귀 테스트
+- `public/ev_strdata_ko_officer_names_0150_0349.v0.2.json`: Batch 2 source-free 오버레이
+- `evidence/alignment_evidence.v0.2.json`: Batch 2의 3언어 해시·구조 증거
+- `review/review_index.v0.2.json`: Batch 2 검수 상태
+- `validation.v0.2.json`: Batch 2 결정성·안전성 검증 결과
+- `build_ev_strdata_batch2.py`: Batch 2 결정적 생성기
+- `tests/test_ev_strdata_batch2.py`: Batch 2 회귀 테스트
 
 ## 재생성 및 검증
 
@@ -40,6 +57,12 @@ python -B workstreams/ev_strdata/build_ev_strdata_batch1.py `
   --out-root workstreams/ev_strdata
 
 python -B -m unittest workstreams/ev_strdata/tests/test_ev_strdata_batch1.py
+
+python -B workstreams/ev_strdata/build_ev_strdata_batch2.py `
+  --game-root .. `
+  --out-root workstreams/ev_strdata
+
+python -B -m unittest workstreams/ev_strdata/tests/test_ev_strdata_batch2.py
 ```
 
 생성기는 설치본을 읽기만 한다. 패치 후보 바이너리·manifest·recipe는 임시
@@ -57,5 +80,5 @@ python -B -m unittest workstreams/ev_strdata/tests/test_ev_strdata_batch1.py
 - PUA 코드포인트
 - `[token]` 형태 자리표시자 순서
 
-현재 150개는 이름 문자열이라 해당 특수 구조가 없지만, 동일 검사를 일반화해
+현재 누적 350개는 이름 문자열이라 해당 특수 구조가 없지만, 동일 검사를 일반화해
 다음 배치에도 그대로 적용한다. 번역은 런타임 검수 전 초안 상태다.
