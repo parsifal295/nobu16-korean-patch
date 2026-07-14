@@ -1,0 +1,3348 @@
+{
+  "alignment_basis": [
+    "same_resource_role",
+    "same_17868_string_count",
+    "same_numeric_string_ids",
+    "selected_ids_nonempty_in_sc_jp_tc",
+    "existing_korean_officer_name_reused_only_on_exact_sc_hash_match"
+  ],
+  "batch_id": "ev-strdata-officer-names-2150-2206-v0.12",
+  "boundary_anchors": [
+    {
+      "id": 2149,
+      "reference_hashes": {
+        "JP": "55425A7B6FA72CB9DC8BBC1F38A8B6F71E921EBC87838D8CCAB67177D47B7C0A",
+        "SC": "5FDBB9E91284E6E7724AA8ED1F7A4C5A94C7C16486AA3741C9EDD4EFB4793337",
+        "TC": "45A03109E84D1C4FC050899F59223BC1451646D90DCC74636D1B95E9FA76DD33"
+      }
+    },
+    {
+      "id": 2150,
+      "reference_hashes": {
+        "JP": "01BD5AA0D80E10DD81FA7AD6F32C3E0A4C56CFAF883F8BF8C96B3FD29FC8C36A",
+        "SC": "8000D8386AAF7FB12D3094C6D9E238D908BCAC3A90EC0FA0B1AB2AD168E65DE3",
+        "TC": "01BD5AA0D80E10DD81FA7AD6F32C3E0A4C56CFAF883F8BF8C96B3FD29FC8C36A"
+      }
+    },
+    {
+      "id": 2206,
+      "reference_hashes": {
+        "JP": "383F444E757E4742F18135E17F0AF64CFC9A3CB6C04F63C30ED1CE73AFCE9A5F",
+        "SC": "F67D4F9B97A8A5552285D429C584041AF5CB5F5BA9B0F6AF33D9B5339B842F40",
+        "TC": "383F444E757E4742F18135E17F0AF64CFC9A3CB6C04F63C30ED1CE73AFCE9A5F"
+      }
+    },
+    {
+      "id": 2207,
+      "reference_hashes": {
+        "JP": "143A3833C55A7B51DBBEB8B0E0475770C90A4756005D69FCBB117DDBF4611BFC",
+        "SC": "2AB80B631AD896118B57262A7756C480D2BC0733C95357BC5EC1F4AD4A21CFAB",
+        "TC": "2AB80B631AD896118B57262A7756C480D2BC0733C95357BC5EC1F4AD4A21CFAB"
+      }
+    }
+  ],
+  "contains_commercial_source_text": false,
+  "entries": [
+    {
+      "id": 2150,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "01BD5AA0D80E10DD81FA7AD6F32C3E0A4C56CFAF883F8BF8C96B3FD29FC8C36A"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8000D8386AAF7FB12D3094C6D9E238D908BCAC3A90EC0FA0B1AB2AD168E65DE3"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "01BD5AA0D80E10DD81FA7AD6F32C3E0A4C56CFAF883F8BF8C96B3FD29FC8C36A"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2151,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39851DF7E4839C307C32195EB1D33A9A4F1DE9D7EB079629CF8F943848A22E06"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D57C3F38799D4EC3D8C33061B367B1D502E3291D33F8EB0C16493AF39FB9D250"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39851DF7E4839C307C32195EB1D33A9A4F1DE9D7EB079629CF8F943848A22E06"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2152,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1C819CDFCB1AD13751DE6712C926C3EE238E5EB044FEDB843208B30F29E70452"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1C76BC038F933502CD53F61B474CDD2A489CC763EFF8F01AAC804677E89AAB7E"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1BCE1997D5C7DD6607B0DBDB57D37131A3FE2D150E66A846F9BC57693AA121CE"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2153,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8D700C8636967AF88759B23696F04A462102360B4416DE90B6FCCED7A7546B48"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8D700C8636967AF88759B23696F04A462102360B4416DE90B6FCCED7A7546B48"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8D700C8636967AF88759B23696F04A462102360B4416DE90B6FCCED7A7546B48"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2154,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39F59C58E8BE6B6104CEED2A7732511185CA3414BF94524A9F416163F391C63D"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39F59C58E8BE6B6104CEED2A7732511185CA3414BF94524A9F416163F391C63D"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39F59C58E8BE6B6104CEED2A7732511185CA3414BF94524A9F416163F391C63D"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2155,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A6F3669A056B8EFD8B8392822B98A03FF9EE609825745208F554BA160AFB68EE"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A6F3669A056B8EFD8B8392822B98A03FF9EE609825745208F554BA160AFB68EE"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A6F3669A056B8EFD8B8392822B98A03FF9EE609825745208F554BA160AFB68EE"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2156,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "561830FC6E38B644CBD47709CA17ECE60A0E6EF538ECE2A4C7617C611F777451"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "561830FC6E38B644CBD47709CA17ECE60A0E6EF538ECE2A4C7617C611F777451"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "561830FC6E38B644CBD47709CA17ECE60A0E6EF538ECE2A4C7617C611F777451"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2157,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D1A5F3E6C701FC9185C8B3AFD8835E1547FFB24A1160C210D9FAE7BAA1B186CC"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0A7EDBC74D4C0AAAF14768577219378BADB27B38AB01EFC1B017D3F1E67072E9"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D1A5F3E6C701FC9185C8B3AFD8835E1547FFB24A1160C210D9FAE7BAA1B186CC"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2158,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "78CF314EB09AB82B72DD67A526F60DDCAD9A8579683373AA1D7A87CA11D1980C"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "78CF314EB09AB82B72DD67A526F60DDCAD9A8579683373AA1D7A87CA11D1980C"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "78CF314EB09AB82B72DD67A526F60DDCAD9A8579683373AA1D7A87CA11D1980C"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2159,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AF9B161618245DC93E323DD9D36AF03589411BE103679E7D00D28B183C2E34DB"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "14BF9EDA5744FC049DA239D1A9D3B7BB6C981221E8E34714244C97BB66517DD5"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AF9B161618245DC93E323DD9D36AF03589411BE103679E7D00D28B183C2E34DB"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2160,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CB04C84BFA8DD488B092866636A4D68690321364784C35B5987776AE9D31B978"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "83AB88B10E1B5ACEB5623418495019B93824AADF3050342FE93264F9E381B41A"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CB04C84BFA8DD488B092866636A4D68690321364784C35B5987776AE9D31B978"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2161,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "823123D0254C4C9AC70B446EC318AD543E2EB0816241CB62D2FDA97A7DEFEB31"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "823123D0254C4C9AC70B446EC318AD543E2EB0816241CB62D2FDA97A7DEFEB31"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "823123D0254C4C9AC70B446EC318AD543E2EB0816241CB62D2FDA97A7DEFEB31"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2162,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A88E55C2C2B1892AE62DF27C15CA5C2D9C8F63BA675EEBAF51AA406046D65ED1"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7DD6F408C59920053CED02C21F0DEA794F8567C901CC6982651DEEA18A0A80CC"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A26F1760BE40F9B3DFD7899D8880E52D89BE827DFC571EEC9A564D2788B16E5B"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2163,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6203F2D87BA362B4E3E4B81BFB03CC9A35DE665919629BD24D07F3D585098D59"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5E09F2D5F0931DCEE7478D1DF08F41A21E41B1A3961178F513CD0A9B7189A10F"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "11DF9254BCDCA640FC6E4DC2EF1E4EE4839B467B7830C28366A0C57D880FFFED"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2164,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6590992C5876B5F1A5489A3E8FAF4F6183F8B433EF4A7545E78C9CAB428977C5"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1E84934014E418FB545B75E025F2ABFC6176BB3DE3796A20C34D75B2A14FE81D"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4327779571071290DA3D639540A3C2274849265307296B35C806AA9E4853AE09"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2165,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8EAD69846EAE560DEDA54EC6999DA5FBB085E4432F23EC76AA0B674484A3B8E0"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "709010C1D331C76020712879750475C8EE2828D7EA17207CE6716ECCBF66B126"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "772388260AA3716FA09CE85D8073EE847E4737543B1E10A6E9987E008595334F"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2166,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B759D9153C9348597DC62E096E71C956D7342F51EA3F05EA4B251B3C1D3DA3CA"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "166597120E33845BCD528E61A2701BB2BC70B3BD33F4FD280621E589379F6D57"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B759D9153C9348597DC62E096E71C956D7342F51EA3F05EA4B251B3C1D3DA3CA"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2167,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "90789085FD3A33FAB9B49DBD07E9D823D6A0875D9982EFBA6AE947D4966BFC8A"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F3D0BBC63283D0DB7B6434AD30AB35406BBCFAAAF4CF44596C53A245712EB865"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "90789085FD3A33FAB9B49DBD07E9D823D6A0875D9982EFBA6AE947D4966BFC8A"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2168,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "20308A33A81E55B1142FFCD3CB9B4B28BC9E490423378B6EAC9B6F3A4AF1187A"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6BF621B4E874CEA84224C9C59E7B7A47E683341BA48F4F13AC6AAD19B6029E56"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "20308A33A81E55B1142FFCD3CB9B4B28BC9E490423378B6EAC9B6F3A4AF1187A"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2169,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C13301B8518BA6D5B7521D80C25FB9FC515CCD5C3E0FD3C1D7AC5928B20BC2E2"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D72F82357FA0165911B05595210382DCA8A83AFA0D4A94F9836C11093BA83162"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C13301B8518BA6D5B7521D80C25FB9FC515CCD5C3E0FD3C1D7AC5928B20BC2E2"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2170,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "00DF46FA73FA11B86ACBAF5C3EFAF6C290BF920777FF361D14A20277ED369ED0"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A197EE075690D32393178EFB0885D300779D180909FB95A09F6C80D28D32B998"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "00DF46FA73FA11B86ACBAF5C3EFAF6C290BF920777FF361D14A20277ED369ED0"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2171,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39BFAEAA7ACC0B4B32612C6837EEDA29EC3F61FF5B8A22F0A3ADE57D18F843CD"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6FD0DB1B0BAF2329F2DE05A64BCDDF2B40FF8F703DDA837E321E93B6AC10C74E"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "39BFAEAA7ACC0B4B32612C6837EEDA29EC3F61FF5B8A22F0A3ADE57D18F843CD"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2172,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4D5FB4F24D0894E8DC530B81F6644E002A0046F2ED3A9381A0A30A34854FA898"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D76F10221ACC2CD6AE7EB8E308397E7BB430F9870CAC248B447FE82A42F6B4A6"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4D5FB4F24D0894E8DC530B81F6644E002A0046F2ED3A9381A0A30A34854FA898"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2173,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8AB9CFAA2B7290538AA92F471CBC88D8E143B3881B34977413BC3DF54F7B7787"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "22D625011925C987BE2DAE4C34145AB744C1A11F44B9D12DFFE05382CBB5F6C9"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8AB9CFAA2B7290538AA92F471CBC88D8E143B3881B34977413BC3DF54F7B7787"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2174,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0F9E6075D1702322547CDEE97481C8ABCFE3867B647FB9E6FD0EBA2CF0240566"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "197EC2FB98CE53CA280DF7FFCF8617834B01E4889024EDE98F83D5701647A58D"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0F9E6075D1702322547CDEE97481C8ABCFE3867B647FB9E6FD0EBA2CF0240566"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2175,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8F05048736B2BF73AD868FF1801727A298BA37B38A5935D39196EE050BE37B36"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8F05048736B2BF73AD868FF1801727A298BA37B38A5935D39196EE050BE37B36"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8F05048736B2BF73AD868FF1801727A298BA37B38A5935D39196EE050BE37B36"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2176,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FD1BB2A4CBE6BF93D4FD78A2F551CE3E07BFA137044F4D13B452655BD0C419D7"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2FE27B98E954255C3927BDF006D16578A97E2044566266EED39FA5F0707EC66B"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "11B40B4465C0A93AABE7A0370086C4B05900C4A8067B0E83B41C607250CCD169"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2177,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "79327BA17950CB96786683FE315DDF5BEB78A59B21B2F9E9C5833318E5C36569"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2851B75CD64B69F0CCA48DC15B39C8EFA3331E339D19EE34B2B93E6D1D9D550D"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "79327BA17950CB96786683FE315DDF5BEB78A59B21B2F9E9C5833318E5C36569"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2178,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "FC3C7DCD7CDC227DB03E186855E1CEA81691A290AD586AEC63F9A8B992DC1179"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4E2070D1B1C20BA044FD9BA20D83D62B0A39DB6FEEED944EEB43A245691C6B73"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3FF72510ACDACA5FD0611BB7239398CA77637B3F77A1B4D709BF60E35A5E1183"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2179,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6FAAF76188428B9A26623E2038F09647F59F1CF9CC53B8C83181E47CBF6E561C"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "A4DC29265ED9355C50744099B02696DE7D5D2421A4ABFE05AF51BE28F700EDD0"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4E38BE880EAB73B9F0D30F6AAEF1BDD786E8F2933EE8567C6520B95739A6FF0C"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2180,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "75BC71F53813AAA4F4EEA0B06B0EECB1E8F4966EE0482B5E4F7BBDD8FE2A7C9A"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "13470CD98DEB7C4D5951DD57D1554C9746DDEA1EFBA61345D3DFF189B62ABE05"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "75BC71F53813AAA4F4EEA0B06B0EECB1E8F4966EE0482B5E4F7BBDD8FE2A7C9A"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2181,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CD48B5C21D97A64CF99F2E879DBA226781750558BC2CC7EE51330640B88D0C9F"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7F85E5F0CE3A964179348D9E02791272FAF2A283916C879FA76C6E7EDF2E9997"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CD48B5C21D97A64CF99F2E879DBA226781750558BC2CC7EE51330640B88D0C9F"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2182,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "051820C57ECF83C451F92BE6C7946E463476ABE1420B05528459AC17B691768A"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "AF604AD61A7475A736FE7C15D2F5F200AA7137CD7CA5809A1E4863962F853B58"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "5834E16D1BAF696BF74940B56E2C70626944E873AF44CDBBD0A594998899E3DF"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2183,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CB98082A022A79A81C1EF2F3249CB74A6B02B443A6FF29B66828E685BE1D4227"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8E2EA5AEBD6CD5A3774EC02BD8458D312A781A062D2895B194FB0B38A4035393"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CB98082A022A79A81C1EF2F3249CB74A6B02B443A6FF29B66828E685BE1D4227"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2184,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E54A4253CD6D980FF2F9F3C907D77375696807BC4061C9310AC1BCAFB4A32415"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D6DD6817B8A821090BB538EA3443D6B016FC05790D6C9AEC1EE35A85107E48D5"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E54A4253CD6D980FF2F9F3C907D77375696807BC4061C9310AC1BCAFB4A32415"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2185,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "81474A85255BF524C38D37DB282976831C95AD9277721E22F303DE2460A093E8"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F5BDB6C66C0FBA22D3FCB8063C6632A816B0EB82347D55F8BB006C8C4421EF09"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "81474A85255BF524C38D37DB282976831C95AD9277721E22F303DE2460A093E8"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2186,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D463C6782F3694F3981496A80C624A16694CF169A7AACE9874A81572E0345DAA"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D802DE02212E87C969DEFD81BB86651442BE91657ED3709BAD97084D9CCA3758"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F53ECF57A00528F50AE3ACF568E5BF9B103FEE84ECEEE9A6E2CC5A30981CB1A9"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2187,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "CA06FB2B22A3DE30433CF3AD82A08658F684077BEA50D6E40B77BADEA59E5878"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B615F00E4CEB92AE4AD4941CB8604CFAF87685C803EFC9B56393CBAE1A67C24B"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B5CD360826498035742C0AC1EB7EA0C057F2AC757C4AACB9D4E8BA5FFF7BCFCE"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2188,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8407E2E709B6AC49DF3814EF4BA2A5BED852B0B46DEBADB44CA5A2E1859C0C26"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8407E2E709B6AC49DF3814EF4BA2A5BED852B0B46DEBADB44CA5A2E1859C0C26"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "8407E2E709B6AC49DF3814EF4BA2A5BED852B0B46DEBADB44CA5A2E1859C0C26"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2189,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C66CDE78EC06BB84A06E325BF87822287198D5A298721C142F0880261FFA4E22"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C66CDE78EC06BB84A06E325BF87822287198D5A298721C142F0880261FFA4E22"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C66CDE78EC06BB84A06E325BF87822287198D5A298721C142F0880261FFA4E22"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2190,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B30D82734523896203CB83D902CD4CE07F4288813D8D240BEABB03B272F8D751"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B30D82734523896203CB83D902CD4CE07F4288813D8D240BEABB03B272F8D751"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "B30D82734523896203CB83D902CD4CE07F4288813D8D240BEABB03B272F8D751"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2191,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1761D462D4B82BD05F695290D1AA9BC9B0503A1AC70E93CBF076DBE519349A94"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1761D462D4B82BD05F695290D1AA9BC9B0503A1AC70E93CBF076DBE519349A94"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1761D462D4B82BD05F695290D1AA9BC9B0503A1AC70E93CBF076DBE519349A94"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2192,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F6CAF1C4EDBE9EBD6CFBA85BDEDE1EFA98F4BE8AF6413069085D9E51AD39E0F2"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F6CAF1C4EDBE9EBD6CFBA85BDEDE1EFA98F4BE8AF6413069085D9E51AD39E0F2"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F6CAF1C4EDBE9EBD6CFBA85BDEDE1EFA98F4BE8AF6413069085D9E51AD39E0F2"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2193,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1E0CC6BD47A726FEEC33D2FAFA2DAF72BADF081E234E47AC4AFA9BB36AC1CA56"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E4B4A5F31F56590AB522DA0BFCD332A68FA9BFF7AD5AD499C6A96F537E8D8C49"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1E0CC6BD47A726FEEC33D2FAFA2DAF72BADF081E234E47AC4AFA9BB36AC1CA56"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2194,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9FE4CFE81AA64B8483EA71A7D7CAFF5CDFD141323E67E6D0139AB83D1E36E8D0"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0928D985FFA2969900697BEB94983489C9641FB0F3733BA4F6F0490DC32D7C74"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "9FE4CFE81AA64B8483EA71A7D7CAFF5CDFD141323E67E6D0139AB83D1E36E8D0"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2195,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6ECC1E68141C1C05350B394ABB12CDD0998C0C14099A563CBA9A8E5AE0E56FBE"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E10A848E0A5D17443EE78CE407E972A19AE2F4EC2B850536A08A870DD3B9228A"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6ECC1E68141C1C05350B394ABB12CDD0998C0C14099A563CBA9A8E5AE0E56FBE"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2196,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "465E434F0053FC6F1E410BE6F0131AEAA6D6FA30FB34DCCBBCABC54E9E0D7E7F"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "6294267FAF58F4A3F2E2F8BD53B5CFA5652A98F2BCFA729B76A665FE4368FCD1"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "465E434F0053FC6F1E410BE6F0131AEAA6D6FA30FB34DCCBBCABC54E9E0D7E7F"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2197,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "C76A026DA6A94D2CC8139779EF41A283EF0DA0F8273032757ED9287D2313DA61"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0BD2455BA5916BF03E04DC1B3FBD739DE1ECF73A28EC52354C839EC0A138D1E0"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0758FACC03F038F6D145333C68F19E849FBC2074658C7CC6847995275B896DB8"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2198,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "EFF2B9CD0603C1C52B90EDC0F69AE041EEC0BE8BDB61E863E28A885816B46186"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "4363FE62025FEE5219A382ACDB969C3409B63F7B0B01138198649C7671C66273"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "31376804862E1350BD3C6A87C2EC81D2F5F4D48C485D85ECCB5EB19B9754055C"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2199,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "239820784F6DB3A04269933A6ADD8B11C5DBEDAE380FC69B14C1FAF6DED0DC8B"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D10F6224EF491C615E0D62688840BF416ED60ED09155597896D43CDB3C0005AE"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "730F61A6F2B91FAFC8BC3C0E7172704CF811AFA9CCEA879134B7327F3E0FD80B"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2200,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "91E4A38FCA9413E5839C1560DF78AB966BA5DBCB40DFD341A75239ACDC99ECE8"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0753404D55A59BD6AC0C9FC01346B7CA71D3288654D03EDC0BBE19C6D20264F9"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "0830B43F297A38483FD5F49774EF7947105C225305E87FB7DE6BD4B4EEDFD838"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2201,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "56C863D787168B752DE13EBCB4A2AC0157E5DE871F4CD7E191F3C22FD5C7D75A"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "128ED00D8EA036437F71A78B0F4122E24268AFB09A7AA15B275A03710FBBC0C0"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "E023AB33A26DAAC75ADEC661710EF997E9699AF8260DC05F0BBB925B80F5E3FB"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2202,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3AFB744A5B1416BB50716453C3098F6188AEC144311AE3F4C7CB72FD10625701"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3AFB744A5B1416BB50716453C3098F6188AEC144311AE3F4C7CB72FD10625701"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "D97E7068639A363DD1C90BEA619FAA3CDB4CBEEDC662C3897FE2D068F1FF63FD"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2203,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3FFDE38FEFD0BF2D5E394E602D484A20F24D89C07B0DA2ACB0A70FE9EA2012E9"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "3FFDE38FEFD0BF2D5E394E602D484A20F24D89C07B0DA2ACB0A70FE9EA2012E9"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "80E0B7D23EF1D964A72206664C2B5287949E4414BAE03C79AF65D58AF54D2BE8"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2204,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "06EDCD078F3BEC20B619DD38589E9C9A0343A53BCB8CB85A952D12886B3FAF5F"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "06EDCD078F3BEC20B619DD38589E9C9A0343A53BCB8CB85A952D12886B3FAF5F"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "2FF3EBC9B51E2DCDBFA2FB192831088075940983DF58A4EA94EF498BDBF1E970"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2205,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "7B0BC2961E34B51CC32CCD53E5423B90E30A64063D6BC9888EA998009284C6F7"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "02F3AE328C35A5102D8CE036D1EA2314145E199E5009DC85024053BBB5028C81"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "1496A1722C74E266196F5BEE9BCEE78E66C3B59C824E86621B63695ED3E5AA08"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    },
+    {
+      "id": 2206,
+      "references": {
+        "JP": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "383F444E757E4742F18135E17F0AF64CFC9A3CB6C04F63C30ED1CE73AFCE9A5F"
+        },
+        "SC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "F67D4F9B97A8A5552285D429C584041AF5CB5F5BA9B0F6AF33D9B5339B842F40"
+        },
+        "TC": {
+          "structure": {
+            "bracket_placeholder_count": 0,
+            "bracket_placeholders_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "control_codepoints": [],
+            "escape_token_count": 0,
+            "escape_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "printf_token_count": 0,
+            "printf_tokens_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+            "pua_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0
+          },
+          "utf16le_sha256": "383F444E757E4742F18135E17F0AF64CFC9A3CB6C04F63C30ED1CE73AFCE9A5F"
+        }
+      },
+      "translation_reuse_exact_sc_hash_match": true
+    }
+  ],
+  "entry_count": 57,
+  "manual_translation_policy": {
+    "basis": "SC_JP_TC_aligned_name_review_with_exact_SC_hash_pins",
+    "count": 0,
+    "ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+    "official_source_text_included": false
+  },
+  "reference_language_note": "The installed MSG tree has no EN ev_strdata.bin; TC is the third reference alongside SC and JP.",
+  "resource": "ev_strdata",
+  "schema": "nobu16.kr.ev-strdata-alignment-evidence.v12",
+  "scope": {
+    "boundary_reason": "continued the officer-name section to the 200-entry batch cap",
+    "end_id": 2206,
+    "functional_section": "officer_full_name_catalog_continuation_batch",
+    "next_start_id": 2207,
+    "selected_display_entry_count": 57,
+    "start_id": 2150
+  },
+  "source_files": {
+    "JP": {
+      "display_nonempty_count": 13283,
+      "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+      "raw_sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+      "raw_size": 789260,
+      "relative_path": "MSG/JP/ev_strdata.bin",
+      "size": 496819,
+      "string_count": 17868
+    },
+    "SC": {
+      "display_nonempty_count": 11687,
+      "packed_sha256": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+      "raw_sha256": "482B25ACFBF219E85EF9F9A073745414B3FC97705BABB4FAF4AAC3BB68248DAD",
+      "raw_size": 662228,
+      "relative_path": "MSG/SC/ev_strdata.bin",
+      "size": 461651,
+      "string_count": 17868
+    },
+    "TC": {
+      "display_nonempty_count": 11687,
+      "packed_sha256": "9E9346B942CAFA99432D675F6BA74DD04D48F56095F35F46392697011D9CFEF3",
+      "raw_sha256": "8918886EC8BB8B58317189F7ABAF48EBC761633CC263F0641ED5213050D1B352",
+      "raw_size": 650756,
+      "relative_path": "MSG/TC/ev_strdata.bin",
+      "size": 460929,
+      "string_count": 17868
+    }
+  },
+  "translation_seed": {
+    "commercial_source_text_included": false,
+    "relative_path": "data/public/msgev_ko_officer_names_0000_2399.v0.1.json",
+    "sha256": "2625B8261527217EB3592D6B6BD03BE38A666998D32C944D29917FD4598B63BC"
+  }
+}
