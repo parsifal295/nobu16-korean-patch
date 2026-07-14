@@ -4,6 +4,8 @@ import subprocess
 import sys
 import unittest
 
+from tools import update_readme_progress as readme_progress
+
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PROGRESS = ROOT / "data" / "public" / "translation_progress.v0.1.json"
@@ -55,6 +57,17 @@ class ReadmeProgressTests(unittest.TestCase):
                 "MSG/SC/msggame.bin": (19152, 21225, 12268),
             },
         )
+
+    def test_msggame_coordinate_overlay_is_counted_as_completed(self):
+        coverage, completed = readme_progress.overlay_stats(
+            [
+                "workstreams/msggame/public/"
+                "msggame_ko_system_messages_b01r0003_b02r0086_0197.v0.1.json"
+            ],
+            {"translated", "reviewed"},
+        )
+        self.assertEqual(150, len(coverage))
+        self.assertEqual(coverage, completed)
 
     def test_readme_progress_is_current(self):
         result = subprocess.run(

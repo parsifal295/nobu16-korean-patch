@@ -23,9 +23,22 @@ def load_json(path: Path) -> dict:
     return payload
 
 
-def overlay_stats(patterns: list[str], completed_statuses: set[str]) -> tuple[set[int], set[int]]:
-    ids: set[int] = set()
-    completed: set[int] = set()
+def overlay_entry_key(entry: dict, path: Path) -> tuple[object, ...]:
+    entry_id = entry.get("id")
+    if isinstance(entry_id, int):
+        return ("id", entry_id)
+    coordinate_fields = ("block_id", "record_id", "literal_id")
+    coordinate = tuple(entry.get(field) for field in coordinate_fields)
+    if all(isinstance(value, int) for value in coordinate):
+        return ("msggame", *coordinate)
+    raise ValueError(f"overlay entry has no integer id or msggame coordinate: {path}")
+
+
+def overlay_stats(
+    patterns: list[str], completed_statuses: set[str]
+) -> tuple[set[tuple[object, ...]], set[tuple[object, ...]]]:
+    ids: set[tuple[object, ...]] = set()
+    completed: set[tuple[object, ...]] = set()
     matched: set[Path] = set()
     for pattern in patterns:
         paths = sorted(ROOT.glob(pattern))
@@ -47,9 +60,9 @@ def overlay_stats(patterns: list[str], completed_statuses: set[str]) -> tuple[se
             if default_status is None and isinstance(translation_policy, dict):
                 default_status = translation_policy.get("status")
             for entry in entries:
-                if not isinstance(entry, dict) or not isinstance(entry.get("id"), int):
-                    raise ValueError(f"overlay entry has no integer id: {path}")
-                entry_id = entry["id"]
+                if not isinstance(entry, dict):
+                    raise ValueError(f"overlay entry is not an object: {path}")
+                entry_id = overlay_entry_key(entry, path)
                 ids.add(entry_id)
                 status = entry.get("status", default_status)
                 if status in completed_statuses:
@@ -142,7 +155,7 @@ def render() -> str:
         "`msggame.bin` 2개는 18블록 바이트코드에서 확인한 표시 가능한 SC 리터럴 후보를 분모에 포함했다.",
         "후속 사람 분류에서 코드용 문자열이 확인되면 대상 분모를 보수적으로 조정한다.",
         "번역 대상은 표시 가능한 비공백 문자열과 의도적으로 활성화한 UI 빈 슬롯만 센다.",
-        "완료는 공개 오버레이의 `translated`·`reviewed` 고유 ID 합집합이다. 최종 화면 QA 완료를 뜻하지 않는다.",
+        "완료는 공개 오버레이의 `translated`·`reviewed` 고유 ID·`msggame` 좌표 합집합이다. 최종 화면 QA 완료를 뜻하지 않는다.",
         "",
         "| 한글화 대상 파일 | 번역 완료 / 대상 | 초벌 커버리지 | 전체 슬롯·레코드 | 진행률 | 현재 상태 |",
         "|---|---:|---:|---:|---|---|",

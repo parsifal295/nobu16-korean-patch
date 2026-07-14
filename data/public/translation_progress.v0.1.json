@@ -1,6 +1,6 @@
 {
   "schema": "nobu16.kr.translation-progress.v0.1",
-  "count_policy": "completed is the union of unique ids whose effective status is translated or reviewed; draft coverage includes every unique id in tracked source-free overlays; translation_target_total is the pinned set of displayable nonblank strings that require Korean text, plus intentionally activated UI slots",
+  "count_policy": "completed is the union of unique ids or msggame coordinates whose effective status is translated or reviewed; draft coverage includes every unique id or msggame coordinate in tracked source-free overlays; translation_target_total is the pinned set of displayable nonblank strings that require Korean text, plus intentionally activated UI slots",
   "completed_statuses": [
     "translated",
     "reviewed"
@@ -95,8 +95,10 @@
       "total_slots": 25598,
       "stock_visible_nonblank": 16482,
       "translation_target_total": 16482,
-      "overlay_globs": [],
-      "note": "18블록·21,581레코드 파싱 및 가변 길이 재패킹 완료; 표시 후보 16,482개, 번역 미착수"
+      "overlay_globs": [
+        "workstreams/msggame/public/msggame_ko_system_messages_b01r0003_b02r0086_0197.v0.1.json"
+      ],
+      "note": "좌표 기반 첫 150개 초벌; 다음 좌표 (2,198,0), 블록 0 문법 조각 93개 문맥 검수 보류"
     },
     {
       "path": "MSG/SC/msggame.bin",
