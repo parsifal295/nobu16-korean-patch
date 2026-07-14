@@ -129,7 +129,7 @@
       "kind": "strings",
       "total_slots": 17868,
       "stock_visible_nonblank": 11687,
-      "translation_target_total": 11687,
+      "translation_target_total": 11199,
       "overlay_globs": [
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0000_0149.v0.1.json",
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0150_0349.v0.2.json",
@@ -142,9 +142,10 @@
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1550_1749.v0.9.json",
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1750_1949.v0.10.json",
         "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1950_2149.v0.11.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_2150_2206.v0.12.json"
+        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_2150_2206.v0.12.json",
+        "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2207_2406.v0.13.json"
       ],
-      "note": "파일 선두 장수 전체 이름표 ID 0–2206, 2,207개 완료; 다음 ID 2207부터 이벤트 제목·라벨 구간"
+      "note": "장수명 ID 0–2206 2,207개 + 이벤트 라벨 7개 완료; ID 2207–3200 내부 placeholder 488개는 대상 제외; 다음 ID 2407"
     },
     {
       "path": "RES_SC/res_lang.bin",
