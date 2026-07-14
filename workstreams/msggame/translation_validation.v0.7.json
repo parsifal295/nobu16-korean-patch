@@ -1,0 +1,135 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/translation_alignment_evidence.v0.7.json",
+      "sha256": "1101834764FD3FE97481FCE36622406466E1DABAC4BC37F2FD157A0276F0A842",
+      "size": 696489
+    },
+    "overlay": {
+      "path": "public/msggame_ko_system_messages_b06r0560_0947.v0.7.json",
+      "sha256": "EB328E39DBC811BA258178C02AAB1C76795CCCB385A285072C9A20944AE94E65",
+      "size": 36882
+    },
+    "review_index": {
+      "path": "review/translation_review_index.v0.7.json",
+      "sha256": "FEE1233E90AD8C1707078D6E83E9F71963976C6B5D5E5041866551BD95372C77",
+      "size": 61104
+    }
+  },
+  "batch_id": "msggame_pk_system_messages_b06r0560_0947.v0.7",
+  "generator": {
+    "path": "build_translation_batch7.py",
+    "sha256": "AE3E3A7E23AA8C91EF29BB9362DE14F35E0054C1D59E580956B085EA41172989"
+  },
+  "offline_binary_validation": {
+    "entry_count": 150,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "opaque_record_bytecode_preserved": true,
+    "raw_parse_rebuild_byte_exact": true,
+    "record_coordinates_preserved": true,
+    "skipped_candidates_unchanged": true,
+    "target_packed_sha256": "49147F4CBA624373158DAA4BD8B9BE0966275DD006CE3A99FA3244DED3868AD3",
+    "target_packed_size": 1083285,
+    "target_raw_sha256": "EF9EE9C1E611340CA040672891AB94C6AEFA7467FA905382E8CCAC70D3D0DF2C",
+    "target_raw_size": 1079028,
+    "top_level_offsets_recomputed_and_aligned": true
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 150,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "escape_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "bracket_sequence_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "byte_identical_offline_binary_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "process_memory_access": false,
+    "progress_manifest_modified": false,
+    "registry_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msggame-translation-generation-validation.v1",
+  "scope": {
+    "first_coordinate": [
+      6,
+      560,
+      0
+    ],
+    "last_coordinate": [
+      6,
+      947,
+      0
+    ],
+    "next_coordinate": [
+      6,
+      948,
+      0
+    ],
+    "selected_coordinates_sha256": "A43A2AED75BB41206B8126A16DBD57582A6ED067FF0F650BCAE700D02C2403D9",
+    "selected_literal_count": 150,
+    "selected_record_count": 132
+  },
+  "selection": {
+    "all_linguistic_literals_in_scanned_records_selected": true,
+    "natural_scan_record_boundaries": true,
+    "nonlinguistic_visible_candidate_skips": 0,
+    "scanned_visible_candidate_count": 150,
+    "skipped_candidates": [],
+    "stable_sc_coordinate_order": true
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN",
+      "TC"
+    ],
+    "literal_shapes_assumed_aligned": false,
+    "manual_same_record_semantic_crosschecks": 132,
+    "record_coordinates_aligned": true,
+    "record_reference_count": 528
+  },
+  "source_free_scan": {
+    "msggame_ko_system_messages_b06r0560_0947.v0.7.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "translation_alignment_evidence.v0.7.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "translation_review_index.v0.7.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 150,
+    "runtime_reviewed": 0,
+    "translated_draft": 150
+  }
+}
