@@ -1,8 +1,6 @@
-# NOBU16 Korean File-Only Patch
+# NOBU16 Korean Patch
 
-`NOBUNAGA'S AMBITION: Awakening with Power Up Kit`의 한글 패치를 만드는 작업 저장소다.
-목표는 게임이 설치된 디스크의 공식 언어 리소스만 오프라인으로 변환하고, 검증 가능한
-레시피와 복원 절차를 포함한 배포본을 만드는 것이다.
+목적: `신장의 야망 : 신생 파워업키트`의 한글 패치 제작
 
 ## 절대 조건
 
@@ -12,16 +10,6 @@
 - 공식 파일의 stock SHA-256을 확인한 뒤에만 적용한다.
 - 백업, 잠금, 저널, 원자적 교체, 실패 시 롤백, 완전 복원을 제공한다.
 - 상용 게임의 완전한 리소스 파일은 Git이나 공개 배포본에 넣지 않는다.
-
-## 검증 환경과 실행 조건
-
-- 현재 개발·검증 대상은 Steam에서 받은 설치본이 아닌 **비 Steam PC 설치본**이다.
-- Steam 설치 경로, Steam 실행 옵션, Steam 런처 동작을 프로젝트의 전제로 삼지 않는다.
-- `NOBU16PK.exe`를 실행할 때 프로세스 작업 폴더(바로가기의 `시작 위치`)는 반드시
-  게임 설치 루트여야 한다. 이 저장소의 현재 검증 환경에서는 작업 폴더가 다르면
-  순정·수정 리소스와 무관하게 `ERROR:-9001`이 재현됐다.
-- 따라서 `ERROR:-9001`이 발생하면 패치 파일 손상으로 단정하기 전에 작업 폴더부터
-  확인한다. 상세 재현 기록은 `reports/error_9001_working_directory_2026-07-14.md`에 있다.
 
 ## 현재 돌파구와 알려진 제한
 
@@ -34,14 +22,6 @@
   표시 제한으로 수용한다. 메뉴·대화·정보 화면의 번역 완성과 배포본 제작을 우선한다.
 - `single-wide-glyph` 가로쓰기 실험은 보류하며 공개 패치의 필수 구성에 포함하지 않는다.
 
-상세 근거는 다음 문서에 있다.
-
-- `docs/ARCHITECTURE_FILE_ONLY.md`
-- `docs/DISTRIBUTION_POLICY.md`
-- `reports/castle_name_layout_file_only_probe_2026-07-14.md`
-- `reports/single_glyph_castle_wrapped_candidate_2026-07-14.md`
-- `reports/wide_castle_ab_runtime_2026-07-14.md`
-
 ## 저장소 구성
 
 - `tools/`: 추출, 빌드, 검증, 안전 적용·복원 도구
@@ -52,9 +32,6 @@
 - `reports/`: 재현 가능한 분석·검증 결과
 - `tests/`: 파일 형식과 안전장치 회귀 테스트
 - `vendor/noto/`: OFL 라이선스의 고정 폰트 입력과 라이선스
-
-`tmp`, `backups`, Ghidra 프로젝트 DB, 추출 원문, 완성 게임 리소스, 빌드 산출물은
-로컬 작업용이며 Git 추적 대상이 아니다.
 
 ## 현재 번역 상태
 
