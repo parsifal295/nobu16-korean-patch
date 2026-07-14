@@ -1,0 +1,132 @@
+{
+  "aligned_primary_block": {
+    "all_nonempty": true,
+    "entry_count": 392,
+    "first_id": 9151,
+    "last_id": 9542,
+    "resource": "msgdata.bin",
+    "same_ids_in_languages": [
+      "SC",
+      "EN",
+      "JP"
+    ]
+  },
+  "excluded_adjacent_ranges": [
+    {
+      "classification": "unclassified_geographic_and_special_labels",
+      "count": 4028,
+      "first_id": 9947,
+      "last_id": 13974,
+      "reason_excluded": "not proven to be canonical castle-name ids"
+    },
+    {
+      "classification": "province_names",
+      "count": 72,
+      "first_id": 13975,
+      "last_id": 14046,
+      "reason_excluded": "separate province-name block"
+    },
+    {
+      "classification": "province_readings_sc_jp_only",
+      "count": 72,
+      "first_id": 14047,
+      "last_id": 14118,
+      "reason_excluded": "separate province-reading block"
+    }
+  ],
+  "name_blocks": {
+    "EN": {
+      "count": 392,
+      "first_id": 9151,
+      "last_id": 9542,
+      "nonempty_count": 392,
+      "text_block_sha256": "EC24783D0FB87BAD6A58D2785B9A2EF24DDEF11DB596775EB2B83268A326C46E",
+      "unique_text_count": 385
+    },
+    "JP": {
+      "count": 392,
+      "first_id": 9151,
+      "last_id": 9542,
+      "nonempty_count": 392,
+      "text_block_sha256": "580197B9AFC62FDB4A44E727AF6C1279721F498ED1051988668A7D2BA28C45F5",
+      "unique_text_count": 389
+    },
+    "SC": {
+      "count": 392,
+      "first_id": 9151,
+      "last_id": 9542,
+      "nonempty_count": 392,
+      "text_block_sha256": "4273E1330085453DDD5EBE6020FD09A68654B97CEF72770B0FA26CAB885932A2",
+      "unique_text_count": 389
+    }
+  },
+  "reading_blocks": {
+    "EN": {
+      "count": 392,
+      "first_id": 9543,
+      "last_id": 9934,
+      "nonempty_count": 0,
+      "text_block_sha256": "BBDDB244D47EC79A1F0BA56BB05C6F077BA428B4338D26D7CFC0FB15BB0141CB"
+    },
+    "JP": {
+      "count": 392,
+      "first_id": 9543,
+      "last_id": 9934,
+      "nonempty_count": 392,
+      "text_block_sha256": "D26AD0EE8145292BA403DAA2C8645150636D333C3A14E770AEB958BD2670E4D6"
+    },
+    "SC": {
+      "count": 392,
+      "first_id": 9543,
+      "last_id": 9934,
+      "nonempty_count": 392,
+      "text_block_sha256": "B0B889078CCDA618AC865A7DFC93A486A5F08913FCF6A8A3FAEBA1F357C20951"
+    }
+  },
+  "resources": [
+    {
+      "language": "SC",
+      "logical_path": "MSG_PK/SC/msgdata.bin",
+      "raw_sha256": "1290BCDF6B00C6E4516061888C618BC66A246375E271C9D1330A9D168037FBCF",
+      "raw_size": 499760,
+      "string_count": 29210,
+      "unchanged_parse_rebuild_byte_exact": true,
+      "wrapper_sha256": "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+      "wrapper_size": 267385
+    },
+    {
+      "language": "EN",
+      "logical_path": "MSG_PK/EN/msgdata.bin",
+      "raw_sha256": "DA913D870DA3C13F108E8E6727C9A8881B9E13A83F8EB7F02DD3C55D1D444B32",
+      "raw_size": 744236,
+      "string_count": 29210,
+      "unchanged_parse_rebuild_byte_exact": true,
+      "wrapper_sha256": "15142A9D252F1759364FEE5D090B0802C51D8355B2A24A1DC6F1300FBF1EC5E1",
+      "wrapper_size": 267550
+    },
+    {
+      "language": "JP",
+      "logical_path": "MSG_PK/JP/msgdata.bin",
+      "raw_sha256": "119F10F28DAEEFFA7B231764BB5747A8837DEB487E4595504ADE2A77023148A0",
+      "raw_size": 431044,
+      "string_count": 29210,
+      "unchanged_parse_rebuild_byte_exact": true,
+      "wrapper_sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+      "wrapper_size": 273734
+    }
+  ],
+  "schema": "nobu16.kr.castle-name-resource-map.v0.1",
+  "source_text_free": true,
+  "suffix_contract": {
+    "name_ids": [
+      9936,
+      9940
+    ],
+    "reading_ids": [
+      9942,
+      9946
+    ],
+    "separator_id_9941_empty_all_languages": true,
+    "suffix_count": 5
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "draft": {
+    "entry_count": 392,
+    "max_korean_character_count_including_spaces": 8,
+    "method_counts": {
+      "en_romaji": 370,
+      "en_romaji_jp_n_y_boundary": 2,
+      "en_romaji_words": 20
+    },
+    "status": "automatic_draft_review_needed",
+    "unique_korean_name_count": 385
+  },
+  "generator": {
+    "path": "workstreams/castle_names/generate_castle_name_draft.py",
+    "sha256": "D447D7B7B0EEC366742577B18F207EC858A3288526230501605D7F11E4E8431D"
+  },
+  "outputs": {
+    "private_alignment": {
+      "distribution_forbidden": true,
+      "path": "private/castle_names_alignment.v0.1.json",
+      "sha256": "6169A149F4F52D368751E0EE7B802B57704E76A1E747C0A98628596C43BA7E8F",
+      "size": 92785
+    },
+    "public_overlay": {
+      "path": "public/castle_names_ko_9151_9542.v0.1.json",
+      "sha256": "465F0CA873E310C20FAF9DF7D247B4A5025991774E1C4F8F320BC4125A93AE13",
+      "size": 53671
+    },
+    "resource_evidence": {
+      "path": "evidence/resource_id_map.v0.1.json",
+      "sha256": "A6CF012C157020A102489CAD7FCC1FF62B29BCA6431B189177903A935BED5ED6",
+      "size": 3761
+    },
+    "validation": {
+      "path": "validation.json",
+      "sha256": "B1B31A887036EAE2233385C28EC2AF74D7354E0336BEE69F06AE967F85C2C299",
+      "size": 719
+    }
+  },
+  "safety": {
+    "commercial_source_text_in_public_artifacts": false,
+    "installed_game_files_modified": false,
+    "private_alignment_distribution_forbidden": true,
+    "process_memory_access": false,
+    "registry_access": false
+  },
+  "schema": "nobu16.kr.castle-name-draft-manifest.v0.1",
+  "source_text_free_public_artifacts": true
+}

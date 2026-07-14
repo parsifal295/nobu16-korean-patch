@@ -1,0 +1,56 @@
+{
+  "determinism": {
+    "file_count": 5,
+    "independent_builds_byte_identical": true,
+    "inventory_sha256": "A660FA2791FC48B5326E9E99CBE5DB99643CF2309E52D3B3063304F356623112"
+  },
+  "passed": true,
+  "patch_recipe_built": false,
+  "public_overlay": {
+    "automatic_review_needed_count": 392,
+    "cjk_unified_source_ideograph_count": 0,
+    "entry_count": 392,
+    "jp_syllabic_n_y_boundary_corrections": {
+      "9201": "덴진야마",
+      "9478": "다몬야마"
+    },
+    "max_korean_character_count_including_spaces": 8,
+    "method_counts": {
+      "en_romaji": 370,
+      "en_romaji_jp_n_y_boundary": 2,
+      "en_romaji_words": 20
+    },
+    "only_precomposed_hangul_and_ascii_space": true,
+    "sha256": "465F0CA873E310C20FAF9DF7D247B4A5025991774E1C4F8F320BC4125A93AE13",
+    "source_text_field_count": 0,
+    "unique_korean_name_count": 385
+  },
+  "release_tree": {
+    "commercial_source_text_present": false,
+    "exact_directory_inventory": true,
+    "exact_file_inventory": true,
+    "forbidden_artifact_count": 0,
+    "private_directory_count": 0,
+    "public_text_file_count_scanned": 8,
+    "required_artifact_count": 4,
+    "required_artifacts_match_build_a": true
+  },
+  "resource_identification": {
+    "adjacent_unclassified_ranges_excluded": true,
+    "all_languages_nonempty_and_id_aligned": true,
+    "block_hashes_exact": true,
+    "entry_count": 392,
+    "first_id": 9151,
+    "last_id": 9542,
+    "resource": "MSG_PK/{SC,EN,JP}/msgdata.bin",
+    "wrapper_and_raw_resource_pins_exact": true
+  },
+  "review_complete": false,
+  "safety": {
+    "installed_game_files_modified": false,
+    "private_alignment_distribution_forbidden": true,
+    "process_memory_access": false,
+    "registry_access": false
+  },
+  "schema": "nobu16.kr.castle-name-draft-verification.v0.1"
+}
