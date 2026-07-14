@@ -1,0 +1,97 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "alignment_evidence.v0.3.json",
+      "sha256": "1AEEBEB457679CC12A01310D80EB405C6B296726330833DEA36EAB5391F88985",
+      "size": 221210
+    },
+    "overlay": {
+      "path": "msgbre_ko_biographies_0251_0350.v0.3.json",
+      "sha256": "1253609BC246DB4A63D1A5658476756AB89A0660FA683262CFFA444E3678132B",
+      "size": 40986
+    },
+    "review_index": {
+      "path": "review_index.v0.3.json",
+      "sha256": "D1DE1B7F08E6EA7AE9B12058813EEA7C65CE4A872E9F6B1257BD7D7DE83FBACD",
+      "size": 28222
+    }
+  },
+  "batch_id": "msgbre_biographies_0251_0350.v0.3",
+  "generator": {
+    "path": "build_msgbre_batch3.py",
+    "sha256": "DE79E74CED5C73B51D2E8F48B08436265C1C9D10D26572E7759C5362A9F21D2B"
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 100,
+    "custom_bracket_placeholder_checks": 100,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "custom_bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "common_builder_modified": false,
+    "existing_v01_v02_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msgbre-generation-validation.v3",
+  "scope": {
+    "end_id": 350,
+    "next_start_id": 351,
+    "selected_ids_sha256": "967A6B55A787F82F5741501D13DC4A911A3D3EF204FC5A27C4E3FB27CC991840",
+    "selected_nonempty_entry_count": 100,
+    "start_id": 251
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks": 100,
+    "selected_nonempty_in_all_languages": 100,
+    "selected_reference_hash_count": 300,
+    "string_count_each": 3000
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 100,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 16,
+    "translated_draft": 100
+  }
+}
