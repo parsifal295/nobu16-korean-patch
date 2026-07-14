@@ -103,8 +103,10 @@
       "total_slots": 17868,
       "stock_visible_nonblank": 11687,
       "translation_target_total": 11687,
-      "overlay_globs": [],
-      "note": "파싱 완료; 번역 미착수"
+      "overlay_globs": [
+        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0000_0149.v0.1.json"
+      ],
+      "note": "파일 선두 장수 전체 이름표 ID 0–149, 150개; 다음 ID 150"
     },
     {
       "path": "RES_SC/res_lang.bin",
