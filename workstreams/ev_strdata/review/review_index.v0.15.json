@@ -1,0 +1,1760 @@
+{
+  "batch_id": "ev-strdata-character-speaker-labels-2780-2971-v0.15",
+  "contains_commercial_source_text": false,
+  "deferred_internal_groups": [
+    {
+      "classification": "actor_reference",
+      "count": 34,
+      "excluded_from_overlay_and_translation_progress": true,
+      "ids": [
+        2953,
+        2954,
+        2955,
+        2959,
+        2960,
+        2964,
+        2965,
+        2967,
+        2972,
+        2973,
+        2974,
+        2975,
+        2976,
+        2977,
+        2978,
+        2979,
+        2980,
+        2981,
+        2982,
+        2983,
+        2984,
+        2985,
+        2986,
+        2987,
+        2988,
+        2989,
+        2990,
+        2991,
+        2992,
+        2993,
+        2994,
+        2995,
+        2996,
+        2997
+      ],
+      "ids_sha256": "A04A1FD8D53E811766759BA29C048A26CE6ADA5124CFBEBFE1BD70FD9C0518C6",
+      "ordered_reference_hashes_sha256": "D03CF5B017076649413812E0444B417C17895641796FF61508CAAC90BFFCCA04",
+      "reason": "runtime_actor_reference_not_display_text",
+      "status": "deferred"
+    },
+    {
+      "classification": "dummy_placeholder",
+      "count": 2,
+      "excluded_from_overlay_and_translation_progress": true,
+      "ids": [
+        2998,
+        2999
+      ],
+      "ids_sha256": "EC1FACDE24FAA5091E53277DE5408358F5A4DA7E22E9C999EFF2D0883DAE94C4",
+      "ordered_reference_hashes_sha256": "9C482BF2A9F75217B040D786A71153C0EC884A9DCBF7031F0A8CEB2FEB03A853",
+      "reason": "dummy_placeholder_not_display_text",
+      "status": "deferred"
+    },
+    {
+      "classification": "internal_role_key",
+      "count": 7,
+      "excluded_from_overlay_and_translation_progress": true,
+      "ids": [
+        3000,
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        3006
+      ],
+      "ids_sha256": "DCFA8857788FE1D57FC736A63BB35842829CDF3B4E556BBCF07801E9D789F39E",
+      "ordered_reference_hashes_sha256": "7BD839CBA467BF6DD6CEA0E6F6DE5AEDE5CE967A0B6449D12299620B9D510327",
+      "reason": "internal_role_key_not_display_text",
+      "status": "deferred"
+    }
+  ],
+  "entries": [
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2780,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2781,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2782,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2783,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2784,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2785,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2786,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2787,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2788,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2789,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2790,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2791,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2792,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2793,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2794,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2795,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2796,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2797,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2798,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2799,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2800,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2801,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2802,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2803,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2804,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2805,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2806,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2807,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2808,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2809,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2810,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2811,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2812,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2813,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2814,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2815,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2816,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2817,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2818,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2819,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2820,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2821,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2822,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2823,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2824,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2825,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2826,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2827,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2828,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2829,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2830,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2831,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2832,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2833,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2834,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2835,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2836,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2837,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2838,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2839,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2840,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2841,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2842,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2843,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2844,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2845,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2846,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2847,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2848,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2849,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2850,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2851,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2852,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2853,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2854,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2855,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2856,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2857,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2858,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2859,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2860,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2861,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2862,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2863,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2864,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2865,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2866,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2867,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2868,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2869,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2870,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2871,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2872,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2873,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2874,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2875,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2876,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2877,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2878,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2879,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2880,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2881,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2882,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2883,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2884,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2885,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2886,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2887,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2888,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2889,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2890,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2891,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2892,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2893,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2894,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2895,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2896,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2897,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2898,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2899,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2900,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2901,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2902,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2903,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2904,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2905,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2906,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2907,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2908,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2909,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2910,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2911,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2912,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2913,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2914,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2915,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2916,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": [
+        "rare_person_reading"
+      ]
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2917,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2918,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2919,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2920,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2921,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2922,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2923,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2924,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2925,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2926,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2927,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2928,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2929,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2930,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2931,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2932,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2933,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2934,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2935,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2936,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2937,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2938,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2939,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2940,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2941,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2942,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2943,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2944,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2945,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2946,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2947,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2948,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2949,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2950,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2951,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2952,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2956,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2957,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2958,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2961,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2962,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2963,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2966,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2968,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "named_character_label",
+      "human_review_required": true,
+      "id": 2969,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2970,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    },
+    {
+      "classification": "generic_speaker_label",
+      "human_review_required": true,
+      "id": 2971,
+      "runtime_reviewed": false,
+      "status": "translated",
+      "translation_origin": "manual_sc_jp_tc_aligned_review",
+      "uncertainty_flags": []
+    }
+  ],
+  "entry_count": 184,
+  "quality_state": "character_and_speaker_label_draft_pending_runtime_review",
+  "schema": "nobu16.kr.ev-strdata-review-index.v15",
+  "uncertain_reading_count": 8
+}
