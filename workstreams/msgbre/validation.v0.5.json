@@ -1,0 +1,102 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "alignment_evidence.v0.5.json",
+      "sha256": "149CCA5AC5B421870318CBA08954F1059ED0B6991C8DDE8381276279571FE3E3",
+      "size": 238725
+    },
+    "overlay": {
+      "path": "msgbre_ko_biographies_0458_0565.v0.5.json",
+      "sha256": "941D6B235708E4E8247CD0E4508DBDADBBA5D46A6A7F5406F047C4187B19A8F0",
+      "size": 44522
+    },
+    "review_index": {
+      "path": "review_index.v0.5.json",
+      "sha256": "B2371FD63BE2749B0F39D5362D167C3B13846DB93BC6B4F19639D7F183D319B8",
+      "size": 31397
+    }
+  },
+  "batch_id": "msgbre_biographies_0458_0565.v0.5",
+  "generator": {
+    "path": "build_msgbre_batch5.py",
+    "sha256": "7FB2D540B6992F086EE5D8468B44C111098DBC617F8AB7DC0EA7972094A3E75C"
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 108,
+    "custom_bracket_placeholder_checks": 108,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "custom_bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "common_builder_modified": false,
+    "existing_v01_v02_v03_v04_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msgbre-generation-validation.v5",
+  "scope": {
+    "end_id": 565,
+    "natural_boundary": {
+      "last_completed_family": "oda_yorinaga",
+      "next_family": "ochi",
+      "officer_name_ids_crosschecked": 109
+    },
+    "next_start_id": 566,
+    "selected_ids_sha256": "7AD406F3B20EEE00F530263D9044E1A91EA9E8E41B72BDB675EE66132D9DBD56",
+    "selected_nonempty_entry_count": 108,
+    "start_id": 458
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks": 108,
+    "selected_nonempty_in_all_languages": 108,
+    "selected_reference_hash_count": 324,
+    "string_count_each": 3000
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 108,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 29,
+    "translated_draft": 108
+  }
+}
