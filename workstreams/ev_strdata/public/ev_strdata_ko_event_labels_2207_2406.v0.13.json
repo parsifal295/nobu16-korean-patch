@@ -1,0 +1,58 @@
+{
+  "base_language": "SC",
+  "defaults": {
+    "status": "translated"
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "id": 2400,
+      "ko": "모베쓰중 두령",
+      "source_sc_utf16le_sha256": "B7E71D9D2ED8654335EF733CE40A0DB7C05AB5F1E830C2726A10645AF32AB0AA"
+    },
+    {
+      "id": 2401,
+      "ko": "아카이시중 두령",
+      "source_sc_utf16le_sha256": "4957A5AD8EE900CBE4F7DCC1ECB4724FCEEC9FE178A3A53D35E6185BDF3F317B"
+    },
+    {
+      "id": 2402,
+      "ko": "도와다중 두령",
+      "source_sc_utf16le_sha256": "C89B202FDEDE0C954C1BB3740D40F8D83B315FBCAA6512C7CE2770EAADE88BDC"
+    },
+    {
+      "id": 2403,
+      "ko": "시치노헤중 두령",
+      "source_sc_utf16le_sha256": "B4E07BD3611826AE6C61D964EE36EA3DA0A567FBF2331BBF68302A9155CA68EB"
+    },
+    {
+      "id": 2404,
+      "ko": "다야마중 두령",
+      "source_sc_utf16le_sha256": "F79C82BFF133561CBF6E4C66AC9110A62C6AE14C44E20DAAAD57FB72548CBCFA"
+    },
+    {
+      "id": 2405,
+      "ko": "구지중 두령",
+      "source_sc_utf16le_sha256": "87AA1DF2BE9C564C0691037E2F290E0B7078D8EC28D36050E492FFA24D6E4044"
+    },
+    {
+      "id": 2406,
+      "ko": "히에누키중 두령",
+      "source_sc_utf16le_sha256": "977AC38F267A187564AB01988B2AD21E6FEDF563C988116D6E47087F17456BC8"
+    }
+  ],
+  "entry_count": 7,
+  "overlay_id": "ev-strdata-event-labels-2207-2406-v0.13",
+  "resource": "MSG/SC/ev_strdata.bin",
+  "schema": "nobu16.kr.common-message-overlay.v1",
+  "stock_sc": {
+    "packed_sha256": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+    "raw_sha256": "482B25ACFBF219E85EF9F9A073745414B3FC97705BABB4FAF4AAC3BB68248DAD",
+    "raw_size": 662228,
+    "size": 461651,
+    "string_count": 17868
+  }
+}
