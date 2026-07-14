@@ -1,0 +1,134 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/translation_alignment_evidence.base.v0.1.json",
+      "sha256": "0F4BF55791F4D102797B1A6968D29297871E84D15798185C397D6FE0C23AE8C6",
+      "size": 529310
+    },
+    "overlay": {
+      "path": "public/msggame_base_ko_system_messages_b00r1194_b02r0138.v0.1.json",
+      "sha256": "0723B420255CB72C915701E0311941E09392E2A4691580C02E59C9DD9F4CB8AD",
+      "size": 34102
+    },
+    "review_index": {
+      "path": "review/translation_review_index.base.v0.1.json",
+      "sha256": "B012EF2E212E41917873395C531DC2E4296EE77CC20E3E1CC7E9507F44997535",
+      "size": 59015
+    }
+  },
+  "batch_id": "msggame_base_system_messages_b00r1194_b02r0138.v0.1",
+  "generator": {
+    "path": "build_base_translation_batch1.py",
+    "sha256": "005551B5468953C69DDC3243D0FD78B6167BC81F4EE7312453C2C84BEDBD9BAF"
+  },
+  "offline_binary_validation": {
+    "entry_count": 150,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "opaque_record_bytecode_preserved": true,
+    "raw_parse_rebuild_byte_exact": true,
+    "record_coordinates_preserved": true,
+    "skipped_candidates_unchanged": true,
+    "target_packed_sha256": "F2F491247BB1695B1DAD40AB66D5A8DAF75BCB1240F0BA9C41CE927B25EA5B31",
+    "target_packed_size": 883324,
+    "target_raw_sha256": "4988EF5E88CFEC69EF1B3900DAE4DD5467568C2E8B76D714D836407B003C4455",
+    "target_raw_size": 879848,
+    "top_level_offsets_recomputed_and_aligned": true
+  },
+  "passed": true,
+  "replacement_invariants": {
+    "checked": 150,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "escape_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "bracket_sequence_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "byte_identical_offline_binary_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "process_memory_access": false,
+    "progress_manifest_modified": false,
+    "registry_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msggame-translation-generation-validation.v1",
+  "scope": {
+    "first_coordinate": [
+      0,
+      1194,
+      0
+    ],
+    "last_coordinate": [
+      2,
+      138,
+      1
+    ],
+    "next_coordinate": [
+      2,
+      139,
+      0
+    ],
+    "selected_coordinates_sha256": "E9924428A9D6D17BA37C9EF65E95EFE200C2FAF6813995A79D32B2ABE6EAF728",
+    "selected_literal_count": 150,
+    "selected_record_count": 131
+  },
+  "selection": {
+    "all_linguistic_literals_in_scanned_records_selected": true,
+    "natural_scan_record_boundaries": true,
+    "nonlinguistic_visible_candidate_skips": 0,
+    "scanned_visible_candidate_count": 150,
+    "skipped_candidates": [],
+    "stable_sc_coordinate_order": true
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "TC"
+    ],
+    "literal_shapes_assumed_aligned": false,
+    "manual_same_record_semantic_crosschecks": 131,
+    "record_coordinates_aligned": true,
+    "record_reference_count": 393
+  },
+  "source_free_scan": {
+    "msggame_base_ko_system_messages_b00r1194_b02r0138.v0.1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "translation_alignment_evidence.base.v0.1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "translation_review_index.base.v0.1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 150,
+    "runtime_reviewed": 0,
+    "translated_draft": 150
+  }
+}
