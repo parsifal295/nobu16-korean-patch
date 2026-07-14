@@ -1,0 +1,199 @@
+{
+  "schema": "nobu16.kr.castle-name-human-review-proposal.v0.2",
+  "proposal_id": "castle-names-9349-9446-review-v0.2",
+  "base_overlay": {
+    "path": "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.1.json",
+    "sha256": "465F0CA873E310C20FAF9DF7D247B4A5025991774E1C4F8F320BC4125A93AE13",
+    "modified_by_this_review": false
+  },
+  "official_game_inputs": {
+    "comparison": "same-id official SC, EN, and JP display names plus official JP reading",
+    "private_alignment_sha256": "6169A149F4F52D368751E0EE7B802B57704E76A1E747C0A98628596C43BA7E8F",
+    "sc_msgdata_wrapper_sha256": "0586C269D381AA1FD75C39802AC01C697B5E8469A9C1ABE693BA5EDB2E658B3E",
+    "en_msgdata_wrapper_sha256": "15142A9D252F1759364FEE5D090B0802C51D8355B2A24A1DC6F1300FBF1EC5E1",
+    "jp_msgdata_wrapper_sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+    "sc_en_jp_id_alignment_verified": true,
+    "commercial_source_text_in_this_proposal": false
+  },
+  "scope": {
+    "first_id": 9349,
+    "last_id": 9446,
+    "reviewed_count": 98,
+    "contiguous": true
+  },
+  "review_policy": {
+    "long_vowels": "do_not_duplicate_japanese_long_vowels_in_korean",
+    "geographic_tsu": "propose_standard_korean_쓰_for_japanese_つ_in_place_names",
+    "compound_spacing": "do_not_replace_EN_word_boundaries_without_attested_Korean_usage",
+    "source_priority": [
+      "official_game_JP_reading",
+      "official_game_EN_romanization",
+      "official_game_SC_display_name_alignment",
+      "Korean_language_authority_or_official_Korean_tourism_usage",
+      "mechanical_transliteration"
+    ],
+    "personal_name_style_is_out_of_scope": true
+  },
+  "summary": {
+    "accepted_as_is_count": 89,
+    "change_proposed_count": 9,
+    "geographic_style_gated_change_count": 9,
+    "compound_spacing_unresolved_count": 1
+  },
+  "accepted_as_is_ids": [
+    9349, 9350, 9351, 9352, 9353, 9354, 9355, 9356, 9357, 9359,
+    9362, 9363, 9364, 9365, 9366, 9367, 9368, 9369, 9370, 9371,
+    9372, 9373, 9375, 9376, 9377, 9378, 9379, 9380, 9381, 9382,
+    9383, 9384, 9385, 9386, 9387, 9388, 9389, 9390, 9391, 9392,
+    9393, 9395, 9397, 9398, 9399, 9400, 9401, 9402, 9403, 9404,
+    9405, 9406, 9407, 9408, 9409, 9410, 9411, 9412, 9413, 9414,
+    9415, 9416, 9417, 9418, 9419, 9420, 9421, 9422, 9423, 9424,
+    9425, 9426, 9427, 9428, 9430, 9432, 9433, 9434, 9435, 9436,
+    9438, 9439, 9440, 9441, 9442, 9443, 9444, 9445, 9446
+  ],
+  "long_vowel_reviewed_and_retained_ids": [
+    9354, 9361, 9365, 9369, 9382, 9384, 9388, 9391, 9403, 9408,
+    9417, 9428, 9437, 9439
+  ],
+  "ei_sequence_reviewed_and_retained_ids": [
+    9401
+  ],
+  "compound_spacing_review": [
+    {
+      "id": 9361,
+      "proposed_ko": "빗추 마쓰야마",
+      "joined_candidate_ko": "빗추마쓰야마",
+      "decision": "retain_current_space_pending_policy",
+      "confidence": "medium",
+      "merge_gate": "approve_compound_spacing_style",
+      "note": "official Korean sources use both spaced and joined forms"
+    },
+    {
+      "id": 9365,
+      "proposed_ko": "사토 가나야마",
+      "decision": "retain_EN_regional_boundary",
+      "confidence": "medium"
+    },
+    {
+      "id": 9369,
+      "proposed_ko": "스오 다카모리",
+      "decision": "retain_EN_regional_boundary",
+      "confidence": "medium"
+    },
+    {
+      "id": 9370,
+      "proposed_ko": "아키 다카야마",
+      "decision": "retain_EN_regional_boundary",
+      "confidence": "medium"
+    },
+    {
+      "id": 9407,
+      "proposed_ko": "히젠 가시마",
+      "decision": "retain_EN_regional_boundary",
+      "confidence": "medium"
+    },
+    {
+      "id": 9428,
+      "proposed_ko": "아이즈 신구",
+      "decision": "retain_EN_regional_boundary",
+      "confidence": "medium"
+    }
+  ],
+  "changes": [
+    {
+      "id": 9358,
+      "draft_ko": "미츠이시",
+      "proposed_ko": "미쓰이시",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_mitsuishi"]
+    },
+    {
+      "id": 9360,
+      "draft_ko": "시모츠이",
+      "proposed_ko": "시모쓰이",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "okayama_shimotsui"]
+    },
+    {
+      "id": 9361,
+      "draft_ko": "빗추 마츠야마",
+      "proposed_ko": "빗추 마쓰야마",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_castle_name_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "secondary_merge_gate": "approve_compound_spacing_style",
+      "evidence_keys": ["nikl_tsu", "jnto_bicchu_matsuyama", "ana_bicchu_matsuyama"]
+    },
+    {
+      "id": 9374,
+      "draft_ko": "다카츠",
+      "proposed_ko": "다카쓰",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9394,
+      "draft_ko": "나카츠",
+      "proposed_ko": "나카쓰",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_castle_name_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_nakatsu_castle"]
+    },
+    {
+      "id": 9396,
+      "draft_ko": "기츠키",
+      "proposed_ko": "기쓰키",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_castle_name_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_kitsuki_castle"]
+    },
+    {
+      "id": 9429,
+      "draft_ko": "츠치우라",
+      "proposed_ko": "쓰치우라",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_tsuchiura"]
+    },
+    {
+      "id": 9431,
+      "draft_ko": "츠쿠이",
+      "proposed_ko": "쓰쿠이",
+      "reason_codes": ["standard_korean_geographic_tsu"],
+      "confidence": "medium",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu"]
+    },
+    {
+      "id": 9437,
+      "draft_ko": "오츠",
+      "proposed_ko": "오쓰",
+      "reason_codes": ["standard_korean_geographic_tsu", "official_korean_usage"],
+      "confidence": "high",
+      "merge_gate": "approve_geographic_tsu_style",
+      "evidence_keys": ["nikl_tsu", "jnto_otsu"]
+    }
+  ],
+  "external_evidence": {
+    "nikl_tsu": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=275072&searchCondition=&searchKeyword=",
+    "nikl_long_vowels": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=329857",
+    "jnto_mitsuishi": "https://www.japan.travel/ko/plan/list-of-volunteer-guides/",
+    "okayama_shimotsui": "https://www.okayama-japan.jp/ko/spot/10743",
+    "jnto_bicchu_matsuyama": "https://www.japan.travel/ko/spot/904/",
+    "ana_bicchu_matsuyama": "https://www.ana.co.jp/ko/kr/japan-travel-planner/okayama/0000006.html",
+    "jnto_nakatsu_castle": "https://www.japan.travel/ko/spot/689/",
+    "jnto_kitsuki_castle": "https://www.japan.travel/ko/spot/691/",
+    "jnto_tsuchiura": "https://www.japan.travel/ko/kr/japan-magazine/1806_hanabi/",
+    "jnto_otsu": "https://www.japan.travel/ko/spot/1061/"
+  },
+  "merge_status": "proposal_only_not_applied"
+}

@@ -1,0 +1,124 @@
+{
+  "schema": "nobu16.kr.translation-progress.v0.1",
+  "count_policy": "completed is the union of unique ids whose effective status is translated or reviewed; draft coverage includes every unique id in tracked source-free overlays; translation_target_total is the pinned set of displayable nonblank strings that require Korean text, plus intentionally activated UI slots",
+  "completed_statuses": [
+    "translated",
+    "reviewed"
+  ],
+  "commit_policy": "regenerate and check the README progress block before every commit",
+  "resources": [
+    {
+      "path": "MSG_PK/SC/msgui.bin",
+      "kind": "strings",
+      "total_slots": 5100,
+      "stock_visible_nonblank": 3940,
+      "translation_target_total": 4037,
+      "overlay_globs": [
+        "data/public/msgui_ko_0000_5099.v0.2.json"
+      ],
+      "note": "UI v0.2 목표 4,037개; v0.1 대상에서 86개 확장"
+    },
+    {
+      "path": "MSG_PK/SC/msgev.bin",
+      "kind": "strings",
+      "total_slots": 17910,
+      "stock_visible_nonblank": 12906,
+      "translation_target_total": 12906,
+      "overlay_globs": [
+        "data/public/msgev_ko_officer_names_0000_2399.v0.1.json",
+        "workstreams/dialogue/public/*.json"
+      ],
+      "note": "장수명 2,207개 + 이벤트 대사 배치"
+    },
+    {
+      "path": "MSG_PK/SC/msgdata.bin",
+      "kind": "strings",
+      "total_slots": 29210,
+      "stock_visible_nonblank": 25534,
+      "translation_target_total": 25534,
+      "overlay_globs": [
+        "data/public/msgdata_ko_officer_names_0000_2399.v0.1.json",
+        "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.2.json",
+        "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json"
+      ],
+      "note": "장수 구성요소 + 성 이름 + 옛 지방명; 중복 ID 제거"
+    },
+    {
+      "path": "MSG_PK/SC/msgbre.bin",
+      "kind": "strings",
+      "total_slots": 3000,
+      "stock_visible_nonblank": 2217,
+      "translation_target_total": 2217,
+      "overlay_globs": [],
+      "note": "미착수"
+    },
+    {
+      "path": "MSG_PK/SC/msgire.bin",
+      "kind": "strings",
+      "total_slots": 122,
+      "stock_visible_nonblank": 122,
+      "translation_target_total": 122,
+      "overlay_globs": [
+        "workstreams/small_message_tables/public/msgire_ko_0000_0121.v0.1.json"
+      ],
+      "note": "물품·명물 설명 122개 번역 완료"
+    },
+    {
+      "path": "MSG_PK/SC/msgstf.bin",
+      "kind": "strings",
+      "total_slots": 20,
+      "stock_visible_nonblank": 8,
+      "translation_target_total": 8,
+      "overlay_globs": [
+        "workstreams/small_message_tables/public/msgstf_ko_0000_0007.v0.1.json"
+      ],
+      "note": "크레디트 직책·분야 8개 완료; 빈 구조 슬롯 12개 제외"
+    },
+    {
+      "path": "MSG_PK/SC/msggame.bin",
+      "kind": "records",
+      "record_total": 21581,
+      "note": "구조 레코드 수만 확정; 멀티블록 문자열 분모 조사 중"
+    },
+    {
+      "path": "MSG/SC/msggame.bin",
+      "kind": "records",
+      "record_total": 19152,
+      "note": "구조 레코드 수만 확정; 본편 멀티블록 문자열 분모 조사 중"
+    },
+    {
+      "path": "MSG/SC/strdata.bin",
+      "kind": "strings",
+      "total_slots": 32311,
+      "stock_visible_nonblank": 26690,
+      "translation_target_total": 26690,
+      "overlay_globs": [],
+      "note": "5개 블록 파싱 완료; 번역 미착수"
+    },
+    {
+      "path": "MSG/SC/ev_strdata.bin",
+      "kind": "strings",
+      "total_slots": 17868,
+      "stock_visible_nonblank": 11687,
+      "translation_target_total": 11687,
+      "overlay_globs": [],
+      "note": "파싱 완료; 번역 미착수"
+    },
+    {
+      "path": "RES_SC/res_lang.bin",
+      "kind": "stages",
+      "done": 1,
+      "total": 4,
+      "unit": "게이트",
+      "note": "Font-v6 정적 재현 PASS; 최신 초벌 글리프 갱신·런타임·통합 설치 대기"
+    },
+    {
+      "path": "RES_SC/res_lang_exp.bin",
+      "kind": "stages",
+      "done": 1,
+      "total": 2,
+      "unit": "조사 게이트",
+      "note": "재귀 스캔에서 글꼴 시그니처 0; 런타임 의존성 확인 대기"
+    }
+  ]
+}

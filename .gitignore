@@ -13,6 +13,12 @@
 /ghidra_game/
 /ghidra_user/
 
+# Internal investigation material (kept locally, never published)
+/ghidra_scripts/
+/docs/
+/reports/
+/tools/ghidra_mcp_probe.py
+
 # Third-party reference checkouts and build products
 /reference/
 
@@ -37,11 +43,6 @@
 /workstreams/msgui_full/font_v4/build/
 /workstreams/msgui_full/font_v4/build_determinism_2/
 /**/private/
-
-# Raw reverse-engineering dumps and machine-local report payloads
-/reports/*.txt
-/reports/*.json
-/reports/*.csv
 
 # Complete game resources and binary patch payloads must never enter Git
 *.bin
