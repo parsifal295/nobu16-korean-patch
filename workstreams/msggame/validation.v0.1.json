@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "deterministic_inventory_two_runs": "OK",
+    "installed_game_files_unchanged": "OK",
+    "literal_markers_balanced_all_records": "OK",
+    "literal_utf16le_decode_all_slots": "OK",
+    "raw_parse_rebuild_byte_exact_all_sources": "OK",
+    "source_pins": "OK"
+  },
+  "generator": {
+    "relative_path": "build_structure_inventory.py",
+    "sha256": "5B5FE662922F7028A6142AA86F5DFFD0AAEF3A383BC46A72047F3EEA6571FC0F"
+  },
+  "inventory": {
+    "relative_path": "public/structure_inventory.v0.1.json",
+    "sha256": "8380C655B7FA30C1B2FDEFCF90E77819707015A8B191F9C881A79B803D82EFD0",
+    "size": 18716,
+    "source_free_scan": "OK"
+  },
+  "parser": {
+    "relative_path": "msggame_format.py",
+    "sha256": "5F2D8076335822BE49A4F84EC334254527F3766F046165C56B1BFB7E4DAE8458"
+  },
+  "passed": true,
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_or_progress_modified": false
+  },
+  "schema": "nobu16.kr.msggame-structure-validation.v1",
+  "verified_editions": [
+    "pk",
+    "base"
+  ],
+  "verified_languages": {
+    "base": [
+      "SC",
+      "JP",
+      "TC"
+    ],
+    "pk": [
+      "SC",
+      "JP",
+      "TC",
+      "EN"
+    ]
+  },
+  "verified_source_count": 7
+}
