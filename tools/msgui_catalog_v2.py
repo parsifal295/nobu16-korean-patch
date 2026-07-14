@@ -33,6 +33,8 @@ ROW_SCHEMA = "nobu16.kr.msgui-catalog-row.v2"
 BUILD_SCHEMA = "nobu16.kr.msgui-build-manifest.v2"
 BATCH_SCHEMA = "nobu16.kr.msgui-translation-batch.v1"
 OVERLAY_SCHEMA = "nobu16.kr.msgui-translation-overlay.v1"
+OVERLAY_ID_RE = re.compile(r"[a-z0-9][a-z0-9._-]{0,127}")
+SHA256_RE = re.compile(r"[0-9A-F]{64}")
 LANGUAGES = ("EN", "JP", "SC", "TC")
 BUILDABLE_STATUSES = frozenset(("translated", "reviewed"))
 VALID_STATUSES = frozenset(("empty", "untranslated", "draft", "translated", "reviewed"))
@@ -59,6 +61,218 @@ ESC_RE = re.compile(r"\x1bC.", re.DOTALL)
 
 class CatalogError(ValueError):
     pass
+
+
+def _strict_object_pairs(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    seen_casefold: dict[str, str] = {}
+    for key, value in pairs:
+        folded = key.casefold()
+        previous = seen_casefold.get(folded)
+        if previous is not None:
+            raise CatalogError(
+                f"duplicate or case-colliding JSON key {previous!r}/{key!r}"
+            )
+        seen_casefold[folded] = key
+        result[key] = value
+    return result
+
+
+def load_json_strict(path: Path) -> Any:
+    return json.loads(
+        path.read_text(encoding="utf-8-sig"), object_pairs_hook=_strict_object_pairs
+    )
+
+
+def _require_exact_keys(value: dict[str, Any], expected: set[str], label: str) -> None:
+    actual = set(value)
+    if actual != expected:
+        raise CatalogError(
+            f"{label} keys mismatch: missing={sorted(expected - actual)!r}, "
+            f"unknown={sorted(actual - expected)!r}"
+        )
+
+
+def _require_sha256(value: Any, label: str) -> str:
+    if not isinstance(value, str) or SHA256_RE.fullmatch(value) is None:
+        raise CatalogError(f"{label} must be an uppercase SHA-256 hex string")
+    return value
+
+
+def _require_int(value: Any, label: str, *, minimum: int = 0) -> int:
+    if isinstance(value, bool) or not isinstance(value, int) or value < minimum:
+        raise CatalogError(f"{label} must be an integer >= {minimum}")
+    return value
+
+
+def validate_translation_overlay_shape(overlay: Any) -> None:
+    """Validate the exact public MSGUI overlay trust boundary."""
+
+    if not isinstance(overlay, dict):
+        raise CatalogError("translation overlay root must be an object")
+    _require_exact_keys(
+        overlay,
+        {
+            "schema",
+            "overlay_id",
+            "resource",
+            "base_language",
+            "entry_count",
+            "skipped_whitespace_entry_count",
+            "distribution_policy",
+            "stock_sc",
+            "defaults",
+            "development_batch_provenance",
+            "entries",
+        },
+        "translation overlay root",
+    )
+    if overlay["schema"] != OVERLAY_SCHEMA:
+        raise CatalogError("unsupported public translation overlay schema")
+    overlay_id = overlay["overlay_id"]
+    if not isinstance(overlay_id, str) or OVERLAY_ID_RE.fullmatch(overlay_id) is None:
+        raise CatalogError("translation overlay_id is invalid")
+    if overlay["resource"] != "msgui" or overlay["base_language"] != "SC":
+        raise CatalogError("translation overlay resource/base language mismatch")
+
+    policy = overlay["distribution_policy"]
+    if not isinstance(policy, dict):
+        raise CatalogError("translation overlay distribution_policy must be an object")
+    _require_exact_keys(
+        policy,
+        {
+            "contains_commercial_source_text",
+            "contains_complete_game_resource",
+            "include_in_public_patch",
+        },
+        "translation overlay distribution_policy",
+    )
+    if policy != {
+        "contains_commercial_source_text": False,
+        "contains_complete_game_resource": False,
+        "include_in_public_patch": True,
+    }:
+        raise CatalogError("translation overlay distribution policy is unsafe")
+
+    stock = overlay["stock_sc"]
+    if not isinstance(stock, dict):
+        raise CatalogError("translation overlay stock_sc must be an object")
+    _require_exact_keys(
+        stock, {"packed_sha256", "raw_sha256", "string_count"}, "translation overlay stock_sc"
+    )
+    _require_sha256(stock["packed_sha256"], "translation overlay stock packed hash")
+    _require_sha256(stock["raw_sha256"], "translation overlay stock raw hash")
+    _require_int(stock["string_count"], "translation overlay stock string_count", minimum=1)
+
+    defaults = overlay["defaults"]
+    if not isinstance(defaults, dict):
+        raise CatalogError("translation overlay defaults must be an object")
+    _require_exact_keys(defaults, {"status"}, "translation overlay defaults")
+    if defaults["status"] != "translated":
+        raise CatalogError("translation overlay default status must be translated")
+
+    provenance = overlay["development_batch_provenance"]
+    if not isinstance(provenance, list):
+        raise CatalogError("translation overlay provenance must be an array")
+    provenance_names: set[str] = set()
+    for index, item in enumerate(provenance):
+        label = f"translation overlay provenance[{index}]"
+        if not isinstance(item, dict):
+            raise CatalogError(f"{label} must be an object")
+        _require_exact_keys(
+            item,
+            {"file", "sha256", "accepted_entries", "skipped_whitespace_entries"},
+            label,
+        )
+        name = item["file"]
+        if (
+            not isinstance(name, str)
+            or not name.endswith(".json")
+            or "/" in name
+            or "\\" in name
+            or Path(name).name != name
+            or name.casefold() in provenance_names
+        ):
+            raise CatalogError(f"{label}.file is invalid or duplicated")
+        provenance_names.add(name.casefold())
+        _require_sha256(item["sha256"], f"{label}.sha256")
+        accepted_entries = _require_int(
+            item["accepted_entries"], f"{label}.accepted_entries"
+        )
+        skipped_entries = _require_int(
+            item["skipped_whitespace_entries"],
+            f"{label}.skipped_whitespace_entries",
+        )
+        if accepted_entries + skipped_entries < 1:
+            raise CatalogError(f"{label} must account for at least one entry")
+
+    entries = overlay["entries"]
+    if not isinstance(entries, list):
+        raise CatalogError("translation overlay entries must be an array")
+    declared_count = _require_int(overlay["entry_count"], "translation overlay entry_count")
+    if declared_count != len(entries):
+        raise CatalogError(
+            f"translation overlay entry_count {declared_count} != actual {len(entries)}"
+        )
+    skipped_total = _require_int(
+        overlay["skipped_whitespace_entry_count"],
+        "translation overlay skipped_whitespace_entry_count",
+    )
+    provenance_skipped_total = sum(
+        int(item["skipped_whitespace_entries"]) for item in provenance
+    )
+    if skipped_total != provenance_skipped_total:
+        raise CatalogError(
+            "translation overlay skipped whitespace total does not match provenance"
+        )
+    allowed_entry_keys = {
+        "id",
+        "source_sc_utf16le_sha256",
+        "ko",
+        "status",
+        "priority",
+        "invariant_overrides",
+    }
+    required_entry_keys = {"id", "source_sc_utf16le_sha256", "ko"}
+    ids: list[int] = []
+    for index, item in enumerate(entries):
+        label = f"translation overlay entries[{index}]"
+        if not isinstance(item, dict):
+            raise CatalogError(f"{label} must be an object")
+        actual_keys = set(item)
+        if not required_entry_keys <= actual_keys or not actual_keys <= allowed_entry_keys:
+            raise CatalogError(
+                f"{label} keys mismatch: required_missing="
+                f"{sorted(required_entry_keys - actual_keys)!r}, unknown="
+                f"{sorted(actual_keys - allowed_entry_keys)!r}"
+            )
+        entry_id = _require_int(item["id"], f"{label}.id")
+        ids.append(entry_id)
+        _require_sha256(item["source_sc_utf16le_sha256"], f"{label}.source hash")
+        ko = item["ko"]
+        if not isinstance(ko, str) or not has_semantic_text(ko) or "\x00" in ko:
+            raise CatalogError(f"{label}.ko must contain semantic text")
+        status = item.get("status", defaults["status"])
+        if status not in BUILDABLE_STATUSES:
+            raise CatalogError(f"{label}.status must be translated or reviewed")
+        priority = item.get("priority")
+        if priority is not None and priority not in {"p1", "p2", "p3", "p4"}:
+            raise CatalogError(f"{label}.priority is not allowlisted")
+        overrides = item.get("invariant_overrides", [])
+        if not isinstance(overrides, list) or not all(isinstance(token, str) for token in overrides):
+            raise CatalogError(f"{label}.invariant_overrides must be a string array")
+        if len(overrides) != len(set(overrides)):
+            raise CatalogError(f"{label}.invariant_overrides contains duplicates")
+        unsupported = set(overrides) - supported_invariant_overrides()
+        if unsupported:
+            raise CatalogError(
+                f"{label}.invariant_overrides contains unsupported tokens: "
+                f"{sorted(unsupported)!r}"
+            )
+        if overrides and status != "reviewed":
+            raise CatalogError(f"{label}: invariant overrides require reviewed status")
+    if ids != sorted(set(ids)):
+        raise CatalogError("translation overlay IDs must be sorted and unique")
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -677,11 +891,8 @@ def cmd_merge_overlay(args: argparse.Namespace) -> int:
     if output_path == catalog_path and not args.in_place:
         raise CatalogError("refusing in-place catalog update without --in-place")
     meta, rows = load_catalog(meta_path, catalog_path)
-    overlay = json.loads(args.overlay.resolve().read_text(encoding="utf-8"))
-    if overlay.get("schema") != OVERLAY_SCHEMA:
-        raise CatalogError("unsupported public translation overlay schema")
-    if overlay.get("resource") != "msgui" or overlay.get("base_language") != "SC":
-        raise CatalogError("translation overlay resource/base language mismatch")
+    overlay = load_json_strict(args.overlay.resolve())
+    validate_translation_overlay_shape(overlay)
 
     stock_sc = overlay.get("stock_sc", {})
     expected_sc = meta["source_files"]["SC"]

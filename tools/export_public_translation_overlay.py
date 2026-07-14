@@ -22,6 +22,32 @@ import msgui_catalog_v2 as catalog
 LEGACY_SCHEMA = "nobu16.kr.translation.v1"
 
 
+def is_msgui_batch(value: dict[str, Any]) -> bool:
+    """Return whether a supported batch is pinned to MSG_PK/SC/msgui.bin.
+
+    ``data/translations`` also contains legacy msgdata/msgev development packs.
+    A MSGUI export must ignore those resources instead of interpreting their
+    numeric IDs against the unrelated UI catalog.
+    """
+
+    schema = value.get("schema")
+    if schema == catalog.BATCH_SCHEMA:
+        return value.get("resource") == "msgui" and value.get("base_language") == "SC"
+    if schema != LEGACY_SCHEMA:
+        return False
+    source_files = value.get("source_files")
+    if not isinstance(source_files, dict):
+        return False
+    sc = source_files.get("SC")
+    if not isinstance(sc, dict):
+        return False
+    path = sc.get("path")
+    if not isinstance(path, str):
+        return False
+    normalized = path.replace("\\", "/").upper()
+    return normalized == "MSG_PK/SC/MSGUI.BIN"
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as stream:
@@ -52,6 +78,8 @@ def load_batches(directory: Path) -> list[tuple[Path, dict[str, Any]]]:
     for path in sorted(directory.glob("*.json"), key=lambda item: item.name):
         value = json.loads(path.read_text(encoding="utf-8"))
         if value.get("schema") not in (catalog.BATCH_SCHEMA, LEGACY_SCHEMA):
+            continue
+        if not is_msgui_batch(value):
             continue
         result.append((path, value))
     if not result:
@@ -146,7 +174,7 @@ def export(args: argparse.Namespace) -> int:
                 raise catalog.CatalogError(f"conflicting duplicate translation for id {entry_id}")
             merged[entry_id] = public_item
             accepted += 1
-        if accepted:
+        if accepted or skipped_whitespace:
             sources.append(
                 {
                     "file": path.name,
@@ -179,6 +207,7 @@ def export(args: argparse.Namespace) -> int:
         "development_batch_provenance": sources,
         "entries": ordered,
     }
+    catalog.validate_translation_overlay_shape(overlay)
     atomic_json(args.output.resolve(), overlay)
     output_sha = sha256_file(args.output.resolve())
     report = {

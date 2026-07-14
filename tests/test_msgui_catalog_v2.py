@@ -16,6 +16,7 @@ sys.path.insert(0, str(TOOLS))
 import msgui_catalog_v2 as catalog  # noqa: E402
 import build_file_only_msg_recipe as message_recipe  # noqa: E402
 import export_public_translation_overlay as overlay_exporter  # noqa: E402
+import verify_msgui_asymmetric_v02 as asymmetric_verifier  # noqa: E402
 
 
 class InvariantTests(unittest.TestCase):
@@ -126,6 +127,119 @@ class PublicOverlayExporterTests(unittest.TestCase):
             report=None,
         )
 
+    @staticmethod
+    def public_overlay_fixture() -> dict[str, object]:
+        return {
+            "schema": catalog.OVERLAY_SCHEMA,
+            "overlay_id": "test-overlay",
+            "resource": "msgui",
+            "base_language": "SC",
+            "entry_count": 1,
+            "skipped_whitespace_entry_count": 0,
+            "distribution_policy": {
+                "contains_commercial_source_text": False,
+                "contains_complete_game_resource": False,
+                "include_in_public_patch": True,
+            },
+            "stock_sc": {
+                "packed_sha256": "1" * 64,
+                "raw_sha256": "2" * 64,
+                "string_count": 1,
+            },
+            "defaults": {"status": "translated"},
+            "development_batch_provenance": [
+                {
+                    "file": "01.json",
+                    "sha256": "3" * 64,
+                    "accepted_entries": 1,
+                    "skipped_whitespace_entries": 0,
+                }
+            ],
+            "entries": [
+                {
+                    "id": 0,
+                    "source_sc_utf16le_sha256": "4" * 64,
+                    "ko": "번역",
+                }
+            ],
+        }
+
+    def test_strict_json_rejects_case_colliding_keys(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "overlay.json"
+            path.write_text('{"schema":1,"Schema":2}', encoding="utf-8")
+            with self.assertRaises(catalog.CatalogError):
+                catalog.load_json_strict(path)
+
+    def test_public_overlay_shape_rejects_unknown_entry_field(self) -> None:
+        overlay = self.public_overlay_fixture()
+        catalog.validate_translation_overlay_shape(overlay)
+        overlay["entries"][0]["source_sc"] = "상용 원문"  # type: ignore[index]
+        with self.assertRaises(catalog.CatalogError):
+            catalog.validate_translation_overlay_shape(overlay)
+
+    def test_public_overlay_shape_rejects_freeform_metadata(self) -> None:
+        overlay = self.public_overlay_fixture()
+        overlay["entries"][0]["priority"] = "private source text"  # type: ignore[index]
+        with self.assertRaises(catalog.CatalogError):
+            catalog.validate_translation_overlay_shape(overlay)
+
+        overlay = self.public_overlay_fixture()
+        overlay["entries"][0]["status"] = "reviewed"  # type: ignore[index]
+        overlay["entries"][0]["invariant_overrides"] = [  # type: ignore[index]
+            "printf:JP",
+            "printf:JP",
+        ]
+        with self.assertRaises(catalog.CatalogError):
+            catalog.validate_translation_overlay_shape(overlay)
+
+    def test_public_overlay_shape_reconciles_skipped_provenance(self) -> None:
+        overlay = self.public_overlay_fixture()
+        overlay["skipped_whitespace_entry_count"] = 1
+        with self.assertRaises(catalog.CatalogError):
+            catalog.validate_translation_overlay_shape(overlay)
+
+    def test_loader_ignores_legacy_non_msgui_batches(self) -> None:
+        legacy_msgui = {
+            "schema": overlay_exporter.LEGACY_SCHEMA,
+            "source_files": {"SC": {"path": "MSG_PK/SC/msgui.bin"}},
+            "entries": [],
+        }
+        legacy_msgdata = {
+            "schema": overlay_exporter.LEGACY_SCHEMA,
+            "source_files": {"SC": {"path": "MSG_PK\\SC\\msgdata.bin"}},
+            "entries": [],
+        }
+        current_msgui = {
+            "schema": catalog.BATCH_SCHEMA,
+            "resource": "msgui",
+            "base_language": "SC",
+            "entries": [],
+        }
+        current_msgev = {
+            "schema": catalog.BATCH_SCHEMA,
+            "resource": "msgev",
+            "base_language": "SC",
+            "entries": [],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            translations = root / "translations"
+            translations.mkdir()
+            fixtures = {
+                "01_ui_legacy.json": legacy_msgui,
+                "02_data_legacy.json": legacy_msgdata,
+                "03_ui_current.json": current_msgui,
+                "04_event_current.json": current_msgev,
+            }
+            for name, value in fixtures.items():
+                (translations / name).write_text(json.dumps(value), encoding="utf-8")
+            loaded = overlay_exporter.load_batches(translations)
+        self.assertEqual(
+            ["01_ui_legacy.json", "03_ui_current.json"],
+            [path.name for path, _ in loaded],
+        )
+
     def test_exporter_requires_reviewed_status_for_overrides(self) -> None:
         meta, rows = self.fixture()
         batch = {
@@ -202,6 +316,17 @@ class GlyphDemandTests(unittest.TestCase):
 
 
 class CurrentArtifactTests(unittest.TestCase):
+    def test_asymmetric_v02_source_free_candidate(self) -> None:
+        project = PROJECT_ROOT / "KR_PATCH_WORK"
+        candidate = project / "workstreams" / "msgui_full" / "asymmetric_v02"
+        if not candidate.exists():
+            self.skipTest("MSGUI asymmetric v0.2 candidate is absent")
+        report = asymmetric_verifier.verify(project)
+        self.assertTrue(report["valid"])
+        self.assertEqual(86, report["new_translations"])
+        self.assertEqual(3922, report["message_operations"])
+        self.assertFalse(report["release_eligible"])
+
     def test_current_p3_catalog_is_valid(self) -> None:
         root = PROJECT_ROOT / "KR_PATCH_WORK" / "workstreams" / "msgui_full" / "catalog_v2"
         if not (root / "msgui.catalog.p3.jsonl").exists():
@@ -218,6 +343,7 @@ class CurrentArtifactTests(unittest.TestCase):
         overlays = sorted(public_dir.glob("msgui_ko_*.json"))
         self.assertTrue(overlays, "no public MSGUI overlay found")
         overlay = json.loads(overlays[-1].read_text(encoding="utf-8"))
+        catalog.validate_translation_overlay_shape(overlay)
         self.assertEqual(catalog.OVERLAY_SCHEMA, overlay["schema"])
         self.assertFalse(
             overlay["distribution_policy"]["contains_commercial_source_text"]

@@ -1,0 +1,118 @@
+{
+  "schema": "nobu16.kr.msgui-asymmetric-candidate-validation.v1",
+  "candidate_id": "msgui_ko_0000_5099.v0.2",
+  "date": "2026-07-14",
+  "file_only": true,
+  "installed_game_files_modified": false,
+  "process_memory_access": false,
+  "dll_injection_or_hooking": false,
+  "executable_modified": false,
+  "registry_modified": false,
+  "classification": {
+    "total_ids": 5100,
+    "translated_or_reviewed": 4037,
+    "canonical_empty": 1041,
+    "preserved_language_specific_blank": 22,
+    "ordinary_sc_nonblank_untranslated": 0,
+    "new_translations": {
+      "count": 86,
+      "id_ranges": [
+        "2329-2348",
+        "2408-2409",
+        "2419-2420",
+        "2457",
+        "2459",
+        "2558",
+        "2650",
+        "2657",
+        "2661",
+        "2691-2746"
+      ]
+    },
+    "preserved_language_specific_ids": [
+      513,
+      689,
+      691,
+      1302,
+      1350,
+      1352,
+      1694,
+      1921,
+      1922,
+      1923,
+      1924,
+      1925,
+      1926,
+      1927,
+      1928,
+      1929,
+      1930,
+      1931,
+      1932,
+      2570,
+      2571,
+      2572
+    ],
+    "structural_empty_ids": [733, 734, 1607]
+  },
+  "catalog_validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "status_counts": {
+      "empty": 1041,
+      "untranslated": 22,
+      "translated": 4019,
+      "reviewed": 18
+    },
+    "buildable_count": 4037,
+    "private_complete_catalog_sha256": "B8BD5E53A630AAC14300342851F89C84F1CA50E8B4FAFBD9FEF5662D1A51A816"
+  },
+  "private_inputs": {
+    "included_in_public_patch": false,
+    "asymmetric_batch_sha256": "80744EEFD24FBB79943C5EB1723A07D01EACCA199B5FB1BE0D3E11082D90D851",
+    "structural_empty_batch_sha256": "3D19016712120C6B04661A3AB173467B0AAA431DBCC141C4D7D5ACFA27E71AB4"
+  },
+  "public_overlay": {
+    "path": "../../../data/public/msgui_ko_0000_5099.v0.2.json",
+    "size": 808378,
+    "sha256": "5DC3C0E14E2131FC2BB4252DF3B25E1F10E462205EAB715E2923298A714B8C14",
+    "entry_count": 4037,
+    "translated_count": 4019,
+    "reviewed_count": 18,
+    "provenance_batch_count": 47,
+    "skipped_whitespace_entry_count": 136,
+    "provenance_skipped_whitespace_total": 136,
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "strict_schema_valid": true,
+    "deterministic_two_builds": true
+  },
+  "message_recipe": {
+    "path": "public/msgui_sc.recipe.json",
+    "size": 706877,
+    "sha256": "88094B17FC90E892020B8301476D1F7899B60389C9E805929C618DFC5EA517BF",
+    "operation_count": 3922,
+    "operation_ids_sha256": "EDABA5D0BDB939265288CC22E15379CD1C4C774DF3F798EA5B181F9F02638CAD",
+    "source_sha256": "C2C69FDF09D9BE06E14F03C4F40562ADD0CA247EE0D50FC3E06EF501524B5E82",
+    "target_size": 116027,
+    "target_sha256": "C683AE9355A43F9A2104E49A6179363727CE0A550682F906C224A44F506826AC",
+    "target_raw_size": 115548,
+    "target_raw_sha256": "7017C096154AEC292D8A209273083954810E9FB000F4E179DB2BF4C90F07AAF3",
+    "deterministic_two_builds": true,
+    "stock_replay_target_exact": true
+  },
+  "glyph_demand": {
+    "path": "public/glyph_demand.json",
+    "sha256": "7DBF97C2AC889F2FB33856A1A8096A1DB091C4D25DB411E73E95E5D0FB7E0D16",
+    "character_count": 625,
+    "hangul_syllable_count": 524,
+    "byte_exact_with_officer_font_v5_msgui_demand": true
+  },
+  "runtime_validation": {
+    "status": "pending",
+    "all_86_sc_blank_slots_require_context_qa": true,
+    "specific_semantic_conflict_ids": [2729, 2730]
+  },
+  "release_eligible": false
+}
