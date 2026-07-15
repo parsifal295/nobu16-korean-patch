@@ -1,0 +1,43 @@
+{
+  "artifacts": [
+    {
+      "path": "workstreams/msggame_pk_jp_native_wave07_j03/translations.ko.jsonl",
+      "sha256": "451A94AE39BBBEC116336E4559822ABB11602AC0053F8F6747E7448C94F3503F",
+      "size": 55289
+    },
+    {
+      "path": "workstreams/msggame_pk_jp_native_wave07_j03/public/msggame_pk_jp_native_steam_wave07_j03_761.v1.json",
+      "sha256": "5A76AF83BF75BCA2FFB085E22F39AEBB9E1685D144CB3B647377E33C2023C4CF",
+      "size": 182137
+    },
+    {
+      "path": "workstreams/msggame_pk_jp_native_wave07_j03/review/review_evidence.v1.json",
+      "sha256": "3D75E2B1240AE6B4CA1690DB1757F1E31BCA0577E86CC4EFF240B119588AA10D",
+      "size": 188686
+    }
+  ],
+  "base_language": "JP",
+  "batch_id": "j03",
+  "checks": {
+    "all_block_ids_are_6": true,
+    "all_invariants_preserved": true,
+    "fragment_grammar_context_review_complete": true,
+    "identical_source_hashes_use_identical_korean": true,
+    "private_context_pin_exact": true,
+    "public_entry_shape_loader_compatible": true,
+    "publisher_source_text_absent_from_tracked_payloads": true,
+    "translation_coordinate_coverage_exact": true
+  },
+  "coordinate_count": 761,
+  "coordinates_sha256": "21F13CD888A11C4F0B4ADC97FB10512EDD106188F8714549268B07749BEE5AF8",
+  "duplicate_source_hash_group_count": 46,
+  "invariant_profile_nonempty_coordinate_counts": {
+    "leading_whitespace": 168,
+    "line_breaks": 399,
+    "trailing_whitespace": 36
+  },
+  "resource": "MSG_PK/JP/msggame.bin",
+  "schema": "nobu16.kr.msggame-jp-batch-validation.v1",
+  "status": "PASS",
+  "unique_source_hash_count": 661
+}
