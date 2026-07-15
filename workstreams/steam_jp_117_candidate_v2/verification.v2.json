@@ -1,5 +1,5 @@
 {
-  "candidate_file_count": 10,
+  "candidate_file_count": 12,
   "candidate_paths": [
     "MSG/JP/strdata.bin",
     "MSG_PK/JP/msgbre.bin",
@@ -10,7 +10,9 @@
     "MSG_PK/JP/msgstf.bin",
     "MSG_PK/JP/msgui.bin",
     "RES_JP/res_lang.bin",
-    "RES_JP_PK/res_lang_pk.bin"
+    "RES_JP_PK/res_lang_pk.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin"
   ],
   "candidates": {
     "MSG/JP/strdata.bin": {
@@ -46,17 +48,25 @@
       "size": 121608
     },
     "RES_JP/res_lang.bin": {
-      "sha256": "04ADC5D345D05973A647C4DAF870E9AEFEB69FA9AF7BD9240DA6505AD18232C6",
-      "size": 175200602
+      "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+      "size": 154216023
     },
     "RES_JP_PK/res_lang_pk.bin": {
-      "sha256": "733FAC967BA0DAED8D59562588CEE0E7136D90169B74B747C5DC45722B7FD7B3",
-      "size": 162728420
+      "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+      "size": 141746742
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+      "sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+      "size": 79243911
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+      "sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
+      "size": 67086423
     }
   },
   "checks": {
     "component_candidate_pins_exact": true,
-    "exact_ten_files": true,
+    "exact_twelve_files": true,
     "sc_container_used": false,
     "staged_before_promote": true,
     "steam_1_1_7_predecessors_exact": true,
@@ -103,13 +113,21 @@
     "RES_JP_PK/res_lang_pk.bin": {
       "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
       "size": 140729547
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+      "sha256": "1B44436B542F73B8B155A43F74D897F8D32C1C274D8C64B3CA9F4478BDB86022",
+      "size": 77468728
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+      "sha256": "52A8DE4BA1480E86218AC0CDE50DA946B4BCDFD7053ED85B94B04E663C00B380",
+      "size": 61609467
     }
   },
   "provenance": {
     "fonts": {
       "demand": {
-        "append_union_codepoint_count": 1357,
-        "append_union_codepoints_sha256": "838FB98006D42AD60F37D22D021D8D46B2A76EEF631B89C262B53EB83906AF64",
+        "append_union_codepoint_count": 1450,
+        "append_union_codepoints_sha256": "32EAF6032E7923C8D89DA6D9C1F805C642BF51F49C94049EAEF6A0F66DD40156",
         "codepoint_count": 1472,
         "codepoints_sha256": "7B1F5B740D580A3B1E67B459B92EED29BA6F3CC1B685D7F312B1518202300E94",
         "hangul_syllable_count": 1251,
@@ -118,8 +136,8 @@
           "future_registration_preserves_catalog_and_candidate_bytes": true,
           "overlay_count": 11
         },
-        "raster_codepoint_count": 1334,
-        "raster_codepoints_sha256": "08E043D135A03612C159B946A190AD9C30A10A71F3BA6474C85328621E81615A",
+        "raster_codepoint_count": 1427,
+        "raster_codepoints_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
         "source_catalog_sha256": "A877E900EA7A42867BF2F71BC69B924BAC354B3A6EADF048B814E54F2B493E28",
         "source_count": 124,
         "source_entry_count": 88062,
@@ -151,15 +169,23 @@
         "stock_reuse_codepoints_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E"
       },
       "evidence_path": "workstreams/font_jp_seoulhangang_v1/verification.v1.json",
-      "evidence_sha256": "6478308F1A3198FE0AAD10F05D6C7030C3C4F8093D112CB885738FE78306F68E",
+      "evidence_sha256": "EA4A916BE27DA393B5A84DC7902726733961D95407CA4F8171B80C99A135E27F",
       "routes": {
         "RES_JP/res_lang.bin": {
-          "sha256": "04ADC5D345D05973A647C4DAF870E9AEFEB69FA9AF7BD9240DA6505AD18232C6",
-          "size": 175200602
+          "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+          "size": 154216023
         },
         "RES_JP_PK/res_lang_pk.bin": {
-          "sha256": "733FAC967BA0DAED8D59562588CEE0E7136D90169B74B747C5DC45722B7FD7B3",
-          "size": 162728420
+          "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+          "size": 141746742
+        },
+        "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+          "sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+          "size": 79243911
+        },
+        "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+          "sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
+          "size": 67086423
         }
       }
     },
@@ -233,9 +259,9 @@
     "strdata_applied": 24524
   },
   "zip": {
-    "member_count": 10,
+    "member_count": 12,
     "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.0.zip",
-    "sha256": "38752EAC593A8E64E2AD0BA93818F417ACF982E96F97B65879EEDA47198B45F2",
-    "size": 238208364
+    "sha256": "F245F23882BD9C676B705DCA9DA5E1443BEE05EA88A12F7BA9E7692BEA100584",
+    "size": 356144243
   }
 }

@@ -1,32 +1,26 @@
-# 신장의 야망·신생 with 파워업키트 비공식 한글 패치
+# 신장의 야망·신생 with 파워업키트 비공식 한국어 패치
 
-Windows Steam판 `NOBU16PK.exe`용 일본어 리소스 경로 기반 파일 전용 한글
-패치입니다. 메모리 패치, DLL 주입, 후킹, EXE·레지스트리 변조는 사용하지
-않습니다.
+Windows Steam판 `NOBU16PK.exe`의 **일본어 리소스 경로**를 사용하는 파일 전용 한국어 패치입니다. 메모리 패치, DLL 주입, 후킹, EXE·레지스트리 변조는 사용하지 않습니다.
 
-## 다운로드와 호환 버전
+## 다운로드
 
-- 기준 버전: **Steam PK v1.1.7** (`Update 1.1.7`, Steam build `18823764`)
-- 배포 버전: **v0.7.0**
-- 패치 파일: [NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.0.zip](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.7.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.0.zip)
-- ZIP SHA-256: `38752EAC593A8E64E2AD0BA93818F417ACF982E96F97B65879EEDA47198B45F2`
+- 패치 버전: **v0.7.0**
+- 대상: **Steam PK v1.1.7** (`Update 1.1.7`, Steam build `18823764`)
+- 파일: [NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.0.zip](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.7.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.0.zip)
+- ZIP SHA-256: `F245F23882BD9C676B705DCA9DA5E1443BEE05EA88A12F7BA9E7692BEA100584`
 
-다른 게임 버전이나 Microsoft Store·비Steam판은 이 배포본의 호환 대상이
-아닙니다. 번역은 아직 진행 중이므로 일부 화면에는 일본어가 남아 있습니다.
+v0.7.0은 QHD 창 모드·테두리 없음에서 한글이 `???`로 표시되던 문제를 고해상도 일본어 PK 글꼴 파일까지 포함해 수정합니다.
 
 ## 설치
 
-1. Steam 게임 속성의 언어와 공식 런처 왼쪽 위 언어를 모두
-   **`日本語 / Japanese`**로 설정합니다.
+1. 공식 런처의 언어를 **`日本語 / Japanese`**로 설정합니다.
 2. 게임과 공식 런처를 완전히 종료합니다.
-3. ZIP 안의 `MSG`, `MSG_PK`, `RES_JP`, `RES_JP_PK` 네 폴더를 Steam 게임
-   폴더(`...\SteamLibrary\steamapps\common\NOBU16`)에 그대로 덮어씁니다.
+3. ZIP의 `MSG`, `MSG_PK`, `RES_JP`, `RES_JP_PK`, `RES_JP_PK_PORT` 폴더를 Steam 게임 폴더에 그대로 덮어씁니다.
 4. 공식 런처에서 PK판을 실행합니다.
 
-ZIP에는 원래 폴더와 파일명을 유지한 실제 게임 적용 파일 10개가 들어 있으며,
-폰트 파일인 `RES_JP/res_lang.bin`과 `RES_JP_PK/res_lang_pk.bin`도 포함됩니다.
+일반적인 Steam 경로는 `...\SteamLibrary\steamapps\common\NOBU16`입니다. ZIP에는 폴더 구조와 원래 파일명을 보존한 실제 적용 파일 12개가 들어 있습니다. `RES_JP_PK_PORT/res_lang_pk_port1.bin`과 `res_lang_pk_port2.bin`을 함께 포함한 이 조합으로 QHD 창 모드·테두리 없음의 한글 출력을 확인했습니다.
 
-## 현재 진행률
+## 진행률
 
 <!-- translation-progress:start -->
 | 영역 | 적용 현황 | 남은 작업 |
@@ -35,7 +29,7 @@ ZIP에는 원래 폴더와 파일명을 유지한 실제 게임 적용 파일 10
 | PK 공용 메시지 5종 | 적용 39,507 / 39,603 (99.8%) | 96 |
 | PK 본문 `msggame.bin` | 적용 28,272 / 28,272 (100.0%) | 0 |
 | 공용 `strdata.bin` | 안전 이식 24,524 / 24,525 | 1 |
-| 일본어 경로 한글 폰트 | 2 / 2 실기 확인 | 0 |
+| 일본어 경로 한글 폰트 | 4 / 4 설치·조합 화면 확인 | 0 |
 
 `msgui.bin`의 안전 이식 4,036건 중 실제 문구 변경은 3,955건이고, 81건은 원문과
 동일합니다. 보류 1건은 번역 대상 문구가 아닌 비의미 공백 1자 레코드입니다.
@@ -44,24 +38,24 @@ ZIP에는 원래 폴더와 파일명을 유지한 실제 게임 적용 파일 10
 기준이며, 줄바꿈·잘림·
 문맥 검수 완료율을 뜻하지는 않습니다.
 
-Steam PK v1.1.7 실기에서 일본어 런처, 한글 타이틀 안내, 한글 메인 메뉴와 두 한글
-폰트 컨테이너를 확인했습니다.
+Steam PK v1.1.7 실기에서 일본어 런처, 한글 타이틀 안내, 한글 메인 메뉴와 4개 한글
+폰트 리소스를 확인했습니다. QHD 창모드와 테두리 없음은 각각 PASS했고, 테두리 없음
+콜드 재시작의 한글 타이틀·메인 메뉴도 PASS했습니다.
 <!-- translation-progress:end -->
 
-## 원상 복구
+번역은 계속 진행 중이므로 일부 화면에는 일본어 또는 아직 다듬지 않은 문장이 남아 있습니다.
 
-덮어쓰기 전 원본 10개 파일을 별도로 보관하는 것을 권장합니다. 원본 백업이
-없다면 Steam의 **설치된 파일 → 게임 파일 무결성 확인**으로 정식 파일을 다시
-받을 수 있습니다.
+## 확인된 실행 환경
+
+- Steam PK v1.1.7 / build `18823764`
+- 일본어 런처·일본어 리소스 경로
+- 2560×1440 창 모드와 테두리 없음
+- QHD 설정 변경 후 재시작한 제목 화면과 메인 메뉴에서 한글 출력 확인
+
+문제가 생기면 덮어쓰기 전 백업을 복원하거나 Steam의 **설치된 파일 무결성 확인**으로 원본 파일을 복구할 수 있습니다.
 
 ## 글꼴과 권리
 
-한글 글리프는 [서울한강체(서울시)](https://www.seoul.go.kr/seoul/font.do)를
-사용하며 [공공누리 제1유형](https://www.kogl.or.kr/info/licenseType1.do) 조건을
-따릅니다.
-48px급 글리프는 서울한강 EB, 32px급 글리프는 서울한강 B로 렌더하며 두 JP 폰트
-컨테이너가 배포 ZIP에 포함됩니다.
+한글 글리프에는 [서울한강체](https://www.seoul.go.kr/seoul/font.do)를 사용합니다. 32·64px 계열은 서울한강 B, 48·96px 계열은 서울한강 EB로 렌더링했습니다.
 
-이 프로젝트는 팬이 제작한 비공식·비영리 한글화 프로젝트이며 KOEI TECMO
-GAMES의 공식 제품이나 지원물이 아닙니다. 게임, 상표, 로고 및 원저작물에 관한
-모든 권리는 KOEI TECMO GAMES 및 각 권리자에게 있습니다.
+이 프로젝트는 팬 제작 비공식 한국어 패치이며 KOEI TECMO GAMES의 공식 제품이나 지원물이 아닙니다. 게임, 상표, 로고와 원본 저작물에 관한 모든 권리는 KOEI TECMO GAMES 및 각 권리자에게 있습니다.

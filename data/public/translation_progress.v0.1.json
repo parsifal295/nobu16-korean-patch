@@ -213,18 +213,34 @@
     {
       "path": "RES_JP/res_lang.bin",
       "kind": "stages",
-      "done": 1,
+      "done": 2,
       "total": 2,
       "unit": "게이트",
-      "note": "서울한강체 글리프의 정적·오프라인 검증 및 로컬 비Steam 일본어 10파일 조합 화면 PASS; Steam 일본어 런타임 화면 QA 대기"
+      "note": "서울한강체 48/32px 글리프의 정적·오프라인 검증과 Steam 일본어 런타임 화면 QA 완료"
     },
     {
       "path": "RES_JP_PK/res_lang_pk.bin",
       "kind": "stages",
-      "done": 1,
+      "done": 2,
       "total": 2,
       "unit": "게이트",
-  "note": "PK 일본어 글꼴 컨테이너의 정적·오프라인 검증 및 로컬 비Steam 일본어 10파일 조합 화면 PASS; Steam 일본어 런타임 화면 QA 대기"
+      "note": "PK 일본어 48/32px 글리프의 정적·오프라인 검증과 Steam 일본어 런타임 화면 QA 완료"
+    },
+    {
+      "path": "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+      "kind": "stages",
+      "done": 2,
+      "total": 2,
+      "unit": "게이트",
+      "note": "이슈 #41 고해상도 64/96/32px 글꼴 경로의 정적·오프라인 검증과 QHD 런타임 화면 QA 완료"
+    },
+    {
+      "path": "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+      "kind": "stages",
+      "done": 2,
+      "total": 2,
+      "unit": "게이트",
+      "note": "이슈 #41 고해상도 96px·64/96/64px 글꼴 경로의 정적·오프라인 검증과 QHD 런타임 화면 QA 완료"
     }
   ],
   "shared_strings": [

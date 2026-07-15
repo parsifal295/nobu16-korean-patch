@@ -1,3 +1,4 @@
+import hashlib
 import importlib.util
 import json
 import subprocess
@@ -8,6 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROGRESS = ROOT / "data" / "public" / "steam_jp_117_progress.v1.json"
+TRANSLATION_PROGRESS = ROOT / "data" / "public" / "translation_progress.v0.1.json"
+FONT_DEMAND_MANIFEST = ROOT / "workstreams" / "font_seoulhangang_v1" / "manifest.v1.json"
 SPEC = importlib.util.spec_from_file_location(
     "readme_progress", ROOT / "tools" / "update_readme_progress.py"
 )
@@ -59,7 +62,7 @@ class ReadmeProgressTests(unittest.TestCase):
         strdata = translation["strdata"]
         self.assertEqual(strdata["safe_targets"], strdata["applied"] + strdata["withheld"])
         self.assertEqual((strdata["applied"], strdata["withheld"]), (24524, 1))
-        self.assertEqual(translation["fonts"], {"containers": 2, "verified": 2})
+        self.assertEqual(translation["fonts"], {"containers": 4, "verified": 4})
 
     def test_render_is_japanese_runtime_only(self):
         rendered = readme_progress.render()
@@ -67,6 +70,9 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("`msgui.bin` | 안전 이식 4,036 / 4,037 (99.98%)", rendered)
         self.assertIn("`msggame.bin` | 적용 28,272 / 28,272 (100.0%)", rendered)
         self.assertIn("`strdata.bin` | 안전 이식 24,524 / 24,525", rendered)
+        self.assertIn("일본어 경로 한글 폰트 | 4 / 4 설치·조합 화면 확인", rendered)
+        self.assertIn("QHD 창모드와 테두리 없음은 각각 PASS했고", rendered)
+        self.assertIn("콜드 재시작의 한글 타이틀·메인 메뉴도 PASS했습니다.", rendered)
         self.assertIn("보류 1건은 번역 대상 문구가 아닌 비의미 공백 1자 레코드", rendered)
         self.assertNotIn("종료 확인창", rendered)
         self.assertNotIn("아직 번역되지 않은 일본어 UI", rendered)
@@ -77,12 +83,39 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_runtime_qa_is_recorded(self):
         qa = readme_progress.load_progress()["runtime_qa"]
         self.assertTrue(qa["steam_install_applied"])
-        self.assertTrue(qa["exact_ten_target_hashes"])
-        self.assertEqual(qa["original_backups_valid"], 10)
+        self.assertTrue(qa["exact_twelve_target_hashes"])
+        self.assertEqual(qa["pre_v0_7_predecessor_backups_valid"], 12)
         self.assertEqual(qa["launcher_update_label"], "Update 1.1.7")
         self.assertTrue(qa["korean_title_prompt_observed"])
         self.assertTrue(qa["korean_main_menu_observed"])
         self.assertTrue(qa["known_untranslated_ui_observed"])
+        self.assertEqual(qa["qhd_windowed"], "PASS")
+        self.assertEqual(qa["qhd_borderless"], "PASS")
+        self.assertEqual(qa["cold_restart"], "PASS")
+
+    def test_four_jp_font_stages_and_progress_pin_are_complete(self):
+        raw = TRANSLATION_PROGRESS.read_bytes()
+        payload = json.loads(raw.decode("utf-8"))
+        rows = {
+            row["path"]: row
+            for row in payload["resources"]
+            if row.get("kind") == "stages" and row.get("path", "").startswith("RES_JP")
+        }
+        expected_paths = {
+            "RES_JP/res_lang.bin",
+            "RES_JP_PK/res_lang_pk.bin",
+            "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+            "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+        }
+        self.assertEqual(set(rows), expected_paths)
+        for path in expected_paths:
+            self.assertEqual((rows[path]["done"], rows[path]["total"]), (2, 2))
+            self.assertIn("QA 완료", rows[path]["note"])
+
+        manifest = json.loads(FONT_DEMAND_MANIFEST.read_text(encoding="utf-8"))
+        pin = manifest["pinned_public_korean_demand"]["translation_progress"]
+        self.assertEqual(pin["path"], "data/public/translation_progress.v0.1.json")
+        self.assertEqual(pin["sha256"], hashlib.sha256(raw).hexdigest().upper())
 
     def test_readme_progress_is_current(self):
         result = subprocess.run(
@@ -95,11 +128,8 @@ class ReadmeProgressTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
-    def test_readme_has_no_simplified_chinese_runtime_instruction(self):
-        readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        block = readme.split(readme_progress.START, 1)[1].split(
-            readme_progress.END, 1
-        )[0]
+    def test_render_has_no_simplified_chinese_runtime_instruction(self):
+        block = readme_progress.render()
         self.assertIn("일본어 경로 한글 폰트", block)
         self.assertNotIn("MSG/SC", block)
         self.assertNotIn("MSG_PK/SC", block)

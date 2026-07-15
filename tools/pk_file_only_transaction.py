@@ -10,7 +10,9 @@ only paths, sizes, and hashes--never candidate bytes or absolute local paths.
 Only the exact Simplified-Chinese or Japanese PC PK runtime paths enumerated
 in ``ALLOWED_TARGETS`` are accepted.  A transaction is always confined to one
 runtime-language profile.  The base-game tree remains blocked except for that
-profile's shared ``MSG/<LANG>/strdata.bin`` and base font archive.
+profile's shared ``MSG/<LANG>/strdata.bin`` and base font archive.  Japanese
+transactions support both the legacy exact ten-file profile and the exact
+twelve-file profile that adds the two JP PK port font archives.
 """
 
 from __future__ import annotations
@@ -27,7 +29,7 @@ import sys
 import tempfile
 import uuid
 from pathlib import Path, PurePosixPath
-from typing import Any, Iterator
+from typing import Any, Callable, Iterator
 
 
 SC_MESSAGE_FILES = (
@@ -44,7 +46,7 @@ SC_ALLOWED_TARGETS = frozenset(
     {f"MSG_PK/SC/{name}" for name in SC_MESSAGE_FILES}
     | {"MSG/SC/strdata.bin", "RES_SC/res_lang.bin", "RES_SC/res_lang_exp.bin"}
 )
-JP_ALLOWED_TARGETS = frozenset(
+JP_LEGACY_ALLOWED_TARGETS = frozenset(
     {f"MSG_PK/JP/{name}" for name in JP_MESSAGE_FILES}
     | {
         "MSG/JP/strdata.bin",
@@ -52,10 +54,24 @@ JP_ALLOWED_TARGETS = frozenset(
         "RES_JP_PK/res_lang_pk.bin",
     }
 )
+JP_PORT_FONT_TARGETS = frozenset(
+    {
+        "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+        "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+    }
+)
+JP_ALLOWED_TARGETS = JP_LEGACY_ALLOWED_TARGETS | JP_PORT_FONT_TARGETS
 ALLOWED_TARGETS = SC_ALLOWED_TARGETS | JP_ALLOWED_TARGETS
 LEGACY_TARGET_SCOPE = ["MSG_PK/SC", "RES_SC"]
 TARGET_SCOPE = ["MSG/SC/strdata.bin", "MSG_PK/SC", "RES_SC"]
 JP_TARGET_SCOPE = ["MSG/JP/strdata.bin", "MSG_PK/JP", "RES_JP", "RES_JP_PK"]
+JP_PORT_TARGET_SCOPE = [
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP",
+    "RES_JP",
+    "RES_JP_PK",
+    "RES_JP_PK_PORT",
+]
 LIVE_RESOURCE_ROOTS = (
     ("MSG", "SC"),
     ("MSG_PK", "SC"),
@@ -64,6 +80,7 @@ LIVE_RESOURCE_ROOTS = (
     ("MSG_PK", "JP"),
     ("RES_JP",),
     ("RES_JP_PK",),
+    ("RES_JP_PK_PORT",),
 )
 MANIFEST_SCHEMA = "nobu16.pk-file-only-transaction.v1"
 STATE_SCHEMA = "nobu16.pk-file-only-transaction-state.v1"
@@ -238,10 +255,19 @@ def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> s
     if len(profiles) != 1:
         raise TransactionError(f"{label} must not mix SC and JP runtime profiles")
     profile = profiles.pop()
-    if profile == "JP" and paths != JP_ALLOWED_TARGETS:
-        missing = sorted(JP_ALLOWED_TARGETS - paths)
+    if profile == "JP" and paths not in (
+        JP_LEGACY_ALLOWED_TARGETS,
+        JP_ALLOWED_TARGETS,
+    ):
+        expected = (
+            JP_ALLOWED_TARGETS
+            if paths & JP_PORT_FONT_TARGETS
+            else JP_LEGACY_ALLOWED_TARGETS
+        )
+        missing = sorted(expected - paths)
         raise TransactionError(
-            f"{label} must contain the exact JP 10-file profile"
+            f"{label} must contain the exact JP 10-file profile or exact "
+            "JP+JP_PK_PORT 12-file profile"
             + (f" (missing={','.join(missing)})" if missing else "")
         )
     return profile
@@ -250,10 +276,11 @@ def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> s
 def runtime_profile_for_scope(target_scope: Any) -> str:
     if target_scope in (LEGACY_TARGET_SCOPE, TARGET_SCOPE):
         return "SC"
-    if target_scope == JP_TARGET_SCOPE:
+    if target_scope in (JP_TARGET_SCOPE, JP_PORT_TARGET_SCOPE):
         return "JP"
     raise TransactionError(
-        "manifest target_scope must be the legacy SC scope, exact SC scope, or exact JP scope"
+        "manifest target_scope must be the legacy SC scope, exact SC scope, "
+        "exact JP 10-file scope, or exact JP+JP_PK_PORT 12-file scope"
     )
 
 
@@ -419,10 +446,22 @@ def validate_manifest(value: dict[str, Any]) -> dict[str, Any]:
         if mode == "retain" and predecessor != target:
             raise TransactionError(f"retain entry {path} must pin an identical predecessor and target")
         entries.append({"path": path, "mode": mode, "predecessor": predecessor, "target": target})
+    if not any(entry["mode"] == "replace" for entry in entries):
+        raise TransactionError(
+            "candidate set is already installed; refusing an all-retain no-op transaction"
+        )
     entry_paths = {entry["path"] for entry in entries}
     entry_profile = runtime_profile_for_paths(entry_paths, "manifest entries")
     if entry_profile != scope_profile:
         raise TransactionError("manifest target_scope and entries must use the same runtime profile")
+    if target_scope == JP_TARGET_SCOPE and entry_paths != JP_LEGACY_ALLOWED_TARGETS:
+        raise TransactionError(
+            "manifest JP 10-file target_scope requires the exact legacy JP 10-file profile"
+        )
+    if target_scope == JP_PORT_TARGET_SCOPE and entry_paths != JP_ALLOWED_TARGETS:
+        raise TransactionError(
+            "manifest JP+JP_PK_PORT target_scope requires the exact JP 12-file profile"
+        )
     if target_scope == LEGACY_TARGET_SCOPE and not entry_paths <= (
         SC_ALLOWED_TARGETS - {"MSG/SC/strdata.bin"}
     ):
@@ -449,6 +488,9 @@ def scope_report(manifest: dict[str, Any]) -> dict[str, Any]:
     jp_message_paths = [path for path in paths if path.startswith("MSG_PK/JP/")]
     jp_base_resource_paths = [path for path in paths if path.startswith("RES_JP/")]
     jp_pk_resource_paths = [path for path in paths if path.startswith("RES_JP_PK/")]
+    jp_pk_port_resource_paths = [
+        path for path in paths if path.startswith("RES_JP_PK_PORT/")
+    ]
     jp_base_paths = [path for path in paths if path == "MSG/JP/strdata.bin"]
     return {
         "target_paths": paths,
@@ -462,12 +504,15 @@ def scope_report(manifest: dict[str, Any]) -> dict[str, Any]:
         "msg_pk_jp_count": len(jp_message_paths),
         "res_jp_count": len(jp_base_resource_paths),
         "res_jp_pk_count": len(jp_pk_resource_paths),
+        "res_jp_pk_port_count": len(jp_pk_port_resource_paths),
         "base_msg_jp_count": len(jp_base_paths),
         "all_seven_msg_pk_jp_included": set(jp_message_paths) == {
             f"MSG_PK/JP/{name}" for name in JP_MESSAGE_FILES
         },
-        "jp_10_file_count": len(path_set & JP_ALLOWED_TARGETS),
-        "jp_10_file_complete": path_set == JP_ALLOWED_TARGETS,
+        "jp_10_file_count": len(path_set & JP_LEGACY_ALLOWED_TARGETS),
+        "jp_10_file_complete": path_set == JP_LEGACY_ALLOWED_TARGETS,
+        "jp_12_file_count": len(path_set & JP_ALLOWED_TARGETS),
+        "jp_12_file_complete": path_set == JP_ALLOWED_TARGETS,
     }
 
 
@@ -500,7 +545,13 @@ def make_manifest(game_root: Path, release_id: str, candidates: dict[str, Path])
         "hooking": False,
         "executable_modified": False,
         "registry_modified": False,
-        "target_scope": JP_TARGET_SCOPE if candidate_profile == "JP" else TARGET_SCOPE,
+        "target_scope": (
+            JP_PORT_TARGET_SCOPE
+            if candidate_profile == "JP" and candidate_targets == JP_ALLOWED_TARGETS
+            else JP_TARGET_SCOPE
+            if candidate_profile == "JP"
+            else TARGET_SCOPE
+        ),
         "entries": entries,
     }
     return validate_manifest(manifest)
@@ -656,7 +707,14 @@ def exclusive_lock(backup_root: Path) -> Iterator[None]:
         lock.unlink(missing_ok=True)
 
 
-def copy_atomic(source: Path, destination: Path, expected: dict[str, object], label: str) -> None:
+def copy_atomic(
+    source: Path,
+    destination: Path,
+    expected: dict[str, object],
+    label: str,
+    *,
+    before_replace: Callable[[], None] | None = None,
+) -> None:
     assert_ordinary_file(source, label + " source")
     destination.parent.mkdir(parents=True, exist_ok=True)
     assert_ordinary_directory(destination.parent, label + " parent")
@@ -667,6 +725,8 @@ def copy_atomic(source: Path, destination: Path, expected: dict[str, object], la
             outgoing.flush()
             os.fsync(outgoing.fileno())
         assert_matches_spec(temporary, expected, label + " staging")
+        if before_replace is not None:
+            before_replace()
         os.replace(temporary, destination)
         assert_matches_spec(destination, expected, label + " replacement")
     finally:
@@ -833,7 +893,13 @@ def apply_transaction(
                 # before every live-resource replacement.
                 assert_game_stopped()
                 assert_matches_spec(paths[relative], entry["predecessor"], f"pre-replace {relative}")
-                copy_atomic(candidates[relative], paths[relative], entry["target"], f"apply {relative}")
+                copy_atomic(
+                    candidates[relative],
+                    paths[relative],
+                    entry["target"],
+                    f"apply {relative}",
+                    before_replace=assert_game_stopped,
+                )
                 changed.append(relative)
                 write_atomic_json(
                     state_path(backup_root),
@@ -850,7 +916,6 @@ def apply_transaction(
                 if entry["mode"] != "replace":
                     continue
                 try:
-                    assert_game_stopped()
                     path = resource_paths(game_root, manifest)[relative]
                     actual = file_spec(path)
                     if actual == entry["predecessor"]:
@@ -859,11 +924,13 @@ def apply_transaction(
                         raise TransactionError(
                             f"rollback source {relative} is neither predecessor nor target"
                         )
+                    assert_game_stopped()
                     copy_atomic(
                         backup_path(backup_root, relative),
                         path,
                         entry["predecessor"],
                         f"rollback {relative}",
+                        before_replace=assert_game_stopped,
                     )
                 except Exception as rollback_error:  # preserve the primary cause too
                     rollback_errors.append(str(rollback_error))
@@ -935,6 +1002,7 @@ def restore_transaction(
                     paths[relative],
                     entry["predecessor"],
                     f"restore {relative}",
+                    before_replace=assert_game_stopped,
                 )
                 changed.append(relative)
             final_status, _ = installed_status(game_root, manifest)

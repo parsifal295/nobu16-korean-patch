@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 """Build and verify private JP-base SeoulHangang G1N candidates for NOBU16 PK.
 
-This pipeline builds both JP font routes statically present in the examined
-local non-Steam PK executable as a conservative candidate set.  A current
-Steam runtime file-open trace has not yet proven that both are required:
+This pipeline builds every JP font route present in Steam PK 1.1.7:
 
 * ``RES_JP/res_lang.bin`` outer G1N entries 6 and 7; and
-* ``RES_JP_PK/res_lang_pk.bin`` outer G1N entries 16 and 17.
+* ``RES_JP_PK/res_lang_pk.bin`` outer G1N entries 16 and 17;
+* ``RES_JP_PK_PORT/res_lang_pk_port1.bin`` outer G1N entry 1; and
+* ``RES_JP_PK_PORT/res_lang_pk_port2.bin`` outer G1N entries 0 and 1.
 
 Every target is a three-table JP G1N.  The stock record geometry proves the
-real table hierarchy is ``48/48/48`` for entry 6/16 and ``32/48/32`` for
-entry 7/17.  Demanded Korean glyphs are therefore rasterized from SHA-pinned
-official SeoulHangang EB for every 48-cell table and SeoulHangang B for every
-32-cell table.  There is no third, smaller cell tier in these four G1Ns, so
-SeoulHangang M is pinned as the unused contingency source rather than being
-silently substituted.  A strict TTF cmap gate prevents GDI font fallback.
-The reviewed non-TTF points are copied from each G1N's same-cell stock table 0
-into a new table-2 atlas tail and never pointer-aliased.
+real table hierarchy is ``48/48/48`` and ``32/48/32`` for the regular routes,
+plus ``64/96/32``, ``96/96/96``, and ``64/96/64`` for the high-resolution
+PORT routes.  Demanded Korean glyphs are rasterized from SHA-pinned official
+SeoulHangang EB for 48/96-cell tables and SeoulHangang B for 32/64-cell
+tables.  A strict TTF cmap gate prevents GDI font fallback.  The reviewed
+non-TTF points are copied from a pinned same-cell stock donor into a new
+table-2 atlas tail and never pointer-aliased.
 Existing mappings, records, palettes, and the complete stock atlas remain
 byte-identical.  Every non-target LINK entry remains byte-identical.
 
@@ -109,10 +108,24 @@ FONT_PROFILES: dict[str, dict[str, Any]] = {
         "font_key": "entry7_32px_b",
         "font": "SeoulHangang B",
     },
+    "b64": {
+        "source_entry": 8,
+        "cell": 64,
+        "raster_size": 64,
+        "font_key": "entry7_32px_b",
+        "font": "SeoulHangang B",
+    },
+    "eb96": {
+        "source_entry": 9,
+        "cell": 96,
+        "raster_size": 92,
+        "font_key": "entry6_48px_eb",
+        "font": "SeoulHangang EB",
+    },
 }
 
 # This is an official member of the same SHA-pinned Seoul archive.  It is not
-# used because none of the four target G1Ns has a cell smaller than 32 pixels.
+# used because none of the seven target G1Ns has a cell smaller than 32 pixels.
 SEOUL_HANGANG_M = {
     "file_name": "SeoulHangangM.ttf",
     "size": 7_627_124,
@@ -183,6 +196,9 @@ EXPECTED_FONT_RESOURCES = DEMAND_REFRESH.EXPECTED_FONT_RESOURCES
 PROFILE_TABLES: dict[int, tuple[str, str, str]] = {
     6: ("eb48", "eb48", "eb48"),
     7: ("b32", "eb48", "b32"),
+    101: ("b64", "eb96", "b32"),
+    200: ("eb96", "eb96", "eb96"),
+    201: ("b64", "eb96", "b64"),
 }
 
 
@@ -207,6 +223,25 @@ ROUTES: dict[str, dict[str, Any]] = {
             {"outer_entry": 17, "profile_entry": 7},
         ),
     },
+    "pk_port1": {
+        "logical_path": "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+        "size": 77_468_728,
+        "sha256": "1B44436B542F73B8B155A43F74D897F8D32C1C274D8C64B3CA9F4478BDB86022",
+        "candidate_relative_path": "private/candidate/RES_JP_PK_PORT/res_lang_pk_port1.bin",
+        "targets": (
+            {"outer_entry": 1, "profile_entry": 101},
+        ),
+    },
+    "pk_port2": {
+        "logical_path": "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+        "size": 61_609_467,
+        "sha256": "52A8DE4BA1480E86218AC0CDE50DA946B4BCDFD7053ED85B94B04E663C00B380",
+        "candidate_relative_path": "private/candidate/RES_JP_PK_PORT/res_lang_pk_port2.bin",
+        "targets": (
+            {"outer_entry": 0, "profile_entry": 200},
+            {"outer_entry": 1, "profile_entry": 201},
+        ),
+    },
 }
 
 
@@ -224,8 +259,8 @@ DEMAND_LOCK: dict[str, Any] = {
 
 
 APPEND_UNION_LOCK = {
-    "codepoint_count": 1_357,
-    "codepoints_sha256": "838FB98006D42AD60F37D22D021D8D46B2A76EEF631B89C262B53EB83906AF64",
+    "codepoint_count": 1_450,
+    "codepoints_sha256": "32EAF6032E7923C8D89DA6D9C1F805C642BF51F49C94049EAEF6A0F66DD40156",
 }
 
 
@@ -261,8 +296,8 @@ STOCK_REUSE_LOCK = {
 
 
 TTF_RASTER_LOCK = {
-    "codepoint_count": 1_334,
-    "codepoints_sha256": "08E043D135A03612C159B946A190AD9C30A10A71F3BA6474C85328621E81615A",
+    "codepoint_count": 1_427,
+    "codepoints_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
 }
 
 
@@ -279,6 +314,19 @@ APPEND_LOCK = {
         "count": 1_357,
         "codepoints_sha256": "838FB98006D42AD60F37D22D021D8D46B2A76EEF631B89C262B53EB83906AF64",
     },
+}
+
+PORT1_TABLE2_APPEND_LOCK = {
+    "count": 1_450,
+    "codepoints_sha256": "32EAF6032E7923C8D89DA6D9C1F805C642BF51F49C94049EAEF6A0F66DD40156",
+}
+
+PROFILE_APPEND_LOCKS = {
+    profile: {
+        table: PORT1_TABLE2_APPEND_LOCK if profile == 101 and table == 2 else APPEND_LOCK[table]
+        for table in range(TABLE_COUNT)
+    }
+    for profile in PROFILE_TABLES
 }
 
 
@@ -614,11 +662,15 @@ def parse_layout(data: bytes, label: str) -> dict[str, Any]:
         if any(len(values) != 1 for values in cell_fields.values()) or len(cell_values) != 1:
             raise JPFontBuildError(f"{label}: table {table} has no uniform record cell")
         cell = next(iter(cell_values))
-        if cell not in (32, 48):
+        if cell not in (32, 48, 64, 96):
             raise JPFontBuildError(f"{label}: table {table} unexpected cell {cell}")
         if any(record[2] != 0 or record[6] != 0 for record in records):
             raise JPFontBuildError(f"{label}: table {table} record zero fields drifted")
-        if any(record[0] != record[4] or not 0 < record[0] <= cell for record in records):
+        if any(
+            record[0] != record[4]
+            or not 0 <= record[0] <= cell
+            for record in records
+        ):
             raise JPFontBuildError(f"{label}: table {table} width fields are malformed")
         pointers = [read_u32(record, 8) for record in records]
         if pointers != sorted(pointers) or pointers[-1] >= len(data) - atlas_offset:
@@ -918,36 +970,32 @@ def extract_raw_g1n(archive: Any, outer_entry: int, label: str) -> bytes:
     return raw
 
 
+STOCK_REUSE_DONORS = {
+    32: ("base", 7, 0),
+    48: ("base", 6, 0),
+    64: ("pk_port1", 1, 0),
+    96: ("pk_port2", 0, 0),
+}
+
+
 def extract_stock_reuse_glyph(
     raw: bytes,
     layout: dict[str, Any],
-    profile_entry: int,
+    table: int,
     codepoint: int,
     label: str,
 ) -> dict[str, Any]:
-    """Read one same-cell table-0 glyph for a new table-2 pixel copy."""
+    """Read one reviewed glyph from a pinned same-cell stock donor."""
 
     if codepoint not in STOCK_REUSE_CODEPOINTS:
         raise JPFontBuildError(f"{label}: unreviewed stock-reuse {canonical_cp(codepoint)}")
-    table_profiles = PROFILE_TABLES[profile_entry]
-    source_table, target_table = 0, 2
-    source_profile = table_profiles[source_table]
-    target_profile = table_profiles[target_table]
-    source_cell = int(FONT_PROFILES[source_profile]["cell"])
-    target_cell = int(FONT_PROFILES[target_profile]["cell"])
-    if source_cell != target_cell:
-        raise JPFontBuildError(
-            f"{label}: stock-reuse source/target cells differ for {canonical_cp(codepoint)}"
-        )
-    source_offset = layout["table_offsets"][source_table]
-    target_offset = layout["table_offsets"][target_table]
+    if not 0 <= table < TABLE_COUNT:
+        raise JPFontBuildError(f"{label}: invalid stock-reuse donor table {table}")
+    source_offset = layout["table_offsets"][table]
     source_ordinal = read_u16(raw, source_offset + 2 * codepoint)
-    target_ordinal = read_u16(raw, target_offset + 2 * codepoint)
-    if source_ordinal == 0 or target_ordinal != 0:
-        raise JPFontBuildError(
-            f"{label}: {canonical_cp(codepoint)} must be mapped only in source table 0"
-        )
-    if source_ordinal >= layout["record_counts"][source_table]:
+    if source_ordinal == 0:
+        raise JPFontBuildError(f"{label}: donor does not map {canonical_cp(codepoint)}")
+    if source_ordinal >= layout["record_counts"][table]:
         raise JPFontBuildError(f"{label}: stock-reuse source ordinal out of range")
     record_start = source_offset + MAP_SIZE + RECORD_SIZE * source_ordinal
     record = raw[record_start : record_start + RECORD_SIZE]
@@ -955,8 +1003,7 @@ def extract_stock_reuse_glyph(
         raise JPFontBuildError(f"{label}: truncated stock-reuse record")
     width, cell = record[0], record[1]
     if (
-        cell != source_cell
-        or record[3] != cell
+        record[3] != cell
         or record[7] != cell
         or record[4] != width
         or not 0 < width <= cell
@@ -972,8 +1019,7 @@ def extract_stock_reuse_glyph(
         raise JPFontBuildError(f"{label}: stock-reuse pixels are blank")
     return {
         "codepoint": codepoint,
-        "source_table": source_table,
-        "target_table": target_table,
+        "source_table": table,
         "source_ordinal": source_ordinal,
         "source_pointer": pointer,
         "metric": record[:8],
@@ -986,19 +1032,136 @@ def extract_stock_reuse_glyph(
     }
 
 
+def downsample_stock_reuse_glyph_2x(
+    raw: bytes,
+    layout: dict[str, Any],
+    codepoint: int,
+    target_cell: int,
+    label: str,
+) -> dict[str, Any]:
+    """Derive one same-palette PORT glyph by deterministic 2x box filtering."""
+
+    glyph = extract_stock_reuse_glyph(raw, layout, 0, codepoint, label)
+    source_cell = int(glyph["cell"])
+    source_width = int(glyph["width"])
+    if source_cell != 2 * target_cell or source_width % 2:
+        raise JPFontBuildError(f"{label}: invalid 2x donor geometry for {canonical_cp(codepoint)}")
+    source_pixels = glyph["pixels"]
+    source_stride = source_width // 2
+    target_width = source_width // 2
+    target_stride = target_width // 2
+    target = bytearray(target_stride * target_cell)
+
+    def nibble(x: int, y: int) -> int:
+        value = source_pixels[y * source_stride + x // 2]
+        return value >> 4 if x % 2 == 0 else value & 0x0F
+
+    for y in range(target_cell):
+        for x in range(0, target_width, 2):
+            packed = 0
+            for delta in (0, 1):
+                source_x = 2 * (x + delta)
+                source_y = 2 * y
+                total = (
+                    nibble(source_x, source_y)
+                    + nibble(source_x + 1, source_y)
+                    + nibble(source_x, source_y + 1)
+                    + nibble(source_x + 1, source_y + 1)
+                )
+                value = min(15, (total + 2) // 4)
+                packed |= value << (4 if delta == 0 else 0)
+            target[y * target_stride + x // 2] = packed
+    pixels = bytes(target)
+    if not pixels or not any(pixels):
+        raise JPFontBuildError(f"{label}: downsampled stock glyph is blank")
+    source_metric = glyph["metric"]
+    bearing = struct.unpack("<b", source_metric[5:6])[0]
+    if bearing % 2:
+        raise JPFontBuildError(f"{label}: stock donor bearing is not exactly scalable")
+    metric = bytes(
+        (
+            target_width,
+            target_cell,
+            0,
+            target_cell,
+            target_width,
+            (bearing // 2) & 0xFF,
+            0,
+            target_cell,
+        )
+    )
+    return glyph | {
+        "metric": metric,
+        "metric_sha256": sha256_bytes(metric),
+        "width": target_width,
+        "cell": target_cell,
+        "pixel_size": len(pixels),
+        "pixels": pixels,
+        "pixels_sha256": sha256_bytes(pixels),
+        "source_metric_sha256": glyph["metric_sha256"],
+        "source_pixels_sha256": glyph["pixels_sha256"],
+        "transform": "same_palette_2x2_box_average_4bpp",
+    }
+
+
+def build_stock_reuse_catalog(stock_blobs: dict[str, bytes]) -> dict[int, dict[int, dict[str, Any]]]:
+    catalog: dict[int, dict[int, dict[str, Any]]] = {}
+    for cell, (route, outer, table) in STOCK_REUSE_DONORS.items():
+        archive = parse_stock_archive(stock_blobs[route], f"JP {route} stock-reuse donor")
+        raw = extract_raw_g1n(archive, outer, f"JP {route} stock-reuse donor")
+        layout = parse_layout(raw, f"JP {route} stock-reuse donor outer entry {outer}")
+        if layout["table_geometry"][table]["cell"] != cell:
+            raise JPFontBuildError(f"JP {route}: stock-reuse donor cell {cell} drifted")
+        rows: dict[int, dict[str, Any]] = {}
+        for codepoint in STOCK_REUSE_CODEPOINTS:
+            glyph = extract_stock_reuse_glyph(
+                raw, layout, table, codepoint, f"JP {route} outer entry {outer}"
+            )
+            rows[codepoint] = glyph | {
+                "source_route": route,
+                "source_outer_entry": outer,
+            }
+        catalog[cell] = rows
+    return catalog
+
+
 def stock_reuse_summary(
-    raw: bytes, layout: dict[str, Any], profile_entry: int, label: str
+    catalog: dict[int, dict[int, dict[str, Any]]], cell: int
 ) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for codepoint in STOCK_REUSE_CODEPOINTS:
-        glyph = extract_stock_reuse_glyph(raw, layout, profile_entry, codepoint, label)
+        glyph = catalog[cell][codepoint]
         rows.append(
             {
                 key: value
                 for key, value in glyph.items()
                 if key not in ("metric", "pixels")
             }
-            | {"codepoint": canonical_cp(codepoint)}
+            | {"codepoint": canonical_cp(codepoint), "target_table": 2}
+        )
+    return rows
+
+
+def downsampled_stock_reuse_summary(
+    raw: bytes, layout: dict[str, Any], route: str, outer: int, target_cell: int
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for codepoint in STOCK_REUSE_CODEPOINTS:
+        glyph = downsample_stock_reuse_glyph_2x(
+            raw, layout, codepoint, target_cell, f"JP {route} outer entry {outer}"
+        )
+        rows.append(
+            {
+                key: value
+                for key, value in glyph.items()
+                if key not in ("metric", "pixels")
+            }
+            | {
+                "codepoint": canonical_cp(codepoint),
+                "source_route": route,
+                "source_outer_entry": outer,
+                "target_table": 2,
+            }
         )
     return rows
 
@@ -1007,9 +1170,12 @@ def append_plan_for_g1n(
     raw: bytes,
     hangul: Sequence[int],
     non_hangul: Sequence[int],
+    profile_entry: int,
     label: str,
 ) -> tuple[dict[int, list[int]], list[dict[str, Any]]]:
     layout = parse_layout(raw, label)
+    if profile_entry not in PROFILE_APPEND_LOCKS:
+        raise JPFontBuildError(f"{label}: missing append lock for profile {profile_entry}")
     plan: dict[int, list[int]] = {}
     summary: list[dict[str, Any]] = []
     for table, offset in enumerate(layout["table_offsets"]):
@@ -1023,7 +1189,7 @@ def append_plan_for_g1n(
             cp for cp in non_hangul if read_u16(raw, offset + 2 * cp) == 0
         ]
         codepoints = sorted(set(hangul) | set(missing_non_hangul))
-        expected = APPEND_LOCK[table]
+        expected = PROFILE_APPEND_LOCKS[profile_entry][table]
         actual_hash = canonical_codepoint_hash(codepoints)
         if len(codepoints) != expected["count"] or actual_hash != expected["codepoints_sha256"]:
             raise JPFontBuildError(f"{label} table {table}: append lock drifted")
@@ -1042,13 +1208,15 @@ def append_plan_for_g1n(
     return plan, summary
 
 
-def build_plan(base_blob: bytes, pk_blob: bytes, demand: dict[str, Any]) -> dict[str, Any]:
-    stock_blobs = {"base": base_blob, "pk": pk_blob}
+def build_plan(stock_blobs: dict[str, bytes], demand: dict[str, Any]) -> dict[str, Any]:
+    if set(stock_blobs) != set(ROUTES):
+        raise JPFontBuildError("JP stock route set is incomplete")
+    reuse_catalog = build_stock_reuse_catalog(stock_blobs)
     route_plans: dict[str, Any] = {}
     reference_by_profile: dict[int, dict[int, list[int]]] = {}
     reference_geometry_by_profile: dict[int, list[dict[str, Any]]] = {}
     raster_union: set[int] = set()
-    for route in ("base", "pk"):
+    for route in ROUTES:
         archive = parse_stock_archive(stock_blobs[route], f"JP {route} stock")
         targets: list[dict[str, Any]] = []
         for target in ROUTES[route]["targets"]:
@@ -1059,6 +1227,7 @@ def build_plan(base_blob: bytes, pk_blob: bytes, demand: dict[str, Any]) -> dict
                 raw,
                 list(demand["hangul"]),
                 list(demand["non_hangul"]),
+                profile,
                 f"JP {route} outer entry {outer}",
             )
             if profile in reference_by_profile and reference_by_profile[profile] != append_plan:
@@ -1084,8 +1253,13 @@ def build_plan(base_blob: bytes, pk_blob: bytes, demand: dict[str, Any]) -> dict
                     f"JP base/PK record geometry differs for profile entry {profile}"
                 )
             reference_geometry_by_profile.setdefault(profile, layout["table_geometry"])
-            reuse_rows = stock_reuse_summary(
-                raw, layout, profile, f"JP {route} outer entry {outer}"
+            target_reuse_cell = int(FONT_PROFILES[table_profiles[2]]["cell"])
+            reuse_rows = (
+                downsampled_stock_reuse_summary(
+                    raw, layout, route, outer, target_reuse_cell
+                )
+                if profile == 101
+                else stock_reuse_summary(reuse_catalog, target_reuse_cell)
             )
             for codepoint in STOCK_REUSE_CODEPOINTS:
                 if codepoint in append_plan[0] or codepoint in append_plan[1]:
@@ -1170,11 +1344,16 @@ def build_plan(base_blob: bytes, pk_blob: bytes, demand: dict[str, Any]) -> dict
         "profile_assignment": {
             "entry_6_or_16": ["EB48", "EB48", "EB48"],
             "entry_7_or_17": ["B32", "EB48", "B32"],
+            "port1_entry_1": ["B64", "EB96", "B32"],
+            "port2_entry_0": ["EB96", "EB96", "EB96"],
+            "port2_entry_1": ["B64", "EB96", "B64"],
             "cell_48": "official SeoulHangang EB",
             "cell_32": "official SeoulHangang B",
+            "cell_64": "official SeoulHangang B",
+            "cell_96": "official SeoulHangang EB",
             "smaller_than_32_cell_tier_present": False,
             "seoul_hangang_m_used": False,
-            "decision_basis": "stock 12-byte record cell fields 1/3/7 and atlas pointer stride",
+            "decision_basis": "stock 12-byte record cell fields 1/3/7; PORT tiers are exact 2x regular B32/EB48 geometry",
         },
         "fonts": [
             {
@@ -1197,39 +1376,141 @@ def build_plan(base_blob: bytes, pk_blob: bytes, demand: dict[str, Any]) -> dict
     }
 
 
+RASTER_PROFILE_ORDER = ("eb48", "b32", "b64", "eb96")
+
+
+def raster_request_v3(
+    font_paths: dict[str, Path], raster_codepoints: Sequence[int]
+) -> dict[str, Any]:
+    return {
+        "schema": "nobu16.kr.font-seoulhangang-v1-raster-request.v3",
+        "fonts": [
+            {
+                "key": key,
+                "path": str(font_paths[key]),
+                "sha256": source["sha256"],
+                "family": source["family"],
+                "entry": source["entry"],
+            }
+            for key, source in SC_FONT.FONT_SOURCES.items()
+        ],
+        "codepoints": [canonical_cp(codepoint) for codepoint in raster_codepoints],
+        "profiles": [
+            {
+                "profile": key,
+                "font_key": FONT_PROFILES[key]["font_key"],
+                "family": FONT_PROFILES[key]["font"],
+                "style": "Regular",
+                "raster_size": FONT_PROFILES[key]["raster_size"],
+                "cell": FONT_PROFILES[key]["cell"],
+            }
+            for key in RASTER_PROFILE_ORDER
+        ],
+    }
+
+
+def validate_raster_result_v3(
+    result: dict[str, Any], raster_root: Path, expected_codepoints: Sequence[int]
+) -> dict[str, bytes]:
+    expected = [canonical_cp(codepoint) for codepoint in expected_codepoints]
+    if result.get("schema") != "nobu16.kr.font-seoulhangang-v1-raster-result.v3":
+        raise JPFontBuildError("unsupported JP raster result schema")
+    if result.get("codepoints") != expected:
+        raise JPFontBuildError("JP raster result codepoint order mismatch")
+    descriptors = result.get("payloads")
+    if not isinstance(descriptors, list) or len(descriptors) != len(RASTER_PROFILE_ORDER):
+        raise JPFontBuildError("JP raster payload set is incomplete")
+    payloads: dict[str, bytes] = {}
+    for item in descriptors:
+        if not isinstance(item, dict):
+            raise JPFontBuildError("invalid JP raster payload descriptor")
+        key = item.get("profile")
+        if key not in RASTER_PROFILE_ORDER or key in payloads:
+            raise JPFontBuildError("invalid or duplicate JP raster profile payload")
+        expected_name = f"glyph_pixels_profile_{key}.pixels"
+        if item.get("path") != expected_name:
+            raise JPFontBuildError(f"JP raster profile {key}: non-canonical payload path")
+        data = (raster_root / expected_name).read_bytes()
+        cell = int(FONT_PROFILES[key]["cell"])
+        expected_size = len(expected_codepoints) * (cell // 2) * cell
+        if len(data) != expected_size or item.get("size") != expected_size:
+            raise JPFontBuildError(f"JP raster profile {key}: payload size mismatch")
+        if sha256_bytes(data) != item.get("sha256"):
+            raise JPFontBuildError(f"JP raster profile {key}: payload hash mismatch")
+        payloads[key] = data
+    if tuple(item.get("profile") for item in descriptors) != RASTER_PROFILE_ORDER:
+        raise JPFontBuildError("JP raster payload order drifted")
+
+    profiles = result.get("profiles")
+    if not isinstance(profiles, list) or len(profiles) != len(RASTER_PROFILE_ORDER):
+        raise JPFontBuildError("JP raster profile descriptors are incomplete")
+    for expected_key, profile in zip(RASTER_PROFILE_ORDER, profiles, strict=True):
+        source = FONT_PROFILES[expected_key]
+        actual = (
+            profile.get("profile"),
+            profile.get("font_key"),
+            profile.get("family"),
+            profile.get("style"),
+            profile.get("raster_size"),
+            profile.get("cell"),
+        ) if isinstance(profile, dict) else None
+        wanted = (
+            expected_key,
+            source["font_key"],
+            source["font"],
+            "Regular",
+            source["raster_size"],
+            source["cell"],
+        )
+        if actual != wanted:
+            raise JPFontBuildError(f"JP raster profile {expected_key}: descriptor drifted")
+        glyphs = profile.get("glyphs")
+        if not isinstance(glyphs, list) or len(glyphs) != len(expected):
+            raise JPFontBuildError(f"JP raster profile {expected_key}: glyph count mismatch")
+        cell = int(source["cell"])
+        pixel_size = (cell // 2) * cell
+        blob = payloads[expected_key]
+        for index, glyph in enumerate(glyphs):
+            if not isinstance(glyph, dict) or glyph.get("codepoint") != expected[index]:
+                raise JPFontBuildError("JP raster glyph order mismatch")
+            pixels = blob[index * pixel_size : (index + 1) * pixel_size]
+            if glyph.get("pixel_size") != pixel_size:
+                raise JPFontBuildError("JP raster glyph geometry mismatch")
+            if glyph.get("pixel_sha256") != sha256_bytes(pixels):
+                raise JPFontBuildError("JP raster glyph hash mismatch")
+            if int(glyph.get("ink_count", 0)) <= 0 or int(glyph.get("minimum_margin", 0)) < 1:
+                raise JPFontBuildError("JP raster glyph is blank or touches the cell edge")
+    return payloads
+
+
 def prepare_raster_profiles(
-    full_pixels: dict[int, bytes], raster_codepoints: Sequence[int]
+    full_pixels: dict[str, bytes], raster_codepoints: Sequence[int]
 ) -> tuple[dict[str, bytes], list[dict[str, Any]]]:
-    """Validate the reviewed EB48/B32 raster output and expose one copy each."""
+    """Validate the reviewed EB48/B32/B64/EB96 raster output."""
 
     pixels: dict[str, bytes] = {}
     result: list[dict[str, Any]] = []
-    for key in ("eb48", "b32"):
+    for key in RASTER_PROFILE_ORDER:
         profile = FONT_PROFILES[key]
-        source_entry = int(profile["source_entry"])
         cell = int(profile["cell"])
         bytes_per_glyph = (cell // 2) * cell
         one_table_size = len(raster_codepoints) * bytes_per_glyph
-        payload = full_pixels[source_entry]
-        if len(payload) != 2 * one_table_size:
+        payload = full_pixels[key]
+        if len(payload) != one_table_size:
             raise JPFontBuildError(f"raster profile {key}: payload size mismatch")
-        first, second = payload[:one_table_size], payload[one_table_size:]
-        if first != second:
-            raise JPFontBuildError(f"raster profile {key}: duplicate source renders differ")
-        if not any(first):
+        if not any(payload):
             raise JPFontBuildError(f"raster profile {key}: all pixels are blank")
-        pixels[key] = first
+        pixels[key] = payload
         result.append(
             {
                 "profile": key,
-                "source_entry": source_entry,
                 "font_key": profile["font_key"],
                 "font": profile["font"],
                 "cell": cell,
                 "raster_size": profile["raster_size"],
                 "one_table_payload_size": one_table_size,
-                "one_table_payload_sha256": sha256_bytes(first),
-                "duplicate_source_renders_exact": True,
+                "one_table_payload_sha256": sha256_bytes(payload),
+                "profile_payload_unique": True,
             }
         )
     return pixels, result
@@ -1238,6 +1519,7 @@ def prepare_raster_profiles(
 def build_g1n_append(
     stock: bytes,
     profile_pixels: dict[str, bytes],
+    stock_reuse_catalog: dict[int, dict[int, dict[str, Any]]],
     profile_entry: int,
     raster_codepoints: Sequence[int],
     table_codepoints: dict[int, list[int]],
@@ -1305,12 +1587,24 @@ def build_g1n_append(
                     raise JPFontBuildError(
                         f"{label}: stock-reuse {canonical_cp(cp)} is only permitted in table 2"
                     )
-                glyph = extract_stock_reuse_glyph(
-                    stock, layout, profile_entry, cp, label
-                )
+                if profile_entry == 101:
+                    glyph = downsample_stock_reuse_glyph_2x(
+                        stock, layout, cp, cell, label
+                    ) | {
+                        "source_route": "same_g1n",
+                        "source_outer_entry": 1,
+                    }
+                    source_kind = "stock_table0_2x_downsample"
+                else:
+                    glyph = stock_reuse_catalog.get(cell, {}).get(cp)
+                    if glyph is None or glyph["cell"] != cell:
+                        raise JPFontBuildError(
+                            f"{label}: no pinned {cell}px donor for {canonical_cp(cp)}"
+                        )
+                    source_kind = "stock_table0_pixel_copy"
                 row = {
                     "codepoint": cp,
-                    "source": "stock_table0_pixel_copy",
+                    "source": source_kind,
                     "metric": glyph["metric"],
                     "pixels": glyph["pixels"],
                     "pixel_size": glyph["pixel_size"],
@@ -1320,7 +1614,13 @@ def build_g1n_append(
                     "source_pointer": glyph["source_pointer"],
                     "source_pixels_sha256": glyph["pixels_sha256"],
                     "source_metric_sha256": glyph["metric_sha256"],
+                    "source_route": glyph["source_route"],
+                    "source_outer_entry": glyph["source_outer_entry"],
                 }
+                if "transform" in glyph:
+                    row["transform"] = glyph["transform"]
+                    row["source_metric_sha256"] = glyph["source_metric_sha256"]
+                    row["source_pixels_sha256"] = glyph["source_pixels_sha256"]
                 reuse_seen.append(cp)
             else:
                 raise JPFontBuildError(
@@ -1389,7 +1689,7 @@ def build_g1n_append(
             record_offset = RECORD_SIZE * index
             new_records[record_offset : record_offset + 8] = glyph["metric"]
             pointer = layout["atlas_length"] + glyph["tail_offset"]
-            if glyph["source"] == "stock_table0_pixel_copy" and pointer == glyph["source_pointer"]:
+            if glyph["source"].startswith("stock_") and pointer == glyph["source_pointer"]:
                 raise JPFontBuildError(f"{label}: direct stock pointer alias is forbidden")
             struct.pack_into("<I", new_records, record_offset + 8, pointer)
         output[target_offset : target_offset + MAP_SIZE] = table_map
@@ -1420,13 +1720,15 @@ def build_g1n_append(
                     row["source"] == "official_ttf" for row in glyph_appends[table]
                 ),
                 "stock_pixel_copy_append_count": sum(
-                    row["source"] == "stock_table0_pixel_copy"
+                    row["source"].startswith("stock_")
                     for row in glyph_appends[table]
                 ),
                 "stock_pixel_copies": [
                     {
                         "codepoint": canonical_cp(row["codepoint"]),
                         "source_table": row["source_table"],
+                        "source_route": row["source_route"],
+                        "source_outer_entry": row["source_outer_entry"],
                         "source_ordinal": row["source_ordinal"],
                         "source_pointer": row["source_pointer"],
                         "target_pointer": layout["atlas_length"] + row["tail_offset"],
@@ -1434,9 +1736,10 @@ def build_g1n_append(
                         "pixel_size": row["pixel_size"],
                         "metric_sha256": row["source_metric_sha256"],
                         "pixels_sha256": row["source_pixels_sha256"],
+                        "transform": row.get("transform", "none"),
                     }
                     for row in glyph_appends[table]
-                    if row["source"] == "stock_table0_pixel_copy"
+                    if row["source"].startswith("stock_")
                 ],
             }
         )
@@ -1540,7 +1843,7 @@ def rebuild_link_with_g1n_replacements(
     for index, raw in sorted(replacements.items()):
         if not 0 <= index < len(archive.entries):
             raise JPFontBuildError(f"{label}: replacement index {index} is out of range")
-        wrapped[index] = LZ4.recompress_wrapper(raw, archive.entries[index].data)
+        wrapped[index] = LZ4.recompress_wrapper_greedy(raw, archive.entries[index].data)
     candidate = LZ4.rebuild_link(archive, wrapped)
     parsed = parse_stock_archive(candidate, f"{label} candidate")
     for index, raw in replacements.items():
@@ -1555,6 +1858,7 @@ def build_route(
     stock_blob: bytes,
     plan: dict[str, Any],
     profile_pixels: dict[str, bytes],
+    stock_reuse_catalog: dict[int, dict[int, dict[str, Any]]],
 ) -> tuple[bytes, dict[int, bytes], dict[str, Any]]:
     archive = parse_stock_archive(stock_blob, f"JP {route} stock")
     target_plan_rows = plan["routes"][route]["targets"]
@@ -1572,6 +1876,7 @@ def build_route(
         candidate_raw, validation = build_g1n_append(
             stock_raw,
             profile_pixels,
+            stock_reuse_catalog,
             profile,
             raster_codepoints,
             table_plan,
@@ -1635,8 +1940,7 @@ def load_expected_outputs(evidence_path: Path) -> dict[str, Any]:
 
 
 def private_build(
-    base_blob: bytes,
-    pk_blob: bytes,
+    stock_blobs: dict[str, bytes],
     font_paths: dict[str, Path],
     plan: dict[str, Any],
     output_root: Path,
@@ -1652,9 +1956,9 @@ def private_build(
     cmap_gate = validate_official_font_cmaps(font_paths, append_union)
     request_path = output_root / "private" / "raster_request.json"
     raster_root = output_root / "private" / "raster"
-    atomic_write(request_path, encode_json(SC_FONT.raster_request(font_paths, raster_codepoints)))
+    atomic_write(request_path, encode_json(raster_request_v3(font_paths, raster_codepoints)))
     raster_result = SC_FONT.run_rasterizer(powershell, request_path, raster_root)
-    full_pixels = SC_FONT.validate_raster_result(
+    full_pixels = validate_raster_result_v3(
         raster_result,
         raster_root,
         raster_codepoints,
@@ -1664,12 +1968,14 @@ def private_build(
     )
 
     route_manifests: list[dict[str, Any]] = []
-    for route, stock_blob in (("base", base_blob), ("pk", pk_blob)):
+    stock_reuse_catalog = build_stock_reuse_catalog(stock_blobs)
+    for route, stock_blob in stock_blobs.items():
         candidate, raw_targets, route_manifest = build_route(
             route,
             stock_blob,
             plan,
             profile_pixels,
+            stock_reuse_catalog,
         )
         candidate_path = output_root / ROUTES[route]["candidate_relative_path"]
         atomic_write(candidate_path, candidate)
@@ -1721,14 +2027,14 @@ def private_build(
 
 
 def verify_existing_candidates(
-    base_blob: bytes,
-    pk_blob: bytes,
+    stock_blobs: dict[str, bytes],
     plan: dict[str, Any],
     candidate_root: Path,
     expected_outputs: dict[str, Any],
 ) -> dict[str, Any]:
     route_manifests: list[dict[str, Any]] = []
-    for route, stock_blob in (("base", base_blob), ("pk", pk_blob)):
+    stock_reuse_catalog = build_stock_reuse_catalog(stock_blobs)
+    for route, stock_blob in stock_blobs.items():
         relative = Path(*ROUTES[route]["candidate_relative_path"].split("/"))
         # --candidate-root points to the build root, so retain private/candidate.
         candidate_path = candidate_root / relative
@@ -1752,6 +2058,7 @@ def verify_existing_candidates(
             validation = verify_g1n_append_without_raster(
                 stock_raw,
                 target_raw,
+                stock_reuse_catalog,
                 profile,
                 table_plan,
                 f"JP {route} outer entry {outer}",
@@ -1809,6 +2116,7 @@ def verify_existing_candidates(
 def verify_g1n_append_without_raster(
     stock: bytes,
     target: bytes,
+    stock_reuse_catalog: dict[int, dict[int, dict[str, Any]]],
     profile_entry: int,
     table_codepoints: dict[int, list[int]],
     label: str,
@@ -1846,18 +2154,32 @@ def verify_g1n_append_without_raster(
                     raise JPFontBuildError(
                         f"{label}: stock-reuse {canonical_cp(cp)} appears outside table 2"
                     )
-                glyph = extract_stock_reuse_glyph(
-                    stock, source, profile_entry, cp, label
-                )
+                if profile_entry == 101:
+                    glyph = downsample_stock_reuse_glyph_2x(
+                        stock, source, cp, cell, label
+                    ) | {
+                        "source_route": "same_g1n",
+                        "source_outer_entry": 1,
+                    }
+                    source_kind = "stock_table0_2x_downsample"
+                else:
+                    glyph = stock_reuse_catalog.get(cell, {}).get(cp)
+                    if glyph is None or glyph["cell"] != cell:
+                        raise JPFontBuildError(
+                            f"{label}: missing pinned {cell}px donor for {canonical_cp(cp)}"
+                        )
+                    source_kind = "stock_table0_pixel_copy"
                 rows.append(
                     {
                         "codepoint": cp,
-                        "source": "stock_table0_pixel_copy",
+                        "source": source_kind,
                         "metric": glyph["metric"],
                         "pixel_size": glyph["pixel_size"],
                         "pixels": glyph["pixels"],
                         "source_pointer": glyph["source_pointer"],
                         "source_ordinal": glyph["source_ordinal"],
+                        "source_route": glyph["source_route"],
+                        "source_outer_entry": glyph["source_outer_entry"],
                     }
                 )
                 reuse_seen.append(cp)
@@ -1937,7 +2259,7 @@ def verify_g1n_append_without_raster(
             ]
             if len(copied) != glyph["pixel_size"] or not any(copied):
                 raise JPFontBuildError(f"{label} table {table}: appended pixels are blank/truncated")
-            if glyph["source"] == "stock_table0_pixel_copy":
+            if glyph["source"].startswith("stock_"):
                 if copied != glyph["pixels"]:
                     raise JPFontBuildError(
                         f"{label} table {table}: stock-reuse pixels are not an exact copy"
@@ -1948,6 +2270,8 @@ def verify_g1n_append_without_raster(
                     {
                         "codepoint": canonical_cp(glyph["codepoint"]),
                         "source_table": 0,
+                        "source_route": glyph["source_route"],
+                        "source_outer_entry": glyph["source_outer_entry"],
                         "target_table": table,
                         "source_ordinal": glyph["source_ordinal"],
                         "source_pointer": glyph["source_pointer"],
@@ -1971,7 +2295,7 @@ def verify_g1n_append_without_raster(
                     row["source"] == "official_ttf" for row in expected_glyphs[table]
                 ),
                 "stock_pixel_copy_append_count": sum(
-                    row["source"] == "stock_table0_pixel_copy"
+                    row["source"].startswith("stock_")
                     for row in expected_glyphs[table]
                 ),
             }
@@ -2003,15 +2327,11 @@ def verify_g1n_append_without_raster(
 
 
 def command_plan(args: argparse.Namespace) -> int:
-    base_path = Path(args.stock_base).resolve()
-    pk_path = Path(args.stock_pk).resolve()
+    stock_paths = stock_paths_from_args(args)
     output_root = Path(args.output_root).resolve()
-    validate_output_root(output_root, (base_path, pk_path))
-    plan = build_plan(
-        require_stock(base_path, "base"),
-        require_stock(pk_path, "pk"),
-        require_demand(),
-    )
+    validate_output_root(output_root, tuple(stock_paths.values()))
+    stock_blobs = {route: require_stock(path, route) for route, path in stock_paths.items()}
+    plan = build_plan(stock_blobs, require_demand())
     output_root.mkdir(parents=True, exist_ok=True)
     atomic_write(output_root / "plan.json", encode_json(plan))
     print(f"plan={output_root / 'plan.json'}")
@@ -2020,8 +2340,7 @@ def command_plan(args: argparse.Namespace) -> int:
 
 
 def staged_private_build(
-    base_blob: bytes,
-    pk_blob: bytes,
+    stock_blobs: dict[str, bytes],
     font_paths: dict[str, Path],
     plan: dict[str, Any],
     destination_parent: Path,
@@ -2035,8 +2354,7 @@ def staged_private_build(
     try:
         atomic_write(staging / "plan.json", encode_json(plan))
         manifest = private_build(
-            base_blob,
-            pk_blob,
+            stock_blobs,
             font_paths,
             plan,
             staging,
@@ -2049,24 +2367,32 @@ def staged_private_build(
     return staging, manifest
 
 
+def stock_paths_from_args(args: argparse.Namespace) -> dict[str, Path]:
+    port_stock_root = Path(args.port_stock_root).resolve()
+    return {
+        "base": Path(args.stock_base).resolve(),
+        "pk": Path(args.stock_pk).resolve(),
+        "pk_port1": port_stock_root / "res_lang_pk_port1.bin",
+        "pk_port2": port_stock_root / "res_lang_pk_port2.bin",
+    }
+
+
 def private_build_inputs(args: argparse.Namespace) -> tuple[
-    Path, Path, dict[str, Path], bytes, bytes, dict[str, Any], Path
+    dict[str, Path], dict[str, Path], dict[str, bytes], dict[str, Any], Path
 ]:
-    base_path = Path(args.stock_base).resolve()
-    pk_path = Path(args.stock_pk).resolve()
+    stock_paths = stock_paths_from_args(args)
     font_paths = {
         "entry6_48px_eb": Path(args.font_eb).resolve(),
         "entry7_32px_b": Path(args.font_b).resolve(),
     }
-    base_blob = require_stock(base_path, "base")
-    pk_blob = require_stock(pk_path, "pk")
-    plan = build_plan(base_blob, pk_blob, require_demand())
+    stock_blobs = {
+        route: require_stock(path, route) for route, path in stock_paths.items()
+    }
+    plan = build_plan(stock_blobs, require_demand())
     return (
-        base_path,
-        pk_path,
+        stock_paths,
         font_paths,
-        base_blob,
-        pk_blob,
+        stock_blobs,
         plan,
         Path(args.powershell).resolve(),
     )
@@ -2075,20 +2401,18 @@ def private_build_inputs(args: argparse.Namespace) -> tuple[
 def command_build(args: argparse.Namespace) -> int:
     expected = load_expected_outputs(Path(args.evidence).resolve())
     (
-        base_path,
-        pk_path,
+        stock_paths,
         font_paths,
-        base_blob,
-        pk_blob,
+        stock_blobs,
         plan,
         powershell,
     ) = private_build_inputs(args)
     output_root = Path(args.output_root).resolve()
-    validate_output_root(output_root, (base_path, pk_path, *font_paths.values()))
+    validate_output_root(output_root, (*stock_paths.values(), *font_paths.values()))
     if output_root.exists():
         raise JPFontBuildError("atomic build output root must not already exist")
     staging, manifest = staged_private_build(
-        base_blob, pk_blob, font_paths, plan, output_root.parent, powershell, expected
+        stock_blobs, font_paths, plan, output_root.parent, powershell, expected
     )
     try:
         os.replace(staging, output_root)
@@ -2117,21 +2441,18 @@ def command_bootstrap(args: argparse.Namespace) -> int:
             "bootstrap proposal must be a new JSON file below repository tmp"
         )
     (
-        base_path,
-        pk_path,
+        stock_paths,
         font_paths,
-        base_blob,
-        pk_blob,
+        stock_blobs,
         plan,
         powershell,
     ) = private_build_inputs(args)
     validate_output_root(
         proposal.parent / ".jp-font-bootstrap-output",
-        (base_path, pk_path, *font_paths.values()),
+        (*stock_paths.values(), *font_paths.values()),
     )
     staging, manifest = staged_private_build(
-        base_blob,
-        pk_blob,
+        stock_blobs,
         font_paths,
         plan,
         proposal.parent,
@@ -2149,13 +2470,14 @@ def command_bootstrap(args: argparse.Namespace) -> int:
 
 
 def command_verify(args: argparse.Namespace) -> int:
-    base_blob = require_stock(Path(args.stock_base).resolve(), "base")
-    pk_blob = require_stock(Path(args.stock_pk).resolve(), "pk")
-    plan = build_plan(base_blob, pk_blob, require_demand())
+    stock_paths = stock_paths_from_args(args)
+    stock_blobs = {
+        route: require_stock(path, route) for route, path in stock_paths.items()
+    }
+    plan = build_plan(stock_blobs, require_demand())
     expected = load_expected_outputs(Path(args.evidence).resolve())
     report = verify_existing_candidates(
-        base_blob,
-        pk_blob,
+        stock_blobs,
         plan,
         Path(args.candidate_root).resolve(),
         expected,
@@ -2174,6 +2496,15 @@ def add_stock_arguments(parser: argparse.ArgumentParser) -> None:
         "--stock-pk",
         type=Path,
         default=STOCK_ROOT / "RES_JP_PK" / "res_lang_pk.bin",
+    )
+    parser.add_argument(
+        "--port-stock-root",
+        type=Path,
+        required=True,
+        help=(
+            "directory containing pristine Steam 1.1.7 "
+            "res_lang_pk_port1.bin and res_lang_pk_port2.bin"
+        ),
     )
 
 

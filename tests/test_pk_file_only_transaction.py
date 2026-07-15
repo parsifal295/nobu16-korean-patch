@@ -93,6 +93,9 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             self.game / "MSG" / "JP" / "ev_strdata.bin": b"jp-base-event-sentinel",
             self.game / "RES_JP" / "res_lang_exp.bin": b"jp-exp-sentinel",
             self.game / "RES_JP_PK" / "res_lang_exp_pk.bin": b"jp-pk-exp-sentinel",
+            self.game
+            / "RES_JP_PK_PORT"
+            / "res_lang_pk_port3.bin": b"jp-pk-port3-sentinel",
             self.game / "NOBU16PK.exe": b"executable-sentinel",
         }
         for path, payload in sentinels.items():
@@ -254,6 +257,33 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         self.assertEqual((self.game / "MSG_PK" / "SC" / "msgui.bin").read_bytes(), b"target-msgui")
         self.assertEqual((self.game / "RES_SC" / "res_lang.bin").read_bytes(), b"stock-font")
 
+    def test_all_retain_plan_is_rejected_as_an_explicit_no_op(self) -> None:
+        candidates, _predecessors, _sentinels = self._prepare_jp_profile()
+        all_retain = tx.make_manifest(self.game, "jp-all-retain-manual-v1", candidates)
+        for entry in all_retain["entries"]:
+            entry["mode"] = "retain"
+            entry["predecessor"] = dict(entry["target"])
+        with self.assertRaisesRegex(tx.TransactionError, "all-retain no-op transaction"):
+            tx.validate_manifest(all_retain)
+
+        for relative, candidate in candidates.items():
+            installed = self.game.joinpath(*relative.split("/"))
+            installed.write_bytes(candidate.read_bytes())
+
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            exit_code = tx.main([
+                "plan",
+                "--game-root", str(self.game),
+                "--release-id", "jp-already-installed-v1",
+                "--manifest", str(self.manifest_path),
+                "--candidate-root", str(self.root / "jp-candidates"),
+            ])
+
+        self.assertEqual(exit_code, 2)
+        self.assertIn("all-retain no-op transaction", output.getvalue())
+        self.assertFalse(self.manifest_path.exists())
+
     def test_candidate_root_collects_only_the_allowed_pk_scope(self) -> None:
         self._write(self.candidates_root / "MSG" / "SC" / "ev_strdata.bin", b"forbidden")
         found = tx.collect_candidate_root(self.candidates_root)
@@ -277,7 +307,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         self.assertEqual(report["base_msg_sc_count"], 0)
         self.assertTrue(report["all_seven_msg_pk_sc_included"])
 
-    def test_exact_jp_plan_dry_run_apply_restore_and_sentinels(self) -> None:
+    def test_exact_jp_port_plan_dry_run_apply_restore_and_sentinels(self) -> None:
         candidates, predecessors, sentinels = self._prepare_jp_profile()
         candidate_root = self.root / "jp-candidates"
         output = io.StringIO()
@@ -291,7 +321,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             ])
         self.assertEqual(exit_code, 0, output.getvalue())
         manifest, manifest_hash = tx.read_manifest(self.manifest_path)
-        self.assertEqual(manifest["target_scope"], tx.JP_TARGET_SCOPE)
+        self.assertEqual(manifest["target_scope"], tx.JP_PORT_TARGET_SCOPE)
         self.assertEqual({entry["path"] for entry in manifest["entries"]}, tx.JP_ALLOWED_TARGETS)
         scope = tx.scope_report(manifest)
         self.assertEqual(scope["runtime_language"], "JP")
@@ -299,9 +329,12 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         self.assertEqual(scope["base_msg_jp_count"], 1)
         self.assertEqual(scope["res_jp_count"], 1)
         self.assertEqual(scope["res_jp_pk_count"], 1)
+        self.assertEqual(scope["res_jp_pk_port_count"], 2)
         self.assertTrue(scope["all_seven_msg_pk_jp_included"])
         self.assertEqual(scope["jp_10_file_count"], 10)
-        self.assertTrue(scope["jp_10_file_complete"])
+        self.assertFalse(scope["jp_10_file_complete"])
+        self.assertEqual(scope["jp_12_file_count"], 12)
+        self.assertTrue(scope["jp_12_file_complete"])
 
         backup = tx.default_backup_root(self.game, manifest["release_id"])
         report = tx.dry_run(self.game, backup, manifest, candidates)
@@ -336,7 +369,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
     def test_jp_subset_is_rejected_at_every_manifest_entrypoint(self) -> None:
         candidates, _, _ = self._prepare_jp_profile()
         full_manifest = tx.make_manifest(self.game, "jp-full-v1", candidates)
-        omitted = "RES_JP_PK/res_lang_pk.bin"
+        omitted = "RES_JP_PK_PORT/res_lang_pk_port2.bin"
         partial = {
             relative: candidate
             for relative, candidate in candidates.items()
@@ -346,9 +379,9 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         direct_arguments = [
             f"{relative}={candidate}" for relative, candidate in partial.items()
         ]
-        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP"):
             tx.parse_candidate_args(direct_arguments)
-        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP"):
             tx.make_manifest(self.game, "jp-partial-v1", partial)
 
         partial_manifest = json.loads(json.dumps(full_manifest))
@@ -357,12 +390,29 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             for entry in partial_manifest["entries"]
             if entry["path"] != omitted
         ]
-        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP"):
             tx.validate_manifest(partial_manifest)
 
         candidates[omitted].unlink()
-        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP"):
             tx.collect_candidate_root(self.root / "jp-candidates")
+
+    def test_exact_eleven_file_jp_port_profile_is_rejected(self) -> None:
+        candidates, _, _ = self._prepare_jp_profile()
+        omitted = "RES_JP_PK_PORT/res_lang_pk_port2.bin"
+        eleven = {
+            relative: candidate
+            for relative, candidate in candidates.items()
+            if relative != omitted
+        }
+        self.assertEqual(len(eleven), 11)
+        self.assertEqual(
+            set(eleven),
+            tx.JP_LEGACY_ALLOWED_TARGETS
+            | {"RES_JP_PK_PORT/res_lang_pk_port1.bin"},
+        )
+        with self.assertRaisesRegex(tx.TransactionError, "12-file profile"):
+            tx.make_manifest(self.game, "jp-eleven-v1", eleven)
 
     def test_jp_candidate_root_rejects_forbidden_extra_files(self) -> None:
         self._prepare_jp_profile()
@@ -372,6 +422,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             "MSG/JP/ev_strdata.bin",
             "RES_JP/res_lang_exp.bin",
             "RES_JP_PK/res_lang_exp_pk.bin",
+            "RES_JP_PK_PORT/res_lang_pk_port3.bin",
         )
         for relative in forbidden:
             with self.subTest(relative=relative):
@@ -419,12 +470,20 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         original_copy_atomic = tx.copy_atomic
         failed = False
 
-        def fail_during_second_live_write(source, destination, expected, label):
+        def fail_during_second_live_write(
+            source, destination, expected, label, *, before_replace=None
+        ):
             nonlocal failed
             if label == "apply MSG_PK/JP/msgbre.bin" and not failed:
                 failed = True
                 raise OSError("injected JP apply failure")
-            return original_copy_atomic(source, destination, expected, label)
+            return original_copy_atomic(
+                source,
+                destination,
+                expected,
+                label,
+                before_replace=before_replace,
+            )
 
         with mock.patch.object(tx, "assert_game_stopped"), mock.patch.object(
             tx, "copy_atomic", side_effect=fail_during_second_live_write
@@ -450,9 +509,17 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         original_copy_atomic = tx.copy_atomic
         failed = False
 
-        def fail_after_verified_live_write(source, destination, expected, label):
+        def fail_after_verified_live_write(
+            source, destination, expected, label, *, before_replace=None
+        ):
             nonlocal failed
-            original_copy_atomic(source, destination, expected, label)
+            original_copy_atomic(
+                source,
+                destination,
+                expected,
+                label,
+                before_replace=before_replace,
+            )
             if label == "apply MSG/JP/strdata.bin" and not failed:
                 failed = True
                 raise OSError("injected after verified live replacement")
@@ -472,11 +539,47 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         state = tx.read_strict_json(tx.state_path(backup))
         self.assertEqual(state["status"], "restored")
 
+    def test_game_launch_after_staging_prevents_the_first_live_replacement(self) -> None:
+        candidates, predecessors, _ = self._prepare_jp_profile()
+        manifest = tx.make_manifest(self.game, "jp-pre-replace-guard-v1", candidates)
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        guard_calls = 0
+
+        def game_starts_before_replace() -> None:
+            nonlocal guard_calls
+            guard_calls += 1
+            if guard_calls == 3:
+                raise tx.TransactionError("injected game launch before live replace")
+
+        with mock.patch.object(
+            tx, "assert_game_stopped", side_effect=game_starts_before_replace
+        ):
+            with self.assertRaisesRegex(tx.TransactionError, "was rolled back"):
+                tx.apply_transaction(
+                    self.game, backup, loaded, manifest_hash, candidates
+                )
+
+        self.assertEqual(guard_calls, 3)
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        self.assertFalse(
+            any(self.game.rglob(".*.n16kr.*.tmp")),
+            "failed guarded staging must not leave a live-tree temporary",
+        )
+        state = tx.read_strict_json(tx.state_path(backup))
+        self.assertEqual(state["status"], "restored")
+
     def test_jp_live_candidates_and_backup_roots_are_rejected(self) -> None:
         candidates, _, _ = self._prepare_jp_profile()
-        live_font = self.game / "RES_JP_PK" / "res_lang_pk.bin"
+        live_font = (
+            self.game / "RES_JP_PK_PORT" / "res_lang_pk_port1.bin"
+        )
         live_candidates = dict(candidates)
-        live_candidates["RES_JP_PK/res_lang_pk.bin"] = live_font
+        live_candidates["RES_JP_PK_PORT/res_lang_pk_port1.bin"] = live_font
         with self.assertRaisesRegex(tx.TransactionError, "live PK resource tree"):
             tx.make_manifest(
                 self.game,
@@ -485,7 +588,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             )
         with self.assertRaisesRegex(tx.TransactionError, "inside a PK resource tree"):
             tx.validate_backup_root(
-                self.game, self.game / "RES_JP" / "transaction-backup"
+                self.game, self.game / "RES_JP_PK_PORT" / "transaction-backup"
             )
         self.assertEqual(set(candidates), tx.JP_ALLOWED_TARGETS)
 
@@ -508,6 +611,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             "MSG/JP/ev_strdata.bin",
             "RES_JP/res_lang_exp.bin",
             "RES_JP_PK/res_lang_exp_pk.bin",
+            "RES_JP_PK_PORT/res_lang_pk_port3.bin",
             "NOBU16PK.exe",
         )
         for relative in forbidden:
@@ -527,10 +631,85 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         with self.assertRaisesRegex(tx.TransactionError, "same runtime profile"):
             tx.validate_manifest(manifest)
 
+        wrong_jp_scope = tx.make_manifest(
+            self.game, "jp-wrong-exact-scope-v1", candidates
+        )
+        wrong_jp_scope["target_scope"] = tx.JP_TARGET_SCOPE
+        with self.assertRaisesRegex(tx.TransactionError, "exact legacy JP 10-file"):
+            tx.validate_manifest(wrong_jp_scope)
+
+        legacy_candidates = {
+            relative: candidate
+            for relative, candidate in candidates.items()
+            if relative in tx.JP_LEGACY_ALLOWED_TARGETS
+        }
+        wrong_port_scope = tx.make_manifest(
+            self.game, "jp-wrong-port-scope-v1", legacy_candidates
+        )
+        wrong_port_scope["target_scope"] = tx.JP_PORT_TARGET_SCOPE
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP 12-file"):
+            tx.validate_manifest(wrong_port_scope)
+
         sc_manifest = tx.make_manifest(self.game, "sc-scope-v1", self._candidates())
         sc_manifest["target_scope"] = tx.JP_TARGET_SCOPE
         with self.assertRaisesRegex(tx.TransactionError, "same runtime profile"):
             tx.validate_manifest(sc_manifest)
+
+    def test_legacy_exact_ten_file_jp_manifest_still_applies_and_restores(self) -> None:
+        candidates, predecessors, _ = self._prepare_jp_profile()
+        legacy_candidates = {
+            relative: candidate
+            for relative, candidate in candidates.items()
+            if relative in tx.JP_LEGACY_ALLOWED_TARGETS
+        }
+        port_predecessors = {
+            relative: predecessors[relative]
+            for relative in tx.JP_PORT_FONT_TARGETS
+        }
+        manifest = tx.make_manifest(
+            self.game, "legacy-jp-ten-v1", legacy_candidates
+        )
+        self.assertEqual(manifest["target_scope"], tx.JP_TARGET_SCOPE)
+        self.assertEqual(
+            {entry["path"] for entry in manifest["entries"]},
+            tx.JP_LEGACY_ALLOWED_TARGETS,
+        )
+        scope = tx.scope_report(manifest)
+        self.assertTrue(scope["jp_10_file_complete"])
+        self.assertFalse(scope["jp_12_file_complete"])
+        self.assertEqual(scope["res_jp_pk_port_count"], 0)
+
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        with mock.patch.object(tx, "assert_game_stopped"):
+            applied = tx.apply_transaction(
+                self.game,
+                backup,
+                loaded,
+                manifest_hash,
+                legacy_candidates,
+            )
+        self.assertEqual(applied["result"], "applied")
+        for relative, predecessor in port_predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(),
+                predecessor,
+            )
+            self.assertFalse(
+                backup.joinpath("originals", *relative.split("/")).exists()
+            )
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            restored = tx.restore_transaction(
+                self.game, backup, loaded, manifest_hash
+            )
+        self.assertEqual(restored["result"], "restored")
+        for relative in tx.JP_LEGACY_ALLOWED_TARGETS:
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(),
+                predecessors[relative],
+            )
 
     def test_legacy_sc_manifest_still_applies_and_restores(self) -> None:
         manifest = tx.make_manifest(self.game, "legacy-sc-v1", self._candidates())
