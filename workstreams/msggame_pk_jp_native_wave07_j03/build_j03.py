@@ -39,6 +39,12 @@ TRANSLATIONS = WORKSTREAM / "translations.ko.jsonl"
 PUBLIC_OVERLAY = WORKSTREAM / "public" / f"{OVERLAY_ID}.json"
 REVIEW_EVIDENCE = WORKSTREAM / "review" / "review_evidence.v1.json"
 VALIDATION = WORKSTREAM / "validation.v1.json"
+CONTEXTUAL_VARIANTS = (
+    REPO_ROOT
+    / "workstreams"
+    / "msggame_pk_jp_native_wave07_integration"
+    / "contextual_variants.v1.json"
+)
 
 PRIVATE_SHA256 = "1BF199F5E099B70377EA5799C651D0B34E756C083B18AA31B9999C49C550A83C"
 COORDINATE_COUNT = 761
@@ -191,6 +197,40 @@ def load_translations(path: Path = TRANSLATIONS) -> tuple[dict[tuple[int, int, i
     return result, blob
 
 
+def load_contextual_variants() -> dict[str, dict[tuple[int, int, int], str]]:
+    value = decode_json(CONTEXTUAL_VARIANTS.read_bytes(), "contextual variants")
+    if (
+        not isinstance(value, dict)
+        or value.get("schema")
+        != "nobu16.kr.msggame-jp-wave07-contextual-variants.v1"
+        or value.get("source_text_free") is not True
+    ):
+        raise BuildError("invalid contextual variant contract")
+    result: dict[str, dict[tuple[int, int, int], str]] = {}
+    for entry in value.get("entries", []):
+        digest = entry.get("source_jp_utf16le_sha256")
+        variants = entry.get("coordinate_variants")
+        if not isinstance(digest, str) or not isinstance(variants, list):
+            raise BuildError("invalid contextual variant entry")
+        coordinate_map: dict[tuple[int, int, int], str] = {}
+        for variant in variants:
+            if not isinstance(variant, dict):
+                raise BuildError("invalid contextual coordinate variant")
+            korean = variant.get("ko")
+            coordinates = variant.get("coordinates")
+            if not isinstance(korean, str) or not isinstance(coordinates, list):
+                raise BuildError("invalid contextual coordinate translation")
+            for raw_coordinate in coordinates:
+                if not isinstance(raw_coordinate, list) or len(raw_coordinate) != 3:
+                    raise BuildError("invalid contextual coordinate")
+                current = tuple(raw_coordinate)
+                if current in coordinate_map:
+                    raise BuildError("duplicate contextual coordinate")
+                coordinate_map[current] = korean
+        result[digest] = coordinate_map
+    return result
+
+
 def artifact(path: Path, blob: bytes) -> dict[str, Any]:
     return {
         "path": path.relative_to(REPO_ROOT).as_posix(),
@@ -245,18 +285,24 @@ def build_values() -> dict[str, tuple[Any, bytes]]:
         )
 
     inconsistent = {
-        digest: sorted(values)
+        digest: dict(by_source_rows[digest])
         for digest, values in by_source_hash.items()
         if len(values) != 1
     }
-    if inconsistent:
-        details = {
-            digest: by_source_rows[digest]
-            for digest in sorted(inconsistent)[:3]
+    reviewed = load_contextual_variants()
+    reviewed_j03 = {
+        digest: {
+            current: korean
+            for current, korean in coordinate_map.items()
+            if current in private
         }
+        for digest, coordinate_map in reviewed.items()
+        if any(current in private for current in coordinate_map)
+    }
+    if inconsistent != reviewed_j03:
         raise BuildError(
-            "identical JP source hashes have differing Korean translations: "
-            f"{details}"
+            "contextual source-hash variants differ from the source-free allowlist: "
+            f"observed={inconsistent} reviewed={reviewed_j03}"
         )
     duplicate_groups = sum(1 for digest in by_source_hash if sum(
         1 for entry in overlay_entries if entry["source_jp_utf16le_sha256"] == digest
@@ -288,7 +334,7 @@ def build_values() -> dict[str, tuple[Any, bytes]]:
             "fragment_grammar_status": "context_reviewed",
             "coordinate_count": COORDINATE_COUNT,
             "coordinates_sha256": COORDINATES_SHA256,
-            "identical_source_hash_consistency": "PASS",
+            "identical_source_hash_consistency": "PASS_WITH_CONTEXTUAL_ALLOWLIST",
         },
         "entries": overlay_entries,
     }
@@ -336,7 +382,8 @@ def build_values() -> dict[str, tuple[Any, bytes]]:
             "all_block_ids_are_6": all(item[0] == 6 for item in translations),
             "all_invariants_preserved": True,
             "fragment_grammar_context_review_complete": True,
-            "identical_source_hashes_use_identical_korean": True,
+            "identical_source_hashes_use_identical_korean_outside_allowlist": True,
+            "contextual_variant_allowlist_exact": True,
             "publisher_source_text_absent_from_tracked_payloads": True,
             "public_entry_shape_loader_compatible": all(
                 set(entry)

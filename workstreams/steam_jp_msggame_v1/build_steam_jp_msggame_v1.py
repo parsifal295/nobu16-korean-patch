@@ -220,7 +220,11 @@ def load_overlay(
     if value.get("resource") != RESOURCE or value.get("base_language") != "JP":
         raise BuildError(f"overlay is not Steam JP msggame: {path}")
     policy = value.get("distribution_policy")
-    if not isinstance(policy, dict) or policy.get("contains_commercial_source_text") is not False:
+    if (
+        not isinstance(policy, dict)
+        or policy.get("contains_commercial_source_text") is not False
+        or policy.get("contains_complete_game_resource") is not False
+    ):
         raise BuildError(f"overlay is not declared source-free: {path}")
     stock_jp = value.get("stock_jp")
     expected_stock = {
