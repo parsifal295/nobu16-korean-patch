@@ -18,9 +18,6 @@ EXPECTED_STRING_TARGETS = {
     "MSG_PK/SC/msgire.bin": (122, 122),
     "MSG_PK/SC/msgstf.bin": (20, 8),
     "MSG_PK/SC/msggame.bin": (25598, 16482),
-    "MSG/SC/msggame.bin": (21225, 12268),
-    "MSG/SC/strdata.bin": (32311, 26690),
-    "MSG/SC/ev_strdata.bin": (17868, 11139),
 }
 
 
@@ -36,7 +33,7 @@ class ReadmeProgressTests(unittest.TestCase):
             if resource["kind"] == "strings"
         }
         self.assertEqual(actual, EXPECTED_STRING_TARGETS)
-        self.assertEqual(sum(target for _, target in actual.values()), 111403)
+        self.assertEqual(sum(target for _, target in actual.values()), 61306)
         self.assertEqual(payload["completed_statuses"], ["translated", "reviewed"])
 
     def test_msggame_record_and_literal_counts_are_explicit_and_included(self):
@@ -50,13 +47,7 @@ class ReadmeProgressTests(unittest.TestCase):
             for resource in payload["resources"]
             if resource["path"].endswith("msggame.bin")
         }
-        self.assertEqual(
-            actual,
-            {
-                "MSG_PK/SC/msggame.bin": (21581, 25598, 16482),
-                "MSG/SC/msggame.bin": (19152, 21225, 12268),
-            },
-        )
+        self.assertEqual(actual, {"MSG_PK/SC/msggame.bin": (21581, 25598, 16482)})
 
     def test_msggame_coordinate_overlay_is_counted_as_completed(self):
         coverage, completed = readme_progress.overlay_stats(
@@ -89,6 +80,17 @@ class ReadmeProgressTests(unittest.TestCase):
             check=False,
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_pk_runtime_summary_keeps_shared_res_sc_visible(self):
+        rendered = readme_progress.render()
+        self.assertIn("PK 실행 경로 `MSG_PK/SC`의 7개 메시지 리소스", rendered)
+        self.assertIn("PK 공용 글꼴·리소스 경로 `RES_SC`의 2개 검증 단계", rendered)
+        self.assertNotIn("MSG/SC", rendered)
+
+    def test_readme_excludes_base_game_runtime_progress(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertNotIn("MSG/SC", readme)
+        self.assertNotIn("ev_strdata", readme)
 
 
 if __name__ == "__main__":
