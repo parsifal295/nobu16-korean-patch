@@ -2,6 +2,7 @@ import json
 import pathlib
 import subprocess
 import sys
+import tempfile
 import unittest
 
 from tools import build_translation_target_catalog as target_catalog
@@ -18,8 +19,9 @@ EXPECTED = {
     "MSG_PK/SC/msgire.bin": (122, "762F5705CCA9E0107A8C2A46DE726E9C543F8EEC25E67740DA92EE9B53009C1B"),
     "MSG_PK/SC/msgstf.bin": (8, "29101EBF1EAD685029508789EEE51C4D4FFF65524064D8E32A48EFDED7036982"),
     "MSG_PK/SC/msggame.bin": (16482, "60D7053C25D2AEA8D565A22BC7AFA7C18F233698EFB0975B54996665A02931AF"),
+    "MSG/SC/strdata.bin": (26690, "45DEA7C11E0369AA628B592FEEE375334B60BC493932601516E169689923BBC5"),
 }
-EXPECTED_AGGREGATE_HASH = "96E582ACA479CA9BA0ECE133D45FC9F04B859E49B8B83A6C7FC2F198C2CE309E"
+EXPECTED_AGGREGATE_HASH = "F0FDA016B64FF5622E3D66021DAAC293E5B89E44D671E728D3766ABF6D25A8EA"
 
 
 class TranslationTargetCatalogTests(unittest.TestCase):
@@ -34,7 +36,11 @@ class TranslationTargetCatalogTests(unittest.TestCase):
             for path, resource in self.resources.items()
         }
         self.assertEqual(EXPECTED, actual)
-        self.assertEqual(61306, self.catalog["target_total"])
+        self.assertEqual(87996, self.catalog["target_total"])
+        self.assertEqual(7, self.catalog["pk_private_resource_count"])
+        self.assertEqual(61306, self.catalog["pk_private_target_total"])
+        self.assertEqual(1, self.catalog["shared_runtime_resource_count"])
+        self.assertEqual(26690, self.catalog["shared_runtime_target_total"])
         self.assertEqual(EXPECTED_AGGREGATE_HASH, self.catalog["all_target_keys_sha256"])
 
     def test_catalog_contains_only_source_free_keys_and_hashes(self):
@@ -46,12 +52,18 @@ class TranslationTargetCatalogTests(unittest.TestCase):
                 self.assertTrue(all(type(value) is int for value in keys))
                 self.assertEqual(keys, sorted(set(keys)))
                 self.assertNotIn("target_coordinates", resource)
-            else:
+            elif resource["key_kind"] in {
+                "msggame_coordinate",
+                "block_slot_coordinate",
+            }:
                 keys = resource["target_coordinates"]
+                coordinate_size = (
+                    3 if resource["key_kind"] == "msggame_coordinate" else 2
+                )
                 self.assertTrue(
                     all(
                         isinstance(value, list)
-                        and len(value) == 3
+                        and len(value) == coordinate_size
                         and all(type(part) is int for part in value)
                         for value in keys
                     )
@@ -59,6 +71,8 @@ class TranslationTargetCatalogTests(unittest.TestCase):
                 coordinate_tuples = [tuple(value) for value in keys]
                 self.assertEqual(coordinate_tuples, sorted(set(coordinate_tuples)))
                 self.assertNotIn("target_ids", resource)
+            else:
+                self.fail(f"unexpected target key kind: {resource['key_kind']}")
             self.assertEqual(resource["target_count"], len(keys))
             self.assertEqual(resource["target_keys_sha256"], target_catalog.canonical_hash(keys))
             self.assertNotIn("text", resource)
@@ -81,23 +95,46 @@ class TranslationTargetCatalogTests(unittest.TestCase):
         self.assertEqual(16482, resource["pristine_visible_nonblank"])
         self.assertEqual("msggame_coordinate", resource["key_kind"])
 
+    def test_pk_loaded_shared_strdata_inventory_is_explicit(self):
+        resource = self.resources["MSG/SC/strdata.bin"]
+        self.assertEqual("pk_loaded_shared_base", resource["runtime_scope"])
+        self.assertEqual("block_slot_coordinate", resource["key_kind"])
+        self.assertEqual([25069, 4100, 3000, 122, 20], resource["block_slot_counts"])
+        self.assertEqual(32311, resource["total_slots"])
+        self.assertEqual(26690, resource["pristine_visible_nonblank"])
+        self.assertEqual(0, resource["intentional_activation_count"])
+        self.assertEqual([], resource["intentional_activation_coordinates"])
+
     def test_defaults_are_backup_only_and_never_live_msg_pk(self):
         officer = target_catalog.DEFAULT_OFFICER_BACKUP_ROOT.as_posix().lower()
         transaction = target_catalog.DEFAULT_TRANSACTION_BACKUP_ROOT.as_posix().lower()
+        shared = target_catalog.DEFAULT_SHARED_TRANSACTION_BACKUP_ROOT.as_posix().lower()
         self.assertIn("kr_patch_backup", officer)
         self.assertIn("kr_patch_backup", transaction)
+        self.assertIn("kr_patch_backup", shared)
         self.assertIn("originals/msg_pk/sc", transaction)
         self.assertNotEqual(transaction, (target_catalog.GAME_ROOT / "MSG_PK" / "SC").as_posix().lower())
+        self.assertNotEqual(shared, target_catalog.GAME_ROOT.as_posix().lower())
+
+    def test_shared_strdata_lookup_fails_closed_without_exact_transaction_backup(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            with self.assertRaisesRegex(
+                target_catalog.TargetCatalogError,
+                "missing exact pristine transaction backup",
+            ):
+                target_catalog.read_pinned_shared_strdata(pathlib.Path(temporary))
 
     def test_pristine_backups_reproduce_public_catalog_when_available(self):
         if not (
             target_catalog.DEFAULT_OFFICER_BACKUP_ROOT.is_dir()
             and target_catalog.DEFAULT_TRANSACTION_BACKUP_ROOT.is_dir()
+            and target_catalog.DEFAULT_SHARED_TRANSACTION_BACKUP_ROOT.is_dir()
         ):
             self.skipTest("private pristine backup roots are not available")
         rebuilt = target_catalog.build_catalog(
             officer_backup_root=target_catalog.DEFAULT_OFFICER_BACKUP_ROOT,
             transaction_backup_root=target_catalog.DEFAULT_TRANSACTION_BACKUP_ROOT,
+            shared_transaction_backup_root=target_catalog.DEFAULT_SHARED_TRANSACTION_BACKUP_ROOT,
         )
         self.assertEqual(self.catalog, rebuilt)
 
@@ -105,6 +142,7 @@ class TranslationTargetCatalogTests(unittest.TestCase):
         if not (
             target_catalog.DEFAULT_OFFICER_BACKUP_ROOT.is_dir()
             and target_catalog.DEFAULT_TRANSACTION_BACKUP_ROOT.is_dir()
+            and target_catalog.DEFAULT_SHARED_TRANSACTION_BACKUP_ROOT.is_dir()
         ):
             self.skipTest("private pristine backup roots are not available")
         result = subprocess.run(

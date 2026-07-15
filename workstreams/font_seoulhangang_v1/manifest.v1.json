@@ -30,10 +30,10 @@
   "pinned_public_korean_demand": {
     "translation_progress": {
       "path": "data/public/translation_progress.v0.1.json",
-      "sha256": "1A690E1E4B758C6EC60C3E79A7B721A9C6C39EE75B5DD25CB8ADC96E08E9149C"
+      "sha256": "180E500ABB241D11A7FF11520EAE564487D77EF0472193310FFBB96D07C1ED71"
     },
-    "source_count": 91,
-    "source_catalog_sha256": "08691A1EDE942ADE24973338808D17AEEF7CEEA27DEEDD0E67BFF6052BBB53CE",
+    "source_count": 93,
+    "source_catalog_sha256": "902C83FF51AB28593C1129A3DD364603D7CB5DB79A0AC548DC0CD64D969D7B38",
     "resource_catalog": [
       {
         "resource": "MSG_PK/SC/msgui.bin",
@@ -76,44 +76,50 @@
         "source_count": 29,
         "entry_count": 10352,
         "source_catalog_sha256": "E0EA36A7E1C8A4FC1F9686C58EE53ED1D9141F67D6B8700E711672DBEF99614B"
+      },
+      {
+        "resource": "MSG/SC/strdata.bin",
+        "source_count": 2,
+        "entry_count": 24425,
+        "source_catalog_sha256": "907733F5ACA06CA0387854B5D7A0E5F21F12C85F674EDFDB2A318782E9013952"
       }
     ],
-    "source_entry_count": 51066,
-    "codepoint_count": 1376,
-    "codepoints_sha256": "4AE9E67CFDD8F940E838EC30B0D1ACBF34F3B8852796A73C69377F0683DA2A1D",
-    "hangul_syllable_count": 1219,
-    "hangul_syllables_sha256": "E5A5CE49E2C71D58A12937E1EA661C2A47C44CA2A4A7010BC85055D8FDC46F8E",
+    "source_entry_count": 75491,
+    "codepoint_count": 1389,
+    "codepoints_sha256": "7FDC3F9C72D5FF3416EAA905B581549434BC3A5577C3587CC5351E4C4676CC16",
+    "hangul_syllable_count": 1232,
+    "hangul_syllables_sha256": "78C37AF6E84D8E066DFB940AF9F9C9C73FE826855DACF6FFDF95D2219F3A36A4",
     "non_hangul_count": 157,
     "non_hangul_sha256": "0AD9CA9A7D20080BE8A8027D0A60D75A2F88E45F14D8A13BB50D78E3C5EB00D7",
-    "raster_codepoint_count": 1293,
-    "raster_codepoints_sha256": "A9831982284F69BEE7D8F6C0621E077F22F3F33606F79E56F4ACDE74EBB8973F",
+    "raster_codepoint_count": 1306,
+    "raster_codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186",
     "append_contract": [
       {
         "entry": 6,
         "table": 0,
-        "count": 1224,
-        "codepoints_sha256": "0E456AF477EFF4C3EA08CFDEE3189C700CECCD2555E145306FB590656861756A"
+        "count": 1237,
+        "codepoints_sha256": "B513EA9109C46200873E81425452D74B7537DEA06ABE23EA02DE22C551BF53B3"
       },
       {
         "entry": 6,
         "table": 1,
-        "count": 1293,
-        "codepoints_sha256": "A9831982284F69BEE7D8F6C0621E077F22F3F33606F79E56F4ACDE74EBB8973F"
+        "count": 1306,
+        "codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186"
       },
       {
         "entry": 7,
         "table": 0,
-        "count": 1224,
-        "codepoints_sha256": "0E456AF477EFF4C3EA08CFDEE3189C700CECCD2555E145306FB590656861756A"
+        "count": 1237,
+        "codepoints_sha256": "B513EA9109C46200873E81425452D74B7537DEA06ABE23EA02DE22C551BF53B3"
       },
       {
         "entry": 7,
         "table": 1,
-        "count": 1293,
-        "codepoints_sha256": "A9831982284F69BEE7D8F6C0621E077F22F3F33606F79E56F4ACDE74EBB8973F"
+        "count": 1306,
+        "codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186"
       }
     ],
-    "sources": "all PK string overlays are derived from the SHA-pinned translation-progress catalog; the plan records one source-free hash row per file"
+    "sources": "all PK-loaded string overlays (seven PK resources plus exact shared MSG/SC/strdata.bin) are derived from the SHA-pinned translation-progress catalog; the plan records one source-free hash row per file"
   },
   "public_payload_policy": {
     "commercial_game_original_bytes": false,
