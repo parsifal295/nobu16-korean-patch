@@ -1,0 +1,271 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/msgdata_pk_native_batch05_evidence.v1.json",
+      "sha256": "253E66FAC55E7DD49903E6DBB41073753F5C7C4AD2C530752C98B998BF5AAD34",
+      "size": 596779
+    },
+    "overlay": {
+      "path": "public/msgdata_ko_pk_native_batch05_300.v1.json",
+      "sha256": "FF19DBE0D56CDB7C8ED1DE70F0BA0820C29F4D62FF1939BF77970983EB9564E5",
+      "size": 53820
+    },
+    "review_index": {
+      "path": "review/msgdata_pk_native_batch05_review.v1.json",
+      "sha256": "6E10C6A0D3A27226190EC6D40F20C79FCBEA1C2FB67CC6181F762178622A74AB",
+      "size": 202601
+    }
+  },
+  "batch_id": "pk_msgdata_native_batch05_300.v1",
+  "format_contract": {
+    "esc_preserved": true,
+    "line_breaks_preserved": true,
+    "nul_count": 0,
+    "printf_preserved": true,
+    "pua_preserved": true,
+    "source_cjk_or_kana_count": 0,
+    "source_hash_match_count": 300
+  },
+  "generator": {
+    "path": "build_msgdata_pk_native_batch05.py",
+    "sha256": "C451AF73D29B30D24EABCD145477F4E75445AB90E5FFE58A479CECF96DC5C4BF"
+  },
+  "input_snapshot_after": {
+    "owner_0": "D787EB64BFFC54D1ACA2F23BC9407991FEB4FCF76D102E1EE017EEF416FE4FA3",
+    "owner_1": "0CEFDE11008F4503198903E1FA25ACDDB120F6B407405EF9ACE2B01B39577E5E",
+    "owner_10": "FAD7242A909EE205F1AF5D1D555208534E8A345095C94F386583CF2E59A22460",
+    "owner_11": "9AA64137BF915FF732CB1DD4C625F156E9784FD65F3779CE381F7DBF4D9E2B45",
+    "owner_2": "2EF65EBDEF21521857477EA180E7FBC7AB92F1626FC69D06BD6262E97BFDBDF5",
+    "owner_3": "A277CC298262A46683CDB81273487BB5EF4AAD25FE361C1977251B52A1BF7244",
+    "owner_4": "9B887DE854B6ADE847036F1D757925AFFA9BD84FD041ADAB0CE23DA0D3DAC09A",
+    "owner_5": "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E",
+    "owner_6": "0372E73879BD2E3C927F69375079AA6EE507E2FF2824E9AE8E8525E109CCC982",
+    "owner_7": "C7D06A9FBE0B11DCA043E7C52DC907898BAF238FD9827913AB04DF47AA494709",
+    "owner_8": "EA6394ADCFF33D2B7737BE098A9637B3545250CE4E9C59EED2237C25DCBEC0AF",
+    "owner_9": "1FF1D8D08F5793AE4AB98F56F5628774BA4A2875BB78235B78C2AA87AAE23BE7",
+    "pk_en": "15142A9D252F1759364FEE5D090B0802C51D8355B2A24A1DC6F1300FBF1EC5E1",
+    "pk_jp": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+    "pk_sc": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "pk_tc": "A3743D318383C5D6E4D16F20B5228337DB0AE9124D144E4FBF3D4AC660FFFC5E",
+    "target_catalog_msgdata_resource_row": "458F6D95E8A2ECE17A6C49FFA1E3ED04DF8492347DEBD3EC157C23CCD5567510"
+  },
+  "input_snapshot_before": {
+    "owner_0": "D787EB64BFFC54D1ACA2F23BC9407991FEB4FCF76D102E1EE017EEF416FE4FA3",
+    "owner_1": "0CEFDE11008F4503198903E1FA25ACDDB120F6B407405EF9ACE2B01B39577E5E",
+    "owner_10": "FAD7242A909EE205F1AF5D1D555208534E8A345095C94F386583CF2E59A22460",
+    "owner_11": "9AA64137BF915FF732CB1DD4C625F156E9784FD65F3779CE381F7DBF4D9E2B45",
+    "owner_2": "2EF65EBDEF21521857477EA180E7FBC7AB92F1626FC69D06BD6262E97BFDBDF5",
+    "owner_3": "A277CC298262A46683CDB81273487BB5EF4AAD25FE361C1977251B52A1BF7244",
+    "owner_4": "9B887DE854B6ADE847036F1D757925AFFA9BD84FD041ADAB0CE23DA0D3DAC09A",
+    "owner_5": "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E",
+    "owner_6": "0372E73879BD2E3C927F69375079AA6EE507E2FF2824E9AE8E8525E109CCC982",
+    "owner_7": "C7D06A9FBE0B11DCA043E7C52DC907898BAF238FD9827913AB04DF47AA494709",
+    "owner_8": "EA6394ADCFF33D2B7737BE098A9637B3545250CE4E9C59EED2237C25DCBEC0AF",
+    "owner_9": "1FF1D8D08F5793AE4AB98F56F5628774BA4A2875BB78235B78C2AA87AAE23BE7",
+    "pk_en": "15142A9D252F1759364FEE5D090B0802C51D8355B2A24A1DC6F1300FBF1EC5E1",
+    "pk_jp": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+    "pk_sc": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "pk_tc": "A3743D318383C5D6E4D16F20B5228337DB0AE9124D144E4FBF3D4AC660FFFC5E",
+    "target_catalog_msgdata_resource_row": "458F6D95E8A2ECE17A6C49FFA1E3ED04DF8492347DEBD3EC157C23CCD5567510"
+  },
+  "official_resource_pins": {
+    "EN": {
+      "logical_path": "MSG_PK/EN/msgdata.bin",
+      "raw_sha256": "DA913D870DA3C13F108E8E6727C9A8881B9E13A83F8EB7F02DD3C55D1D444B32",
+      "raw_size": 744236,
+      "sha256": "15142A9D252F1759364FEE5D090B0802C51D8355B2A24A1DC6F1300FBF1EC5E1",
+      "size": 267550
+    },
+    "JP": {
+      "logical_path": "MSG_PK/JP/msgdata.bin",
+      "raw_sha256": "119F10F28DAEEFFA7B231764BB5747A8837DEB487E4595504ADE2A77023148A0",
+      "raw_size": 431044,
+      "sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+      "size": 273734
+    },
+    "SC": {
+      "logical_path": "MSG_PK/SC/msgdata.bin",
+      "raw_sha256": "5982D520BF2E66260943DE61D0CB7F1135D1BA81A211E917E3F426C58D9125D6",
+      "raw_size": 514752,
+      "sha256": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+      "size": 516796
+    },
+    "TC": {
+      "logical_path": "MSG_PK/TC/msgdata.bin",
+      "raw_sha256": "4D0CEB95818CC9C17623299B2B104482FED03ACCD27116604F8E29BB4C9D7684",
+      "raw_size": 442224,
+      "sha256": "A3743D318383C5D6E4D16F20B5228337DB0AE9124D144E4FBF3D4AC660FFFC5E",
+      "size": 270032
+    }
+  },
+  "official_selected_rowset_sha256": {
+    "EN": "FFC0E7CA97F94D0A9F232821C74CE4257C471659F7ED3F80CC30F94A2DB36C50",
+    "JP": "B6803BE5126BDC3ECBAAD786001F725DF4EB49823267D84887C71CB44C92014A",
+    "SC": "139A6B774C8F36759E3818B2FECA87BC6DD6D9C2DBF033BA7E30E43EEE989CF6",
+    "TC": "6640226422F6C1D5C002BD2067B159D0F6E2892B228452BA25AB50906A6BA2DE"
+  },
+  "owner_catalog": {
+    "authored_entry_count": 21702,
+    "cross_overlay_duplicate_id_count": 72,
+    "effective_ids_sha256": "9A5E18D262043796476DB6059E43EC132527B155C1259D8034E7DBBF098D716C",
+    "effective_unique_id_count": 21630,
+    "overlays": [
+      {
+        "entry_count": 3831,
+        "ids_sha256": "ADBE4F9A948FD4440D5D997D0D8ADD2088696F1A30147932D9A9948754AD7D6E",
+        "path": "data/public/msgdata_ko_officer_names_0000_2399.v0.1.json",
+        "sha256": "D787EB64BFFC54D1ACA2F23BC9407991FEB4FCF76D102E1EE017EEF416FE4FA3"
+      },
+      {
+        "entry_count": 392,
+        "ids_sha256": "474F7B7EA14CA96FF70EBCD63D1FF2CBC0E3CE5BC89ECDD4B9EB8D25E67CE850",
+        "path": "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.2.json",
+        "sha256": "0CEFDE11008F4503198903E1FA25ACDDB120F6B407405EF9ACE2B01B39577E5E"
+      },
+      {
+        "entry_count": 72,
+        "ids_sha256": "92FC19CAC52F04FD5D0DEC3F98F0C929B232DDD41F1D9C2F94059260E9C57A8A",
+        "path": "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json",
+        "sha256": "2EF65EBDEF21521857477EA180E7FBC7AB92F1626FC69D06BD6262E97BFDBDF5"
+      },
+      {
+        "entry_count": 190,
+        "ids_sha256": "BFE9A2B0651D15EB08DA4DD5E1B0C31FDC6BB7E670B1ACF8ED551F7F6C5A44FD",
+        "path": "workstreams/msgdata/public/msgdata_ko_faction_labels_3032_3221.v0.1.json",
+        "sha256": "A277CC298262A46683CDB81273487BB5EF4AAD25FE361C1977251B52A1BF7244"
+      },
+      {
+        "entry_count": 94,
+        "ids_sha256": "17FE6A25C8D2A4EBE5FE311C3154576D4811F983014F43CF7FB2034557524F54",
+        "path": "workstreams/msgdata/public/msgdata_ko_name_components_3222_3315.v0.1.json",
+        "sha256": "9B887DE854B6ADE847036F1D757925AFFA9BD84FD041ADAB0CE23DA0D3DAC09A"
+      },
+      {
+        "entry_count": 16176,
+        "ids_sha256": "B8AC5996A1D9A6231E8A22AC130C077E0F11830F181FF66FA5FB6929C6FB34BB",
+        "path": "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json",
+        "sha256": "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E"
+      },
+      {
+        "entry_count": 145,
+        "ids_sha256": "8BBA6F1E8AC5867BFB0361D4A58D3DAF023BAB559CFEE5044520810A39E79BD0",
+        "path": "workstreams/switch_msgdata_v13_invariant_recovery/public/msgdata_ko_switch_v13_invariant_recovery_145.v1.json",
+        "sha256": "0372E73879BD2E3C927F69375079AA6EE507E2FF2824E9AE8E8525E109CCC982"
+      },
+      {
+        "entry_count": 2,
+        "ids_sha256": "3AF6019509AC61D8A40353E3537EA33EE1D46EA6650732FDE4DBBDD76288C63E",
+        "path": "workstreams/msgdata_pk_native_completion/public/msgdata_ko_pk_native_completion_2.v1.json",
+        "sha256": "C7D06A9FBE0B11DCA043E7C52DC907898BAF238FD9827913AB04DF47AA494709"
+      },
+      {
+        "entry_count": 100,
+        "ids_sha256": "865614726A3D3F6466D084AE5496F0941EEA38F629A36C332BCCFEE4A33ED658",
+        "path": "workstreams/msgdata_pk_native_batch01/public/msgdata_ko_pk_native_batch01_100.v1.json",
+        "sha256": "EA6394ADCFF33D2B7737BE098A9637B3545250CE4E9C59EED2237C25DCBEC0AF"
+      },
+      {
+        "entry_count": 150,
+        "ids_sha256": "11EF95E75B3100A6C9D96A5D94D267B72C11C61F965F2E6FA6A22E3E62F2D52F",
+        "path": "workstreams/msgdata_pk_native_batch02/public/msgdata_ko_pk_native_batch02_150.v1.json",
+        "sha256": "1FF1D8D08F5793AE4AB98F56F5628774BA4A2875BB78235B78C2AA87AAE23BE7"
+      },
+      {
+        "entry_count": 250,
+        "ids_sha256": "52B2D3EC028A889007A56A85F15E374CCEA884C1A664CBDBFE486B27E6164C9F",
+        "path": "workstreams/msgdata_pk_native_batch03/public/msgdata_ko_pk_native_batch03_250.v1.json",
+        "sha256": "FAD7242A909EE205F1AF5D1D555208534E8A345095C94F386583CF2E59A22460"
+      },
+      {
+        "entry_count": 300,
+        "ids_sha256": "864875112A0F563602495F065415F8A3105FA24D9F1E295A6375A9C837F64638",
+        "path": "workstreams/msgdata_pk_native_batch04/public/msgdata_ko_pk_native_batch04_300.v1.json",
+        "sha256": "9AA64137BF915FF732CB1DD4C625F156E9784FD65F3779CE381F7DBF4D9E2B45"
+      }
+    ]
+  },
+  "passed": true,
+  "reproducibility": {
+    "in_memory_target_a_b_equal": true
+  },
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "font_modified": false,
+    "global_progress_modified": false,
+    "global_readme_modified": false,
+    "installed_game_files_modified": false
+  },
+  "schema": "nobu16.kr.msgdata-pk-native-batch-validation.v1",
+  "scope": {
+    "duplicate_id_count": 0,
+    "excluded_count": 1297,
+    "excluded_ids_sha256": "AE42660778FD3A7222A4FF1F647E916626F6CF5A5C9D16C5D6625ADC602B7432",
+    "non_target_count": 0,
+    "owner_overlap_count": 0,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "selected_entry_count": 300,
+    "selected_ids_sha256": "3143CB98C53754BAF1577DDC10E89BCF764F3E6EC87824B746D24CD337F5393E"
+  },
+  "selection": {
+    "fixed_prefix_first_id": 27102,
+    "fixed_prefix_last_id": 28759,
+    "fixed_prefix_untranslated_count": 1597,
+    "next_300_semantic_after_batch04": true,
+    "selected_count": 300,
+    "structural_exclusion_count": 1297
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "generation_validation": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "structural_exclusions": {
+    "format_or_control_only_token": {
+      "count": 0,
+      "ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945"
+    },
+    "placeholder_dummy_not_a_translatable_display_message": {
+      "count": 0,
+      "ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945"
+    },
+    "romanized_or_phonetic_lookup_key": {
+      "count": 1297,
+      "ids_sha256": "AE42660778FD3A7222A4FF1F647E916626F6CF5A5C9D16C5D6625ADC602B7432"
+    }
+  },
+  "target_catalog": {
+    "path": "data/public/translation_target_keys.v0.1.json",
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "resource_row_sha256": "458F6D95E8A2ECE17A6C49FFA1E3ED04DF8492347DEBD3EC157C23CCD5567510",
+    "target_count": 25534,
+    "target_ids_sha256": "B541D484A26F0B6F4306D46A344A29846331CEBC7C6381F18122F0A161C59D3E",
+    "whole_catalog_hash_pinned": false
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 300,
+    "packed_sha256": "3A6F6706771971E08A164E2FCB599FEFEEEB68F07844DBEF8923E58160D50E73",
+    "packed_size": 518977,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "C361E38AA1D30C1F40A2FA2A148BA015EB615DEC6C6438DE2A4847C3CE89F277",
+    "raw_size": 516924,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "wrapper_round_trip": true
+  }
+}
