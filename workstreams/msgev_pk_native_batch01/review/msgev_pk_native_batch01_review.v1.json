@@ -1,0 +1,755 @@
+{
+  "batch_id": "msgev-pk-native-batch01-8.v1",
+  "candidate_count": 100,
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "excluded": [
+    {
+      "id": 2953,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2954,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2955,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2959,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2960,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2964,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2965,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2967,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2972,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2973,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2974,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2975,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2976,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2977,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2978,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2979,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2980,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2981,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2982,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2983,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2984,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2985,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2986,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2987,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2988,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2989,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2990,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2991,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2992,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2993,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2994,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2995,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2996,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2997,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3000,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3001,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3002,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3003,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3004,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3005,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3006,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3109,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3116,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3309,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3310,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3314,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3315,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3319,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3320,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3324,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3325,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3329,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3330,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3334,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3335,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3339,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3340,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3344,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3345,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3349,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3350,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6503,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6506,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6512,
+      "progress_claim_created": false,
+      "reason": "dynamic_token_with_nonlexical_punctuation",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6696,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6697,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6698,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6699,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6989,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7013,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7075,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7105,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7119,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7225,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7295,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7303,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7304,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7324,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7358,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7411,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7419,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7455,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7467,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7484,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7497,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7510,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7523,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7541,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7586,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7700,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7790,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7816,
+      "progress_claim_created": false,
+      "reason": "dynamic_token_with_nonlexical_punctuation",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    }
+  ],
+  "excluded_count": 92,
+  "quality_state": "native_semantic_review_complete_runtime_review_pending",
+  "resource": "MSG_PK/SC/msgev.bin",
+  "schema": "nobu16.kr.msgev-pk-native-batch01-review.v1",
+  "translated": [
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 2581,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_four_language_alignment",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "proper_name"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 3105,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_four_language_alignment",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "proper_name"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 3106,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_four_language_alignment",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "proper_name"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 3107,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_four_language_alignment",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "proper_name"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 3108,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_four_language_alignment",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "proper_name"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 6986,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "narrative"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 7677,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "narrative"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 7828,
+      "pk_sc_invariants_preserved": true,
+      "prior_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "narrative"
+    }
+  ],
+  "translated_count": 8
+}

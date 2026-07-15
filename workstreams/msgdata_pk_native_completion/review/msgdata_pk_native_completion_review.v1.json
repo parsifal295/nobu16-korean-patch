@@ -1,0 +1,32 @@
+{
+  "batch_id": "pk_msgdata_native_completion_2.v1",
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "entries": [
+    {
+      "human_review_required": true,
+      "id": 22594,
+      "pk_sc_invariants_preserved": true,
+      "review_note": "SC/TC 의미를 채택하고 상충하는 JP/Switch 의미를 폐기; 런타임 화면 검수 필요",
+      "runtime_reviewed": false,
+      "status": "translated",
+      "stock_visible_target": true
+    },
+    {
+      "human_review_required": true,
+      "id": 25546,
+      "pk_sc_invariants_preserved": true,
+      "review_note": "공식 SC/EN/TC에 인자 계약이 없어 수치 표시는 의도적으로 생략; 런타임 화면 검수 필요",
+      "runtime_reviewed": false,
+      "status": "translated",
+      "stock_visible_target": true
+    }
+  ],
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "schema": "nobu16.kr.msgdata-pk-native-completion-review.v1",
+  "summary": {
+    "human_review_required_count": 2,
+    "runtime_reviewed_count": 0,
+    "translated_count": 2
+  }
+}
