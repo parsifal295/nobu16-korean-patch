@@ -100,13 +100,13 @@ class ReadmeProgressTests(unittest.TestCase):
         stats = readme_progress.targeted_overlay_stats(
             shared["overlay_globs"], {"translated", "reviewed"}, targets
         )
-        self.assertEqual(24425, stats.overlay_coverage)
-        self.assertEqual(24425, stats.overlay_completed)
-        self.assertEqual(24425, stats.target_coverage)
-        self.assertEqual(24425, stats.target_completed)
+        self.assertEqual(24631, stats.overlay_coverage)
+        self.assertEqual(24631, stats.overlay_completed)
+        self.assertEqual(24631, stats.target_coverage)
+        self.assertEqual(24631, stats.target_completed)
         self.assertEqual(0, stats.non_target_coverage)
         self.assertEqual(0, stats.non_target_completed)
-        self.assertEqual(2265, len(targets) - stats.target_completed)
+        self.assertEqual(2059, len(targets) - stats.target_completed)
 
     def test_progress_uses_target_intersection_and_separates_non_targets(self):
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
@@ -169,25 +169,25 @@ class ReadmeProgressTests(unittest.TestCase):
         )
         rendered = readme_progress.render()
         self.assertIn(f"번역 완료 {done:,} / 61,306 ({done / 61306 * 100:.1f}%)", rendered)
-        self.assertIn(f"비대상 활성 커버리지는 **{non_target:,}개**", rendered)
+        self.assertIn(f"비대상 활성 **{non_target:,}개**는 별도 집계", rendered)
         self.assertIn(
-            "`MSG/SC/strdata.bin`의 1개 문자열 리소스는 "
-            "**번역 완료 24,425 / 26,690 (91.5%)**",
+            "`MSG/SC/strdata.bin`의 1개 문자열 리소스: "
+            "**번역 완료 24,631 / 26,690 (92.3%)**",
             rendered,
         )
         self.assertIn(
-            "`MSG/SC/strdata.bin` | 24,425 / 26,690 | 24,425 | "
-            "32,311 슬롯 | 91.5%",
+            "`MSG/SC/strdata.bin` | 24,631 / 26,690 | 92.3%",
             rendered,
         )
-        self.assertEqual(24425, shared_stats.target_completed)
+        self.assertEqual(24631, shared_stats.target_completed)
         self.assertEqual(0, shared_stats.non_target_coverage)
         for path in ("MSG_PK/SC/msgev.bin", "MSG_PK/SC/msgdata.bin"):
             stats = pk_stats_by_path[path]
             target = len(targets[path])
+            rate = readme_progress.percent(stats.target_completed, target)
             self.assertIn(
                 f"`{path}` | {stats.target_completed:,} / {target:,} | "
-                f"{stats.target_coverage:,} (+{stats.non_target_coverage:,} 비대상 활성)",
+                f"{rate:.1f}%",
                 rendered,
             )
 
