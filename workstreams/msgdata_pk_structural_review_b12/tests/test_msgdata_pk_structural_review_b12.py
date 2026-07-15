@@ -86,11 +86,17 @@ class MsgdataPkStructuralReviewB12Tests(unittest.TestCase):
         }
         self.assertEqual(batch.OFFICIAL_ROWSET_SHA256, actual)
 
-    def test_current_progress_has_the_exact_five_owner_chain(self) -> None:
+    def test_current_progress_has_the_historical_owner_and_successor_chain(self) -> None:
         progress = json.loads((REPO_ROOT / batch.PROGRESS_RELATIVE).read_text(encoding="utf-8"))
         row = next(item for item in progress["resources"] if item["path"] == batch.RESOURCE)
         prefix = list(batch.previous.previous.previous.previous.previous.EXPECTED_PREDECESSOR_PATHS)
-        self.assertEqual(prefix + list(batch.OWNER_PATHS), row["overlay_globs"])
+        successors = [
+            batch.SELF_OVERLAY_PATH,
+            "workstreams/msgdata_pk_structural_review_b13/public/msgdata_ko_pk_structural_review_b13_500.v1.json",
+            "workstreams/msgdata_pk_structural_review_b14/public/msgdata_ko_pk_structural_review_b14_500.v1.json",
+            "workstreams/msgdata_pk_structural_review_b15/public/msgdata_ko_pk_structural_review_b15_final_110.v1.json",
+        ]
+        self.assertEqual(prefix + list(batch.OWNER_PATHS) + successors, row["overlay_globs"])
 
     def test_self_and_successor_registration_produce_identical_artifacts(self) -> None:
         source_progress = json.loads((REPO_ROOT / batch.PROGRESS_RELATIVE).read_text(encoding="utf-8"))

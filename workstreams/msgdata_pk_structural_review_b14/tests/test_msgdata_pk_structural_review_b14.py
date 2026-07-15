@@ -97,7 +97,10 @@ class MsgdataPkStructuralReviewB14Tests(unittest.TestCase):
         source_progress = json.loads((REPO_ROOT / batch.PROGRESS_RELATIVE).read_text(encoding="utf-8"))
         prefix = list(batch.previous.previous.previous.previous.previous.previous.previous.EXPECTED_PREDECESSOR_PATHS)
         self_path = batch.SELF_OVERLAY_PATH
-        successor = "workstreams/msgdata_pk_structural_review_b15/public/msgdata_ko_pk_structural_review_b15_500.v1.json"
+        successor = (
+            "workstreams/msgdata_pk_structural_review_b15/public/"
+            "msgdata_ko_pk_structural_review_b15_final_110.v1.json"
+        )
         checked = {relative: (WORKSTREAM_ROOT / relative).read_bytes() for relative in (
             f"public/{batch.OVERLAY_NAME}", f"evidence/{batch.EVIDENCE_NAME}",
             f"review/{batch.REVIEW_NAME}", batch.VALIDATION_NAME,
