@@ -7,49 +7,98 @@
       "size": 153198542,
       "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53",
       "link_entry_count": 42,
-      "g1n_outer_entries": [6, 7]
+      "g1n_outer_entries": [
+        6,
+        7
+      ]
     },
     "RES_JP_PK/res_lang_pk.bin": {
       "size": 140729547,
       "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
       "link_entry_count": 27,
-      "g1n_outer_entries": [16, 17]
+      "g1n_outer_entries": [
+        16,
+        17
+      ]
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+      "size": 77468728,
+      "sha256": "1B44436B542F73B8B155A43F74D897F8D32C1C274D8C64B3CA9F4478BDB86022",
+      "steam_depot_sha1": "81A3A51ECEA2F0DA1D07A70478EF4C53E86C33F6",
+      "link_entry_count": 38,
+      "g1n_outer_entries": [
+        1
+      ]
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+      "size": 61609467,
+      "sha256": "52A8DE4BA1480E86218AC0CDE50DA946B4BCDFD7053ED85B94B04E663C00B380",
+      "steam_depot_sha1": "AA55879D9CB08E57BEBEAB10545D9B98CEE21186",
+      "link_entry_count": 22,
+      "g1n_outer_entries": [
+        0,
+        1
+      ]
     }
   },
   "pk_runtime_route_evidence": {
     "executable": "NOBU16PK.exe",
-    "examined_build_distribution": "local non-Steam build",
-    "examined_build_size": 29609536,
-    "examined_build_sha256": "BAA1A88F2C83E3EDA06AB2D02A28C3C96D2BA7090E3CE7E643D96B077A0B1739",
-    "ascii_string_offsets": {
-      "/res_lang.bin": "0x13BDFC0",
-      "/res_lang_exp.bin": "0x13BDFE0",
-      "/res_lang_pk.bin": "0x13BE050",
-      "/res_lang_exp_pk.bin": "0x13BE090",
-      "RES_JP": "0x13BE1F0",
-      "_PK": "0x13BE214"
-    },
-    "route_conclusion": "the examined non-Steam executable statically contains distinct base and PK language route strings; this does not prove which combination a current Steam runtime opens",
+    "examined_build_distribution": "Steam PK 1.1.7 build 18823764",
+    "examined_build_size": 31978264,
+    "route_strings_present": [
+      "/res_lang.bin",
+      "/res_lang_pk.bin",
+      "/res_lang_pk_port1.bin",
+      "/res_lang_pk_port2.bin",
+      "/res_lang_pk_port3.bin",
+      "RES_JP",
+      "_PK_PORT"
+    ],
+    "route_conclusion": "regular JP routes contain 32/48-cell G1Ns while JP_PK_PORT1/2 contain 64/96-cell G1Ns; issue 41 FHD-pass/QHD-fail is structurally consistent with the previously unpatched PORT route",
     "runtime_file_open_trace_completed": false,
     "steam_runtime_required_combination_verified": false,
-    "safe_distribution_decision": "include both JP base and JP PK font candidates pending Steam runtime validation"
+    "safe_distribution_decision": "include all four font-bearing JP regular and JP_PK_PORT archives; exclude port3 because exhaustive recursion found zero G1N"
   },
   "demand": {
-    "source_count": 118,
-    "source_entry_count": 83658,
-    "source_catalog_sha256": "436876571A1ABE251C3756566ACC9D95523000FEABEDFB70C10F6E3332AA8A6F",
-    "codepoint_count": 1419,
-    "codepoints_sha256": "31941A7119F571E227A96ED2B99427D13A379B1623E82EBF703B8D3B5D1A654B",
-    "hangul_syllable_count": 1247,
-    "hangul_syllables_sha256": "974C4F799512A3442A28AE94785F6BDD7C9103F54FF0993C223507AD91A9BC2B",
-    "append_union_codepoint_count": 1308,
-    "append_union_codepoints_sha256": "4C8398A11D1512DBFE1B3793E7CD2DCBA8C14001C44663C986B1950EC0F65A34",
-    "raster_codepoint_count": 1306,
-    "raster_codepoints_sha256": "E056B7630AE5055647421C5F53ABADC7BD49B9FE44E5BA8DF4421503D32888C6",
-    "stock_reuse_codepoints": ["U+32A4", "U+FF65"],
-    "stock_reuse_codepoints_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+    "source_count": 124,
+    "source_entry_count": 88062,
+    "source_catalog_sha256": "A877E900EA7A42867BF2F71BC69B924BAC354B3A6EADF048B814E54F2B493E28",
+    "codepoint_count": 1472,
+    "codepoints_sha256": "7B1F5B740D580A3B1E67B459B92EED29BA6F3CC1B685D7F312B1518202300E94",
+    "hangul_syllable_count": 1251,
+    "hangul_syllables_sha256": "ABDB62AD32DDCCB19F8E100179EADC58E028A2AA79FB8B252E407E2D16DCDCD0",
+    "append_union_codepoint_count": 1450,
+    "append_union_codepoints_sha256": "32EAF6032E7923C8D89DA6D9C1F805C642BF51F49C94049EAEF6A0F66DD40156",
+    "raster_codepoint_count": 1427,
+    "raster_codepoints_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
+    "stock_reuse_codepoints": [
+      "U+22BF",
+      "U+32A4",
+      "U+32A8",
+      "U+3303",
+      "U+330D",
+      "U+3314",
+      "U+3318",
+      "U+3322",
+      "U+3323",
+      "U+3326",
+      "U+3327",
+      "U+332B",
+      "U+3336",
+      "U+333B",
+      "U+3349",
+      "U+334A",
+      "U+334D",
+      "U+3351",
+      "U+3357",
+      "U+337C",
+      "U+337D",
+      "U+337E",
+      "U+FF65"
+    ],
+    "stock_reuse_codepoints_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E",
     "pending_registration_normalization": {
-      "overlay_count": 5,
+      "overlay_count": 11,
       "future_registration_preserves_catalog_and_candidate_bytes": true
     }
   },
@@ -59,12 +108,12 @@
     "SeoulHangangEB.ttf": {
       "size": 7350712,
       "sha256": "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1",
-      "assignment": "every 48-cell table"
+      "assignment": "every 48-cell and 96-cell table"
     },
     "SeoulHangangB.ttf": {
       "size": 7344552,
       "sha256": "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B",
-      "assignment": "every 32-cell table"
+      "assignment": "every 32-cell and 64-cell table"
     },
     "SeoulHangangM.ttf": {
       "size": 7627124,
@@ -76,17 +125,48 @@
   "g1n_structure": {
     "record_size": 12,
     "map_entries_per_table": 65536,
-    "cell_field_offsets": [1, 3, 7],
-    "width_field_offsets": [0, 4],
+    "cell_field_offsets": [
+      1,
+      3,
+      7
+    ],
+    "width_field_offsets": [
+      0,
+      4
+    ],
     "profiles": {
       "entry_6_or_16": {
         "table_count": 3,
-        "record_counts": [7116, 7115, 379],
-        "mapped_nonzero_counts": [7115, 7114, 378],
-        "cell_hierarchy": [48, 48, 48],
-        "font_hierarchy": ["EB48", "EB48", "EB48"],
-        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
-        "full_cell_strides": [1152, 1152, 1152],
+        "record_counts": [
+          7116,
+          7115,
+          379
+        ],
+        "mapped_nonzero_counts": [
+          7115,
+          7114,
+          378
+        ],
+        "cell_hierarchy": [
+          48,
+          48,
+          48
+        ],
+        "font_hierarchy": [
+          "EB48",
+          "EB48",
+          "EB48"
+        ],
+        "atlas_storage_modes": [
+          "width_packed",
+          "width_packed",
+          "fixed_cell"
+        ],
+        "full_cell_strides": [
+          1152,
+          1152,
+          1152
+        ],
         "record_geometry_sha256": [
           "FA8B67B45D86727CBFDE86F3D25353FE285D5EAB1277B82206D3DBE08FCCFE7A",
           "899391DE22B4116092682F481FCD1403CD279DD602184AE930C3024E6B7C086C",
@@ -95,30 +175,137 @@
       },
       "entry_7_or_17": {
         "table_count": 3,
-        "record_counts": [7116, 7115, 379],
-        "mapped_nonzero_counts": [7115, 7114, 378],
-        "cell_hierarchy": [32, 48, 32],
-        "font_hierarchy": ["B32", "EB48", "B32"],
-        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
-        "full_cell_strides": [512, 1152, 512],
+        "record_counts": [
+          7116,
+          7115,
+          379
+        ],
+        "mapped_nonzero_counts": [
+          7115,
+          7114,
+          378
+        ],
+        "cell_hierarchy": [
+          32,
+          48,
+          32
+        ],
+        "font_hierarchy": [
+          "B32",
+          "EB48",
+          "B32"
+        ],
+        "atlas_storage_modes": [
+          "width_packed",
+          "width_packed",
+          "fixed_cell"
+        ],
+        "full_cell_strides": [
+          512,
+          1152,
+          512
+        ],
         "record_geometry_sha256": [
           "D7DCC7B580959942466BBDBF85F049284983634DD1EB4643717FCC9CF05F30C1",
           "899391DE22B4116092682F481FCD1403CD279DD602184AE930C3024E6B7C086C",
           "E1A14B369C182F79CD2CE159EECB5E96796F3204BF9A499053A481B678CC083B"
         ]
+      },
+      "port1_entry_1": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 266],
+        "mapped_nonzero_counts": [7115, 7114, 265],
+        "cell_hierarchy": [64, 96, 32],
+        "font_hierarchy": ["B64", "EB96", "B32"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [2048, 4608, 512],
+        "record_geometry_sha256": [
+          "A4607DDF6BCEE9F992AF9ACCB9ADF290769995E1C497EF1122EE4471715E87BC",
+          "504DAC20F4981F889A5F63C0EA158E8EF6B01D39D5FE541E392B8A4DC796FE53",
+          "E7B0440E5F4B851EEE8423CD1C0B29A6FDA56347B01880EDB052C79C0ACEC0B9"
+        ]
+      },
+      "port2_entry_0": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 379],
+        "mapped_nonzero_counts": [7115, 7114, 378],
+        "cell_hierarchy": [96, 96, 96],
+        "font_hierarchy": ["EB96", "EB96", "EB96"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [4608, 4608, 4608],
+        "record_geometry_sha256": [
+          "9EA985FDA326CDCE285DF1EA9602B059D0C136528D6587545829DD67391E8599",
+          "504DAC20F4981F889A5F63C0EA158E8EF6B01D39D5FE541E392B8A4DC796FE53",
+          "9709272CA79D4D9ADF0A22C9D50E056F295C077E82BF5C2E11DC7F7E9E6A6940"
+        ]
+      },
+      "port2_entry_1": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 379],
+        "mapped_nonzero_counts": [7115, 7114, 378],
+        "cell_hierarchy": [64, 96, 64],
+        "font_hierarchy": ["B64", "EB96", "B64"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [2048, 4608, 2048],
+        "record_geometry_sha256": [
+          "A4607DDF6BCEE9F992AF9ACCB9ADF290769995E1C497EF1122EE4471715E87BC",
+          "504DAC20F4981F889A5F63C0EA158E8EF6B01D39D5FE541E392B8A4DC796FE53",
+          "44C9656A2DB1EA5DE8697BB9872796317A73BD1981FD43A95E9885B94D45B85B"
+        ]
       }
     },
     "base_pk_pre_atlas_geometry_exact": true,
+    "port_font_profiles_reviewed": true,
     "smaller_third_tier_present": false
   },
   "stock_reuse_evidence": {
-    "codepoints": ["U+32A4", "U+FF65"],
-    "codepoints_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+    "codepoints": [
+      "U+22BF",
+      "U+32A4",
+      "U+32A8",
+      "U+3303",
+      "U+330D",
+      "U+3314",
+      "U+3318",
+      "U+3322",
+      "U+3323",
+      "U+3326",
+      "U+3327",
+      "U+332B",
+      "U+3336",
+      "U+333B",
+      "U+3349",
+      "U+334A",
+      "U+334D",
+      "U+3351",
+      "U+3357",
+      "U+337C",
+      "U+337D",
+      "U+337E",
+      "U+FF65"
+    ],
+    "codepoints_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E",
     "source_table": 0,
     "target_table": 2,
-    "copy_policy": "copy source metric and width-packed pixels to a new table-2 atlas tail; create a new pointer and never alias the source pointer",
+    "copy_policy": "copy same-cell source metric and pixels to a new table-2 atlas tail; port1 32-cell uses deterministic same-palette 64-to-32 2x2 box filtering; always create a new pointer",
+    "port1_table2_transform": {
+      "source": "same G1N table 0, 64-cell",
+      "target": "same G1N table 2, 32-cell",
+      "palette_preserved": true,
+      "filter": "2x2 box average of 4bpp coverage nibbles with deterministic requantization",
+      "metric_transform": "width, cell, and signed bearing divided by two",
+      "direct_pointer_alias": false
+    },
     "profiles": {
       "48_cell_base6_pk16": [
+        {
+          "codepoint": "U+22BF",
+          "source_ordinal": 749,
+          "source_pointer": 768960,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "888FDD967C450A0350A8A7DF0EF0450A4E369D02E2DE8A242CAB89051A66744F"
+        },
         {
           "codepoint": "U+32A4",
           "source_ordinal": 729,
@@ -126,6 +313,166 @@
           "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
           "pixel_size": 1152,
           "pixels_sha256": "19BB962541C2860CADC98158FC26C4915D619B2B2FCCC2B3BEA3A9523B57B3CF"
+        },
+        {
+          "codepoint": "U+32A8",
+          "source_ordinal": 733,
+          "source_pointer": 750528,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "106AE57C0D26FCD5F62AC62DECD6DF47FC3282A28099560482D40E6E1653F0D6"
+        },
+        {
+          "codepoint": "U+3303",
+          "source_ordinal": 706,
+          "source_pointer": 719424,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "CD57AFCECEB1E0871441705AAB2978006F5F366123AAB7B6FA2BFFC455E5D616"
+        },
+        {
+          "codepoint": "U+330D",
+          "source_ordinal": 710,
+          "source_pointer": 724032,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "6DCEB7FD7E9FFCFA8BA8EAAA6AD172040BE0A711F7618E2D08CC21121EE433C0"
+        },
+        {
+          "codepoint": "U+3314",
+          "source_ordinal": 701,
+          "source_pointer": 713664,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "A3D5B7E240F603EC217CFC6486CB56218E92A4B818F890DFB10DF3B032488473"
+        },
+        {
+          "codepoint": "U+3318",
+          "source_ordinal": 704,
+          "source_pointer": 717120,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "852EDD9F2CA841F86B75B5D10E03BF759B64700C06753427741B2EDE16DBA691"
+        },
+        {
+          "codepoint": "U+3322",
+          "source_ordinal": 702,
+          "source_pointer": 714816,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "D3607248D18D3AEC122B4004EF2183DF9E5E608BDEEEB4FC9BE08E1680FE3B49"
+        },
+        {
+          "codepoint": "U+3323",
+          "source_ordinal": 712,
+          "source_pointer": 726336,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "231A6879437D7E31DD6029E0D1765572503F2338345470D98C85E01D599A96AB"
+        },
+        {
+          "codepoint": "U+3326",
+          "source_ordinal": 711,
+          "source_pointer": 725184,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "DA9801B55B3F93E46DBC44E2CA01453AB9F24A8B311C42DD8072B8F10F52EE38"
+        },
+        {
+          "codepoint": "U+3327",
+          "source_ordinal": 705,
+          "source_pointer": 718272,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "8E15239E6BCA8417AA8CC7D278D000F2617BBE9CC791072B78EDE38FDB255BD1"
+        },
+        {
+          "codepoint": "U+332B",
+          "source_ordinal": 713,
+          "source_pointer": 727488,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "F02E59B2A2531BF3E2789283628612B5AE7C88E5420EBE660F39D24079AE5760"
+        },
+        {
+          "codepoint": "U+3336",
+          "source_ordinal": 707,
+          "source_pointer": 720576,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "6FACAE70E4D6E264E6AE5A078609108A27995623DF605FBD1C84708E058D3E74"
+        },
+        {
+          "codepoint": "U+333B",
+          "source_ordinal": 715,
+          "source_pointer": 729792,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "35CDB3C990C3B05BEBD60C7AABD46CFA4AA68408042DC4EC01185B5D59411F8A"
+        },
+        {
+          "codepoint": "U+3349",
+          "source_ordinal": 700,
+          "source_pointer": 712512,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "B00A174D964D5794AF4D37393C36B57F88C701F64536264A4B25B7B0CF951367"
+        },
+        {
+          "codepoint": "U+334A",
+          "source_ordinal": 714,
+          "source_pointer": 728640,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "3431A57039663F33F0FC1A3B6FA2D88979F6CD669053451A9FD59D4F42D60C7C"
+        },
+        {
+          "codepoint": "U+334D",
+          "source_ordinal": 703,
+          "source_pointer": 715968,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "658A842B5289BE1F86734A8351016C873007774133C4B8AD8F92F003E5267ACF"
+        },
+        {
+          "codepoint": "U+3351",
+          "source_ordinal": 708,
+          "source_pointer": 721728,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "94326A7F119F753D2EAEFDE487C07305931DA22235321F6DE274E9DFC77D1BA2"
+        },
+        {
+          "codepoint": "U+3357",
+          "source_ordinal": 709,
+          "source_pointer": 722880,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "527C23273F954AFE489CC57D617B2717B3906FEA01202B764C75DE57F0EA8752"
+        },
+        {
+          "codepoint": "U+337C",
+          "source_ordinal": 739,
+          "source_pointer": 757440,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "1DE182E8910EF5C8719BA4194972ED7100362697248BF97843E4CF32D99009FA"
+        },
+        {
+          "codepoint": "U+337D",
+          "source_ordinal": 738,
+          "source_pointer": 756288,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "19BD278B9A6A64AEBED14CB0D30A0C9FB7402DC60BF01EBFE9AC0D26F632853B"
+        },
+        {
+          "codepoint": "U+337E",
+          "source_ordinal": 737,
+          "source_pointer": 755136,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "B3886CC66FFD87D1DB75C9743A696855B2A413ED64530CA1F31C3BEEB49C7009"
         },
         {
           "codepoint": "U+FF65",
@@ -138,12 +485,180 @@
       ],
       "32_cell_base7_pk17": [
         {
+          "codepoint": "U+22BF",
+          "source_ordinal": 749,
+          "source_pointer": 341760,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "7150D1D0855E433712BE5AE51D4190524703807CFC56F7CF1A2D00DD5459A1DC"
+        },
+        {
           "codepoint": "U+32A4",
           "source_ordinal": 729,
           "source_pointer": 331520,
           "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
           "pixel_size": 512,
           "pixels_sha256": "3ED4A88C495BA1289EFEDFF57F3916D057A328A577E7F5DCD50390A68D3DCFFC"
+        },
+        {
+          "codepoint": "U+32A8",
+          "source_ordinal": 733,
+          "source_pointer": 333568,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "476E2D8FF45626071D57DBBB65EDAD1980DF22207ABC7324B0E4FEED72CD9148"
+        },
+        {
+          "codepoint": "U+3303",
+          "source_ordinal": 706,
+          "source_pointer": 319744,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "AB366C99E673A8934B88E993911848667CAE9AD59619B95801A848D35628068F"
+        },
+        {
+          "codepoint": "U+330D",
+          "source_ordinal": 710,
+          "source_pointer": 321792,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "B014427CF44BE31BF20B404A6B78014DEC66EE0974DDB1AADECC5D0031DD8DE3"
+        },
+        {
+          "codepoint": "U+3314",
+          "source_ordinal": 701,
+          "source_pointer": 317184,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "C6C139AD3088B9C2C4D4BB23DA3C3FD5D780D99F3876987087D05A1F41442B9B"
+        },
+        {
+          "codepoint": "U+3318",
+          "source_ordinal": 704,
+          "source_pointer": 318720,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "2D13185A1D7B4F57843EE11C6B0F6A9E421561FE3269EF169FEDA2DCA12C5127"
+        },
+        {
+          "codepoint": "U+3322",
+          "source_ordinal": 702,
+          "source_pointer": 317696,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "2C42350CB22680253E796B0EFD793D3D30A513B2A7911A311B290B3FCEB6C66D"
+        },
+        {
+          "codepoint": "U+3323",
+          "source_ordinal": 712,
+          "source_pointer": 322816,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "B5A076D8075D1C604B35D1982C06387442C57CB2160877C416F872D6B2D91A35"
+        },
+        {
+          "codepoint": "U+3326",
+          "source_ordinal": 711,
+          "source_pointer": 322304,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "384B2E6BA786DAB119F4A135881D27E1E1CF506329CF9F9068C7DAAD61AD8B43"
+        },
+        {
+          "codepoint": "U+3327",
+          "source_ordinal": 705,
+          "source_pointer": 319232,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "CB10A292B6E0C62EFC49F1F7A67B2058D9939EC21E5EC769BDBD10F153997181"
+        },
+        {
+          "codepoint": "U+332B",
+          "source_ordinal": 713,
+          "source_pointer": 323328,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "3DBC09EB1C01A822A10ECDD621265EFEDF49EB0212BDD9D10C626DC252339408"
+        },
+        {
+          "codepoint": "U+3336",
+          "source_ordinal": 707,
+          "source_pointer": 320256,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "66AA9EB8E9428C02D86469D50AE2E2BA899D9C122756809DDE9403D1934097F1"
+        },
+        {
+          "codepoint": "U+333B",
+          "source_ordinal": 715,
+          "source_pointer": 324352,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "5540F690349B2197B6A72ED3BC1B05676BF6E5D92747452F5BF0333A751BA0B5"
+        },
+        {
+          "codepoint": "U+3349",
+          "source_ordinal": 700,
+          "source_pointer": 316672,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "DF844C0D67DD4268034CBE53F398A39870C388436EEC813852522D1EF69DC8FA"
+        },
+        {
+          "codepoint": "U+334A",
+          "source_ordinal": 714,
+          "source_pointer": 323840,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "14BAB824D362C674C7CFB5947873A8CE4F0F41654FE418DBE140D6B0252CA5B1"
+        },
+        {
+          "codepoint": "U+334D",
+          "source_ordinal": 703,
+          "source_pointer": 318208,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "A3E43A17F2523005471A8B061A3B5799EAF2505D72BFCB5EA273D27966F3D90F"
+        },
+        {
+          "codepoint": "U+3351",
+          "source_ordinal": 708,
+          "source_pointer": 320768,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "07716EDB121C7BF8BA7F00526C72D5144547FED56E64F4800459647F268B8176"
+        },
+        {
+          "codepoint": "U+3357",
+          "source_ordinal": 709,
+          "source_pointer": 321280,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "4E37AB9923B5E50D03101FFB07C9D303391A8CA1867D703C7B8FFC3896AF7DC3"
+        },
+        {
+          "codepoint": "U+337C",
+          "source_ordinal": 739,
+          "source_pointer": 336640,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "8BBDDA381956A7C973E76FD96048DB5DB60F8B2101862E9B4DF255C87E7F4A04"
+        },
+        {
+          "codepoint": "U+337D",
+          "source_ordinal": 738,
+          "source_pointer": 336128,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "B4E3473A1EF320836036DA83866792F993CEC86B2B3B75A556D3E421F97831DC"
+        },
+        {
+          "codepoint": "U+337E",
+          "source_ordinal": 737,
+          "source_pointer": 335616,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "07B925ABDEA8F82D5C70DA864EE396F353EF702B6DFFED12C86DA555855DFA9C"
         },
         {
           "codepoint": "U+FF65",
@@ -155,22 +670,30 @@
         }
       ]
     },
-    "verified_target_entries": ["base:6", "base:7", "pk:16", "pk:17"],
+    "verified_target_entries": [
+      "base:6",
+      "base:7",
+      "pk:16",
+      "pk:17"
+    ],
     "copied_pixels_exact": true,
     "direct_pointer_alias_count": 0
   },
   "independent_private_builds": {
-    "build_labels": ["A", "B"],
+    "build_labels": [
+      "A",
+      "B"
+    ],
     "all_listed_artifacts_byte_identical": true,
     "first_build_pre_registration_second_build_post_registration": true,
-    "plan_sha256": "79BF3BD50D4F5F6C7435057DFE3C38C6B1F3DD4D1EF165636504F6FBA615BC9B",
-    "raster_request_sha256": "D0257FE7239A047123E3C44E7F50CF24C98E33F31629212D815FCC91F03154FC",
-    "raster_result_sha256": "DE113161BED96792680C2A552DC993FE92CA3DBEC296712D423E6934EFA8B808",
+    "plan_sha256": "1F3ADA992835462FC0E19A289884F0F321E7D0985CA277D5121F3338FD9D8CDE",
+    "raster_request_sha256": "488C0E56EA40759FA0ECCE3C1AA166C17AA02DD888EE0D83A71C0ED033D7B76B",
+    "raster_result_sha256": "A0ADFAA3A2DD8883EE3DE86BF83E82B3E1CAE0A7E0A52541AE5EF802481744E8",
     "private_pixel_payload_sha256": {
-      "EB48": "67707B90E704B78CDDFEFBA843265EB49BC0A6E77C4201F0C801958E66F0700D",
-      "B32": "595633B89C1A6F89F925A49CA7574537589FCD425051F79D6FC93504DC85DF01"
+      "EB48": "689B693D7B8C10A8DD87AE6E594D8541E4DA14DA30657607D0D776B1E896C5DA",
+      "B32": "2BE7EE3371A83805BF49B4398D25F244C75E24B3CD7E5A15A2D5C76ECA73B4AA"
     },
-    "build_manifest_sha256": "E72CE68307DA0E178CF7AC55AF80BA0D0AE97E2978E55800F8D6D62E5E7445F9"
+    "build_manifest_sha256": "2B40F548773069809E617BF8D99BE954FE5081089221FFEFE313D187890D1128"
   },
   "preservation_contract": {
     "stock_hash_gate_fail_closed": true,
@@ -191,93 +714,198 @@
       {
         "route": "base",
         "logical_path": "RES_JP/res_lang.bin",
-        "candidate_archive_size": 175097407,
-        "candidate_archive_sha256": "4395B84C5F678E37D8F39BCEEFF1986F62B07A54FF7936FC1402412AF07536F2",
+        "candidate_archive_size": 154216023,
+        "candidate_archive_sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
         "targets": [
           {
             "outer_entry": 6,
-            "target_size": 21651612,
-            "target_sha256": "F640AF9BFC72F810C49C43BF560C4AF34017C73D137B8E04CB1F6C75CE3BA8F9"
+            "target_size": 21720288,
+            "target_sha256": "30F1AC5AEE1962826AE3D193E2AD6F18723402382D59B242E725E33D7E44F6A6"
           },
           {
             "outer_entry": 7,
-            "target_size": 15269532,
-            "target_sha256": "5B8B4A192DD5D9E4ECD0236E1467B81FC78A9568A44FDDC6C7F6BC8DC9155635"
+            "target_size": 15303648,
+            "target_sha256": "F2CB4EAFE76CF8FBDCDEEE9AAAF3628804194A8B97D67DA20FB75240D7E935EB"
           }
         ]
       },
       {
         "route": "pk",
         "logical_path": "RES_JP_PK/res_lang_pk.bin",
-        "candidate_archive_size": 162625225,
-        "candidate_archive_sha256": "697F5034140A35A676CC0D0006CCECE4753D823109C5792500C46DE6499C9C12",
+        "candidate_archive_size": 141746742,
+        "candidate_archive_sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
         "targets": [
           {
             "outer_entry": 16,
-            "target_size": 21651612,
-            "target_sha256": "02BABFCF8551B326CC1C90BFA1405D9433F87D822CE0B670C0D7045A55515D4E"
+            "target_size": 21720288,
+            "target_sha256": "FE5C24566240432099ECA7CC9E5D2C5901517D0302570B0B779AD4F30F955D92"
           },
           {
             "outer_entry": 17,
-            "target_size": 15269532,
-            "target_sha256": "C21E49D616E98328D69396A30110B82AD6F0359F4C96C3B2ED206EFE68FBE73F"
+            "target_size": 15303648,
+            "target_sha256": "B6499C759802B0575E571C78A671A0B046ECA2DC023FD719A85C3AAFD71FB358"
+          }
+        ]
+      },
+      {
+        "route": "pk_port1",
+        "logical_path": "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+        "candidate_archive_size": 79243911,
+        "candidate_archive_sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+        "targets": [
+          {
+            "outer_entry": 1,
+            "target_size": 56675888,
+            "target_sha256": "20B81FBD7749A50FAEADF0EB6FB1716068202AB2C8C2EC0DF573A1056D6A4C8F"
+          }
+        ]
+      },
+      {
+        "route": "pk_port2",
+        "logical_path": "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+        "candidate_archive_size": 67086423,
+        "candidate_archive_sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
+        "targets": [
+          {
+            "outer_entry": 0,
+            "target_size": 85018656,
+            "target_sha256": "833879EA20517BF5EB9E86AB8F0F076758DFFF420C0AE94EE787D59C42B5AE6F"
+          },
+          {
+            "outer_entry": 1,
+            "target_size": 59352096,
+            "target_sha256": "8A9DB816842DFC9C03D31932F8DAA1DE75EAB97EDB1D6EA309A46AF8B91D86DF"
           }
         ]
       }
     ],
     "raster_profiles": [
       {
-        "profile": "eb48",
-        "source_entry": 6,
-        "font_key": "entry6_48px_eb",
-        "font": "SeoulHangang EB",
         "cell": 48,
-        "raster_size": 46,
-        "one_table_payload_size": 1504512,
-        "one_table_payload_sha256": "93FC7EF1E1DC3A5E7443B5574279F6E3500C78A632FC802850481E872F8B965F",
-        "duplicate_source_renders_exact": true
+        "font": "SeoulHangang EB",
+        "font_key": "entry6_48px_eb",
+        "one_table_payload_sha256": "D350A92371C963CA1CD9E22922906457B794AA3E66442FB1FE533772C4648544",
+        "one_table_payload_size": 1643904,
+        "profile": "eb48",
+        "profile_payload_unique": true,
+        "raster_size": 46
       },
       {
-        "profile": "b32",
-        "source_entry": 7,
-        "font_key": "entry7_32px_b",
-        "font": "SeoulHangang B",
         "cell": 32,
-        "raster_size": 32,
-        "one_table_payload_size": 668672,
-        "one_table_payload_sha256": "A736F85D95F165D1141C181ED29E98A34B751B44BE3FE52B26A9326B7FD02778",
-        "duplicate_source_renders_exact": true
+        "font": "SeoulHangang B",
+        "font_key": "entry7_32px_b",
+        "one_table_payload_sha256": "5CC4E5F6A3788B845A559FD57888BA423B9CFA7E508904B249D01B9348F75919",
+        "one_table_payload_size": 730624,
+        "profile": "b32",
+        "profile_payload_unique": true,
+        "raster_size": 32
+      },
+      {
+        "cell": 64,
+        "font": "SeoulHangang B",
+        "font_key": "entry7_32px_b",
+        "one_table_payload_sha256": "278534F3E00ADBADCE3BA2AC792A1C805B82784A7C6C6AF93FF868C225439632",
+        "one_table_payload_size": 2922496,
+        "profile": "b64",
+        "profile_payload_unique": true,
+        "raster_size": 64
+      },
+      {
+        "cell": 96,
+        "font": "SeoulHangang EB",
+        "font_key": "entry6_48px_eb",
+        "one_table_payload_sha256": "579F82A9CFC007694274E6CABE645BDCAEF849595B8E9F2CA5142FBFC48EA6B2",
+        "one_table_payload_size": 6575616,
+        "profile": "eb96",
+        "profile_payload_unique": true,
+        "raster_size": 92
       }
     ],
     "font_cmap_gate": [
       {
-        "append_union_count": 1308,
-        "cmap_covered_count": 1306,
-        "cmap_covered_sha256": "E056B7630AE5055647421C5F53ABADC7BD49B9FE44E5BA8DF4421503D32888C6",
-        "cmap_missing": ["U+32A4", "U+FF65"],
-        "cmap_missing_count": 2,
-        "cmap_missing_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+        "append_union_count": 1450,
+        "cmap_covered_count": 1427,
+        "cmap_covered_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
+        "cmap_missing": [
+          "U+22BF",
+          "U+32A4",
+          "U+32A8",
+          "U+3303",
+          "U+330D",
+          "U+3314",
+          "U+3318",
+          "U+3322",
+          "U+3323",
+          "U+3326",
+          "U+3327",
+          "U+332B",
+          "U+3336",
+          "U+333B",
+          "U+3349",
+          "U+334A",
+          "U+334D",
+          "U+3351",
+          "U+3357",
+          "U+337C",
+          "U+337D",
+          "U+337E",
+          "U+FF65"
+        ],
+        "cmap_missing_count": 23,
+        "cmap_missing_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E",
         "font_key": "entry6_48px_eb",
         "font_sha256": "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1",
         "gdi_fallback_forbidden": true,
         "profile": "eb48",
         "unicode_cmap_records": [
-          {"encoding": 1, "format": 4, "platform": 3}
+          {
+            "encoding": 1,
+            "format": 4,
+            "platform": 3
+          }
         ]
       },
       {
-        "append_union_count": 1308,
-        "cmap_covered_count": 1306,
-        "cmap_covered_sha256": "E056B7630AE5055647421C5F53ABADC7BD49B9FE44E5BA8DF4421503D32888C6",
-        "cmap_missing": ["U+32A4", "U+FF65"],
-        "cmap_missing_count": 2,
-        "cmap_missing_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+        "append_union_count": 1450,
+        "cmap_covered_count": 1427,
+        "cmap_covered_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
+        "cmap_missing": [
+          "U+22BF",
+          "U+32A4",
+          "U+32A8",
+          "U+3303",
+          "U+330D",
+          "U+3314",
+          "U+3318",
+          "U+3322",
+          "U+3323",
+          "U+3326",
+          "U+3327",
+          "U+332B",
+          "U+3336",
+          "U+333B",
+          "U+3349",
+          "U+334A",
+          "U+334D",
+          "U+3351",
+          "U+3357",
+          "U+337C",
+          "U+337D",
+          "U+337E",
+          "U+FF65"
+        ],
+        "cmap_missing_count": 23,
+        "cmap_missing_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E",
         "font_key": "entry7_32px_b",
         "font_sha256": "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B",
         "gdi_fallback_forbidden": true,
         "profile": "b32",
         "unicode_cmap_records": [
-          {"encoding": 1, "format": 4, "platform": 3}
+          {
+            "encoding": 1,
+            "format": 4,
+            "platform": 3
+          }
         ]
       }
     ]

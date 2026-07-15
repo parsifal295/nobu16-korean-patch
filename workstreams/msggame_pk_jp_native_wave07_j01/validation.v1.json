@@ -1,0 +1,47 @@
+{
+  "schema": "nobu16.kr.msggame-jp-wave-validation.v1",
+  "batch_id": "j01",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "status": "pass",
+  "coordinate_contract": {
+    "selected_count": 970,
+    "coordinates_sha256": "3C8E46FD80A617471B9E2294164FEEB346E19E3AD18944270A7B8ED7FF1FD036",
+    "partition_exact_match": true,
+    "other_batches_disjoint": true
+  },
+  "translation_contract": {
+    "unique_source_hash_count": 613,
+    "representative_translation_count": 613,
+    "expanded_entry_count": 970,
+    "identical_korean_per_identical_source_hash": true,
+    "untranslated_count": 0
+  },
+  "invariant_contract": {
+    "checked_entry_count": 970,
+    "mismatch_count": 0,
+    "preserved_category_coordinate_counts": {
+      "leading_whitespace": 71,
+      "line_breaks": 335,
+      "trailing_whitespace": 57
+    }
+  },
+  "distribution_contract": {
+    "commercial_source_text_present": false,
+    "private_context_present": false,
+    "entry_fields_exact": true
+  },
+  "overlay": {
+    "path": "workstreams/msggame_pk_jp_native_wave07_j01/public/msggame_ko_pk_jp_native_wave07_j01_970.v1.json",
+    "sha256": "B586DF17455DB5B31923FC281ADA91AF2EDD8B2062AF55E7EF72B316AC85E371",
+    "entry_count": 970
+  },
+  "steam_1_1_7_integration": {
+    "foundation_entry_count": 24211,
+    "combined_entry_count": 25181,
+    "remaining_jp_semantic_count": 3091,
+    "candidate_sha256": "4B963147B212EF965FD68953560728460890FEC5D4B306FB64618164B35A49E0",
+    "non_literal_structure_preserved": true,
+    "deterministic_rebuild": true,
+    "installed_game_file_written": false
+  }
+}
