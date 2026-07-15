@@ -41,7 +41,8 @@ from typing import Any, Iterable, Sequence
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
-GAME_ROOT = REPO_ROOT.parent
+# Authoritative local runtime for every current JP build and safety check.
+GAME_ROOT = Path(r"F:/SteamLibrary/steamapps/common/NOBU16")
 sys.dont_write_bytecode = True
 
 
@@ -1983,8 +1984,16 @@ def command_verify(args: argparse.Namespace) -> int:
 
 
 def add_stock_arguments(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--stock-base", type=Path, required=True)
-    parser.add_argument("--stock-pk", type=Path, required=True)
+    parser.add_argument(
+        "--stock-base",
+        type=Path,
+        default=GAME_ROOT / "RES_JP" / "res_lang.bin",
+    )
+    parser.add_argument(
+        "--stock-pk",
+        type=Path,
+        default=GAME_ROOT / "RES_JP_PK" / "res_lang_pk.bin",
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:

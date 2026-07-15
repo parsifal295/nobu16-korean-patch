@@ -1,0 +1,56 @@
+{
+  "base_language": "JP",
+  "foundation": {
+    "coordinate_union_count": 24211,
+    "coordinates_sha256": "852D1645402E1640A640F040F1E7D5769AD442D9B4A185E390375A12D72B8098",
+    "prior_entry_count": 9386,
+    "prior_semantic_count": 9386,
+    "semantic_coverage_count": 24211,
+    "semantic_coverage_percent": 85.636,
+    "switch_exact_entry_count": 14825
+  },
+  "proofs": {
+    "jp_record_structure_preserved": true,
+    "jp_source_hash_guarded": true,
+    "memory_or_executable_patch_used": false,
+    "runtime_container_language": "JP",
+    "sc_container_used": false,
+    "sc_coordinates_used": false,
+    "sc_source_text_used": false
+  },
+  "remaining": {
+    "by_block": {
+      "0": 45,
+      "10": 1,
+      "13": 41,
+      "14": 112,
+      "15": 368,
+      "16": 18,
+      "17": 1939,
+      "2": 56,
+      "3": 22,
+      "4": 47,
+      "6": 761,
+      "7": 162,
+      "8": 133,
+      "9": 356
+    },
+    "coordinate_count": 4061,
+    "coordinates_sha256": "8B039DF39C0A69F5A6119E52331D10B3F183C388A302FBAF32A3E55131889085"
+  },
+  "resource": "MSG_PK/JP/msggame.bin",
+  "schema": "nobu16.kr.msggame-jp-native-catalog.v1",
+  "semantic_target": {
+    "coordinate_count": 28272,
+    "coordinates_sha256": "FA751264E11136595285CAD4BF558DAFDF15074B82ACDC21EBDAFD6B0CDCD4CB"
+  },
+  "source_free": true,
+  "stock_jp": {
+    "literal_count": 29524,
+    "packed_sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "packed_size": 721304,
+    "raw_sha256": "F052DA62C584C024C1EAF67A706253525421E6068976657DF6A6C07EFCA5D4E8",
+    "raw_size": 1599324,
+    "record_count": 21751
+  }
+}

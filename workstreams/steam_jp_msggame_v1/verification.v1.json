@@ -1,0 +1,65 @@
+{
+  "checks": {
+    "block_record_counts_preserved": true,
+    "deterministic_rebuild": true,
+    "installed_game_file_written": false,
+    "jp_source_hash_gate": "PASS",
+    "literal_coordinate_set_preserved": true,
+    "non_literal_structure_preserved": true,
+    "overlay_coordinates_disjoint": true,
+    "replacement_literals_verified": true,
+    "sc_container_used": false,
+    "steam_stock_hash_gate": "PASS",
+    "unchanged_literals_preserved": true,
+    "wrapper_prefix_preserved": true
+  },
+  "overlays": [
+    {
+      "entry_count": 9386,
+      "overlay_id": "msggame_pk_jp_native_steam_prior_rebased_9386.v1",
+      "path": "workstreams/msggame_pk_jp_native_wave06/public/msggame_ko_pk_jp_native_steam_prior_rebased_9386.v1.json",
+      "sha256": "9F2E8498E45899E55D8AF8221434DBB35D1D2660C96F43E678C0A065D059D974"
+    },
+    {
+      "entry_count": 14825,
+      "overlay_id": "msggame_pk_jp_native_steam_switch_v13_exact_14825.v1",
+      "path": "workstreams/msggame_pk_jp_native_wave06/public/msggame_ko_pk_jp_native_steam_switch_v13_exact_14825.v1.json",
+      "sha256": "40C2DCCCDBA0F0FCFD99063531C116F82006E7DFE078F67F930F5EBEDB328045"
+    }
+  ],
+  "resource": "MSG_PK/JP/msggame.bin",
+  "runtime": {
+    "distribution": "Steam",
+    "language_route": "JP",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764
+  },
+  "schema": "nobu16.kr.steam-jp-msggame-build.v1",
+  "source": {
+    "block_count": 18,
+    "coordinate_sha256": "DB146CFDD28807CFB6A9B384256A180C7528B47B7333E1D6EDC9205897735D10",
+    "literal_count": 29524,
+    "normalized_structure_sha256": "5F55F187380C7931DD040094ED35B6FDD009CA7A441F42C42F67459B915B0BA3",
+    "packed_sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "packed_size": 721304,
+    "raw_sha256": "F052DA62C584C024C1EAF67A706253525421E6068976657DF6A6C07EFCA5D4E8",
+    "raw_size": 1599324,
+    "record_count": 21751
+  },
+  "target": {
+    "block_count": 18,
+    "coordinate_sha256": "DB146CFDD28807CFB6A9B384256A180C7528B47B7333E1D6EDC9205897735D10",
+    "literal_count": 29524,
+    "normalized_structure_sha256": "5F55F187380C7931DD040094ED35B6FDD009CA7A441F42C42F67459B915B0BA3",
+    "packed_sha256": "1FBA38AD3B8D436CCFBCCE0E4BBD327184F707AEDAFAC6AB6FC3A1950ABA8C53",
+    "packed_size": 1778914,
+    "raw_sha256": "986CF161C6DD9519315BF5E0E1818C8F65D07B1018E709FBA481767F151B563B",
+    "raw_size": 1771940,
+    "record_count": 21751
+  },
+  "translation": {
+    "applied_entry_count": 24211,
+    "remaining_jp_semantic_count": 4061,
+    "semantic_target_count": 28272
+  }
+}
