@@ -187,13 +187,14 @@ def audit_progress(
     rows = [row for row in progress.get("resources", []) if row.get("path") == RESOURCE]
     if len(rows) != 1 or not isinstance(rows[0].get("overlay_globs"), list):
         raise StructuralReviewError("progress has no unique msgdata row")
-    patterns = rows[0]["overlay_globs"]
     prefix = list(previous.EXPECTED_PREDECESSOR_PATHS)
-    if patterns[:len(prefix)] != prefix:
-        raise StructuralReviewError("pre-B07 registration order changed")
-    tail = patterns[len(prefix):]
-    if tail not in ([], [B07_OVERLAY_PATH], [B07_OVERLAY_PATH, SELF_OVERLAY_PATH]):
-        raise StructuralReviewError("unexpected B07/B08 registration order or duplicate")
+    tail, _successors = previous.historical_registration_tail(
+        rows[0]["overlay_globs"],
+        prefix,
+        [B07_OVERLAY_PATH, SELF_OVERLAY_PATH],
+        8,
+        repo_root,
+    )
     if B07_OVERLAY_PATH in tail and (repo_root / B07_OVERLAY_PATH).read_bytes() != b07_blob:
         raise StructuralReviewError("registered B07 differs from explicit ownership artifact")
     if SELF_OVERLAY_PATH in tail and (repo_root / SELF_OVERLAY_PATH).read_bytes() != overlay_blob:
@@ -248,6 +249,8 @@ def make_files(game_root: Path, repo_root: Path, target_catalog_path: Path, prog
     common.validate_overlay_shape(overlay)
     overlay_blob = encode_json(overlay)
     audit = audit_progress(progress_path, repo_root, b07_blob, overlay_blob, targets, predecessor_claims, set(selected))
+    audit["b07_registration_count"] = 0
+    audit["self_registration_count"] = 0
     reason_summary = {reason: {"count": len(ids), "ids_sha256": REASON_PINS[reason]["ids_sha256"]} for reason, ids in groups.items()}
     evidence = {
         "schema": "nobu16.kr.msgdata-pk-structural-review-evidence.v1", "batch_id": BATCH_ID,

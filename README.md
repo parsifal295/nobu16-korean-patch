@@ -21,9 +21,17 @@ EXE 수정·레지스트리 변경은 사용하지 않습니다.
 3. ZIP 최상단의 `MSG`, `MSG_PK`, `RES_SC` 폴더를 게임 설치 폴더에 덮어씁니다.
 4. 공식 런처로 게임을 다시 실행합니다.
 
-한글 대신 `???`가 나오면 `RES_SC/res_lang.bin`이 덮어써지지 않은 상태입니다. 게임과
-런처를 종료한 뒤 `RES_SC`까지 다시 복사하십시오. v0.4.1 폰트 파일의 SHA-256은
-`706563F2BFB3D8BD63B8859366E69066E0FEEFE1A989A14B967BD4649152E271`입니다.
+한글 대신 `???`가 나오면 먼저 아래 v0.4.1 SHA-256을 확인합니다.
+
+- `RES_SC/res_lang.bin`: `706563F2BFB3D8BD63B8859366E69066E0FEEFE1A989A14B967BD4649152E271`
+- `MSG_PK/SC/msgui.bin`: `C683AE9355A43F9A2104E49A6179363727CE0A550682F906C224A44F506826AC`
+
+해시가 다르면 게임과 런처를 종료하고 다시 덮어씁니다. 두 해시가 모두 같은데도
+`???`가 나오면 단순 복사 실패가 아닙니다. Steam판은 **Steam 라이브러리의 게임 속성
+언어와 공식 런처 언어를 모두 `Simplified Chinese`로 맞춘 뒤** 패치를 다시 덮어씁니다.
+그래도 같으면 [Steam 런타임 진단 수집기](workstreams/steam_runtime_compat_v1/README_KO.md)의
+결과를 제보해 주십시오. `RES_SC_PK/res_lang_pk.bin`은 `RES_SC/res_lang.bin`으로 바꾸거나
+이름을 바꿔 덮어쓰지 않습니다.
 
 ## 한글화 진행률
 

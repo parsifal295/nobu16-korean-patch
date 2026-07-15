@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "release": {
+    "tag": "v0.4.1",
+    "asset_name": "NOBU16_PK_Korean_Patch_v0.4.1.zip",
+    "asset_size": 130249279,
+    "asset_sha256": "BF5092A47E72A521D6BE630C9A222DA9F949AEDC03390FFD8D5BCEF7291AE655"
+  },
+  "files": [
+    {
+      "relative_path": "MSG/SC/strdata.bin",
+      "role": "shared_string_table",
+      "size": 952378,
+      "sha256": "40E435DA4929D5CD5B3085F6CFA2646F492FF121F7DFB65DD16A3ED4DD51C3EB"
+    },
+    {
+      "relative_path": "MSG_PK/SC/msgbre.bin",
+      "role": "pk_biography_messages",
+      "size": 478591,
+      "sha256": "69CF70A59F4F1D1EFB35A4123E4BA5B7092AA65DF629C5BE7D8317B97DB3CD29"
+    },
+    {
+      "relative_path": "MSG_PK/SC/msgdata.bin",
+      "role": "pk_data_messages",
+      "size": 487028,
+      "sha256": "E2435AB3EE0A1D39BD473FADF37BACD38C23E1740E0B9898B5844F77A6012662"
+    },
+    {
+      "relative_path": "MSG_PK/SC/msgev.bin",
+      "role": "pk_event_messages",
+      "size": 1030659,
+      "sha256": "596B47864D69D32446BFEF56177D3CCC615132E2BBFDB8154C9D83F78808CE48"
+    },
+    {
+      "relative_path": "MSG_PK/SC/msggame.bin",
+      "role": "pk_game_messages",
+      "size": 1233957,
+      "sha256": "8D4417737975203A4CFF7EB0185DB1959F09D56B5F394CFD8136A58B3E7783C3"
+    },
+    {
+      "relative_path": "MSG_PK/SC/msgire.bin",
+      "role": "pk_ire_messages",
+      "size": 23136,
+      "sha256": "045B6ADDD7CF01401A3C10FA69A737B6C32259FA95007584E6A3E32CF2142D2A"
+    },
+    {
+      "relative_path": "MSG_PK/SC/msgstf.bin",
+      "role": "pk_staff_messages",
+      "size": 16289,
+      "sha256": "C4A18BC5F7F7FCB8D9913D1AABC0C775059B09CE41261AFE38FB23F15146C195"
+    },
+    {
+      "relative_path": "MSG_PK/SC/msgui.bin",
+      "role": "pk_ui_messages",
+      "size": 116027,
+      "sha256": "C683AE9355A43F9A2104E49A6179363727CE0A550682F906C224A44F506826AC"
+    },
+    {
+      "relative_path": "RES_SC/res_lang.bin",
+      "role": "sc_shared_font_archive",
+      "size": 189750493,
+      "sha256": "706563F2BFB3D8BD63B8859366E69066E0FEEFE1A989A14B967BD4649152E271"
+    }
+  ],
+  "metadata_policy": {
+    "contains_game_payload": false,
+    "contains_text_extraction": false,
+    "source_free_hash_and_size_metadata_only": true
+  }
+}
