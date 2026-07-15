@@ -1,0 +1,1580 @@
+{
+  "base_language": "SC",
+  "defaults": {
+    "status": "translated"
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "block_id": 14,
+      "ko": "\n메인 화면에는 다음 항목이 표시됩니다.\n　·시간 진행 버튼\n　·세력 정보\n　·보조 명령\n　·행동 리스트\n　·부대 리스트\n　·국인중\n　·명소\n　·부대\n　·로그",
+      "literal_id": 1,
+      "record_id": 5,
+      "source_sc_utf16le_sha256": "0DA20E37797DF2325105E761246B469EA005BB97AD28CA78CA1B77BDC67CE095"
+    },
+    {
+      "block_id": 14,
+      "ko": "노력　…　다이묘 군단의 노력\n　　　　　　　성하 시설, 건의, 군 개발 등의 실행 시에 사용\n　　　　　　　실행한 명령 종료 시에 소비한 노력이 반환\n　",
+      "literal_id": 9,
+      "record_id": 8,
+      "source_sc_utf16le_sha256": "B483E8BE2C304437ABC87E8918464A89FCEB997C0A87C035D9490C50DA2E7215"
+    },
+    {
+      "block_id": 14,
+      "ko": "감장… 은상으로서 가신에게 수여할 수 있는 감장\n　　　　　　　가신에게 은상을 줄 때 사용\n　　　　　　　세력 목표를 달성하면 획득",
+      "literal_id": 11,
+      "record_id": 8,
+      "source_sc_utf16le_sha256": "5814027EC188493E6426636E275CAD881DF7216E77782DA2FFE28118B7E41A58"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·가신의 건의\n　　※튜토리얼 이외의 건의는 가운데 클릭으로 거부할 수 있습니다\n　·명령한 내용의 진척（군 개발, 정책 발령 등）\n　·영내 문제\n　·군단 상황",
+      "literal_id": 3,
+      "record_id": 11,
+      "source_sc_utf16le_sha256": "9B7637624C79B3362BEADEB2224932DF569D7488AFA3513ED2F1D578CE9AAA04"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·가신의 건의\n　　※튜토리얼 이외의 건의는 가운데 클릭으로 거부할 수 있습니다\n　·명령한 내용의 진척（군 개발, 정책 발령 등）\n　·영내 문제\n　·직담으로 맺은 약정\n　·군단 상황",
+      "literal_id": 3,
+      "record_id": 12,
+      "source_sc_utf16le_sha256": "791D92E536B2941820EBA5438E2DBB38D5347349F0CB17149721B591487D7898"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·가신의 건의\n　·명령한 내용의 진척（군 개발, 정책 발령 등）\n　·영내 문제",
+      "literal_id": 3,
+      "record_id": 13,
+      "source_sc_utf16le_sha256": "66C294D4976BE68004F8CE301BF85EBC4953758CAE10B7B4FBDDC94BD5D5C702"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·가신의 건의\n　·명령한 내용의 진척（군 개발, 정책 발령 등）\n　·영내 문제\n　·직담으로 맺은 약정\n　·군단 상황",
+      "literal_id": 3,
+      "record_id": 14,
+      "source_sc_utf16le_sha256": "734CAA9C501982C02B673890BA1C86381F2D18E4D58B35C8A9213001574631E7"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n출진 중인 부대입니다.\n자세력은 파란색, 적 세력은 빨강, 아군 세력은 녹색으로 표시됩니다.",
+      "literal_id": 1,
+      "record_id": 18,
+      "source_sc_utf16le_sha256": "CD57195F4960B13A68C768CBFB1314F6E29A54246553C0A4C03C1CC7ADC8D322"
+    },
+    {
+      "block_id": 14,
+      "ko": "【명소】",
+      "literal_id": 0,
+      "record_id": 20,
+      "source_sc_utf16le_sha256": "54024A221330FB5458B82E6FB8D4AC357E22AE1B7D142DF9AED564F21417925A"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n일부 군에는 '명소'라는 특별한 시설이 있습니다.\n모두 높은 효과를 가지고 세력의 발전을 도와줍니다.\n명소는 명소가 있는 성을 지배하는 세력에 속하고 있으며,\nLV를 올리거나 다른 세력에서 빼앗은 명소를 장악하기 위해서는\n영내 문제를 해결해야 합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 20,
+      "source_sc_utf16le_sha256": "C35366C2D74F5F23AC9295D371403641AF0D99238311E8249A9D9F663CFB9F66"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇영내 문제 발생 조건",
+      "literal_id": 2,
+      "record_id": 20,
+      "source_sc_utf16le_sha256": "198B4E97454C2A07741E2CC6589D27DB42980FD04DA5769E485184C0C34E23DF"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·재건(LV1)… 명소가 있는 성의 개발률이 높아지면 발생\n　·발전(LV2)… 명소가 있는 나라의 모든 성의 개발률이 높아지면 발생\n　·번영(LV3)… 명소가 있는 지방의 모든 성을 소유하고 있으면 발생",
+      "literal_id": 3,
+      "record_id": 20,
+      "source_sc_utf16le_sha256": "58D0A9FA5A2D36F7F9CCC020D06045DE761B3251F52583FED80800BE74723DB4"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n일부 정책은 특수한 조건을 충족하면 발령할 수 있게 됩니다.\n조건에는 「일정 이상의 위신」 「특정 주의를 가진 실행 무장」 「상위 취락 건설」이 있습니다.\n또한 다음 정책은 기독교가 전래했을 때 해방됩니다.\n·남만 교역\n·은 교역\n·기리시탄 포교（오토모 가문）",
+      "literal_id": 5,
+      "record_id": 23,
+      "source_sc_utf16le_sha256": "4FF5C8514E58E6D48DB93B0F7F5F73A218200BBB7248F9141CCA3CCE5F80883A"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n일부 정책은 특별한 조건을 충족해야 발령할 수 있습니다.\n조건에는 「일정 이상의 위신」「특정 주의를 지닌 실행 무장」「상위 취락 건설」「세력 목표 달성」 등이 있습니다.\n또한 아래 정책은 기독교가 전래되면 해금됩니다.\n·남만 교역\n·은 교역\n·기리시탄 포교（오토모 가문）",
+      "literal_id": 5,
+      "record_id": 24,
+      "source_sc_utf16le_sha256": "161323D188445942879722516DFA9AD59AFA18099AF2723792F1D55C2C8EB2DD"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n관직을 얻기 위해 조정에 헌금합니다.\n무장을 「중개역」에 맡기고 헌금하면 매월 「신용」을 얻을 수 있습니다.\n신용이 오르면 관직을 얻을 수 있습니다.\n얻을 수 있는 관직은 현재 지닌 것보다 위계가 높은 것에 한합니다.\n※관직의 위계가 높을수록 필요한 헌금의 양은 증가합니다\n\n",
+      "literal_id": 1,
+      "record_id": 34,
+      "source_sc_utf16le_sha256": "D8CB3D4500030FFBBA48DA9083075D6AC51D97378465482302F52EEEEE670D94"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n중개역으로 임명할 수 있는 무장은 「다이묘」 또는 신분이 「부장」 이상인 「성주」「측근」입니다.\n\n",
+      "literal_id": 3,
+      "record_id": 34,
+      "source_sc_utf16le_sha256": "55D0F68F41CE0116F518634C1C0E65E9FD12A6BEA4667D5B8669E96404FB4349"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n관직을 얻기 위해 조정에 헌금합니다.\n무장을 「중개역」으로 임명해 헌금하면 매월 「신용」을 얻습니다.\n얻을 수 있는 관직은 현재보다 위계가 높은 관직으로 한정됩니다.\n\n",
+      "literal_id": 1,
+      "record_id": 35,
+      "source_sc_utf16le_sha256": "004D718444E319CD9F3B45D9BE39B9C3FAB29DD1D56927083762B1C4872804B7"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n중개역으로 임명할 수 있는 무장은 「다이묘」 또는 신분이 「부장」 이상인 「성주」「측근」입니다.\n\n",
+      "literal_id": 3,
+      "record_id": 35,
+      "source_sc_utf16le_sha256": "55D0F68F41CE0116F518634C1C0E65E9FD12A6BEA4667D5B8669E96404FB4349"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n관직을 얻으면 관위의 높이에 따라 세력의 위신이 늘어납니다.\n또한 새로운 관직을 받으면 이전까지의 관직은\n「상벌」 명령으로 가신에게 수여해 충성을 높이거나\n직담의 교섭 재료로 사용할 수 있습니다.\n※위신 증가에 효과가 있는 것은 보유한 것 중 관위가 가장 높은 관직뿐입니다",
+      "literal_id": 5,
+      "record_id": 35,
+      "source_sc_utf16le_sha256": "F762939255FFBC8BC3521649078D3B7165DF98595696119B6B63D562420422D6"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n역직을 수여해 외교 자세를 개선하고 외교를 유리하게 이끌 수 있습니다.\n쇼군 가문으로 플레이할 때는 높은 위신과 역직을 활용해\n적극적으로 외교를 펼칩시다.",
+      "literal_id": 3,
+      "record_id": 36,
+      "source_sc_utf16le_sha256": "C1599CA1C26D629F5FAA0A21A0AF727EF76D29CEF651A3243CE742C67E579DDE"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·조건 「다이묘」 특성을 지닌 경우\n　　다이묘가 되면 그 특성을 발휘할 수 있습니다\n　·다이묘가 자주 병에 걸려 능력 저하가 빈발하는 경우\n　　은거를 고려합시다.",
+      "literal_id": 3,
+      "record_id": 39,
+      "source_sc_utf16le_sha256": "B3944A68FBC27BCDEF97D213082C4DE6C83B330C1F5536E8F1E6C650F1FCA94F"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n가신을 세력에서 추방합니다.\n특별한 사정이 없다면 가신을 추방할 이점은 없습니다.\n\n다만 충성이 낮은 무장은 조략에 넘어가기 쉬우므로,\n무장 수가 부족하지 않다면 추방해\n위험 요소를 미리 제거하는 방법도 있습니다.\n※보유한 가보와 관위는 몰수합니다.",
+      "literal_id": 1,
+      "record_id": 41,
+      "source_sc_utf16le_sha256": "8AB4B66D757889AC25D1699EB8F0C6D8E715C92E147BE5694D21922946EE3446"
+    },
+    {
+      "block_id": 14,
+      "ko": "【군단 전략】",
+      "literal_id": 0,
+      "record_id": 45,
+      "source_sc_utf16le_sha256": "ECFCF1144AD464C69E841675BB973C9B2C30D6728D3D6CAE25C888482A4D0290"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n군단이 수행하는 특별한 전략을 '군단 전략'이라고 부릅니다.\n특정 시점에서 군단에서 제안하고 승인하면 사용할 수 있습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 45,
+      "source_sc_utf16le_sha256": "0D18EAF2408E47EDC3D8C6C7E395CE939808434B017746B65FBF26723E265432"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇군단 전략의 종류",
+      "literal_id": 2,
+      "record_id": 45,
+      "source_sc_utf16le_sha256": "D5A9AB1E84A132E4278D0B48DC03FBB1AB0A983F64CCEDB77D73384F42C63EBA"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n3개월에 한 번 논공행상이 열려 훈공을 세운 가신이 승진합니다.\n이 화면에서는 무장의 훈공의 내역이나 승진한 무장 등을 확인할 수 있습니다.\n※확인하지 않아도 무장은 승진합니다\n\n",
+      "literal_id": 1,
+      "record_id": 46,
+      "source_sc_utf16le_sha256": "F8CEFC7BE4EAC69CA6E7EE5F285F2AACEC4A321E2620880A14A62181AD407659"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n3개월에 한 번 논공행상이 열려 훈공을 세운 가신이 승진합니다.\n이 화면에서는 무장의 훈공의 내역이나 승진한 무장 등을 확인할 수 있습니다.\n※확인하지 않아도 무장은 승진합니다\n\n",
+      "literal_id": 1,
+      "record_id": 47,
+      "source_sc_utf16le_sha256": "F8CEFC7BE4EAC69CA6E7EE5F285F2AACEC4A321E2620880A14A62181AD407659"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·「대관」「지행」으로 맡겨진 영지의 개발\n　·실행 무장으로서 명령 실행\n　·「건의」의 성공\n　·「영내 문제」의 해결\n　·행군이나 합전의 공적\n　·「조두」으로서의 하급 실무（※정책「호로중 결성」의 발령이 필요）\n　·「은상」으로서 감장을 준다",
+      "literal_id": 3,
+      "record_id": 47,
+      "source_sc_utf16le_sha256": "0DEA5935A7139373CF30DE948F4AB0BF344B92343604435B300FCCF90E16D72C"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇평정중 일람",
+      "literal_id": 4,
+      "record_id": 49,
+      "source_sc_utf16le_sha256": "EAB3469F701F7ED9DA9E6385EEBAAF4A60BE9A6EA200448D74774B985B31932B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·가재… 자신의 「가재 특성」에 의해 세력에 방침을 준다\n　·봉행 　… 자신의 「봉행 특성」에 의해 특정 정책의 발령이나 유지비 삭감을 가능하게 한다",
+      "literal_id": 5,
+      "record_id": 49,
+      "source_sc_utf16le_sha256": "3A5355659E0F2E32725631035C270B03F861B3073D28A91B05889A14B1D4A971"
+    },
+    {
+      "block_id": 14,
+      "ko": ")를 선택하면 해임할 수 있습니다\n※「제도 개신」LV3 발령으로 빈 군에 「자동 임명」이 가능해집니다\n※출진 중에는 영주 변경이 불가능합니다\n※직담으로 소령 안도한 무장을 다른 군의 영주로 변경할 수 없습니다.",
+      "literal_id": 7,
+      "record_id": 51,
+      "source_sc_utf16le_sha256": "E7095E0070658249926DB08DC36C0059A281D5EC509079A23053A5481620E9C6"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성주의 능력이 성 능력의 기준이 됨（4페이지 참조）\n　·실행 무장으로 임명 가능\n　·신분이 「부장」 이상인 성주는 여러 군을 영지로 삼을 수 있음\n　·신분이 높을수록 더 많은 군을 영지로 삼을 수 있음\n\n\n※성주로 임명하면 정책 「제도 개신」 LV3 발령 전에는 변경할 수 없습니다.",
+      "literal_id": 3,
+      "record_id": 52,
+      "source_sc_utf16le_sha256": "2530CF839E2F8277060377FC7474D00D680CC3E364C761C70FCA0C9C63CF6EE0"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n정책 '제도 개신' LV1을 발령하면 각 성에서 성하 방침을 설정할 수 있습니다.\n성하 방침을 설정하면 성주와 영주는 각각 자주적으로 성하 시설과 개발 용지의 건설을 실시합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 55,
+      "source_sc_utf16le_sha256": "E0F9C492D20E4FA2077348213C464A1CAE6B29E0D076F50FC398B9801026D5D8"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·설정할 수 있는 성하 방침\n　·성하 시설과 개발 용지의 건설 속도\n　·성하 시설의 증설 가능한 LV 상한\n\n성을 특정 용도에 특화할 수 있기 때문에,\n선택하고 싶은 성하 방침을 선택할 수 있도록 무장의 지행지를 궁리해 봅시다.",
+      "literal_id": 3,
+      "record_id": 55,
+      "source_sc_utf16le_sha256": "9D8EC72BF8E3AA750D4AEAA35F79F3EF7B2838CF27EC5649BD51A8B1CF0D19B1"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇설비 건설",
+      "literal_id": 0,
+      "record_id": 56,
+      "source_sc_utf16le_sha256": "9B171ACDF72D648ED00F592FD2292C8F19124E0CAF077A26BD292C98A24D4F5A"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n정책 '제도 개신·이' LV1을 발령하면 본거지와 방위 거점에서 설비가 건설됩니다.\n\n설비는 공성전에서 사용되어 적의 침공을 막는 큰 도움이 됩니다.\n설비의 종류는 무장에 따라 다르므로 지행과 대관을 고안함으로써\n유리하게 공성전을 할 수 있습니다.\n※건설 속도는 무장에 따라 다릅니다",
+      "literal_id": 1,
+      "record_id": 56,
+      "source_sc_utf16le_sha256": "A04DCF821215A01C5FC58984C53C59C33D7A327233042BDDBDEDDE8587494C9E"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n본거지 이외의 군이나 성을 무장에게 주어 통치를 맡깁니다.\n군을 준 무장은 '영주'로서 군의 발전에 종사합니다.\n성을 준 무장은 「성주」로서 성의 발전에 종사합니다.\n\n본거지 이외의 군이나 성은 영주, 성주가 없으면 발전하지 않기 때문에\n측근을 몇 명 남기면서 적극적으로 영주, 성주를 임명합시다.\n\n",
+      "literal_id": 1,
+      "record_id": 57,
+      "source_sc_utf16le_sha256": "EA910C2BD38437BF0F4EEEBFEDBF209A04307502E23404C938DC60CC33573D57"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇「」에 대하여\n",
+      "literal_id": 2,
+      "record_id": 57,
+      "source_sc_utf16le_sha256": "00E2CECCB50B863176EBE297C2F489DEC41F772CDEBEC9EE22D9EB1EEC18C877"
+    },
+    {
+      "block_id": 14,
+      "ko": "누구의 영지도 아닌 군에는 「」가 표시됩니다.\n특히 노란색 「」가 표시된 군은 농촌과 시장의 장악을 진행하면\n상위 취락인 「대농촌」「대시장」을 건설할 수 있습니다.\n무장에게 우선 맡깁시다.",
+      "literal_id": 3,
+      "record_id": 57,
+      "source_sc_utf16le_sha256": "9D8FDA2200DBD5E5A71F7A45C37AA4F1619BD3D3CA9FBCD11A9CEF5C7E864CB2"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n본거지 이외의 군이나 성을 무장에게 주어 통치를 맡깁니다.\n군을 준 무장은 '영주'로서 군의 발전에 종사합니다.\n성을 준 무장은 「성주」로서 성의 발전에 종사합니다.\n\n본거지 이외의 군이나 성은 영주, 성주가 없으면 발전하지 않기 때문에\n측근을 몇 명 남기면서 적극적으로 영주, 성주를 임명합시다.\n\n",
+      "literal_id": 1,
+      "record_id": 58,
+      "source_sc_utf16le_sha256": "EA910C2BD38437BF0F4EEEBFEDBF209A04307502E23404C938DC60CC33573D57"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇「」에 대하여\n",
+      "literal_id": 2,
+      "record_id": 58,
+      "source_sc_utf16le_sha256": "00E2CECCB50B863176EBE297C2F489DEC41F772CDEBEC9EE22D9EB1EEC18C877"
+    },
+    {
+      "block_id": 14,
+      "ko": "누구의 영지도 아닌 군에는 「」가 표시됩니다.\n특히 노란색 「」가 표시된 군은 농촌과 시장의 장악을 진행하면\n상위 취락인 「대농촌」「대시장」을 건설할 수 있습니다.\n무장에게 우선 맡깁시다.\n\n",
+      "literal_id": 3,
+      "record_id": 58,
+      "source_sc_utf16le_sha256": "08F26B0BBBB8603CAC5A10F05FF9BCC8585E4648946192902CDDBB0AF688748C"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇명소에 대하여",
+      "literal_id": 4,
+      "record_id": 58,
+      "source_sc_utf16le_sha256": "E5C22FA601506C6BBB3A8AADDF80A4F3EFF6580D5CBE3329A9A58B799B33B9F5"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n명소가 있는 성이나 국의 개발률을 높이면 명소를 장악하거나 LV를 올릴 수 있습니다.\n세력 내에 명소가 있다면 해당 성을 무장에게 우선 맡깁시다.",
+      "literal_id": 5,
+      "record_id": 58,
+      "source_sc_utf16le_sha256": "C10EFAB419D8CF19EAC922CEA5199814E0D8E4424FCEFB511B8233DE0A2E86C2"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n본거지 및 직할령을 변경할 수 있습니다.\n현재 성에서 멀어질수록 비용이 증가합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 68,
+      "source_sc_utf16le_sha256": "0ADB6082F7720420985BF19A7D552535A7E645EA26646AC44664F6472C9CEDD5"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n다이묘·군단장의 본거지를 중심으로 명령이 닿는 성의 범위입니다.\n범위 밖의 성에는 명령이 닿지 않고 금전 수입도 크게 줄어듭니다.\n통치 범위 밖에 성이 있다면 본거지를 이전해\n가능한 한 범위 안에 넣읍시다.\n그래도 범위 밖에 성이 남으면 군단 편성을 권장합니다.",
+      "literal_id": 5,
+      "record_id": 68,
+      "source_sc_utf16le_sha256": "E4E6E04A664E3EC1AB2D38C6621E8F034EA70ECF9791B2CA04A87A1C4BF43404"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n본거지 및 직할령을 변경할 수 있습니다.\n현재 성에서 멀어질수록 비용이 증가합니다.\n※직담으로 소령 안도한 성은 이전 대상로 할 수 없습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 69,
+      "source_sc_utf16le_sha256": "7BC91765A5A9CA978ABD59408F9D6B3E9698FFB084E3B32F285B44C59902F345"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n다이묘·군단장의 본거지를 중심으로 명령이 닿는 성의 범위입니다.\n범위 밖의 성에는 명령이 닿지 않고 금전 수입도 크게 줄어듭니다.\n통치 범위 밖에 성이 있다면 본거지를 이전해\n가능한 한 범위 안에 넣읍시다.\n그래도 범위 밖에 성이 남으면 군단 편성이나 정책 「전마제」 발령을 권장합니다.",
+      "literal_id": 5,
+      "record_id": 69,
+      "source_sc_utf16le_sha256": "1DC5A5DD7BB17408D9A88B4BC81596F920F2E657657739501A9F8D53E3BDDD2C"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n시설에 따라 금전과 노력 외에 특별한 건설 조건이 필요합니다.\n조건에는\n「일정 이상의 석고·상업」「정책 발령」「상위 취락 건설」이 있습니다.",
+      "literal_id": 5,
+      "record_id": 70,
+      "source_sc_utf16le_sha256": "FA2A4CD0653BE41865C4EC042E366D35D8BD2B6EEB43F722DA20CD0AE161C2A0"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n「공략 목표」를 설정하면 가신들은\n공략 목표 대상이 되는 성을 공격하기 위해 군비를 행합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 72,
+      "source_sc_utf16le_sha256": "8044811E72D198C3BC5773878950ADDC151D2068EBB641B3A34F8086EF79477A"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n선정된 성 영내의 군은 「군비」를 시작하고,\n완료하면 「임전」 상태가 됩니다.\n임전 상태의 군은 출진 시 부대 능력이 일시적으로 강화되고,\n휴대 병량도 늘어납니다.\n또한 군비 완료 후 적 영지에 인접한 지략 60 이상의 영주가 조략을 시도합니다.\n※성주／영주／대관이 없는 군은 군비를 실시할 수 없습니다.\n\n",
+      "literal_id": 3,
+      "record_id": 72,
+      "source_sc_utf16le_sha256": "C8E86FF51D8662BCB5CBA2E8948AC582C5201E284A85D35F2AD5F79BCF799605"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇성 공격",
+      "literal_id": 0,
+      "record_id": 76,
+      "source_sc_utf16le_sha256": "3FBD36D9ED82478654A018D7D87E0ED2FD68C40781130FE544F6387BB1FEEC91"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇성 공격",
+      "literal_id": 0,
+      "record_id": 77,
+      "source_sc_utf16le_sha256": "3FBD36D9ED82478654A018D7D87E0ED2FD68C40781130FE544F6387BB1FEEC91"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n적의 성과 접촉하면 전투가 시작됩니다.\n이때 다이묘 부대가 전투 중이거나 근처에 있으면 「합전」을 실시할 수 있습니다.\n합전에서는 전용 전장에서 아군과 적군이 각각 최대 16개 부대로 전투합니다.\n※합전이 가능하면 다이묘 부대에 「합전 가능」이 표시됩니다.\n\n",
+      "literal_id": 1,
+      "record_id": 81,
+      "source_sc_utf16le_sha256": "CF6ADA5CBAB695BFF528DCEA9ACAEF140DD4C94614D1A1CB51A380A3EB52354D"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n방어 준비가 되어 있다(",
+      "literal_id": 1,
+      "record_id": 82,
+      "source_sc_utf16le_sha256": "AE729361A5A1F7DB0BD270B86DB69541BACD605FA7EF3522CD2FD1C08E243875"
+    },
+    {
+      "block_id": 14,
+      "ko": ") 적의 성과 접촉하면 「공성전」을 할 수 있습니다.\n방위 준비는 「성 역할」에서 「방위 거점」으로 설정된 성이나 본거지에서 행해집니다.\n각 성이 전용의 전장이 되어, 성을 둘러싸는 공성 측의 부대와\n그 성의 영지를 맡은 수성 측의 부대가 전투를 실시합니다.\n\n",
+      "literal_id": 3,
+      "record_id": 82,
+      "source_sc_utf16le_sha256": "EA27C2FF4147480E70D0D82505DD51D690A7A8023B7508E21A7B1FEE99474798"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇공성전에 참가하는 부대",
+      "literal_id": 4,
+      "record_id": 82,
+      "source_sc_utf16le_sha256": "0CA0C61354CACE181E79E316097A7F9BDB5E9C223873D424D786A6722212DE14"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·공성 측…성에서 일정 범위에 있는 부대\n　　　　　　　　가도 봉쇄를 할수록 참가 가능 부대수가 증가(최대 16)\n　·수성 측… 그 성에 지행지를 가진 무장, 또는 대관\n\n",
+      "literal_id": 5,
+      "record_id": 82,
+      "source_sc_utf16le_sha256": "D1BC9317910645E5B42911685F1130D82EC7452401D16422F1706B12B2BE3DB8"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇공성전의 결과",
+      "literal_id": 6,
+      "record_id": 82,
+      "source_sc_utf16le_sha256": "C61ED53DDB17307A221717FEB18DCB77C4002B0CE07E469E67EE0602331A1DD1"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n포획한 무장의 처우를 결정합니다.\n\n　·등용　…　자세력에 출사하도록 권유\n　·처단　…　처단된 무장은 해당 플레이에서 다시 등장하지 않음\n　·해방　…　그대로 풀어 줌. 다시 포획하면 등용에 응하기 쉬워짐\n\n",
+      "literal_id": 1,
+      "record_id": 83,
+      "source_sc_utf16le_sha256": "79F9D4A8A60C0D5DA836F8ABAE6B7E8A4384FE443765077E9125911F248B6990"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n적군과 아군 부대가 하나의 전장에 모여 승패를 겨루는 것이 합전입니다.\n무장들은 승리와 공명을 위해 스스로 판단해 부대를 움직이고 싸웁니다.\n다만 전황이 변하면 무장들이\n행동 판단을 요청할 때가 있습니다.\n호기와 위기에 어떻게 대응하느냐가 합전의 승패를 좌우합니다.",
+      "literal_id": 1,
+      "record_id": 87,
+      "source_sc_utf16le_sha256": "78382F9C0783CB0AF38A7F0F54A9579A702E1E2243D500E72687936BFAA566B2"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n일부 무장은 「특성」을 가지고 있습니다.\n특성은 본인 외에 성이나 부대 등에도 영향을 줍니다.\n또한 일부 특성은 직명이 조건인 것도 있습니다.\n※국인중의 무장은, 직명의 조건에 관계없이 모든 특성을 발동할 수 있습니다\n\n",
+      "literal_id": 1,
+      "record_id": 93,
+      "source_sc_utf16le_sha256": "F393AA9B76B61ADDEABD72CA15179F0AC3DF8A21AA7237D326EA364545210BFE"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n일부 무장은 「특성」을 가지고 있습니다.\n특성은 본인 외에 성이나 부대 등에도 영향을 줍니다.\n또한 일부 특성은 직명이 조건인 것도 있습니다.\n※국인중의 무장은, 직명의 조건에 관계없이 모든 특성을 발동할 수 있습니다\n\n",
+      "literal_id": 1,
+      "record_id": 94,
+      "source_sc_utf16le_sha256": "F393AA9B76B61ADDEABD72CA15179F0AC3DF8A21AA7237D326EA364545210BFE"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n특성「성타기」를 지닌 무장이 부대에 있는 경우\n그 부대가 적 성에 주는 내구 피해가 증가한다.\n\n일부 특성은 다음의 경우에「강화」되는 경우가 있다.\n　·같은 성에 같은 특성을 지닌 무장이 여럿 있다\n　·대응하는 성 능력이 80, 90을 넘는다\n　·특성을 강화하는 명소의 혜택을 받고 있다",
+      "literal_id": 5,
+      "record_id": 94,
+      "source_sc_utf16le_sha256": "D84181B23B546168E3E81B0AB249A045CB49D90C71210868F343D6262DBF996E"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n건의는 상황에 따라 가신이 다이묘에게 올리는 제언입니다.\n승인하면 가신이 건의 내용을 실행하며, 거부할 수도 있습니다.\n성주·대관·측근인 무장이 건의합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 95,
+      "source_sc_utf16le_sha256": "7919EB6E6385B72B9C896017A7A44146AA5B440F21903A4072DBD8B3FC24D42B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n건의는 상황에 따라 가신이 다이묘에게 올리는 제언입니다.\n승인하면 가신이 건의 내용을 실행하며, 거부할 수도 있습니다.\n성주·대관·측근인 무장이 건의합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 96,
+      "source_sc_utf16le_sha256": "7919EB6E6385B72B9C896017A7A44146AA5B440F21903A4072DBD8B3FC24D42B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　자세력이 멸망하는 이벤트는 초기 상태에서 무효로 되어 있습니다.\n　일부 이벤트(",
+      "literal_id": 5,
+      "record_id": 107,
+      "source_sc_utf16le_sha256": "2174C6F0B3451125EB77147286152E7C2C760B7F179DB69B252A20842F2FD4DA"
+    },
+    {
+      "block_id": 14,
+      "ko": ")에서는 싸움이 재현된 \"이벤트 합전\"가 발생하고,\n　승패에 따라 전개가 변화하는 경우가 있습니다.",
+      "literal_id": 7,
+      "record_id": 107,
+      "source_sc_utf16le_sha256": "314BBCB1E96F23F2A78779926B5DE556021762F9B28DE0B68ACF40733525DC90"
+    },
+    {
+      "block_id": 14,
+      "ko": "【전장：부대에의 명령】",
+      "literal_id": 0,
+      "record_id": 108,
+      "source_sc_utf16le_sha256": "172FC162F05DCE4C81CA46D311D287D5727CB85A17C944EF8E6FEC0D5FD55B1B"
+    },
+    {
+      "block_id": 14,
+      "ko": "【전장：부대의 상태】",
+      "literal_id": 0,
+      "record_id": 111,
+      "source_sc_utf16le_sha256": "E7976A3D74D4DD3E4462331D2A7B7B3685B797DD72D53E2DC50E4B84B33A500A"
+    },
+    {
+      "block_id": 14,
+      "ko": "【전장：응용】",
+      "literal_id": 0,
+      "record_id": 115,
+      "source_sc_utf16le_sha256": "51914F8BDE834406177FBE0438312BFC50797B4FB0BD9072686D37DE79FE9371"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n정면에서 싸우는 것만이 싸움이 아닙니다.\n무장의 제안에 귀를 기울이는 것도 좋고, 스스로 호기를 찾는 것도 좋습니다\n상황에 맞는 정확한 판단으로 전황을 유리하게 이끌어 갑시다.\n\n",
+      "literal_id": 1,
+      "record_id": 115,
+      "source_sc_utf16le_sha256": "28F0EEE0BCEB5D3E1070E2BB47C7723B87E4A3570FB815C07FE7F373E3ABFD48"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·상업은 금전이나 보급 병량의 수입량에 영향\n　·군의 상업은 주로 장악한 취락（특히 시장）의 효과로 결정된다\n　·성의 상업은 성에 이어지는 군의 상업 합계",
+      "literal_id": 5,
+      "record_id": 120,
+      "source_sc_utf16le_sha256": "927DC41DBE5F386624BE96CAFCDBF7C953D0E453FA830FEC3969A7A6F3A0F6D6"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성하 시설을 건설한다\n　·정책을 발령한다\n　·LV를 올리는 특성을 가진 무장을 부대에 추가한다\n　·영내의 문제를 해결하여「말 목장」「대장간 취락」을 건설한다\n　·「총수 선예」등의 LV를 올리는 가재 특성을 가지는 무장을 가재에 임명한다\n\n",
+      "literal_id": 3,
+      "record_id": 123,
+      "source_sc_utf16le_sha256": "E27BCBB60109F473D401FFE35A9EB54D03A4258C4B2F8F524D960554B11ECB4F"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·낙석：범위 내에 피해＆혼란\n　·고무：범위 내 부대의 체력이 회복\n　·다리 무너뜨리기：다리를 파괴하여 경로를 차단",
+      "literal_id": 3,
+      "record_id": 124,
+      "source_sc_utf16le_sha256": "5B2D776E899B6EA83D13CB9D117DACE957EF1AA805A7AF276252A020D6EB0AAE"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·친선의 승낙 후, 기간 중에는 매월 금전 수입을 얻을 수 있다\n　·기간 종료 후, 필요한 때에 보상으로 약속한 내용을 요구받는다\n　·약속한 내용을 거부하면 상대의 신용이나 주변 세력의 외교 자세가 악화된다",
+      "literal_id": 3,
+      "record_id": 130,
+      "source_sc_utf16le_sha256": "8C3E8DED378D863CB8E2E0D4A7A376DADB22B3F2FC1D2AE0B4DDC2435999A23B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n부대가 출진할 때 휴대하는 병량을 「휴대 병량」이라 합니다.\n휴대 병량은 서서히 줄며, 모두 소모하면 병력이 계속 감소합니다.\n휴대 병량은 부대 아이콘의 색으로 확인할 수 있습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 131,
+      "source_sc_utf16le_sha256": "7B2BFDD3917142B3ECA679086FC6BFAB7142CD56153F433CEAE587908CA0D04C"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성에 병력 미만의 병량밖에 없으면 출진 시의 휴대 병량 일수가 감소\n　·부대 아이콘은 휴대 병량이 60일 이내면 노란색, 30일 이내면 빨간색이 된다\n　·자세력의 성 위에 있는 동안은, 휴대 병량이 아니라 출진한 성 성에 있는 병량을 소비\n　　※그 경우, 부대 아이콘이 점멸한다\n　　※출진한 성에 병량이 없으면, 부대의 휴대 병량을 소비한다",
+      "literal_id": 3,
+      "record_id": 131,
+      "source_sc_utf16le_sha256": "B65C72FDE45E0E259168EEA613A00055CC15B88B7DFA790C77E790C30F220142"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n부대는 출진할 때 병량을 휴대하며, 모두 소모하면 병력이 계속 감소합니다.\n휴대 병량이 줄면 부대 아이콘의 색이 바뀌므로 주의합시다.\n\n",
+      "literal_id": 1,
+      "record_id": 132,
+      "source_sc_utf16le_sha256": "1DD058890E3F92D82F2C8E698FD9D0C40731B519D43368F6E661E8A2A58E48ED"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n재해와는 반대로, 7월은 풍작이 될 가능성도 있습니다.\n풍작이 된 군은 석고가 1년간 증가해, 병량 수입과 병력에 영향을 줍니다.",
+      "literal_id": 7,
+      "record_id": 133,
+      "source_sc_utf16le_sha256": "1B1627E8518A93FD2D30481784C03761972588CEC447DF945FE8AF9BADB33EF9"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성 능력의 정무가 높을수록 「상업」이 같아도 금전 수입이 오른다\n　·정책이나 외교의 친선을 실시 중에는 매월 금전을 소비한다\n　·건의에는 비용이 드는 경우가 많다\n　·통치 범위 밖의 성은 군단에 들어가지 않으면 수입이 현저히 낮아진다",
+      "literal_id": 5,
+      "record_id": 136,
+      "source_sc_utf16le_sha256": "C0B376D195E5595A78E894DBAAD7096821992D639AFFFED558D315E775EB2D7E"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성 능력의 정무가 높을수록 「상업」이 같아도 금전 수입이 오른다\n　·정책이나 외교의 친선을 실시 중에는 매월 금전을 소비한다\n　·건의에는 비용이 드는 경우가 많다\n　·통치 범위 밖의 성은 군단에 들어가지 않으면 수입이 현저히 낮아진다",
+      "literal_id": 5,
+      "record_id": 137,
+      "source_sc_utf16le_sha256": "C0B376D195E5595A78E894DBAAD7096821992D639AFFFED558D315E775EB2D7E"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n자세력 영내 개발을 진행시켜 석고를 증가시키면 병력이 올라갑니다.\n성하 시설이나 정책으로 병력만 올릴 수도 있으니 활용합시다.\n덧붙여 성 능력의 정무가 높으면, 같은 석고에서도 병량 수입이 보다 많아집니다.\n\n",
+      "literal_id": 1,
+      "record_id": 138,
+      "source_sc_utf16le_sha256": "725F95C88FA006C9D13D1EBFE38CD83D830CCEEFC0A6A287F3551119D4A5D6A8"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n자세력 영내 개발을 진행시켜 석고를 증가시키면 병력이 올라갑니다.\n성하 시설이나 정책으로 병력만 올릴 수도 있으니 활용합시다.\n덧붙여 성 능력의 정무가 높으면, 같은 석고에서도 병량 수입이 보다 많아집니다.\n\n",
+      "literal_id": 1,
+      "record_id": 139,
+      "source_sc_utf16le_sha256": "725F95C88FA006C9D13D1EBFE38CD83D830CCEEFC0A6A287F3551119D4A5D6A8"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n병력이나 기마LV, 철포LV가 높은 성의 성주로 능력이 높은 무장을 임명하여\n자기 부대를 최대한 강화하는 것이 중요합니다.\n또한 전투를 향한 특성을 가진 무장을 추가하면 부대를 더욱 강화할 수 있습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 140,
+      "source_sc_utf16le_sha256": "1EDF22A5AF96671C3ADA9A8F9B2AA2D299B98BDBF1CA669FAD0C7581637E82E1"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇그 외의 방법",
+      "literal_id": 2,
+      "record_id": 140,
+      "source_sc_utf16le_sha256": "2621CE05AD600B0CBDF525DFAA60754751FE0C6D73A598AAAE8C8A5E51085A54"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·공략 목표 커맨드로 군비를 갖춰 일시적으로 부대를 강화한다\n　·사전에 조략 커맨드로 적 전력을 약화한다\n　·적 부대를 협격하여 능력을 낮춘다\n　·성 공격 시 복수의 길로부터 성을 둘러싸도록 공격한다\n　·성하 시설이나 정책의 효과로 휴대 병량을 늘린다\n　·다른 세력과 동맹하여 원군을 부른다",
+      "literal_id": 3,
+      "record_id": 140,
+      "source_sc_utf16le_sha256": "70D00C4CC38A839A424068FF116CFCB1C6D566B7D2A0444EF5E70E20AF7BF1E6"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n병력이나 기마LV, 철포LV가 높은 성의 성주로 능력이 높은 무장을 임명하여\n자기 부대를 최대한 강화하는 것이 중요합니다.\n또한 전투를 향한 특성을 가진 무장을 추가하면 부대를 더욱 강화할 수 있습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 141,
+      "source_sc_utf16le_sha256": "1EDF22A5AF96671C3ADA9A8F9B2AA2D299B98BDBF1CA669FAD0C7581637E82E1"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇그 외의 방법",
+      "literal_id": 2,
+      "record_id": 141,
+      "source_sc_utf16le_sha256": "2621CE05AD600B0CBDF525DFAA60754751FE0C6D73A598AAAE8C8A5E51085A54"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n적의 침공이 예상되는 전선의 성의 방위 능력을 올립시다.\n또, 동맹 세력에의 「중개」의뢰나 상대와의 직담을 실시하면, 정전도 가능합니다.\n강대한 세력에게 공격받을 경우에 대비해 동맹을 맺어 두는 것도 좋습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 143,
+      "source_sc_utf16le_sha256": "085A757BB6F4A123CCE25AC3C396D131B29DD2EE17FBC1E7674F82C4F3CD097D"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성 역할 커맨드로 「방위 거점」으로 하고, 주위에 「지원 거점」을 설정해 병사를 모은다\n　·지행 커맨드로 능력이 높은 무장을 성주로 임명\n　·성하 시설 커맨드로 성하 시설 「망루」를 건설\n　·정책 커맨드로 정책 「성곽 조영」을 발령\n　·군 개발 커맨드로 침공 예상 경로상의 군에 「요새」를 건설",
+      "literal_id": 3,
+      "record_id": 143,
+      "source_sc_utf16le_sha256": "5F817D5AA0730C35E8309356C7A5360859D5D27EDC2613CB019B90B15D960875"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n직명이 「측근」「성주」인 무장을 실행 무장으로 임명할 수 있습니다.\n실행 무장은 기본적으로 다이묘 군단의 무장 중에서 고르지만,\n아래 명령에는 일부 예외가 있습니다.\n　·성하 시설　…　측근과 해당 성의 성주만 가능\n　·친선　　　　…　신분이 「부장」 이상\n　·정책　　　　…　신분이 「부장」 이상이며 휘하 군단의 측근·성주도 선택 가능\n\n",
+      "literal_id": 3,
+      "record_id": 145,
+      "source_sc_utf16le_sha256": "8781DC829A740DB1707A63363B1005E777DCF18A27304E6B170506770138DEA6"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n무장의 능력은 명령, 건의, 합전 등 여러 요소에 영향을 줍니다.\n또한 각 능력은 아래 상황에도 영향을 주므로,\n가신에게 지행을 줄 때 다음 페이지를 참고합시다.\n※부대나 성주를 실행 무장으로 고를 때는 「성 능력」을 참조합니다.\n※건의는 종류에 따라 영향을 주는 능력이 다릅니다.\n\n",
+      "literal_id": 1,
+      "record_id": 146,
+      "source_sc_utf16le_sha256": "585531A2A9F11D112154C569A18B0FBA8C306B33EAFB6DA9F0CAB00AF6DEF283"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·부대나 성의 방어\n　·취락의 장악 속도\n　·통솔 70 이상이면 성하 방침「방위」를 선택할 수 있다\n　·본인의 통솔 70 이상으로 군단 전략 「광역」을 제안 가능(성 능력으로는 불가)\n",
+      "literal_id": 3,
+      "record_id": 148,
+      "source_sc_utf16le_sha256": "8ACB26CC980218D895346EA5C673944F8ED2BB3351C03447C5572B9359CF8B43"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·부대나 성의 공격\n　·무용 70 이상이면 성하 방침「공격」을 선택할 수 있다\n　·본인의 무용 70 이상으로 군단 전략 「양동」을 건의 가능(성 능력으로는 불가)\n",
+      "literal_id": 5,
+      "record_id": 148,
+      "source_sc_utf16le_sha256": "21C9D64BE447995D82A1C15788B67D5786E183A73B19D0F2B93B0F89400EEEA0"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·부대의 포위, 성의 대포위\n　·조략의 성공률\n　·지략 60 이상이면 영주가 인접 군에 조략하는 경우가 있다\n　·지략 70 이상이면 성하 방침「진군」을 선택할 수 있다\n　·본인의 지략 70 이상으로 군단 전략 「증원」을 제안 가능(성 능력으로는 불가)\n",
+      "literal_id": 7,
+      "record_id": 148,
+      "source_sc_utf16le_sha256": "9960343994F7B58DDA037CEF75A5C878F3DE1A85886D85ECE44D42A7AE6D2929"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성하 시설이나 취락의 건설 속도\n　·정책의 발령 속도\n　·외교 친선에 의한 신용 상승량\n　·보급 병량의 수입량\n　·지략 70 이상이면 성하 방침「내정」선택 가능",
+      "literal_id": 9,
+      "record_id": 148,
+      "source_sc_utf16le_sha256": "27614B9831705F7A0DFB0B46F7D81486C0C1F4754123EA9248F6042AAEA6964A"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n충성은 여러 요인에 따라 변동합니다.\n충성이 낮은 무장은 「영지 수여」「관직·가보 수여」\n등으로 충성을 높일 수 있습니다.\n\n◇충성이 오르는 주요 요인\n　·충의가 두터운 성격\n　·다이묘의 일문 또는 배우자이거나 다이묘와 궁합이 좋음\n　·오랫동안 다이묘 가문을 섬겼거나 신분이 높음\n　·관직이나 가보를 받음\n　·합전에서 승리해 위풍이 발생함\n　·특성이나 정책의 영향\n\n◇충성이 내려가는 주요 요인\n　·야심이 강한 성격\n　·다이묘를 원망하거나 궁합이 매우 나쁨\n　·현재 다이묘를 인정하지 않음\n　·신분에 맞는 지행지를 받지 못함\n　·자신의 영지가 공격받거나 약탈당함\n　·보유하던 가보를 다이묘에게 몰수당함\n　·외교 약속 파기 등 다이묘가 불명예스러운 행동을 함\n　·합전에서 패배해 위풍이 발생함\n　·정책이나 조략 「유언비어」의 영향",
+      "literal_id": 1,
+      "record_id": 151,
+      "source_sc_utf16le_sha256": "ACE1E214A3F0770EDA4C5CC43325AC10469C64A104E62F59B6108EF683C2362B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·충의에 두터운 성격이다\n　·다이묘의 일문이나 배우자이거나, 다이묘와의 궁합이 좋다\n　·오랜 세월 다이묘 가문을 섬겼거나, 신분이 높다\n　·관직이나 가보를 받았다\n　·감장을 수여받고 있다\n　·직담의 영향\n　·합전이나 공성전에 승리해 위풍이 발생했다\n　·특성이나 정책에 의한 영향",
+      "literal_id": 3,
+      "record_id": 152,
+      "source_sc_utf16le_sha256": "39F6558E6A552A57A6703E0C626C2B2D66E7C91C55FC8CFE78BE2DDBAF8CD40F"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·조략 「공물」을 실행한다\n　·동맹과 종속관계를 맺는다\n　·역직을 부여한다（자신이 막부 세력인 경우에만）\n　·동맹 세력을 줄인다\n　　※AI 레벨 「표준」 이상에서는 동맹 상대가 많은 세력은 경계받기 때문",
+      "literal_id": 1,
+      "record_id": 154,
+      "source_sc_utf16le_sha256": "CACF84DE7705A351360F531A7103D9750F0EC0B41D4728B444134C13737681D5"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·외교 교섭 「공물」 실시\n　·역직 수여（자신이 막부 세력일 때만）\n　·동맹 세력 수 줄이기\n　　※AI 레벨 「표준」 이상에서는 동맹 상대가 많을수록 경계받기 때문",
+      "literal_id": 1,
+      "record_id": 155,
+      "source_sc_utf16le_sha256": "4BA613E0605EF4DDE9F5161A5E308B41D90121EEEF9BFE479CEC7DAC8DE85CC2"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·적 세력을 멸망시키고, 사로잡은 무장을 등용한다\n　·영내 제책 「무장 탐색」을 실행한다\n　·영내 제책 「국인중 편입」을 「○○○○두령」이외의 무장이 있는 국인중에게 실시한다",
+      "literal_id": 1,
+      "record_id": 156,
+      "source_sc_utf16le_sha256": "6495D4FCEBA06FA04F957158C0295620E07C97429FB38D2253D4F30CC8538C5C"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n무장은 세력에 공헌하여 훈공을 쌓으면 「신분」이 올라갑니다.\n신분이 오르면 보다 책임있는 직명에 임명할 수 있기 때문에\n눈여겨보는 무장이 훈공을 얻을 수 있도록 명령을 내립시다.\n다음을 행하면 훈공을 얻을 수 있습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 157,
+      "source_sc_utf16le_sha256": "E4A7E8CBAFD5CEC407DDCEAE1586418253E8D79F4F4DB688B5DB139D0CEA5D9B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·「성주」「영주」「대관」으로서 군이나 성을 개발한다\n　·「조두」으로서 하급 실무를 수행한다\n　　(정책「호로중 결성」의 발령이 필요)\n　·실행 무장으로서 명령을 실행한다\n　　(성하 시설, 정책, 조략, 영내 제책, 외교)\n\n",
+      "literal_id": 3,
+      "record_id": 157,
+      "source_sc_utf16le_sha256": "7BAF35E900FB0E03D23BF0747C291EE9937E7D01C43B9ACCC20B4169A326DDF9"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·적 부대 격파나 적 성의 제압을 수행\n　·전투에 공헌한다",
+      "literal_id": 7,
+      "record_id": 157,
+      "source_sc_utf16le_sha256": "AD95623E1E01B4FCE4FA700CCD97D542C7B55D8A7A809264F3C9555D6DCA1646"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n무장은 세력에 공헌하여 훈공을 쌓으면 「신분」이 올라갑니다.\n신분이 오르면 보다 책임있는 직명에 임명할 수 있기 때문에\n눈여겨보는 무장이 훈공을 얻을 수 있도록 명령을 내립시다.\n다음을 행하면 훈공을 얻을 수 있습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 158,
+      "source_sc_utf16le_sha256": "E4A7E8CBAFD5CEC407DDCEAE1586418253E8D79F4F4DB688B5DB139D0CEA5D9B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·「성주」「영주」「대관」으로서 군이나 성을 개발한다\n　·「조두」으로서 하급 실무를 수행한다\n　　(정책「호로중 결성」의 발령이 필요)\n　·실행 무장으로서 명령을 실행한다\n　　(성하 시설, 정책, 조략, 영내 제책, 외교)\n\n",
+      "literal_id": 3,
+      "record_id": 158,
+      "source_sc_utf16le_sha256": "7BAF35E900FB0E03D23BF0747C291EE9937E7D01C43B9ACCC20B4169A326DDF9"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·적 부대 격파나 적 성의 제압을 수행\n　·합전이나 공성전에 공헌한다\n\n",
+      "literal_id": 7,
+      "record_id": 158,
+      "source_sc_utf16le_sha256": "76FD98A36D8AD9A371B21C83C4113C02A598DEBCC82B25726F20CC297B0355E3"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇그 외",
+      "literal_id": 8,
+      "record_id": 158,
+      "source_sc_utf16le_sha256": "460C1D2240D1EDD3E7A690C1DA96C6DE11990B3DFA956C319B48B4B6EE13EA6C"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·은상으로서 감장을 준다",
+      "literal_id": 9,
+      "record_id": 158,
+      "source_sc_utf16le_sha256": "AF73E0A9BC87E28F073BE8D7B3CD47DDF57B1395525347A4A5E42E66AA284B69"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성의 병량이 출진 병력 이상 쌓인 뒤 출진한다\n　·성하 시설「치중 집결소」를 건설한다\n　·정책「치중대 배치」를 발령한다\n　·공략 목표를 설정해 임전 상태로 한다\n　·자세력의 성 위에서 대기한다\n　　※출진한 성의 병량을 사용할 수 있기 때문",
+      "literal_id": 1,
+      "record_id": 159,
+      "source_sc_utf16le_sha256": "D6721607610C2DF033D7FBBB52F4A5DDAFED0460B5D232DFB2610D6FC07C3805"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·성의 병량이 출진 병력 이상 쌓인 뒤 출진한다\n　·성하 시설「치중 집결소」를 건설한다\n　·정책「치중대 배치」를 발령한다\n　·공략 목표를 설정해 임전 상태로 한다\n　·자세력의 성 위에서 대기한다\n　　※출진한 성의 병량을 사용할 수 있기 때문\n　·행군 루트상의 성을 보급 거점으로 한다",
+      "literal_id": 1,
+      "record_id": 160,
+      "source_sc_utf16le_sha256": "B5BDF9FFF2FC23D7C6EF70AD8D0CAE125642376AB0565B8B4E9473036855581D"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n주위에 자신보다 약한 세력이 있다면\n공격해 영지나 무장을 빼앗자.\n\n자리를 비운 사이 다른 세력에게 공격당하지 않도록\n내정으로 영지를 지킬 병력을 늘리거나\n미리 위험한 상대와 동맹을 맺으면 더 안전합니다.\n\n전쟁이 길어질 것 같으면 합전을 벌여\n단숨에 결착을 짓는 것도 유효합니다.",
+      "literal_id": 1,
+      "record_id": 162,
+      "source_sc_utf16le_sha256": "1DF4EBFC6D88C2858019D0077C860AC8B9B958E43884AF03D5DDDB6D01799EFA"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n너무 넓은 영지는 다이묘 혼자 통치하기가 어렵기 때문에\n군단을 만들어 부하에게 맡기는 것이 중요합니다.\n\n약소 세력이라면 외교로 종속시킬 수 있는 경우가 있습니다.\n불필요한 전쟁을 피하는 것도 천하 통일로 가는 지름길이 될 것입니다.",
+      "literal_id": 1,
+      "record_id": 163,
+      "source_sc_utf16le_sha256": "E319A0FD6FB72CA1B6C047DE6BD13AC00F3C7CA08F1BD2D777CCF1CF392C8F9B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n「조략」 명령은 건의로 실행하는 조략과 달리 언제든 실행할 수 있지만,\n금전·노력·효과·기간 면의 효율은 떨어집니다.",
+      "literal_id": 3,
+      "record_id": 164,
+      "source_sc_utf16le_sha256": "596A17E2CFEC4C5EEEA02B28CF118E19E9B3112BB3410F72C5615AED8F8FD19A"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n「조략」 명령은 건의로 실행하는 조략과 달리 언제든 실행할 수 있지만,\n금전·노력·효과·기간 면의 효율은 떨어집니다.",
+      "literal_id": 3,
+      "record_id": 165,
+      "source_sc_utf16le_sha256": "DDD4B31D8B1FA6534639F63D1F7EDAEAC0540DF91E048790D148804A52B01BD9"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n·동맹/종속/정전/동맹 상대의 종속세력이 아니다\n·자세력과 인접한 성임\n·충성이 황색인 무장이 있음\n\n",
+      "literal_id": 3,
+      "record_id": 166,
+      "source_sc_utf16le_sha256": "EF9ED168F36E2970A41C7A25FC1EDD7C4F5BC097DF084A37025B6BE93890E2E7"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n·동맹/종속/정전/동맹 상대의 종속세력이 아니다\n·자세력과 인접한 성임\n·충성이 적색인 무장이 있음\n\n",
+      "literal_id": 3,
+      "record_id": 167,
+      "source_sc_utf16le_sha256": "FA64BBDCDEFFA3CB826A945BB6CF2E63EB2B16586523253EB1DACDB1209D0421"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n·동맹/종속/정전/동맹 상대의 종속세력이 아니다\n·자세력과 인접한 성임\n·잇키를 발생시킬 수 있는 군이 있음\n\n",
+      "literal_id": 3,
+      "record_id": 168,
+      "source_sc_utf16le_sha256": "4F325B35E7042F985EE43FF4C06B456EBF7CE6CA0000AC865CED26CB16843956"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n·동맹/종속/정전/동맹 상대의 종속세력이 아니다\n·자세력과 인접한 성임\n\n",
+      "literal_id": 3,
+      "record_id": 169,
+      "source_sc_utf16le_sha256": "48C0A9FF447633FEA8577A2FD22DA96FAD51391893F4803455421B829E1DCDCD"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n·동맹/종속/정전/동맹 상대의 종속세력이 아니다\n·자세력과 인접한 성임\n\n",
+      "literal_id": 3,
+      "record_id": 170,
+      "source_sc_utf16le_sha256": "48C0A9FF447633FEA8577A2FD22DA96FAD51391893F4803455421B829E1DCDCD"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n영내의 군에서는 무장을 파견하지 않으면 해결하기 어려운 문제가 발생할 수 있습니다.\n그 경우에는 「성주」나 「측근」을 지명하여 해결하게 합시다.\n영내 문제에는 「영내의 황폐」 「국경 분쟁」 「상위 취락의 건설」 「명소에 관한 것」이 있습니다.\n\n",
+      "literal_id": 1,
+      "record_id": 173,
+      "source_sc_utf16le_sha256": "6DE8ADECE14771EF12392141DED56BEA98803E71F541515395C0B010EA27DC67"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇명소에 관한 것",
+      "literal_id": 0,
+      "record_id": 175,
+      "source_sc_utf16le_sha256": "8028472DD4D949A0D212291FFD3710B48F36CD3997C3980E596F997431BA1D16"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·명소를 장악하면 세력 전체에 혜택을 줌\n　·이미 장악한 명소라면 LV가 올라 효과가 강해짐\n\n　",
+      "literal_id": 1,
+      "record_id": 175,
+      "source_sc_utf16le_sha256": "1CCCF514B51C7F0E3A413F4414068BB304F6EA217D6EE79C09A29A5A46F1F517"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇발생 조건",
+      "literal_id": 2,
+      "record_id": 175,
+      "source_sc_utf16le_sha256": "97904CD53855E20FABDF59F26D1C36BC8CF926F334D9A2C6F23C0E3B4EA0151B"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　　·재건(LV1)… 명소가 있는 성의 개발률이 높아지면 발생\n　·발전(LV2)… 명소가 있는 나라의 모든 성의 개발률이 높아지면 발생\n　·번영(LV3)… 명소가 있는 지방의 모든 성을 소유하고 있으면 발생",
+      "literal_id": 3,
+      "record_id": 175,
+      "source_sc_utf16le_sha256": "F6B0103ABBC486F574EC1C14001DE4386873EDCD605D1E754440F3CB5BD1A487"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·출분하여 세력에서 사라진다\n　·성주인 경우 적에게 공격받으면 함락 전에 항복한다\n　　※항복한 성주는 상대 세력의 등용에 반드시 응한다\n　·불리한 상황이 되면 독단으로 철수한다",
+      "literal_id": 3,
+      "record_id": 177,
+      "source_sc_utf16le_sha256": "6DD07909DFC95C441C63F9EC639E96088799ED15B386C42D803304C69BCDEE7E"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·패배한 세력의 군이나 성이 승리한 편으로 돌아선다\n　·주변 세력의 외교자세가 변동한다\n　·주변 국인중의 종속도가 변동한다\n　·양 세력에 속하는 무장의 충성이 변동한다",
+      "literal_id": 3,
+      "record_id": 178,
+      "source_sc_utf16le_sha256": "B0FF6B35E6E741C98970DFD5469AB3FC1F7C737C289B9AF263B1843D0FAF61DD"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n많은 적 부대 상대의 합전이나 공성전에서 승리하면\n그 명성이 「위풍」이 되어 주변에 전해져 영향을 미칩니다.\n\n",
+      "literal_id": 1,
+      "record_id": 179,
+      "source_sc_utf16le_sha256": "82708E0FFDC4A69AE5463AED7EDEE2FA9C20F57769E987E1A37B1FA72F9A0D90"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·패배한 세력의 군이나 성이 승리한 편으로 돌아선다\n　　※공성전에서 수성 측이 승리했을 경우는 발생하지 않는다\n　·진 세력 주변의 성이 동요해 출진이나 설비의 건설을 할 수 없게 된다\n　　※영내에 공격당하면 해제\n　·주변 세력의 외교자세가 변동한다\n　·주변 국인중의 종속도가 변동한다\n　·양 세력에 속하는 무장의 충성이 변동한다",
+      "literal_id": 3,
+      "record_id": 179,
+      "source_sc_utf16le_sha256": "3AE52E9E53892C993C0ACBC7BB9798B013CFD0080C549E5FD1B31D28201CBBC5"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n무장이 전쟁이나 내정에서 능력을 사용하면 경험치를 얻습니다.\n경험치가 쌓이면 무장의 능력이 성장하므로,\n관심 있는 무장에게 경험을 얻을 기회를 많이 줍시다.\n\n",
+      "literal_id": 1,
+      "record_id": 181,
+      "source_sc_utf16le_sha256": "C39A88D7C58130ACE99DE3B9BD200C464DB196322A6C2EC93461460164F58D37"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n무장이 전쟁이나 내정에서 능력을 사용하면 경험치를 얻습니다.\n경험치가 쌓이면 무장의 능력이 성장하므로,\n관심 있는 무장에게 경험을 얻을 기회를 많이 줍시다.\n\n",
+      "literal_id": 1,
+      "record_id": 182,
+      "source_sc_utf16le_sha256": "C39A88D7C58130ACE99DE3B9BD200C464DB196322A6C2EC93461460164F58D37"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n세력 목표로서\n성하 시설의 건설이나 영지의 확대 등이 제안되는 일이 있습니다.\n\n제안된 내용을 기한 내에 달성하면 보상을 얻을 수 있으니\n달성을 노려 보는 것도 좋습니다.\n※달성하지 못해도 불이익은 없습니다\n※설정＞시나리오에서 OFF로 할 수도 있습니다",
+      "literal_id": 1,
+      "record_id": 183,
+      "source_sc_utf16le_sha256": "31CE744B13EB2825BC29FCD0409DFDD93748228B68C60AA1D6875720440A1508"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n세력을 발전시켜 「세력 목표」를 달성하면 보상을 획득할 수 있습니다.\n현재 목표를 달성하면 다음 LV 목표가 표시됩니다.\n달성할 수 있을 것 같은 내용이 있으면 플레이의 참고로 해 봅시다.\n※시나리오 개시 시점에서 달성된 목표의 보상은 획득한 상태가 됩니다\n\n",
+      "literal_id": 1,
+      "record_id": 184,
+      "source_sc_utf16le_sha256": "B4FE7D5BDADF77D7005553E6E96B882528980B8422ECC75158D03ACDDACF89AE"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇보상 내용",
+      "literal_id": 2,
+      "record_id": 184,
+      "source_sc_utf16le_sha256": "2DEA083F153C9350C79D3023652E9F4C09690317FDC24494AC3162C9EB6CE8C1"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·감장 　　… 공적을 올린 무장에게 「은상」 커맨드로 수여할 수 있다\n　　　　　　　　　감장을 얻은 무장은 충성과 능력 등이 오른다\n　·특별 보상… 특정 목표 달성시 획득 가능. 세력 전체에 혜택이\n　　　　　　　　　※ 획득할 수 있는 목표나 LV는 세력 목표 일람으로 확인 가능",
+      "literal_id": 3,
+      "record_id": 184,
+      "source_sc_utf16le_sha256": "75597CAA6C2A4FD3F2103E236AB2398E254B2AAD951727133882CAC853D3571A"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n다이묘나 군단장이 있는 성에서 멀리 떨어진 성은\n통치 범위 밖이 되어 금전 수입이 크게 감소합니다.\n\n본거지 이전이나 군단의 신설을 실시해\n성이 통치 범위 밖이 되지 않도록 주의합시다.\n\n",
+      "literal_id": 1,
+      "record_id": 185,
+      "source_sc_utf16le_sha256": "3A3751C3F7E8F1C7A2AC9480B334E5C06FAFFDA6DC3740FBDF7D74048B257338"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n통치범위는 아래에서 확인할 수 있습니다.\n　·군단 뷰\n　·「지행」 커맨드\n　·「본거지 이전」 커맨드\n　·「군단」 커맨드",
+      "literal_id": 3,
+      "record_id": 185,
+      "source_sc_utf16le_sha256": "FCA1039C712FB03E8FE9FC75FEA90E75AFBC3C786E500B9D4F828BAC2239599D"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n다이묘나 군단장이 있는 성에서 멀리 떨어진 성은\n통치 범위 밖이 되어 금전 수입이 크게 감소합니다.\n\n본거지 이전이나 군단의 신설을 실시해\n성이 통치 범위 밖이 되지 않도록 주의합시다.\n※정책 「전마제」를 발령하면 통치 범위를 확대할 수 있습니다\n\n",
+      "literal_id": 1,
+      "record_id": 186,
+      "source_sc_utf16le_sha256": "57FBC0E29FE09C31CCE4130EEC20FE8062006E1E0F9449291B81BF34D21DCDC3"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n통치범위는 아래에서 확인할 수 있습니다.\n　·군단 뷰\n　·「지행」 커맨드\n　·「본거지 이전」 커맨드\n　·「군단」 커맨드",
+      "literal_id": 3,
+      "record_id": 186,
+      "source_sc_utf16le_sha256": "FCA1039C712FB03E8FE9FC75FEA90E75AFBC3C786E500B9D4F828BAC2239599D"
+    },
+    {
+      "block_id": 14,
+      "ko": "【본거지의 군】",
+      "literal_id": 0,
+      "record_id": 190,
+      "source_sc_utf16le_sha256": "8E93EDB3DCD36E63AB2B54D997197414383003CE51FC35A5F92838CC99E68604"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇영주／성주가 실행할 수 있는 행동",
+      "literal_id": 2,
+      "record_id": 202,
+      "source_sc_utf16le_sha256": "6224DFC1FB25D8B56BDD9AD17D189D060159553B4AC74CEEDF2170A6FFA66959"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n\n　·취락 장악　…　영지 내 취락을 장악\n　·취락 건설　…　개발 용지에 취락을 건설\n　·장악 방해　…　공략 목표 세력의 군과 인접한 영주는\n　　　　　　　　　적군의 취락 장악을 방해할 수 있음（영주의 지략 60 이상）",
+      "literal_id": 3,
+      "record_id": 202,
+      "source_sc_utf16le_sha256": "5F870E013E2B529FDF2C23A970FB4DCFAEEBC038A877322E9EDDADA81614486F"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n게임을 시작할 연대를 선택할 수 있습니다.\n연대에 따라 세력과 그 규모가 다릅니다.\n또한 시나리오에는 「사실에 기반한 것」과 「사실과 관계없는 가상의 것」이 있습니다.\n※「등장 전환」버튼으로부터 게임에 등장시키는 「등록 무장」 「사실 무장」 「추가 무장」의 설정도 할 수 있습니다\n\n",
+      "literal_id": 3,
+      "record_id": 205,
+      "source_sc_utf16le_sha256": "C982FD213348910F9E98CAD66411814D62C3D890970387AAA66A6E3E6216451E"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇시나리오 편집",
+      "literal_id": 0,
+      "record_id": 206,
+      "source_sc_utf16le_sha256": "D22ED7D4F4081103B7B50F8253F4BD241D5A1128F2C565DB298CA3573B40F028"
+    },
+    {
+      "block_id": 14,
+      "ko": "【전장에서의 부대의 아이콘】\n",
+      "literal_id": 0,
+      "record_id": 210,
+      "source_sc_utf16le_sha256": "6C7D5965DD71631FC6C11A98E1BE260C287D21EA351FF9831BF62C256D83FCF4"
+    },
+    {
+      "block_id": 14,
+      "ko": "전장에서는 표시되는 상태 아이콘의 종류가 다릅니다.\n\nΦ　…　교전 중\nΩ　…　설비에서 교전 중\nγ　…　설비 공격 중\nΤ　…　사격 중\n　…　협격당하는 중\nΥ　…　체력 회복 중\nΧ　…　혼란 중\nΨ　…　조작 불가",
+      "literal_id": 1,
+      "record_id": 210,
+      "source_sc_utf16le_sha256": "ECC1406BA5338BFF9FEC84AF033C5FB1B61BA14586251612F0C23EC9E7B2312B"
+    },
+    {
+      "block_id": 14,
+      "ko": "【이벤트 합전】\n",
+      "literal_id": 0,
+      "record_id": 212,
+      "source_sc_utf16le_sha256": "B8061C7BFC5E50E95103910CE9695880D48BA32F882BBE3AC7268AC6B73D0BED"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇이벤트 합전의 특징",
+      "literal_id": 2,
+      "record_id": 212,
+      "source_sc_utf16le_sha256": "E5E588DBEFD34C71CA832FAC0E15881E1329A0180482C24750899FCA99376984"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·화면 왼쪽에 표시되는 목표를 달성함으로써 승리할 수 있다\n　·이벤트 합전의 종류마다 출진하는 무장이나 병력이 정해져 있다\n　·일부의 특성이나, 정책, 가재의 효과는, 이벤트 합전 중에는 발휘되지 않는다",
+      "literal_id": 3,
+      "record_id": 212,
+      "source_sc_utf16le_sha256": "FB602430FDB251AA333DD76755A4B6A48E524DE54C52BC72FD073A81A48B64DA"
+    },
+    {
+      "block_id": 14,
+      "ko": "【직담】\n",
+      "literal_id": 0,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "627CC26DB90AB20EEE0F87805637A030546FE3F11CE23CAD59EBCC8D8DC0B1BC"
+    },
+    {
+      "block_id": 14,
+      "ko": "자세력 무장의 출분이나 적 성주의 배반 등 특정한 시기에\n다이묘가 직접 교섭할 수 있습니다.\n반드시 직담에 응할 필요는 없지만, 성공하면 출분을 만류하거나\n적 성주를 등용하는 등의 성과를 얻습니다.\n가보·관직·지행으로 줄 영지 등의 교섭 재료를 보유하면\n직담이 발생하기 쉬워집니다.\n\n",
+      "literal_id": 1,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "6BE0DAAE5E61FFE37B8B336C2833D2EAD5F9FB16DF4EDCBB277E2CFAF1FCB3EE"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇직담의 규칙\n",
+      "literal_id": 2,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "A2D3B6409AA8F060A26314BF4BF274C4E1344C38CFAB43C1351EB18D10CA778F"
+    },
+    {
+      "block_id": 14,
+      "ko": "　·교섭 조건을 제안해 교섭치를 높임\n　·교섭치가 일정 수치를 넘으면 교섭 성공\n　·교섭치에 따른 성과 획득\n　·상대의 기대에 따라 교섭 내용이 지정될 수 있음\n　·지정된 기대는 교섭치가 높으며 거부할 수 없음\n",
+      "literal_id": 3,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "B3E3CAA86D0435F8FEB95E1828204688375B595FFCC74C89D5FAB729CD86CE42"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇무장의 심경\n",
+      "literal_id": 4,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "90D884B20FEA34B602EC3E3DD54F44DC3DC6E1B3B85C8B8732CA1BD3D5186DC4"
+    },
+    {
+      "block_id": 14,
+      "ko": "무장의 심경에 따라 교섭에 적극적인지 소극적인지가 달라집니다.\n심경은 5단계이며 「적극」일수록 교섭치가 오르기 쉽고,\n기대 내용이 간단해질 수도 있습니다.\n적극＞관심＞중립＞신중＞소극\n",
+      "literal_id": 5,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "E9E3C3C2EBA7C1457F45F49BD10B7A17C2BA629955884B81EBAA91785299CEC4"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇교섭 조건",
+      "literal_id": 6,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "75AB35CB19E840CA6E085D8E3490507BD1AE3D64BB7C5FD69BEC633932966940"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n「기대」에는 상대가 요구하거나 선호하는 것이 표시되며, 조건에 맞는 교섭 조건을 고르면 교섭치가 평소보다 높아집니다.\n※심경이 「적극」이면 기대 내용이 간단해집니다.\n※기대에 맞는 교섭 조건 버튼에는 파란 원이 표시됩니다.",
+      "literal_id": 7,
+      "record_id": 213,
+      "source_sc_utf16le_sha256": "36C2E10F027EABAD692B66AFFC85F0917529D6ED83F9C479F0AA32FA237FBCE6"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇교섭 재료\n",
+      "literal_id": 0,
+      "record_id": 214,
+      "source_sc_utf16le_sha256": "9D074C830E1F82287802515DF2083533D911E90D9A4283142D03D3FAEE34F50F"
+    },
+    {
+      "block_id": 14,
+      "ko": "【은상】\n",
+      "literal_id": 0,
+      "record_id": 215,
+      "source_sc_utf16le_sha256": "685E566A1BABD6EA6377061A1D0ABA6C31961B60E225CF0E14BECAF019BF8C30"
+    },
+    {
+      "block_id": 14,
+      "ko": "무장의 「공적」을 기려 「감장」을 수여할 수 있습니다.\n감장을 받은 무장은 공훈을 얻고 충성이 오릅니다.\n또한 공적에 맞는 「별호」를 얻어 능력이 오르거나 특수 효과를 획득합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 215,
+      "source_sc_utf16le_sha256": "AA4CF4FCAD2EDA91C367D3E06367D6BDED19885B0DE033B6397327882A7E1459"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇공적을 세우는 방법\n",
+      "literal_id": 2,
+      "record_id": 215,
+      "source_sc_utf16le_sha256": "1108612A7A1A808404A613321D5EF926B0283763F399B5052E8587A6FA9A5F88"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇감장 획득\n",
+      "literal_id": 4,
+      "record_id": 215,
+      "source_sc_utf16le_sha256": "42750A2C8C916396BA982C0A6690F3611CC9B23E85BC46776C7E949474841C47"
+    },
+    {
+      "block_id": 14,
+      "ko": "「세력 목표」를 달성하면 감장을 획득할 수 있습니다.\n세력 목표는 메인 화면의 「보고」에서 확인할 수 있습니다.",
+      "literal_id": 5,
+      "record_id": 215,
+      "source_sc_utf16le_sha256": "4BAB2BFB66242C99603D97F79473529D036D87AFAFCBDCBB816CF1AA4DB6F164"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇별호\n",
+      "literal_id": 0,
+      "record_id": 216,
+      "source_sc_utf16le_sha256": "9B420F3081F8DF568F2FD1DC1745383CD72DB5F49A301CAD61F2C245F13C9CB9"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇별호 획득으로 성장하는 능력",
+      "literal_id": 2,
+      "record_id": 216,
+      "source_sc_utf16le_sha256": "A3980CBB2E49AE4589E7340411BDD8E4EB39B9436651672059A5EB377EE1A2C7"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n별호의 LV가 오를수록 능력도 크게 상승합니다.\n　·제압……통솔\n　·전투…무용\n　·조략… 지략\n　·내정… 정무",
+      "literal_id": 3,
+      "record_id": 216,
+      "source_sc_utf16le_sha256": "482A5DD121BD88C4BF51A027DB094758C84C1B37DC761EB52776D7C76C3D7010"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇별호 획득으로 얻을 수 있는 효과",
+      "literal_id": 0,
+      "record_id": 217,
+      "source_sc_utf16le_sha256": "16C2F40286B0EFED31B3761540367A4D28F9B90066058BF19537B886D2644FC9"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇별호 획득에 필요한 공적\n",
+      "literal_id": 2,
+      "record_id": 217,
+      "source_sc_utf16le_sha256": "6ACBBCAAC29B2F6E368C7DF1A2296A3C9092AB1B73A5EDA045A6ABBB87309667"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇어떤 무장에게 주면 좋은가\n",
+      "literal_id": 4,
+      "record_id": 217,
+      "source_sc_utf16le_sha256": "10740C0658A91CB7A8EB803E8301CF6E86CF91C293C23BB746083CF884DD0FC7"
+    },
+    {
+      "block_id": 14,
+      "ko": "　·능력을 키워 강화하고 싶은 무장\n　·능력을 키우면 80이나 90을 넘는 무장\n　·충성을 올려 출분을 막고 싶은 무장\n　·애착 있는 무장",
+      "literal_id": 5,
+      "record_id": 217,
+      "source_sc_utf16le_sha256": "D50786F5A889FA9E6F8C157AA03C91104D2FFBA7A4345AF11C3FD12F07438360"
+    },
+    {
+      "block_id": 14,
+      "ko": "【평정중】\n",
+      "literal_id": 0,
+      "record_id": 218,
+      "source_sc_utf16le_sha256": "F30D47D66CBCA741B4D1DCC6E7DAEF4880AB74CF42A96D0C1250B7EF6697584F"
+    },
+    {
+      "block_id": 14,
+      "ko": ")를 선택하면 해임할 수 있습니다\n\n",
+      "literal_id": 3,
+      "record_id": 218,
+      "source_sc_utf16le_sha256": "12A817055BB2190CD7E858B19BBFCADA14D5E74721AF3EDF9392B1DDDFE91ACB"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇가재\n",
+      "literal_id": 4,
+      "record_id": 218,
+      "source_sc_utf16le_sha256": "321D6A335785BCAC5AF931F4A32D84414FD9F5DD5DF708A9689162CD1056FB04"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇봉행\n",
+      "literal_id": 0,
+      "record_id": 219,
+      "source_sc_utf16le_sha256": "EE763E2EB71A60D853DB90280E2F2C2BDBDDF52E5A76F0414684E870CE324AC6"
+    },
+    {
+      "block_id": 14,
+      "ko": "【성 역할】\n",
+      "literal_id": 0,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "FA6888FCDBBBDDB0F8355988D1A2D6F98848243B79C9F7D058F74C889F60523B"
+    },
+    {
+      "block_id": 14,
+      "ko": "성에 아래 역할을 부여해 전략적으로 군사를 운용합니다.\n방위 거점과 보급 거점은 정책 「제도 개신·이」로 해금됩니다.\n",
+      "literal_id": 1,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "4855726E8D79C504AD89900AECD1B7A15AB7FD81E5194B31F423AFCB8B63B0F9"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇공략 목표와 군비 거점",
+      "literal_id": 2,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "019C2DA96EFA2E2459C71361FA43D02EF8800C6A9C657DB4522C64122301AC48"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·공략 목표로서 적의 성을 설정하면, 그 성을 공격하기 위한 군비 거점이 선택된다\n　·군비 거점에서는 시간을 들여 군비를 실시해, 부대 능력 상승이나 휴대 병량 증가를 실시한다\n　·군비가 완료될 때까지 다른 영내 행동은 실시하지 않고, 내정이 멈춘다\n\n",
+      "literal_id": 3,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "5084BD73AC8025DF7C358BB62F645F19996A9D1AD72155B00A5D1F66CE42C0CD"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇방위 거점",
+      "literal_id": 4,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "6E3B77C4AEDCF36F962B1439C18CD7A424D7B9711FE1DA42FE55969D9EBB02DB"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·적의 침공을 막기 위한 거점\n　·주변의 성을 지원 거점으로 하는 것으로 방위용의 병력을 모을 수 있다\n　·방위 준비가 완료되면 공성전이 발생하는 성이 된다\n　·방위 거점으로 하면, 출진을 위한 병력과 병량의 상한이 대폭 감소한다\n\n",
+      "literal_id": 5,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "3D449C4508E06F5B44E37A1E63B3ADA49B5DA3A938AAC92A2E974BF2FF451397"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇보급 거점",
+      "literal_id": 6,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "C0B7BB457E7F28C01EF35D00832B8FC6F1DF6775ADB2759E618BE1D2A656407D"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·부대가 휴대 병량을 보급할 수 있는 거점\n　·부대가 성을 지나면 휴대 병량이 최대까지 보충된다\n　·보급 거점으로 하면 최대 병력과 금전 수입이 감소한다",
+      "literal_id": 7,
+      "record_id": 220,
+      "source_sc_utf16le_sha256": "2D171304A0E37C3231F7B9D9D55A1157885A7E0A84F4115B08753C42F42F4660"
+    },
+    {
+      "block_id": 14,
+      "ko": "【방위 거점】\n",
+      "literal_id": 0,
+      "record_id": 221,
+      "source_sc_utf16le_sha256": "56FC9A26B2919A8E3C8E4F9CC288F474639A9E8B99F872C3DD5B8CEA15F946D1"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇방위 거점의 특징\n",
+      "literal_id": 2,
+      "record_id": 221,
+      "source_sc_utf16le_sha256": "D22DC588BADBFCC47BB81B485FACF1D1AADE2B676F908C86E67B1FD7680E9C25"
+    },
+    {
+      "block_id": 14,
+      "ko": "　·수호가 견고해져, 통상의 성보다 제압되기 어려워진다\n　·영주나 대관은 각각의 생각으로 공성전용의 설비를 건설한다\n　·혼마루의 설비의 건설이 완료되면 「공성전」을 실시하는 성(",
+      "literal_id": 3,
+      "record_id": 221,
+      "source_sc_utf16le_sha256": "AF9F07C0B07325DC15AF4E5EA500B2D33727E32E89B3DFA03B59561434C6A84A"
+    },
+    {
+      "block_id": 14,
+      "ko": ")가 됨\n　·공성전 가능한 성(",
+      "literal_id": 5,
+      "record_id": 221,
+      "source_sc_utf16le_sha256": "CC74F5C8E231F939BB458CA4D0F943EC24158332B7497D36CCF6F97EC55600D5"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇공성전이 가능하게 되는 조건\n",
+      "literal_id": 8,
+      "record_id": 221,
+      "source_sc_utf16le_sha256": "F17655773A1FE274E96F61C2B8E6D1EDE350B85E8B803A31A139CDAA52BD2613"
+    },
+    {
+      "block_id": 14,
+      "ko": "　·혼마루에 설비가 건설되어 있음\n　·성주가 성 안에 있음\n　·최대 병력의 일정 비율 이상이 성 안에 있음",
+      "literal_id": 9,
+      "record_id": 221,
+      "source_sc_utf16le_sha256": "194C622D73297781E30347A12F258BCD4BCCA9549619146273584F534367AB4F"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇지원 거점의 설정\n",
+      "literal_id": 0,
+      "record_id": 222,
+      "source_sc_utf16le_sha256": "7191F0BA79ACF329B18A1DBD23334FF602C9A22C4223F8F1723A897C978E4884"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇위풍\n",
+      "literal_id": 2,
+      "record_id": 222,
+      "source_sc_utf16le_sha256": "BB04425866EE61438D4928BBEC87F410ABCFDB6FA78379754C7E8CC871C35505"
+    },
+    {
+      "block_id": 14,
+      "ko": "　·공성전 방어에 성공하면 위풍이 발생\n　　※방어 승리 때 발생한 위풍으로 적 성이 배반하지는 않음\n　·방어에 실패하면 적의 위풍이 발생\n　·공성전이 가능한 성(",
+      "literal_id": 3,
+      "record_id": 222,
+      "source_sc_utf16le_sha256": "A581C73A24BDC5B6ED18A7CD3536208B965598906E662B02D4BD6AE3DF49DCEC"
+    },
+    {
+      "block_id": 14,
+      "ko": ")는 주변에서 발생한 위풍의 영향을 받지 않고 위풍의 확산을 막아준다",
+      "literal_id": 5,
+      "record_id": 222,
+      "source_sc_utf16le_sha256": "2B2BAAE1FF27A293978E6A631184A0E5FB02147EDD193D36D3D984AA7ED9175A"
+    },
+    {
+      "block_id": 14,
+      "ko": "【보급 거점】\n",
+      "literal_id": 0,
+      "record_id": 223,
+      "source_sc_utf16le_sha256": "DE467D9077E83329D9A251201642536055983DCB245A449785FA7A7D58EBF4B8"
+    },
+    {
+      "block_id": 14,
+      "ko": "\"보급 거점\"으로 설정하면 성을 통과한 부대가\n휴대 병량을 보충할 수 있게 됩니다.\n\n",
+      "literal_id": 1,
+      "record_id": 223,
+      "source_sc_utf16le_sha256": "873BC112AAADBAAC7CC1636415FF4A53E12AC4C3831F40B27DD5FCBE573BC9B6"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇보급 거점의 특징\n",
+      "literal_id": 2,
+      "record_id": 223,
+      "source_sc_utf16le_sha256": "3D0EB8405ACB5C61F06B7E704EA5EB3EAED74017D1F14C7C7AC12395F48F7679"
+    },
+    {
+      "block_id": 14,
+      "ko": "　·아군 부대가 보급 거점을 지나면 휴대 병량이 최대까지 보충된다\n　·보급 거점에서는 매월 보급 병량이 저장된다\n　·보급 병량의 상한과 수입은 성의 상업과 정무에 의해 정해진다\n　·보급 준비에 특화하기 위해 최대 병력과 금전 수입이 감소한다",
+      "literal_id": 3,
+      "record_id": 223,
+      "source_sc_utf16le_sha256": "7A29D5A8EE178863D60D782495049F959534D50D5BCA9B3FD27FFCF98B2B745F"
+    },
+    {
+      "block_id": 14,
+      "ko": "【명소】\n",
+      "literal_id": 0,
+      "record_id": 224,
+      "source_sc_utf16le_sha256": "4764529F8D766F443C031E2526189E33B2AA428226516421F84C23ACB7B2B808"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇영내 문제 발생 조건",
+      "literal_id": 2,
+      "record_id": 224,
+      "source_sc_utf16le_sha256": "198B4E97454C2A07741E2CC6589D27DB42980FD04DA5769E485184C0C34E23DF"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　·재건(LV1)… 명소가 있는 성의 개발률이 높아지면 발생\n　·발전(LV2)… 명소가 있는 나라의 모든 성의 개발률이 높아지면 발생\n　·번영(LV3)… 명소가 있는 지방의 모든 성을 소유하고 있으면 발생",
+      "literal_id": 3,
+      "record_id": 224,
+      "source_sc_utf16le_sha256": "58D0A9FA5A2D36F7F9CCC020D06045DE761B3251F52583FED80800BE74723DB4"
+    },
+    {
+      "block_id": 14,
+      "ko": "【공성전】\n",
+      "literal_id": 0,
+      "record_id": 225,
+      "source_sc_utf16le_sha256": "E49E331D3A57BD1C6A879891E08592F0913D5BFCE5EC7C4C58C86F9306EF4076"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇공성 측의 승리 조건\n",
+      "literal_id": 0,
+      "record_id": 226,
+      "source_sc_utf16le_sha256": "50017694FC4846C42F8EF3731F415BDC77302E673DA4AD19BD1993FA5ED99C04"
+    },
+    {
+      "block_id": 14,
+      "ko": "　①「혼마루」를 파괴한다\n　②적 부대를 모두 격파한다\n　③적의 다이묘를 토벌한다\n　④ 적 성주를 항복시킨다(항복 목표 발생 시에만)\n\n",
+      "literal_id": 1,
+      "record_id": 226,
+      "source_sc_utf16le_sha256": "60A3A63ED909FE32389F47CCEAEE7AECECF8D43BBB3967EA32AB2B4B3058A473"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇수성 측의 승리 조건",
+      "literal_id": 2,
+      "record_id": 226,
+      "source_sc_utf16le_sha256": "749505CA2884528FB8F5A0C3DAF15DFE140DC97240E73E32666F88B84660E8C6"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n　①적의 「총사기」를 0으로 만든다\n　②적 부대를 모두 격파한다\n　③적의 다이묘를 토벌한다",
+      "literal_id": 3,
+      "record_id": 226,
+      "source_sc_utf16le_sha256": "77C2627B67E0AE3CB74951D3A4BA5D11D0DC8E6615CDA67D1961E569A75864A5"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇성주의 항복\n",
+      "literal_id": 0,
+      "record_id": 227,
+      "source_sc_utf16le_sha256": "72E1A07EF5EE55F3B7D042566949F8E9A5EC95A2E7DFE7F9DAE159A0A58E5A6B"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇공성전의 설비",
+      "literal_id": 0,
+      "record_id": 228,
+      "source_sc_utf16le_sha256": "2408B9D5BB7E4649185736FE6E399B0A3413996F6B7159630E1E2DD2DCCD400D"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇설비의 종류",
+      "literal_id": 2,
+      "record_id": 228,
+      "source_sc_utf16le_sha256": "84B75E9E7ECF35FC18FCD9AE455E4018C4106F745797DF4EBC992BA006FF66D3"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇중요 설비의 종류",
+      "literal_id": 0,
+      "record_id": 229,
+      "source_sc_utf16le_sha256": "84B75E9E7ECF35FC18FCD9AE455E4018C4106F745797DF4EBC992BA006FF66D3"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇중요 설비의 종류",
+      "literal_id": 2,
+      "record_id": 229,
+      "source_sc_utf16le_sha256": "F4097AB2D38A7663E06548FF66F98D5920825613C79D55362CD2A880E6885F85"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n수동 발동형 중요 설비는 게이지가 차면 버튼을 눌러 발동합니다.\n상시 발동형 중요 설비는 주변에 계속 효과를 줍니다.\n\n상시 발동형 중요 설비 중에는 LV가 있는 설비도 있습니다.\n게이지가 차면 LV가 올라 효과가 점차 강해집니다.（최대 LV5）\n\n게이지가 있는 중요 설비에 아군 부대를 대기시키면,\n게이지가 차는 속도가 크게 빨라집니다.",
+      "literal_id": 3,
+      "record_id": 229,
+      "source_sc_utf16le_sha256": "5A86DDF156A321A049CAF55CEA4A4B0B7DC4B1F2F14A440F4E68079EECE54919"
+    },
+    {
+      "block_id": 14,
+      "ko": "【동요】\n",
+      "literal_id": 0,
+      "record_id": 230,
+      "source_sc_utf16le_sha256": "6311552596E5A869FD5A32AC72E8D1DEB4EEF4557AA7320D42D2EE5C6956495E"
+    },
+    {
+      "block_id": 14,
+      "ko": "패전 등으로 성이 동요하면 부대가 출진할 수 없게 됩니다.\n특히 복수의 성이 동요하고 있으면 적에게 공격당해도 요격이 어렵기 때문에,\n주변에 그러한 세력이 있는 경우는 공격하는 호기입니다.\n\n",
+      "literal_id": 1,
+      "record_id": 230,
+      "source_sc_utf16le_sha256": "262F0CAFA0762E9CB351EC7E0F9143606652A09E14AC89DB1D2DC9F8CFBFB09D"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇동요 상태의 특징",
+      "literal_id": 2,
+      "record_id": 230,
+      "source_sc_utf16le_sha256": "3585879B15248E963B101FA989B8C738B33C7ED2C00DFA8FF8B49EA1280B4AB6"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n공성전 전에 열리는 군평정에서는\n아군 부대의 포진과 행동 예정 내용을 확인할 수 있습니다.\n아군 부대의 포진 위치를 선택합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 231,
+      "source_sc_utf16le_sha256": "0EEE8AF832F594E8171E254F6B04C143D66170C4B770BAED3B27212D99C9E2D3"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇포진 변경(수성 측만)",
+      "literal_id": 2,
+      "record_id": 231,
+      "source_sc_utf16le_sha256": "367E96F325992AA1B8499BA8D7F4890EA932241F6A2056366EA667CBF3B1D12C"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n현재 설정으로 공성전을 시작합니다.",
+      "literal_id": 5,
+      "record_id": 231,
+      "source_sc_utf16le_sha256": "379362AE2D7944A3F207C44B1B09A5C66057ED11FF9341510AA73A5F11E3EFC2"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n공성 측의 사기가 0이 되면 수성 측의 승리가 됩니다.\n사기는 시간 경과나 전장의 사건에 따라 변동합니다.\n\n",
+      "literal_id": 1,
+      "record_id": 232,
+      "source_sc_utf16le_sha256": "360FF396974817F29E8DBEE9F1794FDD15FAB58F5BAF37F6C596172BC29D74CB"
+    },
+    {
+      "block_id": 14,
+      "ko": "◇사기 변동의 요인",
+      "literal_id": 2,
+      "record_id": 232,
+      "source_sc_utf16le_sha256": "0F3D07F2D5E8BF6C41ACA062BE1299BAFFB89BE515F3E5CE38D25456250A3411"
+    },
+    {
+      "block_id": 14,
+      "ko": "\n·시간 경과로 공성 측의 사기가 내려간다\n·「중요 설비」의 파괴나 부대의 격파\n\n사기 상황은 게이지로 확인할 수 있습니다.",
+      "literal_id": 3,
+      "record_id": 232,
+      "source_sc_utf16le_sha256": "DADA05ABE559C04FADF9147E69857B01E481B4BEEF1706765324B5CBBA219BF7"
+    }
+  ],
+  "entry_count": 220,
+  "overlay_id": "msggame_pk_ui_priority_b03_220.v1",
+  "resource": "MSG_PK/SC/msggame.bin",
+  "schema": "nobu16.kr.msggame-literal-overlay.v1",
+  "selection_policy": {
+    "dynamic_fragments_excluded": true,
+    "event_dialogue_excluded": true,
+    "priority": "block14_short_static_help_menu_label_and_system_ui",
+    "source_text_embedded": false
+  },
+  "stock_sc": {
+    "literal_slot_count": 25598,
+    "packed_sha256": "BD7B33FCC7495B855B0828C7FE4E5F7ADB2DE656A9B12E20259750F94EE665D6",
+    "packed_size": 529419,
+    "raw_sha256": "1958B2B801D37186D478284EA0E29CA96D8DA2BC087D6BEB74A4139EF01C11CE",
+    "raw_size": 1077200,
+    "record_count": 21581
+  },
+  "translation_provenance": {
+    "context_languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "kind": "agent_ui_priority_full_record_translation",
+    "runtime_reviewed": false,
+    "source_text_embedded": false
+  }
+}

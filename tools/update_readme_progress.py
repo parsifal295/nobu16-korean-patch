@@ -243,12 +243,9 @@ def render_string_row(
     if done > coverage:
         raise ValueError(f"completed ids exceed draft coverage for {path}")
     value = percent(done, total)
-    coverage_amount = f"{coverage:,}"
-    if stats.non_target_coverage:
-        coverage_amount += f" (+{stats.non_target_coverage:,} 비대상 활성)"
     row = (
-        f"| `{path}` | {done:,} / {total:,} | {coverage_amount} | "
-        f"{total_slots:,} 슬롯 | {value:.1f}% `{progress_bar(value)}` | {note} |"
+        f"| `{path}` | {done:,} / {total:,} | "
+        f"{value:.1f}% `{progress_bar(value)}` | {note} |"
     )
     return row, done, total, stats
 
@@ -308,28 +305,20 @@ def render() -> str:
             pk_string_resources += 1
         elif kind == "records":
             amount = "0 / 조사 중"
-            coverage_amount = "—"
-            inventory = f"{int(resource['record_total']):,} 레코드"
             rate = "—"
-            rows.append(
-                f"| `{path}` | {amount} | {coverage_amount} | {inventory} | {rate} | {note} |"
-            )
+            rows.append(f"| `{path}` | {amount} | {rate} | {note} |")
         elif kind == "stages":
             done = int(resource["done"])
             total = int(resource["total"])
             unit = resource["unit"]
             value = percent(done, total)
             amount = f"{done:,} / {total:,} {unit}"
-            coverage_amount = "—"
-            inventory = "—"
             rate = f"{value:.1f}% `{progress_bar(value)}`"
             if path.startswith("RES_SC/"):
                 pk_stage_done += done
                 pk_stage_total += total
                 pk_stage_resources += 1
-            stage_rows.append(
-                f"| `{path}` | {amount} | {coverage_amount} | {inventory} | {rate} | {note} |"
-            )
+            stage_rows.append(f"| `{path}` | {amount} | {rate} | {note} |")
         else:
             raise ValueError(f"unknown progress kind {kind!r} for {path}")
 
@@ -366,47 +355,23 @@ def render() -> str:
     lines = [
         START,
         (
-            f"PK 실행 경로 `MSG_PK/SC`의 {pk_string_resources}개 메시지 리소스 기준 "
+            f"- PK 실행 경로 `MSG_PK/SC`의 {pk_string_resources}개 메시지 리소스: "
             f"**번역 완료 {pk_done:,} / {pk_total:,} ({pk_overall:.1f}%)**, "
-            f"대상 초벌 커버리지는 **{pk_coverage:,}개**다. 대상 밖에서 활성화된 "
-            f"커버리지는 **{pk_non_target_coverage:,}개**로 별도 집계한다."
+            f"비대상 활성 **{pk_non_target_coverage:,}개**는 별도 집계"
         ),
         (
-            f"PK 실행에서 함께 로드되는 공용 경로 `{SHARED_STRDATA_PATH}`의 "
-            f"{shared_string_resources}개 문자열 리소스는 **번역 완료 "
-            f"{shared_done:,} / {shared_total:,} ({shared_overall:.1f}%)**, "
-            f"대상 초벌 커버리지는 **{shared_coverage:,}개**다."
+            f"- PK 실행에서 함께 로드되는 공용 경로 `{SHARED_STRDATA_PATH}`의 "
+            f"{shared_string_resources}개 문자열 리소스: **번역 완료 "
+            f"{shared_done:,} / {shared_total:,} ({shared_overall:.1f}%)**"
         ),
         (
-            f"PK 공용 글꼴·리소스 경로 `RES_SC`의 {pk_stage_resources}개 검증 단계는 "
-            f"**{pk_stage_done} / {pk_stage_total}** 완료다."
+            f"- PK 공용 글꼴·리소스 경로 `RES_SC`의 {pk_stage_resources}개 검증 단계: "
+            f"**{pk_stage_done} / {pk_stage_total} 완료**"
         ),
         "",
-        "## 현재 한글화 진행 현황",
-        "",
-        f"PK 실행 기준 {pk_string_resources}개 메시지 리소스 **번역 완료 "
-        f"{pk_done:,} / {pk_total:,} ({pk_overall:.1f}%)**, 대상 초벌 커버리지는 "
-        f"**{pk_coverage:,}개**다. 비대상 활성 커버리지는 **{pk_non_target_coverage:,}개**"
-        f"(그중 완료 상태 {pk_non_target_completed:,}개)로 분리했다.",
-        (
-            f"PK가 실제로 함께 읽는 공용 본편 표 `{SHARED_STRDATA_PATH}`는 "
-            f"**{shared_done:,} / {shared_total:,} ({shared_overall:.1f}%)** 완료, "
-            f"대상 초벌 커버리지 **{shared_coverage:,}개**, 비대상 활성 "
-            f"**{shared_non_target_coverage:,}개**(그중 완료 상태 "
-            f"{shared_non_target_completed:,}개)로 별도 집계한다."
-        ),
-        "PK `msggame.bin`은 18블록 바이트코드에서 확인한 표시 가능한 SC 리터럴 후보를 분모에 포함했다.",
-        "후속 사람 분류에서 코드용 문자열이 확인되면 대상 분모를 보수적으로 조정한다.",
-        "번역 대상은 표시 가능한 비공백 문자열과 의도적으로 활성화한 UI 빈 슬롯만 센다.",
-        "완료·초벌 커버리지는 source-free target-key 카탈로그와 공개 오버레이 고유 ID·`msggame` 좌표·공용 표 블록/슬롯 좌표 합집합의 교집합만 센다.",
-        "target-key 밖에서 새로 활성화한 ID는 번역 대상 완료율에 넣지 않고 비대상 활성 커버리지로 별도 표시한다. 최종 화면 QA 완료를 뜻하지 않는다.",
-        "",
-        "| 한글화 대상 파일 | 번역 완료 / 대상 | 초벌 커버리지 | 전체 슬롯·레코드 | 진행률 | 현재 상태 |",
-        "|---|---:|---:|---:|---|---|",
+        "| 한글화 대상 파일 | 번역 완료 / 대상 | 진행률 | 현재 상태 |",
+        "|---|---:|---:|---|",
         *rows,
-        "",
-        "이 표는 `tools/update_readme_progress.py`가 공개 오버레이를 다시 집계해 만든다. 모든",
-        "커밋은 표를 갱신한 뒤 `--check`를 통과해야 한다.",
         END,
     ]
     return "\n".join(lines)

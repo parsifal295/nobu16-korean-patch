@@ -1,6 +1,6 @@
 {
   "schema": "nobu16.kr.font-seoulhangang-v1-manifest.v1",
-  "status": "local_private_build_ready_runtime_unverified",
+  "status": "local_private_build_applied_runtime_screen_unverified",
   "target": {
     "runtime": "NOBU16PK.exe",
     "resource": "RES_SC/res_lang.bin",
@@ -8,15 +8,36 @@
     "g1n_entries": [6, 7],
     "file_only": true
   },
-  "font_source": {
-    "family": "SeoulHangang M",
-    "file_name": "SeoulHangangM.ttf",
-    "file_sha256": "D27E1B26B55E507BEC1045962C954CF426D79605009C720FAD1C9EF808E312CB",
-    "file_size": 7627124,
+  "font_sources": [
+    {
+      "key": "entry6_48px_eb",
+      "entry": 6,
+      "cell": 48,
+      "family": "SeoulHangang EB",
+      "file_name": "SeoulHangangEB.ttf",
+      "file_sha256": "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1",
+      "file_size": 7350712
+    },
+    {
+      "key": "entry7_32px_b",
+      "entry": 7,
+      "cell": 32,
+      "family": "SeoulHangang B",
+      "file_name": "SeoulHangangB.ttf",
+      "file_sha256": "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B",
+      "file_size": 7344552
+    }
+  ],
+  "profile_assignment": {
+    "entry_6_48px": "SeoulHangang EB",
+    "entry_7_32px": "SeoulHangang B",
+    "policy": "PC SC의 기존 2-table 구조를 보존하고 같은 entry의 table 0/1에는 동일한 공식 서울한강체 굵기를 사용한다."
+  },
+  "font_license": {
     "official_download_page": "https://www.seoul.go.kr/seoul/font.do",
     "official_archive_url": "https://www.seoul.go.kr/upload/seoul/font/seoul_font3.zip",
     "official_archive_sha256": "7AB485B98F5B1A1B05CFD04484DD49A62F856BE8506223CD99E5EA1A33E400A7",
-    "weight_selection": "Switch v1.1 README names SeoulHangang but does not identify M/L/B/EB. v1 fixes the official M file as one reproducible local input; it does not assert pixel identity with Switch.",
+    "weight_selection": "PC 표시 위계에 맞춰 48px entry 6은 공식 EB, 32px entry 7은 공식 B로 고정한다. Switch와 glyph 픽셀까지 동일하다고 주장하지 않는다.",
     "license": "공공누리 제1유형(출처표시)",
     "attribution": "출처: 서울특별시, 서울서체 서울한강체 (https://www.seoul.go.kr/seoul/font.do)",
     "redistribution_policy": "서울시 안내의 판매·유상양도·무단배포 금지 고지를 보수적으로 적용한다. 원본 TTF/OTF, 래스터 픽셀, 완성 G1N/LINK/res_lang.bin을 저장소·공개 배포물에 포함하지 않는다."
@@ -30,10 +51,10 @@
   "pinned_public_korean_demand": {
     "translation_progress": {
       "path": "data/public/translation_progress.v0.1.json",
-      "sha256": "180E500ABB241D11A7FF11520EAE564487D77EF0472193310FFBB96D07C1ED71"
+      "sha256": "3F07CB01E4E14CF764C56F386B251F55E073E5E26D5CC657BB20F0B2537B115D"
     },
-    "source_count": 93,
-    "source_catalog_sha256": "902C83FF51AB28593C1129A3DD364603D7CB5DB79A0AC548DC0CD64D969D7B38",
+    "source_count": 98,
+    "source_catalog_sha256": "CDB4CF365DCB4B009F364D0329B4189E51A3EB029C6A756A3790AC2FF7FE5C3B",
     "resource_catalog": [
       {
         "resource": "MSG_PK/SC/msgui.bin",
@@ -43,15 +64,15 @@
       },
       {
         "resource": "MSG_PK/SC/msgev.bin",
-        "source_count": 35,
-        "entry_count": 13178,
-        "source_catalog_sha256": "A1062911EB38DCDE6690ADE0084BF717DC4ACEA416850E468E6C38767C18245F"
+        "source_count": 37,
+        "entry_count": 13703,
+        "source_catalog_sha256": "1620A3212A23F72B9D1AA53F7BFA1E7084B747A66DCCDE5ABA05858B3E60F2DF"
       },
       {
         "resource": "MSG_PK/SC/msgdata.bin",
-        "source_count": 10,
-        "entry_count": 21152,
-        "source_catalog_sha256": "89DEB1672CF4B9217D518A41B3FC35D9BCF9777240D4C60DECAE0C0C3218F14C"
+        "source_count": 11,
+        "entry_count": 21402,
+        "source_catalog_sha256": "64B756055AB14E73A239626C1FB4CB158657D51489E4AF97B4033B9488160035"
       },
       {
         "resource": "MSG_PK/SC/msgbre.bin",
@@ -73,50 +94,50 @@
       },
       {
         "resource": "MSG_PK/SC/msggame.bin",
-        "source_count": 29,
-        "entry_count": 10352,
-        "source_catalog_sha256": "E0EA36A7E1C8A4FC1F9686C58EE53ED1D9141F67D6B8700E711672DBEF99614B"
+        "source_count": 30,
+        "entry_count": 10572,
+        "source_catalog_sha256": "A05C42530AE92335439BF620CAC42E1914F700F89303995B7728181C09A05A00"
       },
       {
         "resource": "MSG/SC/strdata.bin",
-        "source_count": 2,
-        "entry_count": 24425,
-        "source_catalog_sha256": "907733F5ACA06CA0387854B5D7A0E5F21F12C85F674EDFDB2A318782E9013952"
+        "source_count": 3,
+        "entry_count": 24631,
+        "source_catalog_sha256": "02CAC2A7E77C8AD3A8DFB2A88345E16CE09B9A81B18C963FDA93E83DC2E2180F"
       }
     ],
-    "source_entry_count": 75491,
-    "codepoint_count": 1389,
-    "codepoints_sha256": "7FDC3F9C72D5FF3416EAA905B581549434BC3A5577C3587CC5351E4C4676CC16",
-    "hangul_syllable_count": 1232,
-    "hangul_syllables_sha256": "78C37AF6E84D8E066DFB940AF9F9C9C73FE826855DACF6FFDF95D2219F3A36A4",
-    "non_hangul_count": 157,
-    "non_hangul_sha256": "0AD9CA9A7D20080BE8A8027D0A60D75A2F88E45F14D8A13BB50D78E3C5EB00D7",
-    "raster_codepoint_count": 1306,
-    "raster_codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186",
+    "source_entry_count": 76692,
+    "codepoint_count": 1401,
+    "codepoints_sha256": "A10646370BE093D34CB82BCC611A462BF3330DD2D763B1056CA430E254432B49",
+    "hangul_syllable_count": 1236,
+    "hangul_syllables_sha256": "2283EEDB1450374DE5921E651D8C2170E199CE05A932F2D93B5FF730E18A864C",
+    "non_hangul_count": 165,
+    "non_hangul_sha256": "73F2B1A3B4484B66DEBE0F635EAC5DC0A3B751EBD04713F0B88FD7D6646BC515",
+    "raster_codepoint_count": 1318,
+    "raster_codepoints_sha256": "08D81661263417AB2FFF7474A0517B8C0DEAFAB53D6EA88DA1E9E9B16A2A0CF9",
     "append_contract": [
       {
         "entry": 6,
         "table": 0,
-        "count": 1237,
-        "codepoints_sha256": "B513EA9109C46200873E81425452D74B7537DEA06ABE23EA02DE22C551BF53B3"
+        "count": 1241,
+        "codepoints_sha256": "2A22A546E1D07066850A9DA2A844CDD4EBDD478CC503F7EB9EF8B2C3073C7945"
       },
       {
         "entry": 6,
         "table": 1,
-        "count": 1306,
-        "codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186"
+        "count": 1318,
+        "codepoints_sha256": "08D81661263417AB2FFF7474A0517B8C0DEAFAB53D6EA88DA1E9E9B16A2A0CF9"
       },
       {
         "entry": 7,
         "table": 0,
-        "count": 1237,
-        "codepoints_sha256": "B513EA9109C46200873E81425452D74B7537DEA06ABE23EA02DE22C551BF53B3"
+        "count": 1241,
+        "codepoints_sha256": "2A22A546E1D07066850A9DA2A844CDD4EBDD478CC503F7EB9EF8B2C3073C7945"
       },
       {
         "entry": 7,
         "table": 1,
-        "count": 1306,
-        "codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186"
+        "count": 1318,
+        "codepoints_sha256": "08D81661263417AB2FFF7474A0517B8C0DEAFAB53D6EA88DA1E9E9B16A2A0CF9"
       }
     ],
     "sources": "all PK-loaded string overlays (seven PK resources plus exact shared MSG/SC/strdata.bin) are derived from the SHA-pinned translation-progress catalog; the plan records one source-free hash row per file"
@@ -131,7 +152,7 @@
   },
   "structural_build_verification": {
     "path": "workstreams/font_seoulhangang_v1/verification.v1.json",
-    "sha256": "142D5E2C654632AEDE2112BCC1123F63C9088E06E5F16928C4A15A512BD0F7AB",
+    "sha256": "ADC8801EC3DC3982B008AC64595508417FA2A7E36E6774E105211E0B6261348F",
     "a_b_candidate_byte_identical": true,
     "full_pk_glyph_demand_coverage": true,
     "g1n_structural_validation": true,
@@ -139,6 +160,13 @@
   },
   "runtime_validation": {
     "performed": false,
-    "blocker": "실제 게임 설치본은 이 작업에서 수정하지 않으며, 별도 백업·화면·종료 검증 후에만 로컬 후보를 수동 적용할 수 있음"
+    "install_applied": true,
+    "release_id": "pk-font-eb48-b32-preserve-images-20260715-v1",
+    "live_archive_sha256": "DB94884F058EA5DEE72F8BC3584E157B98F7B59DB70D7265CCE9125452F0A431",
+    "restore_dry_run_passed": true,
+    "changed_outer_link_entries": [6, 7],
+    "preserved_outer_link_entry_count": 40,
+    "title_image_entry_3_byte_identical": true,
+    "blocker": "실제 게임 화면에서 48px EB와 32px B의 가독성·클리핑·역할 배치를 확인하는 런타임 화면 QA가 남아 있음"
   }
 }
