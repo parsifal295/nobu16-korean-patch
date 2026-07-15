@@ -1,0 +1,91 @@
+{
+  "artifacts": {
+    "evidence": {
+      "path": "evidence/msggame_pk_ui_priority_b05_evidence.v1.json",
+      "sha256": "93EB81A0348AC9D93B307A8C5CB7EBB8C4DEF67780376AEE5881F33115EA6171",
+      "size": 388156
+    },
+    "overlay": {
+      "path": "public/msggame_ko_pk_ui_priority_b05_300.v1.json",
+      "sha256": "E67FFDC802485FFB8B1276880239CA4CE9F4098274792B993A448A36E1771808",
+      "size": 92675
+    },
+    "review": {
+      "path": "review/msggame_pk_ui_priority_b05_review.v1.json",
+      "sha256": "8236ED5F7D024393C27BE8029D5DEDB3194E972798928E39B34680960801B6C9",
+      "size": 61270
+    }
+  },
+  "batch_id": "msggame_pk_ui_priority_b05_300.v1",
+  "coordinate_sets": {
+    "excluded_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+    "selected_b01_disjoint": true,
+    "selected_blocks_reviewed": true,
+    "selected_excluded_disjoint": true,
+    "selected_registered_disjoint": true,
+    "selected_reserved_b04_disjoint": true,
+    "selected_sha256": "C872E6178EC8E77B4EE820A0AE06C323146E8C437B894D47ADB9E7EF5541B331",
+    "selected_target_subset": true
+  },
+  "counts": {
+    "excluded_review_items": 0,
+    "translated": 300
+  },
+  "full_candidate_validation": {
+    "full_overlay_entry_count": 11122,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "non_overlay_literals_preserved": true,
+    "registered_predecessor_entry_count": 10822,
+    "selected_b05_entry_count": 300,
+    "target_packed_sha256": "8A200EBE9616D44AF37BAD7E7FCBF2F8133FC2E6CD166F9DF1E8714D59B24B67",
+    "target_packed_size": 1257795
+  },
+  "generator": {
+    "path": "build_msggame_pk_ui_priority_b05.py",
+    "sha256": "84A836ACF83A1327A458E42318A4BBF555C6751F0B7D22ADE33A4C57ADD3786B"
+  },
+  "offline_binary_validation": {
+    "entry_count": 300,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "target_packed_sha256": "D9AB0FFC25A58FA61DAAADC4F8DF5FBE35BB868C4DC64640ABE0A14326E8AD4D",
+    "target_packed_size": 1089569
+  },
+  "passed": true,
+  "proofs": {
+    "all_replacements_have_hangul": true,
+    "display_width_budget_preserved": true,
+    "duplicate_source_translation_consistent": true,
+    "dynamic_fragments_excluded": true,
+    "event_dialogue_excluded": true,
+    "parallel_translation_parts_merged": true,
+    "placeholder_control_code_newline_preserved": true,
+    "reserved_b04_overlay_and_coordinates_pinned": true,
+    "static_ui_literal_with_pk_multilingual_record_context": true
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_progress_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msggame-pk-ui-priority-validation.v1",
+  "source_free_scan": {
+    "msggame_ko_pk_ui_priority_b05_300.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_pk_ui_priority_b05_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_pk_ui_priority_b05_review.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  }
+}
