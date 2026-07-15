@@ -1,0 +1,225 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/msgbre_pk_native_completion_evidence.v0.1.json",
+      "sha256": "C5C309D48BD21DD4FE684EC4687B79A569B0D2DAE81874CF26C259AB3F047BA4",
+      "size": 18751
+    },
+    "overlay": {
+      "path": "public/msgbre_ko_pk_native_completion_11.v0.1.json",
+      "sha256": "961DB30C18524544DC58ED67E256CAA2EA2BC8CB337465778585EF54404CB8D2",
+      "size": 5374
+    },
+    "review_index": {
+      "path": "review/msgbre_pk_native_completion_review_index.v0.1.json",
+      "sha256": "FC05E936507ADB8BAF209464DCF9CD389813CC723568E293ED241724821B7DE0",
+      "size": 6089
+    }
+  },
+  "batch_id": "msgbre_pk_native_completion_11.v0.1",
+  "generator": {
+    "path": "build_msgbre_pk_native_completion.py",
+    "sha256": "6A7113F1E211F09D6B5EB3453C3A4AEACC0E7C32298588D1613415073A606F49"
+  },
+  "input_snapshot_after": {
+    "pk_en_msgbre": "6A3F7415187F8D7E4442972C7F6AAA4C3D2C2CD5EE4584B72D130295FEDCBA47",
+    "pk_jp_msgbre": "DA9BE8242CF0A90592D573DF676ECDE26566B11C5707273EEB4AF5BA54132AD5",
+    "pk_sc_msgbre": "AD1FEC313228AADB00581C25AE59D8C6AFF54DD771A4D0F7BC35CD1B44D77B8D",
+    "pk_tc_msgbre": "B10E7C7E4BBE3D19DFB9BABBCC254A905AB0EB7BB59643C8845B18A8C4A7BB3A",
+    "translation_progress": "DCD7F716A57F907EBF78109CBA2CE5755E5AE3B22136602E91E1BAEEF20F4503",
+    "translation_target_keys": "FF3D15D0792052EB1A4E67BC296B3ED5169662C3510EE8F164F1331EFF07C786"
+  },
+  "input_snapshot_before": {
+    "pk_en_msgbre": "6A3F7415187F8D7E4442972C7F6AAA4C3D2C2CD5EE4584B72D130295FEDCBA47",
+    "pk_jp_msgbre": "DA9BE8242CF0A90592D573DF676ECDE26566B11C5707273EEB4AF5BA54132AD5",
+    "pk_sc_msgbre": "AD1FEC313228AADB00581C25AE59D8C6AFF54DD771A4D0F7BC35CD1B44D77B8D",
+    "pk_tc_msgbre": "B10E7C7E4BBE3D19DFB9BABBCC254A905AB0EB7BB59643C8845B18A8C4A7BB3A",
+    "translation_progress": "DCD7F716A57F907EBF78109CBA2CE5755E5AE3B22136602E91E1BAEEF20F4503",
+    "translation_target_keys": "FF3D15D0792052EB1A4E67BC296B3ED5169662C3510EE8F164F1331EFF07C786"
+  },
+  "passed": true,
+  "progress_registration_audit": {
+    "candidate_excluded_from_prior_claims": true,
+    "candidate_registered_in_current_progress": true,
+    "completion_after_registration": true,
+    "prior_overlay_count": 13,
+    "prior_overlays": [
+      {
+        "entry_count": 129,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0000_0128.v0.1.json",
+        "max_id": 128,
+        "min_id": 0,
+        "sha256": "DDD87FDF972F4EE907D310387074D0879E620C61B15C26B7F8A7FBA40BE52E00"
+      },
+      {
+        "entry_count": 122,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0129_0250.v0.2.json",
+        "max_id": 250,
+        "min_id": 129,
+        "sha256": "FDB2511970F1E8CEF194E661CBCE3F8D912B372382BCFD89129FD1F8B309A4D3"
+      },
+      {
+        "entry_count": 100,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0251_0350.v0.3.json",
+        "max_id": 350,
+        "min_id": 251,
+        "sha256": "1253609BC246DB4A63D1A5658476756AB89A0660FA683262CFFA444E3678132B"
+      },
+      {
+        "entry_count": 107,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0351_0457.v0.4.json",
+        "max_id": 457,
+        "min_id": 351,
+        "sha256": "30E38BE8C8F0D0E48FAFB828A88765AFF52BF607F1D8D22985E88CD0B810109E"
+      },
+      {
+        "entry_count": 108,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0458_0565.v0.5.json",
+        "max_id": 565,
+        "min_id": 458,
+        "sha256": "941D6B235708E4E8247CD0E4508DBDADBBA5D46A6A7F5406F047C4187B19A8F0"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0566_0610.v0.6.json",
+        "max_id": 610,
+        "min_id": 566,
+        "sha256": "0FB3F6F777E5110507EB4782C5B7C5E2B61EC50FBF9E8314E5FF2491C9D6ACD2"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0611_0655.v0.7.json",
+        "max_id": 655,
+        "min_id": 611,
+        "sha256": "82FCFE650D8AA0EBDC70AFEEFEDE2EE14049AB0EB1979464ACBDD10B69F9B72C"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0656_0700.v0.8.json",
+        "max_id": 700,
+        "min_id": 656,
+        "sha256": "6791F39371E7C34F2792AE03EB88CD3CEB0FA0980D21178EFF4A86B7793063BA"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0701_0745.v0.9.json",
+        "max_id": 745,
+        "min_id": 701,
+        "sha256": "3D8D2EE48F42ED9F2F580DA4AB0004A131198DC692FC8DEE44F6B201814ADA91"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0746_0790.v0.10.json",
+        "max_id": 790,
+        "min_id": 746,
+        "sha256": "6D74AE6E3D86F09C0A1356B0D25D97B1B2BEBC319A288544D31714039BAA2430"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0791_0835.v0.11.json",
+        "max_id": 835,
+        "min_id": 791,
+        "sha256": "B1FD769444B4BE226257FFF9E7245CD78392258FAB3A5219AE822F82341088D7"
+      },
+      {
+        "entry_count": 1367,
+        "logical_path": "workstreams/switch_msgbre_v11/public/msgbre_ko_switch_v11_strict_transfer.v0.1.json",
+        "max_id": 2206,
+        "min_id": 836,
+        "sha256": "BFEFB590F10B073E9510F598BDFDCC840DDEDC165B637F9F0FEA0CB6B2675FC1"
+      },
+      {
+        "entry_count": 3,
+        "logical_path": "workstreams/switch_msgbre_v13_cjk_cleanup/public/msgbre_ko_switch_v13_cjk_cleanup_3.v0.1.json",
+        "max_id": 1238,
+        "min_id": 944,
+        "sha256": "170A49AE210ED546888B33A4A4BD626AA44E66966B64217E4398847B989A4E43"
+      }
+    ],
+    "progress_logical_path": "data/public/translation_progress.v0.1.json",
+    "progress_sha256": "DCD7F716A57F907EBF78109CBA2CE5755E5AE3B22136602E91E1BAEEF20F4503",
+    "registration_order_independent": true,
+    "simulated_with_candidate_count": 2217,
+    "simulated_with_candidate_ids_sha256": "FDD3B10B6434607F642C979F804E804D7B3684FD538C92212E38E0EF4C76A5B0",
+    "simulated_without_candidate_count": 2206,
+    "simulated_without_candidate_ids_sha256": "0027C433843D1F175772DECFDDFCFE7EA62CC42106E7944CD6D3A36628B22643"
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ],
+    "target_a_b_equal": true
+  },
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "font_modified": false,
+    "installed_game_files_modified": false,
+    "root_progress_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msgbre-pk-native-completion-validation.v1",
+  "scope": {
+    "completion_after_registration": true,
+    "coverage_after_registration": 2217,
+    "exact_target_count": 2217,
+    "expected_selected_entry_count": 11,
+    "prior_claimed_count": 2206,
+    "selected_entry_count": 11,
+    "selected_ids": [
+      1749,
+      2207,
+      2208,
+      2209,
+      2210,
+      2211,
+      2212,
+      2213,
+      2214,
+      2215,
+      2216
+    ],
+    "selected_ids_sha256": "31F6AEC16C201CCDE31984F70A477A9673F651ACFE878D956C8CBAAE024BEC47"
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "generation_validation": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "target_catalog": {
+    "contains_source_text": false,
+    "logical_path": "data/public/translation_target_keys.v0.1.json",
+    "sha256": "FF3D15D0792052EB1A4E67BC296B3ED5169662C3510EE8F164F1331EFF07C786",
+    "target_count": 2217,
+    "target_keys_sha256": "FDD3B10B6434607F642C979F804E804D7B3684FD538C92212E38E0EF4C76A5B0"
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 11,
+    "packed_sha256": "C44E4C66722E022167F5061697870023668726AAC2DF247DF9941342BBA98269",
+    "packed_size": 293512,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "976C30985C21EDABAD1FE8BFA882E9ED236592407F2C84A80F921CE0337CC971",
+    "raw_size": 292340,
+    "resource": "MSG_PK/SC/msgbre.bin",
+    "wrapper_round_trip": true
+  }
+}

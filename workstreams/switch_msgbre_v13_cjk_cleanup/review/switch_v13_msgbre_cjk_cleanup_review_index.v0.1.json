@@ -1,0 +1,43 @@
+{
+  "batch_id": "switch_v13_msgbre_cjk_cleanup_3.v0.1",
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "entries": [
+    {
+      "cleanup_kind": "single_character_meaning_gloss_to_hangul",
+      "human_review_required": true,
+      "id": 944,
+      "pk_sc_invariants_preserved": true,
+      "runtime_reviewed": false,
+      "selected_within_stock_visible_target": true,
+      "source_script_free": true,
+      "status": "translated",
+      "translation_origin": "switch_v1.3_text_identical_to_v1.1_plus_pinned_hangul_cleanup"
+    },
+    {
+      "cleanup_kind": "single_character_reading_to_hangul",
+      "human_review_required": true,
+      "id": 1104,
+      "pk_sc_invariants_preserved": true,
+      "runtime_reviewed": false,
+      "selected_within_stock_visible_target": true,
+      "source_script_free": true,
+      "status": "translated",
+      "translation_origin": "switch_v1.3_text_identical_to_v1.1_plus_pinned_hangul_cleanup"
+    },
+    {
+      "cleanup_kind": "two_character_age_gloss_to_natural_hangul",
+      "human_review_required": true,
+      "id": 1238,
+      "pk_sc_invariants_preserved": true,
+      "runtime_reviewed": false,
+      "selected_within_stock_visible_target": true,
+      "source_script_free": true,
+      "status": "translated",
+      "translation_origin": "switch_v1.3_text_identical_to_v1.1_plus_pinned_hangul_cleanup"
+    }
+  ],
+  "entry_count": 3,
+  "quality_state": "source_script_cleanup_complete_not_runtime_reviewed",
+  "schema": "nobu16.kr.switch-msgbre-v13-cjk-cleanup-review-index.v1"
+}
