@@ -30,7 +30,7 @@ UNIQUE_SOURCE_HASH_COUNT = 538
 COORDINATES_SHA256 = "2551FECCE0E0DE16DF7ABF0AABC71D103F8768391527777BA648A9C6CDB2A12B"
 INTEGRATED_ENTRY_COUNT = 25_861
 INTEGRATED_REMAINING_COUNT = 2_411
-INTEGRATED_CANDIDATE_SHA256 = "6333B8A475D0F10AAA4FE6416E26A58F756D4CD885F2CBA2FD5F1FBBA51208E0"
+INTEGRATED_CANDIDATE_SHA256 = "DDCADCE7B1840C8CE2360B81E974DA335C1C5554ADEE95FAB3BC4355953365F0"
 OVERLAY_SCHEMA = "nobu16.kr.msggame-jp-literal-overlay.v1"
 PRIVATE_SCHEMA = "nobu16.kr.msggame-jp-private-context.v1"
 STOCK_JP = {
@@ -291,6 +291,8 @@ def build_artifacts(private_path: Path) -> dict[Path, dict[str, Any]]:
         },
         "steam_1_1_7_integration": {
             "foundation_entry_count": 24_211,
+            "combined_wave07_batches": ["j01", "j04"],
+            "j04_entry_count": COORDINATE_COUNT,
             "combined_entry_count": INTEGRATED_ENTRY_COUNT,
             "remaining_jp_semantic_count": INTEGRATED_REMAINING_COUNT,
             "candidate_sha256": INTEGRATED_CANDIDATE_SHA256,

@@ -66,12 +66,29 @@ class Wave07J03Tests(unittest.TestCase):
 
     def test_all_message_invariants_and_repeated_sources_are_consistent(self) -> None:
         by_source_hash: dict[str, set[str]] = defaultdict(set)
+        by_source_coordinate: dict[str, dict[tuple[int, int, int], str]] = defaultdict(dict)
         for coordinate, private_entry in self.private.items():
             source = private_entry["jp"]
             korean = self.translations[coordinate]
             self.assertEqual([], builder.common.invariant_mismatches(source, korean))
-            by_source_hash[builder.text_hash(source)].add(korean)
-        self.assertTrue(all(len(values) == 1 for values in by_source_hash.values()))
+            digest = builder.text_hash(source)
+            by_source_hash[digest].add(korean)
+            by_source_coordinate[digest][coordinate] = korean
+        observed = {
+            digest: by_source_coordinate[digest]
+            for digest, values in by_source_hash.items()
+            if len(values) > 1
+        }
+        reviewed = {
+            digest: {
+                coordinate: korean
+                for coordinate, korean in coordinate_map.items()
+                if coordinate in self.private
+            }
+            for digest, coordinate_map in builder.load_contextual_variants().items()
+            if any(coordinate in self.private for coordinate in coordinate_map)
+        }
+        self.assertEqual(reviewed, observed)
 
     def test_public_overlay_has_loader_exact_entry_shape(self) -> None:
         overlay = self.values["overlay"][0]

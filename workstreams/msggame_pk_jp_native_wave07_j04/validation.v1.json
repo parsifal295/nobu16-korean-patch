@@ -32,14 +32,19 @@
   },
   "overlay": {
     "path": "workstreams/msggame_pk_jp_native_wave07_j04/public/msggame_ko_pk_jp_native_wave07_j04_680.v1.json",
-    "sha256": "5BEB90AD8073B93495DE28E9C6F1EDB55854862AD423E8DED5C5172D828F64E9",
+    "sha256": "DDC3B34DB5A1B6428D028435DF65C67ECA7E5698F94C2912D03DAF18EB4524DC",
     "entry_count": 680
   },
   "steam_1_1_7_integration": {
     "foundation_entry_count": 24211,
+    "combined_wave07_batches": [
+      "j01",
+      "j04"
+    ],
+    "j04_entry_count": 680,
     "combined_entry_count": 25861,
     "remaining_jp_semantic_count": 2411,
-    "candidate_sha256": "6333B8A475D0F10AAA4FE6416E26A58F756D4CD885F2CBA2FD5F1FBBA51208E0",
+    "candidate_sha256": "DDCADCE7B1840C8CE2360B81E974DA335C1C5554ADEE95FAB3BC4355953365F0",
     "non_literal_structure_preserved": true,
     "deterministic_rebuild": true,
     "installed_game_file_written": false
