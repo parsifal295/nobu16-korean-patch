@@ -1,0 +1,116 @@
+{
+  "artifacts": {
+    "evidence/msgdata_pk_structural_review_b08_evidence.v1.json": {
+      "path": "evidence/msgdata_pk_structural_review_b08_evidence.v1.json",
+      "sha256": "7BCFD6F4444F149512A8F31A3F2126A760B27D748BFE7F18E7C6306E5AC21012",
+      "size": 190639
+    },
+    "public/msgdata_ko_pk_structural_review_b08_500.v1.json": {
+      "path": "public/msgdata_ko_pk_structural_review_b08_500.v1.json",
+      "sha256": "8A262817778418CE6F86D11DAE7C7F56837376D83522AECB09A1930C68EECD04",
+      "size": 91758
+    },
+    "review/msgdata_pk_structural_review_b08_review.v1.json": {
+      "path": "review/msgdata_pk_structural_review_b08_review.v1.json",
+      "sha256": "18E8407DDB96414FB1F4446958988CE895FF1DE3ECA15455CEEED674E94772FA",
+      "size": 65934
+    }
+  },
+  "batch_id": "msgdata-pk-structural-review-b08-500.v1",
+  "generator": {
+    "path": "build_msgdata_pk_structural_review_b08.py",
+    "sha256": "20972D7499059C13CBE2E18209549C70EAD45E7343CA196FD63FBEA34D0E6742"
+  },
+  "official_selected_rowset_sha256": {
+    "EN": "632F22DFDE4EC3664895CC64A911638A1891291188D8CCC52F43A9C381C00077",
+    "JP": "EC2BBDE656B94A5723C5C41DE6E6CAF0DA97252CAF8C50128D64A9047EAA12C9",
+    "SC": "66554207B59BDB338A81F23265783EFB83765323FAD962FD3A6BD1D0ACE9E78B",
+    "TC": "0A4B24F06FE70827FA6AB3623EF48DE0365EC1A3C0155D65976B19CA4711531B"
+  },
+  "passed": true,
+  "progress_audit": {
+    "b07_explicit_ownership_count": 500,
+    "b07_registration_count": 0,
+    "post_review_gap_count": 3110,
+    "post_review_gap_ids_sha256": "40EA6B0474C0741A97244F60CC6E91A6A6084C768377837D647A8AF1F64F9887",
+    "pre_b07_registration_count": 14,
+    "pre_review_gap_count": 3610,
+    "pre_review_gap_ids_sha256": "00CCD5BF47F9867BA8825CDD985E628F96EDB5F1F861750020FB0756EF2217A4",
+    "predecessor_target_count": 21924,
+    "predecessor_target_ids_sha256": "A0A2580C914F7FA4C42BDF141D945A3376E5F904DCD00C5EAE5798673E065D2B",
+    "self_registration_count": 0
+  },
+  "reason_summary": {
+    "placeholder_dummy_not_a_translatable_display_message": {
+      "count": 487,
+      "ids_sha256": "D6FAE539084F18B326BB8C065FD30E815F833CBFE2CA35472D8B422C3E2B3105"
+    },
+    "romanized_or_phonetic_lookup_key": {
+      "count": 13,
+      "ids_sha256": "0A2C1F18B63C69B9EBEDA3B414E4BD443E2D84406F11E32E31929CE7E1EA405F"
+    }
+  },
+  "replacement_invariants": {
+    "checked": 500,
+    "esc_preserved": true,
+    "exact_utf16le_byte_preserve_count": 500,
+    "failures": 0,
+    "line_breaks_preserved": true,
+    "printf_preserved": true,
+    "pua_preserved": true
+  },
+  "reproducibility": {
+    "artifact_json_canonical": true,
+    "in_memory_target_a_b_equal": true
+  },
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "global_progress_modified": false,
+    "global_readme_modified": false,
+    "installed_game_files_modified": false
+  },
+  "schema": "nobu16.kr.msgdata-pk-structural-review-validation.v1",
+  "scope": {
+    "blocked_count": 0,
+    "duplicate_id_count": 0,
+    "exact_byte_preserve_count": 500,
+    "narrative_mixed_count": 0,
+    "post_review_structural_remaining": 3110,
+    "predecessor_overlap_count": 0,
+    "reviewed_count": 500,
+    "reviewed_ids_sha256": "65130D53D533B45BFA2F38AD779692E0B78C178A493C85CCE50153C9FBBF894C",
+    "translated_narrative_count": 0
+  },
+  "source_free_scan": {
+    "evidence/msgdata_pk_structural_review_b08_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "public/msgdata_ko_pk_structural_review_b08_500.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "review/msgdata_pk_structural_review_b08_review.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    }
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 500,
+    "packed_sha256": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "packed_size": 516796,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "5982D520BF2E66260943DE61D0CB7F1135D1BA81A211E917E3F426C58D9125D6",
+    "raw_size": 514752,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "wrapper_round_trip": true
+  }
+}
