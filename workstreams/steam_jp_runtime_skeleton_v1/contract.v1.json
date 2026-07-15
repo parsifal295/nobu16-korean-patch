@@ -1,0 +1,163 @@
+{
+  "candidate_root_file_count": 10,
+  "candidate_root_paths": [
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP/msgbre.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgev.bin",
+    "MSG_PK/JP/msggame.bin",
+    "MSG_PK/JP/msgire.bin",
+    "MSG_PK/JP/msgstf.bin",
+    "MSG_PK/JP/msgui.bin",
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin"
+  ],
+  "entries": [
+    {
+      "candidate": {
+        "sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+        "size": 956835,
+        "status": "reproducible_in_memory_not_staged"
+      },
+      "path": "MSG/JP/strdata.bin",
+      "predecessor": {
+        "sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+        "size": 507054
+      },
+      "ready_for_candidate_root": true
+    },
+    {
+      "candidate": null,
+      "path": "MSG_PK/JP/msgbre.bin",
+      "predecessor": {
+        "sha256": "945A0E9157E2DBD12781FFA5A986D93681325F40B6486348B1AB311D3BEE1D6D",
+        "size": 221127
+      },
+      "ready_for_candidate_root": false
+    },
+    {
+      "candidate": null,
+      "path": "MSG_PK/JP/msgdata.bin",
+      "predecessor": {
+        "sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+        "size": 272453
+      },
+      "ready_for_candidate_root": false
+    },
+    {
+      "candidate": null,
+      "path": "MSG_PK/JP/msgev.bin",
+      "predecessor": {
+        "sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+        "size": 562226
+      },
+      "ready_for_candidate_root": false
+    },
+    {
+      "candidate": null,
+      "path": "MSG_PK/JP/msggame.bin",
+      "predecessor": {
+        "sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+        "size": 721304
+      },
+      "ready_for_candidate_root": false
+    },
+    {
+      "candidate": null,
+      "path": "MSG_PK/JP/msgire.bin",
+      "predecessor": {
+        "sha256": "0AFBFE11A380A9C98FB3B368092A05B39ABB6F80C4B0723AD3B6DB55C2559C5D",
+        "size": 12376
+      },
+      "ready_for_candidate_root": false
+    },
+    {
+      "candidate": null,
+      "path": "MSG_PK/JP/msgstf.bin",
+      "predecessor": {
+        "sha256": "01EEB0B1B4879B6C70E9D7564F9D2FBD93E7B537CF8C614A58EEA82A83785A29",
+        "size": 6841
+      },
+      "ready_for_candidate_root": false
+    },
+    {
+      "candidate": null,
+      "path": "MSG_PK/JP/msgui.bin",
+      "predecessor": {
+        "sha256": "9775D4B7253828899F7EF0DF2E88AB28121ACB260E1381F3D706C6A1065D504A",
+        "size": 64976
+      },
+      "ready_for_candidate_root": false
+    },
+    {
+      "candidate": {
+        "sha256": "4395B84C5F678E37D8F39BCEEFF1986F62B07A54FF7936FC1402412AF07536F2",
+        "size": 175097407,
+        "status": "verified_existing_candidate"
+      },
+      "path": "RES_JP/res_lang.bin",
+      "predecessor": {
+        "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53",
+        "size": 153198542
+      },
+      "ready_for_candidate_root": true
+    },
+    {
+      "candidate": {
+        "sha256": "697F5034140A35A676CC0D0006CCECE4753D823109C5792500C46DE6499C9C12",
+        "size": 162625225,
+        "status": "verified_existing_candidate"
+      },
+      "path": "RES_JP_PK/res_lang_pk.bin",
+      "predecessor": {
+        "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
+        "size": 140729547
+      },
+      "ready_for_candidate_root": true
+    }
+  ],
+  "prohibitions": {
+    "dll_injection": true,
+    "exe_or_registry_modification": true,
+    "hooking": true,
+    "memory_patch": true,
+    "sc_container_input": true
+  },
+  "readiness": {
+    "blocked_candidate_count": 7,
+    "blocked_paths": [
+      "MSG_PK/JP/msgbre.bin",
+      "MSG_PK/JP/msgdata.bin",
+      "MSG_PK/JP/msgev.bin",
+      "MSG_PK/JP/msggame.bin",
+      "MSG_PK/JP/msgire.bin",
+      "MSG_PK/JP/msgstf.bin",
+      "MSG_PK/JP/msgui.bin"
+    ],
+    "complete_candidate_root_ready": false,
+    "known_candidate_count": 3
+  },
+  "runtime_language": "JP",
+  "schema": "nobu16.kr.steam-jp-runtime-candidate-root-contract.v1",
+  "steam_build_id": "18823764",
+  "steam_pk_version": "1.1.7",
+  "transaction": {
+    "dry_run_allowed_now": false,
+    "dry_run_prerequisites": [
+      "all NOBU16 processes closed",
+      "all ten installed predecessor hashes exact",
+      "all ten candidate files staged under exact relative paths",
+      "candidate-root contains no extra files",
+      "hash-only transaction manifest generated from the same predecessor vector",
+      "verified backup root under game-root/KR_PATCH_BACKUP"
+    ],
+    "target_scope": [
+      "MSG/JP/strdata.bin",
+      "MSG_PK/JP",
+      "RES_JP",
+      "RES_JP_PK"
+    ],
+    "tool": "tools/pk_file_only_transaction.py",
+    "write_to_steam_performed": false
+  }
+}
