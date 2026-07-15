@@ -18,6 +18,12 @@ TARGET_CATALOG = ROOT / "data" / "public" / "translation_target_keys.v0.1.json"
 START = "<!-- translation-progress:start -->"
 END = "<!-- translation-progress:end -->"
 SHARED_STRDATA_PATH = "MSG/SC/strdata.bin"
+RUNTIME_PK_PREFIX = "MSG_PK/JP/"
+RUNTIME_SHARED_STRDATA_PATH = "MSG/JP/strdata.bin"
+EXPECTED_STAGE_PATHS = {
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin",
+}
 
 
 def load_json(path: Path) -> dict:
@@ -213,14 +219,41 @@ def progress_bar(value: float) -> str:
     return "█" * filled + "░" * (10 - filled)
 
 
+def expected_runtime_path(catalog_path: str) -> str:
+    """Map the pinned SC catalog identity to its exact Japanese runtime path."""
+    pk_catalog_prefix = "MSG_PK/SC/"
+    if catalog_path.startswith(pk_catalog_prefix):
+        filename = catalog_path.removeprefix(pk_catalog_prefix)
+        if not filename or "/" in filename:
+            raise ValueError(f"invalid PK catalog path: {catalog_path}")
+        return f"{RUNTIME_PK_PREFIX}{filename}"
+    if catalog_path == SHARED_STRDATA_PATH:
+        return RUNTIME_SHARED_STRDATA_PATH
+    raise ValueError(f"unsupported SC catalog path: {catalog_path}")
+
+
+def validate_runtime_path(resource: dict) -> str:
+    catalog_path = resource["path"]
+    runtime_path = resource.get("runtime_path")
+    expected = expected_runtime_path(catalog_path)
+    if runtime_path != expected:
+        raise ValueError(
+            f"runtime_path must be the exact SC-to-JP mapping for {catalog_path}: "
+            f"expected {expected!r}, got {runtime_path!r}"
+        )
+    return runtime_path
+
+
 def render_string_row(
     resource: dict,
     *,
     completed_statuses: set[str],
     target_keys_by_path: dict[str, set[tuple[object, ...]]],
     string_paths: set[str],
+    runtime_paths: set[str],
 ) -> tuple[str, int, int, TargetedOverlayStats]:
     path = resource["path"]
+    runtime_path = validate_runtime_path(resource)
     note = resource["note"]
     total = int(resource["translation_target_total"])
     total_slots = int(resource["total_slots"])
@@ -229,6 +262,9 @@ def render_string_row(
     if path in string_paths:
         raise ValueError(f"duplicate string progress resource: {path}")
     string_paths.add(path)
+    if runtime_path in runtime_paths:
+        raise ValueError(f"duplicate runtime string resource: {runtime_path}")
+    runtime_paths.add(runtime_path)
     target_keys = target_keys_by_path[path]
     if len(target_keys) != total:
         raise ValueError(
@@ -244,7 +280,7 @@ def render_string_row(
         raise ValueError(f"completed ids exceed draft coverage for {path}")
     value = percent(done, total)
     row = (
-        f"| `{path}` | {done:,} / {total:,} | "
+        f"| `{runtime_path}` | {done:,} / {total:,} | "
         f"{value:.1f}% `{progress_bar(value)}` | {note} |"
     )
     return row, done, total, stats
@@ -252,6 +288,8 @@ def render_string_row(
 
 def render() -> str:
     config = load_json(PROGRESS)
+    if config.get("runtime_target_language") != "JP":
+        raise ValueError("runtime_target_language must be JP")
     target_keys_by_path = load_target_keys()
     resources = config.get("resources")
     if not isinstance(resources, list):
@@ -281,6 +319,8 @@ def render() -> str:
     shared_total = 0
     shared_string_resources = 0
     string_paths: set[str] = set()
+    runtime_paths: set[str] = set()
+    stage_paths: set[str] = set()
     for resource in resources:
         if not isinstance(resource, dict):
             raise ValueError("progress resource is not an object")
@@ -295,6 +335,7 @@ def render() -> str:
                 completed_statuses=completed_statuses,
                 target_keys_by_path=target_keys_by_path,
                 string_paths=string_paths,
+                runtime_paths=runtime_paths,
             )
             rows.append(row)
             pk_done += done
@@ -314,10 +355,14 @@ def render() -> str:
             value = percent(done, total)
             amount = f"{done:,} / {total:,} {unit}"
             rate = f"{value:.1f}% `{progress_bar(value)}`"
-            if path.startswith("RES_SC/"):
-                pk_stage_done += done
-                pk_stage_total += total
-                pk_stage_resources += 1
+            if path not in EXPECTED_STAGE_PATHS:
+                raise ValueError(f"unsupported Japanese runtime stage path: {path}")
+            if path in stage_paths:
+                raise ValueError(f"duplicate Japanese runtime stage path: {path}")
+            stage_paths.add(path)
+            pk_stage_done += done
+            pk_stage_total += total
+            pk_stage_resources += 1
             stage_rows.append(f"| `{path}` | {amount} | {rate} | {note} |")
         else:
             raise ValueError(f"unknown progress kind {kind!r} for {path}")
@@ -334,6 +379,7 @@ def render() -> str:
             completed_statuses=completed_statuses,
             target_keys_by_path=target_keys_by_path,
             string_paths=string_paths,
+            runtime_paths=runtime_paths,
         )
         rows.append(row)
         shared_done += done
@@ -349,24 +395,40 @@ def render() -> str:
         missing = sorted(set(target_keys_by_path) - string_paths)
         extra = sorted(string_paths - set(target_keys_by_path))
         raise ValueError(f"progress/target catalog resource mismatch: missing={missing}, extra={extra}")
+    expected_runtime_paths = {
+        expected_runtime_path(path) for path in target_keys_by_path
+    }
+    if runtime_paths != expected_runtime_paths:
+        missing = sorted(expected_runtime_paths - runtime_paths)
+        extra = sorted(runtime_paths - expected_runtime_paths)
+        raise ValueError(
+            f"Japanese runtime resource mismatch: missing={missing}, extra={extra}"
+        )
+    if stage_paths != EXPECTED_STAGE_PATHS:
+        missing = sorted(EXPECTED_STAGE_PATHS - stage_paths)
+        extra = sorted(stage_paths - EXPECTED_STAGE_PATHS)
+        raise ValueError(
+            f"Japanese font stage resource mismatch: missing={missing}, extra={extra}"
+        )
 
     pk_overall = percent(pk_done, pk_total)
     shared_overall = percent(shared_done, shared_total)
     lines = [
         START,
         (
-            f"- PK 실행 경로 `MSG_PK/SC`의 {pk_string_resources}개 메시지 리소스: "
+            f"- 일본어 PK 실행 경로 `MSG_PK/JP`의 {pk_string_resources}개 메시지 리소스: "
             f"**번역 완료 {pk_done:,} / {pk_total:,} ({pk_overall:.1f}%)**, "
             f"비대상 활성 **{pk_non_target_coverage:,}개**는 별도 집계"
         ),
         (
-            f"- PK 실행에서 함께 로드되는 공용 경로 `{SHARED_STRDATA_PATH}`의 "
+            f"- 일본어 PK 실행에서 함께 로드할 공용 경로 `{RUNTIME_SHARED_STRDATA_PATH}`의 "
             f"{shared_string_resources}개 문자열 리소스: **번역 완료 "
             f"{shared_done:,} / {shared_total:,} ({shared_overall:.1f}%)**"
         ),
         (
-            f"- PK 공용 글꼴·리소스 경로 `RES_SC`의 {pk_stage_resources}개 검증 단계: "
-            f"**{pk_stage_done} / {pk_stage_total} 완료**"
+            f"- 일본어 글꼴 경로 `RES_JP`, `RES_JP_PK`의 {pk_stage_resources}개 정적·오프라인 검증 단계: "
+            f"**{pk_stage_done} / {pk_stage_total} 완료** — 로컬 비Steam 10파일 조합 화면 PASS, "
+            "Steam 일본어 런타임 화면 QA 대기"
         ),
         "",
         "| 한글화 대상 파일 | 번역 완료 / 대상 | 진행률 | 현재 상태 |",

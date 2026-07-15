@@ -1,0 +1,220 @@
+{
+  "base_container_language": "SC",
+  "container_policy": {
+    "build_complete_sc_container_then_place_at_jp_resource_path": true,
+    "jp_installed_resource_is_only_a_pinned_target_guard": true,
+    "official_pk_msggame_container_format_shared_by_sc_and_jp": true,
+    "overlay_source_hashes_and_control_layout_must_match_sc": true,
+    "preserve_sc_record_directory_and_literal_coordinates": true
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entry_count": 11722,
+  "expected_candidate": {
+    "literal_slot_count": 25598,
+    "packed_sha256": "D5365A49945582D1F82BF5137CA898EC9EBE270B5F8B90513497E6ADC68E9AD9",
+    "packed_size": 1269018,
+    "raw_sha256": "D1EB3749C835BDEB6C5AA252452F15C83E5E0E57AB6E7636EBBB54401691A04A",
+    "raw_size": 1264036,
+    "record_count": 21581
+  },
+  "input_overlay_catalog": {
+    "coordinates_sha256": "82882CCE6B645BFDEE802AF5E4EDD47CD074C453E346AC64EAF4B8F6601A66FB",
+    "entry_count": 11722,
+    "input_manifest_sha256": "60023DC59C47AC10305B38388E5D32D55014A863A990227353A2DD11CF7EB9D4",
+    "inputs": [
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b01r0003_b02r0086_0197.v0.1.json",
+        "sha256": "685EDA93970D0C658461F087362F237A646F09248D6671FF58C34EE282BB20B4",
+        "size": 37150
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b02r0198_0297.v0.2.json",
+        "sha256": "2330BAFAE23D4C3BF6E16B47CBF9EA9CE05489337FF101441964C01CD046F0DD",
+        "size": 36584
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b02r0298_0565.v0.3.json",
+        "sha256": "CFB91FBB1C9F962183908595C2DFADD3A60B04BB3469113FF68324EC053C34CA",
+        "size": 38684
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b02r0566_0665.v0.4.json",
+        "sha256": "B3A23F25E6632BABCC177D58299F4ACCCF8BFA62012A5541A031285440EA1722",
+        "size": 36866
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b02r0666_b04r0075.v0.5.json",
+        "sha256": "CCECA594A287733EB7EAAD08CF13488B5E857C93D076970551C9BB0CEA9806EC",
+        "size": 43768
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b04r0076_b06r0559.v0.6.json",
+        "sha256": "19AB28AF98E115885F66D483AA8A74ADABBBC8F90E96CF54910F60CFD3C39707",
+        "size": 37444
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r0560_0947.v0.7.json",
+        "sha256": "EB328E39DBC811BA258178C02AAB1C76795CCCB385A285072C9A20944AE94E65",
+        "size": 36882
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r0948_1205.v0.8.json",
+        "sha256": "01B0E8F1D42372CF62E67F7E8C01F43001A1E79178C9B635207281F484B2F5EC",
+        "size": 36722
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r1209_1384.v0.9.json",
+        "sha256": "A97C5D95653E72817F3D94EBAC70E36759A43D2C6CBAC0F60ECCA28EDF4FE729",
+        "size": 37728
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r1385_1514.v0.10.json",
+        "sha256": "1230CC67D68726390FBD6677FC980603D5EF17F7CF8318525E03EC03EAA4E1FF",
+        "size": 35374
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r1515_1677.v0.11.json",
+        "sha256": "7E697120390C9F5C2916EE4343482558AF72FA422F7AF531129BB5E2DECC8DAC",
+        "size": 37803
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r1677_1838.v0.12.json",
+        "sha256": "311204F048F768B58600AB42879095D96CE12CF0613926C9E0BE67105BEDFD01",
+        "size": 39270
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r1839_1991.v0.13.json",
+        "sha256": "D1D5D4D51F582951F06926AD1568016D2E85C03393D9FC064EB7030BAAE1AC9F",
+        "size": 39115
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r1993_2139.v0.14.json",
+        "sha256": "79EB3F94DF6AC226C8FE805C8CEA7E02F519D1EE8D3B56A84FAF8EC24284FEDB",
+        "size": 37191
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r2139_2436.v0.15.json",
+        "sha256": "1FC393C02A36164D30B6DEDE95337D5775A1A41DA71FB5498F474F22D0C00A47",
+        "size": 37802
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r2436_2787.v0.16.json",
+        "sha256": "147D69B27DEB7696D5859AACDF8114B3888FCC95A7FCFC739574367795B73D20",
+        "size": 40387
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r2787_3050.v0.17.json",
+        "sha256": "436CB8538888496F5D6ABD989D49B5D5A8C6658C3151290FB7BC167D4A834F99",
+        "size": 37704
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r3050_3298.v0.18.json",
+        "sha256": "B0279F4C3958D375BD5BA99C2F9CB38E82F8AFFD5DD8DFDB7EB2828D62F92873",
+        "size": 38057
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r3302_3477.v0.19.json",
+        "sha256": "73D9356BB50AC547FE0F34538050C8F5E569051E71C5CFA67A9703E2FA2B8EB0",
+        "size": 38796
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r3478_3697.v0.20.json",
+        "sha256": "EB7FD44B58DCEE05827FB730986650CE6A2F527E63FE7365F2D75B63E9D11112",
+        "size": 37717
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r3698_3837.v0.21.json",
+        "sha256": "2302FE6F3F6A03E206EBCE50A5A8C97C84AA72EEFDB287C1EE9505F187F07B12",
+        "size": 37374
+      },
+      {
+        "path": "workstreams/msggame/public/msggame_ko_system_messages_b06r3841_3930.v0.22.json",
+        "sha256": "8BF5B5C58D6CC522775B379A942ED9B67AA94C97409CD68C47B25F805310ED8B",
+        "size": 36201
+      },
+      {
+        "path": "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json",
+        "sha256": "245A73AA77B5649B686CE5A459C299CFBF7EE8EF5A6CDC56A7EB11288DECDFB5",
+        "size": 1475155
+      },
+      {
+        "path": "workstreams/switch_msggame_v13_invariant_recovery/public/msggame_ko_switch_v13_invariant_recovery_580.v1.json",
+        "sha256": "9EF7210B5AA5F6842494EA75D79874AC009A9452855E4EC0FE79744284C6E61C",
+        "size": 171527
+      },
+      {
+        "path": "workstreams/switch_msggame_v13_human_review_b01/public/msggame_ko_switch_v13_semantic_review_b01_53.v1.json",
+        "sha256": "8F1450EE1E06F26E8A2AC004E1562241F2150CF3FEF0EA10BD8B5786DDA05A3B",
+        "size": 15655
+      },
+      {
+        "path": "workstreams/switch_msggame_v13_human_review_b02/public/msggame_ko_switch_v13_semantic_review_b02_68.v1.json",
+        "sha256": "1656637F64B7EA30C284AA9DE229A636A93CD14E90EF92F25A1FB6F838F47359",
+        "size": 19254
+      },
+      {
+        "path": "workstreams/switch_msggame_v13_human_review_b03/public/msggame_ko_switch_v13_semantic_review_b03_130.v1.json",
+        "sha256": "6279D3C7D7139EED15670309F7DAD3E993359821985DA3194E392439B3C77302",
+        "size": 34570
+      },
+      {
+        "path": "workstreams/msggame_pk_ui_priority_b01/public/msggame_ko_pk_ui_priority_b01_150.v1.json",
+        "sha256": "9F64B7CBC810D6FDE6FC99D4C06032736EB4552C925E500042E778CAEBEE07D5",
+        "size": 70400
+      },
+      {
+        "path": "workstreams/msggame_pk_ui_priority_b02/public/msggame_ko_pk_ui_priority_b02_53.v1.json",
+        "sha256": "337251C3D5741131BD0D2C001E17F8A2F4C37E5797967A6CF79A10C2F440B19C",
+        "size": 14493
+      },
+      {
+        "path": "workstreams/msggame_pk_ui_priority_b03/public/msggame_ko_pk_ui_priority_b03_220.v1.json",
+        "sha256": "5F2DEEBDFF49F65DBD5878CC5652D97F91EA7D2A2322DB4C83F93847A5D82A28",
+        "size": 86308
+      },
+      {
+        "path": "workstreams/msggame_pk_ui_priority_b04/public/msggame_ko_pk_ui_priority_b04_250.v1.json",
+        "sha256": "399CC98E8C778663FFF95CD7AE052C04B1BF96DACFBA6E09E207D54E6EF55AD5",
+        "size": 106559
+      },
+      {
+        "path": "workstreams/msggame_pk_ui_priority_b05/public/msggame_ko_pk_ui_priority_b05_300.v1.json",
+        "sha256": "E67FFDC802485FFB8B1276880239CA4CE9F4098274792B993A448A36E1771808",
+        "size": 92675
+      },
+      {
+        "path": "workstreams/msggame_pk_ui_priority_b06/public/msggame_ko_pk_ui_priority_b06_300.v1.json",
+        "sha256": "E7DEAF3D73DD124FBD770A8E36F1A3F71EDF97E0136B4DC8B3E6533FD6706AD1",
+        "size": 84286
+      },
+      {
+        "path": "workstreams/msggame_pk_ui_priority_b07/public/msggame_ko_pk_ui_priority_b07_300.v1.json",
+        "sha256": "6292D829DA64C1E3A0476CF0B3248161E7317AB53D6F0D00B98663F5BAF74BD6",
+        "size": 88837
+      }
+    ],
+    "overlay_count": 34,
+    "source_resource": "MSG_PK/SC/msggame.bin"
+  },
+  "recipe_id": "msggame_pk_jp_sc_container_mirror_v1_11722.v1",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "schema": "nobu16.kr.msggame-jp-sc-container-mirror-recipe.v1",
+  "stock_jp_target_guard": {
+    "packed_sha256": "0FB9EA3B4817D208C65F587AF1F57A5BB82106367314801A13C9A534ECC47CD8",
+    "packed_size": 709290,
+    "raw_sha256": "F00C897353C3C0084BFBFC5ED781C467945C82708F28A6D57BA0CC2710976D57",
+    "raw_size": 1571384,
+    "record_count": 21581
+  },
+  "stock_sc": {
+    "literal_slot_count": 25598,
+    "packed_sha256": "BD7B33FCC7495B855B0828C7FE4E5F7ADB2DE656A9B12E20259750F94EE665D6",
+    "packed_size": 529419,
+    "raw_sha256": "1958B2B801D37186D478284EA0E29CA96D8DA2BC087D6BEB74A4139EF01C11CE",
+    "raw_size": 1077200,
+    "record_count": 21581
+  }
+}

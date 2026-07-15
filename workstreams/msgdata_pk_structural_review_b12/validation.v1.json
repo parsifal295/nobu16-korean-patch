@@ -1,0 +1,124 @@
+{
+  "artifacts": {
+    "evidence/msgdata_pk_structural_review_b12_evidence.v1.json": {
+      "path": "evidence/msgdata_pk_structural_review_b12_evidence.v1.json",
+      "sha256": "F010F9C7A8F72ECDE39A3780B499B2D4B36BB7308AC763255C1985478A9AB3CB",
+      "size": 182333
+    },
+    "public/msgdata_ko_pk_structural_review_b12_500.v1.json": {
+      "path": "public/msgdata_ko_pk_structural_review_b12_500.v1.json",
+      "sha256": "C3F19E3BC311D1F739149707BB8E63AA7B92447C7E4F5F4E63F1EC9F0F21ACBF",
+      "size": 96030
+    },
+    "review/msgdata_pk_structural_review_b12_review.v1.json": {
+      "path": "review/msgdata_pk_structural_review_b12_review.v1.json",
+      "sha256": "10788A9AE2EF0F8171D542CE8944C3095AF8A05AD93F8B13EDA32EA0FCFACB96",
+      "size": 56019
+    }
+  },
+  "batch_id": "msgdata-pk-structural-review-b12-500.v1",
+  "generator": {
+    "path": "build_msgdata_pk_structural_review_b12.py",
+    "sha256": "DD07BEC0C69257EF5AB204D8A5801307A0B3338234D6B5A631ABA1DF2E5AB6ED"
+  },
+  "official_selected_rowset_sha256": {
+    "EN": "C5212DC0B6A6A8B7EA78EB862479EAA1EC1D37341B7FA7E3B5C50B6B40D7E98E",
+    "JP": "8D3B2F6F287CA7542536F34CC943C0A9A6651C492BA80885493B6C2A3183219A",
+    "SC": "C5212DC0B6A6A8B7EA78EB862479EAA1EC1D37341B7FA7E3B5C50B6B40D7E98E",
+    "TC": "C5212DC0B6A6A8B7EA78EB862479EAA1EC1D37341B7FA7E3B5C50B6B40D7E98E"
+  },
+  "passed": true,
+  "progress_audit": {
+    "explicit_structural_predecessor_count": 2500,
+    "historical_owner_paths": [
+      "workstreams/msgdata_pk_structural_review_b07/public/msgdata_ko_pk_structural_review_b07_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b08/public/msgdata_ko_pk_structural_review_b08_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b09/public/msgdata_ko_pk_structural_review_b09_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b10/public/msgdata_ko_pk_structural_review_b10_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b11/public/msgdata_ko_pk_structural_review_b11_500.v1.json"
+    ],
+    "post_review_gap_count": 1110,
+    "post_review_gap_ids_sha256": "A5A442486459B5F3E5AE72148E066C4FEA159BD9D792CD0BAABCAC257CAE4E0C",
+    "pre_b07_registration_count": 14,
+    "pre_review_gap_count": 1610,
+    "pre_review_gap_ids_sha256": "F64C74B50B40FE5FBF7FD1D66E51F0023D0B9A3888484E96310FC0BFC157C566",
+    "predecessor_target_count": 23924,
+    "predecessor_target_ids_sha256": "882BDBDCDA5E510ABDE723173C2C6E6DC67CD4E462CC2EB75987397463EE4A59",
+    "self_registration_states_supported": [
+      0,
+      1
+    ],
+    "successor_registration_tolerant": true,
+    "successors_excluded_from_historical_claims": true
+  },
+  "reason_summary": {
+    "romanized_or_phonetic_lookup_key": {
+      "count": 500,
+      "ids_sha256": "BA8FB8B6C520E1783B1ED55BA49BBB0425820C0DC740DDFA8DE14BE87678D88D"
+    }
+  },
+  "replacement_invariants": {
+    "checked": 500,
+    "esc_preserved": true,
+    "exact_utf16le_byte_preserve_count": 500,
+    "failures": 0,
+    "line_breaks_preserved": true,
+    "printf_preserved": true,
+    "pua_preserved": true
+  },
+  "reproducibility": {
+    "artifact_json_canonical": true,
+    "in_memory_target_a_b_equal": true,
+    "self_and_successor_registration_stable": true
+  },
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "global_progress_modified": false,
+    "global_readme_modified": false,
+    "installed_game_files_modified": false
+  },
+  "schema": "nobu16.kr.msgdata-pk-structural-review-validation.v1",
+  "scope": {
+    "blocked_count": 0,
+    "duplicate_id_count": 0,
+    "exact_byte_preserve_count": 500,
+    "narrative_mixed_count": 0,
+    "post_review_structural_remaining": 1110,
+    "predecessor_overlap_count": 0,
+    "reviewed_count": 500,
+    "reviewed_ids_sha256": "BA8FB8B6C520E1783B1ED55BA49BBB0425820C0DC740DDFA8DE14BE87678D88D",
+    "translated_narrative_count": 0
+  },
+  "source_free_scan": {
+    "evidence/msgdata_pk_structural_review_b12_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "public/msgdata_ko_pk_structural_review_b12_500.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "review/msgdata_pk_structural_review_b12_review.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    }
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 500,
+    "packed_sha256": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "packed_size": 516796,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "5982D520BF2E66260943DE61D0CB7F1135D1BA81A211E917E3F426C58D9125D6",
+    "raw_size": 514752,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "wrapper_round_trip": true
+  }
+}

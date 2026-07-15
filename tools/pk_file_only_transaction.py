@@ -7,9 +7,10 @@ installed predecessor hashes, verifies the candidate hashes, and can then
 apply or restore the files as one small transaction.  The manifest contains
 only paths, sizes, and hashes--never candidate bytes or absolute local paths.
 
-Only the PC PK runtime paths enumerated in ``ALLOWED_TARGETS`` are accepted.
-The base-game tree remains blocked except for ``MSG/SC/strdata.bin``, whose
-shared UI table is directly observed in PK execution.
+Only the exact Simplified-Chinese or Japanese PC PK runtime paths enumerated
+in ``ALLOWED_TARGETS`` are accepted.  A transaction is always confined to one
+runtime-language profile.  The base-game tree remains blocked except for that
+profile's shared ``MSG/<LANG>/strdata.bin`` and base font archive.
 """
 
 from __future__ import annotations
@@ -38,12 +39,32 @@ SC_MESSAGE_FILES = (
     "msgstf.bin",
     "msggame.bin",
 )
-ALLOWED_TARGETS = frozenset(
+JP_MESSAGE_FILES = SC_MESSAGE_FILES
+SC_ALLOWED_TARGETS = frozenset(
     {f"MSG_PK/SC/{name}" for name in SC_MESSAGE_FILES}
     | {"MSG/SC/strdata.bin", "RES_SC/res_lang.bin", "RES_SC/res_lang_exp.bin"}
 )
+JP_ALLOWED_TARGETS = frozenset(
+    {f"MSG_PK/JP/{name}" for name in JP_MESSAGE_FILES}
+    | {
+        "MSG/JP/strdata.bin",
+        "RES_JP/res_lang.bin",
+        "RES_JP_PK/res_lang_pk.bin",
+    }
+)
+ALLOWED_TARGETS = SC_ALLOWED_TARGETS | JP_ALLOWED_TARGETS
 LEGACY_TARGET_SCOPE = ["MSG_PK/SC", "RES_SC"]
 TARGET_SCOPE = ["MSG/SC/strdata.bin", "MSG_PK/SC", "RES_SC"]
+JP_TARGET_SCOPE = ["MSG/JP/strdata.bin", "MSG_PK/JP", "RES_JP", "RES_JP_PK"]
+LIVE_RESOURCE_ROOTS = (
+    ("MSG", "SC"),
+    ("MSG_PK", "SC"),
+    ("RES_SC",),
+    ("MSG", "JP"),
+    ("MSG_PK", "JP"),
+    ("RES_JP",),
+    ("RES_JP_PK",),
+)
 MANIFEST_SCHEMA = "nobu16.pk-file-only-transaction.v1"
 STATE_SCHEMA = "nobu16.pk-file-only-transaction-state.v1"
 SHA256_RE = re.compile(r"\A[0-9A-F]{64}\Z")
@@ -161,6 +182,24 @@ def assert_no_links_between(root: Path, leaf: Path, label: str) -> None:
             raise TransactionError(f"{label} path contains a symlink/reparse point: {current}")
 
 
+def lexical_absolute(path: Path) -> Path:
+    """Return an absolute path without resolving symlinks or reparse points."""
+    return Path(os.path.abspath(os.fspath(path.expanduser())))
+
+
+def assert_no_reparse_components(path: Path, label: str) -> Path:
+    """Reject every existing link/reparse component before canonical resolution."""
+    absolute = lexical_absolute(path)
+    current = Path(absolute.anchor)
+    for part in absolute.parts[1:]:
+        current /= part
+        if is_reparse_point(current):
+            raise TransactionError(
+                f"{label} path contains a symlink/reparse point: {current}"
+            )
+    return absolute
+
+
 def resolve_under(root: Path, relative: str, label: str, *, root_must_exist: bool = True) -> Path:
     relative = safe_relative_path(relative)
     root = root.resolve(strict=root_must_exist)
@@ -182,6 +221,40 @@ def validate_spec(value: Any, label: str) -> dict[str, object]:
     if not isinstance(digest, str) or not SHA256_RE.fullmatch(digest):
         raise TransactionError(f"{label}.sha256 must be uppercase SHA-256")
     return {"size": size, "sha256": digest}
+
+
+def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> str:
+    """Infer exactly one supported runtime-language profile from target paths."""
+    if not paths:
+        raise TransactionError(f"{label} must contain at least one target path")
+    unknown = paths - ALLOWED_TARGETS
+    if unknown:
+        raise TransactionError(f"{label} contains a target outside PK scope: {sorted(unknown)[0]}")
+    profiles: set[str] = set()
+    if paths & SC_ALLOWED_TARGETS:
+        profiles.add("SC")
+    if paths & JP_ALLOWED_TARGETS:
+        profiles.add("JP")
+    if len(profiles) != 1:
+        raise TransactionError(f"{label} must not mix SC and JP runtime profiles")
+    profile = profiles.pop()
+    if profile == "JP" and paths != JP_ALLOWED_TARGETS:
+        missing = sorted(JP_ALLOWED_TARGETS - paths)
+        raise TransactionError(
+            f"{label} must contain the exact JP 10-file profile"
+            + (f" (missing={','.join(missing)})" if missing else "")
+        )
+    return profile
+
+
+def runtime_profile_for_scope(target_scope: Any) -> str:
+    if target_scope in (LEGACY_TARGET_SCOPE, TARGET_SCOPE):
+        return "SC"
+    if target_scope == JP_TARGET_SCOPE:
+        return "JP"
+    raise TransactionError(
+        "manifest target_scope must be the legacy SC scope, exact SC scope, or exact JP scope"
+    )
 
 
 def assert_matches_spec(path: Path, spec: dict[str, object], label: str) -> None:
@@ -209,16 +282,20 @@ def parse_candidate_args(values: list[str] | None) -> dict[str, Path]:
             raise TransactionError(f"candidate path is empty for {target}")
         if target in candidates:
             raise TransactionError(f"duplicate candidate target: {target}")
-        candidates[target] = Path(local).expanduser().resolve(strict=False)
+        candidates[target] = assert_no_reparse_components(
+            Path(local), f"candidate {target}"
+        )
     if not candidates:
         raise TransactionError("at least one --candidate is required")
+    runtime_profile_for_paths(set(candidates), "candidate set")
     return candidates
 
 
 def collect_candidate_root(root: Path) -> dict[str, Path]:
     """Collect only known PK targets from a local composite output tree."""
-    root = root.expanduser().resolve(strict=True)
+    root = assert_no_reparse_components(root, "candidate root")
     assert_ordinary_directory(root, "candidate root")
+    root = root.resolve(strict=True)
     candidates: dict[str, Path] = {}
     for relative in sorted(ALLOWED_TARGETS):
         candidate = resolve_under(root, relative, f"candidate-root {relative}")
@@ -229,6 +306,34 @@ def collect_candidate_root(root: Path) -> dict[str, Path]:
         candidates[relative] = candidate
     if not candidates:
         raise TransactionError("candidate root contains no accepted PK target files")
+    profile = runtime_profile_for_paths(set(candidates), "candidate root")
+    if profile == "JP":
+        extras: list[str] = []
+        for current, directory_names, file_names in os.walk(
+            root, topdown=True, followlinks=False
+        ):
+            current_path = Path(current)
+            for directory_name in directory_names:
+                child = current_path / directory_name
+                if is_reparse_point(child):
+                    raise TransactionError(
+                        "JP candidate root contains a symlink/reparse point: "
+                        + str(child)
+                    )
+            for file_name in file_names:
+                child = current_path / file_name
+                if is_reparse_point(child):
+                    raise TransactionError(
+                        "JP candidate root contains a symlink/reparse point: "
+                        + str(child)
+                    )
+                relative = child.relative_to(root).as_posix()
+                if relative not in JP_ALLOWED_TARGETS:
+                    extras.append(relative)
+        if extras:
+            raise TransactionError(
+                "JP candidate root contains an unexpected file: " + sorted(extras)[0]
+            )
     return candidates
 
 
@@ -243,16 +348,14 @@ def candidates_from_namespace(args: argparse.Namespace) -> dict[str, Path]:
 
 
 def candidate_must_not_be_live_resource(game_root: Path, candidate: Path, label: str) -> None:
+    candidate = assert_no_reparse_components(candidate, label)
     assert_ordinary_file(candidate, label)
     game_root = game_root.resolve(strict=True)
     resolved = candidate.resolve(strict=True)
-    for scoped_root in (
-        game_root / "MSG" / "SC",
-        game_root / "MSG_PK" / "SC",
-        game_root / "RES_SC",
-    ):
+    for parts in LIVE_RESOURCE_ROOTS:
+        scoped_root = game_root.joinpath(*parts)
         try:
-            resolved.relative_to(scoped_root.resolve(strict=True))
+            resolved.relative_to(scoped_root.resolve(strict=False))
         except ValueError:
             continue
         raise TransactionError(f"{label} must not point into a live PK resource tree: {candidate}")
@@ -290,10 +393,7 @@ def validate_manifest(value: dict[str, Any]) -> dict[str, Any]:
         if value[name] is not expected:
             raise TransactionError(f"manifest {name} must be {expected!r}")
     target_scope = value["target_scope"]
-    if target_scope not in (LEGACY_TARGET_SCOPE, TARGET_SCOPE):
-        raise TransactionError(
-            "manifest target_scope must be the legacy PK scope or the exact shared-strdata PK scope"
-        )
+    scope_profile = runtime_profile_for_scope(target_scope)
     raw_entries = value["entries"]
     if not isinstance(raw_entries, list) or not raw_entries:
         raise TransactionError("manifest entries must be a non-empty array")
@@ -319,6 +419,14 @@ def validate_manifest(value: dict[str, Any]) -> dict[str, Any]:
         if mode == "retain" and predecessor != target:
             raise TransactionError(f"retain entry {path} must pin an identical predecessor and target")
         entries.append({"path": path, "mode": mode, "predecessor": predecessor, "target": target})
+    entry_paths = {entry["path"] for entry in entries}
+    entry_profile = runtime_profile_for_paths(entry_paths, "manifest entries")
+    if entry_profile != scope_profile:
+        raise TransactionError("manifest target_scope and entries must use the same runtime profile")
+    if target_scope == LEGACY_TARGET_SCOPE and not entry_paths <= (
+        SC_ALLOWED_TARGETS - {"MSG/SC/strdata.bin"}
+    ):
+        raise TransactionError("legacy SC target_scope cannot contain shared MSG/SC/strdata.bin")
     entries.sort(key=lambda entry: entry["path"])
     return {**value, "entries": entries}
 
@@ -331,17 +439,35 @@ def read_manifest(path: Path) -> tuple[dict[str, Any], str]:
 
 def scope_report(manifest: dict[str, Any]) -> dict[str, Any]:
     paths = [entry["path"] for entry in manifest["entries"]]
-    message_paths = [path for path in paths if path.startswith("MSG_PK/SC/")]
-    shared_paths = [path for path in paths if path.startswith("RES_SC/")]
-    base_paths = [path for path in paths if path == "MSG/SC/strdata.bin"]
+    path_set = set(paths)
+    runtime_language = runtime_profile_for_paths(path_set, "manifest entries")
+    if runtime_language != runtime_profile_for_scope(manifest["target_scope"]):
+        raise TransactionError("manifest target_scope and entries must use the same runtime profile")
+    sc_message_paths = [path for path in paths if path.startswith("MSG_PK/SC/")]
+    sc_resource_paths = [path for path in paths if path.startswith("RES_SC/")]
+    sc_base_paths = [path for path in paths if path == "MSG/SC/strdata.bin"]
+    jp_message_paths = [path for path in paths if path.startswith("MSG_PK/JP/")]
+    jp_base_resource_paths = [path for path in paths if path.startswith("RES_JP/")]
+    jp_pk_resource_paths = [path for path in paths if path.startswith("RES_JP_PK/")]
+    jp_base_paths = [path for path in paths if path == "MSG/JP/strdata.bin"]
     return {
         "target_paths": paths,
-        "msg_pk_sc_count": len(message_paths),
-        "res_sc_count": len(shared_paths),
-        "base_msg_sc_count": len(base_paths),
-        "all_seven_msg_pk_sc_included": set(message_paths) == {
+        "runtime_language": runtime_language,
+        "msg_pk_sc_count": len(sc_message_paths),
+        "res_sc_count": len(sc_resource_paths),
+        "base_msg_sc_count": len(sc_base_paths),
+        "all_seven_msg_pk_sc_included": set(sc_message_paths) == {
             f"MSG_PK/SC/{name}" for name in SC_MESSAGE_FILES
         },
+        "msg_pk_jp_count": len(jp_message_paths),
+        "res_jp_count": len(jp_base_resource_paths),
+        "res_jp_pk_count": len(jp_pk_resource_paths),
+        "base_msg_jp_count": len(jp_base_paths),
+        "all_seven_msg_pk_jp_included": set(jp_message_paths) == {
+            f"MSG_PK/JP/{name}" for name in JP_MESSAGE_FILES
+        },
+        "jp_10_file_count": len(path_set & JP_ALLOWED_TARGETS),
+        "jp_10_file_complete": path_set == JP_ALLOWED_TARGETS,
     }
 
 
@@ -350,6 +476,8 @@ def make_manifest(game_root: Path, release_id: str, candidates: dict[str, Path])
         raise TransactionError("release_id must be lowercase ASCII [a-z0-9._-]")
     assert_ordinary_directory(game_root, "game root")
     root = game_root.resolve(strict=True)
+    candidate_targets = {safe_relative_path(target) for target in candidates}
+    candidate_profile = runtime_profile_for_paths(candidate_targets, "candidate set")
     entries: list[dict[str, Any]] = []
     for target, candidate in sorted(candidates.items()):
         target = safe_relative_path(target)
@@ -372,7 +500,7 @@ def make_manifest(game_root: Path, release_id: str, candidates: dict[str, Path])
         "hooking": False,
         "executable_modified": False,
         "registry_modified": False,
-        "target_scope": TARGET_SCOPE,
+        "target_scope": JP_TARGET_SCOPE if candidate_profile == "JP" else TARGET_SCOPE,
         "entries": entries,
     }
     return validate_manifest(manifest)
@@ -398,18 +526,24 @@ def default_backup_root(game_root: Path, release_id: str) -> Path:
 
 def validate_backup_root(game_root: Path, backup_root: Path) -> Path:
     root = game_root.resolve(strict=True)
-    backup = backup_root.resolve(strict=False)
-    allowed_parent = root / "KR_PATCH_BACKUP"
-    try:
-        backup.relative_to(allowed_parent)
-    except ValueError as exc:
-        raise TransactionError("backup root must stay under <game-root>/KR_PATCH_BACKUP") from exc
-    for forbidden in (root / "MSG" / "SC", root / "MSG_PK" / "SC", root / "RES_SC"):
+    backup = lexical_absolute(backup_root)
+    for parts in LIVE_RESOURCE_ROOTS:
+        forbidden = root.joinpath(*parts)
         try:
             backup.relative_to(forbidden)
         except ValueError:
             continue
         raise TransactionError("backup root must not be inside a PK resource tree")
+    allowed_parent = root / "KR_PATCH_BACKUP"
+    try:
+        backup.relative_to(allowed_parent)
+    except ValueError as exc:
+        raise TransactionError("backup root must stay under <game-root>/KR_PATCH_BACKUP") from exc
+    backup = assert_no_reparse_components(backup, "backup root").resolve(strict=False)
+    try:
+        backup.relative_to(allowed_parent)
+    except ValueError as exc:
+        raise TransactionError("backup root must stay under <game-root>/KR_PATCH_BACKUP") from exc
     if backup.exists():
         assert_ordinary_directory(backup, "backup root")
     return backup
@@ -485,12 +619,13 @@ def candidate_status(
 
 
 def backup_path(backup_root: Path, relative: str) -> Path:
-    return resolve_under(
+    path = resolve_under(
         backup_root,
         "originals/" + relative,
         f"backup {relative}",
         root_must_exist=False,
     )
+    return assert_no_reparse_components(path, f"backup {relative}")
 
 
 def state_path(backup_root: Path) -> Path:
@@ -503,7 +638,9 @@ def lock_path(backup_root: Path) -> Path:
 
 @contextlib.contextmanager
 def exclusive_lock(backup_root: Path) -> Iterator[None]:
+    backup_root = assert_no_reparse_components(backup_root, "backup root")
     backup_root.mkdir(parents=True, exist_ok=True)
+    assert_no_reparse_components(backup_root, "backup root")
     assert_ordinary_directory(backup_root, "backup root")
     lock = lock_path(backup_root)
     try:
@@ -710,12 +847,18 @@ def apply_transaction(
             rollback_errors: list[str] = []
             for entry in reversed(manifest["entries"]):
                 relative = entry["path"]
-                if relative not in changed:
+                if entry["mode"] != "replace":
                     continue
                 try:
                     assert_game_stopped()
                     path = resource_paths(game_root, manifest)[relative]
-                    assert_matches_spec(path, entry["target"], f"rollback source {relative}")
+                    actual = file_spec(path)
+                    if actual == entry["predecessor"]:
+                        continue
+                    if actual != entry["target"]:
+                        raise TransactionError(
+                            f"rollback source {relative} is neither predecessor nor target"
+                        )
                     copy_atomic(
                         backup_path(backup_root, relative),
                         path,

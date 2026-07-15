@@ -101,7 +101,7 @@ def encode_json(value: Any) -> bytes:
 
 STRUCTURAL_REGISTRATION_RE = re.compile(
     r"workstreams/msgdata_pk_structural_review_b(\d{2})/public/"
-    r"msgdata_ko_pk_structural_review_b\1_500\.v1\.json"
+    r"msgdata_ko_pk_structural_review_b\1_(500|final_110)\.v1\.json"
 )
 
 
@@ -136,6 +136,9 @@ def historical_registration_tail(
         match = STRUCTURAL_REGISTRATION_RE.fullmatch(logical_path)
         if match is None or int(match.group(1)) != expected_batch:
             raise StructuralReviewError("structural successor order is not contiguous")
+        expected_suffix = "final_110" if expected_batch == 15 else "500"
+        if match.group(2) != expected_suffix:
+            raise StructuralReviewError("structural successor filename does not match its batch")
         if not (repo_root / logical_path).is_file():
             raise StructuralReviewError("registered structural successor is missing")
         expected_batch += 1

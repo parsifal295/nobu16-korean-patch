@@ -22,6 +22,20 @@ EXPECTED_PK_STRING_TARGETS = {
 EXPECTED_SHARED_STRING_TARGETS = {
     "MSG/SC/strdata.bin": (32311, 26690),
 }
+EXPECTED_RUNTIME_PATHS = {
+    "MSG_PK/SC/msgui.bin": "MSG_PK/JP/msgui.bin",
+    "MSG_PK/SC/msgev.bin": "MSG_PK/JP/msgev.bin",
+    "MSG_PK/SC/msgdata.bin": "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/SC/msgbre.bin": "MSG_PK/JP/msgbre.bin",
+    "MSG_PK/SC/msgire.bin": "MSG_PK/JP/msgire.bin",
+    "MSG_PK/SC/msgstf.bin": "MSG_PK/JP/msgstf.bin",
+    "MSG_PK/SC/msggame.bin": "MSG_PK/JP/msggame.bin",
+    "MSG/SC/strdata.bin": "MSG/JP/strdata.bin",
+}
+EXPECTED_STAGE_PATHS = {
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin",
+}
 
 EXPECTED_NON_TARGET_COVERAGE = {
     "MSG_PK/SC/msgui.bin": 0,
@@ -38,6 +52,7 @@ EXPECTED_NON_TARGET_COVERAGE = {
 class ReadmeProgressTests(unittest.TestCase):
     def test_pinned_string_inventory_is_complete(self):
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
+        self.assertEqual(payload["runtime_target_language"], "JP")
         actual = {
             resource["path"]: (
                 resource["total_slots"],
@@ -58,6 +73,39 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertEqual(shared, EXPECTED_SHARED_STRING_TARGETS)
         self.assertEqual(sum(target for _, target in shared.values()), 26690)
         self.assertEqual(payload["completed_statuses"], ["translated", "reviewed"])
+
+    def test_sc_catalog_identity_maps_one_to_one_to_japanese_runtime(self):
+        payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
+        string_resources = [
+            resource
+            for resource in payload["resources"]
+            if resource["kind"] == "strings"
+        ] + payload["shared_strings"]
+        actual = {
+            resource["path"]: resource["runtime_path"]
+            for resource in string_resources
+        }
+        self.assertEqual(actual, EXPECTED_RUNTIME_PATHS)
+        self.assertEqual(len(set(actual.values())), len(actual))
+        for catalog_path, runtime_path in actual.items():
+            self.assertEqual(
+                runtime_path,
+                readme_progress.expected_runtime_path(catalog_path),
+            )
+
+    def test_only_japanese_base_and_pk_font_archives_are_staged(self):
+        payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
+        stages = {
+            resource["path"]: (resource["done"], resource["total"], resource["note"])
+            for resource in payload["resources"]
+            if resource["kind"] == "stages"
+        }
+        self.assertEqual(set(stages), EXPECTED_STAGE_PATHS)
+        for done, total, note in stages.values():
+            self.assertEqual((done, total), (1, 2))
+            self.assertIn("정적·오프라인 검증", note)
+            self.assertIn("로컬 비Steam 일본어 10파일 조합 화면 PASS", note)
+            self.assertIn("Steam 일본어 런타임 화면 QA 대기", note)
 
     def test_msggame_record_and_literal_counts_are_explicit_and_included(self):
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
@@ -168,15 +216,16 @@ class ReadmeProgressTests(unittest.TestCase):
             stats.non_target_coverage for stats in pk_stats_by_path.values()
         )
         rendered = readme_progress.render()
+        self.assertEqual(done, 56546)
         self.assertIn(f"번역 완료 {done:,} / 61,306 ({done / 61306 * 100:.1f}%)", rendered)
         self.assertIn(f"비대상 활성 **{non_target:,}개**는 별도 집계", rendered)
         self.assertIn(
-            "`MSG/SC/strdata.bin`의 1개 문자열 리소스: "
+            "`MSG/JP/strdata.bin`의 1개 문자열 리소스: "
             "**번역 완료 24,658 / 26,690 (92.4%)**",
             rendered,
         )
         self.assertIn(
-            "`MSG/SC/strdata.bin` | 24,658 / 26,690 | 92.4%",
+            "`MSG/JP/strdata.bin` | 24,658 / 26,690 | 92.4%",
             rendered,
         )
         self.assertEqual(24658, shared_stats.target_completed)
@@ -186,10 +235,18 @@ class ReadmeProgressTests(unittest.TestCase):
             target = len(targets[path])
             rate = readme_progress.percent(stats.target_completed, target)
             self.assertIn(
-                f"`{path}` | {stats.target_completed:,} / {target:,} | "
+                f"`{EXPECTED_RUNTIME_PATHS[path]}` | {stats.target_completed:,} / {target:,} | "
                 f"{rate:.1f}%",
                 rendered,
             )
+        self.assertIn(
+            "`MSG_PK/JP/msgdata.bin` | 25,534 / 25,534 | 100.0%",
+            rendered,
+        )
+        self.assertIn(
+            "`MSG_PK/JP/msggame.bin` | 11,722 / 16,482 | 71.1%",
+            rendered,
+        )
 
     def test_readme_progress_is_current(self):
         result = subprocess.run(
@@ -202,11 +259,15 @@ class ReadmeProgressTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
-    def test_pk_runtime_summary_keeps_shared_res_sc_visible(self):
+    def test_pk_runtime_summary_uses_only_japanese_runtime_paths(self):
         rendered = readme_progress.render()
-        self.assertIn("PK 실행 경로 `MSG_PK/SC`의 7개 메시지 리소스", rendered)
-        self.assertIn("PK 실행에서 함께 로드되는 공용 경로 `MSG/SC/strdata.bin`", rendered)
-        self.assertIn("PK 공용 글꼴·리소스 경로 `RES_SC`의 2개 검증 단계", rendered)
+        self.assertIn("일본어 PK 실행 경로 `MSG_PK/JP`의 7개 메시지 리소스", rendered)
+        self.assertIn("일본어 PK 실행에서 함께 로드할 공용 경로 `MSG/JP/strdata.bin`", rendered)
+        self.assertIn("일본어 글꼴 경로 `RES_JP`, `RES_JP_PK`의 2개 정적·오프라인 검증 단계", rendered)
+        self.assertIn("Steam 일본어 런타임 화면 QA 대기", rendered)
+        self.assertNotIn("`MSG_PK/SC/", rendered)
+        self.assertNotIn("`MSG/SC/strdata.bin`", rendered)
+        self.assertNotIn("`RES_SC", rendered)
         self.assertNotIn("MSG/SC/ev_strdata.bin", rendered)
 
     def test_render_uses_each_current_catalog_note(self):
@@ -215,12 +276,15 @@ class ReadmeProgressTests(unittest.TestCase):
         for resource in payload["resources"] + payload["shared_strings"]:
             self.assertIn(resource["note"], rendered)
 
-    def test_readme_includes_only_verified_pk_loaded_shared_base_progress(self):
+    def test_readme_includes_only_japanese_pk_runtime_progress(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         progress_block = readme.split(readme_progress.START, 1)[1].split(
             readme_progress.END, 1
         )[0]
-        self.assertIn("MSG/SC/strdata.bin", progress_block)
+        self.assertIn("MSG/JP/strdata.bin", progress_block)
+        self.assertIn("MSG_PK/JP/msgdata.bin", progress_block)
+        self.assertNotIn("MSG/SC/strdata.bin", progress_block)
+        self.assertNotIn("MSG_PK/SC/", progress_block)
         self.assertNotIn("MSG/SC/ev_strdata.bin", progress_block)
 
 

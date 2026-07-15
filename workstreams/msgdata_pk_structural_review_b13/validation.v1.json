@@ -1,0 +1,126 @@
+{
+  "artifacts": {
+    "evidence/msgdata_pk_structural_review_b13_evidence.v1.json": {
+      "path": "evidence/msgdata_pk_structural_review_b13_evidence.v1.json",
+      "sha256": "0A85E31B5F51783EC5902A4DD1630098D780841E93E8BC793E25F69142640963",
+      "size": 182749
+    },
+    "public/msgdata_ko_pk_structural_review_b13_500.v1.json": {
+      "path": "public/msgdata_ko_pk_structural_review_b13_500.v1.json",
+      "sha256": "5881F65D11BF7ECC04B62FE98B90B1797F288BE00560737C78522A324F0F1A47",
+      "size": 96017
+    },
+    "review/msgdata_pk_structural_review_b13_review.v1.json": {
+      "path": "review/msgdata_pk_structural_review_b13_review.v1.json",
+      "sha256": "3C00047377845E757A6E098EEEDAA6A23362CEB06A3C6133D38A64A08A9881F0",
+      "size": 56019
+    }
+  },
+  "batch_id": "msgdata-pk-structural-review-b13-500.v1",
+  "generator": {
+    "path": "build_msgdata_pk_structural_review_b13.py",
+    "sha256": "33B4314A19D6B24D5A998A81E833075175F7C5D3C83B85D487E34A31D39F7FF7"
+  },
+  "official_selected_rowset_sha256": {
+    "EN": "13A1E9E81681C48FB08B159984F9192BB2D71A31385B84070C8A150199FE745C",
+    "JP": "AC8A08591103CEF2D266CD68938CF280344CE887676076ABF7F106CD45562839",
+    "SC": "D68C4E920EE0D215D3E5E79389E992C452206518DB8B06E74EC82B89FA897907",
+    "TC": "3B85B96293F9FEFB77DCF508A98DAC7A6D0342FE94244F6BBBC86834D898EC26"
+  },
+  "passed": true,
+  "progress_audit": {
+    "direct_predecessor_path": "workstreams/msgdata_pk_structural_review_b12/public/msgdata_ko_pk_structural_review_b12_500.v1.json",
+    "explicit_structural_predecessor_count": 3000,
+    "historical_owner_paths": [
+      "workstreams/msgdata_pk_structural_review_b07/public/msgdata_ko_pk_structural_review_b07_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b08/public/msgdata_ko_pk_structural_review_b08_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b09/public/msgdata_ko_pk_structural_review_b09_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b10/public/msgdata_ko_pk_structural_review_b10_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b11/public/msgdata_ko_pk_structural_review_b11_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b12/public/msgdata_ko_pk_structural_review_b12_500.v1.json"
+    ],
+    "post_review_gap_count": 610,
+    "post_review_gap_ids_sha256": "73F5A86727318599D1D01765F724B5991AAC7F0B463F889F280753147EA026E2",
+    "pre_b07_registration_count": 14,
+    "pre_review_gap_count": 1110,
+    "pre_review_gap_ids_sha256": "A5A442486459B5F3E5AE72148E066C4FEA159BD9D792CD0BAABCAC257CAE4E0C",
+    "predecessor_target_count": 24424,
+    "predecessor_target_ids_sha256": "C7A01905B1DDD393305AEA671D8353D002DB33B00F4185742B95ED6BAF0ACF74",
+    "self_registration_states_supported": [
+      0,
+      1
+    ],
+    "successor_registration_tolerant": true,
+    "successors_excluded_from_historical_claims": true
+  },
+  "reason_summary": {
+    "romanized_or_phonetic_lookup_key": {
+      "count": 500,
+      "ids_sha256": "1DA4D5ADC241F3EB2273F472202FB43AAC55B5EFEADBBB59455428370098E544"
+    }
+  },
+  "replacement_invariants": {
+    "checked": 500,
+    "esc_preserved": true,
+    "exact_utf16le_byte_preserve_count": 500,
+    "failures": 0,
+    "line_breaks_preserved": true,
+    "printf_preserved": true,
+    "pua_preserved": true
+  },
+  "reproducibility": {
+    "artifact_json_canonical": true,
+    "in_memory_target_a_b_equal": true,
+    "self_and_successor_registration_stable": true
+  },
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "global_progress_modified": false,
+    "global_readme_modified": false,
+    "installed_game_files_modified": false
+  },
+  "schema": "nobu16.kr.msgdata-pk-structural-review-validation.v1",
+  "scope": {
+    "blocked_count": 0,
+    "duplicate_id_count": 0,
+    "exact_byte_preserve_count": 500,
+    "narrative_mixed_count": 0,
+    "post_review_structural_remaining": 610,
+    "predecessor_overlap_count": 0,
+    "reviewed_count": 500,
+    "reviewed_ids_sha256": "1DA4D5ADC241F3EB2273F472202FB43AAC55B5EFEADBBB59455428370098E544",
+    "translated_narrative_count": 0
+  },
+  "source_free_scan": {
+    "evidence/msgdata_pk_structural_review_b13_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "public/msgdata_ko_pk_structural_review_b13_500.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "review/msgdata_pk_structural_review_b13_review.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    }
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 500,
+    "packed_sha256": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "packed_size": 516796,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "5982D520BF2E66260943DE61D0CB7F1135D1BA81A211E917E3F426C58D9125D6",
+    "raw_size": 514752,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "wrapper_round_trip": true
+  }
+}
