@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "evidence": {
+      "path": "evidence/msggame_pk_ui_priority_b02_evidence.v1.json",
+      "sha256": "107E448502429F17F8E0E703491C5734E2168B3A718AA6AF663EF49F5C2B8FBA",
+      "size": 59821
+    },
+    "overlay": {
+      "path": "public/msggame_ko_pk_ui_priority_b02_53.v1.json",
+      "sha256": "337251C3D5741131BD0D2C001E17F8A2F4C37E5797967A6CF79A10C2F440B19C",
+      "size": 14493
+    },
+    "review": {
+      "path": "review/msggame_pk_ui_priority_b02_review.v1.json",
+      "sha256": "02ECDFE6DAB77DF03269DD556B28B4FF2C97F566BB9750F59D4F659207A7BBFB",
+      "size": 16594
+    }
+  },
+  "batch_id": "msggame_pk_ui_priority_b02_53.v1",
+  "coordinate_sets": {
+    "excluded_sha256": "A8C2B7DA5D1EBE338B29695546372B41B34BAD7953910956F653395E2BA1D6F8",
+    "selected_b01_disjoint": true,
+    "selected_blocks_13_14_disjoint": true,
+    "selected_excluded_disjoint": true,
+    "selected_registered_disjoint": true,
+    "selected_sha256": "1E459F856E32C047643B8CBB3E113A0BFE804F58ADC388442FED8FF00281E07C",
+    "selected_target_subset": true
+  },
+  "counts": {
+    "excluded_review_items": 25,
+    "translated": 53
+  },
+  "generator": {
+    "path": "build_msggame_pk_ui_priority_b02.py",
+    "sha256": "C4B25D4ED91074A9919FE60C99C064E6D8AC9E0F826589DE10E328C825520427"
+  },
+  "offline_binary_validation": {
+    "entry_count": 53,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "target_packed_sha256": "FDED3D09C922632F5B31D0AEC7CBD2070EB68479A0F3977321C87BFEEDCB71AB",
+    "target_packed_size": 1082309
+  },
+  "passed": true,
+  "proofs": {
+    "all_replacements_have_hangul": true,
+    "bracket_sequence_preserved": true,
+    "complete_single_sc_literal_with_full_jp_en_record_context": true,
+    "display_width_budget_preserved": true,
+    "dynamic_fragments_excluded": true,
+    "event_dialogue_excluded": true,
+    "mandatory_dynamic_narrative_false_positive_excluded": true,
+    "placeholder_control_code_newline_preserved": true
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_progress_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msggame-pk-ui-priority-validation.v1",
+  "source_free_scan": {
+    "msggame_ko_pk_ui_priority_b02_53.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_pk_ui_priority_b02_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_pk_ui_priority_b02_review.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  }
+}

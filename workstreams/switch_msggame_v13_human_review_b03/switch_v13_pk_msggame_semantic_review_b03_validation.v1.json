@@ -1,0 +1,86 @@
+{
+  "artifacts": {
+    "evidence": {
+      "path": "evidence/switch_v13_pk_msggame_semantic_review_b03_evidence.v1.json",
+      "sha256": "F955B464F69D0949036E4BEC95D82742458EA22967032F448CBA8F6388935F7C",
+      "size": 266932
+    },
+    "overlay": {
+      "path": "public/msggame_ko_switch_v13_semantic_review_b03_130.v1.json",
+      "sha256": "6279D3C7D7139EED15670309F7DAD3E993359821985DA3194E392439B3C77302",
+      "size": 34570
+    },
+    "review": {
+      "path": "review/switch_v13_pk_msggame_semantic_review_b03_review.v1.json",
+      "sha256": "8128B5DBFB2E4E20365A9BA7A5AE12D2CAC99A17D693656020C334214664B917",
+      "size": 42922
+    }
+  },
+  "batch_id": "switch_v13_pk_msggame_semantic_review_b03_130.v1",
+  "coordinate_sets": {
+    "excluded_sha256": "92E61691EDE558A96854BBB85F638088BBDD4E5B4C12FB6C4ABD6851AC365C7A",
+    "selected_excluded_disjoint": true,
+    "selected_existing_disjoint": true,
+    "selected_predecessor_disjoint": true,
+    "selected_sha256": "8621BF3F6BCD119A51226C18CB10BAA10F69BFEADE204D44139BEFD2C2A34BCD",
+    "selected_target_subset": true
+  },
+  "generator": {
+    "path": "build_switch_msggame_v13_human_review_b03.py",
+    "sha256": "D26CF5AEC0C459AAE78A3B15FA0CE1FAB5FA60484926CDBF851938C3AC4ADB1E"
+  },
+  "offline_binary_validation": {
+    "entry_count": 130,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "target_packed_sha256": "2E8AE6D3265E6F5C0A47B32D362FA7BB82CA6CBD40FFEA0E4819AE550D75720B",
+    "target_packed_size": 1083811
+  },
+  "passed": true,
+  "proofs": {
+    "all_replacements_preserve_bracket_sequence": true,
+    "all_replacements_preserve_delimiter_role_sequence": true,
+    "all_replacements_preserve_pk_sc_invariants": true,
+    "ambiguous_coordinates_excluded": true,
+    "complete_pk_record_context_semantically_reviewed": true,
+    "later_overlay_registration_does_not_change_predecessor_pin": true,
+    "later_overlays_source_free_target_only_and_disjoint": true,
+    "mechanical_literal_split_forbidden": true,
+    "self_registration_does_not_feed_selection": true,
+    "self_registration_states_supported": [
+      0,
+      1
+    ],
+    "switch_korean_meaning_consulted": true,
+    "v13_msggame_byte_identical_to_v11": true
+  },
+  "review_window": {
+    "count": 150,
+    "excluded": 20,
+    "translated": 130
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_progress_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.switch-msggame-v13-semantic-review-validation.v1",
+  "source_free_scan": {
+    "msggame_ko_switch_v13_semantic_review_b03_130.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "switch_v13_pk_msggame_semantic_review_b03_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "switch_v13_pk_msggame_semantic_review_b03_review.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "artifacts": {
+    "evidence/switch_v13_msgev_invariant_recovery_alignment.v1.json": {
+      "path": "evidence/switch_v13_msgev_invariant_recovery_alignment.v1.json",
+      "sha256": "7066B63B90DA9F76093C84C614ED44AA92D6DDA3B28A70CD73947B05DE15400E",
+      "size": 381970
+    },
+    "public/msgev_ko_switch_v13_invariant_recovery_248.v1.json": {
+      "path": "public/msgev_ko_switch_v13_invariant_recovery_248.v1.json",
+      "sha256": "D2757409D426148CE2E636828F4693830D66A661236C4F6E816DD0D028D48F1C",
+      "size": 77998
+    },
+    "review/switch_v13_msgev_invariant_recovery_review.v1.json": {
+      "path": "review/switch_v13_msgev_invariant_recovery_review.v1.json",
+      "sha256": "46F86345A82D8172EA8F00DBBE662BA76EA1726EC2319BEF6957209B9071DE75",
+      "size": 102641
+    }
+  },
+  "batch_id": "switch-v13-pk-msgev-invariant-recovery-248.v1",
+  "entry_count": 248,
+  "generator": {
+    "path": "build_switch_msgev_v13_invariant_recovery.py",
+    "sha256": "F722067781FCD40FC244710E6FA79A1BFA21397F581EC8F0AAF6AA9F1478968C"
+  },
+  "passed": true,
+  "progress_integration_policy": {
+    "prior_overlay_path_count": 31,
+    "prior_overlay_paths_sha256": "6F4099D009F2134A5494A6317212C251C98CCA65815897D978DC868308BFA5A0",
+    "prior_owner_count": 12759,
+    "prior_owner_ids_sha256": "929EB6EFB87F400F1F5F29E3919CA4D77B9D18BB286DA38F6889F936308F7F7C",
+    "self_excluded_from_prior_owner_set": true,
+    "self_registration_states_allowed": [
+      "absent",
+      "one_exact_path"
+    ]
+  },
+  "reconstruction": {
+    "changed_entry_count": 248,
+    "complete_target_included": false,
+    "in_memory_a_b_equal": true,
+    "target": {
+      "changed_entry_count": 248,
+      "raw_sha256": "9911B40CACAEFFDF09FD60A9698781D11B5FE6CBA29345C1EA630F85778473CB",
+      "raw_size": 760588,
+      "wrapper_sha256": "74E8722E92B4198A5D79818EEB2AAB61A07EEECF573AB4016737EFBE1749B1E4",
+      "wrapper_size": 763596
+    }
+  },
+  "replacement_invariants": {
+    "canonical_visible_stream_preserved_count": 248,
+    "checked": 248,
+    "failures": 0,
+    "placeholder_rearrangement_count": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_and_trailing_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "custom_bracket_tokens"
+    ],
+    "sentence_fragment_rearrangement_count": 0,
+    "word_boundary_order_preserved_count": 248
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "pre_and_post_self_registration_must_be_byte_identical": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "residual_pool": {
+    "raw_predicates_on_full_residual": {
+      "intersection_count": 4,
+      "sc_invariant_mismatch_count": 261,
+      "source_script_count": 4,
+      "union_count": 261
+    },
+    "residual_count": 261,
+    "residual_ids_sha256": "3801D57790256C559045092F33764320E133BE7766F8AF32F884AD38D6E9BEB2",
+    "upstream_precedence_gate_classes": {
+      "class_overlap_count": 0,
+      "class_union_count": 261,
+      "sc_invariant_after_source_script_gate": 257,
+      "source_script": 4
+    }
+  },
+  "safety": {
+    "base_msg_sc_modified": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_emitted": false,
+    "deployment_performed": false,
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "official_source_text_exposed_in_public_artifacts": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_or_progress_modified": false,
+    "switch_archive_extracted": false
+  },
+  "schema": "nobu16.kr.switch-msgev-v13-invariant-recovery-validation.v1",
+  "selected_ids_sha256": "C3B4DD558398729877C9861CF917B1C4BE2567B87CE460763FA68C7A529459D0",
+  "selection": {
+    "excluded_count": 13,
+    "excluded_ids_sha256": "FBEB52131D74798885BD0BC311399EB1F054EFB0CB716BE8DFE0AD1133897C72",
+    "exclusion_classes": {
+      "class_intersection": {
+        "count": 1,
+        "ids_sha256": "32DA574BFD69935183474214D76A69B54A2E5AC4A6B27AD10017C927DFAA4A49"
+      },
+      "class_union": {
+        "count": 13,
+        "ids_sha256": "FBEB52131D74798885BD0BC311399EB1F054EFB0CB716BE8DFE0AD1133897C72"
+      },
+      "custom_bracket_sequence_mismatch": {
+        "count": 3,
+        "ids_sha256": "BF807B50C14A7644B060467A87E3B6EDDA1E7AD90CF3121C743D34403055EE11"
+      },
+      "esc_token_count_mismatch": {
+        "count": 11,
+        "ids_sha256": "BADAB3AC0004BA1F7095498A6BCEF892707649217D6F426E91EF3A330B40C965"
+      }
+    },
+    "operation_class_counts": {
+      "esc_token_template": 70,
+      "line_break_template": 179,
+      "middle_dot_normalization": 4,
+      "trailing_whitespace_template": 6
+    },
+    "operation_combination_counts": {
+      "esc_token_template": 61,
+      "esc_token_template+line_break_template": 5,
+      "line_break_template": 172,
+      "line_break_template+trailing_whitespace_template": 2,
+      "middle_dot_normalization+esc_token_template": 4,
+      "trailing_whitespace_template": 4
+    },
+    "selected_count": 248,
+    "selected_ids_sha256": "C3B4DD558398729877C9861CF917B1C4BE2567B87CE460763FA68C7A529459D0",
+    "selected_outside_target_count": 0,
+    "selected_prior_owner_overlap_count": 0,
+    "selected_target_catalog_intersection_count": 248
+  },
+  "source_free_scan": {
+    "evidence/switch_v13_msgev_invariant_recovery_alignment.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "public/msgev_ko_switch_v13_invariant_recovery_248.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review/switch_v13_msgev_invariant_recovery_review.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "source_release": {
+    "archive_relative_path": "tmp/third_party_switch_v13/NobunagaShinsei_KoreanPatch_v1.3.zip",
+    "archive_sha256": "F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4",
+    "archive_size": 72977145,
+    "attribution": "snake7594_unofficial_fan_translation_v1_3",
+    "author_account": "snake7594",
+    "entry_compressed_size": 314537,
+    "entry_crc32": "018EAC29",
+    "entry_path": "NobunagaShinsei_KR/romfs/MSG/JP/ev_strdata.bin",
+    "entry_uncompressed_size": 396257,
+    "platform": "Nintendo Switch",
+    "release_tag": "v1.3",
+    "release_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.3",
+    "source_repository": "https://github.com/snake7594/nobunaga-shinsei-korean-patch",
+    "title": "NobunagaShinsei Korean Patch"
+  },
+  "switch_text_identity": {
+    "v11_member_packed_sha256": "A5D70580790330EF845EC73FDB8D6ACC89EBAD8D026DFE1B1D873C50B43CAD5D",
+    "v11_member_raw_sha256": "1B8F7197D48598994852317B19CA3B9EC113A3B07A3B22642FBD336C21C4F7C3",
+    "v13_is_byte_identical_to_v11": true,
+    "v13_member_packed_sha256": "A5D70580790330EF845EC73FDB8D6ACC89EBAD8D026DFE1B1D873C50B43CAD5D",
+    "v13_member_raw_sha256": "1B8F7197D48598994852317B19CA3B9EC113A3B07A3B22642FBD336C21C4F7C3"
+  },
+  "target_catalog": {
+    "entry_count": 12906,
+    "ids_sha256": "00D725442F097A6F369FC3AC662C753976EAA07C714FDF6F436A7EF8B62E7C89",
+    "path": "data/public/translation_target_keys.v0.1.json",
+    "sha256": "FF3D15D0792052EB1A4E67BC296B3ED5169662C3510EE8F164F1331EFF07C786"
+  }
+}

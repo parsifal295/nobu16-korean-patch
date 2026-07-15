@@ -1,0 +1,90 @@
+{
+  "schema": "nobu16.pc-pk-title-g1t-codec.verification.v1",
+  "scope": "RES_SC/res_lang.bin /3/0 private-only codec and rebuild probe",
+  "file_only": true,
+  "runtime_patch_features": [],
+  "game_install_modified": false,
+  "public_binary_or_image_assets": 0,
+  "source_archive": {
+    "origin": "local private SeoulHangang full-PK candidate",
+    "size": 183397687,
+    "sha256_before": "337570FFB41EB429E358EA0754C63C1218FD808A88439AFF385F792CCBEFA1EE",
+    "sha256_after": "337570FFB41EB429E358EA0754C63C1218FD808A88439AFF385F792CCBEFA1EE",
+    "unchanged": true
+  },
+  "inventory": {
+    "outer_link_entries": 42,
+    "outer_component": 3,
+    "inner_link": {
+      "fixed_header_size": 32,
+      "entry_count": 110,
+      "size": 897602,
+      "sha256": "D358F20570582E47515EE78D4D3B77FCBAC854297F2E043D86D9159D27875B1A",
+      "all_entry_offsets_aligned_to": 32,
+      "all_entries_parse_as_exact_pc_title_g1t": true
+    },
+    "all_110_entries": {
+      "g1t_magic_version": "GT1G0600",
+      "format_code": "0x5B",
+      "decoded_as": "BC3/DXT5 NOBU16 PC platform alias",
+      "width": 512,
+      "height": 128,
+      "mip_count": 1,
+      "bc3_payload_size": 65536
+    },
+    "switch_common_index_range": "0..107",
+    "pc_only_index_range": "108..109"
+  },
+  "entry_3_0": {
+    "wrapper_size": 14634,
+    "wrapper_sha256": "351B23D87A2A893CC94027798F2C1A53C6C11FA24AC36824F8611C07C0676A4E",
+    "g1t_size": 65592,
+    "g1t_sha256": "93AB0789744679A63DB1CA41E070BFA1A0E79E65DEF41000A6D5FECE21A218E9",
+    "bc3_sha256": "34271844F9DFF521FF61EF98782D722A31C35B996243411336A3A7FA1489DF5F",
+    "decoded_rgba_size": 262144,
+    "decoded_rgba_sha256": "ED59A89D447B178411C2C8FA5FBDF5BAD8B463582F08E4463083FF616DDEDBC5",
+    "private_png_size": 21229,
+    "private_png_sha256": "FA0E1BE48AF472E3BA8BF0DC3B485A40B0752EDFC4BD7E73EBD543791B5D9C77",
+    "visual_smoke": "PASS: coherent SC brush label, correct orientation and alpha"
+  },
+  "unchanged_roundtrip": {
+    "ab_byte_identical": true,
+    "total_blocks": 4096,
+    "preserved_template_blocks": 4096,
+    "deterministically_encoded_blocks": 0,
+    "bc3_exact": true,
+    "g1t_exact": true,
+    "wrapper_exact": true,
+    "inner_link_exact": true,
+    "outer_archive_exact": true,
+    "candidate_size": 183397687,
+    "candidate_sha256_a": "337570FFB41EB429E358EA0754C63C1218FD808A88439AFF385F792CCBEFA1EE",
+    "candidate_sha256_b": "337570FFB41EB429E358EA0754C63C1218FD808A88439AFF385F792CCBEFA1EE",
+    "decoded_pixel_error": 0
+  },
+  "changed_block_probe": {
+    "purpose": "private synthetic one-pixel encoder/rebuild proof; not a translation payload",
+    "ab_byte_identical": true,
+    "total_blocks": 4096,
+    "preserved_template_blocks": 4095,
+    "deterministically_encoded_blocks": 1,
+    "candidate_size": 183448919,
+    "candidate_sha256_a": "1DC12DA9FD695935E2F39A00305B7CB996A52F8BC1D6CFC9FF73CFD75A64D9A4",
+    "candidate_sha256_b": "1DC12DA9FD695935E2F39A00305B7CB996A52F8BC1D6CFC9FF73CFD75A64D9A4",
+    "outer_parse_rebuild_valid": true,
+    "inner_parse_rebuild_valid": true,
+    "g1t_reextract_valid": true,
+    "requested_rgba_vs_candidate_rgba_differing_pixels": 0
+  },
+  "tests": {
+    "command": "python -B -m unittest tests.test_pc_g1t_title_codec -v",
+    "result": "PASS",
+    "tests_run": 6
+  },
+  "release_gate": {
+    "container_and_codec_ready": true,
+    "translated_108_image_set_integrated": false,
+    "runtime_screen_verified": false,
+    "release_eligible": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "base_language": "SC",
+  "defaults": {
+    "status": "translated"
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "block_id": 1,
+      "ko": "돌아가기",
+      "slot_id": 22,
+      "source_sc_utf16le_sha256": "21DB128C982FCC6244FB34C5354D8B0D6002CB9C328EBC13DA08D1796D0D326E"
+    }
+  ],
+  "entry_count": 1,
+  "overlay_id": "strdata-pk-shared-ui-b01-1-v1",
+  "provenance": {
+    "kind": "coordinate_level_switch_translation_reuse",
+    "pc_sc_and_jp_semantic_alignment_verified": true,
+    "same_block_slot_coordinate": true,
+    "source_release": "v1.3",
+    "source_resource": "MSG/JP/strdata.bin"
+  },
+  "resource": "MSG/SC/strdata.bin",
+  "schema": "nobu16.kr.strdata-block-overlay.v1",
+  "stock_sc": {
+    "block_slot_counts": [
+      25069,
+      4100,
+      3000,
+      122,
+      20
+    ],
+    "packed_sha256": "93F88D71210B96783749CEB948E0713D7E6552F764F644092B71A5FD0C994B88",
+    "packed_size": 516628,
+    "raw_sha256": "17EF622F36BA94009F67519DC79ED543C223B467311E51711A009F9DD0816214",
+    "raw_size": 760388
+  }
+}

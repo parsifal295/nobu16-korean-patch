@@ -28,27 +28,98 @@
     "method": "Switch v1.1 RES_JP와 PC stock RES_SC의 LINK/G1N 헤더·해시·카운트만 read-only 비교"
   },
   "pinned_public_korean_demand": {
-    "source_entry_count": 33256,
-    "codepoint_count": 1238,
-    "codepoints_sha256": "B0B920BF63E1E5B90D2446CF43F3BD5260B093CFF229F7D450A7AE1D30CE13CE",
-    "hangul_syllable_count": 1101,
-    "hangul_syllables_sha256": "5CFD9B674D31D3E8615C2F8729EDB44B44889A7FF4DA2E5F168A72B5BE2DC6CF",
-    "non_hangul_count": 137,
-    "non_hangul_sha256": "508D73EB78150477F9E702757C06FF31B05966B3715CFE474B010BE853BD0736",
-    "raster_codepoint_count": 1171,
-    "raster_codepoints_sha256": "5469010C9246D0CF50B9098347DED2E61A7DCD2D89414DDB81A772B4C1F207F9",
-    "append_contract": [
-      { "entry": 6, "table": 0, "count": 1106, "codepoints_sha256": "746990AC04F9A3CCDE6C372FD4060B7B9C0B50D2ADC74A9DC86ACE2A41962CC9" },
-      { "entry": 6, "table": 1, "count": 1171, "codepoints_sha256": "5469010C9246D0CF50B9098347DED2E61A7DCD2D89414DDB81A772B4C1F207F9" },
-      { "entry": 7, "table": 0, "count": 1106, "codepoints_sha256": "746990AC04F9A3CCDE6C372FD4060B7B9C0B50D2ADC74A9DC86ACE2A41962CC9" },
-      { "entry": 7, "table": 1, "count": 1171, "codepoints_sha256": "5469010C9246D0CF50B9098347DED2E61A7DCD2D89414DDB81A772B4C1F207F9" }
+    "translation_progress": {
+      "path": "data/public/translation_progress.v0.1.json",
+      "sha256": "180E500ABB241D11A7FF11520EAE564487D77EF0472193310FFBB96D07C1ED71"
+    },
+    "source_count": 93,
+    "source_catalog_sha256": "902C83FF51AB28593C1129A3DD364603D7CB5DB79A0AC548DC0CD64D969D7B38",
+    "resource_catalog": [
+      {
+        "resource": "MSG_PK/SC/msgui.bin",
+        "source_count": 1,
+        "entry_count": 4037,
+        "source_catalog_sha256": "27E5CE7CB1B52BFDF8CC90B76677EDDEEFC6C7B6C07459559369207B70DB334D"
+      },
+      {
+        "resource": "MSG_PK/SC/msgev.bin",
+        "source_count": 35,
+        "entry_count": 13178,
+        "source_catalog_sha256": "A1062911EB38DCDE6690ADE0084BF717DC4ACEA416850E468E6C38767C18245F"
+      },
+      {
+        "resource": "MSG_PK/SC/msgdata.bin",
+        "source_count": 10,
+        "entry_count": 21152,
+        "source_catalog_sha256": "89DEB1672CF4B9217D518A41B3FC35D9BCF9777240D4C60DECAE0C0C3218F14C"
+      },
+      {
+        "resource": "MSG_PK/SC/msgbre.bin",
+        "source_count": 14,
+        "entry_count": 2217,
+        "source_catalog_sha256": "226C44E4673D558DDF3C10386FFE572B7E98CB5EFD319A5A346133A9D36B7D98"
+      },
+      {
+        "resource": "MSG_PK/SC/msgire.bin",
+        "source_count": 1,
+        "entry_count": 122,
+        "source_catalog_sha256": "73EA8E0F0C7EE1197D242DAA859B49E0400B500C8818F4EBCF2D328981E1E9C5"
+      },
+      {
+        "resource": "MSG_PK/SC/msgstf.bin",
+        "source_count": 1,
+        "entry_count": 8,
+        "source_catalog_sha256": "C2926529AD3D220544BCFCC8F9E45308F60E8F4F4752DC628E073C992F1D1BD9"
+      },
+      {
+        "resource": "MSG_PK/SC/msggame.bin",
+        "source_count": 29,
+        "entry_count": 10352,
+        "source_catalog_sha256": "E0EA36A7E1C8A4FC1F9686C58EE53ED1D9141F67D6B8700E711672DBEF99614B"
+      },
+      {
+        "resource": "MSG/SC/strdata.bin",
+        "source_count": 2,
+        "entry_count": 24425,
+        "source_catalog_sha256": "907733F5ACA06CA0387854B5D7A0E5F21F12C85F674EDFDB2A318782E9013952"
+      }
     ],
-    "sources": [
-      { "path": "data/public/msgui_ko_0000_5099.v0.2.json", "sha256": "5DC3C0E14E2131FC2BB4252DF3B25E1F10E462205EAB715E2923298A714B8C14", "entry_count": 4037 },
-      { "path": "workstreams/switch_msgev_v11/public/msgev_ko_switch_v11_ported_7025.v1.json", "sha256": "71652CACEB757BFFF47FB119789150BD841DD9FF6B6AC180D5B2AA1B06231703", "entry_count": 7025 },
-      { "path": "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json", "sha256": "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E", "entry_count": 16176 },
-      { "path": "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json", "sha256": "245A73AA77B5649B686CE5A459C299CFBF7EE8EF5A6CDC56A7EB11288DECDFB5", "entry_count": 6018 }
-    ]
+    "source_entry_count": 75491,
+    "codepoint_count": 1389,
+    "codepoints_sha256": "7FDC3F9C72D5FF3416EAA905B581549434BC3A5577C3587CC5351E4C4676CC16",
+    "hangul_syllable_count": 1232,
+    "hangul_syllables_sha256": "78C37AF6E84D8E066DFB940AF9F9C9C73FE826855DACF6FFDF95D2219F3A36A4",
+    "non_hangul_count": 157,
+    "non_hangul_sha256": "0AD9CA9A7D20080BE8A8027D0A60D75A2F88E45F14D8A13BB50D78E3C5EB00D7",
+    "raster_codepoint_count": 1306,
+    "raster_codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186",
+    "append_contract": [
+      {
+        "entry": 6,
+        "table": 0,
+        "count": 1237,
+        "codepoints_sha256": "B513EA9109C46200873E81425452D74B7537DEA06ABE23EA02DE22C551BF53B3"
+      },
+      {
+        "entry": 6,
+        "table": 1,
+        "count": 1306,
+        "codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186"
+      },
+      {
+        "entry": 7,
+        "table": 0,
+        "count": 1237,
+        "codepoints_sha256": "B513EA9109C46200873E81425452D74B7537DEA06ABE23EA02DE22C551BF53B3"
+      },
+      {
+        "entry": 7,
+        "table": 1,
+        "count": 1306,
+        "codepoints_sha256": "31F65CDB9AE1200B942398B1BDDE8602CE36F189BF475FCA4A976C228B122186"
+      }
+    ],
+    "sources": "all PK-loaded string overlays (seven PK resources plus exact shared MSG/SC/strdata.bin) are derived from the SHA-pinned translation-progress catalog; the plan records one source-free hash row per file"
   },
   "public_payload_policy": {
     "commercial_game_original_bytes": false,
@@ -60,8 +131,9 @@
   },
   "structural_build_verification": {
     "path": "workstreams/font_seoulhangang_v1/verification.v1.json",
-    "sha256": "12482E541ED3F265D3FEB2525C7213C8FB77BEB40972BCDD6BD684FB10EB978B",
+    "sha256": "142D5E2C654632AEDE2112BCC1123F63C9088E06E5F16928C4A15A512BD0F7AB",
     "a_b_candidate_byte_identical": true,
+    "full_pk_glyph_demand_coverage": true,
     "g1n_structural_validation": true,
     "installed_game_files_modified": false
   },

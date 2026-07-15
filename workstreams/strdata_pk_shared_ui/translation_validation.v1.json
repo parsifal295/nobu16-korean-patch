@@ -1,0 +1,46 @@
+{
+  "candidate": {
+    "block_slot_counts_preserved": true,
+    "changed_coordinate_count": 1,
+    "offline_reparse_verified": true,
+    "target_packed_sha256": "F43DF2117B4497FFFC1B58E568BE28A7FB6F6788BF558C2B807D6A5FA0836677",
+    "target_packed_size": 763399,
+    "target_raw_sha256": "7F3FE79C33B05292B3425854A970126B8C87F42E251E30B3667E894FDD91F531",
+    "target_raw_size": 760392,
+    "unchanged_coordinate_count": 32310
+  },
+  "deterministic_builds_identical": true,
+  "installed_game_file_written": false,
+  "overlay": {
+    "path": "public/strdata_ko_pk_shared_ui_b01_1.v1.json",
+    "sha256": "DF58FD55FF17F5AA39F73DF4445360BA9BE18AC9C87E3B7E245F07C359EC5A4D",
+    "size": 1142,
+    "source_free_han_or_kana_count": 0
+  },
+  "overlay_id": "strdata-pk-shared-ui-b01-1-v1",
+  "resource": "MSG/SC/strdata.bin",
+  "runtime_scope": "PK execution shared base UI table",
+  "schema": "nobu16.kr.strdata-pk-shared-ui-validation.v1",
+  "stock_sc": {
+    "block_slot_counts": [
+      25069,
+      4100,
+      3000,
+      122,
+      20
+    ],
+    "packed_sha256": "93F88D71210B96783749CEB948E0713D7E6552F764F644092B71A5FD0C994B88",
+    "packed_size": 516628,
+    "raw_sha256": "17EF622F36BA94009F67519DC79ED543C223B467311E51711A009F9DD0816214",
+    "raw_size": 760388
+  },
+  "switch_reuse": {
+    "same_coordinate": [
+      1,
+      22
+    ],
+    "source": "Switch v1.3 MSG/JP/strdata.bin",
+    "translation_reused": true,
+    "whole_switch_file_copied": false
+  }
+}

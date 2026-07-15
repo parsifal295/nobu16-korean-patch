@@ -1,6 +1,6 @@
 {
   "schema": "nobu16.kr.translation-progress.v0.1",
-  "count_policy": "completed is the union of unique ids or msggame coordinates whose effective status is translated or reviewed; draft coverage includes every unique id or msggame coordinate in tracked source-free overlays; translation_target_total is the pinned set of displayable nonblank strings that require Korean text, plus intentionally activated UI slots",
+  "count_policy": "completed and draft coverage are the intersections of the exact source-free target-key catalog with unique overlay ids, msggame coordinates, or shared block/slot coordinates; translated or reviewed statuses count as completed; overlay keys outside that target catalog are reported separately as non-target activations; translation_target_total is the pinned set of displayable nonblank strings that require Korean text, plus intentionally activated UI slots",
   "completed_statuses": [
     "translated",
     "reviewed"
@@ -53,9 +53,15 @@
     "workstreams/dialogue/public/msgev_ko_historical_events_6142_6268.v0.25.json",
     "workstreams/dialogue/public/msgev_ko_historical_events_6269_6372.v0.26.json",
     "workstreams/dialogue/public/msgev_ko_historical_events_6373_6481.v0.27.json",
-    "workstreams/switch_msgev_v11/public/msgev_ko_switch_v11_ported_7025.v1.json"
+    "workstreams/switch_msgev_v11/public/msgev_ko_switch_v11_ported_7025.v1.json",
+    "workstreams/switch_msgev_v11_cjk_cleanup/public/msgev_ko_switch_v11_cjk_kana_cleanup_20.v1.json",
+    "workstreams/switch_msgev_v13_jp_hash_recovery/public/msgev_ko_switch_v13_exact_jp_hash_recovery_245.v1.json",
+    "workstreams/switch_msgev_v13_invariant_recovery/public/msgev_ko_switch_v13_invariant_recovery_248.v1.json",
+    "workstreams/switch_msgev_v13_native_contract_recovery/public/msgev_ko_switch_v13_native_contract_recovery_13.v1.json",
+    "workstreams/msgev_pk_native_batch01/public/msgev_ko_pk_native_batch01_8.v1.json",
+    "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json"
   ],
-  "note": "장수명 2,207개 + 이벤트 대사 3,262개; 다음 ID 6482"
+  "note": "실제 PK/SC 대상 11,580개 완료 + 순정 빈 슬롯 Switch 활성화 1,598개; 잔여 대상 1,326개"
     },
     {
       "path": "MSG_PK/SC/msgdata.bin",
@@ -69,9 +75,13 @@
     "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json",
     "workstreams/msgdata/public/msgdata_ko_faction_labels_3032_3221.v0.1.json",
     "workstreams/msgdata/public/msgdata_ko_name_components_3222_3315.v0.1.json",
-    "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json"
+    "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json",
+    "workstreams/switch_msgdata_v13_invariant_recovery/public/msgdata_ko_switch_v13_invariant_recovery_145.v1.json",
+    "workstreams/msgdata_pk_native_completion/public/msgdata_ko_pk_native_completion_2.v1.json",
+    "workstreams/msgdata_pk_native_batch01/public/msgdata_ko_pk_native_batch01_100.v1.json",
+    "workstreams/msgdata_pk_native_batch02/public/msgdata_ko_pk_native_batch02_150.v1.json"
       ],
-      "note": "장수 구성요소 + 성 이름 + 옛 지방명; 중복 ID 제거"
+      "note": "실제 PK/SC 대상 20,296개 완료 + 순정 빈 슬롯 Switch 활성화 784개; 잔여 대상 5,238개"
     },
     {
       "path": "MSG_PK/SC/msgbre.bin",
@@ -90,9 +100,12 @@
     "workstreams/msgbre/public/msgbre_ko_biographies_0656_0700.v0.8.json",
     "workstreams/msgbre/public/msgbre_ko_biographies_0701_0745.v0.9.json",
     "workstreams/msgbre/public/msgbre_ko_biographies_0746_0790.v0.10.json",
-    "workstreams/msgbre/public/msgbre_ko_biographies_0791_0835.v0.11.json"
+    "workstreams/msgbre/public/msgbre_ko_biographies_0791_0835.v0.11.json",
+    "workstreams/switch_msgbre_v11/public/msgbre_ko_switch_v11_strict_transfer.v0.1.json",
+    "workstreams/switch_msgbre_v13_cjk_cleanup/public/msgbre_ko_switch_v13_cjk_cleanup_3.v0.1.json",
+    "workstreams/msgbre_pk_native_completion/public/msgbre_ko_pk_native_completion_11.v0.1.json"
   ],
-  "note": "장수 열전 ID 0–835, 836개 초벌; 다음 ID 836"
+  "note": "장수 열전 2,217 / 2,217 완료; Switch 이식·정리 뒤 PK 전용 잔여 11개 직접 번역으로 target 100%"
     },
     {
       "path": "MSG_PK/SC/msgire.bin",
@@ -146,9 +159,15 @@
     "workstreams/msggame/public/msggame_ko_system_messages_b06r3478_3697.v0.20.json",
     "workstreams/msggame/public/msggame_ko_system_messages_b06r3698_3837.v0.21.json",
     "workstreams/msggame/public/msggame_ko_system_messages_b06r3841_3930.v0.22.json",
-    "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json"
+    "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json",
+    "workstreams/switch_msggame_v13_invariant_recovery/public/msggame_ko_switch_v13_invariant_recovery_580.v1.json",
+    "workstreams/switch_msggame_v13_human_review_b01/public/msggame_ko_switch_v13_semantic_review_b01_53.v1.json",
+    "workstreams/switch_msggame_v13_human_review_b02/public/msggame_ko_switch_v13_semantic_review_b02_68.v1.json",
+    "workstreams/switch_msggame_v13_human_review_b03/public/msggame_ko_switch_v13_semantic_review_b03_130.v1.json",
+    "workstreams/msggame_pk_ui_priority_b01/public/msggame_ko_pk_ui_priority_b01_150.v1.json",
+    "workstreams/msggame_pk_ui_priority_b02/public/msggame_ko_pk_ui_priority_b02_53.v1.json"
   ],
-  "note": "좌표 기반 + Switch v1.1 엄격 이식 9,318개 초벌; 다음 좌표 (6,3930,1), 블록 0 문법 조각 93개와 비언어 형식 문맥 검수 보류"
+  "note": "좌표 기반 + Switch 엄격·형식 복구·검토 + UI 우선 배치 10,352개 완료; UI 우선 203개 추가, 잔여 6,130개"
     },
     {
       "path": "RES_SC/res_lang.bin",
@@ -156,7 +175,7 @@
       "done": 2,
       "total": 4,
       "unit": "게이트",
-  "note": "PK 공용 RES_SC 경로: 서울한강체 v1 로컬 결정적 build PASS (PC G1N A/B 동일); 실제 PK 화면·저장·종료 QA 및 사용자 로컬 공식 TTF 입력 검증 대기"
+      "note": "PK 공용 RES_SC 경로: 서울한강체 v1 G1N 및 화면 제목 108개 PC BC3/G1T/LINK 후보의 로컬 A/B 결정성 PASS; 실제 PK 화면·저장·종료 QA 대기"
     },
     {
       "path": "RES_SC/res_lang_exp.bin",
@@ -165,6 +184,20 @@
       "total": 2,
       "unit": "조사 게이트",
   "note": "PK 공용 RES_SC 경로: 재귀 스캔에서 글꼴 시그니처 0; 런타임 의존성·역할 확인 대기"
+    }
+  ],
+  "shared_strings": [
+    {
+      "path": "MSG/SC/strdata.bin",
+      "kind": "strings",
+      "total_slots": 32311,
+      "stock_visible_nonblank": 26690,
+      "translation_target_total": 26690,
+      "overlay_globs": [
+        "workstreams/switch_strdata_v13_direct_transfer/public/strdata_ko_switch_v13_direct_transfer_24424.v1.json",
+        "workstreams/strdata_pk_shared_ui/public/strdata_ko_pk_shared_ui_b01_1.v1.json"
+      ],
+      "note": "PK 실행이 실제로 함께 읽는 공용 본편 표: Switch v1.3 직접 이식 24,424개 + 확인된 공용 UI 1개, 비공백 대상 26,690개 중 24,425개 완료; 잔여 2,265개와 실제 화면 QA 대기"
     }
   ]
 }
