@@ -1,0 +1,261 @@
+{
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "external_msggame_native_validation": {
+    "path": "workstreams/msggame_pk_jp_transfer_v1/msggame_pk_jp_transfer_v1_validation.v1.json",
+    "sha256": "B42652470759E7FEF2A8AADF9A8F7D10CE0E193C3A2ED30573461B8DDE9D6C28",
+    "size": 7429
+  },
+  "overlay_union_effective_total": 83586,
+  "overlay_union_manifest_sha256": "218C1FB47DCCDAE07A3B10C6664EAC2A0E426DA8733A46143BC6D92B8CF682B3",
+  "overlay_union_operation_total": 83658,
+  "resources": {
+    "MSG/SC/strdata.bin": {
+      "base_sc_candidate": {
+        "sha256": "A4B355256E4D3A30032362BBCD54199A3BC530C6D7FD1A09C9A79D53C94A703C",
+        "size": 953064
+      },
+      "base_sc_structure": {
+        "block_count": 5,
+        "packed_sha256": "A4B355256E4D3A30032362BBCD54199A3BC530C6D7FD1A09C9A79D53C94A703C",
+        "packed_size": 953064,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "6408B1462F203425CE89831EDFCA34656A336C9FD4C93261593ADA9DB2373532",
+        "raw_size": 949316,
+        "slot_counts": [
+          25069,
+          4100,
+          3000,
+          122,
+          20
+        ]
+      },
+      "jp_stock": {
+        "sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+        "size": 507054
+      },
+      "jp_stock_structure": {
+        "block_count": 5,
+        "packed_sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+        "packed_size": 507054,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "EAB14063C2060CE11794232F483F0B2210B3BD58118165CBEEC2F37176C25649",
+        "raw_size": 763928,
+        "slot_counts": [
+          25069,
+          4100,
+          3000,
+          122,
+          20
+        ]
+      },
+      "target_resource": "MSG/JP/strdata.bin"
+    },
+    "MSG_PK/SC/msgbre.bin": {
+      "base_sc_candidate": {
+        "sha256": "69CF70A59F4F1D1EFB35A4123E4BA5B7092AA65DF629C5BE7D8317B97DB3CD29",
+        "size": 478591
+      },
+      "base_sc_structure": {
+        "packed_sha256": "69CF70A59F4F1D1EFB35A4123E4BA5B7092AA65DF629C5BE7D8317B97DB3CD29",
+        "packed_size": 478591,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "443651595CF4E326062F1B297985F4AA1817EF02E9D88C9F9D2117CC5704DD7F",
+        "raw_size": 476696,
+        "string_count": 3000
+      },
+      "jp_stock": {
+        "sha256": "DA9BE8242CF0A90592D573DF676ECDE26566B11C5707273EEB4AF5BA54132AD5",
+        "size": 221127
+      },
+      "jp_stock_structure": {
+        "packed_sha256": "DA9BE8242CF0A90592D573DF676ECDE26566B11C5707273EEB4AF5BA54132AD5",
+        "packed_size": 221127,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "02237F07362E0E3DFF92C0E999A29B887EBE5971B1C3EF8F26EAA5C969FB9668",
+        "raw_size": 333516,
+        "string_count": 3000
+      },
+      "target_resource": "MSG_PK/JP/msgbre.bin"
+    },
+    "MSG_PK/SC/msgdata.bin": {
+      "base_sc_candidate": {
+        "sha256": "5E641636C9D5BCD074CDD6B9D04DF5EF60487333835425157843389AC13DEA0C",
+        "size": 492035
+      },
+      "base_sc_structure": {
+        "packed_sha256": "5E641636C9D5BCD074CDD6B9D04DF5EF60487333835425157843389AC13DEA0C",
+        "packed_size": 492035,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "465E8B8D5A3A06909B40E998474FBAA88F713C98666052FD4E8FDD78461F8D6F",
+        "raw_size": 490088,
+        "string_count": 29210
+      },
+      "jp_stock": {
+        "sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+        "size": 273734
+      },
+      "jp_stock_structure": {
+        "packed_sha256": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+        "packed_size": 273734,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "119F10F28DAEEFFA7B231764BB5747A8837DEB487E4595504ADE2A77023148A0",
+        "raw_size": 431044,
+        "string_count": 29210
+      },
+      "target_resource": "MSG_PK/JP/msgdata.bin"
+    },
+    "MSG_PK/SC/msgev.bin": {
+      "base_sc_candidate": {
+        "sha256": "6B8228C0A0FDDF9C4C50C167C63282EF8AE28496F3CEEF4D56E2C71B9F29430A",
+        "size": 1045618
+      },
+      "base_sc_structure": {
+        "packed_sha256": "6B8228C0A0FDDF9C4C50C167C63282EF8AE28496F3CEEF4D56E2C71B9F29430A",
+        "packed_size": 1045618,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "7003072AA7A31AB321F4E39120B6021494A429542842F33BE207E27904882681",
+        "raw_size": 1041508,
+        "string_count": 17910
+      },
+      "jp_stock": {
+        "sha256": "03426B59D32EB628021DE43BC02FF82B56B04D97C25CE37F735630EA7C4E2002",
+        "size": 555784
+      },
+      "jp_stock_structure": {
+        "packed_sha256": "03426B59D32EB628021DE43BC02FF82B56B04D97C25CE37F735630EA7C4E2002",
+        "packed_size": 555784,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "4A916CA6837C4F8FC2D8B6254ECBEF26339558D2DDFEBF5A1637F8426F5918DE",
+        "raw_size": 890428,
+        "string_count": 17910
+      },
+      "target_resource": "MSG_PK/JP/msgev.bin"
+    },
+    "MSG_PK/SC/msggame.bin": {
+      "base_sc_candidate": {
+        "sha256": "70B1FEBBD019D591106C8A67336A88B974895D2FD56F3CFDC96E7CE459A51373",
+        "size": 1263011
+      },
+      "base_sc_structure": {
+        "block_count": 18,
+        "literal_slot_count": 25598,
+        "packed_sha256": "70B1FEBBD019D591106C8A67336A88B974895D2FD56F3CFDC96E7CE459A51373",
+        "packed_size": 1263011,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "E0C09E91F23A692EEDBE1FBD1EC236C82AE1C15F81FE8AEE4632F90EF2C0A413",
+        "raw_size": 1258052,
+        "record_count": 21581
+      },
+      "jp_stock": {
+        "sha256": "0FB9EA3B4817D208C65F587AF1F57A5BB82106367314801A13C9A534ECC47CD8",
+        "size": 709290
+      },
+      "jp_stock_structure": {
+        "block_count": 18,
+        "literal_slot_count": 29149,
+        "packed_sha256": "0FB9EA3B4817D208C65F587AF1F57A5BB82106367314801A13C9A534ECC47CD8",
+        "packed_size": 709290,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "F00C897353C3C0084BFBFC5ED781C467945C82708F28A6D57BA0CC2710976D57",
+        "raw_size": 1571384,
+        "record_count": 21581
+      },
+      "target_resource": "MSG_PK/JP/msggame.bin"
+    },
+    "MSG_PK/SC/msgire.bin": {
+      "base_sc_candidate": {
+        "sha256": "045B6ADDD7CF01401A3C10FA69A737B6C32259FA95007584E6A3E32CF2142D2A",
+        "size": 23136
+      },
+      "base_sc_structure": {
+        "packed_sha256": "045B6ADDD7CF01401A3C10FA69A737B6C32259FA95007584E6A3E32CF2142D2A",
+        "packed_size": 23136,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "E9E31E23BD692D5344E7C01FD29E8328AA19F20C87D95FB253902E4A86FD69A6",
+        "raw_size": 23020,
+        "string_count": 122
+      },
+      "jp_stock": {
+        "sha256": "2856E5DDAF36DD170833B306A4C9C9293AB6E0DC55761086BEDDED90772CB040",
+        "size": 12376
+      },
+      "jp_stock_structure": {
+        "packed_sha256": "2856E5DDAF36DD170833B306A4C9C9293AB6E0DC55761086BEDDED90772CB040",
+        "packed_size": 12376,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "242CE228115746AA1153CDE617C300754D2F82BCAEC5683C70191A88F0BFE94F",
+        "raw_size": 17192,
+        "string_count": 122
+      },
+      "target_resource": "MSG_PK/JP/msgire.bin"
+    },
+    "MSG_PK/SC/msgstf.bin": {
+      "base_sc_candidate": {
+        "sha256": "C4A18BC5F7F7FCB8D9913D1AABC0C775059B09CE41261AFE38FB23F15146C195",
+        "size": 16289
+      },
+      "base_sc_structure": {
+        "packed_sha256": "C4A18BC5F7F7FCB8D9913D1AABC0C775059B09CE41261AFE38FB23F15146C195",
+        "packed_size": 16289,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "4DF7CABA6A5D4283E20A9A63F6FC44EECC872BD4AFE3578E4D430141EA7808DD",
+        "raw_size": 16200,
+        "string_count": 20
+      },
+      "jp_stock": {
+        "sha256": "2138888A6ECB8E49E1C72E60BDD1A18AE577E32C2A72EDC11A813F48F006D96B",
+        "size": 6348
+      },
+      "jp_stock_structure": {
+        "packed_sha256": "2138888A6ECB8E49E1C72E60BDD1A18AE577E32C2A72EDC11A813F48F006D96B",
+        "packed_size": 6348,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "6D06572BB5AFDAC041DF50A789FD0405F3B5C7844FA502329C8E4D27C8BE1620",
+        "raw_size": 10488,
+        "string_count": 20
+      },
+      "target_resource": "MSG_PK/JP/msgstf.bin"
+    },
+    "MSG_PK/SC/msgui.bin": {
+      "base_sc_candidate": {
+        "sha256": "C683AE9355A43F9A2104E49A6179363727CE0A550682F906C224A44F506826AC",
+        "size": 116027
+      },
+      "base_sc_structure": {
+        "packed_sha256": "C683AE9355A43F9A2104E49A6179363727CE0A550682F906C224A44F506826AC",
+        "packed_size": 116027,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "7017C096154AEC292D8A209273083954810E9FB000F4E179DB2BF4C90F07AAF3",
+        "raw_size": 115548,
+        "string_count": 5100
+      },
+      "jp_stock": {
+        "sha256": "B099AD053DB48E3040E76D3FB7F6785C8E5A94D7C5D62EE02C137489001C2B35",
+        "size": 62251
+      },
+      "jp_stock_structure": {
+        "packed_sha256": "B099AD053DB48E3040E76D3FB7F6785C8E5A94D7C5D62EE02C137489001C2B35",
+        "packed_size": 62251,
+        "raw_roundtrip_exact": true,
+        "raw_sha256": "E3B36C5A34825EB22EC21A562F10A622905076EB4219D5BFA7D56C995A80EEFE",
+        "raw_size": 99864,
+        "string_count": 5100
+      },
+      "target_resource": "MSG_PK/JP/msgui.bin"
+    }
+  },
+  "schema": "nobu16.kr.jp-pk-message-route-lock.v1",
+  "source_free": true,
+  "supplemental_overlays": {
+    "MSG_PK/SC/msgdata.bin": [
+      "workstreams/msgdata_pk_structural_review_b12/public/msgdata_ko_pk_structural_review_b12_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b13/public/msgdata_ko_pk_structural_review_b13_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b14/public/msgdata_ko_pk_structural_review_b14_500.v1.json",
+      "workstreams/msgdata_pk_structural_review_b15/public/msgdata_ko_pk_structural_review_b15_final_110.v1.json"
+    ],
+    "MSG_PK/SC/msggame.bin": [
+      "workstreams/msggame_pk_ui_priority_b07/public/msggame_ko_pk_ui_priority_b07_300.v1.json"
+    ]
+  }
+}
