@@ -1,0 +1,120 @@
+{
+  "artifacts": {
+    "evidence/switch_v13_msgev_native_contract_recovery_alignment.v1.json": {
+      "path": "evidence/switch_v13_msgev_native_contract_recovery_alignment.v1.json",
+      "sha256": "9FB3527C7AA3A01C8CD19A4AD4DF5C2234B5C0F1D37065D1F278365DDAAD97B9",
+      "size": 24428
+    },
+    "public/msgev_ko_switch_v13_native_contract_recovery_13.v1.json": {
+      "path": "public/msgev_ko_switch_v13_native_contract_recovery_13.v1.json",
+      "sha256": "92767CB6E1C0BB890F185F611B3055A2E75370D544370A0AEDF08B8AAC6FDE07",
+      "size": 5183
+    },
+    "review/switch_v13_msgev_native_contract_recovery_review.v1.json": {
+      "path": "review/switch_v13_msgev_native_contract_recovery_review.v1.json",
+      "sha256": "9DA326A953CE1181CEB6CC33E6D244E2F41E86AC72DF8FF30EB27BD00F9E120B",
+      "size": 7737
+    }
+  },
+  "batch_id": "switch-v13-pk-msgev-native-contract-recovery-13.v1",
+  "entry_count": 13,
+  "generator": {
+    "path": "build_switch_msgev_v13_native_contract_recovery.py",
+    "sha256": "F7AD3ABF8E347E87477A4B934FF37FA81775961517C650397D9EA49F8D2E0CE5"
+  },
+  "passed": true,
+  "predecessor_exclusion_partition": {
+    "exact_partition_consumed": true,
+    "excluded_count": 13,
+    "excluded_ids_sha256": "FBEB52131D74798885BD0BC311399EB1F054EFB0CB716BE8DFE0AD1133897C72",
+    "path": "workstreams/switch_msgev_v13_invariant_recovery/review/switch_v13_msgev_invariant_recovery_review.v1.json",
+    "sha256": "46F86345A82D8172EA8F00DBBE662BA76EA1726EC2319BEF6957209B9071DE75"
+  },
+  "progress_registration_audit": {
+    "candidate_count": 13,
+    "candidate_ids_sha256": "FBEB52131D74798885BD0BC311399EB1F054EFB0CB716BE8DFE0AD1133897C72",
+    "candidate_outside_target_count": 0,
+    "candidate_prior_overlap_count": 0,
+    "candidate_target_intersection_count": 13,
+    "prior_claim_count": 13007,
+    "prior_claim_ids_sha256": "833726800A984AC94C62BA07E5DC11A9015651B0F691724EA27807B3CF753CFE",
+    "prior_outside_target_count": 1598,
+    "prior_outside_target_ids_sha256": "5C050980004350E17D6B4E5BFC0151075CFDEBF1D41006A7E7FBE5BBC2B0E313",
+    "prior_overlay_path_count": 32,
+    "prior_overlay_paths_sha256": "D8C9647E087E8B1822DF215D2BB7F44BB8DCB36F02C5CCFA1A2C7DCBF8D7A78D",
+    "prior_target_intersection_count": 11409,
+    "prior_target_intersection_ids_sha256": "B328F053C31C5E43230FE7FA31DA8306D730AB8D06116083A7D0D5AA55FFCD84",
+    "registration_order_independent": true,
+    "self_excluded_from_prior_claims": true,
+    "self_registration_states_allowed": [
+      "absent",
+      "one_exact_path"
+    ],
+    "target_coverage_after_registration": 11422
+  },
+  "replacement_invariants": {
+    "checked": 13,
+    "custom_bracket_contract_preserved_count": 13,
+    "failures": 0,
+    "manual_native_reconstruction_count": 13,
+    "pk_sc_contract_preserved_count": 13,
+    "switch_text_blindly_preserved_count": 0
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "in_memory_target_a_b_equal": true,
+    "pre_and_post_self_registration_must_be_byte_identical": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "base_msg_sc_modified": false,
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "executable_modified": false,
+    "font_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_progress_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.switch-msgev-v13-native-contract-recovery-validation.v1",
+  "selected_ids_sha256": "FBEB52131D74798885BD0BC311399EB1F054EFB0CB716BE8DFE0AD1133897C72",
+  "source_free_scan": {
+    "evidence/switch_v13_msgev_native_contract_recovery_alignment.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "public/msgev_ko_switch_v13_native_contract_recovery_13.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review/switch_v13_msgev_native_contract_recovery_review.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "target_catalog": {
+    "catalog_sha256": "FF3D15D0792052EB1A4E67BC296B3ED5169662C3510EE8F164F1331EFF07C786",
+    "entry_count": 12906,
+    "ids_sha256": "00D725442F097A6F369FC3AC662C753976EAA07C714FDF6F436A7EF8B62E7C89",
+    "path": "data/public/translation_target_keys.v0.1.json"
+  },
+  "target_reconstruction": {
+    "changed_entry_count": 13,
+    "complete_target_included": false,
+    "packed_sha256": "7CBD7F26F7DDAA2E7512A4F6F11FF27275A91BB2EAB6364C25E2609EEB2420EB",
+    "packed_size": 754240,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "6613879AA58C68049138FF83E11BB57D890087B32AC2FD95947514ED0D1A1ADB",
+    "raw_size": 751268,
+    "resource": "MSG_PK/SC/msgev.bin",
+    "wrapper_round_trip": true
+  }
+}

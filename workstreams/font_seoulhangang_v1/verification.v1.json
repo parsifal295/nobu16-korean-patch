@@ -1,32 +1,63 @@
 {
-  "build_manifest_sha256": "DA0DEC93E284E96F6757DD0ACDA046753C957A05E551E96ED655CC33E35DEF02",
+  "build_manifest_sha256": "2EECFECD279AE13CAEB8A86E8E75E26BE438870E2486DE6CE39E748AD7BCFFDA",
   "candidate": {
-    "archive_sha256": "31CD9AFD3EBAE226BB6C47ECF3DA9804C559002A88C8C3FB867E89E41B205615",
-    "archive_size": 183029954,
+    "archive_sha256": "AEBA7DD76986062AFA7AED1BCCCD8ED38189C4A9B6CEC854F7E7468473469672",
+    "archive_size": 183480723,
     "entries": [
       {
         "entry": 6,
         "record_counts": [
-          23004,
-          1271
+          23135,
+          1406
         ],
-        "sha256": "C4B2D046EF7AE97DE259E0794721E25A2E7B2232334B4DEA7001F2DD4EEE0347",
-        "size": 28468364,
+        "sha256": "E448539D26821ED32932BD2BDF94F9D370E33CDEB163F53D88869FC3667A3190",
+        "size": 28777988,
         "table_count": 2
       },
       {
         "entry": 7,
         "record_counts": [
-          23004,
-          1271
+          23135,
+          1406
         ],
-        "sha256": "424FC1FD8AA4FC4EBD5A91830DA2713FD6CF1C276E1631ABBCCDDEABB15FC382",
-        "size": 12964684,
+        "sha256": "BCC8D09FE26E5E6795A70687F17126F1943DF50419A99F7712A65BE0F098F669",
+        "size": 13104068,
         "table_count": 2
       }
-    ]
+    ],
+    "glyph_demand_coverage": {
+      "codepoint_count": 1389,
+      "codepoints_sha256": "7FDC3F9C72D5FF3416EAA905B581549434BC3A5577C3587CC5351E4C4676CC16",
+      "tables": [
+        {
+          "entry": 6,
+          "mapped_demand_count": 1389,
+          "missing_demand_count": 0,
+          "table": 0
+        },
+        {
+          "entry": 6,
+          "mapped_demand_count": 1389,
+          "missing_demand_count": 0,
+          "table": 1
+        },
+        {
+          "entry": 7,
+          "mapped_demand_count": 1389,
+          "missing_demand_count": 0,
+          "table": 0
+        },
+        {
+          "entry": 7,
+          "mapped_demand_count": 1389,
+          "missing_demand_count": 0,
+          "table": 1
+        }
+      ]
+    }
   },
   "candidate_byte_identical": true,
+  "full_pk_glyph_demand_coverage": true,
   "g1n_structural_validation": true,
   "installed_game_files_modified": false,
   "manifest_byte_identical": true,

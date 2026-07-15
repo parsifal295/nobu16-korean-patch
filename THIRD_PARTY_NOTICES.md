@@ -5,9 +5,14 @@ PK PC판의 대응 문자열에 이식한 것입니다.
 
 - 원천 저장소·계정: [`snake7594/nobunaga-shinsei-korean-patch`](https://github.com/snake7594/nobunaga-shinsei-korean-patch)
 - 원천 릴리스: [v1.1](https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.1), 2026-07-14
-- 검증한 파일: `NobunagaShinsei_KoreanPatch_v1.1.zip`
-- SHA-256: `931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6`
-- 이식 후보 리소스: `msgev.bin`, `msgdata.bin`, `msggame.bin`
+- 최신 파일 재감사 릴리스: [v1.3](https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.3), 2026-07-15
+- 최신 upstream 릴리스: [v1.4](https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.4), 2026-07-15; 신규분은 Switch `exefs/main` 시스템 문장 6개이므로 이 프로젝트 범위에서 제외
+- 검증한 파일: `NobunagaShinsei_KoreanPatch_v1.1.zip`, `NobunagaShinsei_KoreanPatch_v1.3.zip`
+- ZIP SHA-256: v1.1 `931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6`; v1.3 `F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4`
+- upstream이 고지한 v1.4 ZIP SHA-256: `7529BCD2AF27449E71DD281BD07AE7649FFE7983C6E0B1781A35BA75019BA62F` (다운로드·이식하지 않음)
+- 이식 후보 리소스: `msgev.bin`, `msgdata.bin`, `msggame.bin`, `msgbre.bin`
+
+v1.3의 `ev_strdata.bin`, `strdata.bin`, `msggame.bin`은 검증한 v1.1 파일과 각각 바이트 동일합니다. v1.3에서 달라진 `RES_JP/res_lang.bin`의 화면 제목 이미지 108개는 별도 후보이며, PC `RES_SC`와 크기·포맷·의미를 검증한 항목만 재구성합니다. v1.4가 추가한 `exefs/main`은 실행파일 수정이고 PC판과도 호환되지 않으므로 분석 결과나 진행률에 넣지 않습니다. 원본 G1T·BC3·PNG 픽셀과 완성 게임 리소스는 공개 저장소에 포함하지 않습니다.
 
 원천 ZIP과 게임 원문은 이 저장소에 포함하지 않습니다. 각 이식 항목은 다음을
 모두 만족할 때만 공개 오버레이에 들어갑니다.

@@ -1,0 +1,33 @@
+{
+  "base_language": "SC",
+  "defaults": {
+    "status": "translated"
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "id": 22594,
+      "ko": "성하 시설 \u001bC3%s\u001bCZ의 상업%+d",
+      "source_sc_utf16le_sha256": "BFC6FA69C497111C0E94254D5E9937D3F1947B72AB69F15328900EA2FEB2AC4E"
+    },
+    {
+      "id": 25546,
+      "ko": "부대 능력 증가",
+      "source_sc_utf16le_sha256": "2AB80B631AD896118B57262A7756C480D2BC0733C95357BC5EC1F4AD4A21CFAB"
+    }
+  ],
+  "entry_count": 2,
+  "overlay_id": "pk_msgdata_native_completion_2.v1",
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "schema": "nobu16.kr.common-message-overlay.v1",
+  "stock_sc": {
+    "packed_sha256": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "raw_sha256": "5982D520BF2E66260943DE61D0CB7F1135D1BA81A211E917E3F426C58D9125D6",
+    "raw_size": 514752,
+    "size": 516796,
+    "string_count": 29210
+  }
+}

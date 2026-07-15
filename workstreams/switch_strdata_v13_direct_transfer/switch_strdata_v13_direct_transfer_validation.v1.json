@@ -1,0 +1,176 @@
+{
+  "artifacts": {
+    "evidence": {
+      "path": "evidence/switch_strdata_v13_direct_transfer_evidence.v1.json",
+      "sha256": "E260EA4DEDD0C124B1E784FDEB6D6470C2596C33AE1127CB076681EC41268E9B",
+      "size": 14495687
+    },
+    "overlay": {
+      "path": "public/strdata_ko_switch_v13_direct_transfer_24424.v1.json",
+      "sha256": "2C4B1F7C52D5B04EE915693C20D4662011E18A3B6535212905609B3ABBA9FE98",
+      "size": 5169221
+    },
+    "review": {
+      "path": "review/switch_strdata_v13_direct_transfer_review.v1.json",
+      "sha256": "2F7F45E963A843D80ABC771DACC718589ED86224151B9C677E7383D91977857A",
+      "size": 7651221
+    }
+  },
+  "batch_id": "switch-strdata-v13-direct-transfer-24424-v1",
+  "candidate": {
+    "all_other_coordinates_preserved": true,
+    "block_slot_counts_preserved": true,
+    "changed_coordinate_count": 24525,
+    "changed_coordinates_sha256": "15047708DCC3EEA6254CE0ECB8121D25CBCDC3AEF6CE8DE232BBE40D65DE0A58",
+    "existing_overlay_values_preserved": true,
+    "packed_sha256": "7C566A0EB00BFBD9649B5BBC9202B5244AED2EB8DC014CE8417151CAE6B6DAD6",
+    "packed_size": 950221,
+    "raw_sha256": "24F41BB71CED3EF2A00B6E9A20B50F3DBBEB6BDB0431DFECEF898BD23FCFA54F",
+    "raw_size": 946484,
+    "unchanged_coordinate_count": 7786,
+    "whole_switch_file_copied": false,
+    "wrapper_roundtrip_valid": true
+  },
+  "classification": {
+    "counts": {
+      "direct": 24525,
+      "manual": 1431,
+      "semantic-aligned": 0,
+      "unusable": 6355
+    },
+    "direct_coordinates_sha256": "15047708DCC3EEA6254CE0ECB8121D25CBCDC3AEF6CE8DE232BBE40D65DE0A58",
+    "manual_and_unusable_auto_import_count": 0,
+    "per_block": {
+      "0": {
+        "direct": 19120,
+        "manual": 1345,
+        "semantic-aligned": 0,
+        "unusable": 4604
+      },
+      "1": {
+        "direct": 3082,
+        "manual": 80,
+        "semantic-aligned": 0,
+        "unusable": 938
+      },
+      "2": {
+        "direct": 2203,
+        "manual": 4,
+        "semantic-aligned": 0,
+        "unusable": 793
+      },
+      "3": {
+        "direct": 120,
+        "manual": 2,
+        "semantic-aligned": 0,
+        "unusable": 0
+      },
+      "4": {
+        "direct": 0,
+        "manual": 0,
+        "semantic-aligned": 0,
+        "unusable": 20
+      }
+    },
+    "semantic_aligned_auto_import_count": 0
+  },
+  "deduplication": {
+    "duplicate_coordinate_count": 0,
+    "existing_overlays": {
+      "b00": {
+        "entry_count": 100,
+        "path": "workstreams/strdata/public/strdata_ko_name_labels_b00s0000_0099.v0.1.json",
+        "sha256": "9B1C3F1B2C3C1BFC44974C6C2E1573DA6C48433B9E945EEF6EC5BE2C54B85F24",
+        "size": 18874
+      },
+      "shared_ui": {
+        "entry_count": 1,
+        "path": "workstreams/strdata_pk_shared_ui/public/strdata_ko_pk_shared_ui_b01_1.v1.json",
+        "sha256": "DF58FD55FF17F5AA39F73DF4445360BA9BE18AC9C87E3B7E245F07C359EC5A4D",
+        "size": 1142
+      }
+    },
+    "existing_values_take_precedence": true,
+    "net_new_coordinates_sha256": "837B2E38AD16C6F712C2372F214C3DE13209110B62B2A5A4A588473F5F31B15D"
+  },
+  "deterministic_builds_identical": true,
+  "inputs": {
+    "block_slot_counts": [
+      25069,
+      4100,
+      3000,
+      122,
+      20
+    ],
+    "pc_jp": {
+      "packed_sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+      "packed_size": 507054,
+      "raw_sha256": "EAB14063C2060CE11794232F483F0B2210B3BD58118165CBEEC2F37176C25649",
+      "raw_size": 763928
+    },
+    "pc_sc_pristine_original": {
+      "packed_sha256": "93F88D71210B96783749CEB948E0713D7E6552F764F644092B71A5FD0C994B88",
+      "packed_size": 516628,
+      "raw_sha256": "17EF622F36BA94009F67519DC79ED543C223B467311E51711A009F9DD0816214",
+      "raw_size": 760388
+    },
+    "switch_member": {
+      "packed_sha256": "5F065B9DBDAE4DC75E2D7186A76C0AC988FB504F018F820C204262BF07D5061B",
+      "packed_size": 404189,
+      "raw_sha256": "245538466576E3880B3C53C0CB4929685096DF394C27CCB93B2C893615A46ADE",
+      "raw_size": 953512
+    },
+    "switch_v13_zip": {
+      "sha256": "F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4",
+      "size": 72977145
+    }
+  },
+  "overlay_validation": {
+    "coordinates_sorted": true,
+    "duplicate_coordinate_count": 0,
+    "replacement_contract_failure_count": 0,
+    "source_free": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "source_hash_failure_count": 0,
+    "target_membership_failure_count": 0
+  },
+  "passed": true,
+  "resource": "MSG/SC/strdata.bin",
+  "safety": {
+    "dll_injection_used": false,
+    "exe_or_registry_modified": false,
+    "hooking_used": false,
+    "live_game_file_written": false,
+    "memory_patch_used": false,
+    "progress_file_modified": false,
+    "readme_root_modified": false,
+    "whole_switch_file_copied": false
+  },
+  "schema": "nobu16.kr.strdata-switch-direct-validation.v1",
+  "scope": {
+    "existing_overlay_coordinates_preserved": 101,
+    "integrated_changed_coordinates": 24525,
+    "net_new_overlay_coordinates": 24424,
+    "net_new_per_block": {
+      "0": 19020,
+      "1": 3081,
+      "2": 2203,
+      "3": 120,
+      "4": 0
+    },
+    "safe_direct_before_dedupe": 24525,
+    "total_pc_coordinates": 32311
+  },
+  "source_free_scans": {
+    "evidence": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  }
+}

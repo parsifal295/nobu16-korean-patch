@@ -1,0 +1,243 @@
+{
+  "base_jp_strdata": {
+    "logical_path": "MSG/JP/strdata.bin",
+    "packed_sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+    "raw_sha256": "EAB14063C2060CE11794232F483F0B2210B3BD58118165CBEEC2F37176C25649",
+    "raw_size": 763928,
+    "size": 507054
+  },
+  "batch_id": "switch_v13_msgbre_cjk_cleanup_3.v0.1",
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "entries": [
+    {
+      "after_script_counts": {
+        "cjk_unified_count": 0,
+        "kana_count": 0
+      },
+      "all_pk_sc_message_invariants_preserved": true,
+      "base_biography_slot_count": 1,
+      "base_biography_slot_ids_sha256": "80912BB9727B7F8AFB924529E0951AB12C4882F57CF1592D953FB31C94355F43",
+      "before_script_counts": {
+        "cjk_unified_count": 1,
+        "kana_count": 0
+      },
+      "cleaned_ko_utf16le_sha256": "92CD0D2651CEA9309585E64F0F41131403739718B6FB5C71DDF37CE0B5BAE2BD",
+      "cleanup_kind": "single_character_meaning_gloss_to_hangul",
+      "exact_pk_jp_match": true,
+      "id": 944,
+      "pk_jp_utf16le_sha256": "60D02A408840031D86D6ED4251E0FDA2A52890DCA2F81A3F98ACE5CA91F9C0C6",
+      "pk_sc_utf16le_sha256": "5FAC82A40E5330505E3862135D4EEACDF1C29A472F572358333E45604A092DFE",
+      "selected_within_stock_visible_target": true,
+      "switch_hash_converged": true,
+      "switch_ko_utf16le_sha256": "5412943D73F702DE2AC7EE438321FF619FE6F83F680446DC99277D93D327C82B"
+    },
+    {
+      "after_script_counts": {
+        "cjk_unified_count": 0,
+        "kana_count": 0
+      },
+      "all_pk_sc_message_invariants_preserved": true,
+      "base_biography_slot_count": 1,
+      "base_biography_slot_ids_sha256": "EE16D6650BC6B544B7557263B51EED6CBF07A5D4BD50F633C8BF94910E96CCA3",
+      "before_script_counts": {
+        "cjk_unified_count": 1,
+        "kana_count": 0
+      },
+      "cleaned_ko_utf16le_sha256": "56A62C9A2504496175D266AEEA9E7824D4DC81CAA1F64099D19321B1DB665CB0",
+      "cleanup_kind": "single_character_reading_to_hangul",
+      "exact_pk_jp_match": true,
+      "id": 1104,
+      "pk_jp_utf16le_sha256": "A0A9A70BF40B9BCAAF67DFD27E387FE0D6DA5BF97BD67BBA1DA7EB04678709E2",
+      "pk_sc_utf16le_sha256": "7325D061A605B339F43AEDE0EDCEE03AF45A0EFC3D254CAACB657E5780E991F5",
+      "selected_within_stock_visible_target": true,
+      "switch_hash_converged": true,
+      "switch_ko_utf16le_sha256": "D60229FC6B4047441422CC1435735B7E9C3DD162854423D74A52B45B263D104A"
+    },
+    {
+      "after_script_counts": {
+        "cjk_unified_count": 0,
+        "kana_count": 0
+      },
+      "all_pk_sc_message_invariants_preserved": true,
+      "base_biography_slot_count": 1,
+      "base_biography_slot_ids_sha256": "554605B7C03AC056828581EDB757F31707BD6D398E929CA3C498E658F8AD0669",
+      "before_script_counts": {
+        "cjk_unified_count": 2,
+        "kana_count": 0
+      },
+      "cleaned_ko_utf16le_sha256": "9C36EE342A15A1E1DB46D6020FB4B9509A703A1E6391F7D7569611614515A68E",
+      "cleanup_kind": "two_character_age_gloss_to_natural_hangul",
+      "exact_pk_jp_match": true,
+      "id": 1238,
+      "pk_jp_utf16le_sha256": "2A396F9565CEBF3095347A730226BE73CC0BD662848F7CA844527000419695B7",
+      "pk_sc_utf16le_sha256": "C9034454CF4B201C1C5B5DFB90671B16DBDFED4B33BF15676299FDC5DB8B74BC",
+      "selected_within_stock_visible_target": true,
+      "switch_hash_converged": true,
+      "switch_ko_utf16le_sha256": "C96302EFBF10B89361050960D09631E73836A3B923111238A9910C690A63543F"
+    }
+  ],
+  "entry_count": 3,
+  "matching_policy": {
+    "cleanup": "three pinned minimal Hangul rewrites only",
+    "invariants": [
+      "printf tokens",
+      "unknown percent count",
+      "escape controls",
+      "other controls",
+      "line breaks",
+      "private-use code points",
+      "leading whitespace",
+      "trailing whitespace"
+    ],
+    "source_alignment": "complete PK JP hash plus exact in-memory equality",
+    "switch_selection": "one convergent Korean result for every duplicate base biography slot",
+    "target_gate": "pristine PK SC semantic nonblank row"
+  },
+  "pk_source_files": {
+    "JP": {
+      "logical_path": "MSG_PK/JP/msgbre.bin",
+      "packed_sha256": "DA9BE8242CF0A90592D573DF676ECDE26566B11C5707273EEB4AF5BA54132AD5",
+      "raw_sha256": "02237F07362E0E3DFF92C0E999A29B887EBE5971B1C3EF8F26EAA5C969FB9668",
+      "raw_size": 333516,
+      "size": 221127
+    },
+    "SC": {
+      "logical_path": "MSG_PK/SC/msgbre.bin",
+      "packed_sha256": "AD1FEC313228AADB00581C25AE59D8C6AFF54DD771A4D0F7BC35CD1B44D77B8D",
+      "raw_sha256": "E0343DCDB1BE7C62E515DE52B9045DC54A4D8FE77BF9B6F0836A3478CBD77779",
+      "raw_size": 291256,
+      "size": 226918
+    }
+  },
+  "prior_overlay_exclusion": {
+    "candidate_overlay_excluded_from_prior_claims": true,
+    "candidate_overlay_registered": true,
+    "claimed_ids_sha256": "A1F577B7BBE1CDDF8440C0EE7B26434DB676AFBB1326E990999D434722F8FC5B",
+    "prior_overlay_count": 12,
+    "prior_overlays": [
+      {
+        "entry_count": 129,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0000_0128.v0.1.json",
+        "max_id": 128,
+        "min_id": 0,
+        "sha256": "DDD87FDF972F4EE907D310387074D0879E620C61B15C26B7F8A7FBA40BE52E00"
+      },
+      {
+        "entry_count": 122,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0129_0250.v0.2.json",
+        "max_id": 250,
+        "min_id": 129,
+        "sha256": "FDB2511970F1E8CEF194E661CBCE3F8D912B372382BCFD89129FD1F8B309A4D3"
+      },
+      {
+        "entry_count": 100,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0251_0350.v0.3.json",
+        "max_id": 350,
+        "min_id": 251,
+        "sha256": "1253609BC246DB4A63D1A5658476756AB89A0660FA683262CFFA444E3678132B"
+      },
+      {
+        "entry_count": 107,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0351_0457.v0.4.json",
+        "max_id": 457,
+        "min_id": 351,
+        "sha256": "30E38BE8C8F0D0E48FAFB828A88765AFF52BF607F1D8D22985E88CD0B810109E"
+      },
+      {
+        "entry_count": 108,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0458_0565.v0.5.json",
+        "max_id": 565,
+        "min_id": 458,
+        "sha256": "941D6B235708E4E8247CD0E4508DBDADBBA5D46A6A7F5406F047C4187B19A8F0"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0566_0610.v0.6.json",
+        "max_id": 610,
+        "min_id": 566,
+        "sha256": "0FB3F6F777E5110507EB4782C5B7C5E2B61EC50FBF9E8314E5FF2491C9D6ACD2"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0611_0655.v0.7.json",
+        "max_id": 655,
+        "min_id": 611,
+        "sha256": "82FCFE650D8AA0EBDC70AFEEFEDE2EE14049AB0EB1979464ACBDD10B69F9B72C"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0656_0700.v0.8.json",
+        "max_id": 700,
+        "min_id": 656,
+        "sha256": "6791F39371E7C34F2792AE03EB88CD3CEB0FA0980D21178EFF4A86B7793063BA"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0701_0745.v0.9.json",
+        "max_id": 745,
+        "min_id": 701,
+        "sha256": "3D8D2EE48F42ED9F2F580DA4AB0004A131198DC692FC8DEE44F6B201814ADA91"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0746_0790.v0.10.json",
+        "max_id": 790,
+        "min_id": 746,
+        "sha256": "6D74AE6E3D86F09C0A1356B0D25D97B1B2BEBC319A288544D31714039BAA2430"
+      },
+      {
+        "entry_count": 45,
+        "logical_path": "workstreams/msgbre/public/msgbre_ko_biographies_0791_0835.v0.11.json",
+        "max_id": 835,
+        "min_id": 791,
+        "sha256": "B1FD769444B4BE226257FFF9E7245CD78392258FAB3A5219AE822F82341088D7"
+      },
+      {
+        "entry_count": 1367,
+        "logical_path": "workstreams/switch_msgbre_v11/public/msgbre_ko_switch_v11_strict_transfer.v0.1.json",
+        "max_id": 2206,
+        "min_id": 836,
+        "sha256": "BFEFB590F10B073E9510F598BDFDCC840DDEDC165B637F9F0FEA0CB6B2675FC1"
+      }
+    ],
+    "progress_logical_path": "data/public/translation_progress.v0.1.json",
+    "progress_sha256": "DB88E04F2DDC206F449263FF0CFE3CAA05EA4CD9E1030D58B5BD2EF1B444DD51",
+    "unique_claimed_count": 2203
+  },
+  "resource": "msgbre",
+  "schema": "nobu16.kr.switch-msgbre-v13-cjk-cleanup-evidence.v1",
+  "scope": {
+    "selected_entry_count": 3,
+    "selected_ids": [
+      944,
+      1104,
+      1238
+    ],
+    "selected_ids_sha256": "C19CF4F02CB33DF4FC72C25443BA4E0FD7D5978B142DA7C2A62536881670BFC3",
+    "selected_within_stock_visible_target_count": 3
+  },
+  "source_release": {
+    "archive_member": "NobunagaShinsei_KR/romfs/MSG/JP/strdata.bin",
+    "archive_sha256": "F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4",
+    "archive_size": 72977145,
+    "author_attribution": "GitHub user snake7594",
+    "block_slot_counts": [
+      25069,
+      4100,
+      3000,
+      122,
+      20
+    ],
+    "member_raw_sha256": "245538466576E3880B3C53C0CB4929685096DF394C27CCB93B2C893615A46ADE",
+    "member_raw_size": 953512,
+    "member_readme_size": 2514,
+    "member_sha256": "5F065B9DBDAE4DC75E2D7186A76C0AC988FB504F018F820C204262BF07D5061B",
+    "member_size": 404189,
+    "release_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.3",
+    "repository_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch",
+    "tag": "v1.3",
+    "text_member_byte_identical_to_v1_1": true,
+    "v1_1_member_sha256_pin": "5F065B9DBDAE4DC75E2D7186A76C0AC988FB504F018F820C204262BF07D5061B"
+  }
+}
