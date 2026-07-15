@@ -39,6 +39,12 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest().upper()
 
 
+def canonical_codepoint_hash(codepoints: set[int]) -> str:
+    return sha256(
+        "".join(f"U+{codepoint:04X}\\n" for codepoint in sorted(codepoints)).encode("ascii")
+    )
+
+
 def load_manifest(root: Path) -> tuple[dict[str, Any], bytes]:
     path = root / "private" / "build_manifest.json"
     try:
@@ -56,11 +62,36 @@ def load_manifest(root: Path) -> tuple[dict[str, Any], bytes]:
     return value, raw
 
 
-def candidate_summary(root: Path, manifest: dict[str, Any]) -> dict[str, Any]:
+def load_demand_codepoints(root: Path) -> tuple[set[int], bytes]:
+    path = root / "plan.json"
+    try:
+        raw = path.read_bytes()
+        value = json.loads(raw.decode("utf-8"))
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise VerifyError(f"cannot read private build plan {path}: {exc}") from exc
+    if not isinstance(value, dict) or value.get("schema") != "nobu16.kr.font-seoulhangang-v1-plan.v1":
+        raise VerifyError(f"invalid private build plan: {path}")
+    raw_points = value.get("glyph_demand_codepoints")
+    if not isinstance(raw_points, list) or not raw_points:
+        raise VerifyError(f"private build plan has no explicit glyph demand: {path}")
+    if not all(isinstance(point, int) and 0 <= point <= 0xFFFF for point in raw_points):
+        raise VerifyError(f"private build glyph demand is outside BMP: {path}")
+    if raw_points != sorted(raw_points) or len(raw_points) != len(set(raw_points)):
+        raise VerifyError(f"private build glyph demand is not sorted and unique: {path}")
+    points = set(raw_points)
+    if value.get("glyph_demand_codepoints_sha256") != canonical_codepoint_hash(points):
+        raise VerifyError(f"private build glyph-demand hash mismatch: {path}")
+    return points, raw
+
+
+def candidate_summary(
+    root: Path, manifest: dict[str, Any], demand_codepoints: set[int]
+) -> dict[str, Any]:
     entries = manifest.get("entries")
     if not isinstance(entries, list) or [item.get("entry") for item in entries] != [6, 7]:
         raise VerifyError("private manifest entry order is invalid")
     summaries = []
+    coverage = []
     for item in entries:
         entry = int(item["entry"])
         path = root / "private" / "candidate" / f"SC_{entry}.seoulhangang-v1.g1n"
@@ -70,6 +101,22 @@ def candidate_summary(root: Path, manifest: dict[str, Any]) -> dict[str, Any]:
         parsed = G1N.parse_g1n(path)
         if parsed.structural_errors:
             raise VerifyError(f"entry {entry} has G1N structural errors: {parsed.structural_errors[:1]}")
+        for table in parsed.tables:
+            mapped = {codepoint for codepoint, ordinal in enumerate(table.mapping) if ordinal}
+            missing = sorted(demand_codepoints - mapped)
+            if missing:
+                preview = ", ".join(f"U+{codepoint:04X}" for codepoint in missing[:8])
+                raise VerifyError(
+                    f"entry {entry} table {table.index} misses {len(missing)} demanded glyphs: {preview}"
+                )
+            coverage.append(
+                {
+                    "entry": entry,
+                    "table": table.index,
+                    "mapped_demand_count": len(demand_codepoints),
+                    "missing_demand_count": 0,
+                }
+            )
         summaries.append(
             {
                 "entry": entry,
@@ -84,7 +131,16 @@ def candidate_summary(root: Path, manifest: dict[str, Any]) -> dict[str, Any]:
     candidate = manifest.get("candidate_archive")
     if not isinstance(candidate, dict) or sha256(archive_raw) != candidate.get("sha256") or len(archive_raw) != candidate.get("size"):
         raise VerifyError("candidate archive hash/size does not match its private manifest")
-    return {"entries": summaries, "archive_sha256": sha256(archive_raw), "archive_size": len(archive_raw)}
+    return {
+        "entries": summaries,
+        "archive_sha256": sha256(archive_raw),
+        "archive_size": len(archive_raw),
+        "glyph_demand_coverage": {
+            "codepoint_count": len(demand_codepoints),
+            "codepoints_sha256": canonical_codepoint_hash(demand_codepoints),
+            "tables": coverage,
+        },
+    }
 
 
 def atomic_write(path: Path, data: bytes) -> None:
@@ -112,10 +168,16 @@ def main(argv: Sequence[str] | None = None) -> int:
         build_b = args.build_b.resolve()
         manifest_a, raw_a = load_manifest(build_a)
         manifest_b, raw_b = load_manifest(build_b)
-        summary_a = candidate_summary(build_a, manifest_a)
-        summary_b = candidate_summary(build_b, manifest_b)
+        demand_a, plan_raw_a = load_demand_codepoints(build_a)
+        demand_b, plan_raw_b = load_demand_codepoints(build_b)
+        summary_a = candidate_summary(build_a, manifest_a, demand_a)
+        summary_b = candidate_summary(build_b, manifest_b, demand_b)
         if raw_a != raw_b:
             raise VerifyError("private build manifests differ")
+        if plan_raw_a != plan_raw_b:
+            raise VerifyError("private build plans differ")
+        if demand_a != demand_b:
+            raise VerifyError("private build glyph demands differ")
         if summary_a != summary_b:
             raise VerifyError("private candidate hashes or G1N structures differ")
         result = {
@@ -125,6 +187,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "manifest_byte_identical": True,
             "candidate_byte_identical": True,
             "g1n_structural_validation": True,
+            "full_pk_glyph_demand_coverage": True,
             "installed_game_files_modified": False,
             "official_ttf_or_raster_payload_in_public_output": False,
         }
