@@ -1,0 +1,293 @@
+{
+  "artifacts": {
+    "evidence/alignment_evidence.v0.23.json": {
+      "sha256": "4C28E71EE0DE3F60B143A3F3D41FA7D0AA92DA4E7C4E9E7F698190868CA595B5",
+      "size": 584124
+    },
+    "public/ev_strdata_ko_historical_events_4387_4556.v0.23.json": {
+      "sha256": "A47216482F5012B1958B662DE267798C7227B1F7A7DF8A99E54A5F3C1CFA2170",
+      "size": 47002
+    },
+    "review/review_index.v0.23.json": {
+      "sha256": "B87CC890D9EBB39CFFB88B16281E3843A1868A2A042A4B90CC3B55641E60DE23",
+      "size": 65908
+    }
+  },
+  "batch_id": "ev-strdata-historical-events-4387-4556-v0.23",
+  "deferred_internal_groups": [],
+  "generator": {
+    "path": "build_ev_strdata_batch23.py",
+    "sha256": "3141D201AF5F45E3E837355AFA66EB45CFDB99BA98DFC6DCBD6FB640F92BC60A"
+  },
+  "offline_binary_build": {
+    "files": {
+      "MSG/SC/ev_strdata.bin": {
+        "sha256": "0A129B44C7E40E61D5F72F9867D5F094BEAA60C60F94D8EA21BC5F801FC63308",
+        "size": 669428
+      },
+      "ev_strdata.build-manifest.json": {
+        "sha256": "C8186C789FE31587EE77EFF541FB7454B3F72976B6BD71AB6B88AF335033406C",
+        "size": 70495
+      },
+      "ev_strdata_sc.recipe.json": {
+        "sha256": "437012ECD70E8AF842A57B19D0B6FDE6F40D9644B1FDA797E9BB787504110B5F",
+        "size": 48149
+      }
+    },
+    "installed_target_written": false,
+    "manifest_sha256": "C8186C789FE31587EE77EFF541FB7454B3F72976B6BD71AB6B88AF335033406C",
+    "operations": 166,
+    "overlay_entries": 170,
+    "recipe_sha256": "437012ECD70E8AF842A57B19D0B6FDE6F40D9644B1FDA797E9BB787504110B5F",
+    "target_sha256": "0A129B44C7E40E61D5F72F9867D5F094BEAA60C60F94D8EA21BC5F801FC63308"
+  },
+  "passed": true,
+  "previous_deferred_overlap": {
+    "current_deferred_entry_count": 0,
+    "current_deferred_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+    "overlap_detected": false,
+    "overlap_entry_count": 0,
+    "overlap_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+    "previous_batches": [
+      {
+        "batch_id": "ev-strdata-event-labels-2207-2406-v0.13",
+        "deferred_entry_count": 193,
+        "deferred_ids_sha256": "B346249D6B010CCC0243DE9AE75377A7FF0E0401F8A5FDC1E74621634B9FD9BB",
+        "version": "v0.13"
+      },
+      {
+        "batch_id": "ev-strdata-event-labels-2407-2580-v0.14",
+        "deferred_entry_count": 199,
+        "deferred_ids_sha256": "A3083AED6A0EB0D670B9E3A19D50BF78D60D6325533C2D04D381993F28345373",
+        "version": "v0.14"
+      },
+      {
+        "batch_id": "ev-strdata-character-speaker-labels-2780-2971-v0.15",
+        "deferred_entry_count": 43,
+        "deferred_ids_sha256": "2B95F92D5D9B8AB6E96DEB1A412CB34957B24978FFF2C089254A42C3CE265245",
+        "version": "v0.15"
+      },
+      {
+        "batch_id": "ev-strdata-labels-narration-3007-3276-v0.16",
+        "deferred_entry_count": 96,
+        "deferred_ids_sha256": "06BD88F03E814D81DC107F52B4F1B1452FF8461677854C550FAB5BC1DDD94D00",
+        "version": "v0.16"
+      },
+      {
+        "batch_id": "ev-strdata-events-endings-3277-3484-v0.17",
+        "deferred_entry_count": 18,
+        "deferred_ids_sha256": "CBD6A8F8CB20A423BE5D38411A6AB667ACECB736DCE08404B714ABDC1882D9FA",
+        "version": "v0.17"
+      },
+      {
+        "batch_id": "ev-strdata-historical-events-3485-3661-v0.18",
+        "deferred_entry_count": 0,
+        "deferred_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "version": "v0.18"
+      },
+      {
+        "batch_id": "ev-strdata-historical-events-3662-3839-v0.19",
+        "deferred_entry_count": 0,
+        "deferred_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "version": "v0.19"
+      },
+      {
+        "batch_id": "ev-strdata-historical-events-3840-4031-v0.20",
+        "deferred_entry_count": 0,
+        "deferred_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "version": "v0.20"
+      },
+      {
+        "batch_id": "ev-strdata-historical-events-4032-4209-v0.21",
+        "deferred_entry_count": 0,
+        "deferred_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "version": "v0.21"
+      },
+      {
+        "batch_id": "ev-strdata-historical-events-4210-4386-v0.22",
+        "deferred_entry_count": 0,
+        "deferred_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "version": "v0.22"
+      }
+    ],
+    "previous_deferred_union_entry_count": 549,
+    "previous_deferred_union_ids_sha256": "13D87F620AE49897C10127F8FED317F99859FA89CCAF13CDAACBE0D81787F449"
+  },
+  "raw_format": {
+    "binary_builder_state": "enabled_offline_output_only",
+    "lz4_wrapper_decompression": "OK",
+    "message_table_parser": "tools/nobu16_msg_table.py",
+    "raw_parse_rebuild_byte_exact_languages": [
+      "SC",
+      "JP",
+      "TC"
+    ]
+  },
+  "related_msgev_review": {
+    "commercial_source_text_included": false,
+    "direct_translation_reuse": true,
+    "ev_strdata_sc_structure_differs_at_ids": [],
+    "ev_strdata_sc_structure_is_authoritative": true,
+    "related_batches": [
+      "msgev_historical_events_4280_4417.v0.11",
+      "msgev_historical_events_4418_4556.v0.12"
+    ],
+    "same_numeric_id_semantic_reviewed_entry_count": 170,
+    "sc_structure_adjusted_entry_count": 0,
+    "source_free_reused_entry_count": 170,
+    "terminology_cross_checked": true
+  },
+  "repeated_source_policy": {
+    "failures": 0,
+    "repeated_source_id_groups": [
+      [
+        4468,
+        4484
+      ],
+      [
+        4501,
+        4527,
+        4536,
+        4554
+      ],
+      [
+        4542,
+        4543
+      ]
+    ],
+    "same_source_same_translation_required": true,
+    "translated_repeated_source_group_count": 3,
+    "translated_unique_source_hash_count": 165
+  },
+  "replacement_invariants": {
+    "checked": 170,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "executable_modified": false,
+    "existing_v01_through_v022_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "official_source_text_exposed_in_public_artifacts": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_or_progress_modified": false
+  },
+  "schema": "nobu16.kr.ev-strdata-generation-validation.v23",
+  "scope": {
+    "deferred_ids_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+    "deferred_internal_entry_count": 0,
+    "end_id": 4556,
+    "excluded_candidate_counts": {
+      "actor_reference": 0,
+      "dummy_placeholder": 0,
+      "empty_slot": 0,
+      "internal_event_key": 0
+    },
+    "functional_class_counts": {
+      "akamatsu_harumasa_exile_event": 14,
+      "ashikaga_yoshiteru_return_to_kyoto_event": 15,
+      "chosokabe_kunichika_death_event": 29,
+      "harunobu_shingen_rename_event": 6,
+      "kagetora_yoshiteru_audience_event": 19,
+      "miki_anegakoji_succession_event": 25,
+      "motochika_first_campaign_dialogue_event": 17,
+      "oda_nobunaga_march_to_kyoto_event": 14,
+      "takenaka_hanbei_coming_of_age_event": 3,
+      "ukita_naoie_death_event": 11,
+      "yoshimoto_head_soza_samonji_event": 17
+    },
+    "inspected_entry_count": 170,
+    "inspected_ids_sha256": "934AE238A8BE7D0D3DE23391BBA6DC651EDA2BD29881535A43D780E776F82338",
+    "next_display_id": 4557,
+    "sc_display_translation_target_count": 11687,
+    "start_id": 4387,
+    "total_string_slots": 17868,
+    "translated_display_entry_count": 170,
+    "translated_ids_sha256": "934AE238A8BE7D0D3DE23391BBA6DC651EDA2BD29881535A43D780E776F82338"
+  },
+  "source_alignment": {
+    "english_reference_available": false,
+    "languages": [
+      "SC",
+      "JP",
+      "TC"
+    ],
+    "ordered_all_reference_hashes_sha256": "334A04A083ABFBA94BA5AC22280702991CF5D1FED4A6FFAD51FFEEC2DCF42BD0",
+    "ordered_sc_source_hashes_sha256": "558AE3F6A1B0D4B1DC3B69A1876B278FA0A3A62DBBE1B706C433B07E417623F3",
+    "source_files": {
+      "JP": {
+        "display_nonempty_count": 13283,
+        "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+        "raw_sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+        "raw_size": 789260,
+        "relative_path": "MSG/JP/ev_strdata.bin",
+        "size": 496819,
+        "string_count": 17868
+      },
+      "SC": {
+        "display_nonempty_count": 11687,
+        "packed_sha256": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+        "raw_sha256": "482B25ACFBF219E85EF9F9A073745414B3FC97705BABB4FAF4AAC3BB68248DAD",
+        "raw_size": 662228,
+        "relative_path": "MSG/SC/ev_strdata.bin",
+        "size": 461651,
+        "string_count": 17868
+      },
+      "TC": {
+        "display_nonempty_count": 11687,
+        "packed_sha256": "9E9346B942CAFA99432D675F6BA74DD04D48F56095F35F46392697011D9CFEF3",
+        "raw_sha256": "8918886EC8BB8B58317189F7ABAF48EBC761633CC263F0641ED5213050D1B352",
+        "raw_size": 650756,
+        "relative_path": "MSG/TC/ev_strdata.bin",
+        "size": 460929,
+        "string_count": 17868
+      }
+    },
+    "string_count_each": 17868,
+    "traditional_chinese_used_as_third_reference": true,
+    "translated_ids_nonempty_in_all_references": 170,
+    "translated_reference_hash_count": 510
+  },
+  "source_free_scan": {
+    "evidence/alignment_evidence.v0.23.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "public/ev_strdata_ko_historical_events_4387_4556.v0.23.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review/review_index.v0.23.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "translation": {
+    "exact_sc_hashes_emitted": 170,
+    "historical_term_or_reading_review_flag_count": 13,
+    "runtime_layout_review_flag_count": 170,
+    "source_text_embedded": false,
+    "translation_map_entry_count": 170,
+    "translation_map_sha256": "D14CD6C74BB19C1729FDDA47951F26E9D4F74BF0DAB6BDBFAC696B0460EE65C1"
+  }
+}
