@@ -50,9 +50,12 @@
         "workstreams/dialogue/public/msgev_ko_historical_events_5749_5873.v0.22.json",
         "workstreams/dialogue/public/msgev_ko_historical_events_5874_6019.v0.23.json",
         "workstreams/dialogue/public/msgev_ko_historical_events_6020_6141.v0.24.json",
-        "workstreams/dialogue/public/msgev_ko_historical_events_6142_6268.v0.25.json"
-      ],
-      "note": "장수명 2,207개 + 이벤트 대사 3,049개; 다음 ID 6269"
+    "workstreams/dialogue/public/msgev_ko_historical_events_6142_6268.v0.25.json",
+    "workstreams/dialogue/public/msgev_ko_historical_events_6269_6372.v0.26.json",
+    "workstreams/dialogue/public/msgev_ko_historical_events_6373_6481.v0.27.json",
+    "workstreams/switch_msgev_v11/public/msgev_ko_switch_v11_ported_7025.v1.json"
+  ],
+  "note": "장수명 2,207개 + 이벤트 대사 3,262개; 다음 ID 6482"
     },
     {
       "path": "MSG_PK/SC/msgdata.bin",
@@ -63,7 +66,10 @@
       "overlay_globs": [
         "data/public/msgdata_ko_officer_names_0000_2399.v0.1.json",
         "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.2.json",
-        "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json"
+    "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json",
+    "workstreams/msgdata/public/msgdata_ko_faction_labels_3032_3221.v0.1.json",
+    "workstreams/msgdata/public/msgdata_ko_name_components_3222_3315.v0.1.json",
+    "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json"
       ],
       "note": "장수 구성요소 + 성 이름 + 옛 지방명; 중복 ID 제거"
     },
@@ -78,9 +84,15 @@
         "workstreams/msgbre/public/msgbre_ko_biographies_0129_0250.v0.2.json",
         "workstreams/msgbre/public/msgbre_ko_biographies_0251_0350.v0.3.json",
         "workstreams/msgbre/public/msgbre_ko_biographies_0351_0457.v0.4.json",
-        "workstreams/msgbre/public/msgbre_ko_biographies_0458_0565.v0.5.json"
-      ],
-      "note": "장수 열전 ID 0–565, 566개 초벌; 다음 ID 566"
+    "workstreams/msgbre/public/msgbre_ko_biographies_0458_0565.v0.5.json",
+    "workstreams/msgbre/public/msgbre_ko_biographies_0566_0610.v0.6.json",
+    "workstreams/msgbre/public/msgbre_ko_biographies_0611_0655.v0.7.json",
+    "workstreams/msgbre/public/msgbre_ko_biographies_0656_0700.v0.8.json",
+    "workstreams/msgbre/public/msgbre_ko_biographies_0701_0745.v0.9.json",
+    "workstreams/msgbre/public/msgbre_ko_biographies_0746_0790.v0.10.json",
+    "workstreams/msgbre/public/msgbre_ko_biographies_0791_0835.v0.11.json"
+  ],
+  "note": "장수 열전 ID 0–835, 836개 초벌; 다음 ID 836"
     },
     {
       "path": "MSG_PK/SC/msgire.bin",
@@ -128,69 +140,23 @@
         "workstreams/msggame/public/msggame_ko_system_messages_b06r1993_2139.v0.14.json",
         "workstreams/msggame/public/msggame_ko_system_messages_b06r2139_2436.v0.15.json",
         "workstreams/msggame/public/msggame_ko_system_messages_b06r2436_2787.v0.16.json",
-        "workstreams/msggame/public/msggame_ko_system_messages_b06r2787_3050.v0.17.json"
-      ],
-      "note": "좌표 기반 2,550개 초벌; 다음 좌표 (6,3050,3), 블록 0 문법 조각 93개와 이전 비언어 형식 5개 문맥 검수 보류"
-    },
-    {
-      "path": "MSG/SC/msggame.bin",
-      "kind": "strings",
-      "record_total": 19152,
-      "total_slots": 21225,
-      "stock_visible_nonblank": 12268,
-      "translation_target_total": 12268,
-      "overlay_globs": [],
-      "note": "18블록·19,152레코드 파싱 및 가변 길이 재패킹 완료; 표시 후보 12,268개, 번역 미착수"
-    },
-    {
-      "path": "MSG/SC/strdata.bin",
-      "kind": "strings",
-      "total_slots": 32311,
-      "stock_visible_nonblank": 26690,
-      "translation_target_total": 26690,
-      "overlay_globs": [],
-      "note": "5개 블록 파싱 완료; 번역 미착수"
-    },
-    {
-      "path": "MSG/SC/ev_strdata.bin",
-      "kind": "strings",
-      "total_slots": 17868,
-      "stock_visible_nonblank": 11687,
-      "translation_target_total": 11139,
-      "overlay_globs": [
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0000_0149.v0.1.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0150_0349.v0.2.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0350_0549.v0.3.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0550_0749.v0.4.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0750_0949.v0.5.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_0950_1149.v0.6.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1150_1349.v0.7.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1350_1549.v0.8.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1550_1749.v0.9.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1750_1949.v0.10.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_1950_2149.v0.11.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_officer_names_2150_2206.v0.12.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2207_2406.v0.13.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2407_2580.v0.14.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_event_labels_2780_2971.v0.15.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_labels_and_narration_3007_3276.v0.16.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_events_and_endings_3277_3484.v0.17.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_historical_events_3485_3661.v0.18.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_historical_events_3662_3839.v0.19.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_historical_events_3840_4031.v0.20.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_historical_events_4032_4209.v0.21.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_historical_events_4210_4386.v0.22.json",
-        "workstreams/ev_strdata/public/ev_strdata_ko_historical_events_4387_4556.v0.23.json"
-      ],
-      "note": "장수명 2,207개 + 이벤트 라벨·서술 1,801개 완료; 기존 code placeholder 488개와 추가 내부 참조·역할·이벤트 키 60개는 대상 제외; 다음 실제 표시 후보 ID 4557"
+    "workstreams/msggame/public/msggame_ko_system_messages_b06r2787_3050.v0.17.json",
+    "workstreams/msggame/public/msggame_ko_system_messages_b06r3050_3298.v0.18.json",
+    "workstreams/msggame/public/msggame_ko_system_messages_b06r3302_3477.v0.19.json",
+    "workstreams/msggame/public/msggame_ko_system_messages_b06r3478_3697.v0.20.json",
+    "workstreams/msggame/public/msggame_ko_system_messages_b06r3698_3837.v0.21.json",
+    "workstreams/msggame/public/msggame_ko_system_messages_b06r3841_3930.v0.22.json",
+    "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json"
+  ],
+  "note": "좌표 기반 + Switch v1.1 엄격 이식 9,318개 초벌; 다음 좌표 (6,3930,1), 블록 0 문법 조각 93개와 비언어 형식 문맥 검수 보류"
     },
     {
       "path": "RES_SC/res_lang.bin",
       "kind": "stages",
-      "done": 1,
+      "done": 2,
       "total": 4,
       "unit": "게이트",
-      "note": "Font-v6 정적 재현 PASS; 최신 초벌 글리프 갱신·런타임·통합 설치 대기"
+  "note": "PK 공용 RES_SC 경로: 서울한강체 v1 로컬 결정적 build PASS (PC G1N A/B 동일); 실제 PK 화면·저장·종료 QA 및 사용자 로컬 공식 TTF 입력 검증 대기"
     },
     {
       "path": "RES_SC/res_lang_exp.bin",
@@ -198,7 +164,7 @@
       "done": 1,
       "total": 2,
       "unit": "조사 게이트",
-      "note": "재귀 스캔에서 글꼴 시그니처 0; 런타임 의존성 확인 대기"
+  "note": "PK 공용 RES_SC 경로: 재귀 스캔에서 글꼴 시그니처 0; 런타임 의존성·역할 확인 대기"
     }
   ]
 }

@@ -1,0 +1,150 @@
+{
+  "conclusion": "Use the official SeoulHangang TTF as a local raster input and rebuild PC SC entries 6/7; do not copy Switch resources.",
+  "inspection": {
+    "installed_game_files_modified": false,
+    "read_only": true,
+    "switch_g1n_exported": false,
+    "switch_glyph_pixels_exported": false,
+    "switch_resource_exported": false
+  },
+  "pc": {
+    "archive_sha256": "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99",
+    "archive_size": 160318119,
+    "font_entries": [
+      {
+        "atlas_size": 25283520,
+        "entry": 6,
+        "palette_count": 129,
+        "raw_sha256": "414A8E98DCF0F52633CD039A74E97AE61A97D98A96684D450EBADD4C3C85CAEB",
+        "raw_size": 25817936,
+        "table_count": 2,
+        "tables": [
+          {
+            "index": 0,
+            "mapped_hangul_count": 0,
+            "mapped_nonzero_count": 21897,
+            "record_count": 21898
+          },
+          {
+            "index": 1,
+            "mapped_hangul_count": 0,
+            "mapped_nonzero_count": 99,
+            "record_count": 100
+          }
+        ]
+      },
+      {
+        "atlas_size": 11237120,
+        "entry": 7,
+        "palette_count": 129,
+        "raw_sha256": "DADBE4EEA223FD48CEFA9A93A08EF1F2458B3BD543ADFCEBD6D888B9EE2AFBB0",
+        "raw_size": 11771536,
+        "table_count": 2,
+        "tables": [
+          {
+            "index": 0,
+            "mapped_hangul_count": 0,
+            "mapped_nonzero_count": 21897,
+            "record_count": 21898
+          },
+          {
+            "index": 1,
+            "mapped_hangul_count": 0,
+            "mapped_nonzero_count": 99,
+            "record_count": 100
+          }
+        ]
+      }
+    ],
+    "link_entry_count": 42,
+    "link_parse_rebuild_exact": true
+  },
+  "raw_copy_compatible": false,
+  "raw_copy_reasons": [
+    "PC PK runtime target is RES_SC/res_lang.bin, while the Switch overlay is RES_JP/res_lang.bin",
+    "entry_6_table_count",
+    "entry_6_palette_count",
+    "entry_6_raw_size",
+    "entry_6_raw_hash",
+    "entry_7_table_count",
+    "entry_7_palette_count",
+    "entry_7_raw_size",
+    "entry_7_raw_hash"
+  ],
+  "schema": "nobu16.kr.font-seoulhangang-v1-switch-pc-compatibility.v1",
+  "sources": {
+    "pc_stock": {
+      "path": "RES_SC/res_lang.bin",
+      "sha256": "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99"
+    },
+    "switch_patch_release": {
+      "asset_sha256": "931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6",
+      "release": "https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.1",
+      "repository": "https://github.com/snake7594/nobunaga-shinsei-korean-patch"
+    }
+  },
+  "switch": {
+    "archive_sha256": "E05022246DFB8383A81C915E8EDBDB85C76C12A27F3C1C9D6776CE713810C7DF",
+    "archive_size": 86931093,
+    "font_entries": [
+      {
+        "atlas_size": 22181760,
+        "entry": 6,
+        "palette_count": 91,
+        "raw_sha256": "60834253C0C0153E001F7129A262ED5DA45CF54122CE3756AF5D78672942C2D8",
+        "raw_size": 22813860,
+        "table_count": 3,
+        "tables": [
+          {
+            "index": 0,
+            "mapped_hangul_count": 2353,
+            "mapped_nonzero_count": 9519,
+            "record_count": 9520
+          },
+          {
+            "index": 1,
+            "mapped_hangul_count": 2353,
+            "mapped_nonzero_count": 9518,
+            "record_count": 9519
+          },
+          {
+            "index": 2,
+            "mapped_hangul_count": 0,
+            "mapped_nonzero_count": 378,
+            "record_count": 379
+          }
+        ]
+      },
+      {
+        "atlas_size": 7744336,
+        "entry": 7,
+        "palette_count": 91,
+        "raw_sha256": "6A81F94F69EBD7A9115F5374785F01515032D34F9B63A9B8ECE41475E209581E",
+        "raw_size": 8376436,
+        "table_count": 3,
+        "tables": [
+          {
+            "index": 0,
+            "mapped_hangul_count": 2353,
+            "mapped_nonzero_count": 9519,
+            "record_count": 9520
+          },
+          {
+            "index": 1,
+            "mapped_hangul_count": 2353,
+            "mapped_nonzero_count": 9518,
+            "record_count": 9519
+          },
+          {
+            "index": 2,
+            "mapped_hangul_count": 0,
+            "mapped_nonzero_count": 378,
+            "record_count": 379
+          }
+        ]
+      }
+    ],
+    "link_entry_count": 42,
+    "link_parse_rebuild_exact": true
+  }
+}
