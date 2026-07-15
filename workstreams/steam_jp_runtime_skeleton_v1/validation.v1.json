@@ -1,0 +1,261 @@
+{
+  "artifacts": {
+    "contract": {
+      "path": "contract.v1.json",
+      "sha256": "CA97E342504DBE5A4EE556905D369B48B419855B318CD5E8C0E7867718A3D07B",
+      "size": 4786
+    },
+    "overlay": {
+      "path": "public/strdata_ko_jp_source_rebased_24524.v1.json",
+      "sha256": "67A2F53B35689F2CA8B3ED5670FCFA6A6E56F939F3DCEF035206857D63C11CBB",
+      "size": 5187084
+    }
+  },
+  "candidate_root": {
+    "blocked_candidate_count": 7,
+    "blocked_paths": [
+      "MSG_PK/JP/msgbre.bin",
+      "MSG_PK/JP/msgdata.bin",
+      "MSG_PK/JP/msgev.bin",
+      "MSG_PK/JP/msggame.bin",
+      "MSG_PK/JP/msgire.bin",
+      "MSG_PK/JP/msgstf.bin",
+      "MSG_PK/JP/msgui.bin"
+    ],
+    "complete_candidate_root_ready": false,
+    "known_candidate_count": 3
+  },
+  "fonts": {
+    "all_passed": true,
+    "route_count": 2,
+    "routes": [
+      {
+        "candidate": {
+          "sha256": "4395B84C5F678E37D8F39BCEEFF1986F62B07A54FF7936FC1402412AF07536F2",
+          "size": 175097407
+        },
+        "changed_entries": [
+          6,
+          7
+        ],
+        "link_entry_count": 42,
+        "proofs": {
+          "exact_predecessor": true,
+          "non_target_entry_data_and_gaps_exact": true,
+          "target_gaps_exact": true,
+          "target_wrapper_prefixes_exact": true
+        },
+        "resource": "RES_JP/res_lang.bin",
+        "stock": {
+          "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53",
+          "size": 153198542
+        }
+      },
+      {
+        "candidate": {
+          "sha256": "697F5034140A35A676CC0D0006CCECE4753D823109C5792500C46DE6499C9C12",
+          "size": 162625225
+        },
+        "changed_entries": [
+          16,
+          17
+        ],
+        "link_entry_count": 27,
+        "proofs": {
+          "exact_predecessor": true,
+          "non_target_entry_data_and_gaps_exact": true,
+          "target_gaps_exact": true,
+          "target_wrapper_prefixes_exact": true
+        },
+        "resource": "RES_JP_PK/res_lang_pk.bin",
+        "stock": {
+          "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
+          "size": 140729547
+        }
+      }
+    ]
+  },
+  "passed": true,
+  "predecessor_vector": {
+    "all_ten_exact": true,
+    "file_count": 10,
+    "files": [
+      {
+        "actual": {
+          "sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+          "size": 507054
+        },
+        "matches_contract": true,
+        "path": "MSG/JP/strdata.bin"
+      },
+      {
+        "actual": {
+          "sha256": "945A0E9157E2DBD12781FFA5A986D93681325F40B6486348B1AB311D3BEE1D6D",
+          "size": 221127
+        },
+        "matches_contract": true,
+        "path": "MSG_PK/JP/msgbre.bin"
+      },
+      {
+        "actual": {
+          "sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+          "size": 272453
+        },
+        "matches_contract": true,
+        "path": "MSG_PK/JP/msgdata.bin"
+      },
+      {
+        "actual": {
+          "sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+          "size": 562226
+        },
+        "matches_contract": true,
+        "path": "MSG_PK/JP/msgev.bin"
+      },
+      {
+        "actual": {
+          "sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+          "size": 721304
+        },
+        "matches_contract": true,
+        "path": "MSG_PK/JP/msggame.bin"
+      },
+      {
+        "actual": {
+          "sha256": "0AFBFE11A380A9C98FB3B368092A05B39ABB6F80C4B0723AD3B6DB55C2559C5D",
+          "size": 12376
+        },
+        "matches_contract": true,
+        "path": "MSG_PK/JP/msgire.bin"
+      },
+      {
+        "actual": {
+          "sha256": "01EEB0B1B4879B6C70E9D7564F9D2FBD93E7B537CF8C614A58EEA82A83785A29",
+          "size": 6841
+        },
+        "matches_contract": true,
+        "path": "MSG_PK/JP/msgstf.bin"
+      },
+      {
+        "actual": {
+          "sha256": "9775D4B7253828899F7EF0DF2E88AB28121ACB260E1381F3D706C6A1065D504A",
+          "size": 64976
+        },
+        "matches_contract": true,
+        "path": "MSG_PK/JP/msgui.bin"
+      },
+      {
+        "actual": {
+          "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53",
+          "size": 153198542
+        },
+        "matches_contract": true,
+        "path": "RES_JP/res_lang.bin"
+      },
+      {
+        "actual": {
+          "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
+          "size": 140729547
+        },
+        "matches_contract": true,
+        "path": "RES_JP_PK/res_lang_pk.bin"
+      }
+    ]
+  },
+  "sc_container_read": false,
+  "schema": "nobu16.kr.steam-jp-runtime-skeleton-validation.v1",
+  "source_free": {
+    "contract": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "overlay": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "steam_root_written": false,
+  "strdata": {
+    "blocked": [
+      {
+        "coordinate": [
+          2,
+          1950
+        ],
+        "ko_utf16le_sha256": "C3E8E627905CD7E1789FF74B518FACFA05967663AF7992318F0E5309B801F82F",
+        "reason": [
+          "trailing_whitespace"
+        ],
+        "source_jp_utf16le_sha256": "ABF97E2E3C84E2825964CC26FF516177690202C89085E98C9A8CDDF79CE28890"
+      }
+    ],
+    "blocked_count": 1,
+    "blocked_reason_counts": {
+      "trailing_whitespace": 1
+    },
+    "candidate": {
+      "changed_coordinate_count": 24524,
+      "packed_sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+      "packed_size": 956835,
+      "raw_sha256": "A3410438A13B2DB4C72B56B804BDF4ACABBEE8954203CA13D210AD848134BF66",
+      "raw_size": 953072
+    },
+    "direct_rebase_count": 24524,
+    "korean_catalog": {
+      "coordinate_count": 24525,
+      "inputs": [
+        {
+          "accepted_entries": 100,
+          "commercial_source_text_read": false,
+          "declared_entries": 100,
+          "path": "workstreams/strdata/public/strdata_ko_name_labels_b00s0000_0099.v0.1.json",
+          "precedence_conflicts": 0,
+          "sha256": "9B1C3F1B2C3C1BFC44974C6C2E1573DA6C48433B9E945EEF6EC5BE2C54B85F24",
+          "size": 18874
+        },
+        {
+          "accepted_entries": 1,
+          "commercial_source_text_read": false,
+          "declared_entries": 1,
+          "path": "workstreams/strdata_pk_shared_ui/public/strdata_ko_pk_shared_ui_b01_1.v1.json",
+          "precedence_conflicts": 0,
+          "sha256": "DF58FD55FF17F5AA39F73DF4445360BA9BE18AC9C87E3B7E245F07C359EC5A4D",
+          "size": 1142
+        },
+        {
+          "accepted_entries": 24424,
+          "commercial_source_text_read": false,
+          "declared_entries": 24424,
+          "path": "workstreams/switch_strdata_v13_direct_transfer/public/strdata_ko_switch_v13_direct_transfer_24424.v1.json",
+          "precedence_conflicts": 0,
+          "sha256": "2C4B1F7C52D5B04EE915693C20D4662011E18A3B6535212905609B3ABBA9FE98",
+          "size": 5169221
+        }
+      ]
+    },
+    "proofs": {
+      "block_slot_counts_preserved": true,
+      "candidate_binary_written": false,
+      "jp_source_hash_guarded": true,
+      "untargeted_coordinates_exact": true,
+      "wrapper_roundtrip_exact": true
+    },
+    "sc_container_read": false,
+    "source": {
+      "block_slot_counts": [
+        25069,
+        4100,
+        3000,
+        122,
+        20
+      ],
+      "coordinate_count": 32311,
+      "raw_sha256": "EAB14063C2060CE11794232F483F0B2210B3BD58118165CBEEC2F37176C25649",
+      "raw_size": 763928,
+      "sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+      "size": 507054
+    },
+    "source_language": "JP",
+    "source_resource": "MSG/JP/strdata.bin"
+  }
+}
