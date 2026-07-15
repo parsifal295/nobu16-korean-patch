@@ -1,0 +1,113 @@
+{
+  "artifacts": {
+    "evidence": {
+      "path": "evidence/switch_v13_pk_msggame_invariant_recovery_evidence.v1.json",
+      "sha256": "43DBA66E21368E6BBD564921E8C46A782C511E1C947F12BE039BBC95174DB550",
+      "size": 1150456
+    },
+    "overlay": {
+      "path": "public/msggame_ko_switch_v13_invariant_recovery_580.v1.json",
+      "sha256": "9EF7210B5AA5F6842494EA75D79874AC009A9452855E4EC0FE79744284C6E61C",
+      "size": 171527
+    },
+    "review": {
+      "path": "review/switch_v13_pk_msggame_invariant_recovery_review.v1.json",
+      "sha256": "2C2F2603B01C14E5A706B35190ED5A76CFB1E1CF4E2D0BF9DB2ACDA7F81095D4",
+      "size": 1462107
+    }
+  },
+  "batch_id": "switch_v13_pk_msggame_invariant_recovery_580.v1",
+  "coordinate_sets": {
+    "excluded_sha256": "BADAD3DF1EE50DFFBFDEFC5975A9489D694B4962A5BC63736239CB82BAED1409",
+    "selected_excluded_disjoint": true,
+    "selected_existing_disjoint": true,
+    "selected_sha256": "C3272DBF2B18A63394BED427619D70E04C40D65B5874067EE0D9C68D67C25901",
+    "selected_target_subset": true
+  },
+  "generator": {
+    "path": "build_switch_msggame_v13_invariant_recovery.py",
+    "sha256": "C07F5E06DA090F2CD24B11486FCB490FEE3FE3C3EB9DB9D7FA0132BB3139580A"
+  },
+  "offline_binary_validation": {
+    "entry_count": 580,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "target_packed_sha256": "1D1734FCF60222752E7D8A5CA1C4CC572765EBE3F0D6C118276EEB1F6B28DE96",
+    "target_packed_size": 1093593
+  },
+  "passed": true,
+  "proofs": {
+    "all_replacements_preserve_delimiter_role_sequence": true,
+    "all_replacements_preserve_pk_sc_invariants": true,
+    "bullet_normalization_only_u30fb_to_u00b7": true,
+    "exact_pk_jp_to_base_jp_utf16le_hash_alignment": true,
+    "later_overlay_registration_does_not_feed_selection": true,
+    "later_overlays_source_free_target_only_and_disjoint": true,
+    "pc_pua_map_pinned": true,
+    "self_registration_does_not_feed_selection": true,
+    "self_registration_states_supported": [
+      0,
+      1
+    ],
+    "unique_switch_ko_value_set_required": true,
+    "unresolved_internal_line_redistribution_not_transferred": true,
+    "v13_msggame_byte_identical_to_v11": true
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_progress_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.switch-msggame-v13-invariant-recovery-validation.v1",
+  "selection": {
+    "bullet_normalization": 151,
+    "edge_template": 407,
+    "excluded": 1879,
+    "existing_coordinate_union": 9318,
+    "forbidden_script_pool": 153,
+    "invariant_mismatch_pool": 2306,
+    "pc_pua_map": 15,
+    "public_whitespace_variant": 7,
+    "review_pool": 2459,
+    "selected": 580,
+    "target_coordinate_count": 16482,
+    "unresolved_ideographic_annotation": 2,
+    "unresolved_invariant_mismatch": 1877
+  },
+  "selection_classes": {
+    "bullet_normalization": {
+      "coordinates_sha256": "3D65B71EB65183483412794B19F6F983D350F3E76BE58FE88D123BB92F1B0A1C",
+      "count": 151
+    },
+    "edge_template": {
+      "coordinates_sha256": "6F425F691CC81A634D8E6A654BBF1707FF035DD4D5D2BD11D995B7F50799627B",
+      "count": 407
+    },
+    "pc_pua_map": {
+      "coordinates_sha256": "D12478CAB9574E0DD96290C60F1872D5F3FC7757926B939877243667E46AEEE2",
+      "count": 15
+    },
+    "public_whitespace_variant": {
+      "coordinates_sha256": "EE738F3423B1C397ADD6CA1C7EDF1F28B8E46AA12D3068E149FF0DDCD03896CE",
+      "count": 7
+    }
+  },
+  "source_free_scan": {
+    "msggame_ko_switch_v13_invariant_recovery_580.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "switch_v13_pk_msggame_invariant_recovery_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "switch_v13_pk_msggame_invariant_recovery_review.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  }
+}
