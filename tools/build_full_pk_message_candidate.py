@@ -490,8 +490,13 @@ def parse_msggame_overlay(value: dict[str, Any], label: str) -> dict[str, Any]:
     allowed_root = {
         "schema", "overlay_id", "resource", "base_language", "entry_count", "distribution_policy", "stock_sc", "defaults", "entries"
     }
-    if "migration_provenance" in value:
-        allowed_root.add("migration_provenance")
+    for optional_key in (
+        "migration_provenance",
+        "selection_policy",
+        "translation_provenance",
+    ):
+        if optional_key in value:
+            allowed_root.add(optional_key)
     require_exact_keys(value, allowed_root, label)
     if value["schema"] != MSGGAME_SCHEMA or value["resource"] != "MSG_PK/SC/msggame.bin" or value["base_language"] != "SC":
         raise BuildError(f"{label} is not a PK SC msggame overlay")
@@ -548,6 +553,56 @@ def parse_msggame_overlay(value: dict[str, Any], label: str) -> dict[str, Any]:
         for key in ("author", "kind", "release_tag", "repository_url"):
             if not isinstance(provenance[key], str) or not provenance[key]:
                 raise BuildError(f"{label}.migration_provenance.{key} must be a non-empty string")
+    translation_provenance = value.get("translation_provenance")
+    if translation_provenance is not None:
+        require_exact_keys(
+            translation_provenance,
+            {"context_languages", "kind", "runtime_reviewed", "source_text_embedded"},
+            f"{label}.translation_provenance",
+        )
+        if translation_provenance["context_languages"] != ["SC", "JP", "EN"]:
+            raise BuildError(
+                f"{label}.translation_provenance.context_languages must be "
+                "the reviewed SC/JP/EN context set"
+            )
+        if not isinstance(translation_provenance["kind"], str) or not translation_provenance["kind"]:
+            raise BuildError(f"{label}.translation_provenance.kind must be a non-empty string")
+        if not isinstance(translation_provenance["runtime_reviewed"], bool):
+            raise BuildError(f"{label}.translation_provenance.runtime_reviewed must be boolean")
+        require_bool(
+            translation_provenance["source_text_embedded"],
+            False,
+            f"{label}.translation_provenance.source_text_embedded",
+        )
+    selection_policy = value.get("selection_policy")
+    if selection_policy is not None:
+        require_exact_keys(
+            selection_policy,
+            {
+                "dynamic_fragments_excluded",
+                "event_dialogue_excluded",
+                "priority",
+                "source_text_embedded",
+            },
+            f"{label}.selection_policy",
+        )
+        require_bool(
+            selection_policy["dynamic_fragments_excluded"],
+            True,
+            f"{label}.selection_policy.dynamic_fragments_excluded",
+        )
+        require_bool(
+            selection_policy["event_dialogue_excluded"],
+            True,
+            f"{label}.selection_policy.event_dialogue_excluded",
+        )
+        if not isinstance(selection_policy["priority"], str) or not selection_policy["priority"]:
+            raise BuildError(f"{label}.selection_policy.priority must be a non-empty string")
+        require_bool(
+            selection_policy["source_text_embedded"],
+            False,
+            f"{label}.selection_policy.source_text_embedded",
+        )
     entries = value["entries"]
     if not isinstance(entries, list):
         raise BuildError(f"{label}.entries must be an array")
