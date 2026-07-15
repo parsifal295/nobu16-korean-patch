@@ -1,0 +1,26 @@
+"""Reviewed Korean replacements for the 22 dynamic narrative rows."""
+
+DYNAMIC_TRANSLATIONS = {
+    10_359: "하지만 \x1bCA[b1059]\x1bCZ은\n적에게 등을 돌리고 달아나지 않고\n오히려 적진 한가운데로 나아갔다.",
+    10_367: "\x1bCA도요히사\x1bCZ가 목숨과 맞바꿔 시간을 벌어 준 덕분에\n\x1bCA[b1059]\x1bCZ은 추격대에서 벗어날 수 있었다.",
+    10_805: "\x1bCA[b1448]\x1bCZ의 침공에 고전하던 \x1bCA호조 우지야스\x1bCZ는\n동맹인 \x1bCA다케다 신겐\x1bCZ에게 \x1bCB우에스기\x1bCZ 공격을 부탁했다.",
+    10_806: "부탁을 받은 \x1bCA신겐\x1bCZ은 \x1bCC기타시나노\x1bCZ에 \x1bCC가이즈성\x1bCZ을 쌓아\n\x1bCC시나노\x1bCZ 지배를 강화하고 \x1bCC에치고\x1bCZ 진출 거점을 확보하려 했다.\n이는 \x1bCA[bm1448]\x1bCZ을 동요하게 했다.",
+    10_807: "이에 \x1bCA[bm1448]\x1bCZ은 잠시 방침을 바꾸어\n\x1bCB호조 가문\x1bCZ과 다투던 \x1bCC간토\x1bCZ 진출을 접고\n\x1bCB다케다 가문\x1bCZ과 \x1bCC시나노\x1bCZ 지배를 다투기로 했다.",
+    10_809: "어제는 \x1bCC오다와라\x1bCZ, 오늘은 \x1bCC가스가야마\x1bCZ인가……\n과연 \x1bCA[bm1448]\x1bCZ, 훌륭한 결단이다.",
+    10_827: "\x1bCA[bm1448]\x1bCZ이 \x1bCC사이조산\x1bCZ에 진을 치고 \x1bCB다케다군\x1bCZ의 움직임을 기다렸다.\n이는 \x1bCA간스케\x1bCZ의 예상대로였다.",
+    10_828: "이에 \x1bCA간스케\x1bCZ는 딱따구리의 부리가 될 부대인\n\x1bCA[b854]\x1bCZ와 \x1bCA바바 노부하루\x1bCZ를 \x1bCC사이조산\x1bCZ으로 보냈다.",
+    10_829: "그리고 \x1bCA[bm1251]\x1bCZ의 본대는 \x1bCC가와나카지마\x1bCZ 벌판과\n\x1bCC사이조산\x1bCZ 기슭의 \x1bCC하치만바라\x1bCZ에 진을 치고\n\x1bCB우에스기군\x1bCZ을 협공할 준비를 갖췄다.",
+    10_832: "\x1bCB[bs1871]\x1bCZ군은\n\x1bCB다케다\x1bCZ군의 목표가 \x1bCC하마마쓰성\x1bCZ이라 판단하고\n농성전을 준비하고 있었다.",
+    10_837: "\x1bCA[bm1251]\x1bCZ의 목표는 \x1bCC오와리\x1bCZ입니까?\n주군, 놈들이 무사히 \x1bCC하마마쓰\x1bCZ를 지나\n\x1bCA노부나가\x1bCZ 님과 싸우게 둘 수는 없습니다.",
+    10_840: "하지만 주군, 이것은 \x1bCA[bm1251]\x1bCZ의 함정일지도 모릅니다!",
+    10_843: "(이, 이것이…… \x1bCA[b1251]\x1bCZ……)",
+    10_845: "주군,\n\x1bCA[bm1871]\x1bCZ의 군세가 모습을 드러냈습니다.",
+    10_850: "\x1bCA[bm1871]\x1bCZ이여……\n우선 네게 그 이치를 가르쳐 주마.",
+    10_851: "\x1bCB다케다군\x1bCZ의 배후를 공격하려고 출진한\n\x1bCA[b1871]\x1bCZ이 \x1bCC미카타가하라\x1bCZ의 고지에서 본 것은……",
+    10_852: "완벽한 어린진을 펼치고 기다리는\n\x1bCB[bs1871]\x1bCZ군 앞의 \x1bCB다케다군\x1bCZ이었다.\n이를 본 \x1bCB[bs1871]\x1bCZ군은 황급히 학익진을 펼쳤다.",
+    10_853: "\x1bCB다케다군\x1bCZ의 선봉은 적비대의 \x1bCA야마가타 마사카게\x1bCZ였다.\n\x1bCA[bm1871]\x1bCZ의 지옥이 이제 시작된다——",
+    10_905: "승부는 \x1bCA[bs754]\x1bCZ군의 압승으로 끝났고, \x1bCA미쓰히데\x1bCZ는\n간신히 전장을 빠져나와 \x1bCC교토\x1bCZ를 향해 달렸다.\n살아남는 것만이 유일한 길이라 믿으며……",
+    10_959: "그렇다면 \x1bCA[bm1251]\x1bCZ은 산 아래 \x1bCC하치만바라\x1bCZ에 진을 치겠지……\n하지만 병력을 나눴으니 \x1bCB다케다\x1bCZ 본대는 평소보다 약할 것이다.",
+    10_960: "나는 \x1bCA[bm1251]\x1bCZ의 계책에 휘둘리지 않는다.\n전군, 산을 내려가라! 절대로 적에게 들키지 마라!",
+    10_961: "\x1bCB다케다군\x1bCZ의 움직임을 간파한 \x1bCA[bm1448]\x1bCZ은\n한밤중에 은밀히 \x1bCC사이조산\x1bCZ을 떠나\n\x1bCA[bm1251]\x1bCZ이 기다리는 \x1bCC하치만바라\x1bCZ로 진군했다.",
+}

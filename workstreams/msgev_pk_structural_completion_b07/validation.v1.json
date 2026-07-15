@@ -1,0 +1,123 @@
+{
+  "artifacts": {
+    "evidence/msgev_pk_structural_completion_b07_evidence.v1.json": {
+      "path": "evidence/msgev_pk_structural_completion_b07_evidence.v1.json",
+      "sha256": "A648E62DE41CBFB24298EC0FA76EC572AD29D242D570AB38A9379932A0AB55E3",
+      "size": 110463
+    },
+    "public/msgev_ko_pk_structural_completion_b07_241.v1.json": {
+      "path": "public/msgev_ko_pk_structural_completion_b07_241.v1.json",
+      "sha256": "4FB377A64306BCE929E22A4271E3AB95FEBF1A937B433C3807C4A9816440550F",
+      "size": 50189
+    },
+    "review/msgev_pk_structural_completion_b07_review.v1.json": {
+      "path": "review/msgev_pk_structural_completion_b07_review.v1.json",
+      "sha256": "5103F8D7CB14C6299338219A3F2466D8B82B5E272117F2A5A8482FD02B93A184",
+      "size": 481
+    }
+  },
+  "batch_id": "msgev-pk-structural-completion-b07-241.v1",
+  "generator": {
+    "path": "build_msgev_pk_structural_completion_b07.py",
+    "sha256": "9A24ED1CF24D5F79FD9E79A1064607934719D32B4EE4A3A26FFA07D139B0637B",
+    "translation_table_sha256": "7E86681F9728F1AAF0BCD3DB1214A58534A4A5F94885B360AC7A99AF0BF8CA7E"
+  },
+  "passed": true,
+  "progress_audit": {
+    "batch06_registered_exactly_once": true,
+    "post_completion_gap_count": 0,
+    "post_completion_target_count": 12906,
+    "pre_completion_gap_count": 241,
+    "pre_completion_gap_ids_sha256": "A58E26CCD1D7DD8F7505B0134FD3354E7001B6C91B27A1D7011EBAD29AA4D2B0",
+    "predecessor_target_count": 12665,
+    "predecessor_target_ids_sha256": "7A5C55F9844AF8617657C86549CE5B914C5E6B12D3C5036F3A843196E84E3224",
+    "self_registration_count": 0
+  },
+  "reason_summary": {
+    "dynamic_substitution_token_manual_runtime_risk": {
+      "count": 2,
+      "ids_sha256": "5BE4D230BF65147FAC2AE7C955455730F445C8AB06C7623AB9B3B5B17A167F50"
+    },
+    "dynamic_substitution_token_only": {
+      "count": 36,
+      "ids_sha256": "8F938EE0D55B00410DA051C5FB25C3D6A03DB0D7BE96305C4F4CBF3B2DCE9C35"
+    },
+    "dynamic_token_with_nonlexical_punctuation": {
+      "count": 4,
+      "ids_sha256": "DA5EADCCFC2D00453FBFF534FD8E5CF9B9C1B0E09943A253F765064376CAA20D"
+    },
+    "internal_ascii_key": {
+      "count": 62,
+      "ids_sha256": "3049E2279B70CC85195D82CB6F8F189D8761ED6B28DED00B5A3AE11465E0EEFC"
+    },
+    "internal_event_lookup_key": {
+      "count": 18,
+      "ids_sha256": "CBD6A8F8CB20A423BE5D38411A6AB667ACECB736DCE08404B714ABDC1882D9FA"
+    },
+    "internal_speaker_lookup_key": {
+      "count": 7,
+      "ids_sha256": "DCFA8857788FE1D57FC736A63BB35842829CDF3B4E556BBCF07801E9D789F39E"
+    },
+    "nonlexical_punctuation_only": {
+      "count": 77,
+      "ids_sha256": "E6E60BC596D0EFC247657FCC90610C8FB856C3817599123B74841015C318A605"
+    },
+    "runtime_custom_bracket_substitution": {
+      "count": 20,
+      "ids_sha256": "A04747FB589CDE129C0F2F66CFD973AF55DFB4EE1DEDB5630DECC30B73679FCB"
+    },
+    "runtime_printf_placeholder_only": {
+      "count": 15,
+      "ids_sha256": "50F003C54B9563A7FFB1E3DCDFE5F4B6C990FD2CCEB2AAD57D656CC4C004E2AA"
+    }
+  },
+  "replacement_invariants": {
+    "checked": 241,
+    "dynamic_token_preserve_count": 22,
+    "exact_byte_preserve_count": 219,
+    "failures": 0
+  },
+  "safety": {
+    "dll_injection_used": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "memory_patch_used": false,
+    "registry_modified": false
+  },
+  "schema": "nobu16.kr.msgev-pk-structural-completion-b07-validation.v1",
+  "scope": {
+    "blocked_count": 0,
+    "classification_complete": true,
+    "dynamic_narrative_ids_sha256": "741250CAA54217231C57B21AC84F880092EA5E8503DF79439BFF12CDA90D97AA",
+    "dynamic_narrative_translation_count": 22,
+    "exact_byte_preserve_count": 219,
+    "exact_byte_preserve_ids_sha256": "F93520945377A6B84E23974E8A1184815C1C74BDFBD61CEF7F14E0E8A5A26464",
+    "reviewed_count": 241,
+    "reviewed_ids_sha256": "A58E26CCD1D7DD8F7505B0134FD3354E7001B6C91B27A1D7011EBAD29AA4D2B0"
+  },
+  "source_free_scan": {
+    "evidence/msgev_pk_structural_completion_b07_evidence.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "public/msgev_ko_pk_structural_completion_b07_241.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review/msgev_pk_structural_completion_b07_review.v1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "target_reconstruction": {
+    "changed_entry_count": 241,
+    "complete_target_included": false,
+    "packed_sha256": "D62E438F749C1019CC8CD872DB8CEDD675883B00F55C9F5F25127E6C07F95A5D",
+    "packed_size": 754296,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "5E8F94F02B7945F90C02D55819B766D4B03876463EEB7E949E3DCF52E8D9740B",
+    "raw_size": 751324,
+    "resource": "MSG_PK/SC/msgev.bin",
+    "wrapper_round_trip": true
+  }
+}
