@@ -280,6 +280,9 @@ def load_overlay(
 def build_blob(
     stock_packed: bytes,
     overlay_specs: Sequence[tuple[Path, str | None, int | None]],
+    *,
+    expected_foundation: int = EXPECTED_FOUNDATION,
+    expected_remaining: int = EXPECTED_REMAINING,
 ) -> tuple[bytes, dict[str, Any]]:
     stock = stock_context(stock_packed)
     replacements: dict[tuple[int, int, int], str] = {}
@@ -291,9 +294,9 @@ def build_blob(
             raise BuildError(f"overlays overlap at {sorted(overlap)[:3]}")
         replacements.update(current)
         overlay_rows.append(row)
-    if len(replacements) != EXPECTED_FOUNDATION:
+    if len(replacements) != expected_foundation:
         raise BuildError(
-            f"foundation entry count changed: {len(replacements)} != {EXPECTED_FOUNDATION}"
+            f"foundation entry count changed: {len(replacements)} != {expected_foundation}"
         )
 
     candidate = msggame.rebuild_packed_with_literals(stock_packed, replacements)
@@ -323,9 +326,9 @@ def build_blob(
     remaining_source_script = sum(
         has_source_script(literal.text) for literal in candidate_literals.values()
     )
-    if remaining_source_script != EXPECTED_REMAINING:
+    if remaining_source_script != expected_remaining:
         raise BuildError(
-            f"remaining JP semantic count changed: {remaining_source_script} != {EXPECTED_REMAINING}"
+            f"remaining JP semantic count changed: {remaining_source_script} != {expected_remaining}"
         )
 
     manifest = {
