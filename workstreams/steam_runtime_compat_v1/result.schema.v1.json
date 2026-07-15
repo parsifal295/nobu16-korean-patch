@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/parsifal295/nobu16-korean-patch/workstreams/steam_runtime_compat_v1/result.schema.v1.json",
+  "title": "NOBU16 PK Steam runtime compatibility probe result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "collector_version",
+    "collected_at_utc",
+    "game_root",
+    "platform",
+    "launcher",
+    "steam",
+    "expected_release",
+    "files",
+    "summary",
+    "policy"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "collector_version": { "type": "string", "pattern": "^1\\.[0-9]+\\.[0-9]+$" },
+    "collected_at_utc": { "type": "string", "format": "date-time" },
+    "game_root": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["leaf_name", "under_steamapps_common", "absolute_path_included"],
+      "properties": {
+        "leaf_name": { "type": "string", "minLength": 1 },
+        "under_steamapps_common": { "type": "boolean" },
+        "absolute_path_included": { "const": false }
+      }
+    },
+    "platform": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "windows_system_locale",
+        "powershell_edition",
+        "powershell_version",
+        "process_is_64_bit",
+        "os_is_64_bit"
+      ],
+      "properties": {
+        "windows_system_locale": { "$ref": "#/$defs/systemLocale" },
+        "powershell_edition": { "type": "string", "minLength": 1 },
+        "powershell_version": { "type": "string", "minLength": 1 },
+        "process_is_64_bit": { "type": "boolean" },
+        "os_is_64_bit": { "type": "boolean" }
+      }
+    },
+    "launcher": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registry_read_only",
+        "registry_entries",
+        "selected_language_raw",
+        "language_mapping_assumed"
+      ],
+      "properties": {
+        "registry_read_only": { "const": true },
+        "registry_entries": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "$ref": "#/$defs/registryEntry" }
+        },
+        "selected_language_raw": {
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/$defs/selectedLanguage" }
+          ]
+        },
+        "language_mapping_assumed": { "const": false }
+      }
+    },
+    "steam": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["app_id_requested", "detected_from_nearby_appmanifest", "appmanifest"],
+      "properties": {
+        "app_id_requested": { "const": "1336980" },
+        "detected_from_nearby_appmanifest": { "type": "boolean" },
+        "appmanifest": { "$ref": "#/$defs/appManifest" }
+      }
+    },
+    "expected_release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "asset_name", "asset_size", "asset_sha256", "pinned_file_count"],
+      "properties": {
+        "tag": { "type": "string", "minLength": 1 },
+        "asset_name": { "type": "string", "minLength": 1 },
+        "asset_size": { "type": "integer", "minimum": 0 },
+        "asset_sha256": { "$ref": "#/$defs/sha256" },
+        "pinned_file_count": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 7,
+      "items": { "$ref": "#/$defs/fileProbe" }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "expected_release_file_count",
+        "matched_release_file_count",
+        "all_expected_release_files_match",
+        "mismatch_or_missing_paths",
+        "font_archive_matches_release",
+        "msgui_matches_release"
+      ],
+      "properties": {
+        "expected_release_file_count": { "type": "integer", "minimum": 1 },
+        "matched_release_file_count": { "type": "integer", "minimum": 0 },
+        "all_expected_release_files_match": { "type": "boolean" },
+        "mismatch_or_missing_paths": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/relativePath" }
+        },
+        "font_archive_matches_release": { "type": "boolean" },
+        "msgui_matches_release": { "type": "boolean" }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stdout_only",
+        "filesystem_writes",
+        "registry_reads",
+        "registry_writes",
+        "process_launches",
+        "network_access",
+        "game_process_access",
+        "executable_modification"
+      ],
+      "properties": {
+        "stdout_only": { "const": true },
+        "filesystem_writes": { "const": false },
+        "registry_reads": { "const": true },
+        "registry_writes": { "const": false },
+        "process_launches": { "const": false },
+        "network_access": { "const": false },
+        "game_process_access": { "const": false },
+        "executable_modification": { "const": false }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9A-F]{64}$"
+    },
+    "nullableSha256": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/sha256" }
+      ]
+    },
+    "nullableString": {
+      "type": ["string", "null"]
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?![A-Za-z]:)(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+    },
+    "systemLocale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "name", "english_name", "lcid", "ansi_code_page", "oem_code_page"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "english_name": { "type": "string", "minLength": 1 },
+        "lcid": { "type": "integer", "minimum": 0 },
+        "ansi_code_page": { "type": "integer", "minimum": 0 },
+        "oem_code_page": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "registryValue": {
+      "type": ["integer", "string", "boolean", "null"]
+    },
+    "registryEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "exists",
+        "language_present",
+        "language_value",
+        "language_kind",
+        "read_error_type"
+      ],
+      "properties": {
+        "key": { "type": "string", "pattern": "^HKEY_CURRENT_USER\\\\" },
+        "exists": { "type": "boolean" },
+        "language_present": { "type": "boolean" },
+        "language_value": { "$ref": "#/$defs/registryValue" },
+        "language_kind": { "$ref": "#/$defs/nullableString" },
+        "read_error_type": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "selectedLanguage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "value", "kind"],
+      "properties": {
+        "key": { "type": "string", "pattern": "^HKEY_CURRENT_USER\\\\" },
+        "value": { "$ref": "#/$defs/registryValue" },
+        "kind": { "type": "string", "minLength": 1 }
+      }
+    },
+    "appManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "present",
+        "file_name",
+        "location_class",
+        "size",
+        "sha256",
+        "app_id",
+        "build_id",
+        "user_language",
+        "mounted_language",
+        "installed_depot_ids",
+        "read_error_type"
+      ],
+      "properties": {
+        "present": { "type": "boolean" },
+        "file_name": { "const": "appmanifest_1336980.acf" },
+        "location_class": { "$ref": "#/$defs/nullableString" },
+        "size": { "type": ["integer", "null"], "minimum": 0 },
+        "sha256": { "$ref": "#/$defs/nullableSha256" },
+        "app_id": { "type": ["string", "null"] },
+        "build_id": { "type": ["string", "null"] },
+        "user_language": { "$ref": "#/$defs/nullableString" },
+        "mounted_language": { "$ref": "#/$defs/nullableString" },
+        "installed_depot_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[0-9]+$" }
+        },
+        "read_error_type": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "expectedFilePin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["size", "sha256"],
+      "properties": {
+        "size": { "type": "integer", "minimum": 0 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "fileProbe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relative_path",
+        "role",
+        "exists",
+        "size",
+        "sha256",
+        "file_version",
+        "product_version",
+        "expected_release",
+        "matches_expected_release",
+        "read_error_type"
+      ],
+      "properties": {
+        "relative_path": { "$ref": "#/$defs/relativePath" },
+        "role": { "type": "string", "minLength": 1 },
+        "exists": { "type": "boolean" },
+        "size": { "type": ["integer", "null"], "minimum": 0 },
+        "sha256": { "$ref": "#/$defs/nullableSha256" },
+        "file_version": { "$ref": "#/$defs/nullableString" },
+        "product_version": { "$ref": "#/$defs/nullableString" },
+        "expected_release": {
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/$defs/expectedFilePin" }
+          ]
+        },
+        "matches_expected_release": { "type": ["boolean", "null"] },
+        "read_error_type": { "$ref": "#/$defs/nullableString" }
+      }
+    }
+  }
+}

@@ -99,6 +99,49 @@ def encode_json(value: Any) -> bytes:
     return (json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
 
 
+STRUCTURAL_REGISTRATION_RE = re.compile(
+    r"workstreams/msgdata_pk_structural_review_b(\d{2})/public/"
+    r"msgdata_ko_pk_structural_review_b\1_500\.v1\.json"
+)
+
+
+def historical_registration_tail(
+    patterns: list[str],
+    prefix: list[str],
+    chain_through_self: list[str],
+    current_batch: int,
+    repo_root: Path,
+) -> tuple[list[str], list[str]]:
+    """Return this batch's historical tail while validating later registrations.
+
+    A completed batch must rebuild identically after sequential successor
+    batches are added to the shared progress catalog.  Successors are audited
+    as ordered, existing structural-review paths, but are excluded from the
+    historical evidence generated for this batch.
+    """
+
+    if patterns[: len(prefix)] != prefix:
+        raise StructuralReviewError("pre-B07 registration order changed")
+    tail = patterns[len(prefix) :]
+    historical = tail[: min(len(tail), len(chain_through_self))]
+    if historical not in [
+        chain_through_self[:index] for index in range(len(chain_through_self) + 1)
+    ]:
+        raise StructuralReviewError("unexpected structural registration order or duplicate")
+    successors = tail[len(historical) :]
+    if historical != chain_through_self and successors:
+        raise StructuralReviewError("structural successor registered before this batch")
+    expected_batch = current_batch + 1
+    for logical_path in successors:
+        match = STRUCTURAL_REGISTRATION_RE.fullmatch(logical_path)
+        if match is None or int(match.group(1)) != expected_batch:
+            raise StructuralReviewError("structural successor order is not contiguous")
+        if not (repo_root / logical_path).is_file():
+            raise StructuralReviewError("registered structural successor is missing")
+        expected_batch += 1
+    return historical, successors
+
+
 def resolve_stock_sc(game_root: Path) -> Path:
     candidates = (
         game_root / previous.STOCK_SC_RELATIVE,
@@ -242,6 +285,10 @@ def make_models(
     common.validate_overlay_shape(overlay)
     overlay_blob = encode_json(overlay)
     progress_audit = audit_progress(progress_path, repo_root, overlay_blob, targets, predecessor_claims, set(selected))
+    # Registration timing is diagnostic state, not part of the immutable B07
+    # artifact. Preserve the original pre-registration evidence while the
+    # live catalog has already been validated above.
+    progress_audit["self_registration_count"] = 0
     reason_summary = {
         reason: {"count": len(ids), "ids_sha256": REASON_PINS[reason]["ids_sha256"]}
         for reason, ids in selected_groups.items()
@@ -320,17 +367,19 @@ def audit_progress(
     if len(rows) != 1 or not isinstance(rows[0].get("overlay_globs"), list):
         raise StructuralReviewError("progress has no unique msgdata row")
     patterns = rows[0]["overlay_globs"]
-    if patterns[: len(EXPECTED_PREDECESSOR_PATHS)] != list(EXPECTED_PREDECESSOR_PATHS):
-        raise StructuralReviewError("predecessor registration order changed")
+    tail, _successors = historical_registration_tail(
+        patterns,
+        list(EXPECTED_PREDECESSOR_PATHS),
+        [SELF_OVERLAY_PATH],
+        7,
+        repo_root,
+    )
     if patterns.count(previous.SELF_OVERLAY_LOGICAL_PATH) != 1:
         raise StructuralReviewError("batch06 must be registered exactly once")
     batch06_path = repo_root / previous.SELF_OVERLAY_LOGICAL_PATH
     if sha256(batch06_path.read_bytes()) != EXPECTED_BATCH06_OVERLAY_SHA256:
         raise StructuralReviewError("batch06 registered overlay changed")
-    tail = patterns[len(EXPECTED_PREDECESSOR_PATHS):]
     self_count = tail.count(SELF_OVERLAY_PATH)
-    if self_count > 1 or any(path != SELF_OVERLAY_PATH for path in tail):
-        raise StructuralReviewError("unexpected structural successor or duplicate self registration")
     if self_count and (repo_root / SELF_OVERLAY_PATH).read_bytes() != overlay_blob:
         raise StructuralReviewError("registered self overlay differs from deterministic output")
     gap = targets - predecessor_claims

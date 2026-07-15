@@ -59,7 +59,17 @@ def _augmented_progress(source: Path, destination: Path) -> None:
     patterns = matches[0].get("overlay_globs")
     if not isinstance(patterns, list) or not all(isinstance(value, str) for value in patterns):
         raise ValueError("PK msggame progress overlay list is invalid")
-    patterns[:] = [value for value in patterns if value != SELF_RELATIVE]
+    def keep_pre_b05(value: str) -> bool:
+        prefix = "workstreams/msggame_pk_ui_priority_b"
+        if not value.startswith(prefix):
+            return True
+        suffix = value[len(prefix) :].split("/", 1)[0]
+        return not suffix.isdecimal() or int(suffix) < 5
+
+    # The B05 proof is pinned to the predecessor state.  Once B05 or later
+    # UI batches are registered globally, rebuilding B05 must not absorb them
+    # into its own full-candidate validation.
+    patterns[:] = [value for value in patterns if keep_pre_b05(value)]
     if patterns.count(B04_RELATIVE) == 0:
         patterns.append(B04_RELATIVE)
     if patterns.count(B04_RELATIVE) != 1:

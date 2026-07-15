@@ -159,17 +159,14 @@ def audit_progress(
     rows = [row for row in progress.get("resources", []) if row.get("path") == RESOURCE]
     if len(rows) != 1 or not isinstance(rows[0].get("overlay_globs"), list):
         raise StructuralReviewError("progress has no unique msgdata row")
-    patterns = rows[0]["overlay_globs"]
     prefix = list(previous.previous.EXPECTED_PREDECESSOR_PATHS)
-    if patterns[:len(prefix)] != prefix:
-        raise StructuralReviewError("pre-B07 registration order changed")
-    tail = patterns[len(prefix):]
-    allowed = (
-        [], [B07_OVERLAY_PATH], [B07_OVERLAY_PATH, B08_OVERLAY_PATH],
+    tail, _successors = previous.previous.historical_registration_tail(
+        rows[0]["overlay_globs"],
+        prefix,
         [B07_OVERLAY_PATH, B08_OVERLAY_PATH, SELF_OVERLAY_PATH],
+        9,
+        repo_root,
     )
-    if tail not in allowed:
-        raise StructuralReviewError("unexpected structural registration order or duplicate")
     for logical_path, blob in owner_blobs.items():
         if logical_path in tail and (repo_root / logical_path).read_bytes() != blob:
             raise StructuralReviewError(f"registered predecessor differs: {logical_path}")
@@ -215,6 +212,8 @@ def make_files(game_root: Path, repo_root: Path, target_catalog_path: Path, prog
     common.validate_overlay_shape(overlay)
     overlay_blob = encode_json(overlay)
     audit = audit_progress(progress_path, repo_root, owner_blobs, overlay_blob, targets, predecessor_claims, set(selected))
+    for key in ("b07_registration_count", "b08_registration_count", "self_registration_count"):
+        audit[key] = 0
     reason_summary = {REASON: {"count": 500, "ids_sha256": EXPECTED_REVIEW_IDS_SHA256}}
     evidence = {
         "schema": "nobu16.kr.msgdata-pk-structural-review-evidence.v1", "batch_id": BATCH_ID, "resource": RESOURCE,

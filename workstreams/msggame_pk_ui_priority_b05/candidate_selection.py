@@ -13,7 +13,9 @@ WORKSTREAM_ROOT = SCRIPT_PATH.parent
 REPO_ROOT = SCRIPT_PATH.parents[2]
 B04_ROOT = REPO_ROOT / "workstreams" / "msggame_pk_ui_priority_b04"
 B04_OVERLAY = B04_ROOT / "public" / "msggame_ko_pk_ui_priority_b04_250.v1.json"
+SELF_OVERLAY = WORKSTREAM_ROOT / "public" / "msggame_ko_pk_ui_priority_b05_300.v1.json"
 B04_OVERLAY_SHA256 = "399CC98E8C778663FFF95CD7AE052C04B1BF96DACFBA6E09E207D54E6EF55AD5"
+SELF_OVERLAY_SHA256 = "E67FFDC802485FFB8B1276880239CA4CE9F4098274792B993A448A36E1771808"
 B04_COORDINATES_SHA256 = "9147574B5DC75C50A8BD3CB773F01B9056C7A2AC266D0B979E6CB7E42D397ECD"
 B05_COORDINATES_SHA256 = "C872E6178EC8E77B4EE820A0AE06C323146E8C437B894D47ADB9E7EF5541B331"
 
@@ -48,7 +50,18 @@ def select_coordinates(builder: Any | None = None) -> tuple[list[tuple[int, int,
         "TC": b04.load_source(b04.DEFAULT_PK_TC, "TC"),
     }
     targets, target_hash = b04.target_coordinates(b04.DEFAULT_TARGET)
-    registered, _b01 = b04.existing_coordinates(b04.DEFAULT_PROGRESS)
+    registered_with_self, _b01 = b04.existing_coordinates(b04.DEFAULT_PROGRESS)
+
+    if b04.sha256(SELF_OVERLAY.read_bytes()) != SELF_OVERLAY_SHA256:
+        raise RuntimeError("B05 self overlay pin changed")
+    self_coordinates = b04.overlay_coordinates(SELF_OVERLAY)
+    if len(self_coordinates) != 300:
+        raise RuntimeError("B05 self coordinate count changed")
+    if b04.canonical_hash([list(value) for value in sorted(self_coordinates)]) != B05_COORDINATES_SHA256:
+        raise RuntimeError("B05 self coordinate pin changed")
+    # Once B05 is registered in translation_progress, reproducibility must not
+    # remove its own pinned coordinates from the deterministic selection.
+    registered = registered_with_self - self_coordinates
 
     overlay_blob = B04_OVERLAY.read_bytes()
     if b04.sha256(overlay_blob) != B04_OVERLAY_SHA256:
@@ -96,6 +109,8 @@ def select_coordinates(builder: Any | None = None) -> tuple[list[tuple[int, int,
         "targets": targets,
         "target_hash": target_hash,
         "registered": registered,
+        "registered_with_self": registered_with_self,
+        "self_coordinates": self_coordinates,
         "reserved_b04": reserved,
         "eligible_counts": {key: len(value) for key, value in eligible.items()},
     }

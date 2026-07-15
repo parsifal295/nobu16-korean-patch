@@ -60,7 +60,16 @@ def _augmented_progress(source: Path, destination: Path) -> None:
     patterns = matches[0].get("overlay_globs")
     if not isinstance(patterns, list) or not all(isinstance(value, str) for value in patterns):
         raise ValueError("PK msggame progress overlay list is invalid")
-    patterns[:] = [value for value in patterns if value != SELF_RELATIVE]
+    def keep_pre_b06(value: str) -> bool:
+        prefix = "workstreams/msggame_pk_ui_priority_b"
+        if not value.startswith(prefix):
+            return True
+        suffix = value[len(prefix) :].split("/", 1)[0]
+        return not suffix.isdecimal() or int(suffix) < 6
+
+    # Freeze the proof at B04+B05 even after B06 or future batches are added
+    # to the shared progress catalog.
+    patterns[:] = [value for value in patterns if keep_pre_b06(value)]
     for predecessor in (B04_RELATIVE, B05_RELATIVE):
         if predecessor not in patterns:
             patterns.append(predecessor)

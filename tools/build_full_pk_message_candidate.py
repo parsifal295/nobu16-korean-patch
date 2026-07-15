@@ -555,15 +555,29 @@ def parse_msggame_overlay(value: dict[str, Any], label: str) -> dict[str, Any]:
                 raise BuildError(f"{label}.migration_provenance.{key} must be a non-empty string")
     translation_provenance = value.get("translation_provenance")
     if translation_provenance is not None:
-        require_exact_keys(
-            translation_provenance,
-            {"context_languages", "kind", "runtime_reviewed", "source_text_embedded"},
-            f"{label}.translation_provenance",
+        base_translation_keys = {
+            "context_languages",
+            "kind",
+            "runtime_reviewed",
+            "source_text_embedded",
+        }
+        translation_keys = set(translation_provenance)
+        missing_translation_keys = sorted(base_translation_keys - translation_keys)
+        extra_translation_keys = sorted(
+            translation_keys - base_translation_keys - {"switch_context"}
         )
-        if translation_provenance["context_languages"] != ["SC", "JP", "EN"]:
+        if missing_translation_keys or extra_translation_keys:
+            raise BuildError(
+                f"{label}.translation_provenance keys differ: "
+                f"missing={missing_translation_keys}, extra={extra_translation_keys}"
+            )
+        if translation_provenance["context_languages"] not in (
+            ["SC", "JP", "EN"],
+            ["SC", "JP", "EN", "TC"],
+        ):
             raise BuildError(
                 f"{label}.translation_provenance.context_languages must be "
-                "the reviewed SC/JP/EN context set"
+                "the reviewed SC/JP/EN or SC/JP/EN/TC context set"
             )
         if not isinstance(translation_provenance["kind"], str) or not translation_provenance["kind"]:
             raise BuildError(f"{label}.translation_provenance.kind must be a non-empty string")
@@ -574,28 +588,70 @@ def parse_msggame_overlay(value: dict[str, Any], label: str) -> dict[str, Any]:
             False,
             f"{label}.translation_provenance.source_text_embedded",
         )
+        switch_context = translation_provenance.get("switch_context")
+        if switch_context is not None:
+            require_exact_keys(
+                switch_context,
+                {
+                    "asset_sha256",
+                    "author",
+                    "release_tag",
+                    "repository_url",
+                    "unique_jp_hash_alignment_count",
+                    "use",
+                },
+                f"{label}.translation_provenance.switch_context",
+            )
+            require_hash(
+                switch_context["asset_sha256"],
+                f"{label}.translation_provenance.switch_context.asset_sha256",
+            )
+            for key in ("author", "release_tag", "repository_url", "use"):
+                if not isinstance(switch_context[key], str) or not switch_context[key]:
+                    raise BuildError(
+                        f"{label}.translation_provenance.switch_context.{key} "
+                        "must be a non-empty string"
+                    )
+            require_int(
+                switch_context["unique_jp_hash_alignment_count"],
+                f"{label}.translation_provenance.switch_context.unique_jp_hash_alignment_count",
+                minimum=1,
+            )
     selection_policy = value.get("selection_policy")
     if selection_policy is not None:
-        require_exact_keys(
-            selection_policy,
-            {
-                "dynamic_fragments_excluded",
-                "event_dialogue_excluded",
-                "priority",
-                "source_text_embedded",
-            },
-            f"{label}.selection_policy",
-        )
-        require_bool(
-            selection_policy["dynamic_fragments_excluded"],
-            True,
-            f"{label}.selection_policy.dynamic_fragments_excluded",
-        )
-        require_bool(
-            selection_policy["event_dialogue_excluded"],
-            True,
-            f"{label}.selection_policy.event_dialogue_excluded",
-        )
+        base_selection_keys = {"priority", "source_text_embedded"}
+        allowed_selection_keys = base_selection_keys | {
+            "block_entry_counts",
+            "blocks",
+            "dynamic_fragments_excluded",
+            "event_dialogue_block_17_excluded",
+            "event_dialogue_excluded",
+            "format_control_pua_free_selection",
+            "read_only_predecessor",
+            "read_only_predecessors",
+            "single_literal_records_only",
+        }
+        selection_keys = set(selection_policy)
+        missing_selection_keys = sorted(base_selection_keys - selection_keys)
+        extra_selection_keys = sorted(selection_keys - allowed_selection_keys)
+        if missing_selection_keys or extra_selection_keys:
+            raise BuildError(
+                f"{label}.selection_policy keys differ: "
+                f"missing={missing_selection_keys}, extra={extra_selection_keys}"
+            )
+        for key in (
+            "dynamic_fragments_excluded",
+            "event_dialogue_block_17_excluded",
+            "event_dialogue_excluded",
+            "format_control_pua_free_selection",
+            "single_literal_records_only",
+        ):
+            if key in selection_policy:
+                require_bool(
+                    selection_policy[key],
+                    True,
+                    f"{label}.selection_policy.{key}",
+                )
         if not isinstance(selection_policy["priority"], str) or not selection_policy["priority"]:
             raise BuildError(f"{label}.selection_policy.priority must be a non-empty string")
         require_bool(
@@ -603,6 +659,58 @@ def parse_msggame_overlay(value: dict[str, Any], label: str) -> dict[str, Any]:
             False,
             f"{label}.selection_policy.source_text_embedded",
         )
+        blocks = selection_policy.get("blocks")
+        if blocks is not None:
+            if (
+                not isinstance(blocks, list)
+                or not blocks
+                or any(not isinstance(block, int) or isinstance(block, bool) for block in blocks)
+                or blocks != sorted(set(blocks))
+            ):
+                raise BuildError(
+                    f"{label}.selection_policy.blocks must be sorted unique integers"
+                )
+        block_entry_counts = selection_policy.get("block_entry_counts")
+        if block_entry_counts is not None:
+            if not isinstance(block_entry_counts, dict) or not block_entry_counts:
+                raise BuildError(
+                    f"{label}.selection_policy.block_entry_counts must be a non-empty object"
+                )
+            normalized_count_blocks: list[int] = []
+            for block, count in block_entry_counts.items():
+                if not isinstance(block, str) or not block.isdecimal():
+                    raise BuildError(
+                        f"{label}.selection_policy.block_entry_counts keys must be decimal block ids"
+                    )
+                normalized_count_blocks.append(int(block))
+                require_int(
+                    count,
+                    f"{label}.selection_policy.block_entry_counts[{block}]",
+                    minimum=1,
+                )
+            if blocks is not None and sorted(normalized_count_blocks) != blocks:
+                raise BuildError(
+                    f"{label}.selection_policy.block_entry_counts must match blocks"
+                )
+        predecessor = selection_policy.get("read_only_predecessor")
+        predecessors = selection_policy.get("read_only_predecessors")
+        if predecessor is not None and predecessors is not None:
+            raise BuildError(
+                f"{label}.selection_policy cannot declare both predecessor forms"
+            )
+        if predecessor is not None and (not isinstance(predecessor, str) or not predecessor):
+            raise BuildError(
+                f"{label}.selection_policy.read_only_predecessor must be a non-empty string"
+            )
+        if predecessors is not None and (
+            not isinstance(predecessors, list)
+            or not predecessors
+            or any(not isinstance(item, str) or not item for item in predecessors)
+            or len(predecessors) != len(set(predecessors))
+        ):
+            raise BuildError(
+                f"{label}.selection_policy.read_only_predecessors must be unique non-empty strings"
+            )
     entries = value["entries"]
     if not isinstance(entries, list):
         raise BuildError(f"{label}.entries must be an array")
