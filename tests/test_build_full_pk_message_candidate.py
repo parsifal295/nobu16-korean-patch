@@ -342,6 +342,36 @@ class FullPkCandidateBuilderTests(unittest.TestCase):
         result = self._build("candidate-msggame-metadata")
         self.assertTrue(result["manifest_path"].is_file())
 
+    def test_extended_ui_priority_metadata_is_accepted(self) -> None:
+        paths = self._create_progress()
+        value = json.loads(paths["msggame"].read_text(encoding="utf-8"))
+        value["translation_provenance"] = {
+            "context_languages": ["SC", "JP", "EN", "TC"],
+            "kind": "parallel_agent_battle_ui_translation",
+            "runtime_reviewed": False,
+            "source_text_embedded": False,
+            "switch_context": {
+                "asset_sha256": "F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4",
+                "author": "snake7594",
+                "release_tag": "v1.3",
+                "repository_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch",
+                "unique_jp_hash_alignment_count": 74,
+                "use": "semantic_and_terminology_reference_only",
+            },
+        }
+        value["selection_policy"] = {
+            "block_entry_counts": {"6": 1},
+            "blocks": [6],
+            "event_dialogue_block_17_excluded": True,
+            "format_control_pua_free_selection": True,
+            "priority": "battle_ui",
+            "read_only_predecessors": ["previous-a.json", "previous-b.json"],
+            "single_literal_records_only": True,
+            "source_text_embedded": False,
+        }
+        parsed = full.parse_msggame_overlay(value, "synthetic-extended-msggame")
+        self.assertEqual(value["overlay_id"], parsed["overlay_id"])
+
     def test_msggame_metadata_cannot_claim_embedded_source_text(self) -> None:
         paths = self._create_progress()
         value = json.loads(paths["msggame"].read_text(encoding="utf-8"))

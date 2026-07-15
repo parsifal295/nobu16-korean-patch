@@ -1,0 +1,125 @@
+{
+  "artifacts": {
+    "evidence/msgdata_pk_structural_review_b11_evidence.v1.json": {
+      "path": "evidence/msgdata_pk_structural_review_b11_evidence.v1.json",
+      "sha256": "F90BA9BA16727F96EF922AB5EDD307C9B27A271DCCE01B1CB3C145594C01F1A0",
+      "size": 183016
+    },
+    "public/msgdata_ko_pk_structural_review_b11_500.v1.json": {
+      "path": "public/msgdata_ko_pk_structural_review_b11_500.v1.json",
+      "sha256": "9C5C16DF069E214CAD7FA82316D2603A4E8C3A8654C8F64D5696EC9308F5942E",
+      "size": 95931
+    },
+    "review/msgdata_pk_structural_review_b11_review.v1.json": {
+      "path": "review/msgdata_pk_structural_review_b11_review.v1.json",
+      "sha256": "614534C01C524AB6367BF6348684222CD7F228949AD9C17E582951EA4167D940",
+      "size": 57100
+    }
+  },
+  "batch_id": "msgdata-pk-structural-review-b11-500.v1",
+  "generator": {
+    "path": "build_msgdata_pk_structural_review_b11.py",
+    "sha256": "F922474663DCF374A8F72C5D42D9621FCFC9EB6A9C08E89F2E680A8E7748E314"
+  },
+  "official_selected_rowset_sha256": {
+    "EN": "5180E431BF53D1C75ED84359BB16E9835B66AF4EBBD488BF5A2B78697B09D8AD",
+    "JP": "2744CD2F1FCC4E2CE7EACB858BBB5C9713B185FFA4FC8F752C2DFBB4C3440480",
+    "SC": "7BFA0B3235D2A9BC0AA1A492A090CFA31AA90D51C538FA4D256008A2FA86C916",
+    "TC": "3452836088E7FEF409DF126C847DF881651B4580DE7E57DF53C17AFD40972887"
+  },
+  "passed": true,
+  "progress_audit": {
+    "explicit_structural_predecessor_count": 2000,
+    "post_review_gap_count": 1610,
+    "post_review_gap_ids_sha256": "F64C74B50B40FE5FBF7FD1D66E51F0023D0B9A3888484E96310FC0BFC157C566",
+    "pre_b07_registration_count": 14,
+    "pre_review_gap_count": 2110,
+    "pre_review_gap_ids_sha256": "0F51E04EC360F0C4540ADEE0975BB83FA73837C1CFD86A85976C70542D4761A2",
+    "predecessor_registration_counts": {
+      "workstreams/msgdata_pk_structural_review_b07/public/msgdata_ko_pk_structural_review_b07_500.v1.json": 0,
+      "workstreams/msgdata_pk_structural_review_b08/public/msgdata_ko_pk_structural_review_b08_500.v1.json": 0,
+      "workstreams/msgdata_pk_structural_review_b09/public/msgdata_ko_pk_structural_review_b09_500.v1.json": 0,
+      "workstreams/msgdata_pk_structural_review_b10/public/msgdata_ko_pk_structural_review_b10_500.v1.json": 0
+    },
+    "predecessor_target_count": 23424,
+    "predecessor_target_ids_sha256": "1043EE00D4AA82897ADF1D92FAE8563DC9585DD804DCA88F15BF26AF3EA72A93",
+    "self_registration_count": 0
+  },
+  "reason_summary": {
+    "format_or_control_only_token": {
+      "count": 1,
+      "ids_sha256": "FCCCD607EB8FE9927F4C47E8A74B1E2E7B68BBAA6CFECD4F73C11CDCA3D7967D"
+    },
+    "placeholder_dummy_not_a_translatable_display_message": {
+      "count": 38,
+      "ids_sha256": "DBB528C2A57229244553C87B776EC4156A81E5B78E2A4A1937A9F5FC91AC79A5"
+    },
+    "romanized_or_phonetic_lookup_key": {
+      "count": 461,
+      "ids_sha256": "9772D6F12A4B9F87171916027692AFCACDD61C4759888C604181A8B988EA417D"
+    }
+  },
+  "replacement_invariants": {
+    "checked": 500,
+    "esc_preserved": true,
+    "exact_utf16le_byte_preserve_count": 500,
+    "failures": 0,
+    "line_breaks_preserved": true,
+    "printf_preserved": true,
+    "pua_preserved": true
+  },
+  "reproducibility": {
+    "artifact_json_canonical": true,
+    "in_memory_target_a_b_equal": true
+  },
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "global_progress_modified": false,
+    "global_readme_modified": false,
+    "installed_game_files_modified": false
+  },
+  "schema": "nobu16.kr.msgdata-pk-structural-review-validation.v1",
+  "scope": {
+    "blocked_count": 0,
+    "duplicate_id_count": 0,
+    "exact_byte_preserve_count": 500,
+    "narrative_mixed_count": 0,
+    "post_review_structural_remaining": 1610,
+    "predecessor_overlap_count": 0,
+    "reviewed_count": 500,
+    "reviewed_ids_sha256": "8FA21BEF915AAE152DBE66166D462A5576E906C4B75CC6BD27F9C5F9E7FCC2CF",
+    "translated_narrative_count": 0
+  },
+  "source_free_scan": {
+    "evidence/msgdata_pk_structural_review_b11_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "public/msgdata_ko_pk_structural_review_b11_500.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "review/msgdata_pk_structural_review_b11_review.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    }
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 500,
+    "packed_sha256": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "packed_size": 516796,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "5982D520BF2E66260943DE61D0CB7F1135D1BA81A211E917E3F426C58D9125D6",
+    "raw_size": 514752,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "wrapper_round_trip": true
+  }
+}
