@@ -262,7 +262,10 @@ class FullPkCandidateBuilderTests(unittest.TestCase):
             json.dumps({"schema": full.PROGRESS_SCHEMA, "resources": resources}, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
-        return {"msgdata_common": REPO_ROOT / data_common_path}
+        return {
+            "msgdata_common": REPO_ROOT / data_common_path,
+            "msggame": REPO_ROOT / game_overlay_path,
+        }
 
     def _build(self, name: str) -> dict:
         return full.build_candidate(
@@ -316,6 +319,40 @@ class FullPkCandidateBuilderTests(unittest.TestCase):
                 output_root=output,
             )
         self.assertFalse(output.exists())
+
+    def test_source_free_msggame_selection_and_translation_metadata_are_accepted(self) -> None:
+        paths = self._create_progress()
+        value = json.loads(paths["msggame"].read_text(encoding="utf-8"))
+        value["translation_provenance"] = {
+            "context_languages": ["SC", "JP", "EN"],
+            "kind": "agent_ui_priority_full_record_translation",
+            "runtime_reviewed": False,
+            "source_text_embedded": False,
+        }
+        value["selection_policy"] = {
+            "dynamic_fragments_excluded": True,
+            "event_dialogue_excluded": True,
+            "priority": "complete_ui_components_outside_blocks_13_14",
+            "source_text_embedded": False,
+        }
+        paths["msggame"].write_text(
+            json.dumps(value, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        result = self._build("candidate-msggame-metadata")
+        self.assertTrue(result["manifest_path"].is_file())
+
+    def test_msggame_metadata_cannot_claim_embedded_source_text(self) -> None:
+        paths = self._create_progress()
+        value = json.loads(paths["msggame"].read_text(encoding="utf-8"))
+        value["translation_provenance"] = {
+            "context_languages": ["SC", "JP", "EN"],
+            "kind": "agent_ui_priority_full_record_translation",
+            "runtime_reviewed": False,
+            "source_text_embedded": True,
+        }
+        with self.assertRaisesRegex(full.BuildError, "source_text_embedded"):
+            full.parse_msggame_overlay(value, "synthetic-msggame")
 
     def test_output_outside_repository_tmp_is_refused(self) -> None:
         self._create_progress()
