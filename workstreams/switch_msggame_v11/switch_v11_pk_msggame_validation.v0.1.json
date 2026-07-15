@@ -1,0 +1,155 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/switch_v11_pk_msggame_alignment_evidence.v0.1.json",
+      "sha256": "5A6211F901EBC09BA5AB5164D9E2A1D2F282942FAE8161CE27B39324E77AF74C",
+      "size": 7256764
+    },
+    "overlay": {
+      "path": "public/msggame_ko_switch_v11_exact_source_hash.v0.1.json",
+      "sha256": "245A73AA77B5649B686CE5A459C299CFBF7EE8EF5A6CDC56A7EB11288DECDFB5",
+      "size": 1475155
+    },
+    "review_index": {
+      "path": "review/switch_v11_pk_msggame_review_index.v0.1.json",
+      "sha256": "321416550DBA417664789B861FD5C8898C81E5D7BA4E8CAA47267FDB41B255C6",
+      "size": 3146051
+    }
+  },
+  "batch_id": "switch_v11_pk_msggame_exact_source_hash.v0.1",
+  "font_compatibility": {
+    "excluded_entry_count": 154,
+    "forbidden_ranges": [
+      "U+3400-U+4DBF",
+      "U+4E00-U+9FFF",
+      "U+F900-U+FAFF",
+      "U+3040-U+30FF",
+      "U+31F0-U+31FF"
+    ],
+    "selected_entries_with_forbidden_script": 0
+  },
+  "generator": {
+    "path": "build_switch_msggame_v11.py",
+    "sha256": "2FEAA2C3A21B6547AD6C49FE8FE5F740A6B8C3E9366D1336EC772E58894D7F61"
+  },
+  "offline_binary_validation": {
+    "entry_count": 6018,
+    "installed_game_file_written": false,
+    "literal_coordinates_preserved": true,
+    "opaque_record_bytecode_preserved": true,
+    "raw_parse_rebuild_byte_exact": true,
+    "record_coordinates_preserved": true,
+    "target_packed_sha256": "869B5EBECE617BBCDCCF0BBDC5149B0243B44F2AC02365EFF35329A77E628803",
+    "target_packed_size": 1146789,
+    "target_raw_sha256": "B04CD4E0D2B66B361495DDD70654649894B2D46A5E1E392BA89D8EEE9E5C8297",
+    "target_raw_size": 1142284
+  },
+  "passed": true,
+  "progress_catalog": {
+    "prior_existing_coordinate_union": 3300,
+    "self_overlay_registration": {
+      "configured_reference_count": 1,
+      "excluded_from_prior_existing_coordinates": true,
+      "expected_relative_path": "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json",
+      "resolved_paths": [
+        "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json"
+      ],
+      "resolved_reference_count": 1
+    }
+  },
+  "provenance": {
+    "asset_name": "NobunagaShinsei_KoreanPatch_v1.1.zip",
+    "asset_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/download/v1.1/NobunagaShinsei_KoreanPatch_v1.1.zip",
+    "author": "snake7594",
+    "release_tag": "v1.1",
+    "release_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.1",
+    "repository_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch",
+    "zip_sha256": "931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6"
+  },
+  "replacement_invariants": {
+    "checked": 6018,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "escape_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "literal_coordinate_and_record_structure"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "byte_identical_pk_reconstruction_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "process_memory_access": false,
+    "progress_manifest_modified": false,
+    "registry_modified": false,
+    "root_readme_modified": false,
+    "switch_member_extracted_to_repository": false,
+    "switch_zip_modified": false
+  },
+  "schema": "nobu16.kr.switch-msggame-v11-validation.v1",
+  "selection": {
+    "both_cjk_or_kana_and_existing": 1,
+    "cjk_or_kana_excluded": 154,
+    "existing_overlay_coordinate_union": 3300,
+    "existing_overlay_overlap": 2204,
+    "global_strict_candidates": 8375,
+    "missing_pk_sc_literal": 4675,
+    "no_base_jp_source_hash": 3906,
+    "non_unique_switch_ko_source_set": 0,
+    "pk_sc_invariant_mismatch": 2928,
+    "pk_sc_not_visible": 8430,
+    "same_coordinate": 395,
+    "selected": 6018,
+    "source_hash_transfer": 5623,
+    "switch_ko_equals_pk_jp": 777,
+    "switch_ko_has_no_hangul": 58,
+    "switch_ko_not_semantic": 0
+  },
+  "source_alignment": {
+    "base_switch_literal_coordinates_identical": true,
+    "base_switch_record_coordinates_identical": true,
+    "base_switch_record_skeletons_identical": true,
+    "cross_coordinate_source_hash_transfers": 5623,
+    "pk_sc_invariant_checks": 6018,
+    "source_hash_value_sets_must_be_unique": true
+  },
+  "source_free_scan": {
+    "msggame_ko_switch_v11_exact_source_hash.v0.1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "switch_v11_pk_msggame_alignment_evidence.v0.1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "switch_v11_pk_msggame_review_index.v0.1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "switch_padding": {
+    "in_memory_only": true,
+    "original_final_block_end": 1498434,
+    "original_raw_size": 1498434,
+    "padded_parse_raw_size": 1498436,
+    "required_alignment_padding_bytes": 2,
+    "switch_source_written": false
+  }
+}

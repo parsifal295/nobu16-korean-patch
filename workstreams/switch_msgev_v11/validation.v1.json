@@ -1,0 +1,157 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/switch_v11_pk_msgev_alignment.v1.json",
+      "sha256": "9F2B633308D18C8A9475A6DB7413C6ABF602E3AC01DCD153920C134A7DC4DCA5",
+      "size": 10936998
+    },
+    "overlay": {
+      "path": "public/msgev_ko_switch_v11_ported_7025.v1.json",
+      "sha256": "71652CACEB757BFFF47FB119789150BD841DD9FF6B6AC180D5B2AA1B06231703",
+      "size": 1525351
+    },
+    "review_index": {
+      "path": "review/switch_v11_pk_msgev_review.v1.json",
+      "sha256": "EFDEBA53A039892805F7818EF99EE1277DD52BE9AEE972CEBF630DE078E46525",
+      "size": 2188566
+    }
+  },
+  "batch_id": "switch-v11-pk-msgev-port-7025.v1",
+  "custom_bracket_token_review": {
+    "mismatch_count": 8,
+    "mismatch_ids_sha256": "3474F53CA7F75714638E5057C42BFB116CE29DECFE062886DD2347E23DFCE268",
+    "runtime_review_required": true,
+    "selection_gate": false
+  },
+  "existing_public_catalog_exclusion": {
+    "existing_ids_sha256": "D3827CB87DA20F6807558E055D831E7640DA14652C2C32C4E1292EE899E4D5C4",
+    "existing_unique_id_count": 5469,
+    "selected_overlap_count": 0
+  },
+  "generator": {
+    "path": "build_switch_msgev_v11.py",
+    "sha256": "65E0CE72FA70E3BC74343005AAD434F5B889CB6D092930B8552A13C9D3BF4A8D"
+  },
+  "passed": true,
+  "reconstruction": {
+    "changed_entry_count": 7025,
+    "complete_target_included": false,
+    "target": {
+      "changed_entry_count": 7025,
+      "raw_sha256": "7CC9D38B839ED8A1903567AEEBBF109213611B259A79F968D672B7C5AEB16EAC",
+      "raw_size": 886016,
+      "wrapper_sha256": "452BB33E584351D33EC90F5303A51552A5AC766D79DC0D8BFF97EADC4C8E693A",
+      "wrapper_size": 889516
+    }
+  },
+  "replacement_invariants": {
+    "checked": 7025,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "edge_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "complete_game_resource_emitted": false,
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "official_source_text_exposed_in_public_artifacts": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_or_progress_modified": false,
+    "switch_archive_extracted": false
+  },
+  "schema": "nobu16.kr.switch-msgev-v11-generation-validation.v1",
+  "selection": {
+    "base_jp_equals_pk_jp_count": 12715,
+    "base_jp_scope_count": 17868,
+    "custom_bracket_token_mismatch_count": 8,
+    "custom_bracket_token_mismatch_ids_sha256": "3474F53CA7F75714638E5057C42BFB116CE29DECFE062886DD2347E23DFCE268",
+    "existing_nonoverlap_count": 7045,
+    "jp_original_equality_scope": "PC_base_JP_and_PC_PK_JP",
+    "meaningful_hangul_count": 13090,
+    "pk_extra_slot_count": 42,
+    "pk_sc_invariant_match_count": 12242,
+    "selected_count": 7025,
+    "selected_ids_sha256": "ECE96F365962D0408CC80D5324D2D900C4983B423D782D77B0CF4A4799299DCF",
+    "source_script_excluded_count": 20,
+    "source_script_filter": {
+      "excluded_count": 20,
+      "excluded_ids_sha256": "F9B2C54B499583605D1D8748747123DE1C4FF2C3C990383FD0E672DF8D7BCFDB",
+      "ranges": [
+        "U+3400-U+4DBF",
+        "U+4E00-U+9FFF",
+        "U+F900-U+FAFF",
+        "U+3040-U+30FF",
+        "U+31F0-U+31FF"
+      ]
+    },
+    "source_script_free_portable_count": 7025,
+    "switch_korean_differs_from_jp_count": 12715,
+    "switch_patch_value_role": "Korean_replacement_in_Switch_JP_tree",
+    "switch_to_pc_numeric_id_mapping": "identity_for_ids_0_through_17867"
+  },
+  "source_alignment": {
+    "official_source_text_embedded": false,
+    "pc_base_jp_to_pk_jp_exact_match_count": 12715,
+    "pk_sc_parse_rebuild_byte_exact": true,
+    "ported_entry_reference_hash_count": 28100,
+    "source_string_counts": {
+      "base_jp": 17868,
+      "pk_jp": 17910,
+      "pk_sc_stock": 17910,
+      "switch_ko": 17868
+    },
+    "switch_patch_parse_rebuild_byte_exact": true
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "overlay": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "review_index": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "source_release": {
+    "archive_relative_path": "tmp/third_party_switch_v11/NobunagaShinsei_KoreanPatch_v1.1.zip",
+    "archive_sha256": "931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6",
+    "archive_size": 73040529,
+    "attribution": "snake7594_unofficial_fan_translation_v1_1",
+    "author_account": "snake7594",
+    "entry_compressed_size": 314537,
+    "entry_crc32": "018EAC29",
+    "entry_path": "NobunagaShinsei_KR/romfs/MSG/JP/ev_strdata.bin",
+    "entry_uncompressed_size": 396257,
+    "platform": "Nintendo Switch",
+    "release_tag": "v1.1",
+    "release_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.1",
+    "source_repository": "https://github.com/snake7594/nobunaga-shinsei-korean-patch",
+    "title": "NobunagaShinsei Korean Patch"
+  },
+  "source_script_exclusion": {
+    "excluded_count": 20,
+    "excluded_ids_sha256": "F9B2C54B499583605D1D8748747123DE1C4FF2C3C990383FD0E672DF8D7BCFDB",
+    "selected_entries_are_cjk_kana_free": true
+  }
+}

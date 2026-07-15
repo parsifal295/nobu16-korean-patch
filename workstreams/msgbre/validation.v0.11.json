@@ -1,0 +1,181 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "alignment_evidence.v0.11.json",
+      "sha256": "D83118AF876C1F24E7E5FAE86A0A28D3AD9072D4F2A12686BB51F7476AAEC870",
+      "size": 101132
+    },
+    "overlay": {
+      "path": "msgbre_ko_biographies_0791_0835.v0.11.json",
+      "sha256": "B1FD769444B4BE226257FFF9E7245CD78392258FAB3A5219AE822F82341088D7",
+      "size": 15771
+    },
+    "review_index": {
+      "path": "review_index.v0.11.json",
+      "sha256": "ED52CDF83C0E543199BAAA9547C4A84094AAA949082198308AA185C919A4BFD7",
+      "size": 13438
+    }
+  },
+  "batch_id": "msgbre_biographies_0791_0835.v0.11",
+  "generator": {
+    "path": "build_msgbre_batch11.py",
+    "sha256": "E73BE54A3643CFDD6C05CB0EF9ED5A17FC5F4FAAECE72E1B8DEE996DF90C8897"
+  },
+  "passed": true,
+  "prior_overlay_coordination": {
+    "all_prior_hashes_unchanged": true,
+    "checked_overlay_count": 10,
+    "coordinate_collisions": 0,
+    "overlays": {
+      "msgbre_ko_biographies_0000_0128.v0.1.json": {
+        "end_id": 128,
+        "sha256": "DDD87FDF972F4EE907D310387074D0879E620C61B15C26B7F8A7FBA40BE52E00",
+        "start_id": 0
+      },
+      "msgbre_ko_biographies_0129_0250.v0.2.json": {
+        "end_id": 250,
+        "sha256": "FDB2511970F1E8CEF194E661CBCE3F8D912B372382BCFD89129FD1F8B309A4D3",
+        "start_id": 129
+      },
+      "msgbre_ko_biographies_0251_0350.v0.3.json": {
+        "end_id": 350,
+        "sha256": "1253609BC246DB4A63D1A5658476756AB89A0660FA683262CFFA444E3678132B",
+        "start_id": 251
+      },
+      "msgbre_ko_biographies_0351_0457.v0.4.json": {
+        "end_id": 457,
+        "sha256": "30E38BE8C8F0D0E48FAFB828A88765AFF52BF607F1D8D22985E88CD0B810109E",
+        "start_id": 351
+      },
+      "msgbre_ko_biographies_0458_0565.v0.5.json": {
+        "end_id": 565,
+        "sha256": "941D6B235708E4E8247CD0E4508DBDADBBA5D46A6A7F5406F047C4187B19A8F0",
+        "start_id": 458
+      },
+      "msgbre_ko_biographies_0566_0610.v0.6.json": {
+        "end_id": 610,
+        "sha256": "0FB3F6F777E5110507EB4782C5B7C5E2B61EC50FBF9E8314E5FF2491C9D6ACD2",
+        "start_id": 566
+      },
+      "msgbre_ko_biographies_0611_0655.v0.7.json": {
+        "end_id": 655,
+        "sha256": "82FCFE650D8AA0EBDC70AFEEFEDE2EE14049AB0EB1979464ACBDD10B69F9B72C",
+        "start_id": 611
+      },
+      "msgbre_ko_biographies_0656_0700.v0.8.json": {
+        "end_id": 700,
+        "sha256": "6791F39371E7C34F2792AE03EB88CD3CEB0FA0980D21178EFF4A86B7793063BA",
+        "start_id": 656
+      },
+      "msgbre_ko_biographies_0701_0745.v0.9.json": {
+        "end_id": 745,
+        "sha256": "3D8D2EE48F42ED9F2F580DA4AB0004A131198DC692FC8DEE44F6B201814ADA91",
+        "start_id": 701
+      },
+      "msgbre_ko_biographies_0746_0790.v0.10.json": {
+        "end_id": 790,
+        "sha256": "6D74AE6E3D86F09C0A1356B0D25D97B1B2BEBC319A288544D31714039BAA2430",
+        "start_id": 746
+      }
+    }
+  },
+  "replacement_invariants": {
+    "checked": 45,
+    "custom_bracket_placeholder_checks": 45,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "esc_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "custom_bracket_placeholders_in_order"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "common_builder_modified": false,
+    "complete_translated_target_written": false,
+    "existing_v01_to_v05_artifacts_modified": false,
+    "existing_v01_to_v07_artifacts_modified": false,
+    "existing_v01_to_v08_artifacts_modified": false,
+    "existing_v01_to_v09_artifacts_modified": false,
+    "existing_v01_to_v10_artifacts_modified": false,
+    "existing_v01_v02_v03_v04_artifacts_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "root_readme_modified": false
+  },
+  "schema": "nobu16.kr.msgbre-generation-validation.v11",
+  "scope": {
+    "end_id": 835,
+    "natural_boundary": {
+      "next_start_id": 836,
+      "officer_name_ids_crosschecked": 47,
+      "previous_batch_end_id": 790,
+      "selection_policy": "fixed_contiguous_parallel_slice"
+    },
+    "next_start_id": 836,
+    "selected_ids_sha256": "D80A66AB2DB20A2D1F445701AE757B93889BA14B2F8B42ED9D18D873E357638F",
+    "selected_nonempty_entry_count": 45,
+    "start_id": 791
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "EN"
+    ],
+    "manual_semantic_crosschecks": 45,
+    "selected_nonempty_in_all_languages": 45,
+    "selected_reference_hash_count": 135,
+    "string_count_each": 3000
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "generation_validation": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 45,
+    "packed_sha256": "5748F73A9DC9BD6DF3E67D78618C7FE8BFC2FE10E3B3B2D70B85448F3AD12997",
+    "packed_size": 293841,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "16DA0F3F7CB1BA3A09186C8107CC625AE943229993073A916E72CD27D5160919",
+    "raw_size": 292668,
+    "resource": "MSG_PK/SC/msgbre.bin",
+    "wrapper_round_trip": true
+  },
+  "translation_status": {
+    "human_review_required": 45,
+    "runtime_reviewed": 0,
+    "specific_uncertainty_entries": 15,
+    "translated_draft": 45
+  }
+}

@@ -1,0 +1,2378 @@
+{
+  "alignment_basis": [
+    "same_resource_role",
+    "same_3000_entry_count",
+    "same_numeric_string_ids",
+    "all_selected_entries_nonempty_in_sc_jp_en",
+    "manual_semantic_crosscheck_of_selected_entries",
+    "officer_name_overlay_id_crosscheck"
+  ],
+  "batch_id": "msgbre_biographies_0701_0745.v0.9",
+  "boundary_anchors": [
+    {
+      "id": 700,
+      "reference_hashes": {
+        "EN": "6FBF6918ED7D4F15DD349BCA7BEC695FAB443C1ADD27D357DF6DA3421BD6D417",
+        "JP": "577F0B32E3D8642168EA6B061BF194968D86388CB9DCA359F2E02FA17A69AFF0",
+        "SC": "6902A47E92F64B40904DEA3510BC24249EFFDA88B702ED810ECC6E177A6D1A08"
+      }
+    },
+    {
+      "id": 701,
+      "reference_hashes": {
+        "EN": "59BE5785986E8BBC1372206E36281A9657B9153DFD9CC2B9D14194B6F1BCD0DE",
+        "JP": "2B7686C3DD3DC41E744B524F1A0C02D6A27A429F9F444EA0456FDC6399C26A30",
+        "SC": "B2BEDBB8E5BF0C463FC8A5D309C3955D215A9BF77318BD6B45F8CF6219648D7F"
+      }
+    },
+    {
+      "id": 745,
+      "reference_hashes": {
+        "EN": "89F98902B1A5510B5032BCA63D4505AE178C31513426B3CA24C79D8633A5EF8D",
+        "JP": "0E8DF34769FE411DF9882A83D15221218C7D8B845CFC433A9A25DCFDE49CA012",
+        "SC": "E8B76F76E3682EBCD29717E7A3D0EE84A644A27ADC13E3C3559EABF583EF970C"
+      }
+    },
+    {
+      "id": 746,
+      "reference_hashes": {
+        "EN": "C83BC82AA339923AAC2D4001CB9FFF56D9FB55EAFD2320C64F57703649F12695",
+        "JP": "9248E8DC92BA3D053D5811B731AA5C549A321427EBB9577967F70F90F1D8F355",
+        "SC": "DD7F840ADC06CB7FF825C8190BDF562094E1C6C213EBAA134F5C8CE8785918C5"
+      }
+    }
+  ],
+  "contains_commercial_source_text": false,
+  "entries": [
+    {
+      "id": 701,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 167
+          },
+          "utf16le_sha256": "59BE5785986E8BBC1372206E36281A9657B9153DFD9CC2B9D14194B6F1BCD0DE"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "2B7686C3DD3DC41E744B524F1A0C02D6A27A429F9F444EA0456FDC6399C26A30"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 66
+          },
+          "utf16le_sha256": "B2BEDBB8E5BF0C463FC8A5D309C3955D215A9BF77318BD6B45F8CF6219648D7F"
+        }
+      }
+    },
+    {
+      "id": 702,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 314
+          },
+          "utf16le_sha256": "273BF429F4CDD8F7CD390DF0EC58D12DE030E5C2B777CD2F7EDF5AF6E5EA3708"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "85F32BAC2517070BE98FB40679AD26096C9C3894311DF4D40FCE0C5032D61A86"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 63
+          },
+          "utf16le_sha256": "74574062367D8ACFC2B84DA7A558C29C2BEC0B7D2E61818D8E5E76733BA74A85"
+        }
+      }
+    },
+    {
+      "id": 703,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 157
+          },
+          "utf16le_sha256": "B3E2E8C1D2218EDFFDD5B5CE08BAB4AEB24042287ECDFA6D6601900EC4CC0C39"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "192014059422319F7A3894C34A547D5AA9897D4CE309B313B0A313981095D8E0"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 60
+          },
+          "utf16le_sha256": "D1BB4BE6137791FC9DE8403327D80CEF581C3DABB555E21460607C79E7C65521"
+        }
+      }
+    },
+    {
+      "id": 704,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 177
+          },
+          "utf16le_sha256": "052BA301A250A255CBD2502DA4DCB88B88048F35148DC980A122E5343FE0D79D"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "CB06185F0443DCF8B63CDD956CA57A103DFAFD992F4987E3ACEAA0D16768E105"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 61
+          },
+          "utf16le_sha256": "131826127FBF57ADD70DF96C2CC3CCBD734AD4CE52CBA199D8118EA861BB0C33"
+        }
+      }
+    },
+    {
+      "id": 705,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 204
+          },
+          "utf16le_sha256": "EEDE63A40F0E0D46908C0A051CEEFE78D495C816D2D75F8ED1F15ABDF38F1CB9"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "992A531ACDE17376A5D21BDBE4378454412E3AFB914AD991D4CB4226CE26EFF5"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 57
+          },
+          "utf16le_sha256": "1825382136976785FA598DEC04619F8D38D3DFB6EB03E09AE06A4C8832C53157"
+        }
+      }
+    },
+    {
+      "id": 706,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 150
+          },
+          "utf16le_sha256": "8EEE9EC10DE57A488664D1986E84A5508FD60FB8B608C19513859D34E3C83A99"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "0C73DDC0AE0ABF75341B1470C1CFA88882001EA2B76506B804F65310C3CA72CF"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 51
+          },
+          "utf16le_sha256": "8A29913A1DE9D5E68B8B2778301468CB5DFFF7F045A341776BA3052B1D02DEA7"
+        }
+      }
+    },
+    {
+      "id": 707,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 301
+          },
+          "utf16le_sha256": "F8550FDEE6326094D3B63D0022A25F34E41559EA35CAAD57871058031736297D"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "45A001E5924174D25CA0925F341E12D989F8AAB5031D7BFE7F33BD446380B79E"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 75
+          },
+          "utf16le_sha256": "81DD0569632253C4B46205DDF65234E15184F41CA97CAC1E0132CB880E750A87"
+        }
+      }
+    },
+    {
+      "id": 708,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 188
+          },
+          "utf16le_sha256": "1FB0ED89CD2562CDC6A813EACE27B84E7916E48CB0FAF36C57BAA6986288ECE4"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 70
+          },
+          "utf16le_sha256": "EBCB22B1C1FF3C81547B109D3D71DA7680726ACE491F429D74C9BB139FF385C7"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 73
+          },
+          "utf16le_sha256": "9CBD57FCA298A0D2F07ACDEEF62923564EE763411CFA897BBDE3F9909E700BF4"
+        }
+      }
+    },
+    {
+      "id": 709,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 186
+          },
+          "utf16le_sha256": "88A4310255A89E7D301A7CCA81ECE5EE0983EA503382B0C5F876CD94B530E65C"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "CF578E04ACF38FD8820212E3783401976DC5DD827C0675ED7743D2AE96B443CC"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 63
+          },
+          "utf16le_sha256": "B92052B24566EA2B755A6D442B0EEC5069B54311893C86320DD026563A2FDEBC"
+        }
+      }
+    },
+    {
+      "id": 710,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 182
+          },
+          "utf16le_sha256": "F7FDAA28E8DD7CAE52443181B7CF98ECE06CB30EA1A3B25B144D1266DCF435CD"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "C1BC7E3B90764098820C5E98BFF47FBDDC1AF4B1A41E5E94F8FB6414A92E551A"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 63
+          },
+          "utf16le_sha256": "BD663A0B2E481FBCC354816035514C88F5A52A146CF345D6C220150F0E680CDF"
+        }
+      }
+    },
+    {
+      "id": 711,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 170
+          },
+          "utf16le_sha256": "89010375DA98C42C16171038A7181B75895CB6FCC639D8B0CD7EF15AEA00F5E0"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "8EB8AAA40D30942CB233B2120EFDBBFCB6FF7374C2A15A57D4E19CD5F8C926A3"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 56
+          },
+          "utf16le_sha256": "D965DC0AE51567DA90DC9E298226B0ADA137401AD1DF331BEDF5243EC35E47F2"
+        }
+      }
+    },
+    {
+      "id": 712,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 186
+          },
+          "utf16le_sha256": "9C668047372BFD8C08AE88DC4A49040699602B6B7D94D43B5E8204C08626CB00"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "87453B1299BD35D638A3A0A71A42ECED47C6C1AE9C5CB685F82432EA900E304A"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 62
+          },
+          "utf16le_sha256": "943C41ABAD02609A8599AC3C1005C7C2AC8AB40520BAD9E61F028C2ACD4167CB"
+        }
+      }
+    },
+    {
+      "id": 713,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 181
+          },
+          "utf16le_sha256": "286E3AB3F00050CF04988A81A06B6C80975C644052BD941734CC244655F18776"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "441D792EE23652646DC0995DDD5724B983460EB86B243D3790BBA4562F432CD4"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 62
+          },
+          "utf16le_sha256": "A01D0DB4FCEDE17189EF4016F57BAA59BF2F6D7CD5BE71298B6A49952F4235D6"
+        }
+      }
+    },
+    {
+      "id": 714,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 150
+          },
+          "utf16le_sha256": "B13B070A080090DEFFFBDFD897F5AA7551C62D6E8758401B401BE6A984CF9909"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "0AEFFAB7B07BB6F9CAF11E993237D8597B6C99B44DE86CE917C6870A4D23E5B5"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 53
+          },
+          "utf16le_sha256": "9CB9E21866E40CD2440BB402644AD8603FDE83B4D67D0DB8BE4632A7CFBFC3C1"
+        }
+      }
+    },
+    {
+      "id": 715,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 184
+          },
+          "utf16le_sha256": "037D3E6559B59D030AE947F3D654CDA9ACA5F3262942810235EF518843A4CDFE"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "9E5B46E4DA2F1669A394AE05DCE345A0F94A0AF5DB056B6351E6620A0D57233A"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 61
+          },
+          "utf16le_sha256": "F886F7BE3BA49366CC4A4237A243DE7BD1880ED308A4B3A0655236581FF39B15"
+        }
+      }
+    },
+    {
+      "id": 716,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 169
+          },
+          "utf16le_sha256": "1727BF764DF83974C97F808FBE01D948D4D2D492E4E35BB7B83EDDCE4866F473"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "B2428D1AC1759BE7937EE1FAF521646B1D445EC7A78FB64B18060F26D6FFE155"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 64
+          },
+          "utf16le_sha256": "CAD02B6BDA514D5301C568405A7F8156D72F34A1737FD0B90B5D4A298A15AD1A"
+        }
+      }
+    },
+    {
+      "id": 717,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 164
+          },
+          "utf16le_sha256": "A8B885EA070B3A0A00FB4B8F52A073EC05E1E6176D4F3D7F48982F245A876220"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "ADBBD3CC7EE5375CFA4AA9A966DF787C9E73660EBCFF7A1B57E724BA43B947AE"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 67
+          },
+          "utf16le_sha256": "947839EE5D5343F137A037F50D6F4EB28D3AFE2953C38144326F95A23765D4B4"
+        }
+      }
+    },
+    {
+      "id": 718,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 147
+          },
+          "utf16le_sha256": "1B3DB591BD0821D98AB6B4C85F8EC4F33ECDCF56CAB2AAFD92EDEC2E47FB26D0"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "6D0AC24952EC0D6CFB6F89E01CD6B5049C2205132C731D74D5C3321CE68EB1CD"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 68
+          },
+          "utf16le_sha256": "30EFD04563909626772AA1F441D929D610E5E8CD00AED2CB91BB02CA7C3A0E90"
+        }
+      }
+    },
+    {
+      "id": 719,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 178
+          },
+          "utf16le_sha256": "B7C2FE12A9E781E089C550640C9A848185F194432B7A3FFEFC436DC479F54EC6"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "C9514A50C9476BAAFECDACA69CE2E9CA2AA4D4C6B3C451D5D2CBCE9A24FADB15"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 49
+          },
+          "utf16le_sha256": "D3D4DDB775F1A99424EFB08342CDC6AB5481BEAE94A3C386484FE4F02B4F4380"
+        }
+      }
+    },
+    {
+      "id": 720,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 180
+          },
+          "utf16le_sha256": "12201A97B4F376994B037F137BBC42AA1E41A2CE7AE5180460E488ECA7E7299C"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 70
+          },
+          "utf16le_sha256": "CAB075C7A7E5CACFC2AB75933AEA69540A55684B0C1C5199CB4770B25CDF9730"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 62
+          },
+          "utf16le_sha256": "1D9D62065A5B78F170A8A8DE6D6EF767356994555E4BBB6DE06E6E3514D3169B"
+        }
+      }
+    },
+    {
+      "id": 721,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 184
+          },
+          "utf16le_sha256": "FDA655577201C95C806C0722DC652E6931DEEF8510BEC1E3EA1B7400A5A6899D"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "8526267B34D30A864432A1CF7FD29085C61E60AC38C5F180B42295ACD5FC1614"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 66
+          },
+          "utf16le_sha256": "5F91DCFB46B4E8CBDBB8A44F619B961AD73397AFCC7F919FDF71526EAF1A0FA4"
+        }
+      }
+    },
+    {
+      "id": 722,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 178
+          },
+          "utf16le_sha256": "DA556C018E9D9023314ECB1D50087983612D5524EA00E4EBA003B7E3E16E6089"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "6117802C0BC2684DCD140549DE8D5F2CE368BED7790AA08644A04B28F77E88EC"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 60
+          },
+          "utf16le_sha256": "919B18CDA85A0B559BE8DF9009F74612C4E632641078E41E57E67086687F4638"
+        }
+      }
+    },
+    {
+      "id": 723,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 187
+          },
+          "utf16le_sha256": "53A08B50CDA0431AD0AA256B413639207FE37178877B444E7F1A34D13E5F4A43"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "BDDD730397BAA5E7CFC4837860E76DFA8D7A45F99D58BDCCECBB3189CB56C849"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 59
+          },
+          "utf16le_sha256": "5074789D6E5983B72F81BB0D80753088CA748509322262A15034498A82CFB528"
+        }
+      }
+    },
+    {
+      "id": 724,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 167
+          },
+          "utf16le_sha256": "13CEB12283BBE42FA08A5F13D59265BE4315160B864D2BCA39D8898D4714EF63"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 59
+          },
+          "utf16le_sha256": "1EDB851A741DB04859C641D3356D4E6CBBD010AA9113F49CFB3D93660E21F166"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 52
+          },
+          "utf16le_sha256": "2564100D189FCB3E71A27CF48B398F35037208CF50F3BC2037DB010AC027C17C"
+        }
+      }
+    },
+    {
+      "id": 725,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 168
+          },
+          "utf16le_sha256": "48D3B10BC16EDB40DB65C954110B72E92710344A4416D2C2AB6A51102CD9F42E"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "CA33724A1D9C840D0C71B6E83F58B5EEF436181605CA4C491E1ED24DB8D08C2A"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 59
+          },
+          "utf16le_sha256": "FA313217C769F569B03C127C3AB79AC94248C97E01880BD0C20093392D460623"
+        }
+      }
+    },
+    {
+      "id": 726,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 150
+          },
+          "utf16le_sha256": "DB09927D2C9355A027EE9F0767C14F93052E0477526D1A7CC92C502B9CCD859D"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "DD3FA19D47427F2111064652F0BE533A4C4EEB6BC3394978C8CD9554BD5D3743"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 54
+          },
+          "utf16le_sha256": "9B21D7167B0599F6025CA916B0607CDD6F072D390E372023699FBB244864B5F3"
+        }
+      }
+    },
+    {
+      "id": 727,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 142
+          },
+          "utf16le_sha256": "ACBC4084A42EC7AFE6F372D6F78D4B7ED3BEADA6E4BF2DBC76F0B7B02E7A14B9"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "DDC04A9F903DD8FE39DF6FFD4A1F923AD1CED3DEE5D985FCE42BA1325F70F146"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 62
+          },
+          "utf16le_sha256": "9BDEC39B3FEC4DF0425EF6963943C347E3EA944160F336F478D28E6DA2D384E0"
+        }
+      }
+    },
+    {
+      "id": 728,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 173
+          },
+          "utf16le_sha256": "B34341E4E805487FC59C1E9C50FA2182D3D9D4429D4F5E3FC8910A6A609ED86F"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "0DC9A2492A1C8FBE08611CADF47340CC1B4E74408AB8411BFB4E9FA5F1F79104"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 54
+          },
+          "utf16le_sha256": "991A1AC6564651904B1A68595280995BAAE496B2A920A5DB8DB5ED9DE1922070"
+        }
+      }
+    },
+    {
+      "id": 729,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 242
+          },
+          "utf16le_sha256": "C88E6E6AA351BEC124EC048FF4E5CAF80270DBF262ADC2AF251B4615451F4639"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 69
+          },
+          "utf16le_sha256": "0F2CECFF2F8A24EBD2996171E5E51DBA9D539DF974A69193C2ED43DEDA6DD33D"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 57
+          },
+          "utf16le_sha256": "A332B1D9131987B06CFABD2E52DC0AE6E17BD76BE223F5C150AADF3C781011B1"
+        }
+      }
+    },
+    {
+      "id": 730,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 185
+          },
+          "utf16le_sha256": "7CCF74B19DCD5CB12CC03319E8F60F8DAE828931A6A2F01205D82CE47964F6EC"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "40629219F3AC722F0D6CD316B13F07B263A4413690C18D66347E8CB91C3E2698"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 61
+          },
+          "utf16le_sha256": "E6026FD8207DF7D94D92D29040AD1FA07700708C504D38E809FAFBB25ED136AA"
+        }
+      }
+    },
+    {
+      "id": 731,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 176
+          },
+          "utf16le_sha256": "0DE261D77AC1DE293698BCCFA047572380CFFA4894DF99476F314EE436955BE1"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "38E7007643EAC09647078DF75700476194343BA0FA15D0978F8B2069884C0024"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 62
+          },
+          "utf16le_sha256": "68732654E2E852EDB9447C4113F563BFB09D57C008773A15F9521EAA193B769F"
+        }
+      }
+    },
+    {
+      "id": 732,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 183
+          },
+          "utf16le_sha256": "91E60751F0E6C912FD738317B6409A64FCAEFBD4F1E93A1FB329B804EBF52FC8"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 70
+          },
+          "utf16le_sha256": "CDA69DF97DB92676447B49B89E3337F20EB9DC9535FCE9D92D886CC47E1C04DB"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 57
+          },
+          "utf16le_sha256": "E75D902E14C069DA678837E35A046022E8FCDBF5D6E98FE1CACED0699B17D6D8"
+        }
+      }
+    },
+    {
+      "id": 733,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 166
+          },
+          "utf16le_sha256": "C2214A4A6AA2671852C4571D0A2C4E2A24D0992C95017416D548790409C7CE76"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "5105F57107DAD42C674DF152C0BA92171B8E95E0636C4E1FB0D59AA21B3691B8"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 62
+          },
+          "utf16le_sha256": "B76B52EB6A2C23440E8E638B13F390BAE594290D9D404DC7D44190C6341A52CA"
+        }
+      }
+    },
+    {
+      "id": 734,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 181
+          },
+          "utf16le_sha256": "3E3BA3783150B0296EA1C0A9AFD119E4E529CF576A4E5191412C57B24D48FD7C"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "23B762157025287A389415EE6F6C71FBD90B3D2DF4EF7700B0B08939F7E29C3E"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 59
+          },
+          "utf16le_sha256": "889A4DBEC93A4C60DC63B85A15A56490BD5B385AE09D6CE089458A4E06A1AA93"
+        }
+      }
+    },
+    {
+      "id": 735,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 180
+          },
+          "utf16le_sha256": "C70EEBEC3F7A85B3F8E11CFA552DA488BBDBC0B68AA01F2A4F9278D417DB7049"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "78B2EEF45BD691707F5980CBFFA5D1EA74881FA520FC69BF390C169548B40E66"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 59
+          },
+          "utf16le_sha256": "C7BB9B559DB4D1FA74AD73CF53F65D7D8823B3A1B4A31CB4405C1753E690AA52"
+        }
+      }
+    },
+    {
+      "id": 736,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 132
+          },
+          "utf16le_sha256": "ED42CFF298E35DBFEFE02E984F4008D182EAD879D1EB827C57AEB6643B49475C"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "958F165C0382FF8C49849933092D9C86502DA6618E648AFEDE47FCB6DC1DC0C3"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 67
+          },
+          "utf16le_sha256": "242DFD96B4C0C6E090ACF77EBB1930C3D3C8915A658DDB8093C27D07AE694A5A"
+        }
+      }
+    },
+    {
+      "id": 737,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 166
+          },
+          "utf16le_sha256": "72B92C6AB6425EA4C246D4013FFD463CF617E959A68CC44C385CBB6E6990E2D9"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 69
+          },
+          "utf16le_sha256": "A3C5C637ABA07A41D7EE2BAB1EA4168EE9A49A9540E4B6BD41C02DEB252EDB74"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 60
+          },
+          "utf16le_sha256": "B990344424B0F636850EB1733D844AC93052C9DA245F39D05BF52AB3306CF246"
+        }
+      }
+    },
+    {
+      "id": 738,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 180
+          },
+          "utf16le_sha256": "B54208496E51CBDA7D9D920FEE5DD831D8DF8767893BBF0FD851194483DF3B79"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "EDDEA8E43ADAEE48044CEB354B48EB94B5A5D221653C7E358189BB44C0459A5A"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 63
+          },
+          "utf16le_sha256": "50577A49CB0763A11875D47C9BC56D7E56B1666D0CB61CF6A07CACE859A67592"
+        }
+      }
+    },
+    {
+      "id": 739,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 158
+          },
+          "utf16le_sha256": "EE6E30F3A2B3377D1B12C32834C41B71ED9A3CF3B23400D4A27DDB277D8D8E94"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "40AE1614BD01CE4316F7C437502387F4425227005AAF68DCD5C04E07467F57B7"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 59
+          },
+          "utf16le_sha256": "576ACF9E0F046393E622C237675FA1DFFFD4159AB43B00AEE9337AB4FDAE9261"
+        }
+      }
+    },
+    {
+      "id": 740,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 174
+          },
+          "utf16le_sha256": "3CD6229EE6B39870171FFE1D1B5B6EE56E2E08270F8A2BAE279B72470A06EF7C"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "C26B08C8A6F0819F9CC344D5ADB2C2FCBFD2F2B3CA55DDE05700FC81BA253D8C"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 68
+          },
+          "utf16le_sha256": "5D4F22A90A5A37480972A0D5AC02317EB53E449330E245F7F1E5DB7A7D8157C9"
+        }
+      }
+    },
+    {
+      "id": 741,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 177
+          },
+          "utf16le_sha256": "CA247303AFD78DAFB1945C3BAB56469A920E1C333920A51543F7995445AB37FA"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "DA4AC6AA10D78D2392D6CD6A60A2C1472857AA8A9FDFB4766F618CD33B1EEB4B"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 53
+          },
+          "utf16le_sha256": "E44E45F276D323C74AA54D91BB079B9EAAF2D717AD0A70B1BF1D47BD4F4BA948"
+        }
+      }
+    },
+    {
+      "id": 742,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 187
+          },
+          "utf16le_sha256": "A64C89EE3C0F5F20201A3F75B36AD677E0D766EEC379AFAB6E742A5E1B4A7B71"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 72
+          },
+          "utf16le_sha256": "76700FC2BAFA1DABF48E7F5E7223BF881CB4F487072161BC1B9DA07BBAE73488"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 65
+          },
+          "utf16le_sha256": "80DF7527B10269D4259CA00C80B6609D40E077BD0F28281F057C668A8039787B"
+        }
+      }
+    },
+    {
+      "id": 743,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 175
+          },
+          "utf16le_sha256": "BAE8B1583465645BB921BE1707E891ABFE6EBFA571C6D7F49E57F0CBB3925C50"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 71
+          },
+          "utf16le_sha256": "FA78FA8ABEF02CFAADAC8FB9A0DBAC69A866ECC6A50C3530D026F5FCB32340F0"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 63
+          },
+          "utf16le_sha256": "843B1B1A4785628D58651A5D7BC867E8E59FE59CF5A79200C124781BC69D19B3"
+        }
+      }
+    },
+    {
+      "id": 744,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 188
+          },
+          "utf16le_sha256": "C9DA660A4D01289D8C220C1EAB41B84B6D261A9FBABD7F4D43DB69DF9523AF1D"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 69
+          },
+          "utf16le_sha256": "06D183E14F3D3B1062DAA74BC6745C45B151BE71CFC36E99BC2D57F08D737B64"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 59
+          },
+          "utf16le_sha256": "3A34A05049495BB5EE92D5D9A848EDE2AD5F050EC4A5D04D2D962482CE874ABF"
+        }
+      }
+    },
+    {
+      "id": 745,
+      "manual_semantic_crosscheck": true,
+      "references": {
+        "EN": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 184
+          },
+          "utf16le_sha256": "89F98902B1A5510B5032BCA63D4505AE178C31513426B3CA24C79D8633A5EF8D"
+        },
+        "JP": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 61
+          },
+          "utf16le_sha256": "0E8DF34769FE411DF9882A83D15221218C7D8B845CFC433A9A25DCFDE49CA012"
+        },
+        "SC": {
+          "structure": {
+            "control_codepoints": [],
+            "custom_bracket_placeholders": [],
+            "esc_sequences": [],
+            "leading_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "line_breaks": [],
+            "printf_tokens": [],
+            "private_use_codepoints": [],
+            "trailing_whitespace_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "unknown_percent_count": 0,
+            "utf16_code_units": 55
+          },
+          "utf16le_sha256": "E8B76F76E3682EBCD29717E7A3D0EE84A644A27ADC13E3C3559EABF583EF970C"
+        }
+      }
+    }
+  ],
+  "entry_count": 45,
+  "resource": "msgbre",
+  "schema": "nobu16.kr.msgbre-alignment-evidence.v5",
+  "scope": {
+    "end_id": 745,
+    "next_start_id": 746,
+    "selected_nonempty_entry_count": 45,
+    "start_id": 701
+  },
+  "source_files": {
+    "EN": {
+      "logical_path": "MSG_PK/EN/msgbre.bin",
+      "packed_sha256": "6A3F7415187F8D7E4442972C7F6AAA4C3D2C2CD5EE4584B72D130295FEDCBA47",
+      "raw_sha256": "8445078E7691461D791364208A4286A00D73F0FE4DF73569D376FE9E05986F64",
+      "raw_size": 836320,
+      "size": 295601,
+      "string_count": 3000
+    },
+    "JP": {
+      "logical_path": "MSG_PK/JP/msgbre.bin",
+      "packed_sha256": "DA9BE8242CF0A90592D573DF676ECDE26566B11C5707273EEB4AF5BA54132AD5",
+      "raw_sha256": "02237F07362E0E3DFF92C0E999A29B887EBE5971B1C3EF8F26EAA5C969FB9668",
+      "raw_size": 333516,
+      "size": 221127,
+      "string_count": 3000
+    },
+    "SC": {
+      "logical_path": "MSG_PK/SC/msgbre.bin",
+      "packed_sha256": "AD1FEC313228AADB00581C25AE59D8C6AFF54DD771A4D0F7BC35CD1B44D77B8D",
+      "raw_sha256": "E0343DCDB1BE7C62E515DE52B9045DC54A4D8FE77BF9B6F0836A3478CBD77779",
+      "raw_size": 291256,
+      "size": 226918,
+      "string_count": 3000
+    }
+  }
+}

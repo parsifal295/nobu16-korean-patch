@@ -1,0 +1,72 @@
+{
+  "schema": "nobu16.kr.font-seoulhangang-v1-manifest.v1",
+  "status": "local_private_build_ready_runtime_unverified",
+  "target": {
+    "runtime": "NOBU16PK.exe",
+    "resource": "RES_SC/res_lang.bin",
+    "stock_sha256": "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99",
+    "g1n_entries": [6, 7],
+    "file_only": true
+  },
+  "font_source": {
+    "family": "SeoulHangang M",
+    "file_name": "SeoulHangangM.ttf",
+    "file_sha256": "D27E1B26B55E507BEC1045962C954CF426D79605009C720FAD1C9EF808E312CB",
+    "file_size": 7627124,
+    "official_download_page": "https://www.seoul.go.kr/seoul/font.do",
+    "official_archive_url": "https://www.seoul.go.kr/upload/seoul/font/seoul_font3.zip",
+    "official_archive_sha256": "7AB485B98F5B1A1B05CFD04484DD49A62F856BE8506223CD99E5EA1A33E400A7",
+    "weight_selection": "Switch v1.1 README names SeoulHangang but does not identify M/L/B/EB. v1 fixes the official M file as one reproducible local input; it does not assert pixel identity with Switch.",
+    "license": "공공누리 제1유형(출처표시)",
+    "attribution": "출처: 서울특별시, 서울서체 서울한강체 (https://www.seoul.go.kr/seoul/font.do)",
+    "redistribution_policy": "서울시 안내의 판매·유상양도·무단배포 금지 고지를 보수적으로 적용한다. 원본 TTF/OTF, 래스터 픽셀, 완성 G1N/LINK/res_lang.bin을 저장소·공개 배포물에 포함하지 않는다."
+  },
+  "switch_read_only_evidence": {
+    "path": "workstreams/font_seoulhangang_v1/evidence/switch_pc_g1n_compatibility.v1.json",
+    "sha256": "ABF1837935F020E3B721C5745E688F5B70A28F0DA982C6A7F209DE7E49DBABAE",
+    "raw_copy_compatible": false,
+    "method": "Switch v1.1 RES_JP와 PC stock RES_SC의 LINK/G1N 헤더·해시·카운트만 read-only 비교"
+  },
+  "pinned_public_korean_demand": {
+    "source_entry_count": 33256,
+    "codepoint_count": 1238,
+    "codepoints_sha256": "B0B920BF63E1E5B90D2446CF43F3BD5260B093CFF229F7D450A7AE1D30CE13CE",
+    "hangul_syllable_count": 1101,
+    "hangul_syllables_sha256": "5CFD9B674D31D3E8615C2F8729EDB44B44889A7FF4DA2E5F168A72B5BE2DC6CF",
+    "non_hangul_count": 137,
+    "non_hangul_sha256": "508D73EB78150477F9E702757C06FF31B05966B3715CFE474B010BE853BD0736",
+    "raster_codepoint_count": 1171,
+    "raster_codepoints_sha256": "5469010C9246D0CF50B9098347DED2E61A7DCD2D89414DDB81A772B4C1F207F9",
+    "append_contract": [
+      { "entry": 6, "table": 0, "count": 1106, "codepoints_sha256": "746990AC04F9A3CCDE6C372FD4060B7B9C0B50D2ADC74A9DC86ACE2A41962CC9" },
+      { "entry": 6, "table": 1, "count": 1171, "codepoints_sha256": "5469010C9246D0CF50B9098347DED2E61A7DCD2D89414DDB81A772B4C1F207F9" },
+      { "entry": 7, "table": 0, "count": 1106, "codepoints_sha256": "746990AC04F9A3CCDE6C372FD4060B7B9C0B50D2ADC74A9DC86ACE2A41962CC9" },
+      { "entry": 7, "table": 1, "count": 1171, "codepoints_sha256": "5469010C9246D0CF50B9098347DED2E61A7DCD2D89414DDB81A772B4C1F207F9" }
+    ],
+    "sources": [
+      { "path": "data/public/msgui_ko_0000_5099.v0.2.json", "sha256": "5DC3C0E14E2131FC2BB4252DF3B25E1F10E462205EAB715E2923298A714B8C14", "entry_count": 4037 },
+      { "path": "workstreams/switch_msgev_v11/public/msgev_ko_switch_v11_ported_7025.v1.json", "sha256": "71652CACEB757BFFF47FB119789150BD841DD9FF6B6AC180D5B2AA1B06231703", "entry_count": 7025 },
+      { "path": "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json", "sha256": "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E", "entry_count": 16176 },
+      { "path": "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json", "sha256": "245A73AA77B5649B686CE5A459C299CFBF7EE8EF5A6CDC56A7EB11288DECDFB5", "entry_count": 6018 }
+    ]
+  },
+  "public_payload_policy": {
+    "commercial_game_original_bytes": false,
+    "switch_complete_resource": false,
+    "official_font_ttf_or_otf": false,
+    "seoulhangang_raster_pixels": false,
+    "complete_g1n_or_link": false,
+    "complete_res_lang": false
+  },
+  "structural_build_verification": {
+    "path": "workstreams/font_seoulhangang_v1/verification.v1.json",
+    "sha256": "12482E541ED3F265D3FEB2525C7213C8FB77BEB40972BCDD6BD684FB10EB978B",
+    "a_b_candidate_byte_identical": true,
+    "g1n_structural_validation": true,
+    "installed_game_files_modified": false
+  },
+  "runtime_validation": {
+    "performed": false,
+    "blocker": "실제 게임 설치본은 이 작업에서 수정하지 않으며, 별도 백업·화면·종료 검증 후에만 로컬 후보를 수동 적용할 수 있음"
+  }
+}
