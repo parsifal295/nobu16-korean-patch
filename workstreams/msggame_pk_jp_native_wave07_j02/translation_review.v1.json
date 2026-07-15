@@ -1,0 +1,25 @@
+{
+  "batch_id": "j02",
+  "canonical_reference_count": 16,
+  "commercial_source_text_in_public_artifacts": false,
+  "entry_count": 969,
+  "evidence": {
+    "overlay_sha256": "BE1EA6D80CD813ECEB8D62ACC4060AC027E834CD4ED569703BC4A8C0BD53F647",
+    "reviewed_coordinate_count": 969,
+    "validation_sha256": "C6C2165F0DE832CE9AE07EDEF975EC72111AEC760BB893EAB499F6E434E968B6"
+  },
+  "legacy_seed_coordinate_count": 538,
+  "manual_record_count": 217,
+  "origin_counts": {
+    "legacy_exact_coordinate_context_reviewed": 244,
+    "new_manual_context_translation": 344,
+    "repeated_source_canonical_review": 217,
+    "repeated_source_priority_review": 43,
+    "segmentation_context_review": 121
+  },
+  "private_context_committed": false,
+  "review_scope": "all_assigned_coordinates_in_record_context",
+  "reviewed_resegmented_record_count": 111,
+  "schema": "nobu16.kr.msggame-jp-wave-review.v1",
+  "status": "PASS"
+}
