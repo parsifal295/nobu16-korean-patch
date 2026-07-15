@@ -1,439 +1,112 @@
 #!/usr/bin/env python3
-"""Regenerate the README's file-by-file Korean translation progress table."""
+"""Regenerate the public Steam JP v1.1.7 progress block in README.md."""
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import sys
-from dataclasses import dataclass
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
-PROGRESS = ROOT / "data" / "public" / "translation_progress.v0.1.json"
-TARGET_CATALOG = ROOT / "data" / "public" / "translation_target_keys.v0.1.json"
+PROGRESS = ROOT / "data" / "public" / "steam_jp_117_progress.v1.json"
 START = "<!-- translation-progress:start -->"
 END = "<!-- translation-progress:end -->"
-SHARED_STRDATA_PATH = "MSG/SC/strdata.bin"
-RUNTIME_PK_PREFIX = "MSG_PK/JP/"
-RUNTIME_SHARED_STRDATA_PATH = "MSG/JP/strdata.bin"
-EXPECTED_STAGE_PATHS = {
-    "RES_JP/res_lang.bin",
-    "RES_JP_PK/res_lang_pk.bin",
-}
 
 
-def load_json(path: Path) -> dict:
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    if not isinstance(payload, dict):
-        raise ValueError(f"JSON root is not an object: {path}")
+def load_progress() -> dict:
+    payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
+    if payload.get("schema") != "nobu16.kr.steam-jp-1.1.7-progress.v1":
+        raise ValueError("unsupported Steam JP progress schema")
+    runtime = payload.get("runtime", {})
+    expected_runtime = {
+        "distribution": "Steam",
+        "pk_version": "1.1.7",
+        "steam_build_id": 18823764,
+        "language_route": "JP",
+        "launcher_language": "日本語 / Japanese",
+    }
+    if runtime != expected_runtime:
+        raise ValueError(f"unexpected runtime contract: {runtime!r}")
+    translation = payload.get("translation")
+    if not isinstance(translation, dict):
+        raise ValueError("progress payload has no translation object")
     return payload
 
 
-def overlay_entry_key(entry: dict, path: Path) -> tuple[object, ...]:
-    entry_id = entry.get("id")
-    if isinstance(entry_id, int):
-        return ("id", entry_id)
-    block_slot = (entry.get("block_id"), entry.get("slot_id"))
-    if all(isinstance(value, int) and not isinstance(value, bool) for value in block_slot):
-        return ("block_slot", *block_slot)
-    coordinate_fields = ("block_id", "record_id", "literal_id")
-    coordinate = tuple(entry.get(field) for field in coordinate_fields)
-    if all(isinstance(value, int) and not isinstance(value, bool) for value in coordinate):
-        return ("msggame", *coordinate)
-    raise ValueError(
-        f"overlay entry has no integer id, block/slot, or msggame coordinate: {path}"
-    )
-
-
-def overlay_stats(
-    patterns: list[str], completed_statuses: set[str]
-) -> tuple[set[tuple[object, ...]], set[tuple[object, ...]]]:
-    ids: set[tuple[object, ...]] = set()
-    completed: set[tuple[object, ...]] = set()
-    matched: set[Path] = set()
-    for pattern in patterns:
-        paths = sorted(ROOT.glob(pattern))
-        if not paths:
-            raise ValueError(f"overlay glob matched no files: {pattern}")
-        for path in paths:
-            if path in matched:
-                continue
-            matched.add(path)
-            payload = load_json(path)
-            entries = payload.get("entries")
-            if not isinstance(entries, list):
-                raise ValueError(f"overlay has no entries list: {path}")
-            defaults = payload.get("defaults")
-            translation_policy = payload.get("translation_policy")
-            default_status = None
-            if isinstance(defaults, dict):
-                default_status = defaults.get("status")
-            if default_status is None and isinstance(translation_policy, dict):
-                default_status = translation_policy.get("status")
-            for entry in entries:
-                if not isinstance(entry, dict):
-                    raise ValueError(f"overlay entry is not an object: {path}")
-                entry_id = overlay_entry_key(entry, path)
-                ids.add(entry_id)
-                status = entry.get("status", default_status)
-                if status in completed_statuses:
-                    completed.add(entry_id)
-    return ids, completed
-
-
-def canonical_hash(value: object) -> str:
-    encoded = json.dumps(
-        value, ensure_ascii=True, separators=(",", ":"), sort_keys=True
-    ).encode("utf-8")
-    return hashlib.sha256(encoded).hexdigest().upper()
-
-
-def load_target_keys() -> dict[str, set[tuple[object, ...]]]:
-    catalog = load_json(TARGET_CATALOG)
-    if catalog.get("schema") != "nobu16.kr.translation-target-keys.v0.1":
-        raise ValueError("unsupported translation target-key catalog schema")
-    if catalog.get("source_free") is not True or catalog.get("contains_source_text") is not False:
-        raise ValueError("translation target-key catalog is not source-free")
-    resources = catalog.get("resources")
-    if not isinstance(resources, list):
-        raise ValueError("translation target-key catalog has no resources list")
-
-    by_path: dict[str, set[tuple[object, ...]]] = {}
-    aggregate: dict[str, object] = {}
-    for resource in resources:
-        if not isinstance(resource, dict):
-            raise ValueError("translation target-key resource is not an object")
-        path = resource.get("path")
-        key_kind = resource.get("key_kind")
-        if not isinstance(path, str) or path in by_path:
-            raise ValueError(f"invalid or duplicate translation target path: {path!r}")
-        if not (path.startswith("MSG_PK/SC/") or path == SHARED_STRDATA_PATH):
-            raise ValueError(f"target catalog contains an unsupported runtime path: {path}")
-        if path == SHARED_STRDATA_PATH and key_kind != "block_slot_coordinate":
-            raise ValueError("shared strdata target keys must use block_slot_coordinate")
-        if key_kind == "id":
-            raw_keys = resource.get("target_ids")
-            if not isinstance(raw_keys, list) or not all(
-                isinstance(value, int) and not isinstance(value, bool) for value in raw_keys
-            ):
-                raise ValueError(f"target_ids are invalid for {path}")
-            if raw_keys != sorted(set(raw_keys)):
-                raise ValueError(f"target_ids are not sorted and unique for {path}")
-            keys = {("id", value) for value in raw_keys}
-        elif key_kind == "msggame_coordinate":
-            raw_keys = resource.get("target_coordinates")
-            if not isinstance(raw_keys, list):
-                raise ValueError(f"target_coordinates are invalid for {path}")
-            coordinates: list[tuple[int, int, int]] = []
-            for value in raw_keys:
-                if not (
-                    isinstance(value, list)
-                    and len(value) == 3
-                    and all(isinstance(part, int) and not isinstance(part, bool) for part in value)
-                ):
-                    raise ValueError(f"invalid msggame coordinate for {path}: {value!r}")
-                coordinates.append(tuple(value))
-            if coordinates != sorted(set(coordinates)):
-                raise ValueError(f"target_coordinates are not sorted and unique for {path}")
-            keys = {("msggame", *value) for value in coordinates}
-        elif key_kind == "block_slot_coordinate":
-            if path != SHARED_STRDATA_PATH:
-                raise ValueError(
-                    f"block_slot_coordinate is only supported for {SHARED_STRDATA_PATH}"
-                )
-            raw_keys = resource.get("target_coordinates")
-            if not isinstance(raw_keys, list):
-                raise ValueError(f"target_coordinates are invalid for {path}")
-            block_slots: list[tuple[int, int]] = []
-            for value in raw_keys:
-                if not (
-                    isinstance(value, list)
-                    and len(value) == 2
-                    and all(isinstance(part, int) and not isinstance(part, bool) for part in value)
-                ):
-                    raise ValueError(f"invalid block/slot coordinate for {path}: {value!r}")
-                block_slots.append(tuple(value))
-            if block_slots != sorted(set(block_slots)):
-                raise ValueError(f"target_coordinates are not sorted and unique for {path}")
-            keys = {("block_slot", *value) for value in block_slots}
-        else:
-            raise ValueError(f"unknown target key kind {key_kind!r} for {path}")
-
-        if int(resource.get("target_count", -1)) != len(keys):
-            raise ValueError(f"target_count mismatch for {path}")
-        if resource.get("target_keys_sha256") != canonical_hash(raw_keys):
-            raise ValueError(f"target_keys_sha256 mismatch for {path}")
-        by_path[path] = keys
-        aggregate[path] = raw_keys
-
-    if int(catalog.get("resource_count", -1)) != len(by_path):
-        raise ValueError("target catalog resource_count mismatch")
-    if int(catalog.get("target_total", -1)) != sum(len(keys) for keys in by_path.values()):
-        raise ValueError("target catalog target_total mismatch")
-    if catalog.get("all_target_keys_sha256") != canonical_hash(aggregate):
-        raise ValueError("target catalog aggregate key hash mismatch")
-    return by_path
-
-
-@dataclass(frozen=True)
-class TargetedOverlayStats:
-    overlay_coverage: int
-    overlay_completed: int
-    target_coverage: int
-    target_completed: int
-    non_target_coverage: int
-    non_target_completed: int
-
-
-def targeted_overlay_stats(
-    patterns: list[str],
-    completed_statuses: set[str],
-    target_keys: set[tuple[object, ...]],
-) -> TargetedOverlayStats:
-    if patterns:
-        coverage_keys, completed_keys = overlay_stats(patterns, completed_statuses)
-    else:
-        coverage_keys, completed_keys = set(), set()
-    if not completed_keys.issubset(coverage_keys):
-        raise ValueError("completed overlay keys are not covered by the overlay union")
-    return TargetedOverlayStats(
-        overlay_coverage=len(coverage_keys),
-        overlay_completed=len(completed_keys),
-        target_coverage=len(coverage_keys & target_keys),
-        target_completed=len(completed_keys & target_keys),
-        non_target_coverage=len(coverage_keys - target_keys),
-        non_target_completed=len(completed_keys - target_keys),
-    )
-
-
 def percent(done: int, total: int) -> float:
-    return 0.0 if total == 0 else done * 100.0 / total
-
-
-def progress_bar(value: float) -> str:
-    filled = max(0, min(10, round(value / 10.0)))
-    return "█" * filled + "░" * (10 - filled)
-
-
-def expected_runtime_path(catalog_path: str) -> str:
-    """Map the pinned SC catalog identity to its exact Japanese runtime path."""
-    pk_catalog_prefix = "MSG_PK/SC/"
-    if catalog_path.startswith(pk_catalog_prefix):
-        filename = catalog_path.removeprefix(pk_catalog_prefix)
-        if not filename or "/" in filename:
-            raise ValueError(f"invalid PK catalog path: {catalog_path}")
-        return f"{RUNTIME_PK_PREFIX}{filename}"
-    if catalog_path == SHARED_STRDATA_PATH:
-        return RUNTIME_SHARED_STRDATA_PATH
-    raise ValueError(f"unsupported SC catalog path: {catalog_path}")
-
-
-def validate_runtime_path(resource: dict) -> str:
-    catalog_path = resource["path"]
-    runtime_path = resource.get("runtime_path")
-    expected = expected_runtime_path(catalog_path)
-    if runtime_path != expected:
-        raise ValueError(
-            f"runtime_path must be the exact SC-to-JP mapping for {catalog_path}: "
-            f"expected {expected!r}, got {runtime_path!r}"
-        )
-    return runtime_path
-
-
-def render_string_row(
-    resource: dict,
-    *,
-    completed_statuses: set[str],
-    target_keys_by_path: dict[str, set[tuple[object, ...]]],
-    string_paths: set[str],
-    runtime_paths: set[str],
-) -> tuple[str, int, int, TargetedOverlayStats]:
-    path = resource["path"]
-    runtime_path = validate_runtime_path(resource)
-    note = resource["note"]
-    total = int(resource["translation_target_total"])
-    total_slots = int(resource["total_slots"])
-    if path not in target_keys_by_path:
-        raise ValueError(f"target catalog has no keys for {path}")
-    if path in string_paths:
-        raise ValueError(f"duplicate string progress resource: {path}")
-    string_paths.add(path)
-    if runtime_path in runtime_paths:
-        raise ValueError(f"duplicate runtime string resource: {runtime_path}")
-    runtime_paths.add(runtime_path)
-    target_keys = target_keys_by_path[path]
-    if len(target_keys) != total:
-        raise ValueError(
-            f"translation_target_total={total}, target catalog={len(target_keys)} for {path}"
-        )
-    patterns = resource.get("overlay_globs", [])
-    stats = targeted_overlay_stats(patterns, completed_statuses, target_keys)
-    coverage = stats.target_coverage
-    done = stats.target_completed
-    if coverage > total:
-        raise ValueError(f"draft ids exceed translation target count for {path}")
-    if done > coverage:
-        raise ValueError(f"completed ids exceed draft coverage for {path}")
-    value = percent(done, total)
-    row = (
-        f"| `{runtime_path}` | {done:,} / {total:,} | "
-        f"{value:.1f}% `{progress_bar(value)}` | {note} |"
-    )
-    return row, done, total, stats
+    if done < 0 or total <= 0 or done > total:
+        raise ValueError(f"invalid progress fraction: {done}/{total}")
+    return done * 100.0 / total
 
 
 def render() -> str:
-    config = load_json(PROGRESS)
-    if config.get("runtime_target_language") != "JP":
-        raise ValueError("runtime_target_language must be JP")
-    target_keys_by_path = load_target_keys()
-    resources = config.get("resources")
-    if not isinstance(resources, list):
-        raise ValueError("progress config has no resources list")
-    shared_resources = config.get("shared_strings")
-    if not isinstance(shared_resources, list) or len(shared_resources) != 1:
-        raise ValueError("progress config must have exactly one shared_strings resource")
-    completed_statuses = set(config.get("completed_statuses", []))
-    if not completed_statuses:
-        raise ValueError("progress config has no completed_statuses")
+    payload = load_progress()
+    translation = payload["translation"]
+    msgui = translation["msgui"]
+    common = translation["common_messages"]
+    msggame = translation["msggame"]
+    strdata = translation["strdata"]
+    fonts = translation["fonts"]
 
-    rows: list[str] = []
-    stage_rows: list[str] = []
-    pk_done = 0
-    pk_coverage = 0
-    pk_non_target_coverage = 0
-    pk_non_target_completed = 0
-    pk_total = 0
-    pk_string_resources = 0
-    pk_stage_done = 0
-    pk_stage_total = 0
-    pk_stage_resources = 0
-    shared_done = 0
-    shared_coverage = 0
-    shared_non_target_coverage = 0
-    shared_non_target_completed = 0
-    shared_total = 0
-    shared_string_resources = 0
-    string_paths: set[str] = set()
-    runtime_paths: set[str] = set()
-    stage_paths: set[str] = set()
-    for resource in resources:
-        if not isinstance(resource, dict):
-            raise ValueError("progress resource is not an object")
-        path = resource["path"]
-        kind = resource["kind"]
-        note = resource["note"]
-        if kind == "strings":
-            if not path.startswith("MSG_PK/SC/"):
-                raise ValueError(f"runtime progress must not include non-PK resource: {path}")
-            row, done, total, stats = render_string_row(
-                resource,
-                completed_statuses=completed_statuses,
-                target_keys_by_path=target_keys_by_path,
-                string_paths=string_paths,
-                runtime_paths=runtime_paths,
-            )
-            rows.append(row)
-            pk_done += done
-            pk_coverage += stats.target_coverage
-            pk_non_target_coverage += stats.non_target_coverage
-            pk_non_target_completed += stats.non_target_completed
-            pk_total += total
-            pk_string_resources += 1
-        elif kind == "records":
-            amount = "0 / 조사 중"
-            rate = "—"
-            rows.append(f"| `{path}` | {amount} | {rate} | {note} |")
-        elif kind == "stages":
-            done = int(resource["done"])
-            total = int(resource["total"])
-            unit = resource["unit"]
-            value = percent(done, total)
-            amount = f"{done:,} / {total:,} {unit}"
-            rate = f"{value:.1f}% `{progress_bar(value)}`"
-            if path not in EXPECTED_STAGE_PATHS:
-                raise ValueError(f"unsupported Japanese runtime stage path: {path}")
-            if path in stage_paths:
-                raise ValueError(f"duplicate Japanese runtime stage path: {path}")
-            stage_paths.add(path)
-            pk_stage_done += done
-            pk_stage_total += total
-            pk_stage_resources += 1
-            stage_rows.append(f"| `{path}` | {amount} | {rate} | {note} |")
-        else:
-            raise ValueError(f"unknown progress kind {kind!r} for {path}")
+    if msgui["safely_mapped"] != msgui["effective_changes"] + msgui["source_equal_noops"]:
+        raise ValueError("msgui safe-map accounting mismatch")
+    if msgui["catalog_entries"] != msgui["safely_mapped"] + msgui["withheld"]:
+        raise ValueError("msgui catalog accounting mismatch")
+    if msggame["semantic_targets"] != msggame["applied"] + msggame["remaining"]:
+        raise ValueError("msggame accounting mismatch")
+    if strdata["safe_targets"] != strdata["applied"] + strdata["withheld"]:
+        raise ValueError("strdata accounting mismatch")
+    if fonts["containers"] != fonts["verified"]:
+        raise ValueError("font verification is incomplete")
 
-    for resource in shared_resources:
-        if not isinstance(resource, dict) or resource.get("kind") != "strings":
-            raise ValueError("shared_strings resource must be a strings object")
-        if resource.get("path") != SHARED_STRDATA_PATH:
-            raise ValueError(
-                f"unsupported shared runtime string resource: {resource.get('path')!r}"
-            )
-        row, done, total, stats = render_string_row(
-            resource,
-            completed_statuses=completed_statuses,
-            target_keys_by_path=target_keys_by_path,
-            string_paths=string_paths,
-            runtime_paths=runtime_paths,
-        )
-        rows.append(row)
-        shared_done += done
-        shared_coverage += stats.target_coverage
-        shared_non_target_coverage += stats.non_target_coverage
-        shared_non_target_completed += stats.non_target_completed
-        shared_total += total
-        shared_string_resources += 1
-
-    rows.extend(stage_rows)
-
-    if string_paths != set(target_keys_by_path):
-        missing = sorted(set(target_keys_by_path) - string_paths)
-        extra = sorted(string_paths - set(target_keys_by_path))
-        raise ValueError(f"progress/target catalog resource mismatch: missing={missing}, extra={extra}")
-    expected_runtime_paths = {
-        expected_runtime_path(path) for path in target_keys_by_path
-    }
-    if runtime_paths != expected_runtime_paths:
-        missing = sorted(expected_runtime_paths - runtime_paths)
-        extra = sorted(runtime_paths - expected_runtime_paths)
-        raise ValueError(
-            f"Japanese runtime resource mismatch: missing={missing}, extra={extra}"
-        )
-    if stage_paths != EXPECTED_STAGE_PATHS:
-        missing = sorted(EXPECTED_STAGE_PATHS - stage_paths)
-        extra = sorted(stage_paths - EXPECTED_STAGE_PATHS)
-        raise ValueError(
-            f"Japanese font stage resource mismatch: missing={missing}, extra={extra}"
-        )
-
-    pk_overall = percent(pk_done, pk_total)
-    shared_overall = percent(shared_done, shared_total)
+    common_total = common["applied"] + common["unresolved"]
     lines = [
         START,
+        "| 영역 | 적용 현황 | 남은 작업 |",
+        "|---|---:|---:|",
         (
-            f"- 일본어 PK 실행 경로 `MSG_PK/JP`의 {pk_string_resources}개 메시지 리소스: "
-            f"**번역 완료 {pk_done:,} / {pk_total:,} ({pk_overall:.1f}%)**, "
-            f"비대상 활성 **{pk_non_target_coverage:,}개**는 별도 집계"
+            f"| PK UI `msgui.bin` | 안전 이식 {msgui['safely_mapped']:,} / "
+            f"{msgui['catalog_entries']:,} "
+            f"({percent(msgui['safely_mapped'], msgui['catalog_entries']):.1f}%) | "
+            f"{msgui['withheld']:,} |"
         ),
         (
-            f"- 일본어 PK 실행에서 함께 로드할 공용 경로 `{RUNTIME_SHARED_STRDATA_PATH}`의 "
-            f"{shared_string_resources}개 문자열 리소스: **번역 완료 "
-            f"{shared_done:,} / {shared_total:,} ({shared_overall:.1f}%)**"
+            f"| PK 공용 메시지 5종 | 적용 {common['applied']:,} / {common_total:,} "
+            f"({percent(common['applied'], common_total):.1f}%) | "
+            f"{common['unresolved']:,} |"
         ),
         (
-            f"- 일본어 글꼴 경로 `RES_JP`, `RES_JP_PK`의 {pk_stage_resources}개 정적·오프라인 검증 단계: "
-            f"**{pk_stage_done} / {pk_stage_total} 완료** — 로컬 비Steam 10파일 조합 화면 PASS, "
-            "Steam 일본어 런타임 화면 QA 대기"
+            f"| PK 본문 `msggame.bin` | 적용 {msggame['applied']:,} / "
+            f"{msggame['semantic_targets']:,} "
+            f"({percent(msggame['applied'], msggame['semantic_targets']):.1f}%) | "
+            f"{msggame['remaining']:,} |"
+        ),
+        (
+            f"| 공용 `strdata.bin` | 안전 이식 {strdata['applied']:,} / "
+            f"{strdata['safe_targets']:,} | {strdata['withheld']:,} |"
+        ),
+        (
+            f"| 일본어 경로 한글 폰트 | {fonts['verified']} / "
+            f"{fonts['containers']} 실기 확인 | 0 |"
         ),
         "",
-        "| 한글화 대상 파일 | 번역 완료 / 대상 | 진행률 | 현재 상태 |",
-        "|---|---:|---:|---|",
-        *rows,
+        (
+            f"`msgui.bin`의 안전 이식 {msgui['safely_mapped']:,}건 중 실제 문구 변경은 "
+            f"{msgui['effective_changes']:,}건이고, {msgui['source_equal_noops']:,}건은 원문과"
+        ),
+        (
+            f"동일합니다. 공용 메시지의 중복 문맥 {common['duplicate_context_collapsed']:,}건은 "
+            "동일 대상으로 합쳐졌습니다. 수치는"
+        ),
+        "구조를 보존해 현재 Steam 1.1.7 파일에 안전하게 이식된 항목 기준이며, 줄바꿈·잘림·",
+        "문맥 검수 완료율을 뜻하지는 않습니다.",
+        "",
+        "Steam PK v1.1.7 실기에서 일본어 런처, 한글 타이틀 안내, 한글 메인 메뉴와 두 한글",
+        "폰트 컨테이너를 확인했습니다. 종료 확인창 등 아직 번역되지 않은 일본어 UI가",
+        "남아 있습니다.",
         END,
     ]
     return "\n".join(lines)
@@ -457,15 +130,15 @@ def main() -> int:
     expected = replace_block(current, render())
     if args.check:
         if current != expected:
-            print("README translation progress is stale; run tools/update_readme_progress.py")
+            print("README Steam JP progress is stale; run tools/update_readme_progress.py")
             return 1
-        print("README translation progress is current")
+        print("README Steam JP progress is current")
         return 0
     if current != expected:
         README.write_text(expected, encoding="utf-8", newline="\n")
-        print("updated README translation progress")
+        print("updated README Steam JP progress")
     else:
-        print("README translation progress already current")
+        print("README Steam JP progress already current")
     return 0
 
 

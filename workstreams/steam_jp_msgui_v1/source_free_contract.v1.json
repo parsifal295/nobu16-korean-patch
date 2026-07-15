@@ -1,0 +1,54 @@
+{
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "3D790A1F28199265260B6C1529956D686480C7181A1EA65097E0C6F624005DFF",
+    "packed_size": 118279,
+    "raw_sha256": "38F454D090FE70112C2E8FA42EA094A7944ECB40CC4459AD7528BD6810979BB7",
+    "raw_size": 117792,
+    "string_count": 5100
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgui.bin"
+  },
+  "overlay": {
+    "effective_change_count": 3614,
+    "entry_count": 3693,
+    "relative_path": "workstreams/steam_jp_msgui_v1/public/msgui_ko_pk_jp_steam_native_v1.json",
+    "sha256": "1581C52901FE536AF45F4FD6225E8D94795FDA883798947B6610D5CF86E09424",
+    "unmapped_entry_count": 344
+  },
+  "remap_audit": {
+    "relative_path": "workstreams/steam_jp_msgui_v1/remap_audit.v1.json",
+    "sha256": "B9E65B6360AAA48F097873D218052A8A1D74CDB6FE462BD79963A17D414A397E"
+  },
+  "required_proofs": {
+    "exact_jp_format_profile_required": true,
+    "installed_stock_rechecked_after_build": true,
+    "nonselected_strings_and_utf16le_payloads_preserved": true,
+    "opaque_prefix_preserved_except_logical_size": true,
+    "packed_and_raw_stock_pinned": true,
+    "packed_build_reproducible_ab": true,
+    "per_entry_jp_source_hash_pinned": true,
+    "record_count_and_order_preserved": true
+  },
+  "resource": "MSG_PK/JP/msgui.bin",
+  "runtime_route": {
+    "game_root_default": "F:/SteamLibrary/steamapps/common/NOBU16",
+    "installed_game_file_modified_by_builder": false,
+    "language": "JP",
+    "legacy_candidate_binary_used": false,
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgui-source-free-contract.v1",
+  "source_free": true,
+  "stock_jp": {
+    "packed_sha256": "9775D4B7253828899F7EF0DF2E88AB28121ACB260E1381F3D706C6A1065D504A",
+    "packed_size": 64976,
+    "raw_sha256": "F79AE8B004AAE73F5F67ED0F858AAD74083649040F69A317E48212F74761095C",
+    "raw_size": 105864,
+    "string_count": 5100
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "schema": "nobu16.kr.steam-jp-1.1.7-candidate-verification.v1",
+  "runtime": {
+    "distribution": "Steam",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764,
+    "language_route": "JP"
+  },
+  "candidate_file_count": 10,
+  "candidate_paths": [
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP/msgbre.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgev.bin",
+    "MSG_PK/JP/msggame.bin",
+    "MSG_PK/JP/msgire.bin",
+    "MSG_PK/JP/msgstf.bin",
+    "MSG_PK/JP/msgui.bin",
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin"
+  ],
+  "candidates": {
+    "MSG/JP/strdata.bin": {
+      "size": 956835,
+      "sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034"
+    },
+    "MSG_PK/JP/msgbre.bin": {
+      "size": 478527,
+      "sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167"
+    },
+    "MSG_PK/JP/msgdata.bin": {
+      "size": 492714,
+      "sha256": "D05A585826F116180D81E06CBE7BF136CE67B98B76380A8DC6308F3868A1F9B9"
+    },
+    "MSG_PK/JP/msgev.bin": {
+      "size": 1040052,
+      "sha256": "C73DD1DDC79493EE3751C43B4BEAD216C4A4847C3E7B0A7CCD61FB342E03953E"
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "size": 1778914,
+      "sha256": "1FBA38AD3B8D436CCFBCCE0E4BBD327184F707AEDAFAC6AB6FC3A1950ABA8C53"
+    },
+    "MSG_PK/JP/msgire.bin": {
+      "size": 23136,
+      "sha256": "C4977A74B98605AB350BE761C67CCF879AEE7565104F8D7FD2B725FDD5806D84"
+    },
+    "MSG_PK/JP/msgstf.bin": {
+      "size": 16747,
+      "sha256": "42C98221F7D874BB09C9CD0F06615E581E5CB188F9ABB4E0E825904BC4D181E5"
+    },
+    "MSG_PK/JP/msgui.bin": {
+      "size": 118279,
+      "sha256": "3D790A1F28199265260B6C1529956D686480C7181A1EA65097E0C6F624005DFF"
+    },
+    "RES_JP/res_lang.bin": {
+      "size": 175097407,
+      "sha256": "4395B84C5F678E37D8F39BCEEFF1986F62B07A54FF7936FC1402412AF07536F2"
+    },
+    "RES_JP_PK/res_lang_pk.bin": {
+      "size": 162625225,
+      "sha256": "697F5034140A35A676CC0D0006CCECE4753D823109C5792500C46DE6499C9C12"
+    }
+  },
+  "translation": {
+    "strdata_applied": 24524,
+    "msgui_mapped": 3693,
+    "msgui_effective_changes": 3614,
+    "msgui_unmapped": 344,
+    "common_messages_applied": 39507,
+    "common_messages_unresolved": 96,
+    "msggame_applied": 24211,
+    "msggame_remaining_jp_semantic": 4061
+  },
+  "zip": {
+    "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.6.0.zip",
+    "size": 238184085,
+    "sha256": "1762265CD011D8476B8B90C87E3CA3F5F1D920B46C4A97460147A5FEEDA373D0",
+    "member_count": 10
+  },
+  "checks": {
+    "steam_1_1_7_predecessors_exact": true,
+    "component_candidate_pins_exact": true,
+    "exact_ten_files": true,
+    "zip_payloads_equal_candidates": true,
+    "sc_container_used": false,
+    "steam_files_written": false
+  }
+}
