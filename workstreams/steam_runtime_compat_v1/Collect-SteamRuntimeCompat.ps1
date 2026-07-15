@@ -9,8 +9,8 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$CollectorVersion = '1.0.0'
-$ResultSchemaVersion = '1.0'
+$CollectorVersion = '1.1.0'
+$ResultSchemaVersion = '1.1'
 $SteamAppId = '1336980'
 if ([string]::IsNullOrWhiteSpace($ExpectedReleaseMetadataPath)) {
     $ExpectedReleaseMetadataPath = Join-Path $PSScriptRoot 'expected_release.v0.4.1.json'
@@ -335,8 +335,70 @@ function Get-WindowsLocaleProbe {
         name = [string]$locale.Name
         english_name = [string]$locale.EnglishName
         lcid = [int]$locale.LCID
-        ansi_code_page = [int]$locale.TextInfo.ANSICodePage
-        oem_code_page = [int]$locale.TextInfo.OEMCodePage
+        values_are_culture_defaults = $true
+        culture_default_ansi_code_page = [int]$locale.TextInfo.ANSICodePage
+        culture_default_oem_code_page = [int]$locale.TextInfo.OEMCodePage
+    }
+}
+
+function Get-SystemNlsCodePageProbe {
+    $keyPath = 'HKLM:\SYSTEM\CurrentControlSet\Control\Nls\CodePage'
+    $valueNames = @('ACP', 'OEMCP', 'MACCP')
+    $keyExists = $false
+    $readErrorType = $null
+    $values = [ordered]@{}
+
+    foreach ($valueName in $valueNames) {
+        $values[$valueName.ToLowerInvariant()] = [pscustomobject][ordered]@{
+            name = $valueName
+            present = $false
+            raw_value = $null
+            registry_kind = $null
+            parsed_code_page = $null
+        }
+    }
+
+    try {
+        if (Test-Path -LiteralPath $keyPath) {
+            $keyExists = $true
+            $key = Get-Item -LiteralPath $keyPath
+            $availableNames = @($key.GetValueNames())
+            foreach ($valueName in $valueNames) {
+                if ($availableNames -icontains $valueName) {
+                    $rawValue = $key.GetValue($valueName)
+                    $parsedCodePage = 0
+                    $hasParsedCodePage = [int]::TryParse(
+                        [string]$rawValue,
+                        [ref]$parsedCodePage
+                    )
+                    $values[$valueName.ToLowerInvariant()] = [pscustomobject][ordered]@{
+                        name = $valueName
+                        present = $true
+                        raw_value = $rawValue
+                        registry_kind = $key.GetValueKind($valueName).ToString()
+                        parsed_code_page = if ($hasParsedCodePage) {
+                            $parsedCodePage
+                        }
+                        else {
+                            $null
+                        }
+                    }
+                }
+            }
+        }
+    }
+    catch {
+        $readErrorType = $_.Exception.GetType().FullName
+    }
+
+    return [pscustomobject][ordered]@{
+        key = $keyPath.Replace('HKLM:', 'HKEY_LOCAL_MACHINE')
+        registry_read_only = $true
+        key_exists = [bool]$keyExists
+        acp = $values.acp
+        oemcp = $values.oemcp
+        maccp = $values.maccp
+        read_error_type = $readErrorType
     }
 }
 
@@ -459,6 +521,17 @@ if ($fileByPath.Contains('MSG_PK/SC/msgui.bin')) {
     $msguiMatch = $fileByPath['MSG_PK/SC/msgui.bin'].matches_expected_release -eq $true
 }
 
+$pkExecutableFile = $fileByPath['NOBU16PK.exe']
+$runtimeExecutable = [pscustomobject][ordered]@{
+    relative_path = $pkExecutableFile.relative_path
+    exists = $pkExecutableFile.exists
+    size = $pkExecutableFile.size
+    sha256 = $pkExecutableFile.sha256
+    file_version = $pkExecutableFile.file_version
+    product_version = $pkExecutableFile.product_version
+    read_error_type = $pkExecutableFile.read_error_type
+}
+
 $result = [pscustomobject][ordered]@{
     schema_version = $ResultSchemaVersion
     collector_version = $CollectorVersion
@@ -468,8 +541,10 @@ $result = [pscustomobject][ordered]@{
         under_steamapps_common = [bool]$underSteamAppsCommon
         absolute_path_included = $false
     }
+    runtime_executable = $runtimeExecutable
     platform = [pscustomobject][ordered]@{
         windows_system_locale = Get-WindowsLocaleProbe
+        system_nls_code_pages = Get-SystemNlsCodePageProbe
         powershell_edition = [string]$PSVersionTable.PSEdition
         powershell_version = [string]$PSVersionTable.PSVersion
         process_is_64_bit = [bool][Environment]::Is64BitProcess

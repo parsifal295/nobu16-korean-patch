@@ -9,6 +9,7 @@
     "collector_version",
     "collected_at_utc",
     "game_root",
+    "runtime_executable",
     "platform",
     "launcher",
     "steam",
@@ -18,7 +19,7 @@
     "policy"
   ],
   "properties": {
-    "schema_version": { "const": "1.0" },
+    "schema_version": { "const": "1.1" },
     "collector_version": { "type": "string", "pattern": "^1\\.[0-9]+\\.[0-9]+$" },
     "collected_at_utc": { "type": "string", "format": "date-time" },
     "game_root": {
@@ -31,11 +32,13 @@
         "absolute_path_included": { "const": false }
       }
     },
+    "runtime_executable": { "$ref": "#/$defs/runtimeExecutable" },
     "platform": {
       "type": "object",
       "additionalProperties": false,
       "required": [
         "windows_system_locale",
+        "system_nls_code_pages",
         "powershell_edition",
         "powershell_version",
         "process_is_64_bit",
@@ -43,6 +46,7 @@
       ],
       "properties": {
         "windows_system_locale": { "$ref": "#/$defs/systemLocale" },
+        "system_nls_code_pages": { "$ref": "#/$defs/systemNlsCodePages" },
         "powershell_edition": { "type": "string", "minLength": 1 },
         "powershell_version": { "type": "string", "minLength": 1 },
         "process_is_64_bit": { "type": "boolean" },
@@ -172,18 +176,85 @@
     "systemLocale": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["source", "name", "english_name", "lcid", "ansi_code_page", "oem_code_page"],
+      "required": [
+        "source",
+        "name",
+        "english_name",
+        "lcid",
+        "values_are_culture_defaults",
+        "culture_default_ansi_code_page",
+        "culture_default_oem_code_page"
+      ],
       "properties": {
         "source": { "type": "string", "minLength": 1 },
         "name": { "type": "string", "minLength": 1 },
         "english_name": { "type": "string", "minLength": 1 },
         "lcid": { "type": "integer", "minimum": 0 },
-        "ansi_code_page": { "type": "integer", "minimum": 0 },
-        "oem_code_page": { "type": "integer", "minimum": 0 }
+        "values_are_culture_defaults": { "const": true },
+        "culture_default_ansi_code_page": { "type": "integer", "minimum": 0 },
+        "culture_default_oem_code_page": { "type": "integer", "minimum": 0 }
       }
     },
     "registryValue": {
       "type": ["integer", "string", "boolean", "null"]
+    },
+    "nlsCodePageValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "present", "raw_value", "registry_kind", "parsed_code_page"],
+      "properties": {
+        "name": { "enum": ["ACP", "OEMCP", "MACCP"] },
+        "present": { "type": "boolean" },
+        "raw_value": { "$ref": "#/$defs/registryValue" },
+        "registry_kind": { "$ref": "#/$defs/nullableString" },
+        "parsed_code_page": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "systemNlsCodePages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "registry_read_only",
+        "key_exists",
+        "acp",
+        "oemcp",
+        "maccp",
+        "read_error_type"
+      ],
+      "properties": {
+        "key": {
+          "const": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage"
+        },
+        "registry_read_only": { "const": true },
+        "key_exists": { "type": "boolean" },
+        "acp": { "$ref": "#/$defs/nlsCodePageValue" },
+        "oemcp": { "$ref": "#/$defs/nlsCodePageValue" },
+        "maccp": { "$ref": "#/$defs/nlsCodePageValue" },
+        "read_error_type": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "runtimeExecutable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relative_path",
+        "exists",
+        "size",
+        "sha256",
+        "file_version",
+        "product_version",
+        "read_error_type"
+      ],
+      "properties": {
+        "relative_path": { "const": "NOBU16PK.exe" },
+        "exists": { "type": "boolean" },
+        "size": { "type": ["integer", "null"], "minimum": 0 },
+        "sha256": { "$ref": "#/$defs/nullableSha256" },
+        "file_version": { "$ref": "#/$defs/nullableString" },
+        "product_version": { "$ref": "#/$defs/nullableString" },
+        "read_error_type": { "$ref": "#/$defs/nullableString" }
+      }
     },
     "registryEntry": {
       "type": "object",
