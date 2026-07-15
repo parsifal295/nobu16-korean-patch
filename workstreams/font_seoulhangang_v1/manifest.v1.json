@@ -51,10 +51,10 @@
   "pinned_public_korean_demand": {
     "translation_progress": {
       "path": "data/public/translation_progress.v0.1.json",
-      "sha256": "15EE64B9161307AB23FADB4B9B5D1814937B25409E4CDF0A1065E4EC584F88D4"
+      "sha256": "C191ED85165BD880965D8645666A0575A2334BC3F37FB20211405418371A5977"
     },
-    "source_count": 113,
-    "source_catalog_sha256": "26DFD6E203A1B2B8572D328F74B412966E1B1F4DD8BE9690C4B58ECFEAF52A5A",
+    "source_count": 118,
+    "source_catalog_sha256": "436876571A1ABE251C3756566ACC9D95523000FEABEDFB70C10F6E3332AA8A6F",
     "resource_catalog": [
       {
         "resource": "MSG_PK/SC/msgui.bin",
@@ -70,9 +70,9 @@
       },
       {
         "resource": "MSG_PK/SC/msgdata.bin",
-        "source_count": 19,
-        "entry_count": 24780,
-        "source_catalog_sha256": "67BD48D845850F01D892F5D224ECBAAF0F6BFB6E1AAC2B2607493260EB024E09"
+        "source_count": 23,
+        "entry_count": 26390,
+        "source_catalog_sha256": "2EAB06AB161A7A9A8927F09321ACF63E0E7C6A025643D1AE863B3A4AC64237C5"
       },
       {
         "resource": "MSG_PK/SC/msgbre.bin",
@@ -94,9 +94,9 @@
       },
       {
         "resource": "MSG_PK/SC/msggame.bin",
-        "source_count": 33,
-        "entry_count": 11422,
-        "source_catalog_sha256": "C8B1C7FE67D921AB047EAAE05056F4F7C335F3D2401846FC4852B7F88A76E5FC"
+        "source_count": 34,
+        "entry_count": 11722,
+        "source_catalog_sha256": "C99292B5ABB4D956D793DC3088F36C8EC46E526C3111315C5178C40EBBA5F766"
       },
       {
         "resource": "MSG/SC/strdata.bin",
@@ -105,39 +105,39 @@
         "source_catalog_sha256": "5CDBDB676CF9B63E33E1FCE15727BEA6B6A308564BB3E25FE07FF70F90160EE5"
       }
     ],
-    "source_entry_count": 81748,
-    "codepoint_count": 1418,
-    "codepoints_sha256": "BE7C1FDE9A4BBF04314D701EFC11E9D6FF61AFA0565E11EC0075DE9303D0D32C",
-    "hangul_syllable_count": 1246,
-    "hangul_syllables_sha256": "33EF7D1B9664B2316CB8517F23E31DAED08F521661C4B62E62FCBA00F1DC7B4B",
+    "source_entry_count": 83658,
+    "codepoint_count": 1419,
+    "codepoints_sha256": "31941A7119F571E227A96ED2B99427D13A379B1623E82EBF703B8D3B5D1A654B",
+    "hangul_syllable_count": 1247,
+    "hangul_syllables_sha256": "974C4F799512A3442A28AE94785F6BDD7C9103F54FF0993C223507AD91A9BC2B",
     "non_hangul_count": 172,
     "non_hangul_sha256": "0F5F778AAF5D219483B3F91B3995AD144E236B4563555E3B06BB0D6820F8D42E",
-    "raster_codepoint_count": 1335,
-    "raster_codepoints_sha256": "842EFF3013A625D99BD2C51A0A5B821830ED064282F3A6FC65F7A964D5D4B7F6",
+    "raster_codepoint_count": 1336,
+    "raster_codepoints_sha256": "85F9C622F87441A6CDE816FABA83AFBBF9C8B33790156B3E4B81FF8CDDA799AC",
     "append_contract": [
       {
         "entry": 6,
         "table": 0,
-        "count": 1251,
-        "codepoints_sha256": "CB752EE8697825B8F6839D300ADE684EA3809ED0DD0D7DAAB96D6908D7CBB597"
+        "count": 1252,
+        "codepoints_sha256": "828D459F38BE6765C9A6C79EF5A6610B4F181AED49B4FC7462AD933553DDCE89"
       },
       {
         "entry": 6,
         "table": 1,
-        "count": 1335,
-        "codepoints_sha256": "842EFF3013A625D99BD2C51A0A5B821830ED064282F3A6FC65F7A964D5D4B7F6"
+        "count": 1336,
+        "codepoints_sha256": "85F9C622F87441A6CDE816FABA83AFBBF9C8B33790156B3E4B81FF8CDDA799AC"
       },
       {
         "entry": 7,
         "table": 0,
-        "count": 1251,
-        "codepoints_sha256": "CB752EE8697825B8F6839D300ADE684EA3809ED0DD0D7DAAB96D6908D7CBB597"
+        "count": 1252,
+        "codepoints_sha256": "828D459F38BE6765C9A6C79EF5A6610B4F181AED49B4FC7462AD933553DDCE89"
       },
       {
         "entry": 7,
         "table": 1,
-        "count": 1335,
-        "codepoints_sha256": "842EFF3013A625D99BD2C51A0A5B821830ED064282F3A6FC65F7A964D5D4B7F6"
+        "count": 1336,
+        "codepoints_sha256": "85F9C622F87441A6CDE816FABA83AFBBF9C8B33790156B3E4B81FF8CDDA799AC"
       }
     ],
     "sources": "all PK-loaded string overlays (seven PK resources plus exact shared MSG/SC/strdata.bin) are derived from the SHA-pinned translation-progress catalog; the plan records one source-free hash row per file"

@@ -42,23 +42,23 @@ class SeoulHangangV1Tests(unittest.TestCase):
 
     def test_pinned_public_demand_covers_all_pk_progress_resources(self) -> None:
         demand = BUILD.load_default_overlay_demand()
-        self.assertEqual(113, demand["source_count"])
-        self.assertEqual(81_748, demand["source_entry_count"])
-        self.assertEqual(1_418, demand["codepoint_count"])
-        self.assertEqual(1_246, demand["hangul_syllable_count"])
+        self.assertEqual(118, demand["source_count"])
+        self.assertEqual(83_658, demand["source_entry_count"])
+        self.assertEqual(1_419, demand["codepoint_count"])
+        self.assertEqual(1_247, demand["hangul_syllable_count"])
         self.assertEqual(
-            "BE7C1FDE9A4BBF04314D701EFC11E9D6FF61AFA0565E11EC0075DE9303D0D32C",
+            "31941A7119F571E227A96ED2B99427D13A379B1623E82EBF703B8D3B5D1A654B",
             demand["codepoints_sha256"],
         )
         self.assertEqual(
             [
                 ("MSG_PK/SC/msgui.bin", 1, 4037),
                 ("MSG_PK/SC/msgev.bin", 40, 14504),
-                ("MSG_PK/SC/msgdata.bin", 19, 24780),
+                ("MSG_PK/SC/msgdata.bin", 23, 26390),
                 ("MSG_PK/SC/msgbre.bin", 14, 2217),
                 ("MSG_PK/SC/msgire.bin", 1, 122),
                 ("MSG_PK/SC/msgstf.bin", 1, 8),
-                ("MSG_PK/SC/msggame.bin", 33, 11422),
+                ("MSG_PK/SC/msggame.bin", 34, 11722),
                 ("MSG/SC/strdata.bin", 4, 24658),
             ],
             [
@@ -67,10 +67,10 @@ class SeoulHangangV1Tests(unittest.TestCase):
             ],
         )
         self.assertEqual(
-            "26DFD6E203A1B2B8572D328F74B412966E1B1F4DD8BE9690C4B58ECFEAF52A5A",
+            "436876571A1ABE251C3756566ACC9D95523000FEABEDFB70C10F6E3332AA8A6F",
             demand["source_catalog_sha256"],
         )
-        self.assertEqual(113, len(demand["sources"]))
+        self.assertEqual(118, len(demand["sources"]))
         sources = {item["path"]: item for item in demand["sources"]}
         self.assertEqual(
             "2A2EE0488CCF6BB70DBBDA2B00A005821DB4CD5C5C8300E4A30F9DF52890295C",
@@ -93,9 +93,9 @@ class SeoulHangangV1Tests(unittest.TestCase):
         plan_a = BUILD.build_plan(stock, demand)
         plan_b = BUILD.build_plan(stock, demand)
         self.assertEqual(BUILD.encode_json(plan_a), BUILD.encode_json(plan_b))
-        self.assertEqual(1335, plan_a["raster_codepoint_count"])
+        self.assertEqual(1336, plan_a["raster_codepoint_count"])
         self.assertEqual(
-            [(6, 0, 1251), (6, 1, 1335), (7, 0, 1251), (7, 1, 1335)],
+            [(6, 0, 1252), (6, 1, 1336), (7, 0, 1252), (7, 1, 1336)],
             [(item["entry"], item["table"], item["count"]) for item in plan_a["append_contract"]],
         )
         manifest = self.read_json("manifest.v1.json")

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Assemble the Steam PK 1.1.7 JP-route v0.7.0 ten-file candidate.
+"""Assemble the Steam PK 1.1.7 JP-route v0.7.0 twelve-file candidate.
 
 The v0.6.0 candidate workstream remains immutable.  This wrapper reuses its
-reviewed ten-file container and ZIP gates while replacing only the three
-components that advance in v0.7.0: msgui, msggame, and both JP font routes.
+reviewed ten-file message/container builders while replacing msgui, msggame,
+and all four JP font routes.  The two resolution-dependent PK PORT archives
+are handled locally so the immutable v1 ten-file contract remains unchanged.
 """
 
 from __future__ import annotations
@@ -17,6 +18,7 @@ import shutil
 import sys
 import tempfile
 import unicodedata
+import zipfile
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -38,7 +40,7 @@ STOCK_ROOT = (
 DEFAULT_FONT_ROOT = (
     REPO
     / "tmp"
-    / "font_jp_seoulhangang_wave07_final"
+    / "font_jp_seoulhangang_v07_port_final"
     / "private"
     / "candidate"
 )
@@ -49,7 +51,7 @@ VERIFICATION_SCHEMA = "nobu16.kr.steam-jp-1.1.7-candidate-verification.v2"
 VERIFICATION_PATH = WORKSTREAM / "verification.v2.json"
 FONT_EVIDENCE = REPO / "workstreams" / "font_jp_seoulhangang_v1" / "verification.v1.json"
 # Replaced with the reviewed final evidence hash after the wave07 font A/B build.
-FONT_EVIDENCE_SHA256 = "6478308F1A3198FE0AAD10F05D6C7030C3C4F8093D112CB885738FE78306F68E"
+FONT_EVIDENCE_SHA256 = "EA4A916BE27DA393B5A84DC7902726733961D95407CA4F8171B80C99A135E27F"
 SUPPLEMENT = (
     REPO
     / "workstreams"
@@ -101,6 +103,47 @@ INTEGRATION = load_module(
     / "msggame_pk_jp_native_wave07_integration"
     / "build_wave07_integration.py",
 )
+
+
+PORT_FONT_RESOURCES: dict[str, dict[str, Any]] = {
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+        "stock": {
+            "size": 77_468_728,
+            "sha256": "1B44436B542F73B8B155A43F74D897F8D32C1C274D8C64B3CA9F4478BDB86022",
+        },
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+        "stock": {
+            "size": 61_609_467,
+            "sha256": "52A8DE4BA1480E86218AC0CDE50DA946B4BCDFD7053ED85B94B04E663C00B380",
+        },
+    },
+}
+FONT_RESOURCES: dict[str, dict[str, Any]] = {
+    relative: {"stock": dict(contract["stock"])}
+    for relative, contract in {
+        **BASE.RUNTIME.FONT_RESOURCES,
+        **PORT_FONT_RESOURCES,
+    }.items()
+}
+PORT_TARGETS = tuple(PORT_FONT_RESOURCES)
+TARGETS = tuple(sorted((*BASE.TARGETS, *PORT_TARGETS)))
+EXPECTED_TARGETS = (
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP/msgbre.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgev.bin",
+    "MSG_PK/JP/msggame.bin",
+    "MSG_PK/JP/msgire.bin",
+    "MSG_PK/JP/msgstf.bin",
+    "MSG_PK/JP/msgui.bin",
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+)
+if TARGETS != EXPECTED_TARGETS:
+    raise RuntimeError("v2 twelve-file target vector changed")
 
 
 def sha256(blob: bytes) -> str:
@@ -376,9 +419,9 @@ def configure_font_candidates(font_root: Path) -> dict[str, Any]:
     ):
         raise CandidateV2Error("JP font evidence policy changed")
     stocks = evidence.get("stock_archives")
-    if not isinstance(stocks, dict) or set(stocks) != set(BASE.RUNTIME.FONT_RESOURCES):
+    if not isinstance(stocks, dict) or set(stocks) != set(FONT_RESOURCES):
         raise CandidateV2Error("JP font stock vector changed")
-    for relative, contract in BASE.RUNTIME.FONT_RESOURCES.items():
+    for relative, contract in FONT_RESOURCES.items():
         stock = stocks[relative]
         if not isinstance(stock, dict) or {
             "size": stock.get("size"),
@@ -421,7 +464,7 @@ def configure_font_candidates(font_root: Path) -> dict[str, Any]:
     if not isinstance(expected, dict) or not isinstance(expected.get("routes"), list):
         raise CandidateV2Error("JP font verification has no expected routes")
     routes = expected["routes"]
-    if len(routes) != len(BASE.RUNTIME.FONT_RESOURCES):
+    if len(routes) != len(FONT_RESOURCES):
         raise CandidateV2Error("JP font route count changed")
     normalized: dict[str, dict[str, Any]] = {}
     for index, row in enumerate(routes):
@@ -432,7 +475,7 @@ def configure_font_candidates(font_root: Path) -> dict[str, Any]:
         digest = row.get("candidate_archive_sha256")
         if (
             relative in normalized
-            or relative not in BASE.RUNTIME.FONT_RESOURCES
+            or relative not in FONT_RESOURCES
             or isinstance(size, bool)
             or not isinstance(size, int)
             or size <= 0
@@ -442,17 +485,65 @@ def configure_font_candidates(font_root: Path) -> dict[str, Any]:
         ):
             raise CandidateV2Error(f"invalid JP font candidate route {index}")
         normalized[str(relative)] = {"size": size, "sha256": digest}
-    if set(normalized) != set(BASE.RUNTIME.FONT_RESOURCES):
+    if set(normalized) != set(FONT_RESOURCES):
         raise CandidateV2Error("JP font verification route vector changed")
-    for relative, candidate in normalized.items():
-        BASE.RUNTIME.FONT_RESOURCES[relative]["candidate"] = candidate
-    BASE.RUNTIME.FONT_CANDIDATE_ROOT = font_root.resolve()
     return {
         "evidence_path": FONT_EVIDENCE.relative_to(REPO).as_posix(),
         "evidence_sha256": evidence_hash,
         "demand": demand,
         "routes": normalized,
     }
+
+
+def predecessor_vector(
+    stock_root: Path, port_stock_root: Path
+) -> dict[str, dict[str, Any]]:
+    """Validate the immutable v1 stocks plus the two Steam PORT stocks."""
+
+    result = BASE.predecessor_vector(stock_root)
+    for relative in PORT_TARGETS:
+        path = port_stock_root / Path(relative).name
+        actual = BASE.file_spec(path)
+        expected = FONT_RESOURCES[relative]["stock"]
+        if actual != expected:
+            raise CandidateV2Error(
+                f"Steam 1.1.7 PORT predecessor mismatch: {relative}: "
+                f"{actual} != {expected}"
+            )
+        result[relative] = actual
+    if set(result) != set(TARGETS):
+        raise CandidateV2Error("predecessor manifest is not the exact twelve-file vector")
+    return {relative: result[relative] for relative in TARGETS}
+
+
+def make_zip(candidate_root: Path, destination: Path) -> dict[str, Any]:
+    """Write and re-read the local exact-twelve vector.
+
+    This must not delegate to the immutable v1 ZIP helper because that helper
+    intentionally knows only its original ten members.
+    """
+
+    actual = BASE.candidate_files(candidate_root)
+    if actual != list(TARGETS):
+        raise CandidateV2Error(f"candidate root is not exact before ZIP: {actual}")
+    with zipfile.ZipFile(
+        destination, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6
+    ) as archive:
+        for relative in TARGETS:
+            info = zipfile.ZipInfo(relative, date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            archive.writestr(info, (candidate_root / Path(relative)).read_bytes())
+    with zipfile.ZipFile(destination) as archive:
+        names = [item.filename for item in archive.infolist() if not item.is_dir()]
+        if names != list(TARGETS):
+            raise CandidateV2Error(f"ZIP member vector differs: {names}")
+        for relative in TARGETS:
+            if sha256(archive.read(relative)) != BASE.sha256_path(
+                candidate_root / Path(relative)
+            ):
+                raise CandidateV2Error(f"ZIP payload differs: {relative}")
+    return BASE.file_spec(destination)
 
 
 def verification_projection(manifest: dict[str, Any]) -> dict[str, Any]:
@@ -506,7 +597,7 @@ def verification_projection(manifest: dict[str, Any]) -> dict[str, Any]:
         "checks": {
             "steam_1_1_7_predecessors_exact": True,
             "component_candidate_pins_exact": True,
-            "exact_ten_files": True,
+            "exact_twelve_files": True,
             "zip_payloads_equal_candidates": True,
             "staged_before_promote": True,
             "sc_container_used": False,
@@ -527,9 +618,9 @@ def validate_destination(path: Path) -> Path:
 
 
 def build_staged(
-    stock_root: Path, font_root: Path, staging: Path
+    stock_root: Path, port_stock_root: Path, font_root: Path, staging: Path
 ) -> tuple[dict[str, Any], dict[str, Any]]:
-    before = BASE.predecessor_vector(stock_root)
+    before = predecessor_vector(stock_root, port_stock_root)
     font_evidence = configure_font_candidates(font_root)
     strdata, strdata_meta = BASE.build_strdata(stock_root)
     msgui, msgui_meta = build_msgui(stock_root)
@@ -549,22 +640,22 @@ def build_staged(
     candidates["MSG_PK/JP/msggame.bin"] = BASE.write_candidate_file(
         candidate_root, "MSG_PK/JP/msggame.bin", msggame
     )
-    for relative, route in BASE.RUNTIME.FONT_RESOURCES.items():
-        source = BASE.RUNTIME.FONT_CANDIDATE_ROOT / Path(relative)
+    for relative, route in font_evidence["routes"].items():
+        source = font_root / Path(relative)
         observed = BASE.copy_candidate_file(candidate_root, relative, source)
-        if observed != route["candidate"]:
+        if observed != route:
             raise CandidateV2Error(f"font candidate pin mismatch: {relative}")
         candidates[relative] = observed
-    if BASE.candidate_files(candidate_root) != list(BASE.TARGETS):
-        raise CandidateV2Error("candidate root is not the exact ten-file vector")
-    if set(candidates) != set(BASE.TARGETS):
+    if BASE.candidate_files(candidate_root) != list(TARGETS):
+        raise CandidateV2Error("candidate root is not the exact twelve-file vector")
+    if set(candidates) != set(TARGETS):
         raise CandidateV2Error("candidate manifest does not cover the exact target vector")
-    if BASE.predecessor_vector(stock_root) != before:
+    if predecessor_vector(stock_root, port_stock_root) != before:
         raise CandidateV2Error("Steam stock vector changed during offline build")
     zip_path = staging / DEFAULT_ZIP_NAME
     if zip_path.parent != staging or zip_path.exists():
         raise CandidateV2Error("unsafe fixed ZIP destination")
-    zip_spec = BASE.make_zip(candidate_root, zip_path)
+    zip_spec = make_zip(candidate_root, zip_path)
     manifest = {
         "schema": SCHEMA,
         "runtime": {
@@ -575,9 +666,9 @@ def build_staged(
         },
         "candidate_root": "candidate",
         "candidate_file_count": len(candidates),
-        "candidate_paths": list(BASE.TARGETS),
+        "candidate_paths": list(TARGETS),
         "predecessors": before,
-        "candidates": {key: candidates[key] for key in BASE.TARGETS},
+        "candidates": {key: candidates[key] for key in TARGETS},
         "components": {
             "strdata": strdata_meta,
             "msgui": msgui_meta,
@@ -588,19 +679,19 @@ def build_staged(
                 "evidence": font_evidence,
                 "routes": {
                     relative: candidates[relative]
-                    for relative in BASE.RUNTIME.FONT_RESOURCES
+                    for relative in FONT_RESOURCES
                 },
             },
         },
         "zip": {
             "name": DEFAULT_ZIP_NAME,
             **zip_spec,
-            "member_count": len(BASE.TARGETS),
+            "member_count": len(TARGETS),
         },
         "checks": {
             "steam_1_1_7_predecessors_exact": True,
             "jp_route_exact": True,
-            "exact_ten_files": True,
+            "exact_twelve_files": True,
             "component_candidate_pins_exact": True,
             "zip_payloads_equal_candidates": True,
             "staged_before_promote": True,
@@ -618,13 +709,18 @@ def build_staged(
 
 
 def staged_build(
-    stock_root: Path, font_root: Path, destination_parent: Path
+    stock_root: Path,
+    port_stock_root: Path,
+    font_root: Path,
+    destination_parent: Path,
 ) -> tuple[Path, dict[str, Any], dict[str, Any]]:
     staging = Path(
         tempfile.mkdtemp(prefix=".steam-jp-117-v2-", dir=destination_parent)
     )
     try:
-        manifest, projection = build_staged(stock_root, font_root, staging)
+        manifest, projection = build_staged(
+            stock_root, port_stock_root, font_root, staging
+        )
     except Exception:
         shutil.rmtree(staging, ignore_errors=True)
         raise
@@ -642,6 +738,7 @@ def command_bootstrap(args: argparse.Namespace) -> int:
     proposal = validate_destination(args.proposal)
     staging, _manifest, projection = staged_build(
         args.stock_root.resolve(),
+        args.port_stock_root.resolve(),
         args.font_candidate_root.resolve(),
         proposal.parent,
     )
@@ -660,6 +757,7 @@ def command_build(args: argparse.Namespace) -> int:
     output = validate_destination(args.output_root)
     staging, manifest, projection = staged_build(
         args.stock_root.resolve(),
+        args.port_stock_root.resolve(),
         args.font_candidate_root.resolve(),
         output.parent,
     )
@@ -682,6 +780,15 @@ def command_build(args: argparse.Namespace) -> int:
 
 def add_common_arguments(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--stock-root", type=Path, default=STOCK_ROOT)
+    parser.add_argument(
+        "--port-stock-root",
+        type=Path,
+        required=True,
+        help=(
+            "directory containing pristine Steam 1.1.7 "
+            "res_lang_pk_port1.bin and res_lang_pk_port2.bin"
+        ),
+    )
     parser.add_argument("--font-candidate-root", type=Path, default=DEFAULT_FONT_ROOT)
 
 
@@ -698,7 +805,9 @@ def build_parser() -> argparse.ArgumentParser:
         default=REPO / "tmp" / "steam_jp_117_candidate_v2.proposed.json",
     )
     bootstrap.set_defaults(handler=command_bootstrap)
-    build = commands.add_parser("build", help="stage, verify, and promote the ten files")
+    build = commands.add_parser(
+        "build", help="stage, verify, and promote the twelve files"
+    )
     add_common_arguments(build)
     build.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     build.set_defaults(handler=command_build)

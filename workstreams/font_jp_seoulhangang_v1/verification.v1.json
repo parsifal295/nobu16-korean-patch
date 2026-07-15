@@ -20,25 +20,44 @@
         16,
         17
       ]
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+      "size": 77468728,
+      "sha256": "1B44436B542F73B8B155A43F74D897F8D32C1C274D8C64B3CA9F4478BDB86022",
+      "steam_depot_sha1": "81A3A51ECEA2F0DA1D07A70478EF4C53E86C33F6",
+      "link_entry_count": 38,
+      "g1n_outer_entries": [
+        1
+      ]
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+      "size": 61609467,
+      "sha256": "52A8DE4BA1480E86218AC0CDE50DA946B4BCDFD7053ED85B94B04E663C00B380",
+      "steam_depot_sha1": "AA55879D9CB08E57BEBEAB10545D9B98CEE21186",
+      "link_entry_count": 22,
+      "g1n_outer_entries": [
+        0,
+        1
+      ]
     }
   },
   "pk_runtime_route_evidence": {
     "executable": "NOBU16PK.exe",
-    "examined_build_distribution": "local non-Steam build",
-    "examined_build_size": 29609536,
-    "examined_build_sha256": "BAA1A88F2C83E3EDA06AB2D02A28C3C96D2BA7090E3CE7E643D96B077A0B1739",
-    "ascii_string_offsets": {
-      "/res_lang.bin": "0x13BDFC0",
-      "/res_lang_exp.bin": "0x13BDFE0",
-      "/res_lang_pk.bin": "0x13BE050",
-      "/res_lang_exp_pk.bin": "0x13BE090",
-      "RES_JP": "0x13BE1F0",
-      "_PK": "0x13BE214"
-    },
-    "route_conclusion": "the examined non-Steam executable statically contains distinct base and PK language route strings; this does not prove which combination a current Steam runtime opens",
+    "examined_build_distribution": "Steam PK 1.1.7 build 18823764",
+    "examined_build_size": 31978264,
+    "route_strings_present": [
+      "/res_lang.bin",
+      "/res_lang_pk.bin",
+      "/res_lang_pk_port1.bin",
+      "/res_lang_pk_port2.bin",
+      "/res_lang_pk_port3.bin",
+      "RES_JP",
+      "_PK_PORT"
+    ],
+    "route_conclusion": "regular JP routes contain 32/48-cell G1Ns while JP_PK_PORT1/2 contain 64/96-cell G1Ns; issue 41 FHD-pass/QHD-fail is structurally consistent with the previously unpatched PORT route",
     "runtime_file_open_trace_completed": false,
     "steam_runtime_required_combination_verified": false,
-    "safe_distribution_decision": "include both JP base and JP PK font candidates pending Steam runtime validation"
+    "safe_distribution_decision": "include all four font-bearing JP regular and JP_PK_PORT archives; exclude port3 because exhaustive recursion found zero G1N"
   },
   "demand": {
     "source_count": 124,
@@ -48,10 +67,10 @@
     "codepoints_sha256": "7B1F5B740D580A3B1E67B459B92EED29BA6F3CC1B685D7F312B1518202300E94",
     "hangul_syllable_count": 1251,
     "hangul_syllables_sha256": "ABDB62AD32DDCCB19F8E100179EADC58E028A2AA79FB8B252E407E2D16DCDCD0",
-    "append_union_codepoint_count": 1357,
-    "append_union_codepoints_sha256": "838FB98006D42AD60F37D22D021D8D46B2A76EEF631B89C262B53EB83906AF64",
-    "raster_codepoint_count": 1334,
-    "raster_codepoints_sha256": "08E043D135A03612C159B946A190AD9C30A10A71F3BA6474C85328621E81615A",
+    "append_union_codepoint_count": 1450,
+    "append_union_codepoints_sha256": "32EAF6032E7923C8D89DA6D9C1F805C642BF51F49C94049EAEF6A0F66DD40156",
+    "raster_codepoint_count": 1427,
+    "raster_codepoints_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
     "stock_reuse_codepoints": [
       "U+22BF",
       "U+32A4",
@@ -89,12 +108,12 @@
     "SeoulHangangEB.ttf": {
       "size": 7350712,
       "sha256": "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1",
-      "assignment": "every 48-cell table"
+      "assignment": "every 48-cell and 96-cell table"
     },
     "SeoulHangangB.ttf": {
       "size": 7344552,
       "sha256": "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B",
-      "assignment": "every 32-cell table"
+      "assignment": "every 32-cell and 64-cell table"
     },
     "SeoulHangangM.ttf": {
       "size": 7627124,
@@ -191,9 +210,52 @@
           "899391DE22B4116092682F481FCD1403CD279DD602184AE930C3024E6B7C086C",
           "E1A14B369C182F79CD2CE159EECB5E96796F3204BF9A499053A481B678CC083B"
         ]
+      },
+      "port1_entry_1": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 266],
+        "mapped_nonzero_counts": [7115, 7114, 265],
+        "cell_hierarchy": [64, 96, 32],
+        "font_hierarchy": ["B64", "EB96", "B32"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [2048, 4608, 512],
+        "record_geometry_sha256": [
+          "A4607DDF6BCEE9F992AF9ACCB9ADF290769995E1C497EF1122EE4471715E87BC",
+          "504DAC20F4981F889A5F63C0EA158E8EF6B01D39D5FE541E392B8A4DC796FE53",
+          "E7B0440E5F4B851EEE8423CD1C0B29A6FDA56347B01880EDB052C79C0ACEC0B9"
+        ]
+      },
+      "port2_entry_0": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 379],
+        "mapped_nonzero_counts": [7115, 7114, 378],
+        "cell_hierarchy": [96, 96, 96],
+        "font_hierarchy": ["EB96", "EB96", "EB96"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [4608, 4608, 4608],
+        "record_geometry_sha256": [
+          "9EA985FDA326CDCE285DF1EA9602B059D0C136528D6587545829DD67391E8599",
+          "504DAC20F4981F889A5F63C0EA158E8EF6B01D39D5FE541E392B8A4DC796FE53",
+          "9709272CA79D4D9ADF0A22C9D50E056F295C077E82BF5C2E11DC7F7E9E6A6940"
+        ]
+      },
+      "port2_entry_1": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 379],
+        "mapped_nonzero_counts": [7115, 7114, 378],
+        "cell_hierarchy": [64, 96, 64],
+        "font_hierarchy": ["B64", "EB96", "B64"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [2048, 4608, 2048],
+        "record_geometry_sha256": [
+          "A4607DDF6BCEE9F992AF9ACCB9ADF290769995E1C497EF1122EE4471715E87BC",
+          "504DAC20F4981F889A5F63C0EA158E8EF6B01D39D5FE541E392B8A4DC796FE53",
+          "44C9656A2DB1EA5DE8697BB9872796317A73BD1981FD43A95E9885B94D45B85B"
+        ]
       }
     },
     "base_pk_pre_atlas_geometry_exact": true,
+    "port_font_profiles_reviewed": true,
     "smaller_third_tier_present": false
   },
   "stock_reuse_evidence": {
@@ -225,7 +287,15 @@
     "codepoints_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E",
     "source_table": 0,
     "target_table": 2,
-    "copy_policy": "copy source metric and width-packed pixels to a new table-2 atlas tail; create a new pointer and never alias the source pointer",
+    "copy_policy": "copy same-cell source metric and pixels to a new table-2 atlas tail; port1 32-cell uses deterministic same-palette 64-to-32 2x2 box filtering; always create a new pointer",
+    "port1_table2_transform": {
+      "source": "same G1N table 0, 64-cell",
+      "target": "same G1N table 2, 32-cell",
+      "palette_preserved": true,
+      "filter": "2x2 box average of 4bpp coverage nibbles with deterministic requantization",
+      "metric_transform": "width, cell, and signed bearing divided by two",
+      "direct_pointer_alias": false
+    },
     "profiles": {
       "48_cell_base6_pk16": [
         {
@@ -644,8 +714,8 @@
       {
         "route": "base",
         "logical_path": "RES_JP/res_lang.bin",
-        "candidate_archive_size": 175200602,
-        "candidate_archive_sha256": "04ADC5D345D05973A647C4DAF870E9AEFEB69FA9AF7BD9240DA6505AD18232C6",
+        "candidate_archive_size": 154216023,
+        "candidate_archive_sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
         "targets": [
           {
             "outer_entry": 6,
@@ -662,8 +732,8 @@
       {
         "route": "pk",
         "logical_path": "RES_JP_PK/res_lang_pk.bin",
-        "candidate_archive_size": 162728420,
-        "candidate_archive_sha256": "733FAC967BA0DAED8D59562588CEE0E7136D90169B74B747C5DC45722B7FD7B3",
+        "candidate_archive_size": 141746742,
+        "candidate_archive_sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
         "targets": [
           {
             "outer_entry": 16,
@@ -676,37 +746,86 @@
             "target_sha256": "B6499C759802B0575E571C78A671A0B046ECA2DC023FD719A85C3AAFD71FB358"
           }
         ]
+      },
+      {
+        "route": "pk_port1",
+        "logical_path": "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+        "candidate_archive_size": 79243911,
+        "candidate_archive_sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+        "targets": [
+          {
+            "outer_entry": 1,
+            "target_size": 56675888,
+            "target_sha256": "20B81FBD7749A50FAEADF0EB6FB1716068202AB2C8C2EC0DF573A1056D6A4C8F"
+          }
+        ]
+      },
+      {
+        "route": "pk_port2",
+        "logical_path": "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+        "candidate_archive_size": 67086423,
+        "candidate_archive_sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
+        "targets": [
+          {
+            "outer_entry": 0,
+            "target_size": 85018656,
+            "target_sha256": "833879EA20517BF5EB9E86AB8F0F076758DFFF420C0AE94EE787D59C42B5AE6F"
+          },
+          {
+            "outer_entry": 1,
+            "target_size": 59352096,
+            "target_sha256": "8A9DB816842DFC9C03D31932F8DAA1DE75EAB97EDB1D6EA309A46AF8B91D86DF"
+          }
+        ]
       }
     ],
     "raster_profiles": [
       {
         "cell": 48,
-        "duplicate_source_renders_exact": true,
         "font": "SeoulHangang EB",
         "font_key": "entry6_48px_eb",
-        "one_table_payload_sha256": "36F83748E2CFE69CE017CA0FF44F5F9B8C62C397E26B5D52A6A88B2B8F51E7F3",
-        "one_table_payload_size": 1536768,
+        "one_table_payload_sha256": "D350A92371C963CA1CD9E22922906457B794AA3E66442FB1FE533772C4648544",
+        "one_table_payload_size": 1643904,
         "profile": "eb48",
-        "raster_size": 46,
-        "source_entry": 6
+        "profile_payload_unique": true,
+        "raster_size": 46
       },
       {
         "cell": 32,
-        "duplicate_source_renders_exact": true,
         "font": "SeoulHangang B",
         "font_key": "entry7_32px_b",
-        "one_table_payload_sha256": "34382BAECE7169D24C6F69D84ABFCB224C42CBD0B95975AB09C4DE685062C1EA",
-        "one_table_payload_size": 683008,
+        "one_table_payload_sha256": "5CC4E5F6A3788B845A559FD57888BA423B9CFA7E508904B249D01B9348F75919",
+        "one_table_payload_size": 730624,
         "profile": "b32",
-        "raster_size": 32,
-        "source_entry": 7
+        "profile_payload_unique": true,
+        "raster_size": 32
+      },
+      {
+        "cell": 64,
+        "font": "SeoulHangang B",
+        "font_key": "entry7_32px_b",
+        "one_table_payload_sha256": "278534F3E00ADBADCE3BA2AC792A1C805B82784A7C6C6AF93FF868C225439632",
+        "one_table_payload_size": 2922496,
+        "profile": "b64",
+        "profile_payload_unique": true,
+        "raster_size": 64
+      },
+      {
+        "cell": 96,
+        "font": "SeoulHangang EB",
+        "font_key": "entry6_48px_eb",
+        "one_table_payload_sha256": "579F82A9CFC007694274E6CABE645BDCAEF849595B8E9F2CA5142FBFC48EA6B2",
+        "one_table_payload_size": 6575616,
+        "profile": "eb96",
+        "profile_payload_unique": true,
+        "raster_size": 92
       }
     ],
     "font_cmap_gate": [
       {
-        "append_union_count": 1357,
-        "cmap_covered_count": 1334,
-        "cmap_covered_sha256": "08E043D135A03612C159B946A190AD9C30A10A71F3BA6474C85328621E81615A",
+        "append_union_count": 1450,
+        "cmap_covered_count": 1427,
+        "cmap_covered_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
         "cmap_missing": [
           "U+22BF",
           "U+32A4",
@@ -747,9 +866,9 @@
         ]
       },
       {
-        "append_union_count": 1357,
-        "cmap_covered_count": 1334,
-        "cmap_covered_sha256": "08E043D135A03612C159B946A190AD9C30A10A71F3BA6474C85328621E81615A",
+        "append_union_count": 1450,
+        "cmap_covered_count": 1427,
+        "cmap_covered_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
         "cmap_missing": [
           "U+22BF",
           "U+32A4",

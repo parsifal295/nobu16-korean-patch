@@ -12,9 +12,10 @@ LINK archives use a 16-byte header followed by ``count`` pairs of
 ``(u32le offset, u32le stored_size)``.  The size excludes the four-byte
 entry trailer (normally EF CD AB 89 for a non-empty entry).
 
-No third-party Python package is required.  Recompression deliberately uses
-a valid literal-only raw LZ4 block.  It is larger than an optimized block but
-is deterministic and safe for format work.
+No third-party Python package is required.  The default recompressor retains
+the original deterministic literal-only behavior used by existing message
+recipes.  Font archives can opt into the deterministic greedy compressor to
+avoid inflating large atlas wrappers beyond the stock loading profile.
 """
 
 from __future__ import annotations
@@ -190,6 +191,107 @@ def raw_lz4_compress_literal_only(raw: bytes) -> bytes:
     return bytes(result)
 
 
+def _append_lz4_length(result: bytearray, length: int) -> None:
+    """Append one LZ4 token-length extension, including its terminator."""
+
+    while length >= 255:
+        result.append(255)
+        length -= 255
+    result.append(length)
+
+
+def raw_lz4_compress_greedy(raw: bytes) -> bytes:
+    """Create a deterministic compressed raw-LZ4 block.
+
+    This is a small standard-library implementation of the usual single-entry
+    hash-table LZ4 strategy.  It intentionally favors a compact, auditable
+    implementation over maximum compression ratio.  The final five input
+    bytes remain literals, matching the canonical LZ4 block constraints used
+    by the stock NOBU16 resources.
+    """
+
+    size = len(raw)
+    if size < 13:
+        return raw_lz4_compress_literal_only(raw)
+
+    hash_bits = 16
+    hash_shift = 32 - hash_bits
+    hash_mask = (1 << hash_bits) - 1
+    table = [-1] * (1 << hash_bits)
+    result = bytearray()
+    anchor = 0
+    cursor = 0
+    match_limit = size - 12
+    copy_limit = size - 5
+
+    def hash_at(position: int) -> int:
+        sequence = struct.unpack_from("<I", raw, position)[0]
+        return ((sequence * 2654435761) & 0xFFFFFFFF) >> hash_shift & hash_mask
+
+    while cursor <= match_limit:
+        slot = hash_at(cursor)
+        candidate = table[slot]
+        table[slot] = cursor
+        if (
+            candidate < 0
+            or cursor - candidate > 0xFFFF
+            or raw[candidate : candidate + 4] != raw[cursor : cursor + 4]
+        ):
+            cursor += 1
+            continue
+
+        # Extend backwards without crossing the pending literal run.  This
+        # improves ratio while preserving a positive 16-bit match offset.
+        match_start = cursor
+        reference = candidate
+        while match_start > anchor and reference > 0 and raw[match_start - 1] == raw[reference - 1]:
+            match_start -= 1
+            reference -= 1
+
+        match_end = match_start + 4
+        reference_end = reference + 4
+        while match_end + 8 <= copy_limit:
+            if raw[match_end : match_end + 8] != raw[reference_end : reference_end + 8]:
+                break
+            match_end += 8
+            reference_end += 8
+        while match_end < copy_limit and raw[match_end] == raw[reference_end]:
+            match_end += 1
+            reference_end += 1
+
+        literal_length = match_start - anchor
+        match_length = match_end - match_start
+        encoded_match_length = match_length - 4
+        token = min(literal_length, 15) << 4 | min(encoded_match_length, 15)
+        result.append(token)
+        if literal_length >= 15:
+            _append_lz4_length(result, literal_length - 15)
+        result.extend(raw[anchor:match_start])
+        result.extend(struct.pack("<H", match_start - reference))
+        if encoded_match_length >= 15:
+            _append_lz4_length(result, encoded_match_length - 15)
+
+        # Seed positions near the end of the skipped match so the next search
+        # can still find short-distance repetitions without visiting every
+        # byte inside a long run.
+        cursor = match_end
+        for position in range(max(match_start + 1, cursor - 3), cursor):
+            if position <= match_limit:
+                table[hash_at(position)] = position
+        anchor = cursor
+
+    literal_length = size - anchor
+    result.append(min(literal_length, 15) << 4)
+    if literal_length >= 15:
+        _append_lz4_length(result, literal_length - 15)
+    result.extend(raw[anchor:])
+
+    compressed = bytes(result)
+    if len(compressed) >= len(raw_lz4_compress_literal_only(raw)):
+        return raw_lz4_compress_literal_only(raw)
+    return compressed
+
+
 def decompress_wrapper(blob: bytes) -> tuple[WrapperHeader, bytes]:
     header = parse_wrapper_header(blob)
     start = WRAPPER_SIZE
@@ -200,6 +302,14 @@ def decompress_wrapper(blob: bytes) -> tuple[WrapperHeader, bytes]:
 def recompress_wrapper(raw: bytes, template: bytes | WrapperHeader) -> bytes:
     header = template if isinstance(template, WrapperHeader) else parse_wrapper_header(template)
     compressed = raw_lz4_compress_literal_only(raw)
+    return header.prefix + struct.pack("<QQ", len(raw), len(compressed)) + compressed
+
+
+def recompress_wrapper_greedy(raw: bytes, template: bytes | WrapperHeader) -> bytes:
+    """Wrap raw bytes using the deterministic greedy raw-LZ4 compressor."""
+
+    header = template if isinstance(template, WrapperHeader) else parse_wrapper_header(template)
+    compressed = raw_lz4_compress_greedy(raw)
     return header.prefix + struct.pack("<QQ", len(raw), len(compressed)) + compressed
 
 

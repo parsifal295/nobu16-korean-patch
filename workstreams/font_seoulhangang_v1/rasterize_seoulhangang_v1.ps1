@@ -166,7 +166,11 @@ function New-RasterGlyph([int]$Codepoint, [object]$Profile) {
 
 $requestPath = (Resolve-Path -LiteralPath $RequestPathInput).Path
 $requestData = Get-Content -Raw -Encoding UTF8 -LiteralPath $requestPath | ConvertFrom-Json
-if ($requestData.schema -ne 'nobu16.kr.font-seoulhangang-v1-raster-request.v2') { throw 'Unsupported raster request schema.' }
+$requestSchema = [string]$requestData.schema
+$profilePayloadMode = $requestSchema -eq 'nobu16.kr.font-seoulhangang-v1-raster-request.v3'
+if (-not $profilePayloadMode -and $requestSchema -ne 'nobu16.kr.font-seoulhangang-v1-raster-request.v2') {
+    throw 'Unsupported raster request schema.'
+}
 $expectedFonts = [ordered]@{
     entry6_48px_eb = [ordered]@{
         entry = 6; family = 'SeoulHangang EB'; file_name = 'SeoulHangangEB.ttf'
@@ -206,14 +210,42 @@ foreach ($text in @($requestData.codepoints)) {
     $codepoints.Add($cp); $previous = $cp
 }
 if ($codepoints.Count -eq 0) { throw 'Raster request has no codepoints.' }
-$profiles = @($requestData.profiles | Sort-Object @{Expression = {[int]$_.entry}}, @{Expression = {[int]$_.table}})
-if ($profiles.Count -ne 4) { throw 'Expected four PC G1N profiles.' }
-foreach ($profile in $profiles) {
-    $fontKey = [string]$profile.font_key
-    if (-not $expectedFonts.Contains($fontKey) -or
-        [int]$profile.entry -ne [int]$expectedFonts[$fontKey].entry -or
-        [string]$profile.family -ne [string]$expectedFonts[$fontKey].family) {
-        throw "Profile/font assignment mismatch: entry=$($profile.entry) table=$($profile.table)"
+$profiles = if ($profilePayloadMode) {
+    @($requestData.profiles)
+} else {
+    @($requestData.profiles | Sort-Object @{Expression = {[int]$_.entry}}, @{Expression = {[int]$_.table}})
+}
+if ($profilePayloadMode) {
+    if ($profiles.Count -lt 2) { throw 'Expected at least two JP G1N raster profiles.' }
+    $profileIds = @{}
+    foreach ($profile in $profiles) {
+        $profileId = [string]$profile.profile
+        $fontKey = [string]$profile.font_key
+        $cell = [int]$profile.cell
+        $rasterSize = [int]$profile.raster_size
+        if ($profileId -cnotmatch '^[a-z][a-z0-9_]*$' -or $profileIds.ContainsKey($profileId)) {
+            throw "Invalid or duplicate raster profile id: $profileId"
+        }
+        $profileIds[$profileId] = $true
+        if (-not $expectedFonts.Contains($fontKey) -or
+            [string]$profile.family -ne [string]$expectedFonts[$fontKey].family -or
+            [string]$profile.style -ne 'Regular') {
+            throw "Profile/font assignment mismatch: profile=$profileId"
+        }
+        if ($cell -lt 2 -or $cell -gt 512 -or ($cell % 2) -ne 0 -or
+            $rasterSize -lt 1 -or $rasterSize -gt 1024) {
+            throw "Invalid raster geometry: profile=$profileId cell=$cell raster_size=$rasterSize"
+        }
+    }
+} else {
+    if ($profiles.Count -ne 4) { throw 'Expected four PC G1N profiles.' }
+    foreach ($profile in $profiles) {
+        $fontKey = [string]$profile.font_key
+        if (-not $expectedFonts.Contains($fontKey) -or
+            [int]$profile.entry -ne [int]$expectedFonts[$fontKey].entry -or
+            [string]$profile.family -ne [string]$expectedFonts[$fontKey].family) {
+            throw "Profile/font assignment mismatch: entry=$($profile.entry) table=$($profile.table)"
+        }
     }
 }
 
@@ -235,38 +267,65 @@ try {
 
     $payloadResults = [Collections.Generic.List[object]]::new()
     $profileResults = [Collections.Generic.List[object]]::new()
-    foreach ($entry in @(6, 7)) {
-        $entryProfiles = @($profiles | Where-Object { [int]$_.entry -eq $entry })
-        if ($entryProfiles.Count -ne 2 -or [int]$entryProfiles[0].table -ne 0 -or [int]$entryProfiles[1].table -ne 1) {
-            throw "Entry $entry does not have tables 0 and 1."
-        }
-        $stream = New-Object IO.MemoryStream
-        try {
-            foreach ($profile in $entryProfiles) {
+    if ($profilePayloadMode) {
+        foreach ($profile in $profiles) {
+            $profileId = [string]$profile.profile
+            $stream = New-Object IO.MemoryStream
+            try {
                 $glyphMetrics = [Collections.Generic.List[object]]::new()
                 foreach ($cp in $codepoints) {
                     $glyph = New-RasterGlyph $cp $profile
                     $stream.Write($glyph.pixel_data, 0, $glyph.pixel_data.Length)
                     $metric = $glyph.metric
-                    $metric | Add-Member -NotePropertyName entry -NotePropertyValue $entry
-                    $metric | Add-Member -NotePropertyName table -NotePropertyValue ([int]$profile.table)
+                    $metric | Add-Member -NotePropertyName profile -NotePropertyValue $profileId
                     $glyphMetrics.Add($metric)
                 }
                 $profileResults.Add([ordered]@{
-                    entry = $entry; table = [int]$profile.table; font_key = [string]$profile.font_key; family = [string]$profile.family
+                    profile = $profileId; font_key = [string]$profile.font_key; family = [string]$profile.family
                     style = [string]$profile.style; raster_size = [int]$profile.raster_size; cell = [int]$profile.cell
                     glyph_count = $glyphMetrics.Count; minimum_margin = ($glyphMetrics | ForEach-Object minimum_margin | Measure-Object -Minimum).Minimum
                     glyphs = $glyphMetrics
                 })
+                $payload = $stream.ToArray()
+            } finally { $stream.Dispose() }
+            $payloadPath = Join-Path $out "glyph_pixels_profile_${profileId}.pixels"
+            [IO.File]::WriteAllBytes($payloadPath, $payload)
+            $payloadResults.Add([ordered]@{ profile = $profileId; path = [IO.Path]::GetFileName($payloadPath); size = $payload.Length; sha256 = Get-BytesSha256 $payload })
+        }
+    } else {
+        foreach ($entry in @(6, 7)) {
+            $entryProfiles = @($profiles | Where-Object { [int]$_.entry -eq $entry })
+            if ($entryProfiles.Count -ne 2 -or [int]$entryProfiles[0].table -ne 0 -or [int]$entryProfiles[1].table -ne 1) {
+                throw "Entry $entry does not have tables 0 and 1."
             }
-            $payload = $stream.ToArray()
-        } finally { $stream.Dispose() }
-        $payloadPath = Join-Path $out "glyph_pixels_entry_${entry}.pixels"
-        [IO.File]::WriteAllBytes($payloadPath, $payload)
-        $payloadResults.Add([ordered]@{ entry = $entry; path = [IO.Path]::GetFileName($payloadPath); size = $payload.Length; sha256 = Get-BytesSha256 $payload })
+            $stream = New-Object IO.MemoryStream
+            try {
+                foreach ($profile in $entryProfiles) {
+                    $glyphMetrics = [Collections.Generic.List[object]]::new()
+                    foreach ($cp in $codepoints) {
+                        $glyph = New-RasterGlyph $cp $profile
+                        $stream.Write($glyph.pixel_data, 0, $glyph.pixel_data.Length)
+                        $metric = $glyph.metric
+                        $metric | Add-Member -NotePropertyName entry -NotePropertyValue $entry
+                        $metric | Add-Member -NotePropertyName table -NotePropertyValue ([int]$profile.table)
+                        $glyphMetrics.Add($metric)
+                    }
+                    $profileResults.Add([ordered]@{
+                        entry = $entry; table = [int]$profile.table; font_key = [string]$profile.font_key; family = [string]$profile.family
+                        style = [string]$profile.style; raster_size = [int]$profile.raster_size; cell = [int]$profile.cell
+                        glyph_count = $glyphMetrics.Count; minimum_margin = ($glyphMetrics | ForEach-Object minimum_margin | Measure-Object -Minimum).Minimum
+                        glyphs = $glyphMetrics
+                    })
+                }
+                $payload = $stream.ToArray()
+            } finally { $stream.Dispose() }
+            $payloadPath = Join-Path $out "glyph_pixels_entry_${entry}.pixels"
+            [IO.File]::WriteAllBytes($payloadPath, $payload)
+            $payloadResults.Add([ordered]@{ entry = $entry; path = [IO.Path]::GetFileName($payloadPath); size = $payload.Length; sha256 = Get-BytesSha256 $payload })
+        }
     }
     $result = [ordered]@{
-        schema = 'nobu16.kr.font-seoulhangang-v1-raster-result.v2'
+        schema = $(if ($profilePayloadMode) { 'nobu16.kr.font-seoulhangang-v1-raster-result.v3' } else { 'nobu16.kr.font-seoulhangang-v1-raster-result.v2' })
         request_sha256 = Get-FileSha256 $requestPath
         rasterizer = 'System.Drawing GDI+ AntiAliasGridFit TextContrast=4 72DPI; 2x scratch full-ink extraction; centered 4bpp copy'
         codepoints = @($requestData.codepoints)

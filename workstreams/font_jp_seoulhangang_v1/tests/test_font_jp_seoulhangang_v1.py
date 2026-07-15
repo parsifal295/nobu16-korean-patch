@@ -100,6 +100,40 @@ def synthetic_ttf_format12(mapped: list[int]) -> bytes:
 
 
 class JPFontPipelineTests(unittest.TestCase):
+    def test_port_stock_root_is_explicit_and_resolves_both_pristine_inputs(self) -> None:
+        parser = builder.build_parser()
+        with self.assertRaises(SystemExit), mock.patch("sys.stderr"):
+            parser.parse_args(
+                [
+                    "build",
+                    "--font-eb",
+                    "SeoulHangangEB.ttf",
+                    "--font-b",
+                    "SeoulHangangB.ttf",
+                    "--output-root",
+                    "candidate",
+                ]
+            )
+        args = parser.parse_args(
+            [
+                "verify",
+                "--port-stock-root",
+                "pristine-port-stock",
+                "--candidate-root",
+                "candidate",
+            ]
+        )
+        paths = builder.stock_paths_from_args(args)
+        self.assertEqual(
+            paths["pk_port1"].name,
+            "res_lang_pk_port1.bin",
+        )
+        self.assertEqual(
+            paths["pk_port2"].name,
+            "res_lang_pk_port2.bin",
+        )
+        self.assertEqual(paths["pk_port1"].parent, paths["pk_port2"].parent)
+
     def test_latest_demand_and_evidence_match_final_builder_locks(self) -> None:
         demand = builder.require_demand()
         demand_projection = {
@@ -212,11 +246,16 @@ class JPFontPipelineTests(unittest.TestCase):
     def test_real_profile_assignment_has_no_invented_small_tier(self) -> None:
         self.assertEqual(builder.PROFILE_TABLES[6], ("eb48", "eb48", "eb48"))
         self.assertEqual(builder.PROFILE_TABLES[7], ("b32", "eb48", "b32"))
+        self.assertEqual(builder.PROFILE_TABLES[101], ("b64", "eb96", "b32"))
+        self.assertEqual(builder.PROFILE_TABLES[200], ("eb96", "eb96", "eb96"))
+        self.assertEqual(builder.PROFILE_TABLES[201], ("b64", "eb96", "b64"))
         self.assertFalse(builder.SEOUL_HANGANG_M["used"])
         evidence = json.loads((WORKSTREAM / "verification.v1.json").read_text(encoding="utf-8"))
         profiles = evidence["g1n_structure"]["profiles"]
         self.assertEqual(profiles["entry_6_or_16"]["cell_hierarchy"], [48, 48, 48])
         self.assertEqual(profiles["entry_7_or_17"]["cell_hierarchy"], [32, 48, 32])
+        self.assertEqual(profiles["port1_entry_1"]["cell_hierarchy"], [64, 96, 32])
+        self.assertEqual(profiles["port2_entry_0"]["cell_hierarchy"], [96, 96, 96])
         self.assertFalse(evidence["g1n_structure"]["smaller_third_tier_present"])
 
     def test_mixed_cell_append_uses_b_eb_b(self) -> None:
@@ -229,6 +268,7 @@ class JPFontPipelineTests(unittest.TestCase):
         target, report = builder.build_g1n_append(
             stock,
             pixels,
+            {},
             7,
             [codepoint],
             {0: [codepoint], 1: [codepoint], 2: [codepoint]},
@@ -239,6 +279,7 @@ class JPFontPipelineTests(unittest.TestCase):
         verified = builder.verify_g1n_append_without_raster(
             stock,
             target,
+            {},
             7,
             {0: [codepoint], 1: [codepoint], 2: [codepoint]},
             "synthetic profile 7",
@@ -257,17 +298,55 @@ class JPFontPipelineTests(unittest.TestCase):
             1: [raster_cp],
             2: [0x32A4, raster_cp, 0xFF65],
         }
+        layout = builder.parse_layout(stock, "synthetic stock reuse")
+        reuse_catalog = {
+            32: {
+                cp: builder.extract_stock_reuse_glyph(
+                    stock, layout, 0, cp, "synthetic stock reuse"
+                )
+                | {"source_route": "synthetic", "source_outer_entry": 7}
+                for cp in (0x32A4, 0xFF65)
+            }
+        }
         target, report = builder.build_g1n_append(
-            stock, pixels, 7, [raster_cp], table_plan, "synthetic stock reuse"
+            stock, pixels, reuse_catalog, 7, [raster_cp], table_plan, "synthetic stock reuse"
         )
         copies = report["tables"][2]["stock_pixel_copies"]
         self.assertEqual([row["codepoint"] for row in copies], ["U+32A4", "U+FF65"])
         self.assertTrue(all(not row["direct_pointer_alias"] for row in copies))
         verified = builder.verify_g1n_append_without_raster(
-            stock, target, 7, table_plan, "synthetic stock reuse"
+            stock, target, reuse_catalog, 7, table_plan, "synthetic stock reuse"
         )
         self.assertTrue(verified["stock_pixel_copies_exact"])
         self.assertEqual(len(verified["stock_pixel_copies"]), 2)
+
+    def test_port1_profile_downsamples_same_palette_64px_donors(self) -> None:
+        stock = synthetic_reuse_g1n((64, 96, 32))
+        raster_cp = 0xAC00
+        pixels = {
+            "b64": bytes([0xB1]) * ((64 // 2) * 64),
+            "eb96": bytes([0xE1]) * ((96 // 2) * 96),
+            "b32": bytes([0xB2]) * ((32 // 2) * 32),
+        }
+        table_plan = {
+            0: [raster_cp],
+            1: [raster_cp],
+            2: [0x32A4, raster_cp, 0xFF65],
+        }
+        target, report = builder.build_g1n_append(
+            stock, pixels, {}, 101, [raster_cp], table_plan, "synthetic port1"
+        )
+        copies = report["tables"][2]["stock_pixel_copies"]
+        self.assertEqual(
+            {row.get("source_route") for row in copies},
+            {"same_g1n"},
+        )
+        self.assertTrue(all(row["pixel_size"] in (256, 512) for row in copies))
+        verified = builder.verify_g1n_append_without_raster(
+            stock, target, {}, 101, table_plan, "synthetic port1"
+        )
+        self.assertTrue(verified["stock_pixel_copies_exact"])
+        self.assertEqual(verified["cell_hierarchy"], [64, 96, 32])
 
     def test_cmap_parser_never_invents_fallback_coverage(self) -> None:
         font = synthetic_ttf_format12([0xAC00, 0x32A4])
@@ -319,8 +398,7 @@ class JPFontPipelineTests(unittest.TestCase):
             ):
                 with self.assertRaisesRegex(builder.JPFontBuildError, "boom"):
                     builder.staged_private_build(
-                        b"base",
-                        b"pk",
+                        {"base": b"base", "pk": b"pk"},
                         {},
                         {},
                         parent,
@@ -329,24 +407,23 @@ class JPFontPipelineTests(unittest.TestCase):
                     )
             self.assertEqual(list(parent.iterdir()), [])
 
-    def test_verification_pins_private_outputs_and_both_runtime_routes(self) -> None:
+    def test_verification_pins_private_outputs_and_all_runtime_routes(self) -> None:
         evidence = builder.strict_json(WORKSTREAM / "verification.v1.json")
         expected = builder.load_expected_outputs(WORKSTREAM / "verification.v1.json")
         self.assertEqual(
             [row["candidate_archive_sha256"] for row in expected["routes"]],
             [
-                "04ADC5D345D05973A647C4DAF870E9AEFEB69FA9AF7BD9240DA6505AD18232C6",
-                "733FAC967BA0DAED8D59562588CEE0E7136D90169B74B747C5DC45722B7FD7B3",
+                "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+                "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+                "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+                "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
             ],
         )
         routes = evidence["pk_runtime_route_evidence"]
         self.assertFalse(routes["steam_runtime_required_combination_verified"])
-        self.assertEqual(
-            routes["safe_distribution_decision"],
-            "include both JP base and JP PK font candidates pending Steam runtime validation",
-        )
-        self.assertIn("/res_lang.bin", routes["ascii_string_offsets"])
-        self.assertIn("/res_lang_pk.bin", routes["ascii_string_offsets"])
+        self.assertIn("all four font-bearing JP", routes["safe_distribution_decision"])
+        self.assertIn("/res_lang.bin", routes["route_strings_present"])
+        self.assertIn("/res_lang_pk_port2.bin", routes["route_strings_present"])
 
     def test_expected_cmap_gate_excludes_exact_builder_stock_reuse_set(self) -> None:
         expected = builder.load_expected_outputs(WORKSTREAM / "verification.v1.json")
