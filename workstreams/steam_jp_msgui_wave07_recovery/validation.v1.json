@@ -1,0 +1,63 @@
+{
+  "artifacts": [
+    {
+      "path": "workstreams/steam_jp_msgui_wave07_recovery/recovery_decisions.ko.jsonl",
+      "sha256": "E19CAD77C6B8BBB876426EE72C5997351305EDAE29C1E29F5CEA58D046A27F8F",
+      "size": 36707
+    },
+    {
+      "path": "workstreams/steam_jp_msgui_wave07_recovery/public/msgui_ko_pk_jp_steam_wave07_recovery_343.v1.json",
+      "sha256": "3F89B1EB791686BBA4C1AFA790A157EB88F60DF14D746B81D437365201629B51",
+      "size": 74833
+    },
+    {
+      "path": "workstreams/steam_jp_msgui_wave07_recovery/exclusions.v1.json",
+      "sha256": "3BFE32DCB2452B842B8ADE2B8A5881167BB8E670CFE1B50BBE0AF84C772FD652",
+      "size": 717
+    },
+    {
+      "path": "workstreams/steam_jp_msgui_wave07_recovery/review/review_evidence.v1.json",
+      "sha256": "4F5196D42F08B55B5ABAE110B0AF0D8D0421A2D5C1ED63BA12B861F47E040032",
+      "size": 120333
+    }
+  ],
+  "base_language": "JP",
+  "checks": {
+    "all_exclusions_explicit": true,
+    "all_recovered_invariants_exact": true,
+    "all_recovered_slots_semantically_reviewed": true,
+    "foundation_disjoint": true,
+    "jp_source_hashes_exact": true,
+    "private_context_pins_exact": true,
+    "public_entry_shape_exact": true,
+    "publisher_source_text_absent": true,
+    "v1_audit_pin_exact": true,
+    "v1_foundation_pin_exact": true,
+    "withheld_partition_exact": true
+  },
+  "effective_change_count": 341,
+  "excluded_coordinate_sha256": "701A5A3AC5B35FC9E68400F458DA9803FBB15C02D827B46232FCBF642F96B2DC",
+  "excluded_entry_count": 1,
+  "no_op_count": 2,
+  "original_mismatch_reason_counts": {
+    "esc": 22,
+    "leading_whitespace": 1,
+    "line_breaks": 156,
+    "printf": 252,
+    "pua": 20,
+    "trailing_whitespace": 3
+  },
+  "recovered_coordinate_sha256": "BEF7EAE59645DBADEFFD31CB261BB0C366105715A58420987CDA339487D3219D",
+  "recovered_entry_count": 343,
+  "recovered_invariant_profile_nonempty_counts": {
+    "esc": 24,
+    "line_breaks": 110,
+    "printf": 178,
+    "trailing_whitespace": 1
+  },
+  "resource": "MSG_PK/JP/msgui.bin",
+  "runtime_version": "1.1.7",
+  "schema": "nobu16.kr.steam-jp-msgui-recovery-validation.v1",
+  "status": "PASS",
+  "withheld_entry_count": 344
+}
