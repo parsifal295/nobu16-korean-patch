@@ -1,0 +1,4822 @@
+{
+  "batch_id": "msgev-pk-native-batch06-260.v1",
+  "candidate_count": 501,
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "excluded": [
+    {
+      "id": 2953,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2954,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2955,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2959,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2960,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2964,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2965,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2967,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2972,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2973,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2974,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2975,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2976,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2977,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2978,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2979,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2980,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2981,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2982,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2983,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2984,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2985,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2986,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2987,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2988,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2989,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2990,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2991,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2992,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2993,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2994,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2995,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2996,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 2997,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3000,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3001,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3002,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3003,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3004,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3005,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3006,
+      "progress_claim_created": false,
+      "reason": "internal_speaker_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3109,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3116,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3309,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3310,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3314,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3315,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3319,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3320,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3324,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3325,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3329,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3330,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3334,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3335,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3339,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3340,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3344,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3345,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3349,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 3350,
+      "progress_claim_created": false,
+      "reason": "internal_event_lookup_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6503,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6506,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6512,
+      "progress_claim_created": false,
+      "reason": "dynamic_token_with_nonlexical_punctuation",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6696,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6697,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6698,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6699,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 6989,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7013,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7075,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7105,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7119,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7225,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7295,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7303,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7304,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7324,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7358,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7411,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7419,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7455,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7467,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7484,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7497,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7510,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7523,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7541,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7586,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7700,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7790,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7816,
+      "progress_claim_created": false,
+      "reason": "dynamic_token_with_nonlexical_punctuation",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 7996,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8006,
+      "progress_claim_created": false,
+      "reason": "dynamic_token_with_nonlexical_punctuation",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8118,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8123,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8141,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8181,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8220,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8355,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8375,
+      "progress_claim_created": false,
+      "reason": "dynamic_token_with_nonlexical_punctuation",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8398,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8437,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8529,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8577,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8588,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8589,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8603,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8625,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8631,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8644,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8671,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8676,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8708,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8848,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8875,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8890,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 8900,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9016,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9056,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9197,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9456,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9495,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9532,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9568,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9631,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9656,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9722,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9758,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9762,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9845,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9849,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9853,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 9854,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10105,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10258,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10359,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_manual_runtime_risk",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10367,
+      "progress_claim_created": false,
+      "reason": "dynamic_substitution_token_manual_runtime_risk",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10703,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10708,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10709,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10716,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10764,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10805,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10806,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10807,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10809,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10827,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10828,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10829,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10832,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10837,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10840,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10843,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10845,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10850,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10851,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10852,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10853,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10905,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10926,
+      "progress_claim_created": false,
+      "reason": "nonlexical_punctuation_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10959,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10960,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 10961,
+      "progress_claim_created": false,
+      "reason": "runtime_custom_bracket_substitution",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14550,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14551,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14552,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14553,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14554,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14555,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14556,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14557,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14558,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14559,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14560,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14561,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14562,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14563,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14566,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14567,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14568,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14569,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14570,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14573,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14574,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14575,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14576,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14577,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14578,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14580,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14581,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14582,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14583,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14584,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14585,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14586,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14587,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14588,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14589,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14590,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14591,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14592,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14593,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14594,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14595,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14597,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14598,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14600,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14601,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14602,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14603,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14604,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14605,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14606,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14630,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14631,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14632,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14633,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14634,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14635,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14636,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14637,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14638,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14639,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14640,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 14641,
+      "progress_claim_created": false,
+      "reason": "internal_ascii_key",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17113,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17114,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17138,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17139,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17169,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17179,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17180,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17236,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17261,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17267,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17445,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17707,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17709,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17717,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    },
+    {
+      "id": 17729,
+      "progress_claim_created": false,
+      "reason": "runtime_printf_placeholder_only",
+      "runtime_safety_decision": "preserve_stock_value",
+      "status": "excluded"
+    }
+  ],
+  "excluded_count": 241,
+  "quality_state": "native_semantic_review_complete_runtime_review_pending",
+  "resource": "MSG_PK/SC/msgev.bin",
+  "schema": "nobu16.kr.msgev-pk-native-batch06-review.v1",
+  "translated": [
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10786,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10787,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10788,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10789,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10790,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10791,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10792,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10793,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10794,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10795,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10796,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10797,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10798,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10799,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10800,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10801,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10802,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10803,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10804,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10808,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10810,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10811,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10812,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10813,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10814,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10815,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10816,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10817,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10818,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10819,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10820,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10821,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10822,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10824,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10826,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10830,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10831,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10833,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10834,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10835,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10836,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10838,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10839,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10841,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10842,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10844,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10846,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10847,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10849,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10854,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10855,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10856,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10857,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10859,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10860,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10861,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10862,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10863,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10864,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10865,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10866,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10867,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10868,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10869,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10870,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10871,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10872,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10873,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10874,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10875,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10876,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10877,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10878,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10879,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10880,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10881,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10882,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10883,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10884,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10885,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10886,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10887,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10889,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10895,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10896,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10897,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10898,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10908,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10909,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10914,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10915,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10916,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10917,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10918,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10919,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10920,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10921,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10922,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10923,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10924,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10925,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10927,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10928,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10929,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10930,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10931,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10932,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10933,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10934,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10935,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10936,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10937,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10938,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10939,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10940,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10941,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10942,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10943,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10944,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10945,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10946,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10947,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10948,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10949,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10950,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10951,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10952,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10953,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10954,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10955,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10956,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10957,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 10958,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13751,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13752,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13753,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13754,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13755,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13756,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13757,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13758,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13759,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13760,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13761,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13762,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13763,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13764,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13767,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13768,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13769,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13770,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13771,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13774,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13775,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13776,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13777,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13778,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13779,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13781,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13782,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13783,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13784,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13786,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13787,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13788,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13789,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13790,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13791,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13792,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13793,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13794,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13795,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13796,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13798,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13799,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13801,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13802,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13803,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13804,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13805,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13806,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13807,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13831,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13832,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13833,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13834,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13835,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13836,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13837,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13838,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13839,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13840,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13841,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13842,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13843,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13844,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13845,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13846,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 13847,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 14642,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 14643,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 14645,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 14646,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16410,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16411,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16412,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16413,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16414,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16415,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16416,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16417,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16418,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16419,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16420,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16421,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16422,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16423,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16424,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16425,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16426,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16427,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16428,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16429,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16430,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16431,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16432,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16433,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16434,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16435,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16436,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16823,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16824,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16892,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16893,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16894,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16895,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16896,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16897,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16898,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16899,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16900,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16901,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16902,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 16903,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17030,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17031,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17057,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17104,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17237,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17238,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17264,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17307,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17309,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17311,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17480,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17481,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17876,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17877,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17878,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    },
+    {
+      "custom_bracket_tokens_preserved": true,
+      "exact_target": true,
+      "id": 17879,
+      "pk_sc_invariants_preserved": true,
+      "predecessor_overlay_disjoint": true,
+      "runtime_reviewed": false,
+      "semantic_basis": "official_pk_sc_jp_tc_en_context",
+      "source_script_free": true,
+      "status": "translated",
+      "translation_kind": "pk_native_event_translation"
+    }
+  ],
+  "translated_count": 260
+}

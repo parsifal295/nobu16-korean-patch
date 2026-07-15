@@ -42,24 +42,24 @@ class SeoulHangangV1Tests(unittest.TestCase):
 
     def test_pinned_public_demand_covers_all_pk_progress_resources(self) -> None:
         demand = BUILD.load_default_overlay_demand()
-        self.assertEqual(98, demand["source_count"])
-        self.assertEqual(76_692, demand["source_entry_count"])
-        self.assertEqual(1_401, demand["codepoint_count"])
-        self.assertEqual(1_236, demand["hangul_syllable_count"])
+        self.assertEqual(106, demand["source_count"])
+        self.assertEqual(78_648, demand["source_entry_count"])
+        self.assertEqual(1_415, demand["codepoint_count"])
+        self.assertEqual(1_243, demand["hangul_syllable_count"])
         self.assertEqual(
-            "A10646370BE093D34CB82BCC611A462BF3330DD2D763B1056CA430E254432B49",
+            "EC10CBA8E379FC9BB96D05A3790594137F7B182E7CCB380660946CD8BAA26A94",
             demand["codepoints_sha256"],
         )
         self.assertEqual(
             [
                 ("MSG_PK/SC/msgui.bin", 1, 4037),
-                ("MSG_PK/SC/msgev.bin", 37, 13703),
-                ("MSG_PK/SC/msgdata.bin", 11, 21402),
+                ("MSG_PK/SC/msgev.bin", 40, 14504),
+                ("MSG_PK/SC/msgdata.bin", 14, 22280),
                 ("MSG_PK/SC/msgbre.bin", 14, 2217),
                 ("MSG_PK/SC/msgire.bin", 1, 122),
                 ("MSG_PK/SC/msgstf.bin", 1, 8),
-                ("MSG_PK/SC/msggame.bin", 30, 10572),
-                ("MSG/SC/strdata.bin", 3, 24631),
+                ("MSG_PK/SC/msggame.bin", 31, 10822),
+                ("MSG/SC/strdata.bin", 4, 24658),
             ],
             [
                 (item["resource"], item["source_count"], item["entry_count"])
@@ -67,10 +67,10 @@ class SeoulHangangV1Tests(unittest.TestCase):
             ],
         )
         self.assertEqual(
-            "CDB4CF365DCB4B009F364D0329B4189E51A3EB029C6A756A3790AC2FF7FE5C3B",
+            "D71E6897B8716650445AE4F120C28B4D5E0958E8DB8FF7877AB4604ED5D04D01",
             demand["source_catalog_sha256"],
         )
-        self.assertEqual(98, len(demand["sources"]))
+        self.assertEqual(106, len(demand["sources"]))
         sources = {item["path"]: item for item in demand["sources"]}
         self.assertEqual(
             "2A2EE0488CCF6BB70DBBDA2B00A005821DB4CD5C5C8300E4A30F9DF52890295C",
@@ -93,9 +93,9 @@ class SeoulHangangV1Tests(unittest.TestCase):
         plan_a = BUILD.build_plan(stock, demand)
         plan_b = BUILD.build_plan(stock, demand)
         self.assertEqual(BUILD.encode_json(plan_a), BUILD.encode_json(plan_b))
-        self.assertEqual(1318, plan_a["raster_codepoint_count"])
+        self.assertEqual(1332, plan_a["raster_codepoint_count"])
         self.assertEqual(
-            [(6, 0, 1241), (6, 1, 1318), (7, 0, 1241), (7, 1, 1318)],
+            [(6, 0, 1248), (6, 1, 1332), (7, 0, 1248), (7, 1, 1332)],
             [(item["entry"], item["table"], item["count"]) for item in plan_a["append_contract"]],
         )
         manifest = self.read_json("manifest.v1.json")
@@ -144,13 +144,13 @@ class SeoulHangangV1Tests(unittest.TestCase):
         self.assertTrue(verification["g1n_structural_validation"])
         self.assertFalse(verification["installed_game_files_modified"])
         coverage = verification["candidate"]["glyph_demand_coverage"]
-        self.assertEqual(1401, coverage["codepoint_count"])
+        self.assertEqual(1415, coverage["codepoint_count"])
         self.assertEqual(
             [(6, 0), (6, 1), (7, 0), (7, 1)],
             [(table["entry"], table["table"]) for table in coverage["tables"]],
         )
         self.assertEqual(
-            [1401, 1401, 1401, 1401],
+            [1415, 1415, 1415, 1415],
             [table["mapped_demand_count"] for table in coverage["tables"]],
         )
         self.assertEqual(
