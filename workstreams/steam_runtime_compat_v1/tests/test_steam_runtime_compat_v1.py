@@ -15,6 +15,7 @@ WORKSTREAM = Path(__file__).resolve().parents[1]
 COLLECTOR = WORKSTREAM / "Collect-SteamRuntimeCompat.ps1"
 EXPECTED = WORKSTREAM / "expected_release.v0.4.1.json"
 SCHEMA = WORKSTREAM / "result.schema.v1.json"
+README = WORKSTREAM / "README_KO.md"
 
 EXPECTED_V041_PINS = {
     "MSG/SC/strdata.bin": (
@@ -88,6 +89,7 @@ def assert_result_shape(test: unittest.TestCase, result: dict) -> None:
         "collector_version",
         "collected_at_utc",
         "game_root",
+        "runtime_executable",
         "platform",
         "launcher",
         "steam",
@@ -97,8 +99,25 @@ def assert_result_shape(test: unittest.TestCase, result: dict) -> None:
         "policy",
     }
     test.assertEqual(required_top, set(result))
-    test.assertEqual("1.0", result["schema_version"])
+    test.assertEqual("1.1", result["schema_version"])
+    test.assertEqual("1.1.0", result["collector_version"])
     test.assertFalse(result["game_root"]["absolute_path_included"])
+    runtime_executable = result["runtime_executable"]
+    test.assertEqual("NOBU16PK.exe", runtime_executable["relative_path"])
+    test.assertIsInstance(runtime_executable["exists"], bool)
+    if runtime_executable["sha256"] is not None:
+        test.assertRegex(runtime_executable["sha256"], r"^[0-9A-F]{64}$")
+    locale = result["platform"]["windows_system_locale"]
+    test.assertTrue(locale["values_are_culture_defaults"])
+    nls = result["platform"]["system_nls_code_pages"]
+    test.assertTrue(nls["registry_read_only"])
+    test.assertEqual(
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage",
+        nls["key"],
+    )
+    for field, name in (("acp", "ACP"), ("oemcp", "OEMCP"), ("maccp", "MACCP")):
+        test.assertEqual(name, nls[field]["name"])
+        test.assertIsInstance(nls[field]["present"], bool)
     test.assertIsInstance(result["files"], list)
     test.assertGreaterEqual(len(result["files"]), 7)
     for row in result["files"]:
@@ -161,6 +180,7 @@ class SteamRuntimeCompatV1Tests(unittest.TestCase):
                 "collector_version",
                 "collected_at_utc",
                 "game_root",
+                "runtime_executable",
                 "platform",
                 "launcher",
                 "steam",
@@ -174,6 +194,10 @@ class SteamRuntimeCompatV1Tests(unittest.TestCase):
         self.assertIn("fileProbe", schema["$defs"])
         self.assertIn("appManifest", schema["$defs"])
         self.assertIn("registryEntry", schema["$defs"])
+        self.assertIn("runtimeExecutable", schema["$defs"])
+        self.assertIn("systemNlsCodePages", schema["$defs"])
+        self.assertIn("nlsCodePageValue", schema["$defs"])
+        self.assertEqual("1.1", schema["properties"]["schema_version"]["const"])
 
     def test_collector_source_contains_no_mutating_or_process_commands(self) -> None:
         source = COLLECTOR.read_text(encoding="utf-8")
@@ -216,6 +240,24 @@ class SteamRuntimeCompatV1Tests(unittest.TestCase):
             r"SetWindowsHookEx",
         ):
             self.assertIsNone(re.search(forbidden_api, source, re.IGNORECASE), forbidden_api)
+
+        self.assertIn(
+            "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage", source
+        )
+        for value_name in ("ACP", "OEMCP", "MACCP"):
+            self.assertIn(value_name, source)
+        for forbidden_steam_action in ("steam.exe", "steam://", "app_update", "validate"):
+            self.assertNotIn(forbidden_steam_action.casefold(), source.casefold())
+
+    def test_readme_keeps_manual_verify_outside_collector_and_captures_stock_hash(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn("게임 파일 무결성 검사", readme)
+        self.assertIn("manual_steam_verify_complete_patch_not_reapplied", readme)
+        self.assertIn("NOBU16_stock_after_manual_steam_verify.json", readme)
+        self.assertIn("RES_SC/res_lang.bin", readme)
+        self.assertIn("Get-FileHash", readme)
+        self.assertIn("%TEMP%", readme)
+        self.assertIn("수집기는 Steam 무결성 검사를 실행하거나 Steam을 제어하지 않는다", readme)
 
     def test_fixture_collects_steam_metadata_matches_pins_and_changes_nothing(self) -> None:
         powershell = shutil.which("powershell.exe") or shutil.which("powershell")
@@ -349,6 +391,20 @@ class SteamRuntimeCompatV1Tests(unittest.TestCase):
             self.assertEqual(
                 sha256(fixture_files["NOBU16PK.exe"]), files["NOBU16PK.exe"]["sha256"]
             )
+            runtime_executable = result["runtime_executable"]
+            self.assertTrue(runtime_executable["exists"])
+            self.assertEqual(
+                len(fixture_files["NOBU16PK.exe"]), runtime_executable["size"]
+            )
+            self.assertEqual(
+                sha256(fixture_files["NOBU16PK.exe"]), runtime_executable["sha256"]
+            )
+            self.assertEqual(
+                files["NOBU16PK.exe"]["size"], runtime_executable["size"]
+            )
+            self.assertEqual(
+                files["NOBU16PK.exe"]["sha256"], runtime_executable["sha256"]
+            )
             self.assertTrue(files["RES_SC/res_lang.bin"]["matches_expected_release"])
             self.assertTrue(files["MSG_PK/SC/msgui.bin"]["matches_expected_release"])
             self.assertIsNone(files["RES_SC_PK/res_lang_pk.bin"]["matches_expected_release"])
@@ -356,6 +412,15 @@ class SteamRuntimeCompatV1Tests(unittest.TestCase):
             registry_entries = result["launcher"]["registry_entries"]
             self.assertEqual(4, len(registry_entries))
             self.assertTrue(all(isinstance(row, dict) for row in registry_entries))
+
+            nls = result["platform"]["system_nls_code_pages"]
+            self.assertTrue(nls["key_exists"])
+            self.assertIsNone(nls["read_error_type"])
+            for field in ("acp", "oemcp", "maccp"):
+                self.assertTrue(nls[field]["present"])
+                self.assertIsInstance(nls[field]["raw_value"], (str, int))
+                self.assertIsInstance(nls[field]["parsed_code_page"], int)
+                self.assertGreater(nls[field]["parsed_code_page"], 0)
 
 
 if __name__ == "__main__":
