@@ -1,6 +1,6 @@
 {
   "schema": "nobu16.kr.font-seoulhangang-v1-manifest.v1",
-  "status": "local_private_build_ready_runtime_unverified",
+  "status": "local_private_build_applied_runtime_screen_unverified",
   "target": {
     "runtime": "NOBU16PK.exe",
     "resource": "RES_SC/res_lang.bin",
@@ -8,15 +8,36 @@
     "g1n_entries": [6, 7],
     "file_only": true
   },
-  "font_source": {
-    "family": "SeoulHangang M",
-    "file_name": "SeoulHangangM.ttf",
-    "file_sha256": "D27E1B26B55E507BEC1045962C954CF426D79605009C720FAD1C9EF808E312CB",
-    "file_size": 7627124,
+  "font_sources": [
+    {
+      "key": "entry6_48px_eb",
+      "entry": 6,
+      "cell": 48,
+      "family": "SeoulHangang EB",
+      "file_name": "SeoulHangangEB.ttf",
+      "file_sha256": "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1",
+      "file_size": 7350712
+    },
+    {
+      "key": "entry7_32px_b",
+      "entry": 7,
+      "cell": 32,
+      "family": "SeoulHangang B",
+      "file_name": "SeoulHangangB.ttf",
+      "file_sha256": "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B",
+      "file_size": 7344552
+    }
+  ],
+  "profile_assignment": {
+    "entry_6_48px": "SeoulHangang EB",
+    "entry_7_32px": "SeoulHangang B",
+    "policy": "PC SC의 기존 2-table 구조를 보존하고 같은 entry의 table 0/1에는 동일한 공식 서울한강체 굵기를 사용한다."
+  },
+  "font_license": {
     "official_download_page": "https://www.seoul.go.kr/seoul/font.do",
     "official_archive_url": "https://www.seoul.go.kr/upload/seoul/font/seoul_font3.zip",
     "official_archive_sha256": "7AB485B98F5B1A1B05CFD04484DD49A62F856BE8506223CD99E5EA1A33E400A7",
-    "weight_selection": "Switch v1.1 README names SeoulHangang but does not identify M/L/B/EB. v1 fixes the official M file as one reproducible local input; it does not assert pixel identity with Switch.",
+    "weight_selection": "PC 표시 위계에 맞춰 48px entry 6은 공식 EB, 32px entry 7은 공식 B로 고정한다. Switch와 glyph 픽셀까지 동일하다고 주장하지 않는다.",
     "license": "공공누리 제1유형(출처표시)",
     "attribution": "출처: 서울특별시, 서울서체 서울한강체 (https://www.seoul.go.kr/seoul/font.do)",
     "redistribution_policy": "서울시 안내의 판매·유상양도·무단배포 금지 고지를 보수적으로 적용한다. 원본 TTF/OTF, 래스터 픽셀, 완성 G1N/LINK/res_lang.bin을 저장소·공개 배포물에 포함하지 않는다."
@@ -131,7 +152,7 @@
   },
   "structural_build_verification": {
     "path": "workstreams/font_seoulhangang_v1/verification.v1.json",
-    "sha256": "142D5E2C654632AEDE2112BCC1123F63C9088E06E5F16928C4A15A512BD0F7AB",
+    "sha256": "ADC8801EC3DC3982B008AC64595508417FA2A7E36E6774E105211E0B6261348F",
     "a_b_candidate_byte_identical": true,
     "full_pk_glyph_demand_coverage": true,
     "g1n_structural_validation": true,
@@ -139,6 +160,13 @@
   },
   "runtime_validation": {
     "performed": false,
-    "blocker": "실제 게임 설치본은 이 작업에서 수정하지 않으며, 별도 백업·화면·종료 검증 후에만 로컬 후보를 수동 적용할 수 있음"
+    "install_applied": true,
+    "release_id": "pk-font-eb48-b32-preserve-images-20260715-v1",
+    "live_archive_sha256": "DB94884F058EA5DEE72F8BC3584E157B98F7B59DB70D7265CCE9125452F0A431",
+    "restore_dry_run_passed": true,
+    "changed_outer_link_entries": [6, 7],
+    "preserved_outer_link_entry_count": 40,
+    "title_image_entry_3_byte_identical": true,
+    "blocker": "실제 게임 화면에서 48px EB와 32px B의 가독성·클리핑·역할 배치를 확인하는 런타임 화면 QA가 남아 있음"
   }
 }

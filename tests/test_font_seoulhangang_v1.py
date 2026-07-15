@@ -17,7 +17,10 @@ PATCH_ROOT = Path(__file__).resolve().parents[1]
 GAME_ROOT = PATCH_ROOT.parent
 WORKSTREAM = PATCH_ROOT / "workstreams" / "font_seoulhangang_v1"
 STOCK = GAME_ROOT / "KR_PATCH_BACKUP" / "officer_names_v0_1" / "stock" / "font.stock.bak"
-LOCAL_OFFICIAL_FONT = PATCH_ROOT / "tmp" / "third_party_fonts" / "SeoulHangangM.ttf"
+LOCAL_OFFICIAL_FONTS = {
+    "entry6_48px_eb": PATCH_ROOT / "tmp" / "third_party_fonts" / "SeoulHangangEB.ttf",
+    "entry7_32px_b": PATCH_ROOT / "tmp" / "third_party_fonts" / "SeoulHangangB.ttf",
+}
 
 
 def load_builder():
@@ -129,8 +132,12 @@ class SeoulHangangV1Tests(unittest.TestCase):
         manifest = self.read_json("manifest.v1.json")
         policy = manifest["public_payload_policy"]
         self.assertTrue(all(value is False for value in policy.values()))
-        self.assertEqual(BUILD.SEOUL_HANGANG_M_SHA256, manifest["font_source"]["file_sha256"])
-        self.assertIn("공공누리 제1유형", manifest["font_source"]["license"])
+        sources = {item["key"]: item for item in manifest["font_sources"]}
+        self.assertEqual(BUILD.SEOUL_HANGANG_EB_SHA256, sources["entry6_48px_eb"]["file_sha256"])
+        self.assertEqual(BUILD.SEOUL_HANGANG_B_SHA256, sources["entry7_32px_b"]["file_sha256"])
+        self.assertEqual("SeoulHangang EB", manifest["profile_assignment"]["entry_6_48px"])
+        self.assertEqual("SeoulHangang B", manifest["profile_assignment"]["entry_7_32px"])
+        self.assertIn("공공누리 제1유형", manifest["font_license"]["license"])
         verification = self.read_json("verification.v1.json")
         self.assertTrue(verification["candidate_byte_identical"])
         self.assertTrue(verification["full_pk_glyph_demand_coverage"])
@@ -164,15 +171,15 @@ class SeoulHangangV1Tests(unittest.TestCase):
         with self.assertRaises(BUILD.FontBuildError):
             BUILD.validate_output_root(STOCK.parent, (STOCK,))
 
-    @unittest.skipUnless(LOCAL_OFFICIAL_FONT.is_file(), "official SeoulHangang M is not present in ignored local input")
+    @unittest.skipUnless(all(path.is_file() for path in LOCAL_OFFICIAL_FONTS.values()), "official SeoulHangang EB/B inputs are not present")
     def test_optional_local_raster_smoke_is_byte_deterministic(self) -> None:
-        BUILD.require_official_font(LOCAL_OFFICIAL_FONT)
+        BUILD.require_official_fonts(LOCAL_OFFICIAL_FONTS)
         powershell = Path("C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe")
         if not powershell.is_file():
             self.skipTest("Windows PowerShell is unavailable")
         with tempfile.TemporaryDirectory(prefix="nobu16-seoulhangang-test-") as temp:
             root = Path(temp)
-            request = BUILD.raster_request(LOCAL_OFFICIAL_FONT, [0x3161, 0xAC00, 0xFF65])
+            request = BUILD.raster_request(LOCAL_OFFICIAL_FONTS, [0x3161, 0xAC00, 0xFF65])
             request_path = root / "request.json"
             request_path.write_text(json.dumps(request, ensure_ascii=True), encoding="utf-8")
             outputs = []

@@ -40,11 +40,16 @@ function New-RasterGlyph([int]$Codepoint, [object]$Profile) {
     if ($Codepoint -lt 0 -or $Codepoint -gt 0xFFFF) {
         throw ('G1N supports BMP only: U+{0:X}' -f $Codepoint)
     }
-    if ([string]$Profile.family -ne $script:ExpectedFamily) {
+    $fontKey = [string]$Profile.font_key
+    if (-not $script:FontFamilies.ContainsKey($fontKey)) {
+        throw "Unexpected profile font key: $fontKey"
+    }
+    $fontFamily = $script:FontFamilies[$fontKey]
+    if ([string]$Profile.family -ne $fontFamily.Name) {
         throw "Unexpected profile family: $($Profile.family)"
     }
     $style = [Enum]::Parse([Drawing.FontStyle], [string]$Profile.style)
-    if (-not $script:FontFamily.IsStyleAvailable($style)) {
+    if (-not $fontFamily.IsStyleAvailable($style)) {
         throw "Unavailable SeoulHangang style: $style"
     }
 
@@ -52,7 +57,7 @@ function New-RasterGlyph([int]$Codepoint, [object]$Profile) {
     # GDI+ AntiAliasGridFit, 2x scratch canvas, full-ink extraction and a
     # centered 4bpp packed target cell.  No game asset is read or written here.
     $canvas = $cell * 2
-    $font = New-Object Drawing.Font($script:FontFamily, $rasterSize, $style, [Drawing.GraphicsUnit]::Pixel)
+    $font = New-Object Drawing.Font($fontFamily, $rasterSize, $style, [Drawing.GraphicsUnit]::Pixel)
     $bitmap = New-Object Drawing.Bitmap($canvas, $canvas, [Drawing.Imaging.PixelFormat]::Format32bppArgb)
     $bitmap.SetResolution(72, 72)
     $graphics = [Drawing.Graphics]::FromImage($bitmap)
@@ -161,10 +166,37 @@ function New-RasterGlyph([int]$Codepoint, [object]$Profile) {
 
 $requestPath = (Resolve-Path -LiteralPath $RequestPathInput).Path
 $requestData = Get-Content -Raw -Encoding UTF8 -LiteralPath $requestPath | ConvertFrom-Json
-if ($requestData.schema -ne 'nobu16.kr.font-seoulhangang-v1-raster-request.v1') { throw 'Unsupported raster request schema.' }
-if ($requestData.font.family -ne 'SeoulHangang M') { throw 'Unexpected SeoulHangang family pin.' }
-$fontPath = [string]$requestData.font.path
-Assert-FileHash $fontPath ([string]$requestData.font.sha256) 'official SeoulHangang M TTF'
+if ($requestData.schema -ne 'nobu16.kr.font-seoulhangang-v1-raster-request.v2') { throw 'Unsupported raster request schema.' }
+$expectedFonts = [ordered]@{
+    entry6_48px_eb = [ordered]@{
+        entry = 6; family = 'SeoulHangang EB'; file_name = 'SeoulHangangEB.ttf'
+        sha256 = '60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1'
+    }
+    entry7_32px_b = [ordered]@{
+        entry = 7; family = 'SeoulHangang B'; file_name = 'SeoulHangangB.ttf'
+        sha256 = 'C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B'
+    }
+}
+$fontRows = @($requestData.fonts)
+if ($fontRows.Count -ne $expectedFonts.Count) { throw 'Expected exactly two official SeoulHangang font inputs.' }
+$fontPaths = @{}
+foreach ($fontRow in $fontRows) {
+    $fontKey = [string]$fontRow.key
+    if (-not $expectedFonts.Contains($fontKey) -or $fontPaths.ContainsKey($fontKey)) {
+        throw "Unexpected or duplicate SeoulHangang font key: $fontKey"
+    }
+    $expected = $expectedFonts[$fontKey]
+    $fontPath = [string]$fontRow.path
+    if ([string]$fontRow.family -ne [string]$expected.family -or
+        [int]$fontRow.entry -ne [int]$expected.entry -or
+        [string]$fontRow.sha256 -ne [string]$expected.sha256 -or
+        [IO.Path]::GetFileName($fontPath) -ne [string]$expected.file_name) {
+        throw "SeoulHangang font descriptor mismatch: $fontKey"
+    }
+    Assert-FileHash $fontPath ([string]$expected.sha256) "official $($expected.family) TTF"
+    $fontPaths[$fontKey] = $fontPath
+}
+if ($fontPaths.Count -ne $expectedFonts.Count) { throw 'Incomplete SeoulHangang font descriptor set.' }
 
 $codepoints = [Collections.Generic.List[int]]::new(); $previous = -1
 foreach ($text in @($requestData.codepoints)) {
@@ -176,17 +208,30 @@ foreach ($text in @($requestData.codepoints)) {
 if ($codepoints.Count -eq 0) { throw 'Raster request has no codepoints.' }
 $profiles = @($requestData.profiles | Sort-Object @{Expression = {[int]$_.entry}}, @{Expression = {[int]$_.table}})
 if ($profiles.Count -ne 4) { throw 'Expected four PC G1N profiles.' }
+foreach ($profile in $profiles) {
+    $fontKey = [string]$profile.font_key
+    if (-not $expectedFonts.Contains($fontKey) -or
+        [int]$profile.entry -ne [int]$expectedFonts[$fontKey].entry -or
+        [string]$profile.family -ne [string]$expectedFonts[$fontKey].family) {
+        throw "Profile/font assignment mismatch: entry=$($profile.entry) table=$($profile.table)"
+    }
+}
 
 $out = [IO.Path]::GetFullPath($OutputDirectory)
 [IO.Directory]::CreateDirectory($out) | Out-Null
 Add-Type -AssemblyName System.Drawing
 $script:PrivateFonts = New-Object Drawing.Text.PrivateFontCollection
 try {
-    $script:ExpectedFamily = [string]$requestData.font.family
-    $script:PrivateFonts.AddFontFile($fontPath)
-    $families = @($script:PrivateFonts.Families | Where-Object Name -eq $script:ExpectedFamily)
-    if ($families.Count -ne 1) { throw "Expected one private family '$script:ExpectedFamily', found $($families.Count)." }
-    $script:FontFamily = $families[0]
+    foreach ($fontKey in $expectedFonts.Keys) {
+        $script:PrivateFonts.AddFontFile([string]$fontPaths[$fontKey])
+    }
+    $script:FontFamilies = @{}
+    foreach ($fontKey in $expectedFonts.Keys) {
+        $expectedFamily = [string]$expectedFonts[$fontKey].family
+        $families = @($script:PrivateFonts.Families | Where-Object Name -eq $expectedFamily)
+        if ($families.Count -ne 1) { throw "Expected one private family '$expectedFamily', found $($families.Count)." }
+        $script:FontFamilies[$fontKey] = $families[0]
+    }
 
     $payloadResults = [Collections.Generic.List[object]]::new()
     $profileResults = [Collections.Generic.List[object]]::new()
@@ -208,7 +253,7 @@ try {
                     $glyphMetrics.Add($metric)
                 }
                 $profileResults.Add([ordered]@{
-                    entry = $entry; table = [int]$profile.table; family = [string]$profile.family
+                    entry = $entry; table = [int]$profile.table; font_key = [string]$profile.font_key; family = [string]$profile.family
                     style = [string]$profile.style; raster_size = [int]$profile.raster_size; cell = [int]$profile.cell
                     glyph_count = $glyphMetrics.Count; minimum_margin = ($glyphMetrics | ForEach-Object minimum_margin | Measure-Object -Minimum).Minimum
                     glyphs = $glyphMetrics
@@ -221,7 +266,7 @@ try {
         $payloadResults.Add([ordered]@{ entry = $entry; path = [IO.Path]::GetFileName($payloadPath); size = $payload.Length; sha256 = Get-BytesSha256 $payload })
     }
     $result = [ordered]@{
-        schema = 'nobu16.kr.font-seoulhangang-v1-raster-result.v1'
+        schema = 'nobu16.kr.font-seoulhangang-v1-raster-result.v2'
         request_sha256 = Get-FileSha256 $requestPath
         rasterizer = 'System.Drawing GDI+ AntiAliasGridFit TextContrast=4 72DPI; 2x scratch full-ink extraction; centered 4bpp copy'
         codepoints = @($requestData.codepoints)
