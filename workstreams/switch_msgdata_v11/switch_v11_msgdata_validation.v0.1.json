@@ -1,0 +1,253 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/switch_v11_msgdata_alignment_evidence.v0.1.json",
+      "sha256": "3C82905218666C80CE12A699CD2FF20C998D7928CF8850AF68C7B9B7E108E713",
+      "size": 10020088
+    },
+    "overlay": {
+      "path": "public/msgdata_ko_switch_v11_strict_transfer.v0.1.json",
+      "sha256": "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E",
+      "size": 2615040
+    },
+    "review_index": {
+      "path": "review/switch_v11_msgdata_review_index.v0.1.json",
+      "sha256": "44DCCFA27F56BF2C4212068F92D19AE5849A0CD85CD8EB7B29A9319381478639",
+      "size": 4944482
+    }
+  },
+  "batch_id": "switch_v11_msgdata_strict_transfer.v0.1",
+  "existing_overlay_exclusion": {
+    "cross_overlay_duplicate_coordinate_count": 72,
+    "effective_coordinate_ids_sha256": "396AC36EC1EEC2D9D4E2C196B6F9CA85C6DAEA4D46A92EB5F71EF3C9A9824BD5",
+    "effective_unique_coordinate_count": 4507,
+    "overlay_globs": [
+      "data/public/msgdata_ko_officer_names_0000_2399.v0.1.json",
+      "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.2.json",
+      "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json",
+      "workstreams/msgdata/public/msgdata_ko_faction_labels_3032_3221.v0.1.json",
+      "workstreams/msgdata/public/msgdata_ko_name_components_3222_3315.v0.1.json",
+      "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json"
+    ],
+    "overlays": [
+      {
+        "entry_count": 3831,
+        "logical_path": "data/public/msgdata_ko_officer_names_0000_2399.v0.1.json",
+        "max_id": 16597,
+        "min_id": 0,
+        "sha256": "D787EB64BFFC54D1ACA2F23BC9407991FEB4FCF76D102E1EE017EEF416FE4FA3"
+      },
+      {
+        "entry_count": 392,
+        "logical_path": "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.2.json",
+        "max_id": 9542,
+        "min_id": 9151,
+        "sha256": "0CEFDE11008F4503198903E1FA25ACDDB120F6B407405EF9ACE2B01B39577E5E"
+      },
+      {
+        "entry_count": 72,
+        "logical_path": "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json",
+        "max_id": 14046,
+        "min_id": 13975,
+        "sha256": "2EF65EBDEF21521857477EA180E7FBC7AB92F1626FC69D06BD6262E97BFDBDF5"
+      },
+      {
+        "entry_count": 190,
+        "logical_path": "workstreams/msgdata/public/msgdata_ko_faction_labels_3032_3221.v0.1.json",
+        "max_id": 3221,
+        "min_id": 3032,
+        "sha256": "A277CC298262A46683CDB81273487BB5EF4AAD25FE361C1977251B52A1BF7244"
+      },
+      {
+        "entry_count": 94,
+        "logical_path": "workstreams/msgdata/public/msgdata_ko_name_components_3222_3315.v0.1.json",
+        "max_id": 3315,
+        "min_id": 3222,
+        "sha256": "9B887DE854B6ADE847036F1D757925AFFA9BD84FD041ADAB0CE23DA0D3DAC09A"
+      }
+    ],
+    "prior_overlay_globs": [
+      "data/public/msgdata_ko_officer_names_0000_2399.v0.1.json",
+      "workstreams/castle_names/public/castle_names_ko_9151_9542.v0.2.json",
+      "workstreams/province_names/public/province_names_ko_13975_14046.v0.2.json",
+      "workstreams/msgdata/public/msgdata_ko_faction_labels_3032_3221.v0.1.json",
+      "workstreams/msgdata/public/msgdata_ko_name_components_3222_3315.v0.1.json"
+    ],
+    "progress_logical_path": "data/public/translation_progress.v0.1.json",
+    "progress_sha256": "102558C311A3402B4D26764CE46D3E511B22B9E35C831D8513709EDB6F4958B0",
+    "self_overlay_registration": {
+      "configured_exactly_once": true,
+      "entry_count": 16176,
+      "excluded_from_prior_claims": true,
+      "ids_sha256": "B8AC5996A1D9A6231E8A22AC130C077E0F11830F181FF66FA5FB6929C6FB34BB",
+      "logical_path": "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json",
+      "sha256": "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E"
+    },
+    "total_authored_entry_count": 4579
+  },
+  "generator": {
+    "path": "build_switch_msgdata_v11.py",
+    "sha256": "DFBC1D24BDE04B2DC1CE82F3C09C89B59EFB3D671A50FE44F4C82B7CB0BBA977"
+  },
+  "input_snapshot_after": {
+    "base_jp_strdata": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+    "pk_jp_msgdata": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+    "pk_sc_msgdata": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "switch_archive": "931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6"
+  },
+  "input_snapshot_before": {
+    "base_jp_strdata": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+    "pk_jp_msgdata": "9D4CB81580FFF82299B3DBB54A584EAAFA8793E3F6ED05FBD487605402CF8B38",
+    "pk_sc_msgdata": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "switch_archive": "931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6"
+  },
+  "passed": true,
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ],
+    "target_a_b_equal": true
+  },
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "global_progress_modified": false,
+    "global_readme_modified": false,
+    "installed_game_files_modified": false,
+    "zip_included": false
+  },
+  "schema": "nobu16.kr.switch-msgdata-v11-strict-transfer-validation.v1",
+  "scope": {
+    "expected_selected_entry_count": 16176,
+    "expected_selected_ids_sha256": "B8AC5996A1D9A6231E8A22AC130C077E0F11830F181FF66FA5FB6929C6FB34BB",
+    "selected_entry_count": 16176,
+    "selected_ids_sha256": "B8AC5996A1D9A6231E8A22AC130C077E0F11830F181FF66FA5FB6929C6FB34BB"
+  },
+  "source_free_scan": {
+    "alignment_evidence": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "generation_validation": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "overlay": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "review_index": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  },
+  "source_release": {
+    "archive_contains_complete_game_resource": false,
+    "archive_member": "NobunagaShinsei_KR/romfs/MSG/JP/strdata.bin",
+    "archive_readme_member": "NobunagaShinsei_KR/README.md",
+    "archive_sha256": "931E7C5BDECD724E44987D722E71A12161448A1A583DFFB4A569A4FA58EC46F6",
+    "archive_size": 73040529,
+    "author_attribution": "GitHub user snake7594",
+    "block_layout": [
+      {
+        "block_id": 0,
+        "inner_header_sha256": "7373CE8365EC97F0167E5692C0D7E33EE499ACAD4C5C3692ACC378B72679827B",
+        "slot_count": 25069
+      },
+      {
+        "block_id": 1,
+        "inner_header_sha256": "FB02F5C69BB734DBE14BE7307E2BC14BED09C2C05CC14F293FA27F0B34049F94",
+        "slot_count": 4100
+      },
+      {
+        "block_id": 2,
+        "inner_header_sha256": "C9FE2CCB3CF0AC86086539BF97FEDEB02AD46CDB5790BD195EC3CFE16019F880",
+        "slot_count": 3000
+      },
+      {
+        "block_id": 3,
+        "inner_header_sha256": "302C5FD5C5C259145F6441ADF576CF4633F317D92F934CF0118002C5B3CC1290",
+        "slot_count": 122
+      },
+      {
+        "block_id": 4,
+        "inner_header_sha256": "A2FCB4A776FB4FCCE85D0FF3B0DDF7172384D12FE69B3CEDCED86021EDF8978D",
+        "slot_count": 20
+      }
+    ],
+    "member_raw_sha256": "245538466576E3880B3C53C0CB4929685096DF394C27CCB93B2C893615A46ADE",
+    "member_raw_size": 953512,
+    "member_sha256": "5F065B9DBDAE4DC75E2D7186A76C0AC988FB504F018F820C204262BF07D5061B",
+    "member_size": 404189,
+    "published_at": "2026-07-14T14:13:23Z",
+    "readme_sha256": "F46BB5414BFD2BBA3A739DB9900B696A008CE85718A38B3802B89DB9758064F4",
+    "readme_size": 2080,
+    "release_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch/releases/tag/v1.1",
+    "repository_url": "https://github.com/snake7594/nobunaga-shinsei-korean-patch",
+    "tag": "v1.1"
+  },
+  "strict_selection": {
+    "convergent_pk_jp_candidate_count": 20807,
+    "existing_overlay_collision_count": 4483,
+    "existing_overlay_collision_ids_sha256": "01EC47209F2E307E593342B739D9E5475A1A08AB388435D0FFA7081BCEEAF5A1",
+    "pk_jp_complete_hash_match_count": 25474,
+    "pk_sc_invariant_exclusion_count": 140,
+    "pk_sc_invariant_exclusion_ids_sha256": "1777FF5D1219E3044E1E2BDB4BBE0218FCC8097E9DB10D35B7E1F7DD3690FC06",
+    "pk_sc_invariant_mismatch_histogram": {
+      "esc": 1,
+      "leading_whitespace": 2,
+      "line_breaks": 44,
+      "printf": 8,
+      "pua": 85,
+      "unknown_percent_count": 4
+    },
+    "pk_total_slot_count": 29210,
+    "selected_entry_count": 16176,
+    "selected_ids_sha256": "B8AC5996A1D9A6231E8A22AC130C077E0F11830F181FF66FA5FB6929C6FB34BB",
+    "source_script_exclusion": {
+      "count": 8,
+      "ids": [
+        22617,
+        24378,
+        24379,
+        24380,
+        24381,
+        24382,
+        24383,
+        24384
+      ],
+      "ids_sha256": "FCADD5205BA71741BD63211B21F5BB137A1A20BD865E396022C806C09C249B58",
+      "policy": "pc_korean_font_compatibility_and_source_free_output",
+      "reason": "switch_korean_contains_cjk_unified_or_kana"
+    },
+    "unchanged_sc_exclusion_count": 0
+  },
+  "structure_verification": {
+    "base_jp_parse_rebuild_byte_identical": true,
+    "expected_slot_counts": [
+      25069,
+      4100,
+      3000,
+      122,
+      20
+    ],
+    "switch_and_base_slot_counts_equal": true,
+    "switch_parse_rebuild_byte_identical": true
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 16176,
+    "packed_sha256": "69BCAF13452A25A78BF8AF9ED78C472D6255FFC6B578E150135347F1628F626E",
+    "packed_size": 476013,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "F0661F229EC1DEC68AC167380D016AB9CA3D3FD0B8FBBF63A1AB0D14BF4B4519",
+    "raw_size": 474128,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "wrapper_round_trip": true
+  }
+}

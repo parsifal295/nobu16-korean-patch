@@ -89,15 +89,20 @@ def render() -> str:
         raise ValueError("progress config has no completed_statuses")
 
     rows: list[str] = []
-    known_done = 0
-    known_coverage = 0
-    known_total = 0
-    parsed_string_resources = 0
+    pk_done = 0
+    pk_coverage = 0
+    pk_total = 0
+    pk_string_resources = 0
+    pk_stage_done = 0
+    pk_stage_total = 0
+    pk_stage_resources = 0
     for resource in resources:
         path = resource["path"]
         kind = resource["kind"]
         note = resource["note"]
         if kind == "strings":
+            if not path.startswith("MSG_PK/"):
+                raise ValueError(f"runtime progress must not include non-PK resource: {path}")
             total = int(resource["translation_target_total"])
             total_slots = int(resource["total_slots"])
             patterns = resource.get("overlay_globs", [])
@@ -116,10 +121,10 @@ def render() -> str:
             coverage_amount = f"{coverage:,}"
             inventory = f"{total_slots:,} 슬롯"
             rate = f"{value:.1f}% `{progress_bar(value)}`"
-            known_done += done
-            known_coverage += coverage
-            known_total += total
-            parsed_string_resources += 1
+            pk_done += done
+            pk_coverage += coverage
+            pk_total += total
+            pk_string_resources += 1
             if path.endswith("msgev.bin"):
                 note = f"장수명 2,207 + 대사 {coverage - 2207:,}"
             elif path.endswith("msgdata.bin"):
@@ -138,21 +143,35 @@ def render() -> str:
             coverage_amount = "—"
             inventory = "—"
             rate = f"{value:.1f}% `{progress_bar(value)}`"
+            if path.startswith("RES_SC/"):
+                pk_stage_done += done
+                pk_stage_total += total
+                pk_stage_resources += 1
         else:
             raise ValueError(f"unknown progress kind {kind!r} for {path}")
         rows.append(
             f"| `{path}` | {amount} | {coverage_amount} | {inventory} | {rate} | {note} |"
         )
 
-    overall = percent(known_done, known_total)
+    pk_overall = percent(pk_done, pk_total)
     lines = [
         START,
+        (
+            f"PK 실행 경로 `MSG_PK/SC`의 {pk_string_resources}개 메시지 리소스 기준 "
+            f"**번역 완료 {pk_done:,} / {pk_total:,} ({pk_overall:.1f}%)**, "
+            f"초벌 커버리지는 **{pk_coverage:,}개**다."
+        ),
+        (
+            f"PK 공용 글꼴·리소스 경로 `RES_SC`의 {pk_stage_resources}개 검증 단계는 "
+            f"**{pk_stage_done} / {pk_stage_total}** 완료다."
+        ),
+        "",
         "## 현재 한글화 진행 현황",
         "",
-        f"파싱이 끝난 {parsed_string_resources}개 메시지 리소스 기준 **번역 완료 "
-        f"{known_done:,} / {known_total:,} ({overall:.1f}%)**, 초벌 커버리지는 "
-        f"**{known_coverage:,}개**다.",
-        "`msggame.bin` 2개는 18블록 바이트코드에서 확인한 표시 가능한 SC 리터럴 후보를 분모에 포함했다.",
+        f"PK 실행 기준 {pk_string_resources}개 메시지 리소스 **번역 완료 "
+        f"{pk_done:,} / {pk_total:,} ({pk_overall:.1f}%)**, 초벌 커버리지는 "
+        f"**{pk_coverage:,}개**다.",
+        "PK `msggame.bin`은 18블록 바이트코드에서 확인한 표시 가능한 SC 리터럴 후보를 분모에 포함했다.",
         "후속 사람 분류에서 코드용 문자열이 확인되면 대상 분모를 보수적으로 조정한다.",
         "번역 대상은 표시 가능한 비공백 문자열과 의도적으로 활성화한 UI 빈 슬롯만 센다.",
         "완료는 공개 오버레이의 `translated`·`reviewed` 고유 ID·`msggame` 좌표 합집합이다. 최종 화면 QA 완료를 뜻하지 않는다.",
