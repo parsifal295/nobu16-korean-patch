@@ -1,0 +1,55 @@
+{
+  "schema": "nobu16.kr.steam-jp-1.1.7-progress.v1",
+  "release": "v0.6.0",
+  "runtime": {
+    "distribution": "Steam",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764,
+    "language_route": "JP",
+    "launcher_language": "日本語 / Japanese"
+  },
+  "translation": {
+    "msgui": {
+      "catalog_entries": 4037,
+      "safely_mapped": 3693,
+      "effective_changes": 3614,
+      "source_equal_noops": 79,
+      "withheld": 344
+    },
+    "common_messages": {
+      "files": [
+        "MSG_PK/JP/msgbre.bin",
+        "MSG_PK/JP/msgdata.bin",
+        "MSG_PK/JP/msgev.bin",
+        "MSG_PK/JP/msgire.bin",
+        "MSG_PK/JP/msgstf.bin"
+      ],
+      "applied": 39507,
+      "unresolved": 96,
+      "duplicate_context_collapsed": 50
+    },
+    "msggame": {
+      "semantic_targets": 28272,
+      "applied": 24211,
+      "remaining": 4061
+    },
+    "strdata": {
+      "safe_targets": 24525,
+      "applied": 24524,
+      "withheld": 1
+    },
+    "fonts": {
+      "containers": 2,
+      "verified": 2
+    }
+  },
+  "runtime_qa": {
+    "steam_install_applied": true,
+    "exact_ten_target_hashes": true,
+    "original_backups_valid": 10,
+    "launcher_update_label": "Update 1.1.7",
+    "korean_title_prompt_observed": true,
+    "korean_main_menu_observed": true,
+    "known_untranslated_ui_observed": true
+  }
+}

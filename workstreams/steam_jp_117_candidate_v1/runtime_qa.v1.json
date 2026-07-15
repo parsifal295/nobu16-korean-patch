@@ -1,0 +1,51 @@
+{
+  "schema": "nobu16.kr.steam-jp-1.1.7-runtime-qa.v1",
+  "release_id": "steam-jp-1.1.7-v0.6.0",
+  "tested_on": "2026-07-16",
+  "runtime": {
+    "distribution": "Steam",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764,
+    "language_route": "JP",
+    "launcher_language_observed": "日本語",
+    "launcher_version_observed": "Update 1.1.7",
+    "executable": "NOBU16PK.exe"
+  },
+  "transaction": {
+    "result": "applied",
+    "installed_state_after_apply": "target",
+    "installed_target_files": 10,
+    "valid_original_backups": 10,
+    "candidate_hashes_verified": 10,
+    "restore_available": true
+  },
+  "structural_tests": {
+    "passed": 39,
+    "total": 39,
+    "stock_source": "transaction predecessor backups"
+  },
+  "screen_qa": {
+    "launcher_opened": true,
+    "game_started": true,
+    "korean_title_prompt": "마우스를 클릭하십시오.",
+    "korean_main_menu_labels": [
+      "새 게임",
+      "무장 편집",
+      "추가 콘텐츠",
+      "갤러리",
+      "설정",
+      "라이선스"
+    ],
+    "korean_glyphs_rendered": true,
+    "known_untranslated_example": "게임 종료 확인창"
+  },
+  "constraints": {
+    "sc_container_used": false,
+    "process_memory_access": false,
+    "dll_injection": false,
+    "hooking": false,
+    "executable_modified": false,
+    "registry_modified": false
+  },
+  "status": "PASS_WITH_KNOWN_UNTRANSLATED_UI"
+}

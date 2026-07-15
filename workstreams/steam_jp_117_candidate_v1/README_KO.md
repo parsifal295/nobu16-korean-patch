@@ -22,3 +22,7 @@ python workstreams/steam_jp_117_candidate_v1/build_steam_jp_117_candidate_v1.py 
 ZIP도 같은 10개 상대 경로만 포함하며 원본 게임 파일은 쓰지 않는다. 실제
 적용은 `tools/pk_file_only_transaction.py`로 별도 manifest와 백업을 만든 뒤
 게임 및 공식 런처가 모두 종료된 상태에서 수행한다.
+
+`runtime_qa.v1.json`은 Steam PK v1.1.7 실설치 적용, 원본 백업 10개, 목표 해시
+10개와 한글 타이틀·메인 메뉴 화면 검증 결과를 기록한다. `verification.v1.json`의
+`steam_files_written: false`는 후보 조립기 자체가 게임 폴더를 쓰지 않는다는 뜻이다.
