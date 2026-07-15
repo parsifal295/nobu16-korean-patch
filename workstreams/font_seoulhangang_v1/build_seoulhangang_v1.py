@@ -9,7 +9,7 @@ explicit local output root.  It never overwrites either input or an installed
 game file.
 
 The default corpus is deliberately pinned to source-free public Korean
-overlays, including the three strict Switch-v1.1-to-PK transfers.  A source
+overlays, including every registered strict Switch-v1.1-to-PK transfer.  A source
 change must be reviewed and its pin updated here before it can alter glyph
 demand.
 """
@@ -25,7 +25,6 @@ import re
 import subprocess
 import sys
 import unicodedata
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
@@ -43,45 +42,8 @@ SEOUL_HANGANG_M_SIZE = 7_627_124
 SEOUL_HANGANG_M_FAMILY = "SeoulHangang M"
 
 ESC_COMMAND_RE = re.compile("\\x1bC.", re.DOTALL)
-
-
-@dataclass(frozen=True)
-class OverlayPin:
-    path: str
-    sha256: str
-    expected_entries: int
-    resource: str
-
-
-# These are public Korean overlays only.  There is no game source text in the
-# files and every input is SHA-pinned so corpus expansion cannot happen by
-# accident when parallel translation work advances.
-DEFAULT_OVERLAYS: tuple[OverlayPin, ...] = (
-    OverlayPin(
-        "data/public/msgui_ko_0000_5099.v0.2.json",
-        "5DC3C0E14E2131FC2BB4252DF3B25E1F10E462205EAB715E2923298A714B8C14",
-        4037,
-        "msgui",
-    ),
-    OverlayPin(
-        "workstreams/switch_msgev_v11/public/msgev_ko_switch_v11_ported_7025.v1.json",
-        "71652CACEB757BFFF47FB119789150BD841DD9FF6B6AC180D5B2AA1B06231703",
-        7025,
-        "MSG_PK/SC/msgev.bin",
-    ),
-    OverlayPin(
-        "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json",
-        "1C748373DFF712E52BA11459E032E3611ED5151EF18633E592452D3A2A78392E",
-        16176,
-        "MSG_PK/SC/msgdata.bin",
-    ),
-    OverlayPin(
-        "workstreams/switch_msggame_v11/public/msggame_ko_switch_v11_exact_source_hash.v0.1.json",
-        "245A73AA77B5649B686CE5A459C299CFBF7EE8EF5A6CDC56A7EB11288DECDFB5",
-        6018,
-        "MSG_PK/SC/msggame.bin",
-    ),
-)
+DEMAND_MANIFEST = SCRIPT_DIR / "manifest.v1.json"
+PROGRESS_CONFIG_RELATIVE = "data/public/translation_progress.v0.1.json"
 
 PROFILES = (
     {"entry": 6, "table": 0, "family": SEOUL_HANGANG_M_FAMILY, "style": "Regular", "raster_size": 46, "cell": 48},
@@ -159,12 +121,49 @@ def loads_json_strict(raw: bytes, label: str) -> dict[str, Any]:
 
 def _require_source_free_policy(overlay: dict[str, Any], label: str) -> None:
     policy = overlay.get("distribution_policy")
-    if not isinstance(policy, dict):
-        raise FontBuildError(f"{label}: missing distribution_policy")
-    if policy.get("contains_commercial_source_text") is not False:
-        raise FontBuildError(f"{label}: commercial source text is not explicitly excluded")
-    if policy.get("contains_complete_game_resource") is not False:
-        raise FontBuildError(f"{label}: complete game resource is not explicitly excluded")
+    if isinstance(policy, dict):
+        if policy.get("contains_commercial_source_text") is not False:
+            raise FontBuildError(f"{label}: commercial source text is not explicitly excluded")
+        if policy.get("contains_complete_game_resource") is not False:
+            raise FontBuildError(f"{label}: complete game resource is not explicitly excluded")
+        return
+    # The reviewed castle-name overlay predates the common overlay schema.  It
+    # makes the same safety claim under its schema-specific field instead.
+    if overlay.get("source_text_free") is not True:
+        raise FontBuildError(f"{label}: missing source-free distribution declaration")
+
+
+def canonical_json_hash(value: Any) -> str:
+    return sha256_bytes(
+        json.dumps(value, ensure_ascii=False, separators=(",", ":"), sort_keys=True).encode("utf-8")
+    )
+
+
+def _safe_project_relative_path(value: Any, label: str) -> Path:
+    if not isinstance(value, str) or not value:
+        raise FontBuildError(f"{label}: expected a nonempty relative path")
+    path = Path(value)
+    if path.is_absolute() or ".." in path.parts:
+        raise FontBuildError(f"{label}: path escapes the project root")
+    return path
+
+
+def _overlay_resource(overlay: dict[str, Any], label: str) -> str:
+    direct = overlay.get("resource")
+    if isinstance(direct, str):
+        return direct
+    target = overlay.get("target")
+    if isinstance(target, dict) and isinstance(target.get("resource"), str):
+        return str(target["resource"])
+    raise FontBuildError(f"{label}: overlay has no declared target resource")
+
+
+def _expected_overlay_resource(progress_resource: str) -> set[str]:
+    # msgui v0.2 predates the full logical-path convention.  Every other PK
+    # overlay must name the exact progress resource it serves.
+    if progress_resource == "MSG_PK/SC/msgui.bin":
+        return {"msgui", progress_resource}
+    return {progress_resource}
 
 
 def _validate_ko_text(value: Any, label: str) -> str:
@@ -221,69 +220,178 @@ def renderable_characters(text: str, label: str) -> set[int]:
 
 
 def load_default_overlay_demand() -> dict[str, Any]:
+    """Collect every current PK public overlay through a pinned progress map.
+
+    The old four-source list covered MSGUI and only the then-registered Switch transfers but
+    excluded approved Korean overlays in the other PK message resources.  A
+    full font candidate must cover the same seven runtime resources reported
+    by ``translation_progress.v0.1.json``.  The progress file and the derived
+    source-hash catalog are both pinned in ``manifest.v1.json``: changing an
+    overlay, its order, or the configured PK scope therefore fails closed
+    until the font demand is consciously reviewed and refreshed.
+    """
+
+    try:
+        manifest = loads_json_strict(DEMAND_MANIFEST.read_bytes(), "font demand manifest")
+    except OSError as exc:
+        raise FontBuildError(f"cannot read font demand manifest: {exc}") from exc
+    demand_pin = manifest.get("pinned_public_korean_demand")
+    if not isinstance(demand_pin, dict):
+        raise FontBuildError("font demand manifest has no pinned_public_korean_demand object")
+    progress_pin = demand_pin.get("translation_progress")
+    if not isinstance(progress_pin, dict):
+        raise FontBuildError("font demand manifest has no translation_progress pin")
+    if progress_pin.get("path") != PROGRESS_CONFIG_RELATIVE:
+        raise FontBuildError("font demand manifest has an unexpected translation-progress path")
+
+    progress_path = PATCH_ROOT / PROGRESS_CONFIG_RELATIVE
+    try:
+        progress_raw = progress_path.read_bytes()
+    except OSError as exc:
+        raise FontBuildError(f"cannot read translation progress: {exc}") from exc
+    progress_hash = sha256_bytes(progress_raw)
+    if progress_pin.get("sha256") != progress_hash:
+        raise FontBuildError(
+            "translation progress SHA-256 changed; refresh the font-demand pin before building"
+        )
+    progress = loads_json_strict(progress_raw, PROGRESS_CONFIG_RELATIVE)
+    resources = progress.get("resources")
+    if not isinstance(resources, list):
+        raise FontBuildError("translation progress resources must be an array")
+
     all_codepoints: set[int] = set()
     source_rows: list[dict[str, Any]] = []
+    resource_rows: list[dict[str, Any]] = []
     total_entries = 0
 
-    for pin in DEFAULT_OVERLAYS:
-        path = (PATCH_ROOT / pin.path).resolve()
-        if not path.is_file():
-            raise FontBuildError(f"missing pinned public overlay: {pin.path}")
-        raw = path.read_bytes()
-        actual_hash = sha256_bytes(raw)
-        if actual_hash != pin.sha256:
-            raise FontBuildError(
-                f"{pin.path}: SHA-256 changed; expected={pin.sha256} actual={actual_hash}"
-            )
-        overlay = loads_json_strict(raw, pin.path)
-        _require_source_free_policy(overlay, pin.path)
-        if overlay.get("resource") != pin.resource:
-            raise FontBuildError(f"{pin.path}: resource does not match pin")
-        entries = overlay.get("entries")
-        if not isinstance(entries, list) or len(entries) != pin.expected_entries:
-            raise FontBuildError(f"{pin.path}: entries do not match pinned count")
-        if overlay.get("entry_count") != len(entries):
-            raise FontBuildError(f"{pin.path}: entry_count does not match entries")
+    for resource_row in resources:
+        if not isinstance(resource_row, dict) or resource_row.get("kind") != "strings":
+            continue
+        progress_resource = resource_row.get("path")
+        overlay_paths = resource_row.get("overlay_globs")
+        if not isinstance(progress_resource, str) or not isinstance(overlay_paths, list):
+            raise FontBuildError("PK string resource has an invalid path or overlay list")
+        if not progress_resource.startswith("MSG_PK/SC/"):
+            raise FontBuildError(f"non-PK string resource entered font demand: {progress_resource!r}")
+        if not overlay_paths:
+            raise FontBuildError(f"PK string resource has no public overlays: {progress_resource}")
 
-        local_codepoints: set[int] = set()
-        for index, entry in enumerate(entries):
-            if not isinstance(entry, dict) or "ko" not in entry:
-                raise FontBuildError(f"{pin.path}: entries[{index}] has no Korean output")
-            text = _validate_ko_text(entry["ko"], f"{pin.path}: entries[{index}]")
-            local_codepoints.update(renderable_characters(text, f"{pin.path}: entries[{index}]") )
-        all_codepoints.update(local_codepoints)
-        source_rows.append(
-            {
-                "path": pin.path,
+        resource_sources: list[dict[str, Any]] = []
+        resource_entries = 0
+        for logical_path in overlay_paths:
+            relative = _safe_project_relative_path(logical_path, progress_resource)
+            path = (PATCH_ROOT / relative).resolve()
+            if PATCH_ROOT.resolve() not in path.parents:
+                raise FontBuildError(f"{logical_path}: resolved outside project root")
+            if not path.is_file():
+                raise FontBuildError(f"missing pinned public overlay: {logical_path}")
+            raw = path.read_bytes()
+            actual_hash = sha256_bytes(raw)
+            overlay = loads_json_strict(raw, logical_path)
+            _require_source_free_policy(overlay, logical_path)
+            schema = overlay.get("schema")
+            if not isinstance(schema, str) or not schema:
+                raise FontBuildError(f"{logical_path}: overlay has no schema")
+            actual_resource = _overlay_resource(overlay, logical_path)
+            if actual_resource not in _expected_overlay_resource(progress_resource):
+                raise FontBuildError(
+                    f"{logical_path}: resource {actual_resource!r} does not serve {progress_resource!r}"
+                )
+            entries = overlay.get("entries")
+            if not isinstance(entries, list) or not entries:
+                raise FontBuildError(f"{logical_path}: entries must be a nonempty array")
+            declared_count = overlay.get("entry_count")
+            if declared_count is not None and declared_count != len(entries):
+                raise FontBuildError(f"{logical_path}: entry_count does not match entries")
+
+            local_codepoints: set[int] = set()
+            for index, entry in enumerate(entries):
+                if not isinstance(entry, dict) or "ko" not in entry:
+                    raise FontBuildError(f"{logical_path}: entries[{index}] has no Korean output")
+                text = _validate_ko_text(entry["ko"], f"{logical_path}: entries[{index}]")
+                local_codepoints.update(renderable_characters(text, f"{logical_path}: entries[{index}]"))
+            source = {
+                "path": relative.as_posix(),
                 "sha256": actual_hash,
-                "resource": pin.resource,
+                "resource": progress_resource,
                 "entry_count": len(entries),
-                "glyph_codepoint_count": len(local_codepoints),
-                "glyph_codepoints_sha256": canonical_codepoint_hash(local_codepoints),
+                "schema": schema,
+            }
+            all_codepoints.update(local_codepoints)
+            source_rows.append(source)
+            resource_sources.append(source)
+            resource_entries += len(entries)
+            total_entries += len(entries)
+
+        resource_rows.append(
+            {
+                "resource": progress_resource,
+                "source_count": len(resource_sources),
+                "entry_count": resource_entries,
+                "source_catalog_sha256": canonical_json_hash(resource_sources),
             }
         )
-        total_entries += len(entries)
 
+    if not source_rows:
+        raise FontBuildError("translation progress contains no PK string overlays")
+    expected_resources = demand_pin.get("resource_catalog")
+    if expected_resources != resource_rows:
+        raise FontBuildError("PK resource catalog changed; refresh the font-demand pin before building")
+    if demand_pin.get("source_count") != len(source_rows):
+        raise FontBuildError("PK font source count changed; refresh the font-demand pin before building")
+    if demand_pin.get("source_entry_count") != total_entries:
+        raise FontBuildError("PK font source entry count changed; refresh the font-demand pin before building")
+    if demand_pin.get("source_catalog_sha256") != canonical_json_hash(source_rows):
+        raise FontBuildError("PK font source catalog changed; refresh the font-demand pin before building")
+
+    # Keep a source row per file in the plan so an offline reviewer can
+    # identify every Korean corpus input without exporting any game strings.
+    # Each row contains only project paths, hashes, schemas, and counts.
     ordered = sorted(all_codepoints)
     hangul = [codepoint for codepoint in ordered if 0xAC00 <= codepoint <= 0xD7A3]
-    non_hangul = [codepoint for codepoint in ordered if codepoint not in set(hangul)]
+    hangul_set = set(hangul)
+    non_hangul = [codepoint for codepoint in ordered if codepoint not in hangul_set]
     if not hangul:
         raise FontBuildError("pinned Korean overlays contain no Hangul syllables")
-    return {
-        "schema": "nobu16.kr.font-seoulhangang-v1-demand.v1",
-        "sources": source_rows,
-        "source_entry_count": total_entries,
+    glyph_demand_metrics = {
         "codepoint_count": len(ordered),
         "codepoints_sha256": canonical_codepoint_hash(ordered),
         "hangul_syllable_count": len(hangul),
         "hangul_syllables_sha256": canonical_codepoint_hash(hangul),
         "non_hangul_count": len(non_hangul),
         "non_hangul_sha256": canonical_codepoint_hash(non_hangul),
+    }
+    for key, actual in glyph_demand_metrics.items():
+        if demand_pin.get(key) != actual:
+            raise FontBuildError(
+                f"PK glyph-demand {key} changed; refresh the font-demand pin before building"
+            )
+    append_contract_pin = demand_pin.get("append_contract")
+    if not isinstance(append_contract_pin, list):
+        raise FontBuildError("font demand manifest has no append contract")
+    raster_count_pin = demand_pin.get("raster_codepoint_count")
+    raster_hash_pin = demand_pin.get("raster_codepoints_sha256")
+    if not isinstance(raster_count_pin, int) or not isinstance(raster_hash_pin, str):
+        raise FontBuildError("font demand manifest has no raster-demand pin")
+    return {
+        "schema": "nobu16.kr.font-seoulhangang-v1-demand.v1",
+        "translation_progress": {
+            "path": PROGRESS_CONFIG_RELATIVE,
+            "sha256": progress_hash,
+        },
+        "source_catalog_sha256": canonical_json_hash(source_rows),
+        "resource_catalog": resource_rows,
+        "sources": source_rows,
+        "source_count": len(source_rows),
+        "source_entry_count": total_entries,
+        **glyph_demand_metrics,
         "codepoints": ordered,
         "hangul": hangul,
         "non_hangul": non_hangul,
+        "_pinned_append_contract": append_contract_pin,
+        "_pinned_raster_codepoint_count": raster_count_pin,
+        "_pinned_raster_codepoints_sha256": raster_hash_pin,
     }
-
 
 def require_stock_archive(path: Path) -> bytes:
     if not path.is_file():
@@ -325,6 +433,13 @@ def build_plan(stock_blob: bytes, demand: dict[str, Any]) -> dict[str, Any]:
                     "codepoints_sha256": canonical_codepoint_hash(points),
                 }
             )
+    if demand["_pinned_append_contract"] != append_summary:
+        raise FontBuildError("G1N append contract changed; refresh the font-demand pin before building")
+    raster_hash = canonical_codepoint_hash(raster_codepoints)
+    if demand["_pinned_raster_codepoint_count"] != len(raster_codepoints):
+        raise FontBuildError("raster glyph count changed; refresh the font-demand pin before building")
+    if demand["_pinned_raster_codepoints_sha256"] != raster_hash:
+        raise FontBuildError("raster glyph catalog changed; refresh the font-demand pin before building")
     return {
         "schema": "nobu16.kr.font-seoulhangang-v1-plan.v1",
         "file_only": True,
@@ -339,10 +454,15 @@ def build_plan(stock_blob: bytes, demand: dict[str, Any]) -> dict[str, Any]:
         "demand": {
             key: value
             for key, value in demand.items()
-            if key not in {"codepoints", "hangul", "non_hangul"}
+            if key not in {"codepoints", "hangul", "non_hangul"} and not key.startswith("_pinned_")
         },
         "raster_codepoint_count": len(raster_codepoints),
-        "raster_codepoints_sha256": canonical_codepoint_hash(raster_codepoints),
+        "raster_codepoints_sha256": raster_hash,
+        # Codepoints are source-free metadata.  Keeping the complete demand in
+        # the private plan lets the independent verifier prove that every
+        # configured PK overlay glyph maps in every runtime G1N table.
+        "glyph_demand_codepoints": list(demand["codepoints"]),
+        "glyph_demand_codepoints_sha256": canonical_codepoint_hash(demand["codepoints"]),
         "append_contract": append_summary,
         "stock_coverage": coverage,
         "font": {

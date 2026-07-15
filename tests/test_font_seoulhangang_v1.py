@@ -37,20 +37,45 @@ class SeoulHangangV1Tests(unittest.TestCase):
     def read_json(self, name: str) -> dict:
         return json.loads((WORKSTREAM / name).read_text(encoding="utf-8"))
 
-    def test_pinned_public_demand_has_switch_strict_imports(self) -> None:
+    def test_pinned_public_demand_covers_all_pk_progress_resources(self) -> None:
         demand = BUILD.load_default_overlay_demand()
-        self.assertEqual(33_256, demand["source_entry_count"])
-        self.assertEqual(1_238, demand["codepoint_count"])
-        self.assertEqual(1_101, demand["hangul_syllable_count"])
+        self.assertEqual(91, demand["source_count"])
+        self.assertEqual(51_066, demand["source_entry_count"])
+        self.assertEqual(1_376, demand["codepoint_count"])
+        self.assertEqual(1_219, demand["hangul_syllable_count"])
         self.assertEqual(
-            "B0B920BF63E1E5B90D2446CF43F3BD5260B093CFF229F7D450A7AE1D30CE13CE",
+            "4AE9E67CFDD8F940E838EC30B0D1ACBF34F3B8852796A73C69377F0683DA2A1D",
             demand["codepoints_sha256"],
         )
         self.assertEqual(
-            [4037, 7025, 16176, 6018],
-            [source["entry_count"] for source in demand["sources"]],
+            [
+                ("MSG_PK/SC/msgui.bin", 1, 4037),
+                ("MSG_PK/SC/msgev.bin", 35, 13178),
+                ("MSG_PK/SC/msgdata.bin", 10, 21152),
+                ("MSG_PK/SC/msgbre.bin", 14, 2217),
+                ("MSG_PK/SC/msgire.bin", 1, 122),
+                ("MSG_PK/SC/msgstf.bin", 1, 8),
+                ("MSG_PK/SC/msggame.bin", 29, 10352),
+            ],
+            [
+                (item["resource"], item["source_count"], item["entry_count"])
+                for item in demand["resource_catalog"]
+            ],
         )
-        self.assertTrue(all("switch_" in source["path"] for source in demand["sources"][1:]))
+        self.assertEqual(
+            "08691A1EDE942ADE24973338808D17AEEF7CEEA27DEEDD0E67BFF6052BBB53CE",
+            demand["source_catalog_sha256"],
+        )
+        self.assertEqual(91, len(demand["sources"]))
+        sources = {item["path"]: item for item in demand["sources"]}
+        self.assertEqual(
+            "2A2EE0488CCF6BB70DBBDA2B00A005821DB4CD5C5C8300E4A30F9DF52890295C",
+            sources["workstreams/switch_msgev_v11_cjk_cleanup/public/msgev_ko_switch_v11_cjk_kana_cleanup_20.v1.json"]["sha256"],
+        )
+        self.assertEqual(
+            "BFEFB590F10B073E9510F598BDFDCC840DDEDC165B637F9F0FEA0CB6B2675FC1",
+            sources["workstreams/switch_msgbre_v11/public/msgbre_ko_switch_v11_strict_transfer.v0.1.json"]["sha256"],
+        )
 
     def test_plan_is_deterministic_when_the_local_pristine_backup_exists(self) -> None:
         if not STOCK.is_file():
@@ -60,13 +85,31 @@ class SeoulHangangV1Tests(unittest.TestCase):
         plan_a = BUILD.build_plan(stock, demand)
         plan_b = BUILD.build_plan(stock, demand)
         self.assertEqual(BUILD.encode_json(plan_a), BUILD.encode_json(plan_b))
-        self.assertEqual(1171, plan_a["raster_codepoint_count"])
+        self.assertEqual(1293, plan_a["raster_codepoint_count"])
         self.assertEqual(
-            [(6, 0, 1106), (6, 1, 1171), (7, 0, 1106), (7, 1, 1171)],
+            [(6, 0, 1224), (6, 1, 1293), (7, 0, 1224), (7, 1, 1293)],
             [(item["entry"], item["table"], item["count"]) for item in plan_a["append_contract"]],
         )
         manifest = self.read_json("manifest.v1.json")
-        self.assertEqual(plan_a["raster_codepoints_sha256"], manifest["pinned_public_korean_demand"]["raster_codepoints_sha256"])
+        pinned = manifest["pinned_public_korean_demand"]
+        self.assertEqual(plan_a["raster_codepoints_sha256"], pinned["raster_codepoints_sha256"])
+        self.assertEqual(plan_a["demand"]["source_catalog_sha256"], pinned["source_catalog_sha256"])
+        self.assertEqual(plan_a["demand"]["resource_catalog"], pinned["resource_catalog"])
+        for key in (
+            "source_count",
+            "source_entry_count",
+            "codepoint_count",
+            "codepoints_sha256",
+            "hangul_syllable_count",
+            "hangul_syllables_sha256",
+            "non_hangul_count",
+            "non_hangul_sha256",
+        ):
+            self.assertEqual(plan_a["demand"][key], pinned[key])
+        self.assertEqual(plan_a["raster_codepoint_count"], pinned["raster_codepoint_count"])
+        self.assertEqual(plan_a["append_contract"], pinned["append_contract"])
+        self.assertEqual(demand["codepoints"], plan_a["glyph_demand_codepoints"])
+        self.assertEqual(demand["codepoints_sha256"], plan_a["glyph_demand_codepoints_sha256"])
 
     def test_switch_evidence_proves_no_raw_copy_route(self) -> None:
         evidence = self.read_json("evidence/switch_pc_g1n_compatibility.v1.json")
@@ -85,8 +128,23 @@ class SeoulHangangV1Tests(unittest.TestCase):
         self.assertIn("공공누리 제1유형", manifest["font_source"]["license"])
         verification = self.read_json("verification.v1.json")
         self.assertTrue(verification["candidate_byte_identical"])
+        self.assertTrue(verification["full_pk_glyph_demand_coverage"])
         self.assertTrue(verification["g1n_structural_validation"])
         self.assertFalse(verification["installed_game_files_modified"])
+        coverage = verification["candidate"]["glyph_demand_coverage"]
+        self.assertEqual(1376, coverage["codepoint_count"])
+        self.assertEqual(
+            [(6, 0), (6, 1), (7, 0), (7, 1)],
+            [(table["entry"], table["table"]) for table in coverage["tables"]],
+        )
+        self.assertEqual(
+            [1376, 1376, 1376, 1376],
+            [table["mapped_demand_count"] for table in coverage["tables"]],
+        )
+        self.assertEqual(
+            [0, 0, 0, 0],
+            [table["missing_demand_count"] for table in coverage["tables"]],
+        )
 
     def test_renderer_excludes_game_controls_and_rejects_cjk_or_bad_esc(self) -> None:
         self.assertEqual({ord("가")}, BUILD.renderable_characters("가\x1bC1\ue008", "fixture"))
