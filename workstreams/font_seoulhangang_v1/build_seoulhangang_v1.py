@@ -3,7 +3,7 @@
 
 The builder intentionally does *not* publish a font file, raster payload, G1N,
 LINK archive, or complete ``res_lang.bin``.  It takes a locally acquired,
-SHA-pinned official SeoulHangang Medium TTF plus a user-owned pristine PC
+SHA-pinned official SeoulHangang ExtraBold/Bold TTFs plus a user-owned pristine PC
 ``RES_SC/res_lang.bin`` backup and writes a new candidate only below an
 explicit local output root.  It never overwrites either input or an installed
 game file.
@@ -37,9 +37,31 @@ sys.dont_write_bytecode = True
 STOCK_SC_SHA256 = "916759185E9D64E487530DCA760CD36AE1FCFF021F39CEB1658837FE60AE0D99"
 OFFICIAL_ARCHIVE_URL = "https://www.seoul.go.kr/upload/seoul/font/seoul_font3.zip"
 OFFICIAL_ARCHIVE_SHA256 = "7AB485B98F5B1A1B05CFD04484DD49A62F856BE8506223CD99E5EA1A33E400A7"
-SEOUL_HANGANG_M_SHA256 = "D27E1B26B55E507BEC1045962C954CF426D79605009C720FAD1C9EF808E312CB"
-SEOUL_HANGANG_M_SIZE = 7_627_124
-SEOUL_HANGANG_M_FAMILY = "SeoulHangang M"
+SEOUL_HANGANG_B_SHA256 = "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B"
+SEOUL_HANGANG_B_SIZE = 7_344_552
+SEOUL_HANGANG_B_FAMILY = "SeoulHangang B"
+SEOUL_HANGANG_EB_SHA256 = "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1"
+SEOUL_HANGANG_EB_SIZE = 7_350_712
+SEOUL_HANGANG_EB_FAMILY = "SeoulHangang EB"
+
+FONT_SOURCES = {
+    "entry6_48px_eb": {
+        "entry": 6,
+        "file_name": "SeoulHangangEB.ttf",
+        "sha256": SEOUL_HANGANG_EB_SHA256,
+        "size": SEOUL_HANGANG_EB_SIZE,
+        "family": SEOUL_HANGANG_EB_FAMILY,
+        "weight": "ExtraBold",
+    },
+    "entry7_32px_b": {
+        "entry": 7,
+        "file_name": "SeoulHangangB.ttf",
+        "sha256": SEOUL_HANGANG_B_SHA256,
+        "size": SEOUL_HANGANG_B_SIZE,
+        "family": SEOUL_HANGANG_B_FAMILY,
+        "weight": "Bold",
+    },
+}
 
 ESC_COMMAND_RE = re.compile("\\x1bC.", re.DOTALL)
 DEMAND_MANIFEST = SCRIPT_DIR / "manifest.v1.json"
@@ -57,10 +79,10 @@ EXPECTED_SHARED_RESOURCES = ("MSG/SC/strdata.bin",)
 EXPECTED_FONT_RESOURCES = EXPECTED_PK_RESOURCES + EXPECTED_SHARED_RESOURCES
 
 PROFILES = (
-    {"entry": 6, "table": 0, "family": SEOUL_HANGANG_M_FAMILY, "style": "Regular", "raster_size": 46, "cell": 48},
-    {"entry": 6, "table": 1, "family": SEOUL_HANGANG_M_FAMILY, "style": "Regular", "raster_size": 46, "cell": 48},
-    {"entry": 7, "table": 0, "family": SEOUL_HANGANG_M_FAMILY, "style": "Regular", "raster_size": 32, "cell": 32},
-    {"entry": 7, "table": 1, "family": SEOUL_HANGANG_M_FAMILY, "style": "Regular", "raster_size": 32, "cell": 32},
+    {"entry": 6, "table": 0, "font_key": "entry6_48px_eb", "family": SEOUL_HANGANG_EB_FAMILY, "style": "Regular", "raster_size": 46, "cell": 48},
+    {"entry": 6, "table": 1, "font_key": "entry6_48px_eb", "family": SEOUL_HANGANG_EB_FAMILY, "style": "Regular", "raster_size": 46, "cell": 48},
+    {"entry": 7, "table": 0, "font_key": "entry7_32px_b", "family": SEOUL_HANGANG_B_FAMILY, "style": "Regular", "raster_size": 32, "cell": 32},
+    {"entry": 7, "table": 1, "font_key": "entry7_32px_b", "family": SEOUL_HANGANG_B_FAMILY, "style": "Regular", "raster_size": 32, "cell": 32},
 )
 
 
@@ -506,13 +528,18 @@ def build_plan(stock_blob: bytes, demand: dict[str, Any]) -> dict[str, Any]:
         "glyph_demand_codepoints_sha256": canonical_codepoint_hash(demand["codepoints"]),
         "append_contract": append_summary,
         "stock_coverage": coverage,
-        "font": {
-            "family": SEOUL_HANGANG_M_FAMILY,
-            "file_name": "SeoulHangangM.ttf",
-            "sha256": SEOUL_HANGANG_M_SHA256,
-            "size": SEOUL_HANGANG_M_SIZE,
-            "official_archive_url": OFFICIAL_ARCHIVE_URL,
-            "official_archive_sha256": OFFICIAL_ARCHIVE_SHA256,
+        "fonts": [
+            {
+                "key": key,
+                **source,
+                "official_archive_url": OFFICIAL_ARCHIVE_URL,
+                "official_archive_sha256": OFFICIAL_ARCHIVE_SHA256,
+            }
+            for key, source in FONT_SOURCES.items()
+        ],
+        "profile_assignment": {
+            "entry_6_48px": "SeoulHangang EB",
+            "entry_7_32px": "SeoulHangang B",
         },
         "raster_codepoints": raster_codepoints,
         "append_plan": {
@@ -571,14 +598,21 @@ def validate_output_root(output_root: Path, protected: Sequence[Path]) -> None:
         raise FontBuildError(f"output root must be absent or empty: {resolved}")
 
 
-def raster_request(font_path: Path, raster_codepoints: Sequence[int]) -> dict[str, Any]:
+def raster_request(font_paths: dict[str, Path], raster_codepoints: Sequence[int]) -> dict[str, Any]:
+    if set(font_paths) != set(FONT_SOURCES):
+        raise FontBuildError("font path keys do not match the EB/B profile contract")
     return {
-        "schema": "nobu16.kr.font-seoulhangang-v1-raster-request.v1",
-        "font": {
-            "path": str(font_path),
-            "sha256": SEOUL_HANGANG_M_SHA256,
-            "family": SEOUL_HANGANG_M_FAMILY,
-        },
+        "schema": "nobu16.kr.font-seoulhangang-v1-raster-request.v2",
+        "fonts": [
+            {
+                "key": key,
+                "path": str(font_paths[key]),
+                "sha256": source["sha256"],
+                "family": source["family"],
+                "entry": source["entry"],
+            }
+            for key, source in FONT_SOURCES.items()
+        ],
         "codepoints": [canonical_cp(codepoint) for codepoint in raster_codepoints],
         "profiles": list(PROFILES),
     }
@@ -624,7 +658,7 @@ def validate_raster_result(
     result: dict[str, Any], raster_root: Path, expected_codepoints: Sequence[int]
 ) -> dict[int, bytes]:
     expected = [canonical_cp(codepoint) for codepoint in expected_codepoints]
-    if result.get("schema") != "nobu16.kr.font-seoulhangang-v1-raster-result.v1":
+    if result.get("schema") != "nobu16.kr.font-seoulhangang-v1-raster-result.v2":
         raise FontBuildError("unsupported raster result schema")
     if result.get("codepoints") != expected:
         raise FontBuildError("raster result codepoint order mismatch")
@@ -656,7 +690,7 @@ def validate_raster_result(
     if not isinstance(profiles, list) or len(profiles) != 4:
         raise FontBuildError("raster result must have four profiles")
     expected_profiles = [
-        (profile["entry"], profile["table"], profile["family"], profile["style"], profile["raster_size"], profile["cell"])
+        (profile["entry"], profile["table"], profile["font_key"], profile["family"], profile["style"], profile["raster_size"], profile["cell"])
         for profile in PROFILES
     ]
     actual_profiles = []
@@ -667,6 +701,7 @@ def validate_raster_result(
             (
                 profile.get("entry"),
                 profile.get("table"),
+                profile.get("font_key"),
                 profile.get("family"),
                 profile.get("style"),
                 profile.get("raster_size"),
@@ -703,30 +738,36 @@ def validate_raster_result(
     return payloads
 
 
-def require_official_font(path: Path) -> None:
-    if not path.is_file():
-        raise FontBuildError(f"official SeoulHangang M TTF is missing: {path}")
-    if path.stat().st_size != SEOUL_HANGANG_M_SIZE:
-        raise FontBuildError("SeoulHangang M TTF size does not match the official pin")
-    actual = sha256_file(path)
-    if actual != SEOUL_HANGANG_M_SHA256:
-        raise FontBuildError(
-            f"SeoulHangang M TTF SHA-256 mismatch: expected={SEOUL_HANGANG_M_SHA256} actual={actual}"
-        )
+def require_official_fonts(font_paths: dict[str, Path]) -> None:
+    if set(font_paths) != set(FONT_SOURCES):
+        raise FontBuildError("font path keys do not match the EB/B profile contract")
+    for key, source in FONT_SOURCES.items():
+        path = font_paths[key]
+        if not path.is_file():
+            raise FontBuildError(f"official {source['family']} TTF is missing: {path}")
+        if path.name != source["file_name"]:
+            raise FontBuildError(f"{key}: official font file name must be {source['file_name']}")
+        if path.stat().st_size != source["size"]:
+            raise FontBuildError(f"{source['family']} TTF size does not match the official pin")
+        actual = sha256_file(path)
+        if actual != source["sha256"]:
+            raise FontBuildError(
+                f"{source['family']} TTF SHA-256 mismatch: expected={source['sha256']} actual={actual}"
+            )
 
 
 def private_build(
     stock_blob: bytes,
-    font_path: Path,
+    font_paths: dict[str, Path],
     plan: dict[str, Any],
     output_root: Path,
     powershell: Path,
 ) -> dict[str, Any]:
-    require_official_font(font_path)
+    require_official_fonts(font_paths)
     raster_points = [int(value) for value in plan["raster_codepoints"]]
     request_path = output_root / "private" / "raster_request.json"
     raster_root = output_root / "private" / "raster"
-    atomic_write(request_path, encode_json(raster_request(font_path, raster_points)))
+    atomic_write(request_path, encode_json(raster_request(font_paths, raster_points)))
     raster_result = run_rasterizer(powershell, request_path, raster_root)
     full_pixels = validate_raster_result(raster_result, raster_root, raster_points)
 
@@ -777,10 +818,19 @@ def private_build(
             "complete_candidate_publicly_distributable": False,
         },
         "stock_archive_sha256": sha256_bytes(stock_blob),
-        "font": {
-            "file_name": font_path.name,
-            "sha256": sha256_file(font_path),
-            "family": SEOUL_HANGANG_M_FAMILY,
+        "fonts": [
+            {
+                "key": key,
+                "file_name": font_paths[key].name,
+                "sha256": sha256_file(font_paths[key]),
+                "family": source["family"],
+                "entry": source["entry"],
+            }
+            for key, source in FONT_SOURCES.items()
+        ],
+        "profile_assignment": {
+            "entry_6_48px": "SeoulHangang EB",
+            "entry_7_32px": "SeoulHangang B",
         },
         "plan_sha256": sha256_bytes(encode_json(plan)),
         "raster_result_sha256": sha256_file(raster_root / "raster_result.json"),
@@ -821,17 +871,20 @@ def command_plan(args: argparse.Namespace) -> int:
 
 def command_build(args: argparse.Namespace) -> int:
     stock_path = Path(args.stock_archive).resolve()
-    font_path = Path(args.font).resolve()
+    font_paths = {
+        "entry6_48px_eb": Path(args.font_eb).resolve(),
+        "entry7_32px_b": Path(args.font_b).resolve(),
+    }
     powershell = Path(args.powershell).resolve()
     output_root = Path(args.output_root).resolve()
     if not powershell.is_file():
         raise FontBuildError(f"PowerShell executable is missing: {powershell}")
-    validate_output_root(output_root, (stock_path, font_path))
+    validate_output_root(output_root, (stock_path, *font_paths.values()))
     stock_blob = require_stock_archive(stock_path)
     plan = build_plan(stock_blob, load_default_overlay_demand())
     output_root.mkdir(parents=True, exist_ok=True)
     atomic_write(output_root / "plan.json", encode_json(plan))
-    result = private_build(stock_blob, font_path, plan, output_root, powershell)
+    result = private_build(stock_blob, font_paths, plan, output_root, powershell)
     print(f"private_manifest={output_root / 'private' / 'build_manifest.json'}")
     print(f"candidate_sha256={result['candidate_archive']['sha256']}")
     print("installed_game_files_modified=False")
@@ -843,13 +896,14 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     for name, help_text in (
         ("plan", "validate the pinned Korean corpus and write a source-free append plan"),
-        ("build", "create a local private candidate from official SeoulHangang M"),
+        ("build", "create a local private candidate from official SeoulHangang EB/B"),
     ):
         command = subparsers.add_parser(name, help=help_text)
         command.add_argument("--stock-archive", type=Path, required=True)
         command.add_argument("--output-root", type=Path, required=True)
         if name == "build":
-            command.add_argument("--font", type=Path, required=True)
+            command.add_argument("--font-eb", type=Path, required=True, help="official SeoulHangangEB.ttf for 48px entry 6")
+            command.add_argument("--font-b", type=Path, required=True, help="official SeoulHangangB.ttf for 32px entry 7")
             command.add_argument(
                 "--powershell",
                 type=Path,
