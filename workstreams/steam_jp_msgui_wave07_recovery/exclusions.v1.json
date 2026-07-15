@@ -1,0 +1,24 @@
+{
+  "base_language": "JP",
+  "effective_change_count": 341,
+  "entries": [
+    {
+      "id": 2657,
+      "original_mismatch_reasons": [
+        "printf",
+        "leading_whitespace",
+        "trailing_whitespace"
+      ],
+      "reason": "jp_slot_nonsemantic_whitespace_only",
+      "source_jp_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4"
+    }
+  ],
+  "excluded_coordinate_sha256": "701A5A3AC5B35FC9E68400F458DA9803FBB15C02D827B46232FCBF642F96B2DC",
+  "excluded_entry_count": 1,
+  "no_op_count": 2,
+  "recovered_entry_count": 343,
+  "resource": "MSG_PK/JP/msgui.bin",
+  "schema": "nobu16.kr.steam-jp-msgui-exclusions.v1",
+  "source_free": true,
+  "withheld_entry_count": 344
+}
