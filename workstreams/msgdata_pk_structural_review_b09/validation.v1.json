@@ -1,0 +1,114 @@
+{
+  "artifacts": {
+    "evidence/msgdata_pk_structural_review_b09_evidence.v1.json": {
+      "path": "evidence/msgdata_pk_structural_review_b09_evidence.v1.json",
+      "sha256": "C76D93AB86DBF020CE0DECF50D68BFE7FB11828A02657B43497C44DFFD22BA91",
+      "size": 191207
+    },
+    "public/msgdata_ko_pk_structural_review_b09_500.v1.json": {
+      "path": "public/msgdata_ko_pk_structural_review_b09_500.v1.json",
+      "sha256": "00E5889E447ABCC4833D65A8F2F0554E5D8945487B5B04D81F1A25DCE6E449B9",
+      "size": 91653
+    },
+    "review/msgdata_pk_structural_review_b09_review.v1.json": {
+      "path": "review/msgdata_pk_structural_review_b09_review.v1.json",
+      "sha256": "009A6290DD19C108806D75B3A2CDBD1AF201C0700A0A18FDEA76E465AAF93513",
+      "size": 66039
+    }
+  },
+  "batch_id": "msgdata-pk-structural-review-b09-500.v1",
+  "generator": {
+    "path": "build_msgdata_pk_structural_review_b09.py",
+    "sha256": "232DD53470B1086896F889B29C76C55D0ECD798E9150589BFE16D6A75E6EFB4F"
+  },
+  "official_selected_rowset_sha256": {
+    "EN": "32DF97D9FEA00557E7B30236DA3D512F0F8E9A6C3F59496F7815011AC979086B",
+    "JP": "8350B87DD47611F23BB442D584AC8512F10213DD2219674AE68D158C3DD009F1",
+    "SC": "0EA37EE65757B1A3EF2454D49532C3EF651630E84AE9820138FE1F1BDF2EDFB4",
+    "TC": "0EA37EE65757B1A3EF2454D49532C3EF651630E84AE9820138FE1F1BDF2EDFB4"
+  },
+  "passed": true,
+  "progress_audit": {
+    "b07_explicit_ownership_count": 500,
+    "b07_registration_count": 0,
+    "b08_explicit_ownership_count": 500,
+    "b08_registration_count": 0,
+    "post_review_gap_count": 2610,
+    "post_review_gap_ids_sha256": "728546C32585FC9EEB7DE022A4CFB0722C20118406C3F7FEA0D0A7FE9E1041F4",
+    "pre_b07_registration_count": 14,
+    "pre_review_gap_count": 3110,
+    "pre_review_gap_ids_sha256": "40EA6B0474C0741A97244F60CC6E91A6A6084C768377837D647A8AF1F64F9887",
+    "predecessor_target_count": 22424,
+    "predecessor_target_ids_sha256": "D17BBE660DE06E92F95D67F07A6DF4E450C9C837DC9D33C07BC0F77A78674785",
+    "self_registration_count": 0
+  },
+  "reason_summary": {
+    "placeholder_dummy_not_a_translatable_display_message": {
+      "count": 500,
+      "ids_sha256": "735FBC9DD82F8E1BEF2A0CCCD42477DCDD691CEAA0D960DBD89FB28A2B35DF55"
+    }
+  },
+  "replacement_invariants": {
+    "checked": 500,
+    "esc_preserved": true,
+    "exact_utf16le_byte_preserve_count": 500,
+    "failures": 0,
+    "line_breaks_preserved": true,
+    "printf_preserved": true,
+    "pua_preserved": true
+  },
+  "reproducibility": {
+    "artifact_json_canonical": true,
+    "in_memory_target_a_b_equal": true
+  },
+  "resource": "MSG_PK/SC/msgdata.bin",
+  "safety": {
+    "commercial_source_text_included": false,
+    "commit_or_push_performed": false,
+    "complete_game_resource_included": false,
+    "deployment_performed": false,
+    "global_progress_modified": false,
+    "global_readme_modified": false,
+    "installed_game_files_modified": false
+  },
+  "schema": "nobu16.kr.msgdata-pk-structural-review-validation.v1",
+  "scope": {
+    "blocked_count": 0,
+    "duplicate_id_count": 0,
+    "exact_byte_preserve_count": 500,
+    "narrative_mixed_count": 0,
+    "post_review_structural_remaining": 2610,
+    "predecessor_overlap_count": 0,
+    "reviewed_count": 500,
+    "reviewed_ids_sha256": "735FBC9DD82F8E1BEF2A0CCCD42477DCDD691CEAA0D960DBD89FB28A2B35DF55",
+    "translated_narrative_count": 0
+  },
+  "source_free_scan": {
+    "evidence/msgdata_pk_structural_review_b09_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "public/msgdata_ko_pk_structural_review_b09_500.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "review/msgdata_pk_structural_review_b09_review.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    }
+  },
+  "target_reconstruction": {
+    "complete_target_included": false,
+    "entry_count": 500,
+    "packed_sha256": "DFFC1FA9E8D175085568C14A407B9CB4BE81CF1416DA4485A64CA330D908ADA5",
+    "packed_size": 516796,
+    "parse_rebuild_round_trip": true,
+    "raw_sha256": "5982D520BF2E66260943DE61D0CB7F1135D1BA81A211E917E3F426C58D9125D6",
+    "raw_size": 514752,
+    "resource": "MSG_PK/SC/msgdata.bin",
+    "wrapper_round_trip": true
+  }
+}
