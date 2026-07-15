@@ -1,0 +1,285 @@
+{
+  "schema": "nobu16.kr.font-jp-seoulhangang-v1-verification.v1",
+  "public_source_free": true,
+  "private_binary_payload_included": false,
+  "stock_archives": {
+    "RES_JP/res_lang.bin": {
+      "size": 153198542,
+      "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53",
+      "link_entry_count": 42,
+      "g1n_outer_entries": [6, 7]
+    },
+    "RES_JP_PK/res_lang_pk.bin": {
+      "size": 140729547,
+      "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
+      "link_entry_count": 27,
+      "g1n_outer_entries": [16, 17]
+    }
+  },
+  "pk_runtime_route_evidence": {
+    "executable": "NOBU16PK.exe",
+    "examined_build_distribution": "local non-Steam build",
+    "examined_build_size": 29609536,
+    "examined_build_sha256": "BAA1A88F2C83E3EDA06AB2D02A28C3C96D2BA7090E3CE7E643D96B077A0B1739",
+    "ascii_string_offsets": {
+      "/res_lang.bin": "0x13BDFC0",
+      "/res_lang_exp.bin": "0x13BDFE0",
+      "/res_lang_pk.bin": "0x13BE050",
+      "/res_lang_exp_pk.bin": "0x13BE090",
+      "RES_JP": "0x13BE1F0",
+      "_PK": "0x13BE214"
+    },
+    "route_conclusion": "the examined non-Steam executable statically contains distinct base and PK language route strings; this does not prove which combination a current Steam runtime opens",
+    "runtime_file_open_trace_completed": false,
+    "steam_runtime_required_combination_verified": false,
+    "safe_distribution_decision": "include both JP base and JP PK font candidates pending Steam runtime validation"
+  },
+  "demand": {
+    "source_count": 118,
+    "source_entry_count": 83658,
+    "source_catalog_sha256": "436876571A1ABE251C3756566ACC9D95523000FEABEDFB70C10F6E3332AA8A6F",
+    "codepoint_count": 1419,
+    "codepoints_sha256": "31941A7119F571E227A96ED2B99427D13A379B1623E82EBF703B8D3B5D1A654B",
+    "hangul_syllable_count": 1247,
+    "hangul_syllables_sha256": "974C4F799512A3442A28AE94785F6BDD7C9103F54FF0993C223507AD91A9BC2B",
+    "append_union_codepoint_count": 1308,
+    "append_union_codepoints_sha256": "4C8398A11D1512DBFE1B3793E7CD2DCBA8C14001C44663C986B1950EC0F65A34",
+    "raster_codepoint_count": 1306,
+    "raster_codepoints_sha256": "E056B7630AE5055647421C5F53ABADC7BD49B9FE44E5BA8DF4421503D32888C6",
+    "stock_reuse_codepoints": ["U+32A4", "U+FF65"],
+    "stock_reuse_codepoints_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+    "pending_registration_normalization": {
+      "overlay_count": 5,
+      "future_registration_preserves_catalog_and_candidate_bytes": true
+    }
+  },
+  "official_font_pin": {
+    "archive_url": "https://www.seoul.go.kr/upload/seoul/font/seoul_font3.zip",
+    "archive_sha256": "7AB485B98F5B1A1B05CFD04484DD49A62F856BE8506223CD99E5EA1A33E400A7",
+    "SeoulHangangEB.ttf": {
+      "size": 7350712,
+      "sha256": "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1",
+      "assignment": "every 48-cell table"
+    },
+    "SeoulHangangB.ttf": {
+      "size": 7344552,
+      "sha256": "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B",
+      "assignment": "every 32-cell table"
+    },
+    "SeoulHangangM.ttf": {
+      "size": 7627124,
+      "sha256": "D27E1B26B55E507BEC1045962C954CF426D79605009C720FAD1C9EF808E312CB",
+      "used": false,
+      "reason": "no target table has a cell smaller than 32"
+    }
+  },
+  "g1n_structure": {
+    "record_size": 12,
+    "map_entries_per_table": 65536,
+    "cell_field_offsets": [1, 3, 7],
+    "width_field_offsets": [0, 4],
+    "profiles": {
+      "entry_6_or_16": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 379],
+        "mapped_nonzero_counts": [7115, 7114, 378],
+        "cell_hierarchy": [48, 48, 48],
+        "font_hierarchy": ["EB48", "EB48", "EB48"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [1152, 1152, 1152],
+        "record_geometry_sha256": [
+          "FA8B67B45D86727CBFDE86F3D25353FE285D5EAB1277B82206D3DBE08FCCFE7A",
+          "899391DE22B4116092682F481FCD1403CD279DD602184AE930C3024E6B7C086C",
+          "C2478526F5F40DC95C97D7D2BF4F8D621C8A53561CFBA068DF97AC0759A02E94"
+        ]
+      },
+      "entry_7_or_17": {
+        "table_count": 3,
+        "record_counts": [7116, 7115, 379],
+        "mapped_nonzero_counts": [7115, 7114, 378],
+        "cell_hierarchy": [32, 48, 32],
+        "font_hierarchy": ["B32", "EB48", "B32"],
+        "atlas_storage_modes": ["width_packed", "width_packed", "fixed_cell"],
+        "full_cell_strides": [512, 1152, 512],
+        "record_geometry_sha256": [
+          "D7DCC7B580959942466BBDBF85F049284983634DD1EB4643717FCC9CF05F30C1",
+          "899391DE22B4116092682F481FCD1403CD279DD602184AE930C3024E6B7C086C",
+          "E1A14B369C182F79CD2CE159EECB5E96796F3204BF9A499053A481B678CC083B"
+        ]
+      }
+    },
+    "base_pk_pre_atlas_geometry_exact": true,
+    "smaller_third_tier_present": false
+  },
+  "stock_reuse_evidence": {
+    "codepoints": ["U+32A4", "U+FF65"],
+    "codepoints_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+    "source_table": 0,
+    "target_table": 2,
+    "copy_policy": "copy source metric and width-packed pixels to a new table-2 atlas tail; create a new pointer and never alias the source pointer",
+    "profiles": {
+      "48_cell_base6_pk16": [
+        {
+          "codepoint": "U+32A4",
+          "source_ordinal": 729,
+          "source_pointer": 745920,
+          "metric_sha256": "70AC864DD86F521A6652AE97904FB7EF8D5A1AB69B7F16321E520A6673629006",
+          "pixel_size": 1152,
+          "pixels_sha256": "19BB962541C2860CADC98158FC26C4915D619B2B2FCCC2B3BEA3A9523B57B3CF"
+        },
+        {
+          "codepoint": "U+FF65",
+          "source_ordinal": 234,
+          "source_pointer": 209664,
+          "metric_sha256": "06C87BD7C859D94F225BF9BC6FBEE41B9257D49681D7B217BD7DD02A2502F933",
+          "pixel_size": 576,
+          "pixels_sha256": "40296D023EA83CDDDD85A92379CE071280579AEFE1C1E080751EBA340A7D9111"
+        }
+      ],
+      "32_cell_base7_pk17": [
+        {
+          "codepoint": "U+32A4",
+          "source_ordinal": 729,
+          "source_pointer": 331520,
+          "metric_sha256": "8CC907D0891EF1CCAFC01F4FB3B2D23099416890FD93F627E86FDD81588092AF",
+          "pixel_size": 512,
+          "pixels_sha256": "3ED4A88C495BA1289EFEDFF57F3916D057A328A577E7F5DCD50390A68D3DCFFC"
+        },
+        {
+          "codepoint": "U+FF65",
+          "source_ordinal": 234,
+          "source_pointer": 93184,
+          "metric_sha256": "243637F0283095B434F7F51636B349E5EB786F240B26DF7BA76654626268D640",
+          "pixel_size": 256,
+          "pixels_sha256": "F44029A1510C9F26FFCD3A9C499A13A491E4FB4D40CC588D31438E25894D103A"
+        }
+      ]
+    },
+    "verified_target_entries": ["base:6", "base:7", "pk:16", "pk:17"],
+    "copied_pixels_exact": true,
+    "direct_pointer_alias_count": 0
+  },
+  "independent_private_builds": {
+    "build_labels": ["A", "B"],
+    "all_listed_artifacts_byte_identical": true,
+    "first_build_pre_registration_second_build_post_registration": true,
+    "plan_sha256": "79BF3BD50D4F5F6C7435057DFE3C38C6B1F3DD4D1EF165636504F6FBA615BC9B",
+    "raster_request_sha256": "D0257FE7239A047123E3C44E7F50CF24C98E33F31629212D815FCC91F03154FC",
+    "raster_result_sha256": "DE113161BED96792680C2A552DC993FE92CA3DBEC296712D423E6934EFA8B808",
+    "private_pixel_payload_sha256": {
+      "EB48": "67707B90E704B78CDDFEFBA843265EB49BC0A6E77C4201F0C801958E66F0700D",
+      "B32": "595633B89C1A6F89F925A49CA7574537589FCD425051F79D6FC93504DC85DF01"
+    },
+    "build_manifest_sha256": "E72CE68307DA0E178CF7AC55AF80BA0D0AE97E2978E55800F8D6D62E5E7445F9"
+  },
+  "preservation_contract": {
+    "stock_hash_gate_fail_closed": true,
+    "non_target_link_entries_exact": true,
+    "non_target_g1t_and_nested_payloads_exact": true,
+    "existing_maps_exact_outside_append_codepoints": true,
+    "existing_records_exact": true,
+    "palette_exact": true,
+    "complete_stock_atlas_exact_prefix": true,
+    "gdi_font_fallback_allowed": false,
+    "stock_reuse_pixels_copied_to_new_table2_tail": true,
+    "direct_stock_pointer_alias_allowed": false,
+    "switch_archive_raw_copy": false,
+    "installed_game_files_modified": false
+  },
+  "expected_private_outputs": {
+    "routes": [
+      {
+        "route": "base",
+        "logical_path": "RES_JP/res_lang.bin",
+        "candidate_archive_size": 175097407,
+        "candidate_archive_sha256": "4395B84C5F678E37D8F39BCEEFF1986F62B07A54FF7936FC1402412AF07536F2",
+        "targets": [
+          {
+            "outer_entry": 6,
+            "target_size": 21651612,
+            "target_sha256": "F640AF9BFC72F810C49C43BF560C4AF34017C73D137B8E04CB1F6C75CE3BA8F9"
+          },
+          {
+            "outer_entry": 7,
+            "target_size": 15269532,
+            "target_sha256": "5B8B4A192DD5D9E4ECD0236E1467B81FC78A9568A44FDDC6C7F6BC8DC9155635"
+          }
+        ]
+      },
+      {
+        "route": "pk",
+        "logical_path": "RES_JP_PK/res_lang_pk.bin",
+        "candidate_archive_size": 162625225,
+        "candidate_archive_sha256": "697F5034140A35A676CC0D0006CCECE4753D823109C5792500C46DE6499C9C12",
+        "targets": [
+          {
+            "outer_entry": 16,
+            "target_size": 21651612,
+            "target_sha256": "02BABFCF8551B326CC1C90BFA1405D9433F87D822CE0B670C0D7045A55515D4E"
+          },
+          {
+            "outer_entry": 17,
+            "target_size": 15269532,
+            "target_sha256": "C21E49D616E98328D69396A30110B82AD6F0359F4C96C3B2ED206EFE68FBE73F"
+          }
+        ]
+      }
+    ],
+    "raster_profiles": [
+      {
+        "profile": "eb48",
+        "source_entry": 6,
+        "font_key": "entry6_48px_eb",
+        "font": "SeoulHangang EB",
+        "cell": 48,
+        "raster_size": 46,
+        "one_table_payload_size": 1504512,
+        "one_table_payload_sha256": "93FC7EF1E1DC3A5E7443B5574279F6E3500C78A632FC802850481E872F8B965F",
+        "duplicate_source_renders_exact": true
+      },
+      {
+        "profile": "b32",
+        "source_entry": 7,
+        "font_key": "entry7_32px_b",
+        "font": "SeoulHangang B",
+        "cell": 32,
+        "raster_size": 32,
+        "one_table_payload_size": 668672,
+        "one_table_payload_sha256": "A736F85D95F165D1141C181ED29E98A34B751B44BE3FE52B26A9326B7FD02778",
+        "duplicate_source_renders_exact": true
+      }
+    ],
+    "font_cmap_gate": [
+      {
+        "append_union_count": 1308,
+        "cmap_covered_count": 1306,
+        "cmap_covered_sha256": "E056B7630AE5055647421C5F53ABADC7BD49B9FE44E5BA8DF4421503D32888C6",
+        "cmap_missing": ["U+32A4", "U+FF65"],
+        "cmap_missing_count": 2,
+        "cmap_missing_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+        "font_key": "entry6_48px_eb",
+        "font_sha256": "60D6A471E9A14F4BA563612D2577B9B6CCB2D1C599A69191B3F9F82EF80A19D1",
+        "gdi_fallback_forbidden": true,
+        "profile": "eb48",
+        "unicode_cmap_records": [
+          {"encoding": 1, "format": 4, "platform": 3}
+        ]
+      },
+      {
+        "append_union_count": 1308,
+        "cmap_covered_count": 1306,
+        "cmap_covered_sha256": "E056B7630AE5055647421C5F53ABADC7BD49B9FE44E5BA8DF4421503D32888C6",
+        "cmap_missing": ["U+32A4", "U+FF65"],
+        "cmap_missing_count": 2,
+        "cmap_missing_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+        "font_key": "entry7_32px_b",
+        "font_sha256": "C33BAB9596C0B60ADA7EA9B3456E00E1CFD8EE63C599DB2F0EF71A84BA54769B",
+        "gdi_fallback_forbidden": true,
+        "profile": "b32",
+        "unicode_cmap_records": [
+          {"encoding": 1, "format": 4, "platform": 3}
+        ]
+      }
+    ]
+  }
+}
