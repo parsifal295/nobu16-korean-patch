@@ -18,6 +18,9 @@
       "overlay_globs": [
         "data/public/msgui_ko_0000_5099.v0.2.json"
       ],
+      "runtime_overlay_globs": [
+        "workstreams/steam_jp_msgui_wave07_recovery/public/msgui_ko_pk_jp_steam_wave07_recovery_343.v1.json"
+      ],
       "note": "UI v0.2 목표 4,037개; v0.1 대상에서 86개 확장"
     },
     {
@@ -198,23 +201,46 @@
     "workstreams/msggame_pk_ui_priority_b06/public/msggame_ko_pk_ui_priority_b06_300.v1.json",
     "workstreams/msggame_pk_ui_priority_b07/public/msggame_ko_pk_ui_priority_b07_300.v1.json"
   ],
+  "runtime_overlay_globs": [
+    "workstreams/msggame_pk_jp_native_wave07_j01/public/msggame_ko_pk_jp_native_wave07_j01_970.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j02/public/msggame_ko_pk_jp_native_wave07_j02_969.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j03/public/msggame_pk_jp_native_steam_wave07_j03_761.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j04/public/msggame_ko_pk_jp_native_wave07_j04_680.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j05/public/msggame_ko_pk_jp_native_wave07_j05_681.v1.json"
+  ],
   "note": "좌표 기반 + Switch 엄격·형식 복구·검토 + UI 우선 배치 11,722개 완료; 잔여 4,760개"
     },
     {
       "path": "RES_JP/res_lang.bin",
       "kind": "stages",
-      "done": 1,
+      "done": 2,
       "total": 2,
       "unit": "게이트",
-      "note": "서울한강체 글리프의 정적·오프라인 검증 및 로컬 비Steam 일본어 10파일 조합 화면 PASS; Steam 일본어 런타임 화면 QA 대기"
+      "note": "서울한강체 48/32px 글리프의 정적·오프라인 검증과 Steam 일본어 런타임 화면 QA 완료"
     },
     {
       "path": "RES_JP_PK/res_lang_pk.bin",
       "kind": "stages",
-      "done": 1,
+      "done": 2,
       "total": 2,
       "unit": "게이트",
-  "note": "PK 일본어 글꼴 컨테이너의 정적·오프라인 검증 및 로컬 비Steam 일본어 10파일 조합 화면 PASS; Steam 일본어 런타임 화면 QA 대기"
+      "note": "PK 일본어 48/32px 글리프의 정적·오프라인 검증과 Steam 일본어 런타임 화면 QA 완료"
+    },
+    {
+      "path": "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+      "kind": "stages",
+      "done": 2,
+      "total": 2,
+      "unit": "게이트",
+      "note": "이슈 #41 고해상도 64/96/32px 글꼴 경로의 정적·오프라인 검증과 QHD 런타임 화면 QA 완료"
+    },
+    {
+      "path": "RES_JP_PK_PORT/res_lang_pk_port2.bin",
+      "kind": "stages",
+      "done": 2,
+      "total": 2,
+      "unit": "게이트",
+      "note": "이슈 #41 고해상도 96px·64/96/64px 글꼴 경로의 정적·오프라인 검증과 QHD 런타임 화면 QA 완료"
     }
   ],
   "shared_strings": [

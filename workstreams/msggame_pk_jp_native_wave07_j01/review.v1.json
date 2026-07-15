@@ -1,0 +1,43 @@
+{
+  "schema": "nobu16.kr.msggame-jp-wave-review.v1",
+  "batch_id": "j01",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "status": "complete",
+  "manual_context_review": {
+    "reviewed_coordinate_count": 970,
+    "reviewed_unique_source_hash_count": 613,
+    "record_count": 480,
+    "context_fields_used_privately": [
+      "jp_record",
+      "jp_previous_record",
+      "jp_next_record",
+      "en_record",
+      "tc_record"
+    ],
+    "commercial_context_distributed": false
+  },
+  "quality_gates": {
+    "natural_korean_context_reviewed": true,
+    "literal_boundary_context_reviewed": true,
+    "legacy_coordinate_seeds_semantically_rechecked": true,
+    "repeated_source_consistency_enforced": true,
+    "all_invariants_preserved": true,
+    "source_script_leak_count": 0
+  },
+  "coverage": {
+    "first_coordinate": [
+      17,
+      5,
+      3
+    ],
+    "last_coordinate": [
+      17,
+      530,
+      1
+    ],
+    "selected_coordinate_count": 970,
+    "unique_source_hash_count": 613,
+    "repeated_source_hash_count": 116,
+    "largest_repeat_count": 34
+  }
+}

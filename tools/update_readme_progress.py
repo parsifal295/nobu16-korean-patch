@@ -33,6 +33,20 @@ def load_progress() -> dict:
     translation = payload.get("translation")
     if not isinstance(translation, dict):
         raise ValueError("progress payload has no translation object")
+    expected_qa = {
+        "steam_install_applied": True,
+        "exact_twelve_target_hashes": True,
+        "pre_v0_7_predecessor_backups_valid": 12,
+        "launcher_update_label": "Update 1.1.7",
+        "korean_title_prompt_observed": True,
+        "korean_main_menu_observed": True,
+        "known_untranslated_ui_observed": True,
+        "qhd_windowed": "PASS",
+        "qhd_borderless": "PASS",
+        "cold_restart": "PASS",
+    }
+    if payload.get("runtime_qa") != expected_qa:
+        raise ValueError("Steam JP exact-12 runtime QA contract is incomplete")
     return payload
 
 
@@ -59,8 +73,8 @@ def render() -> str:
         raise ValueError("msggame accounting mismatch")
     if strdata["safe_targets"] != strdata["applied"] + strdata["withheld"]:
         raise ValueError("strdata accounting mismatch")
-    if fonts["containers"] != fonts["verified"]:
-        raise ValueError("font verification is incomplete")
+    if fonts != {"containers": 4, "verified": 4}:
+        raise ValueError("four-route font verification is incomplete")
 
     common_total = common["applied"] + common["unresolved"]
     lines = [
@@ -70,7 +84,7 @@ def render() -> str:
         (
             f"| PK UI `msgui.bin` | 안전 이식 {msgui['safely_mapped']:,} / "
             f"{msgui['catalog_entries']:,} "
-            f"({percent(msgui['safely_mapped'], msgui['catalog_entries']):.1f}%) | "
+            f"({percent(msgui['safely_mapped'], msgui['catalog_entries']):.2f}%) | "
             f"{msgui['withheld']:,} |"
         ),
         (
@@ -90,7 +104,7 @@ def render() -> str:
         ),
         (
             f"| 일본어 경로 한글 폰트 | {fonts['verified']} / "
-            f"{fonts['containers']} 실기 확인 | 0 |"
+            f"{fonts['containers']} 설치·조합 화면 확인 | 0 |"
         ),
         "",
         (
@@ -98,15 +112,20 @@ def render() -> str:
             f"{msgui['effective_changes']:,}건이고, {msgui['source_equal_noops']:,}건은 원문과"
         ),
         (
-            f"동일합니다. 공용 메시지의 중복 문맥 {common['duplicate_context_collapsed']:,}건은 "
-            "동일 대상으로 합쳐졌습니다. 수치는"
+            f"동일합니다. 보류 {msgui['withheld']:,}건은 번역 대상 문구가 아닌 비의미 공백 "
+            "1자 레코드입니다."
         ),
-        "구조를 보존해 현재 Steam 1.1.7 파일에 안전하게 이식된 항목 기준이며, 줄바꿈·잘림·",
+        (
+            f"공용 메시지의 중복 문맥 {common['duplicate_context_collapsed']:,}건은 동일 대상으로 "
+            "합쳐졌습니다. 수치는"
+        ),
+        "구조를 보존해 현재 Steam 1.1.7 파일에 안전하게 이식된 항목",
+        "기준이며, 줄바꿈·잘림·",
         "문맥 검수 완료율을 뜻하지는 않습니다.",
         "",
-        "Steam PK v1.1.7 실기에서 일본어 런처, 한글 타이틀 안내, 한글 메인 메뉴와 두 한글",
-        "폰트 컨테이너를 확인했습니다. 종료 확인창 등 아직 번역되지 않은 일본어 UI가",
-        "남아 있습니다.",
+        "Steam PK v1.1.7 실기에서 일본어 런처, 한글 타이틀 안내, 한글 메인 메뉴와 4개 한글",
+        "폰트 리소스를 확인했습니다. QHD 창모드와 테두리 없음은 각각 PASS했고, 테두리 없음",
+        "콜드 재시작의 한글 타이틀·메인 메뉴도 PASS했습니다.",
         END,
     ]
     return "\n".join(lines)

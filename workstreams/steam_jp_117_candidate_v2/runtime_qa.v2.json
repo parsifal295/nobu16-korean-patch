@@ -1,0 +1,93 @@
+{
+  "artifacts": {
+    "candidate_verification": {
+      "logical_path": "workstreams/steam_jp_117_candidate_v2/verification.v2.json",
+      "sha256": "C98F6CDD5A7E1FDAD1F93DE4BCA2C95A47A9DF4D1371EC90A2523F8EFD4F52DD"
+    },
+    "transaction_manifest": {
+      "sha256": "58DB4EF76903D9923659E20702747D359F83A72150C5D3599866733F0D936B9F"
+    },
+    "zip": {
+      "file_count": 12,
+      "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.0.zip",
+      "sha256": "F245F23882BD9C676B705DCA9DA5E1443BEE05EA88A12F7BA9E7692BEA100584",
+      "size": 356144243
+    }
+  },
+  "display": {
+    "desktop_scale_percent": 125,
+    "game_render": {
+      "height": 1440,
+      "layout_scale": 0.75,
+      "width": 2560
+    },
+    "monitor": {
+      "height": 1600,
+      "width": 2560
+    }
+  },
+  "installation_verification": {
+    "installed_candidates": {
+      "exact_file_count": 12,
+      "expected_file_count": 12,
+      "valid": true
+    },
+    "pre_v0_7_predecessor_backups": {
+      "expected_file_count": 12,
+      "valid_file_count": 12,
+      "valid": true
+    }
+  },
+  "issue_41": {
+    "hangul_question_mark_substitution_detected": false,
+    "resolution_dependent_symptom_absent_in_tested_qhd_configs": true,
+    "result": "PASS"
+  },
+  "runtime": {
+    "distribution": "Steam",
+    "executable": "NOBU16PK.exe",
+    "language_route": "JP",
+    "launcher_language_observed": "日本語",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "file_only": true,
+    "hooking": false,
+    "process_memory_access": false,
+    "registry_modified": false
+  },
+  "schema": "nobu16.kr.steam-jp-1.1.7-runtime-qa.v2",
+  "visual_evidence": {
+    "cold_restart_validation": {
+      "cold_menu_capture_sha256": "4326853E9A227D4F04A71E4C45905B11A464976A179E65B7A8A1EE488B204579",
+      "cold_title_capture_sha256": "B5EC48076AED29FC5B3AFF651611736FB956E91EE0DF09D9D90F75C3E3A974EA",
+      "hangul_question_mark_substitution_detected": false,
+      "mode": "borderless_qhd",
+      "restarted_process": true,
+      "result": "PASS",
+      "validated_screens": [
+        "title",
+        "menu"
+      ]
+    },
+    "capture_retention": "local QA captures are identified by SHA-256; screenshot payloads are intentionally excluded",
+    "contains_screenshot_payload": false,
+    "same_session_mode_validation": {
+      "borderless_qhd": {
+        "hangul_question_mark_substitution_detected": false,
+        "result": "PASS",
+        "settings_capture_sha256": "E4B20F7F48741BEF9AF51E4883E8E84131479BA8732AD550658857CF64FE3C72"
+      },
+      "result": "PASS",
+      "same_game_process": true,
+      "windowed_qhd": {
+        "hangul_question_mark_substitution_detected": false,
+        "result": "PASS",
+        "settings_capture_sha256": "46DA0513DFBF66CB5E20A187DDC4A8A86E289603EADBE0B52BBD78BF2B09AADA"
+      }
+    }
+  }
+}
