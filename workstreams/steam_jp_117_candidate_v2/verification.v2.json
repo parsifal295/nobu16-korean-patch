@@ -1,0 +1,241 @@
+{
+  "candidate_file_count": 10,
+  "candidate_paths": [
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP/msgbre.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgev.bin",
+    "MSG_PK/JP/msggame.bin",
+    "MSG_PK/JP/msgire.bin",
+    "MSG_PK/JP/msgstf.bin",
+    "MSG_PK/JP/msgui.bin",
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin"
+  ],
+  "candidates": {
+    "MSG/JP/strdata.bin": {
+      "sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+      "size": 956835
+    },
+    "MSG_PK/JP/msgbre.bin": {
+      "sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167",
+      "size": 478527
+    },
+    "MSG_PK/JP/msgdata.bin": {
+      "sha256": "D05A585826F116180D81E06CBE7BF136CE67B98B76380A8DC6308F3868A1F9B9",
+      "size": 492714
+    },
+    "MSG_PK/JP/msgev.bin": {
+      "sha256": "C73DD1DDC79493EE3751C43B4BEAD216C4A4847C3E7B0A7CCD61FB342E03953E",
+      "size": 1040052
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "sha256": "6316E2B288F798B747D983DB08E6C2A477C6FC60DE319D3C7C302102C6384A84",
+      "size": 1808743
+    },
+    "MSG_PK/JP/msgire.bin": {
+      "sha256": "C4977A74B98605AB350BE761C67CCF879AEE7565104F8D7FD2B725FDD5806D84",
+      "size": 23136
+    },
+    "MSG_PK/JP/msgstf.bin": {
+      "sha256": "42C98221F7D874BB09C9CD0F06615E581E5CB188F9ABB4E0E825904BC4D181E5",
+      "size": 16747
+    },
+    "MSG_PK/JP/msgui.bin": {
+      "sha256": "F8152396BA5C11D26A6CD42DAD3120F511813079B27C92DFE107A9DAFFA70797",
+      "size": 121608
+    },
+    "RES_JP/res_lang.bin": {
+      "sha256": "04ADC5D345D05973A647C4DAF870E9AEFEB69FA9AF7BD9240DA6505AD18232C6",
+      "size": 175200602
+    },
+    "RES_JP_PK/res_lang_pk.bin": {
+      "sha256": "733FAC967BA0DAED8D59562588CEE0E7136D90169B74B747C5DC45722B7FD7B3",
+      "size": 162728420
+    }
+  },
+  "checks": {
+    "component_candidate_pins_exact": true,
+    "exact_ten_files": true,
+    "sc_container_used": false,
+    "staged_before_promote": true,
+    "steam_1_1_7_predecessors_exact": true,
+    "steam_files_written": false,
+    "zip_payloads_equal_candidates": true
+  },
+  "predecessors": {
+    "MSG/JP/strdata.bin": {
+      "sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+      "size": 507054
+    },
+    "MSG_PK/JP/msgbre.bin": {
+      "sha256": "945A0E9157E2DBD12781FFA5A986D93681325F40B6486348B1AB311D3BEE1D6D",
+      "size": 221127
+    },
+    "MSG_PK/JP/msgdata.bin": {
+      "sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+      "size": 272453
+    },
+    "MSG_PK/JP/msgev.bin": {
+      "sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+      "size": 562226
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+      "size": 721304
+    },
+    "MSG_PK/JP/msgire.bin": {
+      "sha256": "0AFBFE11A380A9C98FB3B368092A05B39ABB6F80C4B0723AD3B6DB55C2559C5D",
+      "size": 12376
+    },
+    "MSG_PK/JP/msgstf.bin": {
+      "sha256": "01EEB0B1B4879B6C70E9D7564F9D2FBD93E7B537CF8C614A58EEA82A83785A29",
+      "size": 6841
+    },
+    "MSG_PK/JP/msgui.bin": {
+      "sha256": "9775D4B7253828899F7EF0DF2E88AB28121ACB260E1381F3D706C6A1065D504A",
+      "size": 64976
+    },
+    "RES_JP/res_lang.bin": {
+      "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53",
+      "size": 153198542
+    },
+    "RES_JP_PK/res_lang_pk.bin": {
+      "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
+      "size": 140729547
+    }
+  },
+  "provenance": {
+    "fonts": {
+      "demand": {
+        "append_union_codepoint_count": 1357,
+        "append_union_codepoints_sha256": "838FB98006D42AD60F37D22D021D8D46B2A76EEF631B89C262B53EB83906AF64",
+        "codepoint_count": 1472,
+        "codepoints_sha256": "7B1F5B740D580A3B1E67B459B92EED29BA6F3CC1B685D7F312B1518202300E94",
+        "hangul_syllable_count": 1251,
+        "hangul_syllables_sha256": "ABDB62AD32DDCCB19F8E100179EADC58E028A2AA79FB8B252E407E2D16DCDCD0",
+        "pending_registration_normalization": {
+          "future_registration_preserves_catalog_and_candidate_bytes": true,
+          "overlay_count": 11
+        },
+        "raster_codepoint_count": 1334,
+        "raster_codepoints_sha256": "08E043D135A03612C159B946A190AD9C30A10A71F3BA6474C85328621E81615A",
+        "source_catalog_sha256": "A877E900EA7A42867BF2F71BC69B924BAC354B3A6EADF048B814E54F2B493E28",
+        "source_count": 124,
+        "source_entry_count": 88062,
+        "stock_reuse_codepoints": [
+          "U+22BF",
+          "U+32A4",
+          "U+32A8",
+          "U+3303",
+          "U+330D",
+          "U+3314",
+          "U+3318",
+          "U+3322",
+          "U+3323",
+          "U+3326",
+          "U+3327",
+          "U+332B",
+          "U+3336",
+          "U+333B",
+          "U+3349",
+          "U+334A",
+          "U+334D",
+          "U+3351",
+          "U+3357",
+          "U+337C",
+          "U+337D",
+          "U+337E",
+          "U+FF65"
+        ],
+        "stock_reuse_codepoints_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E"
+      },
+      "evidence_path": "workstreams/font_jp_seoulhangang_v1/verification.v1.json",
+      "evidence_sha256": "6478308F1A3198FE0AAD10F05D6C7030C3C4F8093D112CB885738FE78306F68E",
+      "routes": {
+        "RES_JP/res_lang.bin": {
+          "sha256": "04ADC5D345D05973A647C4DAF870E9AEFEB69FA9AF7BD9240DA6505AD18232C6",
+          "size": 175200602
+        },
+        "RES_JP_PK/res_lang_pk.bin": {
+          "sha256": "733FAC967BA0DAED8D59562588CEE0E7136D90169B74B747C5DC45722B7FD7B3",
+          "size": 162728420
+        }
+      }
+    },
+    "msggame": {
+      "wave07_contextual_variant_source_count": 1,
+      "wave07_coordinates_sha256": "93E8ED9F46A40404540DD8912E5C24B5EB196A91F92BAAB6497B814D60FA8C87",
+      "wave07_entries": 4061,
+      "wave07_overlays": [
+        {
+          "batch_id": "j01",
+          "entry_count": 970,
+          "overlay_id": "msggame_ko_pk_jp_native_wave07_j01_970",
+          "path": "workstreams/msggame_pk_jp_native_wave07_j01/public/msggame_ko_pk_jp_native_wave07_j01_970.v1.json",
+          "sha256": "B586DF17455DB5B31923FC281ADA91AF2EDD8B2062AF55E7EF72B316AC85E371"
+        },
+        {
+          "batch_id": "j02",
+          "entry_count": 969,
+          "overlay_id": "msggame_ko_pk_jp_native_wave07_j02_969",
+          "path": "workstreams/msggame_pk_jp_native_wave07_j02/public/msggame_ko_pk_jp_native_wave07_j02_969.v1.json",
+          "sha256": "A11CCFB77EF9CB28BD828CB834F290D5BE514E34722E5079E409E0D539974AAC"
+        },
+        {
+          "batch_id": "j03",
+          "entry_count": 761,
+          "overlay_id": "msggame_pk_jp_native_steam_wave07_j03_761.v1",
+          "path": "workstreams/msggame_pk_jp_native_wave07_j03/public/msggame_pk_jp_native_steam_wave07_j03_761.v1.json",
+          "sha256": "40CB5A24F22017EE747FBC6791D0FD615199EB1E94BAAB6130C70017DFF9A674"
+        },
+        {
+          "batch_id": "j04",
+          "entry_count": 680,
+          "overlay_id": "msggame_ko_pk_jp_native_wave07_j04_680",
+          "path": "workstreams/msggame_pk_jp_native_wave07_j04/public/msggame_ko_pk_jp_native_wave07_j04_680.v1.json",
+          "sha256": "DDC3B34DB5A1B6428D028435DF65C67ECA7E5698F94C2912D03DAF18EB4524DC"
+        },
+        {
+          "batch_id": "j05",
+          "entry_count": 681,
+          "overlay_id": "msggame_ko_pk_jp_native_wave07_j05_681",
+          "path": "workstreams/msggame_pk_jp_native_wave07_j05/public/msggame_ko_pk_jp_native_wave07_j05_681.v1.json",
+          "sha256": "E5FF2BA9F3C9C83602A36B6A13FD876541C7AD250D0B54CF0AC52D226FA8CC0A"
+        }
+      ],
+      "wave07_unique_source_hash_count": 2960
+    },
+    "msgui": {
+      "excluded_id": 2657,
+      "excluded_source_jp_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+      "foundation_sha256": "1581C52901FE536AF45F4FD6225E8D94795FDA883798947B6610D5CF86E09424",
+      "supplement_coordinate_sha256": "BEF7EAE59645DBADEFFD31CB261BB0C366105715A58420987CDA339487D3219D",
+      "supplement_sha256": "3F89B1EB791686BBA4C1AFA790A157EB88F60DF14D746B81D437365201629B51",
+      "withheld_audit_sha256": "B9E65B6360AAA48F097873D218052A8A1D74CDB6FE462BD79963A17D414A397E"
+    }
+  },
+  "runtime": {
+    "distribution": "Steam",
+    "language_route": "JP",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764
+  },
+  "schema": "nobu16.kr.steam-jp-1.1.7-candidate-verification.v2",
+  "translation": {
+    "common_messages_applied": 39507,
+    "common_messages_unresolved": 96,
+    "msggame_applied": 28272,
+    "msggame_remaining_jp_semantic": 0,
+    "msgui_effective_changes": 3955,
+    "msgui_mapped": 4036,
+    "msgui_unmapped": 1,
+    "strdata_applied": 24524
+  },
+  "zip": {
+    "member_count": 10,
+    "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.0.zip",
+    "sha256": "38752EAC593A8E64E2AD0BA93818F417ACF982E96F97B65879EEDA47198B45F2",
+    "size": 238208364
+  }
+}

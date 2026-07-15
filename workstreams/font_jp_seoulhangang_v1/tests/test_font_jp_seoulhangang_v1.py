@@ -6,6 +6,7 @@ import struct
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 
@@ -99,26 +100,110 @@ def synthetic_ttf_format12(mapped: list[int]) -> bytes:
 
 
 class JPFontPipelineTests(unittest.TestCase):
-    def test_latest_demand_includes_pending_five(self) -> None:
+    def test_latest_demand_and_evidence_match_final_builder_locks(self) -> None:
         demand = builder.require_demand()
-        self.assertEqual(demand["source_count"], 118)
-        self.assertEqual(demand["source_entry_count"], 83_658)
-        self.assertEqual(demand["hangul_syllable_count"], 1_247)
-        self.assertEqual(demand["source_catalog_sha256"], builder.DEMAND_LOCK["source_catalog_sha256"])
+        demand_projection = {
+            key: demand[key]
+            for key in builder.DEMAND_LOCK
+        }
+        self.assertEqual(demand_projection, builder.DEMAND_LOCK)
+        self.assertEqual(demand["source_count"], 124)
+        self.assertEqual(demand["source_entry_count"], 88_062)
+        self.assertEqual(demand["codepoint_count"], 1_472)
+        self.assertEqual(demand["hangul_syllable_count"], 1_251)
+        self.assertEqual(demand["translation_progress"]["pending_overlay_count"], 11)
+        self.assertEqual(demand["translation_progress"]["pending_already_registered_count"], 11)
 
-    def test_pending_registration_is_order_stable(self) -> None:
+        evidence = builder.strict_json(WORKSTREAM / "verification.v1.json")
+        evidence_demand = evidence["demand"]
+        evidence_lock_keys = set(builder.DEMAND_LOCK) & set(evidence_demand)
+        self.assertEqual(
+            evidence_lock_keys,
+            set(builder.DEMAND_LOCK) - {"non_hangul_count", "non_hangul_sha256"},
+        )
+        evidence_projection = {
+            key: evidence_demand[key]
+            for key in evidence_lock_keys
+        }
+        self.assertEqual(
+            evidence_projection,
+            {key: builder.DEMAND_LOCK[key] for key in evidence_lock_keys},
+        )
+        self.assertEqual(
+            {
+                "codepoint_count": evidence_demand["append_union_codepoint_count"],
+                "codepoints_sha256": evidence_demand["append_union_codepoints_sha256"],
+            },
+            builder.APPEND_UNION_LOCK,
+        )
+        self.assertEqual(
+            {
+                "codepoint_count": evidence_demand["raster_codepoint_count"],
+                "codepoints_sha256": evidence_demand["raster_codepoints_sha256"],
+            },
+            builder.TTF_RASTER_LOCK,
+        )
+        self.assertEqual(
+            evidence_demand["stock_reuse_codepoints"],
+            [builder.canonical_cp(cp) for cp in builder.STOCK_REUSE_CODEPOINTS],
+        )
+        self.assertEqual(
+            evidence_demand["stock_reuse_codepoints_sha256"],
+            builder.STOCK_REUSE_LOCK["codepoints_sha256"],
+        )
+
+    def test_pending_registration_is_order_stable_across_runtime_globs(self) -> None:
+        progress = builder.strict_json(REPO_ROOT / "data/public/translation_progress.v0.1.json")
+        progress_rows = {
+            row["path"]: row
+            for row in progress["resources"]
+            if isinstance(row, dict) and isinstance(row.get("path"), str)
+        }
+        expected_runtime_pending = {
+            "MSG_PK/SC/msgui.bin": 1,
+            "MSG_PK/SC/msggame.bin": 5,
+            "MSG_PK/SC/msgdata.bin": 0,
+        }
+        expected_logical_pending = {
+            "MSG_PK/SC/msgui.bin": 0,
+            "MSG_PK/SC/msggame.bin": 1,
+            "MSG_PK/SC/msgdata.bin": 4,
+        }
+        self.assertEqual(
+            {row["resource"] for row in builder.PENDING_OVERLAYS},
+            set(expected_runtime_pending),
+        )
+
         for resource in (
-            "MSG_PK/SC/msgdata.bin",
+            "MSG_PK/SC/msgui.bin",
             "MSG_PK/SC/msggame.bin",
+            "MSG_PK/SC/msgdata.bin",
         ):
+            row = progress_rows[resource]
+            self.assertEqual(row["runtime_path"], resource.replace("/SC/", "/JP/"))
+            logical = row["overlay_globs"]
+            runtime = row.get("runtime_overlay_globs", [])
+            self.assertIsInstance(logical, list)
+            self.assertIsInstance(runtime, list)
             pending = [
                 row["path"]
                 for row in builder.PENDING_OVERLAYS
                 if row["resource"] == resource
             ]
-            absent, absent_count = builder.merge_overlay_paths(["a.json"], resource)
+            self.assertTrue(pending)
+            self.assertEqual(
+                sum(path in logical for path in pending),
+                expected_logical_pending[resource],
+            )
+            self.assertEqual(
+                sum(path in runtime for path in pending),
+                expected_runtime_pending[resource],
+            )
+            registered = [*logical, *runtime]
+            nonpending = [path for path in registered if path not in set(pending)]
+            absent, absent_count = builder.merge_overlay_paths(nonpending, resource)
             present, present_count = builder.merge_overlay_paths(
-                [pending[-1], "a.json", *pending[:-1]], resource
+                [*nonpending, *reversed(pending)], resource
             )
             self.assertEqual(absent, present)
             self.assertEqual(absent_count, 0)
@@ -160,7 +245,7 @@ class JPFontPipelineTests(unittest.TestCase):
         )
         self.assertTrue(verified["complete_stock_atlas_exact_prefix"])
 
-    def test_stock_reuse_copies_pixels_to_new_table2_tail(self) -> None:
+    def test_synthetic_two_glyph_stock_reuse_copies_pixels_to_new_table2_tail(self) -> None:
         stock = synthetic_reuse_g1n((32, 48, 32))
         raster_cp = 0xAC00
         pixels = {
@@ -192,19 +277,26 @@ class JPFontPipelineTests(unittest.TestCase):
         self.assertFalse(any(builder.cmap_glyph_id(row, 0xFF65, "synthetic") for row in subtables))
 
     def test_cmap_gate_rejects_any_unreviewed_missing_character(self) -> None:
-        append_union = [0x32A4, 0xAC00, 0xFF65]
+        raster_cp = 0xAC00
+        append_union = [*builder.STOCK_REUSE_CODEPOINTS, raster_cp]
         with tempfile.TemporaryDirectory(dir=REPO_ROOT / "tmp") as temporary:
             root = Path(temporary)
             good = root / "good.ttf"
             bad = root / "bad.ttf"
-            good.write_bytes(synthetic_ttf_format12([0xAC00]))
+            good.write_bytes(synthetic_ttf_format12([raster_cp]))
             bad.write_bytes(synthetic_ttf_format12([]))
             good_paths = {
                 "entry6_48px_eb": good,
                 "entry7_32px_b": good,
             }
             reports = builder.validate_official_font_cmaps(good_paths, append_union)
-            self.assertTrue(all(row["cmap_missing_count"] == 2 for row in reports))
+            self.assertTrue(
+                all(
+                    row["cmap_missing"]
+                    == [builder.canonical_cp(cp) for cp in builder.STOCK_REUSE_CODEPOINTS]
+                    for row in reports
+                )
+            )
             bad_paths = {
                 "entry6_48px_eb": bad,
                 "entry7_32px_b": bad,
@@ -219,14 +311,32 @@ class JPFontPipelineTests(unittest.TestCase):
             with self.assertRaises(builder.JPFontBuildError):
                 builder.require_stock(path, "base")
 
+    def test_private_staging_is_removed_when_build_fails(self) -> None:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT / "tmp") as temporary:
+            parent = Path(temporary)
+            with mock.patch.object(
+                builder, "private_build", side_effect=builder.JPFontBuildError("boom")
+            ):
+                with self.assertRaisesRegex(builder.JPFontBuildError, "boom"):
+                    builder.staged_private_build(
+                        b"base",
+                        b"pk",
+                        {},
+                        {},
+                        parent,
+                        Path("powershell.exe"),
+                        None,
+                    )
+            self.assertEqual(list(parent.iterdir()), [])
+
     def test_verification_pins_private_outputs_and_both_runtime_routes(self) -> None:
         evidence = builder.strict_json(WORKSTREAM / "verification.v1.json")
         expected = builder.load_expected_outputs(WORKSTREAM / "verification.v1.json")
         self.assertEqual(
             [row["candidate_archive_sha256"] for row in expected["routes"]],
             [
-                "4395B84C5F678E37D8F39BCEEFF1986F62B07A54FF7936FC1402412AF07536F2",
-                "697F5034140A35A676CC0D0006CCECE4753D823109C5792500C46DE6499C9C12",
+                "04ADC5D345D05973A647C4DAF870E9AEFEB69FA9AF7BD9240DA6505AD18232C6",
+                "733FAC967BA0DAED8D59562588CEE0E7136D90169B74B747C5DC45722B7FD7B3",
             ],
         )
         routes = evidence["pk_runtime_route_evidence"]
@@ -238,12 +348,20 @@ class JPFontPipelineTests(unittest.TestCase):
         self.assertIn("/res_lang.bin", routes["ascii_string_offsets"])
         self.assertIn("/res_lang_pk.bin", routes["ascii_string_offsets"])
 
-    def test_expected_cmap_gate_excludes_only_two_stock_reuse_points(self) -> None:
+    def test_expected_cmap_gate_excludes_exact_builder_stock_reuse_set(self) -> None:
         expected = builder.load_expected_outputs(WORKSTREAM / "verification.v1.json")
+        expected_missing = [
+            builder.canonical_cp(cp)
+            for cp in builder.STOCK_REUSE_CODEPOINTS
+        ]
         for row in expected["font_cmap_gate"]:
             self.assertTrue(row["gdi_fallback_forbidden"])
-            self.assertEqual(row["cmap_missing"], ["U+32A4", "U+FF65"])
-            self.assertEqual(row["cmap_covered_count"], 1_306)
+            self.assertEqual(row["append_union_count"], builder.APPEND_UNION_LOCK["codepoint_count"])
+            self.assertEqual(row["cmap_missing"], expected_missing)
+            self.assertEqual(row["cmap_missing_count"], builder.STOCK_REUSE_LOCK["codepoint_count"])
+            self.assertEqual(row["cmap_missing_sha256"], builder.STOCK_REUSE_LOCK["codepoints_sha256"])
+            self.assertEqual(row["cmap_covered_count"], builder.TTF_RASTER_LOCK["codepoint_count"])
+            self.assertEqual(row["cmap_covered_sha256"], builder.TTF_RASTER_LOCK["codepoints_sha256"])
 
     def test_official_fonts_and_archive_are_individually_pinned(self) -> None:
         evidence = builder.strict_json(WORKSTREAM / "verification.v1.json")

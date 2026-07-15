@@ -18,6 +18,9 @@
       "overlay_globs": [
         "data/public/msgui_ko_0000_5099.v0.2.json"
       ],
+      "runtime_overlay_globs": [
+        "workstreams/steam_jp_msgui_wave07_recovery/public/msgui_ko_pk_jp_steam_wave07_recovery_343.v1.json"
+      ],
       "note": "UI v0.2 목표 4,037개; v0.1 대상에서 86개 확장"
     },
     {
@@ -197,6 +200,13 @@
     "workstreams/msggame_pk_ui_priority_b05/public/msggame_ko_pk_ui_priority_b05_300.v1.json",
     "workstreams/msggame_pk_ui_priority_b06/public/msggame_ko_pk_ui_priority_b06_300.v1.json",
     "workstreams/msggame_pk_ui_priority_b07/public/msggame_ko_pk_ui_priority_b07_300.v1.json"
+  ],
+  "runtime_overlay_globs": [
+    "workstreams/msggame_pk_jp_native_wave07_j01/public/msggame_ko_pk_jp_native_wave07_j01_970.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j02/public/msggame_ko_pk_jp_native_wave07_j02_969.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j03/public/msggame_pk_jp_native_steam_wave07_j03_761.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j04/public/msggame_ko_pk_jp_native_wave07_j04_680.v1.json",
+    "workstreams/msggame_pk_jp_native_wave07_j05/public/msggame_ko_pk_jp_native_wave07_j05_681.v1.json"
   ],
   "note": "좌표 기반 + Switch 엄격·형식 복구·검토 + UI 우선 배치 11,722개 완료; 잔여 4,760개"
     },
