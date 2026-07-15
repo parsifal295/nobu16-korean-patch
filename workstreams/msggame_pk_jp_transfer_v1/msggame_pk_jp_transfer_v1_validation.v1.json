@@ -1,0 +1,195 @@
+{
+  "artifacts": {
+    "evidence": {
+      "path": "evidence/msggame_pk_jp_transfer_v1_evidence.v1.json",
+      "sha256": "8F886B525C24C35F19D3E11E3135CDE3CCAE5AF21A44C71A5614AC5138657478",
+      "size": 12493498
+    },
+    "mirror_recipe": {
+      "path": "public/msggame_ko_pk_jp_sc_container_mirror_v1_11722.v1.json",
+      "sha256": "93CF4FCB6B1DAC93DED1A3A2208BDF7AEB3EDED1619524F76BA9D3916F27B7E5",
+      "size": 9764
+    },
+    "readme": {
+      "path": "README_KO.md",
+      "sha256": "0CC0CF47D82B807DB22A573F83ACEE00077C35061FFB1E8D757A4CFA9B50E984",
+      "size": 970
+    },
+    "recipe": {
+      "path": "public/msggame_ko_pk_jp_native_transfer_v1_8310.v1.json",
+      "sha256": "A33070DE401B83F025DCC3B5EECEEEAC52F199C0EF4AF0E9C847F6EECB7E053D",
+      "size": 4551091
+    },
+    "review": {
+      "path": "review/msggame_pk_jp_transfer_v1_blocked_review.v1.json",
+      "sha256": "A730AA90D5F0F4CB0BB9241BC251A0529F29596C30D840DF69805714E4071A40",
+      "size": 4054193
+    }
+  },
+  "coordinate_sets": {
+    "blocked_sha256": "DA224ACB393C3075ABF41A6AFC7F882665135C596D9285A46F5DBBF00FC7572F",
+    "classification_covers_input": true,
+    "direct_sha256": "E6B21D5756293B196CD357FCB82C9F75B38C43991B0768BF525D90FCEAE29240",
+    "input_sha256": "82882CCE6B645BFDEE802AF5E4EDD47CD074C453E346AC64EAF4B8F6601A66FB",
+    "remapped_sha256": "66E6E02661861013BB41A46A73724CB50D78B2016C765453AA464792E1AD0EE3",
+    "transferable_blocked_disjoint": true,
+    "transferable_sha256": "AD26C5443C149AD596543AB70AC4F3C535AD817476C46E8FE5F08ABA6005CAF7"
+  },
+  "counts": {
+    "blocked": 3412,
+    "classified_total": 11722,
+    "direct": 7449,
+    "input": 11722,
+    "mirror_changed": 11717,
+    "mirror_preserved": 11722,
+    "remapped": 861,
+    "transferable": 8310,
+    "ui_b05_b07_input": 900,
+    "ui_b05_b07_mirror": 900,
+    "ui_b05_b07_native": 179
+  },
+  "generator": {
+    "path": "build_msggame_pk_jp_transfer_v1.py",
+    "sha256": "4EAB3429BA79B510BAB204B4B7F549C587EBD9D53A916E6DAC2FEC5BE32B0827"
+  },
+  "mirror_candidate_ab": {
+    "A_stock_jp_target_guard": {
+      "packed_sha256": "0FB9EA3B4817D208C65F587AF1F57A5BB82106367314801A13C9A534ECC47CD8",
+      "packed_size": 709290,
+      "raw_sha256": "F00C897353C3C0084BFBFC5ED781C467945C82708F28A6D57BA0CC2710976D57",
+      "raw_size": 1571384
+    },
+    "A_stock_sc_container": {
+      "packed_sha256": "BD7B33FCC7495B855B0828C7FE4E5F7ADB2DE656A9B12E20259750F94EE665D6",
+      "packed_size": 529419,
+      "raw_sha256": "1958B2B801D37186D478284EA0E29CA96D8DA2BC087D6BEB74A4139EF01C11CE",
+      "raw_size": 1077200
+    },
+    "B_candidate": {
+      "literal_slot_count": 25598,
+      "packed_sha256": "D5365A49945582D1F82BF5137CA898EC9EBE270B5F8B90513497E6ADC68E9AD9",
+      "packed_size": 1269018,
+      "raw_sha256": "D1EB3749C835BDEB6C5AA252452F15C83E5E0E57AB6E7636EBBB54401691A04A",
+      "raw_size": 1264036,
+      "record_count": 21581
+    },
+    "checks": {
+      "all_11722_overlay_coordinates_applied": true,
+      "all_sc_control_layout_invariants_exact": true,
+      "all_sc_source_hashes_exact": true,
+      "jp_stock_target_guard_exact": true,
+      "non_overlay_literals_preserved": true,
+      "packed_candidate_parse_verified": true,
+      "raw_parse_rebuild_byte_exact": true,
+      "sc_container_record_count_preserved": true,
+      "sc_literal_coordinates_preserved": true
+    },
+    "installed_game_file_written": false,
+    "private_candidate_path_recorded": false,
+    "private_candidate_written": true
+  },
+  "native_candidate_ab": {
+    "A_stock_jp": {
+      "packed_sha256": "0FB9EA3B4817D208C65F587AF1F57A5BB82106367314801A13C9A534ECC47CD8",
+      "packed_size": 709290,
+      "raw_sha256": "F00C897353C3C0084BFBFC5ED781C467945C82708F28A6D57BA0CC2710976D57",
+      "raw_size": 1571384
+    },
+    "B_candidate": {
+      "packed_sha256": "0E10975D7A08C1BD445D7FCFFF5C2FAEC5D16C3F1BC3CDBD440677873B6EE146",
+      "packed_size": 1651697,
+      "raw_sha256": "67560598716AD90BCA0ED1BC05E262143D526720905F08475989D44EA48443EE",
+      "raw_size": 1645220
+    },
+    "checks": {
+      "jp_control_layout_invariants_exact": true,
+      "jp_record_structure_exact": true,
+      "jp_source_hashes_exact": true,
+      "literal_coordinates_preserved": true,
+      "non_recipe_literals_preserved": true,
+      "rebuilt_literals_match_recipe": true,
+      "source_to_target_mapping_partition_exact": true,
+      "utf16_and_u32_capacity_exact": true
+    },
+    "installed_game_file_written": false,
+    "private_candidate_path_recorded": false,
+    "private_candidate_written": true
+  },
+  "passed": true,
+  "private_staging": {
+    "arbitrary_absolute_file_output_supported": false,
+    "exact_layout": true,
+    "game_root_output_allowed": false,
+    "mirror_relative_path": "mirror/MSG_PK/JP/msggame.bin",
+    "native_relative_path": "native/MSG_PK/JP/msggame.bin",
+    "written": true
+  },
+  "proofs": {
+    "all_input_overlays_source_free_and_pinned": true,
+    "all_sc_jp_tc_en_private_sources_pinned": true,
+    "all_sc_source_hashes_exact": true,
+    "blocked_entries_not_applied": true,
+    "direct_and_remapped_partition_exact": true,
+    "jp_control_layout_invariants_fail_closed": true,
+    "jp_coordinate_existence_fail_closed": true,
+    "jp_literal_coordinates_preserved": true,
+    "jp_non_recipe_literals_preserved": true,
+    "jp_record_literal_count_fail_closed": true,
+    "jp_record_nonliteral_structure_fail_closed": true,
+    "mirror_all_11722_overlay_coordinates_applied": true,
+    "mirror_jp_target_stock_guard_exact": true,
+    "mirror_non_overlay_literals_preserved": true,
+    "mirror_packed_parse_and_raw_roundtrip_verified": true,
+    "mirror_sc_container_record_count_and_literal_coordinates_preserved": true,
+    "recipe_replacements_verified_after_rebuild": true,
+    "remapped_entries_have_unique_same_record_equal_cardinality_ordinal_targets": true,
+    "remapped_entries_include_source_free_four_language_context_anchors": true,
+    "utf16_literal_record_block_and_raw_capacity_fail_closed": true
+  },
+  "recipe_id": "msggame_pk_jp_native_transfer_v1_8310.v1",
+  "runtime_validation": {
+    "game_process_launch_run": false,
+    "installed_game_candidate_application_run": false,
+    "release_ready": false,
+    "screen_capture_verification_run": false,
+    "state": "not_run_game_runtime_unverified"
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "release_ready": false,
+    "runtime_game_validation_run": false,
+    "shared_progress_modified": false,
+    "shared_readme_modified": false,
+    "source_en_modified": false,
+    "source_jp_modified": false,
+    "source_sc_modified": false,
+    "source_tc_modified": false
+  },
+  "schema": "nobu16.kr.msggame-pk-jp-transfer-validation.v1",
+  "source_free_scan": {
+    "README_KO.md": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_ko_pk_jp_native_transfer_v1_8310.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_ko_pk_jp_sc_container_mirror_v1_11722.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_pk_jp_transfer_v1_blocked_review.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    },
+    "msggame_pk_jp_transfer_v1_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "kana_count": 0
+    }
+  }
+}
