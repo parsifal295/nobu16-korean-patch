@@ -61,9 +61,12 @@
     "workstreams/msgev_pk_native_batch01/public/msgev_ko_pk_native_batch01_8.v1.json",
     "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
     "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
-    "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json"
+    "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+    "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+    "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+    "workstreams/msgev_pk_structural_completion_b07/public/msgev_ko_pk_structural_completion_b07_241.v1.json"
   ],
-  "note": "실제 PK/SC 대상 12,105개 완료 + 순정 빈 슬롯 Switch 활성화 1,598개; 직접 번역 3·4차 525개 추가, 잔여 대상 801개"
+  "note": "실제 PK/SC 번역 대상 12,906 / 12,906 완료; 일반 의미 문자열과 구조 보존 행 전수 검토 완료"
     },
     {
       "path": "MSG_PK/SC/msgdata.bin",
@@ -82,9 +85,12 @@
     "workstreams/msgdata_pk_native_completion/public/msgdata_ko_pk_native_completion_2.v1.json",
     "workstreams/msgdata_pk_native_batch01/public/msgdata_ko_pk_native_batch01_100.v1.json",
     "workstreams/msgdata_pk_native_batch02/public/msgdata_ko_pk_native_batch02_150.v1.json",
-    "workstreams/msgdata_pk_native_batch03/public/msgdata_ko_pk_native_batch03_250.v1.json"
+    "workstreams/msgdata_pk_native_batch03/public/msgdata_ko_pk_native_batch03_250.v1.json",
+    "workstreams/msgdata_pk_native_batch04/public/msgdata_ko_pk_native_batch04_300.v1.json",
+    "workstreams/msgdata_pk_native_batch05/public/msgdata_ko_pk_native_batch05_300.v1.json",
+    "workstreams/msgdata_pk_native_batch06/public/msgdata_ko_pk_native_batch06_final_278.v1.json"
       ],
-      "note": "실제 PK/SC 대상 20,546개 완료 + 순정 빈 슬롯 Switch 활성화 784개; 직접 번역 3차 250개 추가, 잔여 대상 4,988개"
+      "note": "실제 PK/SC 대상 21,424개 완료; 일반 의미 문자열 잔여 0, dummy·로마자·제어 구조 4,110개 검토 대기"
     },
     {
       "path": "MSG_PK/SC/msgbre.bin",
@@ -169,9 +175,10 @@
     "workstreams/switch_msggame_v13_human_review_b03/public/msggame_ko_switch_v13_semantic_review_b03_130.v1.json",
     "workstreams/msggame_pk_ui_priority_b01/public/msggame_ko_pk_ui_priority_b01_150.v1.json",
     "workstreams/msggame_pk_ui_priority_b02/public/msggame_ko_pk_ui_priority_b02_53.v1.json",
-    "workstreams/msggame_pk_ui_priority_b03/public/msggame_ko_pk_ui_priority_b03_220.v1.json"
+    "workstreams/msggame_pk_ui_priority_b03/public/msggame_ko_pk_ui_priority_b03_220.v1.json",
+    "workstreams/msggame_pk_ui_priority_b04/public/msggame_ko_pk_ui_priority_b04_250.v1.json"
   ],
-  "note": "좌표 기반 + Switch 엄격·형식 복구·검토 + UI 우선 배치 10,572개 완료; UI 우선 423개 추가, 잔여 5,910개"
+  "note": "좌표 기반 + Switch 엄격·형식 복구·검토 + UI 우선 배치 10,822개 완료; UI 우선 673개 추가, 잔여 5,660개"
     },
     {
       "path": "RES_SC/res_lang.bin",
@@ -200,9 +207,10 @@
       "overlay_globs": [
         "workstreams/switch_strdata_v13_direct_transfer/public/strdata_ko_switch_v13_direct_transfer_24424.v1.json",
         "workstreams/strdata_pk_shared_ui/public/strdata_ko_pk_shared_ui_b01_1.v1.json",
-        "workstreams/strdata_pk_shared_manual_b01/public/strdata_ko_pk_shared_manual_b01_206.v1.json"
+        "workstreams/strdata_pk_shared_manual_b01/public/strdata_ko_pk_shared_manual_b01_206.v1.json",
+        "workstreams/strdata_pk_shared_manual_b02/public/strdata_ko_pk_shared_manual_b02_final_27.v1.json"
       ],
-      "note": "PK 실행이 실제로 함께 읽는 공용 본편 표: Switch v1.3 직접 이식 24,424개 + 공용 UI·수동 번역 207개, 비공백 대상 26,690개 중 24,631개 완료; 잔여 2,059개와 실제 화면 QA 대기"
+      "note": "PK 실행이 함께 읽는 공용 본편 표 24,658개 완료; 일반 의미 문자열 잔여 0, 구조 1,932개와 미등록 사용자 작업 100개는 별도 검토"
     }
   ]
 }
