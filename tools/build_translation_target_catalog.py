@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Build the source-free PK translation target-key catalog from pristine backups.
+"""Build the source-free PK-runtime translation target-key catalog from pristine backups.
 
-The catalog contains only integer string IDs or msggame coordinates plus
-structural counts and SHA-256 values.  It never serializes source strings and
-never reads the live game resources.  Inputs are explicit, pinned backup
-locations created before the file-only translation transactions.
+The catalog contains only integer string IDs, msggame coordinates, or shared
+strdata block/slot coordinates plus structural counts and SHA-256 values.  It
+never serializes source strings and never reads live game resources.  Inputs
+are explicit, pinned backup locations created before file-only transactions.
 """
 
 from __future__ import annotations
@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 GAME_ROOT = ROOT.parent
 TOOLS_ROOT = ROOT / "tools"
 MSGGAME_ROOT = ROOT / "workstreams" / "msggame"
-for import_root in (TOOLS_ROOT, MSGGAME_ROOT):
+STRDATA_CONTAINER_ROOT = ROOT / "workstreams" / "switch_msgbre_v11"
+for import_root in (TOOLS_ROOT, MSGGAME_ROOT, STRDATA_CONTAINER_ROOT):
     if str(import_root) not in sys.path:
         sys.path.insert(0, str(import_root))
 
@@ -33,6 +34,7 @@ from msggame_format import (  # noqa: E402
     iter_literals,
     parse_packed_msggame,
 )
+from strdata_container import parse_strdata  # noqa: E402
 
 
 OUTPUT = ROOT / "data" / "public" / "translation_target_keys.v0.1.json"
@@ -48,9 +50,20 @@ DEFAULT_TRANSACTION_BACKUP_ROOT = (
     / "MSG_PK"
     / "SC"
 )
+DEFAULT_SHARED_TRANSACTION_BACKUP_ROOT = (
+    GAME_ROOT / "KR_PATCH_BACKUP" / "file_only_transaction"
+)
 
 CATALOG_SCHEMA = "nobu16.kr.translation-target-keys.v0.1"
-EXPECTED_TOTAL = 61_306
+EXPECTED_PK_TOTAL = 61_306
+EXPECTED_TOTAL = 87_996
+SHARED_STRDATA_PATH = "MSG/SC/strdata.bin"
+SHARED_STRDATA_PACKED_SIZE = 516_628
+SHARED_STRDATA_PACKED_SHA256 = "93F88D71210B96783749CEB948E0713D7E6552F764F644092B71A5FD0C994B88"
+SHARED_STRDATA_RAW_SIZE = 760_388
+SHARED_STRDATA_RAW_SHA256 = "17EF622F36BA94009F67519DC79ED543C223B467311E51711A009F9DD0816214"
+SHARED_STRDATA_BLOCK_SLOT_COUNTS = (25_069, 4_100, 3_000, 122, 20)
+SHARED_STRDATA_TARGET_COUNT = 26_690
 
 
 class TargetCatalogError(ValueError):
@@ -198,6 +211,39 @@ def read_pinned_packed(path: Path, spec: BaselineSpec) -> tuple[bytes, bytes]:
     return packed, raw
 
 
+def read_pinned_shared_strdata(
+    shared_transaction_backup_root: Path,
+) -> tuple[bytes, bytes]:
+    """Find the exact pristine shared strdata only in transaction backups."""
+
+    pattern = "*/originals/MSG/SC/strdata.bin"
+    matches: list[tuple[Path, bytes]] = []
+    for path in sorted(shared_transaction_backup_root.glob(pattern)):
+        if not path.is_file():
+            continue
+        packed = path.read_bytes()
+        if (
+            len(packed) == SHARED_STRDATA_PACKED_SIZE
+            and sha256(packed) == SHARED_STRDATA_PACKED_SHA256
+        ):
+            matches.append((path, packed))
+    require(
+        bool(matches),
+        "missing exact pristine transaction backup for MSG/SC/strdata.bin",
+    )
+    _path, packed = matches[0]
+    _header, raw = lz4.decompress_wrapper(packed)
+    require(
+        len(raw) == SHARED_STRDATA_RAW_SIZE,
+        "MSG/SC/strdata.bin: pristine raw size mismatch",
+    )
+    require(
+        sha256(raw) == SHARED_STRDATA_RAW_SHA256,
+        "MSG/SC/strdata.bin: pristine raw SHA-256 mismatch",
+    )
+    return packed, raw
+
+
 def visible_common_ids(texts: Sequence[str]) -> list[int]:
     # This exactly reproduces the project's established stock_visible_nonblank
     # policy: Unicode whitespace-only slots are not translation targets.
@@ -288,8 +334,61 @@ def build_msggame_resource(spec: BaselineSpec, *, path: Path) -> dict[str, Any]:
     }
 
 
+def build_shared_strdata_resource(
+    *, shared_transaction_backup_root: Path
+) -> dict[str, Any]:
+    packed, raw = read_pinned_shared_strdata(shared_transaction_backup_root)
+    parsed = parse_strdata(raw)
+    block_slot_counts = tuple(block.slot_count for block in parsed.blocks)
+    require(
+        block_slot_counts == SHARED_STRDATA_BLOCK_SLOT_COUNTS,
+        "MSG/SC/strdata.bin: block slot counts differ",
+    )
+    coordinates = sorted(
+        [block.block_id, slot_id]
+        for block in parsed.blocks
+        for slot_id, value in enumerate(block.texts)
+        if value.strip()
+    )
+    require(
+        len(coordinates) == SHARED_STRDATA_TARGET_COUNT,
+        (
+            f"MSG/SC/strdata.bin: target count={len(coordinates)}, "
+            f"expected={SHARED_STRDATA_TARGET_COUNT}"
+        ),
+    )
+    require(
+        len({tuple(value) for value in coordinates}) == len(coordinates),
+        "MSG/SC/strdata.bin: duplicate block/slot coordinate",
+    )
+    return {
+        "path": SHARED_STRDATA_PATH,
+        "runtime_scope": "pk_loaded_shared_base",
+        "key_kind": "block_slot_coordinate",
+        "block_slot_counts": list(block_slot_counts),
+        "total_slots": sum(block_slot_counts),
+        "pristine_visible_nonblank": len(coordinates),
+        "intentional_activation_count": 0,
+        "intentional_activation_coordinates": [],
+        "target_count": len(coordinates),
+        "target_keys_sha256": canonical_hash(coordinates),
+        "target_coordinates": coordinates,
+        "baseline": {
+            "backup_set": "file_only_transaction/*/originals",
+            "filename": SHARED_STRDATA_PATH,
+            "packed_size": len(packed),
+            "packed_sha256": SHARED_STRDATA_PACKED_SHA256,
+            "raw_size": len(raw),
+            "raw_sha256": SHARED_STRDATA_RAW_SHA256,
+        },
+    }
+
+
 def build_catalog(
-    *, officer_backup_root: Path, transaction_backup_root: Path
+    *,
+    officer_backup_root: Path,
+    transaction_backup_root: Path,
+    shared_transaction_backup_root: Path,
 ) -> dict[str, Any]:
     resources: list[dict[str, Any]] = []
     for spec in BASELINES:
@@ -303,6 +402,17 @@ def build_catalog(
         else:
             resource = build_common_resource(spec, path=input_path)
         resources.append(resource)
+
+    pk_total = sum(int(resource["target_count"]) for resource in resources)
+    require(
+        pk_total == EXPECTED_PK_TOTAL,
+        f"PK-private target count={pk_total}, expected={EXPECTED_PK_TOTAL}",
+    )
+    resources.append(
+        build_shared_strdata_resource(
+            shared_transaction_backup_root=shared_transaction_backup_root
+        )
+    )
 
     total = sum(int(resource["target_count"]) for resource in resources)
     require(total == EXPECTED_TOTAL, f"all target count={total}, expected={EXPECTED_TOTAL}")
@@ -323,8 +433,13 @@ def build_catalog(
             "common_tables": "pristine SC value.strip() is non-empty",
             "msgui": "pristine visible IDs plus 97 intentional v0.2 activations",
             "msggame": "pristine SC literals containing a printable non-whitespace character",
+            "shared_strdata": "exact PK-loaded MSG/SC/strdata.bin block/slot values whose pristine SC value.strip() is non-empty",
             "progress": "completed and coverage are intersections with these target keys; non-target activations are reported separately",
         },
+        "pk_private_resource_count": len(BASELINES),
+        "pk_private_target_total": pk_total,
+        "shared_runtime_resource_count": 1,
+        "shared_runtime_target_total": SHARED_STRDATA_TARGET_COUNT,
         "resource_count": len(resources),
         "target_total": total,
         "all_target_keys_sha256": canonical_hash(aggregate_keys),
@@ -350,6 +465,15 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_TRANSACTION_BACKUP_ROOT,
         help="Pristine pk-full-messages-seoulhangang-v1 originals/MSG_PK/SC directory.",
     )
+    parser.add_argument(
+        "--shared-transaction-backup-root",
+        type=Path,
+        default=DEFAULT_SHARED_TRANSACTION_BACKUP_ROOT,
+        help=(
+            "Transaction backup root searched only for the exact pinned "
+            "originals/MSG/SC/strdata.bin; the live game tree is never read."
+        ),
+    )
     parser.add_argument("--output", type=Path, default=OUTPUT)
     parser.add_argument("--check", action="store_true", help="Fail if the public catalog is stale")
     return parser.parse_args()
@@ -360,6 +484,7 @@ def main() -> int:
     catalog = build_catalog(
         officer_backup_root=args.officer_backup_root,
         transaction_backup_root=args.transaction_backup_root,
+        shared_transaction_backup_root=args.shared_transaction_backup_root,
     )
     encoded = encode_catalog(catalog)
     if args.check:

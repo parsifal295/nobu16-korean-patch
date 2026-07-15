@@ -39,12 +39,12 @@ class SeoulHangangV1Tests(unittest.TestCase):
 
     def test_pinned_public_demand_covers_all_pk_progress_resources(self) -> None:
         demand = BUILD.load_default_overlay_demand()
-        self.assertEqual(91, demand["source_count"])
-        self.assertEqual(51_066, demand["source_entry_count"])
-        self.assertEqual(1_376, demand["codepoint_count"])
-        self.assertEqual(1_219, demand["hangul_syllable_count"])
+        self.assertEqual(93, demand["source_count"])
+        self.assertEqual(75_491, demand["source_entry_count"])
+        self.assertEqual(1_389, demand["codepoint_count"])
+        self.assertEqual(1_232, demand["hangul_syllable_count"])
         self.assertEqual(
-            "4AE9E67CFDD8F940E838EC30B0D1ACBF34F3B8852796A73C69377F0683DA2A1D",
+            "7FDC3F9C72D5FF3416EAA905B581549434BC3A5577C3587CC5351E4C4676CC16",
             demand["codepoints_sha256"],
         )
         self.assertEqual(
@@ -56,6 +56,7 @@ class SeoulHangangV1Tests(unittest.TestCase):
                 ("MSG_PK/SC/msgire.bin", 1, 122),
                 ("MSG_PK/SC/msgstf.bin", 1, 8),
                 ("MSG_PK/SC/msggame.bin", 29, 10352),
+                ("MSG/SC/strdata.bin", 2, 24425),
             ],
             [
                 (item["resource"], item["source_count"], item["entry_count"])
@@ -63,10 +64,10 @@ class SeoulHangangV1Tests(unittest.TestCase):
             ],
         )
         self.assertEqual(
-            "08691A1EDE942ADE24973338808D17AEEF7CEEA27DEEDD0E67BFF6052BBB53CE",
+            "902C83FF51AB28593C1129A3DD364603D7CB5DB79A0AC548DC0CD64D969D7B38",
             demand["source_catalog_sha256"],
         )
-        self.assertEqual(91, len(demand["sources"]))
+        self.assertEqual(93, len(demand["sources"]))
         sources = {item["path"]: item for item in demand["sources"]}
         self.assertEqual(
             "2A2EE0488CCF6BB70DBBDA2B00A005821DB4CD5C5C8300E4A30F9DF52890295C",
@@ -75,6 +76,10 @@ class SeoulHangangV1Tests(unittest.TestCase):
         self.assertEqual(
             "BFEFB590F10B073E9510F598BDFDCC840DDEDC165B637F9F0FEA0CB6B2675FC1",
             sources["workstreams/switch_msgbre_v11/public/msgbre_ko_switch_v11_strict_transfer.v0.1.json"]["sha256"],
+        )
+        self.assertEqual(
+            "2C4B1F7C52D5B04EE915693C20D4662011E18A3B6535212905609B3ABBA9FE98",
+            sources["workstreams/switch_strdata_v13_direct_transfer/public/strdata_ko_switch_v13_direct_transfer_24424.v1.json"]["sha256"],
         )
 
     def test_plan_is_deterministic_when_the_local_pristine_backup_exists(self) -> None:
@@ -85,9 +90,9 @@ class SeoulHangangV1Tests(unittest.TestCase):
         plan_a = BUILD.build_plan(stock, demand)
         plan_b = BUILD.build_plan(stock, demand)
         self.assertEqual(BUILD.encode_json(plan_a), BUILD.encode_json(plan_b))
-        self.assertEqual(1293, plan_a["raster_codepoint_count"])
+        self.assertEqual(1306, plan_a["raster_codepoint_count"])
         self.assertEqual(
-            [(6, 0, 1224), (6, 1, 1293), (7, 0, 1224), (7, 1, 1293)],
+            [(6, 0, 1237), (6, 1, 1306), (7, 0, 1237), (7, 1, 1306)],
             [(item["entry"], item["table"], item["count"]) for item in plan_a["append_contract"]],
         )
         manifest = self.read_json("manifest.v1.json")
@@ -132,13 +137,13 @@ class SeoulHangangV1Tests(unittest.TestCase):
         self.assertTrue(verification["g1n_structural_validation"])
         self.assertFalse(verification["installed_game_files_modified"])
         coverage = verification["candidate"]["glyph_demand_coverage"]
-        self.assertEqual(1376, coverage["codepoint_count"])
+        self.assertEqual(1389, coverage["codepoint_count"])
         self.assertEqual(
             [(6, 0), (6, 1), (7, 0), (7, 1)],
             [(table["entry"], table["table"]) for table in coverage["tables"]],
         )
         self.assertEqual(
-            [1376, 1376, 1376, 1376],
+            [1389, 1389, 1389, 1389],
             [table["mapped_demand_count"] for table in coverage["tables"]],
         )
         self.assertEqual(

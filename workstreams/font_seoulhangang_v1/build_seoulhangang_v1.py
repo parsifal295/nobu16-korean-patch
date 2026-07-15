@@ -44,6 +44,17 @@ SEOUL_HANGANG_M_FAMILY = "SeoulHangang M"
 ESC_COMMAND_RE = re.compile("\\x1bC.", re.DOTALL)
 DEMAND_MANIFEST = SCRIPT_DIR / "manifest.v1.json"
 PROGRESS_CONFIG_RELATIVE = "data/public/translation_progress.v0.1.json"
+EXPECTED_PK_RESOURCES = (
+    "MSG_PK/SC/msgui.bin",
+    "MSG_PK/SC/msgev.bin",
+    "MSG_PK/SC/msgdata.bin",
+    "MSG_PK/SC/msgbre.bin",
+    "MSG_PK/SC/msgire.bin",
+    "MSG_PK/SC/msgstf.bin",
+    "MSG_PK/SC/msggame.bin",
+)
+EXPECTED_SHARED_RESOURCES = ("MSG/SC/strdata.bin",)
+EXPECTED_FONT_RESOURCES = EXPECTED_PK_RESOURCES + EXPECTED_SHARED_RESOURCES
 
 PROFILES = (
     {"entry": 6, "table": 0, "family": SEOUL_HANGANG_M_FAMILY, "style": "Regular", "raster_size": 46, "cell": 48},
@@ -220,12 +231,14 @@ def renderable_characters(text: str, label: str) -> set[int]:
 
 
 def load_default_overlay_demand() -> dict[str, Any]:
-    """Collect every current PK public overlay through a pinned progress map.
+    """Collect every current PK-loaded public overlay through a pinned progress map.
 
     The old four-source list covered MSGUI and only the then-registered Switch transfers but
     excluded approved Korean overlays in the other PK message resources.  A
-    full font candidate must cover the same seven runtime resources reported
-    by ``translation_progress.v0.1.json``.  The progress file and the derived
+    full font candidate must cover the same seven PK resources plus the exact
+    shared ``MSG/SC/strdata.bin`` resource reported by
+    ``translation_progress.v0.1.json``.  No other base-game message path is
+    accepted.  The progress file and the derived
     source-hash catalog are both pinned in ``manifest.v1.json``: changing an
     overlay, its order, or the configured PK scope therefore fails closed
     until the font demand is consciously reviewed and refreshed.
@@ -258,23 +271,48 @@ def load_default_overlay_demand() -> dict[str, Any]:
     resources = progress.get("resources")
     if not isinstance(resources, list):
         raise FontBuildError("translation progress resources must be an array")
+    shared_resources = progress.get("shared_strings")
+    if not isinstance(shared_resources, list):
+        raise FontBuildError("translation progress shared_strings must be an array")
+
+    core_string_rows = [
+        row
+        for row in resources
+        if isinstance(row, dict) and row.get("kind") == "strings"
+    ]
+    shared_string_rows = [
+        row
+        for row in shared_resources
+        if isinstance(row, dict) and row.get("kind") == "strings"
+    ]
+    core_paths = tuple(row.get("path") for row in core_string_rows)
+    shared_paths = tuple(row.get("path") for row in shared_string_rows)
+    if core_paths != EXPECTED_PK_RESOURCES:
+        raise FontBuildError(
+            "translation progress must contain the seven PK string resources in canonical order"
+        )
+    if shared_paths != EXPECTED_SHARED_RESOURCES or len(shared_string_rows) != len(shared_resources):
+        raise FontBuildError(
+            "translation progress shared_strings must contain only MSG/SC/strdata.bin"
+        )
 
     all_codepoints: set[int] = set()
     source_rows: list[dict[str, Any]] = []
     resource_rows: list[dict[str, Any]] = []
+    seen_overlays: set[Path] = set()
     total_entries = 0
 
-    for resource_row in resources:
-        if not isinstance(resource_row, dict) or resource_row.get("kind") != "strings":
-            continue
+    for resource_row in core_string_rows + shared_string_rows:
         progress_resource = resource_row.get("path")
         overlay_paths = resource_row.get("overlay_globs")
         if not isinstance(progress_resource, str) or not isinstance(overlay_paths, list):
-            raise FontBuildError("PK string resource has an invalid path or overlay list")
-        if not progress_resource.startswith("MSG_PK/SC/"):
-            raise FontBuildError(f"non-PK string resource entered font demand: {progress_resource!r}")
+            raise FontBuildError("font string resource has an invalid path or overlay list")
+        if progress_resource not in EXPECTED_FONT_RESOURCES:
+            raise FontBuildError(
+                f"resource outside the PK font-demand scope: {progress_resource!r}"
+            )
         if not overlay_paths:
-            raise FontBuildError(f"PK string resource has no public overlays: {progress_resource}")
+            raise FontBuildError(f"font string resource has no public overlays: {progress_resource}")
 
         resource_sources: list[dict[str, Any]] = []
         resource_entries = 0
@@ -283,6 +321,9 @@ def load_default_overlay_demand() -> dict[str, Any]:
             path = (PATCH_ROOT / relative).resolve()
             if PATCH_ROOT.resolve() not in path.parents:
                 raise FontBuildError(f"{logical_path}: resolved outside project root")
+            if path in seen_overlays:
+                raise FontBuildError(f"overlay is listed more than once: {logical_path}")
+            seen_overlays.add(path)
             if not path.is_file():
                 raise FontBuildError(f"missing pinned public overlay: {logical_path}")
             raw = path.read_bytes()
@@ -333,16 +374,16 @@ def load_default_overlay_demand() -> dict[str, Any]:
         )
 
     if not source_rows:
-        raise FontBuildError("translation progress contains no PK string overlays")
+        raise FontBuildError("translation progress contains no PK-loaded string overlays")
     expected_resources = demand_pin.get("resource_catalog")
     if expected_resources != resource_rows:
-        raise FontBuildError("PK resource catalog changed; refresh the font-demand pin before building")
+        raise FontBuildError("font resource catalog changed; refresh the font-demand pin before building")
     if demand_pin.get("source_count") != len(source_rows):
-        raise FontBuildError("PK font source count changed; refresh the font-demand pin before building")
+        raise FontBuildError("font source count changed; refresh the font-demand pin before building")
     if demand_pin.get("source_entry_count") != total_entries:
-        raise FontBuildError("PK font source entry count changed; refresh the font-demand pin before building")
+        raise FontBuildError("font source entry count changed; refresh the font-demand pin before building")
     if demand_pin.get("source_catalog_sha256") != canonical_json_hash(source_rows):
-        raise FontBuildError("PK font source catalog changed; refresh the font-demand pin before building")
+        raise FontBuildError("font source catalog changed; refresh the font-demand pin before building")
 
     # Keep a source row per file in the plan so an offline reviewer can
     # identify every Korean corpus input without exporting any game strings.
@@ -364,7 +405,7 @@ def load_default_overlay_demand() -> dict[str, Any]:
     for key, actual in glyph_demand_metrics.items():
         if demand_pin.get(key) != actual:
             raise FontBuildError(
-                f"PK glyph-demand {key} changed; refresh the font-demand pin before building"
+                f"glyph-demand {key} changed; refresh the font-demand pin before building"
             )
     append_contract_pin = demand_pin.get("append_contract")
     if not isinstance(append_contract_pin, list):

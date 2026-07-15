@@ -72,6 +72,11 @@ class DemandPinRefreshTests(unittest.TestCase):
                     "overlay_globs": [relative.as_posix()],
                 }
             )
+        shared_resource = TOOL.EXPECTED_SHARED_RESOURCES[0]
+        shared_relative = Path("fixtures") / "shared_overlay.json"
+        shared_path = self.project_root / shared_relative
+        self._write_overlay(shared_path, shared_resource, "\uac00A")
+        self.overlay_paths[shared_resource] = shared_path
         resources.append(
             {
                 "path": "RES_SC/res_lang.bin",
@@ -85,6 +90,13 @@ class DemandPinRefreshTests(unittest.TestCase):
             {
                 "schema": "nobu16.kr.translation-progress.v0.1",
                 "resources": resources,
+                "shared_strings": [
+                    {
+                        "path": shared_resource,
+                        "kind": "strings",
+                        "overlay_globs": [shared_relative.as_posix()],
+                    }
+                ],
             },
         )
         self.manifest_path = (
@@ -151,14 +163,14 @@ class DemandPinRefreshTests(unittest.TestCase):
         first = self._compute()
         second = self._compute()
         self.assertEqual(first, second)
-        self.assertEqual(7, first["source_count"])
-        self.assertEqual(7, first["source_entry_count"])
+        self.assertEqual(8, first["source_count"])
+        self.assertEqual(8, first["source_entry_count"])
         self.assertEqual(2, first["codepoint_count"])
         self.assertEqual(1, first["hangul_syllable_count"])
         self.assertEqual(1, first["non_hangul_count"])
         self.assertEqual(2, first["raster_codepoint_count"])
         self.assertEqual(
-            list(TOOL.EXPECTED_PK_RESOURCES),
+            list(TOOL.EXPECTED_FONT_RESOURCES),
             [row["resource"] for row in first["resource_catalog"]],
         )
         self.assertEqual(
@@ -225,6 +237,22 @@ class DemandPinRefreshTests(unittest.TestCase):
         progress["resources"][1]["overlay_globs"] = [first_path]
         self._write_json(self.progress_path, progress)
         with self.assertRaisesRegex(TOOL.DemandPinError, "listed more than once"):
+            TOOL.collect_overlay_demand(self.project_root)
+
+    def test_rejects_any_other_base_game_message_resource(self) -> None:
+        progress = json.loads(self.progress_path.read_text(encoding="utf-8"))
+        progress["shared_strings"][0]["path"] = "MSG/SC/ev_strdata.bin"
+        self._write_json(self.progress_path, progress)
+        with self.assertRaisesRegex(
+            TOOL.DemandPinError, "only MSG/SC/strdata.bin"
+        ):
+            TOOL.collect_overlay_demand(self.project_root)
+
+        progress["shared_strings"] = []
+        self._write_json(self.progress_path, progress)
+        with self.assertRaisesRegex(
+            TOOL.DemandPinError, "only MSG/SC/strdata.bin"
+        ):
             TOOL.collect_overlay_demand(self.project_root)
 
     def test_stock_input_is_fixed_to_officer_names_backup(self) -> None:

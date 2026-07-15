@@ -29,7 +29,8 @@ MANIFEST_PATH = SCRIPT_DIR / "manifest.v1.json"
 STOCK_RELATIVE = Path("KR_PATCH_BACKUP/officer_names_v0_1/stock/font.stock.bak")
 MANIFEST_SCHEMA = "nobu16.kr.font-seoulhangang-v1-manifest.v1"
 SOURCE_DESCRIPTION = (
-    "all PK string overlays are derived from the SHA-pinned translation-progress "
+    "all PK-loaded string overlays (seven PK resources plus exact shared "
+    "MSG/SC/strdata.bin) are derived from the SHA-pinned translation-progress "
     "catalog; the plan records one source-free hash row per file"
 )
 EXPECTED_PK_RESOURCES = (
@@ -41,6 +42,8 @@ EXPECTED_PK_RESOURCES = (
     "MSG_PK/SC/msgstf.bin",
     "MSG_PK/SC/msggame.bin",
 )
+EXPECTED_SHARED_RESOURCES = ("MSG/SC/strdata.bin",)
+EXPECTED_FONT_RESOURCES = EXPECTED_PK_RESOURCES + EXPECTED_SHARED_RESOURCES
 
 
 def _load_module(name: str, path: Path) -> Any:
@@ -88,7 +91,7 @@ def collect_overlay_demand(
     project_root: Path = PATCH_ROOT,
     progress_relative: str = PROGRESS_RELATIVE,
 ) -> dict[str, Any]:
-    """Validate and collect the seven PK overlay corpora without source text."""
+    """Validate and collect the eight exact PK-loaded corpora without source text."""
 
     project_root = project_root.resolve()
     relative_progress = BASE._safe_project_relative_path(
@@ -105,6 +108,30 @@ def collect_overlay_demand(
     resources = progress.get("resources")
     if not isinstance(resources, list):
         raise DemandPinError("translation progress resources must be an array")
+    shared_resources = progress.get("shared_strings")
+    if not isinstance(shared_resources, list):
+        raise DemandPinError("translation progress shared_strings must be an array")
+
+    core_string_rows = [
+        row
+        for row in resources
+        if isinstance(row, dict) and row.get("kind") == "strings"
+    ]
+    shared_string_rows = [
+        row
+        for row in shared_resources
+        if isinstance(row, dict) and row.get("kind") == "strings"
+    ]
+    core_paths = tuple(row.get("path") for row in core_string_rows)
+    shared_paths = tuple(row.get("path") for row in shared_string_rows)
+    if core_paths != EXPECTED_PK_RESOURCES:
+        raise DemandPinError(
+            "translation progress must contain the seven PK string resources in canonical order"
+        )
+    if shared_paths != EXPECTED_SHARED_RESOURCES or len(shared_string_rows) != len(shared_resources):
+        raise DemandPinError(
+            "translation progress shared_strings must contain only MSG/SC/strdata.bin"
+        )
 
     all_codepoints: set[int] = set()
     source_rows: list[dict[str, Any]] = []
@@ -113,23 +140,21 @@ def collect_overlay_demand(
     seen_overlays: set[Path] = set()
     total_entries = 0
 
-    for resource_row in resources:
-        if not isinstance(resource_row, dict) or resource_row.get("kind") != "strings":
-            continue
+    for resource_row in core_string_rows + shared_string_rows:
         progress_resource = resource_row.get("path")
         overlay_paths = resource_row.get("overlay_globs")
         if not isinstance(progress_resource, str) or not isinstance(overlay_paths, list):
-            raise DemandPinError("PK string resource has an invalid path or overlay list")
-        if not progress_resource.startswith("MSG_PK/SC/"):
+            raise DemandPinError("font string resource has an invalid path or overlay list")
+        if progress_resource not in EXPECTED_FONT_RESOURCES:
             raise DemandPinError(
-                f"non-PK string resource entered font demand: {progress_resource!r}"
+                f"resource outside the PK font-demand scope: {progress_resource!r}"
             )
         if progress_resource in seen_resources:
-            raise DemandPinError(f"duplicate PK string resource: {progress_resource}")
+            raise DemandPinError(f"duplicate font string resource: {progress_resource}")
         seen_resources.add(progress_resource)
         if not overlay_paths:
             raise DemandPinError(
-                f"PK string resource has no public overlays: {progress_resource}"
+                f"font string resource has no public overlays: {progress_resource}"
             )
 
         resource_sources: list[dict[str, Any]] = []
@@ -197,12 +222,12 @@ def collect_overlay_demand(
         )
 
     actual_resources = tuple(row["resource"] for row in resource_rows)
-    if actual_resources != EXPECTED_PK_RESOURCES:
+    if actual_resources != EXPECTED_FONT_RESOURCES:
         raise DemandPinError(
-            "translation progress must contain the seven PK string resources in canonical order"
+            "translation progress must contain the exact eight PK-loaded string resources in canonical order"
         )
     if not source_rows:
-        raise DemandPinError("translation progress contains no PK string overlays")
+        raise DemandPinError("translation progress contains no PK-loaded string overlays")
 
     ordered = sorted(all_codepoints)
     hangul = [codepoint for codepoint in ordered if 0xAC00 <= codepoint <= 0xD7A3]
