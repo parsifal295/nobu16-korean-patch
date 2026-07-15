@@ -1,8 +1,12 @@
 from __future__ import annotations
 
+import contextlib
 import importlib.util
+import io
 import json
+import os
 import shutil
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -39,6 +43,24 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
 
+    @staticmethod
+    def _make_directory_link(link: Path, target: Path) -> bool:
+        link.parent.mkdir(parents=True, exist_ok=True)
+        target.mkdir(parents=True, exist_ok=True)
+        try:
+            if os.name == "nt":
+                completed = subprocess.run(
+                    ["cmd.exe", "/d", "/c", "mklink", "/J", str(link), str(target)],
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                return completed.returncode == 0 and link.exists()
+            link.symlink_to(target, target_is_directory=True)
+            return True
+        except OSError:
+            return False
+
     def _candidates(self) -> dict[str, Path]:
         return {
             "MSG_PK/SC/msgui.bin": self.candidates_root / "MSG_PK" / "SC" / "msgui.bin",
@@ -51,6 +73,31 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         loaded, manifest_hash = tx.read_manifest(self.manifest_path)
         backup = tx.default_backup_root(self.game, loaded["release_id"])
         return loaded, manifest_hash, backup
+
+    def _prepare_jp_profile(
+        self,
+    ) -> tuple[dict[str, Path], dict[str, bytes], dict[Path, bytes]]:
+        candidate_root = self.root / "jp-candidates"
+        candidates: dict[str, Path] = {}
+        predecessors: dict[str, bytes] = {}
+        for relative in sorted(tx.JP_ALLOWED_TARGETS):
+            predecessor = ("stock::" + relative).encode()
+            target = ("target::" + relative).encode()
+            installed = self.game.joinpath(*relative.split("/"))
+            candidate = candidate_root.joinpath(*relative.split("/"))
+            self._write(installed, predecessor)
+            self._write(candidate, target)
+            candidates[relative] = candidate
+            predecessors[relative] = predecessor
+        sentinels = {
+            self.game / "MSG" / "JP" / "ev_strdata.bin": b"jp-base-event-sentinel",
+            self.game / "RES_JP" / "res_lang_exp.bin": b"jp-exp-sentinel",
+            self.game / "RES_JP_PK" / "res_lang_exp_pk.bin": b"jp-pk-exp-sentinel",
+            self.game / "NOBU16PK.exe": b"executable-sentinel",
+        }
+        for path, payload in sentinels.items():
+            self._write(path, payload)
+        return candidates, predecessors, sentinels
 
     def test_plan_dry_run_apply_restore_is_complete_and_base_unchanged(self) -> None:
         manifest, manifest_hash, backup = self._manifest()
@@ -229,6 +276,282 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         self.assertEqual(report["res_sc_count"], 1)
         self.assertEqual(report["base_msg_sc_count"], 0)
         self.assertTrue(report["all_seven_msg_pk_sc_included"])
+
+    def test_exact_jp_plan_dry_run_apply_restore_and_sentinels(self) -> None:
+        candidates, predecessors, sentinels = self._prepare_jp_profile()
+        candidate_root = self.root / "jp-candidates"
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            exit_code = tx.main([
+                "plan",
+                "--game-root", str(self.game),
+                "--release-id", "jp-fixture-v1",
+                "--manifest", str(self.manifest_path),
+                "--candidate-root", str(candidate_root),
+            ])
+        self.assertEqual(exit_code, 0, output.getvalue())
+        manifest, manifest_hash = tx.read_manifest(self.manifest_path)
+        self.assertEqual(manifest["target_scope"], tx.JP_TARGET_SCOPE)
+        self.assertEqual({entry["path"] for entry in manifest["entries"]}, tx.JP_ALLOWED_TARGETS)
+        scope = tx.scope_report(manifest)
+        self.assertEqual(scope["runtime_language"], "JP")
+        self.assertEqual(scope["msg_pk_jp_count"], 7)
+        self.assertEqual(scope["base_msg_jp_count"], 1)
+        self.assertEqual(scope["res_jp_count"], 1)
+        self.assertEqual(scope["res_jp_pk_count"], 1)
+        self.assertTrue(scope["all_seven_msg_pk_jp_included"])
+        self.assertEqual(scope["jp_10_file_count"], 10)
+        self.assertTrue(scope["jp_10_file_complete"])
+
+        backup = tx.default_backup_root(self.game, manifest["release_id"])
+        report = tx.dry_run(self.game, backup, manifest, candidates)
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["installed_state"], "predecessor")
+        self.assertTrue(report["would_apply"])
+        self.assertFalse(report["writes_performed"])
+        self.assertFalse(backup.exists())
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            applied = tx.apply_transaction(
+                self.game, backup, manifest, manifest_hash, candidates
+            )
+        self.assertEqual(applied["result"], "applied")
+        for relative, candidate in candidates.items():
+            installed = self.game.joinpath(*relative.split("/"))
+            self.assertEqual(installed.read_bytes(), candidate.read_bytes())
+            self.assertTrue(backup.joinpath("originals", *relative.split("/")).is_file())
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            restored = tx.restore_transaction(self.game, backup, manifest, manifest_hash)
+        self.assertEqual(restored["result"], "restored")
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
+    def test_jp_subset_is_rejected_at_every_manifest_entrypoint(self) -> None:
+        candidates, _, _ = self._prepare_jp_profile()
+        full_manifest = tx.make_manifest(self.game, "jp-full-v1", candidates)
+        omitted = "RES_JP_PK/res_lang_pk.bin"
+        partial = {
+            relative: candidate
+            for relative, candidate in candidates.items()
+            if relative != omitted
+        }
+
+        direct_arguments = [
+            f"{relative}={candidate}" for relative, candidate in partial.items()
+        ]
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+            tx.parse_candidate_args(direct_arguments)
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+            tx.make_manifest(self.game, "jp-partial-v1", partial)
+
+        partial_manifest = json.loads(json.dumps(full_manifest))
+        partial_manifest["entries"] = [
+            entry
+            for entry in partial_manifest["entries"]
+            if entry["path"] != omitted
+        ]
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+            tx.validate_manifest(partial_manifest)
+
+        candidates[omitted].unlink()
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP 10-file"):
+            tx.collect_candidate_root(self.root / "jp-candidates")
+
+    def test_jp_candidate_root_rejects_forbidden_extra_files(self) -> None:
+        self._prepare_jp_profile()
+        candidate_root = self.root / "jp-candidates"
+        forbidden = (
+            "NOBU16PK.exe",
+            "MSG/JP/ev_strdata.bin",
+            "RES_JP/res_lang_exp.bin",
+            "RES_JP_PK/res_lang_exp_pk.bin",
+        )
+        for relative in forbidden:
+            with self.subTest(relative=relative):
+                extra = candidate_root.joinpath(*relative.split("/"))
+                self._write(extra, b"forbidden-extra")
+                with self.assertRaisesRegex(tx.TransactionError, "unexpected file"):
+                    tx.collect_candidate_root(candidate_root)
+                extra.unlink()
+
+    def test_candidate_root_direct_candidate_and_backup_reparse_are_rejected(self) -> None:
+        candidates, _, _ = self._prepare_jp_profile()
+        direct_target = self.root / "direct-link-target"
+        direct_link = self.root / "direct-link"
+        if not self._make_directory_link(direct_link, direct_target):
+            self.skipTest("directory symlink/junction creation is unavailable")
+
+        relative = "RES_JP_PK/res_lang_pk.bin"
+        linked_candidate = direct_link / "res_lang_pk.bin"
+        self._write(linked_candidate, candidates[relative].read_bytes())
+        linked_candidates = dict(candidates)
+        linked_candidates[relative] = linked_candidate
+        with self.assertRaisesRegex(tx.TransactionError, "symlink/reparse"):
+            tx.make_manifest(self.game, "jp-linked-candidate-v1", linked_candidates)
+
+        candidate_root_link = self.root / "jp-candidates-link"
+        self.assertTrue(
+            self._make_directory_link(candidate_root_link, self.root / "jp-candidates")
+        )
+        with self.assertRaisesRegex(tx.TransactionError, "symlink/reparse"):
+            tx.collect_candidate_root(candidate_root_link)
+
+        backup_parent = self.game / "KR_PATCH_BACKUP"
+        backup_target = backup_parent / "real-backup"
+        backup_link = backup_parent / "linked-backup"
+        self.assertTrue(self._make_directory_link(backup_link, backup_target))
+        with self.assertRaisesRegex(tx.TransactionError, "symlink/reparse"):
+            tx.validate_backup_root(self.game, backup_link)
+
+    def test_jp_apply_failure_rolls_back_the_complete_predecessor_vector(self) -> None:
+        candidates, predecessors, _ = self._prepare_jp_profile()
+        manifest = tx.make_manifest(self.game, "jp-rollback-v1", candidates)
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        original_copy_atomic = tx.copy_atomic
+        failed = False
+
+        def fail_during_second_live_write(source, destination, expected, label):
+            nonlocal failed
+            if label == "apply MSG_PK/JP/msgbre.bin" and not failed:
+                failed = True
+                raise OSError("injected JP apply failure")
+            return original_copy_atomic(source, destination, expected, label)
+
+        with mock.patch.object(tx, "assert_game_stopped"), mock.patch.object(
+            tx, "copy_atomic", side_effect=fail_during_second_live_write
+        ):
+            with self.assertRaisesRegex(tx.TransactionError, "was rolled back"):
+                tx.apply_transaction(
+                    self.game, backup, loaded, manifest_hash, candidates
+                )
+        self.assertTrue(failed)
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        state = tx.read_strict_json(tx.state_path(backup))
+        self.assertEqual(state["status"], "restored")
+
+    def test_jp_post_replace_exception_is_rolled_back(self) -> None:
+        candidates, predecessors, _ = self._prepare_jp_profile()
+        manifest = tx.make_manifest(self.game, "jp-post-replace-v1", candidates)
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        original_copy_atomic = tx.copy_atomic
+        failed = False
+
+        def fail_after_verified_live_write(source, destination, expected, label):
+            nonlocal failed
+            original_copy_atomic(source, destination, expected, label)
+            if label == "apply MSG/JP/strdata.bin" and not failed:
+                failed = True
+                raise OSError("injected after verified live replacement")
+
+        with mock.patch.object(tx, "assert_game_stopped"), mock.patch.object(
+            tx, "copy_atomic", side_effect=fail_after_verified_live_write
+        ):
+            with self.assertRaisesRegex(tx.TransactionError, "was rolled back"):
+                tx.apply_transaction(
+                    self.game, backup, loaded, manifest_hash, candidates
+                )
+        self.assertTrue(failed)
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        state = tx.read_strict_json(tx.state_path(backup))
+        self.assertEqual(state["status"], "restored")
+
+    def test_jp_live_candidates_and_backup_roots_are_rejected(self) -> None:
+        candidates, _, _ = self._prepare_jp_profile()
+        live_font = self.game / "RES_JP_PK" / "res_lang_pk.bin"
+        live_candidates = dict(candidates)
+        live_candidates["RES_JP_PK/res_lang_pk.bin"] = live_font
+        with self.assertRaisesRegex(tx.TransactionError, "live PK resource tree"):
+            tx.make_manifest(
+                self.game,
+                "jp-live-root-v1",
+                live_candidates,
+            )
+        with self.assertRaisesRegex(tx.TransactionError, "inside a PK resource tree"):
+            tx.validate_backup_root(
+                self.game, self.game / "RES_JP" / "transaction-backup"
+            )
+        self.assertEqual(set(candidates), tx.JP_ALLOWED_TARGETS)
+
+    def test_jp_rejects_mixed_profile_expansion_event_and_executable_targets(self) -> None:
+        candidates, _, _ = self._prepare_jp_profile()
+        mixed = {
+            "MSG_PK/SC/msgui.bin": self.candidates_root / "MSG_PK" / "SC" / "msgui.bin",
+            "MSG_PK/JP/msgui.bin": candidates["MSG_PK/JP/msgui.bin"],
+        }
+        with self.assertRaisesRegex(tx.TransactionError, "must not mix SC and JP"):
+            tx.make_manifest(self.game, "mixed-v1", mixed)
+        self._write(
+            self.root / "jp-candidates" / "MSG_PK" / "SC" / "msgui.bin",
+            b"mixed-root-sentinel",
+        )
+        with self.assertRaisesRegex(tx.TransactionError, "must not mix SC and JP"):
+            tx.collect_candidate_root(self.root / "jp-candidates")
+
+        forbidden = (
+            "MSG/JP/ev_strdata.bin",
+            "RES_JP/res_lang_exp.bin",
+            "RES_JP_PK/res_lang_exp_pk.bin",
+            "NOBU16PK.exe",
+        )
+        for relative in forbidden:
+            with self.subTest(relative=relative), self.assertRaisesRegex(
+                tx.TransactionError, "outside PK scope"
+            ):
+                tx.make_manifest(
+                    self.game,
+                    "jp-forbidden-v1",
+                    {relative: self.game.joinpath(*relative.split("/"))},
+                )
+
+    def test_manifest_scope_and_entries_must_use_the_same_profile(self) -> None:
+        candidates, _, _ = self._prepare_jp_profile()
+        manifest = tx.make_manifest(self.game, "jp-scope-v1", candidates)
+        manifest["target_scope"] = tx.TARGET_SCOPE
+        with self.assertRaisesRegex(tx.TransactionError, "same runtime profile"):
+            tx.validate_manifest(manifest)
+
+        sc_manifest = tx.make_manifest(self.game, "sc-scope-v1", self._candidates())
+        sc_manifest["target_scope"] = tx.JP_TARGET_SCOPE
+        with self.assertRaisesRegex(tx.TransactionError, "same runtime profile"):
+            tx.validate_manifest(sc_manifest)
+
+    def test_legacy_sc_manifest_still_applies_and_restores(self) -> None:
+        manifest = tx.make_manifest(self.game, "legacy-sc-v1", self._candidates())
+        manifest["target_scope"] = tx.LEGACY_TARGET_SCOPE
+        manifest = tx.validate_manifest(manifest)
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        self.assertEqual(tx.scope_report(loaded)["runtime_language"], "SC")
+        with mock.patch.object(tx, "assert_game_stopped"):
+            tx.apply_transaction(
+                self.game, backup, loaded, manifest_hash, self._candidates()
+            )
+            tx.restore_transaction(self.game, backup, loaded, manifest_hash)
+        self.assertEqual(
+            (self.game / "MSG_PK" / "SC" / "msgui.bin").read_bytes(),
+            b"stock-msgui",
+        )
+        self.assertEqual(
+            (self.game / "RES_SC" / "res_lang.bin").read_bytes(), b"stock-font"
+        )
 
 
 if __name__ == "__main__":

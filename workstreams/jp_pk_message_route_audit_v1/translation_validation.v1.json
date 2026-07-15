@@ -1,0 +1,75 @@
+{
+  "artifacts": {
+    "evidence/jp_pk_message_route_evidence.v1.json": {
+      "sha256": "0782E24F7FCF5C4776CADB35461A7F04FDCF64957C32CB393F9EA74B0FA0A2D2",
+      "size": 64101
+    },
+    "public/jp_pk_message_native_route_map.v1.json": {
+      "sha256": "B170E7C8E692FA445B97B67E53CDDED89922F4E03A50EC72EF1F49B1985DE7AF",
+      "size": 2650344
+    },
+    "review/jp_pk_message_native_blocked_review.v1.json": {
+      "sha256": "8DB0824391098AD90E586D9E6BC7F7731D277872A5EB0FDDD1FBD0645ECA68E5",
+      "size": 2334928
+    }
+  },
+  "passed": true,
+  "proofs": {
+    "all_base_sc_candidate_sha256_fail_closed": true,
+    "all_jp_stock_sha256_fail_closed": true,
+    "all_overlay_files_source_free_and_complete_resource_free": true,
+    "installed_game_files_modified": false,
+    "mirror_all_eight_containers_strictly_parse": true,
+    "mirror_all_overlay_values_verified": true,
+    "mirror_common_string_counts_match_jp": true,
+    "mirror_in_memory_a_b_equal": true,
+    "mirror_msggame_block_and_record_counts_match_jp": true,
+    "mirror_strdata_block_and_slot_counts_match_jp": true,
+    "native_control_format_profiles_fail_closed": true,
+    "native_coordinates_fail_closed": true,
+    "native_in_memory_a_b_equal": true,
+    "native_msggame_deep_record_audit_pinned": true,
+    "native_nonselected_values_preserved": true,
+    "overlay_union_manifest_pinned": true,
+    "publisher_source_text_in_public_artifacts": false,
+    "runtime_compatibility_claimed": false
+  },
+  "safety": {
+    "complete_candidate_binaries_tracked": false,
+    "dll_injection": false,
+    "executable_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_modified": false,
+    "shared_progress_modified": false
+  },
+  "schema": "nobu16.kr.jp-pk-message-route-validation.v1",
+  "scope": {
+    "mirror_blocked_count": 0,
+    "mirror_transferred_count": 83586,
+    "native_blocked_count": 5389,
+    "native_transferable_count": 78197,
+    "overlay_effective_coordinate_count": 83586,
+    "overlay_operation_count": 83658,
+    "source_resource_count": 8,
+    "target_resource_count": 8
+  },
+  "source_free_scan": {
+    "evidence/jp_pk_message_route_evidence.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "public/jp_pk_message_native_route_map.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    },
+    "review/jp_pk_message_native_blocked_review.v1.json": {
+      "cjk_unified_count": 0,
+      "embedded_nul_count": 0,
+      "kana_count": 0
+    }
+  }
+}

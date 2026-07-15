@@ -1,5 +1,6 @@
 {
   "schema": "nobu16.kr.translation-progress.v0.1",
+  "runtime_target_language": "JP",
   "count_policy": "completed and draft coverage are the intersections of the exact source-free target-key catalog with unique overlay ids, msggame coordinates, or shared block/slot coordinates; translated or reviewed statuses count as completed; overlay keys outside that target catalog are reported separately as non-target activations; translation_target_total is the pinned set of displayable nonblank strings that require Korean text, plus intentionally activated UI slots",
   "completed_statuses": [
     "translated",
@@ -9,6 +10,7 @@
   "resources": [
     {
       "path": "MSG_PK/SC/msgui.bin",
+      "runtime_path": "MSG_PK/JP/msgui.bin",
       "kind": "strings",
       "total_slots": 5100,
       "stock_visible_nonblank": 3940,
@@ -20,6 +22,7 @@
     },
     {
       "path": "MSG_PK/SC/msgev.bin",
+      "runtime_path": "MSG_PK/JP/msgev.bin",
       "kind": "strings",
       "total_slots": 17910,
       "stock_visible_nonblank": 12906,
@@ -66,10 +69,11 @@
     "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
     "workstreams/msgev_pk_structural_completion_b07/public/msgev_ko_pk_structural_completion_b07_241.v1.json"
   ],
-  "note": "실제 PK/SC 번역 대상 12,906 / 12,906 완료; 일반 의미 문자열과 구조 보존 행 전수 검토 완료"
+  "note": "번역 대상 12,906 / 12,906 완료; 일반 의미 문자열과 구조 보존 행 전수 검토 완료"
     },
     {
       "path": "MSG_PK/SC/msgdata.bin",
+      "runtime_path": "MSG_PK/JP/msgdata.bin",
       "kind": "strings",
       "total_slots": 29210,
       "stock_visible_nonblank": 25534,
@@ -93,12 +97,17 @@
     "workstreams/msgdata_pk_structural_review_b08/public/msgdata_ko_pk_structural_review_b08_500.v1.json",
     "workstreams/msgdata_pk_structural_review_b09/public/msgdata_ko_pk_structural_review_b09_500.v1.json",
     "workstreams/msgdata_pk_structural_review_b10/public/msgdata_ko_pk_structural_review_b10_500.v1.json",
-    "workstreams/msgdata_pk_structural_review_b11/public/msgdata_ko_pk_structural_review_b11_500.v1.json"
+    "workstreams/msgdata_pk_structural_review_b11/public/msgdata_ko_pk_structural_review_b11_500.v1.json",
+    "workstreams/msgdata_pk_structural_review_b12/public/msgdata_ko_pk_structural_review_b12_500.v1.json",
+    "workstreams/msgdata_pk_structural_review_b13/public/msgdata_ko_pk_structural_review_b13_500.v1.json",
+    "workstreams/msgdata_pk_structural_review_b14/public/msgdata_ko_pk_structural_review_b14_500.v1.json",
+    "workstreams/msgdata_pk_structural_review_b15/public/msgdata_ko_pk_structural_review_b15_final_110.v1.json"
       ],
-      "note": "실제 PK/SC 대상 23,924개 완료; 일반 의미 문자열 잔여 0, dummy·로마자·제어 구조 1,610개 검토 대기"
+      "note": "번역 대상 25,534 / 25,534 완료; 기존 번역 카탈로그 키를 JP 런타임 파일로 이식하는 정적 검증 완료"
     },
     {
       "path": "MSG_PK/SC/msgbre.bin",
+      "runtime_path": "MSG_PK/JP/msgbre.bin",
       "kind": "strings",
       "total_slots": 3000,
       "stock_visible_nonblank": 2217,
@@ -123,6 +132,7 @@
     },
     {
       "path": "MSG_PK/SC/msgire.bin",
+      "runtime_path": "MSG_PK/JP/msgire.bin",
       "kind": "strings",
       "total_slots": 122,
       "stock_visible_nonblank": 122,
@@ -134,6 +144,7 @@
     },
     {
       "path": "MSG_PK/SC/msgstf.bin",
+      "runtime_path": "MSG_PK/JP/msgstf.bin",
       "kind": "strings",
       "total_slots": 20,
       "stock_visible_nonblank": 8,
@@ -145,6 +156,7 @@
     },
     {
       "path": "MSG_PK/SC/msggame.bin",
+      "runtime_path": "MSG_PK/JP/msggame.bin",
       "kind": "strings",
       "record_total": 21581,
       "total_slots": 25598,
@@ -183,30 +195,32 @@
     "workstreams/msggame_pk_ui_priority_b03/public/msggame_ko_pk_ui_priority_b03_220.v1.json",
     "workstreams/msggame_pk_ui_priority_b04/public/msggame_ko_pk_ui_priority_b04_250.v1.json",
     "workstreams/msggame_pk_ui_priority_b05/public/msggame_ko_pk_ui_priority_b05_300.v1.json",
-    "workstreams/msggame_pk_ui_priority_b06/public/msggame_ko_pk_ui_priority_b06_300.v1.json"
+    "workstreams/msggame_pk_ui_priority_b06/public/msggame_ko_pk_ui_priority_b06_300.v1.json",
+    "workstreams/msggame_pk_ui_priority_b07/public/msggame_ko_pk_ui_priority_b07_300.v1.json"
   ],
-  "note": "좌표 기반 + Switch 엄격·형식 복구·검토 + UI 우선 배치 11,422개 완료; UI 우선 1,273개 추가, 잔여 5,060개"
+  "note": "좌표 기반 + Switch 엄격·형식 복구·검토 + UI 우선 배치 11,722개 완료; 잔여 4,760개"
     },
     {
-      "path": "RES_SC/res_lang.bin",
-      "kind": "stages",
-      "done": 2,
-      "total": 4,
-      "unit": "게이트",
-      "note": "PK 공용 RES_SC 경로: 서울한강체 v1 G1N 및 화면 제목 108개 PC BC3/G1T/LINK 후보의 로컬 A/B 결정성 PASS; 실제 PK 화면·저장·종료 QA 대기"
-    },
-    {
-      "path": "RES_SC/res_lang_exp.bin",
+      "path": "RES_JP/res_lang.bin",
       "kind": "stages",
       "done": 1,
       "total": 2,
-      "unit": "조사 게이트",
-  "note": "PK 공용 RES_SC 경로: 재귀 스캔에서 글꼴 시그니처 0; 런타임 의존성·역할 확인 대기"
+      "unit": "게이트",
+      "note": "서울한강체 글리프의 정적·오프라인 검증 및 로컬 비Steam 일본어 10파일 조합 화면 PASS; Steam 일본어 런타임 화면 QA 대기"
+    },
+    {
+      "path": "RES_JP_PK/res_lang_pk.bin",
+      "kind": "stages",
+      "done": 1,
+      "total": 2,
+      "unit": "게이트",
+  "note": "PK 일본어 글꼴 컨테이너의 정적·오프라인 검증 및 로컬 비Steam 일본어 10파일 조합 화면 PASS; Steam 일본어 런타임 화면 QA 대기"
     }
   ],
   "shared_strings": [
     {
       "path": "MSG/SC/strdata.bin",
+      "runtime_path": "MSG/JP/strdata.bin",
       "kind": "strings",
       "total_slots": 32311,
       "stock_visible_nonblank": 26690,
