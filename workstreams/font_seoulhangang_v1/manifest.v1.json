@@ -1,6 +1,6 @@
 {
   "schema": "nobu16.kr.font-seoulhangang-v1-manifest.v1",
-  "status": "local_private_build_applied_runtime_screen_unverified",
+  "status": "local_private_build_ready_runtime_update_pending",
   "target": {
     "runtime": "NOBU16PK.exe",
     "resource": "RES_SC/res_lang.bin",
@@ -51,10 +51,10 @@
   "pinned_public_korean_demand": {
     "translation_progress": {
       "path": "data/public/translation_progress.v0.1.json",
-      "sha256": "3F07CB01E4E14CF764C56F386B251F55E073E5E26D5CC657BB20F0B2537B115D"
+      "sha256": "C93636D277831475DC2DE7441F8E0FED460EA13CF2B5774A9D422BA6F36F22A3"
     },
-    "source_count": 98,
-    "source_catalog_sha256": "CDB4CF365DCB4B009F364D0329B4189E51A3EB029C6A756A3790AC2FF7FE5C3B",
+    "source_count": 106,
+    "source_catalog_sha256": "D71E6897B8716650445AE4F120C28B4D5E0958E8DB8FF7877AB4604ED5D04D01",
     "resource_catalog": [
       {
         "resource": "MSG_PK/SC/msgui.bin",
@@ -64,15 +64,15 @@
       },
       {
         "resource": "MSG_PK/SC/msgev.bin",
-        "source_count": 37,
-        "entry_count": 13703,
-        "source_catalog_sha256": "1620A3212A23F72B9D1AA53F7BFA1E7084B747A66DCCDE5ABA05858B3E60F2DF"
+        "source_count": 40,
+        "entry_count": 14504,
+        "source_catalog_sha256": "7459F5E2063A77BC6E9D45EF859F65558758EDA4419043974867F58D5EF09CBC"
       },
       {
         "resource": "MSG_PK/SC/msgdata.bin",
-        "source_count": 11,
-        "entry_count": 21402,
-        "source_catalog_sha256": "64B756055AB14E73A239626C1FB4CB158657D51489E4AF97B4033B9488160035"
+        "source_count": 14,
+        "entry_count": 22280,
+        "source_catalog_sha256": "F4823544CD2085095B3A033A3CE581F77277C734073119CEB6E9A36207DB4915"
       },
       {
         "resource": "MSG_PK/SC/msgbre.bin",
@@ -94,50 +94,50 @@
       },
       {
         "resource": "MSG_PK/SC/msggame.bin",
-        "source_count": 30,
-        "entry_count": 10572,
-        "source_catalog_sha256": "A05C42530AE92335439BF620CAC42E1914F700F89303995B7728181C09A05A00"
+        "source_count": 31,
+        "entry_count": 10822,
+        "source_catalog_sha256": "E31C50477073D57CE8680989230C6E00ECBE9AE44B39758283974295DD75A5B3"
       },
       {
         "resource": "MSG/SC/strdata.bin",
-        "source_count": 3,
-        "entry_count": 24631,
-        "source_catalog_sha256": "02CAC2A7E77C8AD3A8DFB2A88345E16CE09B9A81B18C963FDA93E83DC2E2180F"
+        "source_count": 4,
+        "entry_count": 24658,
+        "source_catalog_sha256": "5CDBDB676CF9B63E33E1FCE15727BEA6B6A308564BB3E25FE07FF70F90160EE5"
       }
     ],
-    "source_entry_count": 76692,
-    "codepoint_count": 1401,
-    "codepoints_sha256": "A10646370BE093D34CB82BCC611A462BF3330DD2D763B1056CA430E254432B49",
-    "hangul_syllable_count": 1236,
-    "hangul_syllables_sha256": "2283EEDB1450374DE5921E651D8C2170E199CE05A932F2D93B5FF730E18A864C",
-    "non_hangul_count": 165,
-    "non_hangul_sha256": "73F2B1A3B4484B66DEBE0F635EAC5DC0A3B751EBD04713F0B88FD7D6646BC515",
-    "raster_codepoint_count": 1318,
-    "raster_codepoints_sha256": "08D81661263417AB2FFF7474A0517B8C0DEAFAB53D6EA88DA1E9E9B16A2A0CF9",
+    "source_entry_count": 78648,
+    "codepoint_count": 1415,
+    "codepoints_sha256": "EC10CBA8E379FC9BB96D05A3790594137F7B182E7CCB380660946CD8BAA26A94",
+    "hangul_syllable_count": 1243,
+    "hangul_syllables_sha256": "EA5CE255EE40C282E6771B9A941674DDC1C3E7C4A9A5349B599E10F7037492BD",
+    "non_hangul_count": 172,
+    "non_hangul_sha256": "0F5F778AAF5D219483B3F91B3995AD144E236B4563555E3B06BB0D6820F8D42E",
+    "raster_codepoint_count": 1332,
+    "raster_codepoints_sha256": "5BAE97F4ECCA83636A68F4AE089D4171F501FEE5D2A8EF15E699ED06D71A86E6",
     "append_contract": [
       {
         "entry": 6,
         "table": 0,
-        "count": 1241,
-        "codepoints_sha256": "2A22A546E1D07066850A9DA2A844CDD4EBDD478CC503F7EB9EF8B2C3073C7945"
+        "count": 1248,
+        "codepoints_sha256": "319525A22ACB37DB33677E003B552BAC7BB6FBC55B673E17D0A12EEA2D0BB6AF"
       },
       {
         "entry": 6,
         "table": 1,
-        "count": 1318,
-        "codepoints_sha256": "08D81661263417AB2FFF7474A0517B8C0DEAFAB53D6EA88DA1E9E9B16A2A0CF9"
+        "count": 1332,
+        "codepoints_sha256": "5BAE97F4ECCA83636A68F4AE089D4171F501FEE5D2A8EF15E699ED06D71A86E6"
       },
       {
         "entry": 7,
         "table": 0,
-        "count": 1241,
-        "codepoints_sha256": "2A22A546E1D07066850A9DA2A844CDD4EBDD478CC503F7EB9EF8B2C3073C7945"
+        "count": 1248,
+        "codepoints_sha256": "319525A22ACB37DB33677E003B552BAC7BB6FBC55B673E17D0A12EEA2D0BB6AF"
       },
       {
         "entry": 7,
         "table": 1,
-        "count": 1318,
-        "codepoints_sha256": "08D81661263417AB2FFF7474A0517B8C0DEAFAB53D6EA88DA1E9E9B16A2A0CF9"
+        "count": 1332,
+        "codepoints_sha256": "5BAE97F4ECCA83636A68F4AE089D4171F501FEE5D2A8EF15E699ED06D71A86E6"
       }
     ],
     "sources": "all PK-loaded string overlays (seven PK resources plus exact shared MSG/SC/strdata.bin) are derived from the SHA-pinned translation-progress catalog; the plan records one source-free hash row per file"
@@ -152,7 +152,7 @@
   },
   "structural_build_verification": {
     "path": "workstreams/font_seoulhangang_v1/verification.v1.json",
-    "sha256": "ADC8801EC3DC3982B008AC64595508417FA2A7E36E6774E105211E0B6261348F",
+    "sha256": "3289FD79F1EFA17B715F9866D1C9AB952241250DBD4F6108A9A3F0ECB23C9B5D",
     "a_b_candidate_byte_identical": true,
     "full_pk_glyph_demand_coverage": true,
     "g1n_structural_validation": true,
@@ -161,8 +161,8 @@
   "runtime_validation": {
     "performed": false,
     "install_applied": true,
-    "release_id": "pk-font-eb48-b32-preserve-images-20260715-v1",
-    "live_archive_sha256": "DB94884F058EA5DEE72F8BC3584E157B98F7B59DB70D7265CCE9125452F0A431",
+    "release_id": "pk-translation-wave02-49607-20260715-v1",
+    "live_archive_sha256": "706563F2BFB3D8BD63B8859366E69066E0FEEFE1A989A14B967BD4649152E271",
     "restore_dry_run_passed": true,
     "changed_outer_link_entries": [6, 7],
     "preserved_outer_link_entry_count": 40,

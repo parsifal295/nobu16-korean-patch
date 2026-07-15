@@ -100,13 +100,13 @@ class ReadmeProgressTests(unittest.TestCase):
         stats = readme_progress.targeted_overlay_stats(
             shared["overlay_globs"], {"translated", "reviewed"}, targets
         )
-        self.assertEqual(24631, stats.overlay_coverage)
-        self.assertEqual(24631, stats.overlay_completed)
-        self.assertEqual(24631, stats.target_coverage)
-        self.assertEqual(24631, stats.target_completed)
+        self.assertEqual(24658, stats.overlay_coverage)
+        self.assertEqual(24658, stats.overlay_completed)
+        self.assertEqual(24658, stats.target_coverage)
+        self.assertEqual(24658, stats.target_completed)
         self.assertEqual(0, stats.non_target_coverage)
         self.assertEqual(0, stats.non_target_completed)
-        self.assertEqual(2059, len(targets) - stats.target_completed)
+        self.assertEqual(2032, len(targets) - stats.target_completed)
 
     def test_progress_uses_target_intersection_and_separates_non_targets(self):
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
@@ -172,14 +172,14 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn(f"비대상 활성 **{non_target:,}개**는 별도 집계", rendered)
         self.assertIn(
             "`MSG/SC/strdata.bin`의 1개 문자열 리소스: "
-            "**번역 완료 24,631 / 26,690 (92.3%)**",
+            "**번역 완료 24,658 / 26,690 (92.4%)**",
             rendered,
         )
         self.assertIn(
-            "`MSG/SC/strdata.bin` | 24,631 / 26,690 | 92.3%",
+            "`MSG/SC/strdata.bin` | 24,658 / 26,690 | 92.4%",
             rendered,
         )
-        self.assertEqual(24631, shared_stats.target_completed)
+        self.assertEqual(24658, shared_stats.target_completed)
         self.assertEqual(0, shared_stats.non_target_coverage)
         for path in ("MSG_PK/SC/msgev.bin", "MSG_PK/SC/msgdata.bin"):
             stats = pk_stats_by_path[path]
