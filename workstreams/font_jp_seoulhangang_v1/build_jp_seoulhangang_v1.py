@@ -15,8 +15,8 @@ official SeoulHangang EB for every 48-cell table and SeoulHangang B for every
 32-cell table.  There is no third, smaller cell tier in these four G1Ns, so
 SeoulHangang M is pinned as the unused contingency source rather than being
 silently substituted.  A strict TTF cmap gate prevents GDI font fallback.
-The two reviewed non-TTF points U+32A4/U+FF65 are copied from each G1N's
-same-cell stock table 0 into a new table-2 atlas tail and never pointer-aliased.
+The reviewed non-TTF points are copied from each G1N's same-cell stock table 0
+into a new table-2 atlas tail and never pointer-aliased.
 Existing mappings, records, palettes, and the complete stock atlas remain
 byte-identical.  Every non-target LINK entry remains byte-identical.
 
@@ -33,8 +33,10 @@ import hashlib
 import importlib.util
 import json
 import os
+import shutil
 import struct
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
@@ -43,6 +45,13 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
 # Authoritative local runtime for every current JP build and safety check.
 GAME_ROOT = Path(r"F:/SteamLibrary/steamapps/common/NOBU16")
+STOCK_ROOT = (
+    GAME_ROOT
+    / "KR_PATCH_BACKUP"
+    / "file_only_transaction"
+    / "steam-jp-1.1.7-v0.6.0"
+    / "originals"
+)
 sys.dont_write_bytecode = True
 
 
@@ -114,9 +123,9 @@ SEOUL_HANGANG_M = {
     "reason": "no target JP G1N table has a cell smaller than 32 pixels",
 }
 
-# The five batches are committed before the shared translation-progress row is
-# refreshed.  Canonical in-memory insertion makes demand and candidate bytes
-# identical before and after those same paths are registered centrally.
+# The translation batches are committed before the shared translation-progress
+# rows are refreshed.  Canonical in-memory insertion makes demand and candidate
+# bytes identical before and after those same paths are registered centrally.
 PENDING_OVERLAYS: tuple[dict[str, str], ...] = (
     {
         "resource": "MSG_PK/SC/msgdata.bin",
@@ -137,6 +146,30 @@ PENDING_OVERLAYS: tuple[dict[str, str], ...] = (
     {
         "resource": "MSG_PK/SC/msggame.bin",
         "path": "workstreams/msggame_pk_ui_priority_b07/public/msggame_ko_pk_ui_priority_b07_300.v1.json",
+    },
+    {
+        "resource": "MSG_PK/SC/msgui.bin",
+        "path": "workstreams/steam_jp_msgui_wave07_recovery/public/msgui_ko_pk_jp_steam_wave07_recovery_343.v1.json",
+    },
+    {
+        "resource": "MSG_PK/SC/msggame.bin",
+        "path": "workstreams/msggame_pk_jp_native_wave07_j01/public/msggame_ko_pk_jp_native_wave07_j01_970.v1.json",
+    },
+    {
+        "resource": "MSG_PK/SC/msggame.bin",
+        "path": "workstreams/msggame_pk_jp_native_wave07_j02/public/msggame_ko_pk_jp_native_wave07_j02_969.v1.json",
+    },
+    {
+        "resource": "MSG_PK/SC/msggame.bin",
+        "path": "workstreams/msggame_pk_jp_native_wave07_j03/public/msggame_pk_jp_native_steam_wave07_j03_761.v1.json",
+    },
+    {
+        "resource": "MSG_PK/SC/msggame.bin",
+        "path": "workstreams/msggame_pk_jp_native_wave07_j04/public/msggame_ko_pk_jp_native_wave07_j04_680.v1.json",
+    },
+    {
+        "resource": "MSG_PK/SC/msggame.bin",
+        "path": "workstreams/msggame_pk_jp_native_wave07_j05/public/msggame_ko_pk_jp_native_wave07_j05_681.v1.json",
     },
 )
 
@@ -178,49 +211,73 @@ ROUTES: dict[str, dict[str, Any]] = {
 
 
 DEMAND_LOCK: dict[str, Any] = {
-    "source_catalog_sha256": "436876571A1ABE251C3756566ACC9D95523000FEABEDFB70C10F6E3332AA8A6F",
-    "source_count": 118,
-    "source_entry_count": 83_658,
-    "codepoint_count": 1_419,
-    "codepoints_sha256": "31941A7119F571E227A96ED2B99427D13A379B1623E82EBF703B8D3B5D1A654B",
-    "hangul_syllable_count": 1_247,
-    "hangul_syllables_sha256": "974C4F799512A3442A28AE94785F6BDD7C9103F54FF0993C223507AD91A9BC2B",
-    "non_hangul_count": 172,
-    "non_hangul_sha256": "0F5F778AAF5D219483B3F91B3995AD144E236B4563555E3B06BB0D6820F8D42E",
+    "source_catalog_sha256": "A877E900EA7A42867BF2F71BC69B924BAC354B3A6EADF048B814E54F2B493E28",
+    "source_count": 124,
+    "source_entry_count": 88_062,
+    "codepoint_count": 1_472,
+    "codepoints_sha256": "7B1F5B740D580A3B1E67B459B92EED29BA6F3CC1B685D7F312B1518202300E94",
+    "hangul_syllable_count": 1_251,
+    "hangul_syllables_sha256": "ABDB62AD32DDCCB19F8E100179EADC58E028A2AA79FB8B252E407E2D16DCDCD0",
+    "non_hangul_count": 221,
+    "non_hangul_sha256": "D635D654006E8065FDFBCD618B5A5A55EDBC9CDC9671D6A2005D541C198AC0DC",
 }
 
 
 APPEND_UNION_LOCK = {
-    "codepoint_count": 1_308,
-    "codepoints_sha256": "4C8398A11D1512DBFE1B3793E7CD2DCBA8C14001C44663C986B1950EC0F65A34",
+    "codepoint_count": 1_357,
+    "codepoints_sha256": "838FB98006D42AD60F37D22D021D8D46B2A76EEF631B89C262B53EB83906AF64",
 }
 
 
-STOCK_REUSE_CODEPOINTS = (0x32A4, 0xFF65)
+STOCK_REUSE_CODEPOINTS = (
+    0x22BF,
+    0x32A4,
+    0x32A8,
+    0x3303,
+    0x330D,
+    0x3314,
+    0x3318,
+    0x3322,
+    0x3323,
+    0x3326,
+    0x3327,
+    0x332B,
+    0x3336,
+    0x333B,
+    0x3349,
+    0x334A,
+    0x334D,
+    0x3351,
+    0x3357,
+    0x337C,
+    0x337D,
+    0x337E,
+    0xFF65,
+)
 STOCK_REUSE_LOCK = {
-    "codepoint_count": 2,
-    "codepoints_sha256": "56FA9232EA268ED0FE5B776534B5B7A1A09DBCEAAC8D1E8C27A5EE5E68F13BE4",
+    "codepoint_count": 23,
+    "codepoints_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E",
 }
 
 
 TTF_RASTER_LOCK = {
-    "codepoint_count": 1_306,
-    "codepoints_sha256": "E056B7630AE5055647421C5F53ABADC7BD49B9FE44E5BA8DF4421503D32888C6",
+    "codepoint_count": 1_334,
+    "codepoints_sha256": "08E043D135A03612C159B946A190AD9C30A10A71F3BA6474C85328621E81615A",
 }
 
 
 APPEND_LOCK = {
     0: {
-        "count": 1_251,
-        "codepoints_sha256": "72EE29EA5727A8B8DCA99D088CD99F960902F2406910EC0B48BF1AF2416EA72B",
+        "count": 1_256,
+        "codepoints_sha256": "709085561056ECF4D0652504B2C6142828992A5870CC4D08D04719C213811E3F",
     },
     1: {
-        "count": 1_251,
-        "codepoints_sha256": "72EE29EA5727A8B8DCA99D088CD99F960902F2406910EC0B48BF1AF2416EA72B",
+        "count": 1_256,
+        "codepoints_sha256": "709085561056ECF4D0652504B2C6142828992A5870CC4D08D04719C213811E3F",
     },
     2: {
-        "count": 1_308,
-        "codepoints_sha256": "4C8398A11D1512DBFE1B3793E7CD2DCBA8C14001C44663C986B1950EC0F65A34",
+        "count": 1_357,
+        "codepoints_sha256": "838FB98006D42AD60F37D22D021D8D46B2A76EEF631B89C262B53EB83906AF64",
     },
 }
 
@@ -682,8 +739,28 @@ def _inside(parent: Path, child: Path) -> bool:
     return child == parent or parent in child.parents
 
 
+def expected_overlay_resources(
+    resource_row: dict[str, Any], progress_resource: str
+) -> set[str]:
+    """Accept only the logical SC catalog path and its exact JP runtime path."""
+
+    expected = set(SC_FONT._expected_overlay_resource(progress_resource))
+    runtime = resource_row.get("runtime_path")
+    if runtime is None:
+        return expected
+    if not isinstance(runtime, str):
+        raise JPFontBuildError(f"{progress_resource}: runtime_path must be text")
+    derived = progress_resource.replace("/SC/", "/JP/")
+    if derived == progress_resource or runtime != derived:
+        raise JPFontBuildError(
+            f"{progress_resource}: runtime_path is not the exact JP counterpart"
+        )
+    expected.add(runtime)
+    return expected
+
+
 def collect_latest_overlay_demand() -> dict[str, Any]:
-    """Collect strict current demand plus the five not-yet-registered batches."""
+    """Collect the SC catalog plus JP-runtime overlays and pending batches."""
 
     progress_relative = SC_FONT.PROGRESS_CONFIG_RELATIVE
     progress_path = (REPO_ROOT / progress_relative).resolve()
@@ -714,7 +791,16 @@ def collect_latest_overlay_demand() -> dict[str, Any]:
         globs = resource_row.get("overlay_globs")
         if not isinstance(resource, str) or not isinstance(globs, list):
             raise JPFontBuildError("font resource path/overlay_globs is malformed")
-        logical_paths, registered_count = merge_overlay_paths(globs, resource)
+        runtime_globs = resource_row.get("runtime_overlay_globs", [])
+        if not isinstance(runtime_globs, list):
+            raise JPFontBuildError(f"{resource}: runtime_overlay_globs must be an array")
+        if runtime_globs and resource_row.get("runtime_path") is None:
+            raise JPFontBuildError(
+                f"{resource}: runtime_overlay_globs requires an exact runtime_path"
+            )
+        logical_paths, registered_count = merge_overlay_paths(
+            [*globs, *runtime_globs], resource
+        )
         registered_pending_count += registered_count
         local_sources: list[dict[str, Any]] = []
         local_entries = 0
@@ -731,7 +817,7 @@ def collect_latest_overlay_demand() -> dict[str, Any]:
             if not isinstance(schema, str) or not schema:
                 raise JPFontBuildError(f"{logical_path}: missing schema")
             actual_resource = SC_FONT._overlay_resource(overlay, logical_path)
-            if actual_resource not in SC_FONT._expected_overlay_resource(resource):
+            if actual_resource not in expected_overlay_resources(resource_row, resource):
                 raise JPFontBuildError(
                     f"{logical_path}: resource {actual_resource!r} does not serve {resource!r}"
                 )
@@ -1933,37 +2019,132 @@ def command_plan(args: argparse.Namespace) -> int:
     return 0
 
 
-def command_build(args: argparse.Namespace) -> int:
+def staged_private_build(
+    base_blob: bytes,
+    pk_blob: bytes,
+    font_paths: dict[str, Path],
+    plan: dict[str, Any],
+    destination_parent: Path,
+    powershell: Path,
+    expected: dict[str, Any] | None,
+) -> tuple[Path, dict[str, Any]]:
+    destination_parent.mkdir(parents=True, exist_ok=True)
+    staging = Path(
+        tempfile.mkdtemp(prefix=".jp-font-seoulhangang-", dir=destination_parent)
+    )
+    try:
+        atomic_write(staging / "plan.json", encode_json(plan))
+        manifest = private_build(
+            base_blob,
+            pk_blob,
+            font_paths,
+            plan,
+            staging,
+            powershell,
+            expected,
+        )
+    except Exception:
+        shutil.rmtree(staging, ignore_errors=True)
+        raise
+    return staging, manifest
+
+
+def private_build_inputs(args: argparse.Namespace) -> tuple[
+    Path, Path, dict[str, Path], bytes, bytes, dict[str, Any], Path
+]:
     base_path = Path(args.stock_base).resolve()
     pk_path = Path(args.stock_pk).resolve()
     font_paths = {
         "entry6_48px_eb": Path(args.font_eb).resolve(),
         "entry7_32px_b": Path(args.font_b).resolve(),
     }
-    output_root = Path(args.output_root).resolve()
-    evidence_path = Path(args.evidence).resolve()
-    validate_output_root(output_root, (base_path, pk_path, *font_paths.values()))
     base_blob = require_stock(base_path, "base")
     pk_blob = require_stock(pk_path, "pk")
     plan = build_plan(base_blob, pk_blob, require_demand())
-    expected = load_expected_outputs(evidence_path)
-    output_root.mkdir(parents=True, exist_ok=True)
-    atomic_write(output_root / "plan.json", encode_json(plan))
-    manifest = private_build(
+    return (
+        base_path,
+        pk_path,
+        font_paths,
         base_blob,
         pk_blob,
-        font_paths,
         plan,
-        output_root,
         Path(args.powershell).resolve(),
-        expected,
     )
+
+
+def command_build(args: argparse.Namespace) -> int:
+    expected = load_expected_outputs(Path(args.evidence).resolve())
+    (
+        base_path,
+        pk_path,
+        font_paths,
+        base_blob,
+        pk_blob,
+        plan,
+        powershell,
+    ) = private_build_inputs(args)
+    output_root = Path(args.output_root).resolve()
+    validate_output_root(output_root, (base_path, pk_path, *font_paths.values()))
+    if output_root.exists():
+        raise JPFontBuildError("atomic build output root must not already exist")
+    staging, manifest = staged_private_build(
+        base_blob, pk_blob, font_paths, plan, output_root.parent, powershell, expected
+    )
+    try:
+        os.replace(staging, output_root)
+    except Exception:
+        shutil.rmtree(staging, ignore_errors=True)
+        raise
     print(f"private_manifest={output_root / 'private' / 'build_manifest.json'}")
     for route in manifest["routes"]:
         print(
             f"{route['route']}_candidate_sha256={route['candidate_archive_sha256']} "
             f"size={route['candidate_archive_size']}"
         )
+    return 0
+
+
+def command_bootstrap(args: argparse.Namespace) -> int:
+    proposal = Path(args.proposal).resolve()
+    tmp_root = (REPO_ROOT / "tmp").resolve()
+    if (
+        proposal.suffix.lower() != ".json"
+        or proposal == tmp_root
+        or tmp_root not in proposal.parents
+        or proposal.exists()
+    ):
+        raise JPFontBuildError(
+            "bootstrap proposal must be a new JSON file below repository tmp"
+        )
+    (
+        base_path,
+        pk_path,
+        font_paths,
+        base_blob,
+        pk_blob,
+        plan,
+        powershell,
+    ) = private_build_inputs(args)
+    validate_output_root(
+        proposal.parent / ".jp-font-bootstrap-output",
+        (base_path, pk_path, *font_paths.values()),
+    )
+    staging, manifest = staged_private_build(
+        base_blob,
+        pk_blob,
+        font_paths,
+        plan,
+        proposal.parent,
+        powershell,
+        None,
+    )
+    try:
+        atomic_write(proposal, encode_json(expected_output_projection(manifest)))
+    finally:
+        shutil.rmtree(staging, ignore_errors=True)
+    print(f"proposal={proposal}")
+    print(f"proposal_sha256={sha256_file(proposal)}")
+    print("private_candidate_outputs_retained=False")
     return 0
 
 
@@ -1987,12 +2168,12 @@ def add_stock_arguments(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--stock-base",
         type=Path,
-        default=GAME_ROOT / "RES_JP" / "res_lang.bin",
+        default=STOCK_ROOT / "RES_JP" / "res_lang.bin",
     )
     parser.add_argument(
         "--stock-pk",
         type=Path,
-        default=GAME_ROOT / "RES_JP_PK" / "res_lang_pk.bin",
+        default=STOCK_ROOT / "RES_JP_PK" / "res_lang_pk.bin",
     )
 
 
@@ -2026,6 +2207,25 @@ def build_parser() -> argparse.ArgumentParser:
         / "powershell.exe",
     )
     build.set_defaults(handler=command_build)
+
+    bootstrap = subparsers.add_parser(
+        "bootstrap",
+        help="build in staging and emit only a source-free expected-output proposal",
+    )
+    add_stock_arguments(bootstrap)
+    bootstrap.add_argument("--font-eb", type=Path, required=True)
+    bootstrap.add_argument("--font-b", type=Path, required=True)
+    bootstrap.add_argument("--proposal", type=Path, required=True)
+    bootstrap.add_argument(
+        "--powershell",
+        type=Path,
+        default=Path(os.environ.get("SystemRoot", r"C:\Windows"))
+        / "System32"
+        / "WindowsPowerShell"
+        / "v1.0"
+        / "powershell.exe",
+    )
+    bootstrap.set_defaults(handler=command_bootstrap)
 
     verify = subparsers.add_parser("verify", help="read-only verification of an existing private build root")
     add_stock_arguments(verify)

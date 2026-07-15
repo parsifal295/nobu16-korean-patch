@@ -19,7 +19,7 @@ SPEC.loader.exec_module(readme_progress)
 class ReadmeProgressTests(unittest.TestCase):
     def test_runtime_contract_is_steam_jp_117(self):
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
-        self.assertEqual(payload["release"], "v0.6.0")
+        self.assertEqual(payload["release"], "v0.7.0")
         self.assertEqual(
             payload["runtime"],
             {
@@ -34,7 +34,10 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_translation_accounting_is_exact(self):
         translation = readme_progress.load_progress()["translation"]
         msgui = translation["msgui"]
-        self.assertEqual(msgui["safely_mapped"], 3693)
+        self.assertEqual(msgui["safely_mapped"], 4036)
+        self.assertEqual(msgui["effective_changes"], 3955)
+        self.assertEqual(msgui["source_equal_noops"], 81)
+        self.assertEqual(msgui["withheld"], 1)
         self.assertEqual(
             msgui["safely_mapped"],
             msgui["effective_changes"] + msgui["source_equal_noops"],
@@ -51,7 +54,7 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertEqual(
             msggame["semantic_targets"], msggame["applied"] + msggame["remaining"]
         )
-        self.assertEqual((msggame["applied"], msggame["remaining"]), (24211, 4061))
+        self.assertEqual((msggame["applied"], msggame["remaining"]), (28272, 0))
 
         strdata = translation["strdata"]
         self.assertEqual(strdata["safe_targets"], strdata["applied"] + strdata["withheld"])
@@ -61,9 +64,12 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_render_is_japanese_runtime_only(self):
         rendered = readme_progress.render()
         self.assertIn("Steam PK v1.1.7", rendered)
-        self.assertIn("`msgui.bin` | 안전 이식 3,693 / 4,037 (91.5%)", rendered)
-        self.assertIn("`msggame.bin` | 적용 24,211 / 28,272 (85.6%)", rendered)
+        self.assertIn("`msgui.bin` | 안전 이식 4,036 / 4,037 (99.98%)", rendered)
+        self.assertIn("`msggame.bin` | 적용 28,272 / 28,272 (100.0%)", rendered)
         self.assertIn("`strdata.bin` | 안전 이식 24,524 / 24,525", rendered)
+        self.assertIn("보류 1건은 번역 대상 문구가 아닌 비의미 공백 1자 레코드", rendered)
+        self.assertNotIn("종료 확인창", rendered)
+        self.assertNotIn("아직 번역되지 않은 일본어 UI", rendered)
         self.assertNotIn("MSG_PK/SC", rendered)
         self.assertNotIn("RES_SC", rendered)
         self.assertNotIn("비Steam", rendered)
@@ -76,6 +82,7 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertEqual(qa["launcher_update_label"], "Update 1.1.7")
         self.assertTrue(qa["korean_title_prompt_observed"])
         self.assertTrue(qa["korean_main_menu_observed"])
+        self.assertTrue(qa["known_untranslated_ui_observed"])
 
     def test_readme_progress_is_current(self):
         result = subprocess.run(
