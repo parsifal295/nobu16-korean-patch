@@ -1,0 +1,48 @@
+{
+  "schema": "nobu16.kr.steam-jp-title-images.visual-qa.validation.v1",
+  "source_free": true,
+  "file_only": true,
+  "game_install_modified": false,
+  "runtime_patch_features": [],
+  "target": {
+    "resource": "RES_JP/res_lang.bin",
+    "outer_title_entry": 3,
+    "candidate_pin": {
+      "size": 160351447,
+      "sha256": "D045B42BC3D4A4D4C501C5A0E010698AAE95AAE227775306A1272D5259E0888B"
+    },
+    "pc_texture_contract": {
+      "magic": "GT1G0600",
+      "format_code": "0x5B",
+      "width": 512,
+      "height": 128,
+      "mip_count": 1
+    }
+  },
+  "sample_slots": [0, 24, 25, 38, 74, 107],
+  "source_mapping": {
+    "0": {"source_kind": "switch_v13", "source_index": 3},
+    "24": {"source_kind": "switch_v13", "source_index": 25},
+    "25": {"source_kind": "switch_v13", "source_index": 24},
+    "38": {"source_kind": "corrected", "label": "부대 편성"},
+    "74": {"source_kind": "corrected", "label": "공주 정보"},
+    "107": {"source_kind": "switch_v13", "source_index": 107}
+  },
+  "acceptance": {
+    "candidate_file_must_remain_unchanged": true,
+    "independent_reference_canvas_hash_must_match_builder_metadata": true,
+    "all_automatic_checks_must_pass": true,
+    "codec_fringe_neighborhood_radius_pixels": 3,
+    "stray_visible_pixels_farther_than_codec_fringe_radius_must_be_zero": true,
+    "unexpected_canvas_edge_visible_pixels_must_be_zero": true,
+    "alpha_bbox_delta_max_pixels": 1,
+    "visible_mask_iou_min": 0.98,
+    "manual_contact_sheet_review_required": true,
+    "automated_ocr_claim": false
+  },
+  "private_artifact_policy": {
+    "decoded_pngs_and_contact_sheet_under_tmp_only": true,
+    "raw_or_png_committed": false,
+    "game_install_write_allowed": false
+  }
+}
