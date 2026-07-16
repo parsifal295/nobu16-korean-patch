@@ -1,0 +1,97 @@
+{
+  "batch_ids": [
+    "j06_msgdata_legend_names",
+    "j07_msgdata_legend_reading_keys",
+    "j08_msgdata_legend_descriptions",
+    "j09_msgstf_credit_update"
+  ],
+  "expected": {
+    "overlays": {
+      "j06_msgdata_legend_names": {
+        "sha256": "BCE0860823A7CD17AB9D9C04B3672CB99BDE29192E1D1DBF6DB55E588E340961",
+        "size": 3356
+      },
+      "j07_msgdata_legend_reading_keys": {
+        "sha256": "D0ED5342254E377E180BE30E75206B354F9D6C4F0CAEC177E5DDEB7808ED62A0",
+        "size": 3400
+      },
+      "j08_msgdata_legend_descriptions": {
+        "sha256": "D43F2BF29297A791F283A3AED152C08E37BF8F4428FF7EA54A4F376702B86187",
+        "size": 3682
+      },
+      "j09_msgstf_credit_update": {
+        "sha256": "9740BF92164083C08A45F377DAD41798B4D5D98E68B5308BC58166EAC8933327",
+        "size": 2213
+      }
+    },
+    "resources": [
+      {
+        "baseline_applied_count": 23369,
+        "baseline_candidate": {
+          "sha256": "D05A585826F116180D81E06CBE7BF136CE67B98B76380A8DC6308F3868A1F9B9",
+          "size": 492714
+        },
+        "candidate": {
+          "raw_sha256": "BF70C8451B273342A7BDEFB64BC2EA4BFA084C4AB11F5F39FD5D3188D04C50EC",
+          "raw_size": 490824,
+          "sha256": "A9B673C8C046388C0169F69C4EF025048B624FDB126B1426269BD93775042841",
+          "size": 492774
+        },
+        "delta_applied_count": 18,
+        "id_domain_preserved": true,
+        "non_delta_texts_preserved": true,
+        "resource": "MSG_PK/JP/msgdata.bin",
+        "wrapper_prefix_preserved": true
+      },
+      {
+        "baseline_applied_count": 6,
+        "baseline_candidate": {
+          "sha256": "42C98221F7D874BB09C9CD0F06615E581E5CB188F9ABB4E0E825904BC4D181E5",
+          "size": 16747
+        },
+        "candidate": {
+          "raw_sha256": "C55F20A4F02F95D2ABAFC1A68FD9A84F407743028202B6BE41CF169872C0075A",
+          "raw_size": 17012,
+          "sha256": "FE97F9C0C34D0131D7CDD3CEC4AF4B453CC7148F34FD80E7EFD31DE500F12593",
+          "size": 17104
+        },
+        "delta_applied_count": 1,
+        "id_domain_preserved": true,
+        "non_delta_texts_preserved": true,
+        "resource": "MSG_PK/JP/msgstf.bin",
+        "wrapper_prefix_preserved": true
+      }
+    ],
+    "triage": {
+      "sha256": "85D1C301E06ADDE2DF40086475DF82BACAD891396F98943E9F4DF0B916B9B75E",
+      "size": 7832
+    }
+  },
+  "proofs": {
+    "deterministic_ab_equal": true,
+    "existing_v1_overlay_preserved": true,
+    "id_domain_preserved": true,
+    "non_delta_texts_preserved": true,
+    "source_hashes_fail_closed": true,
+    "wrapper_prefix_preserved": true
+  },
+  "resources": [
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgstf.bin"
+  ],
+  "safety": {
+    "complete_candidate_binaries_tracked": false,
+    "installed_game_files_modified": false,
+    "official_multilingual_reference_is_build_dependency": false,
+    "sc_binary_used": false,
+    "sc_coordinate_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-common-message-wave08-j06-j09-validation.v1",
+  "translation": {
+    "delta_applied_count": 19,
+    "remaining_legacy_unresolved_count": 77,
+    "total_common_applied_count": 39526
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "base_language": "JP",
+  "distribution_policy": {"contains_commercial_source_text": false, "contains_complete_game_resource": false},
+  "entry_count": 286,
+  "equal_hash_blocks_sha256": "8A420A2A570902D86ACAFCD15F27810A4AFA5F3522C4DFFB0816AD69C3FA8A86",
+  "groups": [
+    {"ko": "△", "ranges": [[9146, 9146, 1]], "text_utf16le_sha256": "CAFA3F8670DDE31B2A0BDDF03F52403B2C6066D0C50616FCB6A8A6E4863AF9BF"},
+    {"ko": "◎", "ranges": [[9148, 9148, 1]], "text_utf16le_sha256": "1F3FE9525213C2E5E3CBE3F16ADFC63D31B61FFDE722AEFA754C2E1882EB198C"},
+    {
+      "ko": "dummy",
+      "ranges": [[18563, 18571, 5], [18590, 18598, 28], [18646, 18654, 1], [18654, 18662, 1], [18673, 18681, 1], [18676, 18684, 1], [18701, 18709, 8], [18710, 18718, 5], [18716, 18724, 124], [18861, 18869, 29], [18896, 18904, 34], [18933, 18941, 7], [18994, 19002, 40]],
+      "text_utf16le_sha256": "2AB80B631AD896118B57262A7756C480D2BC0733C95357BC5EC1F4AD4A21CFAB"
+    }
+  ],
+  "ids_sha256": "8C9617E3E3F14EC139209DBC7E8C2D3534234FC56562FE2EE6FACC3E8233E98A",
+  "mapping_rows_sha256": "075901ED848285A752D3CA204133EA8753CFCA85BEA50D06875C39701ADA397A",
+  "overlay_id": "msgdata_exact_contract_s01_286.v1",
+  "provenance": {
+    "existing_v1_overlay_path": "workstreams/steam_jp_common_messages_v1/public/msgdata_ko_steam_jp_native.v1.json",
+    "existing_v1_overlay_sha256": "09EC40029C55D09D1420812879180DFDC9B8842BE5D374C6676189067772D051",
+    "sc_binary_used": false,
+    "source_union_entry_count": 26318,
+    "source_union_ko_rows_sha256": "0B50FD11160F5DA3BDAFDCA2764216ECE8FFC4538CE049BB52F00F724ACC0D86",
+    "source_union_manifest_sha256": "218C1FB47DCCDAE07A3B10C6664EAC2A0E426DA8733A46143BC6D92B8CF682B3",
+    "source_union_values_equal_current_jp": true
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "schema": "nobu16.kr.steam-jp-common-message-exact-contract.v1",
+  "shard": {"count": 6, "index": 1},
+  "source_rows_sha256": "E42EBBD83E39F914FC1053A585F36F6CE02D2056ECF1A3170CD0E7B543678D16",
+  "stock_jp": {"packed_sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E", "raw_sha256": "D09F61E34E4AA498F3DDEF23E7B7FD2CC8E9FE50B24F39D3BA1034BE82E6D0F6", "raw_size": 434000, "size": 272453, "string_count": 29218}
+}

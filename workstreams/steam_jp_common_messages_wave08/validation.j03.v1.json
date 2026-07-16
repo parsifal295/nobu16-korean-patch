@@ -1,0 +1,44 @@
+{
+  "batch_id": "j03_msgev_event_and_era_titles",
+  "expected": {
+    "baseline_candidate": {
+      "sha256": "C73DD1DDC79493EE3751C43B4BEAD216C4A4847C3E7B0A7CCD61FB342E03953E",
+      "size": 1040052
+    },
+    "candidate": {
+      "raw_sha256": "3DC0ECF0B5F3A3DB03E25C963B14A3A6E4C84EB6F99E50BF95A1E2B6D5A6888A",
+      "raw_size": 1036092,
+      "sha256": "529DD3211FB55E6475BB9F320C45F1C7613CAA571C8C48E55362F3E46A39AAC7",
+      "size": 1040181
+    },
+    "overlay": {
+      "sha256": "CA8F474F0C02225B9CD38DD7028CA757475098A9EA15CF356C0C92CCF533A8CC",
+      "size": 15930
+    },
+    "triage": {
+      "sha256": "85D1C301E06ADDE2DF40086475DF82BACAD891396F98943E9F4DF0B916B9B75E",
+      "size": 7832
+    }
+  },
+  "proofs": {
+    "deterministic_ab_equal": true,
+    "existing_v1_overlay_preserved": true,
+    "id_domain_preserved": true,
+    "non_delta_texts_preserved": true,
+    "source_hashes_fail_closed": true,
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "sc_coordinate_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-common-message-wave08-j03-validation.v1",
+  "translation": {
+    "delta_applied_count": 31,
+    "remaining_legacy_unresolved_count": 65,
+    "total_common_applied_count": 39538
+  }
+}
