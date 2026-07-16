@@ -1,0 +1,312 @@
+{
+  "schema": "nobu16.kr.steam-jp-boot-warning-codec-audit.v1",
+  "scope": {
+    "platform": "PC Steam Japanese route",
+    "steam_game_version": "1.1.7",
+    "logical_target": "RES_JP/res_lang.bin /1",
+    "outer_entry_index": 1,
+    "game_files_written": false,
+    "patch_candidate_created": false,
+    "switch_or_sc_raw_copy_used": false,
+    "committed_binary_assets": false,
+    "output_is_source_free_metadata_only": true
+  },
+  "input": {
+    "relative_path": "RES_JP/res_lang.bin",
+    "size": 154216023,
+    "sha256_before_read": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+    "sha256_after_read": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+    "read_only_identity_preserved": true,
+    "outer_link_entry_count": 42,
+    "outer_link_version": 1,
+    "outer_link_reserved": 0
+  },
+  "container": {
+    "outer_entry": {
+      "offset": 45375153,
+      "stored_size": 2848449,
+      "next_offset": 48223606,
+      "sha256": "8BDDE05A9397F125E1BA786C91E570D75CF35788A304972BD9F861DA99B33BE0"
+    },
+    "nested_link": {
+      "header_size": 32,
+      "entry_count": 6,
+      "table_offset": 32,
+      "resource_id": 6,
+      "aligned_table_end": 96,
+      "pre_data_size": 112,
+      "identity_rebuild_sha256": "8BDDE05A9397F125E1BA786C91E570D75CF35788A304972BD9F861DA99B33BE0",
+      "identity_rebuild_exact": true,
+      "identity_rebuild_note": "Parser performs an exact byte-for-byte identity gate before metadata is emitted."
+    }
+  },
+  "format_0x01_contract": {
+    "status": "identified_for_this_observed_pc_variant",
+    "g1t_magic": "GT1G0600",
+    "pc_platform": "0x0A",
+    "format_code": "0x01",
+    "pixel_storage": "linear row-major RGBA8",
+    "bytes_per_pixel": 4,
+    "mip_count": 1,
+    "extra_header": {
+      "version": "0x10",
+      "length": 12
+    },
+    "dimension_counts": {
+      "2048x2048": 3,
+      "4096x4096": 3
+    },
+    "non_generalization": "Do not infer this mapping for arbitrary G1T format 0x01 resources or non-PC platforms."
+  },
+  "decoder_proof": {
+    "all_six_payloads_match_width_times_height_times_4": true,
+    "all_six_decode_encode_identity": true,
+    "container_identity_rebuild_exact": true,
+    "private_visual_check": {
+      "slot": 0,
+      "method": "Decode as RGBA8, nearest-scale privately, and inspect the Japanese startup warning; no PNG is committed.",
+      "observed_result": "Readable Japanese warning with the ご注意 heading; channel-reordered comparison is visibly incorrect.",
+      "status": "completed_private_manual_check"
+    },
+    "evidence_core_sha256": "29B5A92DB4FC624600399BE30649AA062632596580EEFFC8A0E2542B70BCBBC3"
+  },
+  "slots": [
+    {
+      "slot": 0,
+      "offset": 192,
+      "stored_size": 200641,
+      "gap_after_size": 31,
+      "wrapper_sha256": "CE642AFC6E83BE00D0A5D37E772E1547AAF509345B72DF663EFB7D2D8A9DB871",
+      "wrapper": {
+        "prefix_sha256": "8EAFC6BF62952753C9DD8978BE1979648F2BB7102264D0EA81538A3729A2850F",
+        "uncompressed_size": 16777272,
+        "compressed_size": 200617,
+        "exact_payload_size": 200617
+      },
+      "g1t": {
+        "raw_sha256": "EA21CEBD9922260FFCF04A5720260FAEEEBC46E1DD5C9C938F8BBEFD358C2289",
+        "raw_size": 16777272,
+        "declared_size": 16777272,
+        "directory_offset": 32,
+        "texture_count": 1,
+        "platform": "0x0A",
+        "texture_offset": 36,
+        "packed_info": "0x10",
+        "mip_count": 1,
+        "format_code": "0x01",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "extra_version": "0x10",
+        "extra_length": 12,
+        "payload_offset": 56,
+        "payload_size": 16777216,
+        "payload_sha256": "F33CA3703FF32099E6C7BB3B6733553C60EA9B00FD8F9D8C2AD6665A3076830C",
+        "bytes_per_pixel": 4,
+        "alpha_value_count": 2,
+        "decode_encode_identity": true
+      }
+    },
+    {
+      "slot": 1,
+      "offset": 200864,
+      "stored_size": 543615,
+      "gap_after_size": 1,
+      "wrapper_sha256": "7E9FC19BB93A84BAE5336BF3FDA9796BEF0C96C4FDA9FFC86FB1326B01D4FE80",
+      "wrapper": {
+        "prefix_sha256": "8EAFC6BF62952753C9DD8978BE1979648F2BB7102264D0EA81538A3729A2850F",
+        "uncompressed_size": 67108920,
+        "compressed_size": 543591,
+        "exact_payload_size": 543591
+      },
+      "g1t": {
+        "raw_sha256": "E0BCE55C342922E82EA310090367934C3F1CF1B3E36EF55A59AD07E691CD783E",
+        "raw_size": 67108920,
+        "declared_size": 67108920,
+        "directory_offset": 32,
+        "texture_count": 1,
+        "platform": "0x0A",
+        "texture_offset": 36,
+        "packed_info": "0x10",
+        "mip_count": 1,
+        "format_code": "0x01",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "extra_version": "0x10",
+        "extra_length": 12,
+        "payload_offset": 56,
+        "payload_size": 67108864,
+        "payload_sha256": "A4BF28184BD93F9275955F82CB3224F1229B15BF1FA21CB1DB3D977B7B75BA32",
+        "bytes_per_pixel": 4,
+        "alpha_value_count": 2,
+        "decode_encode_identity": true
+      }
+    },
+    {
+      "slot": 2,
+      "offset": 744480,
+      "stored_size": 134178,
+      "gap_after_size": 30,
+      "wrapper_sha256": "5B2BC835C11E1DD6BCA270BD8055A80E85B327044FDB46E79412FF349128D4B0",
+      "wrapper": {
+        "prefix_sha256": "8EAFC6BF62952753C9DD8978BE1979648F2BB7102264D0EA81538A3729A2850F",
+        "uncompressed_size": 16777272,
+        "compressed_size": 134154,
+        "exact_payload_size": 134154
+      },
+      "g1t": {
+        "raw_sha256": "8D0982462E41FDD829C2EA127479B7498C45828DEB34F99F8DEA6DFC8EDF265A",
+        "raw_size": 16777272,
+        "declared_size": 16777272,
+        "directory_offset": 32,
+        "texture_count": 1,
+        "platform": "0x0A",
+        "texture_offset": 36,
+        "packed_info": "0x10",
+        "mip_count": 1,
+        "format_code": "0x01",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "extra_version": "0x10",
+        "extra_length": 12,
+        "payload_offset": 56,
+        "payload_size": 16777216,
+        "payload_sha256": "B9F883E7B2DBD9D2BB12DBDBE062756561E16FFB3216DBC7366F53BFCD35FFBD",
+        "bytes_per_pixel": 4,
+        "alpha_value_count": 2,
+        "decode_encode_identity": true
+      }
+    },
+    {
+      "slot": 3,
+      "offset": 878688,
+      "stored_size": 513619,
+      "gap_after_size": 13,
+      "wrapper_sha256": "156BE057E39D40F32487CC40085B192BA4E8CBA8537CAC2D309FAEC7E2824DED",
+      "wrapper": {
+        "prefix_sha256": "8EAFC6BF62952753C9DD8978BE1979648F2BB7102264D0EA81538A3729A2850F",
+        "uncompressed_size": 67108920,
+        "compressed_size": 513595,
+        "exact_payload_size": 513595
+      },
+      "g1t": {
+        "raw_sha256": "D3CF34F059319AA779EAD33630BB66F2107FFF19F16F52A6B58CDF7764A50363",
+        "raw_size": 67108920,
+        "declared_size": 67108920,
+        "directory_offset": 32,
+        "texture_count": 1,
+        "platform": "0x0A",
+        "texture_offset": 36,
+        "packed_info": "0x10",
+        "mip_count": 1,
+        "format_code": "0x01",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "extra_version": "0x10",
+        "extra_length": 12,
+        "payload_offset": 56,
+        "payload_size": 67108864,
+        "payload_sha256": "F9C183AF45C0E7399421AC58628FA7E1552E6685D8970346A85C42C611A5FBFD",
+        "bytes_per_pixel": 4,
+        "alpha_value_count": 2,
+        "decode_encode_identity": true
+      }
+    },
+    {
+      "slot": 4,
+      "offset": 1392320,
+      "stored_size": 309452,
+      "gap_after_size": 20,
+      "wrapper_sha256": "280581051416196E36937291A214EADB3F2F3A48FB158028996B7338CAE9C3B3",
+      "wrapper": {
+        "prefix_sha256": "8EAFC6BF62952753C9DD8978BE1979648F2BB7102264D0EA81538A3729A2850F",
+        "uncompressed_size": 16777272,
+        "compressed_size": 309428,
+        "exact_payload_size": 309428
+      },
+      "g1t": {
+        "raw_sha256": "25C369ACECC48EADB3F6FEECCB3A66A4D5A4CC60CA5D8DF8B5BCAF3F8F7761BA",
+        "raw_size": 16777272,
+        "declared_size": 16777272,
+        "directory_offset": 32,
+        "texture_count": 1,
+        "platform": "0x0A",
+        "texture_offset": 36,
+        "packed_info": "0x10",
+        "mip_count": 1,
+        "format_code": "0x01",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "extra_version": "0x10",
+        "extra_length": 12,
+        "payload_offset": 56,
+        "payload_size": 16777216,
+        "payload_sha256": "3F8BD711BF6A268FD6A8E9CB715034EC0E7F8977EA15DB3E731FCD4FD4B8E34C",
+        "bytes_per_pixel": 4,
+        "alpha_value_count": 2,
+        "decode_encode_identity": true
+      }
+    },
+    {
+      "slot": 5,
+      "offset": 1701792,
+      "stored_size": 1146657,
+      "gap_after_size": 0,
+      "wrapper_sha256": "8F628B99E31E40B02365E57A43C3AEADE96EEE3234FDC9426CE61D2EE3E375BE",
+      "wrapper": {
+        "prefix_sha256": "8EAFC6BF62952753C9DD8978BE1979648F2BB7102264D0EA81538A3729A2850F",
+        "uncompressed_size": 67108920,
+        "compressed_size": 1146633,
+        "exact_payload_size": 1146633
+      },
+      "g1t": {
+        "raw_sha256": "57A46E1923F071736F3C8E4AD18FE77AC34FB39EA7BD21F42E211883E1AD63D7",
+        "raw_size": 67108920,
+        "declared_size": 67108920,
+        "directory_offset": 32,
+        "texture_count": 1,
+        "platform": "0x0A",
+        "texture_offset": 36,
+        "packed_info": "0x10",
+        "mip_count": 1,
+        "format_code": "0x01",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "extra_version": "0x10",
+        "extra_length": 12,
+        "payload_offset": 56,
+        "payload_size": 67108864,
+        "payload_sha256": "C8ABDD9B9D7F0EC66BDC4DA20604847AD5CBB2294A60292E3EAF6A818F8E1D95",
+        "bytes_per_pixel": 4,
+        "alpha_value_count": 2,
+        "decode_encode_identity": true
+      }
+    }
+  ],
+  "implementation_status": {
+    "decoder": "ready_for_private_inspection_only",
+    "encoder": "byte-identity inverse proven; not exposed as a game patch writer",
+    "container_mutator": "intentionally_not_implemented_in_this_audit",
+    "safe_next_step": [
+      "Approve Korean warning copy and render each exact PC canvas in private tmp using RGBA8; do not use Switch or SC raw containers.",
+      "Build a separate, fail-closed candidate composer that preserves each G1T header, wrapper prefix, non-target inner/outer bytes, and proves all six decode/re-encode checks.",
+      "Run candidate-only structural checks plus actual startup screen capture while the game is closed; only then use a reversible transaction with pre/post hashes."
+    ]
+  },
+  "provenance": {
+    "builder": "build_steam_jp_boot_warning_codec_audit_v1.py",
+    "builder_sha256": "7DD5326AB8A49C38FF226A05C13CB2622EB7A78DAB63B886EA49B793F77F9AD6",
+    "generated_utc": "2026-07-16T00:00:00Z"
+  }
+}
