@@ -1,0 +1,88 @@
+{
+  "schema": "nobu16.kr.steam-jp-1.1.7-candidate-progress.v1",
+  "candidate_release": "v0.10.0",
+  "status": "steam_applied_release_pending",
+  "baseline_release": "v0.9.0",
+  "runtime": {
+    "distribution": "Steam",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764,
+    "language_route": "JP",
+    "launcher_language": "Japanese"
+  },
+  "translation_evidence": {
+    "path": "workstreams/steam_jp_117_candidate_v7/verification.v7.json",
+    "schema": "nobu16.kr.steam-jp-1.1.7-candidate-verification.v7",
+    "sha256": "B3F791B7E0F166594112A79189933145F83AD377534EDE42086E52EF8A496F3F"
+  },
+  "source_audit": {
+    "path": "workstreams/jp_active_message_residual_audit_v1/validation.active_steam.v1.json",
+    "schema": "nobu16.kr.jp-active-message-residual-audit.v1",
+    "sha256": "0939545798749A55E9408E5EA0F7CB2995602C9B7E0B84F86FC050A4D2520538"
+  },
+  "translation": {
+    "active_text_tables": 10,
+    "high_confidence_scope": 2498,
+    "korean_applied": 2489,
+    "official_credit_preserved": 6,
+    "runtime_structure_preserved": 3,
+    "manual_translation_hold": 0,
+    "candidate_high_confidence_remaining": 9,
+    "strdata_supersede_included_in_p0": 1,
+    "mixed_hangul_kana_manual_review": 207,
+    "hanja_only_manual_review": 187
+  },
+  "final_composition": {
+    "original_font_rollback": {
+      "path": "workstreams/steam_jp_117_v010_current_state_composite_rebase_v1/steam_original_font_rollback_transaction.v1.json",
+      "schema": "nobu16.pk-file-only-transaction.v1",
+      "sha256": "CC678D9BDF6B94DA980FEB275DF4FB13BCD82061F51F62FF3B57E7376AE7FBB5"
+    },
+    "event_linebreak_rebase": {
+      "path": "workstreams/steam_jp_ev_strdata_manual_linebreak_rebase_v1/verification.v1.json",
+      "schema": "nobu16.kr.steam-jp-ev-strdata-manual-linebreak-current-rebase-verification.v1",
+      "sha256": "39F64645E39F092C7335A5971CF28C5829AA66651FC93D27E794F6AF32780B1F",
+      "coordinate_count": 4,
+      "hard_break_token_count": 6
+    },
+    "event_apply_transaction": {
+      "path": "workstreams/steam_jp_ev_strdata_manual_linebreak_rebase_v1/steam_transaction.v1.json",
+      "schema": "nobu16.pk-file-only-transaction.v1",
+      "sha256": "A7A7EBAD9EA3DDE070544FC66E5845EB0E2F53DF298BA0E26AD5DE235B3221AE"
+    },
+    "font_widths": {
+      "policy": "original_widths_retained",
+      "resource_count": 4,
+      "targets": {
+        "RES_JP/res_lang.bin": "2F8048EC34B8B86CED54C0DC9A0879522D2717953805A4E4CC5EFF05407A4A45",
+        "RES_JP_PK/res_lang_pk.bin": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+        "RES_JP_PK_PORT/res_lang_pk_port1.bin": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+        "RES_JP_PK_PORT/res_lang_pk_port2.bin": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205"
+      }
+    },
+    "release_scope": {
+      "res_jp_non_font_payloads_from_current_state": true,
+      "github_publication_confirmation": "pending"
+    }
+  },
+  "candidate": {
+    "file_count": 14,
+    "zip_name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.10.0.zip",
+    "zip_sha256": "B18A5B2B4AE40BBD80BB8613BE3E6CD81DF7EDD3B7E7434A9446AFD576E2C117",
+    "zip_size": 356864822
+  },
+  "candidate_qa": {
+    "translation_candidate_verification": "PASS",
+    "event_linebreak_rebase": "PASS",
+    "zip_rebuild": "PASS",
+    "steam_install_applied": true,
+    "screen_qa": "NOT_RERUN_AFTER_FONT_ROLLBACK_AND_EVENT_REBASE",
+    "release_published": false,
+    "file_only": true,
+    "memory_patch": false,
+    "dll_injection": false,
+    "hooking": false,
+    "executable_modified": false,
+    "registry_modified": false
+  }
+}

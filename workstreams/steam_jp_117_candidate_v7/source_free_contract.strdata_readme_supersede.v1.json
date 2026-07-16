@@ -1,0 +1,53 @@
+{
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "37B829E66D2A6EA466068101AF006217BBA1046DB56A6AC2787CC6675DADBFAF",
+    "packed_size": 957008,
+    "raw_sha256": "95ACF0819A316DDCA3E64234FF5D67E994DE2F1A67511461ED6E22317EEDA86A",
+    "raw_size": 953244,
+    "slot_count": 32311
+  },
+  "output_policy": {
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG/JP/strdata.bin"
+  },
+  "overlay": {
+    "entry_count": 1,
+    "relative_path": "workstreams/steam_jp_117_candidate_v7/public/strdata_ko_steam_jp_readme_residual_supersede_1.v1.json",
+    "sha256": "B051FDCF0554395DAA22A53929AE97BA1DB17981BDDF39D052792EB4B8371A3E",
+    "size": 1551
+  },
+  "p0_preimage": {
+    "packed_sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+    "packed_size": 956835,
+    "raw_sha256": "A3410438A13B2DB4C72B56B804BDF4ACABBEE8954203CA13D210AD848134BF66",
+    "raw_size": 953072
+  },
+  "proofs": {
+    "format_signature_source_hash_gated": true,
+    "nonselected_contents_preserved": true,
+    "p0_coordinate_superseded_not_added": true,
+    "parser_roundtrip_valid": true,
+    "strict_trailing_space_preserved": true
+  },
+  "resource": "MSG/JP/strdata.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-strdata-readme-residual-supersede-contract.v1",
+  "source_free": true,
+  "supersedes": {
+    "coordinate": {
+      "block_id": 2,
+      "slot_id": 1950
+    },
+    "new_ko_utf16le_sha256": "583B1C7EFBBEE000D03966E21F49D68E2779D3AC5CBCC183A3E23EE79779CD4C",
+    "old_p0_ko_utf16le_sha256": "3CE17856922F10F60D22E49062472B26A868FE53E4FA58ECBD31FCAA6950E55E",
+    "p0_translated_entry_count": 1400,
+    "source_jp_utf16le_sha256": "ABF97E2E3C84E2825964CC26FF516177690202C89085E98C9A8CDDF79CE28890",
+    "strict_trailing_whitespace_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4"
+  }
+}

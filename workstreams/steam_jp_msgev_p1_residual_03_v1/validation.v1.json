@@ -1,0 +1,4649 @@
+{
+  "active_v090_baseline": {
+    "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+    "packed_size": 1040799,
+    "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+    "raw_size": 1036708,
+    "string_count": 17916
+  },
+  "audit_bundle": {
+    "bundle_id": "p1-MSG_PK_JP_msgev-03",
+    "coordinate_count": 183,
+    "coordinate_sha256": "0245195E033DAA4F5E74D8A73CAE3624D16A751AC4D87B11CE7A1DD4F7FEE204"
+  },
+  "checks": {
+    "active_v090_baseline_pinned": true,
+    "audit_coordinate_scope_exact": true,
+    "committed_korean_provenance_pinned": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "equal_length_esc_pair_family_only": true,
+    "github_written": false,
+    "linebreak_or_bracket_ambiguity_held": true,
+    "literal_reuse_and_esc_rebase_partitioned": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "release_asset_written": false,
+    "runtime_custom_bracket_substitution_preserved": true,
+    "sc_container_used": false,
+    "source_token_profiles_preserved": true,
+    "steam_installation_written": false
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "counts": {
+    "applied_entry_count": 157,
+    "esc_rebased_count": 42,
+    "korean_donor_count": 180,
+    "literal_reuse_count": 115,
+    "manual_review_hold_count": 23,
+    "runtime_preservation_count": 3
+  },
+  "effective_change_coordinate_sha256": "BA87455E43BB9A8A8FA14980289C0ECC833685F6E1F19614DD14CA47CF4D1B38",
+  "effective_change_count": 157,
+  "expected_candidate": {
+    "packed_sha256": "B0FF07719936847F81CDA41CD4DABFF8F780E92E681E42117114EDEB4D16DD3F",
+    "packed_size": 1044341,
+    "raw_sha256": "A84A7935242A4C9128E4626AF55BB3C8960F1A9821621A22C7DD1B576937AD18",
+    "raw_size": 1040236,
+    "string_count": 17916
+  },
+  "manual_review_holds": [
+    {
+      "classification": "manual_review_hold",
+      "id": 8466,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 8466,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "D2E257F533C90FF96FC8061CC88B13C38196071EDF0EED70F44EFCB9D6FE7E83",
+        "input_semantic_payload_utf16le_sha256": "ED0062C1655E9EBA2B8F9DC188607991F980923AC165C6F9F95E0A806647151B",
+        "input_token_profile_sha256": "8A9A7CB7A83ED6CF3C218F14FF68257E5760104C168F7C77657F62106751F7E0",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "D2E257F533C90FF96FC8061CC88B13C38196071EDF0EED70F44EFCB9D6FE7E83"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "232EF72EEAE6FF62871A4E2983D24154108548D0818D5DDBD9A403702B850DDE",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [
+          "[bs754]"
+        ],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "FC14D46B3B06B77A9FFD3C648E884BF161C2CE14A68389C7DD1E014C83307622"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9796,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9796,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "950645F52381936D88E97A5A820DB250193999949BEB2FD7D0574C2552355D48",
+        "input_semantic_payload_utf16le_sha256": "C3A4DCD249BA56ED6EEC6028AD6CC37FA158111CDFAF9E796ECCD2DD96FAE602",
+        "input_token_profile_sha256": "B18981DBF8C59608FCE7602402D80459F31F5A7118DC184429E56F8DBC8720DC",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "950645F52381936D88E97A5A820DB250193999949BEB2FD7D0574C2552355D48"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "6A923CB9D08A7A3A1C47EDB94DE032553065D49BC5FF3C879E77B2F20BC70085",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "8DF1AF298426402A741BEE0735F5970BE660A851C9535C26DDA417939BB7D951"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9820,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9820,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "F74FA70AE63EFA021F122D266C8894B552B4ED15B18EE75BA671A31DACEB3E28",
+        "input_semantic_payload_utf16le_sha256": "69ADE2646C9B126C18006C9C5A8A551690485E157FBB39770E5318A96C3D1E0D",
+        "input_token_profile_sha256": "8FAF7F2BC72FADCE24919B2824C0759B5166072804C48C826DA5C2B0687C74ED",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "F74FA70AE63EFA021F122D266C8894B552B4ED15B18EE75BA671A31DACEB3E28"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "75374DC51EB2561E0B6D8E0F5B41A477C8A778F17B2494C1EA82BB1AC9DCFBC5",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [],
+        "esc_pair_family": [],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "515EC05A4EC3D8B342C9E4854BB2B9487510F2A9F472BD712C50CEBA980FB704"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9822,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9822,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "F2DCFAB62F4A9D1BE8421FC6B3BF0959011E028ED362329977394201C2DB622D",
+        "input_semantic_payload_utf16le_sha256": "8B5E814F6242606D278DF2FFE6E5DBA3268E1C565E23345BF5D042809B98CA41",
+        "input_token_profile_sha256": "8FAF7F2BC72FADCE24919B2824C0759B5166072804C48C826DA5C2B0687C74ED",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "F2DCFAB62F4A9D1BE8421FC6B3BF0959011E028ED362329977394201C2DB622D"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "B62A7C2A9CC8D39DEC54D8BC88655A914585A6B391C3EA8E2DB8B8D3019ED1B2",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [],
+        "esc_pair_family": [],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "515EC05A4EC3D8B342C9E4854BB2B9487510F2A9F472BD712C50CEBA980FB704"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9823,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9823,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "470F173B7961BBDABA34A43E65D78B8D56E981414F959911099C2B5B8B4F6F6A",
+        "input_semantic_payload_utf16le_sha256": "F9B4136986DBE88F7093EA1FCFE8466C5E81058F472525FF2CC539123CDB7198",
+        "input_token_profile_sha256": "56D37A9CEE1EF64086836E3FB2A0845184D58499FFD4D4203D1D3EE97365FAD6",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "470F173B7961BBDABA34A43E65D78B8D56E981414F959911099C2B5B8B4F6F6A"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "D77288F27E27120005F17E01132C29BA39C3A82FAFBC6FF036638605C0748D59",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "85F2E512DA70E622BB0460753301ABCDCE1483EFF8F95DE77085FA98C65DA7D6"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9825,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9825,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "A7C3054564CA224A1BF5ADC952318DC170048CD494B2E713C861CF9F4A39566F",
+        "input_semantic_payload_utf16le_sha256": "0D4DC984851AF4C734B9565B9108C991659A82A41EA420E98495635B30B6D3F3",
+        "input_token_profile_sha256": "3DF799CE444AD9F8D7FECFCBEEADAA2BAFC301378261F98E609649082BBF6F10",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "A7C3054564CA224A1BF5ADC952318DC170048CD494B2E713C861CF9F4A39566F"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "A2424A3FDF5ABC825D48635EB62FBB242D52B74B42930F9105AAEB4167121644",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "B2AC01F2DE3C21EFAC9406DE5625A8D231C14F7CCE7294DD682E53A8FDEC2F08"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9857,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9857,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "A7C3054564CA224A1BF5ADC952318DC170048CD494B2E713C861CF9F4A39566F",
+        "input_semantic_payload_utf16le_sha256": "0D4DC984851AF4C734B9565B9108C991659A82A41EA420E98495635B30B6D3F3",
+        "input_token_profile_sha256": "3DF799CE444AD9F8D7FECFCBEEADAA2BAFC301378261F98E609649082BBF6F10",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "A7C3054564CA224A1BF5ADC952318DC170048CD494B2E713C861CF9F4A39566F"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "A2424A3FDF5ABC825D48635EB62FBB242D52B74B42930F9105AAEB4167121644",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "B2AC01F2DE3C21EFAC9406DE5625A8D231C14F7CCE7294DD682E53A8FDEC2F08"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9890,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9890,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "input_ko_utf16le_sha256": "ADC69718C2F611DD0943A978AD13E6F58F99A74239FD0A835A8CC46192414F1D",
+        "input_semantic_payload_utf16le_sha256": "5462434D0B8B63E3DD8A60CD95FB746C1678C4FF537C5E307B8C52FBC280A95C",
+        "input_token_profile_sha256": "19B055775A21690FE96929EA6426414B95EFCC3462E347262230743C6075A138",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "ADC69718C2F611DD0943A978AD13E6F58F99A74239FD0A835A8CC46192414F1D"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "CBF87AB079EE48FA730E7E1ABE2F595295B377928C1708C55FF3106B9837145B",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "F85B943672361635608731E192E07C08BD55AB06330668EF513C994B6C25B852"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9948,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 9948,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "input_ko_utf16le_sha256": "5FB8F7469F72BAB1781787FB2C2A45A7D9A285031DF75CED3A59BD483536C1FF",
+        "input_semantic_payload_utf16le_sha256": "924E00B106D002F76B576F2025653D5938E4875AADF50AA583F10CFBA52B1BA6",
+        "input_token_profile_sha256": "8FAF7F2BC72FADCE24919B2824C0759B5166072804C48C826DA5C2B0687C74ED",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "5FB8F7469F72BAB1781787FB2C2A45A7D9A285031DF75CED3A59BD483536C1FF"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "DA528D9F3CEC4D29350730F7188279A9F6FAC652ADE98EE2CC1E9DF93591ACA8",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [],
+        "esc_pair_family": [],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "515EC05A4EC3D8B342C9E4854BB2B9487510F2A9F472BD712C50CEBA980FB704"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 9980,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 9980,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "input_ko_utf16le_sha256": "FF4E0F8F72B43140368A99840E96CFF1260006FC3ABF429813A15D09736AA9AB",
+        "input_semantic_payload_utf16le_sha256": "876D7E40FD5A073382D95A6E8E320C3C05F912105EF4DD4B72D732DAE51E7627",
+        "input_token_profile_sha256": "38A69AE80F4808EA24F29CEC50CEB68597F26E4F46F32AF61375E5A64163132A",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "FF4E0F8F72B43140368A99840E96CFF1260006FC3ABF429813A15D09736AA9AB"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "460585E8C8E6F0759B7C0AC49581BCF05D083B6C34BB808DF22EABD1E2818EBA",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "A606ADC6D78A7540B78838F1FDC160BD42D6AF4C462133EA67F5169E2FF8D018"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10008,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10008,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "input_ko_utf16le_sha256": "302051C2DFDCA2F35196F8A932134CFED5BBA7C63E7BF6F219CDECA08246133A",
+        "input_semantic_payload_utf16le_sha256": "FC06755EC4B584DE4AA451CE1CC3989ED31795A5E43DE72784CEB509BC5780DB",
+        "input_token_profile_sha256": "B18981DBF8C59608FCE7602402D80459F31F5A7118DC184429E56F8DBC8720DC",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "302051C2DFDCA2F35196F8A932134CFED5BBA7C63E7BF6F219CDECA08246133A"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "139F60AF91C1B722D70165271AC29B9FAE4578C6CDF54D1CDB3FD2F823749074",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "8DF1AF298426402A741BEE0735F5970BE660A851C9535C26DDA417939BB7D951"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10101,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10101,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "input_ko_utf16le_sha256": "4CD84D1D7A6E42C6C0AFDB8EE6A7A1E4EDC907F0255A3D3C8F576C18BF8AEEC5",
+        "input_semantic_payload_utf16le_sha256": "27E7568A0A88E997E2AC9CDEF2A0882D1C51609BAF4114446AAFAC60B2CD26B0",
+        "input_token_profile_sha256": "B18981DBF8C59608FCE7602402D80459F31F5A7118DC184429E56F8DBC8720DC",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "4CD84D1D7A6E42C6C0AFDB8EE6A7A1E4EDC907F0255A3D3C8F576C18BF8AEEC5"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "1E63474833990D8F8E2156F28C89AAA56F1EA5AE64073FCB3DB15AF9574321CE",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "8DF1AF298426402A741BEE0735F5970BE660A851C9535C26DDA417939BB7D951"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10114,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10114,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "input_ko_utf16le_sha256": "2B9F060EB6EC3CB2F6297D96DB4795F5C072BCBFC17563AC7DE1A973A26A50BE",
+        "input_semantic_payload_utf16le_sha256": "2B3B981CD32766F43B8AECA9D4BA07753D7133379F350C7B84CFCD6437A98F98",
+        "input_token_profile_sha256": "56D37A9CEE1EF64086836E3FB2A0845184D58499FFD4D4203D1D3EE97365FAD6",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "2B9F060EB6EC3CB2F6297D96DB4795F5C072BCBFC17563AC7DE1A973A26A50BE"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "43F2C8ACDF670DFCE19737E34F5EF440F2C3128B8F364F3FC09D21BC4E33613C",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "85F2E512DA70E622BB0460753301ABCDCE1483EFF8F95DE77085FA98C65DA7D6"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10181,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10181,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "input_ko_utf16le_sha256": "5ECE0590703028EA4D40ED6F83E8979BB299ABFBD53F1628553E59209278B507",
+        "input_semantic_payload_utf16le_sha256": "0B453B4EE6DA2DAC841DC44A7B6ACA94507E6193DA17BB2E0E31F845A7A1F22C",
+        "input_token_profile_sha256": "249C48891CF47B2F8C865F1BC47B597800E740435A9EE128C06C7BC0F7248683",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "5ECE0590703028EA4D40ED6F83E8979BB299ABFBD53F1628553E59209278B507"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "C12091DE3577004F8877188289516A2694753C177F35694C6DD327B23593E216",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "DA2A442E3EDB538B5AA17D13BB5BA7264D231B6CD8830A39CDBB96B3E79E601F"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10186,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10186,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "input_ko_utf16le_sha256": "29B554A88A60E0DBECB242ED0F6D08199264EE5A3D86B47ABB9DF733BDACDAFF",
+        "input_semantic_payload_utf16le_sha256": "7542F6996775D5CD9DE92FB1815D5E98CCA43DF7C8DEFF43FCDC16586216ACD3",
+        "input_token_profile_sha256": "F2F3CACD3363D564106B03C330E7B307FA87A799E9391B598C07C4D8E3E358DA",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "29B554A88A60E0DBECB242ED0F6D08199264EE5A3D86B47ABB9DF733BDACDAFF"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "CEC5A525DF6CF571D8C65B4577E8687187743AAF9C8F1CEA8BE9A0B9F24335AA",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "12074BFD83AACF8275E529A3DE42BAAD9F8EF8234318D2113871198832A5EB44"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10421,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10421,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "input_ko_utf16le_sha256": "32600238F53BDCDED5BA6A5644AB9EB2CB89B9BE4F860D17F288B6E30A8EA917",
+        "input_semantic_payload_utf16le_sha256": "93FF503934FF5B222ED8E294244DEF4A553F60826856E73086628C0781E11621",
+        "input_token_profile_sha256": "6B637E4972E857014EB2C42889334ED36D56204C59CB6964FF0C3275676C235D",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "32600238F53BDCDED5BA6A5644AB9EB2CB89B9BE4F860D17F288B6E30A8EA917"
+      },
+      "reason_codes": [
+        "esc_lexeme_count_requires_manual_entity_review"
+      ],
+      "source_jp_utf16le_sha256": "FA9F0433053119F02057E27C03B8DC4785A0DC25BE18026A2171FCC34501ACBF",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "CD4D4A4B89A657883A1C48C4A1DA662DDDDAAF99353C0DB780C7B939170B193F"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10475,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10475,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "input_ko_utf16le_sha256": "3B63D273654ACEEBFA90BFFC20CDC84D4C75E072AF32799A7983FFC88F03D7E2",
+        "input_semantic_payload_utf16le_sha256": "36DEF908C89B1C0341A5D5360B398645648E829DE9A9D4DF979781EE85EFC439",
+        "input_token_profile_sha256": "AB80771CAA4244B54244284EFEBAE309E25F509A4C631EE192C542B230241886",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "3B63D273654ACEEBFA90BFFC20CDC84D4C75E072AF32799A7983FFC88F03D7E2"
+      },
+      "reason_codes": [
+        "esc_lexeme_count_requires_manual_entity_review"
+      ],
+      "source_jp_utf16le_sha256": "455E72F44D3AB3F06025D7134F3F55E172379BBE78DF97BA5BD6C6ADCFE14E8D",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "5DCE1531A1FAF549F0FB38B046525589D7D9D6246463BDEBE984D208258EF2A0"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10574,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10574,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "input_ko_utf16le_sha256": "164C5AEA7658553054836EDAD58614FA97DCA7AD74F78328007DA3E8EA521077",
+        "input_semantic_payload_utf16le_sha256": "E04F9C3D40C61F851BF0D29EE749A10B2F4672505F26DCE4B218DA3541364ECF",
+        "input_token_profile_sha256": "8FAF7F2BC72FADCE24919B2824C0759B5166072804C48C826DA5C2B0687C74ED",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "164C5AEA7658553054836EDAD58614FA97DCA7AD74F78328007DA3E8EA521077"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "D425904706BD8A2053B18D0A983A41AB94D9FEC9315378AF113DF652C2493605",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [],
+        "esc_pair_family": [],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "515EC05A4EC3D8B342C9E4854BB2B9487510F2A9F472BD712C50CEBA980FB704"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10689,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10689,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "input_ko_utf16le_sha256": "D49A213EADDA630B8473F0D8A5FE433746D4D889FD961C136CC2CD96988F9A51",
+        "input_semantic_payload_utf16le_sha256": "FD8EAB46365C5461EF54BACC6814B8FFB5D8526A1AE7E74467ED94262C7A6033",
+        "input_token_profile_sha256": "8FAF7F2BC72FADCE24919B2824C0759B5166072804C48C826DA5C2B0687C74ED",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "D49A213EADDA630B8473F0D8A5FE433746D4D889FD961C136CC2CD96988F9A51"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "782AD5E3FE7321988F9FB01B6BDE0F2FCF7523FCAFC93DA6BB89598C9F1E8C1E",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [],
+        "esc_pair_family": [],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "515EC05A4EC3D8B342C9E4854BB2B9487510F2A9F472BD712C50CEBA980FB704"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10810,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10810,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "input_ko_utf16le_sha256": "373871FBA068560324B00A0037BEAF0322E933D70CCCA724B798D6C05F238C23",
+        "input_semantic_payload_utf16le_sha256": "373871FBA068560324B00A0037BEAF0322E933D70CCCA724B798D6C05F238C23",
+        "input_token_profile_sha256": "4C1E6005467AEF34D8FDEEB03C2918B1454C66784621C61B74ECDEE26C3C4737",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "373871FBA068560324B00A0037BEAF0322E933D70CCCA724B798D6C05F238C23"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "DEFFCD0D62E76A5052032791EBA8373699DAD43A090090940AA688480198E173",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [],
+        "esc_pair_family": [],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "8FAF7F2BC72FADCE24919B2824C0759B5166072804C48C826DA5C2B0687C74ED"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10820,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10820,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "input_ko_utf16le_sha256": "1D1103A6800E0867C4604B2E7AE343512261AE979631C240BCCFBF486F77B1FB",
+        "input_semantic_payload_utf16le_sha256": "D3ACD51BCCC97DFD374EAC7238E57B8E5CF1B41863572BC0ED387BDC93557DAA",
+        "input_token_profile_sha256": "00A19DFFB9B213ABB71B2C4EBB31D493C24D2AAF0D683904B79321DBF5506F67",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "1D1103A6800E0867C4604B2E7AE343512261AE979631C240BCCFBF486F77B1FB"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "70806F743430220CE1884D528DB0EB0ECEBB165A39E93ED86721E182B7C54002",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "12F3297C2C2C98CFFEF01615413397F9011DC41357136BC3A3A2199E25CF50EE"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10876,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10876,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "input_ko_utf16le_sha256": "45298A39A33C359CBAF0F9A9E3D9CA3EA9FF7060BDD9CA1E58ECB4B4D896120F",
+        "input_semantic_payload_utf16le_sha256": "EB3237D69E39B2CF8292C6FAA91634F31B741EBD41D85584752B327A3CFB7FB6",
+        "input_token_profile_sha256": "CE8857BDC0AF022540E39CE5E0D5D54AAA8B0C82879A84574D735BDD3268BC33",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "45298A39A33C359CBAF0F9A9E3D9CA3EA9FF7060BDD9CA1E58ECB4B4D896120F"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "C4DA14AE56EB9D2AF002BBDD319FF6F579C0E8E880DD74C6725E62E111214E88",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "31B15496B83F3B3F16A55478073E326C49A81C591F96B8FAAA2F555B1A2A88B9"
+    },
+    {
+      "classification": "manual_review_hold",
+      "id": 10887,
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10887,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "input_ko_utf16le_sha256": "C12AB37573082D4692951F8D9035AB0522AAABF7B7C840EB0643354CE9F449D3",
+        "input_semantic_payload_utf16le_sha256": "559CAF85C53CC7341E1C0C1D1D0B26E7F94E46A3A1DE031A96FF655267DB8E6A",
+        "input_token_profile_sha256": "56D37A9CEE1EF64086836E3FB2A0845184D58499FFD4D4203D1D3EE97365FAD6",
+        "kind": "committed_native_korean_semantic_payload",
+        "ko_utf16le_sha256": "C12AB37573082D4692951F8D9035AB0522AAABF7B7C840EB0643354CE9F449D3"
+      },
+      "reason_codes": [
+        "linebreak_contract_requires_manual_placement_review"
+      ],
+      "source_jp_utf16le_sha256": "1FBE5B2B95BFA9224E9A63B319AE4FBDDC348E28878509D8A2021089621D7D56",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "85F2E512DA70E622BB0460753301ABCDCE1483EFF8F95DE77085FA98C65DA7D6"
+    },
+    {
+      "classification": "runtime_custom_bracket_substitution_preserved",
+      "id": 10837,
+      "reason_codes": [
+        "runtime_custom_bracket_substitution",
+        "preserve_active_utf16le_payload"
+      ],
+      "source_jp_utf16le_sha256": "375C69E2654F0F4C131C1C7077D245A60D37CE716F3576929F6F43863A7BDA4D",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [
+          "[bm1251]"
+        ],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "EF3410819AB9E6365756EB0EAC1D7663E1F775328049F8C53513F333DF4AA77E"
+    },
+    {
+      "classification": "runtime_custom_bracket_substitution_preserved",
+      "id": 10840,
+      "reason_codes": [
+        "runtime_custom_bracket_substitution",
+        "preserve_active_utf16le_payload"
+      ],
+      "source_jp_utf16le_sha256": "F8CB9D48AA46C1689FFF61D08B1E86A2D1171E661D5816569A37FF9F9E4A4A84",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [
+          "[bm1251]"
+        ],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "2272B41BDC04318310DEE5587E4009A0A5D9F0A2E203FA40C62A0E37B4ECEB35"
+    },
+    {
+      "classification": "runtime_custom_bracket_substitution_preserved",
+      "id": 10905,
+      "reason_codes": [
+        "runtime_custom_bracket_substitution",
+        "preserve_active_utf16le_payload"
+      ],
+      "source_jp_utf16le_sha256": "25197A58676345AD961A7F1469524DF19FC53C302278B390C1B14970494AE4CE",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [
+          "[bs754]"
+        ],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "73B3A0A5FB1972622FABEBD405EEB1584FBC99ED8C0FF8633CFFCBFD2F29554B"
+    }
+  ],
+  "resource": "MSG_PK/JP/msgev.bin",
+  "schema": "nobu16.kr.steam-jp-msgev-p1-residual-03-safe-validation.v1",
+  "source_free": true,
+  "special_exact_donor_evidence": [
+    {
+      "id": 9826,
+      "ko_utf16le_sha256": "3B59124465A8ED9C60CBB906689F43E817180A05D1A795DE939C298E5F74876B",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9858,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "kind": "native_exact_source_hash_format_resolved_payload"
+      },
+      "review_basis": "native_9858_exact_source_hash_with_target_ca_cb_escape_contract",
+      "source_jp_utf16le_sha256": "6AF5388F438D6A4F96367DE2F4448E551A36DBB5E2317E13531CF29706065234",
+      "source_token_profile_sha256": "D697F6849822C3D9A596556889E5C5822226F74FF59688F446BA2857B294D9C3"
+    },
+    {
+      "id": 10888,
+      "ko_utf16le_sha256": "B9F69492D642C8F1295CCD65A7130F20E24658ADFBD72E1EA3205B6D9594917A",
+      "provenance": {
+        "catalog": "workstreams/base_ev_strdata_jp_switch_v13_transfer_v1/public/ev_strdata_ko_base_jp_switch_v13_transfer_13045.v1.json",
+        "catalog_entry_id": 7827,
+        "evidence": null,
+        "kind": "committed_direct_jp_exact_source_hash_reuse"
+      },
+      "review_basis": "direct_7827_exact_target_source_hash_and_token_profile",
+      "source_jp_utf16le_sha256": "358F857260AAFBA20E92CDE23AD34A0CF85B8975FDCA8ED0286D2E5A75C39D7F",
+      "source_token_profile_sha256": "D61056EDC55D99F527D91F91C2E3C93695DEF6D35DE0F32F69E745504D16F849"
+    },
+    {
+      "id": 10889,
+      "ko_utf16le_sha256": "11267E5ED7BC828CC7F31FEE7B8EB4E3B7E5C427B3889A7AE320A067113D1F6D",
+      "provenance": {
+        "catalog": "workstreams/steam_jp_msgev_p1_residual_02_v1/public/msgev_ko_steam_jp_p1_residual_02_185.v1.json",
+        "catalog_entry_id": 7828,
+        "evidence": null,
+        "kind": "committed_direct_jp_exact_source_hash_reuse"
+      },
+      "review_basis": "p1_02_direct_7828_exact_target_source_hash_and_token_profile",
+      "source_jp_utf16le_sha256": "33F78FE35C5EF894F7DAFD88A7EA642F81BA608A7DEC32DA919229DA2D20C944",
+      "source_token_profile_sha256": "A2E9BA7E61E4BF53D7E453ED5BE620A7B66B822F826E06ADE8E2E06F57B92747"
+    },
+    {
+      "id": 10890,
+      "ko_utf16le_sha256": "4D89C396EEE20B144960CD6F93D9FF52AAA77EEDF6B0BED2AF7271C3C495E3F0",
+      "provenance": {
+        "catalog": "workstreams/steam_jp_msgev_p1_residual_02_v1/public/msgev_ko_steam_jp_p1_residual_02_185.v1.json",
+        "catalog_entry_id": 7829,
+        "evidence": null,
+        "kind": "committed_direct_jp_exact_source_hash_reuse"
+      },
+      "review_basis": "p1_02_direct_7829_exact_target_source_hash_and_token_profile",
+      "source_jp_utf16le_sha256": "1A88182E703729D8E84252D95F7BAB8B2699FA0C336EEC0057AEE86A9E1F70A3",
+      "source_token_profile_sha256": "7D42ECFA02320EE76DE6EC8C3D71185B3F8FB6000FC90AD19BDC74C58BBA9D1D"
+    },
+    {
+      "id": 15420,
+      "ko_utf16le_sha256": "CEB83C5EA78C0B00C37AC48FAAB43E7F5DA5447F460A97C4DD0ADC7737E139D9",
+      "provenance": {
+        "catalog": "workstreams/base_ev_strdata_jp_switch_v13_transfer_v1/public/ev_strdata_ko_base_jp_switch_v13_transfer_13045.v1.json",
+        "catalog_entry_id": 15190,
+        "evidence": null,
+        "kind": "committed_direct_jp_exact_source_hash_reuse"
+      },
+      "review_basis": "ordered_equal_hash_block_suffix_4241_exact_direct_donor",
+      "source_jp_utf16le_sha256": "C7229AE8BD2B5567D9DF834275405B5CFAFD8DEBC479E132EC83087CD03942C1",
+      "source_token_profile_sha256": "4C1E6005467AEF34D8FDEEB03C2918B1454C66784621C61B74ECDEE26C3C4737"
+    },
+    {
+      "id": 16219,
+      "ko_utf16le_sha256": "9BD97216C169B6770302FB3C70D0CC43A8081BAD7C8C743B9A1CD21427E10111",
+      "provenance": {
+        "catalog": "workstreams/base_ev_strdata_jp_switch_v13_transfer_v1/public/ev_strdata_ko_base_jp_switch_v13_transfer_13045.v1.json",
+        "catalog_entry_id": 15989,
+        "evidence": null,
+        "kind": "committed_direct_jp_exact_source_hash_reuse"
+      },
+      "review_basis": "ordered_equal_hash_block_suffix_4241_exact_direct_donor",
+      "source_jp_utf16le_sha256": "A334338303986976B348D79E35B506BE4A179B6369DDF9DE093A41F423AAD6B0",
+      "source_token_profile_sha256": "4C1E6005467AEF34D8FDEEB03C2918B1454C66784621C61B74ECDEE26C3C4737"
+    }
+  ],
+  "transformed_entries": [
+    {
+      "id": 9885,
+      "input_ko_utf16le_sha256": "8397E606DDF946AB2766B8A83015168F180FBBDBBDDC1EFFA2D4B854239A96C1",
+      "input_semantic_payload_utf16le_sha256": "1E1B80F5EB7A4CC20FC0B3B445A7F34F67F078D2935C64AA3C459A34F15CE730",
+      "input_token_profile_sha256": "8ADC5859B06C161DF67479CDD95FDA839FA3B2F860BB3754CC376D1213B4B932",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "82559650D7F7A3956EB6BCEFA72ED3428D0C6F461D16F4339D4E4D9E607F3B84",
+      "output_semantic_payload_utf16le_sha256": "1E1B80F5EB7A4CC20FC0B3B445A7F34F67F078D2935C64AA3C459A34F15CE730",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "5513D6F774A00C80DAA80739830B0A8811B4EA02035D32572BECC95DBDDA0644",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9885,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "97170896DD039F9600D7059481B22CD3FBB5A7DABF61DD2A5C5F33E588C30ABF",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "5513D6F774A00C80DAA80739830B0A8811B4EA02035D32572BECC95DBDDA0644"
+    },
+    {
+      "id": 9886,
+      "input_ko_utf16le_sha256": "E1996C16D4E291CF14ABA6D407C30FCB1B9227DB1A5C869D6EB56CDC6FDA52B8",
+      "input_semantic_payload_utf16le_sha256": "2AAA0377A7C8CCD15ADAB5586469A338216037707EEFC5E97BFF65ADB4A495B8",
+      "input_token_profile_sha256": "2E983E75E3BC8693FAC35E2172A6E874D60A49063B5198A5F6432E91D8FE7C7B",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "217BA8E164A7FC54F921F8D282228BD700BD11164CCD684132DBFFD3C83EF9E9",
+      "output_semantic_payload_utf16le_sha256": "2AAA0377A7C8CCD15ADAB5586469A338216037707EEFC5E97BFF65ADB4A495B8",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "F9818DCC5AF98BA7CBE608D5F908B75AFB3642E4BD83F6EF2C6F740DBD19738E",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9886,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "CB3720F0E5BD3A8DDEEAE235A2B23EBA70ECDD54479745E12B8817FB6605A67D",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "F9818DCC5AF98BA7CBE608D5F908B75AFB3642E4BD83F6EF2C6F740DBD19738E"
+    },
+    {
+      "id": 9887,
+      "input_ko_utf16le_sha256": "181547D8DD21DAD822E7060D750E58B6D24C6740C9AF67A2702CE3C08307E41B",
+      "input_semantic_payload_utf16le_sha256": "4D465674B7A54F271DB8CAE54847615CEC60E004F1CDB35B14286AF6248BEABD",
+      "input_token_profile_sha256": "2F87BA2E9C405B7112D875BA18779D06CEDF136285F433CC45C114BD6E8F6650",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "E6CB184BDEAB5CB53DB911AFE8523018797688DB1342EAE6D3AA5043FFF37C50",
+      "output_semantic_payload_utf16le_sha256": "4D465674B7A54F271DB8CAE54847615CEC60E004F1CDB35B14286AF6248BEABD",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "D0BD3DFFFDFC246B4F5D2CCA99B20B745C2747FC2572C63AB3A5152222187C09",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9887,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "49DF54AA59304CB27459D2A041958C1FBFCC1816EDBC9F21FBC13F1A9DB0BD25",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "D0BD3DFFFDFC246B4F5D2CCA99B20B745C2747FC2572C63AB3A5152222187C09"
+    },
+    {
+      "id": 9888,
+      "input_ko_utf16le_sha256": "B49E72E08B97EBA76C478E96C5A12BB7304153309D04E2E2201D38F2C7998132",
+      "input_semantic_payload_utf16le_sha256": "E24B9FDF83E771F886FB0FB4F5A18C42E6D5BFEAD955A6337DC3BD6EE52879A3",
+      "input_token_profile_sha256": "A2E9BA7E61E4BF53D7E453ED5BE620A7B66B822F826E06ADE8E2E06F57B92747",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "6202685F7A022F407E4AFB7459865E1350876C8197AFAEC1F656A74EF3ADD281",
+      "output_semantic_payload_utf16le_sha256": "E24B9FDF83E771F886FB0FB4F5A18C42E6D5BFEAD955A6337DC3BD6EE52879A3",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "F85B943672361635608731E192E07C08BD55AB06330668EF513C994B6C25B852",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9888,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "D4E1C1707797A73DE26D7A3FA12006E663705D34BDF8F4750C3D1A85720845E0",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "F85B943672361635608731E192E07C08BD55AB06330668EF513C994B6C25B852"
+    },
+    {
+      "id": 9916,
+      "input_ko_utf16le_sha256": "DA3528DE5726B341FFB263E34245BC5FFBA7DD1FD9F15AEC53C54E69B8058324",
+      "input_semantic_payload_utf16le_sha256": "D86F59D3EFACB2B515F634B0D3B3B8CE26EFB0816C94E7B8735B7E14FF51E74B",
+      "input_token_profile_sha256": "AFC8CC9C6142B580E71E55FBDA4B5174035007791413298FEFEF6B351C3869A2",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "9ACCB3954807265C87AD23860C32F9BCC531574BF36B1DA0354B649C60D4C333",
+      "output_semantic_payload_utf16le_sha256": "D86F59D3EFACB2B515F634B0D3B3B8CE26EFB0816C94E7B8735B7E14FF51E74B",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "84B2998BAD1FF9B074A7051825A773EF817D8DE6C5E96FA84DD6EB25FEF5367F",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch02/public/msgev_ko_pk_native_batch02_150.v1.json",
+        "catalog_entry_id": 9916,
+        "evidence": "workstreams/msgev_pk_native_batch02/evidence/msgev_pk_native_batch02_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "8D58D521C42888F2C51550F8FA8C7995C5681911E0AFC6059EFE99C387EEA7B3",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "84B2998BAD1FF9B074A7051825A773EF817D8DE6C5E96FA84DD6EB25FEF5367F"
+    },
+    {
+      "id": 9975,
+      "input_ko_utf16le_sha256": "1D73B5369701437E91D3F468AEDE219160C1ED5B1DF1F1894239E54E20489894",
+      "input_semantic_payload_utf16le_sha256": "F48C650E9BB4F97C8A318E039BB1DD9EF4FA340E7749554EDF0EA7D01460FBDF",
+      "input_token_profile_sha256": "AFC8CC9C6142B580E71E55FBDA4B5174035007791413298FEFEF6B351C3869A2",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "32B3683A4B85C4D335ACABDCEF3F5543D7AB12FEBEE29323FBB5CEDE85EEEF83",
+      "output_semantic_payload_utf16le_sha256": "F48C650E9BB4F97C8A318E039BB1DD9EF4FA340E7749554EDF0EA7D01460FBDF",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "84B2998BAD1FF9B074A7051825A773EF817D8DE6C5E96FA84DD6EB25FEF5367F",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 9975,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "9FEB402DCEC744244713D57EBE7127891A53B0C2B65E10CD1CAF8B39D80CF7A8",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "84B2998BAD1FF9B074A7051825A773EF817D8DE6C5E96FA84DD6EB25FEF5367F"
+    },
+    {
+      "id": 9998,
+      "input_ko_utf16le_sha256": "87D3006CFABB7D52DA10C53B742B4BABE2005BD64D197B836D6D58084D50B44A",
+      "input_semantic_payload_utf16le_sha256": "01D2297D83371529DB013474DF222C32B6060BC3AFEFD8476E5A947550EB8208",
+      "input_token_profile_sha256": "901373A512FC998CFBDD80B1DB6E5A304D0C2DFCC7CD946BCBD8DE887B54143B",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "6D3EDE99E2162ADAEEC2C8F9CEE553EABEDD5AD71F7AC71A719CED3BD2E3710E",
+      "output_semantic_payload_utf16le_sha256": "01D2297D83371529DB013474DF222C32B6060BC3AFEFD8476E5A947550EB8208",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "FD4F314486CA6BCE22E62AA9C08C410769320397EA4C8CCDB1CDBCA4711441B4",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 9998,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "7CC10373D0897C119EBB608064DA3028208D2B7F1CFCF045575B57DF3A2BD890",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "FD4F314486CA6BCE22E62AA9C08C410769320397EA4C8CCDB1CDBCA4711441B4"
+    },
+    {
+      "id": 10032,
+      "input_ko_utf16le_sha256": "A63D00A39BBED89D674923817C2758A8CCF901B860DAF5C7EAF52406E727784F",
+      "input_semantic_payload_utf16le_sha256": "49DDBD8471BDE515B8D40DDB50709B3C020D619D1F712EB97E64B2E93453D741",
+      "input_token_profile_sha256": "6FD0A8E561BE4F5B3DAEC9D84B5DD361172DE269E340BBAC1D6C6A4E4D5D1EB7",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "1874E141A00531B002F0A73DEB193331707922C4376DDBE143ACA167B72F8F02",
+      "output_semantic_payload_utf16le_sha256": "49DDBD8471BDE515B8D40DDB50709B3C020D619D1F712EB97E64B2E93453D741",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "1D3BFD1D840A3F1729931A2D94900D90B1C1C6D85DE4E3EC5E935AAFAC8FBC7F",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10032,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "6319532E1FDAB05672F77D35C52BE99E0B901CA6B24F7B7F440BE6BA110F23E1",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "1D3BFD1D840A3F1729931A2D94900D90B1C1C6D85DE4E3EC5E935AAFAC8FBC7F"
+    },
+    {
+      "id": 10151,
+      "input_ko_utf16le_sha256": "1CA0460FE8BB56CC192D80042074886760EA662768BA9D98F4206AAFC1FCA3CD",
+      "input_semantic_payload_utf16le_sha256": "89CD3EE50842FD285887EE249848846FFDE37241773FE3EE2A3837235531B9C6",
+      "input_token_profile_sha256": "BEDA53624DA4F46BE480ECECF47CE6672294E510D4EF37BCE3AAB1804F5B9CA9",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "05F4D091A8BB8A4009DDE47CB257D20841B7AE1EB292170E2D3B953EA87B7A75",
+      "output_semantic_payload_utf16le_sha256": "89CD3EE50842FD285887EE249848846FFDE37241773FE3EE2A3837235531B9C6",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "533FC987765BF2E2138F7192BD04D6360167C4CA3C2C09248CF299C3ADD42125",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10151,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "2F17D68A68DF913EC0E0D4334242FF83A3990253D3458F145E3CE948C9245AD9",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "533FC987765BF2E2138F7192BD04D6360167C4CA3C2C09248CF299C3ADD42125"
+    },
+    {
+      "id": 10272,
+      "input_ko_utf16le_sha256": "CA51CECD3ACC058A42EFD8BA9F9351AAB12FEA761B07746FF29C2693E7AC923D",
+      "input_semantic_payload_utf16le_sha256": "5B4D16342889E91FEE4E3D3BB93B1FB32C23A60874687FD752DCF2730D142D32",
+      "input_token_profile_sha256": "5B79D5C96AC2C5E75C7610F76D979191E8980CBE795314DD87E46C189FF2B59F",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "379F9D5AD8B9DE6583A37E0413F263E9C2133AFDFC6C33AF1554BC8DAB42D29F",
+      "output_semantic_payload_utf16le_sha256": "5B4D16342889E91FEE4E3D3BB93B1FB32C23A60874687FD752DCF2730D142D32",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "1CAF95FA35C4F1D25297FC4EA252B73127D0DC641106F3C00BD87018BD018FD2",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10272,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "B5CA4935FB5D047E6C1893638E407CFCBF601DFEE22C65969AC95ED61A9CBBF3",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "1CAF95FA35C4F1D25297FC4EA252B73127D0DC641106F3C00BD87018BD018FD2"
+    },
+    {
+      "id": 10274,
+      "input_ko_utf16le_sha256": "940825EF9564BA401150001FB46F5B14359554D27DCE01085FF90BC1A6B7A68B",
+      "input_semantic_payload_utf16le_sha256": "7B2EFDD35D03FD81C2E158A7A4DAC112ADB16F8DC4AF92B489C589BF12B5D857",
+      "input_token_profile_sha256": "6B1D0537FBC9850AEADC463DC5692D2D0BBB821F17EF2E600D61B0C7AFE79E25",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "73AA26DCAC503965FC7A379FD8AF363ADA99DE649E1CF58E8A5F127E1300AC43",
+      "output_semantic_payload_utf16le_sha256": "7B2EFDD35D03FD81C2E158A7A4DAC112ADB16F8DC4AF92B489C589BF12B5D857",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "77FEAB2F0A60ABEEAF013E1E8E043411821DCFACB9FD473DD44F4CA8F18E690E",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10274,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "EAA781B12711726A808F0DD6F9001B433DA51F378245DE73347C6CA6F367C6C2",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "77FEAB2F0A60ABEEAF013E1E8E043411821DCFACB9FD473DD44F4CA8F18E690E"
+    },
+    {
+      "id": 10276,
+      "input_ko_utf16le_sha256": "DF4F9B94D94BAB79D2BCF86746805C779D5ABA11D5988428E9F1FC0D8844DB87",
+      "input_semantic_payload_utf16le_sha256": "32BD5E1FACFECA3151073A3E6CB71B05240E502A35EFACEE7C325F657C9D2A81",
+      "input_token_profile_sha256": "ADBF4AF17B36D596496B0A49B91376B529BFADF637B5DD54739ABABCDB2EB00C",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "FB42A79B593750E1BF5FA40C32401F320546DC37D20C7DB12966C6A93FD74823",
+      "output_semantic_payload_utf16le_sha256": "32BD5E1FACFECA3151073A3E6CB71B05240E502A35EFACEE7C325F657C9D2A81",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "8A898CF616EC48ED327E072F9FED126EF0F9BBC955D6A09F9B3D41A10313C61D",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10276,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "023F8A846B500F2E9D149CF181A9A46C586B5A7FE7E01376A2C9DE67A76F7088",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "8A898CF616EC48ED327E072F9FED126EF0F9BBC955D6A09F9B3D41A10313C61D"
+    },
+    {
+      "id": 10288,
+      "input_ko_utf16le_sha256": "774D6B484917E4B451E2FB183A2128EE172343BFB6FDAB637E4F78777EE6D490",
+      "input_semantic_payload_utf16le_sha256": "5BED93484F0ED9E7C1DEF62A7D562E62F46CEA2BCFF4D02C3B955C7C5899BD14",
+      "input_token_profile_sha256": "D697F6849822C3D9A596556889E5C5822226F74FF59688F446BA2857B294D9C3",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "53B6FBF87AE542C90128931070DBFA79449E8ED6EEBB350BB8FF725D652A644E",
+      "output_semantic_payload_utf16le_sha256": "5BED93484F0ED9E7C1DEF62A7D562E62F46CEA2BCFF4D02C3B955C7C5899BD14",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "305CE6D325A86476407B1B405B6F58AD545601EF495327EF31E8867149E93D08",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch03/public/msgev_ko_pk_native_batch03_350.v1.json",
+        "catalog_entry_id": 10288,
+        "evidence": "workstreams/msgev_pk_native_batch03/evidence/msgev_pk_native_batch03_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "930F400D339029E38A215EEF1BC8817AFEF8FFA3DB2F93EA66FEFF9F21EA9CBF",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "305CE6D325A86476407B1B405B6F58AD545601EF495327EF31E8867149E93D08"
+    },
+    {
+      "id": 10299,
+      "input_ko_utf16le_sha256": "B24A7B9378F6D498FC3C6C21B569E5D992CFBA6349B6118BB1BDC3F5D33A806F",
+      "input_semantic_payload_utf16le_sha256": "E2DA040EB48E5D4682823186B1B47FEA8BA64A8CB36BBAEE7F6004497E30BCAC",
+      "input_token_profile_sha256": "8ADC5859B06C161DF67479CDD95FDA839FA3B2F860BB3754CC376D1213B4B932",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "736A8CF6D2613D591CCB27239689FD81CF3C6F032627DC0F1123D3392AAA23BC",
+      "output_semantic_payload_utf16le_sha256": "E2DA040EB48E5D4682823186B1B47FEA8BA64A8CB36BBAEE7F6004497E30BCAC",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "5F4935405EBAF977C5134EA0FB2B1E00897956172C8E2B37A368823083F46185",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10299,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "F6FAC6ECADF6C926F1684FB412E0DDE2990E29CE13DA06805F3720EB6639EC99",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "5F4935405EBAF977C5134EA0FB2B1E00897956172C8E2B37A368823083F46185"
+    },
+    {
+      "id": 10325,
+      "input_ko_utf16le_sha256": "E1DF7DCEFFCDB39C636072D36997DE222D44900496ED7483316B2AE8AC62F427",
+      "input_semantic_payload_utf16le_sha256": "6F07CBC20A5E6402304D29D8C8C69BD34C36AD40202A122972586DDE0A04148D",
+      "input_token_profile_sha256": "DFB86ED7AFE462DCE1C8DB5C89C5CFB1D5615587ED88AEF20395D204E1C2B031",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "D3F6B06AC176150C97348F186409D4B530FA7B68D4DA9C9D862606C9B2D6F0F0",
+      "output_semantic_payload_utf16le_sha256": "6F07CBC20A5E6402304D29D8C8C69BD34C36AD40202A122972586DDE0A04148D",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "E83C27103392CDA4B7492B4F8FF1F467474BD818DB4C534D450808DCB8565CF6",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10325,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "3C710D302094FE8CFDCAC0928981FE6B8B76120A7677A2442057943ABC66E383",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "E83C27103392CDA4B7492B4F8FF1F467474BD818DB4C534D450808DCB8565CF6"
+    },
+    {
+      "id": 10333,
+      "input_ko_utf16le_sha256": "A4247D58D736BADD1604FA2A42AABC0569FA0832C90C0C936AFA24D8503833D8",
+      "input_semantic_payload_utf16le_sha256": "7E7876BBC2AB86701A05996212B4A8998E3D6D9E84BFCDE8017DC930E5537A21",
+      "input_token_profile_sha256": "64FF14B2BCCC9811801C2CE785437B46EC3D0CE4A933460E237CD7E41449CD73",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "710A006C6A33707207D5700758C14A8B79B4F03404E22C3B7AD45E67DA978F80",
+      "output_semantic_payload_utf16le_sha256": "7E7876BBC2AB86701A05996212B4A8998E3D6D9E84BFCDE8017DC930E5537A21",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "7E31CC187AA8AFB4DA03993C84E7898679D376E35C3E235E1509CA3663026070",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10333,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "1B150BC2A905419AA98C5BB57B185612B7403E464153E843A47DDB7A05B22000",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "7E31CC187AA8AFB4DA03993C84E7898679D376E35C3E235E1509CA3663026070"
+    },
+    {
+      "id": 10334,
+      "input_ko_utf16le_sha256": "085D88258AC43DE67F1E8941EDF09D12F14D63AAD4CD32FDC2E8840D170FCA2E",
+      "input_semantic_payload_utf16le_sha256": "045D62A62A62E9236759777F6A001793544F5D83BC6C1E6F60CE879730901D38",
+      "input_token_profile_sha256": "E1676ED99397D57B8AA31EDBC4187FFFF9D512469266B792D3E8F34EF11855EA",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "FB0F173B423ABAD78FC2D6D04E08B0D10847AD016347F5002FFEBD64FAAC81D1",
+      "output_semantic_payload_utf16le_sha256": "045D62A62A62E9236759777F6A001793544F5D83BC6C1E6F60CE879730901D38",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "DA2A442E3EDB538B5AA17D13BB5BA7264D231B6CD8830A39CDBB96B3E79E601F",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10334,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "FB7A1A190BF3A111A8BE047CA438529DA8DE60C938E8B9C754FA0DCF0BC508E6",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "DA2A442E3EDB538B5AA17D13BB5BA7264D231B6CD8830A39CDBB96B3E79E601F"
+    },
+    {
+      "id": 10343,
+      "input_ko_utf16le_sha256": "26584570525B0C681D0649A657C37C02CF3655D45E3E7E60656497304037F497",
+      "input_semantic_payload_utf16le_sha256": "F061C46DBD8BED9BB278D5407CEBAD2BD7D1A0101CA0BA0FBECA7E5D4DAFF6FA",
+      "input_token_profile_sha256": "3AC44CD2FF0F2A13F9B1E072CE748E4F22AFEB17FA63E59FCA2079141FE714B1",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "B512FE7D43AFA94E5E99EE9BD1B6B0D0D1A2125FCA6E9FDC2BB8AC203597E3D2",
+      "output_semantic_payload_utf16le_sha256": "F061C46DBD8BED9BB278D5407CEBAD2BD7D1A0101CA0BA0FBECA7E5D4DAFF6FA",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "A8A2E2927087446E3FC860A4A877131D1E35B11EC93B61E6D234C3E839799EDC",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10343,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "AF8FDFD29B596650C5717522BB7C392A9A4B3B051795CE8C8458A8697804FD32",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "A8A2E2927087446E3FC860A4A877131D1E35B11EC93B61E6D234C3E839799EDC"
+    },
+    {
+      "id": 10381,
+      "input_ko_utf16le_sha256": "03CFE9584342DF2DF1CA292EB6A72908506CE285021C4C52012543D1236A8EB2",
+      "input_semantic_payload_utf16le_sha256": "ECBA7F823112F23D738D82E053EE7200DC21F6982BB161FBCA2D3CF7911EE292",
+      "input_token_profile_sha256": "720EA8AACE90D4D6B569AC2F0C22F91C464E0E40878E92FA246F8FC97063CF83",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "8581A136F67E4975DE9550F81D66CBEF7949841C266B618503AC434940F8C265",
+      "output_semantic_payload_utf16le_sha256": "ECBA7F823112F23D738D82E053EE7200DC21F6982BB161FBCA2D3CF7911EE292",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "452FF411E5E12E973EDA2064BBE717C7343B5F9145910F0DFAF30415F217E53A",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10381,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "3FFFBBB8EDD207C7215AEE73139E52BE6DA7879339C3CB1BCA7D32D15CB95E52",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "452FF411E5E12E973EDA2064BBE717C7343B5F9145910F0DFAF30415F217E53A"
+    },
+    {
+      "id": 10386,
+      "input_ko_utf16le_sha256": "A42238848F19CE4268D65DB22FA7D9E1651B7578534D4CF0CD72EB7751ED8CC9",
+      "input_semantic_payload_utf16le_sha256": "ADD15FE5C700793EF983B159A23DD002CA5337C5B591C2E9B02F36ABE21E0488",
+      "input_token_profile_sha256": "AFC8CC9C6142B580E71E55FBDA4B5174035007791413298FEFEF6B351C3869A2",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "54E97643A3D0634D81890CE92E2F35A3870006416523102977A3CF45BA6F1AF5",
+      "output_semantic_payload_utf16le_sha256": "ADD15FE5C700793EF983B159A23DD002CA5337C5B591C2E9B02F36ABE21E0488",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "84B2998BAD1FF9B074A7051825A773EF817D8DE6C5E96FA84DD6EB25FEF5367F",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10386,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "849EA6F274A194DF6A9E86CB8EE9C9BEFF470BE94D697A2CAB8A4F6134216365",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "84B2998BAD1FF9B074A7051825A773EF817D8DE6C5E96FA84DD6EB25FEF5367F"
+    },
+    {
+      "id": 10450,
+      "input_ko_utf16le_sha256": "057D69D46F6AF4FDAEEC994605E2B16F89F0D31241C9D132E124836306B575F2",
+      "input_semantic_payload_utf16le_sha256": "FE880519EE1ACD26A261CFF86DEB637794E6D4C139F863160E0EC541C12B08AC",
+      "input_token_profile_sha256": "173A0F398AB98894C3E24BB9176FD81DC14DE6752B4E68E8E96E269B33C3FFCD",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "97EBD6F74E7605F2ED5EBD5B5C2EE6780336C4C6C391181D2DAA9C9EEF1EA6E1",
+      "output_semantic_payload_utf16le_sha256": "FE880519EE1ACD26A261CFF86DEB637794E6D4C139F863160E0EC541C12B08AC",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "5F3783316FEA94CC288AA6BF8E5C3DE60B31EE44134C8611D3A947EE71364B52",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch04/public/msgev_ko_pk_native_batch04_175.v1.json",
+        "catalog_entry_id": 10450,
+        "evidence": "workstreams/msgev_pk_native_batch04/evidence/msgev_pk_native_batch04_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "0DCB83A57C50B0CB38EAD7B0DB65BCC72898860B795FE9F7FF09F606730513AB",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "5F3783316FEA94CC288AA6BF8E5C3DE60B31EE44134C8611D3A947EE71364B52"
+    },
+    {
+      "id": 10483,
+      "input_ko_utf16le_sha256": "1E964A4123E7FFB163B368BAEC62854E6ACE84CFD0C0AA12E565A7C964923F02",
+      "input_semantic_payload_utf16le_sha256": "D4750F9DCD6BD8671A479763F4804A6157687EF17BE6FFFA09BDB9B8CA8B2E7F",
+      "input_token_profile_sha256": "6FD0A8E561BE4F5B3DAEC9D84B5DD361172DE269E340BBAC1D6C6A4E4D5D1EB7",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "57AA029346C3A2A2D8A8C59EE27A15CFD3840E8DAD3FCD2B6284B7F258EA1E79",
+      "output_semantic_payload_utf16le_sha256": "D4750F9DCD6BD8671A479763F4804A6157687EF17BE6FFFA09BDB9B8CA8B2E7F",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "1E933B42FD50069810EB44DD174A38F7EEA3F229A9E9848ADEEE4FF701F2CBFD",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10483,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "806109A83832D37B7C562AE6E8C821CC2CF23BCBD21A7E64220E9F78622144FD",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "1E933B42FD50069810EB44DD174A38F7EEA3F229A9E9848ADEEE4FF701F2CBFD"
+    },
+    {
+      "id": 10484,
+      "input_ko_utf16le_sha256": "A44569A909D4A7F77F9B6834CBB79C9B5BC40D2A9196D0D733E2C6EB3F21B32C",
+      "input_semantic_payload_utf16le_sha256": "3CAC98FFFF3F86167622E078DCF8AA5166A1932ECBB8432FD7306238BD1C9088",
+      "input_token_profile_sha256": "D697F6849822C3D9A596556889E5C5822226F74FF59688F446BA2857B294D9C3",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "21F21E414747235343CB69F4E495F22E9FBAF77B3C8FB86CE1E5489748907B14",
+      "output_semantic_payload_utf16le_sha256": "3CAC98FFFF3F86167622E078DCF8AA5166A1932ECBB8432FD7306238BD1C9088",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "305CE6D325A86476407B1B405B6F58AD545601EF495327EF31E8867149E93D08",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10484,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "E73542D4073418AE78DA9BA77DDC652AC14433959A7C9A592798A7FE4468DB6E",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "305CE6D325A86476407B1B405B6F58AD545601EF495327EF31E8867149E93D08"
+    },
+    {
+      "id": 10499,
+      "input_ko_utf16le_sha256": "AF11F399CFEBF89F97DF257F99B7A3D74F9A2EDB1F1000AB1C23489E9FA5086D",
+      "input_semantic_payload_utf16le_sha256": "C387A54D9EF151D8E51FCEBC4C0B0897A5A7FDCA70E9080E1A534E1A0EC9592D",
+      "input_token_profile_sha256": "9EF190EDF9AAC9EFF07AD92259607A6556A61D7E1A70248C6BFA3AE33B567183",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "D18563D7952C878C3B20C1D8427AA7685DC153084FB879EC4FB4E498C1491528",
+      "output_semantic_payload_utf16le_sha256": "C387A54D9EF151D8E51FCEBC4C0B0897A5A7FDCA70E9080E1A534E1A0EC9592D",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "28CDECA743CE139FD54B206A625695D99CE0B93E821642E4C0E60CD4126E2829",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10499,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "F30518412A92F784218677AE38264D7E68071F71D03014A3DEF1EF13D308C6D2",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "28CDECA743CE139FD54B206A625695D99CE0B93E821642E4C0E60CD4126E2829"
+    },
+    {
+      "id": 10513,
+      "input_ko_utf16le_sha256": "E5189DFEBCCDB8E5FC6B7F3E6A165EE2B797F06CA1451802FBB0595FDBA00F6B",
+      "input_semantic_payload_utf16le_sha256": "33E1184C285FC809B0005006D9CEDB9FF0B50B1187044B1601CF64F0C11FF0B8",
+      "input_token_profile_sha256": "8ADC5859B06C161DF67479CDD95FDA839FA3B2F860BB3754CC376D1213B4B932",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "7D6004EB9CE15655250E39A5904BC994AFE37012B89DF91E107FB2FAA7FA1032",
+      "output_semantic_payload_utf16le_sha256": "33E1184C285FC809B0005006D9CEDB9FF0B50B1187044B1601CF64F0C11FF0B8",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "5513D6F774A00C80DAA80739830B0A8811B4EA02035D32572BECC95DBDDA0644",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10513,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "A915DA057BB38B328FBE9B54B6450466FEBB6635EFAD060D60D69D99289A6E82",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "5513D6F774A00C80DAA80739830B0A8811B4EA02035D32572BECC95DBDDA0644"
+    },
+    {
+      "id": 10544,
+      "input_ko_utf16le_sha256": "5DBCDEA0A331663643DD8C08D7E587232AE3F5DEC18BF059038322365B56B43D",
+      "input_semantic_payload_utf16le_sha256": "8E05103ABBE6825F8062644ABF7E871E2417616F73D7D326D057A2842363B021",
+      "input_token_profile_sha256": "85A781E934FE4D1C9B68A6B26BA3D81F6DC9A2C23D3873D53AABE91E0FC065BC",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "B22BB07E5F9D614457F1CF3E6715E6FBDF57268E3C9226CCF6D6DA3D6EE7B804",
+      "output_semantic_payload_utf16le_sha256": "8E05103ABBE6825F8062644ABF7E871E2417616F73D7D326D057A2842363B021",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "E775C085AB95BD32DB086151BD90028131B19D3448673CAF0292E719216EEEF3",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10544,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "72F1786BC50847BE0959C15BD49E7776F2BE7572177CF0B065E6B0C97B0BF859",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "E775C085AB95BD32DB086151BD90028131B19D3448673CAF0292E719216EEEF3"
+    },
+    {
+      "id": 10562,
+      "input_ko_utf16le_sha256": "E3641954885F86A91D5E29ADB053AABDE0491A9AE40E691BDAEDEA402027C80D",
+      "input_semantic_payload_utf16le_sha256": "E4A881D06A1CCFD8C6BA8DEDE7F6DDE7F1307614051D18EF928B11966A40C38C",
+      "input_token_profile_sha256": "249C48891CF47B2F8C865F1BC47B597800E740435A9EE128C06C7BC0F7248683",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "A32F3F5C0A492CFD3E1B4F1CE01326B77CEAEE14DC7775E1BDC361C61B626E69",
+      "output_semantic_payload_utf16le_sha256": "E4A881D06A1CCFD8C6BA8DEDE7F6DDE7F1307614051D18EF928B11966A40C38C",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "D9D33C2CDDEB2972C570D508E2BD729CC1690E6A44CD1F3D4E68CF1FE8647555",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10562,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "0999F344DBAF461FEE75D07082AC65DAFC512D4FB6FE539DE3668D9DDB56F54F",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "D9D33C2CDDEB2972C570D508E2BD729CC1690E6A44CD1F3D4E68CF1FE8647555"
+    },
+    {
+      "id": 10563,
+      "input_ko_utf16le_sha256": "6D6738E351F33CD53DA6C93F754C07EB311039DEC64465069441F02DDDF7280E",
+      "input_semantic_payload_utf16le_sha256": "4577CCA36F30521E0E36B75E80BB708F55DFB3BD9134263AF2265EEB387A3E5C",
+      "input_token_profile_sha256": "8776990985E038E78AC67D81637CA056EB6A961B6D04A360F268E4255E2DA885",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "0BB45E8ADA142A06D53883710707EE75F850EABE63FD83C0257CF142FDC818F9",
+      "output_semantic_payload_utf16le_sha256": "4577CCA36F30521E0E36B75E80BB708F55DFB3BD9134263AF2265EEB387A3E5C",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "0400C41E9C131FD7E2AFDA7125F3E1EA41A0569846FF895976B56B797BD3CBBF",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10563,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "E59976A34DF7A48A3A1A575FA6BF675BCC6A6FEA8EE469641540AB434668EE11",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "0400C41E9C131FD7E2AFDA7125F3E1EA41A0569846FF895976B56B797BD3CBBF"
+    },
+    {
+      "id": 10566,
+      "input_ko_utf16le_sha256": "281349AD6880E445E38B51922C81EC2864AAC63B0D0B4994F394EAB41EA31045",
+      "input_semantic_payload_utf16le_sha256": "9B90A5DF874E437CC35F0E110891A5F7F3DE82F12FF3F26C0CBF37002DA07CE4",
+      "input_token_profile_sha256": "F98AD2F03E039C903DE79524AE6A5809693D8FA2AF57CA3CB543DBC159E2786C",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "4587B1D2D9008978D51603FF29A4D29EE417FB0FF21A02230CC136CF8FCF6C1C",
+      "output_semantic_payload_utf16le_sha256": "9B90A5DF874E437CC35F0E110891A5F7F3DE82F12FF3F26C0CBF37002DA07CE4",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "CCE458BD962E8DDD47F384946B0EE174905E0CB69AFE9CC3D63A897503CDB9D1",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10566,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "BF78B1060AAD6EB7212F597BF8B8E6630F3D246632D754F74D364A50F2516852",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "CCE458BD962E8DDD47F384946B0EE174905E0CB69AFE9CC3D63A897503CDB9D1"
+    },
+    {
+      "id": 10625,
+      "input_ko_utf16le_sha256": "35865ADBA9100EC361671A08C8A2F9AEF4A7AC0892CCC02AFB50971BA9B26B3F",
+      "input_semantic_payload_utf16le_sha256": "36C254F158BCD1D6D73210E83C92DA721A4EC6430E6CB7860FC7C592FB0CF393",
+      "input_token_profile_sha256": "5651219F078C477E030E4836A82CF63C16829FBC0A014B84CA7AB08FF8AED44B",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "A1EBB0EC1E548ED0D7568E3D3AF1619A0552F30E2663FF9FFD8E929B3F41828F",
+      "output_semantic_payload_utf16le_sha256": "36C254F158BCD1D6D73210E83C92DA721A4EC6430E6CB7860FC7C592FB0CF393",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "E83C27103392CDA4B7492B4F8FF1F467474BD818DB4C534D450808DCB8565CF6",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10625,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "944E2D66AF05303D9446439D999D9007BD348134404199F6F375ED4C72571A6E",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "E83C27103392CDA4B7492B4F8FF1F467474BD818DB4C534D450808DCB8565CF6"
+    },
+    {
+      "id": 10627,
+      "input_ko_utf16le_sha256": "A64197CCC6447B52E264911C6CEB47928CC7E8DCAE2CA7CDC79788C191DE9656",
+      "input_semantic_payload_utf16le_sha256": "CE4094A5C8D3B7719DCC279281FDE6042205FD9A5CB48890C167C7FDB7B7F934",
+      "input_token_profile_sha256": "A8786DB88E4C057D221A8973183D12F2BE553B2A5BA18E53F7D1402A358F9579",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "8AC6793F6BFE59B305BAA707DCBC7BAB199FE25E0844581800B1E43515598F00",
+      "output_semantic_payload_utf16le_sha256": "CE4094A5C8D3B7719DCC279281FDE6042205FD9A5CB48890C167C7FDB7B7F934",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "E0175E46DE48EAC415F6C0D2CCF615611248F13DFBD6AE30E2B97D4D993CDBB8",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10627,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "D69CC14FFD3336BA16AE2D57BE6A8BDFF5E5D676E24641C3A25FE70AC80176F8",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "E0175E46DE48EAC415F6C0D2CCF615611248F13DFBD6AE30E2B97D4D993CDBB8"
+    },
+    {
+      "id": 10630,
+      "input_ko_utf16le_sha256": "7C162DD39FDC4D59D4698EB89018BE42ECA1617C42325A43F5AA5A98D80152CA",
+      "input_semantic_payload_utf16le_sha256": "1E249936F2462E29BB226B018F733B37A732ECB2A6F5A2EDE5EBA57EDD452CFF",
+      "input_token_profile_sha256": "1B96D6FFB766E6EF7FB90D97EEA28F455E424662F4A33E6C5F7EC170BCA21594",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "C93F87B458491A296E161223BE0C812E007D4E761A2E9BFF2604D3A11ADB62DA",
+      "output_semantic_payload_utf16le_sha256": "1E249936F2462E29BB226B018F733B37A732ECB2A6F5A2EDE5EBA57EDD452CFF",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "A2E9BA7E61E4BF53D7E453ED5BE620A7B66B822F826E06ADE8E2E06F57B92747",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10630,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "42BE17AB8BEFF31AA1A919E72D2CB0E8F19F6EE19FD67AE61D181FC2D6B8464E",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "A2E9BA7E61E4BF53D7E453ED5BE620A7B66B822F826E06ADE8E2E06F57B92747"
+    },
+    {
+      "id": 10700,
+      "input_ko_utf16le_sha256": "7A9688CC8CF1A6F9CCBA7F836BD11098C0F519716FF6AAC4FF30C4EA6ED8B04F",
+      "input_semantic_payload_utf16le_sha256": "325D7CAFBE2888FEEA5D1B1C6970B3A6F6C3574A4D473CB363D4E3727E309B79",
+      "input_token_profile_sha256": "CCE458BD962E8DDD47F384946B0EE174905E0CB69AFE9CC3D63A897503CDB9D1",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "B5F837D0FF7041669EFCF883F9FD44A64046BE7447A80DC67F52C53AA211E400",
+      "output_semantic_payload_utf16le_sha256": "325D7CAFBE2888FEEA5D1B1C6970B3A6F6C3574A4D473CB363D4E3727E309B79",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "F98AD2F03E039C903DE79524AE6A5809693D8FA2AF57CA3CB543DBC159E2786C",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch05/public/msgev_ko_pk_native_batch05_300.v1.json",
+        "catalog_entry_id": 10700,
+        "evidence": "workstreams/msgev_pk_native_batch05/evidence/msgev_pk_native_batch05_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "B1525F8AF5787BE28614A18FF96FFFDAA5DDABDC5FBEAFF83C84DEA3F1E24146",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "F98AD2F03E039C903DE79524AE6A5809693D8FA2AF57CA3CB543DBC159E2786C"
+    },
+    {
+      "id": 10788,
+      "input_ko_utf16le_sha256": "22FD599D3D6238CCBCEF8105AF3EDC4E539AD879AF50A6869D3CA9E0D0F41028",
+      "input_semantic_payload_utf16le_sha256": "FAFD1E25BFFE958FFCB5E608DCA3C3BDBC772AC7A8F20A27B42BD42AF2EDA631",
+      "input_token_profile_sha256": "61B776F7BD219BDE4C18B32ED95D1A2089C5A1CCC47AAABCCFC3400E9CA815E2",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "8591CEED1BE98B01C679E3476225262394991AF9714A6FF4FA4DD466AB9371A5",
+      "output_semantic_payload_utf16le_sha256": "FAFD1E25BFFE958FFCB5E608DCA3C3BDBC772AC7A8F20A27B42BD42AF2EDA631",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "F2F3CACD3363D564106B03C330E7B307FA87A799E9391B598C07C4D8E3E358DA",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10788,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "F27F44693CBB9F68A318E404481F08509FE058730902B6DBA2C9283B83F4993C",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "F2F3CACD3363D564106B03C330E7B307FA87A799E9391B598C07C4D8E3E358DA"
+    },
+    {
+      "id": 10794,
+      "input_ko_utf16le_sha256": "5A5E3500C2CFEDA1F7B4DC2E525CD0213AE78C9F934296BAD0A610123BFCE720",
+      "input_semantic_payload_utf16le_sha256": "9C8CB748F23B25DA1FDFCD92EA7877AB1AE8B1BF125B7C876B5945D7EEBD19D5",
+      "input_token_profile_sha256": "4A92E84FEC1E68F8BDDD058907A0B9D6ABAD4B42ED95701A6D277A7FE4733109",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "1B8A5255F3471E79FA22DA3539861F1742B58A2EAB0F323801E64818C720D451",
+      "output_semantic_payload_utf16le_sha256": "9C8CB748F23B25DA1FDFCD92EA7877AB1AE8B1BF125B7C876B5945D7EEBD19D5",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "DECA3E5CB2EDC9F0ABBB089DC8821726E356449360E50B25B4F26C3A5874D4A0",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10794,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "D40036CB3C37A04391DF719B94C782CC065A5DEE896EDABBF8077E7E08D03F9A",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "DECA3E5CB2EDC9F0ABBB089DC8821726E356449360E50B25B4F26C3A5874D4A0"
+    },
+    {
+      "id": 10815,
+      "input_ko_utf16le_sha256": "65CC42D2AD348F0C9A06009FBAFC1B3D0D9B33240AF2ACB12042C12E62576D9C",
+      "input_semantic_payload_utf16le_sha256": "B8F7D34105968F14B96D18EAF7C55ED4529C4985539D4D21DA81CDB2411CCD09",
+      "input_token_profile_sha256": "12074BFD83AACF8275E529A3DE42BAAD9F8EF8234318D2113871198832A5EB44",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "88B1B2B6D2D88625AF786C21902DA6C9C33512EB86BBF9ABE09BC3900DA757CC",
+      "output_semantic_payload_utf16le_sha256": "B8F7D34105968F14B96D18EAF7C55ED4529C4985539D4D21DA81CDB2411CCD09",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "CC4CBCAFEA3B4B791FFCE8869C9E195019258D1A99ED6D01DB9B22AAF6525463",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10815,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "01C08B684E592E9BC87BF3191FA133172B22058EF725B8D3BE4E8F3FB6E87F61",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "CC4CBCAFEA3B4B791FFCE8869C9E195019258D1A99ED6D01DB9B22AAF6525463"
+    },
+    {
+      "id": 10854,
+      "input_ko_utf16le_sha256": "F41F7229F3ECEEADE2817B335EC10EA179056078C5A3B561B9EB6461C2CBB006",
+      "input_semantic_payload_utf16le_sha256": "E03BD7E71E70B7601BFA4637A8EBE045479C6AC6672F666B4E1A5476F941F351",
+      "input_token_profile_sha256": "94AAE412C284A5DCC851CFD579E801A86DB44336DA7C35B1602502E963542C36",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "E071BCD2426BF1AD54B7766176BEBD3FAB47A859F262154E5002847913D6C0FB",
+      "output_semantic_payload_utf16le_sha256": "E03BD7E71E70B7601BFA4637A8EBE045479C6AC6672F666B4E1A5476F941F351",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "CCE458BD962E8DDD47F384946B0EE174905E0CB69AFE9CC3D63A897503CDB9D1",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10854,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "4E1A1E4C3AB77A11F7D55C27604D5BD0A73DFD466579320BBC8BF5269DE53412",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "CCE458BD962E8DDD47F384946B0EE174905E0CB69AFE9CC3D63A897503CDB9D1"
+    },
+    {
+      "id": 10866,
+      "input_ko_utf16le_sha256": "0765CC7B4918B7728CE3408479DA6FB2A0A2C6046B66D87EF84314DA91098A35",
+      "input_semantic_payload_utf16le_sha256": "95F0FBE4B21C7DF62F21BA56B490BA5292926613CE40326FDC5E6F0A86341B21",
+      "input_token_profile_sha256": "5F3783316FEA94CC288AA6BF8E5C3DE60B31EE44134C8611D3A947EE71364B52",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "B4576A6B7E522F4255E60ADAC704C2C303BD6A299D112E61164AE019784C3E46",
+      "output_semantic_payload_utf16le_sha256": "95F0FBE4B21C7DF62F21BA56B490BA5292926613CE40326FDC5E6F0A86341B21",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "0D2C7447D817AC55EF24AEBD03EF3929FF6E7E26711A5C62DD3A341DAB0DA26A",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10866,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "6DB3A12979D86F8DD4EE84B7F7D180738AB2187CBB9DDF4D122FF89D2CF65B41",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "0D2C7447D817AC55EF24AEBD03EF3929FF6E7E26711A5C62DD3A341DAB0DA26A"
+    },
+    {
+      "id": 10934,
+      "input_ko_utf16le_sha256": "A6D3DC23C4FBB3A01CA6D3D801CBAA4ADBA3386AFE25598F1F72D5131BF3CD0E",
+      "input_semantic_payload_utf16le_sha256": "4639FBF61C5ADE036C88884E5C60C9CDD7DFD9B901EAD1A3B3A1E0D1E17F6F63",
+      "input_token_profile_sha256": "86713C9401211201D77167FE31B1D6A94F43575546F73704AD5CDF86A994D049",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "7956541FD521AE879922576DECCCC2A894EBDCA7FA6E83804D0BA7F7F4D03B99",
+      "output_semantic_payload_utf16le_sha256": "4639FBF61C5ADE036C88884E5C60C9CDD7DFD9B901EAD1A3B3A1E0D1E17F6F63",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "7BFF96948488DF3CB19B7E0B2BBD82D4E5E304DFA0F5991F84B76C4199DD3F9C",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10934,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "F77387EA52487345FF3E76E73EBAF75CC711319F9E9333BDE2511209203C67A6",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "7BFF96948488DF3CB19B7E0B2BBD82D4E5E304DFA0F5991F84B76C4199DD3F9C"
+    },
+    {
+      "id": 10938,
+      "input_ko_utf16le_sha256": "F8467BFBE8EA4B0579C4E50BADF7009DF13451C01A9AE451454C922F60C5F549",
+      "input_semantic_payload_utf16le_sha256": "4A20081DFE0D112CC6D6358BCB720BB4315A4A1418EF870AEA2013193A58147A",
+      "input_token_profile_sha256": "D717D42CE1955DE87A5FF8CCC7D940F7A333724634CE528516FB959F9FED764C",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "A6E59983D8684D7490947F50D84E40C9708E7BE7C91AF67F0AAEAB56060A4E8A",
+      "output_semantic_payload_utf16le_sha256": "4A20081DFE0D112CC6D6358BCB720BB4315A4A1418EF870AEA2013193A58147A",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "8FC151E3264AAB64188B39168329EE0B795922D75159286FA497ADB4468DFB26",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10938,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "0EADA269B2860D1610F187C995BF15CF3703A43B392DD96652B0091042EEC679",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "8FC151E3264AAB64188B39168329EE0B795922D75159286FA497ADB4468DFB26"
+    },
+    {
+      "id": 10940,
+      "input_ko_utf16le_sha256": "011A28EC652441F5408CD95512BC8194CBD6D8CA76D2C266CA229C15BB266A89",
+      "input_semantic_payload_utf16le_sha256": "4D52E48F29962AD5BCEB0D72C4D7420B1717F78C38ED1F01ADD4577434E6A9B0",
+      "input_token_profile_sha256": "5F3783316FEA94CC288AA6BF8E5C3DE60B31EE44134C8611D3A947EE71364B52",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "CC8886F4F1A8CE0218EC9A8258673135BCD3360AB30D14A529A3D336D336CE68",
+      "output_semantic_payload_utf16le_sha256": "4D52E48F29962AD5BCEB0D72C4D7420B1717F78C38ED1F01ADD4577434E6A9B0",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "0D2C7447D817AC55EF24AEBD03EF3929FF6E7E26711A5C62DD3A341DAB0DA26A",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10940,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "D9DF58329AED788BBF0DE899AD20AD33D00137326FC2518037F399DE63E2711D",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "0D2C7447D817AC55EF24AEBD03EF3929FF6E7E26711A5C62DD3A341DAB0DA26A"
+    },
+    {
+      "id": 10943,
+      "input_ko_utf16le_sha256": "042D3997776D041192C66941B276DCC546AAEFDE28F57A78AEA5A09F3D9EA949",
+      "input_semantic_payload_utf16le_sha256": "9ACFD568BE480DA54952E1E23D5530612618AC20EA55C986D461AC62DFBFAECC",
+      "input_token_profile_sha256": "A606ADC6D78A7540B78838F1FDC160BD42D6AF4C462133EA67F5169E2FF8D018",
+      "operation": "replace_equal_length_esc_lexemes_in_target_order",
+      "output_ko_utf16le_sha256": "F769F918845C22EFADBEF5041FCB36F74810B07C017A9A898EC750490DA5BE82",
+      "output_semantic_payload_utf16le_sha256": "9ACFD568BE480DA54952E1E23D5530612618AC20EA55C986D461AC62DFBFAECC",
+      "output_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "output_token_profile_sha256": "2E8D3E61E926BE3FC08DB3D07382111A8FC3AFD0C323E496F033095E86D9C3BE",
+      "provenance": {
+        "catalog": "workstreams/msgev_pk_native_batch06/public/msgev_ko_pk_native_batch06_260.v1.json",
+        "catalog_entry_id": 10943,
+        "evidence": "workstreams/msgev_pk_native_batch06/evidence/msgev_pk_native_batch06_alignment.v1.json",
+        "kind": "committed_native_korean_semantic_payload"
+      },
+      "source_jp_utf16le_sha256": "F1A82608C6403E6FE3E8512538D196625ED158F95379197761D9D978F7A7855C",
+      "source_token_profile": {
+        "controls": [],
+        "esc": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "esc_pair_family": [
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close",
+          "open",
+          "close"
+        ],
+        "leading_whitespace": "",
+        "line_breaks": [
+          "\n",
+          "\n"
+        ],
+        "printf": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "trailing_whitespace": "",
+        "unknown_percent_count": 0
+      },
+      "source_token_profile_sha256": "2E8D3E61E926BE3FC08DB3D07382111A8FC3AFD0C323E496F033095E86D9C3BE"
+    }
+  ]
+}
