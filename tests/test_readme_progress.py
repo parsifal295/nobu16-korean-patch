@@ -42,16 +42,14 @@ class ReadmeProgressTests(unittest.TestCase):
             + translation["runtime_structure_preserved"],
         )
 
-    def test_render_is_compact_and_keeps_only_user_relevant_status(self) -> None:
+    def test_render_states_that_text_translation_is_complete(self) -> None:
         rendered = readme_progress.render()
-        self.assertIn("v0.10.0 공개 현황", rendered)
-        self.assertIn("JP 경로 14개 파일", rendered)
-        self.assertIn("고신뢰 좌표 2,489 / 2,498 한글 반영", rendered)
-        self.assertIn("의도적 원문 유지", rendered)
-        self.assertIn("추가 수동 검토 | 394건", rendered)
-        self.assertIn("이벤트 줄바꿈 정리 · 기존 글꼴 폭 유지", rendered)
-        self.assertIn("게임 전체의 번역 완료율은 아닙니다", rendered)
-        self.assertIn("해당 이벤트 장면은 다시 확인하지 않았습니다", rendered)
+        self.assertIn("v0.10.0 — 텍스트 번역 완료", rendered)
+        self.assertIn("게임 내 번역 대상 텍스트 번역을 완료했습니다.", rendered)
+        self.assertIn("9건은 번역 대상이 아니므로 원문을 유지합니다.", rendered)
+        self.assertIn("남은 것은 번역 작업이 아니라 일부 표현·화면의 선택 검수입니다.", rendered)
+        self.assertNotIn("2,489", rendered)
+        self.assertNotIn("추가 수동 검토", rendered)
         self.assertNotIn("SHA-256", rendered)
         self.assertNotIn("후보 ZIP", rendered)
         self.assertNotIn("설치=True", rendered)
