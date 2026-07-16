@@ -1,6 +1,6 @@
 {
   "schema": "nobu16.kr.steam-jp-1.1.7-progress.v1",
-  "release": "v0.8.0",
+  "release": "v0.9.0",
   "runtime": {
     "distribution": "Steam",
     "pk_version": "1.1.7",
@@ -43,14 +43,14 @@
     "base_msggame": {
       "resource": "MSG/JP/msggame.bin",
       "source_script_literals": 23256,
-      "strict_switch_v13_transfer": 22924,
-      "residual": 332
+      "strict_switch_v13_transfer": 23194,
+      "residual": 62
     },
     "base_ev_strdata": {
       "resource": "MSG/JP/ev_strdata.bin",
       "switch_hangul_candidates": 13090,
-      "strict_switch_v13_transfer": 13045,
-      "residual": 45
+      "strict_switch_v13_transfer": 13085,
+      "residual": 5
     },
     "strdata": {
       "safe_targets": 24525,
@@ -65,7 +65,7 @@
   "runtime_qa": {
     "candidate_verification": "PASS",
     "candidate_file_count": 14,
-    "candidate_zip_sha256": "8167B09DE5DC56C1F195AF0A913336F552D189B0DB320C2A4F5EC863BBC58D08",
+    "candidate_zip_sha256": "1BCC92A3CD7025D307AF9B193BDDD8F1448451024630C8414FC218F0C49FE829",
     "steam_install_applied": true,
     "steam_apply_transaction": "PASS",
     "steam_apply_backup_entries": 14,
