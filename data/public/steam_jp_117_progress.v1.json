@@ -1,12 +1,12 @@
 {
   "schema": "nobu16.kr.steam-jp-1.1.7-progress.v1",
-  "release": "v0.7.1",
+  "release": "v0.8.0",
   "runtime": {
     "distribution": "Steam",
     "pk_version": "1.1.7",
     "steam_build_id": 18823764,
     "language_route": "JP",
-    "launcher_language": "日本語 / Japanese"
+    "launcher_language": "Japanese"
   },
   "translation": {
     "msgui": {
@@ -25,20 +25,32 @@
         "MSG_PK/JP/msgstf.bin"
       ],
       "source_union_effective_coordinates": 43169,
-      "applied": 40487,
+      "applied": 40581,
       "source_equal_structural_noops": 1796,
       "format_contract_blocked": 730,
-      "alignment_gap": 156,
-      "review_backlog": 886,
+      "alignment_gap": 62,
+      "review_backlog": 792,
       "known_internal_dummy": 2,
-      "reviewed_semantic_gaps_pending": 94,
+      "wave08_semantic_gaps_resolved": 94,
       "officer_surnames_recovered": 980,
       "duplicate_context_collapsed": 50
     },
-    "msggame": {
+    "pk_msggame": {
       "semantic_targets": 28272,
       "applied": 28272,
       "remaining": 0
+    },
+    "base_msggame": {
+      "resource": "MSG/JP/msggame.bin",
+      "source_script_literals": 23256,
+      "strict_switch_v13_transfer": 22924,
+      "residual": 332
+    },
+    "base_ev_strdata": {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "switch_hangul_candidates": 13090,
+      "strict_switch_v13_transfer": 13045,
+      "residual": 45
     },
     "strdata": {
       "safe_targets": 24525,
@@ -51,19 +63,20 @@
     }
   },
   "runtime_qa": {
-    "evidence_release": "v0.7.0",
-    "current_release_live_apply": "FILE_PASS",
-    "officer_surname_binary_recomposition": "PASS",
-    "v0_7_1_screen_qa": "PENDING",
+    "candidate_verification": "PASS",
+    "candidate_file_count": 14,
+    "candidate_zip_sha256": "8167B09DE5DC56C1F195AF0A913336F552D189B0DB320C2A4F5EC863BBC58D08",
     "steam_install_applied": true,
-    "exact_twelve_target_hashes": true,
-    "pre_v0_7_predecessor_backups_valid": 12,
-    "launcher_update_label": "Update 1.1.7",
-    "korean_title_prompt_observed": true,
-    "korean_main_menu_observed": true,
-    "known_untranslated_ui_observed": true,
-    "qhd_windowed": "PASS",
-    "qhd_borderless": "PASS",
-    "cold_restart": "PASS"
+    "steam_apply_transaction": "PASS",
+    "steam_apply_backup_entries": 14,
+    "screen_qa": "PASS",
+    "manual_korean_screen_output": "PASS",
+    "release_published": true,
+    "file_only": true,
+    "memory_patch": false,
+    "dll_injection": false,
+    "hooking": false,
+    "executable_modified": false,
+    "registry_modified": false
   }
 }
