@@ -123,7 +123,7 @@ class ReadmeProgressTests(unittest.TestCase):
         candidate = readme_progress.load_candidate_progress()
         self.assertEqual(candidate, payload)
         self.assertEqual(payload["candidate_release"], "v0.10.0")
-        self.assertEqual(payload["status"], "steam_applied_release_pending")
+        self.assertEqual(payload["status"], "released")
         self.assertEqual(payload["baseline_release"], "v0.9.0")
 
         translation = payload["translation"]
@@ -161,22 +161,22 @@ class ReadmeProgressTests(unittest.TestCase):
             payload["candidate_qa"]["screen_qa"],
             "NOT_RERUN_AFTER_FONT_ROLLBACK_AND_EVENT_REBASE",
         )
-        self.assertFalse(payload["candidate_qa"]["release_published"])
+        self.assertTrue(payload["candidate_qa"]["release_published"])
 
     def test_v010_render_distinguishes_final_rebase_from_release_and_screen_qa(self) -> None:
         rendered = readme_progress.render_candidate()
-        self.assertIn("v0.10.0 Steam 적용 후보 — GitHub 릴리스 대기", rendered)
+        self.assertIn("v0.10.0 Steam 공개 릴리스", rendered)
         self.assertIn("한국어 적용 | 2,489", rendered)
         self.assertIn("공식 크레딧 보존 | 6", rendered)
         self.assertIn("런타임 구조 보존 | 3", rendered)
         self.assertIn("글꼴 폭 조정은 포함하지 않고", rendered)
         self.assertIn("4개 좌표에서 6개만 공백으로 리베이스", rendered)
-        self.assertIn("Steam 설치본에는 적용했지만", rendered)
+        self.assertIn("Steam 설치본에는 적용했습니다", rendered)
         self.assertIn(
-            "설치=True, 화면 QA=NOT_RERUN_AFTER_FONT_ROLLBACK_AND_EVENT_REBASE, 배포=False",
+            "설치=True, 화면 QA=NOT_RERUN_AFTER_FONT_ROLLBACK_AND_EVENT_REBASE, 배포=True",
             rendered,
         )
-        self.assertIn("GitHub 공개 범위 확인이 남아 있습니다", rendered)
+        self.assertIn("비글꼴 payload도 보존한 공개본", rendered)
         self.assertIn("게임 전체 번역 완료율이 아닙니다", rendered)
         self.assertNotIn("게임 전체 번역 완료율입니다", rendered)
         self.assertNotIn("21 맵", rendered)
@@ -202,8 +202,8 @@ class ReadmeProgressTests(unittest.TestCase):
 
     def test_readme_distinguishes_the_published_v09_and_local_v010_candidate(self) -> None:
         readme = README.read_text(encoding="utf-8")
-        self.assertIn("현재 공개 안정판은 [v0.9.0]", readme)
-        self.assertIn("v0.10.0 Steam 적용 후보 — GitHub 릴리스 대기", readme)
+        self.assertIn("현재 공개 안정판은 [v0.10.0]", readme)
+        self.assertIn("v0.10.0 Steam 공개 릴리스", readme)
         self.assertIn("<!-- translation-progress:start -->", readme)
         self.assertIn("<!-- active-text-audit:start -->", readme)
 

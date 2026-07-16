@@ -89,14 +89,14 @@ def load_evidence(entry: object, *, path: str, schema: str, label: str) -> dict:
 
 
 def load_candidate_progress() -> dict:
-    """Load the applied-but-unreleased v0.10 candidate from pinned evidence."""
+    """Load the published v0.10 release ledger from pinned evidence."""
 
     payload = json.loads(CANDIDATE_PROGRESS.read_text(encoding="utf-8"))
     if payload.get("schema") != "nobu16.kr.steam-jp-1.1.7-candidate-progress.v1":
         raise ValueError("unsupported Steam JP candidate progress schema")
     if payload.get("candidate_release") != "v0.10.0":
         raise ValueError("candidate progress is not v0.10.0")
-    if payload.get("status") != "steam_applied_release_pending":
+    if payload.get("status") != "released":
         raise ValueError("candidate status differs")
     if payload.get("baseline_release") != "v0.9.0":
         raise ValueError("candidate baseline release differs")
@@ -241,7 +241,7 @@ def load_candidate_progress() -> dict:
         raise ValueError("event linebreak transaction scope differs")
     if final.get("release_scope") != {
         "res_jp_non_font_payloads_from_current_state": True,
-        "github_publication_confirmation": "pending",
+        "github_publication_confirmation": "confirmed",
     }:
         raise ValueError("candidate release scope differs")
 
@@ -261,7 +261,7 @@ def load_candidate_progress() -> dict:
         "zip_rebuild": "PASS",
         "steam_install_applied": True,
         "screen_qa": "NOT_RERUN_AFTER_FONT_ROLLBACK_AND_EVENT_REBASE",
-        "release_published": False,
+        "release_published": True,
         "file_only": True,
         "memory_patch": False,
         "dll_injection": False,
@@ -372,7 +372,7 @@ def render() -> str:
 
 
 def render_candidate() -> str:
-    """Render the separately labelled v0.10 Steam candidate without overstating QA."""
+    """Render the separately labelled v0.10 Steam release without overstating QA."""
 
     payload = load_candidate_progress()
     translation = payload["translation"]
@@ -383,7 +383,7 @@ def render_candidate() -> str:
     qa = payload["candidate_qa"]
     lines = [
         CANDIDATE_START,
-        "### v0.10.0 Steam 적용 후보 — GitHub 릴리스 대기",
+        "### v0.10.0 Steam 공개 릴리스",
         "",
         "v0.9.0 공개본을 기준으로 활성 Steam JP 텍스트 10개 테이블을 다시 감사한 결과입니다.",
         "아래는 고신뢰 ‘가나가 남고 한글이 없는’ 좌표만의 폐쇄 검증이며, 게임 전체 번역 완료율이 아닙니다.",
@@ -410,11 +410,11 @@ def render_candidate() -> str:
         ),
         f"후보 ZIP SHA-256: `{candidate['zip_sha256']}` ({candidate['zip_size']:,} bytes).",
         (
-            "Steam 설치본에는 적용했지만, 글꼴 복원·이벤트 리베이스 뒤 해당 이벤트 화면 QA는 다시 하지 않았고 "
-            "GitHub 릴리스도 아직 올리지 않았습니다. "
+            "Steam 설치본에는 적용했습니다. 글꼴 복원·이벤트 리베이스 뒤 해당 이벤트 화면 QA는 다시 하지 않았으며, "
+            "GitHub 릴리스는 공개했습니다. "
             f"상태는 설치={qa['steam_install_applied']}, 화면 QA={qa['screen_qa']}, 배포={qa['release_published']}입니다."
         ),
-        "이 ZIP은 현재 `RES_JP`의 비글꼴 payload도 보존하므로, GitHub 공개 범위 확인이 남아 있습니다.",
+        "이 ZIP은 현재 `RES_JP`의 비글꼴 payload도 보존한 공개본입니다.",
         CANDIDATE_END,
     ]
     return "\n".join(lines)
