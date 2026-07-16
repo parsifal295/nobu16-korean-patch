@@ -1,0 +1,43 @@
+{
+  "expected": {
+    "baseline": {
+      "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+      "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+      "raw_size": 1036708,
+      "sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+      "size": 1040799,
+      "string_count": 17916
+    },
+    "candidate": {
+      "packed_sha256": "7519E2E1DD68A43966AAE7A3FF5B44EEF2C513F298913B3ABDF964B7FB1AF2BD",
+      "raw_sha256": "1F681172CD2130D4F2E88C3575110A41C3908D6B8B4744C910C4ED544DDDDBFE",
+      "raw_size": 1040448,
+      "sha256": "7519E2E1DD68A43966AAE7A3FF5B44EEF2C513F298913B3ABDF964B7FB1AF2BD",
+      "size": 1044554,
+      "string_count": 17916
+    }
+  },
+  "proofs": {
+    "active_jp_hash_gate_required": true,
+    "deterministic_ab_equal": true,
+    "format_invariants_preserved": true,
+    "non_target_texts_preserved": true,
+    "opaque_non_string_metadata_preserved": true,
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "source_text_embedded": false
+  },
+  "schema": "nobu16.kr.msgev-pk-base-ev-reuse-p1-validation.v1",
+  "status": "PASS",
+  "translation": {
+    "entry_count": 185,
+    "ids_sha256": "FBB7FB41E107FF298545A1BA0F2C25E78A73E336F3B8BAC4E2BADAEC1852AB44",
+    "project_authored_manual_count": 3,
+    "reused_exact_source_hash_count": 182
+  }
+}

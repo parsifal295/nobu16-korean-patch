@@ -1,0 +1,62 @@
+{
+  "active_v090_baseline": {
+    "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+    "packed_size": 1040799,
+    "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+    "raw_size": 1036708,
+    "string_count": 17916
+  },
+  "audit_bundle": {
+    "bundle_id": "p1-MSG_PK_JP_msgev-03",
+    "coordinate_sha256": "0245195E033DAA4F5E74D8A73CAE3624D16A751AC4D87B11CE7A1DD4F7FEE204"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "B0FF07719936847F81CDA41CD4DABFF8F780E92E681E42117114EDEB4D16DD3F",
+    "packed_size": 1044341,
+    "raw_sha256": "A84A7935242A4C9128E4626AF55BB3C8960F1A9821621A22C7DD1B576937AD18",
+    "raw_size": 1040236,
+    "string_count": 17916
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgev.bin"
+  },
+  "overlay": {
+    "entry_count": 157,
+    "relative_path": "workstreams/steam_jp_msgev_p1_residual_03_v1/public/msgev_ko_steam_jp_p1_residual_03_safe_157.v1.json",
+    "sha256": "D42EA1A00954F1EDDEDCD008D293247B932401D3C91DEB19C3A6782969ED1BB9"
+  },
+  "proofs": {
+    "active_v090_baseline_pinned": true,
+    "committed_korean_provenance_source_hash_gated": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "literal_and_safe_esc_rebase_only": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "runtime_custom_bracket_rows_preserved": true,
+    "source_token_profiles_preserved": true,
+    "steam_installation_read_only": true,
+    "unsafe_structural_rows_held": true
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "safe_partition": {
+    "esc_rebased_count": 42,
+    "literal_reuse_count": 115,
+    "manual_review_hold_count": 23,
+    "runtime_preservation_count": 3
+  },
+  "schema": "nobu16.kr.steam-jp-msgev-p1-residual-03-safe-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_msgev_p1_residual_03_v1/validation.v1.json",
+    "sha256": "974B26E37645B680AED541C9FB81E3CAFB152A9216A82E5A882743BBEE229B79"
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "schema": "nobu16.kr.steam-jp-wheel-button-audit.v1",
+  "scope": {
+    "platform": "PC Steam Japanese route",
+    "steam_game_version": "1.1.7",
+    "game_files_written": false,
+    "patch_candidate_created": false,
+    "switch_raw_or_archive_copy": false
+  },
+  "identification": {
+    "asset": "main-screen radial command wheel / command-button atlas",
+    "switch_source_path": "RES_JP/res_lang.bin/8/0",
+    "switch_v21_change_proof": "v2.0→v2.1 changes only outer /8; its primary 2048x1024 BC3 texture changes while nested layout remains stable",
+    "switch_v22_adjustment_proof": "v2.1→v2.2 changes /8 again; v2.2 is the intended command-label size adjustment",
+    "latest_source_choice": "Switch v2.4 /8 is byte-identical to v2.2 /8, so v2.4 may be used as the latest visual reference while preserving the v2.2-adjusted wheel pixels",
+    "pc_target_path": "RES_JP/res_lang.bin/8/0"
+  },
+  "pc_input": {
+    "relative_path": "RES_JP/res_lang.bin",
+    "size": 154216023,
+    "sha256_before_read": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+    "sha256_after_read": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+    "read_only_identity_preserved": true
+  },
+  "switch_releases": {
+    "v20": {
+      "zip_filename": "NobunagaShinsei_KoreanPatch_v2.0.zip",
+      "zip_size": 84385377,
+      "zip_sha256": "A7497986FCC53312BC40B470465CD4DD0AE5179B0B9DB92526541E10987079DD",
+      "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+      "member_size": 86832335,
+      "member_crc32": "9CD0582F",
+      "member_sha256": "79B572CE211A4D18F2A6CDF0AFD0197802463D270797993BA169F0D6BB651159"
+    },
+    "v21": {
+      "zip_filename": "NobunagaShinsei_KoreanPatch_v2.1.zip",
+      "zip_size": 84369615,
+      "zip_sha256": "473213B0013FB24C812C517A147A15D51EFCBFCE975FBB51738EFC34F5E7B387",
+      "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+      "member_size": 86777150,
+      "member_crc32": "F6E6B288",
+      "member_sha256": "C79B8F205CDAAF374B2F84F3AE4E385CE8498C5BA7CB8071DD2B9A178A27688D"
+    },
+    "v22": {
+      "zip_filename": "NobunagaShinsei_KoreanPatch_v2.2.zip",
+      "zip_size": 83752794,
+      "zip_sha256": "5E6354069E38BE22E3B3C9272A6CEC8A4B4110DF2486B9A63E84D1058C35D7F7",
+      "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+      "member_size": 85548771,
+      "member_crc32": "5D7EB72C",
+      "member_sha256": "F179D9A89A7D20B51E26681208CA7186BDD1DC6B2F09FAF9CA8154B35933557F"
+    },
+    "v23": {
+      "zip_filename": "NobunagaShinsei_KoreanPatch_v2.3.zip",
+      "zip_size": 83756574,
+      "zip_sha256": "A085B5D7F661786CF8E6568A36CF24E7BE1ADF81D042FF8C3D2E220D46A09388",
+      "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+      "member_size": 85531410,
+      "member_crc32": "AFE49454",
+      "member_sha256": "20A548D544BEB40A45359914777DB7467F6D319078CE43BC566F0BBD6D64F9FB"
+    },
+    "v24": {
+      "zip_filename": "NobunagaShinsei_KoreanPatch_v2.4.zip",
+      "zip_size": 83764122,
+      "zip_sha256": "9BAC0A141A7DEBB779BF67EB35F582287B120CBDE6A4B4939AC4903315F7E04C",
+      "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+      "member_size": 85549663,
+      "member_crc32": "ECD0A811",
+      "member_sha256": "086A6AC3F22F09A77E325BF23675F792AB6ACA5D9CBC35564EE6BDB4433CDB06"
+    }
+  },
+  "wheel_inventories": {
+    "switch_v20": {
+      "path": "RES_JP/res_lang.bin/8",
+      "outer_index": 8,
+      "outer_entry": {
+        "offset": 77032483,
+        "stored_size": 413306,
+        "next_offset": 77445793,
+        "sha256": "25C3116479CCBCA44205E5813596C37D5DBEC2317599369DF6E043EA96830B06"
+      },
+      "nested_link": {
+        "resource_id": 474,
+        "table_slot_count": 1,
+        "table_offset": 32,
+        "aligned_table_end": 64,
+        "pre_slot_size": 5696,
+        "pre_slot_sha256": "FA61EA7184CF4AFD19E13A845C27C84AF0763DAC88336A93755E31602FA7F890",
+        "tail_size": 0,
+        "tail_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "slot": {
+        "slot": 0,
+        "offset": 5760,
+        "stored_size": 407546,
+        "wrapper_sha256": "C5C871B6E267FB1260B937792F96250CB88964BE112BDD5D0E70DE1366812257",
+        "wrapper_prefix_sha256": "49C3B80E566A5C491F469382D6EA4307D615C7C893569EF895582B6EF10AC045",
+        "wrapper_uncompressed_size": 2099284,
+        "wrapper_compressed_size": 407522,
+        "raw_sha256": "851E4972DA4BC89F0DEBA6319E27D33182CDB8173A7A99FABF9A17ABB5A90E06",
+        "raw_kind": "GT1G0600",
+        "g1t": {
+          "declared_size": 2099284,
+          "platform": 16,
+          "texture_count": 2,
+          "textures": [
+            {
+              "texture": 0,
+              "dimensions": [
+                2048,
+                1024
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 2097172,
+              "node_sha256": "736D59509DEE29AC575428C1C373B99CEDF1C7A39745EB1CE6DFF2F0399266D5",
+              "payload_size": 2097152,
+              "payload_sha256": "BF000397E1225080C3A0215E16164FD0161E56B5AB89173B21D3C5889ABEC247"
+            },
+            {
+              "texture": 1,
+              "dimensions": [
+                64,
+                32
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 2068,
+              "node_sha256": "C3AF5BC1959A3DDB4D6B2306148310A52D1B2B6ADEC77E72B3317418988784A7",
+              "payload_size": 2048,
+              "payload_sha256": "5DE8E4C4BBE324C6470D3FD414E7D23835BA15A25365E97FE1C863AC4B3696A0"
+            }
+          ]
+        }
+      },
+      "inventory_sha256": "1E80117EF16CA3FDFD8C8712A3D254602DBF7FED2F4D02A65CAE9855CB2AE7C2"
+    },
+    "switch_v21": {
+      "path": "RES_JP/res_lang.bin/8",
+      "outer_index": 8,
+      "outer_entry": {
+        "offset": 77032483,
+        "stored_size": 358121,
+        "next_offset": 77390608,
+        "sha256": "42261DBF83E54CD5352872C432E8FECB3C71FC32E704F476D6947D12786D5565"
+      },
+      "nested_link": {
+        "resource_id": 474,
+        "table_slot_count": 1,
+        "table_offset": 32,
+        "aligned_table_end": 64,
+        "pre_slot_size": 5696,
+        "pre_slot_sha256": "FA61EA7184CF4AFD19E13A845C27C84AF0763DAC88336A93755E31602FA7F890",
+        "tail_size": 0,
+        "tail_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "slot": {
+        "slot": 0,
+        "offset": 5760,
+        "stored_size": 352361,
+        "wrapper_sha256": "FDEBC3095617F2BBF9A5968D68E782A4C33EFA9481CAEBA76DF33936BA966DBC",
+        "wrapper_prefix_sha256": "49C3B80E566A5C491F469382D6EA4307D615C7C893569EF895582B6EF10AC045",
+        "wrapper_uncompressed_size": 2099284,
+        "wrapper_compressed_size": 352337,
+        "raw_sha256": "A5BEA5E5333FEFBBBAF17108E61CAE61F76A57AC0B3905B69778816EFA573BC4",
+        "raw_kind": "GT1G0600",
+        "g1t": {
+          "declared_size": 2099284,
+          "platform": 16,
+          "texture_count": 2,
+          "textures": [
+            {
+              "texture": 0,
+              "dimensions": [
+                2048,
+                1024
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 2097172,
+              "node_sha256": "22B51BA1EEC69D8577CACCA92A633E0CAABE58058CA832C5B0068665D6D55769",
+              "payload_size": 2097152,
+              "payload_sha256": "F5EEBFCED7A437468352F9F825B437F942D7A05E73057256BACDC5C5860976CD"
+            },
+            {
+              "texture": 1,
+              "dimensions": [
+                64,
+                32
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 2068,
+              "node_sha256": "C3AF5BC1959A3DDB4D6B2306148310A52D1B2B6ADEC77E72B3317418988784A7",
+              "payload_size": 2048,
+              "payload_sha256": "5DE8E4C4BBE324C6470D3FD414E7D23835BA15A25365E97FE1C863AC4B3696A0"
+            }
+          ]
+        }
+      },
+      "inventory_sha256": "25916C288B28CEBCB68FDBF58F427B174F2AD9C1DE13D7837E894CD516409DFE"
+    },
+    "switch_v24": {
+      "path": "RES_JP/res_lang.bin/8",
+      "outer_index": 8,
+      "outer_entry": {
+        "offset": 76861267,
+        "stored_size": 365744,
+        "next_offset": 77227015,
+        "sha256": "E53DD86B2ECD3FDA2900A52FB7390814AE49793F8C81C9801CA9C39C27743059"
+      },
+      "nested_link": {
+        "resource_id": 474,
+        "table_slot_count": 1,
+        "table_offset": 32,
+        "aligned_table_end": 64,
+        "pre_slot_size": 5696,
+        "pre_slot_sha256": "FA61EA7184CF4AFD19E13A845C27C84AF0763DAC88336A93755E31602FA7F890",
+        "tail_size": 0,
+        "tail_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "slot": {
+        "slot": 0,
+        "offset": 5760,
+        "stored_size": 359984,
+        "wrapper_sha256": "8A8223997DEABC376A12850AD2D9722B4E6F281F447F707203AF1C3DDAB766BD",
+        "wrapper_prefix_sha256": "49C3B80E566A5C491F469382D6EA4307D615C7C893569EF895582B6EF10AC045",
+        "wrapper_uncompressed_size": 2099284,
+        "wrapper_compressed_size": 359960,
+        "raw_sha256": "051F55B6E776BFB9942C61932CBCBE723F30E3E43DDD2A0CC59521B637F07487",
+        "raw_kind": "GT1G0600",
+        "g1t": {
+          "declared_size": 2099284,
+          "platform": 16,
+          "texture_count": 2,
+          "textures": [
+            {
+              "texture": 0,
+              "dimensions": [
+                2048,
+                1024
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 2097172,
+              "node_sha256": "C79A216A4878C7C65C21668F65DED3BDEC06E061D747D03B21E00134B4F80D61",
+              "payload_size": 2097152,
+              "payload_sha256": "6E7F9992F371228D1C501E81CA5A60FB2C78656BB5C3CA01FF46BA31BA05CDFC"
+            },
+            {
+              "texture": 1,
+              "dimensions": [
+                64,
+                32
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 2068,
+              "node_sha256": "C3AF5BC1959A3DDB4D6B2306148310A52D1B2B6ADEC77E72B3317418988784A7",
+              "payload_size": 2048,
+              "payload_sha256": "5DE8E4C4BBE324C6470D3FD414E7D23835BA15A25365E97FE1C863AC4B3696A0"
+            }
+          ]
+        }
+      },
+      "inventory_sha256": "12AC467CD7347EF25035E6BDD81044266DDEA26D912872C429FCFC21AD1B331A"
+    },
+    "steam_jp": {
+      "path": "RES_JP/res_lang.bin/8",
+      "outer_index": 8,
+      "outer_entry": {
+        "offset": 135375954,
+        "stored_size": 867317,
+        "next_offset": 136243275,
+        "sha256": "A4249EAA29587DB251601208CF2B5ED0E8D1E0D27F7DCFDC0E8A5709C66B2B8D"
+      },
+      "nested_link": {
+        "resource_id": 474,
+        "table_slot_count": 1,
+        "table_offset": 32,
+        "aligned_table_end": 64,
+        "pre_slot_size": 5696,
+        "pre_slot_sha256": "11FD27D41E05DF2A04DB30C841C540082838D5C9753BFAA94DF25F1A1DF2F25E",
+        "tail_size": 0,
+        "tail_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "slot": {
+        "slot": 0,
+        "offset": 5760,
+        "stored_size": 861557,
+        "wrapper_sha256": "20ED525BCD79F2EE56F61282404A995C56310E41E91CD58DB3C87FBD716463E1",
+        "wrapper_prefix_sha256": "49C3B80E566A5C491F469382D6EA4307D615C7C893569EF895582B6EF10AC045",
+        "wrapper_uncompressed_size": 4196436,
+        "wrapper_compressed_size": 861533,
+        "raw_sha256": "5ED7549C5953728302FBB3688D69F82E2A58879B3BDDD445B94D058B5DE52AD9",
+        "raw_kind": "GT1G0600",
+        "g1t": {
+          "declared_size": 4196436,
+          "platform": 10,
+          "texture_count": 2,
+          "textures": [
+            {
+              "texture": 0,
+              "dimensions": [
+                2048,
+                2048
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 4194324,
+              "node_sha256": "30BE9D926F84423B3552DEF9A345DF2BE2CD066981D53206CFC0EFEFB3D1EFBF",
+              "payload_size": 4194304,
+              "payload_sha256": "9922D32B23853A29847F6D33C85550504BF7028FE2FA86D0D5442365D697D2C1"
+            },
+            {
+              "texture": 1,
+              "dimensions": [
+                64,
+                32
+              ],
+              "format_code": "0x5B",
+              "mip_count": 1,
+              "extra_version": 16,
+              "extra_length": 12,
+              "node_size": 2068,
+              "node_sha256": "C3AF5BC1959A3DDB4D6B2306148310A52D1B2B6ADEC77E72B3317418988784A7",
+              "payload_size": 2048,
+              "payload_sha256": "5DE8E4C4BBE324C6470D3FD414E7D23835BA15A25365E97FE1C863AC4B3696A0"
+            }
+          ]
+        }
+      },
+      "inventory_sha256": "E3D911A5BE6A176AB93C5904792ACA367AE9739461E7505145BF033BB3E9A2A7"
+    }
+  },
+  "comparisons": {
+    "switch_v20_to_v21": {
+      "left": "switch_v20",
+      "right": "switch_v21",
+      "outer_entry_count_equal": true,
+      "changed_outer_indices": [
+        8
+      ],
+      "wheel_outer_changed": true,
+      "wheel_nested_contract_equal": true,
+      "wheel_g1t_layout_equal": true,
+      "wheel_changed_texture_indices": [
+        0
+      ],
+      "wheel_primary_texture_changed": true,
+      "comparison_sha256": "70EBE3A37038629EF1684E983774C0A3315E395692CFC41D8E775BD72AE0F851"
+    },
+    "switch_v21_to_v22": {
+      "left": "switch_v21",
+      "right": "switch_v22",
+      "outer_entry_count_equal": true,
+      "changed_outer_indices": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        24
+      ],
+      "wheel_outer_changed": true,
+      "wheel_nested_contract_equal": true,
+      "wheel_g1t_layout_equal": true,
+      "wheel_changed_texture_indices": [
+        0
+      ],
+      "wheel_primary_texture_changed": true,
+      "comparison_sha256": "F8075C1C031A771AFD898AF1F9BF273B6EAE20CA9C229011A0EC9751D7AC846B"
+    },
+    "switch_v22_to_v23": {
+      "left": "switch_v22",
+      "right": "switch_v23",
+      "outer_entry_count_equal": true,
+      "changed_outer_indices": [
+        6,
+        7
+      ],
+      "wheel_outer_changed": false,
+      "wheel_nested_contract_equal": true,
+      "wheel_g1t_layout_equal": true,
+      "wheel_changed_texture_indices": [],
+      "wheel_primary_texture_changed": false,
+      "comparison_sha256": "034977508908F8EF8414F53F87F321336F3B3273517382E3E8204CFD420F4AB6"
+    },
+    "switch_v23_to_v24": {
+      "left": "switch_v23",
+      "right": "switch_v24",
+      "outer_entry_count_equal": true,
+      "changed_outer_indices": [
+        6,
+        7
+      ],
+      "wheel_outer_changed": false,
+      "wheel_nested_contract_equal": true,
+      "wheel_g1t_layout_equal": true,
+      "wheel_changed_texture_indices": [],
+      "wheel_primary_texture_changed": false,
+      "comparison_sha256": "0D0BD22E69AA61F86D223556C124C3AB2E8A0F4FFCC8216454C2C166B4AB6959"
+    },
+    "switch_v22_to_steam_jp": {
+      "switch_outer_index": 8,
+      "pc_outer_index": 8,
+      "nested_resource_id_equal": true,
+      "nested_slot_count_equal": true,
+      "g1t_platform": {
+        "switch": 16,
+        "pc": 10,
+        "equal": false
+      },
+      "primary_texture": {
+        "format_code": {
+          "switch": "0x5B",
+          "pc": "0x5B",
+          "equal": true
+        },
+        "dimensions": {
+          "switch": [
+            2048,
+            1024
+          ],
+          "pc": [
+            2048,
+            2048
+          ],
+          "equal": false
+        },
+        "payload_size": {
+          "switch": 2097152,
+          "pc": 4194304,
+          "equal": false
+        }
+      },
+      "raw_or_wrapper_copy_allowed": false,
+      "pc_only_rebuild_required": true,
+      "comparison_sha256": "F4401A3C34842C396A86570C612702F97208A3FB236E56703C20191C55115984"
+    }
+  },
+  "implementation_gate": {
+    "status": "blocked_pending_pc_atlas_mapping_and_visual_qa",
+    "why": [
+      "Switch /8/0 primary atlas is 2048x1024, while Steam JP /8/0 is 2048x2048.",
+      "Switch and PC G1T platform fields differ (0x10 vs 0x0A).",
+      "Raw Switch LINK, wrapper, G1T, or payload byte copying is prohibited."
+    ],
+    "next_pc_only_rebuild_gate": [
+      "Use the Switch v2.4 primary BC3 pixels only as a private preview; its /8 is byte-identical to the v2.2 wheel-size-adjusted atlas.",
+      "Map the Korean labels onto the Steam JP 2048x2048 layout by visual correspondence; do not assume matching coordinates.",
+      "Render Korean labels into the Steam JP atlas while preserving icons, clouds, arrows, backgrounds, texture 1, and all non-/8 outer entries byte-identically.",
+      "Rebuild only Steam JP /8/0 with the PC 0x0A G1T, PC wrapper, and PC LINK structures; then require parse, hash, and in-game main-screen wheel QA before any apply."
+    ]
+  },
+  "audit_sha256": "B34F1DDD207A902D073096E6A542055CE88685DABE9F4A3B61D2B87AAC83717C"
+}

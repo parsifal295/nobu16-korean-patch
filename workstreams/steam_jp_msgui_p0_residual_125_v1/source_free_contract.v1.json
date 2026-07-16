@@ -1,0 +1,50 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "29D0C6CCC262E7AB757AA5D0819224370DEDEF4CF250E89FC88B24E600EF2169",
+    "packed_size": 121608,
+    "raw_sha256": "FFCCBDB6EE4C80E143B8F6F8B0DAB31DD2F01B1ED2E608A98DEA13F45B939502",
+    "raw_size": 121108,
+    "string_count": 5100
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "1589C2FA4A3B0F53FB2779838435C8B4FA67226E9A19148A7CDDA8B1E033746E",
+    "packed_size": 122568,
+    "raw_sha256": "983C89BE2DB553A757813E8626FAB846849FA0B83EEC6071ECA95E5B05ACDC43",
+    "raw_size": 122064,
+    "string_count": 5100
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgui.bin"
+  },
+  "overlay": {
+    "coordinate_sha256": "E8B5AF6C3AA20B5744B9BF30DDAB70E826ECDE375EE858FEB1848F8749122456",
+    "entry_count": 125,
+    "relative_path": "workstreams/steam_jp_msgui_p0_residual_125_v1/public/msgui_ko_pk_jp_p0_residual_125.v1.json",
+    "sha256": "A04964A876CAECB951EB891423E6A6F9B657492188EC616309B1D8FB47A132A5"
+  },
+  "proofs": {
+    "active_v6_baseline_pinned": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "format_and_token_profile_preserved": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "steam_installation_read_only": true
+  },
+  "resource": "MSG_PK/JP/msgui.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgui-p0-residual-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_msgui_p0_residual_125_v1/validation.v1.json",
+    "sha256": "CF23435CE6BABAB7D43DDC2103BD9E0F7BBC33316C755309513E37CC0D437510"
+  }
+}

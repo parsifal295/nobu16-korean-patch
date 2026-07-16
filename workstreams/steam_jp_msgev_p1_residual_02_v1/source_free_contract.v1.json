@@ -1,0 +1,55 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+    "packed_size": 1040799,
+    "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+    "raw_size": 1036708,
+    "string_count": 17916
+  },
+  "audit_bundle": {
+    "bundle_id": "p1-MSG_PK_JP_msgev-02",
+    "coordinate_sha256": "69FE48161322FBDF99CC5AB9660CAC3438B43FB0B90443038750A02E47ADAAFC"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "332BCAD3AAE5C05FD8E52D39A29763988C3236242AC4261AE6E503184A2307DD",
+    "packed_size": 1044361,
+    "raw_sha256": "5FAE66DA5D19D931BA7A9FFDB3CD20146B24258BED505757F50060881E98B5BD",
+    "raw_size": 1040256,
+    "string_count": 17916
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgev.bin"
+  },
+  "overlay": {
+    "entry_count": 185,
+    "relative_path": "workstreams/steam_jp_msgev_p1_residual_02_v1/public/msgev_ko_steam_jp_p1_residual_02_185.v1.json",
+    "sha256": "BBBCB3F55D7D109B11A98195355F25D7233270158F40BE1FD2B14C9B9D162200"
+  },
+  "proofs": {
+    "active_v6_baseline_pinned": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "exact_base_ev_source_hash_reuse": true,
+    "format_and_token_profile_preserved": true,
+    "manual_remainder_only": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "steam_installation_read_only": true
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgev-p1-residual-02-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_msgev_p1_residual_02_v1/validation.v1.json",
+    "sha256": "732CBE3B16A78DE5D53F93FEE1828B0C5B33121521C2C6D6A7560CCDC05C987F"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "nobu16.kr.steam-jp-1.1.7-image-candidate-validation.v1",
+  "source_free": true,
+  "file_only": true,
+  "game_install_modified": false,
+  "runtime_patch_features": [],
+  "target": {
+    "resource": "RES_JP/res_lang.bin",
+    "title_slots": {
+      "first": 0,
+      "last": 107,
+      "count": 108
+    }
+  },
+  "baseline_v0_9": {
+    "shared_default_input_root": "tmp/steam_jp_117_image_candidate_v1_inputs/v0.9.0",
+    "default_input_uses_inherited_acl_bucket": true,
+    "zip": {
+      "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.9.0.zip",
+      "size": 356951693,
+      "sha256": "1BCC92A3CD7025D307AF9B193BDDD8F1448451024630C8414FC218F0C49FE829"
+    },
+    "manifest": {
+      "name": "candidate_manifest.v6.json",
+      "size": 16870,
+      "sha256": "5D93C83B817E67408A9F8A160B8437E37DE4EF332AB7C76D69855D2F705A8F3B",
+      "schema": "nobu16.kr.steam-jp-1.1.7-candidate-manifest.v6"
+    },
+    "candidate_file_count": 14,
+    "res_lang_font_baseline": {
+      "size": 154216023,
+      "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0"
+    },
+    "res_lang_stock_predecessor": {
+      "size": 153198542,
+      "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53"
+    }
+  },
+  "title_image_input": {
+    "validation": {
+      "path": "workstreams/steam_jp_title_images_v1/validation.v1.json",
+      "size": 2413,
+      "sha256": "F3968CFC7FEDD816251F301EB09BA70BDA99C7CD2FEA58C793FA1487D8CE7FB4"
+    },
+    "candidate": {
+      "size": 160351447,
+      "sha256": "D045B42BC3D4A4D4C501C5A0E010698AAE95AAE227775306A1272D5259E0888B"
+    },
+    "pc_title_slot_contract_verified": true,
+    "tail_slots_108_109_preserved": true,
+    "unrelated_outer_entries_preserved": true
+  },
+  "constraints": {
+    "one_resource_replaced": true,
+    "thirteen_v0_9_resources_retained": true,
+    "archive_members_exactly_fourteen": true,
+    "archive_has_no_reports_png_switch_or_exefs": true,
+    "deterministic_zip": true,
+    "outputs_under_tmp_only": true,
+    "live_steam_pre_post_guard_including_exes": true,
+    "memory_patch": false,
+    "dll_injection": false,
+    "hooking": false,
+    "exe_or_registry_modified": false,
+    "steam_files_written": false
+  }
+}

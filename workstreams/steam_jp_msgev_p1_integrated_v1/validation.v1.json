@@ -1,0 +1,44 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+    "packed_size": 1040799,
+    "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+    "raw_size": 1036708,
+    "string_count": 17916
+  },
+  "checks": {
+    "combined_changes": 370,
+    "coordinate_overlap": false,
+    "deterministic_raw_and_packed_rebuild": true,
+    "format_and_token_profile_preserved": true,
+    "github_written": false,
+    "nonselected_utf16le_payloads_preserved": true,
+    "p1_01_entries": 185,
+    "p1_02_entries": 185,
+    "parser_roundtrip_valid": true,
+    "per_entry_source_hash_gated": true,
+    "release_asset_written": false,
+    "shared_active_v6_baseline": true,
+    "steam_installation_written": false
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "coordinate_sha256": "BA5CA1A7863D4ECBFC300B2F05BEF51B6F8B3661F0C41A4694C6EAD7CC854FE4",
+  "effective_change_coordinate_sha256": "BA5CA1A7863D4ECBFC300B2F05BEF51B6F8B3661F0C41A4694C6EAD7CC854FE4",
+  "effective_change_count": 370,
+  "entry_count": 370,
+  "expected_candidate": {
+    "packed_sha256": "63A6244E8F6C4C370DB45F3218463F17A54976FBD30D9153784AD81B09984AC6",
+    "packed_size": 1048116,
+    "raw_sha256": "2D559AF3175EEF31C966195C7F293BED5C71B0CDC058DCAEF0ED4835D39E02DB",
+    "raw_size": 1043996,
+    "string_count": 17916
+  },
+  "input_entry_counts": {
+    "p1_01": 185,
+    "p1_02": 185
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "schema": "nobu16.kr.steam-jp-msgev-p1-integrated-validation.v1",
+  "source_free": true
+}

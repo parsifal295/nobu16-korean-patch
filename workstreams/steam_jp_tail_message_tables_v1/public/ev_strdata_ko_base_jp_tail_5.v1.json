@@ -1,0 +1,80 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "9ED892E85AF18EB3BC965A834853969BC06F486A2466A83F3CEBED1B8D5433C0",
+    "packed_size": 928464,
+    "raw_sha256": "205BA7CA7873411B03C51D1931C277DA9BA8E56700B5EA0D8EDB82B49BD45ABE",
+    "raw_size": 924812,
+    "string_count": 17868
+  },
+  "audit_bundle": {
+    "coordinate_sha256": "4D495C297FC9EED9B6E317EC2D4F5718DBD31A1A96B73A200B89E1038D040BE2",
+    "entry_ids": [
+      3917,
+      4835,
+      7260,
+      8818,
+      8904
+    ]
+  },
+  "base_language": "JP",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "sc_container_used": false
+  },
+  "entries": [
+    {
+      "format_signature_sha256": "08D95555C35169FADB49D5025E374D84FC1E000AA9C4CF9AC41D3F975426D878",
+      "id": 3917,
+      "ko": "가마쿠라 막부 고케닌인 \u001bCB도이씨\u001bCZ에서 비롯되어,\n뛰어난 수군을 거느린 \u001bCC산요\u001bCZ의 명문 \u001bCB고바야카와 가문\u001bCZ―",
+      "ko_utf16le_sha256": "1743E7FE57CF437897EBA287E16D252E38BA3F1EABB6AC2DCEA7A6BE0058DFAA",
+      "source_jp_utf16le_sha256": "81B3FD52E181F013A72065C4D31CC614EF161E489D18766CD20DA49BA3FE1B8D",
+      "translation_origin": "exact_source_hash_catalog_reuse"
+    },
+    {
+      "format_signature_sha256": "614A0E4A3EDC0520497A67D09E9FCF8B59BA5C22C0207A4690BF31BEAB5DA368",
+      "id": 4835,
+      "ko": "(어디까지나 정직한 사내로군……\n　하지만 바로 그 ‘성실함’이\n　네 무서운 재능이다……)",
+      "ko_utf16le_sha256": "8B75CB286E6235393AD6A79B5F1068C428C0E075E13B146143A06CB2A891EB06",
+      "source_jp_utf16le_sha256": "716A34A85C23281EBAC8C828ED95D9214E5BBC683F474808ABB3DDECA06315E0",
+      "translation_origin": "exact_source_hash_catalog_reuse"
+    },
+    {
+      "format_signature_sha256": "B7B7AB2A8C410FDF078F78CFBA1FE4996695A8C7E430CE62CA1A622E613FF253",
+      "id": 7260,
+      "ko": "길이 십팔 간, 대포 여러 문을 갖추고, 얇은 철판으로\n배의 바깥을 뒤덮은, 거대한 대아타케부네 여섯 척이\n마침내 완성된 것이다.",
+      "ko_utf16le_sha256": "CBACEE37D4554A4E89313CBE9BB598285F6CD5307E2B55BE58D02CBA055AE657",
+      "source_jp_utf16le_sha256": "C999C78BF24861002DEF07BA3BA2D0BC0A3690C6E9FA446B9FE716E2F876E953",
+      "translation_origin": "exact_source_hash_catalog_reuse"
+    },
+    {
+      "format_signature_sha256": "36100A3DBFFC4D7F2263D47A50FA9186BE96BC22397B3BC16847643E709C87B7",
+      "id": 8818,
+      "ko": "관백 \u001bCA히데요시\u001bCZ는 여러 나라의 다이묘에게, 제멋대로의 영토 다툼을\n금하고, 그것을 '소부지'라 칭하였다.\n이를 거스르는 자는 관백의 토벌을 받는다.",
+      "ko_utf16le_sha256": "2D0C6EAEEC471ED82390F714A22DBB3C54E95D11BB3ACCC53FA5F0D6B69854C3",
+      "source_jp_utf16le_sha256": "486A9D15FDF3C39BDF6C23F04EEE748BB0691D5F77155C1678C944A7A8556C14",
+      "translation_origin": "exact_source_hash_catalog_reuse"
+    },
+    {
+      "format_signature_sha256": "DB37017B056099180816E90FA47349D815BC448BE0FACD73AE2FCD8D1741BF66",
+      "id": 8904,
+      "ko": "관백 전하께서는 강녕하시온지…\n\u001bCA시마즈 요시히사\u001bCZ, 개명하여 입도 \u001bCA류하쿠\u001bCZ이옵니다.",
+      "ko_utf16le_sha256": "F346875D8EA24CC0AD3C3191E4ED6C54543295234D19AF1662C88212B8C1AFE3",
+      "source_jp_utf16le_sha256": "B45CA1F5D46F3C4922F2EEF9BCDAD88F3663D724F54F209000D3A04318E5BC80",
+      "translation_origin": "exact_source_hash_catalog_reuse"
+    }
+  ],
+  "entry_count": 5,
+  "exact_reuse_catalogs": [
+    {
+      "relative_path": "workstreams/steam_jp_common_messages_v1/public/msgev_ko_steam_jp_native.v1.json",
+      "sha256": "47742330C4375A6BB6AC19ED0F7E8040CF57E22EF39BEDEE7FF4959520B1575C"
+    }
+  ],
+  "overlay_id": "ev_strdata_ko_base_jp_tail_5.v1",
+  "resource": "MSG/JP/ev_strdata.bin",
+  "schema": "nobu16.kr.steam-jp-tail-ev-overlay.v1",
+  "translation_origin_counts": {
+    "exact_source_hash_catalog_reuse": 5
+  }
+}

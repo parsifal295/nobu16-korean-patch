@@ -1,0 +1,118 @@
+{
+  "candidate": {
+    "changed_entry_count": 640,
+    "changed_entry_ids_sha256": "96E82AAD3B74FA8F930250E7C7ECCE9F814EA886771F71361BAA4C5604C6ED6C",
+    "exact_entry_count": 625,
+    "linebreak_tokens_replaced": 1121,
+    "packed": {
+      "sha256": "83254E56D7B0310848D065E6A6EF1DAF3C8E1FA03C07FB669CA497C2014D85C1",
+      "size": 928593
+    },
+    "raw": {
+      "sha256": "5C4FC966F29C652C0D9040188348AD3C61FA97F18FE7E12A9B03A5D203216444",
+      "size": 924940
+    },
+    "raw_parse_rebuild_valid": true,
+    "rebased_entry_count": 11,
+    "residual_translation_repair_entry_count": 4,
+    "wrapper_prefix_preserved": true
+  },
+  "checks": {
+    "all_public_targets_korean_only": true,
+    "candidate_changed_domain_exact": true,
+    "candidate_parse_roundtrip": true,
+    "exact_v13_v22_v09_preimage_gate": true,
+    "fullwidth_linebreak_combined_candidate_validated_in_memory": true,
+    "fullwidth_linebreak_overlap_requires_composed_candidate_api": true,
+    "fullwidth_or_middle_dot_mutation_in_linebreak_only_entries": false,
+    "fullwidth_overlap_reported_from_external_v0_9_hash_gated_model": true,
+    "generic_linebreak_stripping": false,
+    "installed_game_file_written": false,
+    "linebreak_only_entries_replace_only_breaks_with_ascii_space": true,
+    "middle_dot_fullwidth_composition_deferred_pending_font_prerequisite": true,
+    "rebase_linebreak_vector_gate": true,
+    "rebase_printf_esc_control_pua_gate": true,
+    "release_asset_written": false,
+    "residual_japanese_preimages_hash_only": true,
+    "residual_translation_repairs_retain_switch_v23_reference_hash_only": true,
+    "residual_translation_repairs_use_manual_cjk_kana_free_korean_target": true,
+    "switch_binary_written": false,
+    "switch_v22_v23_coordinate_delta_pinned": true,
+    "switch_v24_text_member_equals_v23": true,
+    "v09_preimage_hash_gate": true
+  },
+  "deferred": {
+    "entry_count": 3,
+    "entry_ids_sha256": "0B6940C04DEBFAB6D8EFDD27A9A02DF0573002B10EB89E613B0961B0A2F28028"
+  },
+  "fullwidth_composed_candidate": {
+    "changed_entry_count": 1138,
+    "changed_entry_ids_sha256": "9B229A0E3B24A986E85F8418869A306E84651D4435B1569A00B6767414026ADF",
+    "fullwidth_linebreak_composition": {
+      "composition_order_for_linebreak_only_overlap": "v0.9 -> fullwidth_punctuation -> CRLF_CR_LF_to_ascii_space",
+      "fullwidth_ev_strdata_operation_count": 526,
+      "fullwidth_model_sha256": "E902FB90D19B37168C9512A5337CE0A0CB18E1D4EEE77284667BFB7CA7B73329",
+      "intersection_entry_count": 28,
+      "intersection_entry_ids_sha256": "53705CCD9BCE75A1C5974D250C16AFB4E258A3A8B4F79562A8DF792A26D8D147",
+      "manual_residual_intersection_count": 0,
+      "manual_residual_intersection_ids_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "manual_residual_overlap_allowed": false,
+      "middle_dot_composition_included": false,
+      "middle_dot_font_prerequisite_deferred": true,
+      "safe_ascii_only_fullwidth_model": true
+    },
+    "fullwidth_operations_embedded_in_linebreak_overlay": false,
+    "linebreak_tokens_replaced": 1121,
+    "packed": {
+      "sha256": "FBDED923E3BFA4117B45E419D5365D66ED5D744239B8576D9F5D3366A5E5A64E",
+      "size": 928593
+    },
+    "raw": {
+      "sha256": "8F4086E8E8DB5A6A2F83403D5734F39BF595550834849ECF2378F4CBFF2B71EB",
+      "size": 924940
+    },
+    "raw_parse_rebuild_valid": true
+  },
+  "fullwidth_handoff": {
+    "entry_count": 686,
+    "entry_ids_sha256": "97DCBBB6DBC0F6FF52431FF1DAA365BF5B1AF811B70F34685D2B0052A44B540D",
+    "policy": "handled_by_separate_punctuation_only_workstream"
+  },
+  "fullwidth_linebreak_composition": {
+    "composition_order_for_linebreak_only_overlap": "v0.9 -> fullwidth_punctuation -> CRLF_CR_LF_to_ascii_space",
+    "fullwidth_ev_strdata_operation_count": 526,
+    "fullwidth_model_sha256": "E902FB90D19B37168C9512A5337CE0A0CB18E1D4EEE77284667BFB7CA7B73329",
+    "intersection_entry_count": 28,
+    "intersection_entry_ids_sha256": "53705CCD9BCE75A1C5974D250C16AFB4E258A3A8B4F79562A8DF792A26D8D147",
+    "manual_residual_intersection_count": 0,
+    "manual_residual_intersection_ids_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "manual_residual_overlap_allowed": false,
+    "middle_dot_composition_included": false,
+    "middle_dot_font_prerequisite_deferred": true,
+    "safe_ascii_only_fullwidth_model": true
+  },
+  "operations": {
+    "entry_count": 640,
+    "exact_entry_count": 625,
+    "linebreak_tokens_replaced": 1121,
+    "rebased_entry_count": 11,
+    "residual_translation_repair_entry_count": 4
+  },
+  "resource": "MSG/JP/ev_strdata.bin",
+  "runtime": {
+    "distribution": "Steam",
+    "pk_version": "1.1.7",
+    "predecessor_release": "v0.9.0",
+    "steam_build_id": 18823764
+  },
+  "schema": "nobu16.kr.steam-jp-switch-v23-linebreak-validation.v1",
+  "source_delta": {
+    "coordinate_ids_sha256": "96E82AAD3B74FA8F930250E7C7ECCE9F814EA886771F71361BAA4C5604C6ED6C",
+    "linebreak_coordinate_count": 640,
+    "linebreak_token_count": 1121,
+    "one_break_row_count": 159,
+    "two_break_row_count": 481,
+    "v22_to_v23_changed_rows": 1329
+  },
+  "status": "PASS"
+}

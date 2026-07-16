@@ -1,0 +1,54 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "2D1BEFF03972777FBA5EE0B8FEF24E6A03B285DA466A4DA439794D21587A0F69",
+    "packed_size": 496999,
+    "raw_sha256": "25593167A47B5B0F69357F71E5E9882382F346AEF1B8DCA7DB6902D7E270AB67",
+    "raw_size": 495032,
+    "string_count": 29218
+  },
+  "audit_bundle": {
+    "bundle_id": "p1-MSG_PK_JP-msgdata-02",
+    "coordinate_sha256": "00EC1CA72A9015A88CA7D0673C1C79B42AAF38144ADE32FD1CE11C61ED4F94F5"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "B55F527C5BBCFB0D6EE9DB94A72614A421E28A74F445E122A29AC3F95D31152D",
+    "packed_size": 496613,
+    "raw_sha256": "2AC4E1B4F9606CA6AC43066A1E4ECAB3725E1282FED21FAF18E361C416FE4889",
+    "raw_size": 494648,
+    "string_count": 29218
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgdata.bin"
+  },
+  "overlay": {
+    "entry_count": 170,
+    "relative_path": "workstreams/steam_jp_msgdata_p1_residual_170_v1/public/msgdata_ko_pk_jp_p1_residual_170.v1.json",
+    "sha256": "A10AC4CFD4D0A2DF1B5EDAD8324DB54F69703D0357BE80E4B1CF7E58059B82ED"
+  },
+  "proofs": {
+    "active_v6_baseline_pinned": true,
+    "catalog_reuse_exact_source_hash_only": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "format_and_token_profile_preserved": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "steam_installation_read_only": true
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgdata-p1-residual-170-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_msgdata_p1_residual_170_v1/validation.v1.json",
+    "sha256": "8E80104EF7EB441F54A28F523A7F79A1DE8E9E6B267A0F25582B8FC0E3215B36"
+  }
+}

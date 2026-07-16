@@ -1,0 +1,44 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167",
+    "packed_size": 478527,
+    "raw_sha256": "D4B1BAB427E93FD7049BBFCA86376EFBE44454B53EFADAE81A703BC67B8C11A5",
+    "raw_size": 476632,
+    "string_count": 3000
+  },
+  "audit_bundle": {
+    "coordinate_sha256": "231487657C5CDD301217A96F5F9B5BA6286A459D36713E5B839AC706A8EADE7C",
+    "entry_ids": [
+      1950
+    ]
+  },
+  "base_language": "JP",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "sc_container_used": false
+  },
+  "entries": [
+    {
+      "format_signature_sha256": "9DAA52712AED21B615EDB9BB6EFC6F117D6D83E340E12C1012756F41A2BE9778",
+      "id": 1950,
+      "ko": "아마고 가신. 주가가 모리 가문 공격에 패하자 오우치 가문으로 돌아섰다. 그러나 오우치 가문이 아마고 가문 공격에 실패하자 다시 아마고 가문에 귀속했으나, 그 후 또 모리 가문에 항복했다. ",
+      "ko_utf16le_sha256": "3CE17856922F10F60D22E49062472B26A868FE53E4FA58ECBD31FCAA6950E55E",
+      "source_jp_utf16le_sha256": "ABF97E2E3C84E2825964CC26FF516177690202C89085E98C9A8CDDF79CE28890",
+      "translation_origin": "exact_source_hash_catalog_reuse"
+    }
+  ],
+  "entry_count": 1,
+  "exact_reuse_catalogs": [
+    {
+      "relative_path": "workstreams/steam_jp_strdata_p0_b04_v1/public/strdata_ko_steam_jp_p0_b04_350.v1.json",
+      "sha256": "EF45441B5DAB00B6F569A3FD5F6BF4538F2FE0E02DE1512FEE60B4C65A8A92F2"
+    }
+  ],
+  "overlay_id": "msgbre_ko_pk_jp_tail_1.v1",
+  "resource": "MSG_PK/JP/msgbre.bin",
+  "schema": "nobu16.kr.steam-jp-tail-bre-overlay.v1",
+  "translation_origin_counts": {
+    "exact_source_hash_catalog_reuse": 1
+  }
+}
