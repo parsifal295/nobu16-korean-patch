@@ -1,0 +1,72 @@
+{
+  "schema": "nobu16.kr.steam-jp-title-images.validation.v1",
+  "source_free": true,
+  "file_only": true,
+  "game_install_modified": false,
+  "runtime_patch_features": [],
+  "target": {
+    "resource": "RES_JP/res_lang.bin",
+    "outer_entry": 3,
+    "title_slots": {
+      "first": 0,
+      "last": 107,
+      "count": 108
+    },
+    "preserved_tail_slots": [
+      108,
+      109
+    ]
+  },
+  "pins": {
+    "steam_jp_font_baseline": {
+      "size": 154216023,
+      "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0"
+    },
+    "steam_jp_title_candidate": {
+      "size": 160351447,
+      "sha256": "D045B42BC3D4A4D4C501C5A0E010698AAE95AAE227775306A1272D5259E0888B"
+    },
+    "switch_v13_audit_sha256": "224DFA3F3F538FA7559977A9927BC30E9B9A0CE7BF697E9FE9DE942F014103D7",
+    "corrected_title_png_sha256": {
+      "038": "47D6D9FDB733CC499FB9E546F5283E85C38B77989B9DCB020D76B60DBCA338A4",
+      "074": "4A15EA220A6DB567DADCCD39434F5F4BBB56E89A5FA0F43D6D7B53A49E2FB5A0"
+    }
+  },
+  "semantic_source_plan": {
+    "switch_same_slot_count": 103,
+    "switch_remap": {
+      "0": 3,
+      "24": 25,
+      "25": 24
+    },
+    "corrected_labels": {
+      "38": "부대 편성",
+      "74": "공주 정보"
+    }
+  },
+  "candidate_verification": {
+    "outer_link_entry_count": 42,
+    "unrelated_outer_entry_count": 41,
+    "unrelated_outer_entry_hashes_sha256": "7D302425746D9D4358EED44F2DBD6E1CCDB8791334D05651C3EC8CB415136B84",
+    "unrelated_outer_entries_byte_preserved": true,
+    "tail_slot_wrapper_sha256": {
+      "108": "93E1A8040A10E4621AC0761F5453A904C8B415DD534F0C9FE965264FB6E31C29",
+      "109": "BB65C3D47C61AB74F03FCC44F112D0206B8120A9DA78DBB86B2687C498847E50"
+    },
+    "tail_slots_108_109_byte_preserved": true,
+    "rebuilt_title_slot_count": 108,
+    "title_slot_pc_g1t_contract_verified": true,
+    "candidate_title_wrapper_hashes_sha256": "50B283D96F6BCAAE01163F43E1E850DA3D27F65254158B98C33BE61FE14A7366",
+    "entry_report_sha256": "4F7E0D15C28D403B682976BA5ACBB50914BEE31A07024C63F4D1B6497FCDCA91",
+    "outer_parse_valid": true,
+    "inner_parse_valid": true
+  },
+  "constraints": {
+    "switch_container_bytes_copied": false,
+    "other_language_raw_resource_copied": false,
+    "candidate_output_under_tmp_only": true,
+    "output_paths_resolve_under_tmp": true,
+    "complete_resource_not_committed": true,
+    "runtime_screen_position_verified": false
+  }
+}
