@@ -22,8 +22,8 @@ def load_progress() -> dict:
     payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
     if payload.get("schema") != "nobu16.kr.steam-jp-1.1.7-progress.v1":
         raise ValueError("unsupported Steam JP progress schema")
-    if payload.get("release") != "v0.8.0":
-        raise ValueError("progress catalog is not the v0.8.0 release")
+    if payload.get("release") != "v0.9.0":
+        raise ValueError("progress catalog is not the v0.9.0 release")
     expected_runtime = {
         "distribution": "Steam",
         "pk_version": "1.1.7",
@@ -55,7 +55,7 @@ def load_progress() -> dict:
         "registry_modified": False,
     }
     if any(qa.get(key) != value for key, value in expected_qa.items()):
-        raise ValueError("release QA state differs from the final v0.8.0 contract")
+        raise ValueError("release QA state differs from the final v0.9.0 contract")
     if not isinstance(qa.get("candidate_zip_sha256"), str) or not SHA256_RE.fullmatch(
         qa["candidate_zip_sha256"]
     ):
@@ -144,8 +144,8 @@ def render() -> str:
         f"| 일본어 경로 한글 폰트 | {fonts['verified']} / {fonts['containers']} | 0 |",
         "",
         (
-            "v0.8.0 정식 배포본은 기존 PK 12파일에 기본판 대사 파일 2개를 더한 정확히 14파일입니다. "
-            "지도 조언·튜토리얼 대사가 빠졌던 원인은 기본판 `MSG/JP/msggame.bin`이 이전 후보에 없었던 것입니다."
+            "v0.9.0 정식 배포본은 기존 PK 12파일에 기본판 대사 파일 2개를 더한 정확히 14파일입니다. "
+            "이번 버전은 지도·튜토리얼 잔여 대사 270건과 기본 이벤트 잔여 대사 40건을 추가로 반영합니다."
         ),
         (
             f"후보 ZIP SHA-256: `{qa['candidate_zip_sha256']}`. Steam 실적용과 "
