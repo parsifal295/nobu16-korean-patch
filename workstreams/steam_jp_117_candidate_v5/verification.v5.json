@@ -1,0 +1,567 @@
+{
+  "candidate_file_count": 14,
+  "candidate_paths": [
+    "MSG/JP/ev_strdata.bin",
+    "MSG/JP/msggame.bin",
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP/msgbre.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgev.bin",
+    "MSG_PK/JP/msggame.bin",
+    "MSG_PK/JP/msgire.bin",
+    "MSG_PK/JP/msgstf.bin",
+    "MSG_PK/JP/msgui.bin",
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin"
+  ],
+  "candidates": {
+    "MSG/JP/ev_strdata.bin": {
+      "sha256": "AD1A442C3588E791DB442548C2B7878ABB4D53A686C591A94AB7F4FAB719A886",
+      "size": 927573
+    },
+    "MSG/JP/msggame.bin": {
+      "sha256": "72A81DABBDD5BC596356CF4F457B2235E439B2D27BD2FB00546842606531CE44",
+      "size": 647418
+    },
+    "MSG/JP/strdata.bin": {
+      "sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+      "size": 956835
+    },
+    "MSG_PK/JP/msgbre.bin": {
+      "sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167",
+      "size": 478527
+    },
+    "MSG_PK/JP/msgdata.bin": {
+      "sha256": "2D1BEFF03972777FBA5EE0B8FEF24E6A03B285DA466A4DA439794D21587A0F69",
+      "size": 496999
+    },
+    "MSG_PK/JP/msgev.bin": {
+      "sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+      "size": 1040799
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "sha256": "6316E2B288F798B747D983DB08E6C2A477C6FC60DE319D3C7C302102C6384A84",
+      "size": 1808743
+    },
+    "MSG_PK/JP/msgire.bin": {
+      "sha256": "C4977A74B98605AB350BE761C67CCF879AEE7565104F8D7FD2B725FDD5806D84",
+      "size": 23136
+    },
+    "MSG_PK/JP/msgstf.bin": {
+      "sha256": "FE97F9C0C34D0131D7CDD3CEC4AF4B453CC7148F34FD80E7EFD31DE500F12593",
+      "size": 17104
+    },
+    "MSG_PK/JP/msgui.bin": {
+      "sha256": "29D0C6CCC262E7AB757AA5D0819224370DEDEF4CF250E89FC88B24E600EF2169",
+      "size": 121608
+    },
+    "RES_JP/res_lang.bin": {
+      "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+      "size": 154216023
+    },
+    "RES_JP_PK/res_lang_pk.bin": {
+      "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+      "size": 141746742
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+      "sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+      "size": 79243911
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+      "sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
+      "size": 67086423
+    }
+  },
+  "checks": {
+    "base_ev_strdata_switch_v13_transfer_integrated": true,
+    "base_msggame_switch_v13_transfer_integrated": true,
+    "clan_label_normalization_159_integrated": true,
+    "exact_fourteen_files": true,
+    "high_resolution_seoul_hangang_four_routes_exact": true,
+    "msgev_residual_wave09_66_integrated": true,
+    "office_titles_core_121_integrated": true,
+    "office_titles_geographic_and_bakufu_deferred": true,
+    "sc_container_used": false,
+    "scenario_date_id1051_integrated": true,
+    "scenario_duration_month_preserved": true,
+    "staged_before_promote": true,
+    "steam_1_1_7_predecessors_exact": true,
+    "steam_files_written": false,
+    "tactics_reading_hotfix_integrated": true,
+    "v0_7_0_non_common_candidates_exact": true,
+    "v3_baseline_candidate_exact": true,
+    "zip_payloads_equal_candidates": true
+  },
+  "predecessors": {
+    "MSG/JP/ev_strdata.bin": {
+      "sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+      "size": 496819
+    },
+    "MSG/JP/msggame.bin": {
+      "sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+      "size": 610163
+    },
+    "MSG/JP/strdata.bin": {
+      "sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+      "size": 507054
+    },
+    "MSG_PK/JP/msgbre.bin": {
+      "sha256": "945A0E9157E2DBD12781FFA5A986D93681325F40B6486348B1AB311D3BEE1D6D",
+      "size": 221127
+    },
+    "MSG_PK/JP/msgdata.bin": {
+      "sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+      "size": 272453
+    },
+    "MSG_PK/JP/msgev.bin": {
+      "sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+      "size": 562226
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+      "size": 721304
+    },
+    "MSG_PK/JP/msgire.bin": {
+      "sha256": "0AFBFE11A380A9C98FB3B368092A05B39ABB6F80C4B0723AD3B6DB55C2559C5D",
+      "size": 12376
+    },
+    "MSG_PK/JP/msgstf.bin": {
+      "sha256": "01EEB0B1B4879B6C70E9D7564F9D2FBD93E7B537CF8C614A58EEA82A83785A29",
+      "size": 6841
+    },
+    "MSG_PK/JP/msgui.bin": {
+      "sha256": "9775D4B7253828899F7EF0DF2E88AB28121ACB260E1381F3D706C6A1065D504A",
+      "size": 64976
+    },
+    "RES_JP/res_lang.bin": {
+      "sha256": "D32898C186CBDC7534692269C062E888ACE3B7A58F5DB4FEC8B0C745DADAAE53",
+      "size": 153198542
+    },
+    "RES_JP_PK/res_lang_pk.bin": {
+      "sha256": "67CC064ED9D138B85255F8AA6AC5B5E47D7239E06E15A4E5AD68922274300EF5",
+      "size": 140729547
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+      "sha256": "1B44436B542F73B8B155A43F74D897F8D32C1C274D8C64B3CA9F4478BDB86022",
+      "size": 77468728
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+      "sha256": "52A8DE4BA1480E86218AC0CDE50DA946B4BCDFD7053ED85B94B04E663C00B380",
+      "size": 61609467
+    }
+  },
+  "provenance": {
+    "base_ev_strdata_switch_v13_transfer": {
+      "candidate": {
+        "sha256": "AD1A442C3588E791DB442548C2B7878ABB4D53A686C591A94AB7F4FAB719A886",
+        "size": 927573
+      },
+      "metrics": {
+        "candidate": {
+          "changed_entry_count": 13045,
+          "packed_sha256": "AD1A442C3588E791DB442548C2B7878ABB4D53A686C591A94AB7F4FAB719A886",
+          "packed_size": 927573,
+          "raw_sha256": "1B4255E3F3DADA24EA5D526AA5DCD2D1BC73E1284891EBBE9B4E891D6FFBA162",
+          "raw_size": 923924,
+          "string_count": 17868
+        },
+        "checks": {
+          "candidate_parse_roundtrip": true,
+          "control_linebreak_placeholder_invariants": true,
+          "installed_game_file_written": false,
+          "jp_source_hash_gate": true,
+          "overlay_source_free": true,
+          "sc_container_used": false,
+          "source_script_entries_excluded": true,
+          "steam_jp_stock_hash_gate": true,
+          "steam_switch_slot_count_equal": true,
+          "switch_v13_archive_hash_gate": true,
+          "switch_v13_entry_hash_gate": true,
+          "wrapper_prefix_preserved": true
+        },
+        "resource": "MSG/JP/ev_strdata.bin",
+        "runtime": {
+          "base_language_route": "JP",
+          "distribution": "Steam",
+          "steam_pk_version": "1.1.7"
+        },
+        "schema": "nobu16.kr.base-ev-strdata-jp-switch-v13-transfer-validation.v1",
+        "selection": {
+          "excluded_ids_sha256": "436BA9C3BA0CE19A470E34571B01A2D36832F6B7EEFB9968DB86C8FD9A4DB675",
+          "excluded_source_script_count": 45,
+          "selected_count": 13045,
+          "selected_ids_sha256": "E7C8B1950B67FC4DDEC2053768A600CA1799C431BF74A48544013F2BF800B346",
+          "switch_hangul_candidate_count": 13090
+        },
+        "stock_jp": {
+          "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+          "packed_size": 496819,
+          "raw_sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+          "raw_size": 789260,
+          "string_count": 17868
+        },
+        "switch_v13": {
+          "archive_sha256": "F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4",
+          "entry_path": "NobunagaShinsei_KR/romfs/MSG/JP/ev_strdata.bin",
+          "entry_sha256": "A5D70580790330EF845EC73FDB8D6ACC89EBAD8D026DFE1B1D873C50B43CAD5D",
+          "raw_sha256": "1B8F7197D48598994852317B19CA3B9EC113A3B07A3B22642FBD336C21C4F7C3"
+        }
+      },
+      "module_expected_candidate_pin": {
+        "packed_sha256": "AD1A442C3588E791DB442548C2B7878ABB4D53A686C591A94AB7F4FAB719A886",
+        "packed_size": 927573,
+        "raw_sha256": "1B4255E3F3DADA24EA5D526AA5DCD2D1BC73E1284891EBBE9B4E891D6FFBA162",
+        "raw_size": 923924,
+        "string_count": 17868
+      },
+      "resource": "MSG/JP/ev_strdata.bin",
+      "stock_predecessor": {
+        "sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+        "size": 496819
+      },
+      "switch_v13_zip": {
+        "sha256": "F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4",
+        "size": 72977145
+      },
+      "transferred_entry_count": 13045,
+      "validation": {
+        "path": "workstreams/base_ev_strdata_jp_switch_v13_transfer_v1/validation.v1.json",
+        "sha256": "516BCF7C52A3152E4B5BE819D4B92218B6CD564B159125B5077407E46BFB0B0B",
+        "size": 1989
+      },
+      "workstream": "nobu16_base_ev_strdata_jp_switch_v13_transfer_v5"
+    },
+    "base_msggame_switch_v13_transfer": {
+      "candidate": {
+        "sha256": "72A81DABBDD5BC596356CF4F457B2235E439B2D27BD2FB00546842606531CE44",
+        "size": 647418
+      },
+      "metrics": {
+        "candidate": {
+          "packed_sha256": "72A81DABBDD5BC596356CF4F457B2235E439B2D27BD2FB00546842606531CE44",
+          "packed_size": 647418,
+          "raw_sha256": "CAA61791F205A1FD3F3DB8FBEB479F2C6551104B7884AF663D4F23FF19542A93",
+          "raw_size": 1490068
+        },
+        "compression": "raw-lz4-greedy",
+        "entry_contract_sha256": "8BBBD9AD28AEB38F5E9DAD2E7E2ABF18957FB178376BE61BD6C2C8D07B07A0B2",
+        "entry_coordinate_sha256": "4AD107EEC33B1DB759B2546F59C65566E94EFBE0AB24C5F1C89BBE36D25AD803",
+        "entry_count": 22924,
+        "map_tutorial_anchor": {
+          "coordinate": [
+            13,
+            217,
+            0
+          ],
+          "ko_utf16le_sha256": "0EA8FAF9225A94AF8A10296E06FC1AF873806B8C5CE10C53A2997836A7B42067",
+          "source_jp_utf16le_sha256": "279D8D1246B6C655F8E6FEC0DA1CAA7848AAA1E0EB58C1AA13370EBF5E84BC5B"
+        },
+        "non_selected_literals_preserved": true,
+        "normalized_structure_sha256": "06DE8E4A0007E21C1479589C94D259ADD6A8A8E5BF91D5C0CC3BE92EA8BC019D",
+        "overlay": {
+          "sha256": "7239714BC8D6E66005A903E128291C57111A2995C3C0EDFA6AB8BEBC77B02175",
+          "size": 7829108
+        },
+        "resource": "MSG/JP/msggame.bin",
+        "sc_binary_used": false,
+        "stock": {
+          "block_count": 18,
+          "literal_count": 24262,
+          "packed_sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+          "packed_size": 610163,
+          "raw_sha256": "353010B59A3E04BFE5541162229C1CFCAD181EF0E75FCC9B6DE2043BFC515F38",
+          "raw_size": 1337548,
+          "record_count": 19152
+        },
+        "wrapper_prefix_preserved": true
+      },
+      "module_expected_candidate_pin": {
+        "packed_sha256": "72A81DABBDD5BC596356CF4F457B2235E439B2D27BD2FB00546842606531CE44",
+        "packed_size": 647418,
+        "raw_sha256": "CAA61791F205A1FD3F3DB8FBEB479F2C6551104B7884AF663D4F23FF19542A93",
+        "raw_size": 1490068
+      },
+      "resource": "MSG/JP/msggame.bin",
+      "stock_predecessor": {
+        "sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+        "size": 610163
+      },
+      "switch_v13_zip": {
+        "sha256": "F4D2563C1B32DB450165C8CCF61C6947DEA904233581036E179AFA1D6A918CC4",
+        "size": 72977145
+      },
+      "transferred_entry_count": 22924,
+      "validation": {
+        "path": "workstreams/tutorial_dialogue_trace_msggame_v1/validation.v1.json",
+        "sha256": "E1241A26BE001C28757CAD3573C1BB42EA63D743B8DC174503A4095F9DF928A9",
+        "size": 1803
+      },
+      "workstream": "nobu16_base_msggame_jp_switch_v13_transfer_v5"
+    },
+    "fonts": {
+      "demand": {
+        "append_union_codepoint_count": 1450,
+        "append_union_codepoints_sha256": "32EAF6032E7923C8D89DA6D9C1F805C642BF51F49C94049EAEF6A0F66DD40156",
+        "codepoint_count": 1472,
+        "codepoints_sha256": "7B1F5B740D580A3B1E67B459B92EED29BA6F3CC1B685D7F312B1518202300E94",
+        "hangul_syllable_count": 1251,
+        "hangul_syllables_sha256": "ABDB62AD32DDCCB19F8E100179EADC58E028A2AA79FB8B252E407E2D16DCDCD0",
+        "pending_registration_normalization": {
+          "future_registration_preserves_catalog_and_candidate_bytes": true,
+          "overlay_count": 11
+        },
+        "raster_codepoint_count": 1427,
+        "raster_codepoints_sha256": "96179F0F8B8B7AB34AF4E4CFE8A2459023682E22C7F6DB0F3B4D047595534039",
+        "source_catalog_sha256": "A877E900EA7A42867BF2F71BC69B924BAC354B3A6EADF048B814E54F2B493E28",
+        "source_count": 124,
+        "source_entry_count": 88062,
+        "stock_reuse_codepoints": [
+          "U+22BF",
+          "U+32A4",
+          "U+32A8",
+          "U+3303",
+          "U+330D",
+          "U+3314",
+          "U+3318",
+          "U+3322",
+          "U+3323",
+          "U+3326",
+          "U+3327",
+          "U+332B",
+          "U+3336",
+          "U+333B",
+          "U+3349",
+          "U+334A",
+          "U+334D",
+          "U+3351",
+          "U+3357",
+          "U+337C",
+          "U+337D",
+          "U+337E",
+          "U+FF65"
+        ],
+        "stock_reuse_codepoints_sha256": "0BDD77C1301D825618FC9DCF5388DD98B2B590DB1B3228DD7AEE65CCB6C1400E"
+      },
+      "evidence_path": "workstreams/font_jp_seoulhangang_v1/verification.v1.json",
+      "evidence_sha256": "EA4A916BE27DA393B5A84DC7902726733961D95407CA4F8171B80C99A135E27F",
+      "routes": {
+        "RES_JP/res_lang.bin": {
+          "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+          "size": 154216023
+        },
+        "RES_JP_PK/res_lang_pk.bin": {
+          "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+          "size": 141746742
+        },
+        "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+          "sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+          "size": 79243911
+        },
+        "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+          "sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
+          "size": 67086423
+        }
+      }
+    },
+    "msgev_residual_wave09": {
+      "candidate": {
+        "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+        "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+        "raw_size": 1036708,
+        "sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+        "size": 1040799,
+        "string_count": 17916
+      },
+      "changed_ids_sha256": "196FCC18680133D1AEE4C6A9A2C299A1CC156676CC2B087980ED60FB0F7D3363",
+      "delta_count": 66,
+      "event_label_delta_count": 16,
+      "event_story_delta_count": 50,
+      "format_invariants_preserved": true,
+      "non_target_texts_preserved": true,
+      "target_ids_sha256": "ACF81701ED58889837F38211CD91691B58795D0A9E3C2F9151F3748E473E047E",
+      "v3_baseline": {
+        "packed_sha256": "39E8FEE6C4A7F1EB5018F01FB9446C9866E85BF13509C2CE099849E7AA3AAECD",
+        "raw_sha256": "E1D78EBEDC2B6C42036D2D967CF7A83C0703DAA6B477D333F516EE476626C033",
+        "raw_size": 1035840,
+        "sha256": "39E8FEE6C4A7F1EB5018F01FB9446C9866E85BF13509C2CE099849E7AA3AAECD",
+        "size": 1039928,
+        "string_count": 17916
+      },
+      "validation": {
+        "path": "workstreams/msgev_steam_jp_residual_wave09/validation.v1.json",
+        "sha256": "18A122409A406111A51A9B4D5523D35C75682AEFFD41B1D89036B2DF6E9567B4",
+        "size": 2009
+      },
+      "workstream": "msgev_steam_jp_residual_wave09",
+      "wrapper_prefix_preserved": true
+    },
+    "office_titles_core": {
+      "candidate": {
+        "packed_sha256": "2D1BEFF03972777FBA5EE0B8FEF24E6A03B285DA466A4DA439794D21587A0F69",
+        "raw_sha256": "25593167A47B5B0F69357F71E5E9882382F346AEF1B8DCA7DB6902D7E270AB67",
+        "raw_size": 495032,
+        "size": 496999,
+        "string_count": 29218
+      },
+      "changed_ids_sha256": "6751D11D97EB5DDDA6868C10211BBFD01C6A039760B248F3C8185FF0757A3257",
+      "deferred_domains": {
+        "bakufu_16614_16624": true,
+        "geographic_title_categories": true
+      },
+      "delta_count": 121,
+      "display_delta_count": 113,
+      "display_reading_anchors": {
+        "16399": {
+          "display": "관백",
+          "reading": "간파쿠",
+          "reading_id": 16670
+        },
+        "16402": {
+          "display": "우대신",
+          "reading": "우다이진",
+          "reading_id": 16673
+        },
+        "16404": {
+          "display": "대납언",
+          "reading": "다이나곤",
+          "reading_id": 16675
+        },
+        "16613": {
+          "display": "정이대장군",
+          "reading": "세이이다이쇼군",
+          "reading_id": 16884
+        }
+      },
+      "input_baseline": {
+        "packed_sha256": "4E0B1009789D6EF3935DA359932D73685447890784796BE3702D50C8D64E4387",
+        "raw_sha256": "B5704A99DEDD87A51409DBFA0772695B3FD3A391B12CD0BCAD9727B1631DBE78",
+        "raw_size": 495416,
+        "size": 497384,
+        "string_count": 29218
+      },
+      "prior_clan_and_tactics_preserved": true,
+      "reading_delta_count": 8,
+      "scope": {
+        "display_ids_sha256": "F4EE4D5CA357F10BA2B0DC83E1BDDD7ADA815BE32067A4EA88C4DC541FA63218",
+        "display_pair_count": 146,
+        "excluded_bakufu_id_range": [
+          16614,
+          16624
+        ],
+        "explicit_canonical_dictionary_sha256": "3ED2E7D57206FFAD0AD12E05589E61CABCD1B1C8E9935E83BE4ACF822F58D1B5",
+        "japanese_hangul_reading_override_ids_sha256": "1045712D815BA7D17213E11DDDC54F26EFC8FE0B52D43709A5971720AD5F20B1",
+        "pair_offset": 271,
+        "target_contract_count": 292
+      },
+      "validation": {
+        "path": "workstreams/steam_jp_office_titles_core_v1/validation.v1.json",
+        "sha256": "841CB9DCEF6FDCD02D3AF5B3B6121ED729D719A9C89E47CB436A257CC2676EF0",
+        "size": 3462
+      },
+      "workstream": "steam_jp_office_titles_core_v1"
+    },
+    "scenario_date_hotfix": {
+      "baseline": {
+        "sha256": "F8152396BA5C11D26A6CD42DAD3120F511813079B27C92DFE107A9DAFFA70797",
+        "size": 121608
+      },
+      "candidate": {
+        "sha256": "29D0C6CCC262E7AB757AA5D0819224370DEDEF4CF250E89FC88B24E600EF2169",
+        "size": 121608
+      },
+      "delta_count": 1,
+      "duration_month_preserved": true,
+      "entry_id": 1051,
+      "validation": {
+        "path": "workstreams/steam_jp_scenario_date_hotfix_v1/validation.v1.json",
+        "sha256": "843045EDC38E5606A2DC596F25D50472DAC093AB7BF6437D1F9EA446A97221BB",
+        "size": 1214
+      },
+      "workstream": "steam_jp_scenario_date_hotfix_v1",
+      "wrapper_prefix_preserved": true
+    },
+    "tactics_reading_hotfix": {
+      "active_tactics_reading_slot_count": 62,
+      "all_active_tactics_reading_slots_no_latin": true,
+      "candidate": {
+        "packed_sha256": "4E0B1009789D6EF3935DA359932D73685447890784796BE3702D50C8D64E4387",
+        "raw_sha256": "B5704A99DEDD87A51409DBFA0772695B3FD3A391B12CD0BCAD9727B1631DBE78",
+        "raw_size": 495416,
+        "size": 497384,
+        "string_count": 29218
+      },
+      "clan_candidate": {
+        "packed_sha256": "E783C492860BDC6229A3A05343635FEB05435D3751BBB2670F691F270DA484B6",
+        "raw_sha256": "7276B55F4E5C95728DA9DFA3372F037FE256587F0761E87BA6C87F75DA8BE597",
+        "raw_size": 495536,
+        "size": 497505,
+        "string_count": 29218
+      },
+      "clan_changed_ids_sha256": "F26F7D32C873AF7A64B8F9EEEFAC2E0DBA163559141D2CDDAC352368E267BE6D",
+      "clan_delta_count": 159,
+      "clan_wrapper_prefix_preserved": true,
+      "tactics_changed_ids_sha256": "8FC4980C883DBA27FBF4CF8E776C8622FED6FEF26282A5C97D91F4763308E3F6",
+      "tactics_delta_count": 10,
+      "tactics_target_ids_sha256": "E67A422ADE9ECB46246D800F746D66D1FAD853713A51E49722FE4F5EE69626FE",
+      "v3_baseline": {
+        "packed_sha256": "5469F26B0E75A2214969F2EBA66CD0C850D7BFEC9E3D344ECBC4DBD171110AA6",
+        "raw_sha256": "62E0209E7A9715C1D44BCE28E4C7D0CE2BBBDDD19A25DC21D4A3FA931CD8BC8D",
+        "raw_size": 494900,
+        "size": 496866,
+        "string_count": 29218
+      },
+      "validation": {
+        "path": "workstreams/steam_jp_tactics_reading_hotfix_v1/validation.v1.json",
+        "sha256": "5DC973E00F4048EE3EAB6DFBF0090D22F45CC244598A111EFFA6FA667240D7BD",
+        "size": 2768
+      },
+      "workstream": "steam_jp_tactics_reading_hotfix_v1"
+    },
+    "v3_verification_sha256": "7B05C0F44AE4849BAB65E55FD32CF62B37931E66EE41D6CC743BDC083F7D1FC8"
+  },
+  "runtime": {
+    "distribution": "Steam",
+    "language_route": "JP",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764
+  },
+  "schema": "nobu16.kr.steam-jp-1.1.7-candidate-verification.v5",
+  "translation": {
+    "base_ev_strdata_switch_v13_transferred_entries": 13045,
+    "base_msggame_switch_v13_transferred_entries": 22924,
+    "clan_label_normalization_delta_entries": 159,
+    "common_messages_alignment_gap_entries": 62,
+    "common_messages_applied": 40581,
+    "common_messages_excluded_source_equal_contract_entries": 1796,
+    "common_messages_format_contract_blocked_entries": 730,
+    "common_messages_retained_internal_dummy_entries": 2,
+    "common_messages_review_backlog_entries": 792,
+    "common_messages_source_union_effective_entries": 43169,
+    "common_messages_surname_recovery_delta_entries": 980,
+    "common_messages_wave08_reviewed_semantic_gap_remaining": 0,
+    "common_messages_wave08_semantic_delta_entries": 94,
+    "msgev_residual_event_label_delta_entries": 16,
+    "msgev_residual_event_story_delta_entries": 50,
+    "msgev_residual_wave09_delta_entries": 66,
+    "msggame_applied": 28272,
+    "msggame_remaining_jp_semantic": 0,
+    "msgui_effective_changes": 3955,
+    "msgui_mapped": 4036,
+    "msgui_unmapped": 1,
+    "office_titles_core_delta_entries": 121,
+    "office_titles_core_display_delta_entries": 113,
+    "office_titles_core_reading_delta_entries": 8,
+    "scenario_calendar_month_delta_entries": 1,
+    "scenario_duration_month_preserved": true,
+    "strdata_applied": 24524,
+    "tactics_reading_delta_entries": 10
+  },
+  "zip": {
+    "member_count": 14,
+    "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.8.0.zip",
+    "sha256": "8167B09DE5DC56C1F195AF0A913336F552D189B0DB320C2A4F5EC863BBC58D08",
+    "size": 356954358
+  }
+}
