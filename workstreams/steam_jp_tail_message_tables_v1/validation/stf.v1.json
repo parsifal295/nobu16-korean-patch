@@ -1,0 +1,49 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "FE97F9C0C34D0131D7CDD3CEC4AF4B453CC7148F34FD80E7EFD31DE500F12593",
+    "packed_size": 17104,
+    "raw_sha256": "C55F20A4F02F95D2ABAFC1A68FD9A84F407743028202B6BE41CF169872C0075A",
+    "raw_size": 17012,
+    "string_count": 20
+  },
+  "audit_bundle": {
+    "coordinate_sha256": "69520AE1328FAAB60B590D1EDC2EAD38872FDD97C4FE4DA0A3425064D94CF585",
+    "entry_ids": [
+      5
+    ]
+  },
+  "checks": {
+    "active_v6_baseline": "OK",
+    "candidate_parser_roundtrip": "OK",
+    "coordinate_contract": "OK",
+    "exact_source_hash_catalog_reuse": "OK",
+    "github_written": false,
+    "nonselected_utf16le_payloads": "OK",
+    "packed_deterministic_rebuild": "OK",
+    "per_entry_jp_source_hashes": "OK",
+    "raw_deterministic_rebuild": "OK",
+    "release_asset_written": false,
+    "sc_container_used": false,
+    "selected_high_confidence_kana_residuals": "0",
+    "steam_installation_written": false,
+    "token_and_format_profiles": "OK"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "effective_change_coordinate_sha256": "1AE3592F8248C3F879B56AFE3F2CE6AAD45BA898434796D35C565684397FB3E6",
+  "effective_change_count": 1,
+  "entry_count": 1,
+  "expected_candidate": {
+    "packed_sha256": "24DF518F2A2AE9EC12E483991BC4ADAD340E0660CA66383E389D50C704A96A1F",
+    "packed_size": 17337,
+    "raw_sha256": "4FAF02E1F6EECB471AE9E93489099FDEB86444042CD76C2D104F9D6E066872AF",
+    "raw_size": 17244
+  },
+  "high_confidence_kana_residual_count_after_candidate": 0,
+  "resource": "MSG_PK/JP/msgstf.bin",
+  "schema": "nobu16.kr.steam-jp-tail-stf-validation.v1",
+  "source_free": true,
+  "translation_origin_counts": {
+    "project_direct_translation": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "nobu16.kr.steam-jp-wheel-toprows.validation.v1",
+  "scope": {
+    "target_resource": "RES_JP/res_lang.bin",
+    "outer_entry": 8,
+    "nested_slot": 0,
+    "primary_texture": "2048x2048 BC3",
+    "game_install_modified": false,
+    "raw_switch_payload_copy": false
+  },
+  "title_baseline": {
+    "size": 160351447,
+    "sha256": "D045B42BC3D4A4D4C501C5A0E010698AAE95AAE227775306A1272D5259E0888B",
+    "outer_3_must_remain_byte_identical": true
+  },
+  "switch_inputs": {
+    "v20_zip_sha256": "A7497986FCC53312BC40B470465CD4DD0AE5179B0B9DB92526541E10987079DD",
+    "v24_zip_sha256": "9BAC0A141A7DEBB779BF67EB35F582287B120CBDE6A4B4939AC4903315F7E04C",
+    "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin"
+  },
+  "labels": {
+    "평정": 6,
+    "임명": 6,
+    "군사": 6,
+    "내정": 6,
+    "외교": 6
+  },
+  "preservation": {
+    "non_8_outer_entries_byte_identical": true,
+    "wheel_texture_1_byte_identical": true,
+    "decoded_delta_limited_to_expanded_4x4_label_blocks": true
+  },
+  "git_policy": {
+    "complete_game_resource": false,
+    "raw_switch_archive": false,
+    "private_contact_sheet": false
+  }
+}

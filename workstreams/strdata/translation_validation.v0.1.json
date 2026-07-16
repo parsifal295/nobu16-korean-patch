@@ -1,0 +1,214 @@
+{
+  "artifacts": {
+    "alignment_evidence": {
+      "path": "evidence/translation_alignment_evidence.v0.1.json",
+      "sha256": "1ADE91F00FEA86B9D7CB5C7FBAA7711AA31D0DD3CEC79E1EEB4C5A08665017F2",
+      "size": 322066
+    },
+    "overlay": {
+      "path": "public/strdata_ko_name_labels_b00s0000_0099.v0.1.json",
+      "sha256": "9B1C3F1B2C3C1BFC44974C6C2E1573DA6C48433B9E945EEF6EC5BE2C54B85F24",
+      "size": 18874
+    },
+    "review_index": {
+      "path": "review/translation_review_index.v0.1.json",
+      "sha256": "26D97B83196A941767EAE06992D6608F9E5A9B5F50AFE27443C786E0D201004F",
+      "size": 33235
+    }
+  },
+  "batch_id": "strdata-name-labels-b00s0000-0099-v0.1",
+  "cross_resource_translation_memory_review": {
+    "comparison_normalization": "trailing_whitespace_removed_for_comparison_only",
+    "exceptions": [
+      {
+        "coordinates": [
+          [
+            0,
+            17
+          ],
+          [
+            0,
+            25
+          ],
+          [
+            0,
+            31
+          ],
+          [
+            0,
+            62
+          ],
+          [
+            0,
+            86
+          ],
+          [
+            0,
+            87
+          ],
+          [
+            0,
+            89
+          ],
+          [
+            0,
+            90
+          ],
+          [
+            0,
+            91
+          ],
+          [
+            0,
+            93
+          ]
+        ],
+        "reason": "no_matching_cross_resource_source_hash_candidate"
+      },
+      {
+        "coordinates": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            21
+          ]
+        ],
+        "reason": "multiple_reference_translation_candidates_resolved_by_strdata_coordinate_context"
+      }
+    ],
+    "policy": {
+      "automatic_reuse_permitted": false,
+      "independent_strdata_coordinate_context_reviewed": true,
+      "matching_source_hash_is_translation_memory_only": true,
+      "review_languages": [
+        "SC",
+        "JP",
+        "TC"
+      ]
+    },
+    "primary_reference_overlay": {
+      "entry_count": 3831,
+      "logical_path": "KR_PATCH_WORK/data/public/msgdata_ko_officer_names_0000_2399.v0.1.json",
+      "sha256": "D787EB64BFFC54D1ACA2F23BC9407991FEB4FCF76D102E1EE017EEF416FE4FA3"
+    },
+    "summary": {
+      "ambiguous_reference_candidate_coordinate_count": 2,
+      "automatic_reuse_count": 0,
+      "coordinates_with_matching_source_hash_candidate": 90,
+      "coordinates_without_matching_source_hash_candidate": 10,
+      "distinct_matching_source_hash_count": 90,
+      "matching_reference_entry_count": 121,
+      "post_context_review_normalized_agreement_count": 90,
+      "strdata_coordinate_count": 100
+    }
+  },
+  "generator": {
+    "path": "build_translation_batch1.py",
+    "sha256": "4A8B53054FE3414606C7A4FC3D393F1B971429A48FFFBC548143F56324DFD10E"
+  },
+  "passed": true,
+  "raw_binary_validation": {
+    "coordinate_set_preserved": true,
+    "inner_opaque_header_bytes_preserved": true,
+    "inner_tables_rebuilt_via_synthetic_single_table_wrapper": true,
+    "installed_game_file_written": false,
+    "outer_alignment_padding_recomputed": true,
+    "outer_five_block_directory_rebuilt": true,
+    "target_packed_sha256": "CB6C13A115A3107155C93E799858DE546B5A75F0678F5422E54052AAC0FB6BC3",
+    "target_packed_size": 763616,
+    "target_raw_sha256": "FEC46EB3332D6E5605E00423D688AA294EB266A163B8102D3D1F1508AB04FF66",
+    "target_raw_size": 760608,
+    "unselected_texts_preserved": true
+  },
+  "replacement_invariants": {
+    "checked": 100,
+    "failures": 0,
+    "preserved": [
+      "printf_tokens",
+      "unknown_percent_count",
+      "leading_whitespace",
+      "trailing_whitespace",
+      "escape_sequences_in_order",
+      "control_characters",
+      "line_break_sequence",
+      "private_use_codepoints",
+      "bracket_placeholder_sequence"
+    ]
+  },
+  "reproducibility": {
+    "byte_identical_artifacts_required": true,
+    "byte_identical_offline_binary_required": true,
+    "required_runs": [
+      "isolated_a",
+      "isolated_b",
+      "final"
+    ]
+  },
+  "safety": {
+    "dll_injection": false,
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "installer_modified": false,
+    "other_workstreams_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false,
+    "root_readme_or_progress_modified": false
+  },
+  "schema": "nobu16.kr.strdata-translation-generation-validation.v1",
+  "scope": {
+    "first_coordinate": [
+      0,
+      0
+    ],
+    "last_coordinate": [
+      0,
+      99
+    ],
+    "next_coordinate": [
+      0,
+      100
+    ],
+    "selected_coordinates_sha256": "19B2C39B5C70E2A8F372F344C7A71C024DB0A3F2FAF4FFF392BFC38170EDB49B",
+    "selected_literal_count": 100
+  },
+  "selection": {
+    "all_candidates_nonempty_in_sc_jp_tc": true,
+    "natural_first_contiguous_display_run": true,
+    "nonlinguistic_visible_candidate_skips": 0,
+    "stable_block_slot_order": true
+  },
+  "source_alignment": {
+    "languages": [
+      "SC",
+      "JP",
+      "TC"
+    ],
+    "ordered_all_reference_hashes_sha256": "2EC1527576E378585F72CBC3E774B89F9B2042B80C780FDC0AF465E0F12C4BF9",
+    "ordered_sc_source_hashes_sha256": "5B5FD7C5A1219AAD57A25CC6BF7E58A94AA20853AD7B94731B991644A8914FC7",
+    "same_block_slot_shape": true,
+    "translated_reference_hash_count": 300
+  },
+  "source_free_scan": {
+    "strdata_ko_name_labels_b00s0000_0099.v0.1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "translation_alignment_evidence.v0.1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    },
+    "translation_review_index.v0.1.json": {
+      "embedded_nul_count": 0,
+      "han_or_kana_count": 0
+    }
+  },
+  "translation_status": {
+    "human_review_required": 100,
+    "runtime_reviewed": 0,
+    "translated_draft": 100
+  }
+}

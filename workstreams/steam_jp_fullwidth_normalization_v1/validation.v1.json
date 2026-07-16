@@ -1,0 +1,584 @@
+{
+  "candidate_before": {
+    "MSG/JP/ev_strdata.bin": {
+      "sha256": "9ED892E85AF18EB3BC965A834853969BC06F486A2466A83F3CEBED1B8D5433C0",
+      "size": 928464
+    },
+    "MSG/JP/msggame.bin": {
+      "sha256": "E54D7AB55CB981B7973FBF8657A276520EBFA881D3439BE94A2D14086B293177",
+      "size": 649347
+    },
+    "MSG/JP/strdata.bin": {
+      "sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+      "size": 956835
+    },
+    "MSG_PK/JP/msgbre.bin": {
+      "sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167",
+      "size": 478527
+    },
+    "MSG_PK/JP/msgdata.bin": {
+      "sha256": "2D1BEFF03972777FBA5EE0B8FEF24E6A03B285DA466A4DA439794D21587A0F69",
+      "size": 496999
+    },
+    "MSG_PK/JP/msgev.bin": {
+      "sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+      "size": 1040799
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "sha256": "6316E2B288F798B747D983DB08E6C2A477C6FC60DE319D3C7C302102C6384A84",
+      "size": 1808743
+    },
+    "MSG_PK/JP/msgire.bin": {
+      "sha256": "C4977A74B98605AB350BE761C67CCF879AEE7565104F8D7FD2B725FDD5806D84",
+      "size": 23136
+    },
+    "MSG_PK/JP/msgstf.bin": {
+      "sha256": "FE97F9C0C34D0131D7CDD3CEC4AF4B453CC7148F34FD80E7EFD31DE500F12593",
+      "size": 17104
+    },
+    "MSG_PK/JP/msgui.bin": {
+      "sha256": "29D0C6CCC262E7AB757AA5D0819224370DEDEF4CF250E89FC88B24E600EF2169",
+      "size": 121608
+    },
+    "RES_JP/res_lang.bin": {
+      "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+      "size": 154216023
+    },
+    "RES_JP_PK/res_lang_pk.bin": {
+      "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+      "size": 141746742
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin": {
+      "sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7",
+      "size": 79243911
+    },
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin": {
+      "sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205",
+      "size": 67086423
+    }
+  },
+  "checks": {
+    "active_jp_text_resources_scanned": true,
+    "automatic_scope_uses_switch_v22_v23_map_plus_v0_9_hash_gates": true,
+    "controls_placeholders_and_layout_preserved": true,
+    "font_coverage_all_applied_fullwidth_ascii_targets_proven": true,
+    "font_metric_change_not_mixed_into_this_workstream": true,
+    "installed_game_file_written": false,
+    "korean_middle_dot_direction_is_u00b7_to_u30fb": true,
+    "korean_middle_dot_is_font_dependency_blocked_and_not_applied": true,
+    "linebreak_removal_not_mixed_into_this_workstream": true,
+    "reverse_restores_each_hash_gated_source_coordinate": true,
+    "unicode_nfkc_not_used": true
+  },
+  "deferred_korean_middle_dot": {
+    "character_operation_count": 3287,
+    "mode": "font_dependency_blocked_not_applied",
+    "operation_count": 1944,
+    "scope": {
+      "active_korean_coordinate_count": 131002,
+      "active_text_coordinate_count": 159341,
+      "active_text_resource_count": 10,
+      "automatic_fullwidth_ascii_character_count": 0,
+      "automatic_korean_middle_dot_character_count": 3287,
+      "automatic_normalization_character_count": 3287,
+      "automatic_normalization_coordinate_count": 1944,
+      "coordinates_containing_evidenced_punctuation_characters": 1944,
+      "per_resource": {
+        "MSG/JP/ev_strdata.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 322,
+          "automatic_normalization_character_count": 322,
+          "automatic_normalization_coordinate_count": 274,
+          "coordinates_containing_evidenced_punctuation_characters": 274,
+          "kind": "table",
+          "korean_coordinate_count": 13085,
+          "text_coordinate_count": 17868
+        },
+        "MSG/JP/msggame.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 200,
+          "automatic_normalization_character_count": 200,
+          "automatic_normalization_coordinate_count": 132,
+          "coordinates_containing_evidenced_punctuation_characters": 132,
+          "kind": "msggame",
+          "korean_coordinate_count": 23194,
+          "text_coordinate_count": 24262
+        },
+        "MSG/JP/strdata.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 389,
+          "automatic_normalization_character_count": 389,
+          "automatic_normalization_coordinate_count": 335,
+          "coordinates_containing_evidenced_punctuation_characters": 335,
+          "kind": "strdata",
+          "korean_coordinate_count": 24524,
+          "text_coordinate_count": 32311
+        },
+        "MSG_PK/JP/msgbre.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 240,
+          "automatic_normalization_character_count": 240,
+          "automatic_normalization_coordinate_count": 183,
+          "coordinates_containing_evidenced_punctuation_characters": 183,
+          "kind": "table",
+          "korean_coordinate_count": 2216,
+          "text_coordinate_count": 3000
+        },
+        "MSG_PK/JP/msgdata.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 193,
+          "automatic_normalization_character_count": 193,
+          "automatic_normalization_coordinate_count": 168,
+          "coordinates_containing_evidenced_punctuation_characters": 168,
+          "kind": "table",
+          "korean_coordinate_count": 22025,
+          "text_coordinate_count": 29218
+        },
+        "MSG_PK/JP/msgev.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 346,
+          "automatic_normalization_character_count": 346,
+          "automatic_normalization_coordinate_count": 302,
+          "coordinates_containing_evidenced_punctuation_characters": 302,
+          "kind": "table",
+          "korean_coordinate_count": 13744,
+          "text_coordinate_count": 17916
+        },
+        "MSG_PK/JP/msggame.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 1545,
+          "automatic_normalization_character_count": 1545,
+          "automatic_normalization_coordinate_count": 507,
+          "coordinates_containing_evidenced_punctuation_characters": 507,
+          "kind": "msggame",
+          "korean_coordinate_count": 28168,
+          "text_coordinate_count": 29524
+        },
+        "MSG_PK/JP/msgire.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 3,
+          "automatic_normalization_character_count": 3,
+          "automatic_normalization_coordinate_count": 2,
+          "coordinates_containing_evidenced_punctuation_characters": 2,
+          "kind": "table",
+          "korean_coordinate_count": 122,
+          "text_coordinate_count": 122
+        },
+        "MSG_PK/JP/msgstf.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 0,
+          "automatic_normalization_character_count": 0,
+          "automatic_normalization_coordinate_count": 0,
+          "coordinates_containing_evidenced_punctuation_characters": 0,
+          "kind": "table",
+          "korean_coordinate_count": 7,
+          "text_coordinate_count": 20
+        },
+        "MSG_PK/JP/msgui.bin": {
+          "automatic_fullwidth_ascii_character_count": 0,
+          "automatic_korean_middle_dot_character_count": 49,
+          "automatic_normalization_character_count": 49,
+          "automatic_normalization_coordinate_count": 41,
+          "coordinates_containing_evidenced_punctuation_characters": 41,
+          "kind": "table",
+          "korean_coordinate_count": 3917,
+          "text_coordinate_count": 5100
+        }
+      }
+    }
+  },
+  "font_demand_impact": {
+    "added_codepoints": [],
+    "after_active_korean_codepoint_count": 1484,
+    "applied_fullwidth_ascii": {
+      "all_evidenced_targets_mapped_in_all_live_jp_g1ns": true,
+      "evidenced_target_codepoints": [
+        "U+0020",
+        "U+0021",
+        "U+0025",
+        "U+0028",
+        "U+0029",
+        "U+002B",
+        "U+002D",
+        "U+002E",
+        "U+002F",
+        "U+0030",
+        "U+0031",
+        "U+0032",
+        "U+0033",
+        "U+0034",
+        "U+0035",
+        "U+0036",
+        "U+0037",
+        "U+0038",
+        "U+0039",
+        "U+003A",
+        "U+003E",
+        "U+003F",
+        "U+005B",
+        "U+005D",
+        "U+007E"
+      ],
+      "live_g1n_outer_entry_count": 7,
+      "per_font_route": {
+        "RES_JP/res_lang.bin": [
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 6,
+            "table_count": 3
+          },
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 7,
+            "table_count": 3
+          }
+        ],
+        "RES_JP_PK/res_lang_pk.bin": [
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 16,
+            "table_count": 3
+          },
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 17,
+            "table_count": 3
+          }
+        ],
+        "RES_JP_PK_PORT/res_lang_pk_port1.bin": [
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 1,
+            "table_count": 3
+          }
+        ],
+        "RES_JP_PK_PORT/res_lang_pk_port2.bin": [
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 0,
+            "table_count": 3
+          },
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 1,
+            "table_count": 3
+          }
+        ]
+      }
+    },
+    "before_active_korean_codepoint_count": 1508,
+    "deferred_korean_middle_dot": {
+      "automatic_application": false,
+      "base_live_coverage_probe": {
+        "outer_entries": [
+          6,
+          7
+        ],
+        "resource": "RES_JP/res_lang.bin",
+        "source_u00b7": [
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 6,
+            "table_count": 3
+          },
+          {
+            "all_evidenced_target_codepoints_mapped": true,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": []
+            },
+            "outer_entry": 7,
+            "table_count": 3
+          }
+        ],
+        "target_missing_codepoints": [
+          "U+30FB"
+        ],
+        "target_u30fb": [
+          {
+            "all_evidenced_target_codepoints_mapped": false,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": [
+                "U+30FB"
+              ]
+            },
+            "outer_entry": 6,
+            "table_count": 3
+          },
+          {
+            "all_evidenced_target_codepoints_mapped": false,
+            "missing_evidenced_target_codepoints_by_table": {
+              "0": [],
+              "1": [],
+              "2": [
+                "U+30FB"
+              ]
+            },
+            "outer_entry": 7,
+            "table_count": 3
+          }
+        ]
+      },
+      "evidence_map": {
+        "U+00B7": "U+30FB"
+      },
+      "reason": "font_dependency_blocked_target_unmapped_in_base_live_g1n_table",
+      "v0_9_affected_character_count": 3287,
+      "v0_9_affected_coordinate_count": 1944
+    },
+    "font_resources_unchanged_exact": true,
+    "overlay_only_font_decision": "fullwidth_ascii_eligible__middle_dot_deferred_no_font_payload_or_metric_change",
+    "removed_codepoints": [
+      "U+FF01",
+      "U+FF05",
+      "U+FF08",
+      "U+FF09",
+      "U+FF0B",
+      "U+FF0D",
+      "U+FF0E",
+      "U+FF0F",
+      "U+FF10",
+      "U+FF11",
+      "U+FF12",
+      "U+FF13",
+      "U+FF14",
+      "U+FF15",
+      "U+FF16",
+      "U+FF17",
+      "U+FF18",
+      "U+FF19",
+      "U+FF1A",
+      "U+FF1E",
+      "U+FF1F",
+      "U+FF3B",
+      "U+FF3D",
+      "U+FF5E"
+    ]
+  },
+  "input": {
+    "candidate_target_count": 14,
+    "zip": {
+      "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.9.0.zip",
+      "sha256": "1BCC92A3CD7025D307AF9B193BDDD8F1448451024630C8414FC218F0C49FE829",
+      "size": 356951693
+    }
+  },
+  "reversal": {
+    "character_operation_count": 12887,
+    "mode": "coordinate_hash_gated_character_operations",
+    "operation_count": 3460,
+    "per_coordinate_source_text_restored_exact": true,
+    "requires_after_utf16le_sha256_match": true
+  },
+  "runtime": {
+    "distribution": "Steam",
+    "language_route": "JP",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764
+  },
+  "schema": "nobu16.kr.steam-jp-fullwidth-normalization-validation.v1",
+  "scope": {
+    "active_korean_coordinate_count": 131002,
+    "active_text_coordinate_count": 159341,
+    "active_text_resource_count": 10,
+    "automatic_fullwidth_ascii_character_count": 12887,
+    "automatic_korean_middle_dot_character_count": 0,
+    "automatic_normalization_character_count": 12887,
+    "automatic_normalization_coordinate_count": 3460,
+    "coordinates_containing_evidenced_punctuation_characters": 3511,
+    "per_resource": {
+      "MSG/JP/ev_strdata.bin": {
+        "automatic_fullwidth_ascii_character_count": 1266,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 1266,
+        "automatic_normalization_coordinate_count": 526,
+        "coordinates_containing_evidenced_punctuation_characters": 526,
+        "kind": "table",
+        "korean_coordinate_count": 13085,
+        "text_coordinate_count": 17868
+      },
+      "MSG/JP/msggame.bin": {
+        "automatic_fullwidth_ascii_character_count": 3027,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 3027,
+        "automatic_normalization_coordinate_count": 765,
+        "coordinates_containing_evidenced_punctuation_characters": 778,
+        "kind": "msggame",
+        "korean_coordinate_count": 23194,
+        "text_coordinate_count": 24262
+      },
+      "MSG/JP/strdata.bin": {
+        "automatic_fullwidth_ascii_character_count": 862,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 862,
+        "automatic_normalization_coordinate_count": 453,
+        "coordinates_containing_evidenced_punctuation_characters": 453,
+        "kind": "strdata",
+        "korean_coordinate_count": 24524,
+        "text_coordinate_count": 32311
+      },
+      "MSG_PK/JP/msgbre.bin": {
+        "automatic_fullwidth_ascii_character_count": 281,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 281,
+        "automatic_normalization_coordinate_count": 138,
+        "coordinates_containing_evidenced_punctuation_characters": 138,
+        "kind": "table",
+        "korean_coordinate_count": 2216,
+        "text_coordinate_count": 3000
+      },
+      "MSG_PK/JP/msgdata.bin": {
+        "automatic_fullwidth_ascii_character_count": 298,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 298,
+        "automatic_normalization_coordinate_count": 215,
+        "coordinates_containing_evidenced_punctuation_characters": 216,
+        "kind": "table",
+        "korean_coordinate_count": 22025,
+        "text_coordinate_count": 29218
+      },
+      "MSG_PK/JP/msgev.bin": {
+        "automatic_fullwidth_ascii_character_count": 892,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 892,
+        "automatic_normalization_coordinate_count": 401,
+        "coordinates_containing_evidenced_punctuation_characters": 402,
+        "kind": "table",
+        "korean_coordinate_count": 13744,
+        "text_coordinate_count": 17916
+      },
+      "MSG_PK/JP/msggame.bin": {
+        "automatic_fullwidth_ascii_character_count": 5114,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 5114,
+        "automatic_normalization_coordinate_count": 885,
+        "coordinates_containing_evidenced_punctuation_characters": 921,
+        "kind": "msggame",
+        "korean_coordinate_count": 28168,
+        "text_coordinate_count": 29524
+      },
+      "MSG_PK/JP/msgire.bin": {
+        "automatic_fullwidth_ascii_character_count": 0,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 0,
+        "automatic_normalization_coordinate_count": 0,
+        "coordinates_containing_evidenced_punctuation_characters": 0,
+        "kind": "table",
+        "korean_coordinate_count": 122,
+        "text_coordinate_count": 122
+      },
+      "MSG_PK/JP/msgstf.bin": {
+        "automatic_fullwidth_ascii_character_count": 1010,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 1010,
+        "automatic_normalization_coordinate_count": 7,
+        "coordinates_containing_evidenced_punctuation_characters": 7,
+        "kind": "table",
+        "korean_coordinate_count": 7,
+        "text_coordinate_count": 20
+      },
+      "MSG_PK/JP/msgui.bin": {
+        "automatic_fullwidth_ascii_character_count": 137,
+        "automatic_korean_middle_dot_character_count": 0,
+        "automatic_normalization_character_count": 137,
+        "automatic_normalization_coordinate_count": 70,
+        "coordinates_containing_evidenced_punctuation_characters": 70,
+        "kind": "table",
+        "korean_coordinate_count": 3917,
+        "text_coordinate_count": 5100
+      }
+    }
+  },
+  "status": "PASS",
+  "switch_v23_evidence": {
+    "fullwidth_ascii_coordinate_count": 1586,
+    "korean_middle_dot_coordinate_count": 735,
+    "linebreak_changes_not_classified_by_this_workstream": true,
+    "non_punctuation_changed_coordinate_count": 1046,
+    "observed_fullwidth_map": {
+      "U+3000": "U+0020",
+      "U+FF01": "U+0021",
+      "U+FF05": "U+0025",
+      "U+FF08": "U+0028",
+      "U+FF09": "U+0029",
+      "U+FF0B": "U+002B",
+      "U+FF0D": "U+002D",
+      "U+FF0E": "U+002E",
+      "U+FF0F": "U+002F",
+      "U+FF10": "U+0030",
+      "U+FF11": "U+0031",
+      "U+FF12": "U+0032",
+      "U+FF13": "U+0033",
+      "U+FF14": "U+0034",
+      "U+FF15": "U+0035",
+      "U+FF16": "U+0036",
+      "U+FF17": "U+0037",
+      "U+FF18": "U+0038",
+      "U+FF19": "U+0039",
+      "U+FF1A": "U+003A",
+      "U+FF1E": "U+003E",
+      "U+FF1F": "U+003F",
+      "U+FF3B": "U+005B",
+      "U+FF3D": "U+005D",
+      "U+FF5E": "U+007E"
+    },
+    "observed_korean_middle_dot_map": {
+      "U+00B7": "U+30FB"
+    },
+    "punctuation_only_coordinate_count": 2254,
+    "v2.2_zip": {
+      "name": "NobunagaShinsei_KoreanPatch_v2.2.zip",
+      "sha256": "5E6354069E38BE22E3B3C9272A6CEC8A4B4110DF2486B9A63E84D1058C35D7F7",
+      "size": 83752794
+    },
+    "v2.3_zip": {
+      "name": "NobunagaShinsei_KoreanPatch_v2.3.zip",
+      "sha256": "A085B5D7F661786CF8E6568A36CF24E7BE1ADF81D042FF8C3D2E220D46A09388",
+      "size": 83756574
+    },
+    "v22_v23_changed_coordinate_count": 3300
+  }
+}

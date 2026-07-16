@@ -1,0 +1,402 @@
+{
+  "alignment": {
+    "block_count": 5,
+    "blocks": [
+      {
+        "block_id": 0,
+        "language_hash_chain_sha256": {
+          "JP": "6AA639ABFC3F94B7044F14913EF28DAC5B7E84527D995B3AAF040CC2DA2666AE",
+          "SC": "8A432D76D465CB7B0F52B3A2F1CABBFF742A6A3612CF78BC7CF5F8233F273C8A",
+          "TC": "D68C237B5D12BD27A75F3433723EF701C955DDA23366420BE5DFAC551F938AED"
+        },
+        "occupancy": {
+          "all_empty": 2738,
+          "all_nonempty": 20945,
+          "mixed": 1386
+        },
+        "same_slot_count_across_languages": true,
+        "slot_count": 25069,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 1,
+        "language_hash_chain_sha256": {
+          "JP": "D45C0BD82786B8AC8862297B0D6E33E48858EBE95673D79D84798426FEC05CA1",
+          "SC": "9BB7EADF6066C0812A390463368BE6E4C9878615BB8208CDA364264A87FA2F6A",
+          "TC": "7A8900FFCB9367CF393CBCA1A545E1E8FF5EA402559432E0F31ABF2BE4A2E21E"
+        },
+        "occupancy": {
+          "all_empty": 839,
+          "all_nonempty": 3240,
+          "mixed": 21
+        },
+        "same_slot_count_across_languages": true,
+        "slot_count": 4100,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 2,
+        "language_hash_chain_sha256": {
+          "JP": "6F6515935865F9C4F76D84E9619278294577BED105ECBF8C5E2AB818AEE0B5F6",
+          "SC": "0C2BCD96775D09D0C63989114CFAF36197F0E1C5402A453589A26FB5D827BBC9",
+          "TC": "D0E4A43D013C64B6DE1CA23C13A0D2639286FD7D6EC999E0D67F6CE42162252E"
+        },
+        "occupancy": {
+          "all_empty": 779,
+          "all_nonempty": 2207,
+          "mixed": 14
+        },
+        "same_slot_count_across_languages": true,
+        "slot_count": 3000,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 3,
+        "language_hash_chain_sha256": {
+          "JP": "7486C5D4DAD47191CA6962FE1F7788DB259DFFB2146204F6748F6BB76EFBB830",
+          "SC": "3C874646CA920080B14FF209495C0B4114C3E94677D74237ACABA1C632245D20",
+          "TC": "425CE6E3E0CF15897EFFD81D754F3AAA2D4541F450BBF0CD2C22B113767E8B97"
+        },
+        "occupancy": {
+          "all_empty": 0,
+          "all_nonempty": 122,
+          "mixed": 0
+        },
+        "same_slot_count_across_languages": true,
+        "slot_count": 122,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 4,
+        "language_hash_chain_sha256": {
+          "JP": "4737E65C3616FEF43245CE6D34B6934968FE2AA31901D87638AE62711DA3C082",
+          "SC": "5B63C11CEB93B57B7CA4E4D8CD703A6D42E529191B567C28F5DB77E35E0511C9",
+          "TC": "5B63C11CEB93B57B7CA4E4D8CD703A6D42E529191B567C28F5DB77E35E0511C9"
+        },
+        "occupancy": {
+          "all_empty": 14,
+          "all_nonempty": 6,
+          "mixed": 0
+        },
+        "same_slot_count_across_languages": true,
+        "slot_count": 20,
+        "source_text_embedded": false
+      }
+    ],
+    "same_five_block_shape": true,
+    "same_slot_counts_per_block": true,
+    "source_text_embedded": false
+  },
+  "contains_commercial_source_text": false,
+  "expected_slot_counts": [
+    25069,
+    4100,
+    3000,
+    122,
+    20
+  ],
+  "language_blocks": {
+    "JP": [
+      {
+        "block_id": 0,
+        "directory_relative_offset": 20,
+        "directory_size": 100276,
+        "display_nonempty_count": 22289,
+        "first_string_relative_offset": 100276,
+        "gap_after_size": 2,
+        "inner_header_sha256": "BCABEF3B2E555ED96F09EE885F8B0C9D13195B022144FC12F3296E375B68D106",
+        "last_string_relative_offset": 330800,
+        "logical_size": 330822,
+        "ordered_utf16le_hashes_sha256": "6AA639ABFC3F94B7044F14913EF28DAC5B7E84527D995B3AAF040CC2DA2666AE",
+        "outer_offset": 44,
+        "slot_count": 25069,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 1,
+        "directory_relative_offset": 20,
+        "directory_size": 16400,
+        "display_nonempty_count": 3261,
+        "first_string_relative_offset": 16400,
+        "gap_after_size": 2,
+        "inner_header_sha256": "4BE3243B220652BC9CB34E659154A7D9B6F7BFC431BD131EF18F39A328FE44E4",
+        "last_string_relative_offset": 76048,
+        "logical_size": 76070,
+        "ordered_utf16le_hashes_sha256": "D45C0BD82786B8AC8862297B0D6E33E48858EBE95673D79D84798426FEC05CA1",
+        "outer_offset": 330868,
+        "slot_count": 4100,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 2,
+        "directory_relative_offset": 20,
+        "directory_size": 12000,
+        "display_nonempty_count": 2221,
+        "first_string_relative_offset": 12000,
+        "gap_after_size": 0,
+        "inner_header_sha256": "980ADB4474A766814C16D44F5929DBFE97EFF3AB64C80CA85AC31B7883C45EE7",
+        "last_string_relative_offset": 332090,
+        "logical_size": 332112,
+        "ordered_utf16le_hashes_sha256": "6F6515935865F9C4F76D84E9619278294577BED105ECBF8C5E2AB818AEE0B5F6",
+        "outer_offset": 406940,
+        "slot_count": 3000,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 3,
+        "directory_relative_offset": 20,
+        "directory_size": 488,
+        "display_nonempty_count": 122,
+        "first_string_relative_offset": 488,
+        "gap_after_size": 2,
+        "inner_header_sha256": "A3086C9CF2ACAAD52E28C60814A0393DB12BB9605FFC69DA0E88C22EEAA20711",
+        "last_string_relative_offset": 17030,
+        "logical_size": 17178,
+        "ordered_utf16le_hashes_sha256": "7486C5D4DAD47191CA6962FE1F7788DB259DFFB2146204F6748F6BB76EFBB830",
+        "outer_offset": 739052,
+        "slot_count": 122,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 4,
+        "directory_relative_offset": 20,
+        "directory_size": 80,
+        "display_nonempty_count": 6,
+        "first_string_relative_offset": 80,
+        "gap_after_size": 0,
+        "inner_header_sha256": "A2FCB4A776FB4FCCE85D0FF3B0DDF7172384D12FE69B3CEDCED86021EDF8978D",
+        "last_string_relative_offset": 7674,
+        "logical_size": 7696,
+        "ordered_utf16le_hashes_sha256": "4737E65C3616FEF43245CE6D34B6934968FE2AA31901D87638AE62711DA3C082",
+        "outer_offset": 756232,
+        "slot_count": 20,
+        "source_text_embedded": false
+      }
+    ],
+    "SC": [
+      {
+        "block_id": 0,
+        "directory_relative_offset": 20,
+        "directory_size": 100276,
+        "display_nonempty_count": 21115,
+        "first_string_relative_offset": 100276,
+        "gap_after_size": 2,
+        "inner_header_sha256": "CEC5AD6001C51C383756788287F08847CF6C145462908EE02B196713FB83A904",
+        "last_string_relative_offset": 375948,
+        "logical_size": 375970,
+        "ordered_utf16le_hashes_sha256": "8A432D76D465CB7B0F52B3A2F1CABBFF742A6A3612CF78BC7CF5F8233F273C8A",
+        "outer_offset": 44,
+        "slot_count": 25069,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 1,
+        "directory_relative_offset": 20,
+        "directory_size": 16400,
+        "display_nonempty_count": 3240,
+        "first_string_relative_offset": 16400,
+        "gap_after_size": 2,
+        "inner_header_sha256": "5BC030F24C876FD837BC5C445BBFB70E0FED63272B2BB947F29E11ABFE9261A7",
+        "last_string_relative_offset": 65820,
+        "logical_size": 65842,
+        "ordered_utf16le_hashes_sha256": "9BB7EADF6066C0812A390463368BE6E4C9878615BB8208CDA364264A87FA2F6A",
+        "outer_offset": 376016,
+        "slot_count": 4100,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 2,
+        "directory_relative_offset": 20,
+        "directory_size": 12000,
+        "display_nonempty_count": 2207,
+        "first_string_relative_offset": 12000,
+        "gap_after_size": 0,
+        "inner_header_sha256": "6FA56F31922C52AFF42AE7512FCF4BD32A386EEDFF3F2E79A297E9D6CB931DCE",
+        "last_string_relative_offset": 289950,
+        "logical_size": 289972,
+        "ordered_utf16le_hashes_sha256": "0C2BCD96775D09D0C63989114CFAF36197F0E1C5402A453589A26FB5D827BBC9",
+        "outer_offset": 441860,
+        "slot_count": 3000,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 3,
+        "directory_relative_offset": 20,
+        "directory_size": 488,
+        "display_nonempty_count": 122,
+        "first_string_relative_offset": 488,
+        "gap_after_size": 2,
+        "inner_header_sha256": "274A585806E71D4921178A7EA10ECAB339EB5931F2CC486A3A75BBC4C1C5C5AC",
+        "last_string_relative_offset": 15756,
+        "logical_size": 15878,
+        "ordered_utf16le_hashes_sha256": "3C874646CA920080B14FF209495C0B4114C3E94677D74237ACABA1C632245D20",
+        "outer_offset": 731832,
+        "slot_count": 122,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 4,
+        "directory_relative_offset": 20,
+        "directory_size": 80,
+        "display_nonempty_count": 6,
+        "first_string_relative_offset": 80,
+        "gap_after_size": 2,
+        "inner_header_sha256": "45A36879B6CA61F542661CEC992BCC825213CAE6DD457E8D1AD5B1449B10C827",
+        "last_string_relative_offset": 12652,
+        "logical_size": 12674,
+        "ordered_utf16le_hashes_sha256": "5B63C11CEB93B57B7CA4E4D8CD703A6D42E529191B567C28F5DB77E35E0511C9",
+        "outer_offset": 747712,
+        "slot_count": 20,
+        "source_text_embedded": false
+      }
+    ],
+    "TC": [
+      {
+        "block_id": 0,
+        "directory_relative_offset": 20,
+        "directory_size": 100276,
+        "display_nonempty_count": 21002,
+        "first_string_relative_offset": 100276,
+        "gap_after_size": 0,
+        "inner_header_sha256": "90F8A8ED77B976BCA1D99760ED76E15B9CBDE7BAA3D1A504F5263F845BB781CD",
+        "last_string_relative_offset": 324902,
+        "logical_size": 324924,
+        "ordered_utf16le_hashes_sha256": "D68C237B5D12BD27A75F3433723EF701C955DDA23366420BE5DFAC551F938AED",
+        "outer_offset": 44,
+        "slot_count": 25069,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 1,
+        "directory_relative_offset": 20,
+        "directory_size": 16400,
+        "display_nonempty_count": 3240,
+        "first_string_relative_offset": 16400,
+        "gap_after_size": 0,
+        "inner_header_sha256": "22DC7BE776ADD2D45E86922077C215B6039CCB6E9FEB2DCFB7481CB260364DA7",
+        "last_string_relative_offset": 65966,
+        "logical_size": 65988,
+        "ordered_utf16le_hashes_sha256": "7A8900FFCB9367CF393CBCA1A545E1E8FF5EA402559432E0F31ABF2BE4A2E21E",
+        "outer_offset": 324968,
+        "slot_count": 4100,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 2,
+        "directory_relative_offset": 20,
+        "directory_size": 12000,
+        "display_nonempty_count": 2207,
+        "first_string_relative_offset": 12000,
+        "gap_after_size": 0,
+        "inner_header_sha256": "ED32583D17A16D4BF9A67A4C334C9611891112168271E929E0DEF9883EA51366",
+        "last_string_relative_offset": 301226,
+        "logical_size": 301248,
+        "ordered_utf16le_hashes_sha256": "D0E4A43D013C64B6DE1CA23C13A0D2639286FD7D6EC999E0D67F6CE42162252E",
+        "outer_offset": 390956,
+        "slot_count": 3000,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 3,
+        "directory_relative_offset": 20,
+        "directory_size": 488,
+        "display_nonempty_count": 122,
+        "first_string_relative_offset": 488,
+        "gap_after_size": 2,
+        "inner_header_sha256": "0300261EAB353049ADBDDD035A7272E5F6EB43608E326A60E03F70C76F565299",
+        "last_string_relative_offset": 14180,
+        "logical_size": 14302,
+        "ordered_utf16le_hashes_sha256": "425CE6E3E0CF15897EFFD81D754F3AAA2D4541F450BBF0CD2C22B113767E8B97",
+        "outer_offset": 692204,
+        "slot_count": 122,
+        "source_text_embedded": false
+      },
+      {
+        "block_id": 4,
+        "directory_relative_offset": 20,
+        "directory_size": 80,
+        "display_nonempty_count": 6,
+        "first_string_relative_offset": 80,
+        "gap_after_size": 2,
+        "inner_header_sha256": "45A36879B6CA61F542661CEC992BCC825213CAE6DD457E8D1AD5B1449B10C827",
+        "last_string_relative_offset": 12652,
+        "logical_size": 12674,
+        "ordered_utf16le_hashes_sha256": "5B63C11CEB93B57B7CA4E4D8CD703A6D42E529191B567C28F5DB77E35E0511C9",
+        "outer_offset": 706508,
+        "slot_count": 20,
+        "source_text_embedded": false
+      }
+    ]
+  },
+  "languages": [
+    "SC",
+    "JP",
+    "TC"
+  ],
+  "outer_container": {
+    "block_count": 5,
+    "descriptor_rule": "first_block_size_then_offset_size_pairs",
+    "header_size": 44,
+    "inner_table_directory_relative_offset": 20,
+    "synthetic_padding_rule": "negative_of_12_plus_logical_size_mod_4",
+    "synthetic_single_table_header_size": 12
+  },
+  "raw_parse_rebuild_byte_exact_languages": [
+    "SC",
+    "JP",
+    "TC"
+  ],
+  "resource": "MSG/SC/strdata.bin",
+  "safety": {
+    "executable_modified": false,
+    "font_files_modified": false,
+    "installed_game_files_modified": false,
+    "process_memory_access": false,
+    "registry_modified": false
+  },
+  "schema": "nobu16.kr.strdata-structure-inventory.v1",
+  "source_files": {
+    "JP": {
+      "block_display_nonempty_counts": [
+        22289,
+        3261,
+        2221,
+        122,
+        6
+      ],
+      "packed_sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+      "packed_size": 507054,
+      "raw_sha256": "EAB14063C2060CE11794232F483F0B2210B3BD58118165CBEEC2F37176C25649",
+      "raw_size": 763928,
+      "relative_path": "MSG/JP/strdata.bin"
+    },
+    "SC": {
+      "block_display_nonempty_counts": [
+        21115,
+        3240,
+        2207,
+        122,
+        6
+      ],
+      "packed_sha256": "93F88D71210B96783749CEB948E0713D7E6552F764F644092B71A5FD0C994B88",
+      "packed_size": 516628,
+      "raw_sha256": "17EF622F36BA94009F67519DC79ED543C223B467311E51711A009F9DD0816214",
+      "raw_size": 760388,
+      "relative_path": "MSG/SC/strdata.bin"
+    },
+    "TC": {
+      "block_display_nonempty_counts": [
+        21002,
+        3240,
+        2207,
+        122,
+        6
+      ],
+      "packed_sha256": "16481F0B4B1E544F8F7C0B1C92210D13592560470AC062847DA32375B77DA861",
+      "packed_size": 532610,
+      "raw_sha256": "3076080A96E8251A8A700D95C201698BBEC1B391D746E3F51DFB780CB765075C",
+      "raw_size": 719184,
+      "relative_path": "MSG/TC/strdata.bin"
+    }
+  }
+}

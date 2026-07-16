@@ -1,0 +1,51 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "2D1BEFF03972777FBA5EE0B8FEF24E6A03B285DA466A4DA439794D21587A0F69",
+    "packed_size": 496999,
+    "raw_sha256": "25593167A47B5B0F69357F71E5E9882382F346AEF1B8DCA7DB6902D7E270AB67",
+    "raw_size": 495032,
+    "string_count": 29218
+  },
+  "checks": {
+    "active_v6_baseline": "OK",
+    "candidate_parser_roundtrip": "OK",
+    "esc_printf_newline_pua_whitespace": "OK",
+    "github_written": false,
+    "input_coordinates_overlap": "0",
+    "input_overlay_hash_pins": "OK",
+    "nonselected_utf16le_payloads": "OK",
+    "packed_deterministic_rebuild": "OK",
+    "per_entry_jp_source_hashes": "OK",
+    "raw_deterministic_rebuild": "OK",
+    "release_asset_written": false,
+    "selected_high_confidence_kana_residuals": "0",
+    "steam_installation_written": false
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "effective_change_coordinate_sha256": "A2571E6CB1C5F8C6EF93F3339F4EF677EAAB1121BD9F8041EFC76D37129BBAE3",
+  "effective_change_count": 345,
+  "entry_count": 345,
+  "expected_candidate": {
+    "packed_sha256": "AB2010944EA9F7042166710326AA940F74EF01F0B9008257740F5A0EDFD64CD2",
+    "packed_size": 497517,
+    "raw_sha256": "D78490533A567C4F09F109B82FA9BC234610DCA1EDE729D6D52028B72D435918",
+    "raw_size": 495548
+  },
+  "high_confidence_kana_residual_count_after_candidate": 0,
+  "merged_audit_bundle": {
+    "bundle_id": "p1-MSG_PK_JP-msgdata-01-plus-02",
+    "coordinate_sha256": "D3A559DD853504332F46F2ED91DAFF6D30A6100C04F53907E812784374007FA6"
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "schema": "nobu16.kr.steam-jp-msgdata-p1-integrated-345-validation.v1",
+  "source_bundle_counts": {
+    "p1-MSG_PK_JP-msgdata-02": 170,
+    "p1-MSG_PK_JP_msgdata-01": 175
+  },
+  "source_free": true,
+  "translation_origin_counts": {
+    "exact_source_hash_catalog_reuse": 43,
+    "project_direct_translation": 302
+  }
+}

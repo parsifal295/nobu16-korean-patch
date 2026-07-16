@@ -1,0 +1,72 @@
+{
+  "active_v6_baseline": {
+    "block_count": 18,
+    "literal_count": 24262,
+    "packed_sha256": "E54D7AB55CB981B7973FBF8657A276520EBFA881D3439BE94A2D14086B293177",
+    "packed_size": 649347,
+    "raw_sha256": "183F7867817FBDAAE8E8B1DE547AEAC9B80C6A818604DD26FBF57BABD2FC10E2",
+    "raw_size": 1498276,
+    "record_count": 19152
+  },
+  "audit_bundle": {
+    "bundle_id": "p2-MSG_JP-msggame-residual-62",
+    "coordinate_sha256": "A882DC7B496535932DBB7C27C8191B66454B14F09F84BBF31BFDB39697F185F4"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "exact_reuse_catalogs": [
+    {
+      "relative_path": "workstreams/msggame_pk_jp_native_wave06/public/msggame_ko_pk_jp_native_steam_prior_rebased_9386.v1.json",
+      "sha256": "9F2E8498E45899E55D8AF8221434DBB35D1D2660C96F43E678C0A065D059D974"
+    },
+    {
+      "relative_path": "workstreams/msggame_pk_jp_native_wave06/public/msggame_ko_pk_jp_native_steam_switch_v13_exact_14825.v1.json",
+      "sha256": "40C2DCCCDBA0F0FCFD99063531C116F82006E7DFE078F67F930F5EBEDB328045"
+    },
+    {
+      "relative_path": "workstreams/msggame_pk_jp_native_wave07_j04/public/msggame_ko_pk_jp_native_wave07_j04_680.v1.json",
+      "sha256": "DDC3B34DB5A1B6428D028435DF65C67ECA7E5698F94C2912D03DAF18EB4524DC"
+    }
+  ],
+  "expected_candidate": {
+    "literal_count": 24262,
+    "packed_sha256": "916DD84BCF77207C1F28A2046B901BC588E0120DCBA99A1DED820A6711305CF8",
+    "packed_size": 649309,
+    "raw_sha256": "5664FCDD33A91E29250DC789DD33694C97AF2065CDFC04A03F109104310BCED3",
+    "raw_size": 1498312
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG/JP/msggame.bin"
+  },
+  "overlay": {
+    "entry_count": 62,
+    "relative_path": "workstreams/steam_jp_base_msggame_p2_residual_62_v1/public/msggame_ko_base_jp_p2_residual_62.v1.json",
+    "sha256": "86B5E67CA5B263F5AF19208DB22A38C567CB4186E1AAEB5681A386AF554804EB"
+  },
+  "proofs": {
+    "active_v6_baseline_pinned": true,
+    "catalog_reuse_exact_source_hash_only": true,
+    "deterministic_packed_rebuild": true,
+    "esc_printf_newline_pua_whitespace_preserved": true,
+    "literal_coordinate_set_preserved": true,
+    "nonliteral_structure_preserved": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "steam_installation_read_only": true
+  },
+  "resource": "MSG/JP/msggame.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-base-msggame-p2-residual-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_base_msggame_p2_residual_62_v1/validation.v1.json",
+    "sha256": "841587A24137DD2B4120754E80C847E1808585B0A8C350478427160F389E11CA"
+  }
+}

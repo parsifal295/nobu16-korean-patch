@@ -1,0 +1,54 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "2D1BEFF03972777FBA5EE0B8FEF24E6A03B285DA466A4DA439794D21587A0F69",
+    "packed_size": 496999,
+    "raw_sha256": "25593167A47B5B0F69357F71E5E9882382F346AEF1B8DCA7DB6902D7E270AB67",
+    "raw_size": 495032,
+    "string_count": 29218
+  },
+  "audit_bundle": {
+    "bundle_id": "p1-MSG_PK_JP_msgdata-01",
+    "coordinate_sha256": "9884F706F0C8C283895E74B02EBA06E6C832E5733142FB58DB7AA37F44D6EE1D"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "47A982A7BB65AAF12094753CB040E2EA3B9A89846DBCF1F151A46FE56E9676E3",
+    "packed_size": 497902,
+    "raw_sha256": "94C457AECAF36115C0B600629F48BB477B087022DFC7F6EFDA5B87792FB2E277",
+    "raw_size": 495932,
+    "string_count": 29218
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgdata.bin"
+  },
+  "overlay": {
+    "entry_count": 175,
+    "relative_path": "workstreams/steam_jp_msgdata_p1_residual_175_v1/public/msgdata_ko_pk_jp_p1_residual_175.v1.json",
+    "sha256": "DBFD1F92FEDFD415AD1CA88F63F645492285AF8B2FF256C333EC8FC36956CF8A"
+  },
+  "proofs": {
+    "active_v6_baseline_pinned": true,
+    "catalog_reuse_exact_source_hash_only": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "format_and_token_profile_preserved": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "steam_installation_read_only": true
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgdata-p1-residual-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_msgdata_p1_residual_175_v1/validation.v1.json",
+    "sha256": "7A4EFAE2B33E9B1DE253094603A3342BD3A9B843F0B2BCAFD464C9F2BA536942"
+  }
+}
