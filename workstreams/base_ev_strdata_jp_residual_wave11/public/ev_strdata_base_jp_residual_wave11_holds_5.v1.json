@@ -1,0 +1,54 @@
+{
+  "base_language": "JP",
+  "entries": [
+    {
+      "action": "leave_stock_jp_unchanged",
+      "id": 3917,
+      "reason_code": "institutional_term_style",
+      "review_question": "중세 봉신 신분의 한국어 표기를 고정한 뒤 반영",
+      "source_jp_utf16le_sha256": "81B3FD52E181F013A72065C4D31CC614EF161E489D18766CD20DA49BA3FE1B8D",
+      "switch_ko_utf16le_sha256": "13EA9631DD1F2AB2F308A33363C0B5141E374F1C7EF2BF0D176F462ECDFEA987"
+    },
+    {
+      "action": "leave_stock_jp_unchanged",
+      "id": 4835,
+      "reason_code": "character_trait_gloss",
+      "review_question": "인물 성품을 나타내는 강조어의 문맥 번역을 화면 확인 뒤 반영",
+      "source_jp_utf16le_sha256": "716A34A85C23281EBAC8C828ED95D9214E5BBC683F474808ABB3DDECA06315E0",
+      "switch_ko_utf16le_sha256": "DE86D9E87BE3B958C9A85AACAE453C3EFD9DDC7D4C0CCA821E327D551C44CA8F"
+    },
+    {
+      "action": "leave_stock_jp_unchanged",
+      "id": 7260,
+      "reason_code": "naval_vessel_term_style",
+      "review_question": "대형 군선 유형의 한국어 명칭을 확정한 뒤 반영",
+      "source_jp_utf16le_sha256": "C999C78BF24861002DEF07BA3BA2D0BC0A3690C6E9FA446B9FE716E2F876E953",
+      "switch_ko_utf16le_sha256": "57C4B4568A8370E096D0985A1E53CE54CA20B7C3CF795C65D1F92D6C0ED4DD39"
+    },
+    {
+      "action": "leave_stock_jp_unchanged",
+      "id": 8818,
+      "reason_code": "historic_policy_term_gloss",
+      "review_question": "관백 표기는 유지하되 제도명 설명 표기를 확정한 뒤 반영",
+      "source_jp_utf16le_sha256": "486A9D15FDF3C39BDF6C23F04EEE748BB0691D5F77155C1678C944A7A8556C14",
+      "switch_ko_utf16le_sha256": "8718A4545444D182F9C40D4DEBE9B1BC2DC1518703A5DE15CDCCB7FFC717936B"
+    },
+    {
+      "action": "leave_stock_jp_unchanged",
+      "id": 8904,
+      "reason_code": "religious_title_style",
+      "review_question": "출가 인물 호칭의 한국어 표기를 확정한 뒤 반영",
+      "source_jp_utf16le_sha256": "B45CA1F5D46F3C4922F2EEF9BCDAD88F3663D724F54F209000D3A04318E5BC80",
+      "switch_ko_utf16le_sha256": "1DB028F104A9415331F7CABD3BA0245F6BB307093D6E538099B35AF3FE4E984E"
+    }
+  ],
+  "entry_count": 5,
+  "ids_sha256": "39577521D5728E1BF5C348235F1F625A8F2D82266659D74C02755B2FCBBE1CE7",
+  "policy_context": {
+    "candidate_action": "manual_rows_excluded",
+    "display_title_policy": "관백",
+    "reading_style_policy": "간레이"
+  },
+  "resource": "MSG/JP/ev_strdata.bin",
+  "schema": "nobu16.kr.base-ev-strdata-jp-residual-wave11-holds.v1"
+}
