@@ -1,0 +1,55 @@
+{
+  "expected": {
+    "candidate": {
+      "packed_sha256": "E54D7AB55CB981B7973FBF8657A276520EBFA881D3439BE94A2D14086B293177",
+      "packed_size": 649347,
+      "raw_sha256": "183F7867817FBDAAE8E8B1DE547AEAC9B80C6A818604DD26FBF57BABD2FC10E2",
+      "raw_size": 1498276
+    },
+    "stock": {
+      "block_count": 18,
+      "literal_count": 24262,
+      "packed_sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+      "packed_size": 610163,
+      "raw_sha256": "353010B59A3E04BFE5541162229C1CFCAD181EF0E75FCC9B6DE2043BFC515F38",
+      "raw_size": 1337548,
+      "record_count": 19152
+    }
+  },
+  "proofs": {
+    "deferred_report": {
+      "sha256": "C07056D0270FF04550362156062794032F6EF256175ECF981FD4345678BACD92",
+      "size": 15716
+    },
+    "deterministic_ab_equal": true,
+    "non_selected_literals_preserved": true,
+    "normalized_structure_sha256": "06DE8E4A0007E21C1479589C94D259ADD6A8A8E5BF91D5C0CC3BE92EA8BC019D",
+    "wave11_entry_coordinate_sha256": "34B073BE510E567132BC24C8B908E56130F29BF2B2922D877C72BC4CA85FEF6A",
+    "wave11_overlay": {
+      "sha256": "EB84C0D07CDC95DD24FE1638E493F767514228A2CE2F2E61B4889325966C047F",
+      "size": 157932
+    },
+    "wrapper_header_preserved": true
+  },
+  "resource": "MSG/JP/msggame.bin",
+  "runtime": {
+    "distribution": "Steam",
+    "version": "1.1.7"
+  },
+  "safety": {
+    "candidate_written": false,
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "source_text_embedded": false
+  },
+  "schema": "nobu16.kr.base-msggame-jp-wave11-validation.v1",
+  "status": "PASS",
+  "translation": {
+    "combined_changed_entries": 23194,
+    "manual_hanja_gloss_deferred": 3,
+    "nonsemantic_format_token_retained": 59,
+    "prior_switch_v13_exact_entries": 22924,
+    "wave11_safe_contract_entries": 270
+  }
+}

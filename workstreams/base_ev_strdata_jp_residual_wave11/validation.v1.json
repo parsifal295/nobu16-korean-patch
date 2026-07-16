@@ -1,0 +1,59 @@
+{
+  "base_transfer": {
+    "candidate": {
+      "packed_sha256": "AD1A442C3588E791DB442548C2B7878ABB4D53A686C591A94AB7F4FAB719A886",
+      "packed_size": 927573,
+      "raw_sha256": "1B4255E3F3DADA24EA5D526AA5DCD2D1BC73E1284891EBBE9B4E891D6FFBA162",
+      "raw_size": 923924,
+      "string_count": 17868
+    },
+    "entry_count": 13045
+  },
+  "candidate": {
+    "changed_entry_count": 13085,
+    "packed_sha256": "9ED892E85AF18EB3BC965A834853969BC06F486A2466A83F3CEBED1B8D5433C0",
+    "packed_size": 928464,
+    "raw_sha256": "205BA7CA7873411B03C51D1931C277DA9BA8E56700B5EA0D8EDB82B49BD45ABE",
+    "raw_size": 924812,
+    "string_count": 17868
+  },
+  "checks": {
+    "base_and_wave_domains_disjoint": true,
+    "candidate_parse_roundtrip": true,
+    "control_linebreak_placeholder_invariants": true,
+    "current_v5_candidate_modified": false,
+    "display_title_policy_7240": true,
+    "installed_game_file_written": false,
+    "live_steam_root_rejected": true,
+    "manual_hold_rows_preserved": true,
+    "middle_dot_normalization": true,
+    "preapplication_stock_backup_hash_gate": true,
+    "release_asset_written": false,
+    "source_free_overlay": true,
+    "source_hash_gate": true,
+    "switch_target_hash_gate": true,
+    "upstream_contract_hash_gate": true,
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG/JP/ev_strdata.bin",
+  "runtime": {
+    "base_language_route": "JP",
+    "distribution": "Steam",
+    "steam_pk_version": "1.1.7"
+  },
+  "schema": "nobu16.kr.base-ev-strdata-jp-residual-wave11-validation.v1",
+  "status": "PASS",
+  "stock_jp": {
+    "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+    "packed_size": 496819,
+    "raw_sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+    "raw_size": 789260,
+    "string_count": 17868
+  },
+  "wave11": {
+    "hold_ids_sha256": "39577521D5728E1BF5C348235F1F625A8F2D82266659D74C02755B2FCBBE1CE7",
+    "manual_hold_count": 5,
+    "safe_entry_count": 40,
+    "safe_ids_sha256": "4A55ECB78E1C90BB764761BB9FE4CECD44C52B8A455119DD159A196342096199"
+  }
+}
