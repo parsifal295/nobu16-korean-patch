@@ -1,0 +1,73 @@
+{
+  "base_language": "JP",
+  "coordinate_contract": {
+    "bundle_id": "p0-MSG_JP_strdata-05",
+    "coordinate_count": 6,
+    "coordinate_sha256": "FAE4643A1B9E1AF483CCB16CAB2828357E39796A45256FD1835BEF975CDAFB9F",
+    "path": "workstreams/jp_active_message_residual_audit_v1/public/active_jp_remaining_coordinates.v1.json"
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "block_id": 4,
+      "reason_code": "official_credit_attribution_preserved",
+      "slot_id": 0,
+      "source_jp_utf16le_sha256": "6249CF57815FF17565487DE1C6A59A85E8AD6FABF296F613249AE0AC0D38A5A2",
+      "status": "deferred_credit_attribution_review"
+    },
+    {
+      "block_id": 4,
+      "reason_code": "official_credit_attribution_preserved",
+      "slot_id": 1,
+      "source_jp_utf16le_sha256": "9374E18DAFDDC43D0CADB4AA3A33886320A2C6CCEE819F20D93049D18E7D46D1",
+      "status": "deferred_credit_attribution_review"
+    },
+    {
+      "block_id": 4,
+      "reason_code": "official_credit_attribution_preserved",
+      "slot_id": 2,
+      "source_jp_utf16le_sha256": "4692B41C8176D41CDCF5374CEFDE6F5AA78F61467326E1D68A6A151BECAB3B0A",
+      "status": "deferred_credit_attribution_review"
+    },
+    {
+      "block_id": 4,
+      "reason_code": "official_credit_attribution_preserved",
+      "slot_id": 3,
+      "source_jp_utf16le_sha256": "600C7F12FFF6A4BED527A91E0244D3B9C5D683B17889F8F673897C6A178509B0",
+      "status": "deferred_credit_attribution_review"
+    },
+    {
+      "block_id": 4,
+      "reason_code": "official_credit_attribution_preserved",
+      "slot_id": 4,
+      "source_jp_utf16le_sha256": "7B8EFC381500F48B9B65475DBEE1820CDF56D0B75FFD2660319B969856186269",
+      "status": "deferred_credit_attribution_review"
+    },
+    {
+      "block_id": 4,
+      "reason_code": "official_credit_attribution_preserved",
+      "slot_id": 5,
+      "source_jp_utf16le_sha256": "823C68E18DD0D8DED6CB2380A3500601E9796DE368AF87C4E57EFD49E74A01EA",
+      "status": "deferred_credit_attribution_review"
+    }
+  ],
+  "entry_count": 6,
+  "overlay_id": "steam-jp-strdata-p0-b05-credit-hold-v1",
+  "reference_evidence": {
+    "switch_v13_unchanged": true,
+    "switch_v20_unchanged": true
+  },
+  "resource": "MSG/JP/strdata.bin",
+  "schema": "nobu16.kr.strdata-credit-attribution-hold.v1",
+  "stock_jp": {
+    "block_count": 5,
+    "packed_sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+    "raw_sha256": "A3410438A13B2DB4C72B56B804BDF4ACABBEE8954203CA13D210AD848134BF66",
+    "raw_size": 953072,
+    "size": 956835,
+    "slot_count": 32311
+  }
+}

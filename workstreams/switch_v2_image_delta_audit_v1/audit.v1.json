@@ -1,0 +1,2476 @@
+{
+  "assets": {
+    "12": {
+      "family": "battle military-assessment overlay",
+      "logical_path": "RES_JP/res_lang.bin/12",
+      "pc_mapping_gate": {
+        "nested_resource_id_equal": true,
+        "pc_only_rebuild_required": true,
+        "physical_slot_set_equal": true,
+        "selected_texture_geometry_equal_count": 0,
+        "selected_texture_geometry_row_count": 1,
+        "slot_rows": [
+          {
+            "platform": {
+              "equal": false,
+              "pc": 10,
+              "switch": 16
+            },
+            "slot": 0,
+            "texture_count_equal": true,
+            "textures": [
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  512
+                ],
+                "switch_dimensions": [
+                  2048,
+                  256
+                ],
+                "texture": 0
+              }
+            ]
+          }
+        ],
+        "whole_switch_copy_allowed": false
+      },
+      "priority": "P1",
+      "screen_gate": "open the exact PC battle-assessment screen and map text rectangles",
+      "status": "confirmed_by_private_atlas_review",
+      "steam_jp": {
+        "full_inventory_sha256": "CF74336423378A4B9123F4D34CDF8B58BEB7243ABEAC5B715DB1B218254F9CFA",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 58
+        },
+        "outer": {
+          "index": 12,
+          "offset": 138438528,
+          "sha256": "51E95970681289802B33D9E8492E602ED07079883EED13CABB1F42FF4C0003F4",
+          "stored_size": 303571
+        },
+        "public_inventory_sha256": "A77FD27DD6083894ED622FC89238C12195F95489B8BFDD02B500536FDE51A54B",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "0DD81EF501847C57303CA9F3B5F7F704E674820E0B85B0F825413DA98C29332F",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    512
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "A7732AC45D0FD094DE9357ABFA5B2C7E36B5500BA91069A91E0C0E19C5002A91",
+                  "payload_size": 1048576,
+                  "texture": 0
+                }
+              ],
+              "platform": 10,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "EBB772B7109AE5A6A651CFA92BBA29D6880541C3E651CADBBA5266CAD3FB9E5F",
+            "slot": 0,
+            "stored_size": 302803,
+            "wrapper_sha256": "AD3CDAA687B303EAF62515135798FA5FF7DBFB35E20116C26AB61DD5C0ABC293"
+          }
+        ]
+      },
+      "switch_v21": {
+        "full_inventory_sha256": "4B8474C0D3CA786EC9493EEC6B17E22CD05839A1A76F089DCE80031280699DE1",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 58
+        },
+        "outer": {
+          "index": 12,
+          "offset": 78749657,
+          "sha256": "84A77685D2F0AA6841804E0DFAC7A7B883F8673398DA1638A080CCDCF5D36C30",
+          "stored_size": 169156
+        },
+        "public_inventory_sha256": "A641C3CC618FE3CDC02A5CA7CE81F185FFBC2262768AA4F25AD5B1124BFC8CC7",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "4CDA0B118B7440D3195832476AF877DDF163195E69F12B333AC76B52498E17F2",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "970268B90E3D31F950FCE837CA29F82F51A192C52985A10D9E017FBA0C3AD8F5",
+                  "payload_size": 524288,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "3BBFFC70CF36CA0BE6DDE84D32A7658810F2C701577497069D35BA18F0975E10",
+            "slot": 0,
+            "stored_size": 168388,
+            "wrapper_sha256": "AFEA2C5808364718DB46FF79E79B73C3B3AD614CBA4737E6512679BE275A2DF7"
+          }
+        ]
+      },
+      "switch_v21_to_v22": {
+        "changed_slot_indices": [
+          0
+        ],
+        "nested_resource_id_equal": true,
+        "physical_slot_count_equal": true,
+        "slots": [
+          {
+            "changed_texture_indices": [
+              0
+            ],
+            "platform_equal": true,
+            "raw_sha256_equal": false,
+            "slot": 0,
+            "texture_count_equal": true
+          }
+        ]
+      },
+      "switch_v22": {
+        "full_inventory_sha256": "B93BEFB41B799E588B387533678BBD5C118BCA6424E7EF7859E835C55A221D3C",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 58
+        },
+        "outer": {
+          "index": 12,
+          "offset": 78585172,
+          "sha256": "0FDAE5E5652611A69D2038965D601511AA41C82437DF2DC6655C815DF2941025",
+          "stored_size": 130451
+        },
+        "public_inventory_sha256": "D1931DA07CAE7615FAE3D1D99473E6E92A8DA5F38173CA034B3D34DCF699F1F4",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "171E6804ED0D5DBB1DBEAF47D7DAC0961C6518FDCE75CCACC08296FBF5167FF7",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "38560C61BFE10F8FC17057FC1C3A262721035C3E86867B6B12E6AD9B94C9F785",
+                  "payload_size": 524288,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "935308EB468685263855C5F5193BBD59762D6CE712E1CE1B9525D0663A749F16",
+            "slot": 0,
+            "stored_size": 129683,
+            "wrapper_sha256": "45570C88B5F60C01434012FDBE4B5CBC74326D1DE8AD90B1A5C9AB3DDD8C7EC1"
+          }
+        ]
+      },
+      "switch_v22_to_v24_outer_byte_equal": true,
+      "switch_v24": {
+        "full_inventory_sha256": "DD26FB5F3B51BFD8368FC6684991C33AAD502FA5B719B2219ECD35780CD8B9C8",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 58
+        },
+        "outer": {
+          "index": 12,
+          "offset": 78586064,
+          "sha256": "0FDAE5E5652611A69D2038965D601511AA41C82437DF2DC6655C815DF2941025",
+          "stored_size": 130451
+        },
+        "public_inventory_sha256": "F833F3F6CDE0863AD92D1B1DF66A955F4C10B7A83CFA6A76FE4CA41144389AE7",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "171E6804ED0D5DBB1DBEAF47D7DAC0961C6518FDCE75CCACC08296FBF5167FF7",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "38560C61BFE10F8FC17057FC1C3A262721035C3E86867B6B12E6AD9B94C9F785",
+                  "payload_size": 524288,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "935308EB468685263855C5F5193BBD59762D6CE712E1CE1B9525D0663A749F16",
+            "slot": 0,
+            "stored_size": 129683,
+            "wrapper_sha256": "45570C88B5F60C01434012FDBE4B5CBC74326D1DE8AD90B1A5C9AB3DDD8C7EC1"
+          }
+        ]
+      },
+      "visual_evidence": "v2.2 changed texture 0 shows gunpyeong, victory, defeat and merit labels"
+    },
+    "13": {
+      "family": "battle-start banner family",
+      "logical_path": "RES_JP/res_lang.bin/13",
+      "pc_mapping_gate": {
+        "nested_resource_id_equal": true,
+        "pc_only_rebuild_required": true,
+        "physical_slot_set_equal": true,
+        "selected_texture_geometry_equal_count": 0,
+        "selected_texture_geometry_row_count": 9,
+        "slot_rows": [
+          {
+            "platform": {
+              "equal": false,
+              "pc": 10,
+              "switch": 16
+            },
+            "slot": 0,
+            "texture_count_equal": true,
+            "textures": [
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 48
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 49
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 50
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 51
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 52
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 53
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 54
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 55
+              },
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  256
+                ],
+                "switch_dimensions": [
+                  2048,
+                  128
+                ],
+                "texture": 56
+              }
+            ]
+          }
+        ],
+        "whole_switch_copy_allowed": false
+      },
+      "priority": "P1",
+      "screen_gate": "trigger or select each matching PC battle/event before rendering",
+      "status": "confirmed_by_private_atlas_review",
+      "steam_jp": {
+        "full_inventory_sha256": "A2988AC95293DC0A074FF0754A2CE2CC2325C2CED0E96549F8041CFA53297FC8",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 79
+        },
+        "outer": {
+          "index": 13,
+          "offset": 138742103,
+          "sha256": "8E965B14C1BA8137114EDDD0CB4AE584AD3DEC76EB4E1759846FA11771029692",
+          "stored_size": 1209960
+        },
+        "public_inventory_sha256": "7DC046E3A10898A58BD2C55DC69732DB408626B18CD00327E0351C35917016E7",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "9022135C258053167E7F3F09EF1FBDF5E0D2BE927E76EC3EE1ABCB0AA0567B56",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "A3D2E7FBFE674E00163AAB5966EDF30B2D7252B97B14E5EA2CE8E64C0821383E",
+                  "payload_size": 524288,
+                  "texture": 48
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "661D0F68BBFBB97956DC5C3EF386480C9A368F63DA1E8270FDA4B70F8DEA289A",
+                  "payload_size": 524288,
+                  "texture": 49
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "93664DB9A7FD0EA079839A66418723C0C069C4883068DC201C41C1EEC335527F",
+                  "payload_size": 524288,
+                  "texture": 50
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "3EDF38B9F2685592CBC142E5A516B1B57F4B5600E3ACE4F467EDE7B0D8AF8624",
+                  "payload_size": 524288,
+                  "texture": 51
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "96BE512969235BBD14C08C2399D9095CEE9EF735D6D913939FF2DE7108DCB4A1",
+                  "payload_size": 524288,
+                  "texture": 52
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "0FB07FFFD5D7BFD18111B32D7F7DB80CCAF7E4FB0F8B9DB7F4821F91D569BD89",
+                  "payload_size": 524288,
+                  "texture": 53
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "DBA74B815F2A943D87DCEA6F4B1E440E8BE5B966EA1B57C34884C95F15FBDD22",
+                  "payload_size": 524288,
+                  "texture": 54
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "A3EA1DC5374476E95D3554D9DC7B27106B8AEA91A6D03B40C9E7B0B53026CF76",
+                  "payload_size": 524288,
+                  "texture": 55
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    256
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "813679264ACE2A74977FB42B6D5F3217EE4497741D1EA79D84D833AFF5D9109C",
+                  "payload_size": 524288,
+                  "texture": 56
+                }
+              ],
+              "platform": 10,
+              "texture_count": 57,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56
+              ]
+            },
+            "raw_sha256": "8C42E216F5E86756805AB0FBE2E7003F47E54A721FB10A3D79B23A24BE32DDB1",
+            "slot": 0,
+            "stored_size": 1208936,
+            "wrapper_sha256": "02570A8267AED7908046D22A021A140F37F94886DD50E36E337B6B557061B870"
+          }
+        ]
+      },
+      "switch_v21": {
+        "full_inventory_sha256": "0BDC0CA1CEF45F54F8D7F0184771AEB53912B55446337364ECD8B11BFD982E86",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 79
+        },
+        "outer": {
+          "index": 13,
+          "offset": 78918817,
+          "sha256": "8D1B731841368C4F1F07AE7F7A51084CEE8C4C774FFD62581334F8C14D4B0E2C",
+          "stored_size": 707829
+        },
+        "public_inventory_sha256": "F41E63ED20CA1F95F4A7E7FEEDFC5DD4012B4D5DC579B8C782158947872B77D8",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "9DAFB02DC1BDF51B7AFCD4970F7CFD09E1278144D09BCC2DD96EF3E303F84C73",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "25AAD601BB2FE9D4F17AE09D84506EFE59B42E0F6C1FBACA3B57DDB8EBD95AB6",
+                  "payload_size": 262144,
+                  "texture": 48
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "5E43AA024AC7BC030E085B3A87C9EA865F9293EF91104013E48B9B0207986004",
+                  "payload_size": 262144,
+                  "texture": 49
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "4A2DFDB542414EB137C8BC5863B47A2DE6E13CAFD0DF9AEA9A21A8BCFBF09BE5",
+                  "payload_size": 262144,
+                  "texture": 50
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "894EB5F7ACCC9DBC169D5ABC21CF010E50FD266C5B96D526FD01FD0397BED162",
+                  "payload_size": 262144,
+                  "texture": 51
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "ED68E04465819EF02DF71C0064AC381436D81242A3D5FE0CDE9DF24BE9DA382E",
+                  "payload_size": 262144,
+                  "texture": 52
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "9AE2AE80C9E7BD61E1D972E67B02B0A0D7BECD318BFB1A4B50CA6EC74BCADA52",
+                  "payload_size": 262144,
+                  "texture": 53
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "D50D571386982DB9F798BDCEC29F2DF5EFE78598C049173BB2531F833A40662A",
+                  "payload_size": 262144,
+                  "texture": 54
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "E37038D684B95705CAF861B27B4CAD9DFC6F6D7EEE8D05786CEF0AC3EFE20DB3",
+                  "payload_size": 262144,
+                  "texture": 55
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "199AF7EA289B0C02DC39DB4DD2092DF540D7E8B7B202E98F392052BEAD54DD6D",
+                  "payload_size": 262144,
+                  "texture": 56
+                }
+              ],
+              "platform": 16,
+              "texture_count": 57,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56
+              ]
+            },
+            "raw_sha256": "74D45E989007F165A28047F31BCECD0025BCE430AB23AE2744492A9A1D9F5A4A",
+            "slot": 0,
+            "stored_size": 706805,
+            "wrapper_sha256": "E633E9EB5CEA778D9C5C0242D8A08BD07453F0D5D992899F232CF836F74FB833"
+          }
+        ]
+      },
+      "switch_v21_to_v22": {
+        "changed_slot_indices": [
+          0
+        ],
+        "nested_resource_id_equal": true,
+        "physical_slot_count_equal": true,
+        "slots": [
+          {
+            "changed_texture_indices": [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56
+            ],
+            "platform_equal": true,
+            "raw_sha256_equal": false,
+            "slot": 0,
+            "texture_count_equal": true
+          }
+        ]
+      },
+      "switch_v22": {
+        "full_inventory_sha256": "3B63163A9B45159154AA452B0ED5505BA72D771F7EBF6D18228A5C5254A5EA1F",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 79
+        },
+        "outer": {
+          "index": 13,
+          "offset": 78715627,
+          "sha256": "E751F79D065B1894E516A3DE929EB783F83770DD9C348E16975896B77AC43165",
+          "stored_size": 463023
+        },
+        "public_inventory_sha256": "773A8772EEA35187C348B6FCF3B56C96580CEF555C8C20EDD19501306A1FCFDA",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "9BB1C1EF0FD1285130EED1806E7BE70E49D74568EDCBB24D57CE7967AF1FE5B6",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "8E1D7CEBFAFE4E011FB40E4CDE4AA490AE0EF660468A7F66E0AE86F9B2582021",
+                  "payload_size": 262144,
+                  "texture": 48
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "A1B74AB756C0F9F612297E58D7E7DB5813DB6BBE95AA0216D71447059B463F64",
+                  "payload_size": 262144,
+                  "texture": 49
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "E3DE8D438C1541B5202562214DAE8A132029C2CFDC17622752DF444F1DC6219C",
+                  "payload_size": 262144,
+                  "texture": 50
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "893D1A681B5667D92EABAA38B4B51E8708CB43464F551CCB04DC1FBCD0A65C48",
+                  "payload_size": 262144,
+                  "texture": 51
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "128238220B797EC31805BD1C881975D86D9373D5512611B804613D124F66E7FE",
+                  "payload_size": 262144,
+                  "texture": 52
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "DD177101083B17BB26C57B686B1A1F3807D7453429180F3F0046AC32FA71C3A9",
+                  "payload_size": 262144,
+                  "texture": 53
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "0632EEEE08F05A853DA79A03FFB2E5F0FAC06E2728EAF6D5BB3E151FCA49876D",
+                  "payload_size": 262144,
+                  "texture": 54
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "33DD13F84BE42B6F9BEDDA67F2A472F0497E580CB3A1DE9212326398F728BB19",
+                  "payload_size": 262144,
+                  "texture": 55
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "FA9CAC901075E5D4C2AEC5A579FDFFC95BD587090E069D2C31A3CA07C1AFE498",
+                  "payload_size": 262144,
+                  "texture": 56
+                }
+              ],
+              "platform": 16,
+              "texture_count": 57,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56
+              ]
+            },
+            "raw_sha256": "5F735E0EEEA70B52E9B8DE7391A8219D1A77BB3B48D0E444145ECABCBD793B38",
+            "slot": 0,
+            "stored_size": 461999,
+            "wrapper_sha256": "3E6CF3B676052974BA889B1DF8E84A5D8AC5208CF3686C34FCD2BF750F8341D2"
+          }
+        ]
+      },
+      "switch_v22_to_v24_outer_byte_equal": true,
+      "switch_v24": {
+        "full_inventory_sha256": "FB603ED50D437C90AA1A632152018D1501C09D133C486CB4994E828FFFF0B6AB",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 79
+        },
+        "outer": {
+          "index": 13,
+          "offset": 78716519,
+          "sha256": "E751F79D065B1894E516A3DE929EB783F83770DD9C348E16975896B77AC43165",
+          "stored_size": 463023
+        },
+        "public_inventory_sha256": "463CD14C7D191441B3D62E57D8C4D6F38D03BBB249B129428DEFBF441F36D68D",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "9BB1C1EF0FD1285130EED1806E7BE70E49D74568EDCBB24D57CE7967AF1FE5B6",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "8E1D7CEBFAFE4E011FB40E4CDE4AA490AE0EF660468A7F66E0AE86F9B2582021",
+                  "payload_size": 262144,
+                  "texture": 48
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "A1B74AB756C0F9F612297E58D7E7DB5813DB6BBE95AA0216D71447059B463F64",
+                  "payload_size": 262144,
+                  "texture": 49
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "E3DE8D438C1541B5202562214DAE8A132029C2CFDC17622752DF444F1DC6219C",
+                  "payload_size": 262144,
+                  "texture": 50
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "893D1A681B5667D92EABAA38B4B51E8708CB43464F551CCB04DC1FBCD0A65C48",
+                  "payload_size": 262144,
+                  "texture": 51
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "128238220B797EC31805BD1C881975D86D9373D5512611B804613D124F66E7FE",
+                  "payload_size": 262144,
+                  "texture": 52
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "DD177101083B17BB26C57B686B1A1F3807D7453429180F3F0046AC32FA71C3A9",
+                  "payload_size": 262144,
+                  "texture": 53
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "0632EEEE08F05A853DA79A03FFB2E5F0FAC06E2728EAF6D5BB3E151FCA49876D",
+                  "payload_size": 262144,
+                  "texture": 54
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "33DD13F84BE42B6F9BEDDA67F2A472F0497E580CB3A1DE9212326398F728BB19",
+                  "payload_size": 262144,
+                  "texture": 55
+                },
+                {
+                  "dimensions": [
+                    2048,
+                    128
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "FA9CAC901075E5D4C2AEC5A579FDFFC95BD587090E069D2C31A3CA07C1AFE498",
+                  "payload_size": 262144,
+                  "texture": 56
+                }
+              ],
+              "platform": 16,
+              "texture_count": 57,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56
+              ]
+            },
+            "raw_sha256": "5F735E0EEEA70B52E9B8DE7391A8219D1A77BB3B48D0E444145ECABCBD793B38",
+            "slot": 0,
+            "stored_size": 461999,
+            "wrapper_sha256": "3E6CF3B676052974BA889B1DF8E84A5D8AC5208CF3686C34FCD2BF750F8341D2"
+          }
+        ]
+      },
+      "visual_evidence": "v2.2 changed textures 48..56 are nine Korean battle-title banners"
+    },
+    "16": {
+      "family": "tutorial flow diagram",
+      "logical_path": "RES_JP/res_lang.bin/16",
+      "pc_mapping_gate": {
+        "nested_resource_id_equal": true,
+        "pc_only_rebuild_required": true,
+        "physical_slot_set_equal": true,
+        "selected_texture_geometry_equal_count": 0,
+        "selected_texture_geometry_row_count": 1,
+        "slot_rows": [
+          {
+            "platform": {
+              "equal": false,
+              "pc": 10,
+              "switch": 16
+            },
+            "slot": 0,
+            "texture_count_equal": true,
+            "textures": [
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  2048
+                ],
+                "switch_dimensions": [
+                  2048,
+                  1024
+                ],
+                "texture": 0
+              }
+            ]
+          }
+        ],
+        "whole_switch_copy_allowed": false
+      },
+      "priority": "P1",
+      "screen_gate": "open the exact PC tutorial/help panel and map text rectangles",
+      "status": "confirmed_by_private_atlas_review",
+      "steam_jp": {
+        "full_inventory_sha256": "350622FB192A759D929CE53C8DFA6DBEADACB28AC16B8DDD151A919FACDA01C2",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 64
+        },
+        "outer": {
+          "index": 16,
+          "offset": 139959617,
+          "sha256": "72D965CEE22A63CA9E863507A9EE66295DB4069DCF154AAE7FACA66351E4FF47",
+          "stored_size": 1046585
+        },
+        "public_inventory_sha256": "2DB1825EECD874CDDE5F7742F01B1FD2DBE04C79A00E7324F4B55A6F2B17D76D",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "69ADB87268E063957BF51FA8483DD94E27AF7C45B74F805C954D04ABD65F04B6",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    2048
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "F06B0A9FAC0292FD9DC358CA5F8809A2B43A3E02C4A768948EA7028EF9AC3886",
+                  "payload_size": 4194304,
+                  "texture": 0
+                }
+              ],
+              "platform": 10,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "9AC4CFD4ABD710FA13FFC550007E52429754DCAA69193A58DDD1EA40D513A9B9",
+            "slot": 0,
+            "stored_size": 1045753,
+            "wrapper_sha256": "DDA76A46236A07B4B25032A72E20AE8E6C9FFB72E4BE303D55F844F92766B21E"
+          }
+        ]
+      },
+      "switch_v21": {
+        "full_inventory_sha256": "08A4630F7278C69A49E586532DDADFF9F667FDF21477CA89134D5B1FBFC3D226",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 64
+        },
+        "outer": {
+          "index": 16,
+          "offset": 79634198,
+          "sha256": "ACD43710E42795267573BE170982359CF32FD4A921DFED069861A69CDA3B399A",
+          "stored_size": 596580
+        },
+        "public_inventory_sha256": "D3490BE85200EBFE0500D164055AC6B261A075ABF57A7FF7A1A57B1E69DA73A0",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "15612BDEF4BA4F27585C848189F96D259E6E0F5EE22584CF55020B119D2712EC",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "F8B287AB12519B10A30533AC2B46ABE0AC390A1D1F0DFA3BEF1BDFF3BE77D583",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "C540D8AB06C177E39993650F7715E0C1B894330C1E37776141E87FE20446386F",
+            "slot": 0,
+            "stored_size": 595748,
+            "wrapper_sha256": "9F6E5D0F5BBFF66172E382467A71B569B48AE9E26E2659939272C6F89D593EE4"
+          }
+        ]
+      },
+      "switch_v21_to_v22": {
+        "changed_slot_indices": [
+          0
+        ],
+        "nested_resource_id_equal": true,
+        "physical_slot_count_equal": true,
+        "slots": [
+          {
+            "changed_texture_indices": [
+              0
+            ],
+            "platform_equal": true,
+            "raw_sha256_equal": false,
+            "slot": 0,
+            "texture_count_equal": true
+          }
+        ]
+      },
+      "switch_v22": {
+        "full_inventory_sha256": "24724A68146138B9EBD94A24C1E4909E14697C7F03F66EFFDA8581B4692EE6E1",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 64
+        },
+        "outer": {
+          "index": 16,
+          "offset": 79186202,
+          "sha256": "2BC7670297E69AB6BED4B36E014578FDEFD0EFD9C8F21E4797FE41AFACB8D881",
+          "stored_size": 446696
+        },
+        "public_inventory_sha256": "8602F2CAFF4D9E18CDEA44C7ED24341A87449D52EC31834123F47553098DEB84",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "FF0FDEF0665B32AD451B08334A07820C0C7A215A55D241C59217D5CF457144AF",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "833626B34951190C563C49D1500D9ECFDFDA31289FA0FBEB2B4E47DC62352405",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "B3F6BD76D4207B45C94C04E2AF2B32740CE1E5FFCE2376907AAE9EB585CDB007",
+            "slot": 0,
+            "stored_size": 445864,
+            "wrapper_sha256": "F14050A8F8EB3ADD2CBB77B474BABBF424919B8FAFD070E247195ACE526219D9"
+          }
+        ]
+      },
+      "switch_v22_to_v24_outer_byte_equal": true,
+      "switch_v24": {
+        "full_inventory_sha256": "32B4AEC37980C8DAEF4DA7D656913744D84197B0CA13C41BEB830CA746AB29C2",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 64
+        },
+        "outer": {
+          "index": 16,
+          "offset": 79187094,
+          "sha256": "2BC7670297E69AB6BED4B36E014578FDEFD0EFD9C8F21E4797FE41AFACB8D881",
+          "stored_size": 446696
+        },
+        "public_inventory_sha256": "5FA5B7C939B47E0531D05B4600D44D0E52AA53011C380B11E758BC94BD51F441",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "FF0FDEF0665B32AD451B08334A07820C0C7A215A55D241C59217D5CF457144AF",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "833626B34951190C563C49D1500D9ECFDFDA31289FA0FBEB2B4E47DC62352405",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 1,
+              "texture_indices": [
+                0
+              ]
+            },
+            "raw_sha256": "B3F6BD76D4207B45C94C04E2AF2B32740CE1E5FFCE2376907AAE9EB585CDB007",
+            "slot": 0,
+            "stored_size": 445864,
+            "wrapper_sha256": "F14050A8F8EB3ADD2CBB77B474BABBF424919B8FAFD070E247195ACE526219D9"
+          }
+        ]
+      },
+      "visual_evidence": "v2.2 changed texture 0 shows action/domestic/battle/unification and faction/castle/army/officer diagrams"
+    },
+    "24": {
+      "family": "title-screen top-right additional-content label",
+      "logical_path": "RES_JP/res_lang.bin/24",
+      "pc_mapping_gate": {
+        "nested_resource_id_equal": true,
+        "pc_only_rebuild_required": true,
+        "physical_slot_set_equal": true,
+        "selected_texture_geometry_equal_count": 0,
+        "selected_texture_geometry_row_count": 1,
+        "slot_rows": [
+          {
+            "platform": {
+              "equal": false,
+              "pc": 10,
+              "switch": 16
+            },
+            "slot": 0,
+            "texture_count_equal": true,
+            "textures": [
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  2048
+                ],
+                "switch_dimensions": [
+                  2048,
+                  1024
+                ],
+                "texture": 0
+              }
+            ]
+          }
+        ],
+        "whole_switch_copy_allowed": false
+      },
+      "priority": "P2",
+      "screen_gate": "capture the matching PC title/menu surface before rendering the tiny label",
+      "status": "confirmed_by_private_atlas_review",
+      "steam_jp": {
+        "full_inventory_sha256": "9171D09E3171E070A8C018CF2363D7F91C8950B4D7AB2BAE4F8D310795FFD625",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 83
+        },
+        "outer": {
+          "index": 24,
+          "offset": 141657184,
+          "sha256": "A1B420C3B4195F1AD55A05060DB493067163F26F1DFF0B816BF11804730D15C8",
+          "stored_size": 6876050
+        },
+        "public_inventory_sha256": "720E3C432FE6AB9A6611E3C139FAC4CFEAF27BCF7DF06DE8525AEB49CE7271C1",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "876182937D66A7C4BB4DCB241E709F8FF3E7453F88783F3CA95C36D4A0342156",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    2048
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "6189F0CCF4CC1CFF7BC6144B95530B5882897461738C7FC54D1BEC3D7F26486C",
+                  "payload_size": 4194304,
+                  "texture": 0
+                }
+              ],
+              "platform": 10,
+              "texture_count": 10,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "raw_sha256": "B9CF7B60347E85BAF272FA240301D242603BA18E4DD1EF6AFF46FB878316571D",
+            "slot": 0,
+            "stored_size": 6874962,
+            "wrapper_sha256": "B637BDC8AFEB7A078EF7DF29A214F823332A96C24CF8BA8DE6DA58B58BAFD4E5"
+          }
+        ]
+      },
+      "switch_v21": {
+        "full_inventory_sha256": "6E63FB703887DFA99763CE43D043D47DE5F78F55A3947BD1CB2B133F78BC3082",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 83
+        },
+        "outer": {
+          "index": 24,
+          "offset": 80615770,
+          "sha256": "5DAF31D912B41DCE4C72026AF1CFB2E9F470893DCF3AAB06F3E50E7967F0CF2A",
+          "stored_size": 3272836
+        },
+        "public_inventory_sha256": "C6053747518F1EB88E6ABEF967259621F8B35BD1E63A9E9B658E24276C5F7540",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "A7FD77D1AA76B2883C853D53995A41B4C5BE7CEE6E11E802FF591A4A61B08B9A",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "E9E22BF678EB89B1ECE89705DA96174C394C1638177D20D4C4A6684C06694044",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 10,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "raw_sha256": "8FE9A5986415FBCBBCD7F248C49AE6620027E9CC17ADACCEB85230B38AA2079F",
+            "slot": 0,
+            "stored_size": 3271748,
+            "wrapper_sha256": "38873198D9A1774A03D628353BD122212E09A26936D9C70763C9BB7DA1DF5E7C"
+          }
+        ]
+      },
+      "switch_v21_to_v22": {
+        "changed_slot_indices": [
+          0
+        ],
+        "nested_resource_id_equal": true,
+        "physical_slot_count_equal": true,
+        "slots": [
+          {
+            "changed_texture_indices": [
+              0
+            ],
+            "platform_equal": true,
+            "raw_sha256_equal": false,
+            "slot": 0,
+            "texture_count_equal": true
+          }
+        ]
+      },
+      "switch_v22": {
+        "full_inventory_sha256": "4B226720A85F05B56E1D0B6B33B7164109B8DC272875C863EA93CBA164C4B265",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 83
+        },
+        "outer": {
+          "index": 24,
+          "offset": 80017890,
+          "sha256": "EFC4DA088BB29ED6821121EC29330C234C2270405D9D59617E60208160DF15E1",
+          "stored_size": 2642337
+        },
+        "public_inventory_sha256": "209ADBBFAE1A47F12DA78E120E96116D2E6607EB2187850C102740B0166B67FE",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "DA6412A7272A37B0889048FCC2FD303F3EF25DD4DEDEC0759768C6544C630176",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "931AD95530E4848207E2C0368DC894CFC9C76C7B74EDFCD0AD475A0B97187D74",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 10,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "raw_sha256": "DF529259DA0C0EE8D902779341689999CD1559B1CC75151ED4B671E42DA7D945",
+            "slot": 0,
+            "stored_size": 2641249,
+            "wrapper_sha256": "BD88F8BBA44917283C97E4CD0A72FB4E57A0654C8D87657E5D88665EAA8148D1"
+          }
+        ]
+      },
+      "switch_v22_to_v24_outer_byte_equal": true,
+      "switch_v24": {
+        "full_inventory_sha256": "02CD2FF923873425F338DD8B4F1F10CC0790C86D15925E22097A0C04E7848DAE",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 83
+        },
+        "outer": {
+          "index": 24,
+          "offset": 80018782,
+          "sha256": "EFC4DA088BB29ED6821121EC29330C234C2270405D9D59617E60208160DF15E1",
+          "stored_size": 2642337
+        },
+        "public_inventory_sha256": "143EBC0800E3E002A95DF3F802F196E89B25446A145B3B975D8A8D3CF4C3A937",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "DA6412A7272A37B0889048FCC2FD303F3EF25DD4DEDEC0759768C6544C630176",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "931AD95530E4848207E2C0368DC894CFC9C76C7B74EDFCD0AD475A0B97187D74",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 10,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "raw_sha256": "DF529259DA0C0EE8D902779341689999CD1559B1CC75151ED4B671E42DA7D945",
+            "slot": 0,
+            "stored_size": 2641249,
+            "wrapper_sha256": "BD88F8BBA44917283C97E4CD0A72FB4E57A0654C8D87657E5D88665EAA8148D1"
+          }
+        ]
+      },
+      "visual_evidence": "v2.1→v2.2 rendered delta is confined to 48x21 pixels at [1996,2]..[2043,22]: Japanese 追加 becomes Korean 추가; title logo remains unchanged"
+    },
+    "5": {
+      "family": "system/navigation action-button atlas",
+      "logical_path": "RES_JP/res_lang.bin/5",
+      "pc_mapping_gate": {
+        "nested_resource_id_equal": true,
+        "pc_only_rebuild_required": true,
+        "physical_slot_set_equal": true,
+        "selected_texture_geometry_equal_count": 0,
+        "selected_texture_geometry_row_count": 1,
+        "slot_rows": [
+          {
+            "platform": {
+              "equal": false,
+              "pc": 10,
+              "switch": 16
+            },
+            "slot": 0,
+            "texture_count_equal": true,
+            "textures": [
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  4096,
+                  2048
+                ],
+                "switch_dimensions": [
+                  2048,
+                  2048
+                ],
+                "texture": 1
+              }
+            ]
+          }
+        ],
+        "whole_switch_copy_allowed": false
+      },
+      "priority": "P1",
+      "screen_gate": "trace the PC button coordinates and state variants before rendering",
+      "status": "confirmed_by_private_atlas_review",
+      "steam_jp": {
+        "full_inventory_sha256": "01C61C0C467137D250F2B9A7851322AC7B6EDD632D9A0C3BF63D40A6F2C9C113",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 3856
+        },
+        "outer": {
+          "index": 5,
+          "offset": 117592377,
+          "sha256": "F2FAAC8ECC7DA09459A25D3BF076F18D85EED1306263D7CCD86D89FEF0E42337",
+          "stored_size": 1598965
+        },
+        "public_inventory_sha256": "64EEF6BFBD4E288238F59E60B8FC339EDDB7B8C0D3034750D5831D93235731AB",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "83B491CC5D8FF35F76B68819800D83BA22F44D3BA9A1E764867B30A0EFAC429C",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    4096,
+                    2048
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "5273FE975F5B7B2B1BA87538B15F55E07B7B64C7695E915D4A99A29D96F193C5",
+                  "payload_size": 8388608,
+                  "texture": 1
+                }
+              ],
+              "platform": 10,
+              "texture_count": 13,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "raw_sha256": "8611A319D6C9B5AC8FAC27A58B14FBCE876112D51C4C2AAC84870BEBE1D160D7",
+            "slot": 0,
+            "stored_size": 1552629,
+            "wrapper_sha256": "A5B33A32E0E5E8558A19050E26C3AA3FBB6B0A1F20AF3D4E85E7B9A4EE582FE1"
+          }
+        ]
+      },
+      "switch_v21": {
+        "full_inventory_sha256": "EBE2DE1E974416296CE73806D534ECD0790A562FE11CEFA4153B2165107C29BA",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 3856
+        },
+        "outer": {
+          "index": 5,
+          "offset": 64945998,
+          "sha256": "058AA507BE255FD7BD6568BAB45AB6B1E97913DA2E31474DE39D8DE70C3DBEEE",
+          "stored_size": 1173307
+        },
+        "public_inventory_sha256": "E00B65A505FBBAC2EE4A5C23C3B7E20EDD7D7D42400E9707FE6EB6A5D651ED3B",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "CE8D1C2D3D693BB9E8431200227F00A662EC3AEBC3EB90469F19E6CE381F68A4",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    2048
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "A740502973B890AD1DEF6E31EDCB90B8DA837958CC2F987F48148BC82454972D",
+                  "payload_size": 4194304,
+                  "texture": 1
+                }
+              ],
+              "platform": 16,
+              "texture_count": 13,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "raw_sha256": "C2F774F38B6B5E87295D1AA02E4A9FB6A8C37FE09164541B1872778BC9CAB1E0",
+            "slot": 0,
+            "stored_size": 1126971,
+            "wrapper_sha256": "6E50F41326B5F59D50087EF37D1D8F4D258584DEF6F06B4103E754B335BD60D9"
+          }
+        ]
+      },
+      "switch_v21_to_v22": {
+        "changed_slot_indices": [
+          0
+        ],
+        "nested_resource_id_equal": true,
+        "physical_slot_count_equal": true,
+        "slots": [
+          {
+            "changed_texture_indices": [
+              1
+            ],
+            "platform_equal": true,
+            "raw_sha256_equal": false,
+            "slot": 0,
+            "texture_count_equal": true
+          }
+        ]
+      },
+      "switch_v22": {
+        "full_inventory_sha256": "1BDB83C25256A35DA9CB58242143C34439163801DD874BA966A133163AB0684C",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 3856
+        },
+        "outer": {
+          "index": 5,
+          "offset": 64945998,
+          "sha256": "D232BD42B2E1CF5DD357C703482362895AE65D5C6CDBBFA855F922902BB66BC6",
+          "stored_size": 1001199
+        },
+        "public_inventory_sha256": "1216AACAB22B4F4431B697AC709DFF65AE357BD7D768476BF859FEC38A1B03B8",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "E3101B9FCFE6F0D27465BE77D81445B91531E8F713DAB5E532B09DAC2AD9309F",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    2048
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "8DFCEE5A175BF672663D5CF42E70FF7FD3271BAF432BE3B1557C7C81C41A838B",
+                  "payload_size": 4194304,
+                  "texture": 1
+                }
+              ],
+              "platform": 16,
+              "texture_count": 13,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "raw_sha256": "7EA2A4F34C91EF1E1032DC411FBD7A3DCBB630F00059873F757756E6CF7CA57F",
+            "slot": 0,
+            "stored_size": 954863,
+            "wrapper_sha256": "E0CFFC0DB8A4227F2BBE523AA38028C3C85A0A292777DDD539F96D9BD7E4FF9A"
+          }
+        ]
+      },
+      "switch_v22_to_v24_outer_byte_equal": true,
+      "switch_v24": {
+        "full_inventory_sha256": "1BDB83C25256A35DA9CB58242143C34439163801DD874BA966A133163AB0684C",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 3856
+        },
+        "outer": {
+          "index": 5,
+          "offset": 64945998,
+          "sha256": "D232BD42B2E1CF5DD357C703482362895AE65D5C6CDBBFA855F922902BB66BC6",
+          "stored_size": 1001199
+        },
+        "public_inventory_sha256": "1216AACAB22B4F4431B697AC709DFF65AE357BD7D768476BF859FEC38A1B03B8",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "E3101B9FCFE6F0D27465BE77D81445B91531E8F713DAB5E532B09DAC2AD9309F",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    2048
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "8DFCEE5A175BF672663D5CF42E70FF7FD3271BAF432BE3B1557C7C81C41A838B",
+                  "payload_size": 4194304,
+                  "texture": 1
+                }
+              ],
+              "platform": 16,
+              "texture_count": 13,
+              "texture_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            "raw_sha256": "7EA2A4F34C91EF1E1032DC411FBD7A3DCBB630F00059873F757756E6CF7CA57F",
+            "slot": 0,
+            "stored_size": 954863,
+            "wrapper_sha256": "E0CFFC0DB8A4227F2BBE523AA38028C3C85A0A292777DDD539F96D9BD7E4FF9A"
+          }
+        ]
+      },
+      "visual_evidence": "v2.2 changed texture 1 shows Korean action buttons in multiple colour states (close, reject, confirm, back, etc.)"
+    },
+    "8": {
+      "family": "main-screen radial command wheel / command-button atlas",
+      "logical_path": "RES_JP/res_lang.bin/8",
+      "pc_mapping_gate": {
+        "nested_resource_id_equal": true,
+        "pc_only_rebuild_required": true,
+        "physical_slot_set_equal": true,
+        "selected_texture_geometry_equal_count": 0,
+        "selected_texture_geometry_row_count": 1,
+        "slot_rows": [
+          {
+            "platform": {
+              "equal": false,
+              "pc": 10,
+              "switch": 16
+            },
+            "slot": 0,
+            "texture_count_equal": true,
+            "textures": [
+              {
+                "dimensions_equal": false,
+                "format_code_equal": true,
+                "pc_dimensions": [
+                  2048,
+                  2048
+                ],
+                "switch_dimensions": [
+                  2048,
+                  1024
+                ],
+                "texture": 0
+              }
+            ]
+          }
+        ],
+        "whole_switch_copy_allowed": false
+      },
+      "priority": "P0",
+      "screen_gate": "open the PC main map command wheel and capture every labelled state",
+      "status": "confirmed",
+      "steam_jp": {
+        "full_inventory_sha256": "45994D5A06DB3418B226BD4F066B9C28A0F18469169211BF8A682B46A2D1D05B",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 474
+        },
+        "outer": {
+          "index": 8,
+          "offset": 135375954,
+          "sha256": "A4249EAA29587DB251601208CF2B5ED0E8D1E0D27F7DCFDC0E8A5709C66B2B8D",
+          "stored_size": 867317
+        },
+        "public_inventory_sha256": "71B12807A1F9CC7B8677A49769E2200CC50882D11D444EB46926394E04506985",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "49AC0A746C58059320DE52B77706F48B99969C27B6811876D909768921886D26",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    2048
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "9922D32B23853A29847F6D33C85550504BF7028FE2FA86D0D5442365D697D2C1",
+                  "payload_size": 4194304,
+                  "texture": 0
+                }
+              ],
+              "platform": 10,
+              "texture_count": 2,
+              "texture_indices": [
+                0,
+                1
+              ]
+            },
+            "raw_sha256": "5ED7549C5953728302FBB3688D69F82E2A58879B3BDDD445B94D058B5DE52AD9",
+            "slot": 0,
+            "stored_size": 861557,
+            "wrapper_sha256": "20ED525BCD79F2EE56F61282404A995C56310E41E91CD58DB3C87FBD716463E1"
+          }
+        ]
+      },
+      "switch_v21": {
+        "full_inventory_sha256": "5E2DC22C055A92A66985F67D844B00F620D09A50663001AE5E6C83ED2B71F713",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 474
+        },
+        "outer": {
+          "index": 8,
+          "offset": 77032483,
+          "sha256": "42261DBF83E54CD5352872C432E8FECB3C71FC32E704F476D6947D12786D5565",
+          "stored_size": 358121
+        },
+        "public_inventory_sha256": "43339EED65663DAA8C5DF578F28149BC38B8628C65BB1772BA76D14726CCF98B",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "B4050948085C74DB52045D5472DB831C2790A77DE83A818F16EBE2E5D558895C",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "F5EEBFCED7A437468352F9F825B437F942D7A05E73057256BACDC5C5860976CD",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 2,
+              "texture_indices": [
+                0,
+                1
+              ]
+            },
+            "raw_sha256": "A5BEA5E5333FEFBBBAF17108E61CAE61F76A57AC0B3905B69778816EFA573BC4",
+            "slot": 0,
+            "stored_size": 352361,
+            "wrapper_sha256": "FDEBC3095617F2BBF9A5968D68E782A4C33EFA9481CAEBA76DF33936BA966DBC"
+          }
+        ]
+      },
+      "switch_v21_to_v22": {
+        "changed_slot_indices": [
+          0
+        ],
+        "nested_resource_id_equal": true,
+        "physical_slot_count_equal": true,
+        "slots": [
+          {
+            "changed_texture_indices": [
+              0
+            ],
+            "platform_equal": true,
+            "raw_sha256_equal": false,
+            "slot": 0,
+            "texture_count_equal": true
+          }
+        ]
+      },
+      "switch_v22": {
+        "full_inventory_sha256": "ECE262D0E7B8E84593D3F01804CD78E3F07B1D813DAA2806FF56EEE64E2601F7",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 474
+        },
+        "outer": {
+          "index": 8,
+          "offset": 76860375,
+          "sha256": "E53DD86B2ECD3FDA2900A52FB7390814AE49793F8C81C9801CA9C39C27743059",
+          "stored_size": 365744
+        },
+        "public_inventory_sha256": "02985F81E7B86DB37645A76BA48583BEF86D90A76196656468D79E0D2C7979F5",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "E9AB4EBE29A7E022F8A172CD5E7EA49F46D1CD55DEE4865A80ECAFF48A90FEDE",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "6E7F9992F371228D1C501E81CA5A60FB2C78656BB5C3CA01FF46BA31BA05CDFC",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 2,
+              "texture_indices": [
+                0,
+                1
+              ]
+            },
+            "raw_sha256": "051F55B6E776BFB9942C61932CBCBE723F30E3E43DDD2A0CC59521B637F07487",
+            "slot": 0,
+            "stored_size": 359984,
+            "wrapper_sha256": "8A8223997DEABC376A12850AD2D9722B4E6F281F447F707203AF1C3DDAB766BD"
+          }
+        ]
+      },
+      "switch_v22_to_v24_outer_byte_equal": true,
+      "switch_v24": {
+        "full_inventory_sha256": "4D0EF5D1132ED4C017F31CA0CB4D30C3A06F0EFEE5A9801CB4557E40AB5D14F6",
+        "nested_link": {
+          "physical_slot_count": 1,
+          "physical_slots": [
+            0
+          ],
+          "resource_id": 474
+        },
+        "outer": {
+          "index": 8,
+          "offset": 76861267,
+          "sha256": "E53DD86B2ECD3FDA2900A52FB7390814AE49793F8C81C9801CA9C39C27743059",
+          "stored_size": 365744
+        },
+        "public_inventory_sha256": "B362DEAAAA47095F5ADDE643A2E72F979BA9CB808EBED0516B082634A5E28B6B",
+        "slots": [
+          {
+            "g1t": {
+              "all_texture_metadata_sha256": "E9AB4EBE29A7E022F8A172CD5E7EA49F46D1CD55DEE4865A80ECAFF48A90FEDE",
+              "changed_texture_details": [
+                {
+                  "dimensions": [
+                    2048,
+                    1024
+                  ],
+                  "extra_version": 16,
+                  "format_code": "0x5B",
+                  "mip_count": 1,
+                  "payload_sha256": "6E7F9992F371228D1C501E81CA5A60FB2C78656BB5C3CA01FF46BA31BA05CDFC",
+                  "payload_size": 2097152,
+                  "texture": 0
+                }
+              ],
+              "platform": 16,
+              "texture_count": 2,
+              "texture_indices": [
+                0,
+                1
+              ]
+            },
+            "raw_sha256": "051F55B6E776BFB9942C61932CBCBE723F30E3E43DDD2A0CC59521B637F07487",
+            "slot": 0,
+            "stored_size": 359984,
+            "wrapper_sha256": "8A8223997DEABC376A12850AD2D9722B4E6F281F447F707203AF1C3DDAB766BD"
+          }
+        ]
+      }
+    }
+  },
+  "audit_sha256": "F5C583B422029CC483F53C0444EFAD2EEBF6D4A1D4B3017AD5AFC63B44A1D16D",
+  "implementation_gate": [
+    "Do not copy Switch LINK, LZ4, G1T, BC3 payload, archive, executable, or exefs bytes to the PC route.",
+    "For each selected outer bundle, start from the exact Steam JP 1.1.7 structure and re-render only verified Korean text coordinates.",
+    "Preserve all non-target outer entries byte-identically; preserve unrelated nested slots and non-text pixels within each target.",
+    "Require private visual atlas QA plus the actual matching PC screen before game apply or release."
+  ],
+  "inputs": {
+    "steam_jp": {
+      "outer_entry_count": 42,
+      "outer_link_reserved": 0,
+      "outer_link_version": 1,
+      "read_only_identity_preserved": true,
+      "relative_path": "RES_JP/res_lang.bin",
+      "sha256_after_read": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+      "sha256_before_read": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+      "size": 154216023
+    },
+    "switch_releases": {
+      "v20": {
+        "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+        "member_crc32": "9CD0582F",
+        "member_sha256": "79B572CE211A4D18F2A6CDF0AFD0197802463D270797993BA169F0D6BB651159",
+        "member_size": 86832335,
+        "outer_entry_count": 42,
+        "outer_link_reserved": 0,
+        "outer_link_version": 1,
+        "zip_filename": "NobunagaShinsei_KoreanPatch_v2.0.zip",
+        "zip_sha256": "A7497986FCC53312BC40B470465CD4DD0AE5179B0B9DB92526541E10987079DD",
+        "zip_size": 84385377
+      },
+      "v21": {
+        "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+        "member_crc32": "F6E6B288",
+        "member_sha256": "C79B8F205CDAAF374B2F84F3AE4E385CE8498C5BA7CB8071DD2B9A178A27688D",
+        "member_size": 86777150,
+        "outer_entry_count": 42,
+        "outer_link_reserved": 0,
+        "outer_link_version": 1,
+        "zip_filename": "NobunagaShinsei_KoreanPatch_v2.1.zip",
+        "zip_sha256": "473213B0013FB24C812C517A147A15D51EFCBFCE975FBB51738EFC34F5E7B387",
+        "zip_size": 84369615
+      },
+      "v22": {
+        "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+        "member_crc32": "5D7EB72C",
+        "member_sha256": "F179D9A89A7D20B51E26681208CA7186BDD1DC6B2F09FAF9CA8154B35933557F",
+        "member_size": 85548771,
+        "outer_entry_count": 42,
+        "outer_link_reserved": 0,
+        "outer_link_version": 1,
+        "zip_filename": "NobunagaShinsei_KoreanPatch_v2.2.zip",
+        "zip_sha256": "5E6354069E38BE22E3B3C9272A6CEC8A4B4110DF2486B9A63E84D1058C35D7F7",
+        "zip_size": 83752794
+      },
+      "v23": {
+        "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+        "member_crc32": "AFE49454",
+        "member_sha256": "20A548D544BEB40A45359914777DB7467F6D319078CE43BC566F0BBD6D64F9FB",
+        "member_size": 85531410,
+        "outer_entry_count": 42,
+        "outer_link_reserved": 0,
+        "outer_link_version": 1,
+        "zip_filename": "NobunagaShinsei_KoreanPatch_v2.3.zip",
+        "zip_sha256": "A085B5D7F661786CF8E6568A36CF24E7BE1ADF81D042FF8C3D2E220D46A09388",
+        "zip_size": 83756574
+      },
+      "v24": {
+        "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+        "member_crc32": "ECD0A811",
+        "member_sha256": "086A6AC3F22F09A77E325BF23675F792AB6ACA5D9CBC35564EE6BDB4433CDB06",
+        "member_size": 85549663,
+        "outer_entry_count": 42,
+        "outer_link_reserved": 0,
+        "outer_link_version": 1,
+        "zip_filename": "NobunagaShinsei_KoreanPatch_v2.4.zip",
+        "zip_sha256": "9BAC0A141A7DEBB779BF67EB35F582287B120CBDE6A4B4939AC4903315F7E04C",
+        "zip_size": 83764122
+      }
+    }
+  },
+  "priorities": {
+    "P0": [
+      "/8 main-screen radial command wheel; latest visual reference is v2.4 which is byte-identical to v2.2"
+    ],
+    "P1": [
+      "/5/0 texture 1 system/navigation buttons; /12/0 military-assessment overlay; /13/0 textures 48..56 battle banners; /16/0 tutorial flow diagram"
+    ],
+    "P2": [
+      "/24/0 texture 0 title-screen top-right additional-content label; deliberately preserve the title logo"
+    ],
+    "out_of_scope": [
+      "/6 and /7 are v2.3/v2.4 font-only changes, outside this raster rebuild train"
+    ]
+  },
+  "release_deltas": {
+    "v20_to_v21": {
+      "changed_outer_indices": [
+        8
+      ],
+      "exact_expected_delta": true,
+      "expected_changed_outer_indices": [
+        8
+      ],
+      "left": "v20",
+      "right": "v21"
+    },
+    "v21_to_v22": {
+      "changed_outer_indices": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        24
+      ],
+      "exact_expected_delta": true,
+      "expected_changed_outer_indices": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        24
+      ],
+      "left": "v21",
+      "right": "v22"
+    },
+    "v22_to_v23": {
+      "changed_outer_indices": [
+        6,
+        7
+      ],
+      "exact_expected_delta": true,
+      "expected_changed_outer_indices": [
+        6,
+        7
+      ],
+      "left": "v22",
+      "right": "v23"
+    },
+    "v23_to_v24": {
+      "changed_outer_indices": [
+        6,
+        7
+      ],
+      "exact_expected_delta": true,
+      "expected_changed_outer_indices": [
+        6,
+        7
+      ],
+      "left": "v23",
+      "right": "v24"
+    }
+  },
+  "schema": "nobu16.kr.switch-v2-image-delta-audit.v1",
+  "scope": {
+    "game_files_written": false,
+    "patch_candidate_created": false,
+    "platform": "PC Steam Japanese route",
+    "route": "JP only",
+    "steam_game_version": "1.1.7",
+    "switch_raw_or_archive_copy": false
+  },
+  "source_free_guarantees": {
+    "committed_decoded_images": false,
+    "committed_g1t_or_texture_bytes": false,
+    "committed_game_archives": false,
+    "committed_switch_payload_bytes": false,
+    "metadata_only": true
+  }
+}

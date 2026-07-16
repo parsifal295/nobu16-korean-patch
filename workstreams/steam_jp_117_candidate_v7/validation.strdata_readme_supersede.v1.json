@@ -1,0 +1,38 @@
+{
+  "candidate": {
+    "packed_sha256": "37B829E66D2A6EA466068101AF006217BBA1046DB56A6AC2787CC6675DADBFAF",
+    "packed_size": 957008,
+    "raw_sha256": "95ACF0819A316DDCA3E64234FF5D67E994DE2F1A67511461ED6E22317EEDA86A",
+    "raw_size": 953244,
+    "slot_count": 32311
+  },
+  "checks": {
+    "baseline_p0_preimage_exact": true,
+    "combined_p0_translation_count_remains_1400": true,
+    "coordinate_2_1950_supersedes_existing_p0_entry": true,
+    "format_profile_exact": true,
+    "nonselected_contents_preserved": true,
+    "packed_roundtrip_exact": true,
+    "strict_trailing_space_exact": true
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "coordinate": {
+    "block_id": 2,
+    "slot_id": 1950
+  },
+  "entry_count": 1,
+  "format_signature_sha256": "179A2F97FA3C4768DF6C173D7AB8BE1DF0F0285B0B80F1FC0C8FF0427E09CE60",
+  "new_ko_utf16le_sha256": "583B1C7EFBBEE000D03966E21F49D68E2779D3AC5CBCC183A3E23EE79779CD4C",
+  "old_p0_ko_utf16le_sha256": "3CE17856922F10F60D22E49062472B26A868FE53E4FA58ECBD31FCAA6950E55E",
+  "p0_translated_entry_count": 1400,
+  "resource": "MSG/JP/strdata.bin",
+  "schema": "nobu16.kr.steam-jp-strdata-readme-residual-supersede-validation.v1",
+  "source_free": true,
+  "source_jp_utf16le_sha256": "ABF97E2E3C84E2825964CC26FF516177690202C89085E98C9A8CDDF79CE28890",
+  "strict_trailing_whitespace": {
+    "codepoint_count": 1,
+    "ko_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+    "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4"
+  }
+}

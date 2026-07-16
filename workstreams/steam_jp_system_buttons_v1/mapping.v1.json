@@ -1,0 +1,72 @@
+{
+  "schema": "nobu16.kr.steam-jp-system-buttons.mapping.v1",
+  "status": "audit-only",
+  "target": {
+    "resource": "RES_JP/res_lang.bin",
+    "outer_entry": 5,
+    "nested_slot": 0,
+    "texture": 1,
+    "baseline": {
+      "platform": "Steam JP 1.1.7",
+      "size": 154216023,
+      "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0"
+    }
+  },
+  "confirmed_mappings": [
+    {"label_ko": "닫기", "state": "cyan", "switch_source_cell": [0, 176, 132, 240], "pc_target_cell": [0, 88, 192, 176]},
+    {"label_ko": "중지", "state": "cyan", "switch_source_cell": [648, 128, 780, 192], "pc_target_cell": [648, 88, 840, 176]},
+    {"label_ko": "결정", "state": "white", "switch_source_cell": [396, 240, 528, 304], "pc_target_cell": [576, 176, 768, 264]},
+    {"label_ko": "거부", "state": "white", "switch_source_cell": [1716, 256, 1848, 320], "pc_target_cell": [0, 176, 192, 264]},
+    {"label_ko": "뒤로", "state": "white", "switch_source_cell": [0, 304, 132, 368], "pc_target_cell": [3264, 176, 3456, 264]},
+    {"label_ko": "아니오", "state": "white", "switch_source_cell": [1584, 320, 1716, 384], "pc_target_cell": [192, 264, 384, 352]},
+    {"label_ko": "건너뛰기", "state": "cyan", "switch_source_cell": [132, 496, 264, 560], "pc_target_cell": [3648, 352, 3840, 440]},
+    {"label_ko": "예", "state": "cyan", "switch_source_cell": [1716, 576, 1848, 640], "pc_target_cell": [384, 512, 576, 600]}
+  ],
+  "invalid_or_deferred_core_mappings": [
+    {
+      "label_ko": "뒤로",
+      "switch_source_cell": [0, 304, 132, 368],
+      "pc_target_cell": [3264, 176, 3456, 264],
+      "reason": "PC target cell crosses button boundaries and contains a residual previous-label fragment; screen-level remap required",
+      "candidate_eligible": false
+    }
+  ],
+  "next_batch_confirmed_mappings": [
+    {"label_ko": "전부개방", "state": "cyan", "switch_source_cell": [132, 240, 264, 304], "pc_target_cell": [192, 176, 384, 264], "pc_target_has_icon": false},
+    {"label_ko": "희", "state": "cyan", "switch_source_cell": [132, 368, 264, 432], "pc_target_cell": [1536, 264, 1728, 352], "pc_target_has_icon": false},
+    {"label_ko": "지휘", "state": "white", "switch_source_cell": [396, 368, 528, 432], "pc_target_cell": [2880, 264, 3072, 352], "pc_target_has_icon": false},
+    {"label_ko": "재교섭", "state": "blue", "switch_source_cell": [660, 368, 792, 432], "pc_target_cell": [2112, 352, 2304, 440], "pc_target_has_icon": true},
+    {"label_ko": "승낙", "state": "white", "switch_source_cell": [0, 432, 132, 496], "pc_target_cell": [768, 352, 960, 440], "pc_target_has_icon": true},
+    {"label_ko": "처단", "state": "blue", "switch_source_cell": [528, 432, 660, 496], "pc_target_cell": [2688, 352, 2880, 440], "pc_target_has_icon": false},
+    {"label_ko": "등용", "state": "blue", "switch_source_cell": [660, 496, 792, 560], "pc_target_cell": [0, 440, 192, 528], "pc_target_has_icon": false},
+    {"label_ko": "무장", "state": "white", "switch_source_cell": [0, 560, 132, 624], "pc_target_cell": [2880, 440, 3072, 528], "pc_target_has_icon": false},
+    {"label_ko": "다음", "state": "white", "switch_source_cell": [792, 576, 924, 640], "pc_target_cell": [768, 512, 960, 600], "pc_target_has_icon": true},
+    {"label_ko": "승인", "state": "cyan", "switch_source_cell": [1452, 128, 1584, 192], "pc_target_cell": [2688, 0, 2880, 88], "pc_target_has_icon": true},
+    {"label_ko": "부인", "state": "cyan", "switch_source_cell": [1584, 192, 1716, 256], "pc_target_cell": [2880, 88, 3072, 176], "pc_target_has_icon": true}
+  ],
+  "deferred": {
+    "historical_misidentification": {
+      "incorrect_requested_label_ko": "다음",
+      "incorrect_switch_source_cell": [1188, 576, 1320, 640],
+      "actual_visual_label_ko": "무장",
+      "correct_next_switch_source_cell": [792, 576, 924, 640]
+    },
+    "labels_ko": ["개시"]
+  },
+  "candidate_gate": {
+    "requires_immutable_pc_background_donor": true,
+    "requires_pixel_bound_bc3_proof": true,
+    "requires_private_visual_qa_without_background_or_icon_damage": true,
+    "candidate_generation_enabled": false,
+    "strict_pc_donor_study": {
+      "result": "NO / defer",
+      "pc_en_vs_jp": "pixel-identical",
+      "pc_sc_tc": "Chinese glyph overlap prevents invariant background consensus",
+      "same_skin_mode": "residual Japanese glyphs remain",
+      "candidate_exclusion_until_screen_qa": ["뒤로"]
+    },
+    "switch_payload_copy_allowed": false,
+    "game_install_write_allowed": false,
+    "git_or_release_write_allowed": false
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "9ED892E85AF18EB3BC965A834853969BC06F486A2466A83F3CEBED1B8D5433C0",
+    "packed_size": 928464,
+    "raw_sha256": "205BA7CA7873411B03C51D1931C277DA9BA8E56700B5EA0D8EDB82B49BD45ABE",
+    "raw_size": 924812,
+    "string_count": 17868
+  },
+  "audit_bundle": {
+    "coordinate_sha256": "4D495C297FC9EED9B6E317EC2D4F5718DBD31A1A96B73A200B89E1038D040BE2",
+    "entry_ids": [
+      3917,
+      4835,
+      7260,
+      8818,
+      8904
+    ]
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "F10E13601BBF04C31489C0C012D603ACE7879F20D072748DE7A77D0FACC87D2C",
+    "packed_size": 928605,
+    "raw_sha256": "9EDBEEE37F6E67B0159EAD845FE7DECF56AC31BB97CB4871D2D8A21D81E3B58E",
+    "raw_size": 924952,
+    "string_count": 17868
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG/JP/ev_strdata.bin"
+  },
+  "overlay": {
+    "entry_count": 5,
+    "relative_path": "workstreams/steam_jp_tail_message_tables_v1/public/ev_strdata_ko_base_jp_tail_5.v1.json",
+    "sha256": "1EF248860D52A2716977161C2D74E5E91D25F1F71A061CB2C019AC8473621C85"
+  },
+  "proofs": {
+    "active_v6_baseline_pinned": true,
+    "catalog_reuse_exact_source_hash_only": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "format_and_token_profile_preserved": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "steam_installation_read_only": true
+  },
+  "resource": "MSG/JP/ev_strdata.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-tail-ev-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_tail_message_tables_v1/validation/ev.v1.json",
+    "sha256": "74F6C4BFEAF2335428BA5A2B31149F810A1042CACC255FDE515B20117A4B358D"
+  }
+}

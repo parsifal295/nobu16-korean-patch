@@ -1,0 +1,36 @@
+{
+  "base_language": "JP",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "sc_container_used": false
+  },
+  "entries": [
+    {
+      "block_id": 2,
+      "format_signature_sha256": "179A2F97FA3C4768DF6C173D7AB8BE1DF0F0285B0B80F1FC0C8FF0427E09CE60",
+      "ko": "아마고 가신... 그 후 또 모리 가문에 항복했다. ",
+      "ko_utf16le_sha256": "583B1C7EFBBEE000D03966E21F49D68E2779D3AC5CBCC183A3E23EE79779CD4C",
+      "source_jp_utf16le_sha256": "ABF97E2E3C84E2825964CC26FF516177690202C89085E98C9A8CDDF79CE28890",
+      "strict_trailing_whitespace": {
+        "codepoint_count": 1,
+        "ko_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+        "source_utf16le_sha256": "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4"
+      },
+      "supersedes_p0_ko_utf16le_sha256": "3CE17856922F10F60D22E49062472B26A868FE53E4FA58ECBD31FCAA6950E55E",
+      "translation_origin": "readme_residual_revision",
+      "slot_id": 1950
+    }
+  ],
+  "entry_count": 1,
+  "overlay_id": "strdata_ko_steam_jp_readme_residual_supersede_1.v1",
+  "p0_preimage": {
+    "packed_sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+    "packed_size": 956835,
+    "raw_sha256": "A3410438A13B2DB4C72B56B804BDF4ACABBEE8954203CA13D210AD848134BF66",
+    "raw_size": 953072
+  },
+  "resource": "MSG/JP/strdata.bin",
+  "schema": "nobu16.kr.steam-jp-strdata-readme-residual-supersede-overlay.v1",
+  "source_free": true
+}

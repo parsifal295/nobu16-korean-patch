@@ -1,0 +1,57 @@
+{
+  "active_v090_baseline": {
+    "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+    "packed_size": 1040799,
+    "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+    "raw_size": 1036708,
+    "string_count": 17916
+  },
+  "audit_bundle": {
+    "bundle_id": "p1-MSG_PK_JP_msgev-03",
+    "coordinate_sha256": "0245195E033DAA4F5E74D8A73CAE3624D16A751AC4D87B11CE7A1DD4F7FEE204"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "5C5C066F3FC29E9E264DD27B8AF31BAF6762B176D075ADA5896AA5CE61123BEC",
+    "packed_size": 1041221,
+    "raw_sha256": "B920B3DD9E8924160B4209A0077D98548470F3B2464D96122540F457338BF112",
+    "raw_size": 1037128,
+    "string_count": 17916
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgev.bin"
+  },
+  "overlay": {
+    "entry_count": 23,
+    "relative_path": "workstreams/steam_jp_msgev_p1_residual_03_manual_layout_v1/public/msgev_ko_steam_jp_p1_residual_03_manual_layout_23.v1.json",
+    "sha256": "7B58E109802DACB04BA6D0F4FE3CBD30A23820785102671476687660775BC544"
+  },
+  "proofs": {
+    "active_v090_baseline_pinned": true,
+    "committed_korean_provenance_source_hash_gated": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "full_token_profiles_preserved": true,
+    "manual_entity_layout_source_esc_stream_exact": true,
+    "manual_line_layout_semantic_payload_preserved": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "runtime_custom_bracket_rows_preserved": true,
+    "steam_installation_read_only": true,
+    "switch_same_index_payload_not_used": true
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgev-p1-residual-03-manual-layout-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_msgev_p1_residual_03_manual_layout_v1/validation.v1.json",
+    "sha256": "7A45FA15C1C56D4F49DB75A2A99CA0DC57996BBF5551C6FD36545EB99FD0ACF3"
+  }
+}

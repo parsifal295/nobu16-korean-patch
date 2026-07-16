@@ -1,0 +1,125 @@
+{
+  "schema": "nobu16.kr.steam-jp-ev-strdata-manual-linebreak-current-rebase-verification.v1",
+  "resource": "MSG/JP/ev_strdata.bin",
+  "source": {
+    "packed": {
+      "size": 928605,
+      "sha256": "109E0B3D11E4942FD56F5C785CC3824884B8830DF14FF398476D6CBFEDEE584E"
+    },
+    "raw": {
+      "size": 924952,
+      "sha256": "747738EE9B46613814FD1BC608C17FA480C9774E58E2C13A237543FCEDC0ED41"
+    },
+    "string_count": 17868
+  },
+  "operation": {
+    "name": "current_cell_hard_break_to_ascii_space",
+    "replacement": "each CRLF/CR/LF token becomes exactly one U+0020",
+    "coordinate_ids_sha256": "43E60ED17467481508B1D3070DAE8BB94D1BAA0BBE1A9069C1B00733E56F15C7",
+    "hard_break_token_count": 6,
+    "only_line_break_invariant_may_change": true,
+    "outside_coordinates_unchanged": true,
+    "coordinates": [
+      {
+        "id": 3917,
+        "current_utf16le_sha256": "1743E7FE57CF437897EBA287E16D252E38BA3F1EABB6AC2DCEA7A6BE0058DFAA",
+        "current_linebreak_vector": ["\n"],
+        "current_protected_signature": {
+          "controls": [],
+          "esc": ["\u001bCB", "\u001bCZ", "\u001bCC", "\u001bCZ", "\u001bCB", "\u001bCZ"],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        },
+        "target_utf16le_sha256": "355EFA6C70E56D596A9210B0FE3F763C94D645EA45F33A08D325EB4EAC257EE0",
+        "target_linebreak_vector": [],
+        "target_protected_signature": {
+          "controls": [],
+          "esc": ["\u001bCB", "\u001bCZ", "\u001bCC", "\u001bCZ", "\u001bCB", "\u001bCZ"],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        }
+      },
+      {
+        "id": 7260,
+        "current_utf16le_sha256": "CBACEE37D4554A4E89313CBE9BB598285F6CD5307E2B55BE58D02CBA055AE657",
+        "current_linebreak_vector": ["\n", "\n"],
+        "current_protected_signature": {
+          "controls": [],
+          "esc": [],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        },
+        "target_utf16le_sha256": "0086AB96BCED64112DE581E71AF31ECBA494224F5820AA191772A9B44380952A",
+        "target_linebreak_vector": [],
+        "target_protected_signature": {
+          "controls": [],
+          "esc": [],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        }
+      },
+      {
+        "id": 8818,
+        "current_utf16le_sha256": "2D0C6EAEEC471ED82390F714A22DBB3C54E95D11BB3ACCC53FA5F0D6B69854C3",
+        "current_linebreak_vector": ["\n", "\n"],
+        "current_protected_signature": {
+          "controls": [],
+          "esc": ["\u001bCA", "\u001bCZ"],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        },
+        "target_utf16le_sha256": "38D7A0C4FC6A72E4EF393B75CA34650F0880C98B334B0284879C183543FDEEF3",
+        "target_linebreak_vector": [],
+        "target_protected_signature": {
+          "controls": [],
+          "esc": ["\u001bCA", "\u001bCZ"],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        }
+      },
+      {
+        "id": 8904,
+        "current_utf16le_sha256": "F346875D8EA24CC0AD3C3191E4ED6C54543295234D19AF1662C88212B8C1AFE3",
+        "current_linebreak_vector": ["\n"],
+        "current_protected_signature": {
+          "controls": [],
+          "esc": ["\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ"],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        },
+        "target_utf16le_sha256": "F67BB3D877E8D50BA30B7ED0E9E3CFF7186EC883E2FE5C48A1989D42AFD94BA7",
+        "target_linebreak_vector": [],
+        "target_protected_signature": {
+          "controls": [],
+          "esc": ["\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ"],
+          "printf": [],
+          "pua": [],
+          "unknown_percent_count": 0
+        }
+      }
+    ]
+  },
+  "candidate": {
+    "packed": {
+      "size": 928605,
+      "sha256": "6A7D90C1A95AD42DCAE2D3C3719508EDD00588288659A1D192B680CF70EAE6E4"
+    },
+    "raw": {
+      "size": 924952,
+      "sha256": "476BF7300FDE67B77205929E1D182F7C8E60D1E6464BC96BB44389E3F86E9FFA"
+    }
+  },
+  "scope": {
+    "font_resources_touched": false,
+    "other_resources_touched": false,
+    "steam_install_write_allowed": false,
+    "candidate_private_only": true
+  }
+}

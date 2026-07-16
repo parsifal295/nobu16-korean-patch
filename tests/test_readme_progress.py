@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 PROGRESS = ROOT / "data" / "public" / "steam_jp_117_progress.v1.json"
+CANDIDATE_PROGRESS = ROOT / "data" / "public" / "steam_jp_117_candidate_v10_progress.v1.json"
 SPEC = importlib.util.spec_from_file_location(
     "readme_progress", ROOT / "tools" / "update_readme_progress.py"
 )
@@ -117,6 +118,70 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertFalse(qa["executable_modified"])
         self.assertFalse(qa["registry_modified"])
 
+    def test_v010_candidate_audit_and_final_rebase_are_tied_to_frozen_evidence(self) -> None:
+        payload = json.loads(CANDIDATE_PROGRESS.read_text(encoding="utf-8"))
+        candidate = readme_progress.load_candidate_progress()
+        self.assertEqual(candidate, payload)
+        self.assertEqual(payload["candidate_release"], "v0.10.0")
+        self.assertEqual(payload["status"], "released")
+        self.assertEqual(payload["baseline_release"], "v0.9.0")
+
+        translation = payload["translation"]
+        self.assertEqual(
+            (
+                translation["high_confidence_scope"],
+                translation["korean_applied"],
+                translation["official_credit_preserved"],
+                translation["runtime_structure_preserved"],
+                translation["manual_translation_hold"],
+            ),
+            (2498, 2489, 6, 3, 0),
+        )
+        self.assertEqual(
+            translation["candidate_high_confidence_remaining"],
+            translation["official_credit_preserved"]
+            + translation["runtime_structure_preserved"],
+        )
+        self.assertEqual(
+            payload["candidate"],
+            {
+                "file_count": 14,
+                "zip_name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.10.0.zip",
+                "zip_sha256": "B18A5B2B4AE40BBD80BB8613BE3E6CD81DF7EDD3B7E7434A9446AFD576E2C117",
+                "zip_size": 356864822,
+            },
+        )
+        final = payload["final_composition"]
+        self.assertEqual(final["font_widths"]["policy"], "original_widths_retained")
+        self.assertEqual(final["font_widths"]["resource_count"], 4)
+        self.assertEqual(final["event_linebreak_rebase"]["coordinate_count"], 4)
+        self.assertEqual(final["event_linebreak_rebase"]["hard_break_token_count"], 6)
+        self.assertTrue(payload["candidate_qa"]["steam_install_applied"])
+        self.assertEqual(
+            payload["candidate_qa"]["screen_qa"],
+            "NOT_RERUN_AFTER_FONT_ROLLBACK_AND_EVENT_REBASE",
+        )
+        self.assertTrue(payload["candidate_qa"]["release_published"])
+
+    def test_v010_render_distinguishes_final_rebase_from_release_and_screen_qa(self) -> None:
+        rendered = readme_progress.render_candidate()
+        self.assertIn("v0.10.0 Steam 공개 릴리스", rendered)
+        self.assertIn("한국어 적용 | 2,489", rendered)
+        self.assertIn("공식 크레딧 보존 | 6", rendered)
+        self.assertIn("런타임 구조 보존 | 3", rendered)
+        self.assertIn("글꼴 폭 조정은 포함하지 않고", rendered)
+        self.assertIn("4개 좌표에서 6개만 공백으로 리베이스", rendered)
+        self.assertIn("Steam 설치본에는 적용했습니다", rendered)
+        self.assertIn(
+            "설치=True, 화면 QA=NOT_RERUN_AFTER_FONT_ROLLBACK_AND_EVENT_REBASE, 배포=True",
+            rendered,
+        )
+        self.assertIn("비글꼴 payload도 보존한 공개본", rendered)
+        self.assertIn("게임 전체 번역 완료율이 아닙니다", rendered)
+        self.assertNotIn("게임 전체 번역 완료율입니다", rendered)
+        self.assertNotIn("21 맵", rendered)
+        self.assertNotIn("907개", rendered)
+
     def test_readme_progress_is_current(self) -> None:
         result = subprocess.run(
             [sys.executable, "-B", "tools/update_readme_progress.py", "--check"],
@@ -134,6 +199,13 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("Simplified Chinese", readme)
+
+    def test_readme_distinguishes_the_published_v09_and_local_v010_candidate(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn("현재 공개 안정판은 [v0.10.0]", readme)
+        self.assertIn("v0.10.0 Steam 공개 릴리스", readme)
+        self.assertIn("<!-- translation-progress:start -->", readme)
+        self.assertIn("<!-- active-text-audit:start -->", readme)
 
 
 if __name__ == "__main__":

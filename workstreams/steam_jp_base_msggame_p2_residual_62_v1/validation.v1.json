@@ -1,0 +1,48 @@
+{
+  "active_v6_baseline": {
+    "block_count": 18,
+    "literal_count": 24262,
+    "packed_sha256": "E54D7AB55CB981B7973FBF8657A276520EBFA881D3439BE94A2D14086B293177",
+    "packed_size": 649347,
+    "raw_sha256": "183F7867817FBDAAE8E8B1DE547AEAC9B80C6A818604DD26FBF57BABD2FC10E2",
+    "raw_size": 1498276,
+    "record_count": 19152
+  },
+  "audit_bundle": {
+    "bundle_id": "p2-MSG_JP-msggame-residual-62",
+    "coordinate_sha256": "A882DC7B496535932DBB7C27C8191B66454B14F09F84BBF31BFDB39697F185F4"
+  },
+  "checks": {
+    "active_v6_baseline": "OK",
+    "esc_printf_newline_pua_whitespace": "OK",
+    "exact_source_hash_catalog_reuse": "OK",
+    "github_written": false,
+    "literal_coordinate_set_preserved": "OK",
+    "nonliteral_structure_preserved": "OK",
+    "nonselected_utf16le_payloads": "OK",
+    "packed_deterministic_rebuild": "OK",
+    "per_entry_jp_source_hashes": "OK",
+    "raw_parser_roundtrip": "OK",
+    "release_asset_written": false,
+    "selected_high_confidence_kana_residuals": "0",
+    "steam_installation_written": false
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "effective_change_coordinate_sha256": "A882DC7B496535932DBB7C27C8191B66454B14F09F84BBF31BFDB39697F185F4",
+  "effective_change_count": 62,
+  "entry_count": 62,
+  "expected_candidate": {
+    "packed_sha256": "916DD84BCF77207C1F28A2046B901BC588E0120DCBA99A1DED820A6711305CF8",
+    "packed_size": 649309,
+    "raw_sha256": "5664FCDD33A91E29250DC789DD33694C97AF2065CDFC04A03F109104310BCED3",
+    "raw_size": 1498312
+  },
+  "high_confidence_kana_residual_count_after_candidate": 0,
+  "resource": "MSG/JP/msggame.bin",
+  "schema": "nobu16.kr.steam-jp-base-msggame-p2-residual-validation.v1",
+  "source_free": true,
+  "translation_origin_counts": {
+    "exact_source_hash_catalog_reuse": 62
+  }
+}
