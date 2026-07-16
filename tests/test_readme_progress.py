@@ -22,7 +22,7 @@ SPEC.loader.exec_module(readme_progress)
 class ReadmeProgressTests(unittest.TestCase):
     def test_runtime_contract_is_steam_jp_117(self):
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
-        self.assertEqual(payload["release"], "v0.7.0")
+        self.assertEqual(payload["release"], "v0.7.1")
         self.assertEqual(
             payload["runtime"],
             {
@@ -50,7 +50,26 @@ class ReadmeProgressTests(unittest.TestCase):
         )
 
         common = translation["common_messages"]
-        self.assertEqual((common["applied"], common["unresolved"]), (39507, 96))
+        self.assertEqual(common["source_union_effective_coordinates"], 43169)
+        self.assertEqual(common["applied"], 40487)
+        self.assertEqual(common["source_equal_structural_noops"], 1796)
+        self.assertEqual(common["format_contract_blocked"], 730)
+        self.assertEqual(common["alignment_gap"], 156)
+        self.assertEqual(common["review_backlog"], 886)
+        self.assertEqual(common["known_internal_dummy"], 2)
+        self.assertEqual(common["reviewed_semantic_gaps_pending"], 94)
+        self.assertEqual(common["officer_surnames_recovered"], 980)
+        self.assertEqual(
+            common["source_union_effective_coordinates"],
+            common["applied"]
+            + common["source_equal_structural_noops"]
+            + common["format_contract_blocked"]
+            + common["alignment_gap"],
+        )
+        self.assertEqual(
+            common["review_backlog"],
+            common["format_contract_blocked"] + common["alignment_gap"],
+        )
         self.assertEqual(common["duplicate_context_collapsed"], 50)
 
         msggame = translation["msggame"]
@@ -70,10 +89,20 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("`msgui.bin` | 안전 이식 4,036 / 4,037 (99.98%)", rendered)
         self.assertIn("`msggame.bin` | 적용 28,272 / 28,272 (100.0%)", rendered)
         self.assertIn("`strdata.bin` | 안전 이식 24,524 / 24,525", rendered)
-        self.assertIn("일본어 경로 한글 폰트 | 4 / 4 설치·조합 화면 확인", rendered)
-        self.assertIn("QHD 창모드와 테두리 없음은 각각 PASS했고", rendered)
-        self.assertIn("콜드 재시작의 한글 타이틀·메인 메뉴도 PASS했습니다.", rendered)
+        self.assertIn("한국어 변경 40,487 · 구조 확인 1,796 / 원천 합집합 43,169", rendered)
+        self.assertIn("검토 886", rendered)
+        self.assertIn("인물 성씨 누락 980건을 복구", rendered)
+        self.assertIn("검토된 의미 간극 94건", rendered)
+        self.assertIn("이번 오류수정 릴리즈에 포함하지 않았습니다", rendered)
+        self.assertIn("형식 계약 검토 730건, 정렬 간극 156건", rendered)
+        self.assertIn("내부 더미 2건이 포함", rendered)
+        self.assertIn("일본어 경로 한글 폰트 | 4 / 4 포함", rendered)
+        self.assertIn("Steam PK v1.1.7 일본어 경로", rendered)
+        self.assertIn("메모리 패치, DLL 주입, 후킹, EXE·레지스트리 변조는 사용하지 않습니다.", rendered)
         self.assertIn("보류 1건은 번역 대상 문구가 아닌 비의미 공백 1자 레코드", rendered)
+        self.assertNotIn("미해결 0", rendered)
+        self.assertNotIn("unresolved=0", rendered)
+        self.assertNotIn("전역 100%", rendered)
         self.assertNotIn("종료 확인창", rendered)
         self.assertNotIn("아직 번역되지 않은 일본어 UI", rendered)
         self.assertNotIn("MSG_PK/SC", rendered)
@@ -82,6 +111,10 @@ class ReadmeProgressTests(unittest.TestCase):
 
     def test_runtime_qa_is_recorded(self):
         qa = readme_progress.load_progress()["runtime_qa"]
+        self.assertEqual(qa["current_release_live_apply"], "FILE_PASS")
+        self.assertEqual(qa["officer_surname_binary_recomposition"], "PASS")
+        self.assertEqual(qa["v0_7_1_screen_qa"], "PENDING")
+        self.assertEqual(qa["evidence_release"], "v0.7.0")
         self.assertTrue(qa["steam_install_applied"])
         self.assertTrue(qa["exact_twelve_target_hashes"])
         self.assertEqual(qa["pre_v0_7_predecessor_backups_valid"], 12)
