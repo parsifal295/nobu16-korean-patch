@@ -1,0 +1,126 @@
+{
+  "aggregate": {
+    "alignment_gap_count": 156,
+    "blocked_format_contract_count": 1710,
+    "decomposition_total": 43169,
+    "existing_v1_effective_korean_change_count": 39507,
+    "source_equal_structural_contract_count": 1796,
+    "source_union_effective_coordinate_count": 43169
+  },
+  "artifacts": [
+    {
+      "entry_count": 83,
+      "path": "workstreams/steam_jp_common_messages_wave08/public/exact_contract/msgev_exact_contract_83.v1.json",
+      "resource": "MSG_PK/JP/msgev.bin",
+      "sha256": "AB6B73DBC88AA74ED8AA6DB6B05F65C79073EA5BA759551441663B9E1CE66035",
+      "size": 8187
+    },
+    {
+      "entry_count": 286,
+      "path": "workstreams/steam_jp_common_messages_wave08/public/exact_contract/msgdata_exact_contract_s01_286.v1.json",
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "sha256": "06890CD7C3A2A54D62FEA46348DA4DE44DB5D8F4A955F90EE6407B37A829B774",
+      "size": 2229
+    },
+    {
+      "entry_count": 286,
+      "path": "workstreams/steam_jp_common_messages_wave08/public/exact_contract/msgdata_exact_contract_s02_286.v1.json",
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "sha256": "D025D2020EBD0D1D7752F8F50AB679B74C8B10BEB6D038DF67F43BC5FE5BE42E",
+      "size": 1896
+    },
+    {
+      "entry_count": 286,
+      "path": "workstreams/steam_jp_common_messages_wave08/public/exact_contract/msgdata_exact_contract_s03_286.v1.json",
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "sha256": "6C9D9AF19DB22F11D4297B7E62B7BB4999750BA8DB3F109A82386D475FFB27EC",
+      "size": 1954
+    },
+    {
+      "entry_count": 285,
+      "path": "workstreams/steam_jp_common_messages_wave08/public/exact_contract/msgdata_exact_contract_s04_285.v1.json",
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "sha256": "16DE718812C94F426166E6922640ED3F3EDAB4A220331E1344F3348877509FF8",
+      "size": 1878
+    },
+    {
+      "entry_count": 285,
+      "path": "workstreams/steam_jp_common_messages_wave08/public/exact_contract/msgdata_exact_contract_s05_285.v1.json",
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "sha256": "4E588B5FC9F7DCD6DA69D721A070FFCD79291A848DB2D956E2175748360C23F8",
+      "size": 1799
+    },
+    {
+      "entry_count": 285,
+      "path": "workstreams/steam_jp_common_messages_wave08/public/exact_contract/msgdata_exact_contract_s06_285.v1.json",
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "sha256": "AC33B2A88517EABDDD7C94032285CE6910BFEF64B4DEC26585C81F23F5C9C46B",
+      "size": 3888
+    }
+  ],
+  "base_language": "JP",
+  "coordinates_sha256": "4603DF84ED8B824B438FE754F0BEA82486E92E28163642711CC5FA36E8B77A79",
+  "progress_accounting": {
+    "candidate_binary_bytes_changed": false,
+    "runtime_translation_added_count": 0,
+    "source_equal_contracts_must_not_increment_applied_translation": true,
+    "structural_contract_coverage_count": 1796
+  },
+  "proofs": {
+    "candidate_bytes_unchanged": true,
+    "current_jp_source_hash_exact": true,
+    "equal_hash_block_mapping_exact": true,
+    "existing_v1_overlap_zero": true,
+    "format_invariants_exact": true,
+    "source_binary_used": false,
+    "source_union_ko_hashes_exact": true,
+    "source_union_values_equal_current_jp": true
+  },
+  "resources": {
+    "msgbre.bin": {
+      "alignment_gap_count": 0,
+      "blocked_format_contract_count": 1,
+      "existing_v1_effective_korean_change_count": 2216,
+      "source_equal_structural_contract_count": 0,
+      "source_union_effective_coordinate_count": 2217
+    },
+    "msgdata.bin": {
+      "alignment_gap_count": 81,
+      "blocked_format_contract_count": 1155,
+      "candidate": {
+        "sha256": "D05A585826F116180D81E06CBE7BF136CE67B98B76380A8DC6308F3868A1F9B9",
+        "size": 492714
+      },
+      "existing_v1_effective_korean_change_count": 23369,
+      "source_equal_structural_contract_count": 1713,
+      "source_union_effective_coordinate_count": 26318
+    },
+    "msgev.bin": {
+      "alignment_gap_count": 73,
+      "blocked_format_contract_count": 554,
+      "candidate": {
+        "sha256": "C73DD1DDC79493EE3751C43B4BEAD216C4A4847C3E7B0A7CCD61FB342E03953E",
+        "size": 1040052
+      },
+      "existing_v1_effective_korean_change_count": 13794,
+      "source_equal_structural_contract_count": 83,
+      "source_union_effective_coordinate_count": 14504
+    },
+    "msgire.bin": {
+      "alignment_gap_count": 0,
+      "blocked_format_contract_count": 0,
+      "existing_v1_effective_korean_change_count": 122,
+      "source_equal_structural_contract_count": 0,
+      "source_union_effective_coordinate_count": 122
+    },
+    "msgstf.bin": {
+      "alignment_gap_count": 2,
+      "blocked_format_contract_count": 0,
+      "existing_v1_effective_korean_change_count": 6,
+      "source_equal_structural_contract_count": 0,
+      "source_union_effective_coordinate_count": 8
+    }
+  },
+  "schema": "nobu16.kr.steam-jp-common-message-exact-recovery-evidence.v1",
+  "source_union_manifest_sha256": "218C1FB47DCCDAE07A3B10C6664EAC2A0E426DA8733A46143BC6D92B8CF682B3"
+}

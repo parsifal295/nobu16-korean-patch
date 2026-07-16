@@ -1,0 +1,28 @@
+{
+  "base_language": "JP",
+  "distribution_policy": {"contains_commercial_source_text": false, "contains_complete_game_resource": false},
+  "entry_count": 286,
+  "equal_hash_blocks_sha256": "8A420A2A570902D86ACAFCD15F27810A4AFA5F3522C4DFFB0816AD69C3FA8A86",
+  "groups": [{
+    "ko": "dummy",
+    "ranges": [[19034, 19042, 6], [19060, 19068, 80], [19146, 19154, 1], [19154, 19162, 1], [19173, 19181, 1], [19176, 19184, 1], [19201, 19209, 8], [19210, 19218, 5], [19216, 19224, 124], [19361, 19369, 28], [19396, 19404, 31]],
+    "text_utf16le_sha256": "2AB80B631AD896118B57262A7756C480D2BC0733C95357BC5EC1F4AD4A21CFAB"
+  }],
+  "ids_sha256": "84F1BA8F812CA39A0ADEB05442D2AD9FE625DF44E960E0ACB305E55B049066A3",
+  "mapping_rows_sha256": "4D5CBC2D59FED5CBCC015EF07A5C812021C4B6257B0692F54D0B2CB02F82342B",
+  "overlay_id": "msgdata_exact_contract_s02_286.v1",
+  "provenance": {
+    "existing_v1_overlay_path": "workstreams/steam_jp_common_messages_v1/public/msgdata_ko_steam_jp_native.v1.json",
+    "existing_v1_overlay_sha256": "09EC40029C55D09D1420812879180DFDC9B8842BE5D374C6676189067772D051",
+    "sc_binary_used": false,
+    "source_union_entry_count": 26318,
+    "source_union_ko_rows_sha256": "1D8515C12AADB9FC5D05D3C5FE1105F1226E2BB4C04F4371EF6CEB3A29E60F87",
+    "source_union_manifest_sha256": "218C1FB47DCCDAE07A3B10C6664EAC2A0E426DA8733A46143BC6D92B8CF682B3",
+    "source_union_values_equal_current_jp": true
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "schema": "nobu16.kr.steam-jp-common-message-exact-contract.v1",
+  "shard": {"count": 6, "index": 2},
+  "source_rows_sha256": "5542A18B771A64649527B8BC9C35E85C702EC6FBA2A3848B4DF86932BF1F14AC",
+  "stock_jp": {"packed_sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E", "raw_sha256": "D09F61E34E4AA498F3DDEF23E7B7FD2CC8E9FE50B24F39D3BA1034BE82E6D0F6", "raw_size": 434000, "size": 272453, "string_count": 29218}
+}
