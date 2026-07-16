@@ -1,0 +1,33 @@
+{
+  "schema": "nobu16.kr.steam-jp-msgev-10564-compact-layout-overlay.v1",
+  "overlay_id": "msgev_ko_steam_jp_10564_compact_layout.v1",
+  "resource": "MSG_PK/JP/msgev.bin",
+  "entries": [
+    {
+      "id": 10564,
+      "operation": "manual_compact_korean_layout",
+      "preimage_utf16le_sha256": "430B77E0B6210204450991E4140CA1C892F475244FEB6E8976BC7DFB3340E6B8",
+      "ko": "\u001bCB도쿠가와\u001bCZ에 적의가 없자, \u001bCB도쿠가와\u001bCZ를\n따르자던 \u001bCA가쓰모토\u001bCZ는 \u001bCB도쿠가와\u001bCZ 앞잡이로\n몰려 \u001bCB도요토미 가문\u001bCZ에서 고립된다.",
+      "target_utf16le_sha256": "9CCEA560F83BDC6A3F951FE95E4BEC6AF796954D4F5FDE1A72443C7D80793284",
+      "source_line_breaks": ["\n", "\n"],
+      "target_line_breaks": ["\n", "\n"],
+      "preserved": {
+        "printf": [],
+        "unknown_percent_count": 0,
+        "esc": ["\u001bCB", "\u001bCZ", "\u001bCB", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCB", "\u001bCZ", "\u001bCB", "\u001bCZ"],
+        "controls": [],
+        "pua": [],
+        "runtime_brackets": [],
+        "leading_whitespace": "",
+        "trailing_whitespace": ""
+      },
+      "layout": {
+        "font_resource": "RES_JP/res_lang.bin",
+        "outer_entry": 6,
+        "table": 0,
+        "max_line_px": 912,
+        "line_widths_px": [816, 888, 768]
+      }
+    }
+  ]
+}
