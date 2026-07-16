@@ -95,11 +95,6 @@ def load_release_progress() -> dict:
 def render() -> str:
     payload = load_release_progress()
     translation = payload["translation"]
-    candidate = payload["candidate"]
-    manual_review = (
-        translation["mixed_hangul_kana_manual_review"]
-        + translation["hanja_only_manual_review"]
-    )
     intentionally_preserved = (
         translation["official_credit_preserved"]
         + translation["runtime_structure_preserved"]
@@ -107,36 +102,14 @@ def render() -> str:
     return "\n".join(
         [
             START,
-            "### v0.10.0 공개 현황",
+            "### v0.10.0 — 텍스트 번역 완료",
+            "",
+            "`v0.10.0`은 Steam JP 1.1.7용 공개 배포본입니다. 게임 내 번역 대상 텍스트 번역을 완료했습니다.",
             "",
             (
-                "`v0.10.0`은 Steam JP 1.1.7용 공개 배포본이며, "
-                f"JP 경로 {candidate['file_count']}개 파일을 설치합니다."
+                f"공식 크레딧과 런타임 구조용 {intentionally_preserved}건은 번역 대상이 아니므로 "
+                "원문을 유지합니다. 남은 것은 번역 작업이 아니라 일부 표현·화면의 선택 검수입니다."
             ),
-            "",
-            "| 항목 | 현황 |",
-            "|---|---|",
-            (
-                "| 활성 텍스트 10개 테이블 | "
-                f"고신뢰 좌표 {translation['korean_applied']:,} / "
-                f"{translation['high_confidence_scope']:,} 한글 반영 |"
-            ),
-            (
-                "| 의도적 원문 유지 | "
-                f"{intentionally_preserved}건 (공식 크레딧 "
-                f"{translation['official_credit_preserved']} · 런타임 구조 "
-                f"{translation['runtime_structure_preserved']}) |"
-            ),
-            (
-                "| 추가 수동 검토 | "
-                f"{manual_review}건 (혼합 한글/가나 "
-                f"{translation['mixed_hangul_kana_manual_review']} · 한자 중심 "
-                f"{translation['hanja_only_manual_review']}) |"
-            ),
-            "| 표시·글꼴 | 이벤트 줄바꿈 정리 · 기존 글꼴 폭 유지 |",
-            "",
-            "수치는 자동 판정 가능한 활성 텍스트 기준이며, 게임 전체의 번역 완료율은 아닙니다.",
-            "참고: 마지막 이벤트 줄바꿈 조정 뒤 해당 이벤트 장면은 다시 확인하지 않았습니다.",
             END,
         ]
     )
