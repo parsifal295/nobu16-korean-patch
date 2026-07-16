@@ -1,0 +1,79 @@
+{
+  "base_language": "JP",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "id": 15021,
+      "ko": "삿사",
+      "ko_utf16le_sha256": "11712F680E4D13E0049AE1D21D9ABB92F37008B46D3A3D2439BAE22E83121476",
+      "recovered_legacy_jp_id": 15017,
+      "source_jp_utf16le_sha256": "5F49177652FDE2B47CA3981A8E9ACE26CC9587919783F16AD0F2A0535028A9E6",
+      "translation_role": "current_semantic_revision"
+    },
+    {
+      "id": 22663,
+      "ko": "아군 세력 하나마다 부대 능력+%d（최대 +%d）",
+      "ko_utf16le_sha256": "0E604C9DA599EAE8CED5222B9B83676EAB80CC662A223F575D04B09A0FD7E086",
+      "recovered_legacy_jp_id": 22655,
+      "source_jp_utf16le_sha256": "83F38B15217EB0B2F2E8B991301A92E906858E3B49CF52573A05F07D6C681B8E",
+      "translation_role": "current_semantic_revision"
+    },
+    {
+      "id": 23164,
+      "ko": "성 개발률 25％마다 부대 능력 상승",
+      "ko_utf16le_sha256": "2783138CC264FA6FC2C2D57D978D4F0E952E6149D01F78EC2FE7171D88193222",
+      "recovered_legacy_jp_id": 23156,
+      "source_jp_utf16le_sha256": "BC69F8D9E98A5C6908DF2481D3D0B97A68658D4F56376307B80DEB255D4DEA14",
+      "translation_role": "current_semantic_revision"
+    },
+    {
+      "id": 25208,
+      "ko": "혼란 부여",
+      "ko_utf16le_sha256": "BA15719973460C49A2D133C48B8DEE58402CB47CC5CF7407EF989E4DCF18A447",
+      "recovered_legacy_jp_id": 25200,
+      "source_jp_utf16le_sha256": "679FB09B980C647923E5DDE1A9C5C50570315ECD0CE9E475F64B8D39B6AC86CC",
+      "translation_role": "current_semantic_revision"
+    },
+    {
+      "id": 25463,
+      "ko": "혼란 부여",
+      "ko_utf16le_sha256": "BA15719973460C49A2D133C48B8DEE58402CB47CC5CF7407EF989E4DCF18A447",
+      "recovered_legacy_jp_id": 25455,
+      "source_jp_utf16le_sha256": "679FB09B980C647923E5DDE1A9C5C50570315ECD0CE9E475F64B8D39B6AC86CC",
+      "translation_role": "current_semantic_revision"
+    },
+    {
+      "id": 25900,
+      "ko": "세력 목표를 달성한 증표",
+      "ko_utf16le_sha256": "50801BA77707513B6F21F863A5AC29A95796F7AFE04FCDAEEE889999AB7D80C9",
+      "recovered_legacy_jp_id": 25892,
+      "source_jp_utf16le_sha256": "5D5B1B802EE08C1276E152FBC90291B9DAF32338AFB9EA55B52F4FA224941358",
+      "translation_role": "current_semantic_revision"
+    }
+  ],
+  "entry_count": 6,
+  "ids_sha256": "C83177BF2468E12B2AA62F75FDA3E50657A934548405AC9E3C1E2169BCAFB035",
+  "overlay_id": "msgdata_ko_steam_jp_wave08_j05_live_revisions_6.v1",
+  "provenance": {
+    "batch_id": "j05_msgdata_live_revisions",
+    "builder_reads_pristine_jp_only": true,
+    "existing_v1_overlay_preserved": true,
+    "mapping_method": "current_steam_jp_id_manual_semantic_revision_translation",
+    "official_multilingual_reference_is_build_dependency": false,
+    "official_multilingual_same_id_reviewed": true,
+    "resolved_previous_unmapped_count": 6
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "schema": "nobu16.kr.steam-jp-common-message-wave08-delta.v1",
+  "source_rows_sha256": "2444099BD0948840E866A13FEE364D0AE4A6E30D04C3E055E2304F6817C5EAFF",
+  "stock_jp": {
+    "packed_sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+    "raw_sha256": "D09F61E34E4AA498F3DDEF23E7B7FD2CC8E9FE50B24F39D3BA1034BE82E6D0F6",
+    "raw_size": 434000,
+    "size": 272453,
+    "string_count": 29218
+  }
+}

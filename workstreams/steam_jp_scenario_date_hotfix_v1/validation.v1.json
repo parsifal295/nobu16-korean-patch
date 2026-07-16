@@ -1,0 +1,40 @@
+{
+  "expected": {
+    "baseline": {
+      "sha256": "F8152396BA5C11D26A6CD42DAD3120F511813079B27C92DFE107A9DAFFA70797",
+      "size": 121608
+    },
+    "candidate": {
+      "raw_sha256": "FFCCBDB6EE4C80E143B8F6F8B0DAB31DD2F01B1ED2E608A98DEA13F45B939502",
+      "raw_size": 121108,
+      "sha256": "29D0C6CCC262E7AB757AA5D0819224370DEDEF4CF250E89FC88B24E600EF2169",
+      "size": 121608
+    },
+    "overlay": {
+      "sha256": "C607BBF4A04DBFFB5A0F6A6DE6DE4B1B514D0CB73E649C30BEB6F4DE1EAD3556",
+      "size": 1701
+    }
+  },
+  "issue": 45,
+  "proofs": {
+    "baseline_ko_hashes_fail_closed": true,
+    "current_jp_source_hashes_fail_closed": true,
+    "deterministic_ab_equal": true,
+    "non_delta_texts_preserved": true,
+    "scenario_date_composition": "1559년 3월",
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG_PK/JP/msgui.bin",
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-scenario-date-hotfix-validation.v1",
+  "status": "PASS",
+  "translation": {
+    "calendar_month_delta_count": 1,
+    "calendar_month_entry_id": 1051,
+    "duration_month_preserved": true
+  }
+}

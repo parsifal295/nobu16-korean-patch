@@ -1,0 +1,141 @@
+{
+  "expected": {
+    "baseline": {
+      "candidate": {
+        "packed_sha256": "4E0B1009789D6EF3935DA359932D73685447890784796BE3702D50C8D64E4387",
+        "raw_sha256": "B5704A99DEDD87A51409DBFA0772695B3FD3A391B12CD0BCAD9727B1631DBE78",
+        "raw_size": 495416,
+        "size": 497384,
+        "string_count": 29218
+      },
+      "composable_after_screen_hotfix": true,
+      "composition_requirement": "all_44_baseline_ko_utf16le_sha256_anchors_match",
+      "default_upstream_workstream": "steam_jp_tactics_reading_hotfix_v1",
+      "target_hashes_fail_closed": true,
+      "whole_baseline_blob_pinned": false
+    },
+    "candidate": {
+      "packed_sha256": "7BFE94DDB5A8DCDF7F21D67325C79D9BE66FA51A2AA2D7D5474EDE3F5E492313",
+      "raw_sha256": "8B66C702A12FC2739B28448E0B97B117ABD095177916C6DAC4BA34788B05A10C",
+      "raw_size": 494856,
+      "size": 496822,
+      "string_count": 29218
+    },
+    "default_upstream": {
+      "candidate": {
+        "packed_sha256": "4E0B1009789D6EF3935DA359932D73685447890784796BE3702D50C8D64E4387",
+        "raw_sha256": "B5704A99DEDD87A51409DBFA0772695B3FD3A391B12CD0BCAD9727B1631DBE78",
+        "raw_size": 495416,
+        "size": 497384,
+        "string_count": 29218
+      },
+      "workstream": "steam_jp_tactics_reading_hotfix_v1"
+    },
+    "overlay": {
+      "sha256": "4FD2D58D0F8895B4A9DADD5A6E3B09BAAF38C511E0460F79DFDAAA5802B80436",
+      "size": 18720
+    },
+    "stock_jp": {
+      "packed_sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+      "raw_sha256": "D09F61E34E4AA498F3DDEF23E7B7FD2CC8E9FE50B24F39D3BA1034BE82E6D0F6",
+      "raw_size": 434000,
+      "size": 272453,
+      "string_count": 29218
+    },
+    "trace": {
+      "sha256": "8CF47CA5A21D66BE09B271A345FB0AB707B2147B45EE82F1BFFE31C34CBE49C6",
+      "size": 15991
+    }
+  },
+  "policy_effect_wave09": {
+    "entry_count": 44,
+    "extra_ids": [
+      23030,
+      23059,
+      23079,
+      23085,
+      23088,
+      23089,
+      23101,
+      23106
+    ],
+    "primary_id_range": [
+      21640,
+      21675
+    ],
+    "target_ids": [
+      21640,
+      21641,
+      21642,
+      21643,
+      21644,
+      21645,
+      21646,
+      21647,
+      21648,
+      21649,
+      21650,
+      21651,
+      21652,
+      21653,
+      21654,
+      21655,
+      21656,
+      21657,
+      21658,
+      21659,
+      21660,
+      21661,
+      21662,
+      21663,
+      21664,
+      21665,
+      21666,
+      21667,
+      21668,
+      21669,
+      21670,
+      21671,
+      21672,
+      21673,
+      21674,
+      21675,
+      23030,
+      23059,
+      23079,
+      23085,
+      23088,
+      23089,
+      23101,
+      23106
+    ],
+    "target_ids_sha256": "2B69EF6188634C6A1642D7ECC1A618BE2584F3B7F72E1A17460DBBBBC1A7618C"
+  },
+  "proofs": {
+    "all_44_target_policy_effect_values_no_latin": true,
+    "baseline_ko_hashes_fail_closed": true,
+    "deterministic_ab_equal": true,
+    "jp_source_hashes_fail_closed": true,
+    "non_target_texts_preserved": true,
+    "opaque_non_string_metadata_preserved": true,
+    "screen_hotfix_composable_if_target_hashes_unchanged": true,
+    "stock_jp_hash_pinned": true,
+    "string_count_preserved": true,
+    "target_id_domain_exact": true,
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "sc_runtime_path_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-policy-effects-wave09-validation.v1",
+  "status": "PASS",
+  "target": {
+    "base_language": "JP",
+    "steam_version": "1.1.7"
+  },
+  "wave": 9
+}

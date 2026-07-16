@@ -1,0 +1,47 @@
+{
+  "base_language": "JP",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "id": 301,
+      "ko": "겐코 에탄",
+      "ko_utf16le_sha256": "0EF9BBDBA752C0AD33C5FECC51518F846FA7DBF8EA7950D2ECE96C2550293E4D",
+      "legacy_source_jp_utf16le_sha256": "F7D9E74EB40F63AEEDF962AE326C9F2FF8084E0CBEFA4AEEABDE0725338B3AAE",
+      "recovered_legacy_jp_id": 301,
+      "resolution": "current_officer_identity_translation",
+      "source_jp_utf16le_sha256": "78B4916A1B886C12F0FE6A9C642F0D662C42854F5FA7A6C59E3361350F65A651"
+    },
+    {
+      "id": 1584,
+      "ko": "오후지 노부모토",
+      "ko_utf16le_sha256": "56F82C8A937DBAA9FF3A9DE52A6FE4393185407BDD309A5C1D7433B43B98199A",
+      "legacy_source_jp_utf16le_sha256": "F66431DDBA42A1692566AC508271CD847126173CBDDEF4A33C8183A6126BF2CB",
+      "recovered_legacy_jp_id": 1584,
+      "resolution": "current_officer_identity_translation",
+      "source_jp_utf16le_sha256": "8254EA2F37A51B95D0FDD3FDA3E4828E81AED0C2C59A9D0C7293609FF172A6A8"
+    }
+  ],
+  "entry_count": 2,
+  "ids_sha256": "A05A17AA2555C40B799A487A253330672CDD566F12B3D67E1BCCD1A372C41E1F",
+  "overlay_id": "msgev_ko_steam_jp_wave08_j02_officer_names_2.v1",
+  "provenance": {
+    "existing_v1_overlay_preserved": true,
+    "mapping_method": "manual_current_jp_identity_translation",
+    "resolved_previous_unmapped_count": 2,
+    "sc_binary_used": false,
+    "sc_coordinate_used": false
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "schema": "nobu16.kr.steam-jp-common-message-wave08-delta.v1",
+  "source_rows_sha256": "AC53BA386F1405E304E1B28F22BAB599DEB8ACF01F6623F0B974394E6C27A2C5",
+  "stock_jp": {
+    "packed_sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+    "raw_sha256": "07D7512BE0235753FC7BB0C7C548B61F471D9CDED01379E63B8AF8EAE013813E",
+    "raw_size": 894800,
+    "size": 562226,
+    "string_count": 17916
+  }
+}

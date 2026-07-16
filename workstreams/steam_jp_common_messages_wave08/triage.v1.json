@@ -1,0 +1,151 @@
+{
+  "aggregate": {
+    "cause_counts": {
+      "credit_roster_revision": 1,
+      "internal_dummy_identifier_revision": 2,
+      "meaning_or_identity_revision": 6,
+      "previous_dummy_slot_now_semantic": 82,
+      "semantic_equivalent_source_revision": 5
+    },
+    "current_coordinates_sha256": "990A31E9C6A36391EC4D3946D7A4A8BD69622A488BCFA2AC23684A92B7995F82",
+    "legacy_unresolved_count": 96,
+    "nonsemantic_hold_count": 2,
+    "semantic_translation_count": 94
+  },
+  "base_language": "JP",
+  "batches": [
+    {
+      "batch_id": "j01_msgev_semantic_equivalent_reuse",
+      "cause_counts": {"semantic_equivalent_source_revision": 5},
+      "current_ids": [4370, 4640, 8839, 17361, 17689],
+      "current_ids_sha256": "36A9178D9EFE5E1A3B851CC2BE0B8AB9C4E133BC6893DF17D95E049B958690F3",
+      "legacy_ids": [4370, 4640, 8839, 17355, 17683],
+      "resource": "MSG_PK/JP/msgev.bin",
+      "semantic_entry_count": 5,
+      "source_rows_sha256": "DE48E3B783FE4B5191FB5E65032AA003C2B3489D232E7E526DBE35E4394FE8B6",
+      "status": "implemented",
+      "translation_action": "reuse_verified_korean"
+    },
+    {
+      "batch_id": "j02_msgev_officer_names",
+      "cause_counts": {"meaning_or_identity_revision": 2},
+      "current_ids": [301, 1584],
+      "current_ids_sha256": "A05A17AA2555C40B799A487A253330672CDD566F12B3D67E1BCCD1A372C41E1F",
+      "legacy_ids": [301, 1584],
+      "resource": "MSG_PK/JP/msgev.bin",
+      "semantic_entry_count": 2,
+      "source_rows_sha256": "AC53BA386F1405E304E1B28F22BAB599DEB8ACF01F6623F0B974394E6C27A2C5",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "translate"
+    },
+    {
+      "batch_id": "j03_msgev_event_and_era_titles",
+      "cause_counts": {"previous_dummy_slot_now_semantic": 31},
+      "current_ids": [13808, 13809, 13810, 13811, 13812, 13813, 13814, 13815, 13816, 13817, 13818, 13819, 13820, 13821, 13822, 13823, 13824, 13825, 13826, 13827, 13828, 13829, 13848, 13849, 13850, 13851, 13852, 13853, 13854, 13855, 13856],
+      "current_ids_sha256": "021E6FCE7B94C0B51566B2577DCD91F9652A51CDBE8B01B5CE69A0BFECEEED19",
+      "legacy_ids": [13808, 13809, 13810, 13811, 13812, 13813, 13814, 13815, 13816, 13817, 13818, 13819, 13820, 13821, 13822, 13823, 13824, 13825, 13826, 13827, 13828, 13829, 13848, 13849, 13850, 13851, 13852, 13853, 13854, 13855, 13856],
+      "resource": "MSG_PK/JP/msgev.bin",
+      "semantic_entry_count": 31,
+      "source_rows_sha256": "B62D9B7D9FA8084DE1DD158335359495492CCDC8DE5432EF1973C3A826548C8C",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "translate"
+    },
+    {
+      "batch_id": "j04_msgev_reading_keys",
+      "cause_counts": {"previous_dummy_slot_now_semantic": 31},
+      "current_ids": [14607, 14608, 14609, 14610, 14611, 14612, 14613, 14614, 14615, 14616, 14617, 14618, 14619, 14620, 14621, 14622, 14623, 14624, 14625, 14626, 14627, 14628, 14647, 14648, 14649, 14650, 14651, 14652, 14653, 14654, 14655],
+      "current_ids_sha256": "114859EB5BD2885EEED3B1E7C9D23A00B1E944B9B168A74D7642F07A447904D6",
+      "legacy_ids": [14607, 14608, 14609, 14610, 14611, 14612, 14613, 14614, 14615, 14616, 14617, 14618, 14619, 14620, 14621, 14622, 14623, 14624, 14625, 14626, 14627, 14628, 14647, 14648, 14649, 14650, 14651, 14652, 14653, 14654, 14655],
+      "resource": "MSG_PK/JP/msgev.bin",
+      "semantic_entry_count": 31,
+      "source_rows_sha256": "68F5C17C72083842031EB03861A253ABFB74EF9826CB3235B2C5079D9811C248",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "translate_as_korean_search_keys"
+    },
+    {
+      "batch_id": "hold_msgev_internal_dummy_labels",
+      "cause_counts": {"internal_dummy_identifier_revision": 2},
+      "current_ids": [15420, 16219],
+      "current_ids_sha256": "3991361617FB5C44728164B5F3219BB7186AA106F4BB59FC0830B4B204DAB9A0",
+      "legacy_ids": [15420, 16219],
+      "resource": "MSG_PK/JP/msgev.bin",
+      "semantic_entry_count": 0,
+      "source_rows_sha256": "45F242EF8F3867E0627BB93CC925B1EE4B239F7EE22EA3839895DBF8C465388D",
+      "status": "withheld_nonsemantic",
+      "translation_action": "hold"
+    },
+    {
+      "batch_id": "j05_msgdata_live_revisions",
+      "cause_counts": {"meaning_or_identity_revision": 4, "previous_dummy_slot_now_semantic": 2},
+      "current_ids": [15021, 22663, 23164, 25208, 25463, 25900],
+      "current_ids_sha256": "C83177BF2468E12B2AA62F75FDA3E50657A934548405AC9E3C1E2169BCAFB035",
+      "legacy_ids": [15017, 22655, 23156, 25200, 25455, 25892],
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "semantic_entry_count": 6,
+      "source_rows_sha256": "2444099BD0948840E866A13FEE364D0AE4A6E30D04C3E055E2304F6817C5EAFF",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "translate"
+    },
+    {
+      "batch_id": "j06_msgdata_legend_names",
+      "cause_counts": {"previous_dummy_slot_now_semantic": 6},
+      "current_ids": [26619, 26620, 26621, 26622, 26623, 26624],
+      "current_ids_sha256": "625F904E1457F57E8E20ACF7E70A5327F8260B9EFF730EFE160FF023556FD33B",
+      "legacy_ids": [26611, 26612, 26613, 26614, 26615, 26616],
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "semantic_entry_count": 6,
+      "source_rows_sha256": "436C9C45D4148F18FE8D3B1081B64538FFF508DAE8D1F048A87540EED0C51006",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "translate"
+    },
+    {
+      "batch_id": "j07_msgdata_legend_reading_keys",
+      "cause_counts": {"previous_dummy_slot_now_semantic": 6},
+      "current_ids": [26875, 26876, 26877, 26878, 26879, 26880],
+      "current_ids_sha256": "ACA9466582F76C301461A423FFD2AA56C359AE6A155C84A549D6172488A429FA",
+      "legacy_ids": [26867, 26868, 26869, 26870, 26871, 26872],
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "semantic_entry_count": 6,
+      "source_rows_sha256": "F6A1511A29AEB358BB4AC39CDB628F542B4F914F93F1864B018DA6FFE5F12B10",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "translate_as_korean_search_keys"
+    },
+    {
+      "batch_id": "j08_msgdata_legend_descriptions",
+      "cause_counts": {"previous_dummy_slot_now_semantic": 6},
+      "current_ids": [27131, 27132, 27133, 27134, 27135, 27136],
+      "current_ids_sha256": "BA15D8F86B7ADB5B300ABD8D2C8AAF9D103D753A9A1535593885ACBF6C82997F",
+      "legacy_ids": [27123, 27124, 27125, 27126, 27127, 27128],
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "semantic_entry_count": 6,
+      "source_rows_sha256": "1E1730D361591054DBBF66947B66841526DFF2A0D12505486E9713D367DB87A9",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "translate"
+    },
+    {
+      "batch_id": "j09_msgstf_credit_update",
+      "cause_counts": {"credit_roster_revision": 1},
+      "current_ids": [7],
+      "current_ids_sha256": "589FFD3ACF522AE81192579F297589E93B0C41F748B224D1B4BB5C857A2F70CB",
+      "legacy_ids": [7],
+      "resource": "MSG_PK/JP/msgstf.bin",
+      "semantic_entry_count": 1,
+      "source_rows_sha256": "D872D8FB9C4CC2A87F14E75EBD97AF8F512837D9E22C44FB35AB1C095F924E91",
+      "status": "ready_for_parallel_translation",
+      "translation_action": "update_existing_credit_translation"
+    }
+  ],
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "provenance": {
+    "current_stock": "Steam PK 1.1.7 build 18823764 JP",
+    "legacy_unresolved_review": "workstreams/steam_jp_common_messages_v1/review/steam_jp_common_message_unmapped.v1.json",
+    "legacy_unresolved_review_sha256": "1A62B907F85011A5EE2E78CCE20562C2EF718BE105EE2C90C9683C94BBB61B82",
+    "mapping_method": "ordered_hash_diff_opcode_manual_semantic_triage",
+    "sc_binary_used": false,
+    "sc_coordinate_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-common-message-wave08-triage.v1"
+}

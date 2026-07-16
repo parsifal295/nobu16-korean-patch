@@ -1,0 +1,39 @@
+{
+  "expected": {
+    "baseline_candidate": {
+      "sha256": "D05A585826F116180D81E06CBE7BF136CE67B98B76380A8DC6308F3868A1F9B9",
+      "size": 492714
+    },
+    "candidate": {
+      "raw_sha256": "885E9C197007188437B23F96D2CBB8948C27EEE04DBE0231935DA087B515D1D5",
+      "raw_size": 490788,
+      "sha256": "692082DAFD3D177F6A49287BEEC161185F55874B73206C0C7230F17F96EA95CE",
+      "size": 492738
+    },
+    "overlay": {
+      "sha256": "EAA6F7564C4C3CC74410F18DA32AC0484204ADC0C67E2B2C2A3192F8687E2184",
+      "size": 3402
+    }
+  },
+  "proofs": {
+    "baseline_v1_preserved": true,
+    "deterministic_ab_equal": true,
+    "format_invariants_preserved": true,
+    "id_domain_preserved": true,
+    "non_delta_texts_preserved": true,
+    "source_hashes_fail_closed": true,
+    "wrapper_prefix_preserved": true
+  },
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "official_multilingual_reference_is_build_dependency": false,
+    "pristine_jp_input_read_only": true
+  },
+  "schema": "nobu16.kr.steam-jp-common-message-wave08-j05-validation.v1",
+  "translation": {
+    "delta_applied_count": 6,
+    "remaining_legacy_unresolved_count": 90,
+    "total_common_applied_count": 39513
+  }
+}

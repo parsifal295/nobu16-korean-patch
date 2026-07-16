@@ -1,0 +1,54 @@
+{
+  "expected": {
+    "candidate": {
+      "packed_sha256": "72A81DABBDD5BC596356CF4F457B2235E439B2D27BD2FB00546842606531CE44",
+      "packed_size": 647418,
+      "raw_sha256": "CAA61791F205A1FD3F3DB8FBEB479F2C6551104B7884AF663D4F23FF19542A93",
+      "raw_size": 1490068
+    },
+    "overlay": {
+      "sha256": "7239714BC8D6E66005A903E128291C57111A2995C3C0EDFA6AB8BEBC77B02175",
+      "size": 7829108
+    },
+    "stock": {
+      "block_count": 18,
+      "literal_count": 24262,
+      "packed_sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+      "packed_size": 610163,
+      "raw_sha256": "353010B59A3E04BFE5541162229C1CFCAD181EF0E75FCC9B6DE2043BFC515F38",
+      "raw_size": 1337548,
+      "record_count": 19152
+    }
+  },
+  "proofs": {
+    "base_switch_coordinate_sets_equal": true,
+    "deterministic_ab_equal": true,
+    "entry_contract_sha256": "8BBBD9AD28AEB38F5E9DAD2E7E2ABF18957FB178376BE61BD6C2C8D07B07A0B2",
+    "entry_coordinate_sha256": "4AD107EEC33B1DB759B2546F59C65566E94EFBE0AB24C5F1C89BBE36D25AD803",
+    "non_selected_literals_preserved": true,
+    "normalized_structure_sha256": "06DE8E4A0007E21C1479589C94D259ADD6A8A8E5BF91D5C0CC3BE92EA8BC019D",
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG/JP/msggame.bin",
+  "runtime": {
+    "steam_build_id": 18823764,
+    "version": "1.1.7"
+  },
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "source_text_embedded": false
+  },
+  "schema": "nobu16.kr.base-msggame-jp-switch-v13-exact-validation.v1",
+  "status": "PASS",
+  "translation": {
+    "eligible_switch_v13_exact_literals": 22924,
+    "map_tutorial_anchor_coordinate": [
+      13,
+      217,
+      0
+    ],
+    "map_tutorial_anchor_included": true
+  }
+}

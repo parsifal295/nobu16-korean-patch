@@ -1,0 +1,58 @@
+{
+  "expected": {
+    "candidate": {
+      "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+      "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+      "raw_size": 1036708,
+      "sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+      "size": 1040799,
+      "string_count": 17916
+    },
+    "overlay": {
+      "sha256": "CB1B83E707993F65772A5B1203A0888C4E88067533526F73A5C108D6A539788A",
+      "size": 41311
+    },
+    "trace": {
+      "sha256": "65FEBDCB583AC4DCEB35976C1B614E055D62F5297373957477C152258259B879",
+      "size": 33950
+    },
+    "wave08_baseline": {
+      "packed_sha256": "39E8FEE6C4A7F1EB5018F01FB9446C9866E85BF13509C2CE099849E7AA3AAECD",
+      "raw_sha256": "E1D78EBEDC2B6C42036D2D967CF7A83C0703DAA6B477D333F516EE476626C033",
+      "raw_size": 1035840,
+      "sha256": "39E8FEE6C4A7F1EB5018F01FB9446C9866E85BF13509C2CE099849E7AA3AAECD",
+      "size": 1039928,
+      "string_count": 17916
+    }
+  },
+  "proofs": {
+    "deterministic_ab_equal": true,
+    "existing_coordinate_overlap_checked": true,
+    "format_invariants_preserved": true,
+    "id_domain_preserved": true,
+    "non_target_texts_preserved": true,
+    "opaque_non_string_metadata_preserved": true,
+    "pristine_jp_hashes_fail_closed": true,
+    "wave08_baseline_hashes_fail_closed": true,
+    "wrapper_prefix_preserved": true
+  },
+  "safety": {
+    "complete_candidate_binaries_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "sc_runtime_path_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgev-residual-wave09-validation.v1",
+  "status": "PASS",
+  "target": {
+    "base_language": "JP",
+    "resource": "MSG_PK/JP/msgev.bin",
+    "steam_version": "1.1.7"
+  },
+  "translation": {
+    "event_label_delta_count": 16,
+    "event_story_delta_count": 50,
+    "target_ids_sha256": "ACF81701ED58889837F38211CD91691B58795D0A9E3C2F9151F3748E473E047E",
+    "total_delta_count": 66
+  }
+}
