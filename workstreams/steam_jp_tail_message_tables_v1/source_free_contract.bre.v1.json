@@ -1,0 +1,56 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167",
+    "packed_size": 478527,
+    "raw_sha256": "D4B1BAB427E93FD7049BBFCA86376EFBE44454B53EFADAE81A703BC67B8C11A5",
+    "raw_size": 476632,
+    "string_count": 3000
+  },
+  "audit_bundle": {
+    "coordinate_sha256": "231487657C5CDD301217A96F5F9B5BA6286A459D36713E5B839AC706A8EADE7C",
+    "entry_ids": [
+      1950
+    ]
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "expected_candidate": {
+    "packed_sha256": "CFE3BBDFBC5015685BBBC972B0E57E47AEF326C7FF38328E68BA9C45E197CA6F",
+    "packed_size": 478595,
+    "raw_sha256": "B92537F7A6DDFA646535FF88F98E2FDE53BE6FDB3A726FEF0FEFB41A98ACBC95",
+    "raw_size": 476700,
+    "string_count": 3000
+  },
+  "output_policy": {
+    "allowed_root": "tmp",
+    "complete_candidate_private_only": true,
+    "relative_path": "MSG_PK/JP/msgbre.bin"
+  },
+  "overlay": {
+    "entry_count": 1,
+    "relative_path": "workstreams/steam_jp_tail_message_tables_v1/public/msgbre_ko_pk_jp_tail_1.v1.json",
+    "sha256": "51DED2A726DA27ACA65EF40E66AA8BB6DE20F24FE0B5D494438060BE050116D0"
+  },
+  "proofs": {
+    "active_v6_baseline_pinned": true,
+    "catalog_reuse_exact_source_hash_only": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "format_and_token_profile_preserved": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "steam_installation_read_only": true
+  },
+  "resource": "MSG_PK/JP/msgbre.bin",
+  "runtime_route": {
+    "installed_game_file_written": false,
+    "language": "JP",
+    "sc_container_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-tail-bre-contract.v1",
+  "source_free": true,
+  "validation": {
+    "relative_path": "workstreams/steam_jp_tail_message_tables_v1/validation/bre.v1.json",
+    "sha256": "26B64A93F761F8E9A57BD97DCD862A1DFB43CA2B14E6A2322300FB2CEC6EA0F7"
+  }
+}

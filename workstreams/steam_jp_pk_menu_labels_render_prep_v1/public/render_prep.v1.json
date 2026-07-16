@@ -1,0 +1,836 @@
+{
+  "audit_pins": {
+    "catalog": "515E6EDDC98479E2ADA3F20FC6458C20F3520837875E13F757DCCF476D9E046E",
+    "manifest": "3B3C8E6B74B4A77803E413F938A25C79FB5C35CC8C7B7DBA4CB43EC7B838CB61",
+    "report": "2C6A7500EB4BE0D086BAB0461399F84C7D1B3B80C5E323450D064424E6D63FA9"
+  },
+  "baseline": {
+    "jp_outer_18_sha256": "BCECE33A8EEFFCA19EB2C11DB5C289E89472B85682AD1F8281D100966189F515",
+    "jp_resource": {
+      "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08",
+      "size": 141746742
+    },
+    "steam_game_version": "1.1.7"
+  },
+  "confirmed_wording_count": 40,
+  "pc_native_renderer": {
+    "font_cell_pixels": 48,
+    "font_outer_entry": 16,
+    "font_resource": "RES_JP_PK/res_lang_pk.bin",
+    "font_table": 0,
+    "glyph_coverage_verified": true,
+    "pixel_source": "PC-native rendered Korean only; Switch pixels prohibited"
+  },
+  "schema": "nobu16.kr.steam-jp-pk-menu-label-render-prep.v1",
+  "scope": {
+    "candidate_generation_enabled": false,
+    "excluded_families": [
+      "product_logo",
+      "title_screen_art",
+      "brand_art",
+      "historical_title_cards"
+    ],
+    "excluded_outer_entries": [
+      3,
+      24
+    ],
+    "game_install_write_allowed": false,
+    "git_release_github_write_allowed": false,
+    "resource": "RES_JP_PK/res_lang_pk.bin",
+    "selected_slots": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "switch_pixel_copy_allowed": false,
+    "target_outer_entry": 18
+  },
+  "slot_count": 43,
+  "slots": [
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "E4B6BD7BD4999AA99E659A024EABDC31358EF4B9C70365053E9EDEF6B8AE7CBE",
+      "proposed_ko_utf16le_sha256": "79B3A1031ECE889F971094D6769431C732AEFDBBD35940A36917251D11340E7D",
+      "runtime_trace_status": "missing",
+      "slot": 0,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "korean_wording_review_required",
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "E273FD217403C69824E4BA43ABA67677360BF0B0B1B87347BDBD0FCA2C5EE76D",
+      "proposed_ko_utf16le_sha256": "F28F3127AB9D7E0DA3EEADDF836D0810A54268857886D6325F759BB459556FD2",
+      "runtime_trace_status": "missing",
+      "slot": 1,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "term_review_needed"
+    },
+    {
+      "candidate_blockers": [
+        "korean_wording_review_required",
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "71B86C9E6D1CBFAAB1913E5573EB1AD3A70A74D468837481940AB9D481A97C53",
+      "proposed_ko_utf16le_sha256": "2977F1A001004EA4083FAB5BE82A50CF02883318E54481FFDB1562DDDACFD274",
+      "runtime_trace_status": "missing",
+      "slot": 2,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "term_review_needed"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "C564BA31470A85B21DAC169D4A1154DFC54C7C4BD86C791B880189B6DC88A6E5",
+      "proposed_ko_utf16le_sha256": "B298176F15DAC1F139C60260B6F735B7CCD56E28168CB28A21588BF2586A9EF9",
+      "runtime_trace_status": "missing",
+      "slot": 3,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "7A6940432FC305DBAB4C0A31E616FF0B482A6D16F455DC85645C857B194B0209",
+      "proposed_ko_utf16le_sha256": "E9514A0911D82435CEE108BA029B67EA051F32C2F509C5B921732EF50DDA8656",
+      "runtime_trace_status": "missing",
+      "slot": 4,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "1FF37715625D3C42BCD83AA63E0AFB62134745E8CD7794488DE069E9ACACE3B5",
+      "proposed_ko_utf16le_sha256": "8307F674C1CED94F5EABC126DEF9098EFED2829E02C62518D9A6477EADA1193A",
+      "runtime_trace_status": "missing",
+      "slot": 5,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "3A4520368DE691A2074059F47263099CF48743C494B610268F8410B701D8F1D5",
+      "proposed_ko_utf16le_sha256": "3BD8268B1877E25A4F22CCC7C57A9FEDEEC3B8638756AF4A64838D2A1FB287E3",
+      "runtime_trace_status": "missing",
+      "slot": 6,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "28C2BD987EB118BBD121806D68FAFB1A77A6D45E3F36E511FD8EFBD4437D93CB",
+      "proposed_ko_utf16le_sha256": "36954F61FE4FAFD53957326EFD6666B9A303A5C8225DE9DB667A826050D6233C",
+      "runtime_trace_status": "missing",
+      "slot": 7,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "E85A7FE9DD0BD99C5C3EA888ABD4FCA51FC85972963F7C0871710EC53961CA63",
+      "proposed_ko_utf16le_sha256": "B03371A4C3B0C93AB844AB93F99A4475395D964D2FF059B46B3E1E47F3176C95",
+      "runtime_trace_status": "missing",
+      "slot": 8,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "E143814DB0321CAF9DF98BE0B41037904A38D55BD116CC1BA5A1CEBA1374FE14",
+      "proposed_ko_utf16le_sha256": "C2DCB7766571E9E9DEF115DFA9DF06B243A11F17F8CF2A03366724970742DE29",
+      "runtime_trace_status": "missing",
+      "slot": 9,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "ADF66BDE4AAD31135DEC10AD68146F6F4F672DF6BD38666643D944FC018B7ADA",
+      "proposed_ko_utf16le_sha256": "3578B257D7B60A664ED5BC9B1680D24AF5385A754ABF633E5FB91EE42732B6EA",
+      "runtime_trace_status": "missing",
+      "slot": 10,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "E42F4A240B4DE615364308639C375095F2CC56C3944781AFC91FE6187EDB3771",
+      "proposed_ko_utf16le_sha256": "F89AAE10B857827521DECAD94C41782966551F4EB5B536E5CAE944A8A0986F87",
+      "runtime_trace_status": "missing",
+      "slot": 11,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "3D9ACFB2E335A615F95459299039FC974C937A5864456A0E9018A9923EABBDE4",
+      "proposed_ko_utf16le_sha256": "A6963CA767C8007030AC6C25DB144220025B9C33A983B255E5D093FCB100D31F",
+      "runtime_trace_status": "missing",
+      "slot": 12,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "99D1B693BE3DBF9D1158D68341986549242585E3632A6BCFE5F6A1D2B77DCBFE",
+      "proposed_ko_utf16le_sha256": "B49FD97B14727F025E53F38F592F6D76F7A71F834D6AD47737DBFE1732165F8D",
+      "runtime_trace_status": "missing",
+      "slot": 13,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "A2FAB2F069942CA2B99530064AC4001C1CD9C99B8433A3EC9DF4C146585905D7",
+      "proposed_ko_utf16le_sha256": "A08E1A11AA315C51BFD1537CFFF6BB9FA7C92984AF32ECCE2658D0E6320C3ECC",
+      "runtime_trace_status": "missing",
+      "slot": 14,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "89A23C990167EA2BEE42457E65E68EFE46CEB3B93AFDB4DB961CE99AC03E6ECE",
+      "proposed_ko_utf16le_sha256": "065295D6923FC339BB06B7CA371BDE55013D25F5BD55897BA505FA9AE747E68D",
+      "runtime_trace_status": "missing",
+      "slot": 15,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "E82FCB714FD0D27B48D3656D443A186A713D23033B84BBE4E8463C9102342D64",
+      "proposed_ko_utf16le_sha256": "0DD0A2C8B0D4322CB94A08047CFBF6B331FED44DC00840E0D941B08EBE237557",
+      "runtime_trace_status": "missing",
+      "slot": 16,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "58ABA268586DCFD491D1D0478CAB77F36BAF5BF4DD9C07F5820B2989EEB77090",
+      "proposed_ko_utf16le_sha256": "D00EB66A540000BA6BA2442EE83AAC6B5F1CC89E90F0C8F8F4C8B9BA4A4EA465",
+      "runtime_trace_status": "missing",
+      "slot": 17,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "326C03579660EC3397F11C80E82139BDA6842FECD1FC80817270E0C2BEE4A37B",
+      "proposed_ko_utf16le_sha256": "E2D597BB917601C7F90EA1E630DF74E2C9E63CB2E6AB8046710259FBF8C33721",
+      "runtime_trace_status": "missing",
+      "slot": 18,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "korean_wording_review_required",
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "61082B463DCFB66307606AFDA144E3FAA505E63809E7A8BB1A8B79493D190E38",
+      "proposed_ko_utf16le_sha256": "25A1D03B46B34CAF2930492914205F84F87417B2B2E32C79E82A4162951A25A9",
+      "runtime_trace_status": "missing",
+      "slot": 19,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "term_review_needed"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "93E9C14A7420BC52028F1003FFF9944F85B53E9715637E73052A4FF3A72F0B27",
+      "proposed_ko_utf16le_sha256": "A251DBDECB6759656E1878D3D85410C2CEA13FBD77D37C611517DE45053A29EF",
+      "runtime_trace_status": "missing",
+      "slot": 20,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "C29E0A806132ECB674324F446A9A2539CB25281F43BEC29E9E09BA312AE84989",
+      "proposed_ko_utf16le_sha256": "3450D493FD11B27F73DEF3F2F282F2319DD8CEC7CEF1B32430FEBF7979A43328",
+      "runtime_trace_status": "missing",
+      "slot": 21,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "81B9AFCE27D2043FB75B22811288A9C553A3863D4E005F7910422CB07966BCCF",
+      "proposed_ko_utf16le_sha256": "A92637B01D6BA91744E6356953E592AB2C938C79AA72BA9E4E9321ECBC9A2B3B",
+      "runtime_trace_status": "missing",
+      "slot": 22,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "A79B2DCD4EEAF32027B790FE636E85944EB1EA78AEFA028BAF9A13D02D5DA151",
+      "proposed_ko_utf16le_sha256": "2D7E13A29D6A37701FBAE9F23CDF219D681384B52097076FC4140C7824124627",
+      "runtime_trace_status": "missing",
+      "slot": 23,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "913C030B977CBFE20EDFC050C233CF6DE8D695F1AEF0B43305E58D22AA62D108",
+      "proposed_ko_utf16le_sha256": "340E81EE59EBFFCCAC16D24395E028CC4260F1AF2DEF2EFCAA2E4790B7239137",
+      "runtime_trace_status": "missing",
+      "slot": 24,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "2B696F191DC19A7D781750A777A771685B15FEAA435593F469ECED95AA0ED507",
+      "proposed_ko_utf16le_sha256": "530CE1B0718AC484DBA9991B5BA187F41B11E357D4DE00187F957857D16A5A69",
+      "runtime_trace_status": "missing",
+      "slot": 25,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "D32E6362BA1E8E9D8FB66171179A1FEC418073F47E06F08143FC5D6B7319C9BF",
+      "proposed_ko_utf16le_sha256": "7B457FF57B70914017F8B08BA819ABF29119024FFC4A9FEA046E37FAB2FEA1F8",
+      "runtime_trace_status": "missing",
+      "slot": 26,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "4DF15D50081C9F0707595A2F4380F1DE4AE8670261EFBA4DFCDFD033D3E13A89",
+      "proposed_ko_utf16le_sha256": "97B10C9B786DE344D892B13AB2AE42F7DF7D7C597C81ECE2B101165A699F495F",
+      "runtime_trace_status": "missing",
+      "slot": 27,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "1FAF68BE78C3E730E03FEE23AA0D10BA28DD38658FBBB1F33DEB02123E9E493C",
+      "proposed_ko_utf16le_sha256": "35E7E2CE9315EC58157B6869FA7FA45B4B4925021D53D2EBC47AB53536A8BDA6",
+      "runtime_trace_status": "missing",
+      "slot": 28,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "D3A68560AD28289BC6AA08C91DAF0AA1C20FA5BBDB03CDFF5661A57779955C6C",
+      "proposed_ko_utf16le_sha256": "699683138DDC7D4C8470CDE4E79F95492F422C84B321D517E2528E5D4A4A3E34",
+      "runtime_trace_status": "missing",
+      "slot": 29,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "93853D1006287CCAA6F99E4835023F8B08D1315C11BF76923D7EF702C07C8CC1",
+      "proposed_ko_utf16le_sha256": "236105317B5EDB2769CAC8C85381E42C19A3E63203D7F5D5A99329C86D84F2B2",
+      "runtime_trace_status": "missing",
+      "slot": 30,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "C2DD3A0AA5FD0C284B4B338345EFFBB9F6F6E23B1CB38C44A222BF93C798F584",
+      "proposed_ko_utf16le_sha256": "B3E8546C12FEBE56A24C7152979E8459B904F7CAF981C89728178EFD585FB107",
+      "runtime_trace_status": "missing",
+      "slot": 31,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "25B2EAC7D03B7E7834E26B83D8DA26F23E83D3DB064D6BCA9E4FB3EE8C16A2DA",
+      "proposed_ko_utf16le_sha256": "9C2F6F798BAE2CFB9C2587B81D6669B8A6E283260D10853655091FF1312630A2",
+      "runtime_trace_status": "missing",
+      "slot": 32,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "656692380C20BD2EF8264C8AED5C63218418DFF0E88BB89D7C09854BCC0B2456",
+      "proposed_ko_utf16le_sha256": "0281D375405691F8E63B72D36A04976631E002C1D2A558FEF84B6488032A5241",
+      "runtime_trace_status": "missing",
+      "slot": 33,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "ADEC01460E3978A55C5EA94B99C1FC5D67004BE6E2D2D0C8C445E46FF6ED6030",
+      "proposed_ko_utf16le_sha256": "5DA86761CCDE26B3381EFDD490B94DA81F730301EAAFE51EA6DE645628465AE6",
+      "runtime_trace_status": "missing",
+      "slot": 34,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "FC3D3E786CC46FF5F6388807DE7DB2C3A2E57891C8063267890003B335DF745C",
+      "proposed_ko_utf16le_sha256": "93582599FB0A30F48ABCF2B6EF541B763494C3E49ABAF38AA805E88BE5EB6B94",
+      "runtime_trace_status": "missing",
+      "slot": 35,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "F6C8C682A3C132771055E69E8A4554CD8DCD3290A3BB79E3ADC13726F0C803AE",
+      "proposed_ko_utf16le_sha256": "303C2AE9522E46D93DA73D1848F3A59F280059B99CACAAC0BA588D67260235B8",
+      "runtime_trace_status": "missing",
+      "slot": 36,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "068A2965FEDFEF779EE93660889A620D17023382CE2A24E4B9725213A08BEC11",
+      "proposed_ko_utf16le_sha256": "1FD4C2B2A85277EE6ED8D3AB0520BF2872254CE00B28FB8D6D90F02B32521F97",
+      "runtime_trace_status": "missing",
+      "slot": 37,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "17940BF8B6CADAA09C096F9D4C684065530B57EB973EBABC022B000CC1A18DAC",
+      "proposed_ko_utf16le_sha256": "EAB85C9345B5C6D6FAF4CC3BC70EB0D441055990BBFC99DB846037DA0289D6B8",
+      "runtime_trace_status": "missing",
+      "slot": 38,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "334F33AAA69F6CAB0E96B322DD1F3D8DE1F2C1133D1A5CAF79E80ADB65F7228C",
+      "proposed_ko_utf16le_sha256": "5F74BC42AB49B77AC2D5199F5C8C3807CCA1774504821FB5608D0AFB7C1868F8",
+      "runtime_trace_status": "missing",
+      "slot": 39,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "C04CBBF46060E4F7920099DECFDE55728DA8764A5BDF88D9408238976F17237E",
+      "proposed_ko_utf16le_sha256": "E8D649B15A925413E1E9249979D6A32BDD1945ACA0AA8B01399680D012D3D1E9",
+      "runtime_trace_status": "missing",
+      "slot": 40,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "A30395D6E382B1235EB3192EE892A34F6F0C749C882E422F002551668D67431F",
+      "proposed_ko_utf16le_sha256": "050FE5647C59908C6BBE4FDB95DDEE34D4F86FD1E65A51E6B1FBA01E9ECADA80",
+      "runtime_trace_status": "missing",
+      "slot": 41,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    },
+    {
+      "candidate_blockers": [
+        "runtime_screen_trace_missing",
+        "text_rectangle_qa_missing"
+      ],
+      "candidate_eligible": false,
+      "dimensions": [
+        512,
+        128
+      ],
+      "input_payload_sha256": "87F51837110BE7B16B5E3AD8166756C5A11C15332025B13347215E5BA8E81B8F",
+      "proposed_ko_utf16le_sha256": "DA933CA699C6D01A764F65E157AE8122DFB204411672C57DAD29BC3E998288E0",
+      "runtime_trace_status": "missing",
+      "slot": 42,
+      "text_rectangle_qa_status": "missing",
+      "wording_status": "confirmed_term"
+    }
+  ],
+  "source_free_guarantees": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_plaintext_korean_output": false,
+    "contains_switch_pixels": false
+  },
+  "wording_review_required_slots": [
+    1,
+    2,
+    19
+  ]
+}

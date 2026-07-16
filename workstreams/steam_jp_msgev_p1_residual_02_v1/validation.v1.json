@@ -1,0 +1,50 @@
+{
+  "active_v6_baseline": {
+    "packed_sha256": "A8835C3520B29A076A21014E17B17D7AAABF4AC99D37D65C891415AC17BBF3F5",
+    "packed_size": 1040799,
+    "raw_sha256": "6D87086EA6B533EAB3F3745DB7564E8D7842E7DD603AD765B2D6D900644E00FB",
+    "raw_size": 1036708,
+    "string_count": 17916
+  },
+  "audit_bundle_id": "p1-MSG_PK_JP_msgev-02",
+  "checks": {
+    "active_v6_baseline_pinned": true,
+    "audit_coordinate_scope_exact": true,
+    "base_ev_reuse_count": 182,
+    "base_ev_reuse_requires_exact_source_hash": true,
+    "deterministic_raw_and_packed_rebuild": true,
+    "format_and_token_profile_preserved": true,
+    "github_written": false,
+    "manual_korean_ids_exact": [
+      7828,
+      7841,
+      7918
+    ],
+    "nonselected_utf16le_payloads_preserved": true,
+    "parser_roundtrip_valid": true,
+    "per_entry_jp_source_hash_gated": true,
+    "release_asset_written": false,
+    "residual_01_coordinate_overlap": false,
+    "sc_container_used": false,
+    "steam_installation_written": false
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "coordinate_sha256": "69FE48161322FBDF99CC5AB9660CAC3438B43FB0B90443038750A02E47ADAAFC",
+  "effective_change_coordinate_sha256": "69FE48161322FBDF99CC5AB9660CAC3438B43FB0B90443038750A02E47ADAAFC",
+  "effective_change_count": 185,
+  "entry_count": 185,
+  "expected_candidate": {
+    "packed_sha256": "332BCAD3AAE5C05FD8E52D39A29763988C3236242AC4261AE6E503184A2307DD",
+    "packed_size": 1044361,
+    "raw_sha256": "5FAE66DA5D19D931BA7A9FFDB3CD20146B24258BED505757F50060881E98B5BD",
+    "raw_size": 1040256,
+    "string_count": 17916
+  },
+  "manual_coordinate_sha256": "F8604FEBAA1302FE221D4E3FFC33FDDD4D19EDF24A65BE25AAF353AB67760EAC",
+  "manual_count": 3,
+  "resource": "MSG_PK/JP/msgev.bin",
+  "reuse_count": 182,
+  "schema": "nobu16.kr.steam-jp-msgev-p1-residual-02-validation.v1",
+  "source_free": true
+}

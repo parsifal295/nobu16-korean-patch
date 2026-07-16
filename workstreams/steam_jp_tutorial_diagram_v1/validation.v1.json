@@ -1,0 +1,25 @@
+{
+  "schema": "nobu16.kr.steam-jp-tutorial-diagram.validation.v1",
+  "file_only": true,
+  "game_install_modified": false,
+  "candidate_output": "private_tmp_only",
+  "target": {
+    "resource": "RES_JP/res_lang.bin",
+    "outer_entry": 16,
+    "nested_slot": 0,
+    "texture": 0
+  },
+  "excluded_outer_entries": [3, 24],
+  "baseline": {
+    "steam_build": "1.1.7",
+    "size": 154216023,
+    "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0"
+  },
+  "source_policy": {
+    "switch_decoded_reference_only": true,
+    "switch_link_lz4_g1t_bc3_or_archive_copy": false,
+    "pc_native_g1t_bc3_rebuild": true,
+    "non_target_outer_entries_byte_identical": true
+  },
+  "release_status": "not_authorized"
+}

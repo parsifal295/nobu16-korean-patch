@@ -1,0 +1,98 @@
+{
+  "schema": "nobu16.kr.steam-jp-pk-menu-labels-audit.v1",
+  "scope": {
+    "platform": "Steam PC Japanese route",
+    "steam_game_version": "1.1.7",
+    "target_resource": "RES_JP_PK/res_lang_pk.bin",
+    "target_outer_entry": 18,
+    "target_kind": "non-logo PK menu/content labels",
+    "excluded_outer_entries": [
+      3,
+      24
+    ],
+    "excluded_families": [
+      "product_logo",
+      "title_screen_art",
+      "brand_art",
+      "historical_title_cards"
+    ],
+    "game_install_write_allowed": false,
+    "git_or_release_write_allowed": false,
+    "candidate_generation_enabled": false
+  },
+  "inputs": {
+    "jp": {
+      "relative_path": "RES_JP_PK/res_lang_pk.bin",
+      "size": 141746742,
+      "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08"
+    },
+    "en": {
+      "relative_path": "RES_EN_PK/res_lang_pk.bin",
+      "size": 126334241,
+      "sha256": "BA26D0E66EBF427F9A1BDDEFABF0558092E8869424BF154D4C3A13D795640B9D"
+    },
+    "sc": {
+      "relative_path": "RES_SC_PK/res_lang_pk.bin",
+      "size": 124951301,
+      "sha256": "64819DA065F99AB73E0FB92EEE4D968182E7B5AC4B5A17F88A1FA10695D7131F"
+    },
+    "tc": {
+      "relative_path": "RES_TC_PK/res_lang_pk.bin",
+      "size": 125095591,
+      "sha256": "19C0149A7B4F9A5CA2672F61D4D8F3C3674FC343E33AEF3E4E1ED04BAFDC5B7B"
+    }
+  },
+  "structure_contract": {
+    "outer_entry_count": 27,
+    "nested_slot_count": 43,
+    "g1t_texture_count_per_slot": 1,
+    "g1t_platform": 10,
+    "format_code": "0x5B",
+    "format_name": "BC3/DXT5",
+    "dimensions": [
+      512,
+      128
+    ],
+    "mip_count": 1
+  },
+  "switch_v2_reference": {
+    "available": false,
+    "reason": "Public Switch v2.x package has RES_JP/res_lang.bin only and does not contain RES_JP_PK/res_lang_pk.bin.",
+    "whole_resource_copy_allowed": false,
+    "pixel_copy_allowed": false
+  },
+  "next_candidate_gate": {
+    "status": "audit_ready_not_candidate",
+    "candidate_builder_behavior": "hard_disabled",
+    "required_evidence": [
+      "slot-to-screen runtime trace",
+      "non-logo/non-title classification for each selected slot",
+      "approved Korean wording",
+      "PC-native text-only rectangle and background preservation proof",
+      "private candidate re-extraction and visual QA"
+    ]
+  },
+  "audit_outcome": {
+    "private_multilanguage_atlas_reviewed": true,
+    "all_43_slots_are_logo_free_ui_or_editor_labels": true,
+    "slot_catalog": "catalog.v1.json",
+    "pc_native_background_donor": "Each JP /18 texture is a transparent label canvas; no button gradient, frame, logo, or title art is present in the reviewed 43 slots.",
+    "active_korean_glyph_donor": {
+      "resource": "RES_JP_PK/res_lang_pk.bin",
+      "outer_entry": 16,
+      "table": 0,
+      "cell_pixels": 48,
+      "required_catalog_codepoints_covered": true,
+      "verification_mode": "read-only G1N mapping probe against the pinned JP input"
+    },
+    "implementation_feasibility": "yes_after_per-slot_runtime_trace_and_private_render_QA",
+    "not_a_switch_pixel_port": true
+  },
+  "source_free_guarantees": {
+    "committed_game_archives": false,
+    "committed_g1t_or_texture_bytes": false,
+    "committed_decoded_images": false,
+    "committed_switch_payload_bytes": false,
+    "metadata_only": true
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "candidate_policy": {
+    "existing_pc_pixels_use_pc_ink_bbox_crop_and_row_pack": true,
+    "game_apply_or_release_completed": false,
+    "missing_pc_glyphs_use_official_seoulhangang_raster": true,
+    "non_space_blank_or_ink_clipping_fails_closed": true,
+    "space_is_the_only_permitted_blank_glyph": true,
+    "switch_pixels_are_not_copied": true
+  },
+  "inputs": {
+    "steam_jp_res_lang": {
+      "logical_path": "RES_JP/res_lang.bin",
+      "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0",
+      "size": 154216023
+    },
+    "switch_v22_zip": {
+      "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+      "name": "NobunagaShinsei_KoreanPatch_v2.2.zip",
+      "res_lang_sha256": "F179D9A89A7D20B51E26681208CA7186BDD1DC6B2F09FAF9CA8154B35933557F",
+      "res_lang_size": 85548771,
+      "sha256": "5E6354069E38BE22E3B3C9272A6CEC8A4B4110DF2486B9A63E84D1058C35D7F7",
+      "size": 83752794
+    },
+    "switch_v23_zip": {
+      "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+      "name": "NobunagaShinsei_KoreanPatch_v2.3.zip",
+      "res_lang_sha256": "20A548D544BEB40A45359914777DB7467F6D319078CE43BC566F0BBD6D64F9FB",
+      "res_lang_size": 85531410,
+      "sha256": "A085B5D7F661786CF8E6568A36CF24E7BE1ADF81D042FF8C3D2E220D46A09388",
+      "size": 83756574
+    }
+  },
+  "installed_game_files_modified": false,
+  "optimized_codepoints": {
+    "compatibility_jamo_count": 51,
+    "count": 2405,
+    "hangul_syllable_count": 2353,
+    "sha256": "FD1338F53F1AB1B634496C65CA5AED5F5D182C2731B6A32E4AE1366A6030848D",
+    "space_count": 1
+  },
+  "pc_current_coverage_per_table": {
+    "missing": 1152,
+    "missing_compatibility_jamo": 50,
+    "missing_hangul_syllables": 1102,
+    "present": 1253,
+    "record_capacity_remaining_minimum": 57163
+  },
+  "public_source_free": true,
+  "schema": "nobu16.kr.steam-jp-font-advance-audit.v1",
+  "switch_archive_raw_copy": false,
+  "switch_pixels_copied": false,
+  "switch_v22_to_v23": {
+    "changed_outer_entries": [
+      6,
+      7
+    ],
+    "outer_6": {
+      "cell_hierarchy": [
+        48,
+        48,
+        48
+      ],
+      "changed_atlas_bytes": 2492553,
+      "changed_records": [
+        2405,
+        2405,
+        0
+      ],
+      "map_bytes_exact": true,
+      "pointer_bytes_exact": true,
+      "repack_contract": "every changed allocation is a glyph-specific horizontal crop followed by row-pack; unused allocation tail is zeroed"
+    },
+    "outer_7": {
+      "cell_hierarchy": [
+        24,
+        32,
+        32
+      ],
+      "changed_atlas_bytes": 374665,
+      "changed_records": [
+        2405,
+        1,
+        0
+      ],
+      "map_bytes_exact": true,
+      "pointer_bytes_exact": true,
+      "repack_contract": "every changed allocation is a glyph-specific horizontal crop followed by row-pack; unused allocation tail is zeroed"
+    },
+    "record_metric_fields": {
+      "advance_byte": 4,
+      "contract": "byte0 == byte4, byte5 == -(byte0/2), byte0 is even",
+      "signed_4bpp_row_stride_byte": 5,
+      "visible_width_byte": 0
+    }
+  }
+}

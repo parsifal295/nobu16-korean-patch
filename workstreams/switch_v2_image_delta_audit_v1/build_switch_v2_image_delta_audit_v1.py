@@ -90,7 +90,7 @@ TARGETS: Mapping[int, Mapping[str, str]] = {
         "priority": "P2",
         "status": "confirmed_by_private_atlas_review",
         "family": "title-screen top-right additional-content label",
-        "visual_evidence": "v2.1→v2.2 rendered delta is confined to 48x21 pixels at [1996,2]..[2043,22]: Japanese 追加 becomes Korean 추가; title logo remains unchanged",
+        "visual_evidence": "v2.1→v2.2 rendered delta is confined to 48x21 pixels at [1996,2]..[2043,22]: Japanese U+8FFD U+52A0 becomes Korean 추가; title logo remains unchanged",
         "screen_gate": "capture the matching PC title/menu surface before rendering the tiny label",
     },
 }
@@ -619,12 +619,15 @@ def _preview_bundle(
             sw_rgba = trace.composite_checker(trace.decode_texture(sw_texture), sw_texture.width, sw_texture.height)
             pc_rgba = trace.composite_checker(trace.decode_texture(pc_texture), pc_texture.width, pc_texture.height)
             png_path = slot_dir / f"texture_{texture_index:03d}_switch.png"
-            image_codec.encode_rgba_png(sw_rgba, sw_texture.width, sw_texture.height)
+            pc_png_path = slot_dir / f"texture_{texture_index:03d}_pc.png"
             atomic_write(png_path, image_codec.encode_rgba_png(sw_rgba, sw_texture.width, sw_texture.height))
+            atomic_write(pc_png_path, image_codec.encode_rgba_png(pc_rgba, pc_texture.width, pc_texture.height))
             images.append({
                 "texture": texture_index,
                 "switch_png": str(png_path),
                 "switch_png_sha256": sha256_file(png_path),
+                "pc_png": str(pc_png_path),
+                "pc_png_sha256": sha256_file(pc_png_path),
                 "switch_dimensions": [sw_texture.width, sw_texture.height],
                 "pc_dimensions": [pc_texture.width, pc_texture.height],
                 "pc_rgba_sha256": sha256_bytes(pc_rgba),

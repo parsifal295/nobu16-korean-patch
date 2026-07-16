@@ -1,0 +1,251 @@
+{
+  "schema": "nobu16.kr.steam-jp-system-buttons.catalog.v1",
+  "purpose": "Steam 1.1.7 JP system-button atlas (/5/0 texture 1)의 다음 파일 전용 한국어 재구성 배치를 위한 source-free 좌표 카탈로그",
+  "candidate_generation_blocked": true,
+  "candidate_generation_blocked_reason": "현재 donor 검증 계약으로는 안전한 PC-native 후보 생성을 승인할 수 없다. 이 카탈로그는 좌표·의미·보존 조건만 넘기며, 별도 재구성 경로와 화면 QA가 갖춰질 때까지 후보 생성에 사용하지 않는다.",
+  "scope": {
+    "route": "Steam JP only",
+    "steam_game_version": "1.1.7",
+    "outer_entry": 5,
+    "nested_slot": 0,
+    "texture": 1,
+    "switch_reference_delta": "v2.1 to v2.2 private visual comparison",
+    "candidate_created": false,
+    "candidate_generation_blocked": true,
+    "candidate_generation_blocked_reason": "top-level candidate block applies.",
+    "game_files_written": false,
+    "git_or_release_action": false
+  },
+  "source_free_guarantees": {
+    "committed_switch_archive": false,
+    "committed_switch_container_or_payload": false,
+    "committed_decoded_image": false,
+    "committed_pc_game_resource": false,
+    "committed_original_language_string": false,
+    "private_visual_reference_only": true
+  },
+  "core_v1_excluded_labels_ko": [
+    "닫기",
+    "중지",
+    "결정",
+    "거부",
+    "뒤로",
+    "아니오",
+    "건너뛰기",
+    "예"
+  ],
+  "coordinate_system": {
+    "switch_texture_dimensions": [
+      2048,
+      2048
+    ],
+    "pc_texture_dimensions": [
+      4096,
+      2048
+    ],
+    "rectangle_format": [
+      "left",
+      "top",
+      "right_exclusive",
+      "bottom_exclusive"
+    ],
+    "meaning": "셀 전체 좌표다. 실제 재구성은 셀 전체를 복사하지 않고, 검증된 한국어 글리프 대역만 다시 그린 뒤 PC 네이티브 아이콘·장식·배경을 보존해야 한다."
+  },
+  "state_group_policy": {
+    "canonical_cell_only": true,
+    "rule": "아래 행은 각 중복 상태 그룹의 한 상태만 확인한 기준 행이다. 같은 라벨의 나머지 상태는 자동 확장 금지이며, 상태별 private atlas 및 실제 화면 확인 뒤 별도 행으로 추가한다.",
+    "priority_order": [
+      "P1",
+      "P2"
+    ]
+  },
+  "mappings": [
+    {
+      "id": "full_release_cyan",
+      "label_ko": "전부개방",
+      "priority": "P1",
+      "state_group_id": "full_release__standard_states",
+      "canonical_state": "cyan",
+      "switch_source_cell_rect": [132, 240, 264, 304],
+      "pc_jp_target_cell_rect": [192, 176, 384, 264],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "none_in_canonical_cell"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical cyan cells were directly crop-compared"
+    },
+    {
+      "id": "approval_cyan",
+      "label_ko": "승인",
+      "priority": "P1",
+      "state_group_id": "approval__top_strip_states",
+      "canonical_state": "cyan",
+      "switch_source_cell_rect": [1452, 128, 1584, 192],
+      "pc_jp_target_cell_rect": [2688, 0, 2880, 88],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "preserve_check_icon"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical cyan cells were directly crop-compared"
+    },
+    {
+      "id": "denial_cyan",
+      "label_ko": "부인",
+      "priority": "P1",
+      "state_group_id": "denial__top_strip_states",
+      "canonical_state": "cyan",
+      "switch_source_cell_rect": [1584, 192, 1716, 256],
+      "pc_jp_target_cell_rect": [2880, 88, 3072, 176],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "preserve_prohibition_icon"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical cyan cells were directly crop-compared"
+    },
+    {
+      "id": "hime_cyan",
+      "label_ko": "희",
+      "priority": "P1",
+      "state_group_id": "hime__standard_states",
+      "canonical_state": "cyan",
+      "switch_source_cell_rect": [132, 368, 264, 432],
+      "pc_jp_target_cell_rect": [1536, 264, 1728, 352],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "none_in_canonical_cell"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical cyan cells were directly crop-compared"
+    },
+    {
+      "id": "command_white",
+      "label_ko": "지휘",
+      "priority": "P1",
+      "state_group_id": "command__standard_states",
+      "canonical_state": "white",
+      "switch_source_cell_rect": [396, 368, 528, 432],
+      "pc_jp_target_cell_rect": [2880, 264, 3072, 352],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "none_in_canonical_cell"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical white cells were directly crop-compared"
+    },
+    {
+      "id": "renegotiate_blue",
+      "label_ko": "재교섭",
+      "priority": "P1",
+      "state_group_id": "renegotiate__standard_states",
+      "canonical_state": "blue",
+      "switch_source_cell_rect": [660, 368, 792, 432],
+      "pc_jp_target_cell_rect": [2112, 352, 2304, 440],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "preserve_recirculation_icon"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical blue cells were directly crop-compared"
+    },
+    {
+      "id": "consent_white",
+      "label_ko": "승낙",
+      "priority": "P1",
+      "state_group_id": "consent__standard_states",
+      "canonical_state": "white",
+      "switch_source_cell_rect": [0, 432, 132, 496],
+      "pc_jp_target_cell_rect": [768, 352, 960, 440],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "preserve_check_icon"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical white cells were directly crop-compared"
+    },
+    {
+      "id": "dispose_blue",
+      "label_ko": "처단",
+      "priority": "P1",
+      "state_group_id": "dispose__standard_states",
+      "canonical_state": "blue",
+      "switch_source_cell_rect": [528, 432, 660, 496],
+      "pc_jp_target_cell_rect": [2688, 352, 2880, 440],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "none_in_canonical_cell"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical blue cells were directly crop-compared"
+    },
+    {
+      "id": "recruit_blue",
+      "label_ko": "등용",
+      "priority": "P1",
+      "state_group_id": "recruit__standard_states",
+      "canonical_state": "blue",
+      "switch_source_cell_rect": [660, 496, 792, 560],
+      "pc_jp_target_cell_rect": [0, 440, 192, 528],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "none_in_canonical_cell"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical blue cells were directly crop-compared"
+    },
+    {
+      "id": "warrior_white",
+      "label_ko": "무장",
+      "priority": "P1",
+      "state_group_id": "warrior__standard_states",
+      "canonical_state": "white",
+      "switch_source_cell_rect": [0, 560, 132, 624],
+      "pc_jp_target_cell_rect": [2880, 440, 3072, 528],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "none_in_canonical_cell"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical white cells were directly crop-compared"
+    },
+    {
+      "id": "next_white",
+      "label_ko": "다음",
+      "priority": "P1",
+      "state_group_id": "next__standard_states",
+      "canonical_state": "white",
+      "switch_source_cell_rect": [792, 576, 924, 640],
+      "pc_jp_target_cell_rect": [768, 512, 960, 600],
+      "pc_native_preservation": {
+        "background": "confirmed",
+        "icon_or_ornament": "preserve_forward_arrow_icon"
+      },
+      "confidence": "confirmed",
+      "evidence": "private v2.2 Korean and PC JP canonical white cells were directly crop-compared"
+    },
+    {
+      "id": "start_ornamented_white",
+      "label_ko": "개시",
+      "priority": "P2",
+      "state_group_id": "battle_start__ornamented_states",
+      "canonical_state": "ornamented_white",
+      "switch_source_cell_rect": [396, 496, 528, 560],
+      "pc_jp_target_cell_rect": [192, 440, 384, 528],
+      "pc_native_preservation": {
+        "background": "deferred",
+        "icon_or_ornament": "preserve_all_native_ornaments"
+      },
+      "confidence": "deferred",
+      "deferred_reason": "장식형 전투 개시 버튼은 일반 셀과 재구성 대역·화면 표현이 다르다. 실제 화면 캡처와 타깃 글리프 대역 마스킹을 먼저 확인해야 한다."
+    }
+  ],
+  "handoff_requirements": [
+    "core v1의 8개 라벨 또는 그 좌표에 겹치는 후보를 만들지 않는다.",
+    "확정 행도 셀 전체가 아닌 검증된 글리프 대역만 PC 네이티브 방식으로 다시 그린다.",
+    "PC 아이콘·장식·배경·비대상 텍스처·비대상 outer 항목은 byte-preserve 검증 대상이다.",
+    "동일 라벨의 다른 상태는 이 카탈로그만으로 자동 확장하지 않는다.",
+    "개시 행은 deferred 상태를 유지하며 실제 화면 QA 전 후보에 넣지 않는다."
+  ]
+}

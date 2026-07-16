@@ -1,0 +1,49 @@
+{
+  "schema": "nobu16.kr.steam-jp-battle-banners.validation.v1",
+  "scope": {
+    "target_resource": "RES_JP/res_lang.bin",
+    "outer_entry": 13,
+    "nested_slot": 0,
+    "textures": [48, 49, 50, 51, 52, 53, 54, 55, 56],
+    "texture_geometry": "2048x256 BC3",
+    "game_install_modified": false,
+    "raw_switch_payload_copy": false,
+    "title_or_logo_art_touched": false
+  },
+  "baseline": {
+    "steam_build": "1.1.7",
+    "v0_9_original_size": 154216023,
+    "v0_9_original_sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0"
+  },
+  "switch_visual_reference": {
+    "member": "NobunagaShinsei_KR/romfs/RES_JP/res_lang.bin",
+    "v21_zip_sha256": "473213B0013FB24C812C517A147A15D51EFCBFCE975FBB51738EFC34F5E7B387",
+    "v22_zip_sha256": "5E6354069E38BE22E3B3C9272A6CEC8A4B4110DF2486B9A63E84D1058C35D7F7",
+    "reference_use": "decoded visual delta only; PC-native G1T/BC3 reconstruction required"
+  },
+  "labels": [
+    "오케하자마 전투",
+    "나가시노 전투",
+    "미카타가하라 전투",
+    "히에이잔 방화",
+    "가네가사키 철퇴전",
+    "기초 훈련",
+    "젠토쿠지 회맹",
+    "이쓰쿠시마 전투",
+    "가와나카지마 전투"
+  ],
+  "preservation": {
+    "all_non_13_outer_entries_byte_identical": true,
+    "all_nonselected_g1t_bytes_byte_identical": true,
+    "all_nine_texture_geometries_preserved": true,
+    "lz4_roundtrip_required": true,
+    "private_visual_contact_sheet_required": true,
+    "in_game_screen_qa_required_before_apply": true
+  },
+  "git_policy": {
+    "complete_game_resource": false,
+    "raw_switch_archive": false,
+    "decoded_switch_images": false,
+    "private_candidate_or_contact_sheet": false
+  }
+}
