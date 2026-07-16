@@ -1,0 +1,207 @@
+{
+  "schema": "nobu16.kr.steam-jp-base-runtime-route-audit.v2",
+  "status": "STATIC_AUDIT_COMPLETE_RUNTIME_TRACE_NOT_PERFORMED",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_extracted_binary_payload": false,
+    "contains_only_hashes_counts_paths_and_static_conclusions": true
+  },
+  "observed_install": {
+    "distribution": "Steam",
+    "pk_version_from_UpdateVer_txt": "1.1.7",
+    "message_root_count": 2,
+    "runtime_file_open_trace_completed": false,
+    "screen_evidence_used": true,
+    "static_executable_string_scan_completed": true
+  },
+  "v5_exact_target_vector": [
+    "MSG/JP/ev_strdata.bin",
+    "MSG/JP/msggame.bin",
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP/msgbre.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgev.bin",
+    "MSG_PK/JP/msggame.bin",
+    "MSG_PK/JP/msgire.bin",
+    "MSG_PK/JP/msgstf.bin",
+    "MSG_PK/JP/msgui.bin",
+    "RES_JP/res_lang.bin",
+    "RES_JP_PK/res_lang_pk.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+    "RES_JP_PK_PORT/res_lang_pk_port2.bin"
+  ],
+  "message_inventory": [
+    {
+      "path": "MSG/JP/ev_strdata.bin",
+      "packed_size": 496819,
+      "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 17868,
+      "source_script_string_count": 13090,
+      "hangul_string_count": 0,
+      "v5_coverage": "included_base_transfer"
+    },
+    {
+      "path": "MSG/JP/msggame.bin",
+      "packed_size": 610163,
+      "packed_sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+      "container": "raw-lz4-18-block-message-bytecode",
+      "record_count": 19152,
+      "literal_count": 24262,
+      "v5_coverage": "included_base_transfer"
+    },
+    {
+      "path": "MSG/JP/strdata.bin",
+      "packed_size": 956835,
+      "packed_sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034",
+      "container": "raw-lz4-5-block-string-container",
+      "v5_coverage": "included_inherited_v3_candidate"
+    },
+    {
+      "path": "MSG_PK/JP/msgbre.bin",
+      "packed_size": 478527,
+      "packed_sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 3000,
+      "v5_coverage": "included"
+    },
+    {
+      "path": "MSG_PK/JP/msgdata.bin",
+      "packed_size": 496866,
+      "packed_sha256": "5469F26B0E75A2214969F2EBA66CD0C850D7BFEC9E3D344ECBC4DBD171110AA6",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 29218,
+      "v5_coverage": "included"
+    },
+    {
+      "path": "MSG_PK/JP/msgev.bin",
+      "packed_size": 1039928,
+      "packed_sha256": "39E8FEE6C4A7F1EB5018F01FB9446C9866E85BF13509C2CE099849E7AA3AAECD",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 17916,
+      "v5_coverage": "included"
+    },
+    {
+      "path": "MSG_PK/JP/msggame.bin",
+      "packed_size": 1808743,
+      "packed_sha256": "6316E2B288F798B747D983DB08E6C2A477C6FC60DE319D3C7C302102C6384A84",
+      "container": "raw-lz4-18-block-message-bytecode",
+      "record_count": 21751,
+      "literal_count": 29524,
+      "v5_coverage": "included"
+    },
+    {
+      "path": "MSG_PK/JP/msgire.bin",
+      "packed_size": 23136,
+      "packed_sha256": "C4977A74B98605AB350BE761C67CCF879AEE7565104F8D7FD2B725FDD5806D84",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 122,
+      "v5_coverage": "included"
+    },
+    {
+      "path": "MSG_PK/JP/msgstf.bin",
+      "packed_size": 17104,
+      "packed_sha256": "FE97F9C0C34D0131D7CDD3CEC4AF4B453CC7148F34FD80E7EFD31DE500F12593",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 20,
+      "v5_coverage": "included"
+    },
+    {
+      "path": "MSG_PK/JP/msgstf_ce.bin",
+      "packed_size": 7448,
+      "packed_sha256": "27E8F296E7EA452E6AC1D6D6884084D3AB635D11281AF01E3A1F0A3696710F36",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 20,
+      "source_script_string_count": 8,
+      "hangul_string_count": 0,
+      "v5_coverage": "omitted_runtime_risk_untriaged"
+    },
+    {
+      "path": "MSG_PK/JP/msgui.bin",
+      "packed_size": 121608,
+      "packed_sha256": "F8152396BA5C11D26A6CD42DAD3120F511813079B27C92DFE107A9DAFFA70797",
+      "container": "raw-lz4-single-message-table",
+      "string_count": 5100,
+      "v5_coverage": "included"
+    }
+  ],
+  "base_resource_coverage": {
+    "MSG/JP/strdata.bin": {
+      "status": "covered",
+      "candidate_basis": "inherited_v3_exact_target"
+    },
+    "MSG/JP/msggame.bin": {
+      "status": "covered",
+      "candidate_basis": "tutorial_dialogue_trace_msggame_v1",
+      "transfer_entry_count": 22924,
+      "candidate_packed_sha256": "72A81DABBDD5BC596356CF4F457B2235E439B2D27BD2FB00546842606531CE44"
+    },
+    "MSG/JP/ev_strdata.bin": {
+      "status": "covered",
+      "candidate_basis": "base_ev_strdata_jp_switch_v13_transfer_v1",
+      "transfer_entry_count": 13045,
+      "residual_source_script_count": 45,
+      "candidate_packed_sha256": "AD1A442C3588E791DB442548C2B7878ABB4D53A686C591A94AB7F4FAB719A886"
+    }
+  },
+  "screen_static_attribution": {
+    "evidence_class": "strong_static_attribution_not_runtime_file_open_proof",
+    "source_utf16le_sha256": "279D8D1246B6C655F8E6FEC0DA1CAA7848AAA1E0EB58C1AA13370EBF5E84BC5B",
+    "base_msggame_coordinate": [13, 217, 0],
+    "base_msggame_occurrence_count": 1,
+    "pk_msggame_occurrence_count": 0,
+    "all_jp_message_resources_scanned": 11,
+    "other_jp_message_resource_occurrence_count": 0,
+    "v5_base_msggame_transfer_includes_coordinate": true,
+    "runtime_file_open_trace_completed": false
+  },
+  "remaining_static_runtime_risks": [
+    {
+      "path": "MSG_PK/JP/msgstf_ce.bin",
+      "priority": "P0",
+      "reason": "present but outside exact-14; 8 source-script strings and no Hangul",
+      "runtime_load_proven": false,
+      "next_evidence": "screen_or_resource_selection_trace_before_translation_module"
+    },
+    {
+      "path": "RES_JP/res_lang_exp.bin",
+      "priority": "P1",
+      "reason": "executable string is present; not in current font vector",
+      "runtime_load_proven": false,
+      "top_level_direct_g1n_entries": []
+    },
+    {
+      "path": "RES_JP_PK/res_lang_exp_pk.bin",
+      "priority": "P1",
+      "reason": "executable string is present; not in current font vector",
+      "runtime_load_proven": false,
+      "top_level_direct_g1n_entries": []
+    },
+    {
+      "path": "RES_JP_PK_PORT/res_lang_pk_port3.bin",
+      "priority": "P1",
+      "reason": "executable string is present; not in current font vector",
+      "runtime_load_proven": false,
+      "top_level_direct_g1n_entries": []
+    }
+  ],
+  "static_executable_route_strings": [
+    "res_lang.bin",
+    "res_lang_exp.bin",
+    "res_lang_pk.bin",
+    "res_lang_exp_pk.bin",
+    "res_lang_pk_port1.bin",
+    "res_lang_pk_port2.bin",
+    "res_lang_pk_port3.bin",
+    "MSG_PK",
+    "RES_JP",
+    "_PK_PORT"
+  ],
+  "v5_completion_boundary": {
+    "tracked_verification_v5_exists": false,
+    "candidate_zip_exists": false,
+    "release_asset_exists": false,
+    "conclusion": "not_release_eligible_from_this_audit"
+  }
+}

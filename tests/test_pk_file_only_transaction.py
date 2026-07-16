@@ -102,6 +102,28 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             self._write(path, payload)
         return candidates, predecessors, sentinels
 
+    def _prepare_jp_full_profile(
+        self,
+    ) -> tuple[dict[str, Path], dict[str, bytes], dict[Path, bytes]]:
+        candidates, predecessors, sentinels = self._prepare_jp_profile()
+        # ``ev_strdata.bin`` is deliberately a sentinel in the legacy JP
+        # fixture.  The full profile explicitly owns it, together with the
+        # base map/tutorial dialogue archive.
+        sentinels.pop(self.game / "MSG" / "JP" / "ev_strdata.bin")
+        for relative in sorted(tx.JP_BASE_DIALOGUE_TARGETS):
+            predecessor = ("stock::" + relative).encode()
+            target = ("target::" + relative).encode()
+            installed = self.game.joinpath(*relative.split("/"))
+            candidate = (self.root / "jp-candidates").joinpath(*relative.split("/"))
+            self._write(installed, predecessor)
+            self._write(candidate, target)
+            candidates[relative] = candidate
+            predecessors[relative] = predecessor
+        extra_base = self.game / "MSG" / "JP" / "unlisted.bin"
+        self._write(extra_base, b"jp-base-unlisted-sentinel")
+        sentinels[extra_base] = b"jp-base-unlisted-sentinel"
+        return candidates, predecessors, sentinels
+
     def test_plan_dry_run_apply_restore_is_complete_and_base_unchanged(self) -> None:
         manifest, manifest_hash, backup = self._manifest()
         raw = json.loads(self.manifest_path.read_text(encoding="utf-8"))
@@ -366,6 +388,53 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         for path, payload in sentinels.items():
             self.assertEqual(path.read_bytes(), payload)
 
+    def test_exact_jp_full_plan_apply_restore_includes_base_dialogues(self) -> None:
+        candidates, predecessors, sentinels = self._prepare_jp_full_profile()
+        manifest = tx.make_manifest(self.game, "jp-full-dialogue-v1", candidates)
+        self.assertEqual(manifest["target_scope"], tx.JP_FULL_TARGET_SCOPE)
+        self.assertEqual(
+            {entry["path"] for entry in manifest["entries"]},
+            tx.JP_FULL_ALLOWED_TARGETS,
+        )
+        scope = tx.scope_report(manifest)
+        self.assertEqual(scope["runtime_language"], "JP")
+        self.assertEqual(scope["base_msg_jp_count"], 3)
+        self.assertEqual(scope["base_msg_jp_dialogue_count"], 2)
+        self.assertEqual(scope["jp_14_file_count"], 14)
+        self.assertTrue(scope["jp_14_file_complete"])
+        self.assertFalse(scope["jp_12_file_complete"])
+
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        report = tx.dry_run(self.game, backup, loaded, candidates)
+        self.assertEqual(report["status"], "PASS")
+        self.assertTrue(report["would_apply"])
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            applied = tx.apply_transaction(
+                self.game, backup, loaded, manifest_hash, candidates
+            )
+        self.assertEqual(applied["result"], "applied")
+        for relative, candidate in candidates.items():
+            installed = self.game.joinpath(*relative.split("/"))
+            self.assertEqual(installed.read_bytes(), candidate.read_bytes())
+            self.assertTrue(backup.joinpath("originals", *relative.split("/")).is_file())
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            restored = tx.restore_transaction(
+                self.game, backup, loaded, manifest_hash
+            )
+        self.assertEqual(restored["result"], "restored")
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
     def test_jp_subset_is_rejected_at_every_manifest_entrypoint(self) -> None:
         candidates, _, _ = self._prepare_jp_profile()
         full_manifest = tx.make_manifest(self.game, "jp-full-v1", candidates)
@@ -419,7 +488,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         candidate_root = self.root / "jp-candidates"
         forbidden = (
             "NOBU16PK.exe",
-            "MSG/JP/ev_strdata.bin",
+            "MSG/JP/unlisted.bin",
             "RES_JP/res_lang_exp.bin",
             "RES_JP_PK/res_lang_exp_pk.bin",
             "RES_JP_PK_PORT/res_lang_pk_port3.bin",
@@ -608,7 +677,7 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             tx.collect_candidate_root(self.root / "jp-candidates")
 
         forbidden = (
-            "MSG/JP/ev_strdata.bin",
+            "MSG/JP/unlisted.bin",
             "RES_JP/res_lang_exp.bin",
             "RES_JP_PK/res_lang_exp_pk.bin",
             "RES_JP_PK_PORT/res_lang_pk_port3.bin",

@@ -1,0 +1,74 @@
+{
+  "base_language": "JP",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "id": 4370,
+      "ko": "하지만 여기서 멸망해 주어야겠소.\n한때 영화를 누린 가문도 힘을 잃었다면,\n새로운 세력에 자리를 내주어야 하는 법.",
+      "ko_utf16le_sha256": "4F04C046A8F48913ABF8C288373A492DAD94A8316B69C7FF3EE51C1DDB55BFD4",
+      "legacy_source_jp_utf16le_sha256": "46BCC027CEC1903CA4D1A0A369CA923E5801FB5767B0050751B1903EAA80272C",
+      "recovered_legacy_jp_id": 4370,
+      "resolution": "source_typo_correction_same_meaning",
+      "source_jp_utf16le_sha256": "656E2CAFA3D703F3B2172A530B7C34C513BB3E3CA45508BEFC8323827444D2CD"
+    },
+    {
+      "id": 4640,
+      "ko": "――몇 달 전·\u001bCC아리마 온천\u001bCZ",
+      "ko_utf16le_sha256": "6E7D80A0E850344B7FC2FB6E1CE8FECBEF26B37BCC3AD60CB9D07D3B66F85B03",
+      "legacy_source_jp_utf16le_sha256": "2385764434756F9B2D41945073071883F6510F8842DF6BB605E5A7A067BD80D3",
+      "recovered_legacy_jp_id": 4640,
+      "resolution": "source_orthography_normalization_same_meaning",
+      "source_jp_utf16le_sha256": "F98FB427475DF19A44DCBD3D621CC6E18ACD0C3C05D114A21B7AC2F0DCC66A19"
+    },
+    {
+      "id": 8839,
+      "ko": "\u001bCA히데요시\u001bCZ와 \u001bCB호조가\u001bCZ의 대치는 이후,\n몇 달이나 이어지는 것이었다…",
+      "ko_utf16le_sha256": "E7175BFB7C9B6C5CA80FE02D518D4E682D005B0A241958EFA0F003A97561DCBF",
+      "legacy_source_jp_utf16le_sha256": "0BEFAA2B4544C73AE8153C9CBCBDB56F66579F4BA042D9918D633E121D7E6F43",
+      "recovered_legacy_jp_id": 8839,
+      "resolution": "source_orthography_normalization_same_meaning",
+      "source_jp_utf16le_sha256": "A4C644FD261F1A280B97A5BED3C5238A5F7FAB92552D4E7C8B36858E90DCEA4D"
+    },
+    {
+      "id": 17361,
+      "ko": "%s와 %s가 정전（%d개월）",
+      "ko_utf16le_sha256": "A7F0FDF85DB7F82056A9A7250C7AB693F2D0C7B4F8525BB49CDD6F07415BEBFF",
+      "legacy_source_jp_utf16le_sha256": "575E5E920B3040963917AAEB1C3C58110F101DDAD5F732F55390024089890BEE",
+      "recovered_legacy_jp_id": 17355,
+      "resolution": "source_orthography_normalization_same_meaning",
+      "source_jp_utf16le_sha256": "0458542956AA71BA40DDECA96241F128D089813DFC400DC47C3D38F6488DD1A5"
+    },
+    {
+      "id": 17689,
+      "ko": "%s와 %s（%d개월）",
+      "ko_utf16le_sha256": "56D9475EE619410EF7209FB20E776995756E95D6D71F01ABF7F06F724A949F41",
+      "legacy_source_jp_utf16le_sha256": "36FE09F2E49762725DD303A8A1D249D106C5031FD8C00BBCD1A7FE993C88E014",
+      "recovered_legacy_jp_id": 17683,
+      "resolution": "source_orthography_normalization_same_meaning",
+      "source_jp_utf16le_sha256": "B7BDE2AAAF487B0B697F6E3A17378C002397F571634B6DFC6975F7EFE64E7C0C"
+    }
+  ],
+  "entry_count": 5,
+  "ids_sha256": "36A9178D9EFE5E1A3B851CC2BE0B8AB9C4E133BC6893DF17D95E049B958690F3",
+  "overlay_id": "msgev_ko_steam_jp_wave08_j01_semantic_equivalent_5.v1",
+  "provenance": {
+    "existing_v1_overlay_preserved": true,
+    "mapping_method": "manual_same_meaning_source_revision_review",
+    "resolved_previous_unmapped_count": 5,
+    "sc_binary_used": false,
+    "sc_coordinate_used": false
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "schema": "nobu16.kr.steam-jp-common-message-wave08-delta.v1",
+  "source_rows_sha256": "DE48E3B783FE4B5191FB5E65032AA003C2B3489D232E7E526DBE35E4394FE8B6",
+  "stock_jp": {
+    "packed_sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+    "raw_sha256": "07D7512BE0235753FC7BB0C7C548B61F471D9CDED01379E63B8AF8EAE013813E",
+    "raw_size": 894800,
+    "size": 562226,
+    "string_count": 17916
+  }
+}

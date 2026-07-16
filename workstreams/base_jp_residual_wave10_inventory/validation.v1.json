@@ -1,0 +1,54 @@
+{
+  "artifacts": {
+    "public/base_jp_residual_wave10_contracts.v1.json": {
+      "sha256": "F30CE8C5E81E4149AF52439309D3EABCB6D21ECFA5D65B63A3AA7B1D94AC50D5",
+      "size": 112994
+    },
+    "public/base_jp_residual_wave10_inventory.v1.json": {
+      "sha256": "83EE9134EF0FD160B1D9E559B9C12059FA6E25F64BE77E6E0339097BB8C8C7CA",
+      "size": 226501
+    }
+  },
+  "counts": {
+    "contract_ready_rows": 310,
+    "manual_terminology_review_rows": 8,
+    "nonsemantic_format_token_rows": 59,
+    "total_residual": 377,
+    "visible_rows": 318
+  },
+  "partition": {
+    "base_ev_strdata_residual": 45,
+    "base_msggame_residual": 332,
+    "format_token_msggame": 59,
+    "manual_hanja_ev_strdata": 5,
+    "manual_hanja_msggame": 3,
+    "safe_edge_whitespace_msggame": 62,
+    "safe_percent_msggame": 1,
+    "safe_punctuation_ev_strdata": 40,
+    "safe_punctuation_msggame": 207
+  },
+  "proofs": {
+    "all_contract_rows_are_visible_and_format_valid": true,
+    "all_manual_rows_have_no_kana_in_switch_target": true,
+    "all_token_rows_are_nonsemantic": true,
+    "current_v5_or_later_candidate_untouched": true,
+    "strict_transfer_domains_remain_disjoint": true
+  },
+  "safety": {
+    "complete_candidate_binary_written": false,
+    "installed_game_files_modified": false,
+    "release_asset_written": false,
+    "source_text_embedded": false
+  },
+  "schema": "nobu16.kr.base-jp-residual-wave10-validation.v1",
+  "scope": {
+    "base_language": "JP",
+    "current_candidate_modified": false,
+    "installed_game_file_written": false,
+    "runtime": {
+      "distribution": "Steam",
+      "version": "1.1.7"
+    }
+  },
+  "status": "PASS"
+}

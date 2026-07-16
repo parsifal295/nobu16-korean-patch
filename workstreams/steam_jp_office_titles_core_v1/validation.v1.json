@@ -1,0 +1,101 @@
+{
+  "anchors": {
+    "16399": "관백",
+    "16402": "우대신",
+    "16404": "대납언",
+    "16410": "우근위대장",
+    "16413": "참의",
+    "16613": "정이대장군",
+    "16670": "간파쿠",
+    "16673": "우다이진",
+    "16675": "다이나곤",
+    "16681": "우코노에노타이쇼",
+    "16684": "참의",
+    "16884": "세이이다이쇼군"
+  },
+  "composable_api": {
+    "delta_entry_count": 121,
+    "function": "apply_to_packed(stock_root, baseline_packed)",
+    "preserves_non_target_texts": true,
+    "target_contract_count": 292,
+    "validates_each_later_baseline_target_hash": true,
+    "validates_pristine_jp_hashes": true
+  },
+  "expected": {
+    "candidate": {
+      "packed_sha256": "96CA306D8F1DAC69CB6927A29D98E5D845B89952EFA357947988DE384875183B",
+      "raw_sha256": "500B00E196C8455968DAA5BFBE5C7D5F5074C5D42A20AC3A4D57C5EB35E22614",
+      "raw_size": 494516,
+      "size": 496481,
+      "string_count": 29218
+    },
+    "initial_v0_8_baseline": {
+      "packed_sha256": "5469F26B0E75A2214969F2EBA66CD0C850D7BFEC9E3D344ECBC4DBD171110AA6",
+      "raw_sha256": "62E0209E7A9715C1D44BCE28E4C7D0CE2BBBDDD19A25DC21D4A3FA931CD8BC8D",
+      "raw_size": 494900,
+      "size": 496866,
+      "string_count": 29218
+    },
+    "overlay": {
+      "sha256": "8F8C70B00111EBC9E0F696DA6DCAE237660C17EF8207B5866B74265421EF9360",
+      "size": 182144
+    },
+    "stock_jp": {
+      "packed_sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+      "raw_sha256": "D09F61E34E4AA498F3DDEF23E7B7FD2CC8E9FE50B24F39D3BA1034BE82E6D0F6",
+      "raw_size": 434000,
+      "size": 272453,
+      "string_count": 29218
+    }
+  },
+  "issue": 48,
+  "proofs": {
+    "all_146_display_rows_canonical_korean": true,
+    "all_146_reading_rows_japanese_hangul": true,
+    "baseline_ko_hashes_fail_closed": true,
+    "deterministic_ab_equal": true,
+    "generic_hanja_conversion_used": false,
+    "id_domain_preserved": true,
+    "initial_v0_8_baseline_hash_pinned": true,
+    "non_delta_texts_preserved": true,
+    "only_rows_requiring_target_output_changed": true,
+    "opaque_non_string_metadata_preserved": true,
+    "stock_jp_hash_pinned": true,
+    "stock_jp_hashes_fail_closed": true,
+    "string_count_preserved": true,
+    "wrapper_prefix_preserved": true
+  },
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "sc_runtime_path_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-office-titles-core-validation.v1",
+  "scope": {
+    "display_ids_sha256": "F4EE4D5CA357F10BA2B0DC83E1BDDD7ADA815BE32067A4EA88C4DC541FA63218",
+    "display_pair_count": 146,
+    "excluded_bakufu_id_range": [
+      16614,
+      16624
+    ],
+    "explicit_canonical_dictionary_sha256": "3ED2E7D57206FFAD0AD12E05589E61CABCD1B1C8E9935E83BE4ACF822F58D1B5",
+    "japanese_hangul_reading_override_ids_sha256": "1045712D815BA7D17213E11DDDC54F26EFC8FE0B52D43709A5971720AD5F20B1",
+    "pair_offset": 271
+  },
+  "status": "PASS",
+  "target": {
+    "base_language": "JP",
+    "resource": "MSG_PK/JP/msgdata.bin",
+    "steam_version": "1.1.7"
+  },
+  "translation": {
+    "already_canonical_display_count_preserved": 33,
+    "already_correct_japanese_hangul_reading_count_preserved": 138,
+    "changed_display_count": 113,
+    "changed_entry_count": 121,
+    "changed_reading_count": 8,
+    "display_uses_canonical_korean": true,
+    "reading_uses_japanese_hangul": true
+  }
+}

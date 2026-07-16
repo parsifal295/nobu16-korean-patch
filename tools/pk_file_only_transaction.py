@@ -9,10 +9,11 @@ only paths, sizes, and hashes--never candidate bytes or absolute local paths.
 
 Only the exact Simplified-Chinese or Japanese PC PK runtime paths enumerated
 in ``ALLOWED_TARGETS`` are accepted.  A transaction is always confined to one
-runtime-language profile.  The base-game tree remains blocked except for that
-profile's shared ``MSG/<LANG>/strdata.bin`` and base font archive.  Japanese
-transactions support both the legacy exact ten-file profile and the exact
-twelve-file profile that adds the two JP PK port font archives.
+runtime-language profile.  The base-game tree remains blocked except for the
+explicitly approved JP shared-message files.  Japanese transactions support
+the legacy exact ten-file profile, the exact twelve-file JP-port-font profile,
+and the exact fourteen-file profile that additionally replaces the two
+runtime-loaded base dialogue resources.
 """
 
 from __future__ import annotations
@@ -61,11 +62,27 @@ JP_PORT_FONT_TARGETS = frozenset(
     }
 )
 JP_ALLOWED_TARGETS = JP_LEGACY_ALLOWED_TARGETS | JP_PORT_FONT_TARGETS
-ALLOWED_TARGETS = SC_ALLOWED_TARGETS | JP_ALLOWED_TARGETS
+JP_BASE_DIALOGUE_TARGETS = frozenset(
+    {
+        "MSG/JP/ev_strdata.bin",
+        "MSG/JP/msggame.bin",
+    }
+)
+JP_FULL_ALLOWED_TARGETS = JP_ALLOWED_TARGETS | JP_BASE_DIALOGUE_TARGETS
+ALLOWED_TARGETS = SC_ALLOWED_TARGETS | JP_FULL_ALLOWED_TARGETS
 LEGACY_TARGET_SCOPE = ["MSG_PK/SC", "RES_SC"]
 TARGET_SCOPE = ["MSG/SC/strdata.bin", "MSG_PK/SC", "RES_SC"]
 JP_TARGET_SCOPE = ["MSG/JP/strdata.bin", "MSG_PK/JP", "RES_JP", "RES_JP_PK"]
 JP_PORT_TARGET_SCOPE = [
+    "MSG/JP/strdata.bin",
+    "MSG_PK/JP",
+    "RES_JP",
+    "RES_JP_PK",
+    "RES_JP_PK_PORT",
+]
+JP_FULL_TARGET_SCOPE = [
+    "MSG/JP/ev_strdata.bin",
+    "MSG/JP/msggame.bin",
     "MSG/JP/strdata.bin",
     "MSG_PK/JP",
     "RES_JP",
@@ -250,7 +267,7 @@ def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> s
     profiles: set[str] = set()
     if paths & SC_ALLOWED_TARGETS:
         profiles.add("SC")
-    if paths & JP_ALLOWED_TARGETS:
+    if paths & JP_FULL_ALLOWED_TARGETS:
         profiles.add("JP")
     if len(profiles) != 1:
         raise TransactionError(f"{label} must not mix SC and JP runtime profiles")
@@ -258,16 +275,20 @@ def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> s
     if profile == "JP" and paths not in (
         JP_LEGACY_ALLOWED_TARGETS,
         JP_ALLOWED_TARGETS,
+        JP_FULL_ALLOWED_TARGETS,
     ):
         expected = (
-            JP_ALLOWED_TARGETS
+            JP_FULL_ALLOWED_TARGETS
+            if paths & JP_BASE_DIALOGUE_TARGETS
+            else JP_ALLOWED_TARGETS
             if paths & JP_PORT_FONT_TARGETS
             else JP_LEGACY_ALLOWED_TARGETS
         )
         missing = sorted(expected - paths)
         raise TransactionError(
-            f"{label} must contain the exact JP 10-file profile or exact "
-            "JP+JP_PK_PORT 12-file profile"
+            f"{label} must contain the exact JP 10-file profile, exact "
+            "JP+JP_PK_PORT 12-file profile, or exact JP base-dialogue "
+            "14-file profile"
             + (f" (missing={','.join(missing)})" if missing else "")
         )
     return profile
@@ -276,11 +297,12 @@ def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> s
 def runtime_profile_for_scope(target_scope: Any) -> str:
     if target_scope in (LEGACY_TARGET_SCOPE, TARGET_SCOPE):
         return "SC"
-    if target_scope in (JP_TARGET_SCOPE, JP_PORT_TARGET_SCOPE):
+    if target_scope in (JP_TARGET_SCOPE, JP_PORT_TARGET_SCOPE, JP_FULL_TARGET_SCOPE):
         return "JP"
     raise TransactionError(
         "manifest target_scope must be the legacy SC scope, exact SC scope, "
-        "exact JP 10-file scope, or exact JP+JP_PK_PORT 12-file scope"
+        "exact JP 10-file scope, exact JP+JP_PK_PORT 12-file scope, or "
+        "exact JP base-dialogue 14-file scope"
     )
 
 
@@ -355,7 +377,7 @@ def collect_candidate_root(root: Path) -> dict[str, Path]:
                         + str(child)
                     )
                 relative = child.relative_to(root).as_posix()
-                if relative not in JP_ALLOWED_TARGETS:
+                if relative not in JP_FULL_ALLOWED_TARGETS:
                     extras.append(relative)
         if extras:
             raise TransactionError(
@@ -462,6 +484,10 @@ def validate_manifest(value: dict[str, Any]) -> dict[str, Any]:
         raise TransactionError(
             "manifest JP+JP_PK_PORT target_scope requires the exact JP 12-file profile"
         )
+    if target_scope == JP_FULL_TARGET_SCOPE and entry_paths != JP_FULL_ALLOWED_TARGETS:
+        raise TransactionError(
+            "manifest JP base-dialogue target_scope requires the exact JP 14-file profile"
+        )
     if target_scope == LEGACY_TARGET_SCOPE and not entry_paths <= (
         SC_ALLOWED_TARGETS - {"MSG/SC/strdata.bin"}
     ):
@@ -491,7 +517,10 @@ def scope_report(manifest: dict[str, Any]) -> dict[str, Any]:
     jp_pk_port_resource_paths = [
         path for path in paths if path.startswith("RES_JP_PK_PORT/")
     ]
-    jp_base_paths = [path for path in paths if path == "MSG/JP/strdata.bin"]
+    jp_base_paths = [path for path in paths if path.startswith("MSG/JP/")]
+    jp_base_dialogue_paths = [
+        path for path in paths if path in JP_BASE_DIALOGUE_TARGETS
+    ]
     return {
         "target_paths": paths,
         "runtime_language": runtime_language,
@@ -506,6 +535,7 @@ def scope_report(manifest: dict[str, Any]) -> dict[str, Any]:
         "res_jp_pk_count": len(jp_pk_resource_paths),
         "res_jp_pk_port_count": len(jp_pk_port_resource_paths),
         "base_msg_jp_count": len(jp_base_paths),
+        "base_msg_jp_dialogue_count": len(jp_base_dialogue_paths),
         "all_seven_msg_pk_jp_included": set(jp_message_paths) == {
             f"MSG_PK/JP/{name}" for name in JP_MESSAGE_FILES
         },
@@ -513,6 +543,8 @@ def scope_report(manifest: dict[str, Any]) -> dict[str, Any]:
         "jp_10_file_complete": path_set == JP_LEGACY_ALLOWED_TARGETS,
         "jp_12_file_count": len(path_set & JP_ALLOWED_TARGETS),
         "jp_12_file_complete": path_set == JP_ALLOWED_TARGETS,
+        "jp_14_file_count": len(path_set & JP_FULL_ALLOWED_TARGETS),
+        "jp_14_file_complete": path_set == JP_FULL_ALLOWED_TARGETS,
     }
 
 
@@ -546,7 +578,9 @@ def make_manifest(game_root: Path, release_id: str, candidates: dict[str, Path])
         "executable_modified": False,
         "registry_modified": False,
         "target_scope": (
-            JP_PORT_TARGET_SCOPE
+            JP_FULL_TARGET_SCOPE
+            if candidate_profile == "JP" and candidate_targets == JP_FULL_ALLOWED_TARGETS
+            else JP_PORT_TARGET_SCOPE
             if candidate_profile == "JP" and candidate_targets == JP_ALLOWED_TARGETS
             else JP_TARGET_SCOPE
             if candidate_profile == "JP"

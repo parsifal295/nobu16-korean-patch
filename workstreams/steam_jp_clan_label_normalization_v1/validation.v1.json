@@ -1,0 +1,74 @@
+{
+  "anchors": {
+    "14542": "오다 가문",
+    "14692": "아라키 가문"
+  },
+  "expected": {
+    "candidate": {
+      "packed_sha256": "E783C492860BDC6229A3A05343635FEB05435D3751BBB2670F691F270DA484B6",
+      "raw_sha256": "7276B55F4E5C95728DA9DFA3372F037FE256587F0761E87BA6C87F75DA8BE597",
+      "raw_size": 495536,
+      "size": 497505,
+      "string_count": 29218
+    },
+    "overlay": {
+      "sha256": "9AC8652BE99B2F26F0D6E70157B77D5581FC3F63394BB686D0B15C3492546100",
+      "size": 60012
+    },
+    "stock_jp": {
+      "packed_sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+      "raw_sha256": "D09F61E34E4AA498F3DDEF23E7B7FD2CC8E9FE50B24F39D3BA1034BE82E6D0F6",
+      "raw_size": 434000,
+      "size": 272453,
+      "string_count": 29218
+    },
+    "wave08_baseline": {
+      "packed_sha256": "5469F26B0E75A2214969F2EBA66CD0C850D7BFEC9E3D344ECBC4DBD171110AA6",
+      "raw_sha256": "62E0209E7A9715C1D44BCE28E4C7D0CE2BBBDDD19A25DC21D4A3FA931CD8BC8D",
+      "raw_size": 494900,
+      "size": 496866,
+      "string_count": 29218
+    }
+  },
+  "issue": 46,
+  "normalization": {
+    "entry_count": 159,
+    "event_family_id_range": [
+      14519,
+      14766
+    ],
+    "replacement_suffix": " 가문",
+    "selected_ids_sha256": "52141827153A2466A7629E593400E838CBAFBE6F8481D68997ECEE461322F58A",
+    "source_terminal_suffix": "가"
+  },
+  "preservation": {
+    "14603_preserved": true,
+    "14767_14776_preserved": true,
+    "14777_15034_preserved": true,
+    "non_delta_texts_preserved": true
+  },
+  "proofs": {
+    "baseline_ko_hashes_fail_closed": true,
+    "current_jp_source_hashes_fail_closed": true,
+    "deterministic_ab_equal": true,
+    "id_domain_preserved": true,
+    "opaque_non_string_metadata_preserved": true,
+    "stock_jp_hash_pinned": true,
+    "string_count_preserved": true,
+    "wave08_baseline_hash_pinned": true,
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false,
+    "sc_runtime_path_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-clan-label-normalization-validation.v1",
+  "status": "PASS",
+  "target": {
+    "base_language": "JP",
+    "steam_version": "1.1.7"
+  }
+}
