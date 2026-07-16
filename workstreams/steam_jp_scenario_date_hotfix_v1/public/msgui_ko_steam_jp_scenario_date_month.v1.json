@@ -1,0 +1,48 @@
+{
+  "base_language": "JP",
+  "baseline": {
+    "builder": "steam_jp_msgui_v1+wave07_recovery",
+    "candidate": {
+      "sha256": "F8152396BA5C11D26A6CD42DAD3120F511813079B27C92DFE107A9DAFFA70797",
+      "size": 121608
+    }
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false
+  },
+  "entries": [
+    {
+      "baseline_ko_utf16le_sha256": "BD084B564CEEEA3EBBD29D056CC85A167B77CBC0FF3116D420A3C34953D01014",
+      "id": 1051,
+      "ko": "%d월",
+      "ko_utf16le_sha256": "3878977E9BC96804F52E9F7F89D68FB0AC3E69D4A7714F970D92FD049DD781C9",
+      "source_jp_utf16le_sha256": "64D041CB87FA66AB6E106F4DE86C17514A8A404238DAFCB1B91419B9A4D904F7"
+    }
+  ],
+  "entry_count": 1,
+  "issue": 45,
+  "overlay_id": "msgui_ko_steam_jp_scenario_date_month.v1",
+  "regression_anchors": {
+    "calendar_month_entry_id": 1051,
+    "duration_ko_utf16le_sha256": "BD084B564CEEEA3EBBD29D056CC85A167B77CBC0FF3116D420A3C34953D01014",
+    "duration_month_entry_id": 1678,
+    "year_entry_id": 1050,
+    "year_ko_utf16le_sha256": "F6C552CE1CE94865D10EFFEE1879566261450B961034D81BE32503A925EB7B25"
+  },
+  "resource": "MSG_PK/JP/msgui.bin",
+  "safety": {
+    "baseline_ko_hashes_fail_closed": true,
+    "current_jp_source_hashes_fail_closed": true,
+    "sc_binary_used": false,
+    "sc_runtime_path_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-scenario-date-hotfix-overlay.v1",
+  "stock_jp": {
+    "packed_sha256": "9775D4B7253828899F7EF0DF2E88AB28121ACB260E1381F3D706C6A1065D504A",
+    "packed_size": 64976,
+    "raw_sha256": "F79AE8B004AAE73F5F67ED0F858AAD74083649040F69A317E48212F74761095C",
+    "raw_size": 105864,
+    "string_count": 5100
+  }
+}
