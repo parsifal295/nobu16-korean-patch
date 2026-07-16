@@ -22,7 +22,7 @@ SPEC.loader.exec_module(readme_progress)
 class ReadmeProgressTests(unittest.TestCase):
     def test_runtime_contract_is_steam_jp_117_release(self) -> None:
         payload = json.loads(PROGRESS.read_text(encoding="utf-8"))
-        self.assertEqual(payload["release"], "v0.8.0")
+        self.assertEqual(payload["release"], "v0.9.0")
         self.assertEqual(
             payload["runtime"],
             {
@@ -75,7 +75,7 @@ class ReadmeProgressTests(unittest.TestCase):
         )
         self.assertEqual(
             (base_msggame["strict_switch_v13_transfer"], base_msggame["residual"]),
-            (22924, 332),
+            (23194, 62),
         )
 
         base_ev = translation["base_ev_strdata"]
@@ -86,7 +86,7 @@ class ReadmeProgressTests(unittest.TestCase):
         )
         self.assertEqual(
             (base_ev["strict_switch_v13_transfer"], base_ev["residual"]),
-            (13045, 45),
+            (13085, 5),
         )
 
     def test_render_is_japanese_route_only_and_marks_release_as_screen_verified(self) -> None:
