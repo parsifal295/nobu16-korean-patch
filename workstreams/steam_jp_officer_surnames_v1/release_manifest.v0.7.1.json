@@ -1,0 +1,42 @@
+{
+  "schema": "nobu16.kr.steam-jp-hotfix-release-manifest.v1",
+  "release": {
+    "tag": "v0.7.1",
+    "stable": true,
+    "prerelease": false,
+    "target_commit": "97c6b294ca196b8a6153ee2856cb1d2b9ffe0e25",
+    "url": "https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.7.1"
+  },
+  "runtime": {
+    "distribution": "Steam",
+    "pk_version": "1.1.7",
+    "steam_build_id": 18823764,
+    "language_route": "JP"
+  },
+  "asset": {
+    "name": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.1.zip",
+    "size": 356143102,
+    "sha256": "B54E4BD95C1049C3E84800CA643F90E6A984733FE4F2E95BE063A086CB0BA1AE",
+    "url": "https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.7.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.7.1.zip"
+  },
+  "scope": {
+    "entry_count": 12,
+    "officer_surnames_recovered": 980,
+    "font_container_count": 4,
+    "commercial_binary_bytes_included": false
+  },
+  "entries": [
+    {"path": "MSG/JP/strdata.bin", "size": 956835, "sha256": "E77CD1F5CB72789B12B68FE0C1767950C0F54B1A62C9BB671CB14661D7378034"},
+    {"path": "MSG_PK/JP/msgbre.bin", "size": 478527, "sha256": "EA797D2B4098756941A1922DF154786B5734A7ED9564F2E6C21695AD4AE93167"},
+    {"path": "MSG_PK/JP/msgdata.bin", "size": 496782, "sha256": "FF8D4BB10D93CED860AF17AA5CECB3EDCED97887D69F8862AAF9D4161D790F65"},
+    {"path": "MSG_PK/JP/msgev.bin", "size": 1040052, "sha256": "C73DD1DDC79493EE3751C43B4BEAD216C4A4847C3E7B0A7CCD61FB342E03953E"},
+    {"path": "MSG_PK/JP/msggame.bin", "size": 1808743, "sha256": "6316E2B288F798B747D983DB08E6C2A477C6FC60DE319D3C7C302102C6384A84"},
+    {"path": "MSG_PK/JP/msgire.bin", "size": 23136, "sha256": "C4977A74B98605AB350BE761C67CCF879AEE7565104F8D7FD2B725FDD5806D84"},
+    {"path": "MSG_PK/JP/msgstf.bin", "size": 16747, "sha256": "42C98221F7D874BB09C9CD0F06615E581E5CB188F9ABB4E0E825904BC4D181E5"},
+    {"path": "MSG_PK/JP/msgui.bin", "size": 121608, "sha256": "F8152396BA5C11D26A6CD42DAD3120F511813079B27C92DFE107A9DAFFA70797"},
+    {"path": "RES_JP/res_lang.bin", "size": 154216023, "sha256": "0E2AF3F3A163814FEB87A38085DC41E76BD3D98CDB6CD616B232F814CE0D95A0"},
+    {"path": "RES_JP_PK/res_lang_pk.bin", "size": 141746742, "sha256": "EC758BC9B87F98B42E01CA6F841D963811BB944D113E2C65A1E9F5AE19F1DF08"},
+    {"path": "RES_JP_PK_PORT/res_lang_pk_port1.bin", "size": 79243911, "sha256": "00E9C1063ED164402AA70CB770100D8AE11A92B8024F20A4F1D89F2EA1A467F7"},
+    {"path": "RES_JP_PK_PORT/res_lang_pk_port2.bin", "size": 67086423, "sha256": "F18D99C4802AAB78C60C372FF0106ABD61ABDD8C026DC53CAE8FDE47C992C205"}
+  ]
+}

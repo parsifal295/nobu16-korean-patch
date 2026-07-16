@@ -1,0 +1,52 @@
+{
+  "accounting": {
+    "alignment_gap_before_wave08": 156,
+    "source_equal_contract_count": 1796,
+    "source_union_count": 43169
+  },
+  "expected": {
+    "baseline_candidate": {
+      "sha256": "D05A585826F116180D81E06CBE7BF136CE67B98B76380A8DC6308F3868A1F9B9",
+      "size": 492714
+    },
+    "candidate": {
+      "raw_sha256": "E13FE64FB70BA0770A6AF4DBF99674A5206AD5597107BA3E5A231D2EA74F9AA6",
+      "raw_size": 494816,
+      "sha256": "FF8D4BB10D93CED860AF17AA5CECB3EDCED97887D69F8862AAF9D4161D790F65",
+      "size": 496782
+    },
+    "catalog": {
+      "sha256": "D787EB64BFFC54D1ACA2F23BC9407991FEB4FCF76D102E1EE017EEF416FE4FA3",
+      "size": 656630
+    },
+    "overlay": {
+      "sha256": "45E2AAED308ED97629E402685899FE59035847FF2DB1CBB38CBEF6EBC70CB2A4",
+      "size": 355011
+    }
+  },
+  "proofs": {
+    "base_owned_conflicts_preserved": true,
+    "current_jp_source_hashes_fail_closed": true,
+    "deterministic_ab_equal": true,
+    "id_domain_preserved": true,
+    "non_delta_texts_preserved": true,
+    "oda_nobunaga_recomposition": "오다 노부나가",
+    "wrapper_prefix_preserved": true
+  },
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "safety": {
+    "complete_candidate_binary_tracked": false,
+    "installed_game_files_modified": false,
+    "sc_binary_used": false
+  },
+  "schema": "nobu16.kr.steam-jp-officer-surname-validation.v1",
+  "status": "PASS",
+  "translation": {
+    "base_owned_conflict_count": 70,
+    "catalog_surname_count": 1050,
+    "format_contract_backlog_after": 730,
+    "format_contract_backlog_before": 1710,
+    "primary_surname_count": 859,
+    "recovered_surname_count": 980
+  }
+}
