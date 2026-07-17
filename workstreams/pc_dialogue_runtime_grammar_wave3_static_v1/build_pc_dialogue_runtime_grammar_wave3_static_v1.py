@@ -76,10 +76,10 @@ PRISTINE_SOURCES = {
     ),
     "MSG_PK/JP/msggame.bin": (
         Path(
-            r"F:\Games\NOBU16\KR_PATCH_BACKUP\file_only_transaction"
-            r"\jp-runtime-wave05-20260715-v1\originals\MSG_PK\JP\msggame.bin"
+            r"F:\SteamLibrary\steamapps\common\NOBU16\KR_PATCH_BACKUP"
+            r"\file_only_transaction\steam-jp-1.1.7-v0.6.0\originals\MSG_PK\JP\msggame.bin"
         ),
-        "0FB9EA3B4817D208C65F587AF1F57A5BB82106367314801A13C9A534ECC47CD8",
+        "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
     ),
 }
 
@@ -327,6 +327,29 @@ def assert_pristine_sources() -> dict[str, str]:
     return actual
 
 
+def assert_pristine_layout_matches_steam(steam_root: Path) -> None:
+    """Require the PC-JP source to have the exact current PC record layout.
+
+    A whole-file hash proves identity, but not that a previously selected
+    pristine file belongs to the installed PC release.  Compare every message
+    block's record count with the actual PC profile before using it as a
+    translation source; a mismatched release can otherwise make valid-looking
+    coordinates refer to different dialogue.
+    """
+    steam_root = steam_root.resolve()
+    for relative, (source_path, _expected_hash) in PRISTINE_SOURCES.items():
+        source_archive = parse_packed_msggame(source_path.read_bytes()).archive
+        steam_path = require_under(steam_root, steam_root / relative, "Steam input")
+        steam_archive = parse_packed_msggame(steam_path.read_bytes()).archive
+        source_counts = tuple(len(block.records) for block in source_archive.blocks)
+        steam_counts = tuple(len(block.records) for block in steam_archive.blocks)
+        if source_counts != steam_counts:
+            raise WaveError(
+                f"PC JP source layout mismatch for {relative}: "
+                f"source={source_counts}, steam={steam_counts}"
+            )
+
+
 def target_is_pinned() -> bool:
     return all(TARGET_SHA256[path] for path in CHANGED_PATHS)
 
@@ -378,6 +401,7 @@ def build_candidate(
         assert_profile(steam_root, BASELINE_SHA256, "installed input")
         raise AssertionError("unreachable")
     source_hashes = assert_pristine_sources()
+    assert_pristine_layout_matches_steam(steam_root)
 
     output_root.parent.mkdir(parents=True, exist_ok=True)
     stage = Path(tempfile.mkdtemp(prefix=f".{output_root.name}.", dir=output_root.parent))
@@ -414,8 +438,10 @@ def build_candidate(
 def verify_installed(steam_root: Path) -> None:
     if not target_is_pinned():
         raise WaveError("target SHA-256 is not pinned in this source revision")
+    steam_root = steam_root.resolve()
     assert_pristine_sources()
-    assert_profile(steam_root.resolve(), TARGET_SHA256, "installed target")
+    assert_pristine_layout_matches_steam(steam_root)
+    assert_profile(steam_root, TARGET_SHA256, "installed target")
 
 
 def parser() -> argparse.ArgumentParser:

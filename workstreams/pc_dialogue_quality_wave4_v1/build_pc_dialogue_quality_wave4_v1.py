@@ -65,7 +65,7 @@ CHANGED_PATHS = WAVE3.CHANGED_PATHS
 TARGET_SHA256 = {
     **BASELINE_SHA256,
     "MSG/JP/msggame.bin": "C61B7157A957C43B797743203A9F2F8E80775C543871CAE76C3C53354D0B1DD8",
-    "MSG_PK/JP/msggame.bin": "67CE52B83F98390A116CEB09A8EC27DC881D3AD33B7AB7B6B61C9ED27A145197",
+    "MSG_PK/JP/msggame.bin": "4FDAD584CE5C420C4FE2B4397A3F8ECD0EE28E9A317DCE2A29AB9ABB91E00FFA",
 }
 
 
@@ -264,6 +264,24 @@ PK_PLANS += (
     copy_plan(6, 3286, "8AE4905B56CA48E80CB52293C9C7D78C6EA7CDAD8657139EF9A82A5C47AA90A1", ("무명이 자자한 귀가라면\n", ". 어렵지 않을 것입니다"), ("무명이 자자한 귀가라면\n", "공략쯤은 대수롭지 않으리"), anchor(6, 3279, "0A45F5DF076C8F5EC09DB2835FEAE75DB63E9A7BF67E29F0609CD308AC642AC3")),
 )
 
+# These coordinates were first drafted against the 0FB9 source, whose block
+# layout is not the current Steam PC release.  The aligned 31D PC-JP source
+# proves that those coordinates point to different dialogue, so fail closed:
+# keep them out of the candidate until each one is re-audited from 31D.
+DEFERRED_UNALIGNED_0FB9_COORDINATES = frozenset(
+    {
+        (6, 1543), (6, 1558), (6, 1616), (6, 1637), (6, 1641),
+        (6, 2793), (6, 2820), (6, 2821), (6, 2822),
+        (6, 2844), (6, 2845), (6, 2846), (6, 2856), (6, 2857),
+        (6, 2858), (6, 2905), (6, 2906), (6, 2971), (6, 3065),
+        (6, 3078), (6, 3085), (6, 3166), (6, 3263), (6, 3264),
+        (6, 3268), (6, 3275), (6, 3280), (6, 3286),
+    }
+)
+PK_PLANS = tuple(
+    item for item in PK_PLANS if item.coordinate not in DEFERRED_UNALIGNED_0FB9_COORDINATES
+)
+
 
 def sha256_bytes(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest().upper()
@@ -324,10 +342,11 @@ def validate_plan_set(plans: tuple[QualityPlan, ...], relative: str) -> None:
                 raise QualityError(f"more than three lines in {relative} {item.coordinate}")
 
 
-def validate_source_coordinates() -> dict[str, str]:
+def validate_source_coordinates(steam_root: Path) -> dict[str, str]:
     # Wave 3 validates both whole pristine PC JP files; this adds the Wave 4
     # coordinates to that source-gated structural contract.
     source_hashes = WAVE3.assert_pristine_sources()
+    WAVE3.assert_pristine_layout_matches_steam(steam_root)
     source_records_by_relative: dict[str, dict[tuple[int, int], MsgGameRecord]] = {}
     for relative, (source_path, _expected_hash) in WAVE3.PRISTINE_SOURCES.items():
         source_records = records_by_coordinate(source_path.read_bytes())
@@ -423,7 +442,7 @@ def profile_hashes(root: Path) -> dict[str, str]:
 def assert_profile(root: Path, expected: dict[str, str], label: str) -> None:
     try:
         WAVE3.assert_profile(root, expected, label)
-    except WAVE3.GrammarWaveError as exc:
+    except WAVE3.WaveError as exc:
         raise QualityError(str(exc)) from exc
 
 
@@ -445,7 +464,7 @@ def build_candidate(
     if output_root.exists():
         raise QualityError(f"candidate output already exists: {output_root}")
     assert_profile(steam_root, BASELINE_SHA256, "installed input")
-    pristine_hashes = validate_source_coordinates()
+    pristine_hashes = validate_source_coordinates(steam_root)
 
     source_base = (steam_root / "MSG/JP/msggame.bin").read_bytes()
     source_pk = (steam_root / "MSG_PK/JP/msggame.bin").read_bytes()
@@ -508,8 +527,9 @@ def build_candidate(
 def verify_installed(steam_root: Path) -> None:
     if not target_is_pinned():
         raise QualityError("target SHA-256 is not pinned in this source revision")
-    validate_source_coordinates()
-    assert_profile(steam_root.resolve(), TARGET_SHA256, "installed target")
+    steam_root = steam_root.resolve()
+    validate_source_coordinates(steam_root)
+    assert_profile(steam_root, TARGET_SHA256, "installed target")
 
 
 def parser() -> argparse.ArgumentParser:
