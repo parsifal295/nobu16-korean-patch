@@ -1,0 +1,130 @@
+{
+  "checks": {
+    "all_17868_coordinates_accounted_for": true,
+    "candidate_format_profiles_preserved": true,
+    "candidate_hangul_replacements_equal_count": true,
+    "candidate_jp_sc_tc_evidence_pinned": true,
+    "candidate_manual_linebreak_vectors_preserved": true,
+    "candidate_source_preimages_pinned": true,
+    "candidate_visible_per_line_codepoint_counts_preserved": true,
+    "existing_coordinates_excluded_without_generic_overlay_read": true,
+    "no_new_linebreak_move_candidate": true,
+    "private_candidate_only": true,
+    "source_file_pins": true,
+    "source_free_overlap_ledger_contains_no_cjk_or_hangul_text": true,
+    "source_free_overlap_ledger_pin": true
+  },
+  "inputs": {
+    "current_pc_ko": {
+      "packed": {
+        "sha256": "6A7D90C1A95AD42DCAE2D3C3719508EDD00588288659A1D192B680CF70EAE6E4",
+        "size": 928605
+      },
+      "raw": {
+        "sha256": "476BF7300FDE67B77205929E1D182F7C8E60D1E6464BC96BB44389E3F86E9FFA",
+        "size": 924952
+      },
+      "resource": "MSG/JP/ev_strdata.bin"
+    },
+    "pc_en": {
+      "available": false,
+      "reason": "current PC installation has no EN ev_strdata resource",
+      "resource": "MSG/EN/ev_strdata.bin"
+    },
+    "pc_sc": {
+      "packed": {
+        "sha256": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+        "size": 461651
+      },
+      "raw": {
+        "sha256": "482B25ACFBF219E85EF9F9A073745414B3FC97705BABB4FAF4AAC3BB68248DAD",
+        "size": 662228
+      },
+      "resource": "MSG/SC/ev_strdata.bin"
+    },
+    "pc_tc": {
+      "packed": {
+        "sha256": "9E9346B942CAFA99432D675F6BA74DD04D48F56095F35F46392697011D9CFEF3",
+        "size": 460929
+      },
+      "raw": {
+        "sha256": "8918886EC8BB8B58317189F7ABAF48EBC761633CC263F0641ED5213050D1B352",
+        "size": 650756
+      },
+      "resource": "MSG/TC/ev_strdata.bin"
+    },
+    "pristine_pc_jp": {
+      "packed": {
+        "sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+        "size": 496819
+      },
+      "raw": {
+        "sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+        "size": 789260
+      },
+      "resource": "MSG/JP/ev_strdata.bin"
+    }
+  },
+  "outputs": {
+    "private_candidates": {
+      "relative_path": "tmp/translation_quality_ev_strdata_pc_reaudit_v1/ev_strdata_pc_reaudit_candidates.v1.jsonl",
+      "sha256": "63815FA925FF3F3C3E7EDD03A8BC6EBFF61B93D4D6DFF49193B8D9EAF5C02696",
+      "size": 15118
+    },
+    "private_holds": {
+      "relative_path": "tmp/translation_quality_ev_strdata_pc_reaudit_v1/ev_strdata_pc_reaudit_holds.v1.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "size": 0
+    },
+    "source_free_coordinate_ledger": {
+      "relative_path": "tmp/translation_quality_ev_strdata_pc_reaudit_v1/ev_strdata_pc_reaudit_coordinate_ledger.source_free.v1.jsonl",
+      "sha256": "AF197401B1C9E52C3FADE2C0854F033D8DF8DC3569A80CC14D6C6A4D69613E54",
+      "size": 12115289
+    }
+  },
+  "schema": "nobu16.kr.ev-strdata-pc-reaudit.v1",
+  "scope": {
+    "commit_created": false,
+    "generic_builder_modified": false,
+    "generic_builder_read": false,
+    "generic_overlay_korean_text_read": false,
+    "historic_korean_translation_used": false,
+    "steam_game_resource_written": false,
+    "switch_korean_translation_used": false,
+    "translation_contexts": [
+      "pristine_pc_jp",
+      "pc_sc",
+      "pc_tc",
+      "current_pc_ko"
+    ]
+  },
+  "selection": {
+    "excluded_prior_coordinate_count": 289,
+    "excluded_prior_coordinate_ids_sha256": "F003994249CB6AFBEBFCE00A186FB99282ABE1E2FB3A82AAD5A3E5C158766B0F",
+    "expected_coordinate_count": 17868,
+    "ledger_coordinate_count": 17868,
+    "ledger_coordinate_ids_sha256": "1D2171B27C00A8633E6C19FF2AB679406E92B3B602E180A51777829CC92F1FB8",
+    "manual_linebreak_edit_candidate_count": 0,
+    "new_high_confidence_candidate_count": 5,
+    "new_high_confidence_candidate_ids": [
+      4261,
+      6900,
+      6926,
+      9148,
+      9470
+    ],
+    "new_high_confidence_candidate_ids_sha256": "32BB9E6FA64EA48B4F8A946AB5BBE1C9E522C2D0BA514730424174D50B094996",
+    "new_hold_count": 0,
+    "semantic_completion": false,
+    "semantic_completion_reason": "A full PC-only coordinate scan and high-confidence correction pass do not prove exhaustive gameplay-context semantic completion."
+  },
+  "source_free_overlap_exclusions": {
+    "ev_strdata_coordinate_count": 17868,
+    "excluded_coordinate_count": 289,
+    "generic_overlay_read": false,
+    "path": "tmp/translation_quality_pc_coverage_manifest_v1/merged_pc_only_coordinate_dispositions.v1.jsonl",
+    "sha256": "43187327477634855B8D057AC1CE56E54692D2330ADF4C40395C67415B2C9931",
+    "size": 172043884,
+    "text_fields_read": false
+  }
+}
