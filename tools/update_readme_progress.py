@@ -93,23 +93,16 @@ def load_release_progress() -> dict:
 
 
 def render() -> str:
-    payload = load_release_progress()
-    translation = payload["translation"]
-    intentionally_preserved = (
-        translation["official_credit_preserved"]
-        + translation["runtime_structure_preserved"]
-    )
+    load_release_progress()
     return "\n".join(
         [
             START,
             "### v0.10.0 — 텍스트 번역 완료",
             "",
             "`v0.10.0`은 Steam JP 1.1.7용 공개 배포본입니다. 게임 내 번역 대상 텍스트 번역을 완료했습니다.",
+            "현재는 순정 PC 일본어 원문과 PC EN/SC/TC 대조로 번역 품질을 전수 감사하고 있으며, 스위치판 한글은 기준으로 사용하지 않습니다.",
             "",
-            (
-                f"공식 크레딧과 런타임 구조용 {intentionally_preserved}건은 번역 대상이 아니므로 "
-                "원문을 유지합니다. 남은 것은 번역 작업이 아니라 일부 표현·화면의 선택 검수입니다."
-            ),
+            "공식 크레딧·일본어 IME 등 번역 대상이 아닌 구조용 슬롯은 유지하고, 고확신 오역만 별도 검증 후 수정합니다.",
             "이벤트 스크립트 줄바꿈 전수 검수·보정은 완료했습니다. 이미지 번역은 진행 중입니다.",
             END,
         ]
