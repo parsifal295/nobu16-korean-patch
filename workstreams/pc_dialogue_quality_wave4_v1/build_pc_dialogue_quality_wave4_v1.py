@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Build PC-only dialogue-quality wave four on top of static grammar wave three.
 
-The records in this wave keep all opaque bytes byte-for-byte.  That includes
-runtime person/faction/month references and colour spans.  Only explicitly
-pinned UTF-16 literal slots are replaced after Wave 3 has been rebuilt in
-memory; Steam itself is never written by this builder.
+The records in this wave preserve runtime person/faction/month references and
+colour spans byte-for-byte.  Most plans replace only pinned UTF-16 literals.
+The small runtime-suffix subset also removes only its individually pinned
+Japanese ``01 43`` inflection commands; Steam itself is never written.
 """
 
 from __future__ import annotations
@@ -34,6 +34,8 @@ WAVE3_SCRIPT = (
 sys.path.insert(0, str(MSGGAME))
 
 from msggame_format import (  # noqa: E402
+    LITERAL_END,
+    LITERAL_START,
     MsgGameRecord,
     parse_packed_msggame,
     parse_record_literals,
@@ -64,8 +66,8 @@ CHANGED_PATHS = WAVE3.CHANGED_PATHS
 # Generated from the source-gated candidate and pinned for all future builds.
 TARGET_SHA256 = {
     **BASELINE_SHA256,
-    "MSG/JP/msggame.bin": "C61B7157A957C43B797743203A9F2F8E80775C543871CAE76C3C53354D0B1DD8",
-    "MSG_PK/JP/msggame.bin": "4FDAD584CE5C420C4FE2B4397A3F8ECD0EE28E9A317DCE2A29AB9ABB91E00FFA",
+    "MSG/JP/msggame.bin": "2C1211EC2C80356D9213058F669C9E030175235D35441E7C27CD54BDAB258B89",
+    "MSG_PK/JP/msggame.bin": "B8630E52AC3A9D1A56E991BC3BD17CEE5DF319955D71606F5DF4C6A34614BEB8",
 }
 
 
@@ -88,12 +90,25 @@ class Anchor:
 
 
 @dataclass(frozen=True)
+class RemovedCommand:
+    """One exact Japanese inflection command to remove from opaque bytes."""
+
+    offset: int
+    expected_hex: str
+
+    @property
+    def value(self) -> bytes:
+        return bytes.fromhex(self.expected_hex)
+
+
+@dataclass(frozen=True)
 class QualityPlan:
     block_id: int
     record_id: int
     expected_sha256: str
     changes: tuple[LiteralChange, ...]
     base_anchor: Anchor | None = None
+    remove_commands: tuple[RemovedCommand, ...] = ()
 
     @property
     def coordinate(self) -> tuple[int, int]:
@@ -110,16 +125,27 @@ def anchor(block_id: int, record_id: int, expected_sha256: str) -> Anchor:
     return Anchor(block_id, record_id, expected_sha256)
 
 
+def remove_command(offset: int, expected_hex: str) -> RemovedCommand:
+    value = bytes.fromhex(expected_hex)
+    if offset < 0 or len(value) != 6 or value[:2] != b"\x01\x43":
+        raise ValueError(f"invalid removable 0143 command: {offset}, {expected_hex}")
+    return RemovedCommand(offset, expected_hex.upper())
+
+
 def plan(
     block_id: int,
     record_id: int,
     expected_sha256: str,
     changes: tuple[LiteralChange, ...],
     base_anchor: Anchor | None = None,
+    remove_commands: tuple[RemovedCommand, ...] = (),
 ) -> QualityPlan:
     if not changes:
         raise ValueError(f"{block_id}:{record_id} has no literal changes")
-    return QualityPlan(block_id, record_id, expected_sha256, changes, base_anchor)
+    offsets = [item.offset for item in remove_commands]
+    if len(offsets) != len(set(offsets)):
+        raise ValueError(f"duplicate removable 0143 offset for {block_id}:{record_id}")
+    return QualityPlan(block_id, record_id, expected_sha256, changes, base_anchor, remove_commands)
 
 
 def copy_plan(
@@ -140,9 +166,27 @@ def copy_plan(
     return plan(block_id, record_id, expected_sha256, changes, base_anchor)
 
 
-# Base MSG has no standalone quality corrections in this wave.  Wave 3 is
-# still rebuilt for it so the eventual candidate is a single 11-file profile.
-BASE_PLANS: tuple[QualityPlan, ...] = ()
+# The twelve Base variants share a malformed JP runtime-suffix template.  The
+# target and faction placeholders are separate non-0143 commands and remain
+# intact; only the two pinned Japanese inflection commands are removed.
+BASE_RUNTIME_SUFFIX_IDS = tuple(range(2083, 2095))
+BASE_PLANS: tuple[QualityPlan, ...] = tuple(
+    plan(
+        6,
+        record_id,
+        "611712BFCC0A9585A147E3DF866F7675E9E1DF89AF8820B04A0A3C60422FDD77",
+        (
+            change(0, "를 함락시켜라", " 함락은 가능하겠나…"),
+            change(1, "인가…\n", "\n"),
+            change(2, "의 원군에는 감사", "의 원군에는 감사하겠소."),
+        ),
+        remove_commands=(
+            remove_command(23, "014314020000"),
+            remove_command(70, "0143EA010000"),
+        ),
+    )
+    for record_id in BASE_RUNTIME_SUFFIX_IDS
+)
 
 # Every item below was compared directly to the pristine PC JP resource.  The
 # block-6 items additionally pin the matching current PC-base Korean record;
@@ -231,7 +275,7 @@ PK_PLANS = (
 # Each pair has the identical pristine PC JP literal tuple; only the PK Korean
 # record was substituted with an unrelated sentence or a label fragment.
 PK_PLANS += (
-    copy_plan(2, 273, "5BF6140C94EDA42A8C0CC96992D05BC976A57CDC7D44206EFA3219A3FF2AAB99", ("때는 지금…어떤 사정이 있다 한들\n", ".\n완벽한 성과로 이끌겠다."), ("때는 지금…어떤 사정이 있다 한들\n", "을(를) 보좌하여\n완벽한 성과로 이끌리라"), anchor(2, 267, "8E41B4A64A14A231F3AF38B1C040637E4D96D2C4ACC57945538D153DCD8D1E4D")),
+    plan(2, 273, "5BF6140C94EDA42A8C0CC96992D05BC976A57CDC7D44206EFA3219A3FF2AAB99", (change(1, ".\n완벽한 성과로 이끌겠다.", "의 보좌를 맡아\n완벽한 성과를 이루리라"),), anchor(2, 267, "8E41B4A64A14A231F3AF38B1C040637E4D96D2C4ACC57945538D153DCD8D1E4D")),
     copy_plan(6, 442, "083BB4247F35D00670F6EB45C68C1F2ADF26A04528E170801B700D8C73DC4204", ("상을 받아도 마냥\n기뻐할 수는 없군……",), ("…이 또한\n주종의 숙명이라면",), anchor(6, 440, "13126DEA7B6AD532E0B87656588899FF8D87800E07B18A8B8BE3AA36EC998C04")),
     copy_plan(6, 800, "6F93BB0A47A151C707E387F506ECD3C9227241FD8055C19D34656164612E6FF7", ("나를 품을 만한\n그릇은 아닌가 보군……",), ("…무슨 일인가?\n돌아가고 싶다만",), anchor(6, 798, "80CA07C6803C7E706B7B7014B9A0B2BC0CDB8D50C18D485403370F30C456029E")),
     copy_plan(6, 802, "FA734188754D0FBAA0D0E1D01877D0D996907801FCCB3DF20D8C9377E539FCC0", ("내 헌책을 바칠 주군은\n따로 있는 듯하군……",), ("…후우, 이 자리조차\n고통스럽게 느껴지는구나",), anchor(6, 800, "9ACE1A2D306B448D1FC61E8645D5D16E3F0844592856ACB230F236180E45A0C1")),
@@ -243,10 +287,6 @@ PK_PLANS += (
     copy_plan(6, 1076, "DE81DE98D81AAD28C64C8BF0349230970588F1B5EF74611B449F38FDC4DEF8AB", ("누군가 추방되었군요",), ("쓸쓸해집니다…",), anchor(6, 1074, "14ACC284931EA72466346066765001E2B37AD388409EDF9D67DC45E9A683229F")),
     copy_plan(6, 1086, "EA79713BEC822891FEDD7827DEC783533C7A874CCF7A1579B1A31FA5E832FEAB", ("내가 나설\n기회가 있으려나?",), ("좋은 군단에\n소속되고 싶구나",), anchor(6, 1084, "1DDBAEC09270D7F24D7199BA00B90E98E90A7EB9F8769927206784FCFBC9D005")),
     copy_plan(6, 1088, "EA79713BEC822891FEDD7827DEC783533C7A874CCF7A1579B1A31FA5E832FEAB", ("내가 나설\n기회가 있으려나?",), ("좋은 군단에\n소속되고 싶구나",), anchor(6, 1086, "1DDBAEC09270D7F24D7199BA00B90E98E90A7EB9F8769927206784FCFBC9D005")),
-    copy_plan(6, 2089, "F388F4525E37BC03E46793AA7FB937516AD8438FF7F86C18CA6100C542545CC8", ("다음 성을 함락했습니다:", "인가…\n", ". 감사합니다."), ("를 함락시켜라", "인가…\n", "의 원군에는 감사"), anchor(6, 2083, "611712BFCC0A9585A147E3DF866F7675E9E1DF89AF8820B04A0A3C60422FDD77")),
-    copy_plan(6, 2090, "F388F4525E37BC03E46793AA7FB937516AD8438FF7F86C18CA6100C542545CC8", ("다음 성을 함락했습니다:", "인가…\n", ". 감사합니다."), ("를 함락시켜라", "인가…\n", "의 원군에는 감사"), anchor(6, 2083, "611712BFCC0A9585A147E3DF866F7675E9E1DF89AF8820B04A0A3C60422FDD77")),
-    copy_plan(6, 2091, "F388F4525E37BC03E46793AA7FB937516AD8438FF7F86C18CA6100C542545CC8", ("다음 성을 함락했습니다:", "인가…\n", ". 감사합니다."), ("를 함락시켜라", "인가…\n", "의 원군에는 감사"), anchor(6, 2083, "611712BFCC0A9585A147E3DF866F7675E9E1DF89AF8820B04A0A3C60422FDD77")),
-    copy_plan(6, 2095, "F388F4525E37BC03E46793AA7FB937516AD8438FF7F86C18CA6100C542545CC8", ("다음 성을 함락했습니다:", "인가…\n", ". 감사합니다."), ("를 함락시켜라", "인가…\n", "의 원군에는 감사"), anchor(6, 2083, "611712BFCC0A9585A147E3DF866F7675E9E1DF89AF8820B04A0A3C60422FDD77")),
     copy_plan(6, 2793, "66AA170CDCA7A1AE18B5718A4C5E2B61625860A79CFE2D0E15C3AE6771A55F09", ("이", ". 휘하로 들어갔습니다"), ("이", "의 산하에"), anchor(6, 2787, "07EEDDDBA7789A9A5A1E01304BF4C32648DF721B757C327487640FE2B91B1089")),
     copy_plan(6, 2856, "0FB500CA6BD49B5F164B2633E0756F135F3D3B3CAF658587EF6E5085F9DFC785", ("좋다, 결정했다\n공격할 세력:", ". 출진하자"), ("음, 분명히 받들었소\n우리는", "를 공격하도록 하지"), anchor(6, 2850, "2FE85CB576C76B78B0846670EAD688187C942871EB21974E07DD8C8CBB016D82")),
     copy_plan(6, 2857, "B57A9B96A0ABF7CEFA4297CBFD9C90D51012704009FD16F3177391049DFBDD87", ("알겠습니다\n", ". 공격합시다"), ("알겠습니다\n", "를 공격합시다"), anchor(6, 2851, "9A5B37B4A6CE2F28688A9314C2E623A24983D156488028386BCA3CD3B380CD0F")),
@@ -263,6 +303,40 @@ PK_PLANS += (
     copy_plan(6, 3280, "1366AAC013F1253E8774DA74031AC815049FDC37D334F713021FFFA69BF53392", ("어려울 때일수록 서로 도와야지요…\n", ". 방어에 나서겠습니다"), ("어려울 때일수록 서로 도와야지요…\n", "의 방위로 향합니다"), anchor(6, 3273, "6DF461B09F0411B6C6543949A31C5CB1DC9E0E1C6001523725E9653737D6887D")),
     copy_plan(6, 3286, "8AE4905B56CA48E80CB52293C9C7D78C6EA7CDAD8657139EF9A82A5C47AA90A1", ("무명이 자자한 귀가라면\n", ". 어렵지 않을 것입니다"), ("무명이 자자한 귀가라면\n", "공략쯤은 대수롭지 않으리"), anchor(6, 3279, "0A45F5DF076C8F5EC09DB2835FEAE75DB63E9A7BF67E29F0609CD308AC642AC3")),
 )
+
+# The PK variants use the same source dialogue as Base 6:2083–2094, but two
+# Korean preimages differ in literal 2.  Preserve 026432/025032 runtime
+# references and remove only the two JP inflection commands in each record.
+PK_RUNTIME_SUFFIX_GROUPS = (
+    (
+        (2089, 2090, 2091, 2095),
+        "F388F4525E37BC03E46793AA7FB937516AD8438FF7F86C18CA6100C542545CC8",
+        ". 감사합니다.",
+        (remove_command(35, "01431A020000"), remove_command(80, "0143F0010000")),
+    ),
+    (
+        (2092, 2093, 2094, 2096, 2097, 2098, 2099, 2100),
+        "17FBB18B713C38055FD19C83A72E3A2C3E205779B7C56B47B2286D500850DCDA",
+        "의 원군에는 감사",
+        (remove_command(35, "01431A020000"), remove_command(82, "0143F0010000")),
+    ),
+)
+PK_RUNTIME_SUFFIX_PLANS: tuple[QualityPlan, ...] = tuple(
+    plan(
+        6,
+        record_id,
+        expected_sha256,
+        (
+            change(0, "다음 성을 함락했습니다:", " 함락은 가능하겠나…"),
+            change(1, "인가…\n", "\n"),
+            change(2, expected_literal_2, "의 원군에는 감사하겠소."),
+        ),
+        remove_commands=remove_commands,
+    )
+    for record_ids, expected_sha256, expected_literal_2, remove_commands in PK_RUNTIME_SUFFIX_GROUPS
+    for record_id in record_ids
+)
+PK_PLANS += PK_RUNTIME_SUFFIX_PLANS
 
 # These coordinates were first drafted against the 0FB9 source, whose block
 # layout is not the current Steam PC release.  The aligned 31D PC-JP source
@@ -327,6 +401,108 @@ def opaque_bytes(record: MsgGameRecord) -> bytes:
     return bytes(out)
 
 
+def opaque_spans(record: MsgGameRecord) -> tuple[tuple[int, bytes], ...]:
+    cursor = 0
+    spans: list[tuple[int, bytes]] = []
+    for literal in parse_record_literals(record):
+        spans.append((cursor, record.data[cursor : literal.marker_offset]))
+        cursor = literal.marker_end
+    spans.append((cursor, record.data[cursor:]))
+    return tuple(spans)
+
+
+def opaque_commands(record: MsgGameRecord) -> tuple[tuple[int, bytes], ...]:
+    commands: list[tuple[int, bytes]] = []
+    for span_offset, span in opaque_spans(record):
+        for offset in range(len(span) - 5):
+            if span[offset : offset + 2] == b"\x01\x43":
+                commands.append((span_offset + offset, span[offset : offset + 6]))
+    return tuple(commands)
+
+
+def removal_map(record: MsgGameRecord, item: QualityPlan) -> dict[int, bytes]:
+    expected = {command.offset: command.value for command in item.remove_commands}
+    if not expected:
+        return expected
+    actual = dict(opaque_commands(record))
+    mismatch = {
+        offset: {"expected": value.hex().upper(), "actual": actual.get(offset, b"").hex().upper()}
+        for offset, value in expected.items()
+        if actual.get(offset) != value
+    }
+    if mismatch:
+        raise QualityError(
+            f"{item.coordinate} removable 0143 contract mismatch: "
+            f"{json.dumps(mismatch, ensure_ascii=False, sort_keys=True)}"
+        )
+    return expected
+
+
+def strip_removed_commands(span_offset: int, span: bytes, removals: dict[int, bytes]) -> bytes:
+    output = bytearray()
+    index = 0
+    while index < len(span):
+        absolute = span_offset + index
+        command = removals.get(absolute)
+        if command is not None:
+            if span[index : index + len(command)] != command:
+                raise QualityError(f"removable 0143 command shifted at 0x{absolute:X}")
+            index += len(command)
+            continue
+        output.append(span[index])
+        index += 1
+    return bytes(output)
+
+
+def expected_opaque_after_removals(record: MsgGameRecord, item: QualityPlan) -> bytes:
+    removals = removal_map(record, item)
+    return b"".join(
+        strip_removed_commands(span_offset, span, removals)
+        for span_offset, span in opaque_spans(record)
+    )
+
+
+def encode_literal(text: str, item: QualityPlan) -> bytes:
+    encoded = text.encode("utf-16-le")
+    if LITERAL_START in encoded or LITERAL_END in encoded:
+        raise QualityError(f"reserved literal marker in {item.coordinate}")
+    return LITERAL_START + encoded + LITERAL_END
+
+
+def rebuild_quality_record(
+    record: MsgGameRecord,
+    item: QualityPlan,
+    literal_replacements: dict[int, str],
+) -> bytes:
+    if not item.remove_commands:
+        return rebuild_record_literals(record, literal_replacements)
+    removals = removal_map(record, item)
+    output = bytearray()
+    cursor = 0
+    for literal in parse_record_literals(record):
+        output.extend(
+            strip_removed_commands(cursor, record.data[cursor : literal.marker_offset], removals)
+        )
+        output.extend(encode_literal(literal_replacements.get(literal.literal_id, literal.text), item))
+        cursor = literal.marker_end
+    output.extend(strip_removed_commands(cursor, record.data[cursor:], removals))
+    rebuilt = bytes(output)
+    rebuilt_record = MsgGameRecord(record.block_id, record.record_id, record.relative_offset, rebuilt)
+    if opaque_bytes(rebuilt_record) != expected_opaque_after_removals(record, item):
+        raise QualityError(f"{item.coordinate} changed unplanned opaque bytes")
+    remaining_commands = {value for _offset, value in opaque_commands(rebuilt_record)}
+    leftovers = [
+        command.expected_hex
+        for command in item.remove_commands
+        if command.value in remaining_commands
+    ]
+    if leftovers:
+        raise QualityError(
+            f"{item.coordinate} retained planned-to-remove 0143 command(s): {leftovers}"
+        )
+    return rebuilt
+
+
 def validate_plan_set(plans: tuple[QualityPlan, ...], relative: str) -> None:
     coordinates = [item.coordinate for item in plans]
     if len(coordinates) != len(set(coordinates)):
@@ -335,6 +511,9 @@ def validate_plan_set(plans: tuple[QualityPlan, ...], relative: str) -> None:
         literal_ids = [entry.literal_id for entry in item.changes]
         if len(literal_ids) != len(set(literal_ids)):
             raise QualityError(f"duplicate literal slot in {relative} {item.coordinate}")
+        removal_offsets = [command.offset for command in item.remove_commands]
+        if len(removal_offsets) != len(set(removal_offsets)):
+            raise QualityError(f"duplicate removable 0143 offset in {relative} {item.coordinate}")
         for entry in item.changes:
             if entry.expected_text == entry.replacement:
                 raise QualityError(f"no-op literal change in {relative} {item.coordinate}")
@@ -409,8 +588,8 @@ def rebuild_quality_resource(
                     f"expected {entry.expected_text!r}, got {actual!r}"
                 )
             literal_replacements[entry.literal_id] = entry.replacement
-        opaque_contracts[item.coordinate] = opaque_bytes(record)
-        replacements[item.coordinate] = rebuild_record_literals(record, literal_replacements)
+        opaque_contracts[item.coordinate] = expected_opaque_after_removals(record, item)
+        replacements[item.coordinate] = rebuild_quality_record(record, item, literal_replacements)
 
     rebuilt = rebuild_packed_msggame(packed, replacements)
     after = records_by_coordinate(rebuilt)

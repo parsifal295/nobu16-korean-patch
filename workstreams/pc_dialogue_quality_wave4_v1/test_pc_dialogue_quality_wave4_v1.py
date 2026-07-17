@@ -28,7 +28,10 @@ spec.loader.exec_module(wave4)
 class Wave4QualityTests(unittest.TestCase):
     def test_target_is_pinned_and_quality_plans_are_unique(self) -> None:
         self.assertTrue(wave4.target_is_pinned())
-        self.assertEqual(len(wave4.PK_PLANS), 19)
+        self.assertEqual(len(wave4.BASE_PLANS), len(wave4.BASE_RUNTIME_SUFFIX_IDS))
+        self.assertEqual(len(wave4.PK_RUNTIME_SUFFIX_PLANS), 12)
+        runtime_coordinates = {(6, record_id) for record_id in range(2089, 2101)}
+        self.assertTrue(runtime_coordinates.issubset({item.coordinate for item in wave4.PK_PLANS}))
         self.assertTrue(
             set(item.coordinate for item in wave4.PK_PLANS).isdisjoint(
                 wave4.DEFERRED_UNALIGNED_0FB9_COORDINATES
@@ -69,9 +72,6 @@ class Wave4QualityTests(unittest.TestCase):
             self.assertEqual(json.loads(manifest.read_text(encoding="utf-8"))["output_sha256"], wave4.TARGET_SHA256)
             source_base = (steam / "MSG/JP/msggame.bin").read_bytes()
             source_pk = (steam / "MSG_PK/JP/msggame.bin").read_bytes()
-            before = wave4.records_by_coordinate(source_pk)
-            after = wave4.records_by_coordinate((candidate / "MSG_PK/JP/msggame.bin").read_bytes())
-            plans = {item.coordinate: item for item in wave4.PK_PLANS}
             wave3_base = wave4.WAVE3.rebuild_static_resource(
                 source_base,
                 wave4.WAVE3.BASE_PLANS,
@@ -85,18 +85,38 @@ class Wave4QualityTests(unittest.TestCase):
             candidate_base = wave4.records_by_coordinate((candidate / "MSG/JP/msggame.bin").read_bytes())
             wave3_base_records = wave4.records_by_coordinate(wave3_base)
             wave3_records = wave4.records_by_coordinate(wave3_before)
-            self.assertEqual(set(candidate_base), set(wave3_base_records))
-            for coordinate, record in wave3_base_records.items():
-                self.assertEqual(candidate_base[coordinate].data, record.data, f"base {coordinate}")
-            for coordinate, item in plans.items():
-                self.assertEqual(wave4.opaque_bytes(after[coordinate]), wave4.opaque_bytes(wave3_records[coordinate]))
-                for entry in item.changes:
-                    literals = {literal.literal_id: literal.text for literal in wave4.parse_record_literals(after[coordinate])}
-                    self.assertEqual(literals[entry.literal_id], entry.replacement)
-            self.assertEqual(set(before), set(after))
-            for coordinate, record in wave3_records.items():
-                if coordinate not in plans:
-                    self.assertEqual(after[coordinate].data, record.data, f"PK {coordinate}")
+            after = wave4.records_by_coordinate((candidate / "MSG_PK/JP/msggame.bin").read_bytes())
+
+            def assert_transform(
+                before_records: dict[tuple[int, int], wave4.MsgGameRecord],
+                after_records: dict[tuple[int, int], wave4.MsgGameRecord],
+                plan_items: tuple[wave4.QualityPlan, ...],
+                label: str,
+            ) -> None:
+                plans = {item.coordinate: item for item in plan_items}
+                self.assertEqual(set(before_records), set(after_records), label)
+                for coordinate, record in before_records.items():
+                    actual = after_records[coordinate]
+                    item = plans.get(coordinate)
+                    if item is None:
+                        self.assertEqual(actual.data, record.data, f"{label} {coordinate}")
+                        continue
+                    self.assertEqual(
+                        wave4.opaque_bytes(actual),
+                        wave4.expected_opaque_after_removals(record, item),
+                        f"{label} opaque {coordinate}",
+                    )
+                    for entry in item.changes:
+                        literals = {
+                            literal.literal_id: literal.text
+                            for literal in wave4.parse_record_literals(actual)
+                        }
+                        self.assertEqual(
+                            literals[entry.literal_id], entry.replacement, f"{label} literal {coordinate}"
+                        )
+
+            assert_transform(wave3_base_records, candidate_base, wave4.BASE_PLANS, "base")
+            assert_transform(wave3_records, after, wave4.PK_PLANS, "PK")
 
 
 if __name__ == "__main__":
