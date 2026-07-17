@@ -1,0 +1,29 @@
+{
+  "schema": "nobu16.kr.steam-jp-msgev-10564-compact-layout-verification.v1",
+  "resource": "MSG_PK/JP/msgev.bin",
+  "source_profiles": [
+    {
+      "name": "current_game_rebased",
+      "packed": {
+        "size": 1045618,
+        "sha256": "6B8228C0A0FDDF9C4C50C167C63282EF8AE28496F3CEEF4D56E2C71B9F29430A"
+      },
+      "string_count": 17910
+    },
+    {
+      "name": "release_v0_10_0",
+      "packed": {
+        "size": 1052079,
+        "sha256": "2CA183DA690D45A75702EA0F35C70966786B59E9440B8B8F49BE9652342F81AC"
+      },
+      "string_count": 17916
+    }
+  ],
+  "font": {
+    "resource": "RES_JP/res_lang.bin",
+    "outer_entry": 6,
+    "table": 0,
+    "target_advance_px": 48,
+    "max_line_px": 912
+  }
+}

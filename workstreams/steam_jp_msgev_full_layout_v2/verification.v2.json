@@ -1,0 +1,88 @@
+{
+  "audit": {
+    "manual_review_coverage_count": 4003,
+    "missing_private_semantic_compaction_count": 0,
+    "relative_path": "workstreams/steam_jp_msgev_full_layout_v2/public/msgev_full_layout_audit.v2.json",
+    "sha256": "7CAF94DE4E9DDC5C4ACDF5103614E3D9F3B46C98D0E4F285AE15E137F74E65C5"
+  },
+  "counts": {
+    "already_fit_after_review": 1157,
+    "effective_change_count": 3774,
+    "manual_review_coverage_count": 4003,
+    "missing_reviewed_compaction_count": 0,
+    "overlay_entry_count": 3774,
+    "protected_runtime_width_unknown_preserved": 1,
+    "reviewed_boundary_reflow": 1293,
+    "reviewed_semantic_compaction": 1552,
+    "reviewed_semantic_compaction_count": 1552,
+    "v1_existing_layout_retained": 1746,
+    "v1_reused": 929
+  },
+  "expected_candidate": {
+    "effective_change_count": 3774,
+    "packed": {
+      "sha256": "B8B3B1C5A635419E590DB866C240A1B6609799E0FEA0E69F86D6208F27E5C52B",
+      "size": 995446
+    },
+    "raw": {
+      "sha256": "2A98D81EC39E99358386B8E715BC8A97ACFD1E9A6B76B3FF69B2467B1F7D50DB",
+      "size": 991532
+    },
+    "string_count": 17916
+  },
+  "font": {
+    "max_line_px": 912,
+    "max_lines": 3,
+    "outer_entry": 6,
+    "packed": {
+      "sha256": "2AD3B5612D88B0654BED1F3ED9CE5FEF214DABFE8FA312C7A2EBE16A27F7B17A",
+      "size": 160721213
+    },
+    "resource": "RES_JP/res_lang.bin",
+    "runtime_name_reservations_applied": true,
+    "table": 0
+  },
+  "inputs": {
+    "manual_boundary_decisions": {
+      "sha256": "443925865B60164B04791AD6B412F9AAC11F6F6D71D287940CFFD51E0A5882F1"
+    },
+    "runtime_reservation_font": {
+      "ascii_space_advance_px": 24,
+      "outer_entry": 6,
+      "packed": {
+        "sha256": "2AD3B5612D88B0654BED1F3ED9CE5FEF214DABFE8FA312C7A2EBE16A27F7B17A",
+        "size": 160721213
+      },
+      "resource": "RES_JP/res_lang.bin",
+      "table": 0,
+      "wide_script_advance_px": 48
+    },
+    "runtime_token_reservations": {
+      "sha256": "B981C7C456F2DC285721E7E3DB74D2D11456B49B25D5A97BB320F815DFC0A893"
+    }
+  },
+  "overlay": {
+    "effective_change_coordinate_sha256": "00B7CDCD72A8BE0CAD8A5129CFFC2D70CA52F98EBE19E91AC2F4EDD574ACC83B",
+    "entry_count": 3774,
+    "relative_path": "workstreams/steam_jp_msgev_full_layout_v2/public/msgev_ko_steam_jp_full_layout.v2.json",
+    "sha256": "10EE44F4D5F5A871F5DEDB60C6435F4115E698FB1544B898EA421356FAB6BF42"
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "safety": {
+    "dynamic_name_widths_reserved": true,
+    "font_widths_modified": false,
+    "github_written": false,
+    "nonselected_utf16le_payloads_preserved": true,
+    "release_written": false,
+    "steam_files_written": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgev-full-layout-verification.v2",
+  "source": {
+    "packed": {
+      "sha256": "2CA183DA690D45A75702EA0F35C70966786B59E9440B8B8F49BE9652342F81AC",
+      "size": 1052079
+    },
+    "raw_sha256": "EDCF7A9CEBD605BB2275D5A3B92A76E7E2F652B2391554F24C6A8BDD2EF91A08",
+    "string_count": 17916
+  }
+}

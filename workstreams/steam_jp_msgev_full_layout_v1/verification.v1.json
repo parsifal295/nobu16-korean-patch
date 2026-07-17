@@ -1,0 +1,67 @@
+{
+  "audit": {
+    "entry_count": 6678,
+    "relative_path": "workstreams/steam_jp_msgev_full_layout_v1/public/msgev_full_layout_audit.v1.json",
+    "sha256": "E0DD03B8C97EEAE90975BC20B8C424DDE3C30E05CAE970873D8C0783627F0ABE"
+  },
+  "counts": {
+    "automatic_conservative_reflow": 928,
+    "automatic_conservative_reflow_count": 928,
+    "existing_layout_retained": 1746,
+    "manual_compact_override_count": 1,
+    "manual_compaction_override_applied": 1,
+    "manual_compaction_required": 1383,
+    "manual_korean_boundary_review": 2090,
+    "manual_protected_token_review": 530,
+    "manual_review_hold_count": 4003,
+    "scanned_hangul_hard_linebreak_entry_count": 6678
+  },
+  "expected_candidate": {
+    "effective_change_count": 929,
+    "packed": {
+      "sha256": "8AC06DCC50B5CF153FC7E766229F92567875D343DA476897EF4B7E98D4EB080E",
+      "size": 1051810
+    },
+    "raw": {
+      "sha256": "25D417D54AF22418C41688B4A268FA1D917D734FD4E03711E216D14D6F785D22",
+      "size": 1047676
+    },
+    "string_count": 17916
+  },
+  "font": {
+    "max_line_px": 912,
+    "max_lines": 3,
+    "outer_entry": 6,
+    "packed": {
+      "sha256": "2F8048EC34B8B86CED54C0DC9A0879522D2717953805A4E4CC5EFF05407A4A45",
+      "size": 160095868
+    },
+    "resource": "RES_JP/res_lang.bin",
+    "table": 0
+  },
+  "overlay": {
+    "effective_change_coordinate_sha256": "AB8EAC9FB364513F6AA78BB5494A2FA34F2319AAC95490D3A26207E38E8D2BF5",
+    "entry_count": 929,
+    "relative_path": "workstreams/steam_jp_msgev_full_layout_v1/public/msgev_ko_steam_jp_full_layout.v1.json",
+    "sha256": "B0B5EFA330B00B00B57211053B26B2CA74ED975D8E4A037791A40E307156BA77"
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "safety": {
+    "automatic_reflow_only_at_unambiguous_boundaries": true,
+    "font_widths_modified": false,
+    "github_written": false,
+    "manual_review_rows_left_unchanged": true,
+    "nonselected_utf16le_payloads_preserved": true,
+    "release_written": false,
+    "steam_files_written": false
+  },
+  "schema": "nobu16.kr.steam-jp-msgev-full-layout-verification.v1",
+  "source": {
+    "packed": {
+      "sha256": "2CA183DA690D45A75702EA0F35C70966786B59E9440B8B8F49BE9652342F81AC",
+      "size": 1052079
+    },
+    "raw_sha256": "EDCF7A9CEBD605BB2275D5A3B92A76E7E2F652B2391554F24C6A8BDD2EF91A08",
+    "string_count": 17916
+  }
+}

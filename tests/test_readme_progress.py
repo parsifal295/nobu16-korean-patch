@@ -48,7 +48,8 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("게임 내 번역 대상 텍스트 번역을 완료했습니다.", rendered)
         self.assertIn("9건은 번역 대상이 아니므로 원문을 유지합니다.", rendered)
         self.assertIn("남은 것은 번역 작업이 아니라 일부 표현·화면의 선택 검수입니다.", rendered)
-        self.assertIn("이미지 번역과 이벤트 스크립트 줄바꿈 검수는 진행 중입니다.", rendered)
+        self.assertIn("이벤트 스크립트 줄바꿈 전수 검수·보정은 완료했습니다.", rendered)
+        self.assertIn("이미지 번역은 진행 중입니다.", rendered)
         self.assertNotIn("2,489", rendered)
         self.assertNotIn("추가 수동 검토", rendered)
         self.assertNotIn("SHA-256", rendered)
@@ -70,7 +71,7 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.10.0]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.10.1]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
