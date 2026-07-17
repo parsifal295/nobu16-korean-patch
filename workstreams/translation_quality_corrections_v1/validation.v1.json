@@ -1,0 +1,130 @@
+{
+  "checks": {
+    "Steam_installation_written": false,
+    "format_profiles": "OK",
+    "source_hash_gates": "OK"
+  },
+  "contains_commercial_source_text": false,
+  "contains_complete_game_resource": false,
+  "entry_count": 1675,
+  "overlay": {
+    "relative_path": "workstreams/translation_quality_corrections_v1/public/translation_quality_corrections.v1.json",
+    "sha256": "D597EF32EED43824D1DC3D40764F44CD3780D2EE8F9ED3FD2EA74ED2C5B4B192"
+  },
+  "resource_count": 10,
+  "resources": [
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 134,
+      "entry_count": 134,
+      "name": "msgbre"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 756,
+      "entry_count": 756,
+      "name": "msgdata"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 128,
+      "entry_count": 128,
+      "name": "strdata"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 83,
+      "entry_count": 83,
+      "name": "msgev"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 118,
+      "entry_count": 118,
+      "name": "ev_strdata"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 11,
+      "entry_count": 11,
+      "name": "msgire"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 4,
+      "entry_count": 4,
+      "name": "msgstf"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 8,
+      "entry_count": 8,
+      "name": "msgstf_ce"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 202,
+      "entry_count": 202,
+      "name": "base_msggame"
+    },
+    {
+      "checks": {
+        "baseline": "OK",
+        "format_profiles": "OK",
+        "replacement_safety": "OK",
+        "source_hashes": "OK"
+      },
+      "effective_change_count": 231,
+      "entry_count": 231,
+      "name": "pk_msggame"
+    }
+  ],
+  "schema": "nobu16.kr.translation-quality-corrections-validation.v1",
+  "source_free": true,
+  "switch_korean_translation_used": false
+}
