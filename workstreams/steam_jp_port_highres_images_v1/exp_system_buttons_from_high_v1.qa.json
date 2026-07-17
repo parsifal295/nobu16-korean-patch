@@ -1,0 +1,31 @@
+{
+  "schema": "nobu16.kr.exp-system-buttons-from-reviewed-high.qa.v1",
+  "runtime_route": "RES_JP/res_lang_exp.bin outer[3]/resource[3860]/texture[1]",
+  "method": "premultiplied-alpha Lanczos3 1/2 resize from the reviewed high-resolution atlas",
+  "source_high_atlas": {
+    "path": "RES_JP_PK_PORT/res_lang_pk_port1.bin",
+    "size": 83878438,
+    "sha256": "F65383C72291D08B71EBA7E2EF504A8C674E7C4678445045868D98FCA5B0730D"
+  },
+  "output_archive": {
+    "path": "RES_JP/res_lang_exp.bin",
+    "size": 13796051,
+    "sha256": "AC55622FC5C78ECA4ECFE37D1D890D5B26F6200ED7BAF1506B784541E158B7B7"
+  },
+  "checks": {
+    "standard_button_labels": 20,
+    "standard_button_states": 6,
+    "standard_button_sprites_verified": 120,
+    "battle_start_sprites_verified": 7,
+    "candidate_reopened_and_decoded": true,
+    "unrelated_archive_entries_preserved": true,
+    "unrelated_texture_blocks_preserved": true,
+    "steam_live_file_hash_matches": true,
+    "resolution_change_qa_used_full_process_restart": true,
+    "real_game_1280x720_fullscreen": true,
+    "real_game_1920x1080_fullscreen": true,
+    "real_game_3840x2160_fullscreen": true,
+    "final_resolution_restored_to_3840x2160_fullscreen": true,
+    "game_and_launcher_closed_after_qa": true
+  }
+}
