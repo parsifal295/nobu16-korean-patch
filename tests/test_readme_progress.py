@@ -72,7 +72,7 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.11.0]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.11.1]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -99,6 +99,14 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("한글 IME 입력이나 새 한글 이름 작성 기능을 추가하지 않습니다", readme)
         self.assertIn("성명·읽기 필드를 바꾸지 말고", readme)
         self.assertIn("매 게임 세션마다 별도 실행 파일을 실행할 필요가 없습니다", readme)
+
+    def test_readme_documents_the_v0111_installer_hotfix(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn("## v0.11.1 — 설치기 경로·한글 오류 출력 수정", readme)
+        self.assertIn("`%~dp0`", readme)
+        self.assertIn("경로에 잘못된 문자가 있습니다", readme)
+        self.assertIn("UTF-8 BOM", readme)
+        self.assertIn("게임 리소스 15개와 정적 EXE의 다섯 패치 지점", readme)
 
 
 if __name__ == "__main__":
