@@ -67,7 +67,7 @@ CHANGED_PATHS = WAVE3.CHANGED_PATHS
 TARGET_SHA256 = {
     **BASELINE_SHA256,
     "MSG/JP/msggame.bin": "2C1211EC2C80356D9213058F669C9E030175235D35441E7C27CD54BDAB258B89",
-    "MSG_PK/JP/msggame.bin": "85A6866D347D4AD6994DFE13C1B8F6D4102517FB8F96B356EF34C6A08101B4B0",
+    "MSG_PK/JP/msggame.bin": "2ADA436B30E50E0574140A9D7900DF6F63BA0F06BA1477644FC8729666179593",
 }
 
 
@@ -458,7 +458,7 @@ PK_REAUDITED_RUNTIME_PLANS: tuple[QualityPlan, ...] = (
     rewrite_plan(
         6, 2746, "1684986755E0F7DDA403F493FCECBD4B2DC459B8399CE18BAF3017E86889CDEE",
         ("눈앞을 가로막는 적:", ".\n이 또한 철저히 무너뜨리기 위한 포석입니다."),
-        ("눈앞을 가로막는 것은", ", 그렇다면\n이 또한 그것을 무너뜨리기 위한 포석이다"),
+        ("눈앞을 가로막는 것이 ", "라면,\n이 또한 그것을 무너뜨리기 위한 포석이다"),
     ),
     rewrite_plan(
         6, 2758, "02EC116884E135F62EAFB1423D193FD1FC678E467BC32E6B5DED03320432A75F",
@@ -468,7 +468,7 @@ PK_REAUDITED_RUNTIME_PLANS: tuple[QualityPlan, ...] = (
     rewrite_plan(
         6, 2790, "BB4AA21A3A3CF87B803683E93597F2FA1EB0E0CAFBE970FF7C1867DABEB7F16C",
         ("이", ". 이제부터 가신으로\n주군께 평생 충성을 다하겠습니다!\n잘 부탁드립니다."),
-        ("이 ", ", 이제부터 주군의 가신으로서\n선대 가신들께 뒤지지 않도록 힘쓰겠습니다!\n잘 부탁드립니다"),
+        ("이 ", ", 이제부터 주군의 가신으로서\n대대로 섬겨 온 가신들께 뒤지지 않도록 힘쓰겠습니다!\n잘 부탁드립니다"),
     ),
     rewrite_plan(
         6, 2793, "66AA170CDCA7A1AE18B5718A4C5E2B61625860A79CFE2D0E15C3AE6771A55F09",
@@ -553,7 +553,7 @@ PK_REAUDITED_RUNTIME_PLANS: tuple[QualityPlan, ...] = (
     rewrite_plan(
         6, 3166, "8AC93A6C06B080EB65CDCE8F2FD91308403EFFCE9E38EE95A21614D35D76182B",
         ("종속의 건, 알겠노라\n", ". 그 휘하에서 가명을 지켜라"),
-        ("종속의 의식, 알겠다.\n", "의 산하에서 가명을 지켜라"),
+        ("종속의 의식, 알겠다.\n", "의 산하에서 가문을 지켜라"),
     ),
     rewrite_plan(
         6, 3263, "0F672C54972A37773EEF7E6C990181F3C2433422513DF0B46912D7F4FBE677DB",
@@ -583,7 +583,7 @@ PK_REAUDITED_RUNTIME_PLANS: tuple[QualityPlan, ...] = (
     rewrite_plan(
         6, 3286, "8AE4905B56CA48E80CB52293C9C7D78C6EA7CDAD8657139EF9A82A5C47AA90A1",
         ("무명이 자자한 귀가라면\n", ". 어렵지 않을 것입니다"),
-        ("무명이 자자한 귀가라면\n", " 공략쯤은 식은 죽 먹기겠지"),
+        ("무명이 자자한 귀 가문이라면\n", " 공략쯤은 식은 죽 먹기겠지"),
     ),
 )
 
@@ -641,7 +641,7 @@ PK_REAUDITED_DIALOGUE_PLANS: tuple[QualityPlan, ...] = (
     rewrite_plan(
         6, 2438, "96D380155ECCB1650BA7AFED744F8EF6E1A52FAB6D48BAEB071708780BD1BE3B",
         ("파담이로군…", "님 같은 분과 교섭하다니\n제가 어리석었습니다."),
-        ("파담이로군… ", "님을 믿고 찾아왔건만\n그 믿음에는 응해 주지 않은 모양이오"),
+        ("교섭은 결렬이로군… ", "님을 믿고 찾아왔건만\n그 믿음에는 응해 주지 않은 모양이오"),
     ),
     rewrite_plan(
         6, 2673, "FA63151E064CFB5BE4A9307D23F961CE45BE8D636EDD367FB3FA23CA3DEE2E32",
