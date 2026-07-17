@@ -28,6 +28,12 @@ spec.loader.exec_module(wave4)
 class Wave4QualityTests(unittest.TestCase):
     def test_target_is_pinned_and_quality_plans_are_unique(self) -> None:
         self.assertTrue(wave4.target_is_pinned())
+        self.assertEqual(len(wave4.PK_PLANS), 19)
+        self.assertTrue(
+            set(item.coordinate for item in wave4.PK_PLANS).isdisjoint(
+                wave4.DEFERRED_UNALIGNED_0FB9_COORDINATES
+            )
+        )
         for relative in wave4.CHANGED_PATHS:
             wave4.validate_plan_set(wave4.plans_for(relative), relative)
 

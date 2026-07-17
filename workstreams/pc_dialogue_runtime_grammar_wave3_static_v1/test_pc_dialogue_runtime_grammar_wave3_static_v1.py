@@ -26,6 +26,14 @@ spec.loader.exec_module(wave3)
 
 
 class Wave3StaticTests(unittest.TestCase):
+    def test_pristine_pc_jp_layout_matches_current_pc_profile(self) -> None:
+        self.assertTrue(wave3.DEFAULT_STEAM_ROOT.is_dir(), wave3.DEFAULT_STEAM_ROOT)
+        self.assertEqual(
+            wave3.assert_pristine_sources(),
+            {relative: expected for relative, (_path, expected) in wave3.PRISTINE_SOURCES.items()},
+        )
+        wave3.assert_pristine_layout_matches_steam(wave3.DEFAULT_STEAM_ROOT)
+
     def test_target_is_pinned_and_plan_shape_is_static(self) -> None:
         self.assertTrue(wave3.target_is_pinned())
         for relative in wave3.CHANGED_PATHS:
