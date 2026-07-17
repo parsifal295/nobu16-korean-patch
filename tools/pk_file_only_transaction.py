@@ -378,6 +378,11 @@ def collect_candidate_root(root: Path) -> dict[str, Path]:
         raise TransactionError("candidate root contains no accepted PK target files")
     profile = runtime_profile_for_paths(set(candidates), "candidate root")
     if profile == "JP":
+        allowed_root_paths = (
+            JP_TEXT_AUDIT_ALLOWED_TARGETS
+            if set(candidates) == JP_TEXT_AUDIT_ALLOWED_TARGETS
+            else JP_FULL_ALLOWED_TARGETS
+        )
         extras: list[str] = []
         for current, directory_names, file_names in os.walk(
             root, topdown=True, followlinks=False
@@ -398,7 +403,7 @@ def collect_candidate_root(root: Path) -> dict[str, Path]:
                         + str(child)
                     )
                 relative = child.relative_to(root).as_posix()
-                if relative not in JP_FULL_ALLOWED_TARGETS:
+                if relative not in allowed_root_paths:
                     extras.append(relative)
         if extras:
             raise TransactionError(

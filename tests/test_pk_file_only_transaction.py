@@ -462,6 +462,10 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
 
     def test_exact_jp_text_audit_plan_apply_restore_without_fonts(self) -> None:
         candidates, predecessors, sentinels = self._prepare_jp_text_audit_profile()
+        self.assertEqual(
+            set(tx.collect_candidate_root(self.root / "jp-text-audit-candidates")),
+            set(candidates),
+        )
         manifest = tx.make_manifest(self.game, "jp-text-audit-v1", candidates)
         self.assertEqual(manifest["target_scope"], tx.JP_TEXT_AUDIT_TARGET_SCOPE)
         self.assertEqual(
