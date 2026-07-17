@@ -30,13 +30,19 @@ class Wave4QualityTests(unittest.TestCase):
         self.assertTrue(wave4.target_is_pinned())
         self.assertEqual(len(wave4.BASE_PLANS), len(wave4.BASE_RUNTIME_SUFFIX_IDS))
         self.assertEqual(len(wave4.PK_RUNTIME_SUFFIX_PLANS), 12)
+        self.assertEqual(len(wave4.PK_REAUDITED_RUNTIME_PLANS), 39)
+        self.assertEqual(len(wave4.PK_REAUDITED_DIALOGUE_PLANS), 21)
+        self.assertEqual(len(wave4.PK_REAUDITED_PLANS), 60)
         runtime_coordinates = {(6, record_id) for record_id in range(2089, 2101)}
         self.assertTrue(runtime_coordinates.issubset({item.coordinate for item in wave4.PK_PLANS}))
+        reaudited_coordinates = {item.coordinate for item in wave4.PK_REAUDITED_PLANS}
+        active_deferred_coordinates = {
+            item.coordinate for item in wave4.PK_PLANS
+        } & wave4.DEFERRED_UNALIGNED_0FB9_COORDINATES
         self.assertTrue(
-            set(item.coordinate for item in wave4.PK_PLANS).isdisjoint(
-                wave4.DEFERRED_UNALIGNED_0FB9_COORDINATES
-            )
+            wave4.DEFERRED_UNALIGNED_0FB9_COORDINATES.issubset(reaudited_coordinates)
         )
+        self.assertEqual(active_deferred_coordinates, wave4.DEFERRED_UNALIGNED_0FB9_COORDINATES)
         for relative in wave4.CHANGED_PATHS:
             wave4.validate_plan_set(wave4.plans_for(relative), relative)
 
