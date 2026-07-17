@@ -107,6 +107,21 @@ v0.10.1에서 누락된 일반 이상 실제 로딩 경로 `RES_JP/res_lang_exp.
 이벤트 스크립트 줄바꿈 전수 검수·보정은 완료했습니다. 이미지 번역은 진행 중입니다.
 <!-- translation-progress:end -->
 
+## 배포 및 기여 정책
+
+본 한글 패치의 수정본 제작·배포와 전체 파일의 재배포는 허용하지 않습니다.
+공식 배포본은 이 저장소의
+[GitHub Releases](https://github.com/parsifal295/nobu16-korean-patch/releases)에서만
+제공합니다.
+
+오류 수정, 번역 개선, 누락 또는 오표기 제안은 공식 저장소의
+[Issues](https://github.com/parsifal295/nobu16-korean-patch/issues) 또는
+[Pull Requests](https://github.com/parsifal295/nobu16-korean-patch/pulls)를 이용해
+제출해 주세요. 제안된 변경은 검토 후 공식 배포본에 반영됩니다.
+
+공식 배포처 외의 경로에서 받은 파일은 최신성, 무결성, 호환성 및 정상 동작을
+보장하지 않습니다.
+
 ## 글꼴과 권리
 
 한글 글리프는 서울한강체 계열을 사용하며, 32px/4px 계열은 서울한강 B,
