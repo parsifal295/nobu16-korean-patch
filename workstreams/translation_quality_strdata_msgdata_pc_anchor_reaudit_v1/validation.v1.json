@@ -1,0 +1,42 @@
+{
+  "artifacts": {
+    "private_candidates.v1.jsonl": "6E940E75169EF98603CF48AB61EAF071E5A6AE61AF8E6B512E576B3909F073EE",
+    "private_holds.v1.jsonl": "7F5C5DA1E8F0FEE062FF35E568993DC08FD04C498EE1DB2BAA7E07EAF17C4401",
+    "source_free_full_scan.v1.jsonl": "667C02434BD970B2A9AB206D3DC38EB8D77C1114D615C433B9F869285DFC4062",
+    "summary.source_free.v1.json": "0F53B9AE0114E7AF916E29B779CC182D10820E1BB26C2FB0DF983DA3C46442C2"
+  },
+  "candidate_count": 27,
+  "checks": {
+    "all_pc_tables_noop_parse_rebuild": "OK",
+    "candidate_anchor_full_pc_context_signature": "OK",
+    "candidate_display_cells_do_not_expand": "OK",
+    "candidate_glyphs_in_current_pc_korean_corpus": "OK",
+    "candidate_runtime_outer_whitespace_contract": "OK",
+    "generic_korean_replacement_strings_decoded": false,
+    "historic_korean_translation_used": false,
+    "pc_language_coordinate_sets": "OK",
+    "steam_game_resource_written": false,
+    "switch_korean_translation_used": false
+  },
+  "coordinate_count": 61529,
+  "generic_overlay_source_free_coordinate_extraction": {
+    "coordinate_counts": {
+      "base_msggame": 203,
+      "ev_strdata": 119,
+      "msgbre": 134,
+      "msgdata": 805,
+      "msgev": 493,
+      "msgire": 11,
+      "msgstf": 4,
+      "msgstf_ce": 8,
+      "pk_msggame": 232,
+      "strdata": 128
+    },
+    "korean_replacement_strings_decoded": false,
+    "overlay_sha256": "0C9C2AC005C121EA1A53924432AB909EF44B7E714206B81A7008248006D8B7FD"
+  },
+  "hold_count": 83,
+  "schema": "nobu16.kr.pc-anchor-reaudit-validation.v1",
+  "semantic_completion": false,
+  "source_free": true
+}

@@ -59,6 +59,24 @@ RESIDUAL_THREE_PC_ONLY = (
     / "translation_quality_residual_three_pc_only_v1"
     / "private_candidates.v1.jsonl"
 )
+MSGBRE_RESTORED_FACTS = (
+    REPO
+    / "tmp"
+    / "translation_quality_msgbre_restored_facts_v1"
+    / "msgbre_restored_facts_candidates.v1.jsonl"
+)
+PC_ANCHOR_REAUDIT = (
+    REPO
+    / "tmp"
+    / "translation_quality_strdata_msgdata_pc_anchor_reaudit_v1"
+    / "private_candidates.v1.jsonl"
+)
+EV_STRDATA_PC_REAUDIT = (
+    REPO
+    / "tmp"
+    / "translation_quality_ev_strdata_pc_reaudit_v1"
+    / "ev_strdata_pc_reaudit_candidates.v1.jsonl"
+)
 PUBLIC_OVERLAY = WORKSTREAM / "public" / "translation_quality_corrections.v1.json"
 VALIDATION = WORKSTREAM / "validation.v1.json"
 AUTONOMOUS_WORDING_OVERLAY = REPO / "workstreams" / "translation_quality_semantic_fixes_v1" / "public" / "autonomous_wording.v1.json"
@@ -131,6 +149,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "msgbre_quality_findings.v1.jsonl",
             PRIVATE_SEMANTIC / "msgbre_pc_only_quality_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "horse_riding_clarity_addendum.v1.jsonl",
+            MSGBRE_RESTORED_FACTS,
         ),
     ),
     ResourceSpec(
@@ -153,6 +172,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "msgdata_shuu_suffix_consistency_candidates.v1.jsonl",
             PRIVATE_SEMANTIC / "msgdata_tsu_reading_consistency_candidates.v1.jsonl",
             MSGDATA_TSU_OUTER_WHITESPACE,
+            PC_ANCHOR_REAUDIT,
             PRIVATE_SEMANTIC / "msgdata_battle_key_site_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "utsunomiya_reading_consistency_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "territorial_measures_term_consistency_addendum.v1.jsonl",
@@ -212,6 +232,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "ev_strdata_battle_death_clarity_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "yousho_location_clarity_candidates.v1.jsonl",
             PRIVATE_SEMANTIC / "ev_strdata_pc_only_quality_addendum.v1.jsonl",
+            EV_STRDATA_PC_REAUDIT,
         ),
     ),
     ResourceSpec(
@@ -446,7 +467,10 @@ def proposal_replacement(proposal: Mapping[str, Any]) -> tuple[str, str | None]:
         raise CorrectionError("ambiguous private Korean replacement schema")
     if has_short:
         value = proposal["proposed_ko"]
-        current_key = "ko"
+        # Recent PC-only reaudits call the before-value ``current_ko`` while
+        # older semantic batches call it ``ko``.  Both are explicit private
+        # before/after pairs and must be hash-bound during freeze.
+        current_key = "ko" if "ko" in proposal else "current_ko"
     elif has_long:
         value = proposal["proposed_korean"]
         current_key = "current_korean"
@@ -1106,9 +1130,17 @@ def freeze(steam_root: Path) -> dict[str, Any]:
                     "current_hash",
                     "current_text_sha256",
                     "current_korean_utf16le_sha256",
+                    "current_text_utf16le_sha256",
                 )
                 if key in row["proposal"]
             ]
+            nested_source_hashes = row["proposal"].get("source_hashes")
+            if nested_source_hashes is not None:
+                if not isinstance(nested_source_hashes, Mapping):
+                    raise CorrectionError(f"private proposal source-hash mapping is invalid at {spec.name}:{coordinate}")
+                nested_current = nested_source_hashes.get("current_ko_utf16le_sha256")
+                if nested_current is not None:
+                    supplied_hashes.append(nested_current)
             if supplied_hashes:
                 if (
                     not all(isinstance(value, str) and HEX64_RE.fullmatch(value.upper()) for value in supplied_hashes)
@@ -1123,9 +1155,14 @@ def freeze(steam_root: Path) -> dict[str, Any]:
                     "proposed_text_sha256",
                     "proposed_ko_utf16le_sha256",
                     "proposed_korean_utf16le_sha256",
+                    "proposed_text_utf16le_sha256",
                 )
                 if key in row["proposal"]
             ]
+            if nested_source_hashes is not None:
+                nested_proposed = nested_source_hashes.get("proposed_ko_utf16le_sha256")
+                if nested_proposed is not None:
+                    proposed_hashes.append(nested_proposed)
             if proposed_hashes and (
                 not all(isinstance(value, str) and HEX64_RE.fullmatch(value.upper()) for value in proposed_hashes)
                 or len({value.upper() for value in proposed_hashes}) != 1
