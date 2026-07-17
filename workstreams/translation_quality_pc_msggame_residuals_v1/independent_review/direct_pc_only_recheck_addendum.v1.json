@@ -1,0 +1,63 @@
+{
+  "schema": "pc-msggame-direct-pc-only-recheck-addendum-v1",
+  "review_date": "2026-07-18",
+  "scope": {
+    "resource": "MSG_PK/JP/msggame.bin",
+    "candidate_file": "workstreams/translation_quality_pc_msggame_residuals_v1/private/candidates.v1.jsonl",
+    "candidate_file_sha256": "AADA5198C21390C824A3C1E0DECA51240C71A7549C8D48F67E8B7A6970D872E3",
+    "allowed_evidence": [
+      "pristine Steam PC Japanese",
+      "current Steam PC Korean",
+      "Steam PC English",
+      "Steam PC Simplified Chinese",
+      "Steam PC Traditional Chinese",
+      "private candidate proposal"
+    ],
+    "explicitly_not_opened_for_this_recheck": [
+      "Nintendo Switch Korean resources or repository",
+      "historic Korean outputs",
+      "generic Korean overlays",
+      "F:/Games/NOBU16/MSG_PK/SC",
+      "broad workstream search results"
+    ]
+  },
+  "direct_pc_source_pins": {
+    "pristine_pc_jp": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "current_pc_ko": "DE606E50C9A6241BD0B85D17A000394007952093984F75DB56E296E0CCDE6B01",
+    "pc_en": "68B9597DEA78CA2327EE36D62EF03DD673CE2449D40A18392D1ACF837B85A916",
+    "pc_sc": "8884BCC1C085D85AEFDBB2C45180D5E9D4A495B0094A157444C2BA2D39029802",
+    "pc_tc": "C5EF565CBDFB4D95B5A1785D83A758C0057569CCC6ECF1EA873EA7E5F8AD6A23"
+  },
+  "manual_candidate_review_integrity": {
+    "original_manual_candidate_count": 66,
+    "original_manual_review_completed_before_broad_workstream_search": true,
+    "original_manual_review_evidence_was_direct_pc_sources_and_private_candidate_only": true,
+    "broad_workstream_search_result_used_for_manual_verdicts": false,
+    "active_manual_candidate_count": 61,
+    "excluded_from_active_output_after_independent_review": [
+      "pk_msggame:17:715:0",
+      "pk_msggame:17:822:0",
+      "pk_msggame:17:943:2",
+      "pk_msggame:17:944:2",
+      "pk_msggame:17:1004:1"
+    ],
+    "active_manual_candidates_are_the_prior_SAFE_set": true
+  },
+  "exact_anchor_composed_record_recheck": {
+    "method": [
+      "reloaded only the five direct PC resources and the private candidate file",
+      "verified every candidate literal and JP/EN/SC/TC reference record against those direct resources",
+      "checked static literal boundaries and candidate-to-runtime boundaries without expanding semantic scope"
+    ],
+    "candidate_count": 37,
+    "direct_evidence_mismatch_count": 0,
+    "no_explicit_static_literal_join_failure_count": 36,
+    "runtime_boundary_hold_count": 1,
+    "runtime_boundary_hold_candidate_ids": [
+      "pk_msggame:6:3778:0"
+    ],
+    "runtime_boundary_hold_reason": "runtime_opcode_order_differs_across_direct_pc_language_resources, so a Korean word-boundary-safe final composition cannot be proved statically",
+    "recommended_gate": "allow the 36 clear exact-anchor candidates; HOLD the runtime-boundary candidate until real runtime composition or a dedicated boundary proof is available"
+  },
+  "game_resource_written": false
+}

@@ -1,0 +1,258 @@
+{
+  "schema": "nobu16.kr.translation-quality.pc-small-ui-residuals.validation.v1",
+  "audit_scope": {
+    "resources": [
+      "msgui",
+      "msgbre",
+      "msgire",
+      "msgstf",
+      "msgstf_ce"
+    ],
+    "expected_entry_counts": {
+      "msgui": 5100,
+      "msgbre": 3000,
+      "msgire": 122,
+      "msgstf": 20,
+      "msgstf_ce": 20
+    },
+    "total_entry_count": 8262
+  },
+  "source_policy": {
+    "allowed": [
+      "pristine PC JP direct file",
+      "current Steam JP-route Korean direct file",
+      "current Steam PC EN direct file",
+      "current Steam PC SC direct file",
+      "current Steam PC TC direct file"
+    ],
+    "excluded": [
+      "Switch / Switch repository",
+      "historic Korean payload",
+      "generic overlay",
+      "F:/Games/NOBU16/MSG_PK/SC"
+    ],
+    "source_content_in_validation": false
+  },
+  "resource_reports": {
+    "msgui": {
+      "count": 5100,
+      "pristine_jp_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-1.1.7-v0.6.0\\originals\\MSG_PK\\JP\\msgui.bin",
+        "origin": "file_only_transaction_backup",
+        "packed_sha256": "9775D4B7253828899F7EF0DF2E88AB28121ACB260E1381F3D706C6A1065D504A"
+      },
+      "current_steam_ko_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\JP\\msgui.bin",
+        "packed_sha256": "470FAD81852C6D80D2E1A0390F89A5590529ACE0BE5192DC1C1C58F70178D0DB"
+      },
+      "steam_reference_sources": {
+        "EN": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\EN\\msgui.bin",
+          "packed_sha256": "B993412D73889B58B68C8998446AF65E1C7CD02066FEAF483E3F44E3EB0602D5"
+        },
+        "SC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\SC\\msgui.bin",
+          "packed_sha256": "B21196467A5A2E08A4019D4CEC4A474A64C6F0CD577FA3D068F2130F95CF2C0C"
+        },
+        "TC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\TC\\msgui.bin",
+          "packed_sha256": "FA4351F8303DFDAA240441C5BDF8B42DD4F7603E56E6DBAB8CB4DC0594C007D5"
+        }
+      },
+      "suspect_row_count": 80,
+      "same_resource_exact_anchor_candidate_count": 2,
+      "hold_without_canonical_anchor_count": 75,
+      "rejected_cross_language_anchor_count": 3,
+      "rejected_ambiguous_anchor_count": 0,
+      "rejected_format_profile_count": 0
+    },
+    "msgbre": {
+      "count": 3000,
+      "pristine_jp_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-1.1.7-v0.6.0\\originals\\MSG_PK\\JP\\msgbre.bin",
+        "origin": "file_only_transaction_backup",
+        "packed_sha256": "945A0E9157E2DBD12781FFA5A986D93681325F40B6486348B1AB311D3BEE1D6D"
+      },
+      "current_steam_ko_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\JP\\msgbre.bin",
+        "packed_sha256": "C545CD2251E61AEB0A68E10A08ADFFCD3B150C32B5D15236D90727A305B03BAE"
+      },
+      "steam_reference_sources": {
+        "EN": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\EN\\msgbre.bin",
+          "packed_sha256": "97AF6A9CCB7D49C1325A92F6C83B88AA26511B7AE2CB0ABB7C6E0B38AB368945"
+        },
+        "SC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\SC\\msgbre.bin",
+          "packed_sha256": "D0DDE32C6BE9C81BA91D210BC62BC3E552121A9D7E493D53B461641FABAA499E"
+        },
+        "TC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\TC\\msgbre.bin",
+          "packed_sha256": "F4A39E2FFD0DB4FBDE416E20B387DA629D87905E127C4421166751E3650D4A11"
+        }
+      },
+      "suspect_row_count": 0,
+      "same_resource_exact_anchor_candidate_count": 0,
+      "hold_without_canonical_anchor_count": 0,
+      "rejected_cross_language_anchor_count": 0,
+      "rejected_ambiguous_anchor_count": 0,
+      "rejected_format_profile_count": 0
+    },
+    "msgire": {
+      "count": 122,
+      "pristine_jp_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-1.1.7-v0.6.0\\originals\\MSG_PK\\JP\\msgire.bin",
+        "origin": "file_only_transaction_backup",
+        "packed_sha256": "0AFBFE11A380A9C98FB3B368092A05B39ABB6F80C4B0723AD3B6DB55C2559C5D"
+      },
+      "current_steam_ko_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\JP\\msgire.bin",
+        "packed_sha256": "C4977A74B98605AB350BE761C67CCF879AEE7565104F8D7FD2B725FDD5806D84"
+      },
+      "steam_reference_sources": {
+        "EN": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\EN\\msgire.bin",
+          "packed_sha256": "F56ADC564ACBB046B76BC2976C6D2479A9A37B134AF8F8B620E2D65BD7D04035"
+        },
+        "SC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\SC\\msgire.bin",
+          "packed_sha256": "FEE2CBE52D688B6E67D751AB468C4A19D8A44A2142C6D9E723F69D340D263548"
+        },
+        "TC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\TC\\msgire.bin",
+          "packed_sha256": "D18217453963AF0B4A79548995EBBC5FA73B372870BA0C9F1E5E7557DCB50865"
+        }
+      },
+      "suspect_row_count": 0,
+      "same_resource_exact_anchor_candidate_count": 0,
+      "hold_without_canonical_anchor_count": 0,
+      "rejected_cross_language_anchor_count": 0,
+      "rejected_ambiguous_anchor_count": 0,
+      "rejected_format_profile_count": 0
+    },
+    "msgstf": {
+      "count": 20,
+      "pristine_jp_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-1.1.7-v0.6.0\\originals\\MSG_PK\\JP\\msgstf.bin",
+        "origin": "file_only_transaction_backup",
+        "packed_sha256": "01EEB0B1B4879B6C70E9D7564F9D2FBD93E7B537CF8C614A58EEA82A83785A29"
+      },
+      "current_steam_ko_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\JP\\msgstf.bin",
+        "packed_sha256": "B90BB9C18C92626A3E9B0F9A2620FEFAAD9A51A2E67C95B8514CC4E4F4A5C607"
+      },
+      "steam_reference_sources": {
+        "EN": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\EN\\msgstf.bin",
+          "packed_sha256": "75F665B1400560EB1A91DF6F2334B4AC93B9F003C036CFCF62DCEF2CC30AE0B5"
+        },
+        "SC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\SC\\msgstf.bin",
+          "packed_sha256": "B0B61DD26272AA0E64179C7C6495F23C8BA083942E84F1B9F4A3405725AC74CA"
+        },
+        "TC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\TC\\msgstf.bin",
+          "packed_sha256": "4213547ACF0174C099A93E758403CCF944BFCC5225B41488B642E567C677343F"
+        }
+      },
+      "suspect_row_count": 0,
+      "same_resource_exact_anchor_candidate_count": 0,
+      "hold_without_canonical_anchor_count": 0,
+      "rejected_cross_language_anchor_count": 0,
+      "rejected_ambiguous_anchor_count": 0,
+      "rejected_format_profile_count": 0
+    },
+    "msgstf_ce": {
+      "count": 20,
+      "pristine_jp_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\JP\\msgstf_ce.bin",
+        "origin": "active_steam_jp_japanese_only",
+        "packed_sha256": "27E8F296E7EA452E6AC1D6D6884084D3AB635D11281AF01E3A1F0A3696710F36"
+      },
+      "current_steam_ko_source": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\JP\\msgstf_ce.bin",
+        "packed_sha256": "27E8F296E7EA452E6AC1D6D6884084D3AB635D11281AF01E3A1F0A3696710F36"
+      },
+      "steam_reference_sources": {
+        "EN": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\EN\\msgstf_ce.bin",
+          "packed_sha256": "4B86E9FC838B0C82C38B27EE84E30C01916E440D2675F5991EBF6E8E9D85E716"
+        },
+        "SC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\SC\\msgstf_ce.bin",
+          "packed_sha256": "1EBEDA27B5FB81BCD8D5D8BF3A4BFF98AE0D7ACD9CDD3E27C2CE8477556B8F3C"
+        },
+        "TC": {
+          "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\TC\\msgstf_ce.bin",
+          "packed_sha256": "4358E6AE4F1105CF3BDAF4B897FA41BF510F3493E4D239359C1EB3F5C1F8A4FF"
+        }
+      },
+      "suspect_row_count": 8,
+      "same_resource_exact_anchor_candidate_count": 0,
+      "hold_without_canonical_anchor_count": 8,
+      "rejected_cross_language_anchor_count": 0,
+      "rejected_ambiguous_anchor_count": 0,
+      "rejected_format_profile_count": 0
+    }
+  },
+  "candidate_count": 2,
+  "candidate_ids": {
+    "msgui": [
+      2788,
+      2793
+    ],
+    "msgbre": [],
+    "msgire": [],
+    "msgstf": [],
+    "msgstf_ce": []
+  },
+  "candidate_hash_proofs": {
+    "msgui": [
+      {
+        "id": 2788,
+        "anchor_id": 1710,
+        "current_ko_utf16le_sha256": "3B4D44292DE8DEAFC1324A609FD6738C74D6CBB87D11D5FDBAB7CA29B179464C",
+        "proposed_ko_utf16le_sha256": "4B4D1F1DFAB870A8D982330D7C24CC1487CE1A650CF01273819D8037176189EA",
+        "pristine_jp_utf16le_sha256": "3B4D44292DE8DEAFC1324A609FD6738C74D6CBB87D11D5FDBAB7CA29B179464C",
+        "anchor_pc_jp_utf16le_sha256": "3B4D44292DE8DEAFC1324A609FD6738C74D6CBB87D11D5FDBAB7CA29B179464C",
+        "anchor_steam_en_sc_tc_text_exact_match": true,
+        "format_profile_exactly_preserved": true
+      },
+      {
+        "id": 2793,
+        "anchor_id": 1157,
+        "current_ko_utf16le_sha256": "7EAF9876DB7AB2E352F727299F117C40BFFE7418695618FA88239B13D8CFD8FE",
+        "proposed_ko_utf16le_sha256": "0A995A280D9B9237263FFB37445D907416D5CF0B9FEFBA1EA528B4867A11D212",
+        "pristine_jp_utf16le_sha256": "7EAF9876DB7AB2E352F727299F117C40BFFE7418695618FA88239B13D8CFD8FE",
+        "anchor_pc_jp_utf16le_sha256": "7EAF9876DB7AB2E352F727299F117C40BFFE7418695618FA88239B13D8CFD8FE",
+        "anchor_steam_en_sc_tc_text_exact_match": true,
+        "format_profile_exactly_preserved": true
+      }
+    ],
+    "msgbre": [],
+    "msgire": [],
+    "msgstf": [],
+    "msgstf_ce": []
+  },
+  "private_candidate_file": {
+    "path": "F:\\Games\\NOBU16\\KR_PATCH_WORK\\tmp\\translation_quality_pc_small_ui_residuals_v1\\private_candidates.v1.jsonl",
+    "sha256": "66BFCF49FC57845DF8EB215C50110F1244A5CA5B8EF4DFE626C46FCA03AFD5B5",
+    "contains_commercial_text": true,
+    "public_distribution_eligible": false
+  },
+  "validation": {
+    "all_expected_resource_counts_match": {
+      "msgui": true,
+      "msgbre": true,
+      "msgire": true,
+      "msgstf": true,
+      "msgstf_ce": true
+    },
+    "candidate_coordinates_unique": true,
+    "same_resource_exact_pc_jp_anchor_required": true,
+    "anchor_steam_en_sc_tc_text_exact_match_required": true,
+    "unique_current_korean_anchor_required": true,
+    "candidate_format_profiles_exactly_preserved": true,
+    "installed_game_files_modified": false
+  }
+}

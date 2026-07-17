@@ -1,0 +1,31 @@
+{
+  "schema": "nobu16.kr.msgstf-ce-pc-reaudit-validation.v1",
+  "source_free": true,
+  "operational_pristine_pc_jp": {
+    "relative_path": "MSG_PK/JP/msgstf_ce.bin",
+    "sha256": "27E8F296E7EA452E6AC1D6D6884084D3AB635D11281AF01E3A1F0A3696710F36",
+    "packed_size": 7448,
+    "raw_size": 12348,
+    "entry_count": 20,
+    "japanese_glyph_signature": true,
+    "hangul_glyph_count": 0,
+    "prior_project_transaction_backup_contains_file": false
+  },
+  "same_index_pc_contexts": [
+    "pc_jp",
+    "pc_en",
+    "pc_sc",
+    "pc_tc"
+  ],
+  "existing_generic_coordinates_excluded": 8,
+  "existing_generic_coordinate_range": "0-7",
+  "residual_coordinate_range": "8-19",
+  "residual_coordinate_count": 12,
+  "residual_slots_empty_in_all_pc_contexts": true,
+  "new_high_confidence_candidates": 0,
+  "holds": 0,
+  "generic_korean_payload_read": false,
+  "contaminated_f_games_pk_sc_opened": false,
+  "switch_korean_translation_used": false,
+  "steam_game_resource_written": false
+}
