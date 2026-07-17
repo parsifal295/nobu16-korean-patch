@@ -124,6 +124,31 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         sentinels[extra_base] = b"jp-base-unlisted-sentinel"
         return candidates, predecessors, sentinels
 
+    def _prepare_jp_text_audit_profile(
+        self,
+    ) -> tuple[dict[str, Path], dict[str, bytes], dict[Path, bytes]]:
+        candidate_root = self.root / "jp-text-audit-candidates"
+        candidates: dict[str, Path] = {}
+        predecessors: dict[str, bytes] = {}
+        for relative in sorted(tx.JP_TEXT_AUDIT_ALLOWED_TARGETS):
+            predecessor = ("stock::" + relative).encode()
+            target = ("target::" + relative).encode()
+            installed = self.game.joinpath(*relative.split("/"))
+            candidate = candidate_root.joinpath(*relative.split("/"))
+            self._write(installed, predecessor)
+            self._write(candidate, target)
+            candidates[relative] = candidate
+            predecessors[relative] = predecessor
+        sentinels = {
+            self.game / "RES_JP" / "res_lang.bin": b"jp-font-sentinel",
+            self.game / "RES_JP_PK" / "res_lang_pk.bin": b"jp-pk-font-sentinel",
+            self.game / "RES_JP_PK_PORT" / "res_lang_pk_port1.bin": b"jp-port-font-sentinel",
+            self.game / "NOBU16PK.exe": b"executable-sentinel",
+        }
+        for path, payload in sentinels.items():
+            self._write(path, payload)
+        return candidates, predecessors, sentinels
+
     def test_plan_dry_run_apply_restore_is_complete_and_base_unchanged(self) -> None:
         manifest, manifest_hash, backup = self._manifest()
         raw = json.loads(self.manifest_path.read_text(encoding="utf-8"))
@@ -419,6 +444,53 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
         for relative, candidate in candidates.items():
             installed = self.game.joinpath(*relative.split("/"))
             self.assertEqual(installed.read_bytes(), candidate.read_bytes())
+            self.assertTrue(backup.joinpath("originals", *relative.split("/")).is_file())
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            restored = tx.restore_transaction(
+                self.game, backup, loaded, manifest_hash
+            )
+        self.assertEqual(restored["result"], "restored")
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
+    def test_exact_jp_text_audit_plan_apply_restore_without_fonts(self) -> None:
+        candidates, predecessors, sentinels = self._prepare_jp_text_audit_profile()
+        manifest = tx.make_manifest(self.game, "jp-text-audit-v1", candidates)
+        self.assertEqual(manifest["target_scope"], tx.JP_TEXT_AUDIT_TARGET_SCOPE)
+        self.assertEqual(
+            {entry["path"] for entry in manifest["entries"]},
+            tx.JP_TEXT_AUDIT_ALLOWED_TARGETS,
+        )
+        scope = tx.scope_report(manifest)
+        self.assertEqual(scope["runtime_language"], "JP")
+        self.assertEqual(scope["msg_pk_jp_count"], 8)
+        self.assertEqual(scope["base_msg_jp_count"], 3)
+        self.assertTrue(scope["all_eight_text_audit_msg_pk_jp_included"])
+        self.assertEqual(scope["jp_11_text_audit_file_count"], 11)
+        self.assertTrue(scope["jp_11_text_audit_file_complete"])
+        self.assertFalse(scope["jp_14_file_complete"])
+
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        self.assertTrue(tx.dry_run(self.game, backup, loaded, candidates)["would_apply"])
+        with mock.patch.object(tx, "assert_game_stopped"):
+            applied = tx.apply_transaction(
+                self.game, backup, loaded, manifest_hash, candidates
+            )
+        self.assertEqual(applied["result"], "applied")
+        for relative, candidate in candidates.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(),
+                candidate.read_bytes(),
+            )
             self.assertTrue(backup.joinpath("originals", *relative.split("/")).is_file())
         for path, payload in sentinels.items():
             self.assertEqual(path.read_bytes(), payload)
