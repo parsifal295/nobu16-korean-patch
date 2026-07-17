@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import os
 import re
@@ -36,11 +37,14 @@ SEMANTIC_ROOT = TMP_ROOT / "semantic"
 PROPOSAL_ROOT = TMP_ROOT / "proposals"
 OUTPUT = SEMANTIC_ROOT / "msgev_highrisk_semantic_propername_v1.jsonl"
 HOLD_OUTPUT = SEMANTIC_ROOT / "msgev_highrisk_semantic_propername_holds.v1.jsonl"
+LAYOUT_V2_SCRIPT = REPO / "workstreams" / "steam_jp_msgev_full_layout_v2" / "build_steam_jp_msgev_full_layout_v2.py"
 
 RESOURCE = "MSG_PK/JP/msgev.bin"
 REVIEW_BATCH = "msgev_highrisk_semantic_propername_v1"
 TABLE_COUNT = 17_916
 MAX_LOGICAL_COLUMNS = 76
+MAX_EVENT_LINES = 3
+MAX_EVENT_LINE_PX = 912
 
 PC_PATHS = {
     "jp": (
@@ -102,12 +106,12 @@ CANDIDATE_SPECS: dict[int, dict[str, str]] = {
     4258: {
         "expected_current_text_sha256": "4D18E67DAF82D496FCCDFDF0FC5BE78740A8421998536AA93DC84FE6BA7136D8",
         "rationale": "restore_becoming_mino_daimyo_and_multiyear_conflict",
-        "proposed": u(r"\uc8fc\uad70 \x1bCA\ub3c4\ud0a4 \uc694\ub9ac\ub178\ub9ac\x1bCZ\ub97c \ucad3\uc544\ub0b4\n\x1bCC\ubbf8\ub178\x1bCZ\uc758 \ub2e4\uc774\ubb18\uac00 \ub41c \x1bCA[b924]\x1bCZ\ub294\n\uc218\ub144\uc9f8 \uc801\uc7a5\uc790 \x1bCA[bm921]\x1bCZ\uc640 \ub300\ub9bd\ud588\ub2e4."),
+        "proposed": u(r"\uc8fc\uad70 \x1bCA도키 요리노리\x1bCZ를 몰아내\n\x1bCC미노\x1bCZ 일국의 다이묘가 된 \x1bCA[b924]\x1bCZ는\n수년째 적남 \x1bCA[bm921]\x1bCZ와 맞섰다."),
     },
     5647: {
         "expected_current_text_sha256": "67D7A08D1B7405CA7AEC323003015BDB9F45ABA07358627F0D59B586AE4827BD",
         "rationale": "restore_transfer_surrender_refusal_and_escape_context",
-        "proposed": u(r"\x1bCA\uc544\ub9c8\uace0 \uc694\uc2dc\ud788\uc0ac\x1bCZ \uc77c\ud589\uc740 \x1bCB\ubaa8\ub9ac \uac00\ubb38\x1bCZ\uc758\n\x1bCC\uc544\ud0a4\x1bCZ\ub85c \uc774\uc1a1\ub410\uace0, \ud56d\ubcf5\uc5d0 \ubd88\ubcf5\ud55c \x1bCA\uc57c\ub9c8\ub098\uce74 \uc2dc\uce74\ub178\uc2a4\ucf00\x1bCZ \ub4f1\uc740\n\x1bCC\uc774\uc988\ubaa8\ud0c0\uc774\uc0e4\x1bCZ\uc5d0\uc11c \ud0c8\ucd9c\ud588\ub2e4."),
+        "proposed": u(r"\x1bCA아마고 요시히사\x1bCZ 등은 \x1bCB모리령\x1bCZ \x1bCC아키\x1bCZ로\n이송됐다. \x1bCA야마나카 시카노스케\x1bCZ 등은\n항복을 거부해 \x1bCC이즈모타이샤\x1bCZ서 탈출했다."),
     },
     7310: {
         "expected_current_text_sha256": "1B9C772202BEB89CD7894AB3FFC54AD5B362FDB1BCCCE063EDA68FACEFD9AE3B",
@@ -122,33 +126,51 @@ CANDIDATE_SPECS: dict[int, dict[str, str]] = {
     8512: {
         "expected_current_text_sha256": "F1B0C48DDC7B49402964359D49EEE5A61A5A21F92281EF38E861DF256E576D43",
         "rationale": "restore_reluctant_truce_only_and_continued_interclan_tension",
-        "proposed": u(r"\x1bCA[b1871]\x1bCZ\ub3c4 \uc5b4\uca54 \uc218 \uc5c6\uc774 \uc751\ud588\uc9c0\ub9cc\n\uadf8\uc800 \uc815\uc804\ub9cc \ubc1b\uc544\ub4e4\uc600\uc744 \ubfd0,\n\x1bCB[bs754]\x1bCZ\u00b7\x1bCB[bs1871]\x1bCZ \uc591\uac00\ub294 \uc544\uc9c1 \uae34\uc7a5 \uc911\uc774\ub2e4."),
+        "proposed": u(r"\x1bCA[b1871]\x1bCZ도 억지로 따랐지만,\n정전만 응했을 뿐, \x1bCB[bs754]\x1bCZ와\n\x1bCB[bs1871]\x1bCZ 양가는 대립한다."),
     },
     8739: {
         "expected_current_text_sha256": "4E0647C9B6DC7F7E2AFECE025B42FDBB783BC80AF3E35CCB485FB71A532A6D20",
         "rationale": "restore_repeated_battles_with_fated_enemy",
-        "proposed": u(r"\x1bCA[bm1448]\x1bCZ\uc640 \uc218\uc5c6\uc774 \uc2f8\uc6b4\n\uc219\uba85\uc758 \uc801 \x1bCA\ub2e4\ucf00\ub2e4 [bm1251]\x1bCZ\u2014\n\x1bCA[bm1448]\x1bCZ\ub294 \uadf8 \ud798을 \uc11c\uc11c\ud788 \uae4e\uc544 \uac14\ub2e4."),
+        "proposed": u(r"\x1bCA[bm1448]\x1bCZ와 수차례 싸운\n숙명의 대적 \x1bCA다케다 [bm1251]\x1bCZ—\n\x1bCA[bm1448]\x1bCZ은 힘을 차츰 꺾었다."),
     },
     9753: {
         "expected_current_text_sha256": "B8AD25B1B405C5DAD4DC82BE87131D2C146D592EBDEA2CDDAC98FB17061395D2",
         "rationale": "restore_repeated_battles_with_fated_enemy",
-        "proposed": u(r"\x1bCA[bm1251]\x1bCZ\uc640 \uc218\uc5c6\uc774 \uc2f8\uc6b4\n\uc219\uba85\uc758 \uc801 \x1bCA[b1448]\x1bCZ\u2014\n\x1bCA[bm1251]\x1bCZ\ub294 \uadf8 \ud798\uc744 \uc11c\uc11c\ud788 \uae4e\uc544 \uac14\ub2e4."),
-    },
-    9771: {
-        "expected_current_text_sha256": "9EF74B771F65FDBEE627B85A17DF981B30427F52452FC51DC4FEEA95D4A0798D",
-        "rationale": "restore_echigo_nagao_and_yamanouchi_uesugi_proper_names",
-        "proposed": u(r"\x1bCB\uc5d0\uce58\uace0 \ub098\uac00\uc624 \uac00\ubb38\x1bCZ\uacfc \x1bCB\uc57c\ub9c8\ub178\uc6b0\uce58 \uc6b0\uc5d0\uc2a4\uae30 \uac00\ubb38\x1bCZ\uc740\n\ub2e4\uc774\ubb18 \uac00\ubb38\uc73c\ub85c서 \uba78\ub9dd했다. \uc804 \ub2f9\uc8fc \x1bCA[bm1448]\x1bCZ\ub294\n\x1bCC\uace0\uc57c\uc0b0\x1bCZ\uc5d0서 \ubd88\ub3c4 \uc218\ud589에 \ud798썼다."),
+        "proposed": u(r"\x1bCA[bm1251]\x1bCZ와 수차례 싸운\n숙명의 대적 \x1bCA[b1448]\x1bCZ—\n\x1bCA[bm1251]\x1bCZ은 힘을 차츰 꺾었다."),
     },
     10817: {
         "expected_current_text_sha256": "9D6D81DFABAD3476C14507D196E3BFB48752AC528597C3FEDFAFD4509C041453",
         "rationale": "fix_woodpecker_pecking_lexical_typo",
-        "proposed": u(r"\ub531\ub530\uad6c\ub9ac\ub294 \ub098\ubb34 \uc18d \ubc8c\ub808\ub97c \uc7a1\uc744 \ub54c\n\uad6c\uba4d \ubc18\ub300\ud3b8\uc744 \ucabc\uc544 \ub180\ub77c \ub098\uc628 \ubc8c\ub808\ub97c \uba39\ub294\n\uc2b5\uc131\uc774 \uc788\ub2e4. \uc774 \uc804\ubc95\uc740 \uc5ec\uae30\uc11c \uc654\ub2e4."),
+        "proposed": u(r"딱따구리는 나무 속 벌레를 잡을 때\n구멍 반대편을 쪼아 벌레를 놀라게 해\n나오면 먹는 습성에서 온 전법이다."),
+    },
+}
+
+# Three rows were already within the actual event-font budget.  Keep their
+# reviewed text byte-for-byte stable while the eight layout-risk rows below
+# are reflowed or put on hold.
+PRESERVED_PASSING_PROPOSAL_HASHES = {
+    3986: "0CE7C14E9A36C3BD2D90B3CBAF67055D3CD1246B87B95EE3B8FCEF7B505728B0",
+    7310: "04366CFD88C69AC345A32D1CB7E30BED70A856C7396931B40571A3889142EDD5",
+    8128: "6757286E6365883390BDCA9A7A6357FB5B78191AB6254F50B73D96148550F8E5",
+}
+REFLOW_IDS = {4258, 5647, 8512, 8739, 9753, 10817}
+
+# These two semantic corrections cannot be compressed to natural Korean in
+# three actual-font lines without dropping a source fact (former clan head at
+# 9771; both the Mikawa location and Okudaira castle-defense context at
+# 10856).  They remain explicit PC-only holds instead of receiving a
+# misleading shortened candidate.
+LAYOUT_HOLD_SPECS: dict[int, dict[str, str]] = {
+    9771: {
+        "expected_current_text_sha256": "9EF74B771F65FDBEE627B85A17DF981B30427F52452FC51DC4FEEA95D4A0798D",
+        "rationale": "proper_names_former_clan_head_and_buddhist_training_cannot_all_fit_naturally_in_three_lines",
+        "attempted_proposed": u(r"\x1bCB에치고 나가오 가문\x1bCZ과 \x1bCB야마노우치 우에스기 가문\x1bCZ은\n다이묘 가문으로서 멸망했다. 전 당주 \x1bCA[bm1448]\x1bCZ는\n\x1bCC고야산\x1bCZ에서 불도 수행에 힘썼다."),
     },
     10856: {
         "expected_current_text_sha256": "160863361B116C88A2F3D3C131E5F67C7C1266E42AA1BCEE4EDFBA974457C7A9",
-        "rationale": "restore_okudaira_defection_large_army_and_castle_defense_context",
-        "proposed": u(r"\x1bCB\ub2e4\ucf00\ub2e4 \uce21\x1bCZ \uad6d\uc911 \x1bCB\uc624\ucfe0\ub2e4\uc774\ub77c \uac00\ubb38\x1bCZ\uc774 \x1bCB\ub3c4\ucfe0\uac00와 \uce21\x1bCZ\uc73c\ub85c \ub3cc\uc544\uc11c자,\n\x1bCA\uac00\uc4f0\uc694\ub9ac\x1bCZ\ub294 \ub300\uad70\uc744 \uc774\ub04c\uace0 \x1bCB\uc624\ucfe0\ub2e4\uc774\ub77c\x1bCZ\uac00 \uc9c0\ud0a4\ub294\n\x1bCC\ubbf8\uce74\uc640\x1bCZ\u00b7\x1bCC\ub098\uac00\uc2dc\ub178\uc131\x1bCZ\uc744 \ud3ec\uc704\ud588\ub2e4."),
-}
+        "rationale": "takeda_okudaira_tokugawa_defection_large_army_mikawa_and_castle_defense_facts_cannot_all_fit_naturally_in_three_lines",
+        "attempted_proposed": u(r"\x1bCB다케다 측\x1bCZ 국중 \x1bCB오쿠다이라 가문\x1bCZ이 \x1bCB도쿠가와 측\x1bCZ으로 돌아서자,\n\x1bCA가쓰요리\x1bCZ는 대군을 이끌고 \x1bCB오쿠다이라\x1bCZ가 지키는\n\x1bCC미카와\x1bCZ·\x1bCC나가시노성\x1bCZ을 포위했다."),
+    },
 }
 
 
@@ -186,6 +208,128 @@ def load_inputs() -> tuple[dict[str, tuple[str, ...]], dict[str, str]]:
         tables[language] = table
         hashes[language] = packed_hash
     return tables, hashes
+
+
+def load_v2_layout_support(
+    tables: dict[str, tuple[str, ...]],
+    file_hashes: dict[str, str],
+) -> tuple[Any, Any, dict[str, int], dict[str, Any], dict[str, Any]]:
+    """Load the actual event-font metric and per-token reservation contract.
+
+    The v2 layout builder is the authoritative implementation for the game
+    font.  Reusing its ``target_width_pairs`` prevents this semantic audit from
+    passing a surrogate logical-column check that the game can still overflow.
+    """
+
+    module_spec = importlib.util.spec_from_file_location("msgev_highrisk_layout_v2", LAYOUT_V2_SCRIPT)
+    if module_spec is None or module_spec.loader is None:
+        raise RuntimeError(f"cannot load v2 MS GEV layout support: {LAYOUT_V2_SCRIPT}")
+    module = importlib.util.module_from_spec(module_spec)
+    sys.modules[module_spec.name] = module
+    module_spec.loader.exec_module(module)
+    if module.MAX_LINES != MAX_EVENT_LINES or module.MAX_LINE_PX != MAX_EVENT_LINE_PX:
+        raise RuntimeError("v2 layout limits differ from the audited 3-line/912px contract")
+
+    _source_path, packed, _raw, source_table = module.source_table(STEAM_ROOT)
+    if sha256_bytes(packed) != file_hashes["ko"] or tuple(source_table.texts) != tables["ko"]:
+        raise RuntimeError("v2 layout source table differs from the live PC Korean table")
+    advance, font_file = module.current_font(STEAM_ROOT)
+    frozen_reservations, _excluded, reservation_document = module.load_reservations()
+    reservation_font = reservation_document.get("font")
+    if not isinstance(reservation_font, dict):
+        raise RuntimeError("v2 runtime reservation document lacks font evidence")
+    packed_font = reservation_font.get("packed")
+    if not isinstance(packed_font, dict):
+        raise RuntimeError("v2 runtime reservation font evidence is malformed")
+
+    # The frozen v2 reservation file predates the active font resource.  Do
+    # not silently use its old pixel numbers: rebuild only the reservations
+    # needed by this PC-only batch from the *active* font and live PC table,
+    # using the exact v2 policy (numeric token suffix -> full referenced name).
+    reviewed_texts = [spec["proposed"] for spec in CANDIDATE_SPECS.values()]
+    reviewed_texts.extend(spec["attempted_proposed"] for spec in LAYOUT_HOLD_SPECS.values())
+    tokens = sorted({token for text in reviewed_texts for token in RUNTIME_RE.findall(text)})
+    actual_reservations: dict[str, int] = {}
+    recomputed_token_evidence: dict[str, dict[str, Any]] = {}
+    for token in tokens:
+        match = re.fullmatch(r"\[([a-z]+)(\d+)\]", token)
+        if match is None:
+            raise RuntimeError(f"runtime token syntax differs: {token}")
+        source_name_id = int(match.group(2))
+        if not 0 <= source_name_id < TABLE_COUNT:
+            raise RuntimeError(f"runtime token name ID outside the PC table: {token}")
+        full_name = tables["ko"][source_name_id]
+        width = module.base.visual_line_width(full_name, advance)
+        if width <= 0:
+            raise RuntimeError(f"runtime token has no visible active-font width: {token}")
+        actual_reservations[token] = width
+        recomputed_token_evidence[token] = {
+            "source_name_id": source_name_id,
+            "source_name_utf16le_sha256": text_hash(full_name),
+            "reserved_full_name_width_px": width,
+            "frozen_v2_reservation_width_px": frozen_reservations.get(token),
+        }
+    reservation_evidence = {
+        "policy": "v2 numeric runtime suffix -> live PC Korean same-ID full name measured with active event font",
+        "active_font_sha256": font_file["sha256"],
+        "frozen_v2_reservation_font_sha256": packed_font.get("sha256"),
+        "frozen_v2_reservation_font_matches_active": packed_font.get("sha256") == font_file["sha256"],
+        "recomputed_token_count": len(actual_reservations),
+        "recomputed_tokens": recomputed_token_evidence,
+    }
+    return module, advance, actual_reservations, reservation_document, reservation_evidence
+
+
+def actual_font_layout(
+    layout_v2: Any,
+    target: str,
+    advance: Any,
+    reservations: dict[str, int],
+) -> dict[str, Any]:
+    """Return exact per-line actual and runtime-reserved event-font widths."""
+
+    actual, reserved = layout_v2.target_width_pairs(target, advance, reservations)
+    if len(actual) != len(reserved) or not actual:
+        raise RuntimeError("v2 target width pairs are malformed")
+    tokens = tuple(RUNTIME_RE.findall(target))
+    if any(token not in reservations for token in tokens):
+        raise RuntimeError("target uses a runtime token without a v2 reservation")
+    return {
+        "engine": "steam_jp_msgev_full_layout_v2.target_width_pairs",
+        "max_lines": MAX_EVENT_LINES,
+        "max_line_px": MAX_EVENT_LINE_PX,
+        "line_count": len(actual),
+        "target_width_pairs": [
+            {"line": number + 1, "actual_px": visible, "reserved_px": projected}
+            for number, (visible, projected) in enumerate(zip(actual, reserved, strict=True))
+        ],
+        "max_actual_px": max(actual),
+        "max_reserved_px": max(reserved),
+        "runtime_token_reservations_px": {token: reservations[token] for token in tokens},
+        "within_actual_budget": max(actual) <= MAX_EVENT_LINE_PX,
+        "within_reserved_budget": max(reserved) <= MAX_EVENT_LINE_PX,
+        "within_line_budget": len(actual) <= MAX_EVENT_LINES,
+    }
+
+
+def require_candidate_layout(layout: dict[str, Any], index: int) -> None:
+    if not (
+        layout["within_line_budget"]
+        and layout["within_actual_budget"]
+        and layout["within_reserved_budget"]
+    ):
+        raise RuntimeError(
+            f"actual/reserved event-font layout exceeds the 3-line/912px budget at {index}: {layout}"
+        )
+
+
+def require_layout_hold(layout: dict[str, Any], index: int) -> None:
+    if (
+        layout["within_line_budget"]
+        and layout["within_actual_budget"]
+        and layout["within_reserved_budget"]
+    ):
+        raise RuntimeError(f"layout hold unexpectedly fits the 3-line/912px contract at {index}")
 
 
 def existing_msgev_artifact_coordinates() -> tuple[set[int], list[str]]:
@@ -314,11 +458,37 @@ def duplicate_title_hold(tables: dict[str, tuple[str, ...]], index: int) -> dict
 
 def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
     tables, file_hashes = load_inputs()
+    layout_v2, advance, reservations, reservation_document, runtime_reservation_evidence = load_v2_layout_support(
+        tables, file_hashes
+    )
     blocked, active_artifacts = existing_msgev_artifact_coordinates()
 
-    overlap = sorted(set(CANDIDATE_SPECS) & blocked)
+    reviewed_ids = set(CANDIDATE_SPECS) | set(LAYOUT_HOLD_SPECS)
+    if set(CANDIDATE_SPECS).intersection(LAYOUT_HOLD_SPECS):
+        raise RuntimeError("candidate and layout-hold IDs overlap")
+    if set(PRESERVED_PASSING_PROPOSAL_HASHES).difference(CANDIDATE_SPECS):
+        raise RuntimeError("a preserved actual-font-passing candidate is absent")
+    if not REFLOW_IDS.issubset(CANDIDATE_SPECS):
+        raise RuntimeError("a reflow ID is absent from the candidate partition")
+    if reviewed_ids != ({3986, 7310, 8128} | REFLOW_IDS | {9771, 10856}):
+        raise RuntimeError("the eight layout-risk IDs are not partitioned deterministically")
+
+    overlap = sorted(reviewed_ids & blocked)
     if overlap:
-        raise RuntimeError(f"candidate IDs overlap existing MS GEV artifacts: {overlap}")
+        raise RuntimeError(f"reviewed IDs overlap existing MS GEV artifacts: {overlap}")
+
+    font_document = reservation_document["font"]
+    font_evidence = {
+        "resource": font_document["resource"],
+        "active_packed_sha256": runtime_reservation_evidence["active_font_sha256"],
+        "frozen_v2_reservation_packed_sha256": runtime_reservation_evidence[
+            "frozen_v2_reservation_font_sha256"
+        ],
+        "table": font_document["table"],
+        "runtime_reservation_document_sha256": sha256_bytes(layout_v2.RESERVATIONS_PATH.read_bytes()),
+        "active_runtime_reservation_evidence": runtime_reservation_evidence,
+        "width_engine": "steam_jp_msgev_full_layout_v2.target_width_pairs",
+    }
 
     jp_ko_tag_mismatches = sum(
         format_signature(jp)["escape_tokens"] != format_signature(ko)["escape_tokens"]
@@ -336,6 +506,8 @@ def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]
             raise RuntimeError(f"proposal is a no-op at {index}")
         if format_signature(current) != format_signature(proposed):
             raise RuntimeError(f"format/token contract mismatch at {index}")
+        if layout_v2.protected_signature(current) != layout_v2.protected_signature(proposed):
+            raise RuntimeError(f"v2 protected-token contract mismatch at {index}")
         if semantic_visible(current) == semantic_visible(proposed):
             raise RuntimeError(f"linebreak-only proposal rejected at {index}")
 
@@ -345,8 +517,12 @@ def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]
             raise RuntimeError(f"line-count drift at {index}")
         if proposed_lines["line_count"] > 3:
             raise RuntimeError(f"three-line constraint violated at {index}")
-        if max(proposed_lines["logical_display_columns"], default=0) > MAX_LOGICAL_COLUMNS:
-            raise RuntimeError(f"logical width budget exceeded at {index}")
+        if index in REFLOW_IDS and proposed_lines["line_count"] != MAX_EVENT_LINES:
+            raise RuntimeError(f"reflow must retain exactly three natural lines at {index}")
+        if index in PRESERVED_PASSING_PROPOSAL_HASHES and text_hash(proposed) != PRESERVED_PASSING_PROPOSAL_HASHES[index]:
+            raise RuntimeError(f"previously-passing proposal changed at {index}")
+        actual_layout = actual_font_layout(layout_v2, proposed, advance, reservations)
+        require_candidate_layout(actual_layout, index)
 
         rows.append(
             {
@@ -370,7 +546,55 @@ def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]
                 "format_contract": format_signature(current),
                 "current_layout": current_lines,
                 "proposed_layout": proposed_lines,
-                "logical_width_budget": MAX_LOGICAL_COLUMNS,
+                "actual_event_font_layout": actual_layout,
+                "actual_event_font_evidence": font_evidence,
+                "active_artifact_coordinate_overlap": False,
+                "current_korean_source": "live_pc_only",
+                "switch_korean_translation_used": False,
+                "historic_korean_backup_used": False,
+                "game_files_written": False,
+            }
+        )
+
+    layout_holds: list[dict[str, Any]] = []
+    for index in sorted(LAYOUT_HOLD_SPECS):
+        spec = LAYOUT_HOLD_SPECS[index]
+        current = tables["ko"][index]
+        attempted = spec["attempted_proposed"]
+        if text_hash(current) != spec["expected_current_text_sha256"]:
+            raise RuntimeError(f"current PC Korean text changed at layout hold {index}")
+        if current == attempted or semantic_visible(current) == semantic_visible(attempted):
+            raise RuntimeError(f"layout hold lacks a real semantic candidate at {index}")
+        if format_signature(current) != format_signature(attempted):
+            raise RuntimeError(f"layout-hold format/token contract mismatch at {index}")
+        if layout_v2.protected_signature(current) != layout_v2.protected_signature(attempted):
+            raise RuntimeError(f"v2 protected-token contract mismatch at layout hold {index}")
+        attempted_layout = actual_font_layout(layout_v2, attempted, advance, reservations)
+        require_layout_hold(attempted_layout, index)
+        layout_holds.append(
+            {
+                "schema_version": REVIEW_BATCH,
+                "review_batch": REVIEW_BATCH,
+                "record_type": "hold_actual_font_overflow",
+                "resource": RESOURCE,
+                "id": index,
+                "reason": spec["rationale"],
+                "source_japanese": tables["jp"][index],
+                "current_korean": current,
+                "attempted_proposed_korean": attempted,
+                "pc_references": {
+                    "en": tables["en"][index],
+                    "sc": tables["sc"][index],
+                    "tc": tables["tc"][index],
+                },
+                "input_file_sha256": file_hashes,
+                "current_text_sha256": text_hash(current),
+                "attempted_text_sha256": text_hash(attempted),
+                "format_contract": format_signature(current),
+                "attempted_logical_layout": line_metrics(attempted),
+                "attempted_actual_event_font_layout": attempted_layout,
+                "actual_event_font_evidence": font_evidence,
+                "required_next_action": "human semantic compaction or real-game UI decision; do not drop named/source facts only to fit",
                 "active_artifact_coordinate_overlap": False,
                 "current_korean_source": "live_pc_only",
                 "switch_korean_translation_used": False,
@@ -397,6 +621,7 @@ def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]
         },
         duplicate_title_hold(tables, 14391),
         duplicate_title_hold(tables, 14403),
+        *layout_holds,
     ]
 
     colored_span_count = sum(len(ESC_TOKEN_RE.findall(text)) for text in tables["jp"])
@@ -408,6 +633,12 @@ def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]
         "candidate_id_count": len(rows),
         "candidate_ids": [row["id"] for row in rows],
         "hold_group_count": len(holds),
+        "actual_font_passing_candidate_count": len(rows),
+        "actual_font_layout_hold_count": len(layout_holds),
+        "actual_font_layout_hold_ids": [row["id"] for row in layout_holds],
+        "reflow_candidate_ids": sorted(REFLOW_IDS),
+        "preserved_actual_font_passing_ids": sorted(PRESERVED_PASSING_PROPOSAL_HASHES),
+        "actual_event_font_evidence": font_evidence,
         "pinyin_key_like_hold_id_count": len(pinyin_ids),
         "duplicate_title_hold_ids": [14391, 14403],
         "pc_jp_ko_escape_tag_mismatch_count": jp_ko_tag_mismatches,
@@ -415,7 +646,7 @@ def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]
         "jp_high_risk_keyword_source_hit_counts": source_keyword_counts(tables["jp"]),
         "active_artifact_coordinate_union_count": len(blocked),
         "active_artifacts_scanned_for_id_exclusion": active_artifacts,
-        "candidate_overlap_count": len(overlap),
+        "reviewed_coordinate_overlap_count": len(overlap),
         "input_file_sha256": file_hashes,
         "current_korean_source": "live_pc_only",
         "switch_korean_translation_used": False,
@@ -423,6 +654,59 @@ def build() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]
         "game_files_written": False,
     }
     return rows, holds, summary
+
+
+def validate_build(
+    candidates: list[dict[str, Any]],
+    holds: list[dict[str, Any]],
+    summary: dict[str, Any],
+) -> None:
+    """Validate the deterministic candidate/hold partition before emission."""
+
+    candidate_ids = [row.get("id") for row in candidates]
+    if candidate_ids != sorted(CANDIDATE_SPECS):
+        raise RuntimeError("candidate IDs differ from the deterministic PC-only partition")
+    if len(candidate_ids) != len(set(candidate_ids)):
+        raise RuntimeError("candidate IDs are duplicated")
+    for row in candidates:
+        if row.get("switch_korean_translation_used") or row.get("historic_korean_backup_used") or row.get("game_files_written"):
+            raise RuntimeError("candidate scope is no longer PC-only/read-only")
+        layout = row.get("actual_event_font_layout")
+        if not isinstance(layout, dict):
+            raise RuntimeError("candidate lacks actual event-font layout evidence")
+        if not (
+            layout.get("within_line_budget")
+            and layout.get("within_actual_budget")
+            and layout.get("within_reserved_budget")
+        ):
+            raise RuntimeError(f"candidate layout budget failed at {row.get('id')}")
+        pairs = layout.get("target_width_pairs")
+        if not isinstance(pairs, list) or len(pairs) > MAX_EVENT_LINES:
+            raise RuntimeError(f"candidate width-pair evidence differs at {row.get('id')}")
+        for pair in pairs:
+            if not isinstance(pair, dict) or pair.get("actual_px", MAX_EVENT_LINE_PX + 1) > MAX_EVENT_LINE_PX or pair.get("reserved_px", MAX_EVENT_LINE_PX + 1) > MAX_EVENT_LINE_PX:
+                raise RuntimeError(f"candidate width pair exceeds the actual event-font budget at {row.get('id')}")
+
+    layout_holds = [row for row in holds if row.get("record_type") == "hold_actual_font_overflow"]
+    if [row.get("id") for row in layout_holds] != sorted(LAYOUT_HOLD_SPECS):
+        raise RuntimeError("actual-font layout holds differ from the deterministic partition")
+    for row in layout_holds:
+        if row.get("switch_korean_translation_used") or row.get("historic_korean_backup_used") or row.get("game_files_written"):
+            raise RuntimeError("layout hold scope is no longer PC-only/read-only")
+        layout = row.get("attempted_actual_event_font_layout")
+        if not isinstance(layout, dict):
+            raise RuntimeError("layout hold lacks actual event-font evidence")
+        if layout.get("within_line_budget") and layout.get("within_actual_budget") and layout.get("within_reserved_budget"):
+            raise RuntimeError(f"layout hold unexpectedly fits at {row.get('id')}")
+
+    if summary.get("candidate_ids") != candidate_ids or summary.get("actual_font_layout_hold_ids") != sorted(LAYOUT_HOLD_SPECS):
+        raise RuntimeError("summary ID vectors differ from deterministic outputs")
+    if summary.get("actual_font_passing_candidate_count") != len(candidates):
+        raise RuntimeError("summary candidate count differs")
+    if summary.get("actual_font_layout_hold_count") != len(layout_holds):
+        raise RuntimeError("summary layout-hold count differs")
+    if summary.get("switch_korean_translation_used") or summary.get("historic_korean_backup_used") or summary.get("game_files_written"):
+        raise RuntimeError("summary scope is no longer PC-only/read-only")
 
 
 def canonical_jsonl(rows: list[dict[str, Any]]) -> str:
@@ -458,21 +742,30 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--kind", choices=("candidates", "holds", "summary"), default="summary")
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--validate", action="store_true", help="verify deterministic private outputs and actual-font evidence")
     args = parser.parse_args()
     candidates, holds, summary = build()
+    validate_build(candidates, holds, summary)
+    candidate_payload = canonical_jsonl(candidates)
+    hold_payload = canonical_jsonl(holds)
     if args.write:
-        atomic_write(OUTPUT, canonical_jsonl(candidates))
-        atomic_write(HOLD_OUTPUT, canonical_jsonl(holds))
+        atomic_write(OUTPUT, candidate_payload)
+        atomic_write(HOLD_OUTPUT, hold_payload)
         summary["candidate_output"] = OUTPUT.relative_to(REPO).as_posix()
         summary["candidate_output_sha256"] = sha256_bytes(OUTPUT.read_bytes())
         summary["hold_output"] = HOLD_OUTPUT.relative_to(REPO).as_posix()
         summary["hold_output_sha256"] = sha256_bytes(HOLD_OUTPUT.read_bytes())
+    if args.validate:
+        if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8") != candidate_payload:
+            raise RuntimeError("existing candidate output differs from deterministic PC-only evidence")
+        if not HOLD_OUTPUT.is_file() or HOLD_OUTPUT.read_text(encoding="utf-8") != hold_payload:
+            raise RuntimeError("existing hold output differs from deterministic PC-only evidence")
     if args.kind == "candidates":
         print("@@JSONL@@")
-        print(canonical_jsonl(candidates), end="")
+        print(candidate_payload, end="")
     elif args.kind == "holds":
         print("@@JSONL@@")
-        print(canonical_jsonl(holds), end="")
+        print(hold_payload, end="")
     else:
         print("@@SUMMARY@@")
         print(json.dumps(summary, ensure_ascii=True, sort_keys=True, separators=(",", ":")))
