@@ -1,0 +1,351 @@
+{
+  "checks": {
+    "actual_current_font_advance_measured": true,
+    "all_candidates_held_pending_event_layout_evidence": true,
+    "all_nine_coordinates_accounted_for": true,
+    "escape_printf_runtime_control_pua_gates": true,
+    "line_start_particle_gate": true,
+    "max_three_line_textual_limit": true,
+    "no_unverified_container_width_used": true,
+    "outer_whitespace_gate": true,
+    "per_coordinate_preimage_pins": true,
+    "per_coordinate_pristine_jp_pins": true,
+    "private_candidate_only": true,
+    "runtime_name_reservations_measured": true,
+    "source_file_pins": true
+  },
+  "coordinate_gates": [
+    {
+      "actual_line_widths_px": [
+        840,
+        912,
+        912
+      ],
+      "current_ko_utf16le_sha256": "2C52E80DE4E1629C54927FE0E894C5D1CE90601B535D174B70796AC61183294F",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "3B3073359E5693C0555337BC14DA7787ADFE0A364E3825017E53F37F2AB615DF",
+      "id": 4558,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "09A2699E63B94701B4297DB8CD1B8FB225DD5747681A6C51CED62D52789FF8EB",
+      "proposed_ko_utf16le_sha256": "387A61A3B9B73E2E6C3FFF68F4EB7DBD7C47DB7C2E1493A578BBBE5C36FB567A",
+      "reserved_line_widths_px": [
+        840,
+        912,
+        912
+      ],
+      "runtime_tokens": []
+    },
+    {
+      "actual_line_widths_px": [
+        648,
+        744,
+        888
+      ],
+      "current_ko_utf16le_sha256": "2738AAA21BBABF9050C0620F5E9277E4D7DEFAB4484D58A806B63305CE02F4D7",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "97094ED837FA912B3BCEC058D6EF1B285886D586FA37CFE6ED026CFEF1E72ABE",
+      "id": 4769,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "D9A6A3176C61E6DFA892CA5DEB2E4F0B77A0535369E0A8A0AB9B7CC1B9A1930F",
+      "proposed_ko_utf16le_sha256": "D5A9A6EBD9E1906F8878DC72C360A7338D0C723B5CE06F867C15ABAA46C9D0C5",
+      "reserved_line_widths_px": [
+        648,
+        744,
+        888
+      ],
+      "runtime_tokens": []
+    },
+    {
+      "actual_line_widths_px": [
+        816,
+        888,
+        792
+      ],
+      "current_ko_utf16le_sha256": "374A02A025D89355A2DCFF3ECE0D1B9708510DFAB0BC8E9E4D59ACD70BD95F22",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "5516CCCC8EAD6FB71F8C1C1704E0A4366305982A477B8643BC6026643A58E160",
+      "id": 5155,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "5D2B4BFB0CF108233EE6E4586A07A35B723A8427AF29DE08112E125E9C0CCD69",
+      "proposed_ko_utf16le_sha256": "C3CD9B6E378FE73261D0F8AF13BAEFE1A0E4531DD4AB51C50BE7996B6D3F51FB",
+      "reserved_line_widths_px": [
+        816,
+        888,
+        792
+      ],
+      "runtime_tokens": []
+    },
+    {
+      "actual_line_widths_px": [
+        792,
+        816,
+        480
+      ],
+      "current_ko_utf16le_sha256": "D850906A0587C77CC3423D2769469FBD4495336E0D764D91A39350A0911B3B36",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "AEB027A39660B0298E8F59BF4FFF07AA48A0F499226C239BBFDF7B533C36C06C",
+      "id": 5403,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "DF6A875077926EC83DDB23EF025ECF2E7795B4560AED023BC187F98F50C0A579",
+      "proposed_ko_utf16le_sha256": "48EE6B71A22EBC3E5B969B6935EFC08B246A6271C3755F50F8D730447B62DE3C",
+      "reserved_line_widths_px": [
+        792,
+        816,
+        480
+      ],
+      "runtime_tokens": []
+    },
+    {
+      "actual_line_widths_px": [
+        840,
+        576,
+        528
+      ],
+      "current_ko_utf16le_sha256": "C4803703BC79ED0B56DA9D898DE51BCB1955ED2845EAC9CDF365A9BBAFB3C839",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "C232DFFE252BD414D9B9B7AE0AF00D5A1BCA3C625124C45265F62531C3A51D66",
+      "id": 5492,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "E70F195A3F8EF275DA4C100D223EAFBDF9ADA5FC130E50AD22E8037DA2819179",
+      "proposed_ko_utf16le_sha256": "CA16CAAB66DA0AC10D516C653D16105E84ED7DEFEDB702FA4D5DAE0396BB9170",
+      "reserved_line_widths_px": [
+        840,
+        576,
+        888
+      ],
+      "runtime_tokens": [
+        "[b1448]"
+      ]
+    },
+    {
+      "actual_line_widths_px": [
+        624,
+        840,
+        768
+      ],
+      "current_ko_utf16le_sha256": "E24ABC8A3D1F0CD5CAB70773B8D1D81203A64AE886961B8D5E2C5EEC48E20CAD",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "AE13298510014BA196818170A189161E249CD5DDBA2C2B58C4FA20D80173A74C",
+      "id": 6365,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "60576CF7515C12F67E0E1E7429952B7090A7CE6BF522EACE2D51954ED9E51675",
+      "proposed_ko_utf16le_sha256": "F45B33F6C61E2AA8A321077D50725A339D3C2E90B1AD256089123A7B4B471832",
+      "reserved_line_widths_px": [
+        624,
+        840,
+        768
+      ],
+      "runtime_tokens": []
+    },
+    {
+      "actual_line_widths_px": [
+        648,
+        912,
+        912
+      ],
+      "current_ko_utf16le_sha256": "5F5B596BF8AF4727ACC42F7F3D0A1CED5FD5848F24DBE72757D4435934AD9653",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "DF3C6DFB52B9E7E588AF9BF3EA707CD97D307A927AC4F9C50F30766E720AB803",
+      "id": 6401,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "96601D639C6C9AD5A0FFF3180F9367DDEE752D77CAC655818E9D155FFAD5B25C",
+      "proposed_ko_utf16le_sha256": "6728ACA9F46DC98DE86AB6AF3948147D0935028DAE87DEF3708AAF303D387FC5",
+      "reserved_line_widths_px": [
+        648,
+        912,
+        912
+      ],
+      "runtime_tokens": []
+    },
+    {
+      "actual_line_widths_px": [
+        768,
+        744
+      ],
+      "current_ko_utf16le_sha256": "DD6CC5003B8BA3F016262358FC13574ACE6221F265E811482775F43623C789E4",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "AE13298510014BA196818170A189161E249CD5DDBA2C2B58C4FA20D80173A74C",
+      "id": 9580,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 2,
+      "pristine_jp_utf16le_sha256": "A3C6600E3C84E25644FC239A3894AA6EF9245B2D2C7FCDAD4B57A047E2250F6A",
+      "proposed_ko_utf16le_sha256": "8DBFBCFF4E2D6A1578A5468959296D7D72487A18FEC15CC79584B9966F591E91",
+      "reserved_line_widths_px": [
+        768,
+        744
+      ],
+      "runtime_tokens": []
+    },
+    {
+      "actual_line_widths_px": [
+        816,
+        624,
+        624
+      ],
+      "current_ko_utf16le_sha256": "D9C04F30ACAA7A4281D7C57B62A547719AFB3D0A0C92C567DA11B6B1D2BE9BE0",
+      "eligible_for_game_application": false,
+      "format_profile_sha256": "A37AB2A2467DAB98A74B8F579D0E0EF0756E4F2D7CBEA6385CD86AFEE14930F3",
+      "id": 9585,
+      "layout_status": "hold_no_ev_strdata_container_width_evidence",
+      "line_count": 3,
+      "pristine_jp_utf16le_sha256": "59B64F48DBB4DCB7AA368C24BA13BDD11E15CB445B3F18AA7FB8AE4B2E3120CB",
+      "proposed_ko_utf16le_sha256": "9E358512D51E9DEC5BF82B9D44961A43545F5D553620AD8847E5D9524AD846C2",
+      "reserved_line_widths_px": [
+        816,
+        624,
+        624
+      ],
+      "runtime_tokens": []
+    }
+  ],
+  "font_measurement": {
+    "mapping_length": 65536,
+    "measurement": "actual current-PC event-font table advance; non-binding without container proof",
+    "outer_entry": 6,
+    "packed": {
+      "sha256": "3798CB758E6EA48A257F1FBBBBE56E800F668E6FA2DE0CFD4B277C785A322EE7",
+      "size": 161428458
+    },
+    "raw": {
+      "sha256": "30F1AC5AEE1962826AE3D193E2AD6F18723402382D59B242E725E33D7E44F6A6",
+      "size": 21720288
+    },
+    "record_count": 8372,
+    "renderer_contract": {
+      "container_width_px": null,
+      "max_lines": 3,
+      "status": "hold_no_ev_strdata_container_width_evidence"
+    },
+    "resource": "RES_JP/res_lang.bin",
+    "sample_advances_px": {
+      "ascii_space": 24,
+      "ellipsis": 48,
+      "hangul": 48
+    },
+    "table": 0
+  },
+  "inputs": {
+    "current_pc_ko": {
+      "packed": {
+        "sha256": "6A7D90C1A95AD42DCAE2D3C3719508EDD00588288659A1D192B680CF70EAE6E4",
+        "size": 928605
+      },
+      "raw": {
+        "sha256": "476BF7300FDE67B77205929E1D182F7C8E60D1E6464BC96BB44389E3F86E9FFA",
+        "size": 924952
+      },
+      "resource": "MSG/JP/ev_strdata.bin"
+    },
+    "pc_en": {
+      "available": false,
+      "reason": "the current PC installation has no EN ev_strdata resource",
+      "resource": "MSG/EN/ev_strdata.bin"
+    },
+    "pc_sc": {
+      "packed": {
+        "sha256": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+        "size": 461651
+      },
+      "raw": {
+        "sha256": "482B25ACFBF219E85EF9F9A073745414B3FC97705BABB4FAF4AAC3BB68248DAD",
+        "size": 662228
+      },
+      "resource": "MSG/SC/ev_strdata.bin"
+    },
+    "pc_tc": {
+      "packed": {
+        "sha256": "9E9346B942CAFA99432D675F6BA74DD04D48F56095F35F46392697011D9CFEF3",
+        "size": 460929
+      },
+      "raw": {
+        "sha256": "8918886EC8BB8B58317189F7ABAF48EBC761633CC263F0641ED5213050D1B352",
+        "size": 650756
+      },
+      "resource": "MSG/TC/ev_strdata.bin"
+    },
+    "pristine_pc_jp": {
+      "packed": {
+        "sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+        "size": 496819
+      },
+      "raw": {
+        "sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+        "size": 789260
+      },
+      "resource": "MSG/JP/ev_strdata.bin"
+    }
+  },
+  "outputs": {
+    "private_candidates": {
+      "relative_path": "tmp/translation_quality_ev_manual_linebreak_repair_v1/ev_strdata_manual_linebreak_repair_candidates.v1.jsonl",
+      "sha256": "3FBF672AE6D35A2702DA73215AC80D321023C582D1AC60DA9485AB447BBE7353",
+      "size": 25990
+    },
+    "private_holds": {
+      "relative_path": "tmp/translation_quality_ev_manual_linebreak_repair_v1/ev_strdata_manual_linebreak_repair_holds.v1.jsonl",
+      "sha256": "72B8563C035F3FA817985CEAF942277ABC3D82A753639F9CF03476D86325E4ED",
+      "size": 5562
+    }
+  },
+  "runtime_reservations": {
+    "packed": {
+      "sha256": "B8B3B1C5A635419E590DB866C240A1B6609799E0FEA0E69F86D6208F27E5C52B",
+      "size": 995446
+    },
+    "raw": {
+      "sha256": "2A98D81EC39E99358386B8E715BC8A97ACFD1E9A6B76B3FF69B2467B1F7D50DB",
+      "size": 991532
+    },
+    "reservation_policy": "per-token current-PC full-name advance upper bound",
+    "resource": "MSG_PK/JP/msgev.bin",
+    "semantic_translation_context_used": false,
+    "tokens": {
+      "[b1448]": {
+        "reserved_full_name_width_px": 360,
+        "source_id": 1448,
+        "source_utf16le_sha256": "A04C1B6E16CD71922E66C0F49FE0F112A3E2543EEC4EF9A3F36A13E80F024D7A"
+      }
+    }
+  },
+  "schema": "nobu16.kr.ev-strdata-manual-linebreak-repair.v1",
+  "scope": {
+    "current_pc_korean_used_only_as_preimage": true,
+    "generic_builder_modified": false,
+    "historic_korean_translation_used": false,
+    "pc_en_ev_strdata_available": false,
+    "steam_game_resource_written": false,
+    "switch_korean_translation_used": false,
+    "translation_contexts": [
+      "pristine_pc_jp",
+      "pc_sc",
+      "pc_tc"
+    ]
+  },
+  "selection": {
+    "all_semantic_candidates_layout_held": true,
+    "apply_eligible_candidate_count": 0,
+    "layout_hold_count": 9,
+    "layout_hold_ids_sha256": "1BFEB6235B84688A74E6DFA378F3F02E02E4F017F98F312454275259FA47E611",
+    "semantic_candidate_count": 9,
+    "semantic_candidate_ids_sha256": "1BFEB6235B84688A74E6DFA378F3F02E02E4F017F98F312454275259FA47E611",
+    "target_ids": [
+      4558,
+      4769,
+      5155,
+      5403,
+      5492,
+      6365,
+      6401,
+      9580,
+      9585
+    ],
+    "target_ids_sha256": "1BFEB6235B84688A74E6DFA378F3F02E02E4F017F98F312454275259FA47E611"
+  }
+}

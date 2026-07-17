@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import os
 import re
@@ -23,6 +24,7 @@ import tempfile
 import unicodedata
 from collections import Counter
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
@@ -45,9 +47,22 @@ DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 DEFAULT_OUTPUT_ROOT = REPO / "tmp" / "translation_quality_corrections_v1" / "candidate"
 PRIVATE_PROPOSALS = REPO / "tmp" / "translation_quality_audit_v1" / "proposals"
 PRIVATE_SEMANTIC = REPO / "tmp" / "translation_quality_audit_v1" / "semantic"
+MSGDATA_TSU_OUTER_WHITESPACE = (
+    REPO
+    / "tmp"
+    / "translation_quality_msgdata_tsu_outer_whitespace_v1"
+    / "msgdata_tsu_outer_whitespace_candidates.v1.jsonl"
+)
+RESIDUAL_THREE_PC_ONLY = (
+    REPO
+    / "tmp"
+    / "translation_quality_residual_three_pc_only_v1"
+    / "private_candidates.v1.jsonl"
+)
 PUBLIC_OVERLAY = WORKSTREAM / "public" / "translation_quality_corrections.v1.json"
 VALIDATION = WORKSTREAM / "validation.v1.json"
 AUTONOMOUS_WORDING_OVERLAY = REPO / "workstreams" / "translation_quality_semantic_fixes_v1" / "public" / "autonomous_wording.v1.json"
+EVENT_LAYOUT_RUNTIME = REPO / "workstreams" / "steam_jp_msgev_full_layout_v2" / "build_steam_jp_msgev_full_layout_v2.py"
 
 OVERLAY_SCHEMA = "nobu16.kr.translation-quality-corrections-overlay.v1"
 VALIDATION_SCHEMA = "nobu16.kr.translation-quality-corrections-validation.v1"
@@ -137,6 +152,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "msgdata_semantic_ui_term_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "msgdata_shuu_suffix_consistency_candidates.v1.jsonl",
             PRIVATE_SEMANTIC / "msgdata_tsu_reading_consistency_candidates.v1.jsonl",
+            MSGDATA_TSU_OUTER_WHITESPACE,
             PRIVATE_SEMANTIC / "msgdata_battle_key_site_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "utsunomiya_reading_consistency_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "territorial_measures_term_consistency_addendum.v1.jsonl",
@@ -174,6 +190,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "msgev_tsu_to_sseu_static_consistency_candidates.v1.jsonl",
             PRIVATE_SEMANTIC / "msgev_highrisk_semantic_propername_v1.jsonl",
             PRIVATE_SEMANTIC / "yousho_location_clarity_candidates.v1.jsonl",
+            RESIDUAL_THREE_PC_ONLY,
         ),
     ),
     # This is a semantic-quality pass over the base PC event strings.  Its
@@ -237,6 +254,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "base_msggame_quality_addendum.v2.jsonl",
             PRIVATE_SEMANTIC / "base_msggame_quality_addendum.v3.jsonl",
             PRIVATE_SEMANTIC / "base_msggame_quality_addendum.v4.jsonl",
+            RESIDUAL_THREE_PC_ONLY,
             AUTONOMOUS_WORDING_OVERLAY,
         ),
     ),
@@ -262,6 +280,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "pk_msggame_dynamic_child_candidates.v1.jsonl",
             PRIVATE_SEMANTIC / "pk_msggame_key_site_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "horse_riding_clarity_addendum.v1.jsonl",
+            RESIDUAL_THREE_PC_ONLY,
             AUTONOMOUS_WORDING_OVERLAY,
         ),
     ),
@@ -410,6 +429,35 @@ def profile_delta(before: Mapping[str, Any], after: Mapping[str, Any]) -> list[s
     return [key for key in before if before[key] != after[key]]
 
 
+def proposal_replacement(proposal: Mapping[str, Any]) -> tuple[str, str | None]:
+    """Return the reviewed replacement and its private current-text field.
+
+    The early audit generators wrote ``proposed_ko``/``ko`` while the
+    PC-only full-audit generators use ``proposed_korean``/``current_korean``.
+    Both schemas carry an exact current-text hash and are accepted here only
+    as an explicit before/after pair; plain ``ko`` rows remain replacements.
+    """
+
+    has_short = "proposed_ko" in proposal
+    has_long = "proposed_korean" in proposal
+    if has_short and has_long:
+        if proposal["proposed_ko"] != proposal["proposed_korean"]:
+            raise CorrectionError("conflicting private Korean replacements")
+        raise CorrectionError("ambiguous private Korean replacement schema")
+    if has_short:
+        value = proposal["proposed_ko"]
+        current_key = "ko"
+    elif has_long:
+        value = proposal["proposed_korean"]
+        current_key = "current_korean"
+    else:
+        value = proposal.get("ko")
+        current_key = None
+    if not isinstance(value, str) or not value:
+        raise CorrectionError("proposal lacks a Korean replacement")
+    return value, current_key
+
+
 def read_proposals(spec: ResourceSpec) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for path in spec.proposal_paths:
@@ -428,24 +476,26 @@ def read_proposals(spec: ResourceSpec) -> list[dict[str, Any]]:
             if not isinstance(row, dict):
                 raise CorrectionError(f"proposal row is not an object at {path}:{line_number}")
             # A small cross-resource addendum can declare its destination
-            # explicitly.  Ignore rows for the other resource instead of
-            # treating their otherwise-valid coordinate syntax as a duplicate.
+            # explicitly.  Older PC-only review generators used the stable
+            # packed-resource path while this builder uses a short resource
+            # name.  Both exact identifiers are accepted for the matching
+            # resource only; all other destinations remain ignored.
             declared_resource = row.get("resource")
             if declared_resource is not None:
                 if not isinstance(declared_resource, str):
                     raise CorrectionError(f"proposal resource is invalid at {path}:{line_number}")
-                if declared_resource != spec.name:
+                if declared_resource not in {spec.name, spec.relative}:
                     continue
             coordinate = coordinate_key(spec, row)
-            # Semantic-review rows may retain the current Korean text in
-            # ``ko`` for private comparison and put the replacement in
-            # ``proposed_ko``.  For ordinary residual fixes, ``ko`` itself
-            # is the replacement.  Do not mistake that useful before/after
-            # pair for a conflict.
-            values = [row["proposed_ko"]] if "proposed_ko" in row else [row.get("ko")]
-            if not all(isinstance(value, str) and value for value in values):
-                raise CorrectionError(f"proposal lacks a Korean replacement at {spec.name}:{coordinate}")
-            ko = values[0]
+            try:
+                ko, current_key = proposal_replacement(row)
+            except CorrectionError as exc:
+                raise CorrectionError(f"{exc} at {spec.name}:{coordinate}") from exc
+            # Keep the private current-field name with the normalized entry
+            # so freeze can bind the before/after pair to the live PC table.
+            if current_key is not None:
+                row = dict(row)
+                row["_private_current_key"] = current_key
             rows.append({"coordinate": coordinate, "ko": ko, "proposal": row})
     if not rows:
         raise CorrectionError(f"proposal file has no rows: {path}")
@@ -898,7 +948,55 @@ def validate_replacement(before: str, after: str, spec: ResourceSpec, coordinate
     return before_profile, after_profile, delta
 
 
-def event_layout_proof(after: str, proposal: Mapping[str, Any], coordinate: str) -> dict[str, Any]:
+@lru_cache(maxsize=2)
+def event_layout_runtime(steam_root_key: str) -> tuple[Any, Any, Mapping[str, int]]:
+    """Load the local PC font/reservation verifier for frozen event metrics.
+
+    This is layout-only evidence: it reads the current PC font and the
+    checked-in runtime-token reservation table, never a Switch text table or
+    a Korean translation reference.
+    """
+
+    spec = importlib.util.spec_from_file_location(
+        "translation_quality_corrections_event_layout", EVENT_LAYOUT_RUNTIME
+    )
+    if spec is None or spec.loader is None:
+        raise CorrectionError("cannot load the PC event layout verifier")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    try:
+        advance, _font = module.current_font(Path(steam_root_key))
+        reservations, _excluded, _document = module.load_reservations()
+    except Exception as exc:  # pragma: no cover - external layout verifier
+        raise CorrectionError("cannot load PC event layout metrics") from exc
+    return module, advance, reservations
+
+
+def measured_event_layout(after: str, steam_root: Path, coordinate: str) -> tuple[list[int], list[int]]:
+    module, advance, reservations = event_layout_runtime(str(steam_root.resolve()))
+    try:
+        actual, reserved = module.target_width_pairs(after, advance, reservations)
+    except Exception as exc:  # pragma: no cover - external layout verifier
+        raise CorrectionError(f"cannot measure event layout at msgev:{coordinate}") from exc
+    if (
+        not actual
+        or len(actual) != len(reserved)
+        or len(actual) > EVENT_MAX_LINES
+        or any(not isinstance(value, int) or value < 0 or value > EVENT_MAX_LINE_PX for value in actual)
+        or any(not isinstance(value, int) or value < 0 or value > EVENT_MAX_LINE_PX for value in reserved)
+    ):
+        raise CorrectionError(f"event layout exceeds the PC three-line budget at msgev:{coordinate}")
+    return actual, reserved
+
+
+def event_layout_proof(
+    before: str,
+    after: str,
+    proposal: Mapping[str, Any],
+    coordinate: str,
+    steam_root: Path,
+) -> dict[str, Any]:
     """Validate and preserve the reviewer-calculated event layout evidence.
 
     The event font has fixed 48px wide-script cells, but dynamic name tokens
@@ -908,11 +1006,23 @@ def event_layout_proof(after: str, proposal: Mapping[str, Any], coordinate: str)
     that can be lost between review and build.
     """
     validation = proposal.get("validation")
-    if not isinstance(validation, Mapping):
-        raise CorrectionError(f"event layout validation is absent at msgev:{coordinate}")
-    linebreak = validation.get("linebreak")
+    linebreak = validation.get("linebreak") if isinstance(validation, Mapping) else None
+    if linebreak is None:
+        # Older PC-only name/semantic audit batches predate the event-layout
+        # field.  They are admissible only when all format markers (including
+        # manual breaks) stay unchanged, after which the local PC font
+        # verifier independently measures the proposed text.
+        if format_profile(before) != format_profile(after):
+            raise CorrectionError(f"unreviewed format change at msgev:{coordinate}")
+        actual, reserved = measured_event_layout(after, steam_root, coordinate)
+        return {
+            "line_count": len(actual),
+            "line_widths_px": actual,
+            "reserved_line_widths_px": reserved,
+            "max_line_px": EVENT_MAX_LINE_PX,
+        }
     if not isinstance(linebreak, Mapping):
-        raise CorrectionError(f"event linebreak validation is absent at msgev:{coordinate}")
+        raise CorrectionError(f"event linebreak validation is invalid at msgev:{coordinate}")
     lines = re.split(r"\r\n|\n|\r", after)
     actual = linebreak.get("actual_widths_px")
     reserved = linebreak.get("reserved_widths_px")
@@ -984,11 +1094,21 @@ def freeze(steam_root: Path) -> dict[str, Any]:
             if coordinate not in texts:
                 raise CorrectionError(f"proposal coordinate is absent from live {spec.name}: {coordinate}")
             before = texts[coordinate]
-            if "proposed_ko" in row["proposal"]:
-                private_current = row["proposal"].get("ko")
+            private_current_key = row["proposal"].get("_private_current_key")
+            if private_current_key is not None:
+                private_current = row["proposal"].get(private_current_key)
                 if not isinstance(private_current, str) or private_current != before:
                     raise CorrectionError(f"private semantic current text differs at {spec.name}:{coordinate}")
-            supplied_hashes = [row["proposal"][key] for key in ("source_hash", "current_hash") if key in row["proposal"]]
+            supplied_hashes = [
+                row["proposal"][key]
+                for key in (
+                    "source_hash",
+                    "current_hash",
+                    "current_text_sha256",
+                    "current_korean_utf16le_sha256",
+                )
+                if key in row["proposal"]
+            ]
             if supplied_hashes:
                 if (
                     not all(isinstance(value, str) and HEX64_RE.fullmatch(value.upper()) for value in supplied_hashes)
@@ -997,6 +1117,21 @@ def freeze(steam_root: Path) -> dict[str, Any]:
                 ):
                     raise CorrectionError(f"private proposal source hash differs at {spec.name}:{coordinate}")
             after = row["ko"]
+            proposed_hashes = [
+                row["proposal"][key]
+                for key in (
+                    "proposed_text_sha256",
+                    "proposed_ko_utf16le_sha256",
+                    "proposed_korean_utf16le_sha256",
+                )
+                if key in row["proposal"]
+            ]
+            if proposed_hashes and (
+                not all(isinstance(value, str) and HEX64_RE.fullmatch(value.upper()) for value in proposed_hashes)
+                or len({value.upper() for value in proposed_hashes}) != 1
+                or proposed_hashes[0].upper() != sha256_text(after)
+            ):
+                raise CorrectionError(f"private proposal target hash differs at {spec.name}:{coordinate}")
             before_profile, after_profile, delta = validate_replacement(before, after, spec, coordinate, row["proposal"])
             entry = {
                 "coordinate": coordinate,
@@ -1008,7 +1143,7 @@ def freeze(steam_root: Path) -> dict[str, Any]:
                 "allowed_format_delta": delta,
             }
             if spec.name == "msgev":
-                entry["event_layout"] = event_layout_proof(after, row["proposal"], coordinate)
+                entry["event_layout"] = event_layout_proof(before, after, row["proposal"], coordinate, steam_root)
             entries.append(entry)
         if spec.name == "pk_msggame":
             freeze_pk_msggame_join_proof(texts, entries, review_rows)
