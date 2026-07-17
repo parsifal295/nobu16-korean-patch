@@ -1,0 +1,50 @@
+{
+  "schema": "nobu16.kr.small-message-resources-pc-reaudit-validation.v1",
+  "source_free": true,
+  "source_context": [
+    "pristine_pc_jp",
+    "current_pc_ko",
+    "pc_en",
+    "pc_sc",
+    "pc_tc"
+  ],
+  "contaminated_f_games_pk_sc_opened": false,
+  "switch_korean_translation_used": false,
+  "steam_game_resource_written": false,
+  "generic_korean_payload_read": false,
+  "resources": [
+    {
+      "name": "msgbre",
+      "same_index_coordinate_count": 3000,
+      "existing_generic_coordinates_excluded": 136,
+      "active_coordinates_audited": 2864,
+      "new_high_confidence_candidates": 0
+    },
+    {
+      "name": "msgire",
+      "same_index_coordinate_count": 122,
+      "existing_generic_coordinates_excluded": 11,
+      "active_coordinates_audited": 111,
+      "new_high_confidence_candidates": 0
+    },
+    {
+      "name": "msgstf",
+      "current_pc_ko_en_sc_tc_same_index_coordinate_count": 20,
+      "existing_generic_coordinates_excluded": 4,
+      "active_coordinates_audited": 16,
+      "new_high_confidence_candidates": 0
+    },
+    {
+      "name": "msgstf_ce",
+      "same_index_coordinate_count": 20,
+      "existing_generic_coordinates_excluded": 8,
+      "active_coordinates_held_for_missing_pristine_jp": 12,
+      "new_high_confidence_candidates": 0
+    }
+  ],
+  "active_coordinates_audited": 2991,
+  "new_high_confidence_candidates": 0,
+  "holds": {
+    "msgstf_ce_missing_pristine_pc_jp": 12
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "aggregate_candidate_raw_rebuild": {
+    "changed_raw_byte_count": 4,
+    "changed_raw_byte_offsets_sha256": "F579B1DB0A3D9314A6260DB470347FC1A6697AA4D943FF20BC9AD4FDD77085FE",
+    "literal_coordinate_topology_preserved": true,
+    "raw_changed_byte_surface_limited_to_replaced_utf16le_code_units": true,
+    "raw_length_preserved": true,
+    "raw_parse_rebuild_after_candidate": true,
+    "untouched_literal_texts_preserved": true,
+    "wrapper_rebuild_reproducible": true
+  },
+  "checks": {
+    "all_24262_coordinates_accounted_for": true,
+    "candidate_format_profiles_preserved": true,
+    "candidate_hangul_replacements_equal_width": true,
+    "candidate_manual_linebreak_vectors_preserved": true,
+    "candidate_raw_byte_surface_limited": true,
+    "candidate_raw_parse_rebuild": true,
+    "candidate_same_coordinate_pc_sc_tc_evidence_pinned": true,
+    "candidate_source_preimages_pinned": true,
+    "candidate_visible_per_line_codepoint_counts_preserved": true,
+    "existing_coordinates_excluded_without_generic_overlay_read": true,
+    "no_new_linebreak_move_candidate": true,
+    "pc_jp_ko_coordinate_topology_equal": true,
+    "private_candidate_only": true,
+    "source_file_pins": true,
+    "source_free_overlap_ledger_contains_no_cjk_or_hangul_text": true,
+    "source_free_overlap_ledger_pin": true
+  },
+  "inputs": {
+    "current_pc_ko": {
+      "block_count": 18,
+      "packed_sha256": "8DBFCDB21BBDAAD4FE3928AD5B7AAA0D51E56D01F206DFE4D129E354FA5DEDE2",
+      "packed_size": 1504213,
+      "raw_sha256": "84D60187ED63026A0159399F41BE22AA52628856178CF71418783E0DCAFA4D1F",
+      "raw_size": 1498312,
+      "record_count": 19152,
+      "wrapper_header": {
+        "compressed_size": 1504189,
+        "prefix": "0101F6A1FB7F0000",
+        "uncompressed_size": 1498312
+      }
+    },
+    "pc_en": {
+      "available": false,
+      "reason": "Steam PC installation has no same-resource EN msggame.bin",
+      "resource": "MSG/EN/msggame.bin",
+      "substituted_with_other_resource": false
+    },
+    "pc_sc": {
+      "block_count": 18,
+      "packed_sha256": "B2FC3C18DA0F03ACFA93B1EAB0D09FBFCF7CD5076E667602D1AF212953A09BF7",
+      "packed_size": 430720,
+      "raw_sha256": "A42DF025567DB627274454F97E57AC7B77D593401DEAF4CC6476D81A614CF020",
+      "raw_size": 878860,
+      "record_count": 19152,
+      "wrapper_header": {
+        "compressed_size": 430696,
+        "prefix": "0101F6A1FB7F0000",
+        "uncompressed_size": 878860
+      }
+    },
+    "pc_tc": {
+      "block_count": 18,
+      "packed_sha256": "20E710A11CDADFAF514EBC3B9C664E9C57B1A737138F29BF38CFB6527C0A5E95",
+      "packed_size": 433170,
+      "raw_sha256": "754EAE338FA15594ADA28604C98E40CF2CB1C10EC829CDCCF8FB0F10D01CC0CF",
+      "raw_size": 916148,
+      "record_count": 19152,
+      "wrapper_header": {
+        "compressed_size": 433146,
+        "prefix": "0101F6A1FB7F0000",
+        "uncompressed_size": 916148
+      }
+    },
+    "pristine_pc_jp": {
+      "block_count": 18,
+      "packed_sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+      "packed_size": 610163,
+      "raw_sha256": "353010B59A3E04BFE5541162229C1CFCAD181EF0E75FCC9B6DE2043BFC515F38",
+      "raw_size": 1337548,
+      "record_count": 19152,
+      "wrapper_header": {
+        "compressed_size": 610139,
+        "prefix": "0101F6A1FB7F0000",
+        "uncompressed_size": 1337548
+      }
+    }
+  },
+  "outputs": {
+    "private_candidates": {
+      "relative_path": "tmp/translation_quality_base_msggame_pc_reaudit_v1/base_msggame_pc_reaudit_candidates.v1.jsonl",
+      "sha256": "C9158C95ED5756D46EC1328646CFD8B8C038FA05416B849E942498A58F42A9AD",
+      "size": 4682
+    },
+    "private_holds": {
+      "relative_path": "tmp/translation_quality_base_msggame_pc_reaudit_v1/base_msggame_pc_reaudit_holds.v1.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "size": 0
+    },
+    "source_free_coordinate_ledger": {
+      "relative_path": "tmp/translation_quality_base_msggame_pc_reaudit_v1/base_msggame_pc_reaudit_coordinate_ledger.source_free.v1.jsonl",
+      "sha256": "DB7ECFEB83BFFA6001652BC756278B3E529629877028F454AFF74896F052241B",
+      "size": 14458055
+    }
+  },
+  "schema": "nobu16.kr.base-msggame-pc-reaudit.v1",
+  "scope": {
+    "commit_created": false,
+    "f_games_msg_pk_sc_used": false,
+    "generic_builder_modified": false,
+    "generic_builder_read": false,
+    "generic_overlay_korean_text_read": false,
+    "historic_korean_translation_used": false,
+    "pk_en_substituted": false,
+    "same_resource_pc_en_available": false,
+    "steam_game_resource_written": false,
+    "switch_korean_translation_used": false,
+    "translation_contexts": [
+      "pristine_pc_jp",
+      "current_pc_ko",
+      "steam_pc_sc",
+      "steam_pc_tc"
+    ]
+  },
+  "selection": {
+    "excluded_preexisting_generic_coordinate_count": 202,
+    "excluded_preexisting_generic_coordinate_ids_sha256": "E300EF051E0506F3C7FD64C074A369B0CE1D031C36E33778F10105F2B1EC6362",
+    "expected_coordinate_count": 24262,
+    "ledger_coordinate_count": 24262,
+    "ledger_coordinate_ids_sha256": "7BDC4C185D648CDAFB9E7BD55F2F5044C90990612B5DE3783C93D21711F1B292",
+    "manual_linebreak_edit_candidate_count": 0,
+    "new_high_confidence_candidate_coordinates": [
+      "7:2436:0",
+      "15:2249:0"
+    ],
+    "new_high_confidence_candidate_coordinates_sha256": "8FD3335BFA60745C0C127FBFC0EF430191414D0B7A464793653ED0E16F34FE5C",
+    "new_high_confidence_candidate_count": 2,
+    "new_hold_count": 0,
+    "semantic_completion": false,
+    "semantic_completion_reason": "All PC literal coordinates were inventoried and screened, but a resource-only review cannot prove complete in-game-context semantic completion."
+  },
+  "source_free_overlap_exclusions": {
+    "base_msggame_coordinate_count": 24262,
+    "frozen_coordinate_count": 202,
+    "generic_overlay_korean_text_read": false,
+    "relative_path": "tmp/translation_quality_pc_coverage_manifest_v1/merged_pc_only_coordinate_dispositions.v1.jsonl",
+    "sha256": "43187327477634855B8D057AC1CE56E54692D2330ADF4C40395C67415B2C9931",
+    "size": 172043884,
+    "source_free_no_cjk_or_hangul_text": true
+  }
+}

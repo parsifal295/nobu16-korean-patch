@@ -77,6 +77,18 @@ EV_STRDATA_PC_REAUDIT = (
     / "translation_quality_ev_strdata_pc_reaudit_v1"
     / "ev_strdata_pc_reaudit_candidates.v1.jsonl"
 )
+PK_MSGGAME_PC_REAUDIT = (
+    REPO
+    / "tmp"
+    / "translation_quality_msggame_pc_reaudit_v1"
+    / "pk_msggame_pc_reaudit_candidates.v1.jsonl"
+)
+BASE_MSGGAME_PC_REAUDIT = (
+    REPO
+    / "tmp"
+    / "translation_quality_base_msggame_pc_reaudit_v1"
+    / "base_msggame_pc_reaudit_candidates.v1.jsonl"
+)
 PUBLIC_OVERLAY = WORKSTREAM / "public" / "translation_quality_corrections.v1.json"
 VALIDATION = WORKSTREAM / "validation.v1.json"
 AUTONOMOUS_WORDING_OVERLAY = REPO / "workstreams" / "translation_quality_semantic_fixes_v1" / "public" / "autonomous_wording.v1.json"
@@ -109,6 +121,15 @@ PK_MSGGAME_JOIN_CONTRACT = "pk_msggame_17_1078_adjacency.v1"
 PK_MSGGAME_JOIN_COORDINATES = ("17:1078:0", "17:1078:1", "17:1078:2")
 PK_MSGGAME_JOIN_EDIT_COORDINATES = ("17:1078:0", "17:1078:2")
 PK_MSGGAME_JOIN_WHITESPACE_COORDINATE = "17:1078:0"
+PK_MSGGAME_CONSTRUCTION_SPACE_CONTRACT = "pk_msggame_construction_space_bridge.v1"
+PK_MSGGAME_CONSTRUCTION_SPACE_PAIRS = (
+    ("6:3846:1", "6:3846:2"),
+    ("6:3847:1", "6:3847:2"),
+)
+PK_MSGGAME_CONSTRUCTION_SPACE_COORDINATES = tuple(
+    coordinate for pair in PK_MSGGAME_CONSTRUCTION_SPACE_PAIRS for coordinate in pair
+)
+PK_MSGGAME_CONSTRUCTION_SPACE_WHITESPACE_COORDINATES = tuple(pair[0] for pair in PK_MSGGAME_CONSTRUCTION_SPACE_PAIRS)
 # Five base-game battle prompts split ``enemy headquarters`` and the next
 # literal without an ASCII separator.  These are deliberately enumerated:
 # this is a record-join contract, not a general permission to change outer
@@ -277,6 +298,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "base_msggame_quality_addendum.v4.jsonl",
             RESIDUAL_THREE_PC_ONLY,
             AUTONOMOUS_WORDING_OVERLAY,
+            BASE_MSGGAME_PC_REAUDIT,
         ),
     ),
     ResourceSpec(
@@ -303,6 +325,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "horse_riding_clarity_addendum.v1.jsonl",
             RESIDUAL_THREE_PC_ONLY,
             AUTONOMOUS_WORDING_OVERLAY,
+            PK_MSGGAME_PC_REAUDIT,
         ),
     ),
 )
@@ -726,6 +749,110 @@ def validate_frozen_pk_msggame_join(texts: Mapping[str, str], entries: Sequence[
         raise CorrectionError("frozen msggame joined text hash differs")
 
 
+def freeze_pk_msggame_construction_space_proofs(
+    texts: Mapping[str, str], entries: Sequence[dict[str, Any]], rows: Sequence[Mapping[str, Any]]
+) -> None:
+    """Permit exactly two paired literal-space bridges in construction notices.
+
+    The Korean record splits ``<castle>의 <facility> 건설 ...`` across slots
+    1 and 2.  A missing final clause needs a single separator, but that space
+    is preserved by appending it to slot 1 rather than changing slot 2's
+    leading-whitespace contract.  No other ``pk_msggame`` whitespace change
+    is accepted by this proof.
+    """
+    row_by_coordinate = {row["coordinate"]: row["proposal"] for row in rows}
+    expected = set(PK_MSGGAME_CONSTRUCTION_SPACE_COORDINATES)
+    relevant = set(row_by_coordinate).intersection(expected)
+    if not relevant:
+        return
+    if relevant != expected:
+        raise CorrectionError("incomplete or unexpected construction-space review rows")
+
+    entry_by_coordinate = {entry["coordinate"]: entry for entry in entries}
+    if expected - set(entry_by_coordinate):
+        raise CorrectionError("construction-space coordinates are absent from frozen entries")
+
+    for whitespace_coordinate, clause_coordinate in PK_MSGGAME_CONSTRUCTION_SPACE_PAIRS:
+        if whitespace_coordinate not in texts or clause_coordinate not in texts:
+            raise CorrectionError("construction-space coordinate is absent from live text")
+        whitespace_entry = entry_by_coordinate[whitespace_coordinate]
+        clause_entry = entry_by_coordinate[clause_coordinate]
+        before_profile = format_profile(texts[whitespace_coordinate])
+        after_profile = format_profile(whitespace_entry["ko"])
+        if (
+            whitespace_entry["allowed_format_delta"] != ["trailing_whitespace"]
+            or clause_entry["allowed_format_delta"] != []
+            or before_profile["trailing_whitespace"] != ""
+            or after_profile["trailing_whitespace"] != " "
+            or whitespace_entry["ko"].endswith("  ")
+            or whitespace_entry["ko"][-1:] != " "
+            or clause_entry["ko"][:1].isspace()
+            or profile_delta(before_profile, after_profile) != ["trailing_whitespace"]
+            or profile_delta(format_profile(texts[clause_coordinate]), format_profile(clause_entry["ko"])) != []
+        ):
+            raise CorrectionError("construction-space literal contract differs")
+        proposed_join = whitespace_entry["ko"] + clause_entry["ko"]
+        proof = {
+            "contract": PK_MSGGAME_CONSTRUCTION_SPACE_CONTRACT,
+            "coordinates": [whitespace_coordinate, clause_coordinate],
+            "proposed_join_utf16le_sha256": sha256_text(proposed_join),
+        }
+        whitespace_entry["construction_space_join"] = dict(proof)
+        clause_entry["construction_space_join"] = dict(proof)
+
+
+def validate_frozen_pk_msggame_construction_space_proofs(
+    texts: Mapping[str, str], entries: Sequence[Mapping[str, Any]]
+) -> None:
+    """Recheck both source-free construction-space contracts after freeze."""
+    entry_by_coordinate = {entry.get("coordinate"): entry for entry in entries if isinstance(entry, Mapping)}
+    expected = set(PK_MSGGAME_CONSTRUCTION_SPACE_COORDINATES)
+    entries_with_proof = {
+        coordinate
+        for coordinate, entry in entry_by_coordinate.items()
+        if isinstance(entry, Mapping) and "construction_space_join" in entry
+    }
+    if not entries_with_proof:
+        return
+    if entries_with_proof != expected:
+        raise CorrectionError("frozen construction-space coordinates differ")
+
+    required = {"contract", "coordinates", "proposed_join_utf16le_sha256"}
+    for whitespace_coordinate, clause_coordinate in PK_MSGGAME_CONSTRUCTION_SPACE_PAIRS:
+        if whitespace_coordinate not in texts or clause_coordinate not in texts:
+            raise CorrectionError("frozen construction-space coordinate is absent")
+        whitespace_entry = entry_by_coordinate[whitespace_coordinate]
+        clause_entry = entry_by_coordinate[clause_coordinate]
+        proof = whitespace_entry["construction_space_join"]
+        if (
+            not isinstance(proof, Mapping)
+            or clause_entry.get("construction_space_join") != proof
+            or set(proof) != required
+            or proof.get("contract") != PK_MSGGAME_CONSTRUCTION_SPACE_CONTRACT
+            or proof.get("coordinates") != [whitespace_coordinate, clause_coordinate]
+            or not isinstance(proof.get("proposed_join_utf16le_sha256"), str)
+            or not HEX64_RE.fullmatch(proof["proposed_join_utf16le_sha256"].upper())
+        ):
+            raise CorrectionError("frozen construction-space proof differs")
+        before_profile = format_profile(texts[whitespace_coordinate])
+        after_profile = format_profile(whitespace_entry["ko"])
+        if (
+            whitespace_entry.get("allowed_format_delta") != ["trailing_whitespace"]
+            or clause_entry.get("allowed_format_delta") != []
+            or before_profile["trailing_whitespace"] != ""
+            or after_profile["trailing_whitespace"] != " "
+            or whitespace_entry.get("ko", "").endswith("  ")
+            or whitespace_entry.get("ko", "")[-1:] != " "
+            or clause_entry.get("ko", "")[:1].isspace()
+            or profile_delta(before_profile, after_profile) != ["trailing_whitespace"]
+            or profile_delta(format_profile(texts[clause_coordinate]), format_profile(clause_entry["ko"])) != []
+        ):
+            raise CorrectionError("frozen construction-space literal contract differs")
+        proposed_join = whitespace_entry["ko"] + clause_entry["ko"]
+        if sha256_text(proposed_join) != proof["proposed_join_utf16le_sha256"].upper():
+            raise CorrectionError("frozen construction-space joined text hash differs")
+
+
 def base_msggame_record_coordinates(texts: Mapping[str, str], coordinate: str) -> list[str]:
     """Return the complete literal sequence for one base msggame record."""
 
@@ -954,6 +1081,11 @@ def validate_replacement(before: str, after: str, spec: ResourceSpec, coordinate
                 and coordinate == PK_MSGGAME_JOIN_WHITESPACE_COORDINATE
                 and delta == ["trailing_whitespace"]
             )
+            safe_pk_msggame_construction_space = (
+                spec.name == "pk_msggame"
+                and coordinate in PK_MSGGAME_CONSTRUCTION_SPACE_WHITESPACE_COORDINATES
+                and delta == ["trailing_whitespace"]
+            )
             safe_base_msggame_boundary = (
                 spec.name == "base_msggame"
                 and coordinate in BASE_MSGGAME_BOUNDARY_WHITESPACE_COORDINATES
@@ -961,7 +1093,7 @@ def validate_replacement(before: str, after: str, spec: ResourceSpec, coordinate
             )
             if safe_msggame_join:
                 private_pk_msggame_join_proof(proposal, coordinate)
-            if not safe_event and not safe_msggame_join and not safe_base_msggame_boundary:
+            if not safe_event and not safe_msggame_join and not safe_pk_msggame_construction_space and not safe_base_msggame_boundary:
                 raise CorrectionError(f"unsafe permitted format delta at {spec.name}:{coordinate}: {delta!r}")
     expected_runtime = proposal.get("expected_runtime_tokens")
     if expected_runtime is not None:
@@ -1139,6 +1271,8 @@ def freeze(steam_root: Path) -> dict[str, Any]:
                 if not isinstance(nested_source_hashes, Mapping):
                     raise CorrectionError(f"private proposal source-hash mapping is invalid at {spec.name}:{coordinate}")
                 nested_current = nested_source_hashes.get("current_ko_utf16le_sha256")
+                if nested_current is None:
+                    nested_current = nested_source_hashes.get("current_pc_ko_utf16le_sha256")
                 if nested_current is not None:
                     supplied_hashes.append(nested_current)
             if supplied_hashes:
@@ -1184,6 +1318,7 @@ def freeze(steam_root: Path) -> dict[str, Any]:
             entries.append(entry)
         if spec.name == "pk_msggame":
             freeze_pk_msggame_join_proof(texts, entries, review_rows)
+            freeze_pk_msggame_construction_space_proofs(texts, entries, review_rows)
         if spec.name == "base_msggame":
             freeze_base_msggame_boundary_proofs(texts, entries, review_rows)
         if not entries:
@@ -1269,6 +1404,8 @@ def validate_overlay(steam_root: Path, overlay: Mapping[str, Any] | None = None)
                 required_entry = required_entry | {"event_layout"}
             if spec.name == "pk_msggame" and entry.get("coordinate") in PK_MSGGAME_JOIN_EDIT_COORDINATES:
                 required_entry = required_entry | {"adjacent_join"}
+            if spec.name == "pk_msggame" and entry.get("coordinate") in PK_MSGGAME_CONSTRUCTION_SPACE_COORDINATES:
+                required_entry = required_entry | {"construction_space_join"}
             if spec.name == "base_msggame" and entry.get("coordinate") in BASE_MSGGAME_BOUNDARY_WHITESPACE_COORDINATES:
                 required_entry = required_entry | {"adjacent_join"}
             if set(entry) != required_entry:
@@ -1308,17 +1445,23 @@ def validate_overlay(steam_root: Path, overlay: Mapping[str, Any] | None = None)
                     and coordinate == PK_MSGGAME_JOIN_WHITESPACE_COORDINATE
                     and delta == ["trailing_whitespace"]
                 )
+                safe_pk_msggame_construction_space = (
+                    spec.name == "pk_msggame"
+                    and coordinate in PK_MSGGAME_CONSTRUCTION_SPACE_WHITESPACE_COORDINATES
+                    and delta == ["trailing_whitespace"]
+                )
                 safe_base_msggame_boundary = (
                     spec.name == "base_msggame"
                     and coordinate in BASE_MSGGAME_BOUNDARY_WHITESPACE_COORDINATES
                     and delta == ["trailing_whitespace"]
                 )
-                if not safe_event and not safe_msggame_join and not safe_base_msggame_boundary:
+                if not safe_event and not safe_msggame_join and not safe_pk_msggame_construction_space and not safe_base_msggame_boundary:
                     raise CorrectionError(f"unapproved frozen delta at {spec.name}:{coordinate}")
             if before != after:
                 changes += 1
         if spec.name == "pk_msggame":
             validate_frozen_pk_msggame_join(texts, entries)
+            validate_frozen_pk_msggame_construction_space_proofs(texts, entries)
         if spec.name == "base_msggame":
             validate_frozen_base_msggame_boundary_proofs(texts, entries)
         total_entries += len(entries)
