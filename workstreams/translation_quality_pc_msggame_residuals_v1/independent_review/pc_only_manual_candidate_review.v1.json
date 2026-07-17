@@ -1,0 +1,152 @@
+{
+  "schema": "pc-msggame-manual-candidate-independent-review-v1",
+  "review_date": "2026-07-18",
+  "scope": {
+    "resource": "MSG_PK/JP/msggame.bin",
+    "candidate_file": "workstreams/translation_quality_pc_msggame_residuals_v1/private/candidates.v1.jsonl",
+    "candidate_file_sha256": "F81B30D7BB583CBDF07D6F58166DD2FA6AEDC921CE9387057C17D127CEC309ED",
+    "manual_candidate_count": 66,
+    "allowed_evidence": [
+      "pristine Steam PC Japanese",
+      "current Steam PC Korean",
+      "Steam PC English",
+      "Steam PC Simplified Chinese",
+      "Steam PC Traditional Chinese",
+      "the reviewed candidate proposal"
+    ],
+    "explicitly_not_opened": [
+      "Nintendo Switch Korean resources or repository",
+      "historic Korean outputs",
+      "generic Korean overlays",
+      "F:/Games/NOBU16/MSG_PK/SC"
+    ]
+  },
+  "direct_pc_source_pins": {
+    "pristine_pc_jp": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "current_pc_ko": "DE606E50C9A6241BD0B85D17A000394007952093984F75DB56E296E0CCDE6B01",
+    "pc_en": "68B9597DEA78CA2327EE36D62EF03DD673CE2449D40A18392D1ACF837B85A916",
+    "pc_sc": "8884BCC1C085D85AEFDBB2C45180D5E9D4A495B0094A157444C2BA2D39029802",
+    "pc_tc": "C5EF565CBDFB4D95B5A1785D83A758C0057569CCC6ECF1EA873EA7E5F8AD6A23"
+  },
+  "direct_checks": {
+    "all_source_hashes_match_pins": true,
+    "all_66_candidate_jp_literals_match_pristine_pc_jp": true,
+    "all_66_current_ko_literals_match_current_pc_ko": true,
+    "all_66_jp_en_sc_tc_reference_records_match_candidate_evidence": true,
+    "all_66_candidate_format_runtime_signatures_match_current_slot": true,
+    "composed_record_word_boundary_review_performed": true
+  },
+  "verdict_counts": {
+    "SAFE": 61,
+    "HOLD": 2,
+    "REJECT": 3
+  },
+  "verdict_groups": [
+    {
+      "verdict": "SAFE",
+      "basis": [
+        "direct_pc_jp_en_sc_tc_record_semantics_are_clear",
+        "proposal_corrects_the_current_pc_ko_defect",
+        "per-slot_linebreak_whitespace_runtime_signature_is_preserved",
+        "no_composed_record_word_boundary_failure_detected"
+      ],
+      "candidate_ids": [
+        "pk_msggame:2:314:2",
+        "pk_msggame:4:103:1",
+        "pk_msggame:6:4593:0",
+        "pk_msggame:6:4677:0",
+        "pk_msggame:7:1028:0",
+        "pk_msggame:7:1029:0",
+        "pk_msggame:7:1031:0",
+        "pk_msggame:7:1043:0",
+        "pk_msggame:9:4001:0",
+        "pk_msggame:14:31:1",
+        "pk_msggame:14:33:3",
+        "pk_msggame:14:75:3",
+        "pk_msggame:14:111:1",
+        "pk_msggame:14:112:1",
+        "pk_msggame:14:134:3",
+        "pk_msggame:14:171:1",
+        "pk_msggame:14:172:1",
+        "pk_msggame:14:207:1",
+        "pk_msggame:17:85:0",
+        "pk_msggame:17:194:0",
+        "pk_msggame:17:356:0",
+        "pk_msggame:17:358:0",
+        "pk_msggame:17:377:0",
+        "pk_msggame:17:397:0",
+        "pk_msggame:17:447:0",
+        "pk_msggame:17:453:0",
+        "pk_msggame:17:514:0",
+        "pk_msggame:17:568:0",
+        "pk_msggame:17:597:0",
+        "pk_msggame:17:602:0",
+        "pk_msggame:17:635:0",
+        "pk_msggame:17:637:0",
+        "pk_msggame:17:654:0",
+        "pk_msggame:17:688:0",
+        "pk_msggame:17:689:0",
+        "pk_msggame:17:711:0",
+        "pk_msggame:17:714:0",
+        "pk_msggame:17:722:0",
+        "pk_msggame:17:742:0",
+        "pk_msggame:17:744:0",
+        "pk_msggame:17:754:0",
+        "pk_msggame:17:760:0",
+        "pk_msggame:17:821:0",
+        "pk_msggame:17:823:0",
+        "pk_msggame:17:838:0",
+        "pk_msggame:17:851:0",
+        "pk_msggame:17:859:0",
+        "pk_msggame:17:882:0",
+        "pk_msggame:17:890:0",
+        "pk_msggame:17:917:0",
+        "pk_msggame:17:921:0",
+        "pk_msggame:17:924:0",
+        "pk_msggame:17:938:0",
+        "pk_msggame:17:993:0",
+        "pk_msggame:17:994:0",
+        "pk_msggame:17:1000:0",
+        "pk_msggame:17:1023:0",
+        "pk_msggame:17:1079:0",
+        "pk_msggame:17:1107:0",
+        "pk_msggame:17:1117:0",
+        "pk_msggame:17:1154:0"
+      ]
+    },
+    {
+      "verdict": "HOLD",
+      "basis": [
+        "direct_pc_sources confirm the defect, but the Korean forward-motion wording can also mean outpacing rather than preventing further advance",
+        "use a narrower forward-progress wording before inclusion"
+      ],
+      "candidate_ids": [
+        "pk_msggame:17:715:0",
+        "pk_msggame:17:822:0"
+      ]
+    },
+    {
+      "verdict": "REJECT",
+      "basis": [
+        "direct composed-record review finds a visible Korean word-boundary failure not caught by the per-slot format signature",
+        "a paired literal or runtime-boundary repair is required; do not include the standalone proposal"
+      ],
+      "candidate_ids": [
+        "pk_msggame:17:943:2",
+        "pk_msggame:17:944:2",
+        "pk_msggame:17:1004:1"
+      ],
+      "candidate_specific_reasons": {
+        "pk_msggame:17:943:2": "static_adjacent_literals_join_without_required_visible_word_boundary",
+        "pk_msggame:17:944:2": "static_adjacent_literals_join_without_required_visible_word_boundary",
+        "pk_msggame:17:1004:1": "runtime_name_interpolation_lacks_required_visible_boundary_before_dynamic_name"
+      }
+    }
+  ],
+  "recommended_gate": {
+    "allow": "SAFE only",
+    "hold": "exclude the two HOLD candidates until wording is revised and re-reviewed",
+    "reject": "exclude all three REJECT candidates; repair their full composed records as a separate paired-literal/runtime-boundary change"
+  },
+  "game_resource_written": false
+}

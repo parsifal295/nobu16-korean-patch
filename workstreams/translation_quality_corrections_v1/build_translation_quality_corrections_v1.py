@@ -2,7 +2,7 @@
 """Freeze and build the first verified fixes from the PC text-quality audit.
 
 The input is the *current Steam PC JP route*.  Candidate wording is supplied
-through private review JSONL files below ``tmp``; the published overlay keeps
+through private review JSONL files; the published overlay keeps
 only Korean replacements and source hashes.  In particular, this builder does
 not read a Switch Korean resource or use one as a translation authority.
 
@@ -89,6 +89,40 @@ BASE_MSGGAME_PC_REAUDIT = (
     / "translation_quality_base_msggame_pc_reaudit_v1"
     / "base_msggame_pc_reaudit_candidates.v1.jsonl"
 )
+MSGEV_PC_CANONICAL_TITLE_REPAIR = (
+    REPO
+    / "workstreams"
+    / "translation_quality_msgev_pc_canonical_title_repair_v1"
+    / "private_candidates.v1.jsonl"
+)
+EVENT_SEMANTIC_RESIDUALS_PC_ONLY = (
+    REPO
+    / "tmp"
+    / "translation_quality_event_semantic_residuals_pc_only_v1"
+    / "private_candidates.v1.jsonl"
+)
+PC_TRANSLATION_RESIDUALS_ANCHORS = (
+    REPO
+    / "tmp"
+    / "pc_translation_residuals_pc_only_v1"
+    / "pc_exact_anchor_candidates.v1.jsonl"
+)
+PC_MSGGAME_RESIDUALS = (
+    REPO
+    / "tmp"
+    / "translation_quality_pc_msggame_residuals_v1"
+    / "pk_msggame_candidates.v1.jsonl"
+)
+# These two batches were re-reviewed directly against the pristine PC Japanese
+# resource and the PC EN/SC/TC variants.  They deliberately supersede an
+# earlier generic correction at the same coordinate when the two Korean
+# renderings disagree.  Pinning the private batch bytes prevents an unrelated
+# edit under ``tmp`` from silently gaining that precedence.
+PC_ONLY_OVERRIDE_INPUT_SHA256 = {
+    EVENT_SEMANTIC_RESIDUALS_PC_ONLY: "C0DF8E6DE69DF7DEDD07D27FA84E1F6337E5296C631CDBB99F5F7411EAC81CFC",
+    PC_TRANSLATION_RESIDUALS_ANCHORS: "218BE3E2534798C9EB0EDD33A08A481E4670FE017B9C2B9FB2E532D880592A49",
+    PC_MSGGAME_RESIDUALS: "0FBF1825F47463F00382B05F955CDE13A0816A3E7A552B852270ED457CB8A6FB",
+}
 PUBLIC_OVERLAY = WORKSTREAM / "public" / "translation_quality_corrections.v1.json"
 VALIDATION = WORKSTREAM / "validation.v1.json"
 AUTONOMOUS_WORDING_OVERLAY = REPO / "workstreams" / "translation_quality_semantic_fixes_v1" / "public" / "autonomous_wording.v1.json"
@@ -154,6 +188,7 @@ class ResourceSpec:
     relative: str
     parser: str
     proposal_paths: tuple[Path, ...]
+    pc_only_override_paths: tuple[Path, ...] = ()
 
 
 SPECS = (
@@ -200,6 +235,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "horse_riding_clarity_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "static_name_special_glyph_addendum.v1.jsonl",
         ),
+        pc_only_override_paths=(PC_TRANSLATION_RESIDUALS_ANCHORS,),
     ),
     ResourceSpec(
         "strdata",
@@ -216,6 +252,7 @@ SPECS = (
             PRIVATE_SEMANTIC / "horse_riding_clarity_addendum.v1.jsonl",
             PRIVATE_SEMANTIC / "static_name_special_glyph_addendum.v1.jsonl",
         ),
+        pc_only_override_paths=(PC_TRANSLATION_RESIDUALS_ANCHORS,),
     ),
     ResourceSpec(
         "msgev",
@@ -232,7 +269,9 @@ SPECS = (
             PRIVATE_SEMANTIC / "msgev_highrisk_semantic_propername_v1.jsonl",
             PRIVATE_SEMANTIC / "yousho_location_clarity_candidates.v1.jsonl",
             RESIDUAL_THREE_PC_ONLY,
+            MSGEV_PC_CANONICAL_TITLE_REPAIR,
         ),
+        pc_only_override_paths=(EVENT_SEMANTIC_RESIDUALS_PC_ONLY,),
     ),
     # This is a semantic-quality pass over the base PC event strings.  Its
     # private review rows use ``proposed_ko`` and per-coordinate current
@@ -327,6 +366,7 @@ SPECS = (
             AUTONOMOUS_WORDING_OVERLAY,
             PK_MSGGAME_PC_REAUDIT,
         ),
+        pc_only_override_paths=(PC_MSGGAME_RESIDUALS,),
     ),
 )
 SPEC_BY_NAME = {spec.name: spec for spec in SPECS}
@@ -480,15 +520,43 @@ def proposal_replacement(proposal: Mapping[str, Any]) -> tuple[str, str | None]:
     PC-only full-audit generators use ``proposed_korean``/``current_korean``.
     Both schemas carry an exact current-text hash and are accepted here only
     as an explicit before/after pair; plain ``ko`` rows remain replacements.
+    The canonical-title repair has a deliberately separate, hash-bound
+    ``translation`` schema so arbitrary similarly named private fields are
+    never accepted as Korean replacements.
     """
 
     has_short = "proposed_ko" in proposal
     has_long = "proposed_korean" in proposal
-    if has_short and has_long:
+    has_canonical_title = "translation" in proposal
+    if has_canonical_title:
+        required_canonical_title_fields = {
+            "id",
+            "canonical_anchor_id",
+            "candidate_jp_utf16le_sha256",
+            "current_ko_utf16le_sha256",
+            "canonical_jp_utf16le_sha256",
+            "translation",
+            "translation_utf16le_sha256",
+            "proof",
+        }
+        if (
+            has_short
+            or has_long
+            or "ko" in proposal
+            or set(proposal) != required_canonical_title_fields
+            or proposal.get("proof") != "full_canonical_pc_title_anchor"
+            or isinstance(proposal.get("canonical_anchor_id"), bool)
+            or not isinstance(proposal.get("canonical_anchor_id"), int)
+            or proposal["canonical_anchor_id"] < 0
+        ):
+            raise CorrectionError("ambiguous canonical-title Korean replacement schema")
+        value = proposal["translation"]
+        current_key = None
+    elif has_short and has_long:
         if proposal["proposed_ko"] != proposal["proposed_korean"]:
             raise CorrectionError("conflicting private Korean replacements")
         raise CorrectionError("ambiguous private Korean replacement schema")
-    if has_short:
+    elif has_short:
         value = proposal["proposed_ko"]
         # Recent PC-only reaudits call the before-value ``current_ko`` while
         # older semantic batches call it ``ko``.  Both are explicit private
@@ -505,9 +573,10 @@ def proposal_replacement(proposal: Mapping[str, Any]) -> tuple[str, str | None]:
     return value, current_key
 
 
-def read_proposals(spec: ResourceSpec) -> list[dict[str, Any]]:
+def read_proposals(spec: ResourceSpec, proposal_paths: Sequence[Path] | None = None) -> list[dict[str, Any]]:
+    paths = spec.proposal_paths if proposal_paths is None else proposal_paths
     rows: list[dict[str, Any]] = []
-    for path in spec.proposal_paths:
+    for path in paths:
         if path == AUTONOMOUS_WORDING_OVERLAY:
             rows.extend(read_autonomous_wording_overlay(path, spec))
             continue
@@ -545,12 +614,36 @@ def read_proposals(spec: ResourceSpec) -> list[dict[str, Any]]:
                 row["_private_current_key"] = current_key
             rows.append({"coordinate": coordinate, "ko": ko, "proposal": row})
     if not rows:
-        raise CorrectionError(f"proposal file has no rows: {path}")
+        raise CorrectionError(f"proposal file has no rows for {spec.name}")
     rows.sort(key=lambda row: coordinate_sort_key(row["coordinate"]))
     duplicates = [row["coordinate"] for index, row in enumerate(rows[1:], start=1) if row["coordinate"] == rows[index - 1]["coordinate"]]
     if duplicates:
         raise CorrectionError(f"duplicate proposal coordinate(s) for {spec.name}: {duplicates[:5]!r}")
     return rows
+
+
+def read_pc_only_override_proposals(spec: ResourceSpec) -> list[dict[str, Any]]:
+    """Read a fixed, direct-PC review batch that may supersede older wording.
+
+    Normal proposal inputs are intentionally duplicate-free.  A PC-only
+    full-audit batch is different: its evidence is newer and was reviewed from
+    the pristine PC Japanese and PC EN/SC/TC resources, so it may replace a
+    legacy rendering at the same coordinate.  Only the two byte-pinned paths
+    declared above receive this authority; all usual inputs still reject
+    duplicates before anything is frozen.
+    """
+
+    if not spec.pc_only_override_paths:
+        return []
+    for path in spec.pc_only_override_paths:
+        expected = PC_ONLY_OVERRIDE_INPUT_SHA256.get(path)
+        if expected is None:
+            raise CorrectionError(f"unapproved PC-only override input for {spec.name}: {path}")
+        if not path.is_file():
+            raise CorrectionError(f"PC-only override input is absent for {spec.name}: {path}")
+        if sha256_bytes(path.read_bytes()) != expected:
+            raise CorrectionError(f"PC-only override input hash differs for {spec.name}: {path}")
+    return read_proposals(spec, spec.pc_only_override_paths)
 
 
 def load_common(path: Path) -> tuple[bytes, bytes, MessageTable, dict[str, str]]:
@@ -1245,6 +1338,15 @@ def freeze(steam_root: Path) -> dict[str, Any]:
         _path, packed, raw, _parsed, texts = load_resource(steam_root, spec)
         entries: list[dict[str, Any]] = []
         review_rows = read_proposals(spec)
+        pc_only_override_rows = read_pc_only_override_proposals(spec)
+        if pc_only_override_rows:
+            # The normal input set remains duplicate-free.  For the handful
+            # of coordinates subjected to the newer direct-PC review, use the
+            # hash-pinned PC-only result instead of treating an older Korean
+            # rendering as semantic authority.
+            review_by_coordinate = {row["coordinate"]: row for row in review_rows}
+            review_by_coordinate.update({row["coordinate"]: row for row in pc_only_override_rows})
+            review_rows = [review_by_coordinate[coordinate] for coordinate in sorted(review_by_coordinate, key=coordinate_sort_key)]
         for row in review_rows:
             coordinate = row["coordinate"]
             if coordinate not in texts:
@@ -1261,6 +1363,8 @@ def freeze(steam_root: Path) -> dict[str, Any]:
                     "source_hash",
                     "current_hash",
                     "current_text_sha256",
+                    "current_ko_sha256",
+                    "current_ko_utf16le_sha256",
                     "current_korean_utf16le_sha256",
                     "current_text_utf16le_sha256",
                 )
@@ -1287,9 +1391,11 @@ def freeze(steam_root: Path) -> dict[str, Any]:
                 row["proposal"][key]
                 for key in (
                     "proposed_text_sha256",
+                    "proposed_ko_sha256",
                     "proposed_ko_utf16le_sha256",
                     "proposed_korean_utf16le_sha256",
                     "proposed_text_utf16le_sha256",
+                    "translation_utf16le_sha256",
                 )
                 if key in row["proposal"]
             ]

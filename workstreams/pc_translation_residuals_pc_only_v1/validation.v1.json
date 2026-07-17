@@ -1,0 +1,95 @@
+{
+  "schema": "nobu16.translation_quality.pc_only_strdata_msgdata_residuals.v1",
+  "status": "PRIVATE_EXACT_PC_ANCHOR_CANDIDATES_READY",
+  "scope": {
+    "strdata_coordinates": 32311,
+    "msgdata_coordinates": 29218,
+    "total_coordinates": 61529
+  },
+  "source_policy": {
+    "allowed": [
+      "pristine PC JP backup",
+      "current Steam PC KO",
+      "Steam PC EN where shipped",
+      "Steam PC SC",
+      "Steam PC TC"
+    ],
+    "excluded": [
+      "Switch Korean",
+      "Switch repository",
+      "historical Korean outputs",
+      "generic overlay",
+      "F:\\Games\\NOBU16\\MSG_PK\\SC"
+    ]
+  },
+  "sources": {
+    "strdata": {
+      "jp_wrapped_sha256": "FF172741A7ADC0F8C9E903A4BB3F4482639CE5AB80EA44C8CC458C300940DEE0",
+      "jp_raw_sha256": "EAB14063C2060CE11794232F483F0B2210B3BD58118165CBEEC2F37176C25649",
+      "current_ko_wrapped_sha256": "D518A91E36B9A59EAD0B5ED1FDD067941E4BF72E43AFCB19C296C8AD77C8C128",
+      "current_ko_raw_sha256": "BD566DAFD043281B372DC752ECEF6D3139C5A01CF809063A67798EF546681001",
+      "sc_wrapped_sha256": "93F88D71210B96783749CEB948E0713D7E6552F764F644092B71A5FD0C994B88",
+      "tc_wrapped_sha256": "16481F0B4B1E544F8F7C0B1C92210D13592560470AC062847DA32375B77DA861"
+    },
+    "msgdata": {
+      "jp_wrapped_sha256": "13498FBFFF6D33F0BFB0915B6F365F076FE8E78046EE411BB8478235C86C2C9E",
+      "jp_raw_sha256": "D09F61E34E4AA498F3DDEF23E7B7FD2CC8E9FE50B24F39D3BA1034BE82E6D0F6",
+      "current_ko_wrapped_sha256": "7EAA33BC80C021A028660DF1A7934886591A1DA36DB7BC53146749C3A4AEF040",
+      "current_ko_raw_sha256": "6B2A4F8CAA7285791F80CB8FF9E86620470E9C3B6B3D456D46002A1A45706DBC",
+      "en_wrapped_sha256": "BDE25DFD7265C5B6E765F2FA2A8F800E171C6C2B23FB8A66F05AE239BF71E033",
+      "sc_wrapped_sha256": "A3A0260B74191D4676C43403B587BB4EC676A7D96E56725844F24C8107B1604E",
+      "tc_wrapped_sha256": "E266A9C43AAE09BEEA739812AD8E3E8DDDBC4710EF5A81E174A9D215D6B03676"
+    }
+  },
+  "validation": {
+    "strict_parse": true,
+    "unchanged_rebuild_checked": true,
+    "replacement_character_count": 0,
+    "exact_pc_jp_anchor_candidates": 25,
+    "generic_builder_schema": "resource + id (and block for strdata) + current_ko/proposed_ko + UTF-16LE hashes + allowed_format_delta=[]",
+    "private_candidate_path": "tmp/pc_translation_residuals_pc_only_v1/pc_exact_anchor_candidates.v1.jsonl",
+    "private_candidate_payload_sha256": "218BE3E2534798C9EB0EDD33A08A481E4670FE017B9C2B9FB2E532D880592A49",
+    "candidate_coordinate_set_sha256": "A7ABBB7BE7AB5D1C01BDFAD3ACE06041EBAFE21217425B2B41B91EA017B7C412",
+    "semantic_review_code_set_sha256": "FEC95B72297308476744B782EDB19203BD392D64BE693B7804127038C0EEAE16",
+    "candidate_format_delta_free": true,
+    "source_text_or_korean_payload_written": false
+  },
+  "findings": {
+    "strdata_japanese_script_residues": {
+      "count": 45,
+      "credit_block_entries": 6,
+      "other_entries": 39,
+      "ordered_coordinate_set_sha256": "D12514F9966B38165642F68C7CF68B975948EFA355A1A96993CF94452E459666",
+      "exact_pc_anchor_candidates": 7,
+      "hold_without_exact_anchor": 38
+    },
+    "msgdata_japanese_cjk_residues": {
+      "count": 68,
+      "ordered_coordinate_set_sha256": "7369262413355352678A8B97293375905BD688725308381CD2857C703B4F913E",
+      "exact_pc_anchor_candidates": 18,
+      "hold_without_exact_anchor": 50
+    },
+    "msgdata_sc_pinyin_residues": {
+      "count": 303,
+      "rule": "current_ko equals Steam_PC_SC, differs from Steam_PC_EN, contains lowercase Latin, contains neither Hangul nor CJK, and corresponding JP has Japanese script",
+      "placeholder_template_entries": 4,
+      "jp_without_cjk_entries": 303,
+      "ordered_coordinate_set_sha256": "F0A3A4BBBB2F3B15700C54FDE7DCE5CEEFD954AE170214E3C479C020F25E028E",
+      "disposition": "HOLD_READING_KEY_OR_TEMPLATE"
+    },
+    "msgdata_crosslocale_dummy_holds": {
+      "count": 17,
+      "ordered_coordinate_set_sha256": "DD589F40B393416549652A68A2946B58855C21CDA42CDB6F5FD10683EE8F19B5",
+      "disposition": "HOLD_RESERVED_OR_UNUSED"
+    },
+    "exact_pc_anchor_candidates": {
+      "count": 25,
+      "strdata_count": 7,
+      "msgdata_count": 18,
+      "jp_exact_match": true,
+      "pc_en_sc_tc_independently_reviewed": true,
+      "format_profile_equal": true,
+      "allowed_format_delta": []
+    }
+  }
+}

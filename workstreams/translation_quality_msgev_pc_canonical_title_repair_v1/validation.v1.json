@@ -1,0 +1,34 @@
+{
+  "schema": "translation-quality-msgev-pc-canonical-title-repair/v1",
+  "scope": {
+    "resource": "MSG_PK/JP/msgev.bin",
+    "candidate_count": 62,
+    "pinyin_residual_candidate_count": 62,
+    "canonical_title_anchor_count": 62,
+    "superseded_temporary_candidate_id": 14638,
+    "preexisting_generic_coordinate_count": 493
+  },
+  "inputs": {
+    "pristine_pc_jp_sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+    "current_steam_pc_ko_sha256": "B8B3B1C5A635419E590DB866C240A1B6609799E0FEA0E69F86D6208F27E5C52B",
+    "steam_pc_en_sha256": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+    "steam_pc_sc_sha256": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+    "steam_pc_tc_sha256": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6",
+    "string_count": 17916
+  },
+  "proof": {
+    "method": "reviewed Japanese phonetic-key to same-resource canonical-JP-title mapping, followed by exact current-PC-KO canonical-anchor reuse",
+    "candidate_text_hashes": "private_candidates.v1.jsonl",
+    "token_rule": "candidate current and proposal protected-token signatures must be empty and equal",
+    "newline_rule": "candidate source/current/proposal must each be single-line",
+    "event_layout_rule": "proposal UTF-16 code-unit count must not exceed the current residual's count",
+    "canonical_ko_equality": "proposal must equal current PC KO at its canonical anchor coordinate"
+  },
+  "prohibited_inputs": [
+    "Switch",
+    "F:/Games/NOBU16/MSG_PK/SC",
+    "historic Korean workstreams",
+    "generic Korean payload"
+  ],
+  "write_scope": "none"
+}

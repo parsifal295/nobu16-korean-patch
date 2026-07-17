@@ -35,6 +35,7 @@ DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 DEFAULT_ORIGINAL = DEFAULT_STEAM_ROOT / "KR_PATCH_BACKUP" / "file_only_transaction" / "steam-jp-1.1.7-v0.6.0" / "originals" / "MSG_PK" / "JP" / "msgui.bin"
 RESOURCE = "MSG_PK/JP/msgui.bin"
 PRIVATE = REPO / "tmp" / "translation_quality_audit_v1"
+SMALL_UI_RESIDUALS = REPO / "tmp" / "translation_quality_pc_small_ui_residuals_v1" / "private_candidates.v1.jsonl"
 PROPOSAL_PATHS = (
     # The original ``msgui_ko.jsonl`` is retained as audit evidence.  This
     # full PC-only rebase has the identical 70-coordinate set and replaces
@@ -45,6 +46,7 @@ PROPOSAL_PATHS = (
     PRIVATE / "semantic" / "msgui_short_label_addendum.v1.jsonl",
     PRIVATE / "semantic" / "msgui_game_clear_coordinate_drift_addendum.v1.jsonl",
     PRIVATE / "semantic" / "msgui_pc_only_quality_addendum.v1.jsonl",
+    SMALL_UI_RESIDUALS,
 )
 PUBLIC_OVERLAY = WORKSTREAM / "public" / "msgui_realign.v1.json"
 VALIDATION = WORKSTREAM / "validation.v1.json"
@@ -214,9 +216,10 @@ def freeze(steam_root: Path, original_path: Path) -> dict[str, Any]:
                 private_current = proposal.get("ko")
                 if not isinstance(private_current, str) or private_current != current:
                     raise MsguiRealignError(f"private semantic current differs: {label}")
-            elif not any(key in proposal for key in ("source_current_utf16le_sha256", "source_current_hash", "current_hash")):
+            elif not any(key in proposal for key in ("source_current_utf16le_sha256", "source_current_hash", "current_hash", "current_ko_utf16le_sha256")):
                 raise MsguiRealignError(f"private semantic proposal lacks a current-text gate: {label}")
-        optional_hash(proposal, ("source_current_utf16le_sha256", "source_current_hash", "current_hash"), text_hash(current), label)
+        optional_hash(proposal, ("source_current_utf16le_sha256", "source_current_hash", "current_hash", "current_ko_utf16le_sha256"), text_hash(current), label)
+        optional_hash(proposal, ("proposed_ko_utf16le_sha256", "proposed_text_utf16le_sha256"), text_hash(ko), label)
         optional_hash(proposal, ("pristine_jp_utf16le_sha256", "pristine_jp_hash", "source_text_hash"), text_hash(pristine), label)
         if "\0" in ko or "\ufffd" in ko or KANA_OR_HAN_RE.search(ko) or MALFORMED_RUNTIME_RE.search(ko):
             raise MsguiRealignError(f"unsafe Korean replacement at msgui:{entry_id}")

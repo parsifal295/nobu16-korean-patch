@@ -38,13 +38,17 @@
       "name": "msgstf_ce",
       "same_index_coordinate_count": 20,
       "existing_generic_coordinates_excluded": 8,
-      "active_coordinates_held_for_missing_pristine_jp": 12,
+      "initial_coordinates_held_for_missing_pristine_jp": 12,
+      "resolved_as_blank_reserved_slots": 12,
+      "remaining_holds": 0,
       "new_high_confidence_candidates": 0
     }
   ],
   "active_coordinates_audited": 2991,
   "new_high_confidence_candidates": 0,
-  "holds": {
+  "initial_holds": {
     "msgstf_ce_missing_pristine_pc_jp": 12
-  }
+  },
+  "resolved_by": "workstreams/translation_quality_msgstf_ce_pc_reaudit_v1",
+  "remaining_holds": 0
 }
