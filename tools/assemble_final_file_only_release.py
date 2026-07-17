@@ -203,7 +203,6 @@ def assemble(args: argparse.Namespace) -> Path:
         project_root / "release_templates" / "RESTORE_ORIGINALS.bat": output / "RESTORE_ORIGINALS.bat",
         project_root / "release_templates" / "VERIFY_PACKAGE.bat": output / "VERIFY_PACKAGE.bat",
         project_root / "release_templates" / "README_KO.md": output / "README_KO.md",
-        project_root / "release_templates" / "FILE_ONLY_POLICY_KO.md": output / "FILE_ONLY_POLICY_KO.md",
     }
     for source, destination in copies.items():
         checked_copy(source, destination, containment_root=project_root)
