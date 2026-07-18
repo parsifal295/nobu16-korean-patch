@@ -55,6 +55,13 @@ WAVE7_OUTPUT_SHA256 = {
 WAVE8_WORKSTREAM = REPO / "workstreams" / "pc_dialogue_quality_wave8_candidate_v1"
 WAVE8_BUILDER = WAVE8_WORKSTREAM / "build_pc_dialogue_quality_wave8_candidate_v1.py"
 WAVE8_AUDIT = WAVE8_WORKSTREAM / "audit_pc_dialogue_quality_wave8.v1.json"
+WAVE9_WORKSTREAM = REPO / "workstreams" / "pc_dialogue_runtime_wave9_candidate_v1"
+WAVE9_BUILDER = WAVE9_WORKSTREAM / "build_pc_dialogue_runtime_wave9_candidate_v1.py"
+WAVE9_AUDIT = TMP / "pc_dialogue_runtime_wave9_candidate_v1" / "audit_pc_dialogue_runtime_wave9.v1.json"
+WAVE9_EVENT_SUMMARY = TMP / "pc_event_linebreak_wave9_candidate_v1" / "summary.v1.json"
+WAVE9_PK_MSGGAME_SHA256 = "209B96CADE84D82810A8A79CA362DFA1B6665A8C601D3DB2C3DC0F96986E9930"
+WAVE9_BASE_EVENT_SHA256 = "3A7BE17B7DA97B89BD82DFFF44EBC28DA2D3AA91D2E970A0F6C26DE22C657A22"
+WAVE9_PK_EVENT_SHA256 = "73DEC80A85B5441AFFFA725DAB72CF02D334D29B297AD08050BC496D532CB8F3"
 
 WAVE5_RUNTIME_HOLD = (
     REPO
@@ -133,7 +140,7 @@ SPECS: tuple[ResourceSpec, ...] = (
         name="pk_msggame",
         relative=Path("MSG_PK/JP/msggame.bin"),
         pristine_kind="steam_transaction_pc_jp",
-        expected_current_sha256="454A18B0F0ED5E39A3AC823AD0A30086C25226BF6E48D4580962DFEE84E24A32",
+        expected_current_sha256=WAVE9_PK_MSGGAME_SHA256,
         expected_pristine_sha256="31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
         context_relatives={
             "EN": Path("MSG_PK/EN/msggame.bin"),
@@ -145,8 +152,8 @@ SPECS: tuple[ResourceSpec, ...] = (
             "SC": "8884BCC1C085D85AEFDBB2C45180D5E9D4A495B0094A157444C2BA2D39029802",
             "TC": "C5EF565CBDFB4D95B5A1785D83A758C0057569CCC6ECF1EA873EA7E5F8AD6A23",
         },
-        profile_builder=WAVE8_BUILDER,
-        profile_name="pc_dialogue_quality_wave8_candidate_v1",
+        profile_builder=WAVE9_BUILDER,
+        profile_name="pc_dialogue_runtime_wave9_candidate_v1",
     ),
 )
 
@@ -587,8 +594,11 @@ def load_wave8_repair_evidence(
     event_output_sha256 = require_text(event, "output_packed_sha256", WAVE8_AUDIT)
     if event_output_sha256 != "1880A8052C916FAC7F262CCC8638477F5AA124F248A6468E0533A8E252AB55C5":
         raise LedgerError("Wave 8 PK event output hash differs")
-    if sha256_file(require_file(steam_root / "MSG_PK/JP/msgev.bin", "current Steam Wave 8 PK event")) != event_output_sha256:
-        raise LedgerError("current Steam PK event does not match applied Wave 8 output")
+    current_pk_event_sha256 = sha256_file(
+        require_file(steam_root / "MSG_PK/JP/msgev.bin", "current Steam PK event")
+    )
+    if current_pk_event_sha256 not in {event_output_sha256, WAVE9_PK_EVENT_SHA256}:
+        raise LedgerError("current Steam PK event is neither the applied Wave 8 nor Wave 9 profile")
     event_rows = event.get("records")
     if not isinstance(event_rows, list):
         raise LedgerError("Wave 8 PK event records are absent")
@@ -681,12 +691,180 @@ def load_wave8_repair_evidence(
     }
 
 
+def load_wave9_repair_evidence(
+    steam_root: Path,
+    holds: dict[str, dict[str, list[dict[str, str]]]],
+    observed_record_hashes: Mapping[str, Mapping[str, str]],
+    literal_coordinates: Mapping[str, Mapping[str, tuple[str, ...]]],
+) -> tuple[dict[str, dict[str, list[dict[str, Any]]]], dict[str, int]]:
+    """Validate the applied Wave-9 dialogue/event evidence and project QA holds.
+
+    Wave 9 composes the exact Wave-8 profile.  It changes 33 PK character
+    dialogue records (59 literal slots) and 20 event entries.  The event
+    entries are not ledger rows, but both event-table hashes are checked so a
+    mixed three-file Steam application cannot be recorded as Wave 9.
+    """
+    require_file(WAVE9_AUDIT, "Wave 9 dialogue audit")
+    try:
+        audit = json.loads(WAVE9_AUDIT.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise LedgerError(f"Wave 9 dialogue audit is invalid JSON: {exc}") from exc
+    if not isinstance(audit, dict) or audit.get("schema") != "nobu16.kr.pc-dialogue-runtime-wave9.audit.v1":
+        raise LedgerError("Wave 9 dialogue audit schema differs")
+    policy = audit.get("source_policy")
+    if not isinstance(policy, dict) or policy.get("excluded") != ["Nintendo Switch Korean"]:
+        raise LedgerError("Wave 9 dialogue audit no longer excludes Switch Korean")
+    if audit.get("steam_write_capability") != "absent":
+        raise LedgerError("Wave 9 dialogue audit no longer asserts tmp-only construction")
+    inputs = audit.get("input_profile_sha256")
+    outputs = audit.get("output_profile_sha256")
+    summary = audit.get("summary")
+    rows = audit.get("records")
+    if not isinstance(inputs, dict) or not isinstance(outputs, dict) or not isinstance(summary, dict) or not isinstance(rows, list):
+        raise LedgerError("Wave 9 dialogue audit profile, summary, or records are absent")
+    if inputs.get("MSG_PK/JP/msggame.bin") != "454A18B0F0ED5E39A3AC823AD0A30086C25226BF6E48D4580962DFEE84E24A32":
+        raise LedgerError("Wave 9 dialogue input PK msggame hash differs")
+    if outputs.get("MSG_PK/JP/msggame.bin") != WAVE9_PK_MSGGAME_SHA256:
+        raise LedgerError("Wave 9 dialogue output PK msggame hash differs")
+    expected_summary = {
+        "changed_resource": "MSG_PK/JP/msggame.bin",
+        "physical_records": 33,
+        "runtime_linebreak_and_phrase_records": 25,
+        "high_confidence_terminology_records": 8,
+        "real_game_qa_required_before_release": True,
+    }
+    if any(summary.get(key) != value for key, value in expected_summary.items()):
+        raise LedgerError("Wave 9 dialogue summary differs")
+
+    repairs: dict[str, dict[str, list[dict[str, Any]]]] = {
+        name: defaultdict(list) for name in EXPECTED_CURRENT_COUNTS
+    }
+    seen_records: set[str] = set()
+    group_counts: Counter[str] = Counter()
+    changed_literal_count = 0
+    long_runtime_record_count = 0
+    for row in rows:
+        if not isinstance(row, dict):
+            raise LedgerError("Wave 9 dialogue audit contains a non-object record")
+        record = require_text(row, "coordinate", WAVE9_AUDIT)
+        record_key(record)
+        if record in seen_records:
+            raise LedgerError(f"duplicate Wave 9 dialogue record: {record}")
+        seen_records.add(record)
+        output_hash = require_text(row, "output_record_sha256", WAVE9_AUDIT)
+        if observed_record_hashes["pk_msggame"].get(record) != output_hash:
+            raise LedgerError(f"current Steam does not match applied Wave 9 record: {record}")
+        input_literals = row.get("input_literal_utf16le_sha256")
+        output_literals = row.get("output_literal_utf16le_sha256")
+        if not isinstance(input_literals, list) or not isinstance(output_literals, list):
+            raise LedgerError(f"Wave 9 literal hash lists are absent at {record}")
+        if not all(isinstance(value, str) for value in input_literals + output_literals):
+            raise LedgerError(f"Wave 9 literal hash list is invalid at {record}")
+        coordinates = literal_coordinates["pk_msggame"].get(record, ())
+        if len(input_literals) != len(output_literals) or len(output_literals) != len(coordinates):
+            raise LedgerError(f"Wave 9 literal topology differs at {record}")
+        changed_ids = [
+            index
+            for index, pair in enumerate(zip(input_literals, output_literals))
+            if pair[0] != pair[1]
+        ]
+        if not changed_ids:
+            raise LedgerError(f"Wave 9 audit row has no literal change: {record}")
+        group = require_text(row, "group", WAVE9_AUDIT)
+        if group not in {"runtime_linebreak_and_phrase_repair", "high_confidence_gusin_to_geonui"}:
+            raise LedgerError(f"unexpected Wave 9 group at {record}: {group}")
+        group_counts[group] += 1
+        if row.get("real_game_qa_required_before_release") is not True:
+            raise LedgerError(f"Wave 9 msggame row lacks real-game QA flag: {record}")
+        requires_long_runtime_value_qa = row.get("requires_long_runtime_value_qa")
+        if not isinstance(requires_long_runtime_value_qa, bool):
+            raise LedgerError(f"Wave 9 long-runtime QA flag is invalid at {record}")
+        if requires_long_runtime_value_qa:
+            long_runtime_record_count += 1
+        evidence = {
+            "changed_literal_ids": changed_ids,
+            "group": group,
+            "output_record_sha256": output_hash,
+            "record": record,
+            "real_game_qa_required_before_release": True,
+            "requires_long_runtime_value_qa": requires_long_runtime_value_qa,
+            "source": relative_path(WAVE9_AUDIT),
+        }
+        for coordinate in coordinates:
+            literal_id = coordinate_key(coordinate)[2]
+            literal_evidence = {**evidence, "literal_changed": literal_id in changed_ids}
+            repairs["pk_msggame"][coordinate].append(literal_evidence)
+            if literal_id in changed_ids:
+                changed_literal_count += 1
+        if not add_record_hold(
+            holds,
+            resource="pk_msggame",
+            record=record,
+            current_record_hash=output_hash,
+            observed_record_hashes=observed_record_hashes,
+            literal_coordinates=literal_coordinates,
+            source=WAVE9_AUDIT,
+            status="real_game_qa_required_before_release",
+            category="wave9_static_repair",
+        ):
+            raise LedgerError(f"Wave 9 real-game QA hold did not attach: {record}")
+
+    if len(seen_records) != 33 or dict(sorted(group_counts.items())) != {
+        "high_confidence_gusin_to_geonui": 8,
+        "runtime_linebreak_and_phrase_repair": 25,
+    }:
+        raise LedgerError("Wave 9 dialogue record scope differs")
+    if changed_literal_count != 59 or long_runtime_record_count != 5:
+        raise LedgerError("Wave 9 dialogue literal or long-runtime scope differs")
+
+    require_file(WAVE9_EVENT_SUMMARY, "Wave 9 event summary")
+    try:
+        event_summary = json.loads(WAVE9_EVENT_SUMMARY.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise LedgerError(f"Wave 9 event summary is invalid JSON: {exc}") from exc
+    if not isinstance(event_summary, dict) or event_summary.get("schema") != "nobu16.kr.pc-event-linebreak-wave9-summary.v1":
+        raise LedgerError("Wave 9 event summary schema differs")
+    provenance = event_summary.get("provenance")
+    scope = event_summary.get("scope")
+    layout_policy = event_summary.get("layout_policy")
+    event_inputs = event_summary.get("inputs")
+    if not isinstance(provenance, dict) or provenance.get("switch_korean_translation_used") is not False or provenance.get("historic_korean_translation_used") is not False:
+        raise LedgerError("Wave 9 event summary source policy differs")
+    if not isinstance(scope, dict) or scope.get("base_candidate_count") != 15 or scope.get("pk_candidate_count") != 5 or scope.get("total_candidate_count") != 20:
+        raise LedgerError("Wave 9 event candidate scope differs")
+    if not isinstance(layout_policy, dict) or layout_policy.get("base", {}).get("real_game_qa_required") is not True or layout_policy.get("pk", {}).get("real_game_qa_required") is not True:
+        raise LedgerError("Wave 9 event QA policy differs")
+    if not isinstance(event_inputs, dict) or not isinstance(event_inputs.get("base"), dict) or not isinstance(event_inputs.get("pk"), dict):
+        raise LedgerError("Wave 9 event inputs are absent")
+    base_event = event_inputs["base"]
+    pk_event = event_inputs["pk"]
+    if base_event.get("source", {}).get("sha256") != "25D9C029F93788053720C04BAE0C0A14A1A5983F36C68BC2EC7C46C3340D5834" or base_event.get("candidate", {}).get("packed_sha256") != WAVE9_BASE_EVENT_SHA256:
+        raise LedgerError("Wave 9 Base event profile differs")
+    if pk_event.get("source", {}).get("sha256") != "1880A8052C916FAC7F262CCC8638477F5AA124F248A6468E0533A8E252AB55C5" or pk_event.get("candidate", {}).get("packed_sha256") != WAVE9_PK_EVENT_SHA256:
+        raise LedgerError("Wave 9 PK event profile differs")
+    if sha256_file(require_file(steam_root / "MSG/JP/ev_strdata.bin", "current Steam Wave 9 Base event")) != WAVE9_BASE_EVENT_SHA256:
+        raise LedgerError("current Steam Base event does not match applied Wave 9 output")
+    if sha256_file(require_file(steam_root / "MSG_PK/JP/msgev.bin", "current Steam Wave 9 PK event")) != WAVE9_PK_EVENT_SHA256:
+        raise LedgerError("current Steam PK event does not match applied Wave 9 output")
+    return repairs, {
+        "changed_literal_count": changed_literal_count,
+        "matched_record_count": len(seen_records),
+        "real_game_qa_record_count": len(seen_records),
+        "long_runtime_value_record_count": long_runtime_record_count,
+        "event_base_entry_count": 15,
+        "event_pk_entry_count": 5,
+        "event_entry_count": 20,
+        "total_changed_record_or_entry_count": len(seen_records) + 20,
+    }
+
+
 def load_current_hold_evidence(
     steam_root: Path,
     observed_record_hashes: Mapping[str, Mapping[str, str]],
     literal_coordinates: Mapping[str, Mapping[str, tuple[str, ...]]],
 ) -> tuple[
     dict[str, dict[str, list[dict[str, str]]]],
+    dict[str, dict[str, list[dict[str, Any]]]],
     dict[str, dict[str, list[dict[str, Any]]]],
     dict[str, dict[str, list[dict[str, Any]]]],
     dict[str, Any],
@@ -833,10 +1011,19 @@ def load_current_hold_evidence(
         "event_entry_count": wave8_stats["event_entry_count"],
         "stale_or_resolved_record_count": 0,
     }
-    return holds, wave7_repairs, wave8_repairs, {
+    wave9_repairs, wave9_stats = load_wave9_repair_evidence(steam_root, holds, observed_record_hashes, literal_coordinates)
+    source_stats[relative_path(WAVE9_AUDIT)] = {
+        "matched_record_count": wave9_stats["matched_record_count"],
+        "real_game_qa_record_count": wave9_stats["real_game_qa_record_count"],
+        "long_runtime_value_record_count": wave9_stats["long_runtime_value_record_count"],
+        "event_entry_count": wave9_stats["event_entry_count"],
+        "stale_or_resolved_record_count": 0,
+    }
+    return holds, wave7_repairs, wave8_repairs, wave9_repairs, {
         "source_record_validation": source_stats,
         "wave7_repair_validation": wave7_stats,
         "wave8_repair_validation": wave8_stats,
+        "wave9_repair_validation": wave9_stats,
     }
 
 
@@ -926,7 +1113,7 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
             **builder_metadata[spec.name],
         }
 
-    holds, wave7_repairs, wave8_repairs, hold_metadata = load_current_hold_evidence(
+    holds, wave7_repairs, wave8_repairs, wave9_repairs, hold_metadata = load_current_hold_evidence(
         steam_root,
         record_hashes,
         record_literals,
@@ -958,10 +1145,18 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
                 key=lambda value: (value["source"], value["record"]),
             )
             wave8_literal_changed = any(value["literal_changed"] for value in current_wave8_repair_evidence)
+            current_wave9_repair_evidence = sorted(
+                wave9_repairs[spec.name].get(coordinate, []),
+                key=lambda value: (value["source"], value["record"]),
+            )
+            wave9_literal_changed = any(value["literal_changed"] for value in current_wave9_repair_evidence)
 
             if active_holds:
                 current_hold_literal_count += 1
-            if wave8_literal_changed:
+            if wave9_literal_changed:
+                classification = "known_current_wave9_static_repair_pending_real_game_qa"
+                semantic_status = "pinned_wave9_static_repair_real_game_qa_required"
+            elif wave8_literal_changed:
                 classification = "known_current_wave8_static_repair_pending_real_game_qa"
                 semantic_status = "pinned_wave8_static_repair_real_game_qa_required"
             elif active_holds:
@@ -1016,6 +1211,7 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
                     "current_hold_evidence": active_holds,
                     "current_wave7_repair_evidence": current_wave7_repair_evidence,
                     "current_wave8_repair_evidence": current_wave8_repair_evidence,
+                    "current_wave9_repair_evidence": current_wave9_repair_evidence,
                     "scope": {
                         "current_steam_read": True,
                         "pristine_pc_japanese_read": True,
@@ -1096,6 +1292,13 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
         "current_wave8_real_game_qa_record_count": hold_metadata["wave8_repair_validation"]["real_game_qa_record_count"],
         "current_wave8_pk_event_entry_count": hold_metadata["wave8_repair_validation"]["event_entry_count"],
         "current_wave8_total_changed_record_or_entry_count": hold_metadata["wave8_repair_validation"]["total_changed_record_or_entry_count"],
+        "current_wave9_repair_record_count": hold_metadata["wave9_repair_validation"]["matched_record_count"],
+        "current_wave9_changed_literal_count": hold_metadata["wave9_repair_validation"]["changed_literal_count"],
+        "current_wave9_real_game_qa_record_count": hold_metadata["wave9_repair_validation"]["real_game_qa_record_count"],
+        "current_wave9_long_runtime_value_record_count": hold_metadata["wave9_repair_validation"]["long_runtime_value_record_count"],
+        "current_wave9_base_event_entry_count": hold_metadata["wave9_repair_validation"]["event_base_entry_count"],
+        "current_wave9_pk_event_entry_count": hold_metadata["wave9_repair_validation"]["event_pk_entry_count"],
+        "current_wave9_total_changed_record_or_entry_count": hold_metadata["wave9_repair_validation"]["total_changed_record_or_entry_count"],
         "coverage_manifest": {
             "ledger": relative_path(COVERAGE_LEDGER),
             "ledger_sha256": sha256_file(COVERAGE_LEDGER),
