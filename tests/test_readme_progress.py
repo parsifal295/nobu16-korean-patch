@@ -72,7 +72,7 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.11.3]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.11.4]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -116,7 +116,15 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("`선교모로` → `선교사`", readme)
         self.assertIn("`소성씨` → `시동`", readme)
         self.assertIn("`가인` → `가신`", readme)
-        self.assertIn("1F5C3971CE9A81A4EBAF2BFF9792EED39033299A911E384F21F1DA7C2B018B74", readme)
+
+    def test_readme_documents_the_v0114_policy_percent_recovery(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn("## v0.11.4 — 정책 효과 퍼센트 단위 복구", readme)
+        self.assertIn("정책 효과 **196개**", readme)
+        self.assertIn("공통 정책 효과 **134개**", readme)
+        self.assertIn("총 **88개**", readme)
+        self.assertIn("성 개발률 25%마다 부대 능력 상승", readme)
+        self.assertIn("F43F0B6066EE48F398BACD6A8579EEEBFE5929837FB020703E83D3AA5899AFBB", readme)
 
 
 if __name__ == "__main__":
