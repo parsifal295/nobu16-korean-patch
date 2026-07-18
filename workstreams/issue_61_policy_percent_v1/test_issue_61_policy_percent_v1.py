@@ -20,6 +20,25 @@ SPEC.loader.exec_module(builder)
 
 
 class Issue61PolicyPercentTests(unittest.TestCase):
+    def installed_profile_state(self) -> str:
+        try:
+            builder.assert_profile(
+                builder.DEFAULT_STEAM_ROOT,
+                builder.INPUT_SPECS,
+                "current Steam predecessor profile",
+            )
+            return "predecessor"
+        except builder.Issue61Error:
+            pass
+        self.assertIsNotNone(builder.TARGET_SPECS)
+        assert builder.TARGET_SPECS is not None
+        builder.assert_profile(
+            builder.DEFAULT_STEAM_ROOT,
+            builder.TARGET_SPECS,
+            "current Steam Issue 61 target profile",
+        )
+        return "target"
+
     def test_scope_vectors_are_exact_and_inside_the_complete_policy_ranges(self) -> None:
         builder.assert_scope_constants()
         self.assertEqual(len(builder.PK_PERCENT_IDS), 49)
@@ -63,6 +82,16 @@ class Issue61PolicyPercentTests(unittest.TestCase):
             builder.restore_literal_percent("효과 %+d% 변경", entry, fullwidth)
 
     def test_live_candidate_restores_all_88_policy_cells_to_the_v09_oracle(self) -> None:
+        if self.installed_profile_state() == "target":
+            with self.assertRaisesRegex(
+                builder.Issue61Error, "current Steam predecessor profile differs"
+            ):
+                builder.prepare_candidate(
+                    builder.DEFAULT_STEAM_ROOT,
+                    require_pinned_targets=True,
+                )
+            return
+
         payloads, audit = builder.prepare_candidate(
             builder.DEFAULT_STEAM_ROOT,
             require_pinned_targets=True,
@@ -91,6 +120,16 @@ class Issue61PolicyPercentTests(unittest.TestCase):
             )
 
     def test_build_and_verify_stay_in_private_tmp_and_emit_the_exact_11_file_profile(self) -> None:
+        if self.installed_profile_state() == "target":
+            with self.assertRaisesRegex(
+                builder.Issue61Error, "current Steam predecessor profile differs"
+            ):
+                builder.prepare_candidate(
+                    builder.DEFAULT_STEAM_ROOT,
+                    require_pinned_targets=True,
+                )
+            return
+
         builder.TMP_ROOT.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(prefix=".issue61-policy-percent-test-", dir=builder.TMP_ROOT) as raw:
             base = Path(raw)
