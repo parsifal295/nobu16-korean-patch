@@ -47,7 +47,7 @@
         "pc_tc": "傳聞，\u001bCA信長\u001bCZ在\u001bCA義元\u001bCZ的\n「宗三左文字」太刀上刻下字句，\n做為自己的愛刀。"
       },
       "rationale": "愛刀의 동음이의어 ‘애도’ 대신 뜻이 분명한 ‘애검’을 사용한다.",
-      "recommended_korean": "\u001bCA노부나가\u001bCZ는 \u001bCA요시모토\u001bCZ가 지녔던 ‘소자\n사몬지’ 칼에 다음과 같이 새기고,\n그 칼을 자신의 애검으로 삼았다고 전한다.",
+      "recommended_korean": "\u001bCA노부나가\u001bCZ는 \u001bCA요시모토\u001bCZ가 지녔던 ‘소자\n사몬지’ 칼에 다음과 같이 새기고,\n그 칼을 애검으로 삼았다고 전한다.",
       "safe_apply_contract": {
         "esc_runtime_printf_and_edge_whitespace_unchanged": true,
         "manual_line_count_after": 3,
@@ -64,8 +64,8 @@
         "pc_sc": "东海道第一弓，\u001bCA今川义元\u001bCZ之死\n不光是把仅仅是个大名的\u001bCA织田信长\u001bCZ\n推上了战国舞台的正中央。",
         "pc_tc": "海道第一弓取，\n\u001bCA今川義元\u001bCZ之死不僅將大名\u001bCA織田信長\u001bCZ\n推上了戰國的舞台，"
       },
-      "rationale": "원문의 수식어와 ‘not only’ 연결을 복원하고 ‘전국시대 중심’의 어색한 결합을 고친다.",
-      "recommended_korean": "도카이도 제일의 무장, \u001bCA이마가와 요시모토\u001bCZ의 죽음은\n한 다이묘에 지나지 않던 \u001bCA오다 노부나가\u001bCZ를\n전국의 중심 무대로 끌어올렸을 뿐 아니라…",
+      "rationale": "원문의 수식어를 되살리고 ‘전국시대 중심’의 어색한 결합을 자연스러운 서술로 고친다. 다음 문장의 ‘또한’으로 영향을 이어 간다.",
+      "recommended_korean": "도카이도 제일의 무장이던\n\u001bCA이마가와 요시모토\u001bCZ의 죽음은\n\u001bCA노부나가\u001bCZ를 천하의 중심에 세웠다…",
       "safe_apply_contract": {
         "esc_runtime_printf_and_edge_whitespace_unchanged": true,
         "manual_line_count_after": 3,
@@ -82,8 +82,8 @@
         "pc_sc": "同时也动摇了甲相骏三国同盟，\n由此引发了\u001bCA[b1448]\u001bCZ向关东出兵，\n\u001bCB三河松平家\u001bCZ独立等。",
         "pc_tc": "甲相駿三國同盟的動搖、\n動搖後導致\u001bCA[b1448]\u001bCZ進軍關東、\n\u001bCB三河松平家\u001bCZ的獨立等等，"
       },
-      "rationale": "甲相駿의 의미를 잃은 ‘고소슨’ 음역을 한자음 기반의 ‘갑상준’으로 바로잡는다.",
-      "recommended_korean": "갑상준 삼국 동맹의 동요와,\n그에 따른 \u001bCA[b1448]\u001bCZ의 간토 출병,\n\u001bCB미카와 마쓰다이라 가문\u001bCZ의 독립 등,",
+      "rationale": "甲相駿의 의미를 잃은 ‘고소슨’ 음역을 한자음 기반의 ‘갑상준’으로 바로잡고, 앞 문장의 영향 관계를 자연스럽게 잇는다.",
+      "recommended_korean": "또한, 갑상준 삼국 동맹의 동요와,\n그에 따른 \u001bCA[b1448]\u001bCZ의 간토 출병,\n\u001bCB미카와 마쓰다이라 가문\u001bCZ의 독립 등,",
       "safe_apply_contract": {
         "esc_runtime_printf_and_edge_whitespace_unchanged": true,
         "manual_line_count_after": 3,
