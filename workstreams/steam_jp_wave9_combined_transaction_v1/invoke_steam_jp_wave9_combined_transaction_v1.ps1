@@ -194,7 +194,12 @@ function Replace-Atomically(
             Fail "$Label temporary hash mismatch"
         }
         Assert-Game-Stopped
-        [System.IO.File]::Replace($temporary, $Destination, $replaceBackup, $true)
+        try {
+            [System.IO.File]::Replace($temporary, $Destination, $replaceBackup, $true)
+        }
+        catch {
+            Fail ("$Label atomic replacement failed: source=[$temporary]; destination=[$Destination]; backup=[$replaceBackup]; error=$($_.Exception.Message)")
+        }
         if ((Get-Sha256 $Destination) -ne $ExpectedHash) {
             Fail "$Label live hash mismatch"
         }
