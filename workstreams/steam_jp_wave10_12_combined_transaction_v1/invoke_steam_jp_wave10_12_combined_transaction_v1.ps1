@@ -20,7 +20,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 # This is the explicit writer for the candidate-only Python build.  It accepts
-# only the full 11-file Steam Wave 9 profile and writes only the two declared
+# only the full 11-file current Steam text profile and writes only the three declared
 # msggame resources.  Asset work outside those paths is not part of this
 # transaction.
 $repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
@@ -40,16 +40,17 @@ $profilePaths = @(
     'MSG_PK/JP/msgui.bin'
 )
 $changedPaths = @(
+    'MSG/JP/ev_strdata.bin',
     'MSG/JP/msggame.bin',
     'MSG_PK/JP/msggame.bin'
 )
 $inputHashes = [ordered]@{
-    'MSG/JP/ev_strdata.bin' = '3A7BE17B7DA97B89BD82DFFF44EBC28DA2D3AA91D2E970A0F6C26DE22C657A22'
+    'MSG/JP/ev_strdata.bin' = 'CC77EE4B0587B371A901069FB3F39C2187886C3A3335D9748D275FA2881EB426'
     'MSG/JP/msggame.bin' = '7EB3F61CE008C02BA48C191CE95E162CD0BCA76CF3E1C45482FC6CE92E6E0492'
-    'MSG/JP/strdata.bin' = '10AB5E3BD9140B26EB7BC42DC5C352D4CE2905580C6A6112B13B37E12A358AFE'
+    'MSG/JP/strdata.bin' = '5F308F416378976C1AB0B50D4A91C9DA38C637A0A842BAB04FB48256B2103E28'
     'MSG_PK/JP/msgbre.bin' = 'E3FA61B46E6E08F9FE57A36C1F11C367DD448A9BA63003CA5AB0F2D2BDBBB939'
-    'MSG_PK/JP/msgdata.bin' = '8B78403C339BEEE655B53A3F63699054DC6D9078640FE717885627E73B529752'
-    'MSG_PK/JP/msgev.bin' = '73DEC80A85B5441AFFFA725DAB72CF02D334D29B297AD08050BC496D532CB8F3'
+    'MSG_PK/JP/msgdata.bin' = '69090EC9EEE1DF9EAFB64BB35CEFD285A5089FDE78E9A4A855EAA0AE5991C168'
+    'MSG_PK/JP/msgev.bin' = '3E2323DDFAD70DAA15713DD1C4D622508BD2E610C65683C0A06D3D1FAC9827A5'
     'MSG_PK/JP/msggame.bin' = '209B96CADE84D82810A8A79CA362DFA1B6665A8C601D3DB2C3DC0F96986E9930'
     'MSG_PK/JP/msgire.bin' = '46244B588B6B3E39CEF67E1145E561DD5F4CBC177D2EDF98178FFC474E536DAB'
     'MSG_PK/JP/msgstf.bin' = '13A3D3452A226090045372F4676615AFA51B60593D048400045AE4892B90929B'
@@ -57,21 +58,21 @@ $inputHashes = [ordered]@{
     'MSG_PK/JP/msgui.bin' = '5266AEBE9A0B39C6C85A226F2787179F404899A09B286A77036060FDA99AF0A7'
 }
 $targetHashes = [ordered]@{
-    'MSG/JP/ev_strdata.bin' = '3A7BE17B7DA97B89BD82DFFF44EBC28DA2D3AA91D2E970A0F6C26DE22C657A22'
+    'MSG/JP/ev_strdata.bin' = 'BF224468BFBCF3CC71DFF4609142A60D75091813281EE6F2333645413AD81B80'
     'MSG/JP/msggame.bin' = 'C74A5D2382D809FAF3EF6A78751872C6B99DAC15FCAB21CEA73E0C904736A347'
-    'MSG/JP/strdata.bin' = '10AB5E3BD9140B26EB7BC42DC5C352D4CE2905580C6A6112B13B37E12A358AFE'
+    'MSG/JP/strdata.bin' = '5F308F416378976C1AB0B50D4A91C9DA38C637A0A842BAB04FB48256B2103E28'
     'MSG_PK/JP/msgbre.bin' = 'E3FA61B46E6E08F9FE57A36C1F11C367DD448A9BA63003CA5AB0F2D2BDBBB939'
-    'MSG_PK/JP/msgdata.bin' = '8B78403C339BEEE655B53A3F63699054DC6D9078640FE717885627E73B529752'
-    'MSG_PK/JP/msgev.bin' = '73DEC80A85B5441AFFFA725DAB72CF02D334D29B297AD08050BC496D532CB8F3'
-    'MSG_PK/JP/msggame.bin' = '6557733B50CBA6435FB51EC71472FF4B06A321AF92F825EAA3C531DE7722E0A6'
+    'MSG_PK/JP/msgdata.bin' = '69090EC9EEE1DF9EAFB64BB35CEFD285A5089FDE78E9A4A855EAA0AE5991C168'
+    'MSG_PK/JP/msgev.bin' = '3E2323DDFAD70DAA15713DD1C4D622508BD2E610C65683C0A06D3D1FAC9827A5'
+    'MSG_PK/JP/msggame.bin' = '3924ADABF69C9BA72EEBA95E4CE07A3CB8FCD716A31D8F6217ECC5FFAA7B96C5'
     'MSG_PK/JP/msgire.bin' = '46244B588B6B3E39CEF67E1145E561DD5F4CBC177D2EDF98178FFC474E536DAB'
     'MSG_PK/JP/msgstf.bin' = '13A3D3452A226090045372F4676615AFA51B60593D048400045AE4892B90929B'
     'MSG_PK/JP/msgstf_ce.bin' = '06D0C248CB50BB5A1D131FDB8DE0951C719AA638F2B59AC765E72DEF5541FC63'
     'MSG_PK/JP/msgui.bin' = '5266AEBE9A0B39C6C85A226F2787179F404899A09B286A77036060FDA99AF0A7'
 }
-$transactionId = 'steam-jp-wave10-12-combined-transaction-v1'
-$manifestSchema = 'nobu16.kr.steam-jp-wave10-12-combined-transaction.v1'
-$stateSchema = 'nobu16.kr.steam-jp-wave10-12-combined-transaction-apply.v1'
+$transactionId = 'steam-jp-text-quality-bundle-v2'
+$manifestSchema = 'nobu16.kr.steam-jp-text-quality-bundle.v2'
+$stateSchema = 'nobu16.kr.steam-jp-text-quality-bundle-apply.v2'
 
 function Fail([string]$Message) {
     throw $Message
@@ -172,7 +173,7 @@ function Get-ProfileState([string]$Root, [string]$Label) {
     if (Test-Profile $profile $targetHashes) {
         return [PSCustomObject]@{ name = 'target'; hashes = $profile }
     }
-    Fail "$Label is neither the pinned Wave9 input nor Wave10--12 target profile"
+    Fail "$Label is neither the pinned current input nor text-quality target profile"
 }
 
 function Assert-Game-Stopped {
@@ -277,7 +278,7 @@ function Assert-CandidateManifest([string]$CandidateRootValue, [string]$Manifest
     }
     $manifest = Get-Content -LiteralPath $ManifestPathValue -Raw -Encoding utf8 | ConvertFrom-Json
     if (([string]$manifest.schema -cne $manifestSchema) -or ([string]$manifest.transaction_id -cne $transactionId)) {
-        Fail 'candidate manifest is not the pinned Wave10--12 combined transaction'
+        Fail 'candidate manifest is not the pinned text-quality transaction'
     }
     Assert-ExactArray @($manifest.profile_paths) $profilePaths 'candidate manifest profile path order'
     Assert-ExactArray @($manifest.changed_paths) $changedPaths 'candidate manifest changed path order'
@@ -307,7 +308,7 @@ if ($Operation -eq 'RESTORE') {
     }
     $state = Get-Content -LiteralPath $statePath -Raw -Encoding utf8 | ConvertFrom-Json
     if (([string]$state.schema -cne $stateSchema) -or ([string]$state.transaction_id -cne $transactionId) -or ([string]$state.status -cne 'applied')) {
-        Fail 'restore state is not an applied Wave10--12 combined transaction'
+        Fail 'restore state is not an applied text-quality transaction'
     }
     if ((Full-Path ([string]$state.steam_root)) -cne $SteamRoot) {
         Fail 'restore state Steam root differs from the requested Steam root'

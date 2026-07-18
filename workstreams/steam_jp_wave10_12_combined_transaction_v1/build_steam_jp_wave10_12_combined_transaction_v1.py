@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Build the private Steam JP Wave 10--12 combined text transaction candidate.
+"""Build the private Steam JP current text-quality bundle candidate.
 
-This builder starts from the pinned full 11-file Steam Wave 9 profile.  It
-rebuilds only the two ``msggame.bin`` resources, while copying the other nine
-profile files byte-for-byte.  It is intentionally a candidate-only tool: it
-has no Steam writer or game-launch capability.
+This builder starts from the pinned current 11-file Steam text profile after
+the NPC-component repair.  It rebuilds one Base event resource and two
+``msggame.bin`` resources, while copying the other eight profile files
+byte-for-byte.  It is intentionally a candidate-only tool: it has no Steam
+writer or game-launch capability.
 """
 
 from __future__ import annotations
@@ -27,9 +28,7 @@ SCRIPT = Path(__file__).resolve()
 WORKSTREAM = SCRIPT.parent
 REPO = WORKSTREAM.parents[1]
 TMP_ROOT = REPO / "tmp" / WORKSTREAM.name
-WAVE9_INPUT_ROOT = (
-    REPO / "tmp" / "steam_jp_wave9_combined_transaction_v1" / "candidate-build-2"
-)
+DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 
 WAVE10_SOURCE = (
     REPO
@@ -49,10 +48,22 @@ WAVE12_SOURCE = (
     / "pc_dialogue_quality_wave12_candidate_v1"
     / "build_pc_dialogue_quality_wave12_candidate_v1.py"
 )
+WAVE13_EVENT_SOURCE = (
+    REPO
+    / "workstreams"
+    / "pc_event_linebreak_wave13_candidate_v1"
+    / "build_pc_event_linebreak_wave13_candidate_v1.py"
+)
+WAVE13_STATIC12_SOURCE = (
+    REPO
+    / "workstreams"
+    / "pc_dialogue_quality_wave13_static12_candidate_v1"
+    / "build_pc_dialogue_quality_wave13_static12_candidate_v1.py"
+)
 
-SCHEMA = "nobu16.kr.steam-jp-wave10-12-combined-transaction.v1"
-AUDIT_SCHEMA = "nobu16.kr.steam-jp-wave10-12-combined-transaction-audit.v1"
-TRANSACTION_ID = "steam-jp-wave10-12-combined-transaction-v1"
+SCHEMA = "nobu16.kr.steam-jp-text-quality-bundle.v2"
+AUDIT_SCHEMA = "nobu16.kr.steam-jp-text-quality-bundle-audit.v2"
+TRANSACTION_ID = "steam-jp-text-quality-bundle-v2"
 
 PROFILE_PATHS = (
     "MSG/JP/ev_strdata.bin",
@@ -67,20 +78,25 @@ PROFILE_PATHS = (
     "MSG_PK/JP/msgstf_ce.bin",
     "MSG_PK/JP/msgui.bin",
 )
-CHANGED_PATHS = ("MSG/JP/msggame.bin", "MSG_PK/JP/msggame.bin")
-BASE_MSGGAME_PATH = CHANGED_PATHS[0]
-PK_MSGGAME_PATH = CHANGED_PATHS[1]
+CHANGED_PATHS = (
+    "MSG/JP/ev_strdata.bin",
+    "MSG/JP/msggame.bin",
+    "MSG_PK/JP/msggame.bin",
+)
+BASE_EVENT_PATH = CHANGED_PATHS[0]
+BASE_MSGGAME_PATH = CHANGED_PATHS[1]
+PK_MSGGAME_PATH = CHANGED_PATHS[2]
 
-# The exact Steam Wave 9 target profile is this transaction's only accepted
-# input.  It intentionally includes all 11 files, not merely the two files to
-# be written later by the separate PowerShell transaction writer.
+# The exact current Steam profile after the NPC-component repair is this
+# transaction's only accepted input.  It intentionally includes all 11 files,
+# not merely the three files written later by the separate PowerShell writer.
 INPUT_SHA256 = {
-    "MSG/JP/ev_strdata.bin": "3A7BE17B7DA97B89BD82DFFF44EBC28DA2D3AA91D2E970A0F6C26DE22C657A22",
+    "MSG/JP/ev_strdata.bin": "CC77EE4B0587B371A901069FB3F39C2187886C3A3335D9748D275FA2881EB426",
     "MSG/JP/msggame.bin": "7EB3F61CE008C02BA48C191CE95E162CD0BCA76CF3E1C45482FC6CE92E6E0492",
-    "MSG/JP/strdata.bin": "10AB5E3BD9140B26EB7BC42DC5C352D4CE2905580C6A6112B13B37E12A358AFE",
+    "MSG/JP/strdata.bin": "5F308F416378976C1AB0B50D4A91C9DA38C637A0A842BAB04FB48256B2103E28",
     "MSG_PK/JP/msgbre.bin": "E3FA61B46E6E08F9FE57A36C1F11C367DD448A9BA63003CA5AB0F2D2BDBBB939",
-    "MSG_PK/JP/msgdata.bin": "8B78403C339BEEE655B53A3F63699054DC6D9078640FE717885627E73B529752",
-    "MSG_PK/JP/msgev.bin": "73DEC80A85B5441AFFFA725DAB72CF02D334D29B297AD08050BC496D532CB8F3",
+    "MSG_PK/JP/msgdata.bin": "69090EC9EEE1DF9EAFB64BB35CEFD285A5089FDE78E9A4A855EAA0AE5991C168",
+    "MSG_PK/JP/msgev.bin": "3E2323DDFAD70DAA15713DD1C4D622508BD2E610C65683C0A06D3D1FAC9827A5",
     "MSG_PK/JP/msggame.bin": "209B96CADE84D82810A8A79CA362DFA1B6665A8C601D3DB2C3DC0F96986E9930",
     "MSG_PK/JP/msgire.bin": "46244B588B6B3E39CEF67E1145E561DD5F4CBC177D2EDF98178FFC474E536DAB",
     "MSG_PK/JP/msgstf.bin": "13A3D3452A226090045372F4676615AFA51B60593D048400045AE4892B90929B",
@@ -88,12 +104,13 @@ INPUT_SHA256 = {
     "MSG_PK/JP/msgui.bin": "5266AEBE9A0B39C6C85A226F2787179F404899A09B286A77036060FDA99AF0A7",
 }
 
-# The PK value is a fixed hash derived by applying the three disjoint record
-# contracts together to the Wave 9 input.  It is deliberately not any one
+# The PK value is a fixed hash derived by applying four disjoint record
+# contracts together to the current PK input.  It is deliberately not any one
 # component's stand-alone target hash.
-PK_COMBINED_TARGET_SHA256 = "6557733B50CBA6435FB51EC71472FF4B06A321AF92F825EAA3C531DE7722E0A6"
+PK_COMBINED_TARGET_SHA256 = "3924ADABF69C9BA72EEBA95E4CE07A3CB8FCD716A31D8F6217ECC5FFAA7B96C5"
 TARGET_SHA256 = {
     **INPUT_SHA256,
+    BASE_EVENT_PATH: "BF224468BFBCF3CC71DFF4609142A60D75091813281EE6F2333645413AD81B80",
     BASE_MSGGAME_PATH: "C74A5D2382D809FAF3EF6A78751872C6B99DAC15FCAB21CEA73E0C904736A347",
     PK_MSGGAME_PATH: PK_COMBINED_TARGET_SHA256,
 }
@@ -112,6 +129,8 @@ class CandidatePayload:
 
 
 _components: tuple[Any, Any, Any] | None = None
+_wave13_event: Any | None = None
+_wave13_static12: Any | None = None
 
 
 def require(condition: bool, message: str) -> None:
@@ -158,7 +177,11 @@ def require_tmp(path: Path, label: str) -> Path:
 
 
 def relative_to_repo(path: Path) -> str:
-    return path.resolve().relative_to(REPO.resolve()).as_posix()
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(REPO.resolve()).as_posix()
+    except ValueError:
+        return str(resolved)
 
 
 def load_component(module_name: str, source: Path) -> Any:
@@ -184,17 +207,33 @@ def load_components() -> tuple[Any, Any, Any]:
     return _components
 
 
+def load_wave13_event() -> Any:
+    global _wave13_event
+    if _wave13_event is None:
+        _wave13_event = load_component("steam_quality_component_wave13_event", WAVE13_EVENT_SOURCE)
+    return _wave13_event
+
+
+def load_wave13_static12() -> Any:
+    global _wave13_static12
+    if _wave13_static12 is None:
+        _wave13_static12 = load_component(
+            "steam_quality_component_wave13_static12", WAVE13_STATIC12_SOURCE
+        )
+    return _wave13_static12
+
+
 def validate_component_contracts(wave10: Any, wave11: Any, wave12: Any) -> None:
     expected_pk_input = INPUT_SHA256[PK_MSGGAME_PATH]
-    require(wave10.INPUT_SHA256 == expected_pk_input, "Wave 10 input is not Steam Wave 9 PK")
-    require(wave11.INPUT_SHA256 == expected_pk_input, "Wave 11 input is not Steam Wave 9 PK")
+    require(wave10.INPUT_SHA256 == expected_pk_input, "Wave 10 input is not the current Steam PK baseline")
+    require(wave11.INPUT_SHA256 == expected_pk_input, "Wave 11 input is not the current Steam PK baseline")
     require(
         wave12.INPUT_SHA256[BASE_MSGGAME_PATH] == INPUT_SHA256[BASE_MSGGAME_PATH],
-        "Wave 12 Base input is not Steam Wave 9",
+        "Wave 12 Base input is not the current Steam baseline",
     )
     require(
         wave12.INPUT_SHA256[PK_MSGGAME_PATH] == expected_pk_input,
-        "Wave 12 PK input is not Steam Wave 9",
+        "Wave 12 PK input is not the current Steam baseline",
     )
     require(
         wave12.TARGET_SHA256[BASE_MSGGAME_PATH] == TARGET_SHA256[BASE_MSGGAME_PATH],
@@ -204,20 +243,20 @@ def validate_component_contracts(wave10: Any, wave11: Any, wave12: Any) -> None:
     require(len(wave11.CHANGES) == 8, "Wave 11 record-count contract differs")
 
 
-def validate_wave9_profile(input_root: Path) -> dict[str, bytes]:
-    root = require_under(input_root, REPO / "tmp", "Wave 9 input root")
+def validate_current_profile(input_root: Path) -> dict[str, bytes]:
+    root = input_root.resolve(strict=True)
     if not root.is_dir():
-        raise TransactionError(f"Wave 9 input root is absent: {root}")
+        raise TransactionError(f"current Steam input root is absent: {root}")
     files: dict[str, bytes] = {}
     for relative in PROFILE_PATHS:
         path = root / Path(relative)
         if not path.is_file():
-            raise TransactionError(f"Wave 9 input profile is missing {relative}")
+            raise TransactionError(f"current Steam input profile is missing {relative}")
         payload = path.read_bytes()
         actual = sha256_bytes(payload)
         if actual != INPUT_SHA256[relative]:
             raise TransactionError(
-                f"Wave 9 input hash differs for {relative}: "
+                f"current Steam input hash differs for {relative}: "
                 f"expected {INPUT_SHA256[relative]}, got {actual}"
             )
         files[relative] = payload
@@ -284,9 +323,25 @@ def assert_output_profile(files: Mapping[str, bytes]) -> dict[str, str]:
 
 
 def prepare_candidate(input_root: Path) -> CandidatePayload:
-    input_files = validate_wave9_profile(input_root)
+    input_files = validate_current_profile(input_root)
     wave10, wave11, wave12 = load_components()
+    wave13_event = load_wave13_event()
+    wave13_static12 = load_wave13_static12()
     validate_component_contracts(wave10, wave11, wave12)
+
+    event_output, event_summary, _event_details = wave13_event.build(input_root)
+    require(
+        event_summary["input"]["packed_sha256"] == INPUT_SHA256[BASE_EVENT_PATH],
+        "Wave 13 event input does not match the current Base-event profile",
+    )
+    require(
+        event_summary["output"]["packed_sha256"] == TARGET_SHA256[BASE_EVENT_PATH],
+        "Wave 13 event output differs from the pinned target",
+    )
+    require(
+        event_summary["scope"]["changed_ids"] == list(wave13_event.candidate_ids()),
+        "Wave 13 event coordinate scope differs",
+    )
 
     # Wave 12 alters one identical Base/PK record.  The Base output remains a
     # one-record change; the PK copy is placed into the later disjoint union.
@@ -315,7 +370,14 @@ def prepare_candidate(input_root: Path) -> CandidatePayload:
     wave10_coordinates = {(6, record_id) for record_id in wave10.PK_RECORD_IDS}
     wave11_coordinates = {change.record_coordinate for change in wave11.CHANGES}
     wave12_coordinates = {wave12.COORDINATE}
+    wave13_static12_coordinates = {change.coordinate for change in wave13_static12.CHANGES}
     assert_disjoint_coordinate_sets(wave10_coordinates, wave11_coordinates, wave12_coordinates)
+    prior_coordinates = wave10_coordinates | wave11_coordinates | wave12_coordinates
+    require(
+        not (prior_coordinates & wave13_static12_coordinates),
+        "Wave 13 static dialogue coordinates overlap a prior wave",
+    )
+    wave13_static12.validate_prior_wave_disjointness()
 
     expected_pk_records: dict[tuple[int, int], Any] = {}
     replacements: dict[tuple[int, int], bytes] = {}
@@ -348,7 +410,17 @@ def prepare_candidate(input_root: Path) -> CandidatePayload:
     expected_pk_records[wave12.COORDINATE] = pk_wave12_output_record
     replacements[wave12.COORDINATE] = pk_wave12_output_record.data
 
-    require(len(replacements) == 21, "PK combined record count must be 12 + 8 + 1")
+    for change in wave13_static12.CHANGES:
+        coordinate = change.coordinate
+        record = pk_before.get(coordinate)
+        if record is None:
+            raise TransactionError(f"PK msggame lacks Wave 13 {coordinate_text(coordinate)}")
+        wave13_static12.validate_input_record(record, change)
+        output_record = wave13_static12.rebuild_static_record(record, change)
+        expected_pk_records[coordinate] = output_record
+        replacements[coordinate] = output_record.data
+
+    require(len(replacements) == 33, "PK combined record count must be 12 + 8 + 1 + 12")
     pk_output = wave10.rebuild_packed_msggame(pk_input, replacements)
     validate_union_output(
         pk_input,
@@ -365,6 +437,7 @@ def prepare_candidate(input_root: Path) -> CandidatePayload:
     )
 
     output_files = dict(input_files)
+    output_files[BASE_EVENT_PATH] = event_output
     output_files[BASE_MSGGAME_PATH] = base_output
     output_files[PK_MSGGAME_PATH] = pk_output
     output_hashes = assert_output_profile(output_files)
@@ -407,6 +480,16 @@ def prepare_candidate(input_root: Path) -> CandidatePayload:
                 "coordinate": coordinate_text(wave12.COORDINATE),
                 "standalone_target_sha256": dict(wave12.TARGET_SHA256),
             },
+            "wave13_event": {
+                "physical_base_event_cells": len(wave13_event.candidate_ids()),
+                "coordinates": list(wave13_event.candidate_ids()),
+                "standalone_target_sha256": event_summary["output"]["packed_sha256"],
+            },
+            "wave13_static12": {
+                "physical_pk_records": len(wave13_static12_coordinates),
+                "coordinates": [coordinate_text(value) for value in sorted(wave13_static12_coordinates)],
+                "standalone_target_sha256": wave13_static12.TARGET_SHA256,
+            },
         },
         "pk_record_overlap": {
             "required": 0,
@@ -415,11 +498,13 @@ def prepare_candidate(input_root: Path) -> CandidatePayload:
                 "wave10": len(wave10_coordinates),
                 "wave11": len(wave11_coordinates),
                 "wave12": len(wave12_coordinates),
+                "wave13_static12": len(wave13_static12_coordinates),
             },
             "combined_physical_records": len(replacements),
         },
         "record_contract": {
-            "base_changed_coordinates": [coordinate_text(wave12.COORDINATE)],
+            "base_event_changed_ids": list(wave13_event.candidate_ids()),
+            "base_msggame_changed_coordinates": [coordinate_text(wave12.COORDINATE)],
             "pk_changed_coordinate_count": len(
                 changed_coordinates(pk_input, pk_output, wave10.records_by_coordinate)
             ),
@@ -492,6 +577,8 @@ def build_manifest(bundle: CandidatePayload, audit_sha256: str) -> dict[str, Any
             "wave11_pk_records": 8,
             "wave12_base_records": 1,
             "wave12_pk_records": 1,
+            "wave13_base_event_cells": 7,
+            "wave13_static_pk_records": 12,
             "pk_record_overlap": 0,
             "pk_combined_target_sha256": PK_COMBINED_TARGET_SHA256,
         },
@@ -544,13 +631,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
     verify = subparsers.add_parser("verify", help="validate the in-memory combined candidate")
-    verify.add_argument("--input-root", type=Path, default=WAVE9_INPUT_ROOT)
+    verify.add_argument("--input-root", type=Path, default=DEFAULT_STEAM_ROOT)
     verify.set_defaults(func=command_verify)
     build = subparsers.add_parser("build", help="write a private candidate, audit, and manifest")
-    build.add_argument("--input-root", type=Path, default=WAVE9_INPUT_ROOT)
-    build.add_argument("--output-root", type=Path, default=TMP_ROOT / "candidate-build-1")
-    build.add_argument("--audit-path", type=Path, default=TMP_ROOT / "audit.v1.json")
-    build.add_argument("--manifest", type=Path, default=TMP_ROOT / "build_manifest.v1.json")
+    build.add_argument("--input-root", type=Path, default=DEFAULT_STEAM_ROOT)
+    build.add_argument("--output-root", type=Path, default=TMP_ROOT / "candidate-build-2")
+    build.add_argument("--audit-path", type=Path, default=TMP_ROOT / "audit.v2.json")
+    build.add_argument("--manifest", type=Path, default=TMP_ROOT / "build_manifest.v2.json")
     build.set_defaults(func=command_build)
     return parser
 

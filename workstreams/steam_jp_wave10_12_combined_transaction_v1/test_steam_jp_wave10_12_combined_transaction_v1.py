@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regression tests for the private Steam Wave 10--12 text transaction."""
+"""Regression tests for the current Steam text-quality bundle."""
 
 from __future__ import annotations
 
@@ -33,11 +33,13 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.builder = load_builder()
-        cls.input_files = cls.builder.validate_wave9_profile(cls.builder.WAVE9_INPUT_ROOT)
-        cls.bundle = cls.builder.prepare_candidate(cls.builder.WAVE9_INPUT_ROOT)
+        cls.input_files = cls.builder.validate_current_profile(cls.builder.DEFAULT_STEAM_ROOT)
+        cls.bundle = cls.builder.prepare_candidate(cls.builder.DEFAULT_STEAM_ROOT)
         cls.wave10, cls.wave11, cls.wave12 = cls.builder.load_components()
+        cls.wave13_event = cls.builder.load_wave13_event()
+        cls.wave13_static12 = cls.builder.load_wave13_static12()
 
-    def test_full_wave9_profile_is_the_only_input_and_full_target_is_pinned(self) -> None:
+    def test_current_profile_is_the_only_input_and_full_target_is_pinned(self) -> None:
         self.assertEqual(tuple(self.input_files), self.builder.PROFILE_PATHS)
         self.assertEqual(self.bundle.input_sha256, self.builder.INPUT_SHA256)
         self.assertEqual(self.bundle.output_sha256, self.builder.TARGET_SHA256)
@@ -48,15 +50,19 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
         )
         self.assertEqual(
             self.bundle.output_sha256["MSG_PK/JP/msggame.bin"],
-            "6557733B50CBA6435FB51EC71472FF4B06A321AF92F825EAA3C531DE7722E0A6",
+            "3924ADABF69C9BA72EEBA95E4CE07A3CB8FCD716A31D8F6217ECC5FFAA7B96C5",
+        )
+        self.assertEqual(
+            self.bundle.output_sha256["MSG/JP/ev_strdata.bin"],
+            "BF224468BFBCF3CC71DFF4609142A60D75091813281EE6F2333645413AD81B80",
         )
         self.assertEqual(len(self.bundle.files["MSG/JP/msggame.bin"]), 1_504_643)
-        self.assertEqual(len(self.bundle.files["MSG_PK/JP/msggame.bin"]), 1_806_851)
+        self.assertEqual(len(self.bundle.files["MSG_PK/JP/msggame.bin"]), 1_806_787)
 
-    def test_only_the_two_declared_paths_change(self) -> None:
+    def test_only_the_three_declared_paths_change(self) -> None:
         self.assertEqual(
             self.builder.CHANGED_PATHS,
-            ("MSG/JP/msggame.bin", "MSG_PK/JP/msggame.bin"),
+            ("MSG/JP/ev_strdata.bin", "MSG/JP/msggame.bin", "MSG_PK/JP/msggame.bin"),
         )
         for relative in self.builder.PROFILE_PATHS:
             if relative in self.builder.CHANGED_PATHS:
@@ -64,23 +70,25 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
             else:
                 self.assertEqual(self.bundle.files[relative], self.input_files[relative])
 
-    def test_pk_component_coordinates_are_disjoint_and_all_21_records_change(self) -> None:
+    def test_pk_component_coordinates_are_disjoint_and_all_33_records_change(self) -> None:
         wave10_coordinates = {(6, record_id) for record_id in self.wave10.PK_RECORD_IDS}
         wave11_coordinates = {change.record_coordinate for change in self.wave11.CHANGES}
         wave12_coordinates = {self.wave12.COORDINATE}
+        wave13_coordinates = {change.coordinate for change in self.wave13_static12.CHANGES}
         self.builder.assert_disjoint_coordinate_sets(
             wave10_coordinates, wave11_coordinates, wave12_coordinates
         )
         self.assertFalse(wave10_coordinates & wave11_coordinates)
         self.assertFalse(wave10_coordinates & wave12_coordinates)
         self.assertFalse(wave11_coordinates & wave12_coordinates)
-        expected = wave10_coordinates | wave11_coordinates | wave12_coordinates
+        self.assertFalse(wave13_coordinates & (wave10_coordinates | wave11_coordinates | wave12_coordinates))
+        expected = wave10_coordinates | wave11_coordinates | wave12_coordinates | wave13_coordinates
         actual = self.builder.changed_coordinates(
             self.input_files["MSG_PK/JP/msggame.bin"],
             self.bundle.files["MSG_PK/JP/msggame.bin"],
             self.wave10.records_by_coordinate,
         )
-        self.assertEqual(len(expected), 21)
+        self.assertEqual(len(expected), 33)
         self.assertEqual(actual, expected)
 
     def test_overlap_guard_rejects_any_pk_record_overlap(self) -> None:
@@ -105,6 +113,11 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
             self.wave12.sha256_bytes(pk_records[self.wave12.COORDINATE].data),
             self.wave12.TARGET_RECORD_SHA256,
         )
+        for change in self.wave13_static12.CHANGES:
+            self.assertEqual(
+                self.wave13_static12.sha256_bytes(pk_records[change.coordinate].data),
+                change.target_record_sha256,
+            )
         base_records = self.wave12.records_by_coordinate(
             self.bundle.files["MSG/JP/msggame.bin"]
         )
@@ -112,8 +125,16 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
             self.wave12.sha256_bytes(base_records[self.wave12.COORDINATE].data),
             self.wave12.TARGET_RECORD_SHA256,
         )
+        event_packed, event_summary, _event_details = self.wave13_event.build(
+            self.builder.DEFAULT_STEAM_ROOT
+        )
+        self.assertEqual(
+            self.builder.sha256_bytes(event_packed),
+            self.bundle.output_sha256["MSG/JP/ev_strdata.bin"],
+        )
+        self.assertEqual(event_summary["scope"]["changed_ids"], list(self.wave13_event.candidate_ids()))
 
-    def test_manifest_contract_is_full_profile_and_two_path_writer_scope(self) -> None:
+    def test_manifest_contract_is_full_profile_and_three_path_writer_scope(self) -> None:
         manifest = self.builder.build_manifest(self.bundle, "A" * 64)
         self.assertEqual(manifest["schema"], self.builder.SCHEMA)
         self.assertEqual(manifest["transaction_id"], self.builder.TRANSACTION_ID)
@@ -126,6 +147,8 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
         self.assertEqual(manifest["component_contract"]["wave10_pk_records"], 12)
         self.assertEqual(manifest["component_contract"]["wave11_pk_records"], 8)
         self.assertEqual(manifest["component_contract"]["wave12_pk_records"], 1)
+        self.assertEqual(manifest["component_contract"]["wave13_base_event_cells"], 7)
+        self.assertEqual(manifest["component_contract"]["wave13_static_pk_records"], 12)
 
     def test_private_candidate_writer_outputs_full_profile_and_json_contracts(self) -> None:
         self.builder.TMP_ROOT.mkdir(parents=True, exist_ok=True)
@@ -142,7 +165,7 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
             self.assertEqual(len(audit_hash), 64)
             self.assertEqual(len(manifest_hash), 64)
             self.assertEqual(
-                self.builder.validate_wave9_profile(self.builder.WAVE9_INPUT_ROOT),
+                self.builder.validate_current_profile(self.builder.DEFAULT_STEAM_ROOT),
                 self.input_files,
             )
             self.assertEqual(
@@ -173,7 +196,7 @@ class Wave10To12CombinedTransactionTests(unittest.TestCase):
             self.assertIn(required, text)
         self.assertIn("'MSG/JP/msggame.bin'", text)
         self.assertIn("'MSG_PK/JP/msggame.bin'", text)
-        self.assertNotIn("'MSG/JP/ev_strdata.bin',\n    'MSG_PK/JP", text)
+        self.assertIn("'MSG/JP/ev_strdata.bin'", text)
         self.assertNotIn("'RES_JP/", text)
         self.assertNotIn("'HUD/", text)
 
