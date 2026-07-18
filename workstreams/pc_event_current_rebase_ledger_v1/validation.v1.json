@@ -1,0 +1,103 @@
+{
+  "schema": "nobu16.kr.pc-event-current-rebase-ledger.v1",
+  "profiles": {
+    "base": {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "packed": {
+        "size": 928123,
+        "sha256": "BF224468BFBCF3CC71DFF4609142A60D75091813281EE6F2333645413AD81B80"
+      },
+      "raw": {
+        "size": 924472,
+        "sha256": "87BF185203CA776787F74208B7505BCB21E53DB227FA9C8A15DD28388A68C1F4"
+      },
+      "string_count": 17868
+    },
+    "pk": {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "packed": {
+        "size": 994707,
+        "sha256": "3E2323DDFAD70DAA15713DD1C4D622508BD2E610C65683C0A06D3D1FAC9827A5"
+      },
+      "raw": {
+        "size": 990796,
+        "sha256": "2D0419F66F7FA5DD6F6D8E1E9932E8C1EAA929700707BC447954A9783F8C40EA"
+      },
+      "string_count": 17916
+    },
+    "font": {
+      "resource": "RES_JP/res_lang.bin",
+      "packed": {
+        "size": 161428458,
+        "sha256": "3798CB758E6EA48A257F1FBBBBE56E800F668E6FA2DE0CFD4B277C785A322EE7"
+      },
+      "event_g1n_raw": {
+        "size": 21720288,
+        "sha256": "30F1AC5AEE1962826AE3D193E2AD6F18723402382D59B242E725E33D7E44F6A6"
+      },
+      "sample_advances_px": {
+        "ascii_space": 24,
+        "ellipsis": 48,
+        "hangul": 48
+      }
+    }
+  },
+  "base_event_anchors": {
+    "3280": "2A3EE816651247BF2F48D1094CF681B66F889334A2C9276AC635746BCCCB978B",
+    "4066": "D4667A67953622542D2CAAD9DCA84AB20AD54F0B92F496A79559DBBD6172840E",
+    "5299": "4E96BE9F34F32EF3C50822C58469E15D2A14AB4C97300FF6DB8D59D1453AB99F",
+    "6960": "F6AC898549D6EC051313E0588772D19A4F86D6979DBFDE9F1C42A3673EBA91CA",
+    "7380": "FF4F1D2F04DB06CFEB9A69A6DB34E3E3E97E22275DC02259F499F8C16F058A63",
+    "8140": "856764C90E37523EA1155274B6C896AF5FFB9EA7BA7335AD513FB2949807BCD8",
+    "8350": "1F7C0E1DFD8B6F092FF806F8FA89141A125D5A60EB369CD2A888E3C0F2724BF3"
+  },
+  "historic_v2_audit": {
+    "sha256": "7CAF94DE4E9DDC5C4ACDF5103614E3D9F3B46C98D0E4F285AE15E137F74E65C5",
+    "hardbreak_rows": 6678,
+    "hardbreak_coordinate_sha256": "6B97DB64C58F76B13EC17BE4154112CDEA4332AB0708513289BF62FC43CF6F3C",
+    "review_rows": 4003,
+    "review_coordinate_sha256": "5907103ACB45E4822966559817B39EE77BC00E4C9DDBEEA89A409AD9A1EA5A8B"
+  },
+  "current_pk_selection": {
+    "hardbreak_rows": 6681,
+    "coordinate_sha256": "42E7B6051899D40E39C5EBE960A091B842E46775EC94CC85CB758167C5B2BD9A",
+    "new_runtime_ids": [10837, 10840, 10905],
+    "new_runtime_reserved_widths_px": {
+      "10837": [864, 672, 864],
+      "10840": [840, 528],
+      "10905": [840, 888, 912]
+    }
+  },
+  "runtime_reservations": {
+    "token_spelling_count": 58,
+    "name_id_count": 29,
+    "rows_sha256": "92188DCCB21F3721BC85C95402274F104B15C7FC510893678ABF31ACE94770DD"
+  },
+  "layout": {
+    "bounded_review_rows": 4002,
+    "max_lines": 3,
+    "max_actual_width_px": 912,
+    "max_reserved_width_px": 912
+  },
+  "stale_v2_reconciliation": {
+    "prior_overlay_entry_count": 3774,
+    "exact_current_target_noop_count": 3700,
+    "nonexact_target_count": 74,
+    "historic_v1_reused_nonreview_count": 11,
+    "groups": {
+      "boundary_content_and_protection_changed": [3609, 3612, 4079, 4080, 4292, 4621, 4901, 4908, 4951],
+      "boundary_content_changed_same_protection": [4459, 4495, 4502, 4506, 5053, 5259, 5289, 6328, 6499, 6662, 7106, 7256, 7584, 7592, 8159, 8399, 8574, 8748],
+      "semantic_compact_content_and_protection_changed": [3611, 3703, 4053, 4303, 4304, 4414, 4491, 4492, 4592, 4607, 4940, 4960, 4961, 4963, 4974, 4976, 6143, 6314],
+      "semantic_compact_content_changed_same_protection": [3986, 4258, 4289, 4508, 4557, 5647, 5686, 5763, 5813, 5871, 6326, 6379, 7290, 7301, 7310, 7475, 7477, 8128, 8142, 8512, 8739, 8838, 9075, 9081, 9337, 9753, 10817],
+      "structural_safe_preserved": [3945, 5492]
+    }
+  },
+  "safety": {
+    "steam_files_written": false,
+    "candidate_files_written": false,
+    "old_v2_target_overlay_read": false,
+    "old_v2_target_overlay_reinjected": false,
+    "git_written": false,
+    "release_written": false
+  }
+}
