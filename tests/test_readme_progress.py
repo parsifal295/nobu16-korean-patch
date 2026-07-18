@@ -72,7 +72,7 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.11.4]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.11.5]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -125,6 +125,20 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("총 **88개**", readme)
         self.assertIn("성 개발률 25%마다 부대 능력 상승", readme)
         self.assertIn("F43F0B6066EE48F398BACD6A8579EEEBFE5929837FB020703E83D3AA5899AFBB", readme)
+
+    def test_readme_documents_the_v0115_princess_name_validation_fix(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn("## v0.11.5 — 가공 히메 한글 작명 허용", readme)
+        self.assertIn("Issue #62", readme)
+        self.assertIn("문자 검사 네 곳", readme)
+        self.assertIn("성+이름 합산 길이 제한", readme)
+        self.assertIn("2E098ECB…1797C", readme)
+        self.assertIn("7CA2F1D5…AFDB2", readme)
+        self.assertIn("3840×2160 창 모드", readme)
+        self.assertIn(
+            "5B9CF5E245808DB532B60C27C847254F3A22987FF57A75467ED34C8C5942127D",
+            readme,
+        )
 
 
 if __name__ == "__main__":
