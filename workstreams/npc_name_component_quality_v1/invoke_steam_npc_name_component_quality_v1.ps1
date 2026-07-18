@@ -78,18 +78,31 @@ function Assert-Profile([string]$Root, $Expected, [string]$Label) {
     }
 }
 
-function Replace-Checked([string]$Source, [string]$Destination, [string]$ExpectedHash, [string]$Label) {
+function Replace-Checked(
+    [string]$Source,
+    [string]$Destination,
+    [string]$ExpectedHash,
+    [string]$Label,
+    [string]$TransactionBackupRoot
+) {
     $destinationDirectory = Split-Path -Parent $Destination
     $fileName = [System.IO.Path]::GetFileName($Destination)
     $temporary = Join-Path $destinationDirectory ('.' + $fileName + '.npc-name-v1.' + [Guid]::NewGuid().ToString('N') + '.tmp')
+    $replaceBackup = Join-Path $destinationDirectory ('.' + $fileName + '.npc-name-v1.' + [Guid]::NewGuid().ToString('N') + '.bak')
     Copy-Item -LiteralPath $Source -Destination $temporary -Force
     if ((Get-Sha256 $temporary) -cne $ExpectedHash) {
         Fail "$Label temporary hash mismatch"
     }
     Assert-GameStopped
-    [System.IO.File]::Replace($temporary, $Destination, $null, $true)
+    [System.IO.File]::Replace($temporary, $Destination, $replaceBackup, $true)
     if ((Get-Sha256 $Destination) -cne $ExpectedHash) {
         Fail "$Label live hash mismatch"
+    }
+    if (Test-Path -LiteralPath $replaceBackup -PathType Leaf) {
+        $archiveDirectory = Join-Path $TransactionBackupRoot 'replace-backups'
+        New-Item -ItemType Directory -Path $archiveDirectory -Force | Out-Null
+        $archivePath = Join-Path $archiveDirectory ([System.IO.Path]::GetFileName($replaceBackup))
+        [System.IO.File]::Move($replaceBackup, $archivePath)
     }
 }
 
@@ -148,7 +161,7 @@ try {
     foreach ($relative in $profilePaths) {
         $candidate = Join-Path $candidateRoot ($relative -replace '/', '\')
         $destination = Join-Path $SteamRoot ($relative -replace '/', '\')
-        Replace-Checked $candidate $destination $targetHashes[$relative] "apply $relative"
+        Replace-Checked $candidate $destination $targetHashes[$relative] "apply $relative" $BackupRoot
         $written.Add($relative)
     }
     Assert-Profile $SteamRoot $targetHashes 'Steam target'
@@ -160,7 +173,7 @@ catch {
             $relative = $written[$index]
             $backup = Join-Path $originalRoot ($relative -replace '/', '\')
             $destination = Join-Path $SteamRoot ($relative -replace '/', '\')
-            Replace-Checked $backup $destination $inputHashes[$relative] "rollback $relative"
+            Replace-Checked $backup $destination $inputHashes[$relative] "rollback $relative" $BackupRoot
         }
         Assert-Profile $SteamRoot $inputHashes 'Steam rollback'
     }
