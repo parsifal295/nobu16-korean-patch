@@ -1,0 +1,206 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-quality-wave6.direct-static-cleanup.v1",
+  "scope": {
+    "resource": "MSG_PK/JP/msggame.bin",
+    "candidate_count": 3,
+    "source_policy": "PC Japanese source with PC EN/SC/TC semantic cross-checks only; no Switch Korean source is used.",
+    "application_boundary": "This audit approves only these three pinned static literal edits. Runtime rendering still requires separate real-game QA before visual completion can be claimed."
+  },
+  "input": {
+    "steam_file_sha256": "51320EE41C17608BC6DD558B35F5243793BBD74168E51BE8C7F7B65E136B330D",
+    "pristine_pc_jp_file_sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "font_resource": "RES_JP/res_lang.bin",
+    "font_sha256": "3798CB758E6EA48A257F1FBBBBE56E800F668E6FA2DE0CFD4B277C785A322EE7"
+  },
+  "output": {
+    "steam_file_sha256": "CE56A3C6577929513FFEEDFB71637316AA41822DC6F7B26749A6276D572CDF0A"
+  },
+  "records": [
+    {
+      "coordinate": "2:314",
+      "kind": "person_dialogue_source_direct_literal_cleanup",
+      "current_record_sha256": "C48C251D3A74B22123D3DD84B11417AAF117DB08ECFDCB97BDC8E391AA3BB352",
+      "output_record_sha256": "3263E7CF589D849F175D6774EFC1F4304FE4E0E273DAF0E9D0F05CF280B122F8",
+      "current_literals": [
+        "공격자:",
+        "\n",
+        "에게 창상을 입혀 주었다고!"
+      ],
+      "output_literals": [
+        "이",
+        "\n",
+        "에게 창상을 입혀 주었다고!"
+      ],
+      "literal_changes": [
+        {
+          "literal_id": 0,
+          "current": "공격자:",
+          "replacement": "이"
+        }
+      ],
+      "current_opaque_schema": [
+        "",
+        "024633",
+        "024933",
+        "050505"
+      ],
+      "current_0143_commands": [],
+      "pristine_pc_jp_record_sha256": "22D689FE47FD57E73030487B417FBC3BF03F6BC2652983612E70313B56D7B654",
+      "pristine_pc_jp_literals": [
+        "この",
+        "\n",
+        "に槍傷をくれてやったぞ！"
+      ],
+      "pristine_pc_jp_opaque_schema": [
+        "",
+        "024633",
+        "024933",
+        "050505"
+      ],
+      "pc_cross_language_evidence": {
+        "en": "I’ve given [target] a taste of my spear.",
+        "sc": "我……已重创……！",
+        "tc": "我……可是赏了……一枪！"
+      },
+      "reason": "The source has a demonstrative before the preserved runtime span; the Korean attacker label is source-unrelated. Only literal slot 0 changes and all opaque spans remain byte-identical.",
+      "literal_only_layout": {
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            168,
+            624
+          ]
+        },
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            48,
+            624
+          ]
+        }
+      }
+    },
+    {
+      "coordinate": "2:315",
+      "kind": "person_dialogue_source_direct_literal_cleanup",
+      "current_record_sha256": "45252C1AD4AE18A51751E912405AC4C438BE49A03DA1D7764E742CA5C9CF993F",
+      "output_record_sha256": "6A84B08790B5386855C59EA65804FAFFEE2F077BD1F2DF823C0535119AF35F18",
+      "current_literals": [
+        "주군을 돕는 것이 진정한 부장의 임무다.\n이곳은 담당자:",
+        "에게 맡겨라!"
+      ],
+      "output_literals": [
+        "주군을 돕는 것이 진정한 부장의 임무다.\n이곳은",
+        "에게 맡겨라!"
+      ],
+      "literal_changes": [
+        {
+          "literal_id": 0,
+          "current": "주군을 돕는 것이 진정한 부장의 임무다.\n이곳은 담당자:",
+          "replacement": "주군을 돕는 것이 진정한 부장의 임무다.\n이곳은"
+        }
+      ],
+      "current_opaque_schema": [
+        "",
+        "024635",
+        "050505"
+      ],
+      "current_0143_commands": [],
+      "pristine_pc_jp_record_sha256": "FC6D59CE4CC971ED8772C0240959410A48061EB449FBB1F95C2171A76FD489C9",
+      "pristine_pc_jp_literals": [
+        "主を支うるは真の副将の役目にて\nこの場は",
+        "にお任せあれ！"
+      ],
+      "pristine_pc_jp_opaque_schema": [
+        "",
+        "024635",
+        "050505"
+      ],
+      "pc_cross_language_evidence": {
+        "en": "Supporting the leader is the faithful adjutant’s duty. Leave it to me!",
+        "sc": "辅佐主人乃副将真正的使命。这里就请交给……吧！",
+        "tc": "真正的副将，职责乃是辅佐主公。请将这里交给在下！"
+      },
+      "reason": "The source treats the preserved runtime span as the person receiving the task. The Korean role-label fragment is source-unrelated; the fixed literal omits it without changing the runtime span or line count.",
+      "literal_only_layout": {
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            912,
+            624
+          ]
+        },
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            912,
+            432
+          ]
+        }
+      }
+    },
+    {
+      "coordinate": "13:583",
+      "kind": "tutorial_ui_source_direct_literal_cleanup",
+      "current_record_sha256": "E9ACA43E7910C29B4AF0FDC22D71349BC86D01D35D56587877D2C2CDC205882D",
+      "output_record_sha256": "76709A636FE41CA1779F7B92F051369CA4DA9C349C4E0A3AD25AF45201BBFD4A",
+      "current_literals": [
+        "정책 “제도 개혁·이”가 LV2가 되어,\n“평정중” 명령의 “증설”이 해금되었습니다.\n금전을 지불해 봉행의 최대 인원을 늘릴 수 있습니다.\n\n【해금된 내용】\n ·“평정중” 명령:“증설”"
+      ],
+      "output_literals": [
+        "정책 “제도 개혁·이”가 LV2가 되어,\n“평정중” 명령의 “증설”이 해금되었습니다.\n금전을 지불해 봉행의 최대 인원을 늘릴 수 있습니다.\n\n【해금된 내용】\n ·“평정중” 명령의 “증설”"
+      ],
+      "literal_changes": [
+        {
+          "literal_id": 0,
+          "current": "정책 “제도 개혁·이”가 LV2가 되어,\n“평정중” 명령의 “증설”이 해금되었습니다.\n금전을 지불해 봉행의 최대 인원을 늘릴 수 있습니다.\n\n【해금된 내용】\n ·“평정중” 명령:“증설”",
+          "replacement": "정책 “제도 개혁·이”가 LV2가 되어,\n“평정중” 명령의 “증설”이 해금되었습니다.\n금전을 지불해 봉행의 최대 인원을 늘릴 수 있습니다.\n\n【해금된 내용】\n ·“평정중” 명령의 “증설”"
+        }
+      ],
+      "current_opaque_schema": [
+        "",
+        "050505"
+      ],
+      "current_0143_commands": [],
+      "pristine_pc_jp_record_sha256": "0374FEABBF911F82EDAB60ED845477BBC9CD96984F820B5540E9BF801A6CC7B5",
+      "pristine_pc_jp_literals": [
+        "政策「制度改新・弐」がLV2に上がったため\n「評定衆」コマンドの「増設」が解放されました。\n金銭を支払うことで奉行の最大数を増やせます。\n\n【解放された内容】\n　・「評定衆」コマンドの「増設」"
+      ],
+      "pristine_pc_jp_opaque_schema": [
+        "",
+        "050505"
+      ],
+      "pc_cross_language_evidence": {
+        "en": "Council Official’s Construct command",
+        "sc": "“评定众”指令中“增设”已解锁",
+        "tc": "“评定众”的“增筑”指令"
+      },
+      "reason": "The final unlock bullet needs the same possessive construction already used in the preceding line. The edit does not touch controls or manual newlines.",
+      "literal_only_layout": {
+        "before": {
+          "line_count": 6,
+          "widths_px": [
+            864,
+            1056,
+            1200,
+            0,
+            360,
+            648
+          ]
+        },
+        "after": {
+          "line_count": 6,
+          "widths_px": [
+            864,
+            1056,
+            1200,
+            0,
+            360,
+            696
+          ]
+        }
+      },
+      "visual_qa_required": true
+    }
+  ]
+}
