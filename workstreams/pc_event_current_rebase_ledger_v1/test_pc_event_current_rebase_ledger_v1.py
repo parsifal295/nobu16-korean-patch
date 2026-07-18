@@ -43,6 +43,8 @@ class CurrentEventRebaseLedgerTests(unittest.TestCase):
         self.assertEqual(report["stale_v2_reconciliation"]["nonexact_target_count"], 74)
         self.assertEqual(report["stale_v2_reconciliation"]["exact_current_target_noop_count"], 3700)
         self.assertEqual(report["stale_v2_reconciliation"]["historic_v1_reused_nonreview_count"], 11)
+        self.assertEqual(report["stale_v2_reconciliation"]["current_bounded_max_lines"], 3)
+        self.assertEqual(report["stale_v2_reconciliation"]["current_bounded_max_reserved_width_px"], 912)
 
     def test_builder_has_no_file_write_surface(self) -> None:
         source = SCRIPT.read_text(encoding="utf-8")

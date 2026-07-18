@@ -453,6 +453,31 @@ def verify(steam_root: Path = DEFAULT_STEAM_ROOT) -> dict[str, Any]:
         {"v1_reused"},
         "historic nonreview reconciliation classifications",
     )
+    nonexact_maximum_actual = 0
+    nonexact_maximum_reserved = 0
+    nonexact_maximum_lines = 0
+    for identifier in sorted(reconciled):
+        actual, reserved = line_width_pairs(pk.table.texts[identifier], font.advance, reservations)
+        if len(actual) > MAX_LINES or max(reserved, default=0) > MAX_LINE_PX:
+            raise LedgerError(f"current nonexact reconciliation row exceeds layout: {identifier}")
+        nonexact_maximum_actual = max(nonexact_maximum_actual, max(actual, default=0))
+        nonexact_maximum_reserved = max(nonexact_maximum_reserved, max(reserved, default=0))
+        nonexact_maximum_lines = max(nonexact_maximum_lines, len(actual))
+    require(
+        nonexact_maximum_lines,
+        reconciliation.get("current_bounded_max_lines"),
+        "current nonexact reconciliation maximum line count",
+    )
+    require(
+        nonexact_maximum_actual,
+        reconciliation.get("current_bounded_max_actual_width_px"),
+        "current nonexact reconciliation maximum actual width",
+    )
+    require(
+        nonexact_maximum_reserved,
+        reconciliation.get("current_bounded_max_reserved_width_px"),
+        "current nonexact reconciliation maximum reserved width",
+    )
 
     # A no-op candidate is the exact current PK input.  No message table is
     # rebuilt or recompressed, so there is no route to overwrite current text.
@@ -514,6 +539,9 @@ def verify(steam_root: Path = DEFAULT_STEAM_ROOT) -> dict[str, Any]:
             "nonexact_target_ids": sorted(reconciled),
             "nonexact_target_count": len(reconciled),
             "historic_v1_reused_nonreview_count": len(nonreview_reconciled),
+            "current_bounded_max_lines": nonexact_maximum_lines,
+            "current_bounded_max_actual_width_px": nonexact_maximum_actual,
+            "current_bounded_max_reserved_width_px": nonexact_maximum_reserved,
             "exact_current_target_noop_count": contract["stale_v2_reconciliation"]["exact_current_target_noop_count"],
         },
         "candidate": no_op_candidate,

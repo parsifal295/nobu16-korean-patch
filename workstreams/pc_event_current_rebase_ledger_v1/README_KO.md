@@ -29,7 +29,8 @@ resource, with an effective change count of zero.
   printf-width-unknown hold, not an automatic reflow target.
 - Reconciliation of the stale v2 overlay: 3,700 exact current no-ops and 74
   non-exact IDs.  The 74 all remain in the historic hard-break domain; 11 are
-  verified as historic `v1_reused` rows outside the old review subset.
+  verified as historic `v1_reused` rows outside the old review subset.  All
+  74 current rows are independently bounded at three lines and 912 px.
 
 ## Commands
 
