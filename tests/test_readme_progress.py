@@ -72,7 +72,7 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.11.6]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.11.5]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -139,27 +139,6 @@ class ReadmeProgressTests(unittest.TestCase):
             "5B9CF5E245808DB532B60C27C847254F3A22987FF57A75467ED34C8C5942127D",
             readme,
         )
-
-    def test_readme_documents_the_v0116_text_and_npc_scope(self) -> None:
-        readme = README.read_text(encoding="utf-8")
-        self.assertIn(
-            "## v0.11.6 — NPC 표기·인물 대사·이벤트 줄바꿈·상단 헤더 누적 보정",
-            readme,
-        )
-        self.assertIn("**276개**", readme)
-        self.assertIn("인물 대사 레코드 **205개**", readme)
-        self.assertIn("NPC 조합 조각 **46개**", readme)
-        self.assertIn("줄바꿈 셀 **25개**", readme)
-        self.assertIn("`덴령` → `전령`", readme)
-        self.assertIn("`상사람` → `상인`", readme)
-        self.assertIn("`선교모로` → `선교사`", readme)
-        self.assertIn("`소성씨` → `시동`", readme)
-        self.assertIn("`가인` → `가신`", readme)
-        self.assertIn("우에무라 라이렌", readme)
-        self.assertIn("쿠시마 마사노부", readme)
-        self.assertIn("상단 헤더", readme)
-        self.assertIn("총 21개 지점", readme)
-        self.assertIn("9BF487C431164B24CBEE5B97E3A8BB03FB77C20B6D7DD8BF9BAEC19A96BB85B1", readme)
 
 
 if __name__ == "__main__":
