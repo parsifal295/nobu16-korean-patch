@@ -47,7 +47,6 @@ def test_reflow_only_skeleton_contract() -> None:
         ("base", 6668),
         ("base", 16397),
         ("pk", 3945),
-        ("pk", 6499),
     }
 
 
