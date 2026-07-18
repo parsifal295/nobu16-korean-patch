@@ -8,17 +8,23 @@
 - PK Korean: 2,601 records / 5,035 literal slots / 표시 literal 4,888개
 - PK pristine Japanese: 2,601 records / 5,039 literal slots / 표시 literal 4,892개
 - PK EN/SC/TC와 Base SC/TC를 PC 문맥 보조로 사용했다.
-- pristine Base JP/EN은 현 로컬 백업에 없었다. 따라서 Base는 PK와 현재
-  Korean record·PC 보조 원문이 전체 바이트까지 같은 family가 아니면
-  source-gap hold로 남겼다.
+- 이 최초 감사는 Steam 백업 경로만 사용했으므로 Base JP source-gap을
+  보수적으로 적용했다. 이후 별도 PC 원문
+  `F:\Games\NOBU16\MSG\JP\msggame.bin`
+  (SHA-256 `EDEC6E21…A463C4`)을 확인했다. 따라서 이 문서의 Base
+  source-gap 결론과 “정적 후보 0건”은 **재감사 전의 중간 결과**이며,
+  Base 원문을 포함한 후속 감사를 거쳐야 한다.
 - Nintendo Switch 한국어는 읽거나 참조하지 않았다.
 
 PK에서 Japanese와 opaque topology까지 완전히 같은 무표식 정적 레코드
 183개를 별도로 재검토했다. 이 범위에서는 새 고확신 정적 교체 후보를
-확정하지 못했다. 이는 블록 15 전체가 사람이 완독한 번역 완료 판정이 아니라,
-안전하게 빌드할 수 있는 추가 정적 변경이 없다는 감사 결과다.
+확정하지 못했다. 이는 블록 15 전체가 사람이 완독한 번역 완료 판정이 아니다.
+특히 Base를 포함한 정적 변경 여부는 위 PC Base 원문으로 재감사한다.
 
 ## 의미상 문제지만 정적 후보에서 제외한 항목
+
+다음 분류는 최초 PK 중심 감사의 안전 보류다. 새로 확인한 Base JP 원문으로
+재대조하기 전에는 Base source-gap 표기를 최종 결론으로 사용하지 않는다.
 
 | 좌표 | 검토한 대안 | PC 원문 근거 | 제외 사유 |
 | --- | --- | --- | --- |
