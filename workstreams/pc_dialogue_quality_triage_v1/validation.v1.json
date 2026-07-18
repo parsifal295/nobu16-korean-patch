@@ -1,0 +1,86 @@
+{
+  "candidate_coordinate_sha256": "5D0D6056F49E792702F0C606E37696F977ED186708F8943C35BD28A9B29D223D",
+  "candidate_count": 30,
+  "candidate_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C26",
+    "C27",
+    "C28",
+    "C29",
+    "C30"
+  ],
+  "pk_msgev_okehazama_4494_4510_priority": {
+    "candidate_coordinate_sha256": "E098CDDC8452C5685A38C2C1220D7DA0953A64422F2BA245F4DC92BD7B313BCC",
+    "candidate_ids": [
+      4495,
+      4502,
+      4506,
+      4508,
+      4509
+    ],
+    "explicitly_excluded_ids": [
+      4504
+    ],
+    "range_fully_read": true,
+    "source_file_sha256": {
+      "current_pc_ko": "134F6356B194AE319125D369A23EBDA11CA8C75FB79EFA7C987D956EDD4CF154",
+      "pc_en": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+      "pc_sc": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+      "pc_tc": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6",
+      "pristine_pc_jp": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84"
+    },
+    "steam_game_resource_written": false,
+    "switch_korean_translation_used": false
+  },
+  "schema": "nobu16.kr.pc-dialogue-quality-triage-validation.v1",
+  "source_file_sha256": {
+    "base_current_ko": "83C4DF9326DB1487707FDABE9CF2A00380144D14D3AC4A4FCD02513C8E3C279E",
+    "base_pc_sc": "B2FC3C18DA0F03ACFA93B1EAB0D09FBFCF7CD5076E667602D1AF212953A09BF7",
+    "base_pc_tc": "20E710A11CDADFAF514EBC3B9C664E9C57B1A737138F29BF38CFB6527C0A5E95",
+    "base_pristine_pc_jp": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+    "pk_current_ko": "31950B8213AC80C9BCB866163EE7B4B655440ADF863DED21186273E3F8A34BDB",
+    "pk_pc_en": "68B9597DEA78CA2327EE36D62EF03DD673CE2449D40A18392D1ACF837B85A916",
+    "pk_pc_sc": "8884BCC1C085D85AEFDBB2C45180D5E9D4A495B0094A157444C2BA2D39029802",
+    "pk_pc_tc": "C5EF565CBDFB4D95B5A1785D83A758C0057569CCC6ECF1EA873EA7E5F8AD6A23",
+    "pk_pristine_pc_jp": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210"
+  },
+  "source_policy": {
+    "allowed": [
+      "PC Japanese",
+      "PC English",
+      "PC Simplified Chinese",
+      "PC Traditional Chinese",
+      "current PC Korean"
+    ],
+    "message_archive_rebuilt": false,
+    "platform": "Steam PC",
+    "steam_game_resource_written": false,
+    "switch_korean_translation_used": false
+  },
+  "static_contract": "every target contains only removable 0143 commands plus 050505; same-record PC EN/SC/TC contains no 0143",
+  "wave7_coordinate_reintroduced": false
+}
