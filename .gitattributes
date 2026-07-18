@@ -10,6 +10,12 @@
 *.jsonl text eol=lf
 *.csv text eol=lf
 
+# The release builder pins the exact ZIP bytes of these two launchers.
+/release_payload/v0.11.0/*.bat text eol=lf
+/release_payload/v0.11.0/OfficerEditorStaticFix/Steamless/Steamless.CLI.exe.config binary
+/release_payload/v0.11.1/*.bat text eol=lf
+/release_payload/v0.11.1/OfficerEditorStaticFix/Steamless/Steamless.CLI.exe.config binary
+
 # These are byte-pinned upstream OFL texts; do not rewrite their whitespace.
 workstreams/msgui_full/release_p4_vnext/inputs/font/licenses/*.txt text eol=lf -whitespace
 
