@@ -218,11 +218,12 @@ function Write-State([string]$Path, $State) {
     $directory = Split-Path -Parent $Path
     New-Item -ItemType Directory -Path $directory -Force | Out-Null
     $temporary = Join-Path $directory ('.state.' + [Guid]::NewGuid().ToString('N') + '.tmp')
+    $stateBackup = Join-Path $directory ('.state.' + [Guid]::NewGuid().ToString('N') + '.bak')
     try {
         $encoding = New-Object System.Text.UTF8Encoding($false)
         [System.IO.File]::WriteAllText($temporary, ($State | ConvertTo-Json -Depth 12), $encoding)
         if (Test-Path -LiteralPath $Path) {
-            [System.IO.File]::Replace($temporary, $Path, $null, $true)
+            [System.IO.File]::Replace($temporary, $Path, $stateBackup, $true)
         }
         else {
             [System.IO.File]::Move($temporary, $Path)
@@ -231,6 +232,9 @@ function Write-State([string]$Path, $State) {
     finally {
         if (Test-Path -LiteralPath $temporary) {
             Remove-Item -LiteralPath $temporary -Force -ErrorAction SilentlyContinue
+        }
+        if (Test-Path -LiteralPath $stateBackup) {
+            Remove-Item -LiteralPath $stateBackup -Force -ErrorAction SilentlyContinue
         }
     }
 }
