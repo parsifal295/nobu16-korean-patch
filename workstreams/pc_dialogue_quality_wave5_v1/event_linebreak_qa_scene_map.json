@@ -1,0 +1,102 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-quality-wave5.event-linebreak-qa-scene-map.v1",
+  "resource": "MSG/JP/ev_strdata.bin",
+  "static_source": {
+    "pristine_pc_jp_path": "MSG/JP/ev_strdata.bin",
+    "pristine_pc_jp_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+    "current_steam_ko_path": "F:/SteamLibrary/steamapps/common/NOBU16/MSG/JP/ev_strdata.bin",
+    "current_steam_ko_sha256": "25D9C029F93788053720C04BAE0C0A14A1A5983F36C68BC2EC7C46C3340D5834"
+  },
+  "static_trigger_probe": {
+    "files": [
+      "FLOW/ENDING_00.bsf",
+      "FLOW/OPENING_00.bsf",
+      "FLOW/REKISHI_00.bsf",
+      "FLOW/TUTORIAL_00.bsf",
+      "FLOW/TUTORIAL_01.bsf"
+    ],
+    "method": "Search every FLOW .bsf for each target event ID encoded as a direct 32-bit little-endian value.",
+    "direct_le32_matches": {
+      "4657": [],
+      "4781": [],
+      "6233": [],
+      "6668": [],
+      "7475": [],
+      "16397": []
+    },
+    "conclusion": "No direct FLOW reference proves a player-trigger condition. Use an event-ready save, scenario/debug route, or an observed in-game route for runtime QA; do not infer a condition from this map."
+  },
+  "targets": [
+    {
+      "event_record_id": 4657,
+      "identity_confidence": "formal_batch_metadata",
+      "event_id": "death_of_nagano_narimasa",
+      "title_ko": "나가노 나리마사의 유언",
+      "static_scene_span": [4657, 4690],
+      "static_evidence": "KR_PATCH_WORK/workstreams/dialogue/build_event_dialogue_batch13.py: EVENTS",
+      "qa_scene_anchor": "조슈의 황반으로 불린 나가노 나리마사의 말년 서술 시작",
+      "runtime_qa_entry": "해당 역사 이벤트가 발생 직전인 세이브/시나리오 경로가 필요함",
+      "render_capture_target": "4657의 [b1251] 치환 이름과 3개 시각 줄"
+    },
+    {
+      "event_record_id": 4781,
+      "identity_confidence": "formal_batch_metadata",
+      "event_id": "yoshiyori_claims_chunagon_title",
+      "title_ko": "아네가코지 요시요리의 주나곤 자칭",
+      "static_scene_span": [4769, 4799],
+      "static_evidence": "KR_PATCH_WORK/workstreams/dialogue/build_event_dialogue_batch14.py: EVENTS",
+      "qa_scene_anchor": "교의 아네가코지 가문과 우린케·다이나곤 설명",
+      "runtime_qa_entry": "해당 역사 이벤트가 발생 직전인 세이브/시나리오 경로가 필요함",
+      "render_capture_target": "4781의 공가·관직 설명 3개 시각 줄"
+    },
+    {
+      "event_record_id": 6233,
+      "identity_confidence": "formal_batch_metadata",
+      "event_id": "todo_takatora_white_mochi",
+      "title_ko": "도도 다카토라와 출세의 흰 떡",
+      "static_scene_span": [6194, 6234],
+      "static_evidence": "KR_PATCH_WORK/workstreams/dialogue/build_event_dialogue_batch25.py: EVENTS",
+      "qa_scene_anchor": "다카토라가 흰 원 셋의 흰 떡 셋을 깃발 문양으로 삼았다는 후일담",
+      "runtime_qa_entry": "해당 역사 이벤트가 발생 직전인 세이브/시나리오 경로가 필요함",
+      "render_capture_target": "6233의 인명 색상 토큰과 3개 시각 줄"
+    },
+    {
+      "event_record_id": 6668,
+      "identity_confidence": "local_text_sequence_inference_not_formal_trigger_metadata",
+      "event_id": "ashikaga_yoshiaki_kyoto_return_negotiation_sequence",
+      "title_ko": "아시카가 요시아키의 교 귀환 설득·거부",
+      "static_scene_span": [6663, 6677],
+      "static_evidence": "Current and pristine ev_strdata local sequence: 요시아키가 교를 떠난 뒤, 안코쿠지 에케이가 귀환을 설득함",
+      "qa_scene_anchor": "오다의 요구를 받아들여 교로 돌아갈 선택지는 없다는 에케이의 확인 대사",
+      "runtime_qa_entry": "정확한 발생 조건은 정적 FLOW ID 검색으로 확인되지 않았음; 이벤트 직전 세이브/관측 경로가 필요함",
+      "render_capture_target": "6668의 종결 인용구와 3개 시각 줄"
+    },
+    {
+      "event_record_id": 7475,
+      "identity_confidence": "local_text_sequence_inference_not_formal_trigger_metadata",
+      "event_id": "tachibana_ginchiyo_munetora_marriage_discussion_sequence",
+      "title_ko": "다치바나 긴치요·무네토라 혼인 논의",
+      "static_scene_span": [7465, 7488],
+      "static_evidence": "Current and pristine ev_strdata local sequence: 도세쓰가 다카하시 무네토라와 긴치요의 혼인을 논의하고 긴치요의 계승을 설명함",
+      "qa_scene_anchor": "긴치요의 이름 뜻과 소원을 설명하는 서술",
+      "runtime_qa_entry": "정확한 발생 조건은 정적 FLOW ID 검색으로 확인되지 않았음; 이벤트 직전 세이브/관측 경로가 필요함",
+      "render_capture_target": "7475의 인명 색상 토큰과 3개 시각 줄"
+    },
+    {
+      "event_record_id": 16397,
+      "identity_confidence": "explicit_adjacent_ui_labels",
+      "event_id": "ending_role_selection_prompt",
+      "title_ko": "엔딩 직책 선택 안내",
+      "static_scene_span": [16397, 16401],
+      "static_evidence": "16398=관백, 16399=태정대신, 16400=정이대장군, 16401=사퇴한다",
+      "qa_scene_anchor": "취임할 직책을 선택하면 엔딩이 되며 계속하려면 사퇴하기를 선택하라는 안내",
+      "runtime_qa_entry": "엔딩 직책 선택 화면으로 진입하는 세이브/관측 경로가 필요함",
+      "render_capture_target": "16397 안내문과 바로 뒤 4개 선택지의 줄 수·가독성"
+    }
+  ],
+  "qa_contract": {
+    "mutation": "evidence_only_no_game_or_steam_write",
+    "visual_rule": "각 대상이 실제로 표시될 때 수동 줄바꿈이 문법 단위를 끊지 않고 3개 시각 줄을 넘지 않는지 확인한다.",
+    "capture_requirement": "실제 게임 QA 기록에는 사용한 세이브/진입 경로와 캡처 시점의 이벤트 ID를 함께 남긴다."
+  }
+}
