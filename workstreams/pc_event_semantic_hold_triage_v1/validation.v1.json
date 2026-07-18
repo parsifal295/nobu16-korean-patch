@@ -1,0 +1,108 @@
+{
+  "expected": {
+    "classification_counts": {
+      "base": {
+        "linebreak_or_whitespace_layout": 9,
+        "pure_static_wording": 1,
+        "runtime_printf_esc_structural": 145
+      },
+      "pk": {
+        "linebreak_or_whitespace_layout": 86,
+        "pure_static_wording": 215,
+        "runtime_printf_esc_structural": 618
+      },
+      "total": {
+        "linebreak_or_whitespace_layout": 95,
+        "pure_static_wording": 216,
+        "runtime_printf_esc_structural": 763
+      }
+    },
+    "format_feature_counts_nonexclusive": {
+      "base": {
+        "esc_tag_present": 145,
+        "linebreak_present": 152,
+        "outer_whitespace_present": 1,
+        "runtime_token_present": 99
+      },
+      "pk": {
+        "esc_tag_present": 618,
+        "linebreak_present": 699,
+        "outer_whitespace_present": 7,
+        "runtime_token_present": 135
+      },
+      "total": {
+        "esc_tag_present": 763,
+        "linebreak_present": 851,
+        "outer_whitespace_present": 8,
+        "runtime_token_present": 234
+      }
+    },
+    "live_hold_reproduction": {
+      "base": {
+        "ledger_hold_count": 171,
+        "ledger_source_classification_counts": {
+          "hold_ambiguous_or_runtime": 162,
+          "hold_manual_linebreak_layout": 9
+        },
+        "live_hold_count": 155,
+        "live_source_classification_counts": {
+          "hold_ambiguous_or_runtime": 155
+        },
+        "stale_or_changed_count": 16
+      },
+      "pk": {
+        "ledger_hold_count": 930,
+        "ledger_reason_counts": {
+          "external_whitespace_or_padding_needs_ui_context": 1,
+          "localized_layout_or_manual_break_needs_render_review": 667,
+          "same_source_divergence_needs_contextual_terminology_review": 268
+        },
+        "live_hold_count": 919,
+        "live_reason_counts": {
+          "external_whitespace_or_padding_needs_ui_context": 1,
+          "localized_layout_or_manual_break_needs_render_review": 662,
+          "same_source_divergence_needs_contextual_terminology_review": 262
+        },
+        "stale_or_changed_count": 11
+      }
+    },
+    "row_count": 1074,
+    "static_anchor_counts": {
+      "cross_resource_jp_sc_tc": {
+        "conflict": 183,
+        "consensus": 25,
+        "no_anchor": 8
+      },
+      "same_resource_full_available_pc_context": {
+        "conflict": 139,
+        "consensus": 18,
+        "no_anchor": 59
+      }
+    }
+  },
+  "input_file_sha256": {
+    "base_ev_strdata": {
+      "JP": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+      "KO": "BF224468BFBCF3CC71DFF4609142A60D75091813281EE6F2333645413AD81B80",
+      "SC": "77E87C6FEC67859543FCB4134660A7274A2374F6881B956421B561E61BD7B685",
+      "TC": "9E9346B942CAFA99432D675F6BA74DD04D48F56095F35F46392697011D9CFEF3"
+    },
+    "pk_msgev": {
+      "EN": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+      "JP": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+      "KO": "3E2323DDFAD70DAA15713DD1C4D622508BD2E610C65683C0A06D3D1FAC9827A5",
+      "SC": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+      "TC": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6"
+    }
+  },
+  "expected_output_sha256": {
+    "ledger": "CC99E0C3CE4CDDDF5940F8E68AA22EDB425BAA17D49E814459D61182E71F0EF4",
+    "summary": "1C122651B31B85BEF5F9077A2D33C146DEA4636583808DAEDEB2AFF30649E943"
+  },
+  "provenance_ledger_sha256": {
+    "base": "B4BAACC046577B983397A71716A97D8ED9386C2141D3C69BF7816AC1AFD9C32F",
+    "pk": "06C9D4C6082D7C944F290F01868CF0CB45EF5AC0DE7A681B880E7FD4547C24A4"
+  },
+  "schema": "nobu16.kr.pc-event-semantic-hold-triage-validation.v1",
+  "source_free": true
+}
