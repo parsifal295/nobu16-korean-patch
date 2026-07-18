@@ -1,0 +1,1240 @@
+{
+  "binary_text_hits": {
+    "base_16397_anchor": [],
+    "base_4657_anchor": [],
+    "base_4781_anchor": [],
+    "base_6233_anchor": [],
+    "base_6668_anchor": [],
+    "base_7475_anchor": [],
+    "pk_16402_anchor": []
+  },
+  "direct_flow_u32_hits": {
+    "16397": [
+      {
+        "path": "FLOW_PK/REKISHI_03.bsf",
+        "u32be_offsets": [
+          58,
+          2946
+        ],
+        "u32le_offsets": []
+      }
+    ],
+    "16402": [
+      {
+        "path": "FLOW/REKISHI_00.bsf",
+        "u32be_offsets": [
+          4414
+        ],
+        "u32le_offsets": []
+      }
+    ],
+    "4657": [],
+    "4781": [],
+    "6233": [
+      {
+        "path": "FLOW_PK/REKISHI_01.bsf",
+        "u32be_offsets": [
+          88262
+        ],
+        "u32le_offsets": []
+      }
+    ],
+    "6668": [],
+    "7475": []
+  },
+  "schema": "nobu16.kr.runtime-qa-mapping-pc.v1",
+  "scope": {
+    "game_launched": false,
+    "pc_only": true,
+    "steam_or_game_written": false,
+    "switch_opened": false
+  },
+  "sources": {
+    "base_event_current_ko": {
+      "packed_sha256": "25D9C029F93788053720C04BAE0C0A14A1A5983F36C68BC2EC7C46C3340D5834",
+      "path": "F:/Games/NOBU16/KR_PATCH_WORK/tmp/pc_dialogue_goodwill_runtime_wave7_v1/candidate-build-1/MSG/JP/ev_strdata.bin",
+      "rows": {
+        "16397": "취임하고 싶은 직책을 선택하면 엔딩이\n됩니다. 게임을 계속하려면 「사퇴하기」\n를 선택해 주십시오.",
+        "4657": "조슈의 황반(호랑이)이라 두려움을 사며 적과의 최전선\n에서 \u001bCA[b1251]\u001bCZ의 침공을 막아 온\n\u001bCC미노와\u001bCZ 성주 \u001bCA나가노 나리마사\u001bCZ――",
+        "4781": "본래 \u001bCC교\u001bCZ의 \u001bCB아네가코지 가문\u001bCZ은 공가의 격식으로 치면\n「\u001bCB우린케\u001bCZ」에 해당한다. 이는 극관(최고위)\n을 다이나곤으로 하는 가문이다.",
+        "6233": "이 가게 주인의 따뜻한 대접에 감동한 \u001bCA다카토라\u001bCZ는\n이후 깃발 문양을 흰 원 셋을 나란히 놓은 「흰 떡 셋」\n으로 삼았다고 전해진다…",
+        "6668": "요컨대 \u001bCB오다 님\u001bCZ의 요망을 받아들여\n\u001bCC교\u001bCZ로 돌아가실 선택지는 없다…\n는 말씀이시군요?",
+        "7475": "\u001bCA다치바나 도세쓰\u001bCZ의 딸은 \u001bCA긴치요\u001bCZ라 하였다.\n이름의 「긴」은 「남의 말을 삼가며 듣는다」\n는 뜻으로, 소원을 담아 붙여진 이름이었다."
+      },
+      "string_count": 17868
+    },
+    "base_event_jp": {
+      "packed_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+      "path": "F:/Games/NOBU16/MSG/JP/ev_strdata.bin",
+      "rows": {
+        "16397": "就任したい役職を選択することでエンディン\nグとなります。ゲームを継続する場合「辞退\nする」を選択してください。",
+        "4657": "上州の黄斑（虎）と恐れられ、敵との最前線\nで\u001bCA[b1251]\u001bCZの侵攻を防いでいた\n\u001bCC箕輪\u001bCZ城主・\u001bCA長野業正\u001bCZ――",
+        "4781": "本来、\u001bCC京\u001bCZの\u001bCB姉小路家\u001bCZは公家の格式でいえば\n「\u001bCB羽林家\u001bCZ」に当たる。これは極官（最高位）\nを大納言とする家柄である。",
+        "6233": "この店主の温かい振る舞いに感動した\u001bCA高虎\u001bCZは\n以降、旗印を白丸を三つ並べた「白餅三つ」\nにしたと伝わっている…",
+        "6668": "つまりは\u001bCB織田殿\u001bCZの要望を聞き、\n\u001bCC京\u001bCZへ戻られる選択肢はない…\nということにございますな？",
+        "7475": "\u001bCA立花道雪\u001bCZの娘は\u001bCA┌千代\u001bCZといった。\n「┌」の字は「人の話を慎み深く聞く」\nという意味で、願いを込めてつけられた。"
+      },
+      "string_count": 17868
+    },
+    "base_msggame_current_ko": {
+      "packed_sha256": "83C4DF9326DB1487707FDABE9CF2A00380144D14D3AC4A4FCD02513C8E3C279E",
+      "path": "F:/Games/NOBU16/KR_PATCH_WORK/tmp/pc_dialogue_goodwill_runtime_wave7_v1/candidate-build-1/MSG/JP/msggame.bin",
+      "rows": {
+        "6:1518": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": " 측과의 친선은"
+            },
+            {
+              "literal_id": 1,
+              "text": "\n거리가 너무 멀어 계속할 수 없습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "",
+              "offset": 25
+            },
+            {
+              "hex": "050505",
+              "offset": 75
+            }
+          ]
+        },
+        "6:1519": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": " 측과의 친선은"
+            },
+            {
+              "literal_id": 1,
+              "text": "\n비용이 부족해 계속할 수 없습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "",
+              "offset": 25
+            },
+            {
+              "hex": "050505",
+              "offset": 71
+            }
+          ]
+        },
+        "6:1520": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": " 측과의 친선은"
+            },
+            {
+              "literal_id": 1,
+              "text": "\n중개자가 없어"
+            },
+            {
+              "literal_id": 2,
+              "text": " 계속할 수 없습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "",
+              "offset": 25
+            },
+            {
+              "hex": "",
+              "offset": 47
+            },
+            {
+              "hex": "050505",
+              "offset": 77
+            }
+          ]
+        }
+      }
+    },
+    "base_msggame_jp": {
+      "packed_sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+      "path": "F:/Games/NOBU16/MSG/JP/msggame.bin",
+      "rows": {
+        "6:1518": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "との親善"
+            },
+            {
+              "literal_id": 1,
+              "text": "が\nあまりに遠方のため、続けられ"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "014326020000",
+              "offset": 17
+            },
+            {
+              "hex": "0143E0020000050505",
+              "offset": 61
+            }
+          ]
+        },
+        "6:1519": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "との親善"
+            },
+            {
+              "literal_id": 1,
+              "text": "が\n費用不足のため、続けられ"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "014326020000",
+              "offset": 17
+            },
+            {
+              "hex": "0143E0020000050505",
+              "offset": 57
+            }
+          ]
+        },
+        "6:1520": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "との親善"
+            },
+            {
+              "literal_id": 1,
+              "text": "が\n取次不在とな"
+            },
+            {
+              "literal_id": 2,
+              "text": "ため、続けられ"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "014326020000",
+              "offset": 17
+            },
+            {
+              "hex": "014368020000",
+              "offset": 45
+            },
+            {
+              "hex": "0143E0020000050505",
+              "offset": 71
+            }
+          ]
+        }
+      }
+    },
+    "base_msggame_pc_sc": {
+      "packed_sha256": "B2FC3C18DA0F03ACFA93B1EAB0D09FBFCF7CD5076E667602D1AF212953A09BF7",
+      "path": "F:/Games/NOBU16/MSG/SC/msggame.bin",
+      "rows": {
+        "6:1518": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "与"
+            },
+            {
+              "literal_id": 1,
+              "text": "的亲善由于相隔太远，\n因此无法继续。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 8
+            },
+            {
+              "hex": "050505",
+              "offset": 53
+            }
+          ]
+        },
+        "6:1519": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "与"
+            },
+            {
+              "literal_id": 1,
+              "text": "的亲善由于费用不足，\n因此无法继续。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 8
+            },
+            {
+              "hex": "050505",
+              "offset": 53
+            }
+          ]
+        },
+        "6:1520": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "与"
+            },
+            {
+              "literal_id": 1,
+              "text": "的亲善由于代理不在，\n因此无法继续。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 8
+            },
+            {
+              "hex": "050505",
+              "offset": 53
+            }
+          ]
+        }
+      }
+    },
+    "base_msggame_pc_tc": {
+      "packed_sha256": "20E710A11CDADFAF514EBC3B9C664E9C57B1A737138F29BF38CFB6527C0A5E95",
+      "path": "F:/Games/NOBU16/MSG/TC/msggame.bin",
+      "rows": {
+        "6:1518": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "由於距離甚遠，\n無法繼續維持與"
+            },
+            {
+              "literal_id": 1,
+              "text": "的親善。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 36
+            },
+            {
+              "hex": "050505",
+              "offset": 53
+            }
+          ]
+        },
+        "6:1519": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "與"
+            },
+            {
+              "literal_id": 1,
+              "text": "的親善因費用不足之故，\n無法繼續維持。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 8
+            },
+            {
+              "hex": "050505",
+              "offset": 55
+            }
+          ]
+        },
+        "6:1520": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "與"
+            },
+            {
+              "literal_id": 1,
+              "text": "的親善因無聯繫者之故，\n無法繼續維持。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 8
+            },
+            {
+              "hex": "050505",
+              "offset": 55
+            }
+          ]
+        }
+      }
+    },
+    "pk_msgev_current_ko": {
+      "packed_sha256": "134F6356B194AE319125D369A23EBDA11CA8C75FB79EFA7C987D956EDD4CF154",
+      "path": "F:/Games/NOBU16/KR_PATCH_WORK/tmp/pc_dialogue_goodwill_runtime_wave7_v1/candidate-build-1/MSG_PK/JP/msgev.bin",
+      "rows": {
+        "16402": "\u001bCA%s\u001bCZ가 사망하여 \u001bCB%s 가문\u001bCZ이 분열했습니다\n앞으로 플레이할 세력을 선택해 주십시오"
+      },
+      "string_count": 17916
+    },
+    "pk_msgev_pc_en": {
+      "packed_sha256": "95CDB15F1AED529C95ADDE784A750059E90060A44DF1EA208EB4A56E2F685640",
+      "path": "F:/Games/NOBU16/MSG_PK/EN/msgev.bin",
+      "rows": {
+        "16402": "\u001bCA%s\u001bCZ has died, and the \u001bCB%s Clan\u001bCZ has disbanded. Please select a clan to continue playing."
+      },
+      "string_count": 17910
+    },
+    "pk_msgev_pc_sc": {
+      "packed_sha256": "596B47864D69D32446BFEF56177D3CCC615132E2BBFDB8154C9D83F78808CE48",
+      "path": "F:/Games/NOBU16/MSG_PK/SC/msgev.bin",
+      "rows": {
+        "16402": "\u001bCA%s\u001bCZ가 사망하여 \u001bCB%s 가문\u001bCZ이 분열했습니다\n앞으로 플레이할 세력을 선택해 주십시오"
+      },
+      "string_count": 17910
+    },
+    "pk_msgev_pc_tc": {
+      "packed_sha256": "CB4A3E57AF2091124669E28BF1DD6B8C664BFA8A1EF800F8BB6FD79C82E1DE47",
+      "path": "F:/Games/NOBU16/MSG_PK/TC/msgev.bin",
+      "rows": {
+        "16402": "\u001bCA%s\u001bCZ逝世，\u001bCB%s家\u001bCZ已分裂。\n請選擇今後要遊玩的勢力。"
+      },
+      "string_count": 17910
+    },
+    "pk_msggame_current_ko": {
+      "packed_sha256": "31950B8213AC80C9BCB866163EE7B4B655440ADF863DED21186273E3F8A34BDB",
+      "path": "F:/Games/NOBU16/KR_PATCH_WORK/tmp/pc_dialogue_goodwill_runtime_wave7_v1/candidate-build-1/MSG_PK/JP/msggame.bin",
+      "rows": {
+        "2:330": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "주군도 무척 든든하시겠지……\n뜻을 함께할 자:"
+            },
+            {
+              "literal_id": 1,
+              "text": "이(가) 있으니!"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "024935",
+              "offset": 0
+            },
+            {
+              "hex": "024634",
+              "offset": 59
+            },
+            {
+              "hex": "050505",
+              "offset": 86
+            }
+          ]
+        },
+        "2:551": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "내 지혜로,\n보좌할 대상:"
+            },
+            {
+              "literal_id": 1,
+              "text": "을(를) 떠받치는 기둥이 되겠습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "014301000000",
+              "offset": 0
+            },
+            {
+              "hex": "025332",
+              "offset": 40
+            },
+            {
+              "hex": "050505",
+              "offset": 89
+            }
+          ]
+        },
+        "2:628": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "원수의 이름:"
+            },
+            {
+              "literal_id": 1,
+              "text": "다메노부"
+            },
+            {
+              "literal_id": 2,
+              "text": "！\n"
+            },
+            {
+              "literal_id": 3,
+              "text": "에게 무릎 꿇려라."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "1B4341",
+              "offset": 20
+            },
+            {
+              "hex": "1B435A0143FC010000",
+              "offset": 37
+            },
+            {
+              "hex": "024634",
+              "offset": 56
+            },
+            {
+              "hex": "050505",
+              "offset": 85
+            }
+          ]
+        },
+        "6:1524": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": " 측과의 친선은"
+            },
+            {
+              "literal_id": 1,
+              "text": "\n거리가 너무 멀어 계속할 수 없습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "",
+              "offset": 25
+            },
+            {
+              "hex": "050505",
+              "offset": 75
+            }
+          ]
+        },
+        "6:1525": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": " 측과의 친선은"
+            },
+            {
+              "literal_id": 1,
+              "text": "\n비용이 부족해 계속할 수 없습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "",
+              "offset": 25
+            },
+            {
+              "hex": "050505",
+              "offset": 71
+            }
+          ]
+        },
+        "6:1526": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": " 측과의 친선은"
+            },
+            {
+              "literal_id": 1,
+              "text": "\n중개자가 없어"
+            },
+            {
+              "literal_id": 2,
+              "text": " 계속할 수 없습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "",
+              "offset": 25
+            },
+            {
+              "hex": "",
+              "offset": 47
+            },
+            {
+              "hex": "050505",
+              "offset": 77
+            }
+          ]
+        },
+        "6:3887": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": " 건설을 시작하자."
+            },
+            {
+              "literal_id": 1,
+              "text": "\n우리 성하를 더 나은 곳으로 만들자."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "023C",
+              "offset": 0
+            },
+            {
+              "hex": "",
+              "offset": 28
+            },
+            {
+              "hex": "050505",
+              "offset": 76
+            }
+          ]
+        }
+      }
+    },
+    "pk_msggame_pc_en": {
+      "packed_sha256": "14D9A20ECB35F35C91D14947921CF09F5EAF960F8FA4D70F703F2366DB1D13AF",
+      "path": "F:/Games/NOBU16/MSG_PK/EN/msggame.bin",
+      "rows": {
+        "2:330": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "Lord "
+            },
+            {
+              "literal_id": 1,
+              "text": " will certainly be reassured... Who wouldnÖt be with an ally like me!"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "024935",
+              "offset": 16
+            },
+            {
+              "hex": "050505",
+              "offset": 163
+            }
+          ]
+        },
+        "2:551": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "I will give my all to bring prosperity to this land."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "050505",
+              "offset": 110
+            }
+          ]
+        },
+        "2:628": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "The One-Eyed Dragon will show the demon "
+            },
+            {
+              "literal_id": 1,
+              "text": "Satake"
+            },
+            {
+              "literal_id": 2,
+              "text": " how itÖs done! Here comes the moment of truth!"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "1B4341",
+              "offset": 86
+            },
+            {
+              "hex": "1B435A",
+              "offset": 107
+            },
+            {
+              "hex": "050505",
+              "offset": 210
+            }
+          ]
+        },
+        "6:1524": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "We cannot continue our goodwill talks with the "
+            },
+            {
+              "literal_id": 1,
+              "text": " if we donÖt have an emmisary."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 100
+            },
+            {
+              "hex": "050505",
+              "offset": 169
+            }
+          ]
+        },
+        "6:1525": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "The "
+            },
+            {
+              "literal_id": 1,
+              "text": "Ös trust has reached "
+            },
+            {
+              "literal_id": 2,
+              "text": "."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 14
+            },
+            {
+              "hex": "023C",
+              "offset": 65
+            },
+            {
+              "hex": "050505",
+              "offset": 75
+            }
+          ]
+        },
+        "6:1526": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "Alliance between the "
+            },
+            {
+              "literal_id": 1,
+              "text": " and the "
+            },
+            {
+              "literal_id": 2,
+              "text": " finished."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 48
+            },
+            {
+              "hex": "025132",
+              "offset": 75
+            },
+            {
+              "hex": "050505",
+              "offset": 104
+            }
+          ]
+        },
+        "6:3887": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "The addition of facilities will occur when you progress the time. There is no need for gold or labor since this is a tutorial. In fact, you should see the results immediately."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "050505",
+              "offset": 356
+            }
+          ]
+        }
+      }
+    },
+    "pk_msggame_pc_sc": {
+      "packed_sha256": "8D4417737975203A4CFF7EB0185DB1959F09D56B5F394CFD8136A58B3E7783C3",
+      "path": "F:/Games/NOBU16/MSG_PK/SC/msggame.bin",
+      "rows": {
+        "2:330": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "주군도 무척 든든하시겠지……\n뜻을 함께할 자:"
+            },
+            {
+              "literal_id": 1,
+              "text": "이(가) 있으니!"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "024935",
+              "offset": 0
+            },
+            {
+              "hex": "024634",
+              "offset": 59
+            },
+            {
+              "hex": "050505",
+              "offset": 86
+            }
+          ]
+        },
+        "2:551": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "이 땅을 풍요롭게 만들기 위해,\n온 힘을 다하겠다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "050505",
+              "offset": 62
+            }
+          ]
+        },
+        "2:628": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "독안룡이 악귀"
+            },
+            {
+              "literal_id": 1,
+              "text": "사타케"
+            },
+            {
+              "literal_id": 2,
+              "text": "를 제압해 주마.\n모두, 지금이 고비다!"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "1B4341",
+              "offset": 20
+            },
+            {
+              "hex": "1B435A",
+              "offset": 35
+            },
+            {
+              "hex": "050505",
+              "offset": 88
+            }
+          ]
+        },
+        "6:1524": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": ": 친선 상대:"
+            },
+            {
+              "literal_id": 1,
+              "text": ", 중개자가 없어\n계속할 수 없습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 22
+            },
+            {
+              "hex": "050505",
+              "offset": 73
+            }
+          ]
+        },
+        "6:1525": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": ": 도달한 신용:"
+            },
+            {
+              "literal_id": 1,
+              "text": "."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "023C",
+              "offset": 27
+            },
+            {
+              "hex": "050505",
+              "offset": 37
+            }
+          ]
+        },
+        "6:1526": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": ": 동맹 상대:"
+            },
+            {
+              "literal_id": 1,
+              "text": ", 동맹이 종료되었습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "025132",
+              "offset": 25
+            },
+            {
+              "hex": "050505",
+              "offset": 62
+            }
+          ]
+        },
+        "6:3887": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "이제 시간을 진행하면 시설 건설이 시작됩니다.\n이번은 튜토리얼이므로 금전과 노동력은 들지 않습니다.\n건설 결과도 곧바로 확인할 수 있습니다."
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "050505",
+              "offset": 162
+            }
+          ]
+        }
+      }
+    },
+    "pk_msggame_pc_tc": {
+      "packed_sha256": "73278A4CF06F007E729C37FC6E6409FD77A5A246DB0408CF2879082E88FB0B5D",
+      "path": "F:/Games/NOBU16/MSG_PK/TC/msggame.bin",
+      "rows": {
+        "2:330": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "想必"
+            },
+            {
+              "literal_id": 1,
+              "text": "大人也感到相當寬慰吧……\n畢竟能夠和在下"
+            },
+            {
+              "literal_id": 2,
+              "text": "團結齊心！"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "024935",
+              "offset": 10
+            },
+            {
+              "hex": "024634",
+              "offset": 59
+            },
+            {
+              "hex": "050505",
+              "offset": 78
+            }
+          ]
+        },
+        "2:551": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "我將竭盡全力，\n使這片土地變得豐饒富庶。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "050505",
+              "offset": 46
+            }
+          ]
+        },
+        "2:628": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "鬼"
+            },
+            {
+              "literal_id": 1,
+              "text": "佐竹"
+            },
+            {
+              "literal_id": 2,
+              "text": "就由我獨眼龍來制服！\n眾人注意！現在是關鍵時刻！"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "1B4341",
+              "offset": 8
+            },
+            {
+              "hex": "1B435A",
+              "offset": 21
+            },
+            {
+              "hex": "050505",
+              "offset": 78
+            }
+          ]
+        },
+        "6:1524": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "與"
+            },
+            {
+              "literal_id": 1,
+              "text": "的親善因無聯繫者之故，\n無法繼續維持。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "025032",
+              "offset": 8
+            },
+            {
+              "hex": "050505",
+              "offset": 55
+            }
+          ]
+        },
+        "6:1525": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "的信用到達"
+            },
+            {
+              "literal_id": 1,
+              "text": "。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "023C",
+              "offset": 19
+            },
+            {
+              "hex": "050505",
+              "offset": 29
+            }
+          ]
+        },
+        "6:1526": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "和"
+            },
+            {
+              "literal_id": 1,
+              "text": "的同盟結束。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "025032",
+              "offset": 0
+            },
+            {
+              "hex": "025132",
+              "offset": 11
+            },
+            {
+              "hex": "050505",
+              "offset": 32
+            }
+          ]
+        },
+        "6:3887": {
+          "literals": [
+            {
+              "literal_id": 0,
+              "text": "接著讓時間推進，設施就會開始建設。\n這次是遊戲教學，無須金錢與勞力，\n也能立刻看見成果。"
+            }
+          ],
+          "opaque_spans": [
+            {
+              "hex": "",
+              "offset": 0
+            },
+            {
+              "hex": "050505",
+              "offset": 94
+            }
+          ]
+        }
+      }
+    }
+  }
+}

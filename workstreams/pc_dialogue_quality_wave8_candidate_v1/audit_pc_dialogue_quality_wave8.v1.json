@@ -1,0 +1,3103 @@
+{
+  "input_profile_sha256": {
+    "MSG/JP/ev_strdata.bin": "25D9C029F93788053720C04BAE0C0A14A1A5983F36C68BC2EC7C46C3340D5834",
+    "MSG/JP/msggame.bin": "83C4DF9326DB1487707FDABE9CF2A00380144D14D3AC4A4FCD02513C8E3C279E",
+    "MSG/JP/strdata.bin": "10AB5E3BD9140B26EB7BC42DC5C352D4CE2905580C6A6112B13B37E12A358AFE",
+    "MSG_PK/JP/msgbre.bin": "E3FA61B46E6E08F9FE57A36C1F11C367DD448A9BA63003CA5AB0F2D2BDBBB939",
+    "MSG_PK/JP/msgdata.bin": "8B78403C339BEEE655B53A3F63699054DC6D9078640FE717885627E73B529752",
+    "MSG_PK/JP/msgev.bin": "134F6356B194AE319125D369A23EBDA11CA8C75FB79EFA7C987D956EDD4CF154",
+    "MSG_PK/JP/msggame.bin": "31950B8213AC80C9BCB866163EE7B4B655440ADF863DED21186273E3F8A34BDB",
+    "MSG_PK/JP/msgire.bin": "46244B588B6B3E39CEF67E1145E561DD5F4CBC177D2EDF98178FFC474E536DAB",
+    "MSG_PK/JP/msgstf.bin": "13A3D3452A226090045372F4676615AFA51B60593D048400045AE4892B90929B",
+    "MSG_PK/JP/msgstf_ce.bin": "06D0C248CB50BB5A1D131FDB8DE0951C719AA638F2B59AC765E72DEF5541FC63",
+    "MSG_PK/JP/msgui.bin": "5266AEBE9A0B39C6C85A226F2787179F404899A09B286A77036060FDA99AF0A7"
+  },
+  "msggame_records": [
+    {
+      "candidate_id": "C01",
+      "coordinate": "2:212",
+      "current_literals": [
+        "백성을 다스리는 비결은 오직 진심뿐\n이 군의 장악은",
+        "！"
+      ],
+      "current_opaque_hex": "01437C030000050505",
+      "current_record_sha256": "E43FCCC79E181EDE241C011EB39E145179D0093B1B8A8D7757330673CAEFB108",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            840,
+            744
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            816,
+            384
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "백성을 다스리는 비결은 오직 진심뿐.\n이 군의 장악은 제게 ",
+        "맡기십시오!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "65BA0E4D4BCD28012D6A3C8DC9B12C2FACC36D69E888E88E109211298BBDB523",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "民を治める極意は真心あるのみ\nこの郡の掌握は",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01437C030000050505",
+      "pristine_pc_jp_record_sha256": "7C6D3B95BFE2D70856F68034723A13F1FC4406CF990E547CE65AAA5867924382",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          62,
+          "01437C030000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C02",
+      "coordinate": "2:216",
+      "current_literals": [
+        "능숙한 언변으로 반드시 신용을\n얻어 오겠",
+        "！"
+      ],
+      "current_opaque_hex": "01435A040000050505",
+      "current_record_sha256": "B21BF275E1FD47F5E8C532BEE5337F346C8A062FEA5D1256924427A6526D21BA",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            696,
+            384
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            696,
+            264
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "능숙한 언변으로 반드시 신용을\n얻어 ",
+        "오겠습니다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "859B6D4D4D520BC63F7DEE0D4B31AF28D63117590362935831C0B4D1A8685A27",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "得意の弁舌で必ずや信用を\n勝ち取って参",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01435A040000050505",
+      "pristine_pc_jp_record_sha256": "80E6C560BC3F4FED0DEA1779DEFCED63A540826A44393C0A4F2933A79FF440BE",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          50,
+          "01435A040000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C03",
+      "coordinate": "2:219",
+      "current_literals": [
+        "내 영지는 한 치도 침범케 하지",
+        "!\n굳게 지키는 데 전념한다",
+        "！"
+      ],
+      "current_opaque_hex": "0143E0020000014346030000050505",
+      "current_record_sha256": "B243729DE99D009869C8A45537242640C2DB38F45DB31EAAC51ECCEE0E24750F",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            936,
+            624
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            720,
+            600
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "내 영지는 한 치도 침범하게 두지 ",
+        "않겠다!\n굳게 지키는 데 ",
+        "전념하겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "B53F6A7FFFF05138C54BD0A6652EFA0D1C072BCCD2D57D7292022CD037F82176",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "我が領地は寸土も侵させ",
+        "！\n堅守に徹する",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143E0020000014346030000050505",
+      "pristine_pc_jp_record_sha256": "C3B135721C034D2F02F16CAE94651C2A0BDC50229A6E4D1178ABC8FD5D1C91E0",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          40,
+          "0143E0020000"
+        ],
+        [
+          82,
+          "014346030000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C04",
+      "coordinate": "2:224",
+      "current_literals": [
+        "싸움이야말로 무가의 본분! 내 활약을\n기대",
+        "！"
+      ],
+      "current_opaque_hex": "0143F0010000050505",
+      "current_record_sha256": "9D148FD731B22783EFC64BF9539924E358C1ACBD3BF67F0B93FB1455D34CF11F",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            840,
+            336
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            840,
+            144
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "싸움이야말로 무가의 본분! 내 활약을\n기대해도 ",
+        "좋다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "3D7FA0A3344A3B6B92F29692A24CA711871DAA168C4A0D1F33835AFFF72E5310",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "戦こそ武家の本分！　我が働きに\n期待",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143F0010000050505",
+      "pristine_pc_jp_record_sha256": "F85F6BE4CAC4137A8BE8ABFCFBEBFC4562DC11F28682817EA9816BA8D938C25E",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          52,
+          "0143F0010000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C05",
+      "coordinate": "2:227",
+      "current_literals": [
+        "강공 따위 두려울 것 없",
+        "\n지금이야말로 반격의 때",
+        "！"
+      ],
+      "current_opaque_hex": "0143E00200000143F6010000050505",
+      "current_record_sha256": "ACFE08533C85042285E7850C2485B3FE4AD7A8D44C3A3160A36E48DF520FFDE4",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            600,
+            600
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            528,
+            576
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "강공 따위 두려울 것 없다.",
+        "\n지금이야말로 반격의 ",
+        "때다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "BA4A3B2D6028FF27C306A2DF7EA0458E4A6382A9A13A045C81F5F2FFBCEFEDC5",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "強攻など恐るるに足り",
+        "\n今こそ反攻の時",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143E00200000143F6010000050505",
+      "pristine_pc_jp_record_sha256": "06835ABED523F5F5AF08EADDC8D552960837AF10B0D477693CD83673B042FD4F",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          32,
+          "0143E0020000"
+        ],
+        [
+          70,
+          "0143F6010000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C06",
+      "coordinate": "2:235",
+      "current_literals": [
+        "뒷일은",
+        "…\n머리 쓰는 법이 다르",
+        "까닭에…"
+      ],
+      "current_opaque_hex": "01437C0300000143BE000000050505",
+      "current_record_sha256": "D29583C56C42B3F2C852CBDB44CE6856CEFBB970C7741F4848307B4AA92E4651",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            768
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            192,
+            648
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "뒷일은 ",
+        "내게 맡겨라…\n머리 쓰는 법이 다르기",
+        " 때문이지…"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "BB901EAD473307AD2C26B2FDE6232719E078B073C41FDA2479031FC9C3D8B5DA",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "裏の仕事は",
+        "…\n頭の使い方が違",
+        "ゆえ…"
+      ],
+      "pristine_pc_jp_opaque_hex": "01437C0300000143BE000000050505",
+      "pristine_pc_jp_record_sha256": "487C257229DA4E4A30A4A384A797C5C56D3EA490F6F22BEC53A7655B69A74AAD",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          12,
+          "01437C030000"
+        ],
+        [
+          50,
+          "0143BE000000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C07",
+      "coordinate": "2:238",
+      "current_literals": [
+        "수상 전투에서는 질 수 없",
+        "\n우리에게 해신의 가호가 있기를"
+      ],
+      "current_opaque_hex": "0143E0020000050505",
+      "current_record_sha256": "311B3DBF6FABA4F5D6DAD1EC28474181CE4D33DC65EBE0F83700A8E6D0422526",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            648,
+            720
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            576,
+            696
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "수상 전투에서는 질 수 없다.",
+        "\n우리에게 해신의 가호가 있기를."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "3C20A4B089C426490A97E0B4E718B2004BA9AB6DB23DBE2A4BEB1701877C09BE",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "水上の戦いでは負けられ",
+        "\n我らに海神の加護あらんことを"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143E0020000050505",
+      "pristine_pc_jp_record_sha256": "78C877E21277A213903C33C8F8782766C0B86CF88E3B01872B2B1BE50EE1F3CB",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          34,
+          "0143E0020000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C08",
+      "coordinate": "2:243",
+      "current_literals": [
+        "재해는 최소한으로 억제하",
+        "그러니\n걱정은 무용"
+      ],
+      "current_opaque_hex": "01433C04000001431A020000050505",
+      "current_record_sha256": "8776C79878D0EC2AC52959824C9A1246907DEE69D2C8F2A81A4F6C4E0E58859C",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            696,
+            384
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            720,
+            264
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "재해는 최소한으로 억제할 ",
+        "테니\n걱정은 무용이다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "FA523D60C6C76618B4DD558F115D807AC44FB3F3767D42CE29D5E4DB725360D0",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "災害は最小限で抑え",
+        "ゆえ\n心配は無用"
+      ],
+      "pristine_pc_jp_opaque_hex": "01433C04000001431A020000050505",
+      "pristine_pc_jp_record_sha256": "75B3EB5705A4D5BB8CE3B9AA7584C98C950CBCA2B9750BEFFA6CC7ABF0FD275D",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          32,
+          "01433C040000"
+        ],
+        [
+          64,
+          "01431A020000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C09",
+      "coordinate": "2:244",
+      "current_literals": [
+        "속히 성을 수선하여 적의\n공격에 대비한다",
+        "！"
+      ],
+      "current_opaque_hex": "014346030000050505",
+      "current_record_sha256": "2E904407825DB54FB7353966B151FA1255F6D284B324A0517A5269506B9941A0",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            552,
+            432
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            552,
+            408
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "속히 성을 수선하여 적의\n공격에 ",
+        "대비하겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "D09CD5D8E5EE851C560B85E7542E0FDABDC6D5F08284C2BF839CCB2ACB166AC2",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "速やかに城を修繕し、敵からの\n攻撃に備える",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "014346030000050505",
+      "pristine_pc_jp_record_sha256": "EA9663665B4D33766A1E6E497CBCA7C7FF946E73A2AEE01CB2346BB2372EE12F",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          50,
+          "014346030000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C10",
+      "coordinate": "2:246",
+      "current_literals": [
+        "길 정비에는 자신이",
+        "\n부디 성과로",
+        "기대"
+      ],
+      "current_opaque_hex": "01435200000001438A040000014396010000050505",
+      "current_record_sha256": "7E2A3FF85B3A01FA064A5455F37ED00591547DFE5FF4F86D6F63A1CC350FFE7D",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            600,
+            672
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            432,
+            360
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "길 정비에는 자신이 있으니\n",
+        "부디 성과를 기대해 ",
+        "주십시오."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "A580569446FA60CCB34B4945A213EBBFF2B66818DD58757F213443576520FD70",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "道の整備には自信が",
+        "\nぜひとも成果に",
+        "期待"
+      ],
+      "pristine_pc_jp_opaque_hex": "01435200000001438A040000014396010000050505",
+      "pristine_pc_jp_record_sha256": "882E589FF28E1030B4221628E1DC6511C8EC9A031CC668C39390D3C2EA81844D",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          26,
+          "014352000000"
+        ],
+        [
+          52,
+          "01438A040000"
+        ],
+        [
+          68,
+          "014396010000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C11",
+      "coordinate": "2:253",
+      "current_literals": [
+        "지금이야말로 기마철포대의 위력을\n똑똑히 보여주마",
+        "！"
+      ],
+      "current_opaque_hex": "01431E040000050505",
+      "current_record_sha256": "B125D8E114923B602841B1CFD76F04A88FCFA1A322F808BF2E8A9433AEA66480",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            768,
+            408
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            768,
+            408
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "지금이야말로 기마철포대의 위력을\n똑똑히 보여 ",
+        "주마!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "B93423B2F9DCF263A92C60F54E4D1035020F8DC06D0217E3F090B5D39D5F6F67",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "今こそ、騎馬鉄砲隊の威力\n思い知らせてくれ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01431E040000050505",
+      "pristine_pc_jp_record_sha256": "7756149C2E693111E281FA0A07E9D1800480EBA626E28C906E484F3C2F449E27",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "01431E040000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C22",
+      "coordinate": "2:408",
+      "current_literals": [
+        "하늘이여 보라",
+        "!\n백성을 위해 이 몸 바쳐",
+        "！"
+      ],
+      "current_opaque_hex": "01434201000001431E040000050505",
+      "current_record_sha256": "F3AA0BABA4F59E7B614A485B7FDCD4F1B470A605D5B794B09F34040244EE6F34",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            360,
+            696
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            336,
+            576
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "하늘이여, 보라!",
+        "\n백성을 위해 이 몸을 ",
+        "바치겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "72C7490F5FFC55FD45A0C545F4A2DEA72E20348EEF542CB5AB0E04470CCB6855",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "天よ見て",
+        "！\n民のためにこの身捧げ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01434201000001431E040000050505",
+      "pristine_pc_jp_record_sha256": "C77DBC844CB0072C215FF4EEC3EF8B2D002F37CCCAC107237E64A186B748441F",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          20,
+          "014342010000"
+        ],
+        [
+          62,
+          "01431E040000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C23",
+      "coordinate": "2:410",
+      "current_literals": [
+        "사나운 적에게는 매와 같이!\n용병의 극의는 이것",
+        "！"
+      ],
+      "current_opaque_hex": "01431A020000050505",
+      "current_record_sha256": "69091A972628FD2C266F3AD9513925836EC7724824DA9DC110DD541AF48BC619",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            624,
+            552
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            624,
+            480
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "사나운 적에게는 매와 같이!\n용병의 극의는 ",
+        "이것이다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "82DCDD3295B45397613B2FEC2E0D04B8BF100A570FBF611B755D44F97E0E51E0",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "荒ぶる敵には、鷹の如くに！\n用兵の極意はこれ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01431A020000050505",
+      "pristine_pc_jp_record_sha256": "999ABEE71CEF1E2D38EC360B2C5C5E9AAE578F60F44455300A112F24D7C8C25F",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "01431A020000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C24",
+      "coordinate": "2:412",
+      "current_literals": [
+        "내 검술\n그 일단을 여기서 보여",
+        "！"
+      ],
+      "current_opaque_hex": "01431E040000050505",
+      "current_record_sha256": "D4AEDDD8863BD534C5B26A74904BCB2161DE82363F4293B47F985F8BF5BBB20E",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            216,
+            576
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            168,
+            552
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "내 검술의\n일단을 여기서 보여 ",
+        "주마!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "3FC577D0EF665C33F5345AA77537988C9E0FD7E6811EF427DD62B9D9E333B40D",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "我が剣技\nその一端をここに見せ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01431E040000050505",
+      "pristine_pc_jp_record_sha256": "F3FEBC99E58D8B9CF408DF115DFDF0A49C45E9646ACD736C7404EDB6615169CA",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          40,
+          "01431E040000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C27",
+      "coordinate": "2:489",
+      "current_literals": [
+        "휘하가 될 장수들에게\n활약의 장을 마음껏 내리어",
+        "！"
+      ],
+      "current_opaque_hex": "01431E040000050505",
+      "current_record_sha256": "F8E9170B99FA3640BEBFCD8EFBAC13840323F813559B7DCD353D1AD99B0F3574",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            672
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            648
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "휘하가 될 장수들에게\n활약의 장을 마음껏 ",
+        "내리겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "695E6F265001FD6A1B945504D775EF8621D592B669539854297B649A16706C54",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "配下となる将らに\n活躍の場を存分に与え",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01431E040000050505",
+      "pristine_pc_jp_record_sha256": "31F2A7FD9D3E3204E1FB129AB79AE091A6C363D9C3493BBDF6A0DEC08D7662DA",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "01431E040000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C28",
+      "coordinate": "2:502",
+      "current_literals": [
+        "무가에도 풍류는 빠질 수 없",
+        "\n풍류의 마음이야말로 교섭의 요체인가 하옵니다"
+      ],
+      "current_opaque_hex": "0143E0020000050505",
+      "current_record_sha256": "0181380F427AF599469B5CDE7CE1D50462A1F88A20B5315AB88FD4F35F97FC67",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            744,
+            1032
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            624,
+            1056
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "무가에도 풍류는 빠질 수 ",
+        "없지요.\n풍류의 마음이야말로 교섭의 요체라 하옵니다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "09AF3AD1A26498832EDF381695D32A7466ED10E1E4D4D8C8DF8D88AA92A9CDD5",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "武家にも風流は欠かせ",
+        "\n雅びの心こそ交渉の要諦かと"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143E0020000050505",
+      "pristine_pc_jp_record_sha256": "A7750158BC3C7A45BEB3B81FE7701989B56A016E7C00439A8A256548EF083652",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          36,
+          "0143E0020000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C29",
+      "coordinate": "2:512",
+      "current_literals": [
+        "출진",
+        "。나의 병법을\n똑똑히 보여 드리"
+      ],
+      "current_opaque_hex": "0143CC01000001431E040000050505",
+      "current_record_sha256": "C5DE48AF8336D5CFEC180CA3BC2CFF78A4C27DA09BD34C5ED92E775A88795FB0",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            408,
+            600
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            408,
+            384
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "출진!",
+        " 나의 병법을\n똑똑히 보여 드리겠습니다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "E54891FED619A9DB7D661E3DE6550474DE01A025F660F7F0FE2D60F779B65BBC",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "出陣",
+        "。我が兵法\nとくとご覧に入れ"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143CC01000001431E040000050505",
+      "pristine_pc_jp_record_sha256": "B71C61C92A276A1CE3C6E7EEDA2C9C00D01CBD166FCAF7359CE30100B45BE69C",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          10,
+          "0143CC010000"
+        ],
+        [
+          56,
+          "01431E040000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C30",
+      "coordinate": "2:519",
+      "current_literals": [
+        "포위병 마음대로 두지",
+        "\n이쪽에서도 반격",
+        "！"
+      ],
+      "current_opaque_hex": "0143E00200000143CC010000050505",
+      "current_record_sha256": "57C08E32CDAECED020937E3E1337FD828959A2D1233E2520F3D9586BDCB0144C",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            792,
+            528
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            408
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "포위병 마음대로 하게 두지 ",
+        "않겠다.\n이쪽에서도 ",
+        "반격하겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "40FD363013EE0303696156FD03F9580B01FF78201EA9D6944924C3D964156AA2",
+      "pc_reference_languages_checked": [
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "包囲兵の好きにはさせ",
+        "\nこちらからも反撃",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143E00200000143CC010000050505",
+      "pristine_pc_jp_record_sha256": "1B7521434A2DBBD13A4BB037FEB390F1515CBC5912A72CF83575F34DD0A2FCE9",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          28,
+          "0143E0020000"
+        ],
+        [
+          58,
+          "0143CC010000"
+        ]
+      ],
+      "resource": "MSG/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C01",
+      "coordinate": "2:218",
+      "current_literals": [
+        "백성을 다스리는 비결은 오직 진심뿐\n이 군의 장악은",
+        "！"
+      ],
+      "current_opaque_hex": "014388030000050505",
+      "current_record_sha256": "341B2F2D2EC96F3D5AE938DEFC620C5000DC669F7F12A76DA3D9446EDE455590",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            840,
+            744
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            816,
+            384
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "백성을 다스리는 비결은 오직 진심뿐.\n이 군의 장악은 제게 ",
+        "맡기십시오!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "65BA0E4D4BCD28012D6A3C8DC9B12C2FACC36D69E888E88E109211298BBDB523",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "民を治める極意は真心あるのみ\nこの郡の掌握は",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "014388030000050505",
+      "pristine_pc_jp_record_sha256": "39CE585E3C90803CB276407C6C98A2710C62BED1ECCB26D2FA8EC73A71DFD671",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          62,
+          "014388030000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C02",
+      "coordinate": "2:222",
+      "current_literals": [
+        "능숙한 언변으로 반드시 신용을\n얻어 오겠",
+        "！"
+      ],
+      "current_opaque_hex": "014366040000050505",
+      "current_record_sha256": "76E60D5B286D37260F99468EEDC80E8BDD4EE99EFA537A15B2B5D74AAD694081",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            696,
+            384
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            696,
+            264
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "능숙한 언변으로 반드시 신용을\n얻어 ",
+        "오겠습니다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "859B6D4D4D520BC63F7DEE0D4B31AF28D63117590362935831C0B4D1A8685A27",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "得意の弁舌で必ずや信用を\n勝ち取って参",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "014366040000050505",
+      "pristine_pc_jp_record_sha256": "7D938C869DDA8A41CD66D79ECC2C9D490E7BD97F5E4268F777CE5CC2391AB409",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          50,
+          "014366040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C03",
+      "coordinate": "2:225",
+      "current_literals": [
+        "내 영지는 한 치도 침범케 하지",
+        "!\n굳게 지키는 데 전념한다",
+        "！"
+      ],
+      "current_opaque_hex": "0143EC020000014352030000050505",
+      "current_record_sha256": "01F3040B64CB72941F5C595D35AC6A661610D23C539565E25A7953BCA0E472B4",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            936,
+            624
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            720,
+            600
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "내 영지는 한 치도 침범하게 두지 ",
+        "않겠다!\n굳게 지키는 데 ",
+        "전념하겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "B53F6A7FFFF05138C54BD0A6652EFA0D1C072BCCD2D57D7292022CD037F82176",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "我が領地は寸土も侵させ",
+        "！\n堅守に徹する",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143EC020000014352030000050505",
+      "pristine_pc_jp_record_sha256": "6142165ECA559554A8D46E852C7CE7DE465FDE7996A0E04F7453637FD0226318",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          40,
+          "0143EC020000"
+        ],
+        [
+          82,
+          "014352030000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C04",
+      "coordinate": "2:230",
+      "current_literals": [
+        "싸움이야말로 무가의 본분! 내 활약을\n기대",
+        "！"
+      ],
+      "current_opaque_hex": "0143F6010000050505",
+      "current_record_sha256": "5B1520228E690E69BD8735F3DFE24F61AC49BD74E88DC48A3D4D5CF19F59266D",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            840,
+            336
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            840,
+            144
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "싸움이야말로 무가의 본분! 내 활약을\n기대해도 ",
+        "좋다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "3D7FA0A3344A3B6B92F29692A24CA711871DAA168C4A0D1F33835AFFF72E5310",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "戦こそ武家の本分！　我が働きに\n期待",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143F6010000050505",
+      "pristine_pc_jp_record_sha256": "DE0587DB97FC8B988180B79D3BF2092CD5AF83E94380FE58DDD22A082144C139",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          52,
+          "0143F6010000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C05",
+      "coordinate": "2:233",
+      "current_literals": [
+        "강공 따위 두려울 것 없",
+        "\n지금이야말로 반격의 때",
+        "！"
+      ],
+      "current_opaque_hex": "0143EC0200000143FC010000050505",
+      "current_record_sha256": "4AE945D086FA2723112A0689904602E429D10BCC3596DEA3F1653D8893D6538A",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            600,
+            600
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            528,
+            576
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "강공 따위 두려울 것 없다.",
+        "\n지금이야말로 반격의 ",
+        "때다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "BA4A3B2D6028FF27C306A2DF7EA0458E4A6382A9A13A045C81F5F2FFBCEFEDC5",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "強攻など恐るるに足り",
+        "\n今こそ反攻の時",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143EC0200000143FC010000050505",
+      "pristine_pc_jp_record_sha256": "2E364BEC0AC58D3535E0FCC636E58F436FB79A063F195F5519EDCA81BFF75DB4",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          32,
+          "0143EC020000"
+        ],
+        [
+          70,
+          "0143FC010000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C06",
+      "coordinate": "2:241",
+      "current_literals": [
+        "뒷일은",
+        "…\n머리 쓰는 법이 다르",
+        "까닭에…"
+      ],
+      "current_opaque_hex": "0143880300000143BE000000050505",
+      "current_record_sha256": "84BCE4C52F302D277B3146578123337052E1D6A6CE3B4BF903D8FDFFC28C6C00",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            768
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            192,
+            648
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "뒷일은 ",
+        "내게 맡겨라…\n머리 쓰는 법이 다르기",
+        " 때문이지…"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "BB901EAD473307AD2C26B2FDE6232719E078B073C41FDA2479031FC9C3D8B5DA",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "裏の仕事は",
+        "…\n頭の使い方が違",
+        "ゆえ…"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143880300000143BE000000050505",
+      "pristine_pc_jp_record_sha256": "7C294E1788CD68E3EB1300BE4461C7A32DF62BC9C4A8DDAE3544965AD3383886",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          12,
+          "014388030000"
+        ],
+        [
+          50,
+          "0143BE000000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C07",
+      "coordinate": "2:244",
+      "current_literals": [
+        "수상 전투에서는 질 수 없",
+        "\n우리에게 해신의 가호가 있기를"
+      ],
+      "current_opaque_hex": "0143EC020000050505",
+      "current_record_sha256": "42E782CA06262785161D3FF2A16CD06B0E7729D149019DA11138C48CBA96C2DD",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            648,
+            720
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            576,
+            696
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "수상 전투에서는 질 수 없다.",
+        "\n우리에게 해신의 가호가 있기를."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "3C20A4B089C426490A97E0B4E718B2004BA9AB6DB23DBE2A4BEB1701877C09BE",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "水上の戦いでは負けられ",
+        "\n我らに海神の加護あらんことを"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143EC020000050505",
+      "pristine_pc_jp_record_sha256": "BB4C2B1362CE9FED106D439114BF4A343E09E1D060370010D98DFBAC534835C5",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          34,
+          "0143EC020000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C08",
+      "coordinate": "2:249",
+      "current_literals": [
+        "재해는 최소한으로 억제하",
+        "그러니\n걱정은 무용"
+      ],
+      "current_opaque_hex": "014348040000014326020000050505",
+      "current_record_sha256": "172150458BA2A0EB3D220713234C7F0977DF4238D110D051AB5983C77C666BD9",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            696,
+            384
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            720,
+            264
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "재해는 최소한으로 억제할 ",
+        "테니\n걱정은 무용이다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "FA523D60C6C76618B4DD558F115D807AC44FB3F3767D42CE29D5E4DB725360D0",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "災害は最小限で抑え",
+        "ゆえ\n心配は無用"
+      ],
+      "pristine_pc_jp_opaque_hex": "014348040000014326020000050505",
+      "pristine_pc_jp_record_sha256": "391C422ABE9255EECFFD090B286B50AA0F18509E7C850B6FA6D534709A930246",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          32,
+          "014348040000"
+        ],
+        [
+          64,
+          "014326020000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C09",
+      "coordinate": "2:250",
+      "current_literals": [
+        "속히 성을 수선하여 적의\n공격에 대비한다",
+        "！"
+      ],
+      "current_opaque_hex": "014352030000050505",
+      "current_record_sha256": "7CE7144A6A4EB87CC4FE3D86BD8E6A2215B46B5EBA60BF56144BF2C5C590BBE9",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            552,
+            432
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            552,
+            408
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "속히 성을 수선하여 적의\n공격에 ",
+        "대비하겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "D09CD5D8E5EE851C560B85E7542E0FDABDC6D5F08284C2BF839CCB2ACB166AC2",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "速やかに城を修繕し、敵からの\n攻撃に備える",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "014352030000050505",
+      "pristine_pc_jp_record_sha256": "181987A7ABDEBD3E485DAE3510DFFA76C07D568E8FE733267585917B1D0DC595",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          50,
+          "014352030000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C10",
+      "coordinate": "2:252",
+      "current_literals": [
+        "길 정비에는 자신이",
+        "\n부디 성과로",
+        "기대"
+      ],
+      "current_opaque_hex": "01435200000001439604000001439C010000050505",
+      "current_record_sha256": "9232F279C5D2E4CB4F8F37778047F6138D0B849B459461A428D28C8C88EED1F4",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            600,
+            672
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            432,
+            360
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "길 정비에는 자신이 있으니\n",
+        "부디 성과를 기대해 ",
+        "주십시오."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "A580569446FA60CCB34B4945A213EBBFF2B66818DD58757F213443576520FD70",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "道の整備には自信が",
+        "\nぜひとも成果に",
+        "期待"
+      ],
+      "pristine_pc_jp_opaque_hex": "01435200000001439604000001439C010000050505",
+      "pristine_pc_jp_record_sha256": "E6AE3D5B06541B2334B04BC51EDCCD6D2F1B4554EA753BBC782C8AE7AAB949C1",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          26,
+          "014352000000"
+        ],
+        [
+          52,
+          "014396040000"
+        ],
+        [
+          68,
+          "01439C010000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C11",
+      "coordinate": "2:259",
+      "current_literals": [
+        "지금이야말로 기마철포대의 위력을\n똑똑히 보여주마",
+        "！"
+      ],
+      "current_opaque_hex": "01432A040000050505",
+      "current_record_sha256": "FADE41EF9DB6F69BAB0600E4026B2EB42D46E8082F62C84EBDF0602D5E4551B5",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            768,
+            408
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            768,
+            408
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "지금이야말로 기마철포대의 위력을\n똑똑히 보여 ",
+        "주마!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "B93423B2F9DCF263A92C60F54E4D1035020F8DC06D0217E3F090B5D39D5F6F67",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "今こそ、騎馬鉄砲隊の威力\n思い知らせてくれ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01432A040000050505",
+      "pristine_pc_jp_record_sha256": "FAFADAFC67493B88DED77657716F3AF1FADE3AA96FB6E09D842C61E7EAD0E852",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C12",
+      "coordinate": "2:321",
+      "current_literals": [
+        "명인이라 칭송받는 축성 솜씨를,\n마음껏 발휘하겠",
+        "!\n반드시 훌륭한 성하마을로 만들어 보이겠"
+      ],
+      "current_opaque_hex": "01438E000000014348040000050505",
+      "current_record_sha256": "4B9F46329777587823402936E90B103324B709B68222E075182C9419A5CB49B7",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 3,
+          "widths_px": [
+            696,
+            432,
+            984
+          ]
+        },
+        "before": {
+          "line_count": 3,
+          "widths_px": [
+            720,
+            384,
+            912
+          ]
+        }
+      },
+      "manual_line_count": 3,
+      "output_literals": [
+        "명인이라 칭송받는 축성 솜씨를\n마음껏 발휘하겠다!",
+        "\n반드시 훌륭한 성하마을로 만들어 보이겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "6EC398D898818A92434C80D4FB01363A794120E4F6E29465DF7F379ED526EED9",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "名手と謳われし普請の腕、\n存分に発揮",
+        "！\n必ずや見事な城下にしてみせ"
+      ],
+      "pristine_pc_jp_opaque_hex": "01438E000000014348040000050505",
+      "pristine_pc_jp_record_sha256": "BC4F0DEFCC4A554DC2CD1D8ED44B54CAE73DC99285DA6271220070E485674865",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "01438E000000"
+        ],
+        [
+          116,
+          "014348040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C13",
+      "coordinate": "2:325",
+      "current_literals": [
+        "모략이라면 이",
+        "에게 맡기십시오!\n즉시 첩자를 보내 우리의 계책이\n성공하도록 지휘하겠"
+      ],
+      "current_opaque_hex": "01430100000001438E000000050505",
+      "current_record_sha256": "3FEC264642EACF2B9D6228F2EBB1CBD2D42E2AD12543E18DFDDF790259171FA4",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 3,
+          "widths_px": [
+            648,
+            720,
+            624
+          ]
+        },
+        "before": {
+          "line_count": 3,
+          "widths_px": [
+            696,
+            720,
+            456
+          ]
+        }
+      },
+      "manual_line_count": 3,
+      "output_literals": [
+        "모략이라면 ",
+        "제게 맡기십시오!\n즉시 첩자를 보내 우리의 계책이\n성공하도록 지휘하겠습니다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "DFC0C7AFEE5DF222145F41EDB2DD083FFE60777AF2696C0C1F479A613B69AF0D",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "謀とあらばこの",
+        "にお任せを！\n直ちに間者を遣わし、我らが策が\n成就するよう、差配"
+      ],
+      "pristine_pc_jp_opaque_hex": "01430100000001438E000000050505",
+      "pristine_pc_jp_record_sha256": "F62768BDF3C7BF01EDEFC9DF5CEC34A0C8ED477ECBF3B8B20D3E1D5DF747B0B2",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          20,
+          "014301000000"
+        ],
+        [
+          108,
+          "01438E000000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C14",
+      "coordinate": "2:357",
+      "current_literals": [
+        "내 개를 전령으로 써서\n훌륭히 이끌어 보이겠"
+      ],
+      "current_opaque_hex": "01432A040000050505",
+      "current_record_sha256": "B897936FA83A2C4ADCF2648CD9B3A3C08655335D53E3543EFE57F6C0874413AE",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            504,
+            552
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            504,
+            480
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "내 개를 전령으로 써서\n훌륭히 이끌어 보이겠다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "DAB57132EF7FFD6A668CBDF23B4B74B5BAE3FF400B1DC4B283F6C90B5AAB7983",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "我が犬を伝令に用いて\n見事率いてみせ"
+      ],
+      "pristine_pc_jp_opaque_hex": "01432A040000050505",
+      "pristine_pc_jp_record_sha256": "CAB19022A900BB7EA7EA65CD12F6348EA52AB643ADC1E75DBD2D0EDBDDC75E27",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          54,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C15",
+      "coordinate": "2:358",
+      "current_literals": [
+        "지혜와 재주는 익혀도 짐이 되지 않는다…\n『이로하 노래』의 가르침을 널리 알리겠"
+      ],
+      "current_opaque_hex": "01432A040000050505",
+      "current_record_sha256": "CF9D9A16D9991E3798641EAEA77B883E49015CA40879945E317BC7698478E980",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            936,
+            984
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            936,
+            912
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "지혜와 재주는 익혀도 짐이 되지 않는다…\n『이로하 노래』의 가르침을 널리 알리겠다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "715BCC2E8C37637570CCFF21356C83E74BD6108BF0E2E11E08E2507F34948780",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "知恵能は身につきぬれど荷にならず…\n『いろは歌』の教えを広めるとし"
+      ],
+      "pristine_pc_jp_opaque_hex": "01432A040000050505",
+      "pristine_pc_jp_record_sha256": "25BC7C75AB37536AF9A0CCDB36315FA8FFBE13C2A2B254CEEA5D39A434E6E5F9",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          94,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C16",
+      "coordinate": "2:359",
+      "current_literals": [
+        "상대의 마음을 얻는 방법은 알고 있",
+        "\n우리에게 유리하도록\n일을 이끌어 보이겠"
+      ],
+      "current_opaque_hex": "0143B200000001432A040000050505",
+      "current_record_sha256": "A470A6B8D98BCD6F83C6A9EE2C4F3DF07A1111101DADD5ED46A6FA58661FF388",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 3,
+          "widths_px": [
+            864,
+            456,
+            504
+          ]
+        },
+        "before": {
+          "line_count": 3,
+          "widths_px": [
+            792,
+            456,
+            432
+          ]
+        }
+      },
+      "manual_line_count": 3,
+      "output_literals": [
+        "상대의 마음을 얻는 방법은 알고 있다.",
+        "\n우리에게 유리하도록\n일을 이끌어 보이겠다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "48A590A585F156454AD6711221657FA245131D91D6AB656460E192BA67C62177",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "相手の懐に入る術は心得て",
+        "\n我らに有利となるよう\n事を運んでご覧に入れ"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143B200000001432A040000050505",
+      "pristine_pc_jp_record_sha256": "2FC77F4AD8384F5ED0441E08BE87176A73F06A1CB44568E5EAF59082071CC906",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          44,
+          "0143B2000000"
+        ],
+        [
+          100,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C17",
+      "coordinate": "2:360",
+      "current_literals": [
+        "전선에 선 이상\n죽기를 각오하고 싸우겠",
+        "！"
+      ],
+      "current_opaque_hex": "01436C040000050505",
+      "current_record_sha256": "1A67AC932200AA9E63C85DC9832CFE27B058BA3F42C83D1A73F562141B5D537B",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            336,
+            600
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            336,
+            576
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "전선에 선 이상\n죽기를 각오하고 ",
+        "싸우겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "677378F527BA695B491FCDF0D5E847E6388500AB0908F78F7F4EE1F1555E516A",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "前線に立つからには\n決死の覚悟で戦う",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01436C040000050505",
+      "pristine_pc_jp_record_sha256": "A21644D3F6F188F5DEED6A91975635ACBDACD43C537276B3803E7945587DBAFB",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          48,
+          "01436C040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C18",
+      "coordinate": "2:361",
+      "current_literals": [
+        "방울 소리가 울리는 곳에 내가 있다!\n덤빌 자는",
+        "！"
+      ],
+      "current_opaque_hex": "0143B8000000014300010000050505",
+      "current_record_sha256": "0B64347AD0FBA5749E5F4BD89BF7CFA58B74F10FC3D3E419EC4F4FBAC4430F75",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            816,
+            408
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            816,
+            264
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "방울 소리가 울리는 곳에 내가 있다!\n덤빌 자는 ",
+        "없느냐!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "993B04E3EE2EBE81496671E1DE8190C60AC61F9900C4295ABB25A3CFCC51E86D",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "鈴の音の鳴るところに我はあり！\nかかってくる者は",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143B8000000014300010000050505",
+      "pristine_pc_jp_record_sha256": "2DF3D6908FDA9A445C48501866E338F501B817A3D3980B5F260345025D5EBEB8",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "0143B8000000"
+        ],
+        [
+          64,
+          "014300010000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C19",
+      "coordinate": "2:363",
+      "current_literals": [
+        "창을 겨누어라",
+        "!\n기마대가 마음대로 하게 두지 않겠다",
+        "！"
+      ],
+      "current_opaque_hex": "0143600400000143F802000001436C040000050505",
+      "current_record_sha256": "1E9554527BBD456649F9FC5D4CC16AE8A17AB8834C36385207EC9FB81C2D4100",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            336,
+            840
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            336,
+            864
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "창을 겨누어라!",
+        "\n기마대가 마음대로 하게 두지 ",
+        "않겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "291959151A19212E4CF7CF7F45A61A7C96717AB13A1A4A4EB6E9E4801DD2F425",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "槍を構え",
+        "！\n騎馬隊の好きにはさせ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143600400000143F802000001436C040000050505",
+      "pristine_pc_jp_record_sha256": "A23A7FBCB27AA1AB3F6B0632AFBDF2D1E16DB41E840587136C15459F04E19360",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          20,
+          "014360040000"
+        ],
+        [
+          74,
+          "0143F8020000"
+        ],
+        [
+          80,
+          "01436C040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C20",
+      "coordinate": "2:364",
+      "current_literals": [
+        "아직… 아직 포기하지 않겠",
+        "!\n몇 번이고 되찾아 보이겠",
+        "！"
+      ],
+      "current_opaque_hex": "0143F802000001436C040000050505",
+      "current_record_sha256": "91EA9118A581060845F2092C5CC71F716F1D686A69789C4018AD15A903B9DA88",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            672,
+            624
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            624,
+            600
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "아직… 아직 포기하지 않겠다!",
+        "\n몇 번이고 되찾아 ",
+        "보이겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "84471C3DD70D2963693F66E3AFB5A137DC2A356143246B079AB8A88D80BF77D5",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "まだ…まだ諦め",
+        "！\n何度でも奪い返してみせる",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143F802000001436C040000050505",
+      "pristine_pc_jp_record_sha256": "1F48A65A62424BB70B4B7550FB63427C60D5D38C8F139ED763D043615B29ED2A",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          34,
+          "0143F8020000"
+        ],
+        [
+          76,
+          "01436C040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C21",
+      "coordinate": "2:366",
+      "current_literals": [
+        "서로의 가문을 지키기 위해\n우리가 손을 잡는 것은 좋은 일이겠지",
+        "\n잠시 함께 싸우겠"
+      ],
+      "current_opaque_hex": "0143620200000143DA0200000143CA000000014302020000050505",
+      "current_record_sha256": "7E38A22752465177F150552E2A78154B0FCAFD71E8E2712CCECD6E67ABD44160",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 3,
+          "widths_px": [
+            600,
+            864,
+            456
+          ]
+        },
+        "before": {
+          "line_count": 3,
+          "widths_px": [
+            600,
+            840,
+            384
+          ]
+        }
+      },
+      "manual_line_count": 3,
+      "output_literals": [
+        "서로의 가문을 지키기 위해\n우리가 손을 잡는 것은 좋은 일이겠지.\n",
+        "잠시 함께 싸우겠다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "D5EF55E8E05D8319994E699C198FDEBA5055F185692349021B056962487C84DC",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "互いの家を守るため\n我らが手を結ぶのは良い話",
+        "\nしばし共に戦"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143620200000143DA0200000143CA000000014302020000050505",
+      "pristine_pc_jp_record_sha256": "E1F9896B309954848CC5BAED12D6B43133DFE78B53D7873F9539549E0CCBF924",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          76,
+          "014362020000"
+        ],
+        [
+          82,
+          "0143DA020000"
+        ],
+        [
+          114,
+          "0143CA000000"
+        ],
+        [
+          120,
+          "014302020000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C22",
+      "coordinate": "2:415",
+      "current_literals": [
+        "하늘이여 보라",
+        "!\n백성을 위해 이 몸 바쳐",
+        "！"
+      ],
+      "current_opaque_hex": "01434201000001432A040000050505",
+      "current_record_sha256": "E9B3CD67D57D8A121C4407110AFA9FCA1166717F68BBCA18FC49A9D4868242B2",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            360,
+            696
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            336,
+            576
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "하늘이여, 보라!",
+        "\n백성을 위해 이 몸을 ",
+        "바치겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "72C7490F5FFC55FD45A0C545F4A2DEA72E20348EEF542CB5AB0E04470CCB6855",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "天よ見て",
+        "！\n民のためにこの身捧げ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01434201000001432A040000050505",
+      "pristine_pc_jp_record_sha256": "5F0244F591F37696BB19B854379C6CDCF7078855D40E3B62C9731686054DAE8A",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          20,
+          "014342010000"
+        ],
+        [
+          62,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C23",
+      "coordinate": "2:417",
+      "current_literals": [
+        "사나운 적에게는 매와 같이!\n용병의 극의는 이것",
+        "！"
+      ],
+      "current_opaque_hex": "014326020000050505",
+      "current_record_sha256": "5E6A53F671E78C35ADE975ABA3F77D8C65F41044B5B652568CA2017F7EB44D72",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            624,
+            552
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            624,
+            480
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "사나운 적에게는 매와 같이!\n용병의 극의는 ",
+        "이것이다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "82DCDD3295B45397613B2FEC2E0D04B8BF100A570FBF611B755D44F97E0E51E0",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "荒ぶる敵には、鷹の如くに！\n用兵の極意はこれ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "014326020000050505",
+      "pristine_pc_jp_record_sha256": "AE23A5D66298D34C6D2B139A087462593CECDB5865BCB34C5563E70BEA7785D6",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "014326020000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C24",
+      "coordinate": "2:419",
+      "current_literals": [
+        "내 검술\n그 일단을 여기서 보여",
+        "！"
+      ],
+      "current_opaque_hex": "01432A040000050505",
+      "current_record_sha256": "196B5F940AE72DB848B092C3D6890C142518DB5F9526A1D600216E2907708BC3",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            216,
+            576
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            168,
+            552
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "내 검술의\n일단을 여기서 보여 ",
+        "주마!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "3FC577D0EF665C33F5345AA77537988C9E0FD7E6811EF427DD62B9D9E333B40D",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "我が剣技\nその一端をここに見せ",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01432A040000050505",
+      "pristine_pc_jp_record_sha256": "B378C8B9C258CDD4E27064FC7BA933400847BC480719EB56BA5AD4468DF246B7",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          40,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C25",
+      "coordinate": "2:446",
+      "current_literals": [
+        "히익! …뭐, 뭐지?\n저, 적이 혼란에 빠졌",
+        "！"
+      ],
+      "current_opaque_hex": "014302020000050505",
+      "current_record_sha256": "EB833FF042123FEEDE32D05538349B2DAE2A5FDF62D43DD5D1D82D9B5742E8E4",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            408,
+            552
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            408,
+            528
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "히익! …뭐, 뭐지?\n저, 적이 혼란에 ",
+        "빠졌다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "3BEDAE1B539FC9882653D169DBBF6B82D6E83CCB3D2BC39CAB78ECBEADC98783",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "ひょえー！　…な、なんじゃ？\nて、敵が取り乱しておる",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "014302020000050505",
+      "pristine_pc_jp_record_sha256": "37F55B2630B243C62861CFC94E734563AAB87B3DB76C4B218D576D54D38218BD",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          54,
+          "014302020000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C26",
+      "coordinate": "2:447",
+      "current_literals": [
+        "히익!\n저, 적이 혼란에 빠졌",
+        "！"
+      ],
+      "current_opaque_hex": "014302020000050505",
+      "current_record_sha256": "C427DE272D34C646487ED68ABAA4DE5722912CDD0B90D2E1AE6178F450C90792",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            120,
+            552
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            120,
+            528
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "히익!\n저, 적이 혼란에 ",
+        "빠졌다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "75850344AA4012880601EC490851917622183E43F9554F06B0EB00A3DE34E4FC",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "ひょえー！\nて、敵が取り乱しておる",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "014302020000050505",
+      "pristine_pc_jp_record_sha256": "B4FD8753EAE4C94C08BCCD84B42FF40CB679DE950E3D791395605012011548AE",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          38,
+          "014302020000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C27",
+      "coordinate": "2:503",
+      "current_literals": [
+        "휘하가 될 장수들에게\n활약의 장을 마음껏 내리어",
+        "！"
+      ],
+      "current_opaque_hex": "01432A040000050505",
+      "current_record_sha256": "D63E9AE930968A6A9BD623C6E3978E4F3E70870C98720478178717BD8B36E724",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            672
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            648
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "휘하가 될 장수들에게\n활약의 장을 마음껏 ",
+        "내리겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "695E6F265001FD6A1B945504D775EF8621D592B669539854297B649A16706C54",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "配下となる将らに\n活躍の場を存分に与え",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "01432A040000050505",
+      "pristine_pc_jp_record_sha256": "771B591F678D220E8337CD6A32617642D4EB375072867F6CEBD652AFFC1F3A13",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          58,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C28",
+      "coordinate": "2:516",
+      "current_literals": [
+        "무가에도 풍류는 빠질 수 없",
+        "\n풍류의 마음이야말로 교섭의 요체인가 하옵니다"
+      ],
+      "current_opaque_hex": "0143EC020000050505",
+      "current_record_sha256": "2753BEE5928FA0CBB9F388A14C81F7BB7204B85A4D5CF521820B4E32A3892ABB",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            744,
+            1032
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            624,
+            1056
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "무가에도 풍류는 빠질 수 ",
+        "없지요.\n풍류의 마음이야말로 교섭의 요체라 하옵니다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "09AF3AD1A26498832EDF381695D32A7466ED10E1E4D4D8C8DF8D88AA92A9CDD5",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "武家にも風流は欠かせ",
+        "\n雅びの心こそ交渉の要諦かと"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143EC020000050505",
+      "pristine_pc_jp_record_sha256": "873573952199F8897EAD1D1EA73D22A025C3A1B245C6FF38E9FD32B66DCDAD6A",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          36,
+          "0143EC020000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C29",
+      "coordinate": "2:526",
+      "current_literals": [
+        "출진",
+        "。나의 병법을\n똑똑히 보여 드리"
+      ],
+      "current_opaque_hex": "0143D201000001432A040000050505",
+      "current_record_sha256": "54FF6CAD7D36CA870181E4039A974E48CDDA784F23F5B36A7245FDE0F1972536",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            408,
+            600
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            408,
+            384
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "출진!",
+        " 나의 병법을\n똑똑히 보여 드리겠습니다."
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "E54891FED619A9DB7D661E3DE6550474DE01A025F660F7F0FE2D60F779B65BBC",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "出陣",
+        "。我が兵法\nとくとご覧に入れ"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143D201000001432A040000050505",
+      "pristine_pc_jp_record_sha256": "BEC7BD57D55DBB6265141C07A0DF360CE0AAC823678E561E000322640B1C1E6A",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          10,
+          "0143D2010000"
+        ],
+        [
+          56,
+          "01432A040000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    },
+    {
+      "candidate_id": "C30",
+      "coordinate": "2:533",
+      "current_literals": [
+        "포위병 마음대로 두지",
+        "\n이쪽에서도 반격",
+        "！"
+      ],
+      "current_opaque_hex": "0143EC0200000143D2010000050505",
+      "current_record_sha256": "482492D85FBF5A2A6AEAAD8E137AEA15EF9D713109F7DD70A75C7061C62C8BA6",
+      "kind": "msggame_static_0143_cleanup",
+      "literal_layout": {
+        "after": {
+          "line_count": 2,
+          "widths_px": [
+            792,
+            528
+          ]
+        },
+        "before": {
+          "line_count": 2,
+          "widths_px": [
+            480,
+            408
+          ]
+        }
+      },
+      "manual_line_count": 2,
+      "output_literals": [
+        "포위병 마음대로 하게 두지 ",
+        "않겠다.\n이쪽에서도 ",
+        "반격하겠다!"
+      ],
+      "output_opaque_hex": "050505",
+      "output_record_sha256": "40FD363013EE0303696156FD03F9580B01FF78201EA9D6944924C3D964156AA2",
+      "pc_reference_languages_checked": [
+        "EN",
+        "SC",
+        "TC"
+      ],
+      "pristine_pc_jp_literals": [
+        "包囲兵の好きにはさせ",
+        "\nこちらからも反撃",
+        "！"
+      ],
+      "pristine_pc_jp_opaque_hex": "0143EC0200000143D2010000050505",
+      "pristine_pc_jp_record_sha256": "4857A2E358A974BCB81CBC3E7F0E571741BFA8E59558FA094F473026CBFA53BD",
+      "real_game_qa_required_before_release": true,
+      "remove_0143_commands": [
+        [
+          28,
+          "0143EC020000"
+        ],
+        [
+          58,
+          "0143D2010000"
+        ]
+      ],
+      "resource": "MSG_PK/JP/msggame.bin"
+    }
+  ],
+  "pk_msgev": {
+    "input_packed_sha256": "134F6356B194AE319125D369A23EBDA11CA8C75FB79EFA7C987D956EDD4CF154",
+    "input_raw_sha256": "FB00108F13CB243E3FB90E27B5C67C00CED8BB0931CB2F6D0E02DFFC0DC3AB98",
+    "output_packed_sha256": "1880A8052C916FAC7F262CCC8638477F5AA124F248A6468E0533A8E252AB55C5",
+    "output_raw_sha256": "66275C3B935A4CA9C7F1ED1D9A8BE9C52CC3CE4ECD0175DF8C90014CEC5D81FC",
+    "records": [
+      {
+        "candidate_id": 4495,
+        "coordinate": 4495,
+        "current_literal": "\u001bCA노부나가\u001bCZ도 말에서 내려\n우마마와리슈를 이끌고,\n졸병들 사이에서 직접 칼을 휘둘렀다.",
+        "current_utf16le_sha256": "82D9565B6303E95A6C8F8B8C283B14063A2FDB3BA84996987E2C7F9230715BC8",
+        "format_contract": {
+          "leading_whitespace": "",
+          "linebreak_vector": [
+            "\n",
+            "\n"
+          ],
+          "manual_line_count": 3,
+          "protected": {
+            "controls": [],
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "printf": [],
+            "pua": [],
+            "runtime_brackets": [],
+            "unknown_percent_count": 0
+          },
+          "trailing_whitespace": ""
+        },
+        "kind": "pk_msgev_okehazama_static_repair",
+        "layout": {
+          "after": {
+            "actual_line_width_px": [
+              528,
+              504,
+              840
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              528,
+              504,
+              840
+            ],
+            "runtime_reservations_px": {}
+          },
+          "before": {
+            "actual_line_width_px": [
+              528,
+              528,
+              840
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              528,
+              528,
+              840
+            ],
+            "runtime_reservations_px": {}
+          }
+        },
+        "output_literal": "\u001bCA노부나가\u001bCZ도 말에서 내려\n측근 무사들을 이끌고,\n졸병들 사이에서 직접 칼을 휘둘렀다.",
+        "output_utf16le_sha256": "B181643E62E3BB4AFD1B6DDCBC943A1EF205B363628C5B6A01397364F9C0435E",
+        "pc_japanese_literal": "\u001bCA信長\u001bCZも馬を下り、馬廻衆を引き連れ\n雑兵に交じって自ら刀を振るい、",
+        "real_game_qa_required_before_release": true,
+        "resource": "MSG_PK/JP/msgev.bin"
+      },
+      {
+        "candidate_id": 4502,
+        "coordinate": 4502,
+        "current_literal": "(이것이 가이도 제일의 무사\n\u001bCA이마가와 지부타이후\u001bCZ인가.\n이것이 오랫동안 나를 괴롭힌 자……)",
+        "current_utf16le_sha256": "B31BB088E163B897EA9E2733068522E6ED07003DE15A4D15D3DAEE3D6A54C0C4",
+        "format_contract": {
+          "leading_whitespace": "",
+          "linebreak_vector": [
+            "\n",
+            "\n"
+          ],
+          "manual_line_count": 3,
+          "protected": {
+            "controls": [],
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "printf": [],
+            "pua": [],
+            "runtime_brackets": [],
+            "unknown_percent_count": 0
+          },
+          "trailing_whitespace": ""
+        },
+        "kind": "pk_msgev_okehazama_static_repair",
+        "layout": {
+          "after": {
+            "actual_line_width_px": [
+              696,
+              528,
+              840
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              696,
+              528,
+              840
+            ],
+            "runtime_reservations_px": {}
+          },
+          "before": {
+            "actual_line_width_px": [
+              624,
+              576,
+              840
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              624,
+              576,
+              840
+            ],
+            "runtime_reservations_px": {}
+          }
+        },
+        "output_literal": "(이것이 도카이도 제일의 무장,\n\u001bCA이마가와 요시모토\u001bCZ인가.\n이것이 오랫동안 나를 괴롭힌 자……)",
+        "output_utf16le_sha256": "C1445814EB5CDE6A401CCEB19F98BE7B47EE94D9C2587D60AC4F563A212414DB",
+        "pc_japanese_literal": "（これが海道一の弓取り・\u001bCA今川治部大輔\u001bCZか\n　これが、俺を長年苦しめたもの…）",
+        "real_game_qa_required_before_release": true,
+        "resource": "MSG_PK/JP/msgev.bin"
+      },
+      {
+        "candidate_id": 4506,
+        "coordinate": 4506,
+        "current_literal": "\u001bCA노부나가\u001bCZ는 \u001bCA요시모토\u001bCZ가 지녔던 ‘소자\n사몬지’ 칼에 다음과 같이 새기고,\n자신의 애도로 삼았다고 전한다.",
+        "current_utf16le_sha256": "54701E64C9BDE101BC986FAECE7457AECB8D33819B85D99FCD55079676CDFAC1",
+        "format_contract": {
+          "leading_whitespace": "",
+          "linebreak_vector": [
+            "\n",
+            "\n"
+          ],
+          "manual_line_count": 3,
+          "protected": {
+            "controls": [],
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "printf": [],
+            "pua": [],
+            "runtime_brackets": [],
+            "unknown_percent_count": 0
+          },
+          "trailing_whitespace": ""
+        },
+        "kind": "pk_msgev_okehazama_static_repair",
+        "layout": {
+          "after": {
+            "actual_line_width_px": [
+              840,
+              792,
+              792
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              840,
+              792,
+              792
+            ],
+            "runtime_reservations_px": {}
+          },
+          "before": {
+            "actual_line_width_px": [
+              840,
+              792,
+              720
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              840,
+              792,
+              720
+            ],
+            "runtime_reservations_px": {}
+          }
+        },
+        "output_literal": "\u001bCA노부나가\u001bCZ는 \u001bCA요시모토\u001bCZ가 지녔던 ‘소자\n사몬지’ 칼에 다음과 같이 새기고,\n그 칼을 애검으로 삼았다고 전한다.",
+        "output_utf16le_sha256": "2778BF6D20E9DE3CD2B8C0388079E4FB03DBE9B5006552AFAE4D2460E50EA3C3",
+        "pc_japanese_literal": "\u001bCA信長\u001bCZは\u001bCA義元\u001bCZの所持していた\n「宗三左文字」の太刀にこう刻み、\n自らの愛刀にしたと伝わっている。",
+        "real_game_qa_required_before_release": true,
+        "resource": "MSG_PK/JP/msgev.bin"
+      },
+      {
+        "candidate_id": 4508,
+        "coordinate": 4508,
+        "current_literal": "\u001bCA이마가와 요시모토\u001bCZ의 죽음은\n한 다이묘였던 \u001bCA오다 노부나가\u001bCZ를\n전국시대 중심으로 밀어 올렸다…",
+        "current_utf16le_sha256": "25C406D288DC83187148EEE23BDD026691DA2CEF24CF75D304C5FA9C14F6D510",
+        "format_contract": {
+          "leading_whitespace": "",
+          "linebreak_vector": [
+            "\n",
+            "\n"
+          ],
+          "manual_line_count": 3,
+          "protected": {
+            "controls": [],
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCA",
+              "\u001bCZ"
+            ],
+            "printf": [],
+            "pua": [],
+            "runtime_brackets": [],
+            "unknown_percent_count": 0
+          },
+          "trailing_whitespace": ""
+        },
+        "kind": "pk_msgev_okehazama_static_repair",
+        "layout": {
+          "after": {
+            "actual_line_width_px": [
+              576,
+              624,
+              792
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              576,
+              624,
+              792
+            ],
+            "runtime_reservations_px": {}
+          },
+          "before": {
+            "actual_line_width_px": [
+              624,
+              696,
+              744
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              624,
+              696,
+              744
+            ],
+            "runtime_reservations_px": {}
+          }
+        },
+        "output_literal": "도카이도 제일의 무장이던\n\u001bCA이마가와 요시모토\u001bCZ의 죽음은\n\u001bCA노부나가\u001bCZ를 천하의 중심에 세웠다…",
+        "output_utf16le_sha256": "31C77F142158128A88D8EFA52BB3D823765BF1C1F7353C19097D209E956592DB",
+        "pc_japanese_literal": "海道一の弓取り、\n\u001bCA今川義元\u001bCZの死は一大名\u001bCA織田信長\u001bCZを\n戦国の表舞台に押し上げただけでなく…",
+        "real_game_qa_required_before_release": true,
+        "resource": "MSG_PK/JP/msgev.bin"
+      },
+      {
+        "candidate_id": 4509,
+        "coordinate": 4509,
+        "current_literal": "고소슨 삼국동맹의 동요와,\n그에 따른 \u001bCA[b1448]\u001bCZ의 간토 출병,\n\u001bCB미카와 마쓰다이라 가문\u001bCZ의 독립 등,",
+        "current_utf16le_sha256": "57D70A72ECC28190E33D982FAB4ECBA8E41801BCD9B8EFEDCEBAA05CDC9E644A",
+        "format_contract": {
+          "leading_whitespace": "",
+          "linebreak_vector": [
+            "\n",
+            "\n"
+          ],
+          "manual_line_count": 3,
+          "protected": {
+            "controls": [],
+            "esc": [
+              "\u001bCA",
+              "\u001bCZ",
+              "\u001bCB",
+              "\u001bCZ"
+            ],
+            "printf": [],
+            "pua": [],
+            "runtime_brackets": [
+              "[b1448]"
+            ],
+            "unknown_percent_count": 0
+          },
+          "trailing_whitespace": ""
+        },
+        "kind": "pk_msgev_okehazama_static_repair",
+        "layout": {
+          "after": {
+            "actual_line_width_px": [
+              768,
+              720,
+              792
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              768,
+              912,
+              792
+            ],
+            "runtime_reservations_px": {
+              "[b1448]": 360
+            }
+          },
+          "before": {
+            "actual_line_width_px": [
+              600,
+              720,
+              792
+            ],
+            "limit": {
+              "max_lines": 3,
+              "max_reserved_width_px": 912
+            },
+            "line_count": 3,
+            "reserved_line_width_px": [
+              600,
+              912,
+              792
+            ],
+            "runtime_reservations_px": {
+              "[b1448]": 360
+            }
+          }
+        },
+        "output_literal": "또한, 갑상준 삼국 동맹의 동요와,\n그에 따른 \u001bCA[b1448]\u001bCZ의 간토 출병,\n\u001bCB미카와 마쓰다이라 가문\u001bCZ의 독립 등,",
+        "output_utf16le_sha256": "D4F24CADF6EE4C3179D4DCC4406FE55AD555F73145831E4A295D0CD5E9DD2C84",
+        "pc_japanese_literal": "甲相駿三国同盟の動揺、\nそれによる\u001bCA[b1448]\u001bCZによる関東出兵\n\u001bCB三河松平家\u001bCZの独立など、",
+        "real_game_qa_required_before_release": true,
+        "resource": "MSG_PK/JP/msgev.bin"
+      }
+    ],
+    "resource": "MSG_PK/JP/msgev.bin",
+    "string_count": 17916
+  },
+  "schema": "nobu16.kr.pc-dialogue-quality-wave8-audit.v1",
+  "scope": {
+    "allowed_sources": [
+      "PC Japanese",
+      "PC English",
+      "PC Simplified Chinese",
+      "PC Traditional Chinese",
+      "current PC Korean"
+    ],
+    "excluded_sources": [
+      "Switch Korean"
+    ],
+    "platform": "Steam PC",
+    "steam_game_resource_written": false
+  },
+  "summary": {
+    "logical_msggame_candidates": 30,
+    "msggame_record_count": 48,
+    "msggame_record_counts": {
+      "MSG/JP/msggame.bin": 18,
+      "MSG_PK/JP/msggame.bin": 30
+    },
+    "pk_msgev_entry_count": 5,
+    "real_game_qa_required_before_release": true,
+    "total_changed_records_or_entries": 53
+  },
+  "triage_inputs": {
+    "msgev_path": "workstreams/pc_dialogue_quality_triage_v1/pk_msgev_okehazama_4494_4510_priority.v1.json",
+    "msgev_sha256": "D9BA5F076037B583774973349C1A7439A7BB985076299DD6D324C4FDE6DE6CC9",
+    "msggame_path": "workstreams/pc_dialogue_quality_triage_v1/pc_dialogue_quality_triage_candidates.v1.json",
+    "msggame_sha256": "FC79A141D2B0D69978F74D217B2A4606D3BAA146F83A5D3D4D06FFA7DB91FD0E"
+  }
+}

@@ -1,0 +1,1764 @@
+[
+  {
+    "current_korean": "백성을 다스리는 비결은 오직 진심뿐\n이 군의 장악은！",
+    "id": "C01",
+    "pc_japanese": "民を治める極意は真心あるのみ\nこの郡の掌握は！",
+    "rationale": "문장 끝이 일본어 0143 명령에 의존해 ‘이 군의 장악은’으로 끊긴다.",
+    "recommended_korean": "백성을 다스리는 비결은 오직 진심뿐.\n이 군의 장악은 제게 맡기십시오!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:212",
+        "current_0143_commands": [
+          {
+            "hex": "01437C030000",
+            "offset": 62
+          }
+        ],
+        "current_korean": "백성을 다스리는 비결은 오직 진심뿐\n이 군의 장악은！",
+        "current_literals": [
+          "백성을 다스리는 비결은 오직 진심뿐\n이 군의 장악은",
+          "！"
+        ],
+        "current_record_sha256": "E43FCCC79E181EDE241C011EB39E145179D0093B1B8A8D7757330673CAEFB108",
+        "pc_reference_texts": {
+          "base_pc_sc": "治民之极意乃为真心。\n由我来掌控此郡吧！",
+          "base_pc_tc": "治民之極意乃為真心。\n由我來掌控此郡吧！"
+        },
+        "pristine_pc_japanese": "民を治める極意は真心あるのみ\nこの郡の掌握は！",
+        "static_opaque_bytes": "01437C030000050505"
+      },
+      "pk": {
+        "coordinate": "2:218",
+        "current_0143_commands": [
+          {
+            "hex": "014388030000",
+            "offset": 62
+          }
+        ],
+        "current_korean": "백성을 다스리는 비결은 오직 진심뿐\n이 군의 장악은！",
+        "current_literals": [
+          "백성을 다스리는 비결은 오직 진심뿐\n이 군의 장악은",
+          "！"
+        ],
+        "current_record_sha256": "341B2F2D2EC96F3D5AE938DEFC620C5000DC669F7F12A76DA3D9446EDE455590",
+        "pc_reference_texts": {
+          "pk_pc_en": "Sincerity is the key to successful rule. Just leave seizing this county to me!",
+          "pk_pc_sc": "治民之极意乃为真心。\n由我来掌控此郡吧！",
+          "pk_pc_tc": "治民之極意乃為真心。\n由我來掌控此郡吧！"
+        },
+        "pristine_pc_japanese": "民を治める極意は真心あるのみ\nこの郡の掌握は！",
+        "static_opaque_bytes": "014388030000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "능숙한 언변으로 반드시 신용을\n얻어 오겠！",
+    "id": "C02",
+    "pc_japanese": "得意の弁舌で必ずや信用を\n勝ち取って参！",
+    "rationale": "한국어 서술어 ‘얻어 오겠’이 미완성으로 끝난다.",
+    "recommended_korean": "능숙한 언변으로 반드시 신용을\n얻어 오겠습니다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:216",
+        "current_0143_commands": [
+          {
+            "hex": "01435A040000",
+            "offset": 50
+          }
+        ],
+        "current_korean": "능숙한 언변으로 반드시 신용을\n얻어 오겠！",
+        "current_literals": [
+          "능숙한 언변으로 반드시 신용을\n얻어 오겠",
+          "！"
+        ],
+        "current_record_sha256": "B21BF275E1FD47F5E8C532BEE5337F346C8A062FEA5D1256924427A6526D21BA",
+        "pc_reference_texts": {
+          "base_pc_sc": "我能说善道，就以我的口才\n来获得信赖吧！",
+          "base_pc_tc": "我能說善道，就以我的口才\n來獲得信賴吧！"
+        },
+        "pristine_pc_japanese": "得意の弁舌で必ずや信用を\n勝ち取って参！",
+        "static_opaque_bytes": "01435A040000050505"
+      },
+      "pk": {
+        "coordinate": "2:222",
+        "current_0143_commands": [
+          {
+            "hex": "014366040000",
+            "offset": 50
+          }
+        ],
+        "current_korean": "능숙한 언변으로 반드시 신용을\n얻어 오겠！",
+        "current_literals": [
+          "능숙한 언변으로 반드시 신용을\n얻어 오겠",
+          "！"
+        ],
+        "current_record_sha256": "76E60D5B286D37260F99468EEDC80E8BDD4EE99EFA537A15B2B5D74AAD694081",
+        "pc_reference_texts": {
+          "pk_pc_en": "IÖll win them all over with my silver tongue!",
+          "pk_pc_sc": "我能说善道，就以我的口才\n来获得信赖吧！",
+          "pk_pc_tc": "我能說善道，就以我的口才\n來獲得信賴吧！"
+        },
+        "pristine_pc_japanese": "得意の弁舌で必ずや信用を\n勝ち取って参！",
+        "static_opaque_bytes": "014366040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "내 영지는 한 치도 침범케 하지!\n굳게 지키는 데 전념한다！",
+    "id": "C03",
+    "pc_japanese": "我が領地は寸土も侵させ！\n堅守に徹する！",
+    "rationale": "부정 종결과 선언체가 일본어 0143 명령 뒤에 남아 한국어 문장이 불안정하다.",
+    "recommended_korean": "내 영지는 한 치도 침범하게 두지 않겠다!\n굳게 지키는 데 전념하겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:219",
+        "current_0143_commands": [
+          {
+            "hex": "0143E0020000",
+            "offset": 40
+          },
+          {
+            "hex": "014346030000",
+            "offset": 82
+          }
+        ],
+        "current_korean": "내 영지는 한 치도 침범케 하지!\n굳게 지키는 데 전념한다！",
+        "current_literals": [
+          "내 영지는 한 치도 침범케 하지",
+          "!\n굳게 지키는 데 전념한다",
+          "！"
+        ],
+        "current_record_sha256": "B243729DE99D009869C8A45537242640C2DB38F45DB31EAAC51ECCEE0E24750F",
+        "pc_reference_texts": {
+          "base_pc_sc": "就连我的一寸领地也不容侵犯！\n彻底坚守岗位！",
+          "base_pc_tc": "就連我的一寸領地也不容侵犯！\n徹底堅守崗位！"
+        },
+        "pristine_pc_japanese": "我が領地は寸土も侵させ！\n堅守に徹する！",
+        "static_opaque_bytes": "0143E0020000014346030000050505"
+      },
+      "pk": {
+        "coordinate": "2:225",
+        "current_0143_commands": [
+          {
+            "hex": "0143EC020000",
+            "offset": 40
+          },
+          {
+            "hex": "014352030000",
+            "offset": 82
+          }
+        ],
+        "current_korean": "내 영지는 한 치도 침범케 하지!\n굳게 지키는 데 전념한다！",
+        "current_literals": [
+          "내 영지는 한 치도 침범케 하지",
+          "!\n굳게 지키는 데 전념한다",
+          "！"
+        ],
+        "current_record_sha256": "01F3040B64CB72941F5C595D35AC6A661610D23C539565E25A7953BCA0E472B4",
+        "pc_reference_texts": {
+          "pk_pc_en": "They wonÖt take one step into our domain! Our defense will hold!",
+          "pk_pc_sc": "就连我的一寸领地也不容侵犯！\n彻底坚守岗位！",
+          "pk_pc_tc": "就連我的一寸領地也不容侵犯！\n徹底堅守崗位！"
+        },
+        "pristine_pc_japanese": "我が領地は寸土も侵させ！\n堅守に徹する！",
+        "static_opaque_bytes": "0143EC020000014352030000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "싸움이야말로 무가의 본분! 내 활약을\n기대！",
+    "id": "C04",
+    "pc_japanese": "戦こそ武家の本分！　我が働きに\n期待！",
+    "rationale": "명령형 종결이 빠져 ‘내 활약을 기대’에서 끊긴다.",
+    "recommended_korean": "싸움이야말로 무가의 본분! 내 활약을\n기대해도 좋다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:224",
+        "current_0143_commands": [
+          {
+            "hex": "0143F0010000",
+            "offset": 52
+          }
+        ],
+        "current_korean": "싸움이야말로 무가의 본분! 내 활약을\n기대！",
+        "current_literals": [
+          "싸움이야말로 무가의 본분! 내 활약을\n기대",
+          "！"
+        ],
+        "current_record_sha256": "9D148FD731B22783EFC64BF9539924E358C1ACBD3BF67F0B93FB1455D34CF11F",
+        "pc_reference_texts": {
+          "base_pc_sc": "战斗正为武家之本分！\n期待我的表现！",
+          "base_pc_tc": "戰鬥正為武家之本分！\n期待我的表現！"
+        },
+        "pristine_pc_japanese": "戦こそ武家の本分！　我が働きに\n期待！",
+        "static_opaque_bytes": "0143F0010000050505"
+      },
+      "pk": {
+        "coordinate": "2:230",
+        "current_0143_commands": [
+          {
+            "hex": "0143F6010000",
+            "offset": 52
+          }
+        ],
+        "current_korean": "싸움이야말로 무가의 본분! 내 활약을\n기대！",
+        "current_literals": [
+          "싸움이야말로 무가의 본분! 내 활약을\n기대",
+          "！"
+        ],
+        "current_record_sha256": "5B1520228E690E69BD8735F3DFE24F61AC49BD74E88DC48A3D4D5CF19F59266D",
+        "pc_reference_texts": {
+          "pk_pc_en": "War is the lifeblood of a warrior! IÖll bring you results!",
+          "pk_pc_sc": "战斗正为武家之本分！\n期待我的表现！",
+          "pk_pc_tc": "戰鬥正為武家之本分！\n期待我的表現！"
+        },
+        "pristine_pc_japanese": "戦こそ武家の本分！　我が働きに\n期待！",
+        "static_opaque_bytes": "0143F6010000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "강공 따위 두려울 것 없\n지금이야말로 반격의 때！",
+    "id": "C05",
+    "pc_japanese": "強攻など恐るるに足り\n今こそ反攻の時！",
+    "rationale": "두 문장 모두 한국어 종결어미가 빠져 있다.",
+    "recommended_korean": "강공 따위 두려울 것 없다.\n지금이야말로 반격의 때다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:227",
+        "current_0143_commands": [
+          {
+            "hex": "0143E0020000",
+            "offset": 32
+          },
+          {
+            "hex": "0143F6010000",
+            "offset": 70
+          }
+        ],
+        "current_korean": "강공 따위 두려울 것 없\n지금이야말로 반격의 때！",
+        "current_literals": [
+          "강공 따위 두려울 것 없",
+          "\n지금이야말로 반격의 때",
+          "！"
+        ],
+        "current_record_sha256": "ACFE08533C85042285E7850C2485B3FE4AD7A8D44C3A3160A36E48DF520FFDE4",
+        "pc_reference_texts": {
+          "base_pc_sc": "强攻什么的不足为惧。\n如今正是反攻的大好时机！",
+          "base_pc_tc": "強攻之類的不足為懼。\n現在正是反攻之時！"
+        },
+        "pristine_pc_japanese": "強攻など恐るるに足り\n今こそ反攻の時！",
+        "static_opaque_bytes": "0143E00200000143F6010000050505"
+      },
+      "pk": {
+        "coordinate": "2:233",
+        "current_0143_commands": [
+          {
+            "hex": "0143EC020000",
+            "offset": 32
+          },
+          {
+            "hex": "0143FC010000",
+            "offset": 70
+          }
+        ],
+        "current_korean": "강공 따위 두려울 것 없\n지금이야말로 반격의 때！",
+        "current_literals": [
+          "강공 따위 두려울 것 없",
+          "\n지금이야말로 반격의 때",
+          "！"
+        ],
+        "current_record_sha256": "4AE945D086FA2723112A0689904602E429D10BCC3596DEA3F1653D8893D6538A",
+        "pc_reference_texts": {
+          "pk_pc_en": "Do not fear the storm. This is the time for a counterattack!",
+          "pk_pc_sc": "强攻什么的不足为惧。\n如今正是反攻的大好时机！",
+          "pk_pc_tc": "強攻之類的不足為懼。\n現在正是反攻之時！"
+        },
+        "pristine_pc_japanese": "強攻など恐るるに足り\n今こそ反攻の時！",
+        "static_opaque_bytes": "0143EC0200000143FC010000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "뒷일은…\n머리 쓰는 법이 다르까닭에…",
+    "id": "C06",
+    "pc_japanese": "裏の仕事は…\n頭の使い方が違ゆえ…",
+    "rationale": "‘다르까닭에’는 조사 결합 오류이며, 원문의 ‘맡겨라’ 의미도 빠졌다.",
+    "recommended_korean": "뒷일은 내게 맡겨라…\n머리 쓰는 법이 다르기 때문이지…",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:235",
+        "current_0143_commands": [
+          {
+            "hex": "01437C030000",
+            "offset": 12
+          },
+          {
+            "hex": "0143BE000000",
+            "offset": 50
+          }
+        ],
+        "current_korean": "뒷일은…\n머리 쓰는 법이 다르까닭에…",
+        "current_literals": [
+          "뒷일은",
+          "…\n머리 쓰는 법이 다르",
+          "까닭에…"
+        ],
+        "current_record_sha256": "D29583C56C42B3F2C852CBDB44CE6856CEFBB970C7741F4848307B4AA92E4651",
+        "pc_reference_texts": {
+          "base_pc_sc": "幕后的工作就交给我吧……\n毕竟运用头脑的方式不同……",
+          "base_pc_tc": "謀謨帷幄就由我來吧……\n畢竟思維方式不同……"
+        },
+        "pristine_pc_japanese": "裏の仕事は…\n頭の使い方が違ゆえ…",
+        "static_opaque_bytes": "01437C0300000143BE000000050505"
+      },
+      "pk": {
+        "coordinate": "2:241",
+        "current_0143_commands": [
+          {
+            "hex": "014388030000",
+            "offset": 12
+          },
+          {
+            "hex": "0143BE000000",
+            "offset": 50
+          }
+        ],
+        "current_korean": "뒷일은…\n머리 쓰는 법이 다르까닭에…",
+        "current_literals": [
+          "뒷일은",
+          "…\n머리 쓰는 법이 다르",
+          "까닭에…"
+        ],
+        "current_record_sha256": "84BCE4C52F302D277B3146578123337052E1D6A6CE3B4BF903D8FDFFC28C6C00",
+        "pc_reference_texts": {
+          "pk_pc_en": "Leave the dirty work to me. You need a different type of perspective for this stuff.",
+          "pk_pc_sc": "幕后的工作就交给我吧……\n毕竟运用头脑的方式不同……",
+          "pk_pc_tc": "謀謨帷幄就由我來吧……\n畢竟思維方式不同……"
+        },
+        "pristine_pc_japanese": "裏の仕事は…\n頭の使い方が違ゆえ…",
+        "static_opaque_bytes": "0143880300000143BE000000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "수상 전투에서는 질 수 없\n우리에게 해신의 가호가 있기를",
+    "id": "C07",
+    "pc_japanese": "水上の戦いでは負けられ\n我らに海神の加護あらんことを",
+    "rationale": "첫 문장의 부정 종결이 누락됐다.",
+    "recommended_korean": "수상 전투에서는 질 수 없다.\n우리에게 해신의 가호가 있기를.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:238",
+        "current_0143_commands": [
+          {
+            "hex": "0143E0020000",
+            "offset": 34
+          }
+        ],
+        "current_korean": "수상 전투에서는 질 수 없\n우리에게 해신의 가호가 있기를",
+        "current_literals": [
+          "수상 전투에서는 질 수 없",
+          "\n우리에게 해신의 가호가 있기를"
+        ],
+        "current_record_sha256": "311B3DBF6FABA4F5D6DAD1EC28474181CE4D33DC65EBE0F83700A8E6D0422526",
+        "pc_reference_texts": {
+          "base_pc_sc": "水上之战决不能输。\n愿海神庇护我方。",
+          "base_pc_tc": "水上之戰決不能輸。\n願海神庇護我方。"
+        },
+        "pristine_pc_japanese": "水上の戦いでは負けられ\n我らに海神の加護あらんことを",
+        "static_opaque_bytes": "0143E0020000050505"
+      },
+      "pk": {
+        "coordinate": "2:244",
+        "current_0143_commands": [
+          {
+            "hex": "0143EC020000",
+            "offset": 34
+          }
+        ],
+        "current_korean": "수상 전투에서는 질 수 없\n우리에게 해신의 가호가 있기를",
+        "current_literals": [
+          "수상 전투에서는 질 수 없",
+          "\n우리에게 해신의 가호가 있기를"
+        ],
+        "current_record_sha256": "42E782CA06262785161D3FF2A16CD06B0E7729D149019DA11138C48CBA96C2DD",
+        "pc_reference_texts": {
+          "pk_pc_en": "I canÖt lose on the water. May the sea gods watch over us.",
+          "pk_pc_sc": "水上之战决不能输。\n愿海神庇护我方。",
+          "pk_pc_tc": "水上之戰決不能輸。\n願海神庇護我方。"
+        },
+        "pristine_pc_japanese": "水上の戦いでは負けられ\n我らに海神の加護あらんことを",
+        "static_opaque_bytes": "0143EC020000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "재해는 최소한으로 억제하그러니\n걱정은 무용",
+    "id": "C08",
+    "pc_japanese": "災害は最小限で抑えゆえ\n心配は無用",
+    "rationale": "‘억제하그러니’는 어간과 접속어미가 잘못 결합된 명백한 문법 오류다.",
+    "recommended_korean": "재해는 최소한으로 억제할 테니\n걱정은 무용이다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:243",
+        "current_0143_commands": [
+          {
+            "hex": "01433C040000",
+            "offset": 32
+          },
+          {
+            "hex": "01431A020000",
+            "offset": 64
+          }
+        ],
+        "current_korean": "재해는 최소한으로 억제하그러니\n걱정은 무용",
+        "current_literals": [
+          "재해는 최소한으로 억제하",
+          "그러니\n걱정은 무용"
+        ],
+        "current_record_sha256": "8776C79878D0EC2AC52959824C9A1246907DEE69D2C8F2A81A4F6C4E0E58859C",
+        "pc_reference_texts": {
+          "base_pc_sc": "我会把灾害的受害程度降到最低，\n用不着担心。",
+          "base_pc_tc": "我會把災害的受害程度降至最低，\n用不著擔心。"
+        },
+        "pristine_pc_japanese": "災害は最小限で抑えゆえ\n心配は無用",
+        "static_opaque_bytes": "01433C04000001431A020000050505"
+      },
+      "pk": {
+        "coordinate": "2:249",
+        "current_0143_commands": [
+          {
+            "hex": "014348040000",
+            "offset": 32
+          },
+          {
+            "hex": "014326020000",
+            "offset": 64
+          }
+        ],
+        "current_korean": "재해는 최소한으로 억제하그러니\n걱정은 무용",
+        "current_literals": [
+          "재해는 최소한으로 억제하",
+          "그러니\n걱정은 무용"
+        ],
+        "current_record_sha256": "172150458BA2A0EB3D220713234C7F0977DF4238D110D051AB5983C77C666BD9",
+        "pc_reference_texts": {
+          "pk_pc_en": "ThereÖs no need to worry. IÖll keep disasters to a minimum.",
+          "pk_pc_sc": "我会把灾害的受害程度降到最低，\n用不着担心。",
+          "pk_pc_tc": "我會把災害的受害程度降至最低，\n用不著擔心。"
+        },
+        "pristine_pc_japanese": "災害は最小限で抑えゆえ\n心配は無用",
+        "static_opaque_bytes": "014348040000014326020000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "속히 성을 수선하여 적의\n공격에 대비한다！",
+    "id": "C09",
+    "pc_japanese": "速やかに城を修繕し、敵からの\n攻撃に備える！",
+    "rationale": "대사체의 선언을 한국어 완결형으로 고정한다.",
+    "recommended_korean": "속히 성을 수선하여 적의\n공격에 대비하겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:244",
+        "current_0143_commands": [
+          {
+            "hex": "014346030000",
+            "offset": 50
+          }
+        ],
+        "current_korean": "속히 성을 수선하여 적의\n공격에 대비한다！",
+        "current_literals": [
+          "속히 성을 수선하여 적의\n공격에 대비한다",
+          "！"
+        ],
+        "current_record_sha256": "2E904407825DB54FB7353966B151FA1255F6D284B324A0517A5269506B9941A0",
+        "pc_reference_texts": {
+          "base_pc_sc": "速速修缮城楼，\n以防备敌人的攻击！",
+          "base_pc_tc": "速速修繕城樓，\n以防備敵人的攻擊！"
+        },
+        "pristine_pc_japanese": "速やかに城を修繕し、敵からの\n攻撃に備える！",
+        "static_opaque_bytes": "014346030000050505"
+      },
+      "pk": {
+        "coordinate": "2:250",
+        "current_0143_commands": [
+          {
+            "hex": "014352030000",
+            "offset": 50
+          }
+        ],
+        "current_korean": "속히 성을 수선하여 적의\n공격에 대비한다！",
+        "current_literals": [
+          "속히 성을 수선하여 적의\n공격에 대비한다",
+          "！"
+        ],
+        "current_record_sha256": "7CE7144A6A4EB87CC4FE3D86BD8E6A2215B46B5EBA60BF56144BF2C5C590BBE9",
+        "pc_reference_texts": {
+          "pk_pc_en": "LetÖs repair the castle and get ready for the enemy attack!",
+          "pk_pc_sc": "速速修缮城楼，\n以防备敌人的攻击！",
+          "pk_pc_tc": "速速修繕城樓，\n以防備敵人的攻擊！"
+        },
+        "pristine_pc_japanese": "速やかに城を修繕し、敵からの\n攻撃に備える！",
+        "static_opaque_bytes": "014352030000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "길 정비에는 자신이\n부디 성과로기대",
+    "id": "C10",
+    "pc_japanese": "道の整備には自信が\nぜひとも成果に期待",
+    "rationale": "‘성과로기대’는 조사 누락과 띄어쓰기 결합 오류다.",
+    "recommended_korean": "길 정비에는 자신이 있으니\n부디 성과를 기대해 주십시오.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:246",
+        "current_0143_commands": [
+          {
+            "hex": "014352000000",
+            "offset": 26
+          },
+          {
+            "hex": "01438A040000",
+            "offset": 52
+          },
+          {
+            "hex": "014396010000",
+            "offset": 68
+          }
+        ],
+        "current_korean": "길 정비에는 자신이\n부디 성과로기대",
+        "current_literals": [
+          "길 정비에는 자신이",
+          "\n부디 성과로",
+          "기대"
+        ],
+        "current_record_sha256": "7E2A3FF85B3A01FA064A5455F37ED00591547DFE5FF4F86D6F63A1CC350FFE7D",
+        "pc_reference_texts": {
+          "base_pc_sc": "我对整顿行军道稍有自信，\n敬请放心，包在我身上吧。",
+          "base_pc_tc": "關於整備軍道之事，在下略有心得。\n還請安心交給在下去辦。"
+        },
+        "pristine_pc_japanese": "道の整備には自信が\nぜひとも成果に期待",
+        "static_opaque_bytes": "01435200000001438A040000014396010000050505"
+      },
+      "pk": {
+        "coordinate": "2:252",
+        "current_0143_commands": [
+          {
+            "hex": "014352000000",
+            "offset": 26
+          },
+          {
+            "hex": "014396040000",
+            "offset": 52
+          },
+          {
+            "hex": "01439C010000",
+            "offset": 68
+          }
+        ],
+        "current_korean": "길 정비에는 자신이\n부디 성과로기대",
+        "current_literals": [
+          "길 정비에는 자신이",
+          "\n부디 성과로",
+          "기대"
+        ],
+        "current_record_sha256": "9232F279C5D2E4CB4F8F37778047F6138D0B849B459461A428D28C8C88EED1F4",
+        "pc_reference_texts": {
+          "pk_pc_en": "IÖm confident in my roadwork skills. You can expect excellent results.",
+          "pk_pc_sc": "我对整顿行军道稍有自信，\n敬请放心，包在我身上吧。",
+          "pk_pc_tc": "關於整備軍道之事，在下略有心得。\n還請安心交給在下去辦。"
+        },
+        "pristine_pc_japanese": "道の整備には自信が\nぜひとも成果に期待",
+        "static_opaque_bytes": "01435200000001439604000001439C010000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "지금이야말로 기마철포대의 위력을\n똑똑히 보여주마！",
+    "id": "C11",
+    "pc_japanese": "今こそ、騎馬鉄砲隊の威力\n思い知らせてくれ！",
+    "rationale": "같은 문장에 남은 일본식 전각 종결과 결합 표기를 정리한다.",
+    "recommended_korean": "지금이야말로 기마철포대의 위력을\n똑똑히 보여 주마!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:253",
+        "current_0143_commands": [
+          {
+            "hex": "01431E040000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "지금이야말로 기마철포대의 위력을\n똑똑히 보여주마！",
+        "current_literals": [
+          "지금이야말로 기마철포대의 위력을\n똑똑히 보여주마",
+          "！"
+        ],
+        "current_record_sha256": "B125D8E114923B602841B1CFD76F04A88FCFA1A322F808BF2E8A9433AEA66480",
+        "pc_reference_texts": {
+          "base_pc_sc": "现在就让你认识认识\n骑马铁炮队的威力！",
+          "base_pc_tc": "現在就讓你認識認識\n騎馬鐵砲隊的威力！"
+        },
+        "pristine_pc_japanese": "今こそ、騎馬鉄砲隊の威力\n思い知らせてくれ！",
+        "static_opaque_bytes": "01431E040000050505"
+      },
+      "pk": {
+        "coordinate": "2:259",
+        "current_0143_commands": [
+          {
+            "hex": "01432A040000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "지금이야말로 기마철포대의 위력을\n똑똑히 보여주마！",
+        "current_literals": [
+          "지금이야말로 기마철포대의 위력을\n똑똑히 보여주마",
+          "！"
+        ],
+        "current_record_sha256": "FADE41EF9DB6F69BAB0600E4026B2EB42D46E8082F62C84EBDF0602D5E4551B5",
+        "pc_reference_texts": {
+          "pk_pc_en": "WeÖll teach them why our dragoons should be feared!",
+          "pk_pc_sc": "现在就让你认识认识\n骑马铁炮队的威力！",
+          "pk_pc_tc": "現在就讓你認識認識\n騎馬鐵砲隊的威力！"
+        },
+        "pristine_pc_japanese": "今こそ、騎馬鉄砲隊の威力\n思い知らせてくれ！",
+        "static_opaque_bytes": "01432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "명인이라 칭송받는 축성 솜씨를,\n마음껏 발휘하겠!\n반드시 훌륭한 성하마을로 만들어 보이겠",
+    "id": "C12",
+    "pc_japanese": "名手と謳われし普請の腕、\n存分に発揮！\n必ずや見事な城下にしてみせ",
+    "rationale": "두 서술어가 미완성으로 끝나고, 일본식 종결부호가 섞여 있다.",
+    "recommended_korean": "명인이라 칭송받는 축성 솜씨를\n마음껏 발휘하겠다!\n반드시 훌륭한 성하마을로 만들어 보이겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 3,
+      "manual_line_count_before": 3,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:321",
+        "current_0143_commands": [
+          {
+            "hex": "01438E000000",
+            "offset": 58
+          },
+          {
+            "hex": "014348040000",
+            "offset": 116
+          }
+        ],
+        "current_korean": "명인이라 칭송받는 축성 솜씨를,\n마음껏 발휘하겠!\n반드시 훌륭한 성하마을로 만들어 보이겠",
+        "current_literals": [
+          "명인이라 칭송받는 축성 솜씨를,\n마음껏 발휘하겠",
+          "!\n반드시 훌륭한 성하마을로 만들어 보이겠"
+        ],
+        "current_record_sha256": "4B9F46329777587823402936E90B103324B709B68222E075182C9419A5CB49B7",
+        "pc_reference_texts": {
+          "pk_pc_en": "I am known for my skills in infrastructure! I will construct for you a most marvelous castle town!",
+          "pk_pc_sc": "就让我充分发挥\n被誉为名人的建造能力吧！\n必将建成令人称赞的城下町。",
+          "pk_pc_tc": "在下將徹底發揮\n被稱為普請高手的本事！\n在下必定會興建一座壯觀的城下。"
+        },
+        "pristine_pc_japanese": "名手と謳われし普請の腕、\n存分に発揮！\n必ずや見事な城下にしてみせ",
+        "static_opaque_bytes": "01438E000000014348040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "모략이라면 이에게 맡기십시오!\n즉시 첩자를 보내 우리의 계책이\n성공하도록 지휘하겠",
+    "id": "C13",
+    "pc_japanese": "謀とあらばこのにお任せを！\n直ちに間者を遣わし、我らが策が\n成就するよう、差配",
+    "rationale": "지시 대상이 ‘이’로 잘못 남고, 마지막 서술어도 미완성이다.",
+    "recommended_korean": "모략이라면 제게 맡기십시오!\n즉시 첩자를 보내 우리의 계책이\n성공하도록 지휘하겠습니다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 3,
+      "manual_line_count_before": 3,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:325",
+        "current_0143_commands": [
+          {
+            "hex": "014301000000",
+            "offset": 20
+          },
+          {
+            "hex": "01438E000000",
+            "offset": 108
+          }
+        ],
+        "current_korean": "모략이라면 이에게 맡기십시오!\n즉시 첩자를 보내 우리의 계책이\n성공하도록 지휘하겠",
+        "current_literals": [
+          "모략이라면 이",
+          "에게 맡기십시오!\n즉시 첩자를 보내 우리의 계책이\n성공하도록 지휘하겠"
+        ],
+        "current_record_sha256": "3FEC264642EACF2B9D6228F2EBB1CBD2D42E2AD12543E18DFDDF790259171FA4",
+        "pc_reference_texts": {
+          "pk_pc_en": "When it comes to strategy, I am the person you want! I will dispatch our spies immediately to ensure our planÖs success!",
+          "pk_pc_sc": "既要用计，就请交给我！\n我会立即派出暗探，\n必将使此计成功。",
+          "pk_pc_tc": "提到謀略，請交給在下！\n在下立刻派出細作並給予指示，\n以實現我方計策。"
+        },
+        "pristine_pc_japanese": "謀とあらばこのにお任せを！\n直ちに間者を遣わし、我らが策が\n成就するよう、差配",
+        "static_opaque_bytes": "01430100000001438E000000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "내 개를 전령으로 써서\n훌륭히 이끌어 보이겠",
+    "id": "C14",
+    "pc_japanese": "我が犬を伝令に用いて\n見事率いてみせ",
+    "rationale": "의도적인 ‘개를 전령으로’ 내용은 보존하되, 미완성 종결만 고친다.",
+    "recommended_korean": "내 개를 전령으로 써서\n훌륭히 이끌어 보이겠다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:357",
+        "current_0143_commands": [
+          {
+            "hex": "01432A040000",
+            "offset": 54
+          }
+        ],
+        "current_korean": "내 개를 전령으로 써서\n훌륭히 이끌어 보이겠",
+        "current_literals": [
+          "내 개를 전령으로 써서\n훌륭히 이끌어 보이겠"
+        ],
+        "current_record_sha256": "B897936FA83A2C4ADCF2648CD9B3A3C08655335D53E3543EFE57F6C0874413AE",
+        "pc_reference_texts": {
+          "pk_pc_en": "I will send my dog as a messenger and\nexert true leadership.",
+          "pk_pc_sc": "我将以我的狗作为传令，\n展现出色的领军成果。",
+          "pk_pc_tc": "我將以我的狗作為傳令，\n展現出色的領軍成果。"
+        },
+        "pristine_pc_japanese": "我が犬を伝令に用いて\n見事率いてみせ",
+        "static_opaque_bytes": "01432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "지혜와 재주는 익혀도 짐이 되지 않는다…\n『이로하 노래』의 가르침을 널리 알리겠",
+    "id": "C15",
+    "pc_japanese": "知恵能は身につきぬれど荷にならず…\n『いろは歌』の教えを広めるとし",
+    "rationale": "의미는 유지되어 있으나 마지막 한국어 종결이 누락됐다.",
+    "recommended_korean": "지혜와 재주는 익혀도 짐이 되지 않는다…\n『이로하 노래』의 가르침을 널리 알리겠다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:358",
+        "current_0143_commands": [
+          {
+            "hex": "01432A040000",
+            "offset": 94
+          }
+        ],
+        "current_korean": "지혜와 재주는 익혀도 짐이 되지 않는다…\n『이로하 노래』의 가르침을 널리 알리겠",
+        "current_literals": [
+          "지혜와 재주는 익혀도 짐이 되지 않는다…\n『이로하 노래』의 가르침을 널리 알리겠"
+        ],
+        "current_record_sha256": "CF9D9A16D9991E3798641EAEA77B883E49015CA40879945E317BC7698478E980",
+        "pc_reference_texts": {
+          "pk_pc_en": "Wisdom is a weightless burden. Let us\nspread the teachings of the Iroha.",
+          "pk_pc_sc": "艺多不压身……\n应该广传《伊吕波歌》的教诲才是。",
+          "pk_pc_tc": "藝多不壓身……\n應該廣傳《伊呂波歌》的教誨才是。"
+        },
+        "pristine_pc_japanese": "知恵能は身につきぬれど荷にならず…\n『いろは歌』の教えを広めるとし",
+        "static_opaque_bytes": "01432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "상대의 마음을 얻는 방법은 알고 있\n우리에게 유리하도록\n일을 이끌어 보이겠",
+    "id": "C16",
+    "pc_japanese": "相手の懐に入る術は心得て\n我らに有利となるよう\n事を運んでご覧に入れ",
+    "rationale": "첫·마지막 서술어가 모두 0143 명령에 기대어 한국어로 끝나지 않는다.",
+    "recommended_korean": "상대의 마음을 얻는 방법은 알고 있다.\n우리에게 유리하도록\n일을 이끌어 보이겠다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 3,
+      "manual_line_count_before": 3,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:359",
+        "current_0143_commands": [
+          {
+            "hex": "0143B2000000",
+            "offset": 44
+          },
+          {
+            "hex": "01432A040000",
+            "offset": 100
+          }
+        ],
+        "current_korean": "상대의 마음을 얻는 방법은 알고 있\n우리에게 유리하도록\n일을 이끌어 보이겠",
+        "current_literals": [
+          "상대의 마음을 얻는 방법은 알고 있",
+          "\n우리에게 유리하도록\n일을 이끌어 보이겠"
+        ],
+        "current_record_sha256": "A470A6B8D98BCD6F83C6A9EE2C4F3DF07A1111101DADD5ED46A6FA58661FF388",
+        "pc_reference_texts": {
+          "pk_pc_en": "I am well-versed in the art of gaining\nsomeoneÖs favor. Watch how I steer\nthings to our advantage.",
+          "pk_pc_sc": "我知道如何与对方打好关系。\n请拭目以待，\n我将使局势利于我等。",
+          "pk_pc_tc": "我知道如何與對方打好關係。\n請拭目以待，\n我將使局勢利於我等。"
+        },
+        "pristine_pc_japanese": "相手の懐に入る術は心得て\n我らに有利となるよう\n事を運んでご覧に入れ",
+        "static_opaque_bytes": "0143B200000001432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "전선에 선 이상\n죽기를 각오하고 싸우겠！",
+    "id": "C17",
+    "pc_japanese": "前線に立つからには\n決死の覚悟で戦う！",
+    "rationale": "대사체 종결을 한국어 완결형으로 고정한다.",
+    "recommended_korean": "전선에 선 이상\n죽기를 각오하고 싸우겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:360",
+        "current_0143_commands": [
+          {
+            "hex": "01436C040000",
+            "offset": 48
+          }
+        ],
+        "current_korean": "전선에 선 이상\n죽기를 각오하고 싸우겠！",
+        "current_literals": [
+          "전선에 선 이상\n죽기를 각오하고 싸우겠",
+          "！"
+        ],
+        "current_record_sha256": "1A67AC932200AA9E63C85DC9832CFE27B058BA3F42C83D1A73F562141B5D537B",
+        "pc_reference_texts": {
+          "pk_pc_en": "Standing here on the front line, I am\nready to fight right at deathÖs door!",
+          "pk_pc_sc": "既然要站上前线，\n就该以必死的决心战斗！",
+          "pk_pc_tc": "既然要站上前線，\n就該以必死的決心戰鬥！"
+        },
+        "pristine_pc_japanese": "前線に立つからには\n決死の覚悟で戦う！",
+        "static_opaque_bytes": "01436C040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "방울 소리가 울리는 곳에 내가 있다!\n덤빌 자는！",
+    "id": "C18",
+    "pc_japanese": "鈴の音の鳴るところに我はあり！\nかかってくる者は！",
+    "rationale": "원문과 PC EN/SC/TC가 요구하는 도발 의문문이 한국어에서 잘렸다.",
+    "recommended_korean": "방울 소리가 울리는 곳에 내가 있다!\n덤빌 자는 없느냐!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:361",
+        "current_0143_commands": [
+          {
+            "hex": "0143B8000000",
+            "offset": 58
+          },
+          {
+            "hex": "014300010000",
+            "offset": 64
+          }
+        ],
+        "current_korean": "방울 소리가 울리는 곳에 내가 있다!\n덤빌 자는！",
+        "current_literals": [
+          "방울 소리가 울리는 곳에 내가 있다!\n덤빌 자는",
+          "！"
+        ],
+        "current_record_sha256": "0B64347AD0FBA5749E5F4BD89BF7CFA58B74F10FC3D3E419EC4F4FBAC4430F75",
+        "pc_reference_texts": {
+          "pk_pc_en": "When the bell tolls, I am near! Is\nsomeone brave enough to defy me?",
+          "pk_pc_sc": "铃鸣之处必有我在！\n谁要放马过来！",
+          "pk_pc_tc": "鈴鳴之處必有我在！\n誰要放馬過來！"
+        },
+        "pristine_pc_japanese": "鈴の音の鳴るところに我はあり！\nかかってくる者は！",
+        "static_opaque_bytes": "0143B8000000014300010000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "창을 겨누어라!\n기마대가 마음대로 하게 두지 않겠다！",
+    "id": "C19",
+    "pc_japanese": "槍を構え！\n騎馬隊の好きにはさせ！",
+    "rationale": "문장 자체는 완결돼 보이지만, JP 전용 0143 명령과 전각 종결이 남아 있다.",
+    "recommended_korean": "창을 겨누어라!\n기마대가 마음대로 하게 두지 않겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:363",
+        "current_0143_commands": [
+          {
+            "hex": "014360040000",
+            "offset": 20
+          },
+          {
+            "hex": "0143F8020000",
+            "offset": 74
+          },
+          {
+            "hex": "01436C040000",
+            "offset": 80
+          }
+        ],
+        "current_korean": "창을 겨누어라!\n기마대가 마음대로 하게 두지 않겠다！",
+        "current_literals": [
+          "창을 겨누어라",
+          "!\n기마대가 마음대로 하게 두지 않겠다",
+          "！"
+        ],
+        "current_record_sha256": "1E9554527BBD456649F9FC5D4CC16AE8A17AB8834C36385207EC9FB81C2D4100",
+        "pc_reference_texts": {
+          "pk_pc_en": "Spears up! That cavalry shall not\noverrun us!",
+          "pk_pc_sc": "挺枪列阵！\n不能让骑兵队得逞！",
+          "pk_pc_tc": "把槍拿好！\n不能讓騎兵隊得逞！"
+        },
+        "pristine_pc_japanese": "槍を構え！\n騎馬隊の好きにはさせ！",
+        "static_opaque_bytes": "0143600400000143F802000001436C040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "아직… 아직 포기하지 않겠!\n몇 번이고 되찾아 보이겠！",
+    "id": "C20",
+    "pc_japanese": "まだ…まだ諦め！\n何度でも奪い返してみせる！",
+    "rationale": "두 한국어 종결어미가 잘려 있다.",
+    "recommended_korean": "아직… 아직 포기하지 않겠다!\n몇 번이고 되찾아 보이겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:364",
+        "current_0143_commands": [
+          {
+            "hex": "0143F8020000",
+            "offset": 34
+          },
+          {
+            "hex": "01436C040000",
+            "offset": 76
+          }
+        ],
+        "current_korean": "아직… 아직 포기하지 않겠!\n몇 번이고 되찾아 보이겠！",
+        "current_literals": [
+          "아직… 아직 포기하지 않겠",
+          "!\n몇 번이고 되찾아 보이겠",
+          "！"
+        ],
+        "current_record_sha256": "91EA9118A581060845F2092C5CC71F716F1D686A69789C4018AD15A903B9DA88",
+        "pc_reference_texts": {
+          "pk_pc_en": "Never am I giving up! I shall reassert\nmy valor without fail!",
+          "pk_pc_sc": "还不能……还不能放弃！\n无论多少次我都会夺回来！",
+          "pk_pc_tc": "還不能……還不能放棄！\n無論多少次我都會奪回來！"
+        },
+        "pristine_pc_japanese": "まだ…まだ諦め！\n何度でも奪い返してみせる！",
+        "static_opaque_bytes": "0143F802000001436C040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "서로의 가문을 지키기 위해\n우리가 손을 잡는 것은 좋은 일이겠지\n잠시 함께 싸우겠",
+    "id": "C21",
+    "pc_japanese": "互いの家を守るため\n我らが手を結ぶのは良い話\nしばし共に戦",
+    "rationale": "두 번째·세 번째 행의 종결이 한국어로 완성되지 않았다.",
+    "recommended_korean": "서로의 가문을 지키기 위해\n우리가 손을 잡는 것은 좋은 일이겠지.\n잠시 함께 싸우겠다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 3,
+      "manual_line_count_before": 3,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:366",
+        "current_0143_commands": [
+          {
+            "hex": "014362020000",
+            "offset": 76
+          },
+          {
+            "hex": "0143DA020000",
+            "offset": 82
+          },
+          {
+            "hex": "0143CA000000",
+            "offset": 114
+          },
+          {
+            "hex": "014302020000",
+            "offset": 120
+          }
+        ],
+        "current_korean": "서로의 가문을 지키기 위해\n우리가 손을 잡는 것은 좋은 일이겠지\n잠시 함께 싸우겠",
+        "current_literals": [
+          "서로의 가문을 지키기 위해\n우리가 손을 잡는 것은 좋은 일이겠지",
+          "\n잠시 함께 싸우겠"
+        ],
+        "current_record_sha256": "7E38A22752465177F150552E2A78154B0FCAFD71E8E2712CCECD6E67ABD44160",
+        "pc_reference_texts": {
+          "pk_pc_en": "Let us join forces to protect our\nrespective homelands. We may fight on\nthe same side for a time.",
+          "pk_pc_sc": "为了守护彼此家国，\n我等联手是个好主意吧。\n暂时一同作战吧。",
+          "pk_pc_tc": "為了守護彼此的家，\n我等聯手是個好主意吧。\n暫時一同作戰吧。"
+        },
+        "pristine_pc_japanese": "互いの家を守るため\n我らが手を結ぶのは良い話\nしばし共に戦",
+        "static_opaque_bytes": "0143620200000143DA0200000143CA000000014302020000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "하늘이여 보라!\n백성을 위해 이 몸 바쳐！",
+    "id": "C22",
+    "pc_japanese": "天よ見て！\n民のためにこの身捧げ！",
+    "rationale": "목적격과 선언 종결이 빠져 있다.",
+    "recommended_korean": "하늘이여, 보라!\n백성을 위해 이 몸을 바치겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:408",
+        "current_0143_commands": [
+          {
+            "hex": "014342010000",
+            "offset": 20
+          },
+          {
+            "hex": "01431E040000",
+            "offset": 62
+          }
+        ],
+        "current_korean": "하늘이여 보라!\n백성을 위해 이 몸 바쳐！",
+        "current_literals": [
+          "하늘이여 보라",
+          "!\n백성을 위해 이 몸 바쳐",
+          "！"
+        ],
+        "current_record_sha256": "F3AA0BABA4F59E7B614A485B7FDCD4F1B470A605D5B794B09F34040244EE6F34",
+        "pc_reference_texts": {
+          "base_pc_sc": "苍天啊！\n我这条命就献给百姓了！",
+          "base_pc_tc": "蒼天啊！\n我這條命就獻給百姓了！"
+        },
+        "pristine_pc_japanese": "天よ見て！\n民のためにこの身捧げ！",
+        "static_opaque_bytes": "01434201000001431E040000050505"
+      },
+      "pk": {
+        "coordinate": "2:415",
+        "current_0143_commands": [
+          {
+            "hex": "014342010000",
+            "offset": 20
+          },
+          {
+            "hex": "01432A040000",
+            "offset": 62
+          }
+        ],
+        "current_korean": "하늘이여 보라!\n백성을 위해 이 몸 바쳐！",
+        "current_literals": [
+          "하늘이여 보라",
+          "!\n백성을 위해 이 몸 바쳐",
+          "！"
+        ],
+        "current_record_sha256": "E9B3CD67D57D8A121C4407110AFA9FCA1166717F68BBCA18FC49A9D4868242B2",
+        "pc_reference_texts": {
+          "pk_pc_en": "May the heavens witness them! I will sacrifice myself for the people!",
+          "pk_pc_sc": "苍天啊！\n我这条命就献给百姓了！",
+          "pk_pc_tc": "蒼天啊！\n我這條命就獻給百姓了！"
+        },
+        "pristine_pc_japanese": "天よ見て！\n民のためにこの身捧げ！",
+        "static_opaque_bytes": "01434201000001432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "사나운 적에게는 매와 같이!\n용병의 극의는 이것！",
+    "id": "C23",
+    "pc_japanese": "荒ぶる敵には、鷹の如くに！\n用兵の極意はこれ！",
+    "rationale": "‘용병의 극의는 이것’이 미완성 서술문으로 남는다.",
+    "recommended_korean": "사나운 적에게는 매와 같이!\n용병의 극의는 이것이다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:410",
+        "current_0143_commands": [
+          {
+            "hex": "01431A020000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "사나운 적에게는 매와 같이!\n용병의 극의는 이것！",
+        "current_literals": [
+          "사나운 적에게는 매와 같이!\n용병의 극의는 이것",
+          "！"
+        ],
+        "current_record_sha256": "69091A972628FD2C266F3AD9513925836EC7724824DA9DC110DD541AF48BC619",
+        "pc_reference_texts": {
+          "base_pc_sc": "如雄鹰般面对恶敌！\n此乃用兵之极意！",
+          "base_pc_tc": "如飛鷹般面對狂敵！\n此乃用兵之妙！"
+        },
+        "pristine_pc_japanese": "荒ぶる敵には、鷹の如くに！\n用兵の極意はこれ！",
+        "static_opaque_bytes": "01431A020000050505"
+      },
+      "pk": {
+        "coordinate": "2:417",
+        "current_0143_commands": [
+          {
+            "hex": "014326020000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "사나운 적에게는 매와 같이!\n용병의 극의는 이것！",
+        "current_literals": [
+          "사나운 적에게는 매와 같이!\n용병의 극의는 이것",
+          "！"
+        ],
+        "current_record_sha256": "5E6A53F671E78C35ADE975ABA3F77D8C65F41044B5B652568CA2017F7EB44D72",
+        "pc_reference_texts": {
+          "pk_pc_en": "Descend on the barbaric enemy like a hawk! This is the secret art of war!",
+          "pk_pc_sc": "如雄鹰般面对恶敌！\n此乃用兵之极意！",
+          "pk_pc_tc": "如飛鷹般面對狂敵！\n此乃用兵之妙！"
+        },
+        "pristine_pc_japanese": "荒ぶる敵には、鷹の如くに！\n用兵の極意はこれ！",
+        "static_opaque_bytes": "014326020000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "내 검술\n그 일단을 여기서 보여！",
+    "id": "C24",
+    "pc_japanese": "我が剣技\nその一端をここに見せ！",
+    "rationale": "소유격과 동사 종결이 빠져 문장이 끊긴다.",
+    "recommended_korean": "내 검술의\n일단을 여기서 보여 주마!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:412",
+        "current_0143_commands": [
+          {
+            "hex": "01431E040000",
+            "offset": 40
+          }
+        ],
+        "current_korean": "내 검술\n그 일단을 여기서 보여！",
+        "current_literals": [
+          "내 검술\n그 일단을 여기서 보여",
+          "！"
+        ],
+        "current_record_sha256": "D4AEDDD8863BD534C5B26A74904BCB2161DE82363F4293B47F985F8BF5BBB20E",
+        "pc_reference_texts": {
+          "base_pc_sc": "让你见识一下\n吾之剑术的冰山一角吧！",
+          "base_pc_tc": "吾之劍術，\n在此窺見一端吧！"
+        },
+        "pristine_pc_japanese": "我が剣技\nその一端をここに見せ！",
+        "static_opaque_bytes": "01431E040000050505"
+      },
+      "pk": {
+        "coordinate": "2:419",
+        "current_0143_commands": [
+          {
+            "hex": "01432A040000",
+            "offset": 40
+          }
+        ],
+        "current_korean": "내 검술\n그 일단을 여기서 보여！",
+        "current_literals": [
+          "내 검술\n그 일단을 여기서 보여",
+          "！"
+        ],
+        "current_record_sha256": "196B5F940AE72DB848B092C3D6890C142518DB5F9526A1D600216E2907708BC3",
+        "pc_reference_texts": {
+          "pk_pc_en": "IÖll show you the true power of my swordsmanship!",
+          "pk_pc_sc": "让你见识一下\n吾之剑术的冰山一角吧！",
+          "pk_pc_tc": "吾之劍術，\n在此窺見一端吧！"
+        },
+        "pristine_pc_japanese": "我が剣技\nその一端をここに見せ！",
+        "static_opaque_bytes": "01432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "히익! …뭐, 뭐지?\n저, 적이 혼란에 빠졌！",
+    "id": "C25",
+    "pc_japanese": "ひょえー！　…な、なんじゃ？\nて、敵が取り乱しておる！",
+    "rationale": "현재형이 미완성이고, 상대 언어 종결 명령이 남아 있다.",
+    "recommended_korean": "히익! …뭐, 뭐지?\n저, 적이 혼란에 빠졌다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:446",
+        "current_0143_commands": [
+          {
+            "hex": "014302020000",
+            "offset": 54
+          }
+        ],
+        "current_korean": "히익! …뭐, 뭐지?\n저, 적이 혼란에 빠졌！",
+        "current_literals": [
+          "히익! …뭐, 뭐지?\n저, 적이 혼란에 빠졌",
+          "！"
+        ],
+        "current_record_sha256": "EB833FF042123FEEDE32D05538349B2DAE2A5FDF62D43DD5D1D82D9B5742E8E4",
+        "pc_reference_texts": {
+          "pk_pc_en": "Whaaaaaaaaaaaaaaaat?! ...Wait what? Why are the enemies confused?",
+          "pk_pc_sc": "唔哇哇哇！……为、为何？\n看、看来敌人乱了阵脚啊！",
+          "pk_pc_tc": "唔哇哇哇！……是、是怎麼回事？\n看、看來敵人亂了陣腳啊！"
+        },
+        "pristine_pc_japanese": "ひょえー！　…な、なんじゃ？\nて、敵が取り乱しておる！",
+        "static_opaque_bytes": "014302020000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "히익!\n저, 적이 혼란에 빠졌！",
+    "id": "C26",
+    "pc_japanese": "ひょえー！\nて、敵が取り乱しておる！",
+    "rationale": "C25와 같은 대사의 짧은 변형으로 종결 오류가 동일하다.",
+    "recommended_korean": "히익!\n저, 적이 혼란에 빠졌다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "pk": {
+        "coordinate": "2:447",
+        "current_0143_commands": [
+          {
+            "hex": "014302020000",
+            "offset": 38
+          }
+        ],
+        "current_korean": "히익!\n저, 적이 혼란에 빠졌！",
+        "current_literals": [
+          "히익!\n저, 적이 혼란에 빠졌",
+          "！"
+        ],
+        "current_record_sha256": "C427DE272D34C646487ED68ABAA4DE5722912CDD0B90D2E1AE6178F450C90792",
+        "pc_reference_texts": {
+          "pk_pc_en": "Whaaaaaaaaaaaaaaaat?! Why are the enemies confused?",
+          "pk_pc_sc": "唔哇哇哇！\n看、看来敌人乱了阵脚啊！",
+          "pk_pc_tc": "唔哇哇哇！\n看、看來敵人亂了陣腳啊！"
+        },
+        "pristine_pc_japanese": "ひょえー！\nて、敵が取り乱しておる！",
+        "static_opaque_bytes": "014302020000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "휘하가 될 장수들에게\n활약의 장을 마음껏 내리어！",
+    "id": "C27",
+    "pc_japanese": "配下となる将らに\n活躍の場を存分に与え！",
+    "rationale": "‘내리어’가 대사 종결로 끝나 문장이 미완성이다.",
+    "recommended_korean": "휘하가 될 장수들에게\n활약의 장을 마음껏 내리겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:489",
+        "current_0143_commands": [
+          {
+            "hex": "01431E040000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "휘하가 될 장수들에게\n활약의 장을 마음껏 내리어！",
+        "current_literals": [
+          "휘하가 될 장수들에게\n활약의 장을 마음껏 내리어",
+          "！"
+        ],
+        "current_record_sha256": "F8E9170B99FA3640BEBFCD8EFBAC13840323F813559B7DCD353D1AD99B0F3574",
+        "pc_reference_texts": {
+          "base_pc_sc": "给予手下的将士\n充分的舞台来表现吧！",
+          "base_pc_tc": "賦予屬下將領們充分發揮實力的戰場！"
+        },
+        "pristine_pc_japanese": "配下となる将らに\n活躍の場を存分に与え！",
+        "static_opaque_bytes": "01431E040000050505"
+      },
+      "pk": {
+        "coordinate": "2:503",
+        "current_0143_commands": [
+          {
+            "hex": "01432A040000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "휘하가 될 장수들에게\n활약의 장을 마음껏 내리어！",
+        "current_literals": [
+          "휘하가 될 장수들에게\n활약의 장을 마음껏 내리어",
+          "！"
+        ],
+        "current_record_sha256": "D63E9AE930968A6A9BD623C6E3978E4F3E70870C98720478178717BD8B36E724",
+        "pc_reference_texts": {
+          "pk_pc_en": "We should give our retainers the chance to make their mark on the battlefield!",
+          "pk_pc_sc": "给予手下的将士\n充分的舞台来表现吧！",
+          "pk_pc_tc": "賦予屬下將領們充分發揮實力的戰場！"
+        },
+        "pristine_pc_japanese": "配下となる将らに\n活躍の場を存分に与え！",
+        "static_opaque_bytes": "01432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "무가에도 풍류는 빠질 수 없\n풍류의 마음이야말로 교섭의 요체인가 하옵니다",
+    "id": "C28",
+    "pc_japanese": "武家にも風流は欠かせ\n雅びの心こそ交渉の要諦かと",
+    "rationale": "부정 종결과 인용 종결이 일본어 명령의 영향을 받아 끊겼다.",
+    "recommended_korean": "무가에도 풍류는 빠질 수 없지요.\n풍류의 마음이야말로 교섭의 요체라 하옵니다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:502",
+        "current_0143_commands": [
+          {
+            "hex": "0143E0020000",
+            "offset": 36
+          }
+        ],
+        "current_korean": "무가에도 풍류는 빠질 수 없\n풍류의 마음이야말로 교섭의 요체인가 하옵니다",
+        "current_literals": [
+          "무가에도 풍류는 빠질 수 없",
+          "\n풍류의 마음이야말로 교섭의 요체인가 하옵니다"
+        ],
+        "current_record_sha256": "0181380F427AF599469B5CDE7CE1D50462A1F88A20B5315AB88FD4F35F97FC67",
+        "pc_reference_texts": {
+          "base_pc_sc": "一届武夫也不可缺少风雅，\n高雅的心才是交涉的诀窍。",
+          "base_pc_tc": "武家亦勿失風雅氣度。\n雅量可謂交涉的關鍵。"
+        },
+        "pristine_pc_japanese": "武家にも風流は欠かせ\n雅びの心こそ交渉の要諦かと",
+        "static_opaque_bytes": "0143E0020000050505"
+      },
+      "pk": {
+        "coordinate": "2:516",
+        "current_0143_commands": [
+          {
+            "hex": "0143EC020000",
+            "offset": 36
+          }
+        ],
+        "current_korean": "무가에도 풍류는 빠질 수 없\n풍류의 마음이야말로 교섭의 요체인가 하옵니다",
+        "current_literals": [
+          "무가에도 풍류는 빠질 수 없",
+          "\n풍류의 마음이야말로 교섭의 요체인가 하옵니다"
+        ],
+        "current_record_sha256": "2753BEE5928FA0CBB9F388A14C81F7BB7204B85A4D5CF521820B4E32A3892ABB",
+        "pc_reference_texts": {
+          "pk_pc_en": "Even a warrior must possess elegance. Refinement is the key to negotiation.",
+          "pk_pc_sc": "一届武夫也不可缺少风雅，\n高雅的心才是交涉的诀窍。",
+          "pk_pc_tc": "武家亦勿失風雅氣度。\n雅量可謂交涉的關鍵。"
+        },
+        "pristine_pc_japanese": "武家にも風流は欠かせ\n雅びの心こそ交渉の要諦かと",
+        "static_opaque_bytes": "0143EC020000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "출진。나의 병법을\n똑똑히 보여 드리",
+    "id": "C29",
+    "pc_japanese": "出陣。我が兵法\nとくとご覧に入れ",
+    "rationale": "일본식 마침표와 한국어 미완성 경어가 함께 남아 있다.",
+    "recommended_korean": "출진! 나의 병법을\n똑똑히 보여 드리겠습니다.",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:512",
+        "current_0143_commands": [
+          {
+            "hex": "0143CC010000",
+            "offset": 10
+          },
+          {
+            "hex": "01431E040000",
+            "offset": 56
+          }
+        ],
+        "current_korean": "출진。나의 병법을\n똑똑히 보여 드리",
+        "current_literals": [
+          "출진",
+          "。나의 병법을\n똑똑히 보여 드리"
+        ],
+        "current_record_sha256": "C5DE48AF8336D5CFEC180CA3BC2CFF78A4C27DA09BD34C5ED92E775A88795FB0",
+        "pc_reference_texts": {
+          "base_pc_sc": "出阵！ \n仔细见识下我的兵法吧。",
+          "base_pc_tc": "出擊！\n好好見識我的兵法！"
+        },
+        "pristine_pc_japanese": "出陣。我が兵法\nとくとご覧に入れ",
+        "static_opaque_bytes": "0143CC01000001431E040000050505"
+      },
+      "pk": {
+        "coordinate": "2:526",
+        "current_0143_commands": [
+          {
+            "hex": "0143D2010000",
+            "offset": 10
+          },
+          {
+            "hex": "01432A040000",
+            "offset": 56
+          }
+        ],
+        "current_korean": "출진。나의 병법을\n똑똑히 보여 드리",
+        "current_literals": [
+          "출진",
+          "。나의 병법을\n똑똑히 보여 드리"
+        ],
+        "current_record_sha256": "54FF6CAD7D36CA870181E4039A974E48CDDA784F23F5B36A7245FDE0F1972536",
+        "pc_reference_texts": {
+          "pk_pc_en": "LetÖs march. WeÖll show them our tactics in action.",
+          "pk_pc_sc": "出阵！ \n仔细见识下我的兵法吧。",
+          "pk_pc_tc": "出擊！\n好好見識我的兵法！"
+        },
+        "pristine_pc_japanese": "出陣。我が兵法\nとくとご覧に入れ",
+        "static_opaque_bytes": "0143D201000001432A040000050505"
+      }
+    }
+  },
+  {
+    "current_korean": "포위병 마음대로 두지\n이쪽에서도 반격！",
+    "id": "C30",
+    "pc_japanese": "包囲兵の好きにはさせ\nこちらからも反撃！",
+    "rationale": "두 행 모두 한국어 서술어·종결이 누락됐다.",
+    "recommended_korean": "포위병 마음대로 하게 두지 않겠다.\n이쪽에서도 반격하겠다!",
+    "safe_apply_contract": {
+      "manual_line_count_after": 2,
+      "manual_line_count_before": 2,
+      "operation": "replace static record with one Korean literal and remove every 0143 command",
+      "real_game_qa_required_before_release": true,
+      "required_remaining_opaque_bytes": "050505",
+      "runtime_tokens_present": false
+    },
+    "schema": "nobu16.kr.pc-dialogue-quality-triage.v1",
+    "scope": "PC character dialogue / static 0143 cleanup",
+    "signal": "installed KO static record retains JP-only 0143 inflection command(s); same-record PC EN/SC/TC has none",
+    "targets": {
+      "base": {
+        "coordinate": "2:519",
+        "current_0143_commands": [
+          {
+            "hex": "0143E0020000",
+            "offset": 28
+          },
+          {
+            "hex": "0143CC010000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "포위병 마음대로 두지\n이쪽에서도 반격！",
+        "current_literals": [
+          "포위병 마음대로 두지",
+          "\n이쪽에서도 반격",
+          "！"
+        ],
+        "current_record_sha256": "57C08E32CDAECED020937E3E1337FD828959A2D1233E2520F3D9586BDCB0144C",
+        "pc_reference_texts": {
+          "base_pc_sc": "不能让包围军为所欲为，\n我们也开始反击吧！",
+          "base_pc_tc": "絕不讓包圍兵稱心如意！\n我方也將發動反擊！"
+        },
+        "pristine_pc_japanese": "包囲兵の好きにはさせ\nこちらからも反撃！",
+        "static_opaque_bytes": "0143E00200000143CC010000050505"
+      },
+      "pk": {
+        "coordinate": "2:533",
+        "current_0143_commands": [
+          {
+            "hex": "0143EC020000",
+            "offset": 28
+          },
+          {
+            "hex": "0143D2010000",
+            "offset": 58
+          }
+        ],
+        "current_korean": "포위병 마음대로 두지\n이쪽에서도 반격！",
+        "current_literals": [
+          "포위병 마음대로 두지",
+          "\n이쪽에서도 반격",
+          "！"
+        ],
+        "current_record_sha256": "482492D85FBF5A2A6AEAAD8E137AEA15EF9D713109F7DD70A75C7061C62C8BA6",
+        "pc_reference_texts": {
+          "pk_pc_en": "We canÖt let them besiege us as they please! This is our moment to strike back!",
+          "pk_pc_sc": "不能让包围军为所欲为，\n我们也开始反击吧！",
+          "pk_pc_tc": "絕不讓包圍兵稱心如意！\n我方也將發動反擊！"
+        },
+        "pristine_pc_japanese": "包囲兵の好きにはさせ\nこちらからも反撃！",
+        "static_opaque_bytes": "0143EC0200000143D2010000050505"
+      }
+    }
+  }
+]

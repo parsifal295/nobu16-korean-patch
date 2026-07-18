@@ -1,0 +1,122 @@
+{
+  "candidate_count": 5,
+  "candidates": [
+    {
+      "current_korean": "\u001bCA노부나가\u001bCZ도 말에서 내려\n우마마와리슈를 이끌고,\n졸병들 사이에서 직접 칼을 휘둘렀다.",
+      "id": 4495,
+      "pc_japanese": "\u001bCA信長\u001bCZも馬を下り、馬廻衆を引き連れ\n雑兵に交じって自ら刀を振るい、",
+      "pc_reference_texts": {
+        "pc_en": "\u001bCANobunaga\u001bCZ dismounted his horse along with his closest officers. They joined the common soldiers and brandished their swords together.",
+        "pc_sc": "\u001bCA信长\u001bCZ本人也纵马奔驰，率领着马迴众，\n与敌军刀剑相接。",
+        "pc_tc": "\u001bCA信長\u001bCZ亦下馬，親自率領馬迴眾，\n置身兵卒之中，力戰敵軍。"
+      },
+      "rationale": "馬廻衆를 음역한 ‘우마마와리슈’를 PC EN의 closest officers와 SC/TC의 의미에 맞춰 풀어쓴다.",
+      "recommended_korean": "\u001bCA노부나가\u001bCZ도 말에서 내려\n측근 무사들을 이끌고,\n졸병들 사이에서 직접 칼을 휘둘렀다.",
+      "safe_apply_contract": {
+        "esc_runtime_printf_and_edge_whitespace_unchanged": true,
+        "manual_line_count_after": 3,
+        "manual_line_count_before": 3,
+        "real_game_qa_required_before_release": true
+      }
+    },
+    {
+      "current_korean": "(이것이 가이도 제일의 무사\n\u001bCA이마가와 지부타이후\u001bCZ인가.\n이것이 오랫동안 나를 괴롭힌 자……)",
+      "id": 4502,
+      "pc_japanese": "（これが海道一の弓取り・\u001bCA今川治部大輔\u001bCZか\n　これが、俺を長年苦しめたもの…）",
+      "pc_reference_texts": {
+        "pc_en": "(So, this is TªkaidªÖs Strongest Daimyª, \u001bCACivil First Aide Imagawa\u001bCZ, and the cause for my suffering these past many years...)",
+        "pc_sc": "（这就是东海道第一弓\u001bCA今川治部大辅\u001bCZ吗\n　这就是让我痛苦了这么多年的家伙……）",
+        "pc_tc": "（這就是海道第一弓取\u001bCA今川治部大輔\u001bCZ。\n　這就是一直折磨我的人……）"
+      },
+      "rationale": "海道一の弓取り와 治部大輔의 불명확한 음역을, 해당 인물의 통용 이름과 역할로 바꿔 이해 가능하게 한다.",
+      "recommended_korean": "(이것이 도카이도 제일의 무장,\n\u001bCA이마가와 요시모토\u001bCZ인가.\n이것이 오랫동안 나를 괴롭힌 자……)",
+      "safe_apply_contract": {
+        "esc_runtime_printf_and_edge_whitespace_unchanged": true,
+        "manual_line_count_after": 3,
+        "manual_line_count_before": 3,
+        "real_game_qa_required_before_release": true
+      }
+    },
+    {
+      "current_korean": "\u001bCA노부나가\u001bCZ는 \u001bCA요시모토\u001bCZ가 지녔던 ‘소자\n사몬지’ 칼에 다음과 같이 새기고,\n자신의 애도로 삼았다고 전한다.",
+      "id": 4506,
+      "pc_japanese": "\u001bCA信長\u001bCZは\u001bCA義元\u001bCZの所持していた\n「宗三左文字」の太刀にこう刻み、\n自らの愛刀にしたと伝わっている。",
+      "pc_reference_texts": {
+        "pc_en": "It is said that \u001bCANobunaga\u001bCZ took \u001bCAYoshimoto\u001bCZÖs sword, Sªsan Samonji, and made it his own, carving into it these words:",
+        "pc_sc": "据说\u001bCA信长\u001bCZ在\u001bCA义元\u001bCZ所持的\n“宗三左文字”上刻下了这样的文字，\n并当作了自己的爱刀。",
+        "pc_tc": "傳聞，\u001bCA信長\u001bCZ在\u001bCA義元\u001bCZ的\n「宗三左文字」太刀上刻下字句，\n做為自己的愛刀。"
+      },
+      "rationale": "愛刀의 동음이의어 ‘애도’ 대신 뜻이 분명한 ‘애검’을 사용한다.",
+      "recommended_korean": "\u001bCA노부나가\u001bCZ는 \u001bCA요시모토\u001bCZ가 지녔던 ‘소자\n사몬지’ 칼에 다음과 같이 새기고,\n그 칼을 애검으로 삼았다고 전한다.",
+      "safe_apply_contract": {
+        "esc_runtime_printf_and_edge_whitespace_unchanged": true,
+        "manual_line_count_after": 3,
+        "manual_line_count_before": 3,
+        "real_game_qa_required_before_release": true
+      }
+    },
+    {
+      "current_korean": "\u001bCA이마가와 요시모토\u001bCZ의 죽음은\n한 다이묘였던 \u001bCA오다 노부나가\u001bCZ를\n전국시대 중심으로 밀어 올렸다…",
+      "id": 4508,
+      "pc_japanese": "海道一の弓取り、\n\u001bCA今川義元\u001bCZの死は一大名\u001bCA織田信長\u001bCZを\n戦国の表舞台に押し上げただけでなく…",
+      "pc_reference_texts": {
+        "pc_en": "The death of TªkaidªÖs Strongest Daimyª, \u001bCAYoshimoto Imagawa\u001bCZ, had not only launched \u001bCANobunaga Oda\u001bCZ onto center stage as a great daimyª of the era...",
+        "pc_sc": "东海道第一弓，\u001bCA今川义元\u001bCZ之死\n不光是把仅仅是个大名的\u001bCA织田信长\u001bCZ\n推上了战国舞台的正中央。",
+        "pc_tc": "海道第一弓取，\n\u001bCA今川義元\u001bCZ之死不僅將大名\u001bCA織田信長\u001bCZ\n推上了戰國的舞台，"
+      },
+      "rationale": "원문의 수식어를 되살리고 ‘전국시대 중심’의 어색한 결합을 자연스러운 서술로 고친다. 다음 문장의 ‘또한’으로 영향을 이어 간다.",
+      "recommended_korean": "도카이도 제일의 무장이던\n\u001bCA이마가와 요시모토\u001bCZ의 죽음은\n\u001bCA노부나가\u001bCZ를 천하의 중심에 세웠다…",
+      "safe_apply_contract": {
+        "esc_runtime_printf_and_edge_whitespace_unchanged": true,
+        "manual_line_count_after": 3,
+        "manual_line_count_before": 3,
+        "real_game_qa_required_before_release": true
+      }
+    },
+    {
+      "current_korean": "고소슨 삼국동맹의 동요와,\n그에 따른 \u001bCA[b1448]\u001bCZ의 간토 출병,\n\u001bCB미카와 마쓰다이라 가문\u001bCZ의 독립 등,",
+      "id": 4509,
+      "pc_japanese": "甲相駿三国同盟の動揺、\nそれによる\u001bCA[b1448]\u001bCZによる関東出兵\n\u001bCB三河松平家\u001bCZの独立など、",
+      "pc_reference_texts": {
+        "pc_en": "...it also resulted in the independence of the \u001bCBMatsudaira Clan\u001bCZ, and disturbed the tripartite Kª-Sª-Sun Alliance, which would dispatch \u001bCA[b1448]\u001bCZÖs soldiers to \u001bCCKantª\u001bCZ.",
+        "pc_sc": "同时也动摇了甲相骏三国同盟，\n由此引发了\u001bCA[b1448]\u001bCZ向关东出兵，\n\u001bCB三河松平家\u001bCZ独立等。",
+        "pc_tc": "甲相駿三國同盟的動搖、\n動搖後導致\u001bCA[b1448]\u001bCZ進軍關東、\n\u001bCB三河松平家\u001bCZ的獨立等等，"
+      },
+      "rationale": "甲相駿의 의미를 잃은 ‘고소슨’ 음역을 한자음 기반의 ‘갑상준’으로 바로잡고, 앞 문장의 영향 관계를 자연스럽게 잇는다.",
+      "recommended_korean": "또한, 갑상준 삼국 동맹의 동요와,\n그에 따른 \u001bCA[b1448]\u001bCZ의 간토 출병,\n\u001bCB미카와 마쓰다이라 가문\u001bCZ의 독립 등,",
+      "safe_apply_contract": {
+        "esc_runtime_printf_and_edge_whitespace_unchanged": true,
+        "manual_line_count_after": 3,
+        "manual_line_count_before": 3,
+        "real_game_qa_required_before_release": true
+      }
+    }
+  ],
+  "explicitly_excluded": [
+    {
+      "current_korean": "응?\n이것은?",
+      "id": 4504,
+      "pc_en": "Hm? WhatÖs this?",
+      "pc_tc": "嗯？\n這個是？",
+      "reason": "EN and TC retain intentional question marks; not a broken-glyph or translation candidate."
+    }
+  ],
+  "resource": "MSG_PK/JP/msgev.bin",
+  "reviewed_id_range": [
+    4494,
+    4510
+  ],
+  "schema": "nobu16.kr.pk-msgev-okehazama-priority-triage.v1",
+  "source_policy": {
+    "allowed": [
+      "PC Japanese",
+      "PC English",
+      "PC Simplified Chinese",
+      "PC Traditional Chinese",
+      "current PC Korean"
+    ],
+    "platform": "Steam PC",
+    "steam_game_resource_written": false,
+    "switch_korean_translation_used": false
+  }
+}
