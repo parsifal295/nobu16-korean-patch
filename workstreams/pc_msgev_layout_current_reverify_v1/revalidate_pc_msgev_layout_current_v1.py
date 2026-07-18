@@ -25,7 +25,11 @@ AUDIT_PATH = REPO / "workstreams" / "steam_jp_msgev_full_layout_v2" / "public" /
 DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 DEFAULT_REPORT = REPO / "tmp" / WORKSTREAM.name / "revalidation.v1.json"
 
-EXPECTED_MSGEV_SHA256 = "9572873D2BBFF3C62581F09BE2CD54225CCDD2C400D3ACC895675E2C0A2780DD"
+# Wave5 applies two source-gated static repairs (5492 and 6668) on top of the
+# frozen v2 layout-reviewed resource.  Revalidation must bind to that exact
+# installed target rather than falsely requiring the pre-Wave5 source hash.
+EXPECTED_MSGEV_SHA256 = "134F6356B194AE319125D369A23EBDA11CA8C75FB79EFA7C987D956EDD4CF154"
+WAVE5_STATIC_REPAIR_IDS = (5492, 6668)
 EXPECTED_FONT_SHA256 = "3798CB758E6EA48A257F1FBBBBE56E800F668E6FA2DE0CFD4B277C785A322EE7"
 EXPECTED_COORDINATE_SHA256 = "5907103ACB45E4822966559817B39EE77BC00E4C9DDBEEA89A409AD9A1EA5A8B"
 REVIEW_CLASSES = {
@@ -163,6 +167,7 @@ def verify(steam_root: Path) -> dict[str, object]:
         "resource": "MSG_PK/JP/msgev.bin",
         "steam": {"msgev_sha256": msg_hash, "font_sha256": font_hash},
         "reviewed_row_count": len(ids),
+        "wave5_static_repair_ids": list(WAVE5_STATIC_REPAIR_IDS),
         "coordinate_sha256": canonical_hash(ids),
         "bounded_row_count": len(ids) - 1,
         "bounded_failures": failures,
