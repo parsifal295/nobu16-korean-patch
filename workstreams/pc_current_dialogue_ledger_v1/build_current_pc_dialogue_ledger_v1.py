@@ -48,6 +48,13 @@ WAVE6_BUILDER = REPO / "workstreams" / "pc_dialogue_quality_wave6_v1" / "build_p
 WAVE7_WORKSTREAM = REPO / "workstreams" / "pc_dialogue_goodwill_runtime_wave7_v1"
 WAVE7_BUILDER = WAVE7_WORKSTREAM / "build_pc_dialogue_goodwill_runtime_wave7_v1.py"
 WAVE7_AUDIT = WAVE7_WORKSTREAM / "audit_pc_current_static_repairs_wave7.v1.json"
+WAVE7_OUTPUT_SHA256 = {
+    "MSG/JP/msggame.bin": "83C4DF9326DB1487707FDABE9CF2A00380144D14D3AC4A4FCD02513C8E3C279E",
+    "MSG_PK/JP/msggame.bin": "31950B8213AC80C9BCB866163EE7B4B655440ADF863DED21186273E3F8A34BDB",
+}
+WAVE8_WORKSTREAM = REPO / "workstreams" / "pc_dialogue_quality_wave8_candidate_v1"
+WAVE8_BUILDER = WAVE8_WORKSTREAM / "build_pc_dialogue_quality_wave8_candidate_v1.py"
+WAVE8_AUDIT = WAVE8_WORKSTREAM / "audit_pc_dialogue_quality_wave8.v1.json"
 
 WAVE5_RUNTIME_HOLD = (
     REPO
@@ -109,7 +116,7 @@ SPECS: tuple[ResourceSpec, ...] = (
         name="base_msggame",
         relative=Path("MSG/JP/msggame.bin"),
         pristine_kind="workspace_pc_jp",
-        expected_current_sha256="83C4DF9326DB1487707FDABE9CF2A00380144D14D3AC4A4FCD02513C8E3C279E",
+        expected_current_sha256="7EB3F61CE008C02BA48C191CE95E162CD0BCA76CF3E1C45482FC6CE92E6E0492",
         expected_pristine_sha256="EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
         context_relatives={
             "SC": Path("MSG/SC/msggame.bin"),
@@ -119,14 +126,14 @@ SPECS: tuple[ResourceSpec, ...] = (
             "SC": "B2FC3C18DA0F03ACFA93B1EAB0D09FBFCF7CD5076E667602D1AF212953A09BF7",
             "TC": "20E710A11CDADFAF514EBC3B9C664E9C57B1A737138F29BF38CFB6527C0A5E95",
         },
-        profile_builder=WAVE7_BUILDER,
-        profile_name="pc_dialogue_goodwill_runtime_wave7_v1",
+        profile_builder=WAVE8_BUILDER,
+        profile_name="pc_dialogue_quality_wave8_candidate_v1",
     ),
     ResourceSpec(
         name="pk_msggame",
         relative=Path("MSG_PK/JP/msggame.bin"),
         pristine_kind="steam_transaction_pc_jp",
-        expected_current_sha256="31950B8213AC80C9BCB866163EE7B4B655440ADF863DED21186273E3F8A34BDB",
+        expected_current_sha256="454A18B0F0ED5E39A3AC823AD0A30086C25226BF6E48D4580962DFEE84E24A32",
         expected_pristine_sha256="31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
         context_relatives={
             "EN": Path("MSG_PK/EN/msggame.bin"),
@@ -138,13 +145,13 @@ SPECS: tuple[ResourceSpec, ...] = (
             "SC": "8884BCC1C085D85AEFDBB2C45180D5E9D4A495B0094A157444C2BA2D39029802",
             "TC": "C5EF565CBDFB4D95B5A1785D83A758C0057569CCC6ECF1EA873EA7E5F8AD6A23",
         },
-        profile_builder=WAVE7_BUILDER,
-        profile_name="pc_dialogue_goodwill_runtime_wave7_v1",
+        profile_builder=WAVE8_BUILDER,
+        profile_name="pc_dialogue_quality_wave8_candidate_v1",
     ),
 )
 
 # The old PC-only coverage ledger had 24,262 Base and 29,524 PK literals.
-# The current Wave-5/Wave-6 profiles intentionally have fewer literal slots
+# The current Wave-5-to-Wave-8 profiles intentionally have fewer literal slots
 # after earlier static rewrites coalesced JP suffix fragments into Korean
 # literals.  Do not conceal that topology change by pretending the current
 # files have the old coordinate sets.
@@ -443,8 +450,7 @@ def load_wave7_repair_evidence(
     for relative, expected in expected_input.items():
         if inputs.get(relative) != expected:
             raise LedgerError(f"Wave 7 input profile differs for {relative}")
-        resource = path_to_resource[relative]
-        if outputs.get(relative) != next(spec.expected_current_sha256 for spec in SPECS if spec.name == resource):
+        if outputs.get(relative) != WAVE7_OUTPUT_SHA256[relative]:
             raise LedgerError(f"Wave 7 output profile differs for {relative}")
 
     repairs: dict[str, dict[str, list[dict[str, Any]]]] = {
@@ -524,10 +530,167 @@ def load_wave7_repair_evidence(
     }
 
 
-def load_current_hold_evidence(
+def load_wave8_repair_evidence(
+    steam_root: Path,
+    holds: dict[str, dict[str, list[dict[str, str]]]],
     observed_record_hashes: Mapping[str, Mapping[str, str]],
     literal_coordinates: Mapping[str, Mapping[str, tuple[str, ...]]],
-) -> tuple[dict[str, dict[str, list[dict[str, str]]]], dict[str, dict[str, list[dict[str, Any]]]], dict[str, Any]]:
+) -> tuple[dict[str, dict[str, list[dict[str, Any]]]], dict[str, int]]:
+    """Validate the applied Wave-8 audit and project its pending QA holds.
+
+    Wave 8 starts from the exact Wave-7 resource profile and changes 48
+    static character-dialogue records plus five PK event entries.  The ledger
+    is scoped to ``msggame``, but it also verifies the applied event hash so a
+    mixed Wave-8 profile cannot be presented as a complete application.
+    Every Wave-8 character-dialogue repair remains a real-game QA hold until
+    its rendered text has been observed in-game.
+    """
+    require_file(WAVE8_AUDIT, "Wave 8 dialogue-quality audit")
+    try:
+        audit = json.loads(WAVE8_AUDIT.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise LedgerError(f"Wave 8 audit is invalid JSON: {exc}") from exc
+    if not isinstance(audit, dict) or audit.get("schema") != "nobu16.kr.pc-dialogue-quality-wave8-audit.v1":
+        raise LedgerError("Wave 8 audit schema differs")
+    scope = audit.get("scope")
+    if not isinstance(scope, dict):
+        raise LedgerError("Wave 8 audit scope is absent")
+    if scope.get("platform") != "Steam PC" or scope.get("excluded_sources") != ["Switch Korean"]:
+        raise LedgerError("Wave 8 audit platform/source scope differs")
+    if scope.get("steam_game_resource_written") is not False:
+        raise LedgerError("Wave 8 audit no longer asserts read-only construction")
+
+    inputs = audit.get("input_profile_sha256")
+    summary = audit.get("summary")
+    rows = audit.get("msggame_records")
+    if not isinstance(inputs, dict) or not isinstance(summary, dict) or not isinstance(rows, list):
+        raise LedgerError("Wave 8 audit profile, summary, or msggame records are absent")
+    for relative, expected in WAVE7_OUTPUT_SHA256.items():
+        if inputs.get(relative) != expected:
+            raise LedgerError(f"Wave 8 input profile differs for {relative}")
+    expected_summary = {
+        "logical_msggame_candidates": 30,
+        "msggame_record_count": 48,
+        "msggame_record_counts": {"MSG/JP/msggame.bin": 18, "MSG_PK/JP/msggame.bin": 30},
+        "pk_msgev_entry_count": 5,
+        "total_changed_records_or_entries": 53,
+        "real_game_qa_required_before_release": True,
+    }
+    if any(summary.get(key) != value for key, value in expected_summary.items()):
+        raise LedgerError("Wave 8 audit summary differs")
+
+    event = audit.get("pk_msgev")
+    if not isinstance(event, dict) or event.get("resource") != "MSG_PK/JP/msgev.bin":
+        raise LedgerError("Wave 8 PK event evidence is absent")
+    if event.get("input_packed_sha256") != "134F6356B194AE319125D369A23EBDA11CA8C75FB79EFA7C987D956EDD4CF154":
+        raise LedgerError("Wave 8 PK event input hash differs")
+    event_output_sha256 = require_text(event, "output_packed_sha256", WAVE8_AUDIT)
+    if event_output_sha256 != "1880A8052C916FAC7F262CCC8638477F5AA124F248A6468E0533A8E252AB55C5":
+        raise LedgerError("Wave 8 PK event output hash differs")
+    if sha256_file(require_file(steam_root / "MSG_PK/JP/msgev.bin", "current Steam Wave 8 PK event")) != event_output_sha256:
+        raise LedgerError("current Steam PK event does not match applied Wave 8 output")
+    event_rows = event.get("records")
+    if not isinstance(event_rows, list):
+        raise LedgerError("Wave 8 PK event records are absent")
+    event_ids: list[int] = []
+    for row in event_rows:
+        if not isinstance(row, dict) or not isinstance(row.get("coordinate"), int):
+            raise LedgerError("Wave 8 PK event record is invalid")
+        if row.get("real_game_qa_required_before_release") is not True:
+            raise LedgerError(f"Wave 8 PK event row lacks real-game QA flag: {row.get('coordinate')}")
+        event_ids.append(row["coordinate"])
+    if tuple(sorted(event_ids)) != (4495, 4502, 4506, 4508, 4509):
+        raise LedgerError(f"Wave 8 PK event coordinate set differs: {sorted(event_ids)}")
+
+    path_to_resource = {spec.relative.as_posix(): spec.name for spec in SPECS}
+    repairs: dict[str, dict[str, list[dict[str, Any]]]] = {
+        name: defaultdict(list) for name in EXPECTED_CURRENT_COUNTS
+    }
+    seen_records: set[tuple[str, str]] = set()
+    resource_counts: Counter[str] = Counter()
+    changed_literal_count = 0
+    for row in rows:
+        if not isinstance(row, dict):
+            raise LedgerError("Wave 8 audit contains a non-object msggame row")
+        relative = require_text(row, "resource", WAVE8_AUDIT)
+        resource = path_to_resource.get(relative)
+        if resource is None:
+            raise LedgerError(f"Wave 8 audit has an unsupported resource: {relative}")
+        record = require_text(row, "coordinate", WAVE8_AUDIT)
+        record_key(record)
+        key = (resource, record)
+        if key in seen_records:
+            raise LedgerError(f"duplicate Wave 8 audit record: {resource}:{record}")
+        seen_records.add(key)
+        resource_counts[relative] += 1
+        output_hash = require_text(row, "output_record_sha256", WAVE8_AUDIT)
+        if observed_record_hashes[resource].get(record) != output_hash:
+            raise LedgerError(f"current Steam does not match applied Wave 8 record: {resource}:{record}")
+        current_literals = row.get("current_literals")
+        output_literals = row.get("output_literals")
+        if not isinstance(current_literals, list) or not isinstance(output_literals, list):
+            raise LedgerError(f"Wave 8 literal lists are absent at {resource}:{record}")
+        if not all(isinstance(value, str) for value in current_literals + output_literals):
+            raise LedgerError(f"Wave 8 literal list is invalid at {resource}:{record}")
+        coordinates = literal_coordinates[resource].get(record, ())
+        if len(current_literals) != len(output_literals) or len(output_literals) != len(coordinates):
+            raise LedgerError(f"Wave 8 literal topology differs at {resource}:{record}")
+        changed_ids = [index for index, pair in enumerate(zip(current_literals, output_literals)) if pair[0] != pair[1]]
+        if not changed_ids:
+            raise LedgerError(f"Wave 8 audit row has no literal change: {resource}:{record}")
+        if row.get("real_game_qa_required_before_release") is not True:
+            raise LedgerError(f"Wave 8 msggame row lacks real-game QA flag: {resource}:{record}")
+        kind = require_text(row, "kind", WAVE8_AUDIT)
+        evidence = {
+            "changed_literal_ids": changed_ids,
+            "kind": kind,
+            "output_record_sha256": output_hash,
+            "record": record,
+            "real_game_qa_required_before_release": True,
+            "source": relative_path(WAVE8_AUDIT),
+        }
+        for coordinate in coordinates:
+            literal_id = coordinate_key(coordinate)[2]
+            literal_evidence = {**evidence, "literal_changed": literal_id in changed_ids}
+            repairs[resource][coordinate].append(literal_evidence)
+            if literal_id in changed_ids:
+                changed_literal_count += 1
+        if not add_record_hold(
+            holds,
+            resource=resource,
+            record=record,
+            current_record_hash=output_hash,
+            observed_record_hashes=observed_record_hashes,
+            literal_coordinates=literal_coordinates,
+            source=WAVE8_AUDIT,
+            status="real_game_qa_required_before_release",
+            category="wave8_static_repair",
+        ):
+            raise LedgerError(f"Wave 8 real-game QA hold did not attach: {resource}:{record}")
+
+    if len(seen_records) != 48 or dict(sorted(resource_counts.items())) != expected_summary["msggame_record_counts"]:
+        raise LedgerError("Wave 8 msggame record counts differ")
+    if changed_literal_count != 108:
+        raise LedgerError(f"Wave 8 changed literal count differs: {changed_literal_count}")
+    return repairs, {
+        "changed_literal_count": changed_literal_count,
+        "matched_record_count": len(seen_records),
+        "real_game_qa_record_count": len(seen_records),
+        "event_entry_count": len(event_rows),
+        "total_changed_record_or_entry_count": len(seen_records) + len(event_rows),
+    }
+
+
+def load_current_hold_evidence(
+    steam_root: Path,
+    observed_record_hashes: Mapping[str, Mapping[str, str]],
+    literal_coordinates: Mapping[str, Mapping[str, tuple[str, ...]]],
+) -> tuple[
+    dict[str, dict[str, list[dict[str, str]]]],
+    dict[str, dict[str, list[dict[str, Any]]]],
+    dict[str, dict[str, list[dict[str, Any]]]],
+    dict[str, Any],
+]:
     """Load only explicit PC-only current hold records whose record hash still matches."""
     holds: dict[str, dict[str, list[dict[str, str]]]] = {
         name: defaultdict(list) for name in EXPECTED_CURRENT_COUNTS
@@ -663,9 +826,17 @@ def load_current_hold_evidence(
         "runtime_visual_qa_record_count": wave7_stats["runtime_visual_qa_record_count"],
         "stale_or_resolved_record_count": 0,
     }
-    return holds, wave7_repairs, {
+    wave8_repairs, wave8_stats = load_wave8_repair_evidence(steam_root, holds, observed_record_hashes, literal_coordinates)
+    source_stats[relative_path(WAVE8_AUDIT)] = {
+        "matched_record_count": wave8_stats["matched_record_count"],
+        "real_game_qa_record_count": wave8_stats["real_game_qa_record_count"],
+        "event_entry_count": wave8_stats["event_entry_count"],
+        "stale_or_resolved_record_count": 0,
+    }
+    return holds, wave7_repairs, wave8_repairs, {
         "source_record_validation": source_stats,
         "wave7_repair_validation": wave7_stats,
+        "wave8_repair_validation": wave8_stats,
     }
 
 
@@ -755,7 +926,11 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
             **builder_metadata[spec.name],
         }
 
-    holds, wave7_repairs, hold_metadata = load_current_hold_evidence(record_hashes, record_literals)
+    holds, wave7_repairs, wave8_repairs, hold_metadata = load_current_hold_evidence(
+        steam_root,
+        record_hashes,
+        record_literals,
+    )
     rows: list[dict[str, Any]] = []
     retired_rows: list[dict[str, Any]] = []
     current_classification_counts: Counter[str] = Counter()
@@ -778,11 +953,20 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
                 key=lambda value: (value["source"], value["record"]),
             )
             wave7_literal_changed = any(value["literal_changed"] for value in current_wave7_repair_evidence)
+            current_wave8_repair_evidence = sorted(
+                wave8_repairs[spec.name].get(coordinate, []),
+                key=lambda value: (value["source"], value["record"]),
+            )
+            wave8_literal_changed = any(value["literal_changed"] for value in current_wave8_repair_evidence)
 
             if active_holds:
+                current_hold_literal_count += 1
+            if wave8_literal_changed:
+                classification = "known_current_wave8_static_repair_pending_real_game_qa"
+                semantic_status = "pinned_wave8_static_repair_real_game_qa_required"
+            elif active_holds:
                 classification = "known_current_context_or_runtime_hold"
                 semantic_status = "runtime_or_context_review_required"
-                current_hold_literal_count += 1
             elif wave7_literal_changed:
                 classification = "known_current_wave7_static_repair"
                 semantic_status = "pinned_wave7_static_repair_no_global_semantic_completion"
@@ -831,6 +1015,7 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
                     "semantic_status": semantic_status,
                     "current_hold_evidence": active_holds,
                     "current_wave7_repair_evidence": current_wave7_repair_evidence,
+                    "current_wave8_repair_evidence": current_wave8_repair_evidence,
                     "scope": {
                         "current_steam_read": True,
                         "pristine_pc_japanese_read": True,
@@ -906,6 +1091,11 @@ def build(steam_root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]],
         "current_wave7_repair_record_count": hold_metadata["wave7_repair_validation"]["matched_record_count"],
         "current_wave7_changed_literal_count": hold_metadata["wave7_repair_validation"]["changed_literal_count"],
         "current_wave7_runtime_visual_qa_record_count": hold_metadata["wave7_repair_validation"]["runtime_visual_qa_record_count"],
+        "current_wave8_repair_record_count": hold_metadata["wave8_repair_validation"]["matched_record_count"],
+        "current_wave8_changed_literal_count": hold_metadata["wave8_repair_validation"]["changed_literal_count"],
+        "current_wave8_real_game_qa_record_count": hold_metadata["wave8_repair_validation"]["real_game_qa_record_count"],
+        "current_wave8_pk_event_entry_count": hold_metadata["wave8_repair_validation"]["event_entry_count"],
+        "current_wave8_total_changed_record_or_entry_count": hold_metadata["wave8_repair_validation"]["total_changed_record_or_entry_count"],
         "coverage_manifest": {
             "ledger": relative_path(COVERAGE_LEDGER),
             "ledger_sha256": sha256_file(COVERAGE_LEDGER),
