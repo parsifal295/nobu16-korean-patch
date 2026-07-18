@@ -148,7 +148,9 @@ class ReadmeProgressTests(unittest.TestCase):
             readme,
         )
         self.assertIn("이벤트 26건과 인물 대사 51건", readme)
-        self.assertIn("실제 화면 QA 전에는 Steam 적용이나 공개 릴리즈에 포함하지 않습니다.", readme)
+        self.assertIn("개발 Steam JP 설치본에 적용해 부팅·저장 불러오기까지 확인했습니다.", readme)
+        self.assertIn("이 변경은 공개 릴리즈에 포함하지 않았으며", readme)
+        self.assertIn("실제 대사·이벤트 화면 QA와 런타임 항목 검수는 계속 진행 중입니다.", readme)
 
 
 if __name__ == "__main__":
