@@ -60,6 +60,16 @@ WIDE_SCRIPT_RE = re.compile(
 INPUT_SHA256 = "209B96CADE84D82810A8A79CA362DFA1B6665A8C601D3DB2C3DC0F96986E9930"
 TARGET_SHA256 = "51539ABBCF4C78F5B9D51CDE7D2ABB343CFF61FE8DB6ACBEF427253F9C86B463"
 FONT_SHA256 = "3798CB758E6EA48A257F1FBBBBE56E800F668E6FA2DE0CFD4B277C785A322EE7"
+# The live resource can also contain independently staged UI-image/HUD work.
+# Both known outer profiles were compared for every Wave10-12 target glyph:
+# all advances match and no target glyph is absent.  Any other profile remains
+# rejected, and each candidate still pins its actual line widths.
+ALLOWED_FONT_OUTER_SHA256 = frozenset(
+    (
+        FONT_SHA256,
+        "82792DB9EB9B8FB2088A05EF9E66AEC4A5DADB36A919A155155942D270DC2EDB",
+    )
+)
 
 BASE_CURRENT_PATH = Path(r"F:\SteamLibrary\steamapps\common\NOBU16\MSG\JP\msggame.bin")
 BASE_CURRENT_SHA256 = "7EB3F61CE008C02BA48C191CE95E162CD0BCA76CF3E1C45482FC6CE92E6E0492"
@@ -196,9 +206,10 @@ def load_font_advance(
     if not font_path.is_file():
         raise Wave10Error(f"PC JP font resource is absent: {font_path}")
     actual_font_sha256 = sha256_path(font_path)
-    if actual_font_sha256 != FONT_SHA256:
+    if actual_font_sha256 not in ALLOWED_FONT_OUTER_SHA256:
         raise Wave10Error(
-            f"PC JP font hash differs: expected {FONT_SHA256}, got {actual_font_sha256}"
+            "PC JP font hash is not an approved layout profile: "
+            f"expected one of {sorted(ALLOWED_FONT_OUTER_SHA256)}, got {actual_font_sha256}"
         )
     try:
         archive = parse_link(font_path.read_bytes())
