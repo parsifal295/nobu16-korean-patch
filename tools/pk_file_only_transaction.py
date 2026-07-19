@@ -13,8 +13,9 @@ runtime-language profile.  The base-game tree remains blocked except for the
 explicitly approved JP shared-message files.  Japanese transactions support
 the legacy exact ten-file profile, the exact twelve-file JP-port-font profile,
 the exact fourteen-file profile that additionally replaces the two
-runtime-loaded base dialogue resources, and the exact eleven-file PC-only
-text-audit profile (which additionally owns ``msgstf_ce.bin`` but no fonts).
+runtime-loaded base dialogue resources, the exact eleven-file PC-only
+text-audit profile (which additionally owns ``msgstf_ce.bin`` but no fonts),
+and the exact four-file event/dialogue text profile.
 """
 
 from __future__ import annotations
@@ -76,7 +77,20 @@ JP_TEXT_AUDIT_ALLOWED_TARGETS = frozenset(
     | {"MSG/JP/strdata.bin"}
     | JP_BASE_DIALOGUE_TARGETS
 )
-ALLOWED_TARGETS = SC_ALLOWED_TARGETS | JP_FULL_ALLOWED_TARGETS | JP_TEXT_AUDIT_ALLOWED_TARGETS
+JP_FOUR_FILE_TEXT_ALLOWED_TARGETS = frozenset(
+    {
+        "MSG/JP/msggame.bin",
+        "MSG_PK/JP/msggame.bin",
+        "MSG_PK/JP/msgdata.bin",
+        "MSG_PK/JP/msgev.bin",
+    }
+)
+ALLOWED_TARGETS = (
+    SC_ALLOWED_TARGETS
+    | JP_FULL_ALLOWED_TARGETS
+    | JP_TEXT_AUDIT_ALLOWED_TARGETS
+    | JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+)
 LEGACY_TARGET_SCOPE = ["MSG_PK/SC", "RES_SC"]
 TARGET_SCOPE = ["MSG/SC/strdata.bin", "MSG_PK/SC", "RES_SC"]
 JP_TARGET_SCOPE = ["MSG/JP/strdata.bin", "MSG_PK/JP", "RES_JP", "RES_JP_PK"]
@@ -101,6 +115,12 @@ JP_TEXT_AUDIT_TARGET_SCOPE = [
     "MSG/JP/msggame.bin",
     "MSG/JP/strdata.bin",
     "MSG_PK/JP",
+]
+JP_FOUR_FILE_TEXT_TARGET_SCOPE = [
+    "MSG/JP/msggame.bin",
+    "MSG_PK/JP/msggame.bin",
+    "MSG_PK/JP/msgdata.bin",
+    "MSG_PK/JP/msgev.bin",
 ]
 LIVE_RESOURCE_ROOTS = (
     ("MSG", "SC"),
@@ -290,9 +310,13 @@ def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> s
         JP_ALLOWED_TARGETS,
         JP_FULL_ALLOWED_TARGETS,
         JP_TEXT_AUDIT_ALLOWED_TARGETS,
+        JP_FOUR_FILE_TEXT_ALLOWED_TARGETS,
     ):
         expected = (
-            JP_TEXT_AUDIT_ALLOWED_TARGETS
+            JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+            if paths <= JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+            or JP_FOUR_FILE_TEXT_ALLOWED_TARGETS <= paths
+            else JP_TEXT_AUDIT_ALLOWED_TARGETS
             if "MSG_PK/JP/msgstf_ce.bin" in paths
             else JP_FULL_ALLOWED_TARGETS
             if paths & JP_BASE_DIALOGUE_TARGETS
@@ -304,7 +328,8 @@ def runtime_profile_for_paths(paths: set[str] | frozenset[str], label: str) -> s
         raise TransactionError(
             f"{label} must contain the exact JP 10-file profile, exact "
             "JP+JP_PK_PORT 12-file profile, or exact JP base-dialogue "
-            "14-file profile, or exact PC-only text-audit 11-file profile"
+            "14-file profile, exact PC-only text-audit 11-file profile, or "
+            "exact JP event/dialogue text 4-file profile"
             + (f" (missing={','.join(missing)})" if missing else "")
         )
     return profile
@@ -318,12 +343,14 @@ def runtime_profile_for_scope(target_scope: Any) -> str:
         JP_PORT_TARGET_SCOPE,
         JP_FULL_TARGET_SCOPE,
         JP_TEXT_AUDIT_TARGET_SCOPE,
+        JP_FOUR_FILE_TEXT_TARGET_SCOPE,
     ):
         return "JP"
     raise TransactionError(
         "manifest target_scope must be the legacy SC scope, exact SC scope, "
         "exact JP 10-file scope, exact JP+JP_PK_PORT 12-file scope, or "
-        "exact JP base-dialogue 14-file scope"
+        "exact JP base-dialogue 14-file scope, exact PC-only text-audit "
+        "11-file scope, or exact JP event/dialogue text 4-file scope"
     )
 
 
@@ -379,7 +406,9 @@ def collect_candidate_root(root: Path) -> dict[str, Path]:
     profile = runtime_profile_for_paths(set(candidates), "candidate root")
     if profile == "JP":
         allowed_root_paths = (
-            JP_TEXT_AUDIT_ALLOWED_TARGETS
+            JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+            if set(candidates) == JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+            else JP_TEXT_AUDIT_ALLOWED_TARGETS
             if set(candidates) == JP_TEXT_AUDIT_ALLOWED_TARGETS
             else JP_FULL_ALLOWED_TARGETS
         )
@@ -518,6 +547,13 @@ def validate_manifest(value: dict[str, Any]) -> dict[str, Any]:
         raise TransactionError(
             "manifest PC-only text-audit target_scope requires the exact 11-file profile"
         )
+    if (
+        target_scope == JP_FOUR_FILE_TEXT_TARGET_SCOPE
+        and entry_paths != JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+    ):
+        raise TransactionError(
+            "manifest JP event/dialogue text target_scope requires the exact 4-file profile"
+        )
     if target_scope == LEGACY_TARGET_SCOPE and not entry_paths <= (
         SC_ALLOWED_TARGETS - {"MSG/SC/strdata.bin"}
     ):
@@ -580,6 +616,12 @@ def scope_report(manifest: dict[str, Any]) -> dict[str, Any]:
         "jp_14_file_complete": path_set == JP_FULL_ALLOWED_TARGETS,
         "jp_11_text_audit_file_count": len(path_set & JP_TEXT_AUDIT_ALLOWED_TARGETS),
         "jp_11_text_audit_file_complete": path_set == JP_TEXT_AUDIT_ALLOWED_TARGETS,
+        "jp_4_event_dialogue_text_file_count": len(
+            path_set & JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+        ),
+        "jp_4_event_dialogue_text_file_complete": (
+            path_set == JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+        ),
     }
 
 
@@ -613,7 +655,10 @@ def make_manifest(game_root: Path, release_id: str, candidates: dict[str, Path])
         "executable_modified": False,
         "registry_modified": False,
         "target_scope": (
-            JP_TEXT_AUDIT_TARGET_SCOPE
+            JP_FOUR_FILE_TEXT_TARGET_SCOPE
+            if candidate_profile == "JP"
+            and candidate_targets == JP_FOUR_FILE_TEXT_ALLOWED_TARGETS
+            else JP_TEXT_AUDIT_TARGET_SCOPE
             if candidate_profile == "JP" and candidate_targets == JP_TEXT_AUDIT_ALLOWED_TARGETS
             else JP_FULL_TARGET_SCOPE
             if candidate_profile == "JP" and candidate_targets == JP_FULL_ALLOWED_TARGETS
