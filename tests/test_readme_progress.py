@@ -184,6 +184,9 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("아쓰타 신궁", readme)
         self.assertIn("기존 `004`는 v0.12.0 사용자에게 이미 설치된 불변 패치", readme)
         self.assertIn("새 `005`에 고해상도 라벨과 명소 가로쓰기", readme)
+        self.assertIn("v0.12.0 사용자는 v0.13.0 파일을 게임 폴더에 덮어쓴 뒤 반드시 새", readme)
+        self.assertIn("`APPLY_STATIC_EXE_PATCHES.bat`를 다시 실행해야 합니다", readme)
+        self.assertIn("파일만 덮어쓰면\nEXE의 `005`는 적용되지 않습니다", readme)
         self.assertIn(
             "BE983A61C81008289E2483D552122C0BE3299B5F8DD4A557FA14DA2663AC7BD6",
             readme,
