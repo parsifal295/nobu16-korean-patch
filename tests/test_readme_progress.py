@@ -149,8 +149,8 @@ class ReadmeProgressTests(unittest.TestCase):
         )
         self.assertIn("이벤트 26건과 인물 대사 51건", readme)
         self.assertIn("개발 Steam JP 설치본에 적용해 부팅·저장 불러오기까지 확인했습니다.", readme)
-        self.assertIn("이 변경은 공개 릴리즈에 포함하지 않았으며", readme)
-        self.assertIn("실제 대사·이벤트 화면 QA와 런타임 항목 검수는 계속 진행 중입니다.", readme)
+        self.assertIn("v0.13.0 번역 품질 개선 범위에 포함하며", readme)
+        self.assertIn("실제 대사·이벤트 화면 QA와 후속 런타임 항목 검수는 계속 진행 중입니다.", readme)
 
     def test_readme_documents_the_v0120_dynamic_map_labels(self) -> None:
         readme = README.read_text(encoding="utf-8")
@@ -165,6 +165,27 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("최장\n  9자 표시 문자열", readme)
         self.assertIn(
             "624B507EB239F82A2BD9CD5856B8FA0048CDFE3BE285FFF549A5E6C05E2766A4",
+            readme,
+        )
+
+    def test_readme_documents_the_v0130_candidate_scope(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn(
+            "## v0.13.0 예정 — 번역 품질 개선·고해상도 지도 라벨·명소 가로쓰기",
+            readme,
+        )
+        self.assertIn("이벤트 대사 **26건**", readme)
+        self.assertIn("인물 대사 **51건**", readme)
+        self.assertIn("총\n  **77건**", readme)
+        self.assertIn("MSG/JP/ev_strdata.bin", readme)
+        self.assertIn("MSG_PK/JP/msggame.bin", readme)
+        self.assertIn("Issue #68", readme)
+        self.assertIn("Issue #70", readme)
+        self.assertIn("아쓰타 신궁", readme)
+        self.assertIn("기존 `004`는 v0.12.0 사용자에게 이미 설치된 불변 패치", readme)
+        self.assertIn("새 `005`에 고해상도 라벨과 명소 가로쓰기", readme)
+        self.assertIn(
+            "BE983A61C81008289E2483D552122C0BE3299B5F8DD4A557FA14DA2663AC7BD6",
             readme,
         )
 
