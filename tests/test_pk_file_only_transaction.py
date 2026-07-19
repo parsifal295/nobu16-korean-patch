@@ -149,6 +149,38 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             self._write(path, payload)
         return candidates, predecessors, sentinels
 
+    def _prepare_jp_four_file_text_profile(
+        self,
+    ) -> tuple[dict[str, Path], dict[str, bytes], dict[Path, bytes]]:
+        candidate_root = self.root / "jp-four-file-text-candidates"
+        candidates: dict[str, Path] = {}
+        predecessors: dict[str, bytes] = {}
+        for relative in sorted(tx.JP_FOUR_FILE_TEXT_ALLOWED_TARGETS):
+            predecessor = ("stock::" + relative).encode()
+            target = ("target::" + relative).encode()
+            installed = self.game.joinpath(*relative.split("/"))
+            candidate = candidate_root.joinpath(*relative.split("/"))
+            self._write(installed, predecessor)
+            self._write(candidate, target)
+            candidates[relative] = candidate
+            predecessors[relative] = predecessor
+        sentinels = {
+            self.game / "MSG" / "JP" / "ev_strdata.bin": b"jp-base-event-sentinel",
+            self.game / "MSG" / "JP" / "strdata.bin": b"jp-base-shared-sentinel",
+            self.game / "MSG_PK" / "JP" / "msgbre.bin": b"jp-battle-sentinel",
+            self.game / "MSG_PK" / "JP" / "msgire.bin": b"jp-incident-sentinel",
+            self.game / "MSG_PK" / "JP" / "msgstf.bin": b"jp-staff-sentinel",
+            self.game / "RES_JP" / "res_lang.bin": b"jp-font-sentinel",
+            self.game / "RES_JP_PK" / "res_lang_pk.bin": b"jp-pk-font-sentinel",
+            self.game
+            / "RES_JP_PK_PORT"
+            / "res_lang_pk_port1.bin": b"jp-port-font-sentinel",
+            self.game / "NOBU16PK.exe": b"executable-sentinel",
+        }
+        for path, payload in sentinels.items():
+            self._write(path, payload)
+        return candidates, predecessors, sentinels
+
     def test_plan_dry_run_apply_restore_is_complete_and_base_unchanged(self) -> None:
         manifest, manifest_hash, backup = self._manifest()
         raw = json.loads(self.manifest_path.read_text(encoding="utf-8"))
@@ -510,6 +542,198 @@ class PkFileOnlyTransactionTests(unittest.TestCase):
             )
         for path, payload in sentinels.items():
             self.assertEqual(path.read_bytes(), payload)
+
+    def test_exact_jp_four_file_text_plan_dry_run_apply_restore_and_sentinels(
+        self,
+    ) -> None:
+        candidates, predecessors, sentinels = self._prepare_jp_four_file_text_profile()
+        candidate_root = self.root / "jp-four-file-text-candidates"
+        self.assertEqual(set(tx.collect_candidate_root(candidate_root)), set(candidates))
+
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            exit_code = tx.main(
+                [
+                    "plan",
+                    "--game-root",
+                    str(self.game),
+                    "--release-id",
+                    "jp-four-file-text-v1",
+                    "--manifest",
+                    str(self.manifest_path),
+                    "--candidate-root",
+                    str(candidate_root),
+                ]
+            )
+        self.assertEqual(exit_code, 0, output.getvalue())
+        manifest, manifest_hash = tx.read_manifest(self.manifest_path)
+        self.assertEqual(manifest["target_scope"], tx.JP_FOUR_FILE_TEXT_TARGET_SCOPE)
+        self.assertEqual(
+            {entry["path"] for entry in manifest["entries"]},
+            tx.JP_FOUR_FILE_TEXT_ALLOWED_TARGETS,
+        )
+        self.assertEqual(
+            tx.runtime_profile_for_scope(tx.JP_FOUR_FILE_TEXT_TARGET_SCOPE), "JP"
+        )
+        scope = tx.scope_report(manifest)
+        self.assertEqual(scope["runtime_language"], "JP")
+        self.assertEqual(scope["msg_pk_jp_count"], 3)
+        self.assertEqual(scope["base_msg_jp_count"], 1)
+        self.assertEqual(scope["base_msg_jp_dialogue_count"], 1)
+        self.assertEqual(scope["jp_4_event_dialogue_text_file_count"], 4)
+        self.assertTrue(scope["jp_4_event_dialogue_text_file_complete"])
+        self.assertFalse(scope["jp_11_text_audit_file_complete"])
+        self.assertFalse(scope["jp_14_file_complete"])
+
+        backup = tx.default_backup_root(self.game, manifest["release_id"])
+        dry_run = tx.dry_run(self.game, backup, manifest, candidates)
+        self.assertEqual(dry_run["status"], "PASS")
+        self.assertEqual(dry_run["installed_state"], "predecessor")
+        self.assertTrue(dry_run["would_apply"])
+        self.assertFalse(dry_run["writes_performed"])
+        self.assertFalse(backup.exists())
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            applied = tx.apply_transaction(
+                self.game, backup, manifest, manifest_hash, candidates
+            )
+        self.assertEqual(applied["result"], "applied")
+        for relative, candidate in candidates.items():
+            installed = self.game.joinpath(*relative.split("/"))
+            self.assertEqual(installed.read_bytes(), candidate.read_bytes())
+            self.assertTrue(backup.joinpath("originals", *relative.split("/")).is_file())
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
+        with mock.patch.object(tx, "assert_game_stopped"):
+            restored = tx.restore_transaction(
+                self.game, backup, manifest, manifest_hash
+            )
+        self.assertEqual(restored["result"], "restored")
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+
+    def test_jp_four_file_text_rejects_three_and_five_file_variants(self) -> None:
+        candidates, _, _ = self._prepare_jp_four_file_text_profile()
+        exact_manifest = tx.make_manifest(self.game, "jp-four-file-text-v1", candidates)
+        selected = sorted(candidates)
+        three = {relative: candidates[relative] for relative in selected[:3]}
+        extra_relative = "MSG_PK/JP/msgbre.bin"
+        extra_candidate = (
+            self.root / "jp-four-file-text-candidates" / "MSG_PK" / "JP" / "msgbre.bin"
+        )
+        self._write(
+            self.game.joinpath(*extra_relative.split("/")),
+            b"stock::MSG_PK/JP/msgbre.bin",
+        )
+        self._write(extra_candidate, b"target::MSG_PK/JP/msgbre.bin")
+        five = {**candidates, extra_relative: extra_candidate}
+
+        for name, variant in (("three", three), ("five", five)):
+            with self.subTest(variant=name):
+                direct_arguments = [
+                    f"{relative}={candidate}"
+                    for relative, candidate in variant.items()
+                ]
+                with self.assertRaisesRegex(
+                    tx.TransactionError, "event/dialogue text 4-file profile"
+                ):
+                    tx.parse_candidate_args(direct_arguments)
+                with self.assertRaisesRegex(
+                    tx.TransactionError, "event/dialogue text 4-file profile"
+                ):
+                    tx.make_manifest(self.game, f"jp-four-file-{name}-v1", variant)
+
+                malformed = json.loads(json.dumps(exact_manifest))
+                if name == "three":
+                    omitted = selected[-1]
+                    malformed["entries"] = [
+                        entry
+                        for entry in malformed["entries"]
+                        if entry["path"] != omitted
+                    ]
+                else:
+                    malformed["entries"].append(
+                        {
+                            "path": extra_relative,
+                            "mode": "replace",
+                            "predecessor": tx.file_spec(
+                                self.game.joinpath(*extra_relative.split("/"))
+                            ),
+                            "target": tx.file_spec(extra_candidate),
+                        }
+                    )
+                with self.assertRaisesRegex(
+                    tx.TransactionError, "event/dialogue text 4-file profile"
+                ):
+                    tx.validate_manifest(malformed)
+
+        candidate_root = self.root / "jp-four-file-text-candidates"
+        extra_candidate.unlink()
+        omitted = selected[-1]
+        candidates[omitted].unlink()
+        with self.assertRaisesRegex(
+            tx.TransactionError, "event/dialogue text 4-file profile"
+        ):
+            tx.collect_candidate_root(candidate_root)
+        self._write(candidates[omitted], ("target::" + omitted).encode())
+        self._write(extra_candidate, b"target::MSG_PK/JP/msgbre.bin")
+        with self.assertRaisesRegex(
+            tx.TransactionError, "event/dialogue text 4-file profile"
+        ):
+            tx.collect_candidate_root(candidate_root)
+
+        wrong_scope = json.loads(json.dumps(exact_manifest))
+        wrong_scope["target_scope"] = tx.JP_FULL_TARGET_SCOPE
+        with self.assertRaisesRegex(tx.TransactionError, "exact JP 14-file profile"):
+            tx.validate_manifest(wrong_scope)
+
+    def test_jp_four_file_text_apply_failure_rolls_back_and_preserves_sentinels(
+        self,
+    ) -> None:
+        candidates, predecessors, sentinels = self._prepare_jp_four_file_text_profile()
+        manifest = tx.make_manifest(self.game, "jp-four-file-rollback-v1", candidates)
+        tx.write_atomic_json(self.manifest_path, manifest)
+        loaded, manifest_hash = tx.read_manifest(self.manifest_path)
+        backup = tx.default_backup_root(self.game, loaded["release_id"])
+        original_copy_atomic = tx.copy_atomic
+        failed = False
+
+        def fail_during_second_live_write(
+            source, destination, expected, label, *, before_replace=None
+        ):
+            nonlocal failed
+            if label == "apply MSG_PK/JP/msgdata.bin" and not failed:
+                failed = True
+                raise OSError("injected JP four-file apply failure")
+            return original_copy_atomic(
+                source,
+                destination,
+                expected,
+                label,
+                before_replace=before_replace,
+            )
+
+        with mock.patch.object(tx, "assert_game_stopped"), mock.patch.object(
+            tx, "copy_atomic", side_effect=fail_during_second_live_write
+        ):
+            with self.assertRaisesRegex(tx.TransactionError, "was rolled back"):
+                tx.apply_transaction(
+                    self.game, backup, loaded, manifest_hash, candidates
+                )
+        self.assertTrue(failed)
+        for relative, predecessor in predecessors.items():
+            self.assertEqual(
+                self.game.joinpath(*relative.split("/")).read_bytes(), predecessor
+            )
+        for path, payload in sentinels.items():
+            self.assertEqual(path.read_bytes(), payload)
+        state = tx.read_strict_json(tx.state_path(backup))
+        self.assertEqual(state["status"], "restored")
 
     def test_jp_subset_is_rejected_at_every_manifest_entrypoint(self) -> None:
         candidates, _, _ = self._prepare_jp_profile()
