@@ -1,0 +1,118 @@
+# PC PK 이벤트 색상 태그 개행 — Batch A private 후보
+
+이 workstream은 확정된 PC 전용 검토 보고서
+[pc_event_tag_reflow_batch_a_v1/README_KO.md](../pc_event_tag_reflow_batch_a_v1/README_KO.md)의
+정확히 10개 final target만 W45 PK 이벤트 테이블에 조립한다.
+
+후보는 tmp/pc_event_tag_reflow_batch_a_candidate_v1/candidate/ 아래에만 생성된다.
+Steam 게임 파일, 트랜잭션, Git, 네트워크, 릴리즈에는 쓰기 기능이 없다.
+Switch 파일·경로·번역문은 열거나 검색하지 않는다.
+
+## 입력 및 출력 핀
+
+| 구분 | packed | raw |
+| --- | --- | --- |
+| W45 KO MSG_PK/JP/msgev.bin | 994739 / 01287E2ECC5328C85348657EFF06553353CB8664B0FB7E1669DB9FC591D53EBE | 990828 / F3716AB98D60931CEC0FE61976D8DAD386C05B30B7167BD1BDB2CDF02EC55ACC |
+| pristine PC JP MSG_PK/JP/msgev.bin | 555784 / 03426B59D32EB628021DE43BC02FF82B56B04D97C25CE37F735630EA7C4E2002 | 890428 / 4A916CA6837C4F8FC2D8B6254ECBEF26339558D2DDFEBF5A1637F8426F5918DE |
+| private output | 994755 / BE5734E36B18153622A6306006F3BCE7A9C217FCF856E006A7D5C32D4CFCB676 | 990844 / 2FE6B65545B921A21CA65EFBE676FDCE98E4E2E3D591C8BAE74F0CA3204BDCD1 |
+
+- KO input: F:\SteamLibrary\steamapps\common\NOBU16\MSG_PK\JP\msgev.bin
+- JP evidence: F:\Games\NOBU16\KR_PATCH_BACKUP\file_only_transaction\jp-runtime-wave05-20260715-v1\originals\MSG_PK\JP\msgev.bin
+- PC event font: RES_JP/res_lang.bin, SHA-256 3798CB758E6EA48A257F1FBBBBE56E800F668E6FA2DE0CFD4B277C785A322EE7
+
+## 변경 범위와 검증 계약
+
+정확히 다음 10개 ID만 변경한다.
+
+4057, 4257, 4323, 4436, 4726, 4737, 4792, 4880, 4895, 5182
+
+각 행에서 다음을 빌드 전에 확인한다.
+
+- W45 현재 KO preimage UTF-16LE SHA-256
+- target UTF-16LE SHA-256
+- 같은 ID의 pristine PC JP SHA-256 및 JP anchor
+- ESC 색상 태그 순서, 런타임/printf/C0 제어 토큰, 앞뒤 공백의 동일성
+- 색상 span 내부 LF 없음, 1–3줄, 실제 이벤트 글꼴 각 줄 ≤ 912px
+- W45 및 후보의 LZ4/테이블 parser round trip
+- 후보 테이블의 변경 ID가 정확히 위 10개인지
+- 출력 packed/raw 프로필이 위 핀과 정확히 같은지
+
+| ID | W45 KO preimage | target | PC JP hash / anchor | 폭(px) |
+| ---: | --- | --- | --- | --- |
+| 4057 | 3C2C4EAF3F91E8B7A8DB0BA4A03D63FC1DF7117FE6DE9CFF3DD5212FFFCB5244 | 0544512810E2974EED7C55CD77BA365EF27846DA462E1F875E0F078594D6F672 | 9D25F2260895F4C461660B63EE1028B8C68F6881C214104B428447A1DCB07573 / 武田軍, 真田幸隆, 調略, 寝返り | 408 / 648 / 792 |
+| 4257 | 1CAD6D4118F990A8BD3E72CFD4AAC690AF8461C262F59B71A7E4002C01E29661 | E104E041F6295BEDCF401700DF9C77BEF436BC2A6D5EAF95C18729A6FFD5D0E0 | B321862B3ED14BD9AE416A9C0CD0A59952888D83BEDFF3C0E02D0F7C86866F1B / 上杉輝虎, 上杉謙信, 改名, 仏門 | 456 / 744 / 624 |
+| 4323 | 6CEB2B56253078E6D3F1D0B78AB16E66D4DE4F87788D528689CEB6A856D475F5 | BB65FB857CFCEA4C0C33D090F39D634FE4B36AC741832DBD9E8F51EBE01D8F71 | 0D357FDC67C37D821739BD927BAF5AC176A7043DACB8D3382DF682A687B1B805 / 林秀貞, 美作守, 柴田権六勝家 | 600 / 528 / 840 |
+| 4436 | F28CDE55CD2E4A3E29DFC7D5AE7DAD5F1F03F61983F6B5DF987C920B9648BFFC | 0229348A51270C1DAFE32FC3D41DB55D265F374F52EE518888102B21E260FF03 | 27C8E6D47DBD07DDA606867B3C03EC9D28E70F995A2297B5F3746A6EF0A8A368 / 飛騨国司, 姉小路家, 姉小路頼綱 | 816 / 504 / 648 |
+| 4726 | D09F69C626DEF2CBEAC10E5C437870B061079EC1B77DE6D7C4EFFDA24091C428 | C5A96644F9C7029F02C5849F759F3A201E4F6C5343E9CDDAE617611644FFADBB | 3FE698B03C31099252BD5554ADE449FCFC6959B415EB1A41D73ADB5F9FCDCCC5 / 鬼美濃, 馬場信春, 景持, 退けた | 744 / 696 / 552 |
+| 4737 | 230C03049459BAF5F2BB7CDE2C331466375788273196D663F49ADC4C7CB302C1 | 32CFA6698F1B779CB807A31EAB66D47FD77DCBFDEE5C46E78E2DA784B38C22C9 | 146D2C4F0D361F05DBBE7465F811361D55BD37C0AC251F6A98860BB5E69E2E9C / 景持, 馬場信春, 三度目の攻撃 | 864 / 576 |
+| 4792 | 221133482DBD2810592DCA100A1771E85BC3B7D3DC275C365E4EA21E06FA5F4B | 83F428FDCA2FFC3C05D40DC58BF02BAE291BF224CD0AE145D62A836A4D650B17 | 8C5CF68424C8869399F1A792EA8269833BCAAED33D94BA09BC04CF8C45F8BCBD / そうであったな, よし, 姉小路中納言良頼 | 744 / 696 |
+| 4880 | 12C08F550C8389DCC93FA66B40A758EA547FEBBE48E2E4644CD567E14BC71813 | AB3EE0FAD7B9A7B290B599DFE4ECB0C2358432C3B43BD898623884C1E284E901 | 72AA314FB3FCF96083DCC1DFF98FD7299D112A1CCC864626D69792CFA74788EC / もう一人のご舎弟, 安宅冬康, 万一 | 888 / 576 / 384 |
+| 4895 | 3FB51A8C34FB7C6BEC9CFC6B23520DBE89BF2B27553204E94AA0F8A931255036 | D65935A49A24D8AEE6823DCD0E245095D565748969EDE32BBB0A03FDEEAB80FD | 24745D5DBA455B7A5C374C9E2209B230FAB73256F59403604D0188C70C1EAD91 / 勝頼, 諏訪四郎勝頼, おぬしの名 | 648 / 456 / 456 |
+| 5182 | 748DD12DC12DB6B59AB0CADE0816B89E8DC455639599FB5277552B41106EEFB3 | 2CD0DFD0A6DABD5949A0EE4C76929EAA24E9FC398A0AAB852C6A89C6EA92A0C2 | 7FA166F075FCBDD535872B59FCD9CEC8530D23B1B81DFDCA8978C753738A8BBB / それはともかく, こうして, 伊達家, 最上家, 姻戚関係, 奥州, 変えていく | 864 / 840 / 864 |
+
+## Exact final targets
+
+표시된 \x1bC?와 \x1bCZ는 빌더 안에서는 실제 ESC 색상 토큰이다.
+
+~~~text
+4057
+\x1bCB다케다군\x1bCZ에 가담한
+\x1bCA사나다 유키타카\x1bCZ의 조략으로,
+가신들이 잇달아 배신한 것이다……
+
+4257
+\x1bCA우에스기 데루토라\x1bCZ는
+‘\x1bCA우에스기 겐신\x1bCZ’으로 개명하고,
+불문에 더욱 깊이 귀의했다.
+
+4323
+\x1bCA하야시 히데사다\x1bCZ와 그 아우
+\x1bCA미마사카노카미\x1bCZ, 그리고
+\x1bCA시바타 곤로쿠 가쓰이에\x1bCZ 등입니다……
+
+4436
+너는 히다 고쿠시 \x1bCB아네가코지 가문\x1bCZ의
+이름을 이어, 이제부터
+\x1bCA아네가코지 요리쓰나\x1bCZ라 하라!
+
+4726
+오니미노라 불린 \x1bCA바바 노부하루\x1bCZ가
+맹공을 퍼부었지만, \x1bCA가게모치\x1bCZ는
+가까스로 이를 물리쳤다.
+
+4737
+\x1bCA가게모치\x1bCZ의 예상대로, \x1bCA바바 노부하루\x1bCZ가
+세 번째 공격을 시작했다.
+
+4792
+……그랬지. 좋아! 이제부터 나는
+\x1bCA아네가코지 주나곤 요시요리\x1bCZ다!
+
+4880
+또 한 명의 아우 \x1bCA아타기 후유야스\x1bCZ님에게
+만일의 일이 생긴다면……
+어찌한단 말인가.
+
+4895
+오늘부터 \x1bCA가쓰요리\x1bCZ라 칭하라.
+\x1bCA스와 시로 가쓰요리\x1bCZ,
+그것이 네 이름이다.
+
+5182
+그건 그렇다 치고, 이렇게 \x1bCB다테 가문\x1bCZ과
+\x1bCB모가미 가문\x1bCZ은 혼인으로 인척이 되어,
+혼인이 \x1bCC오슈\x1bCZ의 운명을 크게 바꿔 간다.
+~~~
+
+5182의 첫 줄은 반드시 그건 그렇다 치고, 이렇게여야 한다. 다른 표현으로 치환하면 target hash와 private output profile 검증이 실패한다.
+
+## 실행
+
+~~~powershell
+py -3 -B .\workstreams\pc_event_tag_reflow_batch_a_candidate_v1\build_pc_event_tag_reflow_batch_a_candidate_v1.py build
+py -3 -B .\workstreams\pc_event_tag_reflow_batch_a_candidate_v1\build_pc_event_tag_reflow_batch_a_candidate_v1.py verify-private
+py -3 -B .\workstreams\pc_event_tag_reflow_batch_a_candidate_v1\build_pc_event_tag_reflow_batch_a_candidate_v1.py diff-check
+py -3 -B -m unittest .\workstreams\pc_event_tag_reflow_batch_a_candidate_v1\test_pc_event_tag_reflow_batch_a_candidate_v1.py -v
+~~~
+
+build는 기존 candidate를 덮어쓰지 않는다. private root 밖의 출력 경로 및 tmp root 자신은 거부한다.

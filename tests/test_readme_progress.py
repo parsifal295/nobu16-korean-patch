@@ -72,7 +72,8 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.12.0]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.13.0]", readme)
+        self.assertNotIn("현재 공개 안정판은 [v0.12.0]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -140,29 +141,16 @@ class ReadmeProgressTests(unittest.TestCase):
             readme,
         )
 
-    def test_readme_documents_the_v0116_text_and_npc_scope(self) -> None:
+    def test_readme_does_not_advertise_the_withdrawn_v0116_release(self) -> None:
         readme = README.read_text(encoding="utf-8")
-        self.assertIn(
+        self.assertNotIn(
             "## v0.11.6 — NPC 표기·인물 대사·이벤트 줄바꿈·상단 헤더 누적 보정",
             readme,
         )
-        self.assertIn("**276개**", readme)
-        self.assertIn("인물 대사 레코드 **205개**", readme)
-        self.assertIn("NPC 조합 조각 **46개**", readme)
-        self.assertIn("줄바꿈 셀 **25개**", readme)
-        self.assertIn("`덴령` → `전령`", readme)
-        self.assertIn("`상사람` → `상인`", readme)
-        self.assertIn("`선교모로` → `선교사`", readme)
-        self.assertIn("`소성씨` → `시동`", readme)
-        self.assertIn("`가인` → `가신`", readme)
-        self.assertIn("우에무라 라이렌", readme)
-        self.assertIn("쿠시마 마사노부", readme)
-        self.assertIn("상단 헤더", readme)
-        self.assertIn("총 21개 지점", readme)
-        self.assertIn("001·002·003", readme)
-        self.assertIn("Pending 항목만 적용", readme)
-        self.assertIn("APPLY_STATIC_EXE_PATCHES.bat", readme)
-        self.assertIn("6B3C2A8DF5B419EF78F2C87C3C3840D1E276E7D51B1C00BE2B61B6BABD8DE9F3", readme)
+        self.assertIn("이벤트 26건과 인물 대사 51건", readme)
+        self.assertIn("개발 Steam JP 설치본에 적용해 부팅·저장 불러오기까지 확인했습니다.", readme)
+        self.assertIn("v0.13.0 번역 품질 개선 범위에 포함하며", readme)
+        self.assertIn("실제 대사·이벤트 화면 QA와 후속 런타임 항목 검수는 계속 진행 중입니다.", readme)
 
     def test_readme_documents_the_v0120_dynamic_map_labels(self) -> None:
         readme = README.read_text(encoding="utf-8")
@@ -179,6 +167,35 @@ class ReadmeProgressTests(unittest.TestCase):
             "624B507EB239F82A2BD9CD5856B8FA0048CDFE3BE285FFF549A5E6C05E2766A4",
             readme,
         )
+
+    def test_readme_documents_the_v0130_candidate_scope(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn(
+            "## v0.13.0 — 번역 품질 개선·고해상도 지도 라벨·명소 가로쓰기",
+            readme,
+        )
+        self.assertIn("이벤트 대사 **26건**", readme)
+        self.assertIn("인물 대사 **51건**", readme)
+        self.assertIn("총\n  **77건**", readme)
+        self.assertIn("MSG/JP/ev_strdata.bin", readme)
+        self.assertIn("MSG_PK/JP/msggame.bin", readme)
+        self.assertIn("Issue #68", readme)
+        self.assertIn("Issue #70", readme)
+        self.assertIn("아쓰타 신궁", readme)
+        self.assertIn("기존 `004`는 v0.12.0 사용자에게 이미 설치된 불변 패치", readme)
+        self.assertIn("새 `005`에 고해상도 라벨과 명소 가로쓰기", readme)
+        self.assertIn("v0.12.0 사용자는 v0.13.0 파일을 게임 폴더에 덮어쓴 뒤 반드시 새", readme)
+        self.assertIn("`APPLY_STATIC_EXE_PATCHES.bat`를 다시 실행해야 합니다", readme)
+        self.assertIn("파일만 덮어쓰면\nEXE의 `005`는 적용되지 않습니다", readme)
+        self.assertIn(
+            "BE983A61C81008289E2483D552122C0BE3299B5F8DD4A557FA14DA2663AC7BD6",
+            readme,
+        )
+        self.assertIn(
+            "A62410EB857001306EE699FD85CE429AC9A8966619F742FA4AB07BB413308255",
+            readme,
+        )
+        self.assertIn("(380,395,760 bytes)", readme)
 
 
 if __name__ == "__main__":
