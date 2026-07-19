@@ -67,8 +67,8 @@ GAME_TARGETS: Mapping[str, tuple[int, str]] = {
 SUPPORT_TARGETS: Mapping[str, tuple[int, str]] = {
     **_reference.SUPPORT_TARGETS,
     "STATIC_OFFICER_EDITOR_FIX_README_KO.txt": (
-        3_361,
-        "9F1A9BCEBFBA014003177A1AD25C1AAAD98DDA1E56A7332677ABB5DE5F1ABDBF",
+        3_586,
+        "30085755DC1895A5A54BD40E431BEC09E3A5033108DEE6DA9D30EC343BC70B9C",
     ),
     "OfficerEditorStaticFix/Invoke-Nobu16StaticPatches.ps1": (
         29_586,

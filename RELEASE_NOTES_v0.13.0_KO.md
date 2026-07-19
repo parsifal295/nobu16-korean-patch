@@ -39,6 +39,9 @@
 
 ### 설치기 005 통합
 
+- **v0.12.0 사용자는 v0.13.0 ZIP을 게임 폴더에 덮어쓴 뒤 반드시 새
+  `APPLY_STATIC_EXE_PATCHES.bat`를 다시 실행해야 합니다.** 파일만 덮어쓰면
+  EXE에는 `005`가 적용되지 않습니다.
 - v0.12.0에서 배포한 `004` 정의와 페이로드는 변경하지 않습니다.
 - 새 `005-DualResolutionAndHorizontalLandmarks`에 Issue #68과 Issue #70을
   함께 넣었습니다.
