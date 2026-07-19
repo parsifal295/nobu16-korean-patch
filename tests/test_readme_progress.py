@@ -72,7 +72,7 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.11.6]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.12.0]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -163,6 +163,22 @@ class ReadmeProgressTests(unittest.TestCase):
         self.assertIn("Pending 항목만 적용", readme)
         self.assertIn("APPLY_STATIC_EXE_PATCHES.bat", readme)
         self.assertIn("6B3C2A8DF5B419EF78F2C87C3C3840D1E276E7D51B1C00BE2B61B6BABD8DE9F3", readme)
+
+    def test_readme_documents_the_v0120_dynamic_map_labels(self) -> None:
+        readme = README.read_text(encoding="utf-8")
+        self.assertIn("## v0.12.0 — 지도 성·지명 가로쓰기와 동적 라벨 폭", readme)
+        self.assertIn("실제 UTF-16 문자열을 NUL까지", readme)
+        self.assertIn("공백과 `성`", readme)
+        self.assertIn("고정 최대 글자 수 제한이 없습니다", readme)
+        self.assertIn("`001~003`이 이미 적용된", readme)
+        self.assertIn("`004`만 적용", readme)
+        self.assertIn("완전히 종료하고 새 프로세스로 재실행", readme)
+        self.assertIn("3자·5자·6자·7자", readme)
+        self.assertIn("최장\n  9자 표시 문자열", readme)
+        self.assertIn(
+            "624B507EB239F82A2BD9CD5856B8FA0048CDFE3BE285FFF549A5E6C05E2766A4",
+            readme,
+        )
 
 
 if __name__ == "__main__":
