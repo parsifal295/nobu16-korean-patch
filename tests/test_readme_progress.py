@@ -73,6 +73,7 @@ class ReadmeProgressTests(unittest.TestCase):
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
         self.assertIn("현재 공개 안정판은 [v0.12.0]", readme)
+        self.assertNotIn("현재 공개 안정판은 [v0.11.6]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -140,29 +141,16 @@ class ReadmeProgressTests(unittest.TestCase):
             readme,
         )
 
-    def test_readme_documents_the_v0116_text_and_npc_scope(self) -> None:
+    def test_readme_does_not_advertise_the_withdrawn_v0116_release(self) -> None:
         readme = README.read_text(encoding="utf-8")
-        self.assertIn(
+        self.assertNotIn(
             "## v0.11.6 — NPC 표기·인물 대사·이벤트 줄바꿈·상단 헤더 누적 보정",
             readme,
         )
-        self.assertIn("**276개**", readme)
-        self.assertIn("인물 대사 레코드 **205개**", readme)
-        self.assertIn("NPC 조합 조각 **46개**", readme)
-        self.assertIn("줄바꿈 셀 **25개**", readme)
-        self.assertIn("`덴령` → `전령`", readme)
-        self.assertIn("`상사람` → `상인`", readme)
-        self.assertIn("`선교모로` → `선교사`", readme)
-        self.assertIn("`소성씨` → `시동`", readme)
-        self.assertIn("`가인` → `가신`", readme)
-        self.assertIn("우에무라 라이렌", readme)
-        self.assertIn("쿠시마 마사노부", readme)
-        self.assertIn("상단 헤더", readme)
-        self.assertIn("총 21개 지점", readme)
-        self.assertIn("001·002·003", readme)
-        self.assertIn("Pending 항목만 적용", readme)
-        self.assertIn("APPLY_STATIC_EXE_PATCHES.bat", readme)
-        self.assertIn("6B3C2A8DF5B419EF78F2C87C3C3840D1E276E7D51B1C00BE2B61B6BABD8DE9F3", readme)
+        self.assertIn("이벤트 26건과 인물 대사 51건", readme)
+        self.assertIn("개발 Steam JP 설치본에 적용해 부팅·저장 불러오기까지 확인했습니다.", readme)
+        self.assertIn("이 변경은 공개 릴리즈에 포함하지 않았으며", readme)
+        self.assertIn("실제 대사·이벤트 화면 QA와 런타임 항목 검수는 계속 진행 중입니다.", readme)
 
     def test_readme_documents_the_v0120_dynamic_map_labels(self) -> None:
         readme = README.read_text(encoding="utf-8")
