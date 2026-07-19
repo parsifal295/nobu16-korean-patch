@@ -29,10 +29,12 @@ class ReleaseNotesV0130Tests(unittest.TestCase):
             "v0.12.0에서 배포한 `004` 정의와 페이로드는 변경하지 않습니다",
             "001~004`가 이미 적용된 EXE는 `005`만 자동 적용",
             "BE983A61C81008289E2483D552122C0BE3299B5F8DD4A557FA14DA2663AC7BD6",
-            "아직 빌드·게시하지 않았으므로",
+            "A62410EB857001306EE699FD85CE429AC9A8966619F742FA4AB07BB413308255",
+            "380,395,760 bytes",
         ):
             self.assertIn(text, notes)
-        self.assertNotIn("v0.13.0 ZIP SHA-256:", notes)
+        self.assertIn("v0.13.0 ZIP SHA-256:", notes)
+        self.assertNotIn("현재 릴리즈 후보 문서", notes)
 
 
 if __name__ == "__main__":

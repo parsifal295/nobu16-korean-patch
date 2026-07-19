@@ -72,8 +72,8 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_keeps_installation_release_and_rights_information(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.12.0]", readme)
-        self.assertNotIn("현재 공개 안정판은 [v0.11.6]", readme)
+        self.assertIn("현재 공개 안정판은 [v0.13.0]", readme)
+        self.assertNotIn("현재 공개 안정판은 [v0.12.0]", readme)
         self.assertIn("비공식 팬메이드", readme)
         self.assertIn("KOEI TECMO GAMES", readme)
         self.assertNotIn("<!-- active-text-audit:start -->", readme)
@@ -171,7 +171,7 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_documents_the_v0130_candidate_scope(self) -> None:
         readme = README.read_text(encoding="utf-8")
         self.assertIn(
-            "## v0.13.0 예정 — 번역 품질 개선·고해상도 지도 라벨·명소 가로쓰기",
+            "## v0.13.0 — 번역 품질 개선·고해상도 지도 라벨·명소 가로쓰기",
             readme,
         )
         self.assertIn("이벤트 대사 **26건**", readme)
@@ -191,6 +191,11 @@ class ReadmeProgressTests(unittest.TestCase):
             "BE983A61C81008289E2483D552122C0BE3299B5F8DD4A557FA14DA2663AC7BD6",
             readme,
         )
+        self.assertIn(
+            "A62410EB857001306EE699FD85CE429AC9A8966619F742FA4AB07BB413308255",
+            readme,
+        )
+        self.assertIn("(380,395,760 bytes)", readme)
 
 
 if __name__ == "__main__":
