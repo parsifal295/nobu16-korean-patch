@@ -1,0 +1,329 @@
+{
+  "schema": "nobu16.kr.pc-event-manual-compact-static007-reflow-review.v1",
+  "review_kind": "proposal_only",
+  "resource": "MSG_PK/JP/msgev.bin",
+  "scope": {
+    "entry_ids": [6654, 7308, 7610, 7611, 7734],
+    "selection_reason": "The legacy full Korean text is semantically intact but has one Static Patch 007 line over the 912px effective limit in each selected row. The historical manual_compact_korean_layout text removes or rewrites meaning; this review restores the full legacy visible text and reauthors only Korean semantic line breaks."
+  },
+  "provenance_refresh": {
+    "authoritative_current_candidate": "pc_event_manual_compact_static007_batch02_v1",
+    "five_current_texts_unchanged_from_batch01": true,
+    "five_proposed_texts_unchanged": true,
+    "verification": "All five current_ko strings were re-read from the Batch 02 candidate before this artifact refresh."
+  },
+  "layout_policy": {
+    "baseline": "Static Patch 007 verified PK event-dialogue layout",
+    "maximum_lines": 4,
+    "raw_g1n_full_width_px": 48,
+    "raw_g1n_half_width_px": 24,
+    "effective_width_formula": "ceil(raw_g1n_width_px * 30 / 48)",
+    "maximum_effective_width_px": 912,
+    "maximum_raw_g1n_width_px": 1440,
+    "japanese_source_line_breaks_used": false,
+    "japanese_line_break_policy": "Direct Japanese witnesses are semantic evidence only. Korean line breaks are independently placed at Korean clause or sentence boundaries.",
+    "dynamic_token_policy": "No selected row contains a runtime name token. Each row records an actual reservation of raw 0px / effective 0px; no inferred reservation is used."
+  },
+  "inputs": {
+    "strict_current_korean": {
+      "path": "tmp/pc_event_manual_compact_static007_batch02_v1/candidate-final/MSG_PK/JP/msgev.bin",
+      "packed_sha256": "20050DDFB1F5791A20DF7B05FBA891B654D0486F519410EEE516991368D9C41A",
+      "packed_size": 1000389,
+      "raw_sha256": "C9F9BD8772C16DC7FC10220AE515FDFAC2C0B3DBF431B8D07A71604982274C05",
+      "raw_size": 996456
+    },
+    "legacy_full_korean": {
+      "path": "F:/SteamLibrary/steamapps/common/NOBU16/KR_PATCH_BACKUP/file_only_transaction/steam-jp-v0.10.0-original-font-rollback-v1/originals/MSG_PK/JP/msgev.bin",
+      "packed_sha256": "2CA183DA690D45A75702EA0F35C70966786B59E9440B8B8F49BE9652342F81AC",
+      "packed_size": 1052079,
+      "raw_sha256": "EDCF7A9CEBD605BB2275D5A3B92A76E7E2F652B2391554F24C6A8BDD2EF91A08",
+      "raw_size": 1047944
+    },
+    "direct_pc_context": {
+      "jp": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/KR_PATCH_BACKUP/file_only_transaction/steam-jp-1.1.7-v0.6.0/originals/MSG_PK/JP/msgev.bin",
+        "packed_sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+        "raw_sha256": "07D7512BE0235753FC7BB0C7C548B61F471D9CDED01379E63B8AF8EAE013813E"
+      },
+      "en": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/MSG_PK/EN/msgev.bin",
+        "packed_sha256": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+        "raw_sha256": "6A1F3891412EBFF5AC3188F498C9951431154192D69E82B7ABB6F25AA934D911"
+      },
+      "sc": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/MSG_PK/SC/msgev.bin",
+        "packed_sha256": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+        "raw_sha256": "3ACE267E6B9774D8C940C9D7940F168B61744ADDF7C082F2CB1EA7E9BBD82B5E"
+      },
+      "tc": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/MSG_PK/TC/msgev.bin",
+        "packed_sha256": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6",
+        "raw_sha256": "42DC893AA9FF9D3E7B75FBCFFBEFD7C3DFC338CAB71E942C081BDC52C9024BF6"
+      }
+    }
+  },
+  "rows": [
+    {
+      "entry_id": 6654,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_status": "PASS — restore full text and reflow only",
+      "semantic_restoration": [
+        "Restore the adverb 게다가, the commander relation, the absence of both commanders, Motoyoshi's filial relation, and the concluding contrast.",
+        "Direct JP/EN/SC/TC all establish that neither Murakami Takeyoshi nor Kobayakawa Takakage was present and that Motoyoshi, Takeyoshi's son, led instead."
+      ],
+      "current_ko": "\u001bCB모리\u001bCZ 수군 주장 \u001bCA무라카미 다케요시\u001bCZ나\n\u001bCA고바야카와 다카카게\u001bCZ도 없이 \u001bCA다케요시\u001bCZ\n아들 \u001bCA모토요시\u001bCZ가 이끌었는데도……",
+      "current_ko_utf16le_sha256": "44B4A831D31BFF64353065CD4361049CB44633EB8161914E7AA4D4679A805B0E",
+      "legacy_full_ko": "게다가 \u001bCB모리\u001bCZ 수군의 주장인 \u001bCA무라카미 다케요시\u001bCZ나\n\u001bCA고바야카와 다카카게\u001bCZ의 모습조차 없이, \u001bCA다케요시\u001bCZ의 아들 \u001bCA모토요시\u001bCZ가\n이끌고 있었음에도 불구하고, 말이다…",
+      "legacy_full_ko_utf16le_sha256": "4A8E47283B81BD52082C00892F7E3AD96F90D57FE80947CA6C96A9196E495EAC",
+      "proposed_ko": "게다가 \u001bCB모리\u001bCZ 수군의 주장인 \u001bCA무라카미 다케요시\u001bCZ나\n\u001bCA고바야카와 다카카게\u001bCZ의 모습조차 없이,\n\u001bCA다케요시\u001bCZ의 아들 \u001bCA모토요시\u001bCZ가\n이끌고 있었음에도 불구하고, 말이다…",
+      "proposed_ko_utf16le_sha256": "09AE775000C2802934E753236FE4254024EF5DECA8F23C7E55A2503777D7F524",
+      "visible_content_preserved_from_legacy_after_whitespace_normalization": true,
+      "source_evidence": {
+        "jp": "しかも\u001bCB毛利\u001bCZ水軍の主将たる\u001bCA村上武吉\u001bCZや\n\u001bCA小早川隆景\u001bCZの姿すらなく、\u001bCA武吉\u001bCZの子の\u001bCA元吉\u001bCZが\n率いていたにも関わらず、である…",
+        "en": "Furthermore, it was not \u001bCATakeyoshi Murakami\u001bCZ or \u001bCATakakage Kobayakawa\u001bCZ who had led the \u001bCBMªri Navy\u001bCZ, but \u001bCATakeyoshi\u001bCZÖs son \u001bCAMotoyoshi\u001bCZ.",
+        "sc": "而且\u001bCB毛利\u001bCZ水军中甚至不见主将\n\u001bCA村上武吉\u001bCZ和\u001bCA小早川隆景\u001bCZ的身影，\n仅靠\u001bCA武吉\u001bCZ的儿子\u001bCA元吉\u001bCZ率领……",
+        "tc": "而且\u001bCB毛利\u001bCZ水軍中甚至不見主將\u001bCA村上武吉\u001bCZ\n或\u001bCA小早川隆景\u001bCZ的身影，而是由\u001bCA武吉\u001bCZ之子\n\u001bCA元吉\u001bCZ領軍……"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": ["\u001bCB", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ"],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "게다가 모리 수군의 주장인 무라카미 다케요시나", "raw_g1n_width_px": 1080, "effective_width_px": 675, "full_width_character_count": 20, "half_width_character_count": 5, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "고바야카와 다카카게의 모습조차 없이, 다케요시의 아들 모토요시가", "raw_g1n_width_px": 1512, "effective_width_px": 945, "full_width_character_count": 28, "half_width_character_count": 7, "over_effective_912px": true},
+          {"line_number": 3, "display_string": "이끌고 있었음에도 불구하고, 말이다…", "raw_g1n_width_px": 840, "effective_width_px": 525, "full_width_character_count": 15, "half_width_character_count": 5, "over_effective_912px": false}
+        ]},
+        "current": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "모리 수군 주장 무라카미 다케요시나", "raw_g1n_width_px": 816, "effective_width_px": 510, "full_width_character_count": 15, "half_width_character_count": 4, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "고바야카와 다카카게도 없이 다케요시", "raw_g1n_width_px": 840, "effective_width_px": 525, "full_width_character_count": 16, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "아들 모토요시가 이끌었는데도……", "raw_g1n_width_px": 720, "effective_width_px": 450, "full_width_character_count": 13, "half_width_character_count": 4, "over_effective_912px": false}
+        ]},
+        "proposed": {"line_count": 4, "all_lines_pass_static_patch_007": true, "lines": [
+          {"line_number": 1, "display_string": "게다가 모리 수군의 주장인 무라카미 다케요시나", "raw_g1n_width_px": 1080, "effective_width_px": 675, "full_width_character_count": 20, "half_width_character_count": 5, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "고바야카와 다카카게의 모습조차 없이,", "raw_g1n_width_px": 864, "effective_width_px": 540, "full_width_character_count": 16, "half_width_character_count": 4, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "다케요시의 아들 모토요시가", "raw_g1n_width_px": 624, "effective_width_px": 390, "full_width_character_count": 12, "half_width_character_count": 2, "over_effective_912px": false},
+          {"line_number": 4, "display_string": "이끌고 있었음에도 불구하고, 말이다…", "raw_g1n_width_px": 840, "effective_width_px": 525, "full_width_character_count": 15, "half_width_character_count": 5, "over_effective_912px": false}
+        ]}
+      }
+    },
+    {
+      "entry_id": 7308,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_status": "PASS — restore full text and reflow only",
+      "semantic_restoration": [
+        "Restore the father's ally relation, the planned rebellion, and the full report-to-Ieyasu narration.",
+        "Direct JP/EN/SC/TC all specify rebellion against Nobuyasu's father and his ally Nobunaga; the current compact text turns that statement into a shorter paraphrase."
+      ],
+      "current_ko": "\u001bCA노부야스\u001bCZ가 \u001bCA다케다 가쓰요리\u001bCZ와 결탁해\n부친과 \u001bCA노부나가\u001bCZ에 반기한다는 소문이\n\u001bCA이에야스\u001bCZ 귀에 들어갔다.",
+      "current_ko_utf16le_sha256": "C291493694FEF44A98DF973DA9D577C26E670EA5E37D338A69261939C2C82255",
+      "legacy_full_ko": "\u001bCA노부야스\u001bCZ가 \u001bCA다케다 가쓰요리\u001bCZ와 결탁해 아버지와 그 맹우 \u001bCA노부나가\u001bCZ에게\n모반을 일으키려 한다…\n그런 소문이 \u001bCA이에야스\u001bCZ의 귀에 들어간 것이다.",
+      "legacy_full_ko_utf16le_sha256": "48040E501611700187E1A12B4B12FD1508CCE3550A87CBE3B925D06A55F72981",
+      "proposed_ko": "\u001bCA노부야스\u001bCZ가 \u001bCA다케다 가쓰요리\u001bCZ와 결탁해\n아버지와 그 맹우 \u001bCA노부나가\u001bCZ에게 모반을 일으키려 한다…\n그런 소문이 \u001bCA이에야스\u001bCZ의 귀에 들어간 것이다.",
+      "proposed_ko_utf16le_sha256": "26EAFF891BAD694EDECE282271AB63C5F8614EC2D4D42FE84AC2F6E3FC7203EB",
+      "visible_content_preserved_from_legacy_after_whitespace_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA信康\u001bCZが\u001bCA武田勝頼\u001bCZと結び、父とその盟友\u001bCA信長\u001bCZに\n謀反を起こそうとしている…\nそんな噂が\u001bCA家康\u001bCZの耳に達したのである。",
+        "en": "\u001bCAIeyasu\u001bCZ would soon catch word that \u001bCANobuyasu\u001bCZ was conspiring with \u001bCAKatsuyori Takeda\u001bCZ to rebel against \u001bCANobunaga\u001bCZ and his own father.",
+        "sc": "\u001bCA信康\u001bCZ与\u001bCA武田胜赖\u001bCZ勾结，打算背叛\n自己的父亲及其盟友\u001bCA信长\u001bCZ……\n这个消息传到了\u001bCA家康\u001bCZ耳中。",
+        "tc": "\u001bCA信康\u001bCZ與\u001bCA武田勝賴\u001bCZ勾結，打算對父親\n及其盟友\u001bCA信長\u001bCZ發動謀反……\n這傳聞進到了\u001bCA家康\u001bCZ耳裡。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": ["\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ"],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {"actual_runtime_tokens": [], "raw_g1n_px": 0, "effective_width_px": 0, "runtime_proven": false, "reason": "No runtime name token occurs in this row."},
+      "layouts": {
+        "legacy": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "노부야스가 다케다 가쓰요리와 결탁해 아버지와 그 맹우 노부나가에게", "raw_g1n_width_px": 1560, "effective_width_px": 975, "full_width_character_count": 29, "half_width_character_count": 7, "over_effective_912px": true},
+          {"line_number": 2, "display_string": "모반을 일으키려 한다…", "raw_g1n_width_px": 504, "effective_width_px": 315, "full_width_character_count": 9, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "그런 소문이 이에야스의 귀에 들어간 것이다.", "raw_g1n_width_px": 1008, "effective_width_px": 630, "full_width_character_count": 18, "half_width_character_count": 6, "over_effective_912px": false}
+        ]},
+        "current": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "노부야스가 다케다 가쓰요리와 결탁해", "raw_g1n_width_px": 840, "effective_width_px": 525, "full_width_character_count": 16, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "부친과 노부나가에 반기한다는 소문이", "raw_g1n_width_px": 840, "effective_width_px": 525, "full_width_character_count": 16, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "이에야스 귀에 들어갔다.", "raw_g1n_width_px": 552, "effective_width_px": 345, "full_width_character_count": 10, "half_width_character_count": 3, "over_effective_912px": false}
+        ]},
+        "proposed": {"line_count": 3, "all_lines_pass_static_patch_007": true, "lines": [
+          {"line_number": 1, "display_string": "노부야스가 다케다 가쓰요리와 결탁해", "raw_g1n_width_px": 840, "effective_width_px": 525, "full_width_character_count": 16, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "아버지와 그 맹우 노부나가에게 모반을 일으키려 한다…", "raw_g1n_width_px": 1224, "effective_width_px": 765, "full_width_character_count": 22, "half_width_character_count": 7, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "그런 소문이 이에야스의 귀에 들어간 것이다.", "raw_g1n_width_px": 1008, "effective_width_px": 630, "full_width_character_count": 18, "half_width_character_count": 6, "over_effective_912px": false}
+        ]}
+      }
+    },
+    {
+      "entry_id": 7610,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_status": "PASS — restore full text and reflow only",
+      "semantic_restoration": [
+        "Restore Hideyoshi's knowledge of the folly of force, the offer of two provinces as a condition, the attempted enticement, and Muneharu's complete refusal.",
+        "Direct JP/EN/SC/TC corroborate both the force-attack judgment and the conditional offer of Bicchu and Bingo; the compact wording's 미끼/두 고을 paraphrase does not preserve those details."
+      ],
+      "current_ko": "\u001bCA히데요시\u001bCZ는 \u001bCC빗추빈고\u001bCZ 두 고을을 미끼로\n\u001bCA무네하루\u001bCZ를 회유했으나,\n\u001bCA무네하루\u001bCZ는 거들떠보지 않았다.",
+      "current_ko_utf16le_sha256": "372A3432519E67CF2FABB269D1D1CD5075985B6BE0926752E602FF7F8679D778",
+      "legacy_full_ko": "그 누구보다 힘으로 밀어붙이는 어리석음을 아는 \u001bCA히데요시\u001bCZ는, \u001bCC빗추빈고\u001bCZ\n두 지방을 주는 조건으로 \u001bCA무네하루\u001bCZ를 회유하려 했으나\n\u001bCA무네하루\u001bCZ는 거들떠보지도 않았다.",
+      "legacy_full_ko_utf16le_sha256": "B5DEE29A4CC7A4E43A1D3CCDEB0DB759C1BDA4AF2241B33C7131A029B4531907",
+      "proposed_ko": "그 누구보다 힘으로 밀어붙이는 어리석음을 아는 \u001bCA히데요시\u001bCZ는,\n\u001bCC빗추빈고\u001bCZ 두 지방을 주는 조건으로\n\u001bCA무네하루\u001bCZ를 회유하려 했으나\n\u001bCA무네하루\u001bCZ는 거들떠보지도 않았다.",
+      "proposed_ko_utf16le_sha256": "FE667A4E84196AD0789B76EEAE6479BCB7122B4216140FC4031CEF8FEF9F85D3",
+      "visible_content_preserved_from_legacy_after_whitespace_normalization": true,
+      "source_evidence": {
+        "jp": "誰よりも力攻めの愚を知る\u001bCA秀吉\u001bCZは、\u001bCC備中備後\u001bCZ\n二カ国を与える条件で\u001bCA宗治\u001bCZの籠絡を図るが\n\u001bCA宗治\u001bCZは一顧だにしなかった。",
+        "en": "Knowing full well the folly of a brute-force attack, \u001bCAHideyoshi\u001bCZ attempted to entice \u001bCAMuneharu\u001bCZ by offering him \u001bCCBicch¨\u001bCZ and \u001bCCBingo\u001bCZ provinces, but \u001bCAMuneharu\u001bCZ gave the notion not even the slightest consideration.",
+        "sc": "比任何人都清楚蛮力进攻的愚蠢之处的\u001bCA秀吉\u001bCZ以\n给与\u001bCC备中、备后\u001bCZ两国为条件试图拉拢\u001bCA宗治\u001bCZ，\n但是\u001bCA宗治\u001bCZ却不屑一顾。",
+        "tc": "\u001bCA秀吉\u001bCZ比任何人都明白蠻攻有多愚昧，因此提出\n給予\u001bCC備中、備後\u001bCZ兩國的條件，企圖籠絡\u001bCA宗治\u001bCZ，\n但\u001bCA宗治\u001bCZ不屑一顧。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": ["\u001bCA", "\u001bCZ", "\u001bCC", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ"],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false,
+        "direct_en_note": "EN separates Bicchu and Bingo into two CC spans; Korean preserves its existing one-span control signature."
+      },
+      "runtime_token_reservation": {"actual_runtime_tokens": [], "raw_g1n_px": 0, "effective_width_px": 0, "runtime_proven": false, "reason": "No runtime name token occurs in this row."},
+      "layouts": {
+        "legacy": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "그 누구보다 힘으로 밀어붙이는 어리석음을 아는 히데요시는, 빗추빈고", "raw_g1n_width_px": 1584, "effective_width_px": 990, "full_width_character_count": 29, "half_width_character_count": 8, "over_effective_912px": true},
+          {"line_number": 2, "display_string": "두 지방을 주는 조건으로 무네하루를 회유하려 했으나", "raw_g1n_width_px": 1200, "effective_width_px": 750, "full_width_character_count": 22, "half_width_character_count": 6, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "무네하루는 거들떠보지도 않았다.", "raw_g1n_width_px": 744, "effective_width_px": 465, "full_width_character_count": 14, "half_width_character_count": 3, "over_effective_912px": false}
+        ]},
+        "current": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "히데요시는 빗추빈고 두 고을을 미끼로", "raw_g1n_width_px": 864, "effective_width_px": 540, "full_width_character_count": 16, "half_width_character_count": 4, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "무네하루를 회유했으나,", "raw_g1n_width_px": 528, "effective_width_px": 330, "full_width_character_count": 10, "half_width_character_count": 2, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "무네하루는 거들떠보지 않았다.", "raw_g1n_width_px": 696, "effective_width_px": 435, "full_width_character_count": 13, "half_width_character_count": 3, "over_effective_912px": false}
+        ]},
+        "proposed": {"line_count": 4, "all_lines_pass_static_patch_007": true, "lines": [
+          {"line_number": 1, "display_string": "그 누구보다 힘으로 밀어붙이는 어리석음을 아는 히데요시는,", "raw_g1n_width_px": 1368, "effective_width_px": 855, "full_width_character_count": 25, "half_width_character_count": 7, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "빗추빈고 두 지방을 주는 조건으로", "raw_g1n_width_px": 768, "effective_width_px": 480, "full_width_character_count": 14, "half_width_character_count": 4, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "무네하루를 회유하려 했으나", "raw_g1n_width_px": 624, "effective_width_px": 390, "full_width_character_count": 12, "half_width_character_count": 2, "over_effective_912px": false},
+          {"line_number": 4, "display_string": "무네하루는 거들떠보지도 않았다.", "raw_g1n_width_px": 744, "effective_width_px": 465, "full_width_character_count": 14, "half_width_character_count": 3, "over_effective_912px": false}
+        ]}
+      }
+    },
+    {
+      "entry_id": 7611,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_status": "PASS — restore full text and reflow only",
+      "semantic_restoration": [
+        "Restore the comparative disadvantage, Muneharu's holding of the front line, the fear that anything happening to him would be grave, and the repeated dispatch of senior retainers for encouragement.",
+        "Direct JP/EN/SC/TC all retain those causal relations; the compact version cuts them into a much weaker summary."
+      ],
+      "current_ko": "\u001bCB모리가\u001bCZ도 \u001bCB오다가\u001bCZ에 밀린 와중,\n전선 지키는 \u001bCA무네하루\u001bCZ에게 큰일 생길까\n중신을 거듭 보내 격려했다.",
+      "current_ko_utf16le_sha256": "546B8D24BDC2DDE831A6A633646A24278211EF313CB862862155B019108FC29B",
+      "legacy_full_ko": "\u001bCB모리가\u001bCZ 또한 \u001bCB오다가\u001bCZ에 대한 열세 속에서\n최전선을 사수하는 \u001bCA무네하루\u001bCZ에게 무슨 일이 생기면 큰일이라 여겨\n여러 차례 중신을 보내 격려하고 있었다.",
+      "legacy_full_ko_utf16le_sha256": "A3061FFBEA43892BB43D0389A2A24C250AA205C91BB908F5CD62E0E19043B970",
+      "proposed_ko": "\u001bCB모리가\u001bCZ 또한 \u001bCB오다가\u001bCZ에 대한 열세 속에서\n최전선을 사수하는 \u001bCA무네하루\u001bCZ에게\n무슨 일이 생기면 큰일이라 여겨\n여러 차례 중신을 보내 격려하고 있었다.",
+      "proposed_ko_utf16le_sha256": "29DCE1A0244723ACB3E0BA8A9908399A8FC873FB72DCE02854B64C12EC0FB7AC",
+      "visible_content_preserved_from_legacy_after_whitespace_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCB毛利家\u001bCZもまた、\u001bCB織田家\u001bCZに対して劣勢の中\n最前線を固守する\u001bCA宗治\u001bCZに何か起きては一大事\nと、幾度も重臣を派遣して激励していた。",
+        "en": "Although the \u001bCBMªri\u001bCZ forces were inferior to those of the \u001bCBOda Clan\u001bCZ, \u001bCAMuneharu\u001bCZ held the front lines. However, his chief retainers were often dispatched to make certain nothing had gone amiss.",
+        "sc": "\u001bCB毛利家\u001bCZ和\u001bCB织田家\u001bCZ相比处于劣势，\n固守最前线的\u001bCA宗治\u001bCZ如果发生什么事情就是\n大事件，因此多次派遣重臣前去激励。",
+        "tc": "\u001bCB毛利家\u001bCZ也明白如今與\u001bCB織田家\u001bCZ相比處於劣勢，\n固守最前線的\u001bCA宗治\u001bCZ一旦出事則大事不妙。\n因此多次派遣重臣前去激勵他。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": ["\u001bCB", "\u001bCZ", "\u001bCB", "\u001bCZ", "\u001bCA", "\u001bCZ"],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {"actual_runtime_tokens": [], "raw_g1n_px": 0, "effective_width_px": 0, "runtime_proven": false, "reason": "No runtime name token occurs in this row."},
+      "layouts": {
+        "legacy": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "모리가 또한 오다가에 대한 열세 속에서", "raw_g1n_width_px": 888, "effective_width_px": 555, "full_width_character_count": 16, "half_width_character_count": 5, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "최전선을 사수하는 무네하루에게 무슨 일이 생기면 큰일이라 여겨", "raw_g1n_width_px": 1464, "effective_width_px": 915, "full_width_character_count": 27, "half_width_character_count": 7, "over_effective_912px": true},
+          {"line_number": 3, "display_string": "여러 차례 중신을 보내 격려하고 있었다.", "raw_g1n_width_px": 912, "effective_width_px": 570, "full_width_character_count": 16, "half_width_character_count": 6, "over_effective_912px": false}
+        ]},
+        "current": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "모리가도 오다가에 밀린 와중,", "raw_g1n_width_px": 672, "effective_width_px": 420, "full_width_character_count": 12, "half_width_character_count": 4, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "전선 지키는 무네하루에게 큰일 생길까", "raw_g1n_width_px": 864, "effective_width_px": 540, "full_width_character_count": 16, "half_width_character_count": 4, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "중신을 거듭 보내 격려했다.", "raw_g1n_width_px": 624, "effective_width_px": 390, "full_width_character_count": 11, "half_width_character_count": 4, "over_effective_912px": false}
+        ]},
+        "proposed": {"line_count": 4, "all_lines_pass_static_patch_007": true, "lines": [
+          {"line_number": 1, "display_string": "모리가 또한 오다가에 대한 열세 속에서", "raw_g1n_width_px": 888, "effective_width_px": 555, "full_width_character_count": 16, "half_width_character_count": 5, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "최전선을 사수하는 무네하루에게", "raw_g1n_width_px": 720, "effective_width_px": 450, "full_width_character_count": 14, "half_width_character_count": 2, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "무슨 일이 생기면 큰일이라 여겨", "raw_g1n_width_px": 720, "effective_width_px": 450, "full_width_character_count": 13, "half_width_character_count": 4, "over_effective_912px": false},
+          {"line_number": 4, "display_string": "여러 차례 중신을 보내 격려하고 있었다.", "raw_g1n_width_px": 912, "effective_width_px": 570, "full_width_character_count": 16, "half_width_character_count": 6, "over_effective_912px": false}
+        ]}
+      }
+    },
+    {
+      "entry_id": 7734,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_status": "PASS — restore full text and reflow only",
+      "semantic_restoration": [
+        "Restore the framing statement and the explicit decision of which of the two castles to flee to.",
+        "Direct JP/EN/SC/TC all express the alternative of Iwadono Castle versus Iwabitsu Castle; the legacy Korean wording preserves that full decision."
+      ],
+      "current_ko": "결국 \u001bCA오야마다 노부시게\u001bCZ의 \u001bCC이와도노성\u001bCZ과\n\u001bCA사나다 마사유키\u001bCZ의 \u001bCC이와비쓰성\u001bCZ 중\n어디로 달아날지 결정해야 했다.",
+      "current_ko_utf16le_sha256": "BCEE0EB00402B415FE8A0D922EB0E481895A20E799E79E6B8960D75C7DDECC57",
+      "legacy_full_ko": "그것은\n\u001bCA오야마다 노부시게\u001bCZ의 \u001bCC이와도노성\u001bCZ과 \u001bCA사나다 마사유키\u001bCZ의 \u001bCC이와비쓰성\u001bCZ\n어느 쪽으로 도망칠 것인가 하는 결단이었다.",
+      "legacy_full_ko_utf16le_sha256": "34B4D6D9CC09013284183ABF4BDF0F130DD3BCE6EA69CE20114C3EB0F7B685E8",
+      "proposed_ko": "그것은 \u001bCA오야마다 노부시게\u001bCZ의 \u001bCC이와도노성\u001bCZ과\n\u001bCA사나다 마사유키\u001bCZ의 \u001bCC이와비쓰성\u001bCZ\n어느 쪽으로 도망칠 것인가 하는 결단이었다.",
+      "proposed_ko_utf16le_sha256": "9D6A2A48ECF78DB5D2438A965EF207CEA49165C8077C4EAC0F4510C7EDEDEE9B",
+      "visible_content_preserved_from_legacy_after_whitespace_normalization": true,
+      "source_evidence": {
+        "jp": "それは、\n\u001bCA小山田信茂\u001bCZの\u001bCC岩殿城\u001bCZと\u001bCA真田昌幸\u001bCZの\u001bCC岩櫃城\u001bCZ\nどちらに落ち延びるかという決断であった。",
+        "en": "Should he escape to \u001bCANobushige Oyamada\u001bCZÖs \u001bCCIwadono Castle\u001bCZ or \u001bCAMasayuki Sanada\u001bCZÖs \u001bCCIwabitsu Castle\u001bCZ?",
+        "sc": "那便是，决定逃向\u001bCA小山田信茂\u001bCZ的\u001bCC岩殿城\u001bCZ，\n还是向\u001bCA真田昌幸\u001bCZ的\u001bCC岩柜城\u001bCZ……",
+        "tc": "他必須下決定，\n應逃往\u001bCA小山田信茂\u001bCZ的\u001bCC岩殿城\u001bCZ？\n抑或\u001bCA真田昌幸\u001bCZ的\u001bCC岩櫃城\u001bCZ？"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": ["\u001bCA", "\u001bCZ", "\u001bCC", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCC", "\u001bCZ"],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {"actual_runtime_tokens": [], "raw_g1n_px": 0, "effective_width_px": 0, "runtime_proven": false, "reason": "No runtime name token occurs in this row."},
+      "layouts": {
+        "legacy": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "그것은", "raw_g1n_width_px": 144, "effective_width_px": 90, "full_width_character_count": 3, "half_width_character_count": 0, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "오야마다 노부시게의 이와도노성과 사나다 마사유키의 이와비쓰성", "raw_g1n_width_px": 1464, "effective_width_px": 915, "full_width_character_count": 28, "half_width_character_count": 5, "over_effective_912px": true},
+          {"line_number": 3, "display_string": "어느 쪽으로 도망칠 것인가 하는 결단이었다.", "raw_g1n_width_px": 1008, "effective_width_px": 630, "full_width_character_count": 18, "half_width_character_count": 6, "over_effective_912px": false}
+        ]},
+        "current": {"line_count": 3, "lines": [
+          {"line_number": 1, "display_string": "결국 오야마다 노부시게의 이와도노성과", "raw_g1n_width_px": 888, "effective_width_px": 555, "full_width_character_count": 17, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "사나다 마사유키의 이와비쓰성 중", "raw_g1n_width_px": 744, "effective_width_px": 465, "full_width_character_count": 14, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "어디로 달아날지 결정해야 했다.", "raw_g1n_width_px": 720, "effective_width_px": 450, "full_width_character_count": 13, "half_width_character_count": 4, "over_effective_912px": false}
+        ]},
+        "proposed": {"line_count": 3, "all_lines_pass_static_patch_007": true, "lines": [
+          {"line_number": 1, "display_string": "그것은 오야마다 노부시게의 이와도노성과", "raw_g1n_width_px": 936, "effective_width_px": 585, "full_width_character_count": 18, "half_width_character_count": 3, "over_effective_912px": false},
+          {"line_number": 2, "display_string": "사나다 마사유키의 이와비쓰성", "raw_g1n_width_px": 672, "effective_width_px": 420, "full_width_character_count": 13, "half_width_character_count": 2, "over_effective_912px": false},
+          {"line_number": 3, "display_string": "어느 쪽으로 도망칠 것인가 하는 결단이었다.", "raw_g1n_width_px": 1008, "effective_width_px": 630, "full_width_character_count": 18, "half_width_character_count": 6, "over_effective_912px": false}
+        ]}
+      }
+    }
+  ],
+  "safety": {
+    "candidate_bin_written": false,
+    "git_operation_performed": false,
+    "steam_game_resource_written": false,
+    "release_published": false,
+    "network_operation_performed": false
+  }
+}
