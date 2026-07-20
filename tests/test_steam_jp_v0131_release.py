@@ -75,8 +75,8 @@ class SteamJpV0131ReleaseTests(unittest.TestCase):
         self.assertEqual(contract["registered_patch_count"], 6)
         self.assertEqual(contract["patch_site_count"], 201)
         self.assertEqual(contract["patch_006_site_count"], 4)
-        self.assertEqual(contract["patch_006_injected_code_size"], 312)
-        self.assertEqual(contract["patch_006_changed_byte_count"], 284)
+        self.assertEqual(contract["patch_006_injected_code_size"], 162)
+        self.assertEqual(contract["patch_006_changed_byte_count"], 150)
         self.assertEqual(contract["output_size"], 67_024_384)
         self.assertEqual(
             contract["previous_output_sha256"],
@@ -84,7 +84,7 @@ class SteamJpV0131ReleaseTests(unittest.TestCase):
         )
         self.assertEqual(
             contract["output_sha256"],
-            "811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31",
+            "3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43",
         )
         self.assertTrue(contract["supports_all_registered_prefix_states"])
         self.assertTrue(contract["validated_after_full_process_restart"])
@@ -93,7 +93,8 @@ class SteamJpV0131ReleaseTests(unittest.TestCase):
         alignment = release.ISSUE_72_ALIGNMENT
         self.assertEqual(alignment["issue"], 72)
         self.assertIsNone(alignment["fixed_offset"])
-        self.assertTrue(alignment["supply_marker_included"])
+        self.assertTrue(alignment["troop_count_group_preserved"])
+        self.assertNotIn("supply_marker_included", alignment)
         self.assertEqual(alignment["validated_resolution"], "1920x1080")
         self.assertTrue(alignment["validated_after_full_process_restart"])
 

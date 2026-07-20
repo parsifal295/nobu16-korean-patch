@@ -32,7 +32,7 @@ class StaticMapStatusIconsInstallerV0131Tests(unittest.TestCase):
         self.assertIn("Release = 'v0.13.1'", registry)
         self.assertIn(
             "AllAppliedSha256 = "
-            "'811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31'",
+            "'3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43'",
             registry,
         )
         for name in expected:
@@ -86,16 +86,16 @@ class StaticMapStatusIconsInstallerV0131Tests(unittest.TestCase):
     def test_patch_006_is_the_reviewed_same_size_byte_patch(self) -> None:
         source = PATCH_006.read_text(encoding="ascii")
         self.assertIn("Kind = 'BytePatch'", source)
-        self.assertIn("dynamic alignment", source)
-        self.assertIn("dynamic map status X/Y and paired supply-root alignment wrapper", source)
+        self.assertIn("Dynamic horizontal map status alignment", source)
+        self.assertIn("dynamic map status X/Y wrapper preserving troop-count root", source)
         self.assertEqual(source.count("Before = '"), 4)
         self.assertEqual(source.count("After = '"), 4)
         offsets = [int(value, 16) for value in re.findall(r"Offset = 0x([0-9A-F]+)", source)]
         self.assertEqual(offsets, [0x000003C0, 0x000003DC, 0x00F97B64, 0x03FEB460])
-        self.assertEqual(len(PATCH_006.read_bytes()), 1_910)
+        self.assertEqual(len(PATCH_006.read_bytes()), 1_294)
         self.assertEqual(
             hashlib.sha256(PATCH_006.read_bytes()).hexdigest().upper(),
-            "AE96F16467396A31F9891F877BC827C2D62CCEB2F77EE934F469BDD4FDC668C3",
+            "47B668CD1988C1393F051C4253FE2E895F42D4D1228C50174232F2EB96806625",
         )
 
     def test_payload_has_no_game_executable_or_new_append_payload(self) -> None:
@@ -116,7 +116,7 @@ class StaticMapStatusIconsInstallerV0131Tests(unittest.TestCase):
             encoding="utf-8"
         )
         for text in (
-            "006: 지도 성 이름 뒤 상태·보급 아이콘 동적 정렬",
+            "006: 지도 성 이름 뒤 상태 아이콘 동적 정렬",
             "v0.13.0 사용자는 v0.13.1 파일을 게임 폴더에 덮어쓴 뒤 반드시",
             "새 APPLY_STATIC_EXE_PATCHES.bat를 다시 실행해야 합니다",
             "파일만 덮어쓰면\n  EXE의 006은 적용되지 않습니다",
@@ -124,23 +124,23 @@ class StaticMapStatusIconsInstallerV0131Tests(unittest.TestCase):
             "원본 Steam JP 1.1.7 EXE: 001~006을 순서대로 적용",
             "1920x1080",
             "완전 종료·재실행",
-            "811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31",
+            "3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43",
         ):
             self.assertIn(text, readme)
 
     def test_project_readme_documents_issue_72_and_installer_rerun(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         for text in (
-            "## v0.13.1 — 지도 성 이름 뒤 상태·보급 아이콘 동적 정렬",
+            "## v0.13.1 — 지도 성 이름 뒤 상태 아이콘 동적 정렬",
             "Issue #72",
             "전투 준비·방위 거점·공략 목표 아이콘",
-            "군량 표시",
+            "병사수 표시",
             "v0.13.0 사용자는 v0.13.1 파일을 게임 폴더에 덮어쓴 뒤 반드시 새",
             "APPLY_STATIC_EXE_PATCHES.bat",
             "EXE의 `006`은 적용되지 않습니다",
             "1920×1080",
             "완전히 종료한 뒤 새 프로세스로 재실행",
-            "811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31",
+            "3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43",
         ):
             self.assertIn(text, readme)
 
