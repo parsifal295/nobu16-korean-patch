@@ -200,14 +200,14 @@ class ReadmeProgressTests(unittest.TestCase):
     def test_readme_documents_the_v0131_release(self) -> None:
         readme = README.read_text(encoding="utf-8")
         for text in (
-            "## v0.13.1 — 지도 성 이름 뒤 상태·보급 아이콘 동적 정렬",
+            "## v0.13.1 — 지도 성 이름 뒤 상태 아이콘 동적 정렬",
             "Issue #72",
             "전투 준비·방위 거점·공략 목표 아이콘",
-            "군량 표시",
+            "병사수",
             "v0.13.0 설치본에서는 `006`만",
             "완전히 종료한 뒤 새 프로세스로 재실행",
-            "C5F30AF236580ADFFB4F0C7C601A2EFCF75817BA25AB5AD698F6E36F5353A13E",
-            "(380,397,195 bytes)",
+            "7A670A03ACAB2CED43D8F27392CD1F31DB92CD16CB6B0EF04909B8E519A57FDF",
+            "(380,397,094 bytes)",
         ):
             self.assertIn(text, readme)
 

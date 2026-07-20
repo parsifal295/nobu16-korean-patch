@@ -3,8 +3,9 @@
 
 The game-resource payload remains byte-identical to v0.13.0.  This release
 advances the data-driven static installer to patch 006, which dynamically
-aligns map status and supply markers with horizontal castle labels.  The game
-executable itself is never included in the ZIP.
+aligns map status markers with horizontal castle labels while preserving the
+troop-count group below each castle crest.  The game executable itself is
+never included in the ZIP.
 """
 
 from __future__ import annotations
@@ -50,8 +51,8 @@ GAME_TARGETS: Mapping[str, tuple[int, str]] = dict(_reference.GAME_TARGETS)
 SUPPORT_TARGETS: Mapping[str, tuple[int, str]] = {
     **_reference.SUPPORT_TARGETS,
     "STATIC_OFFICER_EDITOR_FIX_README_KO.txt": (
-        4_463,
-        "8089BC1881082ED3D7C71F70FE3043D616842AD5CE91D484F1E75F2148ECAD89",
+        4_570,
+        "0F22F088B2E485C41E75E003A22BA0284DE288AB5BD47876E685722618BE65DE",
     ),
     "OfficerEditorStaticFix/Invoke-Nobu16StaticPatches.ps1": (
         30_949,
@@ -59,11 +60,11 @@ SUPPORT_TARGETS: Mapping[str, tuple[int, str]] = {
     ),
     "OfficerEditorStaticFix/000-PatchRegistry.psd1": (
         1_526,
-        "5268D90920CB91821D7B5D25B9E4977F9CB220F656C3190AA90768CA2E9C7580",
+        "9692B82195BB4AFEC12A10832157D3AE2B5807F481579E9F3175C77239487B36",
     ),
     "OfficerEditorStaticFix/Patches/006-HorizontalMapStatusIcons.psd1": (
-        1_910,
-        "AE96F16467396A31F9891F877BC827C2D62CCEB2F77EE934F469BDD4FDC668C3",
+        1_294,
+        "47B668CD1988C1393F051C4253FE2E895F42D4D1228C50174232F2EB96806625",
     ),
 }
 STATIC_EXE_PATCH: Mapping[str, object] = {
@@ -73,16 +74,17 @@ STATIC_EXE_PATCH: Mapping[str, object] = {
     ),
     "supports_previous_output_upgrade": True,
     "output_sha256": (
-        "811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31"
+        "3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43"
     ),
     "output_size": 67_024_384,
     "patch_site_count": 201,
     "patch_006_site_count": 4,
     "patch_006_kind": "same-size-byte-patch",
-    "patch_006_injected_code_size": 312,
-    "patch_006_changed_byte_count": 284,
+    "patch_006_injected_code_size": 162,
+    "patch_006_changed_byte_count": 150,
     "map_status_alignment": "dynamic-label-width-and-live-widget-height",
-    "supply_group_alignment": "exact-castle-key-paired-pool",
+    "troop_count_alignment": "native-engine-layout-below-castle-crest",
+    "troop_count_root_write": False,
     "fixed_status_offset": None,
     "validated_resolution": "1920x1080 issue-72 map-status QA",
     "validated_after_full_process_restart": True,
@@ -94,12 +96,16 @@ STATIC_EXE_PATCH: Mapping[str, object] = {
 ISSUE_72_ALIGNMENT: Mapping[str, object] = {
     "issue": 72,
     "status_markers": ["battle-ready", "defensive-base", "attack-objective"],
-    "supply_marker_included": True,
     "status_x_formula": "native status X + rendered castle-label width",
     "status_y_formula": "label Y + (label height - status height) / 2",
-    "supply_x_formula": "label root X + rendered castle-label width",
+    "troop_count_group_preserved": True,
+    "troop_count_placement": "native engine layout below castle crest",
     "fixed_offset": None,
-    "excluded_paths": ["castle crest icon", "special map cursor"],
+    "excluded_paths": [
+        "castle crest icon",
+        "troop-count group below castle crest",
+        "special map cursor",
+    ],
     "validated_resolution": "1920x1080",
     "validated_after_full_process_restart": True,
     "user_visual_confirmation": True,

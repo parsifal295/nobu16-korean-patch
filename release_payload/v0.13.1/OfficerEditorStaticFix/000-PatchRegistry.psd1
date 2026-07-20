@@ -1,7 +1,7 @@
 @{
     Schema = 'nobu16.static-exe-patch-registry.v3'
     Release = 'v0.13.1'
-    AllAppliedSha256 = '811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31'
+    AllAppliedSha256 = '3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43'
     Patches = @(
         @{
             Id = '001'
@@ -36,8 +36,8 @@
         @{
             Id = '006'
             File = 'Patches/006-HorizontalMapStatusIcons.psd1'
-            Size = 1910
-            Sha256 = 'AE96F16467396A31F9891F877BC827C2D62CCEB2F77EE934F469BDD4FDC668C3'
+            Size = 1294
+            Sha256 = '47B668CD1988C1393F051C4253FE2E895F42D4D1228C50174232F2EB96806625'
         }
     )
 }
