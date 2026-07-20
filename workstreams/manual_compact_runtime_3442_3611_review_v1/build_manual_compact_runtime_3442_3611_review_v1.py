@@ -62,6 +62,8 @@ TARGET_IDS = (
     3611,
 )
 CURRENT_DIFF_IDS = (3611,)
+SOURCE_COMPLETE_PRESERVE_IDS = (3442, 3443)
+QUALITY_CORRECTION_IDS = (3524, 3579)
 
 RUNTIME_FONT_PX = 30
 RAW_FULL_WIDTH_PX = 48
@@ -192,16 +194,18 @@ PROPOSALS: Mapping[int, Mapping[str, str]] = {
         "reason": "Restore repeated political strife, departure from Kyoto, the current shogun's genpuku in Omi, and accession to the shogunate.",
         "text": (
             f"정쟁 때마다 {cb('아시카가 가문')}의 당주는 {cc('교토')}를 떠났고,\n"
-            f"현 쇼군 {ca('아시카가 [bm75]')}도 {cc('교토')}가 아닌\n"
+            f"현 쇼군 {ca('아시카가 [bm75]')} 또한\n"
+            f"{cc('교토')}가 아닌\n"
             f"{cc('오미')}에서 원복을 치르고 쇼군직에 올랐다."
         ),
     },
     3443: {
         "strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
-        "reason": "Restore the Muromachi base, repeated return attempts, Kyoto's Miyoshi rulers, and the failed negotiations. Replace '또한' with '도' so the conservative token reservation fits without deleting meaning.",
+        "reason": "Restore the Muromachi base, repeated return attempts, Kyoto's Miyoshi rulers, and the failed negotiations without shortening the legacy connective.",
         "text": (
             f"하지만 무로마치 막부의 본거지는 역시 {cc('교토')}였다.\n"
-            f"쇼군 {ca('[bm75]')}도 몇 번이나 {cc('교토')}로 돌아가려 꾀하며,\n"
+            f"쇼군 {ca('[bm75]')} 또한 몇 번이나\n"
+            f"{cc('교토')}로 돌아가려 꾀하며,\n"
             f"{cc('교토')}를 지배하는 {cb('미요시 가문')}과 교섭했지만……"
         ),
     },
@@ -284,7 +288,7 @@ PROPOSALS: Mapping[int, Mapping[str, str]] = {
         "reason": "Restore the move to block Yoshimoto's encirclement, the party's destination at Kawagoe Castle, and Ujiyasu's sortie toward Kato.",
         "text": (
             f"이리하여 {ca('요시모토')}가 펼친 포위망을 막고자,\n"
-            f"{ca('[b790]')} 일행은 {cc('가와고에성')}으로 향했다.\n"
+            f"{ca('[b790]')} 공은 {cc('가와고에성')}으로 향했다.\n"
             f"그리고 {ca('우지야스')}는 {cc('가토')}로 출진했다……"
         ),
     },
@@ -326,10 +330,10 @@ PROPOSALS: Mapping[int, Mapping[str, str]] = {
     },
     3579: {
         "strategy": "source_complete_wording_correction_with_scene_limited_reservation",
-        "reason": "Restore the speaker's father relation and evil conduct, while using natural Korean for the broad resentment that made the unavoidable suppression necessary.",
+        "reason": "Restore the speaker's father relation and evil conduct, while identifying direct-JP 国衆 as the local warrior-landholder stratum whose resentment made the unavoidable suppression necessary.",
         "text": (
             f"황공합니다. {ca('[bm924]')} 공은…… 제 아버지이나,\n"
-            "불의를 많이 저질러 백성들의 원성이 컸습니다.\n"
+            "불의를 많이 저질러 지방 호족들의 원성도 컸습니다.\n"
             "그래서 어쩔 수 없이 토벌했습니다."
         ),
     },
@@ -403,6 +407,10 @@ def normalize_linebreaks(value: str) -> str:
 
 def normalize_legacy_layout(value: str) -> str:
     return "\n".join(line.lstrip(" \u3000") for line in normalize_linebreaks(value).split("\n"))
+
+
+def non_whitespace(value: str) -> str:
+    return "".join(character for character in value if not character.isspace())
 
 
 def is_full_width_visible(character: str) -> bool:
@@ -589,6 +597,8 @@ def build_bundle() -> tuple[dict[str, Any], dict[str, Any]]:
     historical_by_id = {row.get("id"): row for row in historical_entries if isinstance(row, Mapping)}
     inventory_by_id = {row.get("entry_id"): row for row in inventory_rows if isinstance(row, Mapping)}
     require(set(PROPOSALS) == set(TARGET_IDS), "proposal coverage drift")
+    require(set(SOURCE_COMPLETE_PRESERVE_IDS).issubset(TARGET_IDS), "source-complete preserve scope drift")
+    require(set(QUALITY_CORRECTION_IDS).issubset(TARGET_IDS), "quality-correction scope drift")
     require(all(current[entry_id] == prior[entry_id] for entry_id in TARGET_IDS), "batch07 changed a runtime-review row")
 
     referenced_name_ids = sorted(
@@ -639,6 +649,11 @@ def build_bundle() -> tuple[dict[str, Any], dict[str, Any]]:
             require(
                 compact_signature == legacy_signature == current_signature,
                 f"{entry_id}: unexpected token/control migration",
+            )
+        if entry_id in SOURCE_COMPLETE_PRESERVE_IDS:
+            require(
+                non_whitespace(proposed) == non_whitespace(legacy_ko),
+                f"{entry_id}: source-complete wording was shortened or deleted",
             )
         lines = line_metrics(entry_id, proposed, current, reservations)
         require(1 <= len(lines) <= MAX_LINES, f"{entry_id}: line count exceeds four")
@@ -721,6 +736,8 @@ def build_bundle() -> tuple[dict[str, Any], dict[str, Any]]:
             "batch07_nonoverlap_text_asserted": True,
             "batch07_nonoverlap_name_table_asserted": True,
             "later_runtime_token_migration_ids": list(current_token_reconciliation_ids),
+            "source_complete_preserve_ids": list(SOURCE_COMPLETE_PRESERVE_IDS),
+            "quality_correction_ids": list(QUALITY_CORRECTION_IDS),
             "candidate_binary_created": False,
             "steam_files_written": False,
             "git_or_release_actions_performed": False,
@@ -802,6 +819,7 @@ def build_bundle() -> tuple[dict[str, Any], dict[str, Any]]:
             "max_line_count": max_line_count,
             "all_rows_within_912px": True,
             "all_rows_within_four_lines": True,
+            "sentence_shortened_or_deleted": False,
         },
         "entries": entries,
         "safety": {
@@ -821,6 +839,8 @@ def build_bundle() -> tuple[dict[str, Any], dict[str, Any]]:
         "referenced_name_ids": referenced_name_ids,
         "semantic_reflow_ids": reflow_ids,
         "later_runtime_token_migration_ids": current_token_reconciliation_ids,
+        "source_complete_preserve_ids": list(SOURCE_COMPLETE_PRESERVE_IDS),
+        "quality_correction_ids": list(QUALITY_CORRECTION_IDS),
         "max_raw_g1n_width_px": max_raw,
         "max_effective_width_px": max_effective,
         "max_line_count": max_line_count,

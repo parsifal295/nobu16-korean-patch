@@ -56,6 +56,11 @@
       3869,
       3873
     ],
+    "source_meaning_correction_ids": [
+      3713,
+      3767,
+      3789
+    ],
     "source_sequence_reordered_for_tag_order_ids": [
       3767
     ]
@@ -2256,6 +2261,8 @@
         }
       ],
       "scene": "kawagoe_night_battle",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA요시모토\u001bCZ가 부추긴 \u001bCB양 우에스기\u001bCZ와\n\u001bCB고가쿠보\u001bCZ는 \u001bCC가와고에성\u001bCZ 포위 중이었다.\n수비: \u001bCA우지야스\u001bCZ의 매제 \u001bCA[bm790]\u001bCZ",
       "strict_batch07_current_ko_utf16le_sha256": "F11C8217F21472D14B75CF4188E6911ED9ED340CAEDC1D3DC5B064F2AE6091EB",
@@ -2417,6 +2424,8 @@
         }
       ],
       "scene": "kawagoe_night_battle",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCC가와고에성\u001bCZ을 지키던 \u001bCA우지야스\u001bCZ 매제\n\u001bCA[bm790]\u001bCZ는 맹공을 버텼고,\n농성전은 이미 몇 달째였다.",
       "strict_batch07_current_ko_utf16le_sha256": "D3453B62B0EBAB47B22071E8653FF29FF44DBD1C223482A56FC08ED93559BD01",
@@ -2564,6 +2573,8 @@
         }
       ],
       "scene": "kawagoe_night_battle",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCC가와고에성\u001bCZ에서 나온 ‘지키하치만’\n맹장 \u001bCA[b790]\u001bCZ의 군도 가세해,\n협공받은 포위군은 궤멸했다.",
       "strict_batch07_current_ko_utf16le_sha256": "3A06E3E150F31B5E83BE2C648750666BF9BDEE8DF431691366287BED2F326717",
@@ -2715,33 +2726,33 @@
           "raw_g1n_width_px": 984
         },
         {
-          "display_string": "거기서 기쿠도마루를 원복해",
-          "effective_width_px": 390,
-          "full_width_character_count": 12,
+          "display_string": "그곳에서 기쿠도마루를 원복시켜",
+          "effective_width_px": 450,
+          "full_width_character_count": 14,
           "half_width_character_count": 2,
           "line_number": 3,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 624
+          "raw_g1n_width_px": 720
         },
         {
-          "display_string": "아시카가 요시테루 공으로 개명했다.",
-          "effective_width_px": 510,
-          "full_width_character_count": 15,
-          "half_width_character_count": 4,
+          "display_string": "아시카가 요시테루 공이라 이름하게 했다.",
+          "effective_width_px": 585,
+          "full_width_character_count": 17,
+          "half_width_character_count": 5,
           "line_number": 4,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 816
+          "raw_g1n_width_px": 936
         }
       ],
       "entry_id": 3713,
       "japanese_source_line_breaks_used": false,
       "korean_sentence_shortened_or_deleted": false,
       "line_count": 4,
-      "rendered_display_template": "\u001bCB요시하루\u001bCZ는 적장자 \u001bCA기쿠도마루\u001bCZ를 데리고,\n\u001bCC단바\u001bCZ를 거쳐 \u001bCC오미\u001bCZ의 \u001bCC구쓰키다니\u001bCZ로 달아났다.\n거기서 \u001bCA기쿠도마루\u001bCZ를 원복해\n\u001bCA아시카가 요시테루\u001bCZ 공으로 개명했다.",
+      "rendered_display_template": "\u001bCB요시하루\u001bCZ는 적장자 \u001bCA기쿠도마루\u001bCZ를 데리고,\n\u001bCC단바\u001bCZ를 거쳐 \u001bCC오미\u001bCZ의 \u001bCC구쓰키다니\u001bCZ로 달아났다.\n그곳에서 \u001bCA기쿠도마루\u001bCZ를 원복시켜\n\u001bCA아시카가 요시테루\u001bCZ 공이라 이름하게 했다.",
       "route_limit": "No live runtime trace or prefix-specific width claim is made; the complete strict Korean same-ID name is reserved for every token occurrence.",
       "route_status": "CONSERVATIVE_SAME_ID_STRICT_NAME_RESERVATION_READY_FOR_FOLLOWUP_CANDIDATE",
       "runtime_token_reservations": [
@@ -2760,6 +2771,8 @@
         }
       ],
       "scene": "ashikaga_yoshiharu_yoshiteru",
+      "source_meaning_corrected_from_direct_pc_jp": true,
+      "source_meaning_correction_note": "Direct PC JP is a causative construction: Yoshiharu has Kikudomaru undergo genpuku and take the name [bm75].",
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCB요시하루\u001bCZ·적남 \u001bCA기쿠도마루\u001bCZ, \u001bCC단바\u001bCZ 거쳐\n\u001bCC오미\u001bCZ \u001bCC구쓰키\u001bCZ 피신 뒤 \u001bCA기쿠도마루\u001bCZ 원복,\n\u001bCA[bm75]\u001bCZ라 했다.",
       "strict_batch07_current_ko_utf16le_sha256": "B780F72FCB0C089A2912C4EC513A43F9EFA2F301DBAF20EACEC6FF5D6EDD2586",
@@ -2787,8 +2800,8 @@
         ],
         "unknown_percent_count": 0
       },
-      "target_ko": "\u001bCB요시하루\u001bCZ는 적장자 \u001bCA기쿠도마루\u001bCZ를 데리고,\n\u001bCC단바\u001bCZ를 거쳐 \u001bCC오미\u001bCZ의 \u001bCC구쓰키다니\u001bCZ로 달아났다.\n거기서 \u001bCA기쿠도마루\u001bCZ를 원복해\n\u001bCA[bm75]\u001bCZ 공으로 개명했다.",
-      "target_ko_utf16le_sha256": "83EC19144458D1EF0E650801BA6DE32FDBC78C6C0DB430E841EDD50F509AF28C"
+      "target_ko": "\u001bCB요시하루\u001bCZ는 적장자 \u001bCA기쿠도마루\u001bCZ를 데리고,\n\u001bCC단바\u001bCZ를 거쳐 \u001bCC오미\u001bCZ의 \u001bCC구쓰키다니\u001bCZ로 달아났다.\n그곳에서 \u001bCA기쿠도마루\u001bCZ를 원복시켜\n\u001bCA[bm75]\u001bCZ 공이라 이름하게 했다.",
+      "target_ko_utf16le_sha256": "7011F724F675A4875FF8182F8F45EDE26A1E588CE53F406838DFF2C089946641"
     },
     {
       "all_static_patch_007_lines_pass": true,
@@ -2915,6 +2928,8 @@
         }
       ],
       "scene": "ashikaga_yoshiharu_yoshiteru",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA요시하루\u001bCZ는 자신처럼 11세에 원복한\n아들에게 무로마치 13대 쇼군위를 물려,\n\u001bCA[bm75]\u001bCZ가 쇼군이 됐다.",
       "strict_batch07_current_ko_utf16le_sha256": "1F6551BA2BEF693CF5111F4C29204E534711B6015A97D4810CC8FBD1540688A8",
@@ -3060,6 +3075,8 @@
         }
       ],
       "scene": "ashikaga_yoshiharu_yoshiteru",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA아시카가 요시하루\u001bCZ가 쇼군을 물려준 건\n\u001bCA[bm75]\u001bCZ 공이 그 나이에\n이르렀기 때문만은 아니었다…",
       "strict_batch07_current_ko_utf16le_sha256": "A1985A6CA02E34C888F87439F1C943E6CF03E09000338862F9374089E1FE6B1B",
@@ -3205,6 +3222,8 @@
         }
       ],
       "scene": "ashikaga_yoshiharu_yoshiteru",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA[bm75]\u001bCZ는 훗날 '검성'\n\u001bCA쓰카하라 보쿠덴\u001bCZ에게 배워\n역대 쇼군 최고 검술을 얻었다.",
       "strict_batch07_current_ko_utf16le_sha256": "66DE1C9147739B775C426372B13ADE3160D09DF72F0EAA6685365D8D2E1FEB64",
@@ -3350,6 +3369,8 @@
         }
       ],
       "scene": "nagao_kagetora_succession",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "우유부단한 \u001bCA하루카게\u001bCZ는 사태에 대처\n못해, 반란 진압을 나이 어린 아우\n\u001bCA[bm1448]\u001bCZ에게 맡겼다.",
       "strict_batch07_current_ko_utf16le_sha256": "1DD20321C30000C54A12979897CF40BEE8B27F5710C10B826C033A932AC90B17",
@@ -3487,6 +3508,8 @@
         }
       ],
       "scene": "nagao_kagetora_succession",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA[bm1448]\u001bCZ 전투는\n첫 출진 뒤 소년답지 않아,\n사람들은 그 군재에 혀를 내둘렀다.",
       "strict_batch07_current_ko_utf16le_sha256": "1B2B4103DF3E4455AED6D1872D9E36C3B68ADE9206681571CFCCA0BE5420B4EF",
@@ -3582,44 +3605,55 @@
       "direct_pc_tc": "早就對\u001bCA晴景\u001bCZ的統治懷抱諸多不滿的\n\u001bCB長尾\u001bCZ家臣中，許多人更是開始期望\n\u001bCA[bm1448]\u001bCZ能夠接下家主的位子。然而──",
       "displayed_lines": [
         {
-          "display_string": "하루카게의 통치에 예전부터 불만을 품었고,",
-          "effective_width_px": 615,
-          "full_width_character_count": 18,
-          "half_width_character_count": 5,
+          "display_string": "예전부터 하루카게의 통치에",
+          "effective_width_px": 390,
+          "full_width_character_count": 12,
+          "half_width_character_count": 2,
           "line_number": 1,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 984
+          "raw_g1n_width_px": 624
         },
         {
-          "display_string": "많은 나가오 가신은",
-          "effective_width_px": 270,
-          "full_width_character_count": 8,
-          "half_width_character_count": 2,
+          "display_string": "불만을 품은 많은 나가오 가신은",
+          "effective_width_px": 450,
+          "full_width_character_count": 13,
+          "half_width_character_count": 4,
           "line_number": 2,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 432
+          "raw_g1n_width_px": 720
         },
         {
-          "display_string": "나가오 가게토라 공이 당주에 오르기를 바라게 되었지만―",
-          "effective_width_px": 795,
-          "full_width_character_count": 23,
-          "half_width_character_count": 7,
+          "display_string": "나가오 가게토라 공이 당주에 오르기를",
+          "effective_width_px": 540,
+          "full_width_character_count": 16,
+          "half_width_character_count": 4,
           "line_number": 3,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 1272
+          "raw_g1n_width_px": 864
+        },
+        {
+          "display_string": "바라게 되었지만―",
+          "effective_width_px": 240,
+          "full_width_character_count": 7,
+          "half_width_character_count": 2,
+          "line_number": 4,
+          "over_effective_912px": false,
+          "over_raw_1440px": false,
+          "passes_static_patch_007": true,
+          "raw_g1n_width_px": 384
         }
       ],
       "entry_id": 3767,
       "japanese_source_line_breaks_used": false,
       "korean_sentence_shortened_or_deleted": false,
-      "line_count": 3,
-      "rendered_display_template": "\u001bCA하루카게\u001bCZ의 통치에 예전부터 불만을 품었고,\n많은 \u001bCB나가오\u001bCZ 가신은\n\u001bCA나가오 가게토라\u001bCZ 공이 당주에 오르기를 바라게 되었지만―",
+      "line_count": 4,
+      "rendered_display_template": "예전부터 \u001bCA하루카게\u001bCZ의 통치에\n불만을 품은 많은 \u001bCB나가오\u001bCZ 가신은\n\u001bCA나가오 가게토라\u001bCZ 공이 당주에 오르기를\n바라게 되었지만―",
       "route_limit": "No live runtime trace or prefix-specific width claim is made; the complete strict Korean same-ID name is reserved for every token occurrence.",
       "route_status": "CONSERVATIVE_SAME_ID_STRICT_NAME_RESERVATION_READY_FOR_FOLLOWUP_CANDIDATE",
       "runtime_token_reservations": [
@@ -3638,6 +3672,8 @@
         }
       ],
       "scene": "nagao_kagetora_succession",
+      "source_meaning_corrected_from_direct_pc_jp": true,
+      "source_meaning_correction_note": "Reflow puts the long-dissatisfied Nagao retainers before their predicate so the Korean subject remains bound to the desire clause.",
       "source_sequence_reordered_for_protected_tag_order": true,
       "strict_batch07_current_ko": "\u001bCA하루카게\u001bCZ 통치에 불만 품은\n\u001bCB나가오\u001bCZ 가신들은 \u001bCA[bm1448]\u001bCZ의\n당주 취임을 바라게 됐으나……",
       "strict_batch07_current_ko_utf16le_sha256": "C99B25CA4431A901DA3053B7FD1F326B8BAEFD12DA909AC21234469D72729C68",
@@ -3657,8 +3693,8 @@
         ],
         "unknown_percent_count": 0
       },
-      "target_ko": "\u001bCA하루카게\u001bCZ의 통치에 예전부터 불만을 품었고,\n많은 \u001bCB나가오\u001bCZ 가신은\n\u001bCA[bm1448]\u001bCZ 공이 당주에 오르기를 바라게 되었지만―",
-      "target_ko_utf16le_sha256": "85B4E1CA951177ED55E0E08991B82053241A92D82D137807A076C35B042E7D10"
+      "target_ko": "예전부터 \u001bCA하루카게\u001bCZ의 통치에\n불만을 품은 많은 \u001bCB나가오\u001bCZ 가신은\n\u001bCA[bm1448]\u001bCZ 공이 당주에 오르기를\n바라게 되었지만―",
+      "target_ko_utf16le_sha256": "B71D88A17B7C0F8CFA1725B3E195D37F4D7A9174C1CD6D9B7601D27E8997D161"
     },
     {
       "all_static_patch_007_lines_pass": true,
@@ -3783,6 +3819,8 @@
         }
       ],
       "scene": "nagao_kagetora_succession",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "모반이 아닙니다… \u001bCA하루카게\u001bCZ 님께서\n\u001bCA[bm1448]\u001bCZ를 양자로 맞아\n조용히 은거하시길 바랄 뿐입니다.",
       "strict_batch07_current_ko_utf16le_sha256": "CE2A1F076B7C9FA9DD5FA0AC7BBABA82DD43126F4DAAE286CE9E908F0FCFE2A2",
@@ -3886,44 +3924,55 @@
       "direct_pc_tc": "\u001bCA[bm1448]\u001bCZ的師父、同時作為\u001bCC林泉寺\u001bCZ住持\n於家中擁有大量信徒的\u001bCA天室光育\u001bCZ也介入斡旋。\n在他反覆懇請\u001bCA晴景\u001bCZ隱退後……",
       "displayed_lines": [
         {
-          "display_string": "나가오 가게토라 공의 스승이자 린센지 주지로 신자가 많은",
-          "effective_width_px": 825,
-          "full_width_character_count": 24,
-          "half_width_character_count": 7,
+          "display_string": "나가오 가게토라 공의 스승이자 린센지 주지로서",
+          "effective_width_px": 675,
+          "full_width_character_count": 20,
+          "half_width_character_count": 5,
           "line_number": 1,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 1320
+          "raw_g1n_width_px": 1080
         },
         {
-          "display_string": "덴시쓰 고이쿠도 설득에 나서,",
-          "effective_width_px": 420,
-          "full_width_character_count": 12,
-          "half_width_character_count": 4,
+          "display_string": "가문 내에 따르는 이도 많은 덴시쓰 고이쿠가",
+          "effective_width_px": 630,
+          "full_width_character_count": 18,
+          "half_width_character_count": 6,
           "line_number": 2,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 672
+          "raw_g1n_width_px": 1008
         },
         {
-          "display_string": "하루카게에게 은거를 거듭 권했다. 그리고……",
-          "effective_width_px": 615,
-          "full_width_character_count": 17,
-          "half_width_character_count": 7,
+          "display_string": "중재에 나서 하루카게에게 은거를",
+          "effective_width_px": 465,
+          "full_width_character_count": 14,
+          "half_width_character_count": 3,
           "line_number": 3,
           "over_effective_912px": false,
           "over_raw_1440px": false,
           "passes_static_patch_007": true,
-          "raw_g1n_width_px": 984
+          "raw_g1n_width_px": 744
+        },
+        {
+          "display_string": "간곡히 거듭 권했다. 그리고……",
+          "effective_width_px": 420,
+          "full_width_character_count": 11,
+          "half_width_character_count": 6,
+          "line_number": 4,
+          "over_effective_912px": false,
+          "over_raw_1440px": false,
+          "passes_static_patch_007": true,
+          "raw_g1n_width_px": 672
         }
       ],
       "entry_id": 3789,
       "japanese_source_line_breaks_used": false,
       "korean_sentence_shortened_or_deleted": false,
-      "line_count": 3,
-      "rendered_display_template": "\u001bCA나가오 가게토라\u001bCZ 공의 스승이자 \u001bCC린센지\u001bCZ 주지로 신자가 많은\n\u001bCA덴시쓰 고이쿠\u001bCZ도 설득에 나서,\n\u001bCA하루카게\u001bCZ에게 은거를 거듭 권했다. 그리고……",
+      "line_count": 4,
+      "rendered_display_template": "\u001bCA나가오 가게토라\u001bCZ 공의 스승이자 \u001bCC린센지\u001bCZ 주지로서\n가문 내에 따르는 이도 많은 \u001bCA덴시쓰 고이쿠\u001bCZ가\n중재에 나서 \u001bCA하루카게\u001bCZ에게 은거를\n간곡히 거듭 권했다. 그리고……",
       "route_limit": "No live runtime trace or prefix-specific width claim is made; the complete strict Korean same-ID name is reserved for every token occurrence.",
       "route_status": "CONSERVATIVE_SAME_ID_STRICT_NAME_RESERVATION_READY_FOR_FOLLOWUP_CANDIDATE",
       "runtime_token_reservations": [
@@ -3942,6 +3991,8 @@
         }
       ],
       "scene": "nagao_kagetora_succession",
+      "source_meaning_corrected_from_direct_pc_jp": true,
+      "source_meaning_correction_note": "Direct PC JP restores followers within the clan and Tenshitsu Koiku entering as mediator before repeatedly urging retirement.",
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA[bm1448]\u001bCZ의 스승, \u001bCC린센지\u001bCZ 주지\n신망 높은 \u001bCA덴시쓰 고이쿠\u001bCZ도 나서\n\u001bCA하루카게\u001bCZ에게 은거를 거듭 권했다……",
       "strict_batch07_current_ko_utf16le_sha256": "CD2454C1BD0A2F888E472AD3C767422E893F5D0CA6C89D65731E9F0C3B850EFC",
@@ -3963,8 +4014,8 @@
         ],
         "unknown_percent_count": 0
       },
-      "target_ko": "\u001bCA[bm1448]\u001bCZ 공의 스승이자 \u001bCC린센지\u001bCZ 주지로 신자가 많은\n\u001bCA덴시쓰 고이쿠\u001bCZ도 설득에 나서,\n\u001bCA하루카게\u001bCZ에게 은거를 거듭 권했다. 그리고……",
-      "target_ko_utf16le_sha256": "938BE1BB33F6F1AF2C292C544DC3920D642CF5DD9956B6CC4E8D65FF367C76DF"
+      "target_ko": "\u001bCA[bm1448]\u001bCZ 공의 스승이자 \u001bCC린센지\u001bCZ 주지로서\n가문 내에 따르는 이도 많은 \u001bCA덴시쓰 고이쿠\u001bCZ가\n중재에 나서 \u001bCA하루카게\u001bCZ에게 은거를\n간곡히 거듭 권했다. 그리고……",
+      "target_ko_utf16le_sha256": "C1B34B208F65B4F6241782A36AA3220B9485DA91D9C97FBC936D377405362CD9"
     },
     {
       "all_static_patch_007_lines_pass": true,
@@ -4102,6 +4153,8 @@
         }
       ],
       "scene": "nagao_kagetora_succession",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA나가오 하루카게\u001bCZ는 \u001bCA[bm1448]\u001bCZ를\n양자로 맞아 은거하고\n\u001bCA[bm1448]\u001bCZ에게 당주를 넘겼다.",
       "strict_batch07_current_ko_utf16le_sha256": "00EA0A328C6BC17AC7D8D015D6B63D87F8398A253CEAA53817348A88C00E2602",
@@ -4274,6 +4327,8 @@
         }
       ],
       "scene": "nagao_kagetora_succession",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCC에치고\u001bCZ엔 \u001bCA하루카게\u001bCZ 지지 세력도 있었고,\n특히 \u001bCB우에다 나가오가\u001bCZ의 \u001bCA마사카게\u001bCZ와\n\u001bCA[bm1448]\u001bCZ 간 불화가 남았다……",
       "strict_batch07_current_ko_utf16le_sha256": "A203ED827BA7B6488F11EF969F2778DBB8314C68664DE90C7BF1F2D85C10703C",
@@ -4417,6 +4472,8 @@
         }
       ],
       "scene": "otomo_thunder_god",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA[bm1730]\u001bCZ은 지도리 다치를\n곁에 세운 뒤 큰 나무 아래 누웠고,\n연전 피로가 편안한 잠으로 이끌었다.",
       "strict_batch07_current_ko_utf16le_sha256": "5887AC6718B09F37AC68E87CC0EC579FAAB3DF5E35D9DA85475F666895620EFC",
@@ -4547,6 +4604,8 @@
         }
       ],
       "scene": "otomo_thunder_god",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "벼락이면 목숨을 잃는 법.\n번개는 \u001bCA[bm1730]\u001bCZ가 아닌\n기대 있던 큰 나무를 꿰뚫었다.",
       "strict_batch07_current_ko_utf16le_sha256": "423B52DE0FD72253A7D624391ED2AD0A4CFC928F66E5E8F6C419FEA0EEDCD5AE",
@@ -4677,6 +4736,8 @@
         }
       ],
       "scene": "otomo_thunder_god",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "하얗게 빛나는군… 그래.\n이제 '라이키리마루'라 부르겠다!\n앞으로도 \u001bCA[bm1730]\u001bCZ를 지켜 다오!",
       "strict_batch07_current_ko_utf16le_sha256": "DC88E0C72BE6FC2D8E120E4CB85C723BDA622A2954924B05F1F21FFA60727503",
@@ -4807,6 +4868,8 @@
         }
       ],
       "scene": "otomo_thunder_god",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "하지만 투지는 만년까지 꺾이지 않았고,\n사람들은 그 용맹에 ‘뇌신’이라 불러\n\u001bCA[bm1730]\u001bCZ을 두려워했다……",
       "strict_batch07_current_ko_utf16le_sha256": "3DB1E36C87659F581A47E9E962BA5E3E559B441D5DBEF52B7C43990316950738",
@@ -4966,6 +5029,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA하루카게\u001bCZ 뒤 당주 \u001bCA[bm1448]\u001bCZ 공은\n\u001bCB우에다 나가오\u001bCZ 없이는\n\u001bCC에치고\u001bCZ 장악이 불가능했다.",
       "strict_batch07_current_ko_utf16le_sha256": "6873838B2F64A2DA2DA4414E16C0BFE5A96CB031FB300B1B8F4237EF78B2FDDD",
@@ -5131,6 +5196,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCB우에다 나가오 가문\u001bCZ의 \u001bCA마사카게\u001bCZ도\n\u001bCA[bm1448]\u001bCZ가 \u001bCC에치고\u001bCZ를 다지자\n고립을 염려했다.",
       "strict_batch07_current_ko_utf16le_sha256": "3CA0B053411B4748878199D2EE86F074D72AB04F1DF8B7E6796933B213E88A7E",
@@ -5288,6 +5355,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "서로 필요성은 알았지만 교섭은 더뎠고,\n\u001bCA[bm1448]\u001bCZ은 끝내 \u001bCA마사카게\u001bCZ가 있는\n\u001bCC사카토성\u001bCZ으로 군을 보냈다…",
       "strict_batch07_current_ko_utf16le_sha256": "F285E1E50C6E977420EE6E9417399FCF8F95CAE8410FBA1EB61A068F968502DF",
@@ -5427,6 +5496,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA[b1448]\u001bCZ은 젊지만 제법이군.\n말단까지 군령이 닿고,\n흐트러짐 없는 행군을 안다.",
       "strict_batch07_current_ko_utf16le_sha256": "71EC614C5F0D9630DB8E9BDF7878E76E3C40F735954D10A2809E590B8A3DE4CA",
@@ -5562,6 +5633,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA[bm1448]\u001bCZ는 성만 포위하고\n공격할 기색도, 병량을\n끊을 기색도 없었다.",
       "strict_batch07_current_ko_utf16le_sha256": "EBB4B73C88A8D1902C9374477543D5DDD44C10D987BD190BBD7BC9FFDDE9C186",
@@ -5705,6 +5778,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "바라던 일, \u001bCA우에다 나가오 마사카게\u001bCZ.\n\u001bCA[bm1448]\u001bCZ 공의 일문으로\n충성을 맹세하겠소.",
       "strict_batch07_current_ko_utf16le_sha256": "037AC1F890D124B86919D9C0B9CAB9C34EC95D7109D84B10171C035AD5C152B6",
@@ -5843,6 +5918,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "\u001bCA[bm1448]\u001bCZ와 \u001bCA마사카게\u001bCZ는\n공적 대화 속 서로를 살피다\n마침내 인정했다.",
       "strict_batch07_current_ko_utf16le_sha256": "80826D5CD7B71339DECADFC72DC04CCEC692FB234170C61E879EB1D04CCA06D8",
@@ -5980,6 +6057,8 @@
         }
       ],
       "scene": "nagao_ueda_reconciliation",
+      "source_meaning_corrected_from_direct_pc_jp": false,
+      "source_meaning_correction_note": null,
       "source_sequence_reordered_for_protected_tag_order": false,
       "strict_batch07_current_ko": "다른 고쿠진 앞에서 일족이라도\n가차 없이 병력을 보내 굴복시켜\n가문을 다잡은 \u001bCA[bm1448]\u001bCZ—",
       "strict_batch07_current_ko_utf16le_sha256": "1FBF156028A2820AC7F19BCC90616F065667BAF9357F975F327D5931BCB9E7E4",

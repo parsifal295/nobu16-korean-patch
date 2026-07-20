@@ -10,11 +10,12 @@
       "[bm75]",
       "[bm924]"
     ],
-    "exact_legacy_restoration_count": 11,
+    "exact_legacy_restoration_count": 10,
     "max_effective_width_px": 900,
     "max_line_count": 4,
     "max_raw_g1n_width_px": 1440,
     "semantic_reflow_count": 3,
+    "sentence_shortened_or_deleted": false,
     "strategy_counts": {
       "reconcile_later_runtime_token_migration_with_complete_restoration": 1,
       "restore_complete_korean_with_scene_limited_reservation": 12,
@@ -141,6 +142,7 @@
       "current_to_proposed_surface_units": [
         "때마다",
         "가문의",
+        "또한",
         "교토가",
         "원복을",
         "치르고",
@@ -157,6 +159,7 @@
       "historical_compact_to_proposed_surface_units": [
         "때마다",
         "가문의",
+        "또한",
         "교토가",
         "원복을",
         "치르고",
@@ -167,7 +170,7 @@
       "layout": {
         "all_lines_pass_static_patch_007": true,
         "any_line_exceeds_912px": false,
-        "line_count": 3,
+        "line_count": 4,
         "lines": [
           {
             "display_string": "정쟁 때마다 아시카가 가문의 당주는 교토를 떠났고,",
@@ -186,17 +189,17 @@
             "runtime_reservations": []
           },
           {
-            "display_string": "현 쇼군 아시카가 아시카가 요시테루도 교토가 아닌",
-            "display_string_template": "현 쇼군 아시카가 [bm75]도 교토가 아닌",
-            "display_string_with_strict_name_table_substitution": "현 쇼군 아시카가 아시카가 요시테루도 교토가 아닌",
-            "effective_width_px": 720,
-            "encoded_string": "현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ도 \u001bCC교토\u001bCZ가 아닌",
+            "display_string": "현 쇼군 아시카가 아시카가 요시테루 또한",
+            "display_string_template": "현 쇼군 아시카가 [bm75] 또한",
+            "display_string_with_strict_name_table_substitution": "현 쇼군 아시카가 아시카가 요시테루 또한",
+            "effective_width_px": 585,
+            "encoded_string": "현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ 또한",
             "exceeds_912px": false,
-            "full_width_character_count": 21,
-            "half_width_character_count": 6,
+            "full_width_character_count": 17,
+            "half_width_character_count": 5,
             "line_number": 2,
-            "literal_raw_g1n_width_px": 744,
-            "raw_g1n_width_px": 1152,
+            "literal_raw_g1n_width_px": 528,
+            "raw_g1n_width_px": 936,
             "reserved_raw_g1n_width_px": 408,
             "runtime_display_proven": false,
             "runtime_reservations": [
@@ -215,6 +218,22 @@
             ]
           },
           {
+            "display_string": "교토가 아닌",
+            "display_string_template": "교토가 아닌",
+            "display_string_with_strict_name_table_substitution": "교토가 아닌",
+            "effective_width_px": 165,
+            "encoded_string": "\u001bCC교토\u001bCZ가 아닌",
+            "exceeds_912px": false,
+            "full_width_character_count": 5,
+            "half_width_character_count": 1,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 264,
+            "raw_g1n_width_px": 264,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
             "display_string": "오미에서 원복을 치르고 쇼군직에 올랐다.",
             "display_string_template": "오미에서 원복을 치르고 쇼군직에 올랐다.",
             "display_string_with_strict_name_table_substitution": "오미에서 원복을 치르고 쇼군직에 올랐다.",
@@ -223,7 +242,7 @@
             "exceeds_912px": false,
             "full_width_character_count": 17,
             "half_width_character_count": 5,
-            "line_number": 3,
+            "line_number": 4,
             "literal_raw_g1n_width_px": 936,
             "raw_g1n_width_px": 936,
             "reserved_raw_g1n_width_px": 0,
@@ -235,7 +254,7 @@
       },
       "legacy_matches_proposed_after_indent_normalization": false,
       "legacy_precompaction_ko": "정쟁 때마다 \u001bCB아시카가 가문\u001bCZ의 당주는 \u001bCC교토\u001bCZ를 떠났고,\n현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ 또한 \u001bCC교토\u001bCZ가 아닌\n\u001bCC오미\u001bCZ에서 원복을 치르고 쇼군직에 올랐다.",
-      "proposed_ko": "정쟁 때마다 \u001bCB아시카가 가문\u001bCZ의 당주는 \u001bCC교토\u001bCZ를 떠났고,\n현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ도 \u001bCC교토\u001bCZ가 아닌\n\u001bCC오미\u001bCZ에서 원복을 치르고 쇼군직에 올랐다.",
+      "proposed_ko": "정쟁 때마다 \u001bCB아시카가 가문\u001bCZ의 당주는 \u001bCC교토\u001bCZ를 떠났고,\n현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ 또한\n\u001bCC교토\u001bCZ가 아닌\n\u001bCC오미\u001bCZ에서 원복을 치르고 쇼군직에 올랐다.",
       "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
       "review_judgement": "Restore repeated political strife, departure from Kyoto, the current shogun's genpuku in Omi, and accession to the shogunate.",
       "review_policy": {
@@ -252,7 +271,7 @@
         "current_ko": "226A4ADCB31545CB4803BB2C435E858677772B4A5A00F9AF4D5431D0A6676308",
         "historical_manual_compact_ko": "226A4ADCB31545CB4803BB2C435E858677772B4A5A00F9AF4D5431D0A6676308",
         "legacy_precompaction_ko": "7AE86EC757931D1E01EF4A2D3F15B8E6C41916CC1D74E661AFEE8DA7776B733C",
-        "proposed_ko": "96CE6AFBD9AEA7BF87605FE50B02B656EC692ACE2DDC42E8819A8977DE7A22F4"
+        "proposed_ko": "BC60E8942F18839D937040DA7765C81B93EF15DB363C269D2243CFE68BBBA666"
       }
     },
     {
@@ -376,6 +395,7 @@
         "역시",
         "교토였다",
         "쇼군",
+        "또한",
         "몇",
         "번이나",
         "교토로",
@@ -398,6 +418,7 @@
         "역시",
         "교토였다",
         "쇼군",
+        "또한",
         "몇",
         "번이나",
         "교토로",
@@ -411,7 +432,7 @@
       "layout": {
         "all_lines_pass_static_patch_007": true,
         "any_line_exceeds_912px": false,
-        "line_count": 3,
+        "line_count": 4,
         "lines": [
           {
             "display_string": "하지만 무로마치 막부의 본거지는 역시 교토였다.",
@@ -430,17 +451,17 @@
             "runtime_reservations": []
           },
           {
-            "display_string": "쇼군 아시카가 요시테루도 몇 번이나 교토로 돌아가려 꾀하며,",
-            "display_string_template": "쇼군 [bm75]도 몇 번이나 교토로 돌아가려 꾀하며,",
-            "display_string_with_strict_name_table_substitution": "쇼군 아시카가 요시테루도 몇 번이나 교토로 돌아가려 꾀하며,",
-            "effective_width_px": 870,
-            "encoded_string": "쇼군 \u001bCA[bm75]\u001bCZ도 몇 번이나 \u001bCC교토\u001bCZ로 돌아가려 꾀하며,",
+            "display_string": "쇼군 아시카가 요시테루 또한 몇 번이나",
+            "display_string_template": "쇼군 [bm75] 또한 몇 번이나",
+            "display_string_with_strict_name_table_substitution": "쇼군 아시카가 요시테루 또한 몇 번이나",
+            "effective_width_px": 555,
+            "encoded_string": "쇼군 \u001bCA[bm75]\u001bCZ 또한 몇 번이나",
             "exceeds_912px": false,
-            "full_width_character_count": 25,
-            "half_width_character_count": 8,
+            "full_width_character_count": 16,
+            "half_width_character_count": 5,
             "line_number": 2,
-            "literal_raw_g1n_width_px": 984,
-            "raw_g1n_width_px": 1392,
+            "literal_raw_g1n_width_px": 480,
+            "raw_g1n_width_px": 888,
             "reserved_raw_g1n_width_px": 408,
             "runtime_display_proven": false,
             "runtime_reservations": [
@@ -459,6 +480,22 @@
             ]
           },
           {
+            "display_string": "교토로 돌아가려 꾀하며,",
+            "display_string_template": "교토로 돌아가려 꾀하며,",
+            "display_string_with_strict_name_table_substitution": "교토로 돌아가려 꾀하며,",
+            "effective_width_px": 345,
+            "encoded_string": "\u001bCC교토\u001bCZ로 돌아가려 꾀하며,",
+            "exceeds_912px": false,
+            "full_width_character_count": 10,
+            "half_width_character_count": 3,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 552,
+            "raw_g1n_width_px": 552,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
             "display_string": "교토를 지배하는 미요시 가문과 교섭했지만……",
             "display_string_template": "교토를 지배하는 미요시 가문과 교섭했지만……",
             "display_string_with_strict_name_table_substitution": "교토를 지배하는 미요시 가문과 교섭했지만……",
@@ -467,7 +504,7 @@
             "exceeds_912px": false,
             "full_width_character_count": 18,
             "half_width_character_count": 6,
-            "line_number": 3,
+            "line_number": 4,
             "literal_raw_g1n_width_px": 1008,
             "raw_g1n_width_px": 1008,
             "reserved_raw_g1n_width_px": 0,
@@ -479,9 +516,9 @@
       },
       "legacy_matches_proposed_after_indent_normalization": false,
       "legacy_precompaction_ko": "하지만 무로마치 막부의 본거지는 역시 \u001bCC교토\u001bCZ였다.\n쇼군 \u001bCA[bm75]\u001bCZ 또한 몇 번이나 \u001bCC교토\u001bCZ로 돌아가려 꾀하며,\n\u001bCC교토\u001bCZ를 지배하는 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
-      "proposed_ko": "하지만 무로마치 막부의 본거지는 역시 \u001bCC교토\u001bCZ였다.\n쇼군 \u001bCA[bm75]\u001bCZ도 몇 번이나 \u001bCC교토\u001bCZ로 돌아가려 꾀하며,\n\u001bCC교토\u001bCZ를 지배하는 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
+      "proposed_ko": "하지만 무로마치 막부의 본거지는 역시 \u001bCC교토\u001bCZ였다.\n쇼군 \u001bCA[bm75]\u001bCZ 또한 몇 번이나\n\u001bCC교토\u001bCZ로 돌아가려 꾀하며,\n\u001bCC교토\u001bCZ를 지배하는 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
       "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
-      "review_judgement": "Restore the Muromachi base, repeated return attempts, Kyoto's Miyoshi rulers, and the failed negotiations. Replace '또한' with '도' so the conservative token reservation fits without deleting meaning.",
+      "review_judgement": "Restore the Muromachi base, repeated return attempts, Kyoto's Miyoshi rulers, and the failed negotiations without shortening the legacy connective.",
       "review_policy": {
         "automatic_decompaction_forbidden": true,
         "automatic_linebreak_stripping_forbidden": true,
@@ -496,7 +533,7 @@
         "current_ko": "E853ECAFF1FA61205469FD341441E60D24C37672BA26D7682991D288B99B0D03",
         "historical_manual_compact_ko": "E853ECAFF1FA61205469FD341441E60D24C37672BA26D7682991D288B99B0D03",
         "legacy_precompaction_ko": "5B78E9D126D8EDB0F0A3E5DD2D4B117D28AFBC7EA25E75DF0BD5B6A1DD716631",
-        "proposed_ko": "5A86089EF7E72889E2B23F05392E009B8DCDAA3ED7DC0ABFB3F7EBA735EF7A54"
+        "proposed_ko": "8C2C6458929FE3AA582DC1A41D23DE3AC2E8BB965959D484F0B67A62CCEE5992"
       }
     },
     {
@@ -2509,7 +2546,7 @@
         "요시모토가",
         "펼친",
         "막고자",
-        "일행은",
+        "공은",
         "향했다",
         ".",
         "그리고",
@@ -2527,7 +2564,7 @@
         "요시모토가",
         "펼친",
         "막고자",
-        "일행은",
+        "공은",
         "향했다",
         ".",
         "그리고",
@@ -2556,17 +2593,17 @@
             "runtime_reservations": []
           },
           {
-            "display_string": "구시마 츠나시게 일행은 가와고에성으로 향했다.",
-            "display_string_template": "[b790] 일행은 가와고에성으로 향했다.",
-            "display_string_with_strict_name_table_substitution": "구시마 츠나시게 일행은 가와고에성으로 향했다.",
-            "effective_width_px": 675,
-            "encoded_string": "\u001bCA[b790]\u001bCZ 일행은 \u001bCC가와고에성\u001bCZ으로 향했다.",
+            "display_string": "구시마 츠나시게 공은 가와고에성으로 향했다.",
+            "display_string_template": "[b790] 공은 가와고에성으로 향했다.",
+            "display_string_with_strict_name_table_substitution": "구시마 츠나시게 공은 가와고에성으로 향했다.",
+            "effective_width_px": 645,
+            "encoded_string": "\u001bCA[b790]\u001bCZ 공은 \u001bCC가와고에성\u001bCZ으로 향했다.",
             "exceeds_912px": false,
-            "full_width_character_count": 20,
+            "full_width_character_count": 19,
             "half_width_character_count": 5,
             "line_number": 2,
-            "literal_raw_g1n_width_px": 720,
-            "raw_g1n_width_px": 1080,
+            "literal_raw_g1n_width_px": 672,
+            "raw_g1n_width_px": 1032,
             "reserved_raw_g1n_width_px": 360,
             "runtime_display_proven": false,
             "runtime_reservations": [
@@ -2603,9 +2640,9 @@
         ],
         "max_lines": 4
       },
-      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_matches_proposed_after_indent_normalization": false,
       "legacy_precompaction_ko": "이리하여 \u001bCA요시모토\u001bCZ가 펼친 포위망을 막고자,\n\u001bCA[b790]\u001bCZ 일행은 \u001bCC가와고에성\u001bCZ으로 향했다.\n그리고 \u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다……",
-      "proposed_ko": "이리하여 \u001bCA요시모토\u001bCZ가 펼친 포위망을 막고자,\n\u001bCA[b790]\u001bCZ 일행은 \u001bCC가와고에성\u001bCZ으로 향했다.\n그리고 \u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다……",
+      "proposed_ko": "이리하여 \u001bCA요시모토\u001bCZ가 펼친 포위망을 막고자,\n\u001bCA[b790]\u001bCZ 공은 \u001bCC가와고에성\u001bCZ으로 향했다.\n그리고 \u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다……",
       "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
       "review_judgement": "Restore the move to block Yoshimoto's encirclement, the party's destination at Kawagoe Castle, and Ujiyasu's sortie toward Kato.",
       "review_policy": {
@@ -2622,7 +2659,7 @@
         "current_ko": "7D48A4BE14BC79D16A3E1ACE5EC99A8166474F204B126EA1798EA925A7C92124",
         "historical_manual_compact_ko": "7D48A4BE14BC79D16A3E1ACE5EC99A8166474F204B126EA1798EA925A7C92124",
         "legacy_precompaction_ko": "28A469E49BE7E67C601051B0E8C2D0668745F1170B273A7E7397982B27F51F5E",
-        "proposed_ko": "28A469E49BE7E67C601051B0E8C2D0668745F1170B273A7E7397982B27F51F5E"
+        "proposed_ko": "45652CCBE6F9E1515D9390A4A7775F984CA73CE5D98C259DA3B2D3E4F2C68B12"
       }
     },
     {
@@ -3610,7 +3647,9 @@
         ",",
         "많이",
         "저질러",
-        "백성들의",
+        "지방",
+        "호족들의",
+        "원성도",
         "컸습니다",
         ".",
         "그래서",
@@ -3633,7 +3672,9 @@
         ",",
         "많이",
         "저질러",
-        "백성들의",
+        "지방",
+        "호족들의",
+        "원성도",
         "컸습니다",
         ".",
         "그래서",
@@ -3677,17 +3718,17 @@
             ]
           },
           {
-            "display_string": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
-            "display_string_template": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
-            "display_string_with_strict_name_table_substitution": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
-            "effective_width_px": 660,
-            "encoded_string": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
+            "display_string": "불의를 많이 저질러 지방 호족들의 원성도 컸습니다.",
+            "display_string_template": "불의를 많이 저질러 지방 호족들의 원성도 컸습니다.",
+            "display_string_with_strict_name_table_substitution": "불의를 많이 저질러 지방 호족들의 원성도 컸습니다.",
+            "effective_width_px": 735,
+            "encoded_string": "불의를 많이 저질러 지방 호족들의 원성도 컸습니다.",
             "exceeds_912px": false,
-            "full_width_character_count": 19,
-            "half_width_character_count": 6,
+            "full_width_character_count": 21,
+            "half_width_character_count": 7,
             "line_number": 2,
-            "literal_raw_g1n_width_px": 1056,
-            "raw_g1n_width_px": 1056,
+            "literal_raw_g1n_width_px": 1176,
+            "raw_g1n_width_px": 1176,
             "reserved_raw_g1n_width_px": 0,
             "runtime_display_proven": false,
             "runtime_reservations": []
@@ -3713,9 +3754,9 @@
       },
       "legacy_matches_proposed_after_indent_normalization": false,
       "legacy_precompaction_ko": "황공합니다. \u001bCA[bm924]\u001bCZ 공은…… 제 아버지이나,\n불의를 많이 저질러 백성의 원한이 깊었습니다.\n그래서 어쩔 수 없이 토벌했습니다.",
-      "proposed_ko": "황공합니다. \u001bCA[bm924]\u001bCZ 공은…… 제 아버지이나,\n불의를 많이 저질러 백성들의 원성이 컸습니다.\n그래서 어쩔 수 없이 토벌했습니다.",
+      "proposed_ko": "황공합니다. \u001bCA[bm924]\u001bCZ 공은…… 제 아버지이나,\n불의를 많이 저질러 지방 호족들의 원성도 컸습니다.\n그래서 어쩔 수 없이 토벌했습니다.",
       "restoration_strategy": "source_complete_wording_correction_with_scene_limited_reservation",
-      "review_judgement": "Restore the speaker's father relation and evil conduct, while using natural Korean for the broad resentment that made the unavoidable suppression necessary.",
+      "review_judgement": "Restore the speaker's father relation and evil conduct, while identifying direct-JP 国衆 as the local warrior-landholder stratum whose resentment made the unavoidable suppression necessary.",
       "review_policy": {
         "automatic_decompaction_forbidden": true,
         "automatic_linebreak_stripping_forbidden": true,
@@ -3730,7 +3771,7 @@
         "current_ko": "2FA99616B6CE4CCFC7164B3B7876D184157AAFF5ECD472A4676443324A23DE2F",
         "historical_manual_compact_ko": "2FA99616B6CE4CCFC7164B3B7876D184157AAFF5ECD472A4676443324A23DE2F",
         "legacy_precompaction_ko": "DE49A472D6999C30993D5D03A90E3149CD6DF6753FD2CE79D89FA3E4E21D35A6",
-        "proposed_ko": "FEF06803650B2005407F351DBCDD2717CACDFCDA0B51116320438468151E9F4E"
+        "proposed_ko": "C37D4DA5DBAC8ADFC21B8C07CDEF52B19CA8157DF7E18B08FFE6F6B36AF68EC8"
       }
     },
     {
@@ -3958,7 +3999,6 @@
         3499,
         3519,
         3520,
-        3524,
         3526,
         3548,
         3565,
@@ -4036,7 +4076,15 @@
     ],
     "manual_compact_runtime_target_count": 17,
     "network_operation_performed": false,
+    "quality_correction_ids": [
+      3524,
+      3579
+    ],
     "resource": "MSG_PK/JP/msgev.bin",
+    "source_complete_preserve_ids": [
+      3442,
+      3443
+    ],
     "steam_files_written": false,
     "target_ids": [
       3442,

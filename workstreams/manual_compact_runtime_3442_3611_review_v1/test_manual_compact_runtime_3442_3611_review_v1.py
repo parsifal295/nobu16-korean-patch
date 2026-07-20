@@ -28,12 +28,20 @@ def main() -> int:
     require(payload["scope"]["manual_compact_runtime_target_count"] == 17, "target count drift")
     require(payload["scope"]["batch07_nonoverlap_text_asserted"] is True, "batch07 text overlap not asserted")
     require(payload["scope"]["batch07_nonoverlap_name_table_asserted"] is True, "batch07 name overlap not asserted")
+    require(payload["scope"]["source_complete_preserve_ids"] == [3442, 3443], "source-complete preserve scope drift")
+    require(payload["scope"]["quality_correction_ids"] == [3524, 3579], "quality correction scope drift")
     require(payload["scope"]["candidate_binary_created"] is False, "candidate binary must not exist")
     require(payload["safety"]["steam_game_resource_written"] is False, "Steam write recorded")
     require(payload["safety"]["git_operation_performed"] is False, "Git operation recorded")
     require(payload["safety"]["network_operation_performed"] is False, "network operation recorded")
     entries = payload["entries"]
     require(len(entries) == 17, "entry count drift")
+    by_id = {entry["entry_id"]: entry for entry in entries}
+    require("또한" in by_id[3442]["proposed_ko"], "3442: source connective shortened")
+    require("또한" in by_id[3443]["proposed_ko"], "3443: source connective shortened")
+    require("일행" not in by_id[3524]["proposed_ko"], "3524: singular runtime name was pluralized")
+    require("[b790]" in by_id[3524]["proposed_ko"], "3524: runtime token drift")
+    require("지방 호족들의 원성도 컸습니다" in by_id[3579]["proposed_ko"], "3579: 国衆 meaning correction missing")
     for entry in entries:
         signature = entry["control_signature"]["proposed"]
         require(signature["runtime_tokens"], f"{entry['entry_id']}: runtime token absent")

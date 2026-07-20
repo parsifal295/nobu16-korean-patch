@@ -77,6 +77,7 @@ MANUAL_RUNTIME_IDS = (
     3_877,
 )
 SOURCE_SEQUENCE_REORDER_IDS = (3_767,)
+SOURCE_MEANING_CORRECTION_IDS = (3_713, 3_767, 3_789)
 E = "\x1b"
 RUNTIME_RE = re.compile(r"\[([a-z]+)(\d+)\]")
 ESC_RE = re.compile(r"\x1b(?:CA|CB|CC|CZ)")
@@ -102,8 +103,8 @@ TARGETS: Mapping[int, str] = {
     3_713: (
         f"{E}CB요시하루{E}CZ는 적장자 {E}CA기쿠도마루{E}CZ를 데리고,\n"
         f"{E}CC단바{E}CZ를 거쳐 {E}CC오미{E}CZ의 {E}CC구쓰키다니{E}CZ로 달아났다.\n"
-        f"거기서 {E}CA기쿠도마루{E}CZ를 원복해\n"
-        f"{E}CA[bm75]{E}CZ 공으로 개명했다."
+        f"그곳에서 {E}CA기쿠도마루{E}CZ를 원복시켜\n"
+        f"{E}CA[bm75]{E}CZ 공이라 이름하게 했다."
     ),
     3_715: (
         f"{E}CA요시하루{E}CZ는 자신처럼 11세에 원복한 아들에게\n"
@@ -131,9 +132,10 @@ TARGETS: Mapping[int, str] = {
         "사람들은 피어난 군재에 혀를 내둘렀다."
     ),
     3_767: (
-        f"{E}CA하루카게{E}CZ의 통치에 예전부터 불만을 품었고,\n"
-        f"많은 {E}CB나가오{E}CZ 가신은\n"
-        f"{E}CA[bm1448]{E}CZ 공이 당주에 오르기를 바라게 되었지만―"
+        f"예전부터 {E}CA하루카게{E}CZ의 통치에\n"
+        f"불만을 품은 많은 {E}CB나가오{E}CZ 가신은\n"
+        f"{E}CA[bm1448]{E}CZ 공이 당주에 오르기를\n"
+        "바라게 되었지만―"
     ),
     3_783: (
         f"아닙니다. 모반이 아닙니다……\n"
@@ -141,9 +143,10 @@ TARGETS: Mapping[int, str] = {
         "조용히 은거해 주시기를 바랄 뿐입니다."
     ),
     3_789: (
-        f"{E}CA[bm1448]{E}CZ 공의 스승이자 {E}CC린센지{E}CZ 주지로 신자가 많은\n"
-        f"{E}CA덴시쓰 고이쿠{E}CZ도 설득에 나서,\n"
-        f"{E}CA하루카게{E}CZ에게 은거를 거듭 권했다. 그리고……"
+        f"{E}CA[bm1448]{E}CZ 공의 스승이자 {E}CC린센지{E}CZ 주지로서\n"
+        f"가문 내에 따르는 이도 많은 {E}CA덴시쓰 고이쿠{E}CZ가\n"
+        f"중재에 나서 {E}CA하루카게{E}CZ에게 은거를\n"
+        "간곡히 거듭 권했다. 그리고……"
     ),
     3_795: (
         f"{E}CA나가오 하루카게{E}CZ는 아우 {E}CA[bm1448]{E}CZ 공을 양자로 맞아,\n"
@@ -342,6 +345,7 @@ def validate_authored_targets() -> None:
     require(len(MANUAL_RUNTIME_IDS) == 26, "manual runtime target count drift")
     require(set(MANUAL_RUNTIME_IDS).issubset(batch07.RUNTIME_HOLD_IDS), "manual target is not a batch07 runtime row")
     require(set(SOURCE_SEQUENCE_REORDER_IDS).issubset(MANUAL_RUNTIME_IDS), "source reorder scope drift")
+    require(set(SOURCE_MEANING_CORRECTION_IDS).issubset(MANUAL_RUNTIME_IDS), "source meaning-correction scope drift")
     for entry_id, target in TARGETS.items():
         require("\x00" not in target, f"embedded terminator: {entry_id}")
         base.assert_no_break_inside_tag(target)
@@ -367,13 +371,44 @@ def target_row(
     target_signature = base.control_signature(target)
     require(current_signature == base.control_signature(direct["jp"].texts[entry_id]), f"KO/JP control drift: {entry_id}")
     require(target_signature == current_signature, f"target control drift: {entry_id}")
-    if entry_id not in SOURCE_SEQUENCE_REORDER_IDS:
+    if entry_id not in SOURCE_SEQUENCE_REORDER_IDS + SOURCE_MEANING_CORRECTION_IDS:
         require(
             normalized_source_visible(target) == normalized_source_visible(complete),
             f"complete Korean visible-sequence drift: {entry_id}",
         )
+    elif entry_id == 3_713:
+        require(
+            target == (
+                f"{E}CB요시하루{E}CZ는 적장자 {E}CA기쿠도마루{E}CZ를 데리고,\n"
+                f"{E}CC단바{E}CZ를 거쳐 {E}CC오미{E}CZ의 {E}CC구쓰키다니{E}CZ로 달아났다.\n"
+                f"그곳에서 {E}CA기쿠도마루{E}CZ를 원복시켜\n"
+                f"{E}CA[bm75]{E}CZ 공이라 이름하게 했다."
+            ),
+            "3713 direct-JP semantic correction text drift",
+        )
+        require("원복시켜" in target and "공이라 이름하게 했다" in target, "3713 causative restoration drift")
+    elif entry_id == 3_767:
+        require(
+            target
+            == (
+                f"예전부터 {E}CA하루카게{E}CZ의 통치에\n"
+                f"불만을 품은 많은 {E}CB나가오{E}CZ 가신은\n"
+                f"{E}CA[bm1448]{E}CZ 공이 당주에 오르기를\n"
+                "바라게 되었지만―"
+            ),
+            "3767 subject-before-predicate reflow drift",
+        )
     else:
-        require(word_counter(target) == word_counter(complete), "3767 source-complete word preservation drift")
+        require(
+            target
+            == (
+                f"{E}CA[bm1448]{E}CZ 공의 스승이자 {E}CC린센지{E}CZ 주지로서\n"
+                f"가문 내에 따르는 이도 많은 {E}CA덴시쓰 고이쿠{E}CZ가\n"
+                f"중재에 나서 {E}CA하루카게{E}CZ에게 은거를\n"
+                "간곡히 거듭 권했다. 그리고……"
+            ),
+            "3789 direct-JP mediator/followers restoration drift",
+        )
     rendered, token_details = substitute_strict_runtime_names(target, korean)
     lines = list(base.line_metrics(rendered))
     require(1 <= len(lines) <= 4, f"runtime rendered line count exceeds max: {entry_id}")
@@ -418,6 +453,12 @@ def target_row(
         "route_status": "CONSERVATIVE_SAME_ID_STRICT_NAME_RESERVATION_READY_FOR_FOLLOWUP_CANDIDATE",
         "route_limit": "No live runtime trace or prefix-specific width claim is made; the complete strict Korean same-ID name is reserved for every token occurrence.",
         "source_sequence_reordered_for_protected_tag_order": entry_id in SOURCE_SEQUENCE_REORDER_IDS,
+        "source_meaning_corrected_from_direct_pc_jp": entry_id in SOURCE_MEANING_CORRECTION_IDS,
+        "source_meaning_correction_note": {
+            3_713: "Direct PC JP is a causative construction: Yoshiharu has Kikudomaru undergo genpuku and take the name [bm75].",
+            3_767: "Reflow puts the long-dissatisfied Nagao retainers before their predicate so the Korean subject remains bound to the desire clause.",
+            3_789: "Direct PC JP restores followers within the clan and Tenshitsu Koiku entering as mediator before repeatedly urging retirement.",
+        }.get(entry_id),
     }
 
 
@@ -493,6 +534,7 @@ def build_report() -> Mapping[str, Any]:
             "other_runtime_row_ids": [entry_id for entry_id in batch07.RUNTIME_HOLD_IDS if entry_id not in MANUAL_RUNTIME_IDS],
             "other_runtime_row_count": len(batch07.RUNTIME_HOLD_IDS) - len(MANUAL_RUNTIME_IDS),
             "source_sequence_reordered_for_tag_order_ids": list(SOURCE_SEQUENCE_REORDER_IDS),
+            "source_meaning_correction_ids": list(SOURCE_MEANING_CORRECTION_IDS),
         },
         "rows": rows,
         "current_runtime_name_substitution_scan": runtime_scan,
