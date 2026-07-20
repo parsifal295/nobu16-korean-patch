@@ -40,6 +40,10 @@ class StaticMapStatusIconsInstallerV0131Tests(unittest.TestCase):
 
     def test_published_001_through_005_are_unchanged(self) -> None:
         relative_paths = [
+            Path("../APPLY_STATIC_EXE_PATCHES.bat"),
+            Path("../APPLY_STATIC_OFFICER_EDITOR_FIX.bat"),
+            Path("../RESTORE_ORIGINAL_NOBU16PK_EXE.bat"),
+            Path("Steamless/Steamless.CLI.exe.config"),
             *(Path("Patches") / f"{index:03d}-{name}" for index, name in (
                 (1, "OfficerEditorNameValidation.psd1"),
                 (2, "FictionalPrincessNameValidation.psd1"),
@@ -56,6 +60,13 @@ class StaticMapStatusIconsInstallerV0131Tests(unittest.TestCase):
                 (PREVIOUS_STATIC_ROOT / relative).read_bytes(),
                 str(relative),
             )
+
+        attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8")
+        self.assertIn("/release_payload/v0.13.1/*.bat text eol=lf", attributes)
+        self.assertIn(
+            "/release_payload/v0.13.1/OfficerEditorStaticFix/Steamless/Steamless.CLI.exe.config binary",
+            attributes,
+        )
 
     def test_master_accepts_every_registered_prefix_state(self) -> None:
         source = (STATIC_ROOT / "Invoke-Nobu16StaticPatches.ps1").read_text(
