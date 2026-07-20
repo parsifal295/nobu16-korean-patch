@@ -2291,6 +2291,92 @@
         "sha256": "A5F09D0E36A044D895C41BEA56ADC6809A9768BF2D3AFE79B1793E8BCC4B1867",
         "size": 1046345
       }
+    },
+    {
+      "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1",
+      "candidate_event_present": true,
+      "audit_present": true,
+      "manifest_present": true,
+      "event_relative": "tmp/pc_event_manual_compact_static007_3xxx_runtime_restore_v1/candidate-final/MSG_PK/JP/msgev.bin",
+      "audit_relative": "tmp/pc_event_manual_compact_static007_3xxx_runtime_restore_v1/candidate-final/audit.v1.json",
+      "manifest_relative": "tmp/pc_event_manual_compact_static007_3xxx_runtime_restore_v1/candidate-final/candidate_manifest.v1.json",
+      "script_relative": "workstreams/pc_event_manual_compact_static007_3xxx_runtime_restore_v1/build_pc_event_manual_compact_static007_3xxx_runtime_restore_v1.py",
+      "declared_source_lists": {},
+      "audit_changed_ids": [
+        3442,
+        3443,
+        3444,
+        3448,
+        3455,
+        3456,
+        3459,
+        3499,
+        3519,
+        3520,
+        3524,
+        3526,
+        3548,
+        3565,
+        3576,
+        3579,
+        3611,
+        3692,
+        3694,
+        3703,
+        3713,
+        3715,
+        3734,
+        3736,
+        3765,
+        3766,
+        3767,
+        3783,
+        3789,
+        3795,
+        3798,
+        3806,
+        3810,
+        3815,
+        3818,
+        3859,
+        3860,
+        3861,
+        3862,
+        3865,
+        3875,
+        3876,
+        3877
+      ],
+      "audit_preserved_ids": [],
+      "audit_runtime_hold_ids": [],
+      "audit_static_retained_ids": [],
+      "audit_quality_hold_ids": [],
+      "outside_inventory_ids": [],
+      "source_audit_drift": {},
+      "layout_validation": {
+        "contract_ok": true,
+        "formula": "ceil(raw_g1n_width_px * 30 / 48)",
+        "max_raw_g1n_width_px": 1440,
+        "max_effective_width_px": 900,
+        "max_target_line_count": 4,
+        "changed_rows_missing_from_audit": [],
+        "changed_rows_over_limit_or_over_four_lines": []
+      },
+      "safety": {
+        "candidate_only": true,
+        "steam_game_resource_written": false,
+        "git_operation_performed": false,
+        "release_published": false,
+        "network_operation_performed": false
+      },
+      "audit_sha256": "3FAB7DC761428CFCA50ACDC7E6F476A4DCA64F19E902C9E1229AC9F3A812D93A",
+      "candidate_event_sha256": "CFF60029741A596F40EA19DF9F05A8FEC53E240EF09C750B732D052195A04D35",
+      "output_event_profile": {
+        "raw_sha256": "920373F9AFA47959C291025A3D3230B4064261997090AFC01A1EE57F61153FFB",
+        "raw_size": 1043920,
+        "sha256": "CFF60029741A596F40EA19DF9F05A8FEC53E240EF09C750B732D052195A04D35",
+        "size": 1048039
+      }
     }
   ],
   "review_artifacts": [
@@ -14841,52 +14927,13 @@
         "release_published": false,
         "steam_game_resource_written": false
       }
-    }
-  ],
-  "summary": {
-    "target_count": 1553,
-    "status_counts": {
-      "private_candidate_built_reviewed_preserve": 134,
-      "private_candidate_built_text_change": 1367,
-      "reviewed_layout_retained": 9,
-      "runtime_token_hold_context_reviewed": 43
     },
-    "resolution_status_counts": {
-      "pending_runtime_token_evidence": 43,
-      "resolved_preserve": 143,
-      "resolved_restore": 1069,
-      "resolved_semantic_reflow": 298
-    },
-    "candidate_or_review_assignment_complete": true,
-    "all_1553_resolved": false,
-    "all_review_artifacts_present": true,
-    "all_private_candidate_audits_layout_safe": true,
-    "all_review_layout_contracts_match_static007": true,
-    "candidate_source_audit_drift_count": 0,
-    "candidate_action_conflict_count": 0,
-    "unresolved_or_pending_count": 43,
-    "private_candidate_ready_without_follow_up": false,
-    "steam_deployment_ready": false
-  },
-  "range_coverage": [
     {
-      "range": "3000-3999",
-      "target_count": 191,
-      "status_counts": {
-        "private_candidate_built_text_change": 139,
-        "reviewed_layout_retained": 9,
-        "runtime_token_hold_context_reviewed": 43
-      },
-      "resolution_status_counts": {
-        "pending_runtime_token_evidence": 43,
-        "resolved_preserve": 9,
-        "resolved_restore": 21,
-        "resolved_semantic_reflow": 118
-      },
-      "candidate_or_review_assignment_complete": true,
-      "all_rows_resolved": false,
-      "private_candidate_ready_without_follow_up": false,
-      "unresolved_or_pending_ids": [
+      "name": "manual_compact_runtime_3442_3611_review_v1",
+      "relative": "workstreams/manual_compact_runtime_3442_3611_review_v1/public/manual_compact_runtime_3442_3611_review.v1.json",
+      "present": true,
+      "entry_count": 17,
+      "entry_ids": [
         3442,
         3443,
         3444,
@@ -14903,7 +14950,155 @@
         3565,
         3576,
         3579,
-        3611,
+        3611
+      ],
+      "entries": {
+        "3442": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore repeated political strife, departure from Kyoto, the current shogun's genpuku in Omi, and accession to the shogunate.",
+          "proposed_matches_review_current": false
+        },
+        "3443": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the Muromachi base, repeated return attempts, Kyoto's Miyoshi rulers, and the failed negotiations without shortening the legacy connective.",
+          "proposed_matches_review_current": false
+        },
+        "3444": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the Hosokawa-retainer origin, the shogun's view of Miyoshi as a retainer's retainer, and the stalled talks.",
+          "proposed_matches_review_current": false
+        },
+        "3448": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore Nagayoshi's recognition as Otomoshu/direct shogunal retainer, the bilateral peace, and the imminent Kyoto return.",
+          "proposed_matches_review_current": false
+        },
+        "3455": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the initially peace-sceptical retainers, their support for Harumoto, and the shogun's inability to evade the issue. Four lines are used at Korean phrase boundaries for two conservative token reservations.",
+          "proposed_matches_review_current": false
+        },
+        "3456": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the continued entry attempt, the wary Miyoshi obstruction, the siege at Ryozen Castle in Higashiyama, and the complete collapse of peace talks. Four semantic lines avoid the old 930px-effective reservation overflow.",
+          "proposed_matches_review_current": false
+        },
+        "3459": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the fall of Ryozen Castle, the renewed flight to Omi, and Harumoto's followers.",
+          "proposed_matches_review_current": false
+        },
+        "3499": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the joint-operation proposal, willing acceptance and participation in the attack, and the report reaching Ujiyasu.",
+          "proposed_matches_review_current": false
+        },
+        "3519": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the speaker's rejection, the west-side weakness, and the trailing identification of the commander who joined Yoshimoto's camp.",
+          "proposed_matches_review_current": false
+        },
+        "3520": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the unreadable nature of the man, his feigned cooperation, concealed plan for a fisherman's profit, and the proposal to exploit it in reverse.",
+          "proposed_matches_review_current": false
+        },
+        "3524": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the move to block Yoshimoto's encirclement, the party's destination at Kawagoe Castle, and Ujiyasu's sortie toward Kato.",
+          "proposed_matches_review_current": false
+        },
+        "3526": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the youthful recognition of ability, the father's dislike of the token-named rival, and the intended Takeda succession.",
+          "proposed_matches_review_current": false
+        },
+        "3548": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the ninety-nine clauses, the loyalty pledges toward the token-named lord, and the many rules for samurai life.",
+          "proposed_matches_review_current": false
+        },
+        "3565": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the oil merchant's move from Kyoto to Mino, acceptance by the provincial shugo, rise as a powerful warrior, and his son's ousting of Toki.",
+          "proposed_matches_review_current": false
+        },
+        "3576": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the year marker, Sengoku-daimyo status, the small force, the journey to Kyoto, and the audience with the shogun.",
+          "proposed_matches_review_current": false
+        },
+        "3579": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "source_complete_wording_correction_with_scene_limited_reservation",
+          "semantic_status": null,
+          "review_judgement": "Restore the speaker's father relation and evil conduct, while identifying direct-JP 国衆 as the local warrior-landholder stratum whose resentment made the unavoidable suppression necessary.",
+          "proposed_matches_review_current": false
+        },
+        "3611": {
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "reconcile_later_runtime_token_migration_with_complete_restoration",
+          "semantic_status": null,
+          "review_judgement": "The strict current row correctly migrated the legacy literal name to the direct-PC-compatible runtime token. Preserve that token while restoring attention to the reinforcements and the request for mediation immediately after the battle began.",
+          "proposed_matches_review_current": false
+        }
+      },
+      "layout_contract": {
+        "present": true,
+        "raw_full_width_px": 48,
+        "raw_half_width_px": 24,
+        "raw_limit_px": 1440,
+        "effective_limit_px": 912,
+        "max_lines": 4,
+        "formula": "ceil(raw_g1n_width_px * 30 / 48)",
+        "contract_ok": true
+      },
+      "sha256": "45A08D14DDED7DF0AE86D68ECEF78B050EF681D3ED35CF9404DF422F02A4A938",
+      "schema": "nobu16.kr.manual-compact-runtime-3442-3611-review.v1",
+      "safety": {
+        "candidate_binary_written": false,
+        "git_operation_performed": false,
+        "network_operation_performed": false,
+        "release_published": false,
+        "steam_game_resource_written": false
+      }
+    },
+    {
+      "name": "pc_event_3xxx_runtime_review_v1",
+      "relative": "workstreams/pc_event_3xxx_runtime_review_v1/public/pc_event_3xxx_runtime_review.v1.json",
+      "present": true,
+      "entry_count": 26,
+      "entry_ids": [
         3692,
         3694,
         3703,
@@ -14930,7 +15125,246 @@
         3875,
         3876,
         3877
-      ]
+      ],
+      "entries": {
+        "3692": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3694": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3703": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3713": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3715": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3734": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3736": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3765": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3766": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3767": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3783": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3789": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3795": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3798": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3806": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3810": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3815": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3818": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3859": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3860": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3861": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3862": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3865": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3875": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3876": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        },
+        "3877": {
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "review_judgement": null,
+          "proposed_matches_review_current": false
+        }
+      },
+      "layout_contract": {
+        "present": true,
+        "raw_full_width_px": 48,
+        "raw_half_width_px": 24,
+        "raw_limit_px": 1440,
+        "effective_limit_px": 912,
+        "max_lines": 4,
+        "formula": "ceil(raw_g1n_width_px * 30 / 48)",
+        "contract_ok": true
+      },
+      "sha256": "414EDDB6B8920DD14C78681E295A12ACF21E5CAD44E947A3123207775FABD1F5",
+      "schema": "nobu16.kr.pc-event-3xxx-runtime-review.v1",
+      "safety": {}
+    }
+  ],
+  "summary": {
+    "target_count": 1553,
+    "status_counts": {
+      "private_candidate_built_reviewed_preserve": 134,
+      "private_candidate_built_text_change": 1410,
+      "reviewed_layout_retained": 9
+    },
+    "resolution_status_counts": {
+      "resolved_preserve": 143,
+      "resolved_restore": 1109,
+      "resolved_semantic_reflow": 301
+    },
+    "candidate_or_review_assignment_complete": true,
+    "all_1553_resolved": true,
+    "all_review_artifacts_present": true,
+    "all_private_candidate_audits_layout_safe": true,
+    "all_review_layout_contracts_match_static007": true,
+    "candidate_source_audit_drift_count": 0,
+    "candidate_action_conflict_count": 0,
+    "unresolved_or_pending_count": 0,
+    "private_candidate_ready_without_follow_up": true,
+    "steam_deployment_ready": false
+  },
+  "range_coverage": [
+    {
+      "range": "3000-3999",
+      "target_count": 191,
+      "status_counts": {
+        "private_candidate_built_text_change": 182,
+        "reviewed_layout_retained": 9
+      },
+      "resolution_status_counts": {
+        "resolved_preserve": 9,
+        "resolved_restore": 61,
+        "resolved_semantic_reflow": 121
+      },
+      "candidate_or_review_assignment_complete": true,
+      "all_rows_resolved": true,
+      "private_candidate_ready_without_follow_up": true,
+      "unresolved_or_pending_ids": []
     },
     {
       "range": "4000-4999",
@@ -15056,53 +15490,9 @@
     "historical_target_count": 191,
     "expected_historical_target_count": 191,
     "candidate_or_review_assignment_complete": true,
-    "all_rows_resolved": false,
-    "private_candidate_ready_without_follow_up": false,
-    "unresolved_or_pending_ids": [
-      3442,
-      3443,
-      3444,
-      3448,
-      3455,
-      3456,
-      3459,
-      3499,
-      3519,
-      3520,
-      3524,
-      3526,
-      3548,
-      3565,
-      3576,
-      3579,
-      3611,
-      3692,
-      3694,
-      3703,
-      3713,
-      3715,
-      3734,
-      3736,
-      3765,
-      3766,
-      3767,
-      3783,
-      3789,
-      3795,
-      3798,
-      3806,
-      3810,
-      3815,
-      3818,
-      3859,
-      3860,
-      3861,
-      3862,
-      3865,
-      3875,
-      3876,
-      3877
-    ],
+    "all_rows_resolved": true,
+    "private_candidate_ready_without_follow_up": true,
+    "unresolved_or_pending_ids": [],
     "note": "A true result means every 3xxx historical manual-compact ID has either a private-candidate action, a completed review record, or an explicit hold. Final completion is instead all_rows_resolved=true; any runtime-token hold keeps that result false. It never means a Steam install occurred."
   },
   "candidate_source_audit_drift": [],
@@ -15110,309 +15500,7 @@
   "review_layout_contract_failures": [],
   "missing_review_artifacts": [],
   "candidate_action_conflicts": [],
-  "unresolved_or_pending": [
-    {
-      "entry_id": 3442,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3443,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3444,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3448,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3455,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3456,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3459,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3499,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3519,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3520,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3524,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3526,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3548,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3565,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3576,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3579,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3611,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3692,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3694,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3703,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3713,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3715,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3734,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3736,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3765,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3766,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3767,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3783,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3789,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3795,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3798,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3806,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3810,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3815,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3818,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3859,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3860,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3861,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3862,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3865,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3875,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3876,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    },
-    {
-      "entry_id": 3877,
-      "range": "3000-3999",
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
-    }
-  ],
+  "unresolved_or_pending": [],
   "rows": [
     {
       "entry_id": 3210,
@@ -16027,12 +16115,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3443,
@@ -16047,12 +16147,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_semantic_reflow",
+      "follow_up": null
     },
     {
       "entry_id": 3444,
@@ -16067,12 +16179,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3445,
@@ -16107,12 +16231,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3452,
@@ -16147,12 +16283,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_semantic_reflow",
+      "follow_up": null
     },
     {
       "entry_id": 3456,
@@ -16167,12 +16315,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_semantic_reflow",
+      "follow_up": null
     },
     {
       "entry_id": 3459,
@@ -16187,12 +16347,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3468,
@@ -16447,12 +16619,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch05_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3502,
@@ -16547,12 +16731,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3520,
@@ -16567,12 +16763,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3524,
@@ -16587,12 +16795,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3526,
@@ -16607,12 +16827,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3542,
@@ -16647,12 +16879,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3550,
@@ -16767,12 +17011,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3566,
@@ -16847,12 +17103,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3577,
@@ -16887,12 +17155,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "source_complete_wording_correction_with_scene_limited_reservation",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3590,
@@ -17027,12 +17307,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch06_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "manual_compact_runtime_3442_3611_review_v1",
+          "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+          "restoration_strategy": "reconcile_later_runtime_token_migration_with_complete_restoration",
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3613,
@@ -17407,12 +17699,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3694,
@@ -17427,12 +17731,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3699,
@@ -17487,12 +17803,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3704,
@@ -17567,12 +17895,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3715,
@@ -17587,12 +17927,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3734,
@@ -17607,12 +17959,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3736,
@@ -17627,12 +17991,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3738,
@@ -17767,12 +18143,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3766,
@@ -17787,12 +18175,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3767,
@@ -17807,12 +18207,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3768,
@@ -17867,12 +18279,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3789,
@@ -17887,12 +18311,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3795,
@@ -17907,12 +18343,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3796,
@@ -17947,12 +18395,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3800,
@@ -17987,12 +18447,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3810,
@@ -18007,12 +18479,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3815,
@@ -18027,12 +18511,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3818,
@@ -18047,12 +18543,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3819,
@@ -18367,12 +18875,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3860,
@@ -18387,12 +18907,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3861,
@@ -18407,12 +18939,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3862,
@@ -18427,12 +18971,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3865,
@@ -18447,12 +19003,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3875,
@@ -18467,12 +19035,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3876,
@@ -18487,12 +19067,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3877,
@@ -18507,12 +19099,24 @@
         {
           "action": "runtime_token_hold_context_reviewed",
           "workstream": "pc_event_manual_compact_static007_batch07_v1"
+        },
+        {
+          "action": "private_candidate_built_text_change",
+          "workstream": "pc_event_manual_compact_static007_3xxx_runtime_restore_v1"
         }
       ],
-      "review_artifacts": [],
-      "status": "runtime_token_hold_context_reviewed",
-      "resolution_status": "pending_runtime_token_evidence",
-      "follow_up": "Establish the runtime name-token rendering route and a token-specific 30/48-scaled reservation before semantic reflow; do not use a global estimate."
+      "review_artifacts": [
+        {
+          "artifact": "pc_event_3xxx_runtime_review_v1",
+          "review_status": null,
+          "restoration_strategy": null,
+          "semantic_status": null,
+          "proposed_matches_review_current": false
+        }
+      ],
+      "status": "private_candidate_built_text_change",
+      "resolution_status": "resolved_restore",
+      "follow_up": null
     },
     {
       "entry_id": 3879,
