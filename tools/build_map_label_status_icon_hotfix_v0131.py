@@ -3,15 +3,13 @@
 
 The horizontal castle label already exposes its rendered width through the
 widget at label-object offset 0x140.  This patch wraps the single status-icon
-update call in FUN_140F98390 and, after the original update has completed:
-
-* moves the active status icon at label-object offset 0x248 by that width and
-  vertically centers it inside the horizontal name plate;
-* finds the same castle key in the paired supply-label pool and places that
-  group at label-root X + rendered width.
+update call in FUN_140F98390 and, after the original update has completed,
+moves the active status icon at label-object offset 0x248 by that width and
+vertically centers it inside the horizontal name plate.
 
 No fixed pixel offset is used.  The independent castle/crest icon pool and
-the special map cursor path are deliberately untouched.
+the troop-count group below that crest are deliberately untouched, as is the
+special map cursor path.
 """
 
 from __future__ import annotations
@@ -30,7 +28,7 @@ EXPECTED_V0130_SHA256 = (
 )
 # Pinned after the first deterministic build and before live-game QA.
 EXPECTED_CANDIDATE_SHA256 = (
-    "811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31"
+    "3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43"
 )
 
 IMAGE_BASE = 0x140000000
@@ -38,22 +36,10 @@ STATUS_UPDATE_VA = 0x140FA52B0
 STATUS_UPDATE_CALL_SITE = 0x140F98764
 STATUS_UPDATE_CALL_BEFORE = bytes.fromhex("E8 47 CB 00 00")
 
-POOL_STRIDE = 0x10038
-POOL_HEADER_BASE_VA = 0x142252694
-LABEL_POOL_1_VA = POOL_HEADER_BASE_VA + POOL_STRIDE
-SUPPLY_POOL_2_VA = POOL_HEADER_BASE_VA + POOL_STRIDE * 2
-LABEL_POOL_3_VA = POOL_HEADER_BASE_VA + POOL_STRIDE * 3
-SUPPLY_POOL_4_VA = POOL_HEADER_BASE_VA + POOL_STRIDE * 4
-LABEL_POOL_PAIR_DELTA = LABEL_POOL_3_VA - LABEL_POOL_1_VA
-
 LABEL_WIDTH_WIDGET_OFFSET = 0x140
 LABEL_STATUS_WIDGET_OFFSET = 0x248
 WIDGET_X_OFFSET = 0x08
 WIDGET_WIDTH_OFFSET = 0x10
-POOL_RECORD_STRIDE = 0x30
-POOL_KEY_TYPE_OFFSET = 0x08
-POOL_KEY_POINTER_OFFSET = 0x10
-CASTLE_KEY_TYPE = 2
 ACTIVE_STATUS_BASE_X_BITS = 0x41F00000  # 30.0f
 
 CODE_SECTION = ".mlbd"
@@ -152,7 +138,7 @@ class CodeBuilder:
 
 def build_injected_code(code_va: int) -> tuple[bytes, dict[str, int]]:
     code = CodeBuilder(code_va)
-    code.label("status_and_supply_wrapper")
+    code.label("status_wrapper")
 
     # FUN_140FA52B0 has six parameters.  Forward both stack arguments while
     # retaining the label object beyond the original call.  At wrapper entry
@@ -181,9 +167,9 @@ def build_injected_code(code_va: int) -> tuple[bytes, dict[str, int]]:
     # sentinel (312.0) and every unrelated child untouched.
     code.emit("48 8B 91 48 02 00 00") # mov rdx, [rcx+0x248] (status widget)
     code.emit("48 85 D2")             # test rdx, rdx
-    code.branch8(0x74, "find_label_pool")
+    code.branch8(0x74, "return")
     code.emit("81 7A 08 00 00 F0 41") # cmp dword [rdx+8], 0x41f00000
-    code.branch8(0x75, "find_label_pool")
+    code.branch8(0x75, "return")
     code.emit("F3 0F 10 42 08")       # movss xmm0, [rdx+8]
     code.emit("F3 0F 58 C1")          # addss xmm0, xmm1
     code.emit("F3 0F 11 42 08")       # movss [rdx+8], xmm0
@@ -200,70 +186,6 @@ def build_injected_code(code_va: int) -> tuple[bytes, dict[str, int]]:
     code.emit("F3 0F 59 D3")          # mulss xmm2, xmm3
     code.emit("F3 0F 58 C2")          # addss xmm0, xmm2
     code.emit("F3 0F 11 42 0C")       # movss [rdx+0xc], xmm0
-
-    # Find which main-label pool owns RCX.  The pool header is an unaligned
-    # {uint32 count; uint64 records;} pair and every record is 0x30 bytes.
-    code.label("find_label_pool")
-    code.lea_rip("4C 8D 05", LABEL_POOL_1_VA)  # lea r8, label pool 1
-    code.emit("41 BB 02 00 00 00")    # mov r11d, 2 (label pools 1 and 3)
-
-    code.label("label_pool_loop")
-    code.emit("45 8B 08")             # mov r9d, [r8] (count)
-    code.emit("4D 8B 50 04")          # mov r10, [r8+4] (records, unaligned)
-    code.emit("31 C0")                # xor eax, eax (index)
-
-    code.label("label_record_loop")
-    code.emit("44 39 C8")             # cmp eax, r9d
-    code.branch8(0x73, "next_label_pool")
-    code.emit("49 39 0A")             # cmp [r10], rcx (label object)
-    code.branch8(0x74, "label_record_found")
-    code.emit("49 83 C2 30")          # add r10, 0x30
-    code.emit("FF C0")                # inc eax
-    code.branch8(0xEB, "label_record_loop")
-
-    code.label("next_label_pool")
-    code.emit("49 81 C0 70 00 02 00") # add r8, 2 * 0x10038 (pool 1 -> 3)
-    code.emit("41 FF CB")             # dec r11d
-    code.branch8(0x75, "label_pool_loop")
-    code.branch32(0x84, "return")     # jz return
-
-    code.label("label_record_found")
-    code.emit("41 83 7A 08 02")       # cmp dword [r10+8], castle key type 2
-    code.branch32(0x85, "return")
-    code.emit("49 8B 52 10")          # mov rdx, [r10+0x10] (castle key)
-    code.emit("48 85 D2")             # test rdx, rdx
-    code.branch32(0x84, "return")
-
-    # The supply pool immediately follows its corresponding main-label pool:
-    # 1 -> 2 and 3 -> 4.  Match by the exact castle key, then anchor the whole
-    # group at label-root X + rendered width.
-    code.emit("49 81 C0 38 00 01 00") # add r8, 0x10038 (paired supply pool)
-    code.emit("45 8B 08")             # mov r9d, [r8] (count)
-    code.emit("4D 8B 50 04")          # mov r10, [r8+4] (records)
-    code.emit("31 C0")                # xor eax, eax (index)
-
-    code.label("supply_record_loop")
-    code.emit("44 39 C8")             # cmp eax, r9d
-    code.branch8(0x73, "return_short")
-    code.emit("41 83 7A 08 02")       # cmp dword [r10+8], castle key type 2
-    code.branch8(0x75, "next_supply_record")
-    code.emit("49 39 52 10")          # cmp [r10+0x10], rdx
-    code.branch8(0x75, "next_supply_record")
-    code.emit("49 8B 02")             # mov rax, [r10] (supply object)
-    code.emit("48 85 C0")             # test rax, rax
-    code.branch8(0x74, "return_short")
-    code.emit("F3 0F 10 41 08")       # movss xmm0, [rcx+8] (label root X)
-    code.emit("F3 0F 58 C1")          # addss xmm0, xmm1
-    code.emit("F3 0F 11 40 08")       # movss [rax+8], xmm0 (supply root X)
-    code.branch8(0xEB, "return_short")
-
-    code.label("next_supply_record")
-    code.emit("49 83 C2 30")          # add r10, 0x30
-    code.emit("FF C0")                # inc eax
-    code.branch8(0xEB, "supply_record_loop")
-
-    code.label("return_short")
-    code.branch8(0xEB, "return")
     code.label("return")
     code.emit("48 83 C4 58 C3")       # add rsp, 0x58; ret
 
@@ -322,7 +244,7 @@ def build(source_path: Path, output_path: Path, manifest_path: Path) -> dict[str
     target = STATUS_UPDATE_CALL_SITE + 5 + struct.unpack_from("<i", before, 1)[0]
     if target != STATUS_UPDATE_VA:
         raise RuntimeError(f"status-update target mismatch: 0x{target:X}")
-    wrapper_va = labels["status_and_supply_wrapper"]
+    wrapper_va = labels["status_wrapper"]
     after = b"\xE8" + rel32(STATUS_UPDATE_CALL_SITE + 5, wrapper_va)
     candidate[hook_offset : hook_offset + 5] = after
 
@@ -352,11 +274,11 @@ def build(source_path: Path, output_path: Path, manifest_path: Path) -> dict[str
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_bytes(result)
     manifest: dict[str, object] = {
-        "schema": "nobu16.map-label-status-and-supply-alignment.v5",
+        "schema": "nobu16.map-label-status-alignment.v6",
         "issue": 72,
         "purpose": (
-            "Place battle-ready, defensive-base, attack-objective, and supply "
-            "markers after the dynamically sized horizontal castle label."
+            "Place battle-ready, defensive-base, and attack-objective markers "
+            "after the dynamically sized horizontal castle label."
         ),
         "input": {"path": str(source_path), "size": len(source), "sha256": source_hash},
         "output": {"path": str(output_path), "size": len(result), "sha256": result_hash},
@@ -369,11 +291,11 @@ def build(source_path: Path, output_path: Path, manifest_path: Path) -> dict[str
             "status_y_formula": (
                 "plate Y + (plate height - status height) / 2"
             ),
-            "paired_pool_categories": [[1, 2], [3, 4]],
-            "pool_header_base_virtual_address": f"0x{POOL_HEADER_BASE_VA:X}",
-            "pool_stride": f"0x{POOL_STRIDE:X}",
-            "key_match": "record key type 2 and exact key pointer",
-            "excluded": ["castle/crest icon pool", "special map cursor"],
+            "excluded": [
+                "castle/crest icon pool",
+                "troop-count group below castle/crest icon",
+                "special map cursor",
+            ],
         },
         "hook": {
             "call_site_virtual_address": f"0x{STATUS_UPDATE_CALL_SITE:X}",
