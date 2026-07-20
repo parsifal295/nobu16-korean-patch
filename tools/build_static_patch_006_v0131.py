@@ -3,7 +3,7 @@
 
 Patches 001 through 005 remain byte-identical to their published definitions.
 Patch 006 applies after the v0.13.0 structural state and contains only the
-reviewed update-call hook, its dynamic X/Y and supply-alignment wrapper, and
+reviewed update-call hook, its dynamic status-icon X/Y wrapper, and
 the two PE section metadata fields needed to execute that wrapper.  The game
 executable itself is never shipped.
 """
@@ -24,7 +24,7 @@ EXPECTED_V0130_INSTALLED_SHA256 = (
     "BE983A61C81008289E2483D552122C0BE3299B5F8DD4A557FA14DA2663AC7BD6"
 )
 EXPECTED_V0131_INSTALLED_SHA256 = (
-    "811F6B31C09AD87F2D73F1349FB17AA4C9ABEA76F2415083C78E932D0B1D5A31"
+    "3548AD5B71168296DD03851B1F9613CAD1C325AF2AB916A11CC140DC61FA0E43"
 )
 TARGET_SIZE = 67_024_384
 
@@ -66,7 +66,7 @@ def patch_sites(source: bytes, target: bytes) -> list[PatchSite]:
         ("mark .mlbd executable for issue-72 wrapper", characteristics_offset, 4),
         ("wrap map-label status update with dynamic alignment", hook_offset, 5),
         (
-            "dynamic map status X/Y and paired supply-root alignment wrapper",
+            "dynamic map status X/Y wrapper preserving troop-count root",
             code_file_offset,
             len(injected),
         ),
@@ -84,7 +84,7 @@ def render_definition(sites: list[PatchSite]) -> str:
     lines = [
         "@{",
         "    Id = '006'",
-        "    Name = 'Dynamic horizontal map status and supply alignment'",
+        "    Name = 'Dynamic horizontal map status alignment'",
         "    Kind = 'BytePatch'",
         "    Sites = @(",
     ]
