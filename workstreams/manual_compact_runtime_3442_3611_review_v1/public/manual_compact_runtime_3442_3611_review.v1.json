@@ -1,0 +1,4158 @@
+{
+  "counts": {
+    "all_rows_within_912px": true,
+    "all_rows_within_four_lines": true,
+    "distinct_runtime_token_spellings": [
+      "[b1251]",
+      "[b75]",
+      "[b790]",
+      "[bm1251]",
+      "[bm75]",
+      "[bm924]"
+    ],
+    "exact_legacy_restoration_count": 11,
+    "max_effective_width_px": 900,
+    "max_line_count": 4,
+    "max_raw_g1n_width_px": 1440,
+    "semantic_reflow_count": 3,
+    "strategy_counts": {
+      "reconcile_later_runtime_token_migration_with_complete_restoration": 1,
+      "restore_complete_korean_with_scene_limited_reservation": 12,
+      "restore_complete_korean_with_semantic_reflow_runtime_reservation": 3,
+      "source_complete_wording_correction_with_scene_limited_reservation": 1
+    }
+  },
+  "entries": [
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "정쟁 때 \u001bCB아시카가\u001bCZ 당주는 \u001bCC교토\u001bCZ를 떠났고,\n현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ도\n\u001bCC교토\u001bCZ 아닌 \u001bCC오미\u001bCZ에서 원복해 쇼군이 됐다.",
+      "current_to_proposed_surface_units": [
+        "때마다",
+        "가문의",
+        "교토가",
+        "원복을",
+        "치르고",
+        "쇼군직에",
+        "올랐다"
+      ],
+      "direct_pc_sources": {
+        "en": "During times of political turmoil, the leader of the \u001bCBAshikaga Clan\u001bCZ would depart the \u001bCCcapital\u001bCZ. Accordingly, the current shªgun, \u001bCA[bm75] Ashikaga\u001bCZ, came of age and assumed his title not in the \u001bCCcapital\u001bCZ but in \u001bCC¥mi\u001bCZ.",
+        "jp": "政争のたびに\u001bCB足利家\u001bCZ当主は\u001bCC京\u001bCZを離れ、\n現将軍\u001bCA足利[bm75]\u001bCZも\u001bCC京\u001bCZではなく\n\u001bCC近江\u001bCZで元服し、将軍職に就いた。",
+        "sc": "每次政治斗争都迫使\u001bCB足利家\u001bCZ当家离\u001bCC京\u001bCZ，\n现任将军\u001bCA足利[bm75]\u001bCZ也是在\u001bCC京\u001bCZ之外的\n\u001bCC近江\u001bCZ行元服礼，就任将军。",
+        "tc": "每次發生政爭時，\u001bCB足利家\u001bCZ家主便離\u001bCC京\u001bCZ，\n故現任將軍\u001bCA足利[bm75]\u001bCZ只能在\u001bCC近江\u001bCZ\n完成元服禮，就任將軍。"
+      },
+      "entry_id": 3442,
+      "historical_compact_to_proposed_surface_units": [
+        "때마다",
+        "가문의",
+        "교토가",
+        "원복을",
+        "치르고",
+        "쇼군직에",
+        "올랐다"
+      ],
+      "historical_manual_compact_ko": "정쟁 때 \u001bCB아시카가\u001bCZ 당주는 \u001bCC교토\u001bCZ를 떠났고,\n현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ도\n\u001bCC교토\u001bCZ 아닌 \u001bCC오미\u001bCZ에서 원복해 쇼군이 됐다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "정쟁 때마다 아시카가 가문의 당주는 교토를 떠났고,",
+            "display_string_template": "정쟁 때마다 아시카가 가문의 당주는 교토를 떠났고,",
+            "display_string_with_strict_name_table_substitution": "정쟁 때마다 아시카가 가문의 당주는 교토를 떠났고,",
+            "effective_width_px": 735,
+            "encoded_string": "정쟁 때마다 \u001bCB아시카가 가문\u001bCZ의 당주는 \u001bCC교토\u001bCZ를 떠났고,",
+            "exceeds_912px": false,
+            "full_width_character_count": 21,
+            "half_width_character_count": 7,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1176,
+            "raw_g1n_width_px": 1176,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "현 쇼군 아시카가 아시카가 요시테루도 교토가 아닌",
+            "display_string_template": "현 쇼군 아시카가 [bm75]도 교토가 아닌",
+            "display_string_with_strict_name_table_substitution": "현 쇼군 아시카가 아시카가 요시테루도 교토가 아닌",
+            "effective_width_px": 720,
+            "encoded_string": "현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ도 \u001bCC교토\u001bCZ가 아닌",
+            "exceeds_912px": false,
+            "full_width_character_count": 21,
+            "half_width_character_count": 6,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 744,
+            "raw_g1n_width_px": 1152,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          },
+          {
+            "display_string": "오미에서 원복을 치르고 쇼군직에 올랐다.",
+            "display_string_template": "오미에서 원복을 치르고 쇼군직에 올랐다.",
+            "display_string_with_strict_name_table_substitution": "오미에서 원복을 치르고 쇼군직에 올랐다.",
+            "effective_width_px": 585,
+            "encoded_string": "\u001bCC오미\u001bCZ에서 원복을 치르고 쇼군직에 올랐다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 17,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 936,
+            "raw_g1n_width_px": 936,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": false,
+      "legacy_precompaction_ko": "정쟁 때마다 \u001bCB아시카가 가문\u001bCZ의 당주는 \u001bCC교토\u001bCZ를 떠났고,\n현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ 또한 \u001bCC교토\u001bCZ가 아닌\n\u001bCC오미\u001bCZ에서 원복을 치르고 쇼군직에 올랐다.",
+      "proposed_ko": "정쟁 때마다 \u001bCB아시카가 가문\u001bCZ의 당주는 \u001bCC교토\u001bCZ를 떠났고,\n현 쇼군 \u001bCA아시카가 [bm75]\u001bCZ도 \u001bCC교토\u001bCZ가 아닌\n\u001bCC오미\u001bCZ에서 원복을 치르고 쇼군직에 올랐다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore repeated political strife, departure from Kyoto, the current shogun's genpuku in Omi, and accession to the shogunate.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0027",
+      "text_sha256_utf16le": {
+        "current_ko": "226A4ADCB31545CB4803BB2C435E858677772B4A5A00F9AF4D5431D0A6676308",
+        "historical_manual_compact_ko": "226A4ADCB31545CB4803BB2C435E858677772B4A5A00F9AF4D5431D0A6676308",
+        "legacy_precompaction_ko": "7AE86EC757931D1E01EF4A2D3F15B8E6C41916CC1D74E661AFEE8DA7776B733C",
+        "proposed_ko": "96CE6AFBD9AEA7BF87605FE50B02B656EC692ACE2DDC42E8819A8977DE7A22F4"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "무로마치 막부 본거지는 \u001bCC교토\u001bCZ다.\n\u001bCA[bm75]\u001bCZ도 \u001bCC교토\u001bCZ 귀환을 꾀해\n\u001bCC교토\u001bCZ의 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
+      "current_to_proposed_surface_units": [
+        "하지만",
+        "막부의",
+        "역시",
+        "교토였다",
+        "쇼군",
+        "몇",
+        "번이나",
+        "교토로",
+        "돌아가려",
+        "꾀하며",
+        ",",
+        "교토를",
+        "지배하는"
+      ],
+      "direct_pc_sources": {
+        "en": "However, the Muromachi ShªgunateÖs main base was indeed situated in the \u001bCCcapital\u001bCZ. \u001bCA[bm75]\u001bCZ plotted many times to return to the \u001bCCcapital\u001bCZ, negotiating with the controlling \u001bCBMiyoshi Clan\u001bCZ to little avail...",
+        "jp": "だが、やはり室町幕府の本拠は\u001bCC京\u001bCZである。\n\u001bCA[bm75]\u001bCZもまた、何度か\u001bCC京\u001bCZへ戻ろうと画策し\n\u001bCC京\u001bCZを支配する\u001bCB三好家\u001bCZと交渉したが…",
+        "sc": "可室町幕府的大本营终究是\u001bCC京城\u001bCZ。\n\u001bCA[bm75]\u001bCZ也数次筹划返\u001bCC京\u001bCZ事宜，\n并与支配\u001bCC京城\u001bCZ的\u001bCB三好家\u001bCZ交涉……",
+        "tc": "然而，\u001bCC京都\u001bCZ終究是室町幕府的根據地。\n\u001bCA[bm75]\u001bCZ亦曾多次策劃返\u001bCC京\u001bCZ，\n與支配\u001bCC京都\u001bCZ的\u001bCB三好家\u001bCZ進行交涉……"
+      },
+      "entry_id": 3443,
+      "historical_compact_to_proposed_surface_units": [
+        "하지만",
+        "막부의",
+        "역시",
+        "교토였다",
+        "쇼군",
+        "몇",
+        "번이나",
+        "교토로",
+        "돌아가려",
+        "꾀하며",
+        ",",
+        "교토를",
+        "지배하는"
+      ],
+      "historical_manual_compact_ko": "무로마치 막부 본거지는 \u001bCC교토\u001bCZ다.\n\u001bCA[bm75]\u001bCZ도 \u001bCC교토\u001bCZ 귀환을 꾀해\n\u001bCC교토\u001bCZ의 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "하지만 무로마치 막부의 본거지는 역시 교토였다.",
+            "display_string_template": "하지만 무로마치 막부의 본거지는 역시 교토였다.",
+            "display_string_with_strict_name_table_substitution": "하지만 무로마치 막부의 본거지는 역시 교토였다.",
+            "effective_width_px": 690,
+            "encoded_string": "하지만 무로마치 막부의 본거지는 역시 \u001bCC교토\u001bCZ였다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 20,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1104,
+            "raw_g1n_width_px": 1104,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "쇼군 아시카가 요시테루도 몇 번이나 교토로 돌아가려 꾀하며,",
+            "display_string_template": "쇼군 [bm75]도 몇 번이나 교토로 돌아가려 꾀하며,",
+            "display_string_with_strict_name_table_substitution": "쇼군 아시카가 요시테루도 몇 번이나 교토로 돌아가려 꾀하며,",
+            "effective_width_px": 870,
+            "encoded_string": "쇼군 \u001bCA[bm75]\u001bCZ도 몇 번이나 \u001bCC교토\u001bCZ로 돌아가려 꾀하며,",
+            "exceeds_912px": false,
+            "full_width_character_count": 25,
+            "half_width_character_count": 8,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 984,
+            "raw_g1n_width_px": 1392,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          },
+          {
+            "display_string": "교토를 지배하는 미요시 가문과 교섭했지만……",
+            "display_string_template": "교토를 지배하는 미요시 가문과 교섭했지만……",
+            "display_string_with_strict_name_table_substitution": "교토를 지배하는 미요시 가문과 교섭했지만……",
+            "effective_width_px": 630,
+            "encoded_string": "\u001bCC교토\u001bCZ를 지배하는 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
+            "exceeds_912px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 6,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 1008,
+            "raw_g1n_width_px": 1008,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": false,
+      "legacy_precompaction_ko": "하지만 무로마치 막부의 본거지는 역시 \u001bCC교토\u001bCZ였다.\n쇼군 \u001bCA[bm75]\u001bCZ 또한 몇 번이나 \u001bCC교토\u001bCZ로 돌아가려 꾀하며,\n\u001bCC교토\u001bCZ를 지배하는 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
+      "proposed_ko": "하지만 무로마치 막부의 본거지는 역시 \u001bCC교토\u001bCZ였다.\n쇼군 \u001bCA[bm75]\u001bCZ도 몇 번이나 \u001bCC교토\u001bCZ로 돌아가려 꾀하며,\n\u001bCC교토\u001bCZ를 지배하는 \u001bCB미요시 가문\u001bCZ과 교섭했지만……",
+      "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+      "review_judgement": "Restore the Muromachi base, repeated return attempts, Kyoto's Miyoshi rulers, and the failed negotiations. Replace '또한' with '도' so the conservative token reservation fits without deleting meaning.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0027",
+      "text_sha256_utf16le": {
+        "current_ko": "E853ECAFF1FA61205469FD341441E60D24C37672BA26D7682991D288B99B0D03",
+        "historical_manual_compact_ko": "E853ECAFF1FA61205469FD341441E60D24C37672BA26D7682991D288B99B0D03",
+        "legacy_precompaction_ko": "5B78E9D126D8EDB0F0A3E5DD2D4B117D28AFBC7EA25E75DF0BD5B6A1DD716631",
+        "proposed_ko": "5A86089EF7E72889E2B23F05392E009B8DCDAA3ED7DC0ABFB3F7EBA735EF7A54"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCB미요시가\u001bCZ는 본래 \u001bCB호소카와 가문\u001bCZ의 가신.\n\u001bCA[bm75]\u001bCZ 눈엔 가신의 가신.\n자존심 탓에 교섭은 진전 없었다.",
+      "current_to_proposed_surface_units": [
+        "미요시",
+        "가문은",
+        "가신이었다",
+        "곧",
+        "쇼군",
+        "의",
+        "눈에는",
+        "가신에",
+        "불과했다",
+        "자존심이",
+        "방해했는지",
+        "진척되지",
+        "않았다"
+      ],
+      "direct_pc_sources": {
+        "en": "The \u001bCBMiyoshi Clan\u001bCZ were originally retainers of the \u001bCBHosokawa Clan\u001bCZ. As such, from \u001bCA[bm75]\u001bCZÖs perspective, they were no more than vassals. Perhaps owing to this pride, negotiations did not go well.",
+        "jp": "\u001bCB三好家\u001bCZは本来、\u001bCB細川家\u001bCZの家臣。\nつまり\u001bCA[bm75]\u001bCZから見れば陪臣に過ぎない。\n自尊心が邪魔してか、交渉は進まなかった。",
+        "sc": "\u001bCB三好家\u001bCZ原本是\u001bCB细川家\u001bCZ的家臣。\n对\u001bCA[bm75]\u001bCZ而言他们只是区区陪臣。\n或许是自尊心作祟，交涉始终没有进展。",
+        "tc": "\u001bCB三好家\u001bCZ原為\u001bCB細川家\u001bCZ的家臣。\n就\u001bCA[bm75]\u001bCZ而言，\u001bCB三好家\u001bCZ僅一介陪臣。\n或許因自尊心作祟，交涉窒礙難行。"
+      },
+      "entry_id": 3444,
+      "historical_compact_to_proposed_surface_units": [
+        "미요시",
+        "가문은",
+        "가신이었다",
+        "곧",
+        "쇼군",
+        "의",
+        "눈에는",
+        "가신에",
+        "불과했다",
+        "자존심이",
+        "방해했는지",
+        "진척되지",
+        "않았다"
+      ],
+      "historical_manual_compact_ko": "\u001bCB미요시가\u001bCZ는 본래 \u001bCB호소카와 가문\u001bCZ의 가신.\n\u001bCA[bm75]\u001bCZ 눈엔 가신의 가신.\n자존심 탓에 교섭은 진전 없었다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "미요시 가문은 본래 호소카와 가문의 가신이었다.",
+            "display_string_template": "미요시 가문은 본래 호소카와 가문의 가신이었다.",
+            "display_string_with_strict_name_table_substitution": "미요시 가문은 본래 호소카와 가문의 가신이었다.",
+            "effective_width_px": 690,
+            "encoded_string": "\u001bCB미요시 가문\u001bCZ은 본래 \u001bCB호소카와 가문\u001bCZ의 가신이었다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 20,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1104,
+            "raw_g1n_width_px": 1104,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "곧 쇼군 아시카가 요시테루의 눈에는 가신의 가신에 불과했다.",
+            "display_string_template": "곧 쇼군 [bm75]의 눈에는 가신의 가신에 불과했다.",
+            "display_string_with_strict_name_table_substitution": "곧 쇼군 아시카가 요시테루의 눈에는 가신의 가신에 불과했다.",
+            "effective_width_px": 870,
+            "encoded_string": "곧 쇼군 \u001bCA[bm75]\u001bCZ의 눈에는 가신의 가신에 불과했다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 25,
+            "half_width_character_count": 8,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 984,
+            "raw_g1n_width_px": 1392,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          },
+          {
+            "display_string": "자존심이 방해했는지 교섭은 진척되지 않았다.",
+            "display_string_template": "자존심이 방해했는지 교섭은 진척되지 않았다.",
+            "display_string_with_strict_name_table_substitution": "자존심이 방해했는지 교섭은 진척되지 않았다.",
+            "effective_width_px": 645,
+            "encoded_string": "자존심이 방해했는지 교섭은 진척되지 않았다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 19,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 1032,
+            "raw_g1n_width_px": 1032,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "\u001bCB미요시 가문\u001bCZ은 본래 \u001bCB호소카와 가문\u001bCZ의 가신이었다.\n곧 쇼군 \u001bCA[bm75]\u001bCZ의 눈에는 가신의 가신에 불과했다.\n자존심이 방해했는지 교섭은 진척되지 않았다.",
+      "proposed_ko": "\u001bCB미요시 가문\u001bCZ은 본래 \u001bCB호소카와 가문\u001bCZ의 가신이었다.\n곧 쇼군 \u001bCA[bm75]\u001bCZ의 눈에는 가신의 가신에 불과했다.\n자존심이 방해했는지 교섭은 진척되지 않았다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the Hosokawa-retainer origin, the shogun's view of Miyoshi as a retainer's retainer, and the stalled talks.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0027",
+      "text_sha256_utf16le": {
+        "current_ko": "5FC5E87BFAAA01665347C2A13132A3294EA23BF3FB79B70A496AFE5893E37B58",
+        "historical_manual_compact_ko": "5FC5E87BFAAA01665347C2A13132A3294EA23BF3FB79B70A496AFE5893E37B58",
+        "legacy_precompaction_ko": "7B8AD503960E0B35D502DB1F9D837F4BC135D90604B28E10A897C3F9436F641F",
+        "proposed_ko": "7B8AD503960E0B35D502DB1F9D837F4BC135D90604B28E10A897C3F9436F641F"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCA미요시 나가요시\u001bCZ를 오토모슈, 곧\n\u001bCB쇼군가\u001bCZ 직신으로 인정해 화의가 성립,\n\u001bCA[bm75]\u001bCZ의 \u001bCC교토\u001bCZ 귀환이 임박.",
+      "current_to_proposed_surface_units": [
+        "즉",
+        "인정하면서",
+        "양측의",
+        "성립했다",
+        ".",
+        "마침내",
+        "눈앞에",
+        "들어왔다"
+      ],
+      "direct_pc_sources": {
+        "en": "Peace was achieved via the recognition of \u001bCANagayoshi Miyoshi\u001bCZ as Otomo Agent, essentially a direct retainer of the \u001bCBshªgunate\u001bCZ. \u001bCA[bm75]\u001bCZÖs return to the \u001bCCcapital\u001bCZ was finally in sight.",
+        "jp": "\u001bCA三好長慶\u001bCZを御供衆すなわち\u001bCB将軍家\u001bCZ直臣と\n認定することで両者の和睦は成立。\n遂に\u001bCA[bm75]\u001bCZの\u001bCC京\u001bCZ帰還が視野に入る。",
+        "sc": "\u001bCA三好长庆\u001bCZ被认定为御供众，成为\u001bCB将军家\u001bCZ嫡系，\n双方以此达成和解。\n\u001bCA[bm75]\u001bCZ的回\u001bCC京\u001bCZ计划终于有眉目了。",
+        "tc": "\u001bCA[bm75]\u001bCZ承認\u001bCA三好長慶\u001bCZ為御供眾，\n即\u001bCB將軍家\u001bCZ直臣，雙方因此達成和解。\n\u001bCA[bm75]\u001bCZ的返\u001bCC京\u001bCZ指日可待。"
+      },
+      "entry_id": 3448,
+      "historical_compact_to_proposed_surface_units": [
+        "즉",
+        "인정하면서",
+        "양측의",
+        "성립했다",
+        ".",
+        "마침내",
+        "눈앞에",
+        "들어왔다"
+      ],
+      "historical_manual_compact_ko": "\u001bCA미요시 나가요시\u001bCZ를 오토모슈, 곧\n\u001bCB쇼군가\u001bCZ 직신으로 인정해 화의가 성립,\n\u001bCA[bm75]\u001bCZ의 \u001bCC교토\u001bCZ 귀환이 임박.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "미요시 나가요시를 오토모슈, 즉 쇼군가 직신으로",
+            "display_string_template": "미요시 나가요시를 오토모슈, 즉 쇼군가 직신으로",
+            "display_string_with_strict_name_table_substitution": "미요시 나가요시를 오토모슈, 즉 쇼군가 직신으로",
+            "effective_width_px": 690,
+            "encoded_string": "\u001bCA미요시 나가요시\u001bCZ를 오토모슈, 즉 \u001bCB쇼군가\u001bCZ 직신으로",
+            "exceeds_912px": false,
+            "full_width_character_count": 20,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1104,
+            "raw_g1n_width_px": 1104,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "인정하면서 양측의 화의가 성립했다.",
+            "display_string_template": "인정하면서 양측의 화의가 성립했다.",
+            "display_string_with_strict_name_table_substitution": "인정하면서 양측의 화의가 성립했다.",
+            "effective_width_px": 510,
+            "encoded_string": "인정하면서 양측의 화의가 성립했다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 4,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 816,
+            "raw_g1n_width_px": 816,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "마침내 아시카가 요시테루의 교토 귀환이 눈앞에 들어왔다.",
+            "display_string_template": "마침내 [bm75]의 교토 귀환이 눈앞에 들어왔다.",
+            "display_string_with_strict_name_table_substitution": "마침내 아시카가 요시테루의 교토 귀환이 눈앞에 들어왔다.",
+            "effective_width_px": 825,
+            "encoded_string": "마침내 \u001bCA[bm75]\u001bCZ의 \u001bCC교토\u001bCZ 귀환이 눈앞에 들어왔다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 24,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 912,
+            "raw_g1n_width_px": 1320,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "\u001bCA미요시 나가요시\u001bCZ를 오토모슈, 즉 \u001bCB쇼군가\u001bCZ 직신으로\n인정하면서 양측의 화의가 성립했다.\n마침내 \u001bCA[bm75]\u001bCZ의 \u001bCC교토\u001bCZ 귀환이 눈앞에 들어왔다.",
+      "proposed_ko": "\u001bCA미요시 나가요시\u001bCZ를 오토모슈, 즉 \u001bCB쇼군가\u001bCZ 직신으로\n인정하면서 양측의 화의가 성립했다.\n마침내 \u001bCA[bm75]\u001bCZ의 \u001bCC교토\u001bCZ 귀환이 눈앞에 들어왔다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore Nagayoshi's recognition as Otomoshu/direct shogunal retainer, the bilateral peace, and the imminent Kyoto return.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0028",
+      "text_sha256_utf16le": {
+        "current_ko": "8E058A69CA9A876DCEF08D68920F5DF1006971811BF45754511294A9FD72A787",
+        "historical_manual_compact_ko": "8E058A69CA9A876DCEF08D68920F5DF1006971811BF45754511294A9FD72A787",
+        "legacy_precompaction_ko": "68900CFEB11FA7E747BF81743AC43BD23A8065593BD72FB63BC782BBA2C09553",
+        "proposed_ko": "68900CFEB11FA7E747BF81743AC43BD23A8065593BD72FB63BC782BBA2C09553"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]",
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]",
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]",
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]",
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]",
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "본래 \u001bCB미요시가\u001bCZ 화친에 소극적이던\n\u001bCA[bm75]\u001bCZ 측근 \u001bCA하루모토\u001bCZ 동조.\n\u001bCA[bm75]\u001bCZ도 더는 변명 못했다.",
+      "current_to_proposed_surface_units": [
+        "이윽고",
+        "미요시",
+        "가문과의",
+        "의",
+        "중에도",
+        "하루모토에",
+        "동조하는",
+        "자가",
+        "생겨",
+        ",",
+        "[bm75]",
+        "본인도",
+        "더는",
+        "발뺌할",
+        "수",
+        "없는",
+        "처지에",
+        "몰렸다"
+      ],
+      "direct_pc_sources": {
+        "en": "Eventually, even associates of \u001bCA[bm75]\u001bCZ who were initially indifferent to peace talks with the \u001bCBMiyoshi Clan\u001bCZ began sympathizing with \u001bCAHarumoto\u001bCZ, forcing \u001bCA[bm75]\u001bCZ to address the situation.",
+        "jp": "やがて、元々\u001bCB三好家\u001bCZとの和睦に消極的だった\n\u001bCA[bm75]\u001bCZ側近の中にも\u001bCA晴元\u001bCZに同調する動きが現れ、\n\u001bCA[bm75]\u001bCZももはや言い逃れできない状況に陥る。",
+        "sc": "很快，此前对与\u001bCB三好家\u001bCZ的和谈持消极态度的\n\u001bCA[bm75]\u001bCZ亲信之中也出现了配合\u001bCA晴元\u001bCZ展开行动的人，\n\u001bCA[bm75]\u001bCZ也陷入了难以推脱的局面。",
+        "tc": "不久後，對與\u001bCB三好家\u001bCZ和解本就態度消極的\n\u001bCA[bm75]\u001bCZ親信當中亦出現\u001bCA晴元\u001bCZ的贊同者，\n令\u001bCA[bm75]\u001bCZ陷入難辭其咎的境地。"
+      },
+      "entry_id": 3455,
+      "historical_compact_to_proposed_surface_units": [
+        "이윽고",
+        "미요시",
+        "가문과의",
+        "의",
+        "중에도",
+        "하루모토에",
+        "동조하는",
+        "자가",
+        "생겨",
+        ",",
+        "[bm75]",
+        "본인도",
+        "더는",
+        "발뺌할",
+        "수",
+        "없는",
+        "처지에",
+        "몰렸다"
+      ],
+      "historical_manual_compact_ko": "본래 \u001bCB미요시가\u001bCZ 화친에 소극적이던\n\u001bCA[bm75]\u001bCZ 측근 \u001bCA하루모토\u001bCZ 동조.\n\u001bCA[bm75]\u001bCZ도 더는 변명 못했다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 4,
+        "lines": [
+          {
+            "display_string": "이윽고 본래 미요시 가문과의 화친에",
+            "display_string_template": "이윽고 본래 미요시 가문과의 화친에",
+            "display_string_with_strict_name_table_substitution": "이윽고 본래 미요시 가문과의 화친에",
+            "effective_width_px": 510,
+            "encoded_string": "이윽고 본래 \u001bCB미요시 가문\u001bCZ과의 화친에",
+            "exceeds_912px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 4,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 816,
+            "raw_g1n_width_px": 816,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "소극적이던 아시카가 요시테루의 측근 중에도",
+            "display_string_template": "소극적이던 [bm75]의 측근 중에도",
+            "display_string_with_strict_name_table_substitution": "소극적이던 아시카가 요시테루의 측근 중에도",
+            "effective_width_px": 630,
+            "encoded_string": "소극적이던 \u001bCA[bm75]\u001bCZ의 측근 중에도",
+            "exceeds_912px": false,
+            "full_width_character_count": 19,
+            "half_width_character_count": 4,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 600,
+            "raw_g1n_width_px": 1008,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          },
+          {
+            "display_string": "하루모토에 동조하는 자가 생겨, 아시카가 요시테루 본인도",
+            "display_string_template": "하루모토에 동조하는 자가 생겨, [bm75] 본인도",
+            "display_string_with_strict_name_table_substitution": "하루모토에 동조하는 자가 생겨, 아시카가 요시테루 본인도",
+            "effective_width_px": 825,
+            "encoded_string": "\u001bCA하루모토\u001bCZ에 동조하는 자가 생겨, \u001bCA[bm75]\u001bCZ 본인도",
+            "exceeds_912px": false,
+            "full_width_character_count": 24,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 912,
+            "raw_g1n_width_px": 1320,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          },
+          {
+            "display_string": "더는 발뺌할 수 없는 처지에 몰렸다.",
+            "display_string_template": "더는 발뺌할 수 없는 처지에 몰렸다.",
+            "display_string_with_strict_name_table_substitution": "더는 발뺌할 수 없는 처지에 몰렸다.",
+            "effective_width_px": 510,
+            "encoded_string": "더는 발뺌할 수 없는 처지에 몰렸다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 6,
+            "line_number": 4,
+            "literal_raw_g1n_width_px": 816,
+            "raw_g1n_width_px": 816,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": false,
+      "legacy_precompaction_ko": "이윽고 본래 \u001bCB미요시 가문\u001bCZ과의 화친에 소극적이던\n\u001bCA[bm75]\u001bCZ의 측근 중에도 \u001bCA하루모토\u001bCZ에 동조하는 자가 생겨,\n\u001bCA[bm75]\u001bCZ 본인도 더는 발뺌할 수 없는 처지에 몰렸다.",
+      "proposed_ko": "이윽고 본래 \u001bCB미요시 가문\u001bCZ과의 화친에\n소극적이던 \u001bCA[bm75]\u001bCZ의 측근 중에도\n\u001bCA하루모토\u001bCZ에 동조하는 자가 생겨, \u001bCA[bm75]\u001bCZ 본인도\n더는 발뺌할 수 없는 처지에 몰렸다.",
+      "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+      "review_judgement": "Restore the initially peace-sceptical retainers, their support for Harumoto, and the shogun's inability to evade the issue. Four lines are used at Korean phrase boundaries for two conservative token reservations.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0030",
+      "text_sha256_utf16le": {
+        "current_ko": "ED3268C50CA8626CC33F0FBC450E83D1DEB89CE5D168B24066A4F68AB6B075DA",
+        "historical_manual_compact_ko": "ED3268C50CA8626CC33F0FBC450E83D1DEB89CE5D168B24066A4F68AB6B075DA",
+        "legacy_precompaction_ko": "A9CBB857233FD2C73E0D215661F1B36206A56B4BEE2BF5F931EC389FB4B0081C",
+        "proposed_ko": "3F55C62C2E22103501A9752A731C794943C88138514C258C1EF051202918FAE1"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCA[bm75]\u001bCZ는 교토 입성을\n꾀했으나 \u001bCB미요시 세력\u001bCZ에 막혀 \u001bCC히가시야마\u001bCZ\n\u001bCC료젠성\u001bCZ에 틀어박혀 화의도 무너졌다.",
+      "current_to_proposed_surface_units": [
+        "그래도",
+        "본인은",
+        ",",
+        "경계하던",
+        "히가시야마의",
+        "농성했다",
+        ".",
+        "이로써",
+        "화의는",
+        "완전히"
+      ],
+      "direct_pc_sources": {
+        "en": "\u001bCA[bm75]\u001bCZ attempted to enter the \u001bCCcapital\u001bCZ only to be thwarted by the wary \u001bCBMiyoshi Clan\u001bCZ, driving him to hole up in \u001bCCRyªzen Castle\u001bCZ in \u001bCCHigashiyama\u001bCZ. Peace negotiations broke down completely.",
+        "jp": "それでも\u001bCA[bm75]\u001bCZは入京を試みるが、警戒する\n\u001bCB三好勢\u001bCZに阻まれ、\u001bCC東山\u001bCZの\u001bCC霊山城\u001bCZに籠城。\nここにおいて、和議は完全に崩壊した。",
+        "sc": "仍未死心的\u001bCA[bm75]\u001bCZ尝试进京，却受到警戒中的\n\u001bCB三好势力\u001bCZ阻拦，只得守在\u001bCC东山\u001bCZ的\u001bCC灵山城\u001bCZ。\n于是和谈彻底宣告决裂。",
+        "tc": "儘管如此，\u001bCA[bm75]\u001bCZ仍試圖入京，但遭到\n心懷警戒的\u001bCB三好勢力\u001bCZ阻撓，於焉坐守\u001bCC東山\u001bCZ的\n\u001bCC靈山城\u001bCZ。事態演變至此，議和完全決裂。"
+      },
+      "entry_id": 3456,
+      "historical_compact_to_proposed_surface_units": [
+        "그래도",
+        "본인은",
+        ",",
+        "경계하던",
+        "히가시야마의",
+        "농성했다",
+        ".",
+        "이로써",
+        "화의는",
+        "완전히"
+      ],
+      "historical_manual_compact_ko": "\u001bCA[bm75]\u001bCZ는 교토 입성을\n꾀했으나 \u001bCB미요시 세력\u001bCZ에 막혀 \u001bCC히가시야마\u001bCZ\n\u001bCC료젠성\u001bCZ에 틀어박혀 화의도 무너졌다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 4,
+        "lines": [
+          {
+            "display_string": "그래도 아시카가 요시테루 본인은 교토 입성을 꾀했으나,",
+            "display_string_template": "그래도 [bm75] 본인은 교토 입성을 꾀했으나,",
+            "display_string_with_strict_name_table_substitution": "그래도 아시카가 요시테루 본인은 교토 입성을 꾀했으나,",
+            "effective_width_px": 795,
+            "encoded_string": "그래도 \u001bCA[bm75]\u001bCZ 본인은 교토 입성을 꾀했으나,",
+            "exceeds_912px": false,
+            "full_width_character_count": 23,
+            "half_width_character_count": 7,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 864,
+            "raw_g1n_width_px": 1272,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          },
+          {
+            "display_string": "경계하던 미요시 세력에 막혀 히가시야마의",
+            "display_string_template": "경계하던 미요시 세력에 막혀 히가시야마의",
+            "display_string_with_strict_name_table_substitution": "경계하던 미요시 세력에 막혀 히가시야마의",
+            "effective_width_px": 600,
+            "encoded_string": "경계하던 \u001bCB미요시 세력\u001bCZ에 막혀 \u001bCC히가시야마\u001bCZ의",
+            "exceeds_912px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 4,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 960,
+            "raw_g1n_width_px": 960,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "료젠성에 농성했다.",
+            "display_string_template": "료젠성에 농성했다.",
+            "display_string_with_strict_name_table_substitution": "료젠성에 농성했다.",
+            "effective_width_px": 270,
+            "encoded_string": "\u001bCC료젠성\u001bCZ에 농성했다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 8,
+            "half_width_character_count": 2,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 432,
+            "raw_g1n_width_px": 432,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "이로써 화의는 완전히 무너졌다.",
+            "display_string_template": "이로써 화의는 완전히 무너졌다.",
+            "display_string_with_strict_name_table_substitution": "이로써 화의는 완전히 무너졌다.",
+            "effective_width_px": 450,
+            "encoded_string": "이로써 화의는 완전히 무너졌다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 4,
+            "line_number": 4,
+            "literal_raw_g1n_width_px": 720,
+            "raw_g1n_width_px": 720,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": false,
+      "legacy_precompaction_ko": "그래도 \u001bCA[bm75]\u001bCZ 본인은 교토 입성을 꾀했으나, 경계하던\n\u001bCB미요시 세력\u001bCZ에 막혀 \u001bCC히가시야마\u001bCZ의 \u001bCC료젠성\u001bCZ에 농성했다.\n이로써 화의는 완전히 무너졌다.",
+      "proposed_ko": "그래도 \u001bCA[bm75]\u001bCZ 본인은 교토 입성을 꾀했으나,\n경계하던 \u001bCB미요시 세력\u001bCZ에 막혀 \u001bCC히가시야마\u001bCZ의\n\u001bCC료젠성\u001bCZ에 농성했다.\n이로써 화의는 완전히 무너졌다.",
+      "restoration_strategy": "restore_complete_korean_with_semantic_reflow_runtime_reservation",
+      "review_judgement": "Restore the continued entry attempt, the wary Miyoshi obstruction, the siege at Ryozen Castle in Higashiyama, and the complete collapse of peace talks. Four semantic lines avoid the old 930px-effective reservation overflow.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0030",
+      "text_sha256_utf16le": {
+        "current_ko": "4E18267698282CE9ADA549FDAE305DCE9C1B4DFBA49F5FB9539D8987F8BDAA81",
+        "historical_manual_compact_ko": "4E18267698282CE9ADA549FDAE305DCE9C1B4DFBA49F5FB9539D8987F8BDAA81",
+        "legacy_precompaction_ko": "82B5E3CAE6CA889F776AF3A8B55FF3C4277227270F692F8E9E0197ADC081C0AC",
+        "proposed_ko": "590D2D3FCE28E469473EA67567BBF81C5A362F3221F1F66F87E028302D02C1E6"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCB미요시군\u001bCZ 공격에 \u001bCC료젠성\u001bCZ 함락.\n쇼군 \u001bCA[bm75]\u001bCZ는 \u001bCC오미\u001bCZ로\n달아나고, \u001bCA하루모토\u001bCZ 등도 뒤따랐다.",
+      "current_to_proposed_surface_units": [
+        "미요시군의",
+        "공격으로",
+        "료젠성은",
+        "다시",
+        "달아났고",
+        "그",
+        "뒤를",
+        "따랐다"
+      ],
+      "direct_pc_sources": {
+        "en": "\u001bCCRyªzen Castle\u001bCZ fell to the \u001bCBMiyoshi Army\u001bCZÖs assault. Shªgun \u001bCA[bm75]\u001bCZ escaped again to \u001bCC¥mi\u001bCZ accompanied by \u001bCAHarumoto\u001bCZ and his faction.",
+        "jp": "\u001bCB三好軍\u001bCZの攻撃により\u001bCC霊山城\u001bCZは陥落。\n将軍\u001bCA[bm75]\u001bCZは再び\u001bCC近江\u001bCZへと逃れ、\u001bCA晴元\u001bCZらも\nそれに従った。",
+        "sc": "\u001bCC灵山城\u001bCZ在\u001bCB三好军\u001bCZ的攻击下失守。\n\u001bCA[bm75]\u001bCZ将军又一次逃亡\u001bCC近江\u001bCZ，\n\u001bCA晴元\u001bCZ等人随之同去。",
+        "tc": "在\u001bCB三好軍\u001bCZ的猛攻下，\u001bCC靈山城\u001bCZ陷落。\n將軍\u001bCA[bm75]\u001bCZ再度逃往\u001bCC近江\u001bCZ，\n\u001bCA晴元\u001bCZ等人亦尾隨而去。"
+      },
+      "entry_id": 3459,
+      "historical_compact_to_proposed_surface_units": [
+        "미요시군의",
+        "공격으로",
+        "료젠성은",
+        "다시",
+        "달아났고",
+        "그",
+        "뒤를",
+        "따랐다"
+      ],
+      "historical_manual_compact_ko": "\u001bCB미요시군\u001bCZ 공격에 \u001bCC료젠성\u001bCZ 함락.\n쇼군 \u001bCA[bm75]\u001bCZ는 \u001bCC오미\u001bCZ로\n달아나고, \u001bCA하루모토\u001bCZ 등도 뒤따랐다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "미요시군의 공격으로 료젠성은 함락.",
+            "display_string_template": "미요시군의 공격으로 료젠성은 함락.",
+            "display_string_with_strict_name_table_substitution": "미요시군의 공격으로 료젠성은 함락.",
+            "effective_width_px": 510,
+            "encoded_string": "\u001bCB미요시군\u001bCZ의 공격으로 \u001bCC료젠성\u001bCZ은 함락.",
+            "exceeds_912px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 4,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 816,
+            "raw_g1n_width_px": 816,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "쇼군 아시카가 요시테루는 다시 오미로 달아났고, 하루모토 등도",
+            "display_string_template": "쇼군 [bm75]는 다시 오미로 달아났고, 하루모토 등도",
+            "display_string_with_strict_name_table_substitution": "쇼군 아시카가 요시테루는 다시 오미로 달아났고, 하루모토 등도",
+            "effective_width_px": 900,
+            "encoded_string": "쇼군 \u001bCA[bm75]\u001bCZ는 다시 \u001bCC오미\u001bCZ로 달아났고, \u001bCA하루모토\u001bCZ 등도",
+            "exceeds_912px": false,
+            "full_width_character_count": 26,
+            "half_width_character_count": 8,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1032,
+            "raw_g1n_width_px": 1440,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[bm75]"
+              }
+            ]
+          },
+          {
+            "display_string": "그 뒤를 따랐다.",
+            "display_string_template": "그 뒤를 따랐다.",
+            "display_string_with_strict_name_table_substitution": "그 뒤를 따랐다.",
+            "effective_width_px": 225,
+            "encoded_string": "그 뒤를 따랐다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 6,
+            "half_width_character_count": 3,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 360,
+            "raw_g1n_width_px": 360,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "\u001bCB미요시군\u001bCZ의 공격으로 \u001bCC료젠성\u001bCZ은 함락.\n쇼군 \u001bCA[bm75]\u001bCZ는 다시 \u001bCC오미\u001bCZ로 달아났고, \u001bCA하루모토\u001bCZ 등도\n그 뒤를 따랐다.",
+      "proposed_ko": "\u001bCB미요시군\u001bCZ의 공격으로 \u001bCC료젠성\u001bCZ은 함락.\n쇼군 \u001bCA[bm75]\u001bCZ는 다시 \u001bCC오미\u001bCZ로 달아났고, \u001bCA하루모토\u001bCZ 등도\n그 뒤를 따랐다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the fall of Ryozen Castle, the renewed flight to Omi, and Harumoto's followers.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0031",
+      "text_sha256_utf16le": {
+        "current_ko": "AC135455F45EA4DA89C186AAB48EC43806833BC81DF79EBF12DEF38229390968",
+        "historical_manual_compact_ko": "AC135455F45EA4DA89C186AAB48EC43806833BC81DF79EBF12DEF38229390968",
+        "legacy_precompaction_ko": "D513E531E0A2916C7E3638277DF7F2D81B90D7BB48518816339E4099EE6D827D",
+        "proposed_ko": "D513E531E0A2916C7E3638277DF7F2D81B90D7BB48518816339E4099EE6D827D"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]",
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]",
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]",
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]",
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]",
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCA요시모토\u001bCZ가 \u001bCA[b1251]\u001bCZ에 제의하자,\n\u001bCA[bm1251]\u001bCZ도 흔쾌히 가담했고,\n이는 곧 \u001bCA우지야스\u001bCZ에게 전해졌다.",
+      "current_to_proposed_surface_units": [
+        "요시모토는",
+        "에게도",
+        "공동",
+        "작전을",
+        "제안했고",
+        "측도",
+        "받아들여",
+        "공격에",
+        "가담했다",
+        ".",
+        "이",
+        "움직임은"
+      ],
+      "direct_pc_sources": {
+        "en": "\u001bCAYoshimoto\u001bCZ proposed a joint operation to \u001bCA[b1251]\u001bCZ, who accepted and joined his force. \u001bCAUjiyasu\u001bCZ was informed of this immediately.",
+        "jp": "\u001bCA義元\u001bCZは\u001bCA[b1251]\u001bCZにも共同作戦を申し出、\n\u001bCA[bm1251]\u001bCZも快諾してこの攻撃に加わっている。\nこれらの動きは、すぐに\u001bCA氏康\u001bCZに伝わった。",
+        "sc": "\u001bCA义元\u001bCZ亦向\u001bCA[b1251]\u001bCZ提出共同作战的请求，\n而\u001bCA[bm1251]\u001bCZ也欣然应允。\n这些动向立刻传达到了\u001bCA氏康\u001bCZ耳中。",
+        "tc": "\u001bCA義元\u001bCZ也向\u001bCA[b1251]\u001bCZ提議共同作戰。\n\u001bCA[bm1251]\u001bCZ爽快地答應並加入了攻擊行動。\n這些動向很快就傳到\u001bCA氏康\u001bCZ耳裡。"
+      },
+      "entry_id": 3499,
+      "historical_compact_to_proposed_surface_units": [
+        "요시모토는",
+        "에게도",
+        "공동",
+        "작전을",
+        "제안했고",
+        "측도",
+        "받아들여",
+        "공격에",
+        "가담했다",
+        ".",
+        "이",
+        "움직임은"
+      ],
+      "historical_manual_compact_ko": "\u001bCA요시모토\u001bCZ가 \u001bCA[b1251]\u001bCZ에 제의하자,\n\u001bCA[bm1251]\u001bCZ도 흔쾌히 가담했고,\n이는 곧 \u001bCA우지야스\u001bCZ에게 전해졌다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "요시모토는 다케다 하루노부에게도 공동 작전을 제안했고,",
+            "display_string_template": "요시모토는 [b1251]에게도 공동 작전을 제안했고,",
+            "display_string_with_strict_name_table_substitution": "요시모토는 다케다 하루노부에게도 공동 작전을 제안했고,",
+            "effective_width_px": 810,
+            "encoded_string": "\u001bCA요시모토\u001bCZ는 \u001bCA[b1251]\u001bCZ에게도 공동 작전을 제안했고,",
+            "exceeds_912px": false,
+            "full_width_character_count": 24,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 936,
+            "raw_g1n_width_px": 1296,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[b1251]"
+              }
+            ]
+          },
+          {
+            "display_string": "다케다 하루노부 측도 흔쾌히 받아들여 공격에 가담했다.",
+            "display_string_template": "[bm1251] 측도 흔쾌히 받아들여 공격에 가담했다.",
+            "display_string_with_strict_name_table_substitution": "다케다 하루노부 측도 흔쾌히 받아들여 공격에 가담했다.",
+            "effective_width_px": 795,
+            "encoded_string": "\u001bCA[bm1251]\u001bCZ 측도 흔쾌히 받아들여 공격에 가담했다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 23,
+            "half_width_character_count": 7,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 912,
+            "raw_g1n_width_px": 1272,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[bm1251]"
+              }
+            ]
+          },
+          {
+            "display_string": "이 움직임은 곧 우지야스에게 전해졌다.",
+            "display_string_template": "이 움직임은 곧 우지야스에게 전해졌다.",
+            "display_string_with_strict_name_table_substitution": "이 움직임은 곧 우지야스에게 전해졌다.",
+            "effective_width_px": 555,
+            "encoded_string": "이 움직임은 곧 \u001bCA우지야스\u001bCZ에게 전해졌다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 16,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 888,
+            "raw_g1n_width_px": 888,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "\u001bCA요시모토\u001bCZ는 \u001bCA[b1251]\u001bCZ에게도 공동 작전을 제안했고,\n\u001bCA[bm1251]\u001bCZ 측도 흔쾌히 받아들여 공격에 가담했다.\n이 움직임은 곧 \u001bCA우지야스\u001bCZ에게 전해졌다.",
+      "proposed_ko": "\u001bCA요시모토\u001bCZ는 \u001bCA[b1251]\u001bCZ에게도 공동 작전을 제안했고,\n\u001bCA[bm1251]\u001bCZ 측도 흔쾌히 받아들여 공격에 가담했다.\n이 움직임은 곧 \u001bCA우지야스\u001bCZ에게 전해졌다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the joint-operation proposal, willing acceptance and participation in the attack, and the report reaching Ujiyasu.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0037",
+      "text_sha256_utf16le": {
+        "current_ko": "E6A8DA9A237C2E70BC531D9806813FC72915488FE74822C2EF0462FA97DA0FEA",
+        "historical_manual_compact_ko": "E6A8DA9A237C2E70BC531D9806813FC72915488FE74822C2EF0462FA97DA0FEA",
+        "legacy_precompaction_ko": "A06390C4B2C658D5AF0EE5A34C24B4AD7E3230C3B75EB47126F9A17F346DC666",
+        "proposed_ko": "A06390C4B2C658D5AF0EE5A34C24B4AD7E3230C3B75EB47126F9A17F346DC666"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "이번 \u001bCA요시모토\u001bCZ 포위망의 틈은\n서쪽이다. 그 진영에 든\n\u001bCA요시모토\u001bCZ 측 \u001bCA[b1251]\u001bCZ…",
+      "current_to_proposed_surface_units": [
+        "아니",
+        ",",
+        "요시모토의",
+        "우리를",
+        "향한",
+        "포위망",
+        "…",
+        "틈이",
+        "있다면",
+        "가담한",
+        "."
+      ],
+      "direct_pc_sources": {
+        "en": "No. \u001bCAYoshimoto\u001bCZ has us encircled. If there is a weakness, then it is to the west. Perhaps \u001bCA[b1251]\u001bCZ, who has joined \u001bCAYoshimoto\u001bCZÖs forces...",
+        "jp": "いや、我らに対する此度の\u001bCA義元\u001bCZの包囲網…\n隙があるとすれば西側だ。\n\u001bCA義元\u001bCZの陣に加わっている…\u001bCA[b1251]\u001bCZ。",
+        "sc": "不，此次\u001bCA义元\u001bCZ针对我们的包围……\n薄弱点应该是在西侧。\n加入\u001bCA义元\u001bCZ一方的……\u001bCA[b1251]\u001bCZ。",
+        "tc": "不，這次\u001bCA義元\u001bCZ針對我們的包圍網……\n要說哪裡有空隙的話，那就是西側。\n加入\u001bCA義元\u001bCZ陣營的……\u001bCA[b1251]\u001bCZ。"
+      },
+      "entry_id": 3519,
+      "historical_compact_to_proposed_surface_units": [
+        "아니",
+        ",",
+        "요시모토의",
+        "우리를",
+        "향한",
+        "포위망",
+        "…",
+        "틈이",
+        "있다면",
+        "가담한",
+        "."
+      ],
+      "historical_manual_compact_ko": "이번 \u001bCA요시모토\u001bCZ 포위망의 틈은\n서쪽이다. 그 진영에 든\n\u001bCA요시모토\u001bCZ 측 \u001bCA[b1251]\u001bCZ…",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "아니, 이번 요시모토의 우리를 향한 포위망……",
+            "display_string_template": "아니, 이번 요시모토의 우리를 향한 포위망……",
+            "display_string_with_strict_name_table_substitution": "아니, 이번 요시모토의 우리를 향한 포위망……",
+            "effective_width_px": 630,
+            "encoded_string": "아니, 이번 \u001bCA요시모토\u001bCZ의 우리를 향한 포위망……",
+            "exceeds_912px": false,
+            "full_width_character_count": 17,
+            "half_width_character_count": 8,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1008,
+            "raw_g1n_width_px": 1008,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "틈이 있다면 서쪽이다.",
+            "display_string_template": "틈이 있다면 서쪽이다.",
+            "display_string_with_strict_name_table_substitution": "틈이 있다면 서쪽이다.",
+            "effective_width_px": 315,
+            "encoded_string": "틈이 있다면 서쪽이다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 9,
+            "half_width_character_count": 3,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 504,
+            "raw_g1n_width_px": 504,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "요시모토의 진영에 가담한…… 다케다 하루노부.",
+            "display_string_template": "요시모토의 진영에 가담한…… [b1251].",
+            "display_string_with_strict_name_table_substitution": "요시모토의 진영에 가담한…… 다케다 하루노부.",
+            "effective_width_px": 645,
+            "encoded_string": "\u001bCA요시모토\u001bCZ의 진영에 가담한…… \u001bCA[b1251]\u001bCZ.",
+            "exceeds_912px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 672,
+            "raw_g1n_width_px": 1032,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[b1251]"
+              }
+            ]
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "아니, 이번 \u001bCA요시모토\u001bCZ의 우리를 향한 포위망……\n틈이 있다면 서쪽이다.\n\u001bCA요시모토\u001bCZ의 진영에 가담한…… \u001bCA[b1251]\u001bCZ.",
+      "proposed_ko": "아니, 이번 \u001bCA요시모토\u001bCZ의 우리를 향한 포위망……\n틈이 있다면 서쪽이다.\n\u001bCA요시모토\u001bCZ의 진영에 가담한…… \u001bCA[b1251]\u001bCZ.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the speaker's rejection, the west-side weakness, and the trailing identification of the commander who joined Yoshimoto's camp.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0042",
+      "text_sha256_utf16le": {
+        "current_ko": "DC02E5A72C70D34E63C2A9F01096200755A9B34878C8042E1388E0959A664083",
+        "historical_manual_compact_ko": "DC02E5A72C70D34E63C2A9F01096200755A9B34878C8042E1388E0959A664083",
+        "legacy_precompaction_ko": "536FB27C766C60DEB76A354A0DDF5005D227D728DBDFA01491A9F60E98F04805",
+        "proposed_ko": "536FB27C766C60DEB76A354A0DDF5005D227D728DBDFA01491A9F60E98F04805"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCA[bm1251]\u001bCZ은 속을 알 수 없다.\n\u001bCA요시모토\u001bCZ를 돕는 척, 어부지리를 노린다.\n그 속셈을 역이용하자…!",
+      "current_to_proposed_surface_units": [
+        "공은",
+        "속내를",
+        "없는",
+        "자다",
+        "겉으로는",
+        "척하며",
+        "남몰래",
+        "노리고",
+        "있지",
+        "생각을",
+        "거꾸로",
+        "우리가",
+        "이용한다",
+        "…"
+      ],
+      "direct_pc_sources": {
+        "en": "\u001bCA[bm1251]\u001bCZ is difficult to control. I have no doubt that in assisting \u001bCAYoshimoto\u001bCZ he plans to gain something for himself. We must make use of that!",
+        "jp": "\u001bCA[bm1251]\u001bCZこそ最も食えぬ男よ。\u001bCA義元\u001bCZに協力する\n素振りで、密かに漁夫の利を狙っておる。\nそれを逆にこちらが利用する…！",
+        "sc": "\u001bCA[bm1251]\u001bCZ才是最难以对付的对手。他表面上是要与\n\u001bCA义元\u001bCZ合作，背地里却在等待收获渔翁之利。\n如果我们能反过来利用他的这种想法……！",
+        "tc": "\u001bCA[bm1251]\u001bCZ是最不能小覷的男人。他假裝幫助\u001bCA義元\u001bCZ，\n暗地裡卻想坐收漁翁之利。\n我們要反過來利用這點……！"
+      },
+      "entry_id": 3520,
+      "historical_compact_to_proposed_surface_units": [
+        "공은",
+        "속내를",
+        "없는",
+        "자다",
+        "겉으로는",
+        "척하며",
+        "남몰래",
+        "노리고",
+        "있지",
+        "생각을",
+        "거꾸로",
+        "우리가",
+        "이용한다",
+        "…"
+      ],
+      "historical_manual_compact_ko": "\u001bCA[bm1251]\u001bCZ은 속을 알 수 없다.\n\u001bCA요시모토\u001bCZ를 돕는 척, 어부지리를 노린다.\n그 속셈을 역이용하자…!",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "다케다 하루노부 공은 속내를 알 수 없는 자다. 겉으로는",
+            "display_string_template": "[bm1251] 공은 속내를 알 수 없는 자다. 겉으로는",
+            "display_string_with_strict_name_table_substitution": "다케다 하루노부 공은 속내를 알 수 없는 자다. 겉으로는",
+            "effective_width_px": 795,
+            "encoded_string": "\u001bCA[bm1251]\u001bCZ 공은 속내를 알 수 없는 자다. 겉으로는",
+            "exceeds_912px": false,
+            "full_width_character_count": 22,
+            "half_width_character_count": 9,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 912,
+            "raw_g1n_width_px": 1272,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[bm1251]"
+              }
+            ]
+          },
+          {
+            "display_string": "요시모토를 돕는 척하며 남몰래 어부지리를 노리고 있지.",
+            "display_string_template": "요시모토를 돕는 척하며 남몰래 어부지리를 노리고 있지.",
+            "display_string_with_strict_name_table_substitution": "요시모토를 돕는 척하며 남몰래 어부지리를 노리고 있지.",
+            "effective_width_px": 795,
+            "encoded_string": "\u001bCA요시모토\u001bCZ를 돕는 척하며 남몰래 어부지리를 노리고 있지.",
+            "exceeds_912px": false,
+            "full_width_character_count": 23,
+            "half_width_character_count": 7,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1272,
+            "raw_g1n_width_px": 1272,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "그 생각을 거꾸로 우리가 이용한다……!",
+            "display_string_template": "그 생각을 거꾸로 우리가 이용한다……!",
+            "display_string_with_strict_name_table_substitution": "그 생각을 거꾸로 우리가 이용한다……!",
+            "effective_width_px": 525,
+            "encoded_string": "그 생각을 거꾸로 우리가 이용한다……!",
+            "exceeds_912px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 840,
+            "raw_g1n_width_px": 840,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "\u001bCA[bm1251]\u001bCZ 공은 속내를 알 수 없는 자다. 겉으로는\n\u001bCA요시모토\u001bCZ를 돕는 척하며 남몰래 어부지리를 노리고 있지.\n그 생각을 거꾸로 우리가 이용한다……!",
+      "proposed_ko": "\u001bCA[bm1251]\u001bCZ 공은 속내를 알 수 없는 자다. 겉으로는\n\u001bCA요시모토\u001bCZ를 돕는 척하며 남몰래 어부지리를 노리고 있지.\n그 생각을 거꾸로 우리가 이용한다……!",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the unreadable nature of the man, his feigned cooperation, concealed plan for a fisherman's profit, and the proposal to exploit it in reverse.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0042",
+      "text_sha256_utf16le": {
+        "current_ko": "89C2622FEB61B976AE6D277F084B0618D659067DB6686F70ABE9B951056F8A55",
+        "historical_manual_compact_ko": "89C2622FEB61B976AE6D277F084B0618D659067DB6686F70ABE9B951056F8A55",
+        "legacy_precompaction_ko": "57F95C8386F0B81393E3AD02F519AC3D2636088BBF62C6BAFA08B5A296EBCDEF",
+        "proposed_ko": "57F95C8386F0B81393E3AD02F519AC3D2636088BBF62C6BAFA08B5A296EBCDEF"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b790]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b790]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b790]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b790]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b790]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCA요시모토\u001bCZ의 포위망을 막으려,\n\u001bCA[b790]\u001bCZ은 \u001bCC가와고에성\u001bCZ으로,\n\u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다…",
+      "current_to_proposed_surface_units": [
+        "이리하여",
+        "요시모토가",
+        "펼친",
+        "막고자",
+        "일행은",
+        "향했다",
+        ".",
+        "그리고",
+        "…"
+      ],
+      "direct_pc_sources": {
+        "en": "Recognizing the need to defend against \u001bCAYoshimoto\u001bCZÖs coalition, \u001bCA[b790]\u001bCZ went to \u001bCCKawagoe Castle\u001bCZ. Meanwhile, \u001bCAUjiyasu\u001bCZ attacked \u001bCCEast Suruga\u001bCZ...",
+        "jp": "かくして\u001bCA義元\u001bCZが仕掛けた包囲網を阻止すべく\n\u001bCA[b790]\u001bCZは\u001bCC河越城\u001bCZへ。\nそして\u001bCA氏康\u001bCZは\u001bCC河東\u001bCZへと出撃したのである…",
+        "sc": "就这样，为了阻止\u001bCA义元\u001bCZ形成包围网，\n\u001bCA[b790]\u001bCZ前往\u001bCC河越城\u001bCZ。\n而\u001bCA氏康\u001bCZ则向\u001bCC河东\u001bCZ出击……",
+        "tc": "就這樣，為了阻止\u001bCA義元\u001bCZ設下的包圍網，\n\u001bCA[b790]\u001bCZ出發前往\u001bCC河越城\u001bCZ。\n而\u001bCA氏康\u001bCZ則向\u001bCC河東\u001bCZ出擊……"
+      },
+      "entry_id": 3524,
+      "historical_compact_to_proposed_surface_units": [
+        "이리하여",
+        "요시모토가",
+        "펼친",
+        "막고자",
+        "일행은",
+        "향했다",
+        ".",
+        "그리고",
+        "…"
+      ],
+      "historical_manual_compact_ko": "\u001bCA요시모토\u001bCZ의 포위망을 막으려,\n\u001bCA[b790]\u001bCZ은 \u001bCC가와고에성\u001bCZ으로,\n\u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다…",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "이리하여 요시모토가 펼친 포위망을 막고자,",
+            "display_string_template": "이리하여 요시모토가 펼친 포위망을 막고자,",
+            "display_string_with_strict_name_table_substitution": "이리하여 요시모토가 펼친 포위망을 막고자,",
+            "effective_width_px": 615,
+            "encoded_string": "이리하여 \u001bCA요시모토\u001bCZ가 펼친 포위망을 막고자,",
+            "exceeds_912px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 5,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 984,
+            "raw_g1n_width_px": 984,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "구시마 츠나시게 일행은 가와고에성으로 향했다.",
+            "display_string_template": "[b790] 일행은 가와고에성으로 향했다.",
+            "display_string_with_strict_name_table_substitution": "구시마 츠나시게 일행은 가와고에성으로 향했다.",
+            "effective_width_px": 675,
+            "encoded_string": "\u001bCA[b790]\u001bCZ 일행은 \u001bCC가와고에성\u001bCZ으로 향했다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 20,
+            "half_width_character_count": 5,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 720,
+            "raw_g1n_width_px": 1080,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 790,
+                "strict_name_table_string": "구시마 츠나시게",
+                "strict_name_utf16le_sha256": "5AE87E665EF422A8378AB217C7CD3A492B2F61F4429692B0877CC48F4C3B5DCE",
+                "token": "[b790]"
+              }
+            ]
+          },
+          {
+            "display_string": "그리고 우지야스는 가토로 출진했다……",
+            "display_string_template": "그리고 우지야스는 가토로 출진했다……",
+            "display_string_with_strict_name_table_substitution": "그리고 우지야스는 가토로 출진했다……",
+            "effective_width_px": 525,
+            "encoded_string": "그리고 \u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다……",
+            "exceeds_912px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 840,
+            "raw_g1n_width_px": 840,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "이리하여 \u001bCA요시모토\u001bCZ가 펼친 포위망을 막고자,\n\u001bCA[b790]\u001bCZ 일행은 \u001bCC가와고에성\u001bCZ으로 향했다.\n그리고 \u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다……",
+      "proposed_ko": "이리하여 \u001bCA요시모토\u001bCZ가 펼친 포위망을 막고자,\n\u001bCA[b790]\u001bCZ 일행은 \u001bCC가와고에성\u001bCZ으로 향했다.\n그리고 \u001bCA우지야스\u001bCZ는 \u001bCC가토\u001bCZ로 출진했다……",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the move to block Yoshimoto's encirclement, the party's destination at Kawagoe Castle, and Ujiyasu's sortie toward Kato.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0043",
+      "text_sha256_utf16le": {
+        "current_ko": "7D48A4BE14BC79D16A3E1ACE5EC99A8166474F204B126EA1798EA925A7C92124",
+        "historical_manual_compact_ko": "7D48A4BE14BC79D16A3E1ACE5EC99A8166474F204B126EA1798EA925A7C92124",
+        "legacy_precompaction_ko": "28A469E49BE7E67C601051B0E8C2D0668745F1170B273A7E7397982B27F51F5E",
+        "proposed_ko": "28A469E49BE7E67C601051B0E8C2D0668745F1170B273A7E7397982B27F51F5E"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "어릴 때, 부친 \u001bCA노부토라\u001bCZ가 알아보고,\n\u001bCA[bm1251]\u001bCZ을 싫어한 \u001bCA노부토라\u001bCZ는\n\u001bCB다케다 가문\u001bCZ 당주로 세우려 했다고 한다.",
+      "current_to_proposed_surface_units": [
+        "어려서부터",
+        "그",
+        "재능을",
+        "아버지",
+        "노부토라에게",
+        "인정받아",
+        "공을",
+        "노부토라가",
+        "했던",
+        "것으로",
+        "알려져",
+        "있다"
+      ],
+      "direct_pc_sources": {
+        "en": "Unlike \u001bCA[bm1251]\u001bCZ, \u001bCANobushige\u001bCZ was viewed in a more favorable light by their father, \u001bCANobutora\u001bCZ. From the time he was a child, his skills were seen as more promising, so much that he was intended to eventually become leader of the \u001bCBTakeda\u001bCZ instead.",
+        "jp": "若くしてその器量を父・\u001bCA信虎\u001bCZに見込まれ、\n\u001bCA[bm1251]\u001bCZを嫌っていた\u001bCA信虎\u001bCZが\u001bCB武田家\u001bCZ当主に\n据えようとしていたことで知られている。",
+        "sc": "年纪轻轻之时，父亲·\u001bCA信虎\u001bCZ便看中他的器量，\n厌恶\u001bCA[bm1251]\u001bCZ的\u001bCA信虎\u001bCZ想要让他成为\n\u001bCB武田家\u001bCZ家主一事广为人知。",
+        "tc": "他年輕時就被父親\u001bCA信虎\u001bCZ看中他的器量\n厭惡\u001bCA[bm1251]\u001bCZ的\u001bCA信虎\u001bCZ打算讓他成為\n\u001bCB武田家\u001bCZ家主，而使其聲名大噪。"
+      },
+      "entry_id": 3526,
+      "historical_compact_to_proposed_surface_units": [
+        "어려서부터",
+        "그",
+        "재능을",
+        "아버지",
+        "노부토라에게",
+        "인정받아",
+        "공을",
+        "노부토라가",
+        "했던",
+        "것으로",
+        "알려져",
+        "있다"
+      ],
+      "historical_manual_compact_ko": "어릴 때, 부친 \u001bCA노부토라\u001bCZ가 알아보고,\n\u001bCA[bm1251]\u001bCZ을 싫어한 \u001bCA노부토라\u001bCZ는\n\u001bCB다케다 가문\u001bCZ 당주로 세우려 했다고 한다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "어려서부터 그 재능을 아버지 노부토라에게 인정받아,",
+            "display_string_template": "어려서부터 그 재능을 아버지 노부토라에게 인정받아,",
+            "display_string_with_strict_name_table_substitution": "어려서부터 그 재능을 아버지 노부토라에게 인정받아,",
+            "effective_width_px": 750,
+            "encoded_string": "어려서부터 그 재능을 아버지 \u001bCA노부토라\u001bCZ에게 인정받아,",
+            "exceeds_912px": false,
+            "full_width_character_count": 22,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1200,
+            "raw_g1n_width_px": 1200,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "다케다 하루노부 공을 싫어한 노부토라가 다케다 가문 당주로",
+            "display_string_template": "[bm1251] 공을 싫어한 노부토라가 다케다 가문 당주로",
+            "display_string_with_strict_name_table_substitution": "다케다 하루노부 공을 싫어한 노부토라가 다케다 가문 당주로",
+            "effective_width_px": 855,
+            "encoded_string": "\u001bCA[bm1251]\u001bCZ 공을 싫어한 \u001bCA노부토라\u001bCZ가 \u001bCB다케다 가문\u001bCZ 당주로",
+            "exceeds_912px": false,
+            "full_width_character_count": 25,
+            "half_width_character_count": 7,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1008,
+            "raw_g1n_width_px": 1368,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[bm1251]"
+              }
+            ]
+          },
+          {
+            "display_string": "세우려 했던 것으로 알려져 있다.",
+            "display_string_template": "세우려 했던 것으로 알려져 있다.",
+            "display_string_with_strict_name_table_substitution": "세우려 했던 것으로 알려져 있다.",
+            "effective_width_px": 465,
+            "encoded_string": "세우려 했던 것으로 알려져 있다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 744,
+            "raw_g1n_width_px": 744,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "어려서부터 그 재능을 아버지 \u001bCA노부토라\u001bCZ에게 인정받아,\n\u001bCA[bm1251]\u001bCZ 공을 싫어한 \u001bCA노부토라\u001bCZ가 \u001bCB다케다 가문\u001bCZ 당주로\n세우려 했던 것으로 알려져 있다.",
+      "proposed_ko": "어려서부터 그 재능을 아버지 \u001bCA노부토라\u001bCZ에게 인정받아,\n\u001bCA[bm1251]\u001bCZ 공을 싫어한 \u001bCA노부토라\u001bCZ가 \u001bCB다케다 가문\u001bCZ 당주로\n세우려 했던 것으로 알려져 있다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the youthful recognition of ability, the father's dislike of the token-named rival, and the intended Takeda succession.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0044",
+      "text_sha256_utf16le": {
+        "current_ko": "AF10CA473A7ED71A5AF2AC5818CF81DEE3C39E7A0BA5CBC1A6AA20003601D866",
+        "historical_manual_compact_ko": "AF10CA473A7ED71A5AF2AC5818CF81DEE3C39E7A0BA5CBC1A6AA20003601D866",
+        "legacy_precompaction_ko": "D8AFB7E9AECA498A094F49430324E0F39C74E3D86D92E00F2CFBEDD83A5816EE",
+        "proposed_ko": "D8AFB7E9AECA498A094F49430324E0F39C74E3D86D92E00F2CFBEDD83A5816EE"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "99조 다케다 노부시게 가훈에는\n\u001bCA[bm1251]\u001bCZ 충성 조항 외에도\n무사의 생활 규범이 많았다…",
+      "current_to_proposed_surface_units": [
+        "99개",
+        "조항에",
+        "이르는",
+        "노부시게의",
+        ",",
+        "공을",
+        "향한",
+        "충성을",
+        "맹세하는",
+        "항목뿐",
+        "아니라",
+        "규범을",
+        "적은",
+        "항목도",
+        "많았고",
+        "…"
+      ],
+      "direct_pc_sources": {
+        "en": "The ninety-nine precepts of the Takeda were not only about swearing loyalty to \u001bCA[bm1251]\u001bCZ, but also concerned rules of standard conduct for samurai.",
+        "jp": "九十九か条にわたる武田信繁家訓には、\n\u001bCA[bm1251]\u001bCZへの忠義を誓わせる項目以外にも\n武士の生活規範を示す項目も多くあり…",
+        "sc": "在多达九十九条的武田信繁家训中，\n除了对于\u001bCA[bm1251]\u001bCZ的效忠条目以外，\n也记录了多条规范武士生活的条目……",
+        "tc": "多達九十九條的武田信繁家訓，\n除了對\u001bCA[bm1251]\u001bCZ宣示忠義的項目以外，\n也有許多展現武士生活規範的項目……"
+      },
+      "entry_id": 3548,
+      "historical_compact_to_proposed_surface_units": [
+        "99개",
+        "조항에",
+        "이르는",
+        "노부시게의",
+        ",",
+        "공을",
+        "향한",
+        "충성을",
+        "맹세하는",
+        "항목뿐",
+        "아니라",
+        "규범을",
+        "적은",
+        "항목도",
+        "많았고",
+        "…"
+      ],
+      "historical_manual_compact_ko": "99조 다케다 노부시게 가훈에는\n\u001bCA[bm1251]\u001bCZ 충성 조항 외에도\n무사의 생활 규범이 많았다…",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "99개 조항에 이르는 다케다 노부시게의 가훈에는,",
+            "display_string_template": "99개 조항에 이르는 다케다 노부시게의 가훈에는,",
+            "display_string_with_strict_name_table_substitution": "99개 조항에 이르는 다케다 노부시게의 가훈에는,",
+            "effective_width_px": 690,
+            "encoded_string": "99개 조항에 이르는 다케다 노부시게의 가훈에는,",
+            "exceeds_912px": false,
+            "full_width_character_count": 19,
+            "half_width_character_count": 8,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1104,
+            "raw_g1n_width_px": 1104,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "다케다 하루노부 공을 향한 충성을 맹세하는 항목뿐 아니라",
+            "display_string_template": "[bm1251] 공을 향한 충성을 맹세하는 항목뿐 아니라",
+            "display_string_with_strict_name_table_substitution": "다케다 하루노부 공을 향한 충성을 맹세하는 항목뿐 아니라",
+            "effective_width_px": 825,
+            "encoded_string": "\u001bCA[bm1251]\u001bCZ 공을 향한 충성을 맹세하는 항목뿐 아니라",
+            "exceeds_912px": false,
+            "full_width_character_count": 24,
+            "half_width_character_count": 7,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 960,
+            "raw_g1n_width_px": 1320,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[bm1251]"
+              }
+            ]
+          },
+          {
+            "display_string": "무사의 생활 규범을 적은 항목도 많았고……",
+            "display_string_template": "무사의 생활 규범을 적은 항목도 많았고……",
+            "display_string_with_strict_name_table_substitution": "무사의 생활 규범을 적은 항목도 많았고……",
+            "effective_width_px": 585,
+            "encoded_string": "무사의 생활 규범을 적은 항목도 많았고……",
+            "exceeds_912px": false,
+            "full_width_character_count": 16,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 936,
+            "raw_g1n_width_px": 936,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "99개 조항에 이르는 다케다 노부시게의 가훈에는,\n\u001bCA[bm1251]\u001bCZ 공을 향한 충성을 맹세하는 항목뿐 아니라\n무사의 생활 규범을 적은 항목도 많았고……",
+      "proposed_ko": "99개 조항에 이르는 다케다 노부시게의 가훈에는,\n\u001bCA[bm1251]\u001bCZ 공을 향한 충성을 맹세하는 항목뿐 아니라\n무사의 생활 규범을 적은 항목도 많았고……",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the ninety-nine clauses, the loyalty pledges toward the token-named lord, and the many rules for samurai life.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0046",
+      "text_sha256_utf16le": {
+        "current_ko": "1F9D9C0C34AD4798EB2F488C88BD334A6F84F9744594C8675670783829AA1B5F",
+        "historical_manual_compact_ko": "1F9D9C0C34AD4798EB2F488C88BD334A6F84F9744594C8675670783829AA1B5F",
+        "legacy_precompaction_ko": "8775D51A1F30E91D31ACFB507E047FB1CFBDF262598ABCF49F2347252964C999",
+        "proposed_ko": "8775D51A1F30E91D31ACFB507E047FB1CFBDF262598ABCF49F2347252964C999"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCC교토\u001bCZ 기름장수는 \u001bCC미노\u001bCZ의 \u001bCB도키\u001bCZ에 들어가\n무장이 됐고, 아들 \u001bCA[bm924]\u001bCZ은\n\u001bCB도키\u001bCZ를 몰아내 전국 다이묘가 됐다.",
+      "current_to_proposed_surface_units": [
+        "교토에서",
+        "미노로",
+        "간",
+        "기름",
+        "장수는",
+        "지방",
+        "슈고인",
+        "도키",
+        "가문의",
+        "눈에",
+        "들어",
+        "유력",
+        "되었고",
+        "그",
+        "공이"
+      ],
+      "direct_pc_sources": {
+        "en": "The oil merchant left the \u001bCCcapital\u001bCZ for \u001bCCMino\u001bCZ and became a powerful retainer of the governing \u001bCBToki Clan\u001bCZ. His son \u001bCA[bm924]\u001bCZ eventually ousted that clan to become daimyª.",
+        "jp": "\u001bCC京\u001bCZから\u001bCC美濃\u001bCZへ赴いた油商人が、守護\u001bCB土岐氏\u001bCZに\n取り入って有力武将となり、その子\u001bCA[bm924]\u001bCZが\n\u001bCB土岐氏\u001bCZを追放して戦国大名となった。",
+        "sc": "从\u001bCC京都\u001bCZ前往\u001bCC美浓\u001bCZ的卖油商，被地方守护\n\u001bCB土岐氏\u001bCZ相中，成为了一名有为的武将。\n其子\u001bCA[bm924]\u001bCZ流放\u001bCB土岐氏\u001bCZ成了战国大名。",
+        "tc": "自\u001bCC京都\u001bCZ赴\u001bCC美濃\u001bCZ的賣油行商人，\n效力守護\u001bCB土岐氏\u001bCZ成為有力的武將，\n其子\u001bCA[bm924]\u001bCZ流放\u001bCB土岐氏\u001bCZ，成為戰國大名。"
+      },
+      "entry_id": 3565,
+      "historical_compact_to_proposed_surface_units": [
+        "교토에서",
+        "미노로",
+        "간",
+        "기름",
+        "장수는",
+        "지방",
+        "슈고인",
+        "도키",
+        "가문의",
+        "눈에",
+        "들어",
+        "유력",
+        "되었고",
+        "그",
+        "공이"
+      ],
+      "historical_manual_compact_ko": "\u001bCC교토\u001bCZ 기름장수는 \u001bCC미노\u001bCZ의 \u001bCB도키\u001bCZ에 들어가\n무장이 됐고, 아들 \u001bCA[bm924]\u001bCZ은\n\u001bCB도키\u001bCZ를 몰아내 전국 다이묘가 됐다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "교토에서 미노로 간 기름 장수는 지방 슈고인",
+            "display_string_template": "교토에서 미노로 간 기름 장수는 지방 슈고인",
+            "display_string_with_strict_name_table_substitution": "교토에서 미노로 간 기름 장수는 지방 슈고인",
+            "effective_width_px": 630,
+            "encoded_string": "\u001bCC교토\u001bCZ에서 \u001bCC미노\u001bCZ로 간 기름 장수는 지방 슈고인",
+            "exceeds_912px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1008,
+            "raw_g1n_width_px": 1008,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "도키 가문의 눈에 들어 유력 무장이 되었고, 그 아들",
+            "display_string_template": "도키 가문의 눈에 들어 유력 무장이 되었고, 그 아들",
+            "display_string_with_strict_name_table_substitution": "도키 가문의 눈에 들어 유력 무장이 되었고, 그 아들",
+            "effective_width_px": 735,
+            "encoded_string": "\u001bCB도키 가문\u001bCZ의 눈에 들어 유력 무장이 되었고, 그 아들",
+            "exceeds_912px": false,
+            "full_width_character_count": 20,
+            "half_width_character_count": 9,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1176,
+            "raw_g1n_width_px": 1176,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "사이토 도산 공이 도키를 몰아내 전국 다이묘가 됐다.",
+            "display_string_template": "[bm924] 공이 도키를 몰아내 전국 다이묘가 됐다.",
+            "display_string_with_strict_name_table_substitution": "사이토 도산 공이 도키를 몰아내 전국 다이묘가 됐다.",
+            "effective_width_px": 750,
+            "encoded_string": "\u001bCA[bm924]\u001bCZ 공이 \u001bCB도키\u001bCZ를 몰아내 전국 다이묘가 됐다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 21,
+            "half_width_character_count": 8,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 936,
+            "raw_g1n_width_px": 1200,
+            "reserved_raw_g1n_width_px": 264,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 5,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 165,
+                "reserved_raw_g1n_width_px": 264,
+                "runtime_proven": false,
+                "source_name_id": 924,
+                "strict_name_table_string": "사이토 도산",
+                "strict_name_utf16le_sha256": "8B536891671A1A2EB49FF2609515F635B79F681B5847F2CE41654F3C7BD17D1D",
+                "token": "[bm924]"
+              }
+            ]
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "\u001bCC교토\u001bCZ에서 \u001bCC미노\u001bCZ로 간 기름 장수는 지방 슈고인\n\u001bCB도키 가문\u001bCZ의 눈에 들어 유력 무장이 되었고, 그 아들\n\u001bCA[bm924]\u001bCZ 공이 \u001bCB도키\u001bCZ를 몰아내 전국 다이묘가 됐다.",
+      "proposed_ko": "\u001bCC교토\u001bCZ에서 \u001bCC미노\u001bCZ로 간 기름 장수는 지방 슈고인\n\u001bCB도키 가문\u001bCZ의 눈에 들어 유력 무장이 되었고, 그 아들\n\u001bCA[bm924]\u001bCZ 공이 \u001bCB도키\u001bCZ를 몰아내 전국 다이묘가 됐다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the oil merchant's move from Kyoto to Mino, acceptance by the provincial shugo, rise as a powerful warrior, and his son's ousting of Toki.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0049",
+      "text_sha256_utf16le": {
+        "current_ko": "20074AB8A16E0648E152DB77D7C373209CFA74ABF21E75BDB4B411473A022FE1",
+        "historical_manual_compact_ko": "20074AB8A16E0648E152DB77D7C373209CFA74ABF21E75BDB4B411473A022FE1",
+        "legacy_precompaction_ko": "8A5FC9A9A99D4F553CAA6D570D9C6A8A31D1854E4C620CD7CF11E48D1DEEF9CE",
+        "proposed_ko": "8A5FC9A9A99D4F553CAA6D570D9C6A8A31D1854E4C620CD7CF11E48D1DEEF9CE"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b75]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "이해 \u001bCC미노\u001bCZ의 다이묘 \u001bCA사이토 다카마사\u001bCZ는\n소수 병력으로 상경해 쇼군\n\u001bCA[b75]\u001bCZ에게 배알했다.",
+      "current_to_proposed_surface_units": [
+        "이해에",
+        "전국",
+        "소수의",
+        "병력만",
+        "이끌고",
+        "상경하여",
+        ","
+      ],
+      "direct_pc_sources": {
+        "en": "This year, Daimyª \u001bCATakamasa Saitª\u001bCZ of \u001bCCMino\u001bCZ had brought a small number of troops with him to the \u001bCCcapital\u001bCZ, where he was to have an audience with Shªgun \u001bCA[b75]\u001bCZ.",
+        "jp": "この年、\u001bCC美濃\u001bCZの戦国大名・\u001bCA斎藤高政\u001bCZは\nわずかな手勢を引き連れて上洛し、\n将軍\u001bCA[b75]\u001bCZに拝謁している。",
+        "sc": "这一年，\u001bCC美浓\u001bCZ的战国大名·\u001bCA斋藤高政\u001bCZ\n仅带领少数手下上京，\n拜谒将军\u001bCA[b75]\u001bCZ。",
+        "tc": "這一年，\u001bCC美濃\u001bCZ的戰國大名\u001bCA齋藤高政\u001bCZ\n率領了少數兵力上京，\n去謁見了將軍\u001bCA[b75]\u001bCZ。"
+      },
+      "entry_id": 3576,
+      "historical_compact_to_proposed_surface_units": [
+        "이해에",
+        "전국",
+        "소수의",
+        "병력만",
+        "이끌고",
+        "상경하여",
+        ","
+      ],
+      "historical_manual_compact_ko": "이해 \u001bCC미노\u001bCZ의 다이묘 \u001bCA사이토 다카마사\u001bCZ는\n소수 병력으로 상경해 쇼군\n\u001bCA[b75]\u001bCZ에게 배알했다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "이해에 미노의 전국 다이묘 사이토 다카마사는",
+            "display_string_template": "이해에 미노의 전국 다이묘 사이토 다카마사는",
+            "display_string_with_strict_name_table_substitution": "이해에 미노의 전국 다이묘 사이토 다카마사는",
+            "effective_width_px": 645,
+            "encoded_string": "이해에 \u001bCC미노\u001bCZ의 전국 다이묘 \u001bCA사이토 다카마사\u001bCZ는",
+            "exceeds_912px": false,
+            "full_width_character_count": 19,
+            "half_width_character_count": 5,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1032,
+            "raw_g1n_width_px": 1032,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "소수의 병력만 이끌고 상경하여,",
+            "display_string_template": "소수의 병력만 이끌고 상경하여,",
+            "display_string_with_strict_name_table_substitution": "소수의 병력만 이끌고 상경하여,",
+            "effective_width_px": 450,
+            "encoded_string": "소수의 병력만 이끌고 상경하여,",
+            "exceeds_912px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 4,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 720,
+            "raw_g1n_width_px": 720,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "쇼군 아시카가 요시테루에게 배알했다.",
+            "display_string_template": "쇼군 [b75]에게 배알했다.",
+            "display_string_with_strict_name_table_substitution": "쇼군 아시카가 요시테루에게 배알했다.",
+            "effective_width_px": 540,
+            "encoded_string": "쇼군 \u001bCA[b75]\u001bCZ에게 배알했다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 16,
+            "half_width_character_count": 4,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 456,
+            "raw_g1n_width_px": 864,
+            "reserved_raw_g1n_width_px": 408,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 8,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 255,
+                "reserved_raw_g1n_width_px": 408,
+                "runtime_proven": false,
+                "source_name_id": 75,
+                "strict_name_table_string": "아시카가 요시테루",
+                "strict_name_utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7",
+                "token": "[b75]"
+              }
+            ]
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": true,
+      "legacy_precompaction_ko": "이해에 \u001bCC미노\u001bCZ의 전국 다이묘 \u001bCA사이토 다카마사\u001bCZ는\n소수의 병력만 이끌고 상경하여,\n쇼군 \u001bCA[b75]\u001bCZ에게 배알했다.",
+      "proposed_ko": "이해에 \u001bCC미노\u001bCZ의 전국 다이묘 \u001bCA사이토 다카마사\u001bCZ는\n소수의 병력만 이끌고 상경하여,\n쇼군 \u001bCA[b75]\u001bCZ에게 배알했다.",
+      "restoration_strategy": "restore_complete_korean_with_scene_limited_reservation",
+      "review_judgement": "Restore the year marker, Sengoku-daimyo status, the small force, the journey to Kyoto, and the audience with the shogun.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0051",
+      "text_sha256_utf16le": {
+        "current_ko": "87BE0757129CF8F07DE1735886EEEB4938863EBD471A306BB0020C27B62471FC",
+        "historical_manual_compact_ko": "87BE0757129CF8F07DE1735886EEEB4938863EBD471A306BB0020C27B62471FC",
+        "legacy_precompaction_ko": "AE2EE6678D47F874A63CC4FCF8F377D171ADF6BFB913917CBD7471764628C49F",
+        "proposed_ko": "AE2EE6678D47F874A63CC4FCF8F377D171ADF6BFB913917CBD7471764628C49F"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": false,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm924]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "황공합니다.\n\u001bCA[bm924]\u001bCZ은 부친이나 불의를 거듭해\n백성 원성이 커 부득이 토벌했습니다.",
+      "current_to_proposed_surface_units": [
+        "공은",
+        "…",
+        "제",
+        "아버지이나",
+        ",",
+        "많이",
+        "저질러",
+        "백성들의",
+        "컸습니다",
+        ".",
+        "그래서",
+        "어쩔",
+        "수",
+        "없이"
+      ],
+      "direct_pc_sources": {
+        "en": "I am afraid so. My father was an unjust leader on many accounts. He inspired hatred even among the common people. While difficult, it was an act which needed to be done.",
+        "jp": "恐れ入りまする。我が父…ながら、\n\u001bCA[bm924]\u001bCZには非道の行い多く、国衆からの恨みの\n声もあり、やむにやまれず討ちました。",
+        "sc": "不敢当。\u001bCA[bm924]\u001bCZ……虽为我的父亲，\n却多行不义，在民众之中积怨已深。\n因此不得不将其讨伐。",
+        "tc": "不敢當。雖然……他身為我的父親，\n但是\u001bCA[bm924]\u001bCZ有過諸多暴行，民眾對他積怨已深，\n不得已只好殺了他。"
+      },
+      "entry_id": 3579,
+      "historical_compact_to_proposed_surface_units": [
+        "공은",
+        "…",
+        "제",
+        "아버지이나",
+        ",",
+        "많이",
+        "저질러",
+        "백성들의",
+        "컸습니다",
+        ".",
+        "그래서",
+        "어쩔",
+        "수",
+        "없이"
+      ],
+      "historical_manual_compact_ko": "황공합니다.\n\u001bCA[bm924]\u001bCZ은 부친이나 불의를 거듭해\n백성 원성이 커 부득이 토벌했습니다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "황공합니다. 사이토 도산 공은…… 제 아버지이나,",
+            "display_string_template": "황공합니다. [bm924] 공은…… 제 아버지이나,",
+            "display_string_with_strict_name_table_substitution": "황공합니다. 사이토 도산 공은…… 제 아버지이나,",
+            "effective_width_px": 675,
+            "encoded_string": "황공합니다. \u001bCA[bm924]\u001bCZ 공은…… 제 아버지이나,",
+            "exceeds_912px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 9,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 816,
+            "raw_g1n_width_px": 1080,
+            "reserved_raw_g1n_width_px": 264,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 5,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 165,
+                "reserved_raw_g1n_width_px": 264,
+                "runtime_proven": false,
+                "source_name_id": 924,
+                "strict_name_table_string": "사이토 도산",
+                "strict_name_utf16le_sha256": "8B536891671A1A2EB49FF2609515F635B79F681B5847F2CE41654F3C7BD17D1D",
+                "token": "[bm924]"
+              }
+            ]
+          },
+          {
+            "display_string": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
+            "display_string_template": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
+            "display_string_with_strict_name_table_substitution": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
+            "effective_width_px": 660,
+            "encoded_string": "불의를 많이 저질러 백성들의 원성이 컸습니다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 19,
+            "half_width_character_count": 6,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1056,
+            "raw_g1n_width_px": 1056,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "그래서 어쩔 수 없이 토벌했습니다.",
+            "display_string_template": "그래서 어쩔 수 없이 토벌했습니다.",
+            "display_string_with_strict_name_table_substitution": "그래서 어쩔 수 없이 토벌했습니다.",
+            "effective_width_px": 495,
+            "encoded_string": "그래서 어쩔 수 없이 토벌했습니다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 792,
+            "raw_g1n_width_px": 792,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": false,
+      "legacy_precompaction_ko": "황공합니다. \u001bCA[bm924]\u001bCZ 공은…… 제 아버지이나,\n불의를 많이 저질러 백성의 원한이 깊었습니다.\n그래서 어쩔 수 없이 토벌했습니다.",
+      "proposed_ko": "황공합니다. \u001bCA[bm924]\u001bCZ 공은…… 제 아버지이나,\n불의를 많이 저질러 백성들의 원성이 컸습니다.\n그래서 어쩔 수 없이 토벌했습니다.",
+      "restoration_strategy": "source_complete_wording_correction_with_scene_limited_reservation",
+      "review_judgement": "Restore the speaker's father relation and evil conduct, while using natural Korean for the broad resentment that made the unavoidable suppression necessary.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0052",
+      "text_sha256_utf16le": {
+        "current_ko": "2FA99616B6CE4CCFC7164B3B7876D184157AAFF5ECD472A4676443324A23DE2F",
+        "historical_manual_compact_ko": "2FA99616B6CE4CCFC7164B3B7876D184157AAFF5ECD472A4676443324A23DE2F",
+        "legacy_precompaction_ko": "DE49A472D6999C30993D5D03A90E3149CD6DF6753FD2CE79D89FA3E4E21D35A6",
+        "proposed_ko": "FEF06803650B2005407F351DBCDD2717CACDFCDA0B51116320438468151E9F4E"
+      }
+    },
+    {
+      "control_signature": {
+        "current": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "historical_manual_compact": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_precompaction": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "legacy_to_current_token_migration": true,
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[b1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "current_ko_at_batch07_strict_baseline": "\u001bCA우지야스\u001bCZ는 \u001bCA요시모토\u001bCZ의 원군\n\u001bCA[b1251]\u001bCZ에게 전투 직후부터\n화친 중재를 부탁했다.",
+      "current_to_proposed_surface_units": [
+        "원군인",
+        "에",
+        "주목해",
+        ",",
+        "전투가",
+        "시작된",
+        "화친의",
+        "부탁해",
+        "두었다"
+      ],
+      "direct_pc_sources": {
+        "en": "\u001bCAUjiyasu\u001bCZ had met with \u001bCA[b1251]\u001bCZ, who was part of \u001bCAYoshimoto\u001bCZÖs reinforcements, and requested peace to be mediated soon after the fighting started.",
+        "jp": "\u001bCA氏康\u001bCZは\u001bCA義元\u001bCZの援軍である\u001bCA[b1251]\u001bCZに着目し、\n戦いが始まった直後から\n和睦の仲介を依頼していたのである。",
+        "sc": "\u001bCA氏康\u001bCZ着眼于\u001bCA义元\u001bCZ的援军\u001bCA武田晴信\u001bCZ，\n战斗刚打响之后，\n就依赖其作为和解的中间人。",
+        "tc": "\u001bCA氏康\u001bCZ盯上身為\u001bCA義元\u001bCZ援軍的\u001bCA武田晴信\u001bCZ，\n在戰鬥開始後即委託他斡旋和解。"
+      },
+      "entry_id": 3611,
+      "historical_compact_to_proposed_surface_units": [
+        "요시모토의",
+        "원군인",
+        "[b1251]",
+        "에",
+        "주목해",
+        ",",
+        "전투가",
+        "시작된",
+        "직후부터",
+        "화친의",
+        "부탁해"
+      ],
+      "historical_manual_compact_ko": "\u001bCA우지야스\u001bCZ는 \u001bCA요시모토\u001bCZ 원군\n\u001bCA다케다 하루노부\u001bCZ에 화친 중재를\n전투 직후부터 청해 두었다.",
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "우지야스는 요시모토의 원군인 다케다 하루노부에 주목해,",
+            "display_string_template": "우지야스는 요시모토의 원군인 [b1251]에 주목해,",
+            "display_string_with_strict_name_table_substitution": "우지야스는 요시모토의 원군인 다케다 하루노부에 주목해,",
+            "effective_width_px": 810,
+            "encoded_string": "\u001bCA우지야스\u001bCZ는 \u001bCA요시모토\u001bCZ의 원군인 \u001bCA[b1251]\u001bCZ에 주목해,",
+            "exceeds_912px": false,
+            "full_width_character_count": 24,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 936,
+            "raw_g1n_width_px": 1296,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_scope": "This exact 17-row runtime review only; reserve the full strict-table name because prefix semantics are not inferred.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[b1251]"
+              }
+            ]
+          },
+          {
+            "display_string": "전투가 시작된 직후부터",
+            "display_string_template": "전투가 시작된 직후부터",
+            "display_string_with_strict_name_table_substitution": "전투가 시작된 직후부터",
+            "effective_width_px": 330,
+            "encoded_string": "전투가 시작된 직후부터",
+            "exceeds_912px": false,
+            "full_width_character_count": 10,
+            "half_width_character_count": 2,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 528,
+            "raw_g1n_width_px": 528,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "화친의 중재를 부탁해 두었다.",
+            "display_string_template": "화친의 중재를 부탁해 두었다.",
+            "display_string_with_strict_name_table_substitution": "화친의 중재를 부탁해 두었다.",
+            "effective_width_px": 420,
+            "encoded_string": "화친의 중재를 부탁해 두었다.",
+            "exceeds_912px": false,
+            "full_width_character_count": 12,
+            "half_width_character_count": 4,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 672,
+            "raw_g1n_width_px": 672,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_lines": 4
+      },
+      "legacy_matches_proposed_after_indent_normalization": false,
+      "legacy_precompaction_ko": "\u001bCA우지야스\u001bCZ는 \u001bCA요시모토\u001bCZ의 원군인 \u001bCA다케다 하루노부\u001bCZ에 주목해,\n전투가 시작된 직후부터\n화친의 중재를 부탁해 두었다.",
+      "proposed_ko": "\u001bCA우지야스\u001bCZ는 \u001bCA요시모토\u001bCZ의 원군인 \u001bCA[b1251]\u001bCZ에 주목해,\n전투가 시작된 직후부터\n화친의 중재를 부탁해 두었다.",
+      "restoration_strategy": "reconcile_later_runtime_token_migration_with_complete_restoration",
+      "review_judgement": "The strict current row correctly migrated the legacy literal name to the direct-PC-compatible runtime token. Preserve that token while restoring attention to the reinforcements and the request for mediation immediately after the battle began.",
+      "review_policy": {
+        "automatic_decompaction_forbidden": true,
+        "automatic_linebreak_stripping_forbidden": true,
+        "japanese_source_linebreaks_used_as_layout_authority": false,
+        "korean_linebreaks_are_manual_semantic_boundaries": true,
+        "runtime_prefix_semantics_inferred": false,
+        "sentence_shortening_or_deletion_allowed": false
+      },
+      "review_status": "ready_for_runtime_token_semantic_restoration_candidate",
+      "scene_batch_id": "MC-0057",
+      "text_sha256_utf16le": {
+        "current_ko": "0167DD574C8952636EB1DC6D4BE0CB62E424266829488925820E7DAB99C985D0",
+        "historical_manual_compact_ko": "6F87BE9F2C105CCD24B87BCC13265BBEBA0465F748132D878F4B968FF0726E1C",
+        "legacy_precompaction_ko": "993BCC38EF5E27984DBC7693C1922C630AAEE7E0800832B9B545C013B2167636",
+        "proposed_ko": "3547819EF3D5564414A52989D1EF3E0132E60D7519C2CF01D9611410282FD9C6"
+      }
+    }
+  ],
+  "judgement_groups": [
+    {
+      "group": "exact_legacy_complete_restoration",
+      "ids": [
+        3444,
+        3448,
+        3459,
+        3499,
+        3519,
+        3520,
+        3524,
+        3526,
+        3548,
+        3565,
+        3576
+      ],
+      "reason": "The legacy Korean is source-complete and already uses valid Korean semantic boundaries under the strict-name reservation."
+    },
+    {
+      "group": "runtime_reservation_semantic_reflow",
+      "ids": [
+        3443,
+        3455,
+        3456
+      ],
+      "reason": "3443, 3455, and 3456 are manually reflowed to pass the 30/48-scaled full-name reservation without removing meaning."
+    },
+    {
+      "group": "later_runtime_token_migration_preserved",
+      "ids": [
+        3611
+      ],
+      "reason": "3611 retains the current direct-PC-compatible runtime token rather than reverting to the legacy literal name."
+    },
+    {
+      "group": "all_runtime_token_rows",
+      "ids": [
+        3442,
+        3443,
+        3444,
+        3448,
+        3455,
+        3456,
+        3459,
+        3499,
+        3519,
+        3520,
+        3524,
+        3526,
+        3548,
+        3565,
+        3576,
+        3579,
+        3611
+      ],
+      "reason": "Each row has at least one runtime token, an exact strict-table name hash, and a catalog full-name reservation scaled by 30/48."
+    }
+  ],
+  "layout_baseline": {
+    "authority": "Static Patch 007 verified PK event-dialogue layout",
+    "effective_width_formula": "ceil(raw_g1n_width_px * 30 / 48)",
+    "effective_width_pass_limit_px": 912,
+    "max_lines": 4,
+    "raw_g1n_full_width_advance_px": 48,
+    "raw_g1n_half_width_advance_px": 24,
+    "raw_g1n_pass_limit_px": 1440,
+    "runtime_font_px": 30,
+    "runtime_reservation_policy": "Use the exact strict name-table row for evidence, reserve the catalog full-name width within this 17-row scope, then scale by 30/48. No prefix semantics or runtime rendering behavior is inferred.",
+    "runtime_usable_line_width_px": 912
+  },
+  "safety": {
+    "candidate_binary_written": false,
+    "git_operation_performed": false,
+    "network_operation_performed": false,
+    "release_published": false,
+    "steam_game_resource_written": false
+  },
+  "schema": "nobu16.kr.manual-compact-runtime-3442-3611-review.v1",
+  "scope": {
+    "batch07_nonoverlap_name_table_asserted": true,
+    "batch07_nonoverlap_text_asserted": true,
+    "candidate_binary_created": false,
+    "git_or_release_actions_performed": false,
+    "later_runtime_token_migration_ids": [
+      3611
+    ],
+    "manual_compact_runtime_target_count": 17,
+    "network_operation_performed": false,
+    "resource": "MSG_PK/JP/msgev.bin",
+    "steam_files_written": false,
+    "target_ids": [
+      3442,
+      3443,
+      3444,
+      3448,
+      3455,
+      3456,
+      3459,
+      3499,
+      3519,
+      3520,
+      3524,
+      3526,
+      3548,
+      3565,
+      3576,
+      3579,
+      3611
+    ]
+  },
+  "sources": {
+    "batch07_strict_current": {
+      "packed_sha256": "5B84334A51829A8D981F4BE5E161D73803894D29F7FA1D91AC40090671CB347D",
+      "packed_size": 1024182,
+      "path": "tmp/pc_event_manual_compact_static007_batch07_v1/candidate-final/MSG_PK/JP/msgev.bin",
+      "raw_sha256": "85C48E864CC06831EB8F31C713703E0E3715848EE049A36B4F53CEB757F186E3",
+      "raw_size": 1020156,
+      "string_count": 17916
+    },
+    "direct_pc_en": {
+      "packed_sha256": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+      "packed_size": 762196,
+      "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\EN\\msgev.bin",
+      "raw_sha256": "6A1F3891412EBFF5AC3188F498C9951431154192D69E82B7ABB6F25AA934D911",
+      "raw_size": 1878836,
+      "string_count": 17916
+    },
+    "direct_pc_jp_pristine": {
+      "packed_sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+      "packed_size": 562226,
+      "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-1.1.7-v0.6.0\\originals\\MSG_PK\\JP\\msgev.bin",
+      "raw_sha256": "07D7512BE0235753FC7BB0C7C548B61F471D9CDED01379E63B8AF8EAE013813E",
+      "raw_size": 894800,
+      "string_count": 17916
+    },
+    "direct_pc_sc": {
+      "packed_sha256": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+      "packed_size": 522177,
+      "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\SC\\msgev.bin",
+      "raw_sha256": "3ACE267E6B9774D8C940C9D7940F168B61744ADDF7C082F2CB1EA7E9BBD82B5E",
+      "raw_size": 754708,
+      "string_count": 17916
+    },
+    "direct_pc_tc": {
+      "packed_sha256": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6",
+      "packed_size": 524909,
+      "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\TC\\msgev.bin",
+      "raw_sha256": "42DC893AA9FF9D3E7B75FBCFFBEFD7C3DFC338CAB71E942C081BDC52C9024BF6",
+      "raw_size": 744212,
+      "string_count": 17916
+    },
+    "historical_manual_compact_manifest": {
+      "path": "workstreams/steam_jp_msgev_full_layout_v2/public/msgev_ko_steam_jp_full_layout.v2.json",
+      "sha256": "10EE44F4D5F5A871F5DEDB60C6435F4115E698FB1544B898EA421356FAB6BF42"
+    },
+    "legacy_precompaction_ko_backup": {
+      "packed_sha256": "2CA183DA690D45A75702EA0F35C70966786B59E9440B8B8F49BE9652342F81AC",
+      "packed_size": 1052079,
+      "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-v0.10.0-original-font-rollback-v1\\originals\\MSG_PK\\JP\\msgev.bin",
+      "raw_sha256": "EDCF7A9CEBD605BB2275D5A3B92A76E7E2F652B2391554F24C6A8BDD2EF91A08",
+      "raw_size": 1047944,
+      "string_count": 17916
+    },
+    "manual_compact_inventory": {
+      "path": "workstreams/pc_event_manual_compact_korean_layout_inventory_v1/public/msgev_manual_compact_korean_layout_inventory.v1.json",
+      "sha256": "D4727394925761331B19764C86D2450C73C9630FD00F33AC4D76C13873CC2AC6"
+    },
+    "prior_6000_7999_strict_input_for_nonoverlap_check": {
+      "packed_sha256": "D99390D4F2D7D469C105439A11476B01830F5E96287B278C164045CBC7BA3547",
+      "packed_size": 1024138,
+      "path": "tmp/pc_event_manual_compact_static007_6000_7999_restore_v1/candidate-final/MSG_PK/JP/msgev.bin",
+      "raw_sha256": "567C8C3C2F371E27CBE6FFEAB9F8F3EE7F6D6F13A2C179682A5A7F7D3F35780F",
+      "raw_size": 1020112,
+      "string_count": 17916
+    },
+    "runtime_reservation_manifest": {
+      "path": "workstreams/steam_jp_msgev_full_layout_v2/public/runtime_token_reservations.v1.json",
+      "sha256": "B981C7C456F2DC285721E7E3DB74D2D11456B49B25D5A97BB320F815DFC0A893"
+    }
+  },
+  "strict_name_table_evidence": {
+    "names": {
+      "1251": {
+        "strict_name_table_string": "다케다 하루노부",
+        "utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81"
+      },
+      "75": {
+        "strict_name_table_string": "아시카가 요시테루",
+        "utf16le_sha256": "F07FCA2C48D23E95CFC7DE2ACD5E9457C4F82E0B538D209838296F47C9460CA7"
+      },
+      "790": {
+        "strict_name_table_string": "구시마 츠나시게",
+        "utf16le_sha256": "5AE87E665EF422A8378AB217C7CD3A492B2F61F4429692B0877CC48F4C3B5DCE"
+      },
+      "924": {
+        "strict_name_table_string": "사이토 도산",
+        "utf16le_sha256": "8B536891671A1A2EB49FF2609515F635B79F681B5847F2CE41654F3C7BD17D1D"
+      }
+    },
+    "referenced_name_ids": [
+      75,
+      790,
+      924,
+      1251
+    ],
+    "reservation_scope": "The reservation review is scene-limited to the listed 17 event rows; it does not claim live runtime token-prefix behavior."
+  }
+}
