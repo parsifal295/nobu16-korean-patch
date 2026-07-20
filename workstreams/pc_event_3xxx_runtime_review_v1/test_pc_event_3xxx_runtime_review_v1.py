@@ -24,6 +24,7 @@ class PcEvent3xxxRuntimeReviewTests(unittest.TestCase):
         self.assertEqual(len(builder.MANUAL_RUNTIME_IDS), 26)
         self.assertEqual(tuple(builder.TARGETS), builder.MANUAL_RUNTIME_IDS)
         self.assertEqual(builder.SOURCE_SEQUENCE_REORDER_IDS, (3_767,))
+        self.assertEqual(builder.SOURCE_MEANING_CORRECTION_IDS, (3_713, 3_767, 3_789))
 
         korean, profile, _audit = builder.load_strict_input()
         full_korean, _profiles = builder.load_full_korean_sources()
@@ -80,8 +81,16 @@ class PcEvent3xxxRuntimeReviewTests(unittest.TestCase):
         for entry_id in builder.MANUAL_RUNTIME_IDS:
             target = builder.TARGETS[entry_id]
             complete = full_korean[entry_id]
-            if entry_id == 3_767:
-                self.assertEqual(builder.word_counter(target), builder.word_counter(complete))
+            if entry_id == 3_713:
+                self.assertIn("원복시켜", target)
+                self.assertIn("공이라 이름하게 했다", target)
+            elif entry_id == 3_767:
+                self.assertIn("불만을 품은 많은", target)
+                self.assertIn("많은", target)
+            elif entry_id == 3_789:
+                self.assertIn("가문 내에 따르는 이도 많은", target)
+                self.assertIn("중재에 나서", target)
+                self.assertIn("간곡히 거듭 권했다", target)
             else:
                 self.assertEqual(
                     builder.normalized_source_visible(target),
