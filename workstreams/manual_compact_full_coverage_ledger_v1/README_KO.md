@@ -21,9 +21,10 @@ Static Patch 007 기준은 전각 48px/반각 24px 원본 G1N 폭을 `ceil(raw *
 ```powershell
 python -B -X utf8 workstreams\manual_compact_full_coverage_ledger_v1\build_manual_compact_full_coverage_ledger_v1.py build
 python -B -X utf8 workstreams\manual_compact_full_coverage_ledger_v1\build_manual_compact_full_coverage_ledger_v1.py validate
+python -B -X utf8 workstreams\manual_compact_full_coverage_ledger_v1\build_manual_compact_full_coverage_ledger_v1.py gate
 python -B -X utf8 workstreams\manual_compact_full_coverage_ledger_v1\test_manual_compact_full_coverage_ledger_v1.py
 ```
 
-`gate`은 완료 review artifact와 candidate script/audit의 일치뿐 아니라 1,553행 전체가 위 세 `resolved_*` 상태인지까지 요구한다. 현재 3900·8000~11008 후보 결합까지 반영됐으며, 런타임 인명 토큰 근거를 다시 산정 중인 43행이 남아 있으므로 `gate`은 의도적으로 실패한다. 그 43행까지 별도 후보에 반영된 뒤에만 최종 PASS가 가능하다.
+`gate`은 완료 review artifact와 candidate script/audit의 일치뿐 아니라 1,553행 전체가 위 세 `resolved_*` 상태인지까지 요구한다. 현재 `pc_event_manual_compact_static007_3xxx_runtime_restore_v1` 후보가 남아 있던 43행을 보수적인 strict 한국어 동일 ID 인명 예약 폭으로 반영했다. `runtime_proven=false`는 실제 접두사 렌더링을 주장하지 않는다는 뜻일 뿐 hold가 아니며, 1,553행 모두 `resolved_*` 상태라 `gate`이 PASS한다. 이 결과는 private 후보 검증이며 Steam 설치·Git·릴리스 수행을 뜻하지 않는다.
 
 공개 결과는 [manual_compact_full_coverage_ledger.v1.json](public/manual_compact_full_coverage_ledger.v1.json)에 생성된다.

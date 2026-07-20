@@ -61,6 +61,7 @@ CANDIDATE_WORKSTREAMS: tuple[str, ...] = (
     "pc_event_manual_compact_4000_5000_restore_v1",
     "pc_event_manual_compact_static007_6000_7999_restore_v1",
     "pc_event_manual_compact_static007_3900_11008_restore_v1",
+    "pc_event_manual_compact_static007_3xxx_runtime_restore_v1",
 )
 
 REVIEW_SPECS: tuple[Mapping[str, str], ...] = (
@@ -97,6 +98,14 @@ REVIEW_SPECS: tuple[Mapping[str, str], ...] = (
     {
         "name": "manual_compact_3900_review_v1",
         "relative": "workstreams/manual_compact_3900_review_v1/public/manual_compact_3900_review.v1.json",
+    },
+    {
+        "name": "manual_compact_runtime_3442_3611_review_v1",
+        "relative": "workstreams/manual_compact_runtime_3442_3611_review_v1/public/manual_compact_runtime_3442_3611_review.v1.json",
+    },
+    {
+        "name": "pc_event_3xxx_runtime_review_v1",
+        "relative": "workstreams/pc_event_3xxx_runtime_review_v1/public/pc_event_3xxx_runtime_review.v1.json",
     },
 )
 
@@ -229,14 +238,14 @@ def candidate_audit_layout(audit: Mapping[str, Any], changed: set[int]) -> Mappi
         entry_id = row.get("entry_id")
         if entry_id not in changed:
             continue
-        target_lines = row.get("target_lines")
+        target_lines = row.get("target_lines", row.get("displayed_lines"))
         nested_layout = row.get("layout")
         if target_lines is None and isinstance(nested_layout, Mapping):
             target_lines = nested_layout.get("lines")
         require(isinstance(target_lines, list), f"changed candidate row {entry_id} lacks target_lines")
         line_count = get_first(
             row,
-            ("target_manual_line_count", "target_line_count"),
+            ("target_manual_line_count", "target_line_count", "line_count"),
             nested_layout.get("line_count", len(target_lines)) if isinstance(nested_layout, Mapping) else len(target_lines),
         )
         require(isinstance(line_count, int), f"invalid target line count: {entry_id}")
@@ -255,6 +264,8 @@ def candidate_audit_layout(audit: Mapping[str, Any], changed: set[int]) -> Mappi
         if row.get("any_line_exceeds_912px") is True:
             row_bad = True
         if row.get("target_static_patch_007_passes") is False:
+            row_bad = True
+        if row.get("all_static_patch_007_lines_pass") is False:
             row_bad = True
         if row.get("max_four_lines_pass") is False:
             row_bad = True
@@ -369,13 +380,25 @@ def collect_candidate(workstream: str, universe: set[int]) -> Mapping[str, Any]:
 
 
 def review_layout_contract(review: Mapping[str, Any]) -> Mapping[str, Any]:
-    baseline = review.get("layout_baseline", {})
+    baseline = review.get("layout_baseline", review.get("layout_policy", {}))
     if not isinstance(baseline, Mapping):
         return {"present": False, "contract_ok": False}
-    raw_full = get_first(baseline, ("raw_g1n_full_width_advance_px", "raw_full_width_px"))
-    raw_half = get_first(baseline, ("raw_g1n_half_width_advance_px", "raw_half_width_px"))
-    raw_limit = get_first(baseline, ("raw_g1n_pass_limit_px",))
-    effective_limit = get_first(baseline, ("effective_width_pass_limit_px",))
+    raw_full = get_first(
+        baseline,
+        ("raw_g1n_full_width_advance_px", "raw_g1n_full_width_px", "raw_full_width_px"),
+    )
+    raw_half = get_first(
+        baseline,
+        ("raw_g1n_half_width_advance_px", "raw_g1n_half_width_px", "raw_half_width_px"),
+    )
+    raw_limit = get_first(
+        baseline,
+        ("raw_g1n_pass_limit_px", "raw_g1n_hard_limit_px", "raw_hard_limit_px"),
+    )
+    effective_limit = get_first(
+        baseline,
+        ("effective_width_pass_limit_px", "effective_width_hard_limit_px", "runtime_usable_line_width_px"),
+    )
     max_lines = get_first(baseline, ("max_lines", "maximum_lines"))
     formula = baseline.get("effective_width_formula")
     return {
@@ -413,8 +436,8 @@ def collect_review(spec: Mapping[str, str], universe: set[int]) -> Mapping[str, 
         return result
     review = read_json(path)
     require(isinstance(review, Mapping), f"invalid review artifact: {path}")
-    entries = review.get("entries")
-    require(isinstance(entries, list), f"review entries missing: {path}")
+    entries = review.get("entries", review.get("rows"))
+    require(isinstance(entries, list), f"review entries/rows missing: {path}")
     records: dict[int, Mapping[str, Any]] = {}
     for entry in entries:
         require(isinstance(entry, Mapping), f"invalid review entry: {path}")
@@ -426,9 +449,10 @@ def collect_review(spec: Mapping[str, str], universe: set[int]) -> Mapping[str, 
         current_values = [
             value
             for key, value in entry.items()
-            if key.startswith("current_ko") and isinstance(value, str)
+            if (key.startswith("current_ko") or key.endswith("_current_ko"))
+            and isinstance(value, str)
         ]
-        proposed = entry.get("proposed_ko")
+        proposed = entry.get("proposed_ko", entry.get("target_ko"))
         records[entry_id] = {
             "review_status": entry.get("review_status"),
             "restoration_strategy": entry.get("restoration_strategy"),
@@ -546,7 +570,17 @@ def classify_rows(
             row["status"] = "translation_quality_hold"
             row["follow_up"] = QUALITY_HOLD_OVERRIDES[entry_id]
         elif actions:
-            chosen = max(actions, key=lambda action: priority[action["action"]])["action"]
+            # A later audited text candidate resolves a previous runtime-token
+            # evidence hold for the same ID.  The old hold remains provenance,
+            # but it must not mask the completed conservative-name reservation.
+            eligible_actions = actions
+            if "private_candidate_built_text_change" in action_names:
+                eligible_actions = [
+                    action
+                    for action in actions
+                    if action["action"] != "runtime_token_hold_context_reviewed"
+                ]
+            chosen = max(eligible_actions, key=lambda action: priority[action["action"]])["action"]
             row["status"] = chosen
             if chosen == "runtime_token_hold_context_reviewed":
                 row["follow_up"] = (

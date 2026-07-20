@@ -55,6 +55,11 @@ class ManualCompactCoverageLedgerTests(unittest.TestCase):
         self.assertEqual(check["historical_target_count"], 191)
         self.assertEqual(check["expected_historical_target_count"], 191)
 
+    def test_final_coverage_gate_has_no_pending_rows(self) -> None:
+        self.assertTrue(self.ledger["summary"]["all_1553_resolved"])
+        self.assertEqual(self.ledger["summary"]["unresolved_or_pending_count"], 0)
+        module.validate(self.ledger, require_finished_review=True)
+
 
 if __name__ == "__main__":
     unittest.main()
