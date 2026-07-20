@@ -1,0 +1,4587 @@
+{
+  "schema": "nobu16.kr.pc-event-manual-compact-static007-reflow-review.v1",
+  "review_kind": "proposal_only",
+  "resource": "MSG_PK/JP/msgev.bin",
+  "scope": {
+    "entry_ids": [
+      9049,
+      9083,
+      9140,
+      9141,
+      9169,
+      9228,
+      9326,
+      9338,
+      9340,
+      9523,
+      9540,
+      9541,
+      9624,
+      9683,
+      10136,
+      10183,
+      10314,
+      10334,
+      10343,
+      10463,
+      10595,
+      10625,
+      10744
+    ],
+    "entry_count": 23,
+    "selection_reason": "All assigned rows are marked manual_compact_korean_layout in the historical manifest. The compact text is not trusted as a semantic baseline; each row is compared with direct PC JP/EN/SC/TC and the pre-compaction Korean source before a four-line Static Patch 007 reflow is proposed."
+  },
+  "provenance_refresh": {
+    "authoritative_current_candidate": "pc_event_manual_compact_4000_5000_restore_v1",
+    "packed_sha256": "E95A773B7B6448542CF8236868CBEEE7BA49382DD0450DB75DB6CD66CF43FF60",
+    "raw_sha256": "9F15BE13C0CFE09D82A9BAE616B57FCE8B4C92187624EB3686E2F850B504F146",
+    "batch04_scoped_texts_unchanged_in_current_predecessor": true,
+    "all_23_current_texts_re_read_from_current_predecessor": true
+  },
+  "layout_policy": {
+    "baseline": "Static Patch 007 verified PK event-dialogue layout",
+    "maximum_lines": 4,
+    "raw_g1n_full_width_px": 48,
+    "raw_g1n_half_width_px": 24,
+    "effective_width_formula": "ceil(raw_g1n_width_px * 30 / 48)",
+    "maximum_effective_width_px": 912,
+    "maximum_raw_g1n_width_px": 1440,
+    "japanese_source_line_breaks_used": false,
+    "japanese_line_break_policy": "Direct Japanese line breaks are semantic witnesses only. Korean line breaks are authored independently at Korean sentence or clause boundaries.",
+    "dynamic_token_policy": "Each dynamic token line reserves the manifest raw full-name width and reports ceil(raw * 30 / 48); runtime_proven stays false."
+  },
+  "inputs": {
+    "strict_current_korean": {
+      "path": "F:\\Games\\NOBU16\\KR_PATCH_RELEASE_V0116\\tmp\\pc_event_manual_compact_4000_5000_restore_v1\\candidate-final\\MSG_PK\\JP\\msgev.bin",
+      "packed_size": 1010766,
+      "packed_sha256": "E95A773B7B6448542CF8236868CBEEE7BA49382DD0450DB75DB6CD66CF43FF60",
+      "raw_size": 1006792,
+      "raw_sha256": "9F15BE13C0CFE09D82A9BAE616B57FCE8B4C92187624EB3686E2F850B504F146",
+      "string_count": 17916
+    },
+    "legacy_full_korean": {
+      "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-v0.10.0-original-font-rollback-v1\\originals\\MSG_PK\\JP\\msgev.bin",
+      "packed_size": 1052079,
+      "packed_sha256": "2CA183DA690D45A75702EA0F35C70966786B59E9440B8B8F49BE9652342F81AC",
+      "raw_size": 1047944,
+      "raw_sha256": "EDCF7A9CEBD605BB2275D5A3B92A76E7E2F652B2391554F24C6A8BDD2EF91A08",
+      "string_count": 17916
+    },
+    "direct_pc_context": {
+      "jp": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\steam-jp-1.1.7-v0.6.0\\originals\\MSG_PK\\JP\\msgev.bin",
+        "packed_size": 562226,
+        "packed_sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+        "raw_size": 894800,
+        "raw_sha256": "07D7512BE0235753FC7BB0C7C548B61F471D9CDED01379E63B8AF8EAE013813E",
+        "string_count": 17916
+      },
+      "en": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\EN\\msgev.bin",
+        "packed_size": 762196,
+        "packed_sha256": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+        "raw_size": 1878836,
+        "raw_sha256": "6A1F3891412EBFF5AC3188F498C9951431154192D69E82B7ABB6F25AA934D911",
+        "string_count": 17916
+      },
+      "sc": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\SC\\msgev.bin",
+        "packed_size": 522177,
+        "packed_sha256": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+        "raw_size": 754708,
+        "raw_sha256": "3ACE267E6B9774D8C940C9D7940F168B61744ADDF7C082F2CB1EA7E9BBD82B5E",
+        "string_count": 17916
+      },
+      "tc": {
+        "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\TC\\msgev.bin",
+        "packed_size": 524909,
+        "packed_sha256": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6",
+        "raw_size": 744212,
+        "raw_sha256": "42DC893AA9FF9D3E7B75FBCFFBEFD7C3DFC338CAB71E942C081BDC52C9024BF6",
+        "string_count": 17916
+      }
+    },
+    "historical_manual_compact_manifest": {
+      "path": "F:\\Games\\NOBU16\\KR_PATCH_RELEASE_V0116\\workstreams\\steam_jp_msgev_full_layout_v2\\public\\msgev_ko_steam_jp_full_layout.v2.json",
+      "sha256": "10EE44F4D5F5A871F5DEDB60C6435F4115E698FB1544B898EA421356FAB6BF42"
+    },
+    "runtime_token_reservation_manifest": {
+      "path": "F:\\Games\\NOBU16\\KR_PATCH_RELEASE_V0116\\workstreams\\steam_jp_msgev_full_layout_v2\\public\\runtime_token_reservations.v1.json",
+      "sha256": "B981C7C456F2DC285721E7E3DB74D2D11456B49B25D5A97BB320F815DFC0A893"
+    }
+  },
+  "rows": [
+    {
+      "entry_id": 9049,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "역대 구보가 실력 있는 다이묘를 갈아타며 살아남았다는 존대 서술을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA호소카와 마사모토\u001bCZ, \u001bCA오우치 요시오키\u001bCZ,\n\u001bCA호소카와 다카쿠니\u001bCZ, \u001bCA미요시 나가요시\u001bCZ…\n역대 구보도 다이묘를 교묘히 갈아탔다.",
+      "current_ko_utf16le_sha256": "0FCF165641710412AA652463863AEC685858FDB007BC7931D1557A25560ECB56",
+      "legacy_full_ko": "\u001bCA호소카와 마사모토\u001bCZ, \u001bCA오우치 요시오키\u001bCZ, \u001bCA호소카와 다카쿠니\u001bCZ, \u001bCA미요시 나가요시\u001bCZ…\n역대 구보님들도 실력을 갖춘 다이묘를 교묘히\n갈아타며 살아남으셨사옵니다.",
+      "legacy_full_ko_utf16le_sha256": "02DEAAAE5C7C953BB61FCEFDE60DEA7FEF20E835CE66669A06AA81E06F4F60FA",
+      "proposed_ko": "\u001bCA호소카와 마사모토\u001bCZ, \u001bCA오우치 요시오키\u001bCZ,\n\u001bCA호소카와 다카쿠니\u001bCZ, \u001bCA미요시 나가요시\u001bCZ…\n역대 구보님들도 실력을 갖춘 다이묘를\n교묘히 갈아타며 살아남으셨사옵니다.",
+      "proposed_ko_utf16le_sha256": "A94340CE66D1127C436F62BB3AF51DFED1FF57358625153DB75BE9780BD432E8",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA細川政元\u001bCZ、\u001bCA大内義興\u001bCZ、\u001bCA細川高国\u001bCZ、\u001bCA三好長慶\u001bCZ…\n歴代の公方様も実力を持つ大名を巧みに\n切り替えて生き延びてこられました。",
+        "en": "\u001bCAMasamoto Hosokawa\u001bCZ, \u001bCAYoshioki ¥uchi\u001bCZ, \u001bCATakakuni Hosokawa\u001bCZ, \u001bCANagayoshi Miyoshi\u001bCZ... For generations, shªgun have survived by carefully replacing daimyª who hold too much power.",
+        "sc": "\u001bCA细川政元\u001bCZ、\u001bCA大内义兴\u001bCZ、\u001bCA细川高国\u001bCZ、\n\u001bCA三好长庆\u001bCZ……历代的公方大人都是灵活利用\n实力强大的大名，维系着自己的统治。",
+        "tc": "\u001bCA細川政元\u001bCZ、\u001bCA大內義興\u001bCZ、\u001bCA細川高國\u001bCZ、\n\u001bCA三好長慶\u001bCZ……歷代的公方大人也是巧妙地\n利用實力雄厚的大名，才能維繫政權。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "호소카와 마사모토, 오우치 요시오키, 호소카와 다카쿠니, 미요시 나가요시…",
+              "raw_g1n_width_px": 1704,
+              "effective_width_px": 1065,
+              "full_width_character_count": 30,
+              "half_width_character_count": 11,
+              "literal_raw_g1n_width_px": 1704,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "역대 구보님들도 실력을 갖춘 다이묘를 교묘히",
+              "raw_g1n_width_px": 1032,
+              "effective_width_px": 645,
+              "full_width_character_count": 19,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1032,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "갈아타며 살아남으셨사옵니다.",
+              "raw_g1n_width_px": 672,
+              "effective_width_px": 420,
+              "full_width_character_count": 13,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 672,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "호소카와 마사모토, 오우치 요시오키,",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "호소카와 다카쿠니, 미요시 나가요시…",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "역대 구보도 다이묘를 교묘히 갈아탔다.",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 16,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "호소카와 마사모토, 오우치 요시오키,",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "호소카와 다카쿠니, 미요시 나가요시…",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "역대 구보님들도 실력을 갖춘 다이묘를",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "교묘히 갈아타며 살아남으셨사옵니다.",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 16,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9083,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "요시테루의 목숨을 노린다는 소문과 미요시가 안에서 공공연했다는 결말을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCB미요시\u001bCZ 삼인중과 \u001bCA마쓰나가 히사미치\u001bCZ 등이\n쇼군 \u001bCA아시카가 요시테루\u001bCZ를 노린단 소문은\n\u001bCB미요시가\u001bCZ에 공공연했다…",
+      "current_ko_utf16le_sha256": "358CF69338B9274E3938787753A90C0620F5B6AE2B63E395E260E81634784020",
+      "legacy_full_ko": "\u001bCB미요시\u001bCZ 삼인중과 \u001bCA마쓰나가 히사미치\u001bCZ 등이 쇼군 \u001bCA아시카가 요시테루\u001bCZ의\n목숨을 노리고 있다는 소문은 \u001bCB미요시가\u001bCZ 안에서는\n공공연한 것이 되어 있었다…",
+      "legacy_full_ko_utf16le_sha256": "C1B900D249F76E6A5FE63BF7513C18DC172DE3A7BE0AB18A37C0D39058D82F9A",
+      "proposed_ko": "\u001bCB미요시\u001bCZ 삼인중과 \u001bCA마쓰나가 히사미치\u001bCZ 등이\n쇼군 \u001bCA아시카가 요시테루\u001bCZ의 목숨을\n노리고 있다는 소문은 \u001bCB미요시가\u001bCZ 안에서는\n공공연한 것이 되어 있었다…",
+      "proposed_ko_utf16le_sha256": "53202E058F2A8B3270B0C762322B6A58BB9358242A8089EEC3387FCCEAA8D37C",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCB三好\u001bCZ三人衆や\u001bCA松永久通\u001bCZらが将軍\u001bCA足利義輝\u001bCZの\n命を狙っているという噂は、\u001bCB三好家\u001bCZ中では\n公然のものとなっていた…",
+        "en": "The rumor that the \u001bCBMiyoshi\u001bCZ Trio and \u001bCAHisamichi Matsunaga\u001bCZ intended to take the life of Shªgun \u001bCAYoshiteru Ashikaga\u001bCZ became an open secret throughout the \u001bCBMiyoshi Clan\u001bCZ.",
+        "sc": "传闻说，\u001bCB三好\u001bCZ三人众和\u001bCA松永久通\u001bCZ等人\n想要取将军\u001bCA足利义辉\u001bCZ的性命，\n据说在\u001bCB三好家\u001bCZ内部已经人尽皆知……",
+        "tc": "\u001bCB三好\u001bCZ三人眾及\u001bCA松永久通\u001bCZ等人企圖篡弒\n將軍\u001bCA足利義輝\u001bCZ，這項傳聞於\u001bCB三好家\u001bCZ中已成\n公開的祕密…"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미요시 삼인중과 마쓰나가 히사미치 등이 쇼군 아시카가 요시테루의",
+              "raw_g1n_width_px": 1512,
+              "effective_width_px": 945,
+              "full_width_character_count": 28,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1512,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "목숨을 노리고 있다는 소문은 미요시가 안에서는",
+              "raw_g1n_width_px": 1080,
+              "effective_width_px": 675,
+              "full_width_character_count": 20,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1080,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "공공연한 것이 되어 있었다…",
+              "raw_g1n_width_px": 624,
+              "effective_width_px": 390,
+              "full_width_character_count": 11,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 624,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미요시 삼인중과 마쓰나가 히사미치 등이",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "쇼군 아시카가 요시테루를 노린단 소문은",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "미요시가에 공공연했다…",
+              "raw_g1n_width_px": 528,
+              "effective_width_px": 330,
+              "full_width_character_count": 10,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 528,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미요시 삼인중과 마쓰나가 히사미치 등이",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "쇼군 아시카가 요시테루의 목숨을",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 14,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "노리고 있다는 소문은 미요시가 안에서는",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "공공연한 것이 되어 있었다…",
+              "raw_g1n_width_px": 624,
+              "effective_width_px": 390,
+              "full_width_character_count": 11,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 624,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9140,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "각지 전란의 고비, 새 시대의 조짐, 성씨 변경, 재지 지배 강화의 네 의미 단위를 모두 유지했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "전란도 고비를 넘겨 새 세상이 보이는\n지금, 성씨를 고쳐 재지 지배를\n굳혀야 할 때인가…",
+      "current_ko_utf16le_sha256": "EE05AED92D422C7B9644DF60BEE40F03D875F0684BABA4DEB5194BB4712411DB",
+      "legacy_full_ko": "각지에서 잇따른 전란도 고비를 넘기고 새로운 세상이\n보이기 시작한 지금, 성씨를 고쳐 재지 지배를 굳혀야 할 때인가…",
+      "legacy_full_ko_utf16le_sha256": "72A948D42414214140B19DA761EE71DA190070D341D25A4E98760AC006B5738B",
+      "proposed_ko": "각지에서 잇따른 전란도 고비를 넘기고\n새로운 세상이 보이기 시작한 지금,\n성씨를 고쳐 재지 지배를 굳혀야 할 때인가…",
+      "proposed_ko_utf16le_sha256": "9F4EB40B3C262F0275EF93B88B5759AB03E6E4E431AE92F0EBC08F1EFC8A3A0F",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "各地で相次いだ戦乱も峠を越え、新たな世が\n見え始めた今、名字を改めて、在地の支配を固めるべき時か…",
+        "en": "Now though, with the brawling of myriad battlefields behind us, a new world is in sight. Perhaps it is time to change that name and solidify our rule over this land.",
+        "sc": "在各地相继爆发的战乱也趋于平缓、\n即将迎来新时代的当下，\n是时候更换姓氏，稳固当地统治了……",
+        "tc": "在平安度過各地接連發生的戰亂，\n新局面即將展開的此時，\n不妨改名以鞏固對本地的支配……"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 2,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "각지에서 잇따른 전란도 고비를 넘기고 새로운 세상이",
+              "raw_g1n_width_px": 1200,
+              "effective_width_px": 750,
+              "full_width_character_count": 22,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1200,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "보이기 시작한 지금, 성씨를 고쳐 재지 지배를 굳혀야 할 때인가…",
+              "raw_g1n_width_px": 1464,
+              "effective_width_px": 915,
+              "full_width_character_count": 25,
+              "half_width_character_count": 11,
+              "literal_raw_g1n_width_px": 1464,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "전란도 고비를 넘겨 새 세상이 보이는",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "지금, 성씨를 고쳐 재지 지배를",
+              "raw_g1n_width_px": 696,
+              "effective_width_px": 435,
+              "full_width_character_count": 12,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 696,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "굳혀야 할 때인가…",
+              "raw_g1n_width_px": 408,
+              "effective_width_px": 255,
+              "full_width_character_count": 7,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 408,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "각지에서 잇따른 전란도 고비를 넘기고",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "새로운 세상이 보이기 시작한 지금,",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 14,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "성씨를 고쳐 재지 지배를 굳혀야 할 때인가…",
+              "raw_g1n_width_px": 984,
+              "effective_width_px": 615,
+              "full_width_character_count": 17,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 984,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9141,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "顕職은 현직이 아니라 고위 관직이므로 그 관계를 바로잡고, 아키타성스케에서 따온 성씨라는 뜻을 복원했다."
+      ],
+      "legacy_surface_change": "顕職을 '현직'으로 둔 뜻을 '고위 관직'으로 바로잡았다.",
+      "current_ko": "당가에는 옛 이 땅의 성을 다스린\n조정 무관의 현직 '\u001bCC아키타성\u001bCZ스케'에서 딴\n'\u001bCA아키타\u001bCZ'밖에 없을 것이다.",
+      "current_ko_utf16le_sha256": "FA837AF780D2BB821852EBDD60A9176888A8CE4414847A446DDCB8E7CDE15E67",
+      "legacy_full_ko": "당가에 어울리는 것은, 일찍이 이 땅에 있던\n성을 다스린 조정 무관의 현직―「\u001bCC아키타성\u001bCZ스케」에서 딴 「\u001bCA아키타\u001bCZ」밖에 없을 것이다.",
+      "legacy_full_ko_utf16le_sha256": "25FCB4FDDC2C05D60156EFE52C4B197F13FFA5253F6013001E037320BAEA9435",
+      "proposed_ko": "당가에 어울리는 성씨는, 일찍이 이 땅의\n성을 다스린 조정 무관의 고위 관직\n‘\u001bCC아키타성\u001bCZ스케’에서 딴\n‘\u001bCA아키타\u001bCZ’뿐일 것이다.",
+      "proposed_ko_utf16le_sha256": "385B942C961250F97BAC2ADCB8A58A765025FAFECF0E108735AFF8D81396776F",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": false,
+      "source_evidence": {
+        "jp": "当家にふさわしきは、かつてこの地にあった\n城を治めた朝廷武官の顕職―「\u001bCC秋田城\u001bCZ介」にちなむ「\u001bCA秋田\u001bCZ」のほかあるまい。",
+        "en": "For this clan, there can be no other name but \u001bCAAkita\u001bCZ, after the Akita Base Governors, those officers of the Imperial Court who once ruled the castle of this land.",
+        "sc": "有一个姓氏很适合本家，那便是\n曾经在这片土地上治理城邦、身居要职的\n朝廷武官——“\u001bCC秋田城\u001bCZ介”的姓氏“\u001bCA秋田\u001bCZ”。",
+        "tc": "昔日於此地管轄居城，朝廷武官的高官─\n「\u001bCC秋田城\u001bCZ介」的「\u001bCA秋田\u001bCZ」二字，\n可謂本家姓氏的最佳首選。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 2,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "당가에 어울리는 것은, 일찍이 이 땅에 있던",
+              "raw_g1n_width_px": 984,
+              "effective_width_px": 615,
+              "full_width_character_count": 17,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 984,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "성을 다스린 조정 무관의 현직―「아키타성스케」에서 딴 「아키타」밖에 없을 것이다.",
+              "raw_g1n_width_px": 1824,
+              "effective_width_px": 1140,
+              "full_width_character_count": 31,
+              "half_width_character_count": 14,
+              "literal_raw_g1n_width_px": 1824,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "당가에는 옛 이 땅의 성을 다스린",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 13,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "조정 무관의 현직 '아키타성스케'에서 딴",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 16,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "'아키타'밖에 없을 것이다.",
+              "raw_g1n_width_px": 600,
+              "effective_width_px": 375,
+              "full_width_character_count": 10,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 600,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "당가에 어울리는 성씨는, 일찍이 이 땅의",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 16,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "성을 다스린 조정 무관의 고위 관직",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 14,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "‘아키타성스케’에서 딴",
+              "raw_g1n_width_px": 504,
+              "effective_width_px": 315,
+              "full_width_character_count": 9,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 504,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "‘아키타’뿐일 것이다.",
+              "raw_g1n_width_px": 480,
+              "effective_width_px": 300,
+              "full_width_character_count": 8,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 480,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9169,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "노부카도의 동복 관계와 [bm1251]를 닮았다는 전승을 모두 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA다케다 노부카도\u001bCZ는 \u001bCA[bm1251]\u001bCZ,\n\u001bCA노부시게\u001bCZ의 동복 아우.\n용모도 \u001bCA[bm1251]\u001bCZ와 꼭 닮았다.",
+      "current_ko_utf16le_sha256": "9D900A82369F688400FFC551D592E963EF836F6B6C9642C04430373E5C622BC9",
+      "legacy_full_ko": "\u001bCA다케다 노부카도\u001bCZ는 \u001bCA[bm1251]\u001bCZ, \u001bCA노부시게\u001bCZ와 같은 어머니에게서 난 아우로,\n그 용모는 \u001bCA[bm1251]\u001bCZ와 꼭 닮았다고 전해진다.",
+      "legacy_full_ko_utf16le_sha256": "DC7D59BCD0B73AF535770B9639043DBE9644B35DC732D94DE757E2465C6050E7",
+      "proposed_ko": "\u001bCA다케다 노부카도\u001bCZ는 \u001bCA[bm1251]\u001bCZ,\n\u001bCA노부시게\u001bCZ와 같은 어머니에게서 난 아우로,\n그 용모는 \u001bCA[bm1251]\u001bCZ와 꼭 닮았다고\n전해진다.",
+      "proposed_ko_utf16le_sha256": "07E26A8C73D47679E93EE26327093F6CCA8A92DDD2F5746FC6CE12843A7A83A7",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA武田信廉\u001bCZは\u001bCA[bm1251]\u001bCZ、\u001bCA信繁\u001bCZと同母弟であり、\nその容姿は\u001bCA[bm1251]\u001bCZと瓜二つであったと伝わる。",
+        "en": "\u001bCANobukado Takeda\u001bCZ was said to be the spitting image of \u001bCA[bm1251]\u001bCZ, with whom he and \u001bCANobushige\u001bCZ shared a mother.",
+        "sc": "\u001bCA武田信廉\u001bCZ与\u001bCA[bm1251]\u001bCZ、\u001bCA信繁\u001bCZ是同母兄弟，\n据说其容貌身姿与\u001bCA[bm1251]\u001bCZ极其相像。",
+        "tc": "\u001bCA武田信廉\u001bCZ為\u001bCA[bm1251]\u001bCZ、\u001bCA信繁\u001bCZ的同母弟，\n據聞容貌與\u001bCA[bm1251]\u001bCZ神似。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [
+          [
+            "bm",
+            "1251"
+          ],
+          [
+            "bm",
+            "1251"
+          ]
+        ],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [
+          {
+            "token": "[bm1251]",
+            "source_name_id": 1251,
+            "display_string": "다케다 하루노부",
+            "display_full_width_character_count": 7,
+            "display_half_width_character_count": 1,
+            "reserved_raw_g1n_width_px": 360,
+            "reserved_effective_width_px": 225,
+            "runtime_proven": false
+          }
+        ],
+        "raw_g1n_px": 360,
+        "effective_width_px": 225,
+        "runtime_proven": false,
+        "reason": "Conservative token reservation comes from the reviewed manifest and is scaled by 30/48; no unrelated runtime route is inferred."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 2,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "다케다 노부카도는 다케다 하루노부, 노부시게와 같은 어머니에게서 난 아우로,",
+              "raw_g1n_width_px": 1776,
+              "effective_width_px": 1110,
+              "full_width_character_count": 32,
+              "half_width_character_count": 10,
+              "literal_raw_g1n_width_px": 1416,
+              "reserved_raw_g1n_width_px": 360,
+              "runtime_reservations": [
+                {
+                  "token": "[bm1251]",
+                  "source_name_id": 1251,
+                  "display_string": "다케다 하루노부",
+                  "display_full_width_character_count": 7,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 360,
+                  "reserved_effective_width_px": 225,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "그 용모는 다케다 하루노부와 꼭 닮았다고 전해진다.",
+              "raw_g1n_width_px": 1176,
+              "effective_width_px": 735,
+              "full_width_character_count": 21,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 360,
+              "runtime_reservations": [
+                {
+                  "token": "[bm1251]",
+                  "source_name_id": 1251,
+                  "display_string": "다케다 하루노부",
+                  "display_full_width_character_count": 7,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 360,
+                  "reserved_effective_width_px": 225,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "다케다 노부카도는 다케다 하루노부,",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 456,
+              "reserved_raw_g1n_width_px": 360,
+              "runtime_reservations": [
+                {
+                  "token": "[bm1251]",
+                  "source_name_id": 1251,
+                  "display_string": "다케다 하루노부",
+                  "display_full_width_character_count": 7,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 360,
+                  "reserved_effective_width_px": 225,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "노부시게의 동복 아우.",
+              "raw_g1n_width_px": 504,
+              "effective_width_px": 315,
+              "full_width_character_count": 9,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 504,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "용모도 다케다 하루노부와 꼭 닮았다.",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 480,
+              "reserved_raw_g1n_width_px": 360,
+              "runtime_reservations": [
+                {
+                  "token": "[bm1251]",
+                  "source_name_id": 1251,
+                  "display_string": "다케다 하루노부",
+                  "display_full_width_character_count": 7,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 360,
+                  "reserved_effective_width_px": 225,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "다케다 노부카도는 다케다 하루노부,",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 456,
+              "reserved_raw_g1n_width_px": 360,
+              "runtime_reservations": [
+                {
+                  "token": "[bm1251]",
+                  "source_name_id": 1251,
+                  "display_string": "다케다 하루노부",
+                  "display_full_width_character_count": 7,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 360,
+                  "reserved_effective_width_px": 225,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "노부시게와 같은 어머니에게서 난 아우로,",
+              "raw_g1n_width_px": 936,
+              "effective_width_px": 585,
+              "full_width_character_count": 17,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 936,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "그 용모는 다케다 하루노부와 꼭 닮았다고",
+              "raw_g1n_width_px": 936,
+              "effective_width_px": 585,
+              "full_width_character_count": 17,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 576,
+              "reserved_raw_g1n_width_px": 360,
+              "runtime_reservations": [
+                {
+                  "token": "[bm1251]",
+                  "source_name_id": 1251,
+                  "display_string": "다케다 하루노부",
+                  "display_full_width_character_count": 7,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 360,
+                  "reserved_effective_width_px": 225,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "전해진다.",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 4,
+              "half_width_character_count": 1,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9228,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "마쓰마에로의 성 변경, 데릴사위 객장, 와카사 다케다씨 지류 자칭의 세 사실을 복원했다."
+      ],
+      "legacy_surface_change": "네 줄 안에서 지류 자칭의 의미를 보존하도록 '지류라 칭했으나'로 한국어 표현만 재배치했다.",
+      "current_ko": "\u001bCA가키자키 요시히로\u001bCZ는 \u001bCA마쓰마에\u001bCZ로 개성.\n\u001bCB가키자키 가문\u001bCZ은 객장 \u001bCA다케다 노부히로\u001bCZ\n이래 \u001bCB와카사 다케다씨\u001bCZ 지류라 칭했지만…",
+      "current_ko_utf16le_sha256": "92140D8FC849F0D2A8C66A39F2FA0830A6734054F6420B8A5E2C1ACD929E2E74",
+      "legacy_full_ko": "이 무렵 \u001bCA가키자키 요시히로\u001bCZ는 성을 \u001bCA마쓰마에\u001bCZ로 삼았다.\n\u001bCB가키자키 가문\u001bCZ은 데릴사위로 들어온 객장 \u001bCA다케다 노부히로\u001bCZ 이래로,\n\u001bCB와카사 다케다씨\u001bCZ의 지류를 칭하고 있었으나…",
+      "legacy_full_ko_utf16le_sha256": "8E1199B79423067419736714AF82F956FE9FD75EF92A82F5FE92925846FAFBFE",
+      "proposed_ko": "이 무렵 \u001bCA가키자키 요시히로\u001bCZ는\n성을 \u001bCA마쓰마에\u001bCZ로 삼았다.\n\u001bCB가키자키 가문\u001bCZ은 데릴사위로 들어온 객장\n\u001bCA다케다 노부히로\u001bCZ 이래 \u001bCB와카사 다케다씨\u001bCZ의 지류라 칭했으나…",
+      "proposed_ko_utf16le_sha256": "D06321E8EC0691F50C4C2E7CF51DB1D71C26BBA6F31C8EA8CF2E603429013C97",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": false,
+      "source_evidence": {
+        "jp": "このころ、\u001bCA蠣崎慶広\u001bCZは姓を\u001bCA松前\u001bCZとしている。\n\u001bCB蠣崎家\u001bCZは入り婿となった客将\u001bCA武田信広\u001bCZ以来、\n\u001bCB若狭武田氏\u001bCZの支流を称していたが…",
+        "en": "Around this time, \u001bCAYoshihiro Kakizaki\u001bCZ took the surname \u001bCAMatsumae\u001bCZ. The \u001bCBKakizaki Clan\u001bCZ had been a branch of the \u001bCBWakasa Takeda Clan\u001bCZ ever since \u001bCANobuhiro Takeda\u001bCZ had married into the family.",
+        "sc": "近来，\u001bCA蛎崎庆广\u001bCZ将姓改为\u001bCA松前\u001bCZ。\n\u001bCB蛎崎家\u001bCZ自客将\u001bCA武田信广\u001bCZ入赘以来，\n\u001bCB便自称是若狭武田氏\u001bCZ的支流……",
+        "tc": "此時的\u001bCA蠣崎慶廣\u001bCZ姓\u001bCA松前\u001bCZ。\n\u001bCB蠣崎家\u001bCZ從入贅的客將\u001bCA武田信廣\u001bCZ以降，\n以\u001bCB若狹武田氏\u001bCZ旁系自稱……"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "이 무렵 가키자키 요시히로는 성을 마쓰마에로 삼았다.",
+              "raw_g1n_width_px": 1224,
+              "effective_width_px": 765,
+              "full_width_character_count": 22,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1224,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "가키자키 가문은 데릴사위로 들어온 객장 다케다 노부히로 이래로,",
+              "raw_g1n_width_px": 1488,
+              "effective_width_px": 930,
+              "full_width_character_count": 27,
+              "half_width_character_count": 8,
+              "literal_raw_g1n_width_px": 1488,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 3,
+              "display_string": "와카사 다케다씨의 지류를 칭하고 있었으나…",
+              "raw_g1n_width_px": 984,
+              "effective_width_px": 615,
+              "full_width_character_count": 18,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 984,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "가키자키 요시히로는 마쓰마에로 개성.",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "가키자키 가문은 객장 다케다 노부히로",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "이래 와카사 다케다씨 지류라 칭했지만…",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 16,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "이 무렵 가키자키 요시히로는",
+              "raw_g1n_width_px": 648,
+              "effective_width_px": 405,
+              "full_width_character_count": 12,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 648,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "성을 마쓰마에로 삼았다.",
+              "raw_g1n_width_px": 552,
+              "effective_width_px": 345,
+              "full_width_character_count": 10,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 552,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "가키자키 가문은 데릴사위로 들어온 객장",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "다케다 노부히로 이래 와카사 다케다씨의 지류라 칭했으나…",
+              "raw_g1n_width_px": 1320,
+              "effective_width_px": 825,
+              "full_width_character_count": 24,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1320,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9326,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "우지쓰나 사후의 간토 균형 붕괴와 세 세력의 호기 판단·우지야스 도전을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA호조 우지쓰나\u001bCZ 죽자 \u001bCC간토\u001bCZ 균형 깨져,\n\u001bCA이마가와\u001bCZ·\u001bCA다케다\u001bCZ·\u001bCA양 우에스기\u001bCZ가\n새 당주 \u001bCA우지야스\u001bCZ를 노렸다…",
+      "current_ko_utf16le_sha256": "C50687CEA45EE0A73E60D4D77E938357603A83C44AEA6A1544AC8D7F029EB9F2",
+      "legacy_full_ko": "한편, \u001bCA호조 우지쓰나\u001bCZ의 죽음으로 균형이 무너진\n\u001bCC간토\u001bCZ에서는 \u001bCA이마가와\u001bCZ·\u001bCA다케다\u001bCZ·\u001bCA양 우에스기\u001bCZ가 지금이야말로 호기라며\n새 당주 \u001bCA우지야스\u001bCZ에게 도전하려 하고 있었다…",
+      "legacy_full_ko_utf16le_sha256": "827BD208D7CB16F332F290F1C1B7372CF6B13C3F6C2712A3C7B76B4CC60B69B1",
+      "proposed_ko": "한편, \u001bCA호조 우지쓰나\u001bCZ의 죽음으로\n균형이 무너진 \u001bCC간토\u001bCZ에서는 \u001bCA이마가와\u001bCZ·\u001bCA다케다\u001bCZ·\n\u001bCA양 우에스기\u001bCZ가 지금이야말로 호기라며\n새 당주 \u001bCA우지야스\u001bCZ에게 도전하려 하고 있었다…",
+      "proposed_ko_utf16le_sha256": "B8CD03552E12B62089F6CAFFE1F60C3F20F44328F13221B850CE0CF6EBA678C8",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "一方、\u001bCA北条氏綱\u001bCZの死により均衡が崩れた\n\u001bCC関東\u001bCZでは\u001bCA今川\u001bCZ・\u001bCA武田\u001bCZ・\u001bCA両上杉\u001bCZが今こそ好機と\n新当主\u001bCA氏康\u001bCZに挑もうとしていた…",
+        "en": "Meanwhile, the death of \u001bCAUjitsuna Hªjª\u001bCZ had disrupted the balance of power in \u001bCCKantª\u001bCZ. \u001bCAImagawa\u001bCZ, \u001bCATakeda\u001bCZ, and \u001bCAUesugi\u001bCZ recognized the opportunity and moved to challenge the new clan leader, \u001bCAUjiyasu\u001bCZ...",
+        "sc": "另一方面，\u001bCA北条氏纲\u001bCZ的离世\n打破了\u001bCC关东\u001bCZ的战势平衡，\u001bCA今川\u001bCZ、\u001bCA武田\u001bCZ、\u001bCA两上杉\u001bCZ\n借机，向新当家\u001bCA氏康\u001bCZ发出挑战……",
+        "tc": "另一方，在\u001bCA北條氏綱\u001bCZ亡故後，\n制衡關係崩潰的\u001bCC關東\u001bCZ，\u001bCA今川\u001bCZ、\u001bCA武田\u001bCZ、\u001bCA兩上杉\u001bCZ\n欲乘隙挑戰新家主的\u001bCA氏康\u001bCZ……"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "한편, 호조 우지쓰나의 죽음으로 균형이 무너진",
+              "raw_g1n_width_px": 1056,
+              "effective_width_px": 660,
+              "full_width_character_count": 19,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1056,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "간토에서는 이마가와·다케다·양 우에스기가 지금이야말로 호기라며",
+              "raw_g1n_width_px": 1488,
+              "effective_width_px": 930,
+              "full_width_character_count": 28,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1488,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 3,
+              "display_string": "새 당주 우지야스에게 도전하려 하고 있었다…",
+              "raw_g1n_width_px": 1008,
+              "effective_width_px": 630,
+              "full_width_character_count": 18,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1008,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "호조 우지쓰나 죽자 간토 균형 깨져,",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 14,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "이마가와·다케다·양 우에스기가",
+              "raw_g1n_width_px": 696,
+              "effective_width_px": 435,
+              "full_width_character_count": 13,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 696,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "새 당주 우지야스를 노렸다…",
+              "raw_g1n_width_px": 624,
+              "effective_width_px": 390,
+              "full_width_character_count": 11,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 624,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "한편, 호조 우지쓰나의 죽음으로",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "균형이 무너진 간토에서는 이마가와·다케다·",
+              "raw_g1n_width_px": 984,
+              "effective_width_px": 615,
+              "full_width_character_count": 18,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 984,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "양 우에스기가 지금이야말로 호기라며",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 16,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "새 당주 우지야스에게 도전하려 하고 있었다…",
+              "raw_g1n_width_px": 1008,
+              "effective_width_px": 630,
+              "full_width_character_count": 18,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1008,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9338,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "아사쿠라와의 맹약, 오이치의 혼인, 사이에 낀 부부의 고뇌가 시작되는 흐름을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA아사쿠라\u001bCZ와 맹약한 \u001bCA아자이 나가마사\u001bCZ에게,\n\u001bCA노부나가\u001bCZ는 여동생 \u001bCA오이치\u001bCZ를 시집보냈다.\n사이에 낀 부부의 고뇌가 시작된다――",
+      "current_ko_utf16le_sha256": "8BA84C38EC64D68939BFE58987C1FAD58E03BF2632980104EA1CFF8F23D1FC5A",
+      "legacy_full_ko": "그 \u001bCA아사쿠라\u001bCZ와 맹약을 맺은 \u001bCA아자이 나가마사\u001bCZ에게, \u001bCA노부나가\u001bCZ는 누이\n\u001bCA오이치\u001bCZ를 시집보냈다. 사이에 낀 부부의\n고뇌의 나날이 시작되려 하고 있다――",
+      "legacy_full_ko_utf16le_sha256": "06D27FC8D382ECA3D1FE0A927D1AB2C165CF9D154CA2988A269BDEAF33233D12",
+      "proposed_ko": "그 \u001bCA아사쿠라\u001bCZ와 맹약을 맺은\n\u001bCA아자이 나가마사\u001bCZ에게, \u001bCA노부나가\u001bCZ는\n누이 \u001bCA오이치\u001bCZ를 시집보냈다.\n사이에 낀 부부의 고뇌의 나날이 시작되려 하고 있다――",
+      "proposed_ko_utf16le_sha256": "BB86E56FF58A3CD9D171D521CB06CF228C2386BAAAAA8E73E92849330643E9AB",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "その\u001bCA朝倉\u001bCZと盟を結ぶ\u001bCA浅井長政\u001bCZに、\u001bCA信長\u001bCZは妹の\n\u001bCAお市\u001bCZを嫁がせていた。板挟みとなった夫婦の\n苦悩の日々が始まろうとしている――",
+        "en": "Moreover, allied with \u001bCAAsakura\u001bCZ was none other than \u001bCANagamasa Azai\u001bCZ, the husband of \u001bCANobunaga\u001bCZÖs sister \u001bCAOichi\u001bCZ. Difficult times lie ahead...",
+        "sc": "\u001bCA信长\u001bCZ将亲生妹妹\u001bCA阿市\u001bCZ\n嫁给与\u001bCA朝仓\u001bCZ有盟约的\u001bCA浅井长政\u001bCZ。\n陷入两难的夫妻每天都苦恼不已—",
+        "tc": "然而\u001bCA信長\u001bCZ將胞妹\u001bCA阿市\u001bCZ嫁予的對象，正好又是\n\u001bCA朝倉\u001bCZ的盟友\u001bCA淺井長政\u001bCZ。這對立場陷入兩難的\n夫妻，就此開始了苦惱的每一天──"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그 아사쿠라와 맹약을 맺은 아자이 나가마사에게, 노부나가는 누이",
+              "raw_g1n_width_px": 1488,
+              "effective_width_px": 930,
+              "full_width_character_count": 27,
+              "half_width_character_count": 8,
+              "literal_raw_g1n_width_px": 1488,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "오이치를 시집보냈다. 사이에 낀 부부의",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 16,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "고뇌의 나날이 시작되려 하고 있다――",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 14,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "아사쿠라와 맹약한 아자이 나가마사에게,",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "노부나가는 여동생 오이치를 시집보냈다.",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "사이에 낀 부부의 고뇌가 시작된다――",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 14,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그 아사쿠라와 맹약을 맺은",
+              "raw_g1n_width_px": 600,
+              "effective_width_px": 375,
+              "full_width_character_count": 11,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 600,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "아자이 나가마사에게, 노부나가는",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 14,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "누이 오이치를 시집보냈다.",
+              "raw_g1n_width_px": 600,
+              "effective_width_px": 375,
+              "full_width_character_count": 11,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 600,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "사이에 낀 부부의 고뇌의 나날이 시작되려 하고 있다――",
+              "raw_g1n_width_px": 1224,
+              "effective_width_px": 765,
+              "full_width_character_count": 21,
+              "half_width_character_count": 9,
+              "literal_raw_g1n_width_px": 1224,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9340,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "제장에게 통일 사업을 재촉한 명령, 호쿠리쿠 배치, 간토 견제의 세 병렬 조치를 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA노부나가\u001bCZ, \u001bCC호쿠리쿠\u001bCZ \u001bCA우에스기 가게카쓰\u001bCZ\n\u001bCA시바타 가쓰이에\u001bCZ를 보내고 \u001bCC간토\u001bCZ에\n\u001bCA다키가와 가즈마스\u001bCZ·\u001bCA[b1871]\u001bCZ",
+      "current_ko_utf16le_sha256": "6FBF3F1DCE5DD00E81622EDF020CADC5DB452223213B5AC8C083152AD1B56539",
+      "legacy_full_ko": "\u001bCA노부나가\u001bCZ는 제장에게 명해 통일 사업을 서두르게 한다\n\u001bCC호쿠리쿠\u001bCZ의 \u001bCA우에스기 가게카쓰\u001bCZ에게는 \u001bCA시바타 가쓰이에\u001bCZ를 배치하고,\n\u001bCC간토\u001bCZ의 억제는 \u001bCA다키가와 가즈마스\u001bCZ·\u001bCA[b1871]\u001bCZ 등을…",
+      "legacy_full_ko_utf16le_sha256": "385739D73899F949E31BE1A4F0DFA2E7C027A33A8DF6BAD968842FF7C3A98EF6",
+      "proposed_ko": "\u001bCA노부나가\u001bCZ는 제장에게 명해 통일 사업을 서두르게 한다\n\u001bCC호쿠리쿠\u001bCZ의 \u001bCA우에스기 가게카쓰\u001bCZ에게는\n\u001bCA시바타 가쓰이에\u001bCZ를 배치하고, \u001bCC간토\u001bCZ의 억제는\n\u001bCA다키가와 가즈마스\u001bCZ·\u001bCA[b1871]\u001bCZ 등을…",
+      "proposed_ko_utf16le_sha256": "7E9E6FFC4EB9517DB5C1C6B900BED78A94B11DF9B13829292B93D06F5123F8C7",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA信長\u001bCZは諸将に命じ、統一事業を急がせる\n\u001bCC北陸\u001bCZの\u001bCA上杉景勝\u001bCZに対しては\u001bCA柴田勝家\u001bCZを配し、\n\u001bCC関東\u001bCZへの抑えは、\u001bCA滝川一益\u001bCZ・\u001bCA[b1871]\u001bCZらを…",
+        "en": "\u001bCANobunaga\u001bCZ quickened the pace towards unification by giving orders to his many officers. He assigned \u001bCAKatsuie Shibata\u001bCZ to deal with \u001bCAKagekatsu Uesugi\u001bCZ in \u001bCCHokuriku\u001bCZ, while posting \u001bCAKazumasu Takigawa\u001bCZ and \u001bCA[b1871]\u001bCZ in \u001bCCKantª\u001bCZ.",
+        "sc": "\u001bCA信长\u001bCZ命令诸将加快统一事业的步伐。\n安排\u001bCA柴田胜家\u001bCZ对付\u001bCC北陆\u001bCZ的\u001bCA上杉景胜\u001bCZ，\n让\u001bCA泷川一益\u001bCZ、\u001bCA德川家康\u001bCZ等前去压制\u001bCC关东\u001bCZ……",
+        "tc": "\u001bCA信長\u001bCZ命令眾武將儘速完成統一事業。\n指派\u001bCA柴田勝家\u001bCZ迎戰\u001bCC北陸\u001bCZ的\u001bCA上杉景勝\u001bCZ，\n驅使\u001bCA瀧川一益\u001bCZ、\u001bCA德川家康\u001bCZ等人箝制\u001bCC關東\u001bCZ……"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [
+          [
+            "b",
+            "1871"
+          ]
+        ],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [
+          {
+            "token": "[b1871]",
+            "source_name_id": 1871,
+            "display_string": "마쓰다이라 모토야스",
+            "display_full_width_character_count": 9,
+            "display_half_width_character_count": 1,
+            "reserved_raw_g1n_width_px": 456,
+            "reserved_effective_width_px": 285,
+            "runtime_proven": false
+          }
+        ],
+        "raw_g1n_px": 456,
+        "effective_width_px": 285,
+        "runtime_proven": false,
+        "reason": "Conservative token reservation comes from the reviewed manifest and is scaled by 30/48; no unrelated runtime route is inferred."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "노부나가는 제장에게 명해 통일 사업을 서두르게 한다",
+              "raw_g1n_width_px": 1200,
+              "effective_width_px": 750,
+              "full_width_character_count": 22,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1200,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "호쿠리쿠의 우에스기 가게카쓰에게는 시바타 가쓰이에를 배치하고,",
+              "raw_g1n_width_px": 1488,
+              "effective_width_px": 930,
+              "full_width_character_count": 28,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1488,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 3,
+              "display_string": "간토의 억제는 다키가와 가즈마스·마쓰다이라 모토야스 등을…",
+              "raw_g1n_width_px": 1368,
+              "effective_width_px": 855,
+              "full_width_character_count": 25,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 456,
+              "runtime_reservations": [
+                {
+                  "token": "[b1871]",
+                  "source_name_id": 1871,
+                  "display_string": "마쓰다이라 모토야스",
+                  "display_full_width_character_count": 9,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 456,
+                  "reserved_effective_width_px": 285,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "노부나가, 호쿠리쿠 우에스기 가게카쓰",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "시바타 가쓰이에를 보내고 간토에",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 14,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "다키가와 가즈마스·마쓰다이라 모토야스",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 17,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 432,
+              "reserved_raw_g1n_width_px": 456,
+              "runtime_reservations": [
+                {
+                  "token": "[b1871]",
+                  "source_name_id": 1871,
+                  "display_string": "마쓰다이라 모토야스",
+                  "display_full_width_character_count": 9,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 456,
+                  "reserved_effective_width_px": 285,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "노부나가는 제장에게 명해 통일 사업을 서두르게 한다",
+              "raw_g1n_width_px": 1200,
+              "effective_width_px": 750,
+              "full_width_character_count": 22,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1200,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "호쿠리쿠의 우에스기 가게카쓰에게는",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 16,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "시바타 가쓰이에를 배치하고, 간토의 억제는",
+              "raw_g1n_width_px": 984,
+              "effective_width_px": 615,
+              "full_width_character_count": 18,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 984,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "다키가와 가즈마스·마쓰다이라 모토야스 등을…",
+              "raw_g1n_width_px": 1032,
+              "effective_width_px": 645,
+              "full_width_character_count": 19,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 576,
+              "reserved_raw_g1n_width_px": 456,
+              "runtime_reservations": [
+                {
+                  "token": "[b1871]",
+                  "source_name_id": 1871,
+                  "display_string": "마쓰다이라 모토야스",
+                  "display_full_width_character_count": 9,
+                  "display_half_width_character_count": 1,
+                  "reserved_raw_g1n_width_px": 456,
+                  "reserved_effective_width_px": 285,
+                  "runtime_proven": false
+                }
+              ],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9523,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "나가요리의 형제 관계, 형의 우필 경력, 본인의 무용·전공에 의한 출세를 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA미요시\u001bCZ 가신 \u001bCA마쓰나가 나가요리\u001bCZ는\n\u001bCA마쓰나가 히사히데\u001bCZ의 동생으로, \u001bCA나가요시\u001bCZ\n우필 출신 형과 달리 무공으로 출세했다.",
+      "current_ko_utf16le_sha256": "368092A533CBC09B5B8F84978A1BA462895760ACF106614265842D3FDE8D4D87",
+      "legacy_full_ko": "\u001bCA미요시\u001bCZ 가신 \u001bCA마쓰나가 나가요리\u001bCZ는 \u001bCA마쓰나가 히사히데\u001bCZ의 동생으로,\n\u001bCA나가요시\u001bCZ의 우필을 거쳐 출세한 형과 달리,\n무용이 뛰어나 전공을 세워 출세했다고 한다.",
+      "legacy_full_ko_utf16le_sha256": "7491535267BFAA0B1BB159C731D38F708E887F5693A9CE558CFC91907E91938D",
+      "proposed_ko": "\u001bCA미요시\u001bCZ 가신 \u001bCA마쓰나가 나가요리\u001bCZ는\n\u001bCA마쓰나가 히사히데\u001bCZ의 동생으로,\n\u001bCA나가요시\u001bCZ의 우필을 거쳐 출세한 형과 달리,\n무용이 뛰어나 전공을 세워 출세했다고 한다.",
+      "proposed_ko_utf16le_sha256": "0A0D00F1EB3F6BB62E7AC1D4B70E5232C7BE1D865AED9E92AA77546A9F37D022",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA三好\u001bCZ家臣・\u001bCA松永長頼\u001bCZは\u001bCA松永久秀\u001bCZの弟で、\n\u001bCA長慶\u001bCZの右筆を経て出世した兄と異なり、\n武勇に優れ、戦功を立てて出世したという。",
+        "en": "\u001bCANagayori Matsunaga\u001bCZ, retainer to \u001bCAMiyoshi\u001bCZ, was the younger brother of \u001bCAHisahide Matsunaga\u001bCZ. Unlike his brother who found success as \u001bCANagayoshi\u001bCZÖs private secretary, it is said that he possessed great military prowess, proving himself with victory after victory.",
+        "sc": "\u001bCA三好\u001bCZ家臣\u001bCA松永长赖\u001bCZ是\u001bCA松永久秀\u001bCZ之弟。\n与担任\u001bCA长庆\u001bCZ的文书而出人头地的哥哥不同，\n他武艺非凡，因战功赫赫而崭露头角。",
+        "tc": "\u001bCA三好\u001bCZ家臣\u001bCA松永長賴\u001bCZ為\u001bCA松永久秀\u001bCZ之弟，\n有別於擔任\u001bCA長慶\u001bCZ文書而出人頭地的兄長，\n他乃因驍勇善戰，立下戰功而發跡。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미요시 가신 마쓰나가 나가요리는 마쓰나가 히사히데의 동생으로,",
+              "raw_g1n_width_px": 1464,
+              "effective_width_px": 915,
+              "full_width_character_count": 27,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1464,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "나가요시의 우필을 거쳐 출세한 형과 달리,",
+              "raw_g1n_width_px": 960,
+              "effective_width_px": 600,
+              "full_width_character_count": 17,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 960,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "무용이 뛰어나 전공을 세워 출세했다고 한다.",
+              "raw_g1n_width_px": 1008,
+              "effective_width_px": 630,
+              "full_width_character_count": 18,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1008,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미요시 가신 마쓰나가 나가요리는",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 14,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "마쓰나가 히사히데의 동생으로, 나가요시",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "우필 출신 형과 달리 무공으로 출세했다.",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 16,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미요시 가신 마쓰나가 나가요리는",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 14,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "마쓰나가 히사히데의 동생으로,",
+              "raw_g1n_width_px": 696,
+              "effective_width_px": 435,
+              "full_width_character_count": 13,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 696,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "나가요시의 우필을 거쳐 출세한 형과 달리,",
+              "raw_g1n_width_px": 960,
+              "effective_width_px": 600,
+              "full_width_character_count": 17,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 960,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "무용이 뛰어나 전공을 세워 출세했다고 한다.",
+              "raw_g1n_width_px": 1008,
+              "effective_width_px": 630,
+              "full_width_character_count": 18,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1008,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9540,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "니카이도에서 아시나 모리타카로 바뀐 사실과 히코히메·아난히메·모리타카의 친족 관계를 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA니카이도\u001bCZ, \u001bCA아시나 모리타카\u001bCZ로 개명.\n\u001bCA히코히메\u001bCZ는 \u001bCA오나미히메\u001bCZ의 동생,\n\u001bCA모리타카\u001bCZ에겐 이모뻘이었다.",
+      "current_ko_utf16le_sha256": "094E92D6402A8FF6D6F0C58D8A405A84944F07984FC2DC10E348867AE3C70070",
+      "legacy_full_ko": "이리하여 \u001bCA니카이도\u001bCZ에서 이름을 고친 \u001bCA아시나 모리타카\u001bCZ가 탄생했다.\n\u001bCA히코히메\u001bCZ는 \u001bCA아난히메\u001bCZ의 여동생으로,\n\u001bCA모리타카\u001bCZ에게는 이모뻘 되는 여성이다.",
+      "legacy_full_ko_utf16le_sha256": "EF0DCE92C80D929C54F127501BB4B15B7EABD64FD25624BEBA5E0AE138FFC08C",
+      "proposed_ko": "이리하여 \u001bCA니카이도\u001bCZ에서 이름을 고친\n\u001bCA아시나 모리타카\u001bCZ가 탄생했다.\n\u001bCA히코히메\u001bCZ는 \u001bCA아난히메\u001bCZ의 여동생으로,\n\u001bCA모리타카\u001bCZ에게는 이모뻘 되는 여성이다.",
+      "proposed_ko_utf16le_sha256": "1B75EA71CBE1E971870EE198ABB14536E84C1308F285DD157EF1014DFCD527C6",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "ここに\u001bCA二階堂\u001bCZ改め\u001bCA蘆名盛隆\u001bCZが誕生した。\n\u001bCA彦姫\u001bCZは\u001bCA阿南姫\u001bCZの妹であり、\n\u001bCA盛隆\u001bCZにとっては叔母に当たる女性である。",
+        "en": "And so \u001bCAMoritaka Nikaidª\u001bCZ became \u001bCAMoritaka Ashina\u001bCZ. His new wife, \u001bCAHikohime\u001bCZ, was the younger sister of \u001bCAOnamihime\u001bCZ, making her his aunt.",
+        "sc": "从此从\u001bCA二阶堂\u001bCZ改姓\u001bCA芦名\u001bCZ。\u001bCA阿南姬\u001bCZ的妹妹\u001bCA彦姬\u001bCZ对\u001bCA盛隆\u001bCZ来说，\n是相当于叔母的女性。",
+        "tc": "\u001bCA二階堂\u001bCZ改名為\u001bCA蘆名盛隆\u001bCZ。\n\u001bCA彥姬\u001bCZ乃\u001bCA阿南姬\u001bCZ之妹，\n即\u001bCA盛隆\u001bCZ的姨母。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "이리하여 니카이도에서 이름을 고친 아시나 모리타카가 탄생했다.",
+              "raw_g1n_width_px": 1464,
+              "effective_width_px": 915,
+              "full_width_character_count": 27,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1464,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "히코히메는 아난히메의 여동생으로,",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "모리타카에게는 이모뻘 되는 여성이다.",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "니카이도, 아시나 모리타카로 개명.",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 14,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "히코히메는 오나미히메의 동생,",
+              "raw_g1n_width_px": 696,
+              "effective_width_px": 435,
+              "full_width_character_count": 13,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 696,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "모리타카에겐 이모뻘이었다.",
+              "raw_g1n_width_px": 624,
+              "effective_width_px": 390,
+              "full_width_character_count": 12,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 624,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "이리하여 니카이도에서 이름을 고친",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "아시나 모리타카가 탄생했다.",
+              "raw_g1n_width_px": 648,
+              "effective_width_px": 405,
+              "full_width_character_count": 12,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 648,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "히코히메는 아난히메의 여동생으로,",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "모리타카에게는 이모뻘 되는 여성이다.",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9541,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "니카이도·다테의 영향력 확대 우려, 아시나 가신의 맹렬한 반대, 가명 계승 강행을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCB니카이도가\u001bCZ·\u001bCB다테가\u001bCZ 세력을 두려워한\n\u001bCB아시나\u001bCZ 가신들은 반대했지만 \u001bCA모리우지\u001bCZ는\n\u001bCA모리타카\u001bCZ의 \u001bCB아시나\u001bCZ 상속을 강행했다.",
+      "current_ko_utf16le_sha256": "21718451EED6ED87B6FF6DD4B70194390E5BADF1EAB1A47F88614F900EDCE33D",
+      "legacy_full_ko": "\u001bCB니카이도가\u001bCZ와 \u001bCB다테가\u001bCZ의 영향력이 강해지는 것을\n두려워한 \u001bCB아시나\u001bCZ 가신들은 맹렬히 반대했으나,\n\u001bCA모리우지\u001bCZ는 \u001bCA모리타카\u001bCZ에게 \u001bCB아시나\u001bCZ 가명을 잇게 하는 일을 강행했다.",
+      "legacy_full_ko_utf16le_sha256": "E0E662BFF2FA40DDD5F15E1B1392D93AAD7EF735E835906DD1B305960DE57EF1",
+      "proposed_ko": "\u001bCB니카이도가\u001bCZ와 \u001bCB다테가\u001bCZ의 영향력이 강해지는 것을 두려워한\n\u001bCB아시나\u001bCZ 가신들은 맹렬히 반대했으나, \u001bCA모리우지\u001bCZ는\n\u001bCA모리타카\u001bCZ에게 \u001bCB아시나\u001bCZ 가명을 잇게 하는 일을\n강행했다.",
+      "proposed_ko_utf16le_sha256": "1EC46207740CEA25AD41913676C989BF0BF6CF8B94B43912F9F8F2A4DAF1CC47",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCB二階堂家\u001bCZや\u001bCB伊達家\u001bCZの影響力が強まることを\n恐れた\u001bCB蘆名\u001bCZ家臣らは猛反対したが、\n\u001bCA盛氏\u001bCZは\u001bCA盛隆\u001bCZへの\u001bCB蘆名\u001bCZ名跡相続を強行した。",
+        "en": "The \u001bCBAshina\u001bCZ retainers fiercely protested, fearing the growing influence of the \u001bCBNikaidª\u001bCZ and \u001bCBDate\u001bCZ clans, but \u001bCAMoriuji\u001bCZ all but forced \u001bCAMoritaka\u001bCZ to inherit his name.",
+        "sc": "畏惧\u001bCB二阶堂家\u001bCZ和\u001bCB伊达家\u001bCZ强大影响力的\n\u001bCB芦名家\u001bCZ臣们虽然强烈反对，\n但\u001bCA盛氏\u001bCZ仍强行让\u001bCA盛隆\u001bCZ继承\u001bCB芦名\u001bCZ的家名。",
+        "tc": "憂心\u001bCB二階堂家\u001bCZ和\u001bCB伊達家\u001bCZ的影響力過大，\n\u001bCB蘆名家\u001bCZ的眾家臣極力反對婚事，\n但\u001bCA盛氏\u001bCZ仍堅持讓\u001bCA盛隆\u001bCZ繼承\u001bCB蘆名家\u001bCZ。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "니카이도가와 다테가의 영향력이 강해지는 것을",
+              "raw_g1n_width_px": 1056,
+              "effective_width_px": 660,
+              "full_width_character_count": 20,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 1056,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "두려워한 아시나 가신들은 맹렬히 반대했으나,",
+              "raw_g1n_width_px": 1032,
+              "effective_width_px": 645,
+              "full_width_character_count": 19,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1032,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "모리우지는 모리타카에게 아시나 가명을 잇게 하는 일을 강행했다.",
+              "raw_g1n_width_px": 1488,
+              "effective_width_px": 930,
+              "full_width_character_count": 27,
+              "half_width_character_count": 8,
+              "literal_raw_g1n_width_px": 1488,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "니카이도가·다테가 세력을 두려워한",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "아시나 가신들은 반대했지만 모리우지는",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 17,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "모리타카의 아시나 상속을 강행했다.",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "니카이도가와 다테가의 영향력이 강해지는 것을 두려워한",
+              "raw_g1n_width_px": 1272,
+              "effective_width_px": 795,
+              "full_width_character_count": 24,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1272,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "아시나 가신들은 맹렬히 반대했으나, 모리우지는",
+              "raw_g1n_width_px": 1080,
+              "effective_width_px": 675,
+              "full_width_character_count": 20,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1080,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "모리타카에게 아시나 가명을 잇게 하는 일을",
+              "raw_g1n_width_px": 984,
+              "effective_width_px": 615,
+              "full_width_character_count": 18,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 984,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "강행했다.",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 4,
+              "half_width_character_count": 1,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9624,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "가게카쓰의 반복된 고사, 가게토라의 우에스기 성 허락, 가신으로 섬김의 결과를 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA가게카쓰\u001bCZ 고사에도 \u001bCA가게토라\u001bCZ는\n\u001bCA우에스기 성\u001bCZ을 허락,\n\u001bCA가게카쓰\u001bCZ는 \u001bCA우에스기\u001bCZ로 가신이 됐다.",
+      "current_ko_utf16le_sha256": "129F8939204BB4B3025A78C6D2167F117084693A839F66F4D56962181EA8BD8C",
+      "legacy_full_ko": "거듭된 \u001bCA가게카쓰\u001bCZ의 고사에도 불구하고,\n\u001bCA가게토라\u001bCZ는 \u001bCA우에스기 성\u001bCZ을 허락했고, \u001bCA가게카쓰\u001bCZ는 \u001bCA우에스기\u001bCZ인 채로\n가신으로서 섬기게 되었다.",
+      "legacy_full_ko_utf16le_sha256": "28747867E55F038901FA02169A99634BAC80CDC1A07D5FBACDF823EF1BE560F0",
+      "proposed_ko": "거듭된 \u001bCA가게카쓰\u001bCZ의 고사에도 불구하고,\n\u001bCA가게토라\u001bCZ는 \u001bCA우에스기 성\u001bCZ을 허락했고,\n\u001bCA가게카쓰\u001bCZ는 \u001bCA우에스기\u001bCZ인 채로\n가신으로서 섬기게 되었다.",
+      "proposed_ko_utf16le_sha256": "446CF21E971377A8C38993D932D745BCAD2C070239CCEEDDF16DE173DECF4797",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "再三にわたる\u001bCA景勝\u001bCZの固辞にも関わらず、\n\u001bCA景虎\u001bCZは\u001bCA上杉姓\u001bCZを許し、\u001bCA景勝\u001bCZは\u001bCA上杉\u001bCZのまま\n家臣として仕えることとなった。",
+        "en": "\u001bCAKagetora\u001bCZ refuted \u001bCAKagekatsu\u001bCZÖs continuous attempts to shed the \u001bCAUesugi\u001bCZ name. Eventually, \u001bCAKagekatsu\u001bCZ agreed to become his retainer, serving him as an \u001bCAUesugi\u001bCZ.",
+        "sc": "虽然\u001bCA景胜\u001bCZ再三推辞，\u001bCA景虎\u001bCZ仍是将\u001bCA上杉\u001bCZ这一姓氏\n许给\u001bCA景胜\u001bCZ，让其保留\u001bCA上杉\u001bCZ之姓，\n以家臣之名继续在堂下效力。",
+        "tc": "\u001bCA景勝\u001bCZ再三固辭，\u001bCA景虎\u001bCZ則執意允許\u001bCA上杉姓\u001bCZ，\n最終\u001bCA景勝\u001bCZ仍為\u001bCA上杉\u001bCZ，\n並作為家臣效命。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "거듭된 가게카쓰의 고사에도 불구하고,",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "가게토라는 우에스기 성을 허락했고, 가게카쓰는 우에스기인 채로",
+              "raw_g1n_width_px": 1464,
+              "effective_width_px": 915,
+              "full_width_character_count": 27,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1464,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 3,
+              "display_string": "가신으로서 섬기게 되었다.",
+              "raw_g1n_width_px": 600,
+              "effective_width_px": 375,
+              "full_width_character_count": 11,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 600,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "가게카쓰 고사에도 가게토라는",
+              "raw_g1n_width_px": 672,
+              "effective_width_px": 420,
+              "full_width_character_count": 13,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 672,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "우에스기 성을 허락,",
+              "raw_g1n_width_px": 456,
+              "effective_width_px": 285,
+              "full_width_character_count": 8,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 456,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "가게카쓰는 우에스기로 가신이 됐다.",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "거듭된 가게카쓰의 고사에도 불구하고,",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "가게토라는 우에스기 성을 허락했고,",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "가게카쓰는 우에스기인 채로",
+              "raw_g1n_width_px": 624,
+              "effective_width_px": 390,
+              "full_width_character_count": 12,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 624,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "가신으로서 섬기게 되었다.",
+              "raw_g1n_width_px": 600,
+              "effective_width_px": 375,
+              "full_width_character_count": 11,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 600,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 9683,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "쇼군가의 명목화와 미요시가의 정무 장악, 상락하여 천하에 호령하라는 제안을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "쇼군가는 검술에만 빠져\n정무는 \u001bCB미요시가\u001bCZ 손에 넘어갔으니,\n주군께서 상경해 호령하시지요.",
+      "current_ko_utf16le_sha256": "800145A06B35C960EDA554D280D21FBB575793B3FE9F9F26D0C7EC1E6EB25CBA",
+      "legacy_full_ko": "지금의 쇼군가는 검술에만 힘쓰고, 정무의\n주도권은 \u001bCB미요시가\u001bCZ에게 넘어가 허울뿐.\n주군께서 상락하시어 천하에 호령을 내리시는 것이 어떻겠습니까?",
+      "legacy_full_ko_utf16le_sha256": "F17808F393C073D3A472ADEE37E40F134B2C3FD82426D64D7DB5562864C79A61",
+      "proposed_ko": "지금의 쇼군가는 검술에만 힘쓰고, 정무의\n주도권은 \u001bCB미요시가\u001bCZ에게 넘어가 허울뿐.\n주군께서 상락하시어 천하에 호령을\n내리시는 것이 어떻겠습니까?",
+      "proposed_ko_utf16le_sha256": "4CC5136F0A7B81B9E21E9C02B80B757E473FF5FB0DE5570AF52994C72CEA32F0",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "今の将軍家は剣術ばかりに励み、政務の\n主導権は\u001bCB三好家\u001bCZに握られて形ばかり。\n御館様が上洛されて天下に号令を下されては？",
+        "en": "While the shªgunate obsesses over swordsmanship, the \u001bCBMiyoshi Clan\u001bCZ is fixated on political affairs. What if you were to enter the \u001bCCcapital\u001bCZ and seize control of the whole country?",
+        "sc": "现在的将军家只知习武，政务的实权\n完全由\u001bCB三好家\u001bCZ掌控。\n不如大人您上京主持大局，向天下发号施令吧？",
+        "tc": "現今將軍家一味地鑽研劍術，\n大權落入\u001bCB三好家\u001bCZ之手，可謂名存實亡。\n御館大人何不上京，號令天下？"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "지금의 쇼군가는 검술에만 힘쓰고, 정무의",
+              "raw_g1n_width_px": 936,
+              "effective_width_px": 585,
+              "full_width_character_count": 17,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 936,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "주도권은 미요시가에게 넘어가 허울뿐.",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "주군께서 상락하시어 천하에 호령을 내리시는 것이 어떻겠습니까?",
+              "raw_g1n_width_px": 1464,
+              "effective_width_px": 915,
+              "full_width_character_count": 27,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1464,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "쇼군가는 검술에만 빠져",
+              "raw_g1n_width_px": 528,
+              "effective_width_px": 330,
+              "full_width_character_count": 10,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 528,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "정무는 미요시가 손에 넘어갔으니,",
+              "raw_g1n_width_px": 768,
+              "effective_width_px": 480,
+              "full_width_character_count": 14,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 768,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "주군께서 상경해 호령하시지요.",
+              "raw_g1n_width_px": 696,
+              "effective_width_px": 435,
+              "full_width_character_count": 13,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 696,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "지금의 쇼군가는 검술에만 힘쓰고, 정무의",
+              "raw_g1n_width_px": 936,
+              "effective_width_px": 585,
+              "full_width_character_count": 17,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 936,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "주도권은 미요시가에게 넘어가 허울뿐.",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "주군께서 상락하시어 천하에 호령을",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "내리시는 것이 어떻겠습니까?",
+              "raw_g1n_width_px": 648,
+              "effective_width_px": 405,
+              "full_width_character_count": 12,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 648,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10136,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "서군의 지휘자·삼만여 병력과 도미타군의 이천 미만 병력이라는 대비를 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCB서군\u001bCZ은 \u001bCA모리 히데모토\u001bCZ·\u001bCA깃카와 히로이에\u001bCZ\n등 3만여,\n\u001bCB도미타군\u001bCZ은 2천도 못 된 소수였다.",
+      "current_ko_utf16le_sha256": "40E7356F068D24A92E408FA826E0121EFFD8F4C6E1737F244887A4F1EC4FC278",
+      "legacy_full_ko": "\u001bCB서군\u001bCZ은 \u001bCA모리 히데모토\u001bCZ와 \u001bCA깃카와 히로이에\u001bCZ 등이 이끄는 삼만여 명,\n이에 맞선 \u001bCB도미타군\u001bCZ은 이천에도 못 미치는 소수였다.",
+      "legacy_full_ko_utf16le_sha256": "4593CAF060E45010EDC0398CDB0E1BB0A9B637ED99B80ACF990F05E3A68F4880",
+      "proposed_ko": "\u001bCB서군\u001bCZ은 \u001bCA모리 히데모토\u001bCZ와 \u001bCA깃카와 히로이에\u001bCZ 등이\n이끄는 삼만여 명,\n이에 맞선 \u001bCB도미타군\u001bCZ은 이천에도 못 미치는\n소수였다.",
+      "proposed_ko_utf16le_sha256": "46309C07BB848949A1C8553D907C5E157B285F26AE453F7A8D4192263576B31B",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCB西軍\u001bCZは\u001bCA毛利秀元\u001bCZ・\u001bCA吉川広家\u001bCZら３万余、\n対する\u001bCB富田勢\u001bCZは２千に届かぬ小勢である。",
+        "en": "However, the \u001bCBWestern Army\u001bCZ was led by \u001bCAHidemoto Mªri\u001bCZ and \u001bCAHiroie Kikkawa\u001bCZ, boasting a soldier count of over thirty thousand. On the other side stood the \u001bCBTomita\u001bCZ with not even two thousand.",
+        "sc": "\u001bCB西军\u001bCZ有\u001bCA毛利秀元\u001bCZ与\u001bCA吉川广家\u001bCZ率领的三万兵力，\n而\u001bCB富田势\u001bCZ的兵力不足两千。",
+        "tc": "\u001bCB西軍\u001bCZ由\u001bCA毛利秀元\u001bCZ與\u001bCA吉川廣家\u001bCZ兩人率軍，\n兵力3萬有餘，\n反觀\u001bCB富田軍\u001bCZ僅有區區不到2千人的兵力。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 2,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "서군은 모리 히데모토와 깃카와 히로이에 등이 이끄는 삼만여 명,",
+              "raw_g1n_width_px": 1464,
+              "effective_width_px": 915,
+              "full_width_character_count": 26,
+              "half_width_character_count": 9,
+              "literal_raw_g1n_width_px": 1464,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "이에 맞선 도미타군은 이천에도 못 미치는 소수였다.",
+              "raw_g1n_width_px": 1176,
+              "effective_width_px": 735,
+              "full_width_character_count": 21,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1176,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "서군은 모리 히데모토·깃카와 히로이에",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "등 3만여,",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 3,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "도미타군은 2천도 못 된 소수였다.",
+              "raw_g1n_width_px": 768,
+              "effective_width_px": 480,
+              "full_width_character_count": 13,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 768,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "서군은 모리 히데모토와 깃카와 히로이에 등이",
+              "raw_g1n_width_px": 1032,
+              "effective_width_px": 645,
+              "full_width_character_count": 19,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1032,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "이끄는 삼만여 명,",
+              "raw_g1n_width_px": 408,
+              "effective_width_px": 255,
+              "full_width_character_count": 7,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 408,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "이에 맞선 도미타군은 이천에도 못 미치는",
+              "raw_g1n_width_px": 936,
+              "effective_width_px": 585,
+              "full_width_character_count": 17,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 936,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "소수였다.",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 4,
+              "half_width_character_count": 1,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10183,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "거병 소식, 아이즈 정벌 중단, 차남에게 우쓰노미야 잔류와 우에스기군 저지를 명한 흐름을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA미쓰나리\u001bCZ 거병. \u001bCA도쿠가와 이에야스\u001bCZ\n\u001bCC아이즈\u001bCZ 정벌 중단. \u001bCA유키 히데야스\u001bCZ\n\u001bCC우쓰노미야\u001bCZ 잔류, \u001bCB우에스기군\u001bCZ 진출 저지.",
+      "current_ko_utf16le_sha256": "7419E2C10A46ED226316179F14D0E766603357F1792D37E36E82920497485761",
+      "legacy_full_ko": "\u001bCA미쓰나리\u001bCZ의 거병 소식에 \u001bCA도쿠가와 이에야스\u001bCZ는 \u001bCC아이즈\u001bCZ 정벌을 중단했다.\n차남 \u001bCA유키 히데야스\u001bCZ에게는 \u001bCC우쓰노미야\u001bCZ에 머물러\n\u001bCB우에스기군\u001bCZ의 진출을 막으라고 명했고……",
+      "legacy_full_ko_utf16le_sha256": "6F88DFC929FB032E2E4B7EA4B24BA1BBB0364E956128DDAEC52EA1C2444A2F30",
+      "proposed_ko": "\u001bCA미쓰나리\u001bCZ의 거병 소식에 \u001bCA도쿠가와 이에야스\u001bCZ는\n\u001bCC아이즈\u001bCZ 정벌을 중단했다.\n차남 \u001bCA유키 히데야스\u001bCZ에게는 \u001bCC우쓰노미야\u001bCZ에 머물러\n\u001bCB우에스기군\u001bCZ의 진출을 막으라고 명했고……",
+      "proposed_ko_utf16le_sha256": "B83396EEDF45ABA0DA51965FE706C1B73C194DD2FD6D9C9CF51CFA26C2F4C1F2",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA三成\u001bCZ挙兵を受け\u001bCA徳川家康\u001bCZは\u001bCC会津\u001bCZ征伐を中断。\n次男・\u001bCA結城秀康\u001bCZには\u001bCC宇都宮\u001bCZに留まり、\n\u001bCB上杉勢\u001bCZの進出を食い止めるよう言いつけ…",
+        "en": "Upon learning that \u001bCAMitsunari\u001bCZ was raising an army, \u001bCAIeyasu Tokugawa\u001bCZ postponed his conquest of \u001bCCAizu\u001bCZ and told his second son, \u001bCAHideyasu Y¨ki\u001bCZ, to stop at \u001bCCUtsunomiya\u001bCZ and hold off the \u001bCBUesugi\u001bCZ advance.",
+        "sc": "受\u001bCA三成\u001bCZ举兵影响，\u001bCA德川家康\u001bCZ停止征伐\u001bCC会津\u001bCZ。\n他命次子\u001bCA结城秀康\u001bCZ留在\u001bCC宇都宫\u001bCZ，\n阻止\u001bCB上杉势\u001bCZ的进军……",
+        "tc": "因為\u001bCA三成\u001bCZ起兵的緣故，\u001bCA德川家康\u001bCZ中斷了\n\u001bCC會津\u001bCZ征伐，命次子\u001bCA結城秀康\u001bCZ留在\u001bCC宇都宮\u001bCZ，\n阻擋\u001bCB上杉軍\u001bCZ的腳步……"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미쓰나리의 거병 소식에 도쿠가와 이에야스는 아이즈 정벌을 중단했다.",
+              "raw_g1n_width_px": 1584,
+              "effective_width_px": 990,
+              "full_width_character_count": 29,
+              "half_width_character_count": 8,
+              "literal_raw_g1n_width_px": 1584,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "차남 유키 히데야스에게는 우쓰노미야에 머물러",
+              "raw_g1n_width_px": 1056,
+              "effective_width_px": 660,
+              "full_width_character_count": 20,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 1056,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "우에스기군의 진출을 막으라고 명했고……",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 16,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미쓰나리 거병. 도쿠가와 이에야스",
+              "raw_g1n_width_px": 768,
+              "effective_width_px": 480,
+              "full_width_character_count": 14,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 768,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "아이즈 정벌 중단. 유키 히데야스",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 13,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "우쓰노미야 잔류, 우에스기군 진출 저지.",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 16,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미쓰나리의 거병 소식에 도쿠가와 이에야스는",
+              "raw_g1n_width_px": 1008,
+              "effective_width_px": 630,
+              "full_width_character_count": 19,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 1008,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "아이즈 정벌을 중단했다.",
+              "raw_g1n_width_px": 552,
+              "effective_width_px": 345,
+              "full_width_character_count": 10,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 552,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "차남 유키 히데야스에게는 우쓰노미야에 머물러",
+              "raw_g1n_width_px": 1056,
+              "effective_width_px": 660,
+              "full_width_character_count": 20,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 1056,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "우에스기군의 진출을 막으라고 명했고……",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 16,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10314,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "도요토미의 은혜를 입고 동군에 가담한 다이묘의 처벌과 도쿠가와 가문 대항 결정을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "그들은 \u001bCB도요토미\u001bCZ 은고 다이묘 중\n\u001bCB동군\u001bCZ 가담자를 벌하고, 힘을 합쳐\n\u001bCB도쿠가와 가문\u001bCZ에 맞서기로 했다.",
+      "current_ko_utf16le_sha256": "AC2114157DA3260B398C40F2456151109C7504E180B22881367D1C42F5BF4DF4",
+      "legacy_full_ko": "그들은 먼저 \u001bCB도요토미\u001bCZ의 은혜를 입고도 \u001bCB동군\u001bCZ에 가담한 다이묘들을 처벌하고\n힘을 합쳐 \u001bCB도쿠가와 가문\u001bCZ에 맞서기로\n결정했다.",
+      "legacy_full_ko_utf16le_sha256": "AA3D750983E76693FDE2DEE27EBB58F0DAE0DA16F947FF93E44D9CF718D0D878",
+      "proposed_ko": "그들은 먼저 \u001bCB도요토미\u001bCZ의 은혜를 입고도\n\u001bCB동군\u001bCZ에 가담한 다이묘들을 처벌하고\n힘을 합쳐 \u001bCB도쿠가와 가문\u001bCZ에 맞서기로\n결정했다.",
+      "proposed_ko_utf16le_sha256": "66ED832097A6EFEAF84A27AE6CB5E6CE0C9E7354345DF9CFBC30212356F8AB47",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCB東軍\u001bCZに属した\u001bCB豊臣\u001bCZ恩顧大名の処罰、\nそして、協力して\u001bCB徳川家\u001bCZに対抗することが\n取り決められた。",
+        "en": "The former \u001bCBToyotomi\u001bCZ affiliates who defected to the \u001bCBEastern Army\u001bCZ were punished. The \u001bCBWestern Army\u001bCZ then consolidated their power for the fight against the \u001bCBTokugawa Clan\u001bCZ.",
+        "sc": "他们首先决定处罚\n受\u001bCB丰臣\u001bCZ恩顾却隶属于\u001bCB东军\u001bCZ的大名，\n并决定携手对抗\u001bCB德川家\u001bCZ。",
+        "tc": "其眾人合意決定了，\n對隸屬\u001bCB東軍\u001bCZ\u001bCB豐臣\u001bCZ的恩顧大名之處分，\n與協力對抗\u001bCB德川家\u001bCZ之行動。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그들은 먼저 도요토미의 은혜를 입고도 동군에 가담한 다이묘들을 처벌하고",
+              "raw_g1n_width_px": 1680,
+              "effective_width_px": 1050,
+              "full_width_character_count": 31,
+              "half_width_character_count": 8,
+              "literal_raw_g1n_width_px": 1680,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "힘을 합쳐 도쿠가와 가문에 맞서기로",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "결정했다.",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 4,
+              "half_width_character_count": 1,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그들은 도요토미 은고 다이묘 중",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "동군 가담자를 벌하고, 힘을 합쳐",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 13,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "도쿠가와 가문에 맞서기로 했다.",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그들은 먼저 도요토미의 은혜를 입고도",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "동군에 가담한 다이묘들을 처벌하고",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "힘을 합쳐 도쿠가와 가문에 맞서기로",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "결정했다.",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 4,
+              "half_width_character_count": 1,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10334,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "이에야스에게 가담한 도요토미 은고 다이묘의 처벌 및 동군 장수의 당주 교체·영지 삭감을 복원했다."
+      ],
+      "legacy_surface_change": "직접 JP의 인물·가문 색상 태그 순서를 유지하면서, 도요토미 은고 다이묘가 이에야스에 가담했다는 관계를 완전한 한국어로 다시 배열했다.",
+      "current_ko": "\u001bCA미쓰나리\u001bCZ는 \u001bCA이에야스\u001bCZ 편을 든\n\u001bCB도요토미\u001bCZ 은고 다이묘를 벌하고,\n\u001bCB동군\u001bCZ 장수들의 당주를 교체·감봉했다.",
+      "current_ko_utf16le_sha256": "EECB64CA531C2932C9B717934F149AB1657A4FAC079DD128DA7426B8C645AD6A",
+      "legacy_full_ko": "\u001bCA미쓰나리\u001bCZ는 \u001bCA도요토미\u001bCZ의 은혜를 입고도 \u001bCB이에야스\u001bCZ에게 가담한 다이묘들을 처벌했다.\n\u001bCB동군\u001bCZ 장수들의 당주를 교체하고 영지를 줄였다.",
+      "legacy_full_ko_utf16le_sha256": "FB0F173B423ABAD78FC2D6D04E08B0D10847AD016347F5002FFEBD64FAAC81D1",
+      "proposed_ko": "\u001bCA미쓰나리\u001bCZ는 \u001bCA이에야스\u001bCZ에게 가담한\n\u001bCB도요토미\u001bCZ의 은혜를 입은 다이묘들을\n처벌했다. \u001bCB동군\u001bCZ 장수들의 당주를\n교체하고 영지를 줄였다.",
+      "proposed_ko_utf16le_sha256": "A16280315ADC6916319D6A42E25D4E1C3271544F3B45DAC9264263BC8CCE117C",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": false,
+      "source_evidence": {
+        "jp": "\u001bCA三成\u001bCZは\u001bCA家康\u001bCZに与した\u001bCB豊臣\u001bCZ恩顧大名を処罰。\n\u001bCB東軍\u001bCZ諸将の当主交替と減封を行った。",
+        "en": "\u001bCAMitsunari\u001bCZ proceeded to punish the daimyª who had betrayed the \u001bCBToyotomi\u001bCZ by allying with \u001bCAIeyasu\u001bCZ. He reorganized the leadership of the clans affiliated with the \u001bCBEastern Army\u001bCZ and reduced the sizes of their domains.",
+        "sc": "\u001bCA三成\u001bCZ则处罚了受\u001bCB丰臣\u001bCZ恩顾但支持\u001bCA家康\u001bCZ的大名。\n\u001bCB东军\u001bCZ主将的当家被替换，领土也被削减。",
+        "tc": "\u001bCA三成\u001bCZ處罰了受\u001bCB豐臣\u001bCZ恩顧但支持\u001bCA家康\u001bCZ的大名。\n並對\u001bCB東軍\u001bCZ諸將進行當主交替和減封。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 2,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미쓰나리는 도요토미의 은혜를 입고도 이에야스에게 가담한 다이묘들을 처벌했다.",
+              "raw_g1n_width_px": 1824,
+              "effective_width_px": 1140,
+              "full_width_character_count": 34,
+              "half_width_character_count": 8,
+              "literal_raw_g1n_width_px": 1824,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "동군 장수들의 당주를 교체하고 영지를 줄였다.",
+              "raw_g1n_width_px": 1056,
+              "effective_width_px": 660,
+              "full_width_character_count": 19,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1056,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미쓰나리는 이에야스 편을 든",
+              "raw_g1n_width_px": 648,
+              "effective_width_px": 405,
+              "full_width_character_count": 12,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 648,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "도요토미 은고 다이묘를 벌하고,",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "동군 장수들의 당주를 교체·감봉했다.",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "미쓰나리는 이에야스에게 가담한",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 14,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "도요토미의 은혜를 입은 다이묘들을",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "처벌했다. 동군 장수들의 당주를",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "교체하고 영지를 줄였다.",
+              "raw_g1n_width_px": 552,
+              "effective_width_px": 345,
+              "full_width_character_count": 10,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 552,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10343,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "모가미 소수 병력의 방어, 하세도성까지 다가온 우에스기군, 세키가하라 패전보 뒤 항복 결심을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "소수 \u001bCC모가미\u001bCZ는 본거지 \u001bCC야마가타\u001bCZ와\n\u001bCB하세도성\u001bCZ까지 온 \u001bCB우에스기군\u001bCZ을 버텼지만,\n\u001bCC세키가하라\u001bCZ 패전 소식에 항복했다.",
+      "current_ko_utf16le_sha256": "5203D06836DE9A146994D25E401691A8340D275E0315E611B626E0489272D81E",
+      "legacy_full_ko": "\u001bCC모가미\u001bCZ의 소수 병력은\n본거지 \u001bCC야마가타\u001bCZ와 \u001bCB하세도성\u001bCZ까지 다가온 \u001bCB우에스기군\u001bCZ을 잘 버텨 냈지만\n\u001bCC세키가하라\u001bCZ의 패전 소식을 듣고 항복을 결심했다.",
+      "legacy_full_ko_utf16le_sha256": "B512FE7D43AFA94E5E99EE9BD1B6B0D0D1A2125FCA6E9FDC2BB8AC203597E3D2",
+      "proposed_ko": "\u001bCC모가미\u001bCZ의 소수 병력은\n본거지 \u001bCC야마가타\u001bCZ와 \u001bCB하세도성\u001bCZ까지 다가온 \u001bCB우에스기군\u001bCZ을\n잘 버텨 냈지만\n\u001bCC세키가하라\u001bCZ의 패전 소식을 듣고 항복을 결심했다.",
+      "proposed_ko_utf16le_sha256": "D8918F784605389C79DFD45674164746A2CD5DF05316171229C0A7B257A19A34",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "本拠の\u001bCC山形\u001bCZ・\u001bCC長谷堂城\u001bCZまで迫った\n\u001bCB上杉勢\u001bCZに対し小勢の\u001bCB最上\u001bCZはよく堪えたが\n\u001bCC関ヶ原\u001bCZの敗報を受け、降伏を決意。",
+        "en": "Despite having endured impressively against the invading \u001bCBUesugi Clan\u001bCZ, the \u001bCBMogami\u001bCZ, in their main base of \u001bCCHasedª Castle\u001bCZ in \u001bCCYamagata\u001bCZ, surrendered upon learning of the outcome at \u001bCCSekigahara\u001bCZ.",
+        "sc": "\u001bCB最上\u001bCZ的小部队很好地抵御了\n直逼根据地\u001bCC山形\u001bCZ\u001bCC长谷堂城\u001bCZ的\u001bCB上杉势\u001bCZ，\n但收到\u001bCC关原\u001bCZ战败的消息后，决定投降。",
+        "tc": "雖然\u001bCB最上\u001bCZ的小勢力奮勇對抗\n逼近至根據地\u001bCC山形\u001bCZ和\u001bCC長谷堂城\u001bCZ的\u001bCB上杉勢力\u001bCZ，\n但在接到\u001bCC關原\u001bCZ戰敗的消息後，依然決意降伏。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "모가미의 소수 병력은",
+              "raw_g1n_width_px": 480,
+              "effective_width_px": 300,
+              "full_width_character_count": 9,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 480,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "본거지 야마가타와 하세도성까지 다가온 우에스기군을 잘 버텨 냈지만",
+              "raw_g1n_width_px": 1560,
+              "effective_width_px": 975,
+              "full_width_character_count": 29,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1560,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 3,
+              "display_string": "세키가하라의 패전 소식을 듣고 항복을 결심했다.",
+              "raw_g1n_width_px": 1104,
+              "effective_width_px": 690,
+              "full_width_character_count": 20,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1104,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "소수 모가미는 본거지 야마가타와",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 14,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "하세도성까지 온 우에스기군을 버텼지만,",
+              "raw_g1n_width_px": 912,
+              "effective_width_px": 570,
+              "full_width_character_count": 17,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 912,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "세키가하라 패전 소식에 항복했다.",
+              "raw_g1n_width_px": 768,
+              "effective_width_px": 480,
+              "full_width_character_count": 14,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 768,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "모가미의 소수 병력은",
+              "raw_g1n_width_px": 480,
+              "effective_width_px": 300,
+              "full_width_character_count": 9,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 480,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "본거지 야마가타와 하세도성까지 다가온 우에스기군을",
+              "raw_g1n_width_px": 1200,
+              "effective_width_px": 750,
+              "full_width_character_count": 23,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 1200,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "잘 버텨 냈지만",
+              "raw_g1n_width_px": 336,
+              "effective_width_px": 210,
+              "full_width_character_count": 6,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 336,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "세키가하라의 패전 소식을 듣고 항복을 결심했다.",
+              "raw_g1n_width_px": 1104,
+              "effective_width_px": 690,
+              "full_width_character_count": 20,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1104,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10463,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "10314와 같은 반복 사건으로, 처벌과 도쿠가와 가문 대항 결정을 완전한 문장으로 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "그들은 \u001bCB도요토미\u001bCZ 은고 다이묘 중\n\u001bCB동군\u001bCZ 가담자를 벌하고, 힘을 합쳐\n\u001bCB도쿠가와 가문\u001bCZ에 맞서기로 했다.",
+      "current_ko_utf16le_sha256": "AC2114157DA3260B398C40F2456151109C7504E180B22881367D1C42F5BF4DF4",
+      "legacy_full_ko": "그들은 먼저 \u001bCB도요토미\u001bCZ의 은혜를 입고도 \u001bCB동군\u001bCZ에 가담한 다이묘들을 처벌하고\n힘을 합쳐 \u001bCB도쿠가와 가문\u001bCZ에 맞서기로\n결정했다.",
+      "legacy_full_ko_utf16le_sha256": "AA3D750983E76693FDE2DEE27EBB58F0DAE0DA16F947FF93E44D9CF718D0D878",
+      "proposed_ko": "그들은 먼저 \u001bCB도요토미\u001bCZ의 은혜를 입고도\n\u001bCB동군\u001bCZ에 가담한 다이묘들을 처벌하고\n힘을 합쳐 \u001bCB도쿠가와 가문\u001bCZ에 맞서기로\n결정했다.",
+      "proposed_ko_utf16le_sha256": "66ED832097A6EFEAF84A27AE6CB5E6CE0C9E7354345DF9CFBC30212356F8AB47",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCB東軍\u001bCZに属した\u001bCB豊臣\u001bCZ恩顧大名の処罰、\nそして、協力して\u001bCB徳川家\u001bCZに対抗することが\n取り決められた。",
+        "en": "The former \u001bCBToyotomi\u001bCZ affiliates who defected to the \u001bCBEastern Army\u001bCZ were punished. The \u001bCBWestern Army\u001bCZ then consolidated their power for the fight against the \u001bCBTokugawa Clan\u001bCZ.",
+        "sc": "他们首先决定处罚\n受\u001bCB丰臣\u001bCZ恩顾却隶属于\u001bCB东军\u001bCZ的大名，\n并决定携手对抗\u001bCB德川家\u001bCZ。",
+        "tc": "其眾人合意決定了，\n對隸屬\u001bCB東軍\u001bCZ\u001bCB豐臣\u001bCZ的恩顧大名之處分，\n與協力對抗\u001bCB德川家\u001bCZ之行動。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그들은 먼저 도요토미의 은혜를 입고도 동군에 가담한 다이묘들을 처벌하고",
+              "raw_g1n_width_px": 1680,
+              "effective_width_px": 1050,
+              "full_width_character_count": 31,
+              "half_width_character_count": 8,
+              "literal_raw_g1n_width_px": 1680,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "힘을 합쳐 도쿠가와 가문에 맞서기로",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "결정했다.",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 4,
+              "half_width_character_count": 1,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그들은 도요토미 은고 다이묘 중",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "동군 가담자를 벌하고, 힘을 합쳐",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 13,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "도쿠가와 가문에 맞서기로 했다.",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "그들은 먼저 도요토미의 은혜를 입고도",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "동군에 가담한 다이묘들을 처벌하고",
+              "raw_g1n_width_px": 792,
+              "effective_width_px": 495,
+              "full_width_character_count": 15,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 792,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "힘을 합쳐 도쿠가와 가문에 맞서기로",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "결정했다.",
+              "raw_g1n_width_px": 216,
+              "effective_width_px": 135,
+              "full_width_character_count": 4,
+              "half_width_character_count": 1,
+              "literal_raw_g1n_width_px": 216,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10595,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "후다이의 대표인 도쿠가와 사천왕과 네 명의 구성원을 모두 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA도쿠가와 이에야스\u001bCZ의 \u001bCA사카이 다다쓰구\u001bCZ,\n\u001bCA혼다 다다카쓰\u001bCZ, \u001bCA사카키바라 야스마사\u001bCZ,\n\u001bCA이이 나오마사\u001bCZ, \u001bCB도쿠가와\u001bCZ 사천왕.",
+      "current_ko_utf16le_sha256": "0EE7D22F7DEE770744E0F53F7CF9477BAB45A9A0350F19F4E50D3F14D779D0A1",
+      "legacy_full_ko": "\u001bCA도쿠가와 이에야스\u001bCZ를 받쳐 온 후다이의 대표로\n\u001bCA사카이 다다쓰구\u001bCZ·\u001bCA혼다 다다카쓰\u001bCZ·\u001bCA사카키바라 야스마사\u001bCZ·\u001bCA이이 나오마사\u001bCZ의\n\u001bCB도쿠가와\u001bCZ 사천왕이 있다.",
+      "legacy_full_ko_utf16le_sha256": "00352B95E9B5F87D5994D2710E8AC3DAF705515547E632BD9EA25CF8AF13C1B3",
+      "proposed_ko": "\u001bCA도쿠가와 이에야스\u001bCZ를 받쳐 온 후다이의 대표로\n\u001bCA사카이 다다쓰구\u001bCZ·\u001bCA혼다 다다카쓰\u001bCZ·\n\u001bCA사카키바라 야스마사\u001bCZ·\u001bCA이이 나오마사\u001bCZ의\n\u001bCB도쿠가와\u001bCZ 사천왕이 있다.",
+      "proposed_ko_utf16le_sha256": "5C255B2309BF82238DB85FF0FE3E2DC66B0A2734BA576FF896A1213F8042FDD2",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA徳川家康\u001bCZを支えてきた譜代衆の代表格に\n\u001bCA酒井忠次\u001bCZ・\u001bCA本多忠勝\u001bCZ・\u001bCA榊原康政\u001bCZ・\u001bCA井伊直政\u001bCZの\n\u001bCB徳川\u001bCZ四天王がいる。",
+        "en": "Other familial supporters of \u001bCAIeyasu Tokugawa\u001bCZ included representatives from the \u001bCBTokugawa\u001bCZ Big Four: \u001bCATadatsugu Sakai\u001bCZ, \u001bCATadakatsu Honda\u001bCZ, \u001bCAYasumasa Sakakibara\u001bCZ, and \u001bCANaomasa Ii\u001bCZ.",
+        "sc": "支持\u001bCA德川家康\u001bCZ谱代众的代表有\n\u001bCA酒井忠次\u001bCZ、\u001bCA本多忠胜\u001bCZ、\u001bCA榊原康政\u001bCZ、\u001bCA井伊直政\u001bCZ，\n他们被称为\u001bCB德川\u001bCZ四天王。",
+        "tc": "一直以來，譜代眾都是\u001bCA德川家康\u001bCZ的股肱之臣。\n其中又以被稱為\u001bCB德川\u001bCZ四天王的\u001bCA酒井忠次\u001bCZ、\n\u001bCA本多忠勝\u001bCZ、\u001bCA▉原康政\u001bCZ以及\u001bCA井伊直政\u001bCZ為代表。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "도쿠가와 이에야스를 받쳐 온 후다이의 대표로",
+              "raw_g1n_width_px": 1032,
+              "effective_width_px": 645,
+              "full_width_character_count": 19,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1032,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "사카이 다다쓰구·혼다 다다카쓰·사카키바라 야스마사·이이 나오마사의",
+              "raw_g1n_width_px": 1560,
+              "effective_width_px": 975,
+              "full_width_character_count": 29,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1560,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 3,
+              "display_string": "도쿠가와 사천왕이 있다.",
+              "raw_g1n_width_px": 552,
+              "effective_width_px": 345,
+              "full_width_character_count": 10,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 552,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "도쿠가와 이에야스의 사카이 다다쓰구,",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 16,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "혼다 다다카쓰, 사카키바라 야스마사,",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 15,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "이이 나오마사, 도쿠가와 사천왕.",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 13,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "도쿠가와 이에야스를 받쳐 온 후다이의 대표로",
+              "raw_g1n_width_px": 1032,
+              "effective_width_px": 645,
+              "full_width_character_count": 19,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1032,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "사카이 다다쓰구·혼다 다다카쓰·",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "사카키바라 야스마사·이이 나오마사의",
+              "raw_g1n_width_px": 840,
+              "effective_width_px": 525,
+              "full_width_character_count": 16,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 840,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "도쿠가와 사천왕이 있다.",
+              "raw_g1n_width_px": 552,
+              "effective_width_px": 345,
+              "full_width_character_count": 10,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 552,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10625,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "세키가하라 승리, 후시미성에서의 정이대장군 임명, 무가 정점 도달을 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCC도쿠가와 이에야스\u001bCZ는 \u001bCA세키가하라\u001bCZ에서\n\u001bCA이시다 미쓰나리\u001bCZ 등을 꺾고\n\u001bCC후시미성\u001bCZ에서 쇼군이 되어 정점에 섰다.",
+      "current_ko_utf16le_sha256": "8A896749E427F9D09B2B04C43C97366CAA31C7B7A8F46611CD1D7F01ADAFDC10",
+      "legacy_full_ko": "\u001bCC도쿠가와 이에야스\u001bCZ는 \u001bCA세키가하라\u001bCZ에서 \u001bCA이시다 미쓰나리\u001bCZ 등을 물리치고\n\u001bCC후시미성\u001bCZ에서 정이대장군으로 임명되어\n명실공히 무가의 정점에 올랐다.",
+      "legacy_full_ko_utf16le_sha256": "A1EBB0EC1E548ED0D7568E3D3AF1619A0552F30E2663FF9FFD8E929B3F41828F",
+      "proposed_ko": "\u001bCC도쿠가와 이에야스\u001bCZ는 \u001bCA세키가하라\u001bCZ에서\n\u001bCA이시다 미쓰나리\u001bCZ 등을 물리치고\n\u001bCC후시미성\u001bCZ에서 정이대장군으로 임명되어\n명실공히 무가의 정점에 올랐다.",
+      "proposed_ko_utf16le_sha256": "10E94C35208AF0FC1172D9A379850773E635CC22B023AF51299572BF1992F1FE",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCC関ヶ原\u001bCZで\u001bCA石田三成\u001bCZらを下した\u001bCA徳川家康\u001bCZは\n\u001bCC伏見城\u001bCZにて征夷大将軍に任じられ、\n名実ともに武家の頂に登りつめる。",
+        "en": "After defeating \u001bCAMitsunari Ishida\u001bCZ at \u001bCCSekigahara\u001bCZ, \u001bCAIeyasu Tokugawa\u001bCZ was officially appointed shªgun at \u001bCCFushimi Castle\u001bCZ, elevating his name and house to the top of the samurai caste.",
+        "sc": "\u001bCA德川家康\u001bCZ在\u001bCC关原\u001bCZ将\u001bCA石田三成\u001bCZ等人击败，\n后在\u001bCC伏见城\u001bCZ被任命为征夷大将军，\n登上了名副其实的武家之巅。",
+        "tc": "\u001bCA德川家康\u001bCZ在\u001bCC關原\u001bCZ將\u001bCA石田三成\u001bCZ等人擊敗，\n後在\u001bCC伏見城\u001bCZ被任命為征夷大將軍，\n登上了名副其實的武家之巔。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCC",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "도쿠가와 이에야스는 세키가하라에서 이시다 미쓰나리 등을 물리치고",
+              "raw_g1n_width_px": 1536,
+              "effective_width_px": 960,
+              "full_width_character_count": 29,
+              "half_width_character_count": 6,
+              "literal_raw_g1n_width_px": 1536,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 2,
+              "display_string": "후시미성에서 정이대장군으로 임명되어",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 17,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "명실공히 무가의 정점에 올랐다.",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "도쿠가와 이에야스는 세키가하라에서",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 16,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "이시다 미쓰나리 등을 꺾고",
+              "raw_g1n_width_px": 600,
+              "effective_width_px": 375,
+              "full_width_character_count": 11,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 600,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "후시미성에서 쇼군이 되어 정점에 섰다.",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 16,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "도쿠가와 이에야스는 세키가하라에서",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 16,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "이시다 미쓰나리 등을 물리치고",
+              "raw_g1n_width_px": 696,
+              "effective_width_px": 435,
+              "full_width_character_count": 13,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 696,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "후시미성에서 정이대장군으로 임명되어",
+              "raw_g1n_width_px": 864,
+              "effective_width_px": 540,
+              "full_width_character_count": 17,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 864,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "명실공히 무가의 정점에 올랐다.",
+              "raw_g1n_width_px": 720,
+              "effective_width_px": 450,
+              "full_width_character_count": 13,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 720,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry_id": 10744,
+      "historical_operation": "manual_compact_korean_layout",
+      "historical_newline_operations": [
+        "reviewed_semantic_compaction"
+      ],
+      "review_status": "PASS — source-complete restoration and Korean semantic reflow",
+      "semantic_restoration": [
+        "요시모토의 조략, 세 가문의 동시 봉기, 가와고에성 포위를 복원했다."
+      ],
+      "legacy_surface_change": null,
+      "current_ko": "\u001bCA요시모토\u001bCZ 조략에 \u001bCB야마노우치 우에스기가\u001bCZ\n\u001bCB오기가야쓰 우에스기가\u001bCZ 봉기,\n\u001bCB고가 아시카가가\u001bCZ가 \u001bCC가와고에성\u001bCZ 포위.",
+      "current_ko_utf16le_sha256": "E5BEB2AF3CC9452D2F4FC29E407EA2E3B771E40D35FAF652C50B11C1619FA85D",
+      "legacy_full_ko": "\u001bCA요시모토\u001bCZ의 조략에 의해\n\u001bCB야마노우치 우에스기가\u001bCZ, \u001bCB오기가야쓰 우에스기가\u001bCZ, \u001bCB고가 아시카가가\u001bCZ가\n일제히 봉기해 \u001bCC가와고에성\u001bCZ을 포위한 것이다.",
+      "legacy_full_ko_utf16le_sha256": "2DA9DA8A033568513DAC51EE6CF9D608747AE40F459A1A8856F6472F8568DCF0",
+      "proposed_ko": "\u001bCA요시모토\u001bCZ의 조략에 의해\n\u001bCB야마노우치 우에스기가\u001bCZ, \u001bCB오기가야쓰 우에스기가\u001bCZ,\n\u001bCB고가 아시카가가\u001bCZ가 일제히 봉기해\n\u001bCC가와고에성\u001bCZ을 포위한 것이다.",
+      "proposed_ko_utf16le_sha256": "B178A85B0E791E37D9E14EFC368E055ED02EA9F05E491CF4EFE4815593470EE5",
+      "visible_content_preserved_from_legacy_after_linebreak_normalization": true,
+      "source_evidence": {
+        "jp": "\u001bCA義元\u001bCZの調略により、\n\u001bCB山内上杉家\u001bCZ、\u001bCB扇谷上杉家\u001bCZ、\u001bCB古河足利家\u001bCZが\n一斉に蜂起し、\u001bCC河越城\u001bCZを包囲したのである。",
+        "en": "In line with \u001bCAYoshimoto\u001bCZÖs plan, the \u001bCBYamanouchi Uesugi\u001bCZ, \u001bCB¥gigayatsu Uesugi\u001bCZ, and \u001bCBKoga Ashikaga\u001bCZ Clans rose up simultaneously to besiege \u001bCCKawagoe Castle\u001bCZ.",
+        "sc": "由于\u001bCA义元\u001bCZ的谋略，\n\u001bCB山内上杉家\u001bCZ、\u001bCB扇谷上杉家\u001bCZ以及\u001bCB古河足利家\u001bCZ\n同时发起叛乱，围攻\u001bCC河越城\u001bCZ。",
+        "tc": "在\u001bCA義元\u001bCZ的謀略之下，\n\u001bCB山內上杉家\u001bCZ、\u001bCB扇谷上杉家\u001bCZ以及\u001bCB古河足利家\u001bCZ\n同時起義，包圍了\u001bCC河越城\u001bCZ。"
+      },
+      "control_signature": {
+        "current_legacy_proposed_direct_jp_match": true,
+        "esc_tokens": [
+          "\u001bCA",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCB",
+          "\u001bCZ",
+          "\u001bCC",
+          "\u001bCZ"
+        ],
+        "runtime_tokens": [],
+        "printf_tokens": [],
+        "unknown_percent_count": 0,
+        "nul_count": 0,
+        "other_controls": [],
+        "line_break_inside_tag": false
+      },
+      "runtime_token_reservation": {
+        "actual_runtime_tokens": [],
+        "raw_g1n_px": 0,
+        "effective_width_px": 0,
+        "runtime_proven": false,
+        "reason": "No runtime name token occurs in this row."
+      },
+      "layouts": {
+        "legacy": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": false,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "요시모토의 조략에 의해",
+              "raw_g1n_width_px": 528,
+              "effective_width_px": 330,
+              "full_width_character_count": 10,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 528,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "야마노우치 우에스기가, 오기가야쓰 우에스기가, 고가 아시카가가가",
+              "raw_g1n_width_px": 1512,
+              "effective_width_px": 945,
+              "full_width_character_count": 28,
+              "half_width_character_count": 7,
+              "literal_raw_g1n_width_px": 1512,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": true
+            },
+            {
+              "line_number": 3,
+              "display_string": "일제히 봉기해 가와고에성을 포위한 것이다.",
+              "raw_g1n_width_px": 984,
+              "effective_width_px": 615,
+              "full_width_character_count": 18,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 984,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "current": {
+          "line_count": 3,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "요시모토 조략에 야마노우치 우에스기가",
+              "raw_g1n_width_px": 888,
+              "effective_width_px": 555,
+              "full_width_character_count": 17,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 888,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "오기가야쓰 우에스기가 봉기,",
+              "raw_g1n_width_px": 648,
+              "effective_width_px": 405,
+              "full_width_character_count": 12,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 648,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "고가 아시카가가가 가와고에성 포위.",
+              "raw_g1n_width_px": 816,
+              "effective_width_px": 510,
+              "full_width_character_count": 15,
+              "half_width_character_count": 4,
+              "literal_raw_g1n_width_px": 816,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        },
+        "proposed": {
+          "line_count": 4,
+          "all_lines_pass_static_patch_007": true,
+          "lines": [
+            {
+              "line_number": 1,
+              "display_string": "요시모토의 조략에 의해",
+              "raw_g1n_width_px": 528,
+              "effective_width_px": 330,
+              "full_width_character_count": 10,
+              "half_width_character_count": 2,
+              "literal_raw_g1n_width_px": 528,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 2,
+              "display_string": "야마노우치 우에스기가, 오기가야쓰 우에스기가,",
+              "raw_g1n_width_px": 1080,
+              "effective_width_px": 675,
+              "full_width_character_count": 20,
+              "half_width_character_count": 5,
+              "literal_raw_g1n_width_px": 1080,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 3,
+              "display_string": "고가 아시카가가가 일제히 봉기해",
+              "raw_g1n_width_px": 744,
+              "effective_width_px": 465,
+              "full_width_character_count": 14,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 744,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            },
+            {
+              "line_number": 4,
+              "display_string": "가와고에성을 포위한 것이다.",
+              "raw_g1n_width_px": 648,
+              "effective_width_px": 405,
+              "full_width_character_count": 12,
+              "half_width_character_count": 3,
+              "literal_raw_g1n_width_px": 648,
+              "reserved_raw_g1n_width_px": 0,
+              "runtime_reservations": [],
+              "over_effective_912px": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "safety": {
+    "candidate_bin_written": false,
+    "git_operation_performed": false,
+    "steam_game_resource_written": false,
+    "release_published": false,
+    "network_operation_performed": false
+  }
+}
