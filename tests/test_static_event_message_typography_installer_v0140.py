@@ -17,7 +17,7 @@ PATCH_007 = PATCH_ROOT / "007-EventMessageTypography.psd1"
 
 
 class StaticEventMessageTypographyInstallerV0140Tests(unittest.TestCase):
-    def test_registry_owns_seven_ordered_patch_definitions(self) -> None:
+    def test_registry_owns_ten_ordered_patch_definitions(self) -> None:
         expected = (
             "001-OfficerEditorNameValidation.psd1",
             "002-FictionalPrincessNameValidation.psd1",
@@ -26,6 +26,9 @@ class StaticEventMessageTypographyInstallerV0140Tests(unittest.TestCase):
             "005-DualResolutionAndHorizontalLandmarks.psd1",
             "006-HorizontalMapStatusIcons.psd1",
             "007-EventMessageTypography.psd1",
+            "008-HorizontalMapAuxiliaryIndicators.psd1",
+            "009-EventMessageParentWidth.psd1",
+            "010-EventMessageAutoWrapLimit.psd1",
         )
         self.assertEqual(tuple(path.name for path in sorted(PATCH_ROOT.glob("*.psd1"))), expected)
         registry = REGISTRY.read_text(encoding="ascii")
@@ -33,7 +36,7 @@ class StaticEventMessageTypographyInstallerV0140Tests(unittest.TestCase):
         self.assertIn("Release = 'v0.14.0'", registry)
         self.assertIn(
             "AllAppliedSha256 = "
-            "'F424964405CFCD1AC454B3801DA4795A183A8271DD16EA8A6A7B97A2547232BF'",
+            "'C1E9123539506055C1ACB96A15A446C43952AED607DEA2C9646F690813FA53D5'",
             registry,
         )
         for name in expected:
