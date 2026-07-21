@@ -1,0 +1,44 @@
+{
+  "candidate_binary_created": false,
+  "classification": {
+    "reviewed_preserve": 81,
+    "runtime_or_ui_hold": 89,
+    "static_high_confidence_correction": 6
+  },
+  "correction_ids": [
+    3331,
+    3413,
+    3446,
+    3475,
+    3477,
+    3479
+  ],
+  "git_or_release_actions_performed": false,
+  "internal_event_key_hold_count": 18,
+  "max_effective_width_px": 720,
+  "max_manual_line_count": 4,
+  "max_raw_g1n_width_px": 1152,
+  "network_operation_performed": false,
+  "review_output": "workstreams/pc_event_ending_regions_audit_v1/public/pc_event_ending_regions_audit.v1.json",
+  "review_output_sha256": "4425E976A1FDBD524ABD0C9A2B3C8613DBA43AA26F65867FF54A38B3A6CB6A68",
+  "runtime_token_hold_count": 71,
+  "schema": "nobu16.kr.pc-event-ending-regions-audit-validation.v1",
+  "status": "PASS",
+  "steam_files_written": false,
+  "target_row_count": 176,
+  "w98_changed_ids": [
+    3288,
+    3293,
+    3295,
+    3298,
+    3299,
+    3300,
+    3302,
+    3303,
+    3304,
+    3305,
+    3306,
+    3307
+  ],
+  "w98_target_rows_identical_to_pre_w98": true
+}
