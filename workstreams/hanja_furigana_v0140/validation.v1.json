@@ -1,0 +1,30 @@
+{
+  "pair_counts": {
+    "base": 4556,
+    "combined_operation_count": 9125,
+    "pk": 4569
+  },
+  "regression_examples_verified": true,
+  "resources": [
+    {
+      "all_replacements_hangul_only": true,
+      "all_replacements_no_whitespace": true,
+      "non_target_fields_unchanged": true,
+      "operation_count": 4569,
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "target_parse_verified": true,
+      "wrapper_roundtrip_verified": true
+    },
+    {
+      "all_replacements_hangul_only": true,
+      "all_replacements_no_whitespace": true,
+      "non_target_fields_unchanged": true,
+      "operation_count": 4556,
+      "resource": "MSG/JP/strdata.bin",
+      "target_parse_verified": true,
+      "wrapper_roundtrip_verified": true
+    }
+  ],
+  "schema": "nobu16.kr.hanja-furigana-validation.v1",
+  "source_free": true
+}
