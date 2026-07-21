@@ -1,0 +1,69 @@
+{
+  "candidate_count": 5,
+  "candidate_ids_sha256": "BC9431128CC89AE0F6403F4B61C5A8D1782B15D81341744B833F3B34737DA72A",
+  "resources": {
+    "MSG_PK/JP/msgdata.bin": {
+      "operations": [
+        {
+          "adds_ascii_space": true,
+          "current_display_utf16le_sha256": "B7A88174BEFAA6A2521E8F65E101D995DDADCE30689AAACEB37831C981DD52F8",
+          "display_id": 939,
+          "event_full_name_evidence_count": 3,
+          "replacement_utf16le_sha256": "58022908C0D1C33C733FBBF159039957987BDA98FB301BFE2A8591732747FF2A",
+          "source_display_utf16le_sha256": "2FFB890CE553D3E45043629CCB5955C86DEA0D230773B6B07A0390D92237DD3A"
+        },
+        {
+          "adds_ascii_space": true,
+          "current_display_utf16le_sha256": "0728D44091B1FA4D1DE12FFEA0E216E1816FC32F0EC048664D9B7071BC4AC9EE",
+          "display_id": 940,
+          "event_full_name_evidence_count": 4,
+          "replacement_utf16le_sha256": "04AF1221C20B35EDD9070512BD83A54FBD1551E8082BE4954941798704EE72BC",
+          "source_display_utf16le_sha256": "C788836D1520677EA3394D520F060C7A3E1F19643E2F2B4F4D42E7ADFA213217"
+        },
+        {
+          "adds_ascii_space": true,
+          "current_display_utf16le_sha256": "64D8614F9802DD53100A044808A0B6FA7BAE384885556881BA041C1A85031C8F",
+          "display_id": 941,
+          "event_full_name_evidence_count": 9,
+          "replacement_utf16le_sha256": "4EB81797D5AF74059328EE506D773D92C3AFEF660DC2EC3CDBF53AD68B5FF73E",
+          "source_display_utf16le_sha256": "16C8566F91F6B164D082808BC63B796308A6FD2ACA4FE528BDC3D3A245BEB986"
+        },
+        {
+          "adds_ascii_space": true,
+          "current_display_utf16le_sha256": "04D882C6BE31052225A07BE137ED7B65001CFB0DE468E8DCE73A57FEC9F982FE",
+          "display_id": 942,
+          "event_full_name_evidence_count": 5,
+          "replacement_utf16le_sha256": "C09A0F72D4753743C36D0A8785FF64D5BB51A90863DBC444399F659BFC421DA6",
+          "source_display_utf16le_sha256": "20D8CE6954D2DC13365F97D80B955323123ADEED3F4A5F4F81DA1E36E3E44871"
+        },
+        {
+          "adds_ascii_space": true,
+          "current_display_utf16le_sha256": "D5B9EF9EA77C489695BF01781EAAE67D168B3FB7656C113DA55C8ACE62469BD9",
+          "display_id": 943,
+          "event_full_name_evidence_count": 8,
+          "replacement_utf16le_sha256": "0D9ACCC866F075DEFECAE47E050A7D8A2576C9729D18E037DA7E316133DB0B0B",
+          "source_display_utf16le_sha256": "6FB7437E542BA522EFDC7C7B4A7C3F4119F927CD41C9EDCA4A892B9A6447D136"
+        }
+      ],
+      "source": {
+        "sha256": "F9ACF8E013EBF942C7E39D73A927D591591BF5448AAC66519CEB3FE713A03EF6",
+        "size": 481940
+      },
+      "target": {
+        "sha256": "6E2B883004545B2DD7D28360AFEED7D3BFDFEF2BF45E8333FD95CD0A49E95C70",
+        "size": 481948
+      }
+    }
+  },
+  "schema": "nobu16.kr.officer-name-spacing.v1",
+  "scope": {
+    "base_strdata_changed": false,
+    "derivation": "pristine-PC-JP component pair plus current-Steam-PK spaced full-name evidence, restricted to the audited surname-only alias block",
+    "event_body_text_changed": false,
+    "furigana_reading_fields_changed": false,
+    "name_component_display_fields_only": true,
+    "steam_game_resource_written": false
+  },
+  "source_free": true,
+  "source_text_emitted": false
+}
