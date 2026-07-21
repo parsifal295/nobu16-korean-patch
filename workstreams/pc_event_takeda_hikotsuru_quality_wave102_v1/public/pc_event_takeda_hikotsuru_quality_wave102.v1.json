@@ -1,0 +1,2646 @@
+{
+  "candidate_only": true,
+  "coverage": {
+    "all_rows_four_or_fewer_lines": true,
+    "all_rows_sentence_shortened_or_deleted_false": true,
+    "all_rows_static_patch_007_pass": true,
+    "applied_row_count": 20,
+    "applied_row_ids": [
+      3529,
+      3530,
+      3532,
+      3533,
+      3536,
+      3539,
+      3540,
+      3541,
+      3542,
+      3546,
+      3547,
+      3548,
+      3550,
+      3551,
+      3554,
+      3555,
+      3559,
+      3561,
+      3563,
+      3564
+    ],
+    "audit_static_high_confidence_ids": [
+      3529,
+      3530,
+      3532,
+      3533,
+      3536,
+      3539,
+      3540,
+      3541,
+      3542,
+      3546,
+      3547,
+      3548,
+      3550,
+      3551,
+      3554,
+      3555,
+      3559,
+      3561,
+      3563,
+      3564
+    ],
+    "outside_w101_changed_row_ids": [],
+    "runtime_reservation_ids": [
+      3548
+    ],
+    "unresolved_runtime_hold_ids": []
+  },
+  "output_event_profile": {
+    "raw_sha256": "15CC03C20B0E12D4AF2619968CD97C451D5B6A073BB0659000D0E8C6BC645A6B",
+    "raw_size": 1044196,
+    "sha256": "D20E1CC9E1014473DCFCE7C247721FFA912955B0CB6EEA71BB00BD055977FB4E",
+    "size": 1048316
+  },
+  "policy": {
+    "audit_report_proposed_ko_used_without_reauthoring": true,
+    "direct_pc_jp_en_sc_tc_evidence_retained_from_pinned_audit": true,
+    "git_operation_performed": false,
+    "japanese_source_line_breaks_not_reused": true,
+    "network_operation_performed": false,
+    "release_published": false,
+    "sentence_shortening_or_deletion_allowed": false,
+    "steam_game_resource_written": false,
+    "switch_translation_used": false,
+    "tag_internal_line_break_allowed": false
+  },
+  "resource": "MSG_PK/JP/msgev.bin",
+  "rows": [
+    {
+      "baseline_ko": "주군.\n태어날 아이를 위해,\n가훈을 만들고 있었습니다.",
+      "baseline_ko_utf16le_sha256": "E5548032D8C08FE1BE7D3AE04C69C0CA4BD1A11C55D75A5A3AA968FEA5689420",
+      "change_type": "semantic_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "71A9BE87655AF8E9416518173D6E9B07B3021DF2D89E5CB471F0EE62F475F5ED",
+        "jp": "E2FAD955896C548EEFFA5DF9AFC8938C353A13B7F4E4EF3A789B59CDE677D920",
+        "sc": "D45822C7640232BF19CF06920D753FE146B78046C8D4924016DD7C142CB946F0",
+        "tc": "D509605BF3A28CED805057EFFF5C2B712048188C44A96901EF680F140A925580"
+      },
+      "direct_pc_sources": {
+        "en": "Oh, my lord. I was creating a list of clan precepts for the children that are to born.",
+        "jp": "これは御館様。\n生まれてくる子のため、\n家訓を作っておりました。",
+        "sc": "馆主大人。\n我正为了将要出生的孩子，\n而制定家训。",
+        "tc": "館主大人您好。\n我正在為即將出生的孩子\n制定家訓。"
+      },
+      "entry_id": 3529,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "아, 주군이시군요.",
+            "display_string_template": "아, 주군이시군요.",
+            "effective_width_px": 255,
+            "encoded_string": "아, 주군이시군요.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 7,
+            "half_width_character_count": 3,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 408,
+            "raw_g1n_width_px": 408,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "태어날 아이들을 위해",
+            "display_string_template": "태어날 아이들을 위해",
+            "effective_width_px": 300,
+            "encoded_string": "태어날 아이들을 위해",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 9,
+            "half_width_character_count": 2,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 480,
+            "raw_g1n_width_px": 480,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "가훈을 만들고 있었습니다.",
+            "display_string_template": "가훈을 만들고 있었습니다.",
+            "effective_width_px": 375,
+            "encoded_string": "가훈을 만들고 있었습니다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 11,
+            "half_width_character_count": 3,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 600,
+            "raw_g1n_width_px": 600,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 375,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 600
+      },
+      "proposed_ko": "아, 주군이시군요.\n태어날 아이들을 위해\n가훈을 만들고 있었습니다.",
+      "proposed_ko_utf16le_sha256": "069B7994E6500CB14BD5466D367AB58C909C4B82ADC7C062E3D497ADFECB44AE",
+      "review_judgement": "これは御館様의 자연스러운 발견형 호칭과 生まれてくる子의 복수 대상을 복원한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP これは御館様・生まれてくる子のため, EN children that are to born, SC/TC 将要出生的孩子·即將出生的孩子."
+    },
+    {
+      "baseline_ko": "……주군은 그만두거라. 우리는\n형제가 아니냐. 그래, 어떤 가훈을\n만들고 있느냐? 내게도 보여 주겠느냐?",
+      "baseline_ko_utf16le_sha256": "56D64AD5368E1576C5591FA572E64B354F0A315788CDDED8D75AD88892F7454D",
+      "change_type": "semantic_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "9533B64A35A847A8DA0D0C30CD158C643BB6C7D24453DCD5F2B592CAB2096DC2",
+        "jp": "F82BE4C286100222A11211876B19BF2FB6C9B29FCA6E2F6C45BB88F3E4617893",
+        "sc": "CB02873033005A82D4C2D21CF5D593E632CD63D400349C54D9B78EFEACE93E9E",
+        "tc": "AFA5505C241311DD03A713DDF8815F4218D05414C9F8812E6ECC3921C61C53EB"
+      },
+      "direct_pc_sources": {
+        "en": "Please, you must stop calling me Ælord.Æ We are brothers before anything else. Now, what kind of precepts have you created? Would you show me?",
+        "jp": "…御館様はやめよ、我らは兄弟ではないか。\nして、いかなる家訓を作っておるのだ？\n見せてはくれぬか？",
+        "sc": "……别叫我馆主大人了，我们不是兄弟吗。\n那么，你在写什么家训？\n能给我看看吗？",
+        "tc": "……你別叫我館主大人，我們不是兄弟嗎？\n對了，你制定了什麼樣的家訓？\n可以讓我看看嗎？"
+      },
+      "entry_id": 3530,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 4,
+        "lines": [
+          {
+            "display_string": "……주군이라 부르지 말거라.",
+            "display_string_template": "……주군이라 부르지 말거라.",
+            "effective_width_px": 375,
+            "encoded_string": "……주군이라 부르지 말거라.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 10,
+            "half_width_character_count": 5,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 600,
+            "raw_g1n_width_px": 600,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "우리는 형제가 아니냐.",
+            "display_string_template": "우리는 형제가 아니냐.",
+            "effective_width_px": 315,
+            "encoded_string": "우리는 형제가 아니냐.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 9,
+            "half_width_character_count": 3,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 504,
+            "raw_g1n_width_px": 504,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "그래, 어떤 가훈을 만들고 있느냐?",
+            "display_string_template": "그래, 어떤 가훈을 만들고 있느냐?",
+            "effective_width_px": 480,
+            "encoded_string": "그래, 어떤 가훈을 만들고 있느냐?",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 6,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 768,
+            "raw_g1n_width_px": 768,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "내게도 보여 주겠느냐?",
+            "display_string_template": "내게도 보여 주겠느냐?",
+            "effective_width_px": 315,
+            "encoded_string": "내게도 보여 주겠느냐?",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 9,
+            "half_width_character_count": 3,
+            "line_number": 4,
+            "literal_raw_g1n_width_px": 504,
+            "raw_g1n_width_px": 504,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 480,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 768
+      },
+      "proposed_ko": "……주군이라 부르지 말거라.\n우리는 형제가 아니냐.\n그래, 어떤 가훈을 만들고 있느냐?\n내게도 보여 주겠느냐?",
+      "proposed_ko_utf16le_sha256": "C783BB163E7966613F0539C7BFFC24394029B1BC4A015732AAC245B150F83459",
+      "review_judgement": "御館様はやめよ의 대상은 ‘주군’이라는 호칭 자체이므로, 현재의 생략된 목적어를 복원한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 御館様はやめよ、我らは兄弟ではないか, EN stop calling me lord; we are brothers."
+    },
+    {
+      "baseline_ko": "음……\n“제1조 영원히\n주군을 배반해서는 안 된다”",
+      "baseline_ko_utf16le_sha256": "2AA333F7F6667D06F493B8F0284C2EC6577AB065C50AD74D43165C74EA3ABA68",
+      "change_type": "typographic_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "FBA63C4B8418CC38D6F49B8ED84C6D92A35EE8E0E5E02CCB4BFFDA7AC33475AE",
+        "jp": "8611D6F959402927CC8C6EB2F5292FC97B159BAA272D1D8544B281307E681DAF",
+        "sc": "E57C7A6DC6BDF24309C3E988EDD2D1BA30D297D958B663A094C8D09652941E2D",
+        "tc": "24F44CCA0F24D19B5BEF2719A2E635AD2F60BE12D77D8EFEF1E675ECCFB0A47D"
+      },
+      "direct_pc_sources": {
+        "en": "Hm... ÆArticle One: The lord of the clan shall, in perpetuity, never be disobeyed.Æ",
+        "jp": "うむ…\n「其の一　未来永劫、御館様に\n　背くようなことがあってはならない」",
+        "sc": "嗯……\n“其一　未来永远\n不背叛馆主大人”",
+        "tc": "唔……\n「一　永遠不得背叛館主大人」"
+      },
+      "entry_id": 3532,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "음……",
+            "display_string_template": "음……",
+            "effective_width_px": 60,
+            "encoded_string": "음……",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 1,
+            "half_width_character_count": 2,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 96,
+            "raw_g1n_width_px": 96,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "“제1조, 영원히 주군을",
+            "display_string_template": "“제1조, 영원히 주군을",
+            "effective_width_px": 315,
+            "encoded_string": "“제1조, 영원히 주군을",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 8,
+            "half_width_character_count": 5,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 504,
+            "raw_g1n_width_px": 504,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "배반해서는 안 된다.”",
+            "display_string_template": "배반해서는 안 된다.”",
+            "effective_width_px": 300,
+            "encoded_string": "배반해서는 안 된다.”",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 8,
+            "half_width_character_count": 4,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 480,
+            "raw_g1n_width_px": 480,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 315,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 504
+      },
+      "proposed_ko": "음……\n“제1조, 영원히 주군을\n배반해서는 안 된다.”",
+      "proposed_ko_utf16le_sha256": "E9E1AFE8E507377C56ADD81BF30AD64D7010AF74CF535E9FD4FC8F07D0EB08DC",
+      "review_judgement": "조문 번호와 본문을 문장부호로 구분하고, ‘주군을 배반’이라는 서술 단위를 한 줄에 보존한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 其の一 未来永劫、御館様に背くようなことがあってはならない."
+    },
+    {
+      "baseline_ko": "“제2조 주군에게 받은 녹봉에\n 절대로 불만을 품어서는 안 된다”",
+      "baseline_ko_utf16le_sha256": "1E395B51B7651985B65000F0C7C951421C9660DA8E06BBDDAF146EEA4020D3FB",
+      "change_type": "typographic_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "077073126D67812F18EA86B9A1117D5F0FA53C9C38739D5A329B4DE323927157",
+        "jp": "F702A25C956D743EDCCE49D1E5AE050E53066FB0EA8F8974E8243CBF547713AF",
+        "sc": "01D52EE3E38B9AD6C2A51F046CD6CFB79F131243CCD9262A52A789A7A69017E4",
+        "tc": "D7DF92596F83385466020E63041A90890620BF16FC34ADF5E3438455EAF2E677"
+      },
+      "direct_pc_sources": {
+        "en": "ÆArticle Two: Any stipend granted by the lord of the clan must not be received ungratefully.Æ",
+        "jp": "「其の二　御館様からいただく扶持に\n　決して不満を持ってはならない」",
+        "sc": "“其二　对于馆主大人给予的俸禄\n　绝对不会不满”",
+        "tc": "「二　對於館主大人賜予的糧餉，\n　絕對不能有任何不滿」"
+      },
+      "entry_id": 3533,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 2,
+        "lines": [
+          {
+            "display_string": "“제2조, 주군에게 받은 녹봉에",
+            "display_string_template": "“제2조, 주군에게 받은 녹봉에",
+            "effective_width_px": 420,
+            "encoded_string": "“제2조, 주군에게 받은 녹봉에",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 11,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 672,
+            "raw_g1n_width_px": 672,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "절대로 불만을 품어서는 안 된다.”",
+            "display_string_template": "절대로 불만을 품어서는 안 된다.”",
+            "effective_width_px": 480,
+            "encoded_string": "절대로 불만을 품어서는 안 된다.”",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 6,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 768,
+            "raw_g1n_width_px": 768,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 480,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 768
+      },
+      "proposed_ko": "“제2조, 주군에게 받은 녹봉에\n절대로 불만을 품어서는 안 된다.”",
+      "proposed_ko_utf16le_sha256": "49208A4DCE3E310C646AE28286EA6B5794ABB11C4D9A756A67BDA0E4E2DBF196",
+      "review_judgement": "둘째 줄 첫머리의 수동 삽입 공백을 제거하고, 조문 번호와 본문을 한국어 문장으로 정리한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 其の二 御館様からいただく扶持に決して不満を持ってはならない."
+    },
+    {
+      "baseline_ko": "그, 그러냐…… 조금만 더,\n\u001bCB다케다 가문\u001bCZ 밖에서도 쓸 만한\n내용으로 만들 수 없겠느냐?",
+      "baseline_ko_utf16le_sha256": "464530B3358D6AC923EA2536A11775FCECE224FB6B8BBB14F5F2F16B818BDB13",
+      "change_type": "contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "3E0940F4024B90C3E298C1364309BF47E6BB2CAEC0D6DE870E7B658F5E36FF31",
+        "jp": "A02E58012681B091378CA53178E5A32991CFDE112132C9EBCBF81250C65E7E2B",
+        "sc": "02F682399CDFC37D48CDCD0B5D9CC3553447D8D4B74BE83C1B49C30D95687BC8",
+        "tc": "9B48DC65D7E7E98EDB9206E0390264EDBE5D728C09100E5F4A585A6C68C2944E"
+      },
+      "direct_pc_sources": {
+        "en": "You...you donÖt say? Do you believe that...sometime soon...you could be of service somewhere outside the \u001bCBTakeda\u001bCZ?",
+        "jp": "そ、そうか…もう少し、\n\u001bCB武田\u001bCZの外でも役立つものにはできぬのか？",
+        "sc": "这，这样啊……能不能再稍微写点，\n在\u001bCB武田家\u001bCZ之外也有用的规定？",
+        "tc": "是、是嗎……\n你不能多寫點在\u001bCB武田家\u001bCZ之外\n也能派上用場的內容嗎？"
+      },
+      "entry_id": 3536,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "그, 그러냐…… 조금만 더,",
+            "display_string_template": "그, 그러냐…… 조금만 더,",
+            "effective_width_px": 345,
+            "encoded_string": "그, 그러냐…… 조금만 더,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 8,
+            "half_width_character_count": 7,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 552,
+            "raw_g1n_width_px": 552,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "다케다 가문 밖에서도 쓸 만한 내용으로",
+            "display_string_template": "다케다 가문 밖에서도 쓸 만한 내용으로",
+            "effective_width_px": 555,
+            "encoded_string": "\u001bCB다케다 가문\u001bCZ 밖에서도 쓸 만한 내용으로",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 16,
+            "half_width_character_count": 5,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 888,
+            "raw_g1n_width_px": 888,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "만들 수 없겠느냐?",
+            "display_string_template": "만들 수 없겠느냐?",
+            "effective_width_px": 255,
+            "encoded_string": "만들 수 없겠느냐?",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 7,
+            "half_width_character_count": 3,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 408,
+            "raw_g1n_width_px": 408,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 555,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 888
+      },
+      "proposed_ko": "그, 그러냐…… 조금만 더,\n\u001bCB다케다 가문\u001bCZ 밖에서도 쓸 만한 내용으로\n만들 수 없겠느냐?",
+      "proposed_ko_utf16le_sha256": "71480C379D6E49EC780419BC60BA56476B3D254568A510D405D578606FC700F0",
+      "review_judgement": "‘쓸 만한 내용’이라는 명사구를 같은 줄에 두어 기존의 단어 경계 분절을 해소한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 武田の外でも役立つものにはできぬのか."
+    },
+    {
+      "baseline_ko": "생각해 보면 아버지는 네게 \u001bCB다케다 가문\u001bCZ\n당주 자리를 물려주려 했다. 그래서\n남몰래 가보를 네게 주셨던 게 아니냐?",
+      "baseline_ko_utf16le_sha256": "F09EADE8C0A80A7A24416F589BE0A42297ED827A9C5D74E9F1F62B4228FF9C85",
+      "change_type": "semantic_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "D406E40922746F5ED992273809C971A0F0FA4E977EC76D662B69B1EDB2A15EB2",
+        "jp": "7511DA97233AE8D623476A5881BE81E0F77551F00D4AB4049651B57BB8AECEC9",
+        "sc": "0EC03CE026F2724AFA2D0EB38C89093D801EC340EB9B0013921AB5E368572828",
+        "tc": "FFDF1BF6CE7096AC9F631AED634362ADED342647684C7326904A4850394B60EA"
+      },
+      "direct_pc_sources": {
+        "en": "Come to think of it, Father intended you to take the position as leader of the clan. To that end, certainly he must have secretly gifted you some family heirloom?",
+        "jp": "思えば父上は、お前にこそ\u001bCB武田\u001bCZの当主の座を\n譲ろうとしていた。それゆえ、ひそかに\n家宝をお前に渡していたであろう？",
+        "sc": "现在回想起来，\n父亲大人是想让你继承\u001bCB武田\u001bCZ家主之位，\n所以才悄悄将传家宝给你的吧？",
+        "tc": "說到這個，\n父親大人原本打算要把\u001bCB武田\u001bCZ家主之位讓給你。\n所以才會偷偷把傳家之寶給了你對吧？"
+      },
+      "entry_id": 3539,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "생각해 보면 아버지는 너에게야말로",
+            "display_string_template": "생각해 보면 아버지는 너에게야말로",
+            "effective_width_px": 495,
+            "encoded_string": "생각해 보면 아버지는 너에게야말로",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 3,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 792,
+            "raw_g1n_width_px": 792,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "다케다 가문의 당주 자리를 물려주려 하셨다.",
+            "display_string_template": "다케다 가문의 당주 자리를 물려주려 하셨다.",
+            "effective_width_px": 630,
+            "encoded_string": "\u001bCB다케다 가문\u001bCZ의 당주 자리를 물려주려 하셨다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 6,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1008,
+            "raw_g1n_width_px": 1008,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "그래서 남몰래 가보를 네게 주셨던 게 아니냐?",
+            "display_string_template": "그래서 남몰래 가보를 네게 주셨던 게 아니냐?",
+            "effective_width_px": 645,
+            "encoded_string": "그래서 남몰래 가보를 네게 주셨던 게 아니냐?",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 1032,
+            "raw_g1n_width_px": 1032,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 645,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 1032
+      },
+      "proposed_ko": "생각해 보면 아버지는 너에게야말로\n\u001bCB다케다 가문\u001bCZ의 당주 자리를 물려주려 하셨다.\n그래서 남몰래 가보를 네게 주셨던 게 아니냐?",
+      "proposed_ko_utf16le_sha256": "7F595319249F3E10CBB6B6649C6B48E4B7056FF9F2663DE908C78081A86085CB",
+      "review_judgement": "お前にこそ의 강조와 武田の当主の座라는 가문 당주 지위를 복원한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP お前にこそ武田の当主の座を譲ろうとしていた, EN intended you to take the position as leader of the clan."
+    },
+    {
+      "baseline_ko": "예, 하지만 모두 형님께 바쳤습니다.",
+      "baseline_ko_utf16le_sha256": "64E420468922D5A62E400208BA0489D23667767CAF5349E2BB38202BCA0EA0DA",
+      "change_type": "semantic_grammar_correction",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "9C157F2CA855935107A676B35C7EB2A054C869CC15CC4F527CD983B0C130E6C0",
+        "jp": "C50DC70A5B511BA3A5E2A4B15D745C486614E103F736F04E440FA7C549D922B4",
+        "sc": "96F56A246A49E71E49BDC952ED6099A92E8D84CA74F58C86CEC1EA84B4C8F2CA",
+        "tc": "175DE1F1D80EBEBEF3AC9ED4E813E13D0C70698174AB15725AC1384D64574837"
+      },
+      "direct_pc_sources": {
+        "en": "Yes. But...I have offered it all to you, Brother.",
+        "jp": "はい、すべて兄上に献上いたしましたが。",
+        "sc": "是的，不过我已经全部献给您了。",
+        "tc": "沒錯，但我把我的所有皆獻給了兄長。"
+      },
+      "entry_id": 3540,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 1,
+        "lines": [
+          {
+            "display_string": "예, 모두 형님께 바쳤습니다만.",
+            "display_string_template": "예, 모두 형님께 바쳤습니다만.",
+            "effective_width_px": 435,
+            "encoded_string": "예, 모두 형님께 바쳤습니다만.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 12,
+            "half_width_character_count": 5,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 696,
+            "raw_g1n_width_px": 696,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 435,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 696
+      },
+      "proposed_ko": "예, 모두 형님께 바쳤습니다만.",
+      "proposed_ko_utf16le_sha256": "D7BCC93E81AE7EFEDE3224C756396A05BFC73462D783B19F363601205391480D",
+      "review_judgement": "문맥 없이 이어지는 ‘하지만’을 일본어 のですが의 여운을 남기는 ‘습니다만’으로 바로잡는다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP はい、すべて兄上に献上いたしましたが, EN I have offered it all to you, Brother."
+    },
+    {
+      "baseline_ko": "(아버지도 보람이 없으시겠군……)",
+      "baseline_ko_utf16le_sha256": "539D598DC6AF28E0AACDE3704576E5C0F25594F5E723F3029AA753AA40DBA6D7",
+      "change_type": "semantic_correction",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "35A0DF59211A59E7D51C5595465E4BB5A7DA6C99C5F2C2A8FBA182264E85821A",
+        "jp": "94ADA6B5043C487DBFA2B71942B25FED2D4A22672CE69EE176A4B4744E7A839A",
+        "sc": "4696B478DD072737D5103DD63FCEC46B86C2A1EA40528F557512B4B6C1A434CB",
+        "tc": "F79767C7DC3B7343758C11F8192CB8CFB2D4E94A0D6831372080DB1596C1142F"
+      },
+      "direct_pc_sources": {
+        "en": "(It would seem FatherÖs favor has gone unreciprocated...)",
+        "jp": "（父上も報われぬな…）",
+        "sc": "（父亲的愿望一点都没得到回报啊……）",
+        "tc": "（父親大人的願望並沒有實現啊……）"
+      },
+      "entry_id": 3541,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 1,
+        "lines": [
+          {
+            "display_string": "(아버지의 뜻도 헛되었겠군……)",
+            "display_string_template": "(아버지의 뜻도 헛되었겠군……)",
+            "effective_width_px": 420,
+            "encoded_string": "(아버지의 뜻도 헛되었겠군……)",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 11,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 672,
+            "raw_g1n_width_px": 672,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 420,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 672
+      },
+      "proposed_ko": "(아버지의 뜻도 헛되었겠군……)",
+      "proposed_ko_utf16le_sha256": "DC675EC67B2A49DE93B4573B57CA9B1B9143575E2EE532ACBC937F90AF464624",
+      "review_judgement": "父上も報われぬ는 아버지가 의도한 후계 구상이 이루어지지 않았다는 뜻이므로 ‘보람’의 주체를 아버지의 뜻으로 바로잡는다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 父上も報われぬな, SC 父亲的愿望一点都没得到回报, TC 父親大人的願望並沒有實現."
+    },
+    {
+      "baseline_ko": "형님은 \u001bCB다케다\u001bCZ를 천하로 이끌 분입니다.\n저는 작은 재주뿐이니, 형님을 믿고 따를 뿐입니다.",
+      "baseline_ko_utf16le_sha256": "BCBDD938AF412CB3A8C7C0DDCBAE26958B87C3610E2118590FBA913ABBB0FDE9",
+      "change_type": "semantic_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "496E42652974AC67113A9EF5084B28E4E62FA75E50EEEBC06EC9715238897218",
+        "jp": "94375083A07BA18B879EEE9484C22ADFEB872791B6D1D8E872F8F8D1F4D6730A",
+        "sc": "35C7722CC6148FF3F3C74E838678C83C67DC7902631604F3B9C66C057DCEC286",
+        "tc": "26D834575D6107310D10074CD66980894F538EE35398E71DF87E9B8EF9481C61"
+      },
+      "direct_pc_sources": {
+        "en": "Brother, you are the one with the power to bring these lands under \u001bCBTakeda\u001bCZ control. My talents are few. The most I can do is have faith in you and obey your command.",
+        "jp": "兄上には\u001bCB武田\u001bCZを天下に導く力がございます。\n小才しか持たぬ私はただ兄上を信じ、\n兄上に従うまでにございます。",
+        "sc": "兄长拥有带领\u001bCB武田家\u001bCZ夺取天下的能力。\n所以仅有点小聪明的我才决定，\n相信并追随兄长。",
+        "tc": "兄長擁有帶領\u001bCB武田家\u001bCZ贏得天下的能力，\n只有一點小才能的我只是相信兄長、\n追隨兄長而已。"
+      },
+      "entry_id": 3542,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "형님께는 다케다를 천하로 이끌 힘이 있습니다.",
+            "display_string_template": "형님께는 다케다를 천하로 이끌 힘이 있습니다.",
+            "effective_width_px": 660,
+            "encoded_string": "형님께는 \u001bCB다케다\u001bCZ를 천하로 이끌 힘이 있습니다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 19,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1056,
+            "raw_g1n_width_px": 1056,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "저는 작은 재주밖에 없으니,",
+            "display_string_template": "저는 작은 재주밖에 없으니,",
+            "effective_width_px": 390,
+            "encoded_string": "저는 작은 재주밖에 없으니,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 11,
+            "half_width_character_count": 4,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 624,
+            "raw_g1n_width_px": 624,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "그저 형님을 믿고 따를 뿐입니다.",
+            "display_string_template": "그저 형님을 믿고 따를 뿐입니다.",
+            "effective_width_px": 465,
+            "encoded_string": "그저 형님을 믿고 따를 뿐입니다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 744,
+            "raw_g1n_width_px": 744,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 660,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 1056
+      },
+      "proposed_ko": "형님께는 \u001bCB다케다\u001bCZ를 천하로 이끌 힘이 있습니다.\n저는 작은 재주밖에 없으니,\n그저 형님을 믿고 따를 뿐입니다.",
+      "proposed_ko_utf16le_sha256": "05C330E3BC7CB7FC9D097D042C7A683CCDD82345E17BC76E196C5E3888DD5D69",
+      "review_judgement": "武田を天下に導く力가 ‘형님께 있는 힘’이라는 구조와 小才しか持たぬ의 겸양을 복원한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 兄上には武田を天下に導く力がございます。小才しか持たぬ私は…, EN power to bring these lands under Takeda control."
+    },
+    {
+      "baseline_ko": "(\u001bCA덴큐 노부시게\u001bCZ, 가신으로서는\n 이보다 나은 장수가 없겠지……)",
+      "baseline_ko_utf16le_sha256": "9CA3421310A6D7484FAA281C9B76322752A1CB7962B5B545F5723F195DB0BE88",
+      "change_type": "contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "091015E5313F7E6F8A08BB6BE899CEEBADF901C263A6ED764B70FF7FE13F912A",
+        "jp": "FB85A28BFDE5728D1EA830AED52EDDC7D231DC552D0D33F24D3DB15A9CD0D477",
+        "sc": "6257BACD18446FE420D826AA687DA1AF2FBF1B1D233204AE98396A4C546849A6",
+        "tc": "758DF8B2C25E635F93FD87F64CE46365C48C8C7CD5B771D3306C0A09CC8195E3"
+      },
+      "direct_pc_sources": {
+        "en": "(\u001bCANobushige Tenky¨\u001bCZ... As a retainer, there are few better.)",
+        "jp": "（\u001bCA典厩信繁\u001bCZ、家臣としては、\n　これほどの将はあるまい…）",
+        "sc": "（\u001bCA典厩信繁\u001bCZ，作为家臣而言，\n　这样的将领不可多得……）",
+        "tc": "（\u001bCA典廄信繁\u001bCZ，作為家臣而言，\n　這樣的將領不可多得……）"
+      },
+      "entry_id": 3546,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 2,
+        "lines": [
+          {
+            "display_string": "(덴큐 노부시게, 가신으로서는",
+            "display_string_template": "(덴큐 노부시게, 가신으로서는",
+            "effective_width_px": 420,
+            "encoded_string": "(\u001bCA덴큐 노부시게\u001bCZ, 가신으로서는",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 12,
+            "half_width_character_count": 4,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 672,
+            "raw_g1n_width_px": 672,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "이보다 나은 장수가 없겠지……)",
+            "display_string_template": "이보다 나은 장수가 없겠지……)",
+            "effective_width_px": 420,
+            "encoded_string": "이보다 나은 장수가 없겠지……)",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 11,
+            "half_width_character_count": 6,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 672,
+            "raw_g1n_width_px": 672,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 420,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 672
+      },
+      "proposed_ko": "(\u001bCA덴큐 노부시게\u001bCZ, 가신으로서는\n이보다 나은 장수가 없겠지……)",
+      "proposed_ko_utf16le_sha256": "5F4F814768EAA3534E0DD44928CD6902441D999B37419996B414E12C47AD6B35",
+      "review_judgement": "둘째 줄 첫머리의 수동 삽입 공백을 제거하고, 고유명사와 가신으로서의 평가는 그대로 보존한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 典厩信繁、家臣としては、これほどの将はあるまい."
+    },
+    {
+      "baseline_ko": "(하지만 우리는 피를 나눈 형제다.\n 육친의 정 같은 것이 있어도 좋을 텐데.\n 그렇게 생각하는 건 내 어리광일까……)",
+      "baseline_ko_utf16le_sha256": "BA45C39A785606A531FDFAC3FBCF83F30FD4B1BC589CBC4A9CCF99D36826980D",
+      "change_type": "contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "1E4473A39C8165D6064FA819DBEDC850DC51CEA29C79CB74F48B9DFC6456E816",
+        "jp": "BE1C5D638676EFFDEDB68835DC19A0C958DB5712B6AED0E017F53BB9A14B7CF8",
+        "sc": "E363B97795094CEE1601A30F388853E94FB51E92E39A5F1B8C54C23AAC22F4EC",
+        "tc": "317D5E0495F34C411E05C14A1F2943B28617D085A789C6250196414872DB9884"
+      },
+      "direct_pc_sources": {
+        "en": "(But he is my brother by blood. We ought to have affection for one another. Or am I naive to think so?)",
+        "jp": "（されど我らは血の繋がった兄弟。\n　肉親の情らしきものがあってもよい。\n　そう思うのは、わしの甘えであろうか…）",
+        "sc": "（但我们是血脉相通的兄弟。\n　多少应该有点骨肉亲情吧。\n　是因为我太天真了才会这样想吗……）",
+        "tc": "（不過我們是有血緣的兄弟，\n　有點血親之情應該也可以。　\n　會這麼想是因為我太天真了嗎……）"
+      },
+      "entry_id": 3547,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "(하지만 우리는 피를 나눈 형제다.",
+            "display_string_template": "(하지만 우리는 피를 나눈 형제다.",
+            "effective_width_px": 480,
+            "encoded_string": "(하지만 우리는 피를 나눈 형제다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 768,
+            "raw_g1n_width_px": 768,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "육친의 정 같은 것이 있어도 좋을 텐데.",
+            "display_string_template": "육친의 정 같은 것이 있어도 좋을 텐데.",
+            "effective_width_px": 555,
+            "encoded_string": "육친의 정 같은 것이 있어도 좋을 텐데.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 7,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 888,
+            "raw_g1n_width_px": 888,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "그렇게 생각하는 건 내 어리광일까……)",
+            "display_string_template": "그렇게 생각하는 건 내 어리광일까……)",
+            "effective_width_px": 525,
+            "encoded_string": "그렇게 생각하는 건 내 어리광일까……)",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 840,
+            "raw_g1n_width_px": 840,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 555,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 888
+      },
+      "proposed_ko": "(하지만 우리는 피를 나눈 형제다.\n육친의 정 같은 것이 있어도 좋을 텐데.\n그렇게 생각하는 건 내 어리광일까……)",
+      "proposed_ko_utf16le_sha256": "1C36DF716B17E0D2E08EF890EE1D3637E9FA4C2DC91C2D7FEA20B7DE2E396538",
+      "review_judgement": "둘째·셋째 줄 첫머리의 수동 삽입 공백만 제거해 각 문장 단위를 그대로 유지한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 我らは血の繋がった兄弟。肉親の情らしきものがあってもよい。"
+    },
+    {
+      "baseline_ko": "99개 조항에 이르는 다케다 노부시게의 가훈에는,\n\u001bCA[bm1251]\u001bCZ 공을 향한 충성을 맹세하는 항목뿐 아니라\n무사의 생활 규범을 적은 항목도 많았고……",
+      "baseline_ko_utf16le_sha256": "8775D51A1F30E91D31ACFB507E047FB1CFBDF262598ABCF49F2347252964C999",
+      "change_type": "semantic_and_contextual_reflow_with_runtime_reservation",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [
+            "[bm1251]"
+          ],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "5DA8ED7798CC438C958C4969E5E1B2F5275973E4A5DEDEE4AE5CB0FBB877A26E",
+        "jp": "564753B33AABA279356D511BEACBCC54ED5E297C265A12FB91FF4574F7B8EBC4",
+        "sc": "9AF92974E8B669ABE8BE5B31FD10DF76725C1F07D3DEDD095F9A917E95AB05E5",
+        "tc": "08BE9A9AA011BBE00F521A83B5612F0B88A162ED3ECBAB76F6D871137E9BB93F"
+      },
+      "direct_pc_sources": {
+        "en": "The ninety-nine precepts of the Takeda were not only about swearing loyalty to \u001bCA[bm1251]\u001bCZ, but also concerned rules of standard conduct for samurai.",
+        "jp": "九十九か条にわたる武田信繁家訓には、\n\u001bCA[bm1251]\u001bCZへの忠義を誓わせる項目以外にも\n武士の生活規範を示す項目も多くあり…",
+        "sc": "在多达九十九条的武田信繁家训中，\n除了对于\u001bCA[bm1251]\u001bCZ的效忠条目以外，\n也记录了多条规范武士生活的条目……",
+        "tc": "多達九十九條的武田信繁家訓，\n除了對\u001bCA[bm1251]\u001bCZ宣示忠義的項目以外，\n也有許多展現武士生活規範的項目……"
+      },
+      "entry_id": 3548,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "99개 조항에 이르는 다케다 노부시게의 가훈에는,",
+            "display_string_template": "99개 조항에 이르는 다케다 노부시게의 가훈에는,",
+            "effective_width_px": 690,
+            "encoded_string": "99개 조항에 이르는 다케다 노부시게의 가훈에는,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 19,
+            "half_width_character_count": 8,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1104,
+            "raw_g1n_width_px": 1104,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "다케다 하루노부 공에게 충성을 맹세하게 하는 항목뿐 아니라,",
+            "display_string_template": "[bm1251] 공에게 충성을 맹세하게 하는 항목뿐 아니라,",
+            "effective_width_px": 870,
+            "encoded_string": "\u001bCA[bm1251]\u001bCZ 공에게 충성을 맹세하게 하는 항목뿐 아니라,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 25,
+            "half_width_character_count": 8,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1032,
+            "raw_g1n_width_px": 1392,
+            "reserved_raw_g1n_width_px": 360,
+            "runtime_display_proven": false,
+            "runtime_reservations": [
+              {
+                "full_name_display_full_width_character_count": 7,
+                "full_name_display_half_width_character_count": 1,
+                "reservation_policy": "Prefix semantics are not inferred. Reserve the catalogued full strict-table name and scale raw width by 30/48.",
+                "reserved_effective_width_px": 225,
+                "reserved_raw_g1n_width_px": 360,
+                "runtime_proven": false,
+                "source_name_id": 1251,
+                "strict_name_table_string": "다케다 하루노부",
+                "strict_name_utf16le_sha256": "3BE1BAF7374BCC6D3107C8DB3961524045A5BD8A65AA3745E3868342E43B3D81",
+                "token": "[bm1251]"
+              }
+            ]
+          },
+          {
+            "display_string": "무사의 생활 규범을 보인 항목도 많았으며……",
+            "display_string_template": "무사의 생활 규범을 보인 항목도 많았으며……",
+            "effective_width_px": 615,
+            "encoded_string": "무사의 생활 규범을 보인 항목도 많았으며……",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 17,
+            "half_width_character_count": 7,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 984,
+            "raw_g1n_width_px": 984,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 870,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 1392
+      },
+      "proposed_ko": "99개 조항에 이르는 다케다 노부시게의 가훈에는,\n\u001bCA[bm1251]\u001bCZ 공에게 충성을 맹세하게 하는 항목뿐 아니라,\n무사의 생활 규범을 보인 항목도 많았으며……",
+      "proposed_ko_utf16le_sha256": "FD832B0B4B5E3759F000E7EDB0A42533C19020E0C283F507BC3AA47E555BED6A",
+      "review_judgement": "忠義を誓わせる를 ‘충성을 맹세하게 하는’으로, 示す를 ‘보인’으로 바로잡는다. 런타임 이름의 접두사 의미는 추측하지 않는다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [
+          "[bm1251]"
+        ],
+        "strict_full_name_reservation_preserved_from_pinned_audit": true
+      },
+      "source_basis": "JP [bm1251]への忠義を誓わせる項目以外にも武士の生活規範を示す項目も多くあり."
+    },
+    {
+      "baseline_ko": "\u001bCB류조지\u001bCZ의 책사 \u001bCA나베시마 나오시게\u001bCZ.\n바쁜 나날을 내조로 받친 이는 아내 \u001bCA히코쓰루히메\u001bCZ였다.",
+      "baseline_ko_utf16le_sha256": "35BEEC7BF77D8E923F5EA3FF984DDFC3D254C4F799000ECFB35E42460B501167",
+      "change_type": "semantic_restoration_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCB",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "2ACD9ED14911F959A832A9281F81038FAAAADF646DA27A81AA6B202F20B744B4",
+        "jp": "7B380774B0B2AAC21B5D672BE7998BA925162F1955B702D26EEC60D997D47465",
+        "sc": "EA4D496B8FD31CB0B0B743D847B2E1926D6DB5FE293E099A6C5D073E5F4C7519",
+        "tc": "FB0777245CFBCCDB3C0C05C6DF1B7541F817417D891B49D304C0A38BB62A137E"
+      },
+      "direct_pc_sources": {
+        "en": "The \u001bCBRy¨zªji Clan\u001bCZ war strategist \u001bCANaoshige Nabeshima\u001bCZ was well supported by his beloved wife, \u001bCAHikotsuruhime\u001bCZ.",
+        "jp": "\u001bCB龍造寺家\u001bCZの戦略を担う参謀・\u001bCA鍋島直茂\u001bCZ。\nその多忙な日々を内助の功で支えたのが\n恋女房の\u001bCA彦鶴姫\u001bCZであった。",
+        "sc": "参谋\u001bCA锅岛直茂\u001bCZ负责\u001bCB龙造寺家\u001bCZ的战略。\n在他终日忙碌不休之时，以内助之功\n扶持他的是其爱妻\u001bCA彦鹤姬\u001bCZ。",
+        "tc": "參謀\u001bCA鍋島直茂\u001bCZ肩負著\u001bCB龍造寺家\u001bCZ的戰略規劃。\n在他終日忙碌不休時作為賢內助支持他的，\n乃與他鶼鰈情深的\u001bCA彥鶴姬\u001bCZ。"
+      },
+      "entry_id": 3550,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "류조지 가문의 전략을 맡은 참모 나베시마 나오시게.",
+            "display_string_template": "류조지 가문의 전략을 맡은 참모 나베시마 나오시게.",
+            "effective_width_px": 735,
+            "encoded_string": "\u001bCB류조지\u001bCZ 가문의 전략을 맡은 참모 \u001bCA나베시마 나오시게\u001bCZ.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 21,
+            "half_width_character_count": 7,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 1176,
+            "raw_g1n_width_px": 1176,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "그 바쁜 나날을 내조의 공으로 뒷받침한 이는",
+            "display_string_template": "그 바쁜 나날을 내조의 공으로 뒷받침한 이는",
+            "effective_width_px": 630,
+            "encoded_string": "그 바쁜 나날을 내조의 공으로 뒷받침한 이는",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 6,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 1008,
+            "raw_g1n_width_px": 1008,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "사랑하는 아내 히코쓰루히메였다.",
+            "display_string_template": "사랑하는 아내 히코쓰루히메였다.",
+            "effective_width_px": 465,
+            "encoded_string": "사랑하는 아내 \u001bCA히코쓰루히메\u001bCZ였다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 3,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 744,
+            "raw_g1n_width_px": 744,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 735,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 1176
+      },
+      "proposed_ko": "\u001bCB류조지\u001bCZ 가문의 전략을 맡은 참모 \u001bCA나베시마 나오시게\u001bCZ.\n그 바쁜 나날을 내조의 공으로 뒷받침한 이는\n사랑하는 아내 \u001bCA히코쓰루히메\u001bCZ였다.",
+      "proposed_ko_utf16le_sha256": "970012B54F2D49733C331DC4DDB41EC946F70E3486399468689AA81B2F3157A1",
+      "review_judgement": "‘내조로 받친’ 오기를 고치고, 龍造寺家의 전략·内助の功·恋女房의 정보를 모두 복원한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 龍造寺家の戦略を担う参謀・鍋島直茂。その多忙な日々を内助の功で支えたのが恋女房の彦鶴姫."
+    },
+    {
+      "baseline_ko": "두 사람의 첫 만남은 전설로 남았다. 개선 길에\n\u001bCA나오시게\u001bCZ는 \u001bCC이이모리성\u001bCZ에서 \u001bCA히코쓰루\u001bCZ을 처음 보았다…",
+      "baseline_ko_utf16le_sha256": "1108DB35FE629CAD4EFB249D18FAEDBB1AECD5AB349335A5BB9C38080A58F7E1",
+      "change_type": "semantic_restoration_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCC",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "64F405E8948DA369B8B69C2EBE54CC56A386767D9A0D28FF408E0D32AA7380EE",
+        "jp": "FB93201D25E9E2941F35614D1C22CFFBDB05692AF1AF5540BAAE1A4BCE416AC8",
+        "sc": "8BCFDD8E759AE54A257124B7FF9AC6CC3EBA7B4A87FB91200E2B0888B659C071",
+        "tc": "B4D04B9D4B4CA267F71BD422631108ED2FE7FD1297156A041CDD94822B5201F8"
+      },
+      "direct_pc_sources": {
+        "en": "The tale of their romantic beginning would later be passed down through the generations. During a triumphant return home from a battle, \u001bCANaoshige\u001bCZ first met \u001bCAHikotsuru\u001bCZ at \u001bCCIimoriyama Castle\u001bCZ.",
+        "jp": "二人の馴れ初めは伝説に彩られている。\nある時、合戦から凱旋帰国する途中、\n\u001bCA直茂\u001bCZは\u001bCC飯盛城\u001bCZで\u001bCA彦鶴\u001bCZを見初めたという…",
+        "sc": "两人爱情的开始带有传奇色彩。\n相传有一日，在从合战凯旋归国的途中，\n\u001bCA直茂\u001bCZ在\u001bCC饭盛城\u001bCZ对\u001bCA彦鹤\u001bCZ一见钟情……",
+        "tc": "兩人相戀的契機帶著一份傳奇色彩。\n據說，\u001bCA直茂\u001bCZ某天從戰場凱旋而歸的途中，\n於\u001bCC飯盛城\u001bCZ邂逅了\u001bCA彥鶴\u001bCZ……"
+      },
+      "entry_id": 3551,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 4,
+        "lines": [
+          {
+            "display_string": "두 사람의 인연의 시작은 전설로 전해진다.",
+            "display_string_template": "두 사람의 인연의 시작은 전설로 전해진다.",
+            "effective_width_px": 600,
+            "encoded_string": "두 사람의 인연의 시작은 전설로 전해진다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 17,
+            "half_width_character_count": 6,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 960,
+            "raw_g1n_width_px": 960,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "어느 날 전투에서 개선해 돌아오던 길에,",
+            "display_string_template": "어느 날 전투에서 개선해 돌아오던 길에,",
+            "effective_width_px": 570,
+            "encoded_string": "어느 날 전투에서 개선해 돌아오던 길에,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 16,
+            "half_width_character_count": 6,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 912,
+            "raw_g1n_width_px": 912,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "나오시게는 이이모리성에서 히코쓰루에게",
+            "display_string_template": "나오시게는 이이모리성에서 히코쓰루에게",
+            "effective_width_px": 570,
+            "encoded_string": "\u001bCA나오시게\u001bCZ는 \u001bCC이이모리성\u001bCZ에서 \u001bCA히코쓰루\u001bCZ에게",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 2,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 912,
+            "raw_g1n_width_px": 912,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "첫눈에 반했다고 한다……",
+            "display_string_template": "첫눈에 반했다고 한다……",
+            "effective_width_px": 330,
+            "encoded_string": "첫눈에 반했다고 한다……",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 9,
+            "half_width_character_count": 4,
+            "line_number": 4,
+            "literal_raw_g1n_width_px": 528,
+            "raw_g1n_width_px": 528,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 600,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 960
+      },
+      "proposed_ko": "두 사람의 인연의 시작은 전설로 전해진다.\n어느 날 전투에서 개선해 돌아오던 길에,\n\u001bCA나오시게\u001bCZ는 \u001bCC이이모리성\u001bCZ에서 \u001bCA히코쓰루\u001bCZ에게\n첫눈에 반했다고 한다……",
+      "proposed_ko_utf16le_sha256": "5933B54C245CEF4A4255BA01A292949BE6E953BD7F1219C2790648F62E750C22",
+      "review_judgement": "馴れ初め·ある時·見初めた의 인연 시작, 어느 날, 첫눈에 반함을 복원한다. ‘처음 보았다’만으로는 見初めた의 뜻이 빠진다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 二人の馴れ初めは伝説に彩られている。ある時、合戦から凱旋帰国する途中、直茂は飯盛城で彦鶴を見初めた."
+    },
+    {
+      "baseline_ko": "예상치 못한 많은 장병이 찾아오자,\n점심을 준비하느라 바빠진 시녀들은\n큰 혼란에 빠졌다.",
+      "baseline_ko_utf16le_sha256": "0E8FA763AC44701135AF289DA81410275365D1938F1A30C0ADF283B92500BF2F",
+      "change_type": "semantic_grammar_correction",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "A66A321121C0D4578B2125809870584C6FC41FA9A029E0BB6D65A4BE78FAA384",
+        "jp": "EB20916814BC1BEC80D7ACEA84834223D14DC0D22C47908750B5FDC2A51C40F5",
+        "sc": "68891B957DC2440EF7D1984AE0167423EE66F78CC9B146405FF5DEA27C8E8B91",
+        "tc": "E2CA498F8F9BE98E0764C5CF8EFA29A4ABC116EE03A653F8A464FA489E14DBB5"
+      },
+      "direct_pc_sources": {
+        "en": "As suspected, the female attendants were flustered at having to suddenly serve such a large number of hungry soldiers.",
+        "jp": "予期せぬ大人数の将兵が訪れたため、\n昼食の準備に追われた侍女たちは\n大混乱に陥っていた。",
+        "sc": "由于众多将兵意外来访，\n侍女们忙于准备午饭，\n弄得人仰马翻。",
+        "tc": "由於眾多將兵的意外來訪，\n仕女們急著準備午飯，\n弄得人仰馬翻。"
+      },
+      "entry_id": 3554,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "예상치 못하게 많은 장병이 찾아오자,",
+            "display_string_template": "예상치 못하게 많은 장병이 찾아오자,",
+            "effective_width_px": 525,
+            "encoded_string": "예상치 못하게 많은 장병이 찾아오자,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 5,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 840,
+            "raw_g1n_width_px": 840,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "점심 준비에 쫓긴 시녀들은",
+            "display_string_template": "점심 준비에 쫓긴 시녀들은",
+            "effective_width_px": 375,
+            "encoded_string": "점심 준비에 쫓긴 시녀들은",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 11,
+            "half_width_character_count": 3,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 600,
+            "raw_g1n_width_px": 600,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "큰 혼란에 빠졌다.",
+            "display_string_template": "큰 혼란에 빠졌다.",
+            "effective_width_px": 255,
+            "encoded_string": "큰 혼란에 빠졌다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 7,
+            "half_width_character_count": 3,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 408,
+            "raw_g1n_width_px": 408,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 525,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 840
+      },
+      "proposed_ko": "예상치 못하게 많은 장병이 찾아오자,\n점심 준비에 쫓긴 시녀들은\n큰 혼란에 빠졌다.",
+      "proposed_ko_utf16le_sha256": "91A7081DF870EFC8487C9A2C59EEB7707AF569B9EB94EAFA548AB3B7E8E4AAF0",
+      "review_judgement": "예상치 못한 대상은 ‘많은 장병의 방문’이므로 어순을 바로잡고, 準備に追われた의 다급함을 보존한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 予期せぬ大人数の将兵が訪れたため、昼食の準備に追われた侍女たちは大混乱に陥っていた."
+    },
+    {
+      "baseline_ko": "여러분, 조금 진정하세요! 손님\n수만큼 정어리를 준비해 두었습니다.\n일을 나눠 차례대로 구우면 됩니다!",
+      "baseline_ko_utf16le_sha256": "63B92DC61155B1D496A810B13BCFECD40423BF158968C504E0CCA7C8D7D4998D",
+      "change_type": "contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "D166EEDBAC48672A4E086B9227304FBF6E58B5BD6C46F1FA101C6B1A6145EA5F",
+        "jp": "3CAE1A268536E6676DF49DC8B56C8CA7DD2D627815E3873E6D57B23636469472",
+        "sc": "8B81E5A0D12AF02BFB95C9A0F74523A6A6A6220A6762B965B50C6F25352B06EC",
+        "tc": "86E0C7C6316220DF997CE99B50F6D92100D7002FEFF3A224F8A65E4F9DAACCBB"
+      },
+      "direct_pc_sources": {
+        "en": "Everyone, please calm down! We have plenty of sardines for everyone here. If we divide up our tasks, we can finish everything in a timely manner!",
+        "jp": "皆さん、少し落ち着きなさい！\nお客様の人数分の鰯は用意してあります。\n作業を分担して順に焼いていけばよろしい！",
+        "sc": "大家冷静一点！\n来客每人一份的沙丁鱼已经准备好了。\n我们分工，按顺序烤好就可以了！",
+        "tc": "大家鎮定一點！\n已經準備好足夠招待客人的沙丁魚了。\n只要大家分工合作，依序煎好即可！"
+      },
+      "entry_id": 3555,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "여러분, 조금 진정하세요!",
+            "display_string_template": "여러분, 조금 진정하세요!",
+            "effective_width_px": 360,
+            "encoded_string": "여러분, 조금 진정하세요!",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 10,
+            "half_width_character_count": 4,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 576,
+            "raw_g1n_width_px": 576,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "손님 수만큼 정어리를 준비해 두었습니다.",
+            "display_string_template": "손님 수만큼 정어리를 준비해 두었습니다.",
+            "effective_width_px": 585,
+            "encoded_string": "손님 수만큼 정어리를 준비해 두었습니다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 17,
+            "half_width_character_count": 5,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 936,
+            "raw_g1n_width_px": 936,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "일을 나눠 차례대로 구우면 됩니다!",
+            "display_string_template": "일을 나눠 차례대로 구우면 됩니다!",
+            "effective_width_px": 495,
+            "encoded_string": "일을 나눠 차례대로 구우면 됩니다!",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 792,
+            "raw_g1n_width_px": 792,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 585,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 936
+      },
+      "proposed_ko": "여러분, 조금 진정하세요!\n손님 수만큼 정어리를 준비해 두었습니다.\n일을 나눠 차례대로 구우면 됩니다!",
+      "proposed_ko_utf16le_sha256": "2C591CE5DDFBAF31FE9AFC2969705D1F4DC844F52072FF2C4F2614124A00485D",
+      "review_judgement": "‘손님 수만큼’을 한 의미 단위로 붙여 기존의 수동 줄 분절을 해소한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP お客様の人数分の鰯は用意してあります。作業を分担して順に焼いていけばよろしい."
+    },
+    {
+      "baseline_ko": "(훌륭한 지시로 시녀들을 이끌며\n 수많은 정어리를 굽고 있다……\n 저토록 현명한 여인이 있다니.)",
+      "baseline_ko_utf16le_sha256": "66AF617A56A4B4AEE4E12897AB1EE07DF8A3BF45BC341CF08C4B60572F79A2B6",
+      "change_type": "contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "FC072733884D63EB122FE38DD30037A3404074F12FA21AF31D9A7118D86863A1",
+        "jp": "5DB1E91982AFB50BD6BC2E4D2C13A91229D23CA9EAED91F49726301D90CF62F4",
+        "sc": "72CAE20FBCCCF09AE8C1F4EB920D2839C1600A0584D26313A75384AC595FA162",
+        "tc": "20E10843EF51C5406C51A118A77DE4467EAA7036440B2D58C6EE9F3CA2296ABB"
+      },
+      "direct_pc_sources": {
+        "en": "(What intellect and form. Look at how she keeps the other attendants under control even while working the fish herself, and under such a heavy demand too...)",
+        "jp": "（見事な指図で、侍女たちをまとめ\n　大量の鰯を焼いている…\n　賢い女性もいたものだな）",
+        "sc": "（指挥得当，统领侍女们\n　烤这么多沙丁鱼……\n　原来还有这么聪明的女人啊。）",
+        "tc": "（指揮得當，統領侍女們\n　煎著這麼多沙丁魚……\n　好個聰穎的女人啊。）"
+      },
+      "entry_id": 3559,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "(훌륭한 지시로 시녀들을 이끌며",
+            "display_string_template": "(훌륭한 지시로 시녀들을 이끌며",
+            "effective_width_px": 450,
+            "encoded_string": "(훌륭한 지시로 시녀들을 이끌며",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 4,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 720,
+            "raw_g1n_width_px": 720,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "수많은 정어리를 굽고 있다……",
+            "display_string_template": "수많은 정어리를 굽고 있다……",
+            "effective_width_px": 405,
+            "encoded_string": "수많은 정어리를 굽고 있다……",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 11,
+            "half_width_character_count": 5,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 648,
+            "raw_g1n_width_px": 648,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "저토록 현명한 여인이 있다니.)",
+            "display_string_template": "저토록 현명한 여인이 있다니.)",
+            "effective_width_px": 435,
+            "encoded_string": "저토록 현명한 여인이 있다니.)",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 12,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 696,
+            "raw_g1n_width_px": 696,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 450,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 720
+      },
+      "proposed_ko": "(훌륭한 지시로 시녀들을 이끌며\n수많은 정어리를 굽고 있다……\n저토록 현명한 여인이 있다니.)",
+      "proposed_ko_utf16le_sha256": "28486FD1BCCC8013571FA94CA1123DF114198FE4A17E136F87C61E3EBE0125AA",
+      "review_judgement": "둘째·셋째 줄 첫머리의 수동 삽입 공백만 제거해 독백의 세 의미 단위를 유지한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 見事な指図で、侍女たちをまとめ大量の鰯を焼いている…賢い女性もいたものだな."
+    },
+    {
+      "baseline_ko": "\u001bCA이시이 쓰네노부\u001bCZ의 딸 \u001bCA히코쓰루\u001bCZ입니다.\n전에는 \u001bCA노토미 노부즈미\u001bCZ에게 시집갔으나, \u001bCA노토미\u001bCZ 님이\n전사해 과부가 됐습니다…",
+      "baseline_ko_utf16le_sha256": "50CB0231F614EE1282040CD8E5B90EB1DFBFDD2FB9A8289C6D300F4B63E202CC",
+      "change_type": "semantic_honorific_restoration_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "E399DFBCECAC39182D03D5F702E8AA393FA6FC7BCE851370A1BB55763DC5ECF2",
+        "jp": "4939B301971C9936843771348747C313BC7FC51826DA8663DDC12E6B02D6ADB4",
+        "sc": "2782465053E58716C20203D1B0815D97E30E8F81E3F96BCA5030AC14B5F4F52C",
+        "tc": "7F4BEC8F353AF690CF348D06DD3753074AB0159C536E0B6D98634E628F88EE72"
+      },
+      "direct_pc_sources": {
+        "en": "That is \u001bCAHikotsuru\u001bCZ, the daughter of \u001bCAIshii Tsunenobu\u001bCZ. She was once married to Lord \u001bCANobuzumi Nªtomi\u001bCZ, but is now widowed after his death on the battlefield.",
+        "jp": "あれは、\u001bCA石井常延\u001bCZのご息女\u001bCA彦鶴\u001bCZ様です。\n以前は\u001bCA納富信澄\u001bCZ殿に嫁いでおられましたが、\n\u001bCA納富\u001bCZ殿が戦死されたため、後家となられ…",
+        "sc": "那是\u001bCA石井常延\u001bCZ的千金\u001bCA彦鹤\u001bCZ大人。\n从前嫁给了\u001bCA纳富信澄\u001bCZ大人，\n但\u001bCA纳富\u001bCZ大人战死，所以她就守了寡……",
+        "tc": "那位是\u001bCA石井常延\u001bCZ的千金\u001bCA彥鶴\u001bCZ。\n之前嫁給了\u001bCA納富信澄\u001bCZ大人，\n但因\u001bCA納富\u001bCZ大人戰死而守了寡……"
+      },
+      "entry_id": 3561,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 4,
+        "lines": [
+          {
+            "display_string": "저분은 이시이 쓰네노부의 따님,",
+            "display_string_template": "저분은 이시이 쓰네노부의 따님,",
+            "effective_width_px": 450,
+            "encoded_string": "저분은 \u001bCA이시이 쓰네노부\u001bCZ의 따님,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 13,
+            "half_width_character_count": 4,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 720,
+            "raw_g1n_width_px": 720,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "히코쓰루 님입니다. 예전에는",
+            "display_string_template": "히코쓰루 님입니다. 예전에는",
+            "effective_width_px": 405,
+            "encoded_string": "\u001bCA히코쓰루\u001bCZ 님입니다. 예전에는",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 12,
+            "half_width_character_count": 3,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 648,
+            "raw_g1n_width_px": 648,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "노토미 노부즈미 님께 시집가셨으나,",
+            "display_string_template": "노토미 노부즈미 님께 시집가셨으나,",
+            "effective_width_px": 510,
+            "encoded_string": "\u001bCA노토미 노부즈미\u001bCZ 님께 시집가셨으나,",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 15,
+            "half_width_character_count": 4,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 816,
+            "raw_g1n_width_px": 816,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "노토미 님이 전사하시어 과부가 되셨습니다……",
+            "display_string_template": "노토미 님이 전사하시어 과부가 되셨습니다……",
+            "effective_width_px": 630,
+            "encoded_string": "\u001bCA노토미\u001bCZ 님이 전사하시어 과부가 되셨습니다……",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 6,
+            "line_number": 4,
+            "literal_raw_g1n_width_px": 1008,
+            "raw_g1n_width_px": 1008,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 630,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 1008
+      },
+      "proposed_ko": "저분은 \u001bCA이시이 쓰네노부\u001bCZ의 따님,\n\u001bCA히코쓰루\u001bCZ 님입니다. 예전에는\n\u001bCA노토미 노부즈미\u001bCZ 님께 시집가셨으나,\n\u001bCA노토미\u001bCZ 님이 전사하시어 과부가 되셨습니다……",
+      "proposed_ko_utf16le_sha256": "4BB854D1110FC6856EAC097B460310689C7957BDA6787E4E0F130CEE79F8A21E",
+      "review_judgement": "ご息女・様・殿의 대화체 경어를 복원하고, 후가가 된 사정을 존대 서술로 유지한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 石井常延のご息女彦鶴様。以前は納富信澄殿に嫁いでおられましたが、納富殿が戦死されたため、後家となられ."
+    },
+    {
+      "baseline_ko": "시녀를 지휘하고 손수 생선을 굽는 \u001bCA히코쓰루\u001bCZ의 솜씨에\n반한 \u001bCA나오시게\u001bCZ는 훗날 정식으로 청혼했다.",
+      "baseline_ko_utf16le_sha256": "4E495F1B7438C4E1F091E5DEFAF87B4E10EC77413332CF9836AEEC54E2D5550E",
+      "change_type": "semantic_restoration_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "B09B2FB09EBCE6F59B40C6DAF60E4637BA40FDA8E5428FBCC793BE6ED9609051",
+        "jp": "0CC87FE4820A82EFBA53A66278B69F4F1BAE4500DBF7E51788E1716DE6A8E928",
+        "sc": "4A567B82A28BC9146353F2278D037E242D5EB3C90E18CC21401943F7B27F464F",
+        "tc": "EE1FBAE20DBC30651D520FC07653A3B922D08524D79CC9D43A19E2E4DC9E8590"
+      },
+      "direct_pc_sources": {
+        "en": "Enamored of this quick-witted woman who could manage her team so well under pressure, \u001bCANaoshige\u001bCZ would later formally propose to wed.",
+        "jp": "機転を利かせて、侍女を差配するだけでなく\n率先して鰯を焼く\u001bCA彦鶴\u001bCZの手際の良さに\n魅了された\u001bCA直茂\u001bCZは、のちに正式に求婚した。",
+        "sc": "\u001bCA彦鹤\u001bCZ随机应变，不只分派侍女，\n更带头烤沙丁鱼，\u001bCA直茂\u001bCZ被她的处事能力所\n吸引，后来正式向她求了婚。",
+        "tc": "\u001bCA彥鶴\u001bCZ不僅能隨機應變地分派侍女，\n親自煎起沙丁魚亦乾淨俐落。\n對此傾心不已的\u001bCA直茂\u001bCZ後來便正式向她求婚。"
+      },
+      "entry_id": 3563,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 3,
+        "lines": [
+          {
+            "display_string": "재치를 발휘해 시녀들을 지휘할 뿐 아니라",
+            "display_string_template": "재치를 발휘해 시녀들을 지휘할 뿐 아니라",
+            "effective_width_px": 585,
+            "encoded_string": "재치를 발휘해 시녀들을 지휘할 뿐 아니라",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 17,
+            "half_width_character_count": 5,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 936,
+            "raw_g1n_width_px": 936,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "앞장서 정어리를 굽는 히코쓰루의 솜씨에",
+            "display_string_template": "앞장서 정어리를 굽는 히코쓰루의 솜씨에",
+            "effective_width_px": 570,
+            "encoded_string": "앞장서 정어리를 굽는 \u001bCA히코쓰루\u001bCZ의 솜씨에",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 17,
+            "half_width_character_count": 4,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 912,
+            "raw_g1n_width_px": 912,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "매료된 나오시게는 훗날 정식으로 청혼했다.",
+            "display_string_template": "매료된 나오시게는 훗날 정식으로 청혼했다.",
+            "effective_width_px": 615,
+            "encoded_string": "매료된 \u001bCA나오시게\u001bCZ는 훗날 정식으로 청혼했다.",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 5,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 984,
+            "raw_g1n_width_px": 984,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 615,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 984
+      },
+      "proposed_ko": "재치를 발휘해 시녀들을 지휘할 뿐 아니라\n앞장서 정어리를 굽는 \u001bCA히코쓰루\u001bCZ의 솜씨에\n매료된 \u001bCA나오시게\u001bCZ는 훗날 정식으로 청혼했다.",
+      "proposed_ko_utf16le_sha256": "9597D2BC583FA17CAC353D901DF192D0836FC8EF711C55794A311A2C11AD1CE8",
+      "review_judgement": "機転を利かせて·だけでなく·率先して의 재치, 병행, 솔선을 복원한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 機転を利かせて、侍女を差配するだけでなく率先して鰯を焼く彦鶴の手際の良さに魅了された直茂."
+    },
+    {
+      "baseline_ko": "드문 연애결혼으로 아내가 된 \u001bCA히코쓰루\u001bCZ는\n총명함과 포용력으로 냉철한 \u001bCA나베시마 나오시게\u001bCZ를 보필했다…",
+      "baseline_ko_utf16le_sha256": "100F43283EEE09226635395BCAAF609534DFA54F6EE5F811C62DCC517431754D",
+      "change_type": "semantic_restoration_and_contextual_reflow",
+      "control_signature": {
+        "baseline": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "direct_pc_jp": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        },
+        "proposed": {
+          "esc_tags": [
+            "\u001bCA",
+            "\u001bCZ",
+            "\u001bCA",
+            "\u001bCZ"
+          ],
+          "other_c0_controls": [],
+          "printf_tokens": [],
+          "pua_codepoints": [],
+          "runtime_tokens": [],
+          "terminator_nul_count": 0,
+          "unknown_percent_count": 0
+        }
+      },
+      "direct_pc_source_utf16le_sha256": {
+        "en": "97CC64694B352678FBC6010FE78C669438E33AA60FEB4F24DA44A3EF0C0E2419",
+        "jp": "698F3C08FCFBFC272D72504F3F5B49786A96E4F23C27926E9C7E74F91296B86A",
+        "sc": "542D55559D7E6B799AE693BED6AF91406A8504FC06788243489C664B4B870E6B",
+        "tc": "51B3A03016627E06566F7D00277364544EB11C80A124E93CABF19E210F78B5F6"
+      },
+      "direct_pc_sources": {
+        "en": "It was a marriage born of love, which was quite rare for the Sengoku period. With intelligence and persistence, \u001bCAHikotsuru\u001bCZ would support her husband, the cool-minded tactician, \u001bCANaoshige Nabeshima\u001bCZ.",
+        "jp": "戦国時代としては珍しい恋愛結婚で\n妻に迎えられた\u001bCA彦鶴\u001bCZは、聡明さと包容力で\n冷徹なる軍師・\u001bCA鍋島直茂\u001bCZを支えたという…",
+        "sc": "相传\u001bCA彦鹤\u001bCZ通过战国时代罕见的恋爱结婚\n被迎娶进门后，以其才智与包容力\n扶持了冷静的军师\u001bCA锅岛直茂\u001bCZ……",
+        "tc": "戀愛結婚於戰國時代實屬罕見。\n\u001bCA彥鶴\u001bCZ在被迎娶進門後，以其賢慧及包容，\n支持著\u001bCA鍋島直茂\u001bCZ這位冷靜沉著的軍師……"
+      },
+      "entry_id": 3564,
+      "japanese_source_line_breaks_reused": false,
+      "korean_sentence_shortened_or_deleted": false,
+      "layout": {
+        "all_lines_pass_static_patch_007": true,
+        "any_line_exceeds_912px": false,
+        "line_count": 4,
+        "lines": [
+          {
+            "display_string": "전국시대에는 드문 연애결혼으로",
+            "display_string_template": "전국시대에는 드문 연애결혼으로",
+            "effective_width_px": 450,
+            "encoded_string": "전국시대에는 드문 연애결혼으로",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 2,
+            "line_number": 1,
+            "literal_raw_g1n_width_px": 720,
+            "raw_g1n_width_px": 720,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "아내가 된 히코쓰루는 총명함과 포용력으로",
+            "display_string_template": "아내가 된 히코쓰루는 총명함과 포용력으로",
+            "effective_width_px": 600,
+            "encoded_string": "아내가 된 \u001bCA히코쓰루\u001bCZ는 총명함과 포용력으로",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 18,
+            "half_width_character_count": 4,
+            "line_number": 2,
+            "literal_raw_g1n_width_px": 960,
+            "raw_g1n_width_px": 960,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "냉철한 군사 나베시마 나오시게를",
+            "display_string_template": "냉철한 군사 나베시마 나오시게를",
+            "effective_width_px": 465,
+            "encoded_string": "냉철한 군사 \u001bCA나베시마 나오시게\u001bCZ를",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 14,
+            "half_width_character_count": 3,
+            "line_number": 3,
+            "literal_raw_g1n_width_px": 744,
+            "raw_g1n_width_px": 744,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          },
+          {
+            "display_string": "뒷받침했다고 한다……",
+            "display_string_template": "뒷받침했다고 한다……",
+            "effective_width_px": 285,
+            "encoded_string": "뒷받침했다고 한다……",
+            "exceeds_912px": false,
+            "exceeds_raw_1440px": false,
+            "full_width_character_count": 8,
+            "half_width_character_count": 3,
+            "line_number": 4,
+            "literal_raw_g1n_width_px": 456,
+            "raw_g1n_width_px": 456,
+            "reserved_raw_g1n_width_px": 0,
+            "runtime_display_proven": false,
+            "runtime_reservations": []
+          }
+        ],
+        "max_effective_width_px": 600,
+        "max_lines": 4,
+        "max_raw_g1n_width_px": 960
+      },
+      "proposed_ko": "전국시대에는 드문 연애결혼으로\n아내가 된 \u001bCA히코쓰루\u001bCZ는 총명함과 포용력으로\n냉철한 군사 \u001bCA나베시마 나오시게\u001bCZ를\n뒷받침했다고 한다……",
+      "proposed_ko_utf16le_sha256": "8F5D0F986E8764F0DC2649610DEE73C27CBF1B7ADE119241EF30F09529D9176A",
+      "review_judgement": "戦国時代としては, 軍師, 支えたという의 시대 맥락·책사 직위·전승형 서술을 복원한다.",
+      "runtime_token_policy": {
+        "prefix_semantics_inferred": false,
+        "runtime_proven": false,
+        "runtime_tokens": [],
+        "strict_full_name_reservation_preserved_from_pinned_audit": false
+      },
+      "source_basis": "JP 戦国時代としては珍しい恋愛結婚で妻に迎えられた彦鶴は、聡明さと包容力で冷徹なる軍師・鍋島直茂を支えたという."
+    }
+  ],
+  "schema": "nobu16.kr.pc-event-takeda-hikotsuru-quality-wave102.v1.public-audit",
+  "source_takeda_hikotsuru_audit": {
+    "audit_runtime_reservation_ids": [
+      3548
+    ],
+    "audit_static_high_confidence_ids": [
+      3529,
+      3530,
+      3532,
+      3533,
+      3536,
+      3539,
+      3540,
+      3541,
+      3542,
+      3546,
+      3547,
+      3548,
+      3550,
+      3551,
+      3554,
+      3555,
+      3559,
+      3561,
+      3563,
+      3564
+    ],
+    "audit_target_range_identical_between_wave100_and_wave101": true,
+    "builder": {
+      "relative_path": "workstreams/pc_event_takeda_hikotsuru_audit_v1/build_pc_event_takeda_hikotsuru_audit_v1.py",
+      "sha256": "08118E41FF68431EF51649B00A99296161BFF94328A6E77746272B6ABF7F951F",
+      "size": 40663
+    },
+    "proposal_rows_used_without_reauthoring": [
+      3529,
+      3530,
+      3532,
+      3533,
+      3536,
+      3539,
+      3540,
+      3541,
+      3542,
+      3546,
+      3547,
+      3548,
+      3550,
+      3551,
+      3554,
+      3555,
+      3559,
+      3561,
+      3563,
+      3564
+    ],
+    "report": {
+      "relative_path": "workstreams/pc_event_takeda_hikotsuru_audit_v1/public/pc_event_takeda_hikotsuru_audit.v1.json",
+      "sha256": "1740947E1AD394892166B852FCC47BB416570B41388D0E85E4AE9773DB3AFAA4",
+      "size": 322449
+    }
+  },
+  "static_patch_007_layout": {
+    "effective_width_formula": "ceil(raw_g1n_width_px * 30 / 48)",
+    "effective_width_pass_limit_px": 912,
+    "max_lines": 4,
+    "raw_g1n_full_width_advance_px": 48,
+    "raw_g1n_half_width_advance_px": 24,
+    "raw_g1n_pass_limit_px": 1440,
+    "runtime_font_px": 30,
+    "runtime_line_spacing_setting": 8,
+    "runtime_token_reservation": "Use the pinned audit's strict full-name reservation; runtime prefix semantics are not inferred and runtime_proven remains false.",
+    "runtime_usable_line_width_px": 912
+  },
+  "strict_input": {
+    "audit": {
+      "relative_path": "tmp/pc_event_kanto_quality_wave101_v1/candidate-final/audit.v1.json",
+      "sha256": "AFEFF861A1DD28C688657A00CB08DFA0C615C933983A3D2723D7428796ABACBC",
+      "size": 96380
+    },
+    "candidate_manifest": {
+      "relative_path": "tmp/pc_event_kanto_quality_wave101_v1/candidate-final/candidate_manifest.v1.json",
+      "sha256": "85C1894EE95C844A6F14B542A127D73768717325139B73D28D791B840536CDAD",
+      "size": 2555
+    },
+    "candidate_relative": "tmp/pc_event_kanto_quality_wave101_v1/candidate-final",
+    "event_profile": {
+      "raw_sha256": "507F8FB7CF75D327F8CC88725E17BE3DA1084C4BD96237B9F1A1E8CE5F9D3B41",
+      "raw_size": 1043960,
+      "sha256": "96DBB584AE96157E3B7013CAF86A4876CDB0B87EFF66433CB9236206996C2D91",
+      "size": 1048079
+    },
+    "event_relative": "tmp/pc_event_kanto_quality_wave101_v1/candidate-final/MSG_PK/JP/msgev.bin",
+    "workstream": "pc_event_kanto_quality_wave101_v1"
+  }
+}

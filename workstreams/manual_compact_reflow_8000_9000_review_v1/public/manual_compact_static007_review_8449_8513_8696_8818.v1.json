@@ -1,0 +1,521 @@
+{
+  "schema": "nobu16.kr.manual-compact-static007-review.8449-8513-8696-8818.v1",
+  "scope": {
+    "resource": "MSG_PK/JP/msgev.bin",
+    "reviewed_ids": [
+      8449,
+      8513,
+      8696,
+      8818
+    ],
+    "current_korean_input": "tmp/pc_event_manual_compact_static007_batch03_v1/candidate-final/MSG_PK/JP/msgev.bin",
+    "candidate_binary_created": false,
+    "steam_game_resource_written": false,
+    "git_operation_performed": false,
+    "release_published": false,
+    "network_operation_performed": false
+  },
+  "layout_baseline": {
+    "authority": "F:/Games/NOBU16/AGENTS.md — Event dialogue layout / Static Patch 007 baseline",
+    "draw_font_px": 30,
+    "usable_line_width_px": 912,
+    "maximum_manual_lines": 4,
+    "raw_g1n_full_width_advance_px": 48,
+    "raw_g1n_half_width_advance_px": 24,
+    "effective_width_formula": "ceil(raw_g1n_width_px * 30 / 48)",
+    "raw_g1n_width_limit_px": 1440,
+    "effective_width_limit_px": 912,
+    "japanese_source_line_breaks_used": false,
+    "sentence_shortening_or_meaning_deletion": false
+  },
+  "sources": {
+    "strict_current_korean_batch03": {
+      "path": "tmp/pc_event_manual_compact_static007_batch03_v1/candidate-final/MSG_PK/JP/msgev.bin",
+      "packed_sha256": "259908A5D24CB0C81B3A66FBBD55AE9A97D5210DE24555B1BDBF79AAF0C90B16",
+      "packed_size": 1000389,
+      "raw_sha256": "A2815BB64F67F85A4033A907ADD3688B479CD88E34E32BF8E8C9F976B0A879D5",
+      "raw_size": 996456,
+      "string_count": 17916
+    },
+    "legacy_complete_korean": {
+      "path": "F:/SteamLibrary/steamapps/common/NOBU16/KR_PATCH_BACKUP/file_only_transaction/steam-jp-v0.10.0-original-font-rollback-v1/originals/MSG_PK/JP/msgev.bin",
+      "packed_sha256": "2CA183DA690D45A75702EA0F35C70966786B59E9440B8B8F49BE9652342F81AC",
+      "packed_size": 1052079,
+      "raw_sha256": "EDCF7A9CEBD605BB2275D5A3B92A76E7E2F652B2391554F24C6A8BDD2EF91A08",
+      "raw_size": 1047944,
+      "string_count": 17916
+    },
+    "direct_pc_contexts": {
+      "jp": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/KR_PATCH_BACKUP/file_only_transaction/steam-jp-1.1.7-v0.6.0/originals/MSG_PK/JP/msgev.bin",
+        "packed_sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+        "packed_size": 562226,
+        "raw_sha256": "07D7512BE0235753FC7BB0C7C548B61F471D9CDED01379E63B8AF8EAE013813E",
+        "raw_size": 894800
+      },
+      "en": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/MSG_PK/EN/msgev.bin",
+        "packed_sha256": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+        "packed_size": 762196,
+        "raw_sha256": "6A1F3891412EBFF5AC3188F498C9951431154192D69E82B7ABB6F25AA934D911",
+        "raw_size": 1878836
+      },
+      "sc": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/MSG_PK/SC/msgev.bin",
+        "packed_sha256": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+        "packed_size": 522177,
+        "raw_sha256": "3ACE267E6B9774D8C940C9D7940F168B61744ADDF7C082F2CB1EA7E9BBD82B5E",
+        "raw_size": 754708
+      },
+      "tc": {
+        "path": "F:/SteamLibrary/steamapps/common/NOBU16/MSG_PK/TC/msgev.bin",
+        "packed_sha256": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6",
+        "packed_size": 524909,
+        "raw_sha256": "42DC893AA9FF9D3E7B75FBCFFBEFD7C3DFC338CAB71E942C081BDC52C9024BF6",
+        "raw_size": 744212
+      }
+    },
+    "historical_manual_compact_overlay": {
+      "path": "workstreams/steam_jp_msgev_full_layout_v2/public/msgev_ko_steam_jp_full_layout.v2.json",
+      "sha256": "10EE44F4D5F5A871F5DEDB60C6435F4115E698FB1544B898EA421356FAB6BF42"
+    },
+    "runtime_token_reservation_manifest": {
+      "path": "workstreams/steam_jp_msgev_full_layout_v2/public/runtime_token_reservations.v1.json",
+      "sha256": "B981C7C456F2DC285721E7E3DB74D2D11456B49B25D5A97BB320F815DFC0A893",
+      "reservation_policy": "Use the referenced full-name raw reservation; scale it by 30/48. These rows are scene-limited conservative reservations, not runtime proof."
+    }
+  },
+  "entries": [
+    {
+      "id": 8449,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_disposition": "retain_current_post_compaction_quality_revision",
+      "requires_candidate_text_change": false,
+      "historical_manual_compact_ko": "장수는 \u001bCA[bm1871]\u001bCZ 신임의\n\u001bCA도리이\u001bCZ·\u001bCA오쿠보\u001bCZ·\u001bCA히라이와\u001bCZ,\n병력은 우리 넷 배.",
+      "legacy_complete_ko": "장수는 \u001bCA[bm1871]\u001bCZ의 신임 두터운 \u001bCA도리이 모토타다\u001bCZ에 \u001bCA오쿠보 다다요\u001bCZ에\n\u001bCA히라이와 지카요시\u001bCZ이며, 병력은 우리의 네 배는 됩니다.",
+      "current_ko": "장수는 \u001bCA[bm1871]\u001bCZ가 신임하는\n\u001bCA도리이 모토타다\u001bCZ, \u001bCA오쿠보 다다요\u001bCZ,\n\u001bCA히라이와 지카요시\u001bCZ이며,\n병력은 우리 군의 네 배다.",
+      "proposed_ko": "장수는 \u001bCA[bm1871]\u001bCZ가 신임하는\n\u001bCA도리이 모토타다\u001bCZ, \u001bCA오쿠보 다다요\u001bCZ,\n\u001bCA히라이와 지카요시\u001bCZ이며,\n병력은 우리 군의 네 배다.",
+      "text_hashes_utf16le_sha256": {
+        "legacy_complete_ko": "808E7FB2ED9B6994C353C2BA8D6C2C3E9EEB17600E75FBE9E364E8236D46B286",
+        "current_ko": "8FE40D5B5013BB8FD8D628E70FABA46722F4D82EFB69B00A9EB75983E0FF8665",
+        "proposed_ko": "8FE40D5B5013BB8FD8D628E70FABA46722F4D82EFB69B00A9EB75983E0FF8665"
+      },
+      "direct_pc_source_evidence": {
+        "jp": "将は\u001bCA[bm1871]\u001bCZの信厚き、\u001bCA鳥居元忠\u001bCZに\u001bCA大久保忠世\u001bCZに\n\u001bCA平岩親吉\u001bCZにて、兵は我らの四倍はおります。",
+        "en": "Their forces outnumber ours by a factor of four and are led by \u001bCA[bm1871]\u001bCZÖs most trusted generals, \u001bCAMototada Torii\u001bCZ, \u001bCATadayo ¥kubo\u001bCZ, and \u001bCAChikayoshi Hiraiwa\u001bCZ.",
+        "sc": "将领有\u001bCA[bm1871]\u001bCZ的亲信，\u001bCA鸟居元忠\u001bCZ、\u001bCA大久保忠世\u001bCZ、\n\u001bCA平岩亲吉\u001bCZ，兵力是我军的4倍。",
+        "tc": "由\u001bCA[bm1871]\u001bCZ的親信\u001bCA鳥居元忠\u001bCZ、\n\u001bCA大久保忠世\u001bCZ及\u001bCA平岩親吉\u001bCZ率兵，\n兵力是我方的四倍。",
+        "utf16le_sha256": {
+          "jp": "509CAC794C6E047C704EE304812A4F7213CB5C4C643ACC38EB3E25B8AA71B002",
+          "en": "C1B8D99EA2B34257E9BB37BD2CF6F01B1E71D29DF166542341F1120993C3A097",
+          "sc": "A941C31FFD9A6DB35372426F9B10F3F7B24CF82AAAED87CF5514A53A7DFB0547",
+          "tc": "1A2DE808541EB3D3A910CEDB9A81C48F5158154C83AA8ED47CE732CEE6CE2836"
+        }
+      },
+      "control_signatures": {
+        "direct_pc_jp": {
+          "esc_tokens": ["\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ", "\u001bCA", "\u001bCZ"],
+          "runtime_tokens": ["[bm1871]"],
+          "printf_tokens": [],
+          "unknown_percent_count": 0,
+          "other_controls": []
+        },
+        "current_and_proposed_match_direct_pc_jp": true
+      },
+      "semantic_review": "후속 품질본이 역사적 압축문의 축약된 인명·병력 표현을 이미 복원했다. 레거시의 비문인 ‘신임 두터운 …에’와 ‘네 배는 됩니다’는 되돌리지 않고, 원문의 신임 장수 세 명과 우리 군의 네 배라는 정보를 완전하게 보존한 현재 문장을 유지한다.",
+      "layout_review": {
+        "legacy_complete_line_count": 2,
+        "legacy_complete_any_line_exceeds_912px": true,
+        "current_line_count": 4,
+        "current_any_line_exceeds_912px": false,
+        "proposed_line_count": 4,
+        "proposed_any_line_exceeds_912px": false,
+        "runtime_proven": false,
+        "proposed_lines": [
+          {
+            "line_number": 1,
+            "display_string": "장수는 [bm1871]가 신임하는",
+            "visible_string_excluding_dynamic_tokens": "장수는 가 신임하는",
+            "raw_g1n_visible_width_px": 432,
+            "raw_g1n_token_reservation_px": 456,
+            "raw_g1n_width_px": 888,
+            "effective_visible_width_px": 270,
+            "effective_token_reservation_px": 285,
+            "effective_width_px": 555,
+            "full_width_character_count": 8,
+            "half_width_character_count": 2,
+            "dynamic_token_reservations": [{"token": "[bm1871]", "source_name_id": 1871, "raw_g1n_reservation_px": 456, "effective_reservation_px": 285, "runtime_proven": false}],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 2,
+            "display_string": "도리이 모토타다, 오쿠보 다다요,",
+            "visible_string_excluding_dynamic_tokens": "도리이 모토타다, 오쿠보 다다요,",
+            "raw_g1n_visible_width_px": 744,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 744,
+            "effective_visible_width_px": 465,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 465,
+            "full_width_character_count": 13,
+            "half_width_character_count": 5,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 3,
+            "display_string": "히라이와 지카요시이며,",
+            "visible_string_excluding_dynamic_tokens": "히라이와 지카요시이며,",
+            "raw_g1n_visible_width_px": 528,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 528,
+            "effective_visible_width_px": 330,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 330,
+            "full_width_character_count": 10,
+            "half_width_character_count": 2,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 4,
+            "display_string": "병력은 우리 군의 네 배다.",
+            "visible_string_excluding_dynamic_tokens": "병력은 우리 군의 네 배다.",
+            "raw_g1n_visible_width_px": 600,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 600,
+            "effective_visible_width_px": 375,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 375,
+            "full_width_character_count": 10,
+            "half_width_character_count": 5,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 8513,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_disposition": "retain_current_post_compaction_quality_revision_and_reflow_semantic_sentences",
+      "requires_candidate_text_change": true,
+      "historical_manual_compact_ko": "\u001bCA히데요시\u001bCZ는 천하 위해\n\u001bCB[bs1871]가\u001bCZ를 방치 못 해\n\u001bCB[bm1871]\u001bCZ 포섭.",
+      "legacy_complete_ko": "\u001bCA히데요시\u001bCZ는, 천하인을 노리는 데 있어,\n거대한 존재감을 유지하는 \u001bCB[bs1871]가\u001bCZ를 방치할 수 없다. 수단 방법을 가리지 않고, \u001bCB[bm1871]\u001bCZ 포섭을 꾀했다.",
+      "current_ko": "천하인을 목표로 한 \u001bCA히데요시\u001bCZ는\n거대한 존재감을 유지하는 \u001bCB[bs1871]가\u001bCZ를\n그대로 둘 수 없었다. 수단을 가리지 않고\n\u001bCB[bm1871]\u001bCZ 포섭을 꾀했다.",
+      "proposed_ko": "천하인을 목표로 한 \u001bCA히데요시\u001bCZ는\n거대한 존재감을 유지하는 \u001bCB[bs1871]가\u001bCZ를\n그대로 둘 수 없었다.\n수단을 가리지 않고 \u001bCB[bm1871]\u001bCZ 포섭을 꾀했다.",
+      "text_hashes_utf16le_sha256": {
+        "legacy_complete_ko": "9BD38E66EAEB8C9C4FE54A75BDC95C35659B14A2411977BC926E724BFDC8A741",
+        "current_ko": "2DA38D591D23C54C1C0CB8157CEDE243A6C1E1E20BFE9F51D133AA0C28FB9275",
+        "proposed_ko": "423A3378B5DB32AE046F577DF28A47C2728F6E6875171E0F6F7A56101985E273"
+      },
+      "direct_pc_source_evidence": {
+        "jp": "\u001bCA秀吉\u001bCZは、天下人を目指す上で、\n巨大な存在感を保つ\u001bCB[bs1871]家\u001bCZを放置できない。なりふりかまわず、\u001bCB[bm1871]\u001bCZ取り込みを図った。",
+        "en": "\u001bCAHideyoshi\u001bCZ, determined to become the grand unifier, could not afford to ignore the towering presence of the \u001bCB[bs1871] Clan\u001bCZ. Undeterred by how his actions might be perceived, he began plotting to win them over.",
+        "sc": "\u001bCA秀吉\u001bCZ既然剑指天下人，\n就不可能任极富存在感的\u001bCB[bs1871]家\u001bCZ自由发展。\n他不顾一切，企图笼络\u001bCB[bm1871]\u001bCZ。",
+        "tc": "\u001bCA秀吉\u001bCZ既以天下人為目標，\n自然無法忽視佔有一席之地的\u001bCB[bs1871]家\u001bCZ。\n因此不顧一切，試圖籠絡\u001bCB[bm1871]\u001bCZ。",
+        "utf16le_sha256": {
+          "jp": "CCC73DC27F6E2AC632C9C3D6E50E0614F465436A01AA857B6D6DE63F71042C71",
+          "en": "8A51DED91613B98797203819E52D92E74067BCA111392D294E476A0AAED7756F",
+          "sc": "57A935AA3C9529DE5CBFBA8B53E4926EBF17634670AF6D38131804FF507D7317",
+          "tc": "42DEED4B1DF7BCEE4E6917A0A06BA81A289ECC2C2AB82175A07EAEEDF0DAB574"
+        }
+      },
+      "control_signatures": {
+        "direct_pc_jp": {
+          "esc_tokens": ["\u001bCA", "\u001bCZ", "\u001bCB", "\u001bCZ", "\u001bCB", "\u001bCZ"],
+          "runtime_tokens": ["[bs1871]", "[bm1871]"],
+          "printf_tokens": [],
+          "unknown_percent_count": 0,
+          "other_controls": []
+        },
+        "current_and_proposed_match_direct_pc_jp": true
+      },
+      "semantic_review": "현재 품질본의 ‘천하인을 목표로 한’, ‘그대로 둘 수 없었다’, ‘수단을 가리지 않고’는 원문·영문·중문이 공통으로 말하는 천하 통일의 목표, 거대 가문의 방치 불가, 체면·수단을 가리지 않은 포섭을 온전히 전달한다. 레거시의 어색한 직역으로 되돌리지 않고, 두 문장을 한 줄에 붙인 현재 개행만 문장 경계에 맞춰 분리한다.",
+      "layout_review": {
+        "legacy_complete_line_count": 2,
+        "legacy_complete_any_line_exceeds_912px": true,
+        "current_line_count": 4,
+        "current_any_line_exceeds_912px": false,
+        "proposed_line_count": 4,
+        "proposed_any_line_exceeds_912px": false,
+        "runtime_proven": false,
+        "proposed_lines": [
+          {
+            "line_number": 1,
+            "display_string": "천하인을 목표로 한 히데요시는",
+            "visible_string_excluding_dynamic_tokens": "천하인을 목표로 한 히데요시는",
+            "raw_g1n_visible_width_px": 696,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 696,
+            "effective_visible_width_px": 435,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 435,
+            "full_width_character_count": 13,
+            "half_width_character_count": 3,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 2,
+            "display_string": "거대한 존재감을 유지하는 [bs1871]가를",
+            "visible_string_excluding_dynamic_tokens": "거대한 존재감을 유지하는 가를",
+            "raw_g1n_visible_width_px": 696,
+            "raw_g1n_token_reservation_px": 456,
+            "raw_g1n_width_px": 1152,
+            "effective_visible_width_px": 435,
+            "effective_token_reservation_px": 285,
+            "effective_width_px": 720,
+            "full_width_character_count": 13,
+            "half_width_character_count": 3,
+            "dynamic_token_reservations": [{"token": "[bs1871]", "source_name_id": 1871, "raw_g1n_reservation_px": 456, "effective_reservation_px": 285, "runtime_proven": false}],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 3,
+            "display_string": "그대로 둘 수 없었다.",
+            "visible_string_excluding_dynamic_tokens": "그대로 둘 수 없었다.",
+            "raw_g1n_visible_width_px": 480,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 480,
+            "effective_visible_width_px": 300,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 300,
+            "full_width_character_count": 8,
+            "half_width_character_count": 4,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 4,
+            "display_string": "수단을 가리지 않고 [bm1871] 포섭을 꾀했다.",
+            "visible_string_excluding_dynamic_tokens": "수단을 가리지 않고  포섭을 꾀했다.",
+            "raw_g1n_visible_width_px": 816,
+            "raw_g1n_token_reservation_px": 456,
+            "raw_g1n_width_px": 1272,
+            "effective_visible_width_px": 510,
+            "effective_token_reservation_px": 285,
+            "effective_width_px": 795,
+            "full_width_character_count": 14,
+            "half_width_character_count": 6,
+            "dynamic_token_reservations": [{"token": "[bm1871]", "source_name_id": 1871, "raw_g1n_reservation_px": 456, "effective_reservation_px": 285, "runtime_proven": false}],
+            "exceeds_912px": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 8696,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_disposition": "restore_full_korean_meaning_and_semantic_reflow",
+      "requires_candidate_text_change": true,
+      "historical_manual_compact_ko": "말 떨어지자 \u001bCA오니니와 사게쓰사이\u001bCZ가\n\u001bCC히토토리바시\u001bCZ 건너 적진 돌격.\n연합군은 한동안 혼란했다.",
+      "legacy_complete_ko": "말이 떨어지기 무섭게, \u001bCA오니니와 사게쓰사이\u001bCZ는 \u001bCC히토토리바시\u001bCZ를 건너\n적진으로 돌격했다.\n연합군은 한동안 혼란에 빠졌다.",
+      "current_ko": "말 떨어지자 \u001bCA오니니와 사게쓰사이\u001bCZ가\n\u001bCC히토토리바시\u001bCZ 건너 적진 돌격.\n연합군은 한동안 혼란했다.",
+      "proposed_ko": "말이 떨어지기 무섭게, \u001bCA오니니와 사게쓰사이\u001bCZ는\n\u001bCC히토토리바시\u001bCZ를 건너 적진으로 돌격했다.\n연합군은 한동안 혼란에 빠졌다.",
+      "text_hashes_utf16le_sha256": {
+        "legacy_complete_ko": "0401984A78A603450C7917E674153B9E37E3113818CB5A9E73D542018AC3CFB2",
+        "current_ko": "E74A7370FD1E3F9360D517452A903A7D3BF24F71FB58A2A826A7F3F84E1DF1E6",
+        "proposed_ko": "49B2154058D0A3E5BD26C90B1FD5FC756A6742776016E8FDE8F706474260614B"
+      },
+      "direct_pc_source_evidence": {
+        "jp": "言うが早いか、\u001bCA鬼庭左月斎\u001bCZは\u001bCC人取橋\u001bCZを渡り\n敵陣に突撃。\n連合軍はしばし混乱に陥った。",
+        "en": "No sooner had he spoken than \u001bCASagetsusai Oniniwa\u001bCZ crossed \u001bCCHitotoribashi Bridge\u001bCZ and charged at the enemy soldiers. The coalition quickly fell into disarray.",
+        "sc": "说时迟，\u001bCA鬼庭左月斋\u001bCZ已冲过\u001bCC人取桥\u001bCZ，杀入敌阵。联合军顿时陷入混乱。",
+        "tc": "話音未落，\u001bCA鬼庭左月齋\u001bCZ已衝過\u001bCC人取橋\u001bCZ，\n殺入敵陣。聯合軍頓時陷入混亂。",
+        "utf16le_sha256": {
+          "jp": "83EBED9C29B83D93120E55B15604BF89F1CF80D9E0028286109F507F9C6C04BA",
+          "en": "537E7FB2E8CAB69CDC3DD1B5CAE33332AF2E3FF265F20DCBA24B73D0882DF7FA",
+          "sc": "D82B0CFFC0644E8D1284C407E9C631BEDC2B9A55472B05FCBE1F77CD6F6BC64A",
+          "tc": "315A4BF0BAA40AEC2A2AD01B0F2D104CBDA54249D64B98A836728241F596ABDE"
+        }
+      },
+      "control_signatures": {
+        "direct_pc_jp": {
+          "esc_tokens": ["\u001bCA", "\u001bCZ", "\u001bCC", "\u001bCZ"],
+          "runtime_tokens": [],
+          "printf_tokens": [],
+          "unknown_percent_count": 0,
+          "other_controls": []
+        },
+        "current_and_proposed_match_direct_pc_jp": true
+      },
+      "semantic_review": "현재 압축문은 ‘말이 떨어지기 무섭게’, 조사 ‘는/를/으로’, 적진으로 돌격한 완결 서술, 연합군이 혼란에 빠진 결과를 전보식으로 잘랐다. 원문과 세 보조 언어가 모두 확인하는 인과를 복원하고, 기존 레거시 1행의 945px 초과를 두 문맥 단위로 나눴다.",
+      "layout_review": {
+        "legacy_complete_line_count": 3,
+        "legacy_complete_any_line_exceeds_912px": true,
+        "current_line_count": 3,
+        "current_any_line_exceeds_912px": false,
+        "proposed_line_count": 3,
+        "proposed_any_line_exceeds_912px": false,
+        "runtime_proven": false,
+        "proposed_lines": [
+          {
+            "line_number": 1,
+            "display_string": "말이 떨어지기 무섭게, 오니니와 사게쓰사이는",
+            "visible_string_excluding_dynamic_tokens": "말이 떨어지기 무섭게, 오니니와 사게쓰사이는",
+            "raw_g1n_visible_width_px": 1032,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 1032,
+            "effective_visible_width_px": 645,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 645,
+            "full_width_character_count": 19,
+            "half_width_character_count": 5,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 2,
+            "display_string": "히토토리바시를 건너 적진으로 돌격했다.",
+            "visible_string_excluding_dynamic_tokens": "히토토리바시를 건너 적진으로 돌격했다.",
+            "raw_g1n_visible_width_px": 912,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 912,
+            "effective_visible_width_px": 570,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 570,
+            "full_width_character_count": 17,
+            "half_width_character_count": 4,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 3,
+            "display_string": "연합군은 한동안 혼란에 빠졌다.",
+            "visible_string_excluding_dynamic_tokens": "연합군은 한동안 혼란에 빠졌다.",
+            "raw_g1n_visible_width_px": 720,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 720,
+            "effective_visible_width_px": 450,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 450,
+            "full_width_character_count": 13,
+            "half_width_character_count": 4,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 8818,
+      "historical_operation": "manual_compact_korean_layout",
+      "review_disposition": "restore_full_korean_meaning_and_semantic_reflow",
+      "requires_candidate_text_change": true,
+      "historical_manual_compact_ko": "관백 \u001bCA히데요시\u001bCZ는 다이묘의 멋대로인\n영토 다툼을 금하고 이를 '소부지'라\n했다. 어기면 관백의 토벌을 받는다.",
+      "legacy_complete_ko": "관백 \u001bCA히데요시\u001bCZ는 여러 나라의 다이묘에게, 제멋대로의 영토 다툼을\n금하고, 그것을 '소부지'라 칭하였다.\n이를 거스르는 자는 관백의 토벌을 받는다.",
+      "current_ko": "관백 \u001bCA히데요시\u001bCZ는 다이묘의 멋대로인\n영토 다툼을 금하고 이를 '소부지'라\n했다. 어기면 관백의 토벌을 받는다.",
+      "proposed_ko": "관백 \u001bCA히데요시\u001bCZ는 여러 나라의 다이묘에게,\n제멋대로의 영토 다툼을 금하고,\n그것을 '소부지'라 칭하였다.\n이를 거스르는 자는 관백의 토벌을 받는다.",
+      "text_hashes_utf16le_sha256": {
+        "legacy_complete_ko": "2D0C6EAEEC471ED82390F714A22DBB3C54E95D11BB3ACCC53FA5F0D6B69854C3",
+        "current_ko": "D1EB31E60A3BBFFC13C5CF908F7079094A52808299C9D8080A2F37A7047F7F98",
+        "proposed_ko": "D04EA844D997792400D2DCA555DF8FCD97920D05720D81757900FF029C152CE9"
+      },
+      "direct_pc_source_evidence": {
+        "jp": "関白\u001bCA秀吉\u001bCZは諸国の大名に、勝手な領土争いを\n禁じており、それを「惣無事」と称した。\nこれに逆らう者は関白の討伐を受ける。",
+        "en": "As regent, \u001bCAHideyoshi\u001bCZ had banned the daimyª of various countries from engaging in wanton territorial disputes. This was his ÆEdict of Peace,Æ and any who disobeyed it would be subject to his punishment.",
+        "sc": "关白\u001bCA秀吉\u001bCZ禁止诸国大名擅自\n争夺领土，称之为“总无事”。\n违令者会受到关白的讨伐。",
+        "tc": "關白‧\u001bCA秀吉\u001bCZ禁止諸大名擅自爭奪領土，\n該禁令稱為「總無事」。\n違逆者必受關白討伐。",
+        "utf16le_sha256": {
+          "jp": "486A9D15FDF3C39BDF6C23F04EEE748BB0691D5F77155C1678C944A7A8556C14",
+          "en": "8276C82FC37D90E4AB774CCD6A4B4B1A51DA462E72F03E44C26D57F227EBD147",
+          "sc": "114E3203469D7C223E2ECFF518858D428FAE0A13698BC7DF8382489B75B86F26",
+          "tc": "79F3834675CA1F46D7E0FD7E9F25ACF6A3B9DC3B74E466692FFE2567D2B26658"
+        }
+      },
+      "control_signatures": {
+        "direct_pc_jp": {
+          "esc_tokens": ["\u001bCA", "\u001bCZ"],
+          "runtime_tokens": [],
+          "printf_tokens": [],
+          "unknown_percent_count": 0,
+          "other_controls": []
+        },
+        "current_and_proposed_match_direct_pc_jp": true
+      },
+      "semantic_review": "현재 압축문은 ‘여러 나라의 다이묘에게’, ‘제멋대로의’, ‘그것을 … 칭하였다’, ‘이를 거스르는 자’를 각각 일반화하거나 삭제했다. 원문의 칙령 대상·명칭 부여·위반 주체를 모두 복원한다. ‘소부지’는 바로 앞 대사(8817)의 프로젝트 내 용어와 일치하므로 유지한다.",
+      "layout_review": {
+        "legacy_complete_line_count": 3,
+        "legacy_complete_any_line_exceeds_912px": true,
+        "current_line_count": 3,
+        "current_any_line_exceeds_912px": false,
+        "proposed_line_count": 4,
+        "proposed_any_line_exceeds_912px": false,
+        "runtime_proven": false,
+        "proposed_lines": [
+          {
+            "line_number": 1,
+            "display_string": "관백 히데요시는 여러 나라의 다이묘에게,",
+            "visible_string_excluding_dynamic_tokens": "관백 히데요시는 여러 나라의 다이묘에게,",
+            "raw_g1n_visible_width_px": 936,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 936,
+            "effective_visible_width_px": 585,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 585,
+            "full_width_character_count": 17,
+            "half_width_character_count": 5,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 2,
+            "display_string": "제멋대로의 영토 다툼을 금하고,",
+            "visible_string_excluding_dynamic_tokens": "제멋대로의 영토 다툼을 금하고,",
+            "raw_g1n_visible_width_px": 720,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 720,
+            "effective_visible_width_px": 450,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 450,
+            "full_width_character_count": 13,
+            "half_width_character_count": 4,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 3,
+            "display_string": "그것을 '소부지'라 칭하였다.",
+            "visible_string_excluding_dynamic_tokens": "그것을 '소부지'라 칭하였다.",
+            "raw_g1n_visible_width_px": 648,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 648,
+            "effective_visible_width_px": 405,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 405,
+            "full_width_character_count": 11,
+            "half_width_character_count": 5,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          },
+          {
+            "line_number": 4,
+            "display_string": "이를 거스르는 자는 관백의 토벌을 받는다.",
+            "visible_string_excluding_dynamic_tokens": "이를 거스르는 자는 관백의 토벌을 받는다.",
+            "raw_g1n_visible_width_px": 960,
+            "raw_g1n_token_reservation_px": 0,
+            "raw_g1n_width_px": 960,
+            "effective_visible_width_px": 600,
+            "effective_token_reservation_px": 0,
+            "effective_width_px": 600,
+            "full_width_character_count": 17,
+            "half_width_character_count": 6,
+            "dynamic_token_reservations": [],
+            "exceeds_912px": false
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_row_count": 4,
+    "semantic_text_restorations_required": [8696, 8818],
+    "semantic_line_reflow_only_required": [8513],
+    "current_quality_revision_retained_without_text_change": [8449],
+    "all_proposed_rows_within_four_lines": true,
+    "all_proposed_lines_within_912px_effective_limit": true,
+    "all_proposed_control_signatures_match_direct_pc_jp": true,
+    "no_runtime_token_reservation_is_marked_runtime_proven": true
+  }
+}

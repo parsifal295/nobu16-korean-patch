@@ -1,0 +1,72 @@
+{
+  "candidate_protected_row_count": 30,
+  "contiguous_scene_batch_count": 1049,
+  "current_differs_from_historical_compact_count": 205,
+  "git_operation_performed": false,
+  "id_range": [
+    3210,
+    11008
+  ],
+  "legacy_static_preflight": {
+    "non_authoritative": true,
+    "policy": "legacy static preflight only; current runtime-token-reserved static-patch-007 layout is authoritative",
+    "recovery_category_counts": {
+      "current_diff+oldfit": 201,
+      "current_diff+reflow": 4,
+      "current_same+oldfit": 1319,
+      "current_same+reflow": 29
+    },
+    "static_reflow_ids": [
+      5164,
+      6654,
+      7308,
+      7610,
+      7611,
+      7734,
+      8449,
+      8513,
+      8696,
+      8818,
+      9049,
+      9083,
+      9140,
+      9141,
+      9169,
+      9228,
+      9326,
+      9338,
+      9340,
+      9523,
+      9540,
+      9541,
+      9624,
+      9683,
+      10136,
+      10183,
+      10314,
+      10334,
+      10343,
+      10463,
+      10595,
+      10625,
+      10744
+    ],
+    "static_reflow_row_count": 33
+  },
+  "manual_line_count_attention_rows": 0,
+  "network_operation_performed": false,
+  "outputs": {
+    "batches": "workstreams/pc_event_manual_compact_korean_layout_inventory_v1/public/msgev_manual_compact_korean_layout_batches.v1.json",
+    "inventory": "workstreams/pc_event_manual_compact_korean_layout_inventory_v1/public/msgev_manual_compact_korean_layout_inventory.v1.json",
+    "report": "workstreams/pc_event_manual_compact_korean_layout_inventory_v1/REPORT_KO.md"
+  },
+  "read_only": true,
+  "release_published": false,
+  "row_count": 1553,
+  "schema": "nobu16.kr.pc-event-manual-compact-korean-layout-inventory-validation.v1",
+  "static_patch_007_effective_attention_rows": 0,
+  "status": "PASS",
+  "steam_game_resource_written": false,
+  "transaction_performed": false,
+  "unresolved_runtime_hold_rows": 11
+}
