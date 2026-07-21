@@ -1,0 +1,67 @@
+{
+  "artifact_kind": "read-only coverage evidence; no candidate output",
+  "audit_sha256": "1E7D620D9417DF4A5D02D6B13C493C2A5A55E762A7F9FFC7B5B43C7B71172C8D",
+  "binary_replacement_count": 0,
+  "candidate_binary_created": false,
+  "candidate_output": "absent by design because all 44 approved static targets are already present in the strict Wave 97 input",
+  "excluded_hold_count": 32,
+  "git_operation": "not_implemented",
+  "missing_static_literal_count": 0,
+  "network": "not_implemented",
+  "pre_applied_verified_literal_count": 44,
+  "release": "not_implemented",
+  "resources": {
+    "MSG/JP/msggame.bin": {
+      "binary_replacement_count": 0,
+      "input_and_retained_output": {
+        "raw_sha256": "213BA9519E7E3C4B89BA300AB110CBFB3544FAE0407F2CF66906157761C3FDC1",
+        "raw_size": 1498556,
+        "sha256": "27C0D9A5FEE6D212105EE6E6BA14F5DF7B653C0073DBF80AAEBB697D34CC51B2",
+        "size": 1504458
+      },
+      "pre_applied_static_literal_count": 4
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "binary_replacement_count": 0,
+      "input_and_retained_output": {
+        "raw_sha256": "599C1415FA511E934303FFF7B15BB92834DAB90C54365A7FD62E6BB12C850F67",
+        "raw_size": 1799604,
+        "sha256": "E507D55F2FECE844FA3AF1FBA213DE2DB7D0F4113082190615DA9C15D3906540",
+        "size": 1806687
+      },
+      "pre_applied_static_literal_count": 40
+    }
+  },
+  "schema": "nobu16.kr.pc-dialogue-b17-direct-static-quality-preapplied-manifest.v3",
+  "steam_game_resource_write": "absent",
+  "strict_input": {
+    "evidence": {
+      "audit.v1.json": {
+        "schema": "nobu16.kr.pc-dialogue-quality-wave97-pk-security-development-static-audit.v1",
+        "sha256": "54BF4C8A0BC63C91CEEE91652D33D680E56717C5E05D1748A6F1C2E2BC12E5A2",
+        "size": 18710
+      },
+      "build_manifest.v1.json": {
+        "schema": "nobu16.kr.pc-dialogue-quality-wave97-pk-security-development-static-manifest.v1",
+        "sha256": "AA242F0EBFCB3E5BEB1F046D87BB3F0C6DD274380A901550367A7A0DCC824AEB",
+        "size": 2733
+      }
+    },
+    "resources": {
+      "MSG/JP/msggame.bin": {
+        "raw_sha256": "213BA9519E7E3C4B89BA300AB110CBFB3544FAE0407F2CF66906157761C3FDC1",
+        "raw_size": 1498556,
+        "sha256": "27C0D9A5FEE6D212105EE6E6BA14F5DF7B653C0073DBF80AAEBB697D34CC51B2",
+        "size": 1504458
+      },
+      "MSG_PK/JP/msggame.bin": {
+        "raw_sha256": "599C1415FA511E934303FFF7B15BB92834DAB90C54365A7FD62E6BB12C850F67",
+        "raw_size": 1799604,
+        "sha256": "E507D55F2FECE844FA3AF1FBA213DE2DB7D0F4113082190615DA9C15D3906540",
+        "size": 1806687
+      }
+    },
+    "root": "tmp/pc_dialogue_quality_wave97_pk_security_development_static_v1/candidate"
+  },
+  "transaction": "not_implemented"
+}
