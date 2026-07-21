@@ -42,13 +42,8 @@ class StaticEventMessageTypographyInstallerV0140Tests(unittest.TestCase):
         for name in expected:
             self.assertIn(f"Patches/{name}", registry)
 
-    def test_published_v0131_installer_files_are_unchanged(self) -> None:
+    def test_published_static_payload_is_unchanged_except_unified_restore_support(self) -> None:
         relative_paths = [
-            Path("../APPLY_STATIC_EXE_PATCHES.bat"),
-            Path("../APPLY_STATIC_OFFICER_EDITOR_FIX.bat"),
-            Path("../RESTORE_ORIGINAL_NOBU16PK_EXE.bat"),
-            Path("Invoke-Nobu16StaticPatches.ps1"),
-            Path("Invoke-StaticOfficerEditorFix.ps1"),
             Path("THIRD_PARTY_NOTICES.txt"),
             Path("Steamless/Steamless.CLI.exe"),
             Path("Steamless/Steamless.CLI.exe.config"),
@@ -71,6 +66,12 @@ class StaticEventMessageTypographyInstallerV0140Tests(unittest.TestCase):
                 (PREVIOUS_STATIC_ROOT / relative).read_bytes(),
                 str(relative),
             )
+        master = (STATIC_ROOT / "Invoke-Nobu16StaticPatches.ps1").read_text(encoding="utf-8")
+        restore = master.split("function Restore-Original", 1)[1]
+        self.assertLess(
+            restore.index("$currentHash = Get-Sha256 $ExecutablePath"),
+            restore.index("Assert-FileHash $BackupPath $OriginalSize $OriginalSha256 'Original backup'"),
+        )
 
     def test_patch_007_is_the_reviewed_same_size_byte_patch(self) -> None:
         source = PATCH_007.read_text(encoding="ascii")
@@ -101,23 +102,18 @@ class StaticEventMessageTypographyInstallerV0140Tests(unittest.TestCase):
             ),
         )
 
-    def test_installer_and_project_readmes_document_patch_007(self) -> None:
-        installer_readme = (PAYLOAD / "STATIC_OFFICER_EDITOR_FIX_README_KO.txt").read_text(
-            encoding="utf-8"
-        )
+    def test_project_readme_documents_patch_007_and_unified_entrypoint(self) -> None:
         project_readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        for source in (installer_readme, project_readme):
-            for text in (
-                "007",
-                "글자 크기",
-                "36에서 30",
-                "줄간격",
-                "10에서 8",
-                "v0.13.1",
-                "APPLY_STATIC_EXE_PATCHES.bat",
-                "F424964405CFCD1AC454B3801DA4795A183A8271DD16EA8A6A7B97A2547232BF",
-            ):
-                self.assertIn(text, source)
+        for text in (
+            "007",
+            "글자 크기",
+            "36에서 30",
+            "줄간격",
+            "10에서 8",
+            "APPLY_KOREAN_PATCH.bat",
+            "F424964405CFCD1AC454B3801DA4795A183A8271DD16EA8A6A7B97A2547232BF",
+        ):
+            self.assertIn(text, project_readme)
 
         attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8")
         self.assertIn("/release_payload/v0.14.0/*.bat text eol=lf", attributes)

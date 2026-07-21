@@ -642,12 +642,12 @@ function Install-RegisteredPatches([string]$ResolvedGameRoot, [string]$Executabl
 }
 
 function Restore-Original([string]$ExecutablePath, [string]$BackupPath, [object[]]$Patches) {
-    Assert-FileHash $BackupPath $OriginalSize $OriginalSha256 'Original backup'
     $currentHash = Get-Sha256 $ExecutablePath
     if ($currentHash -eq $OriginalSha256) {
         Write-Host 'NOBU16PK.exe is already the original Steam JP 1.1.7 file.' -ForegroundColor Yellow
         return
     }
+    Assert-FileHash $BackupPath $OriginalSize $OriginalSha256 'Original backup'
     [byte[]]$current = [System.IO.File]::ReadAllBytes($ExecutablePath)
     Assert-NormalizedBase $current $Patches
 

@@ -76,21 +76,17 @@ class StaticMapAuxStatusInstallerV0140Tests(unittest.TestCase):
             ),
         )
 
-    def test_docs_explain_patch_008_and_installer_rerun(self) -> None:
-        sources = (
-            (ROOT / "README.md").read_text(encoding="utf-8"),
-            (PAYLOAD / "STATIC_OFFICER_EDITOR_FIX_README_KO.txt").read_text(encoding="utf-8"),
-        )
-        for source in sources:
-            for text in (
-                "008",
-                "20px",
-                "임전 숫자",
-                "성주 미임명",
-                "APPLY_STATIC_EXE_PATCHES.bat",
-                "01C8769F09BD9A5459844FF5E335A71048C1F11CC7AF7738517EFEE61D4BF28D",
-            ):
-                self.assertIn(text, source)
+    def test_docs_explain_patch_008_and_unified_entrypoint(self) -> None:
+        source = (ROOT / "README.md").read_text(encoding="utf-8")
+        for text in (
+            "008",
+            "20px",
+            "임전 숫자",
+            "성주 미임명",
+            "APPLY_KOREAN_PATCH.bat",
+            "01C8769F09BD9A5459844FF5E335A71048C1F11CC7AF7738517EFEE61D4BF28D",
+        ):
+            self.assertIn(text, source)
 
 
 if __name__ == "__main__":
