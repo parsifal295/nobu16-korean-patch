@@ -1,7 +1,7 @@
 @{
     Schema = 'nobu16.static-exe-patch-registry.v3'
     Release = 'v0.14.0'
-    AllAppliedSha256 = 'F424964405CFCD1AC454B3801DA4795A183A8271DD16EA8A6A7B97A2547232BF'
+    AllAppliedSha256 = 'C1E9123539506055C1ACB96A15A446C43952AED607DEA2C9646F690813FA53D5'
     Patches = @(
         @{
             Id = '001'
@@ -44,6 +44,24 @@
             File = 'Patches/007-EventMessageTypography.psd1'
             Size = 378
             Sha256 = 'B9370AA005202CB2E3D2FA22B5F33265517D8354851B434B4A3844EC50796F78'
+        }
+        @{
+            Id = '008'
+            File = 'Patches/008-HorizontalMapAuxiliaryIndicators.psd1'
+            Size = 1362
+            Sha256 = '91DFFF797E00D62567494519E7772ED42A3A966B5D25E488C31BD1B0DD8F0D6F'
+        }
+        @{
+            Id = '009'
+            File = 'Patches/009-EventMessageParentWidth.psd1'
+            Size = 245
+            Sha256 = 'CB70279E78F1B7C2B7F5ED633C5B966D34D8680EEB595BC7C00A8BE1FC57133E'
+        }
+        @{
+            Id = '010'
+            File = 'Patches/010-EventMessageAutoWrapLimit.psd1'
+            Size = 364
+            Sha256 = 'D16D8CA248563EE9A595D0E7BD3D5E2544C1181193ADDCA49B881BCA3FAEEECC'
         }
     )
 }
