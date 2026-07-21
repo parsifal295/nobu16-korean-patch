@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Audit the three remaining static-width outliers in PK ``msgev``.
 
-This is an evidence-only workstream.  It reads the Wave100 private candidate
+This is an evidence-only workstream.  It reads the latest Wave101 private candidate
 and the pinned direct PC language witnesses, then writes one public JSON
 ledger below this workstream.  It never creates a message-table candidate and
 never writes the Steam installation, Git state, a release payload, or network
@@ -52,16 +52,31 @@ RAW_LIMIT_PX = 1_440
 EFFECTIVE_LIMIT_PX = 912
 MAX_DIALOGUE_LINES = 4
 
+# Wave101 is the strict current input.  Wave100 is retained only as an exact
+# predecessor for the scoped non-overlap guard: the W101 Kanto wave changes
+# 15 rows inside 3489..3526 and must not modify the three held tail rows.
 W100_ROOT = REPO / "tmp" / "pc_event_ending_regions_quality_wave100_v1" / "candidate-final"
 W100_EVENT = W100_ROOT / RESOURCE
-W100_AUDIT = W100_ROOT / "audit.v1.json"
-W100_MANIFEST = W100_ROOT / "candidate_manifest.v1.json"
 W100_PROFILE: Mapping[str, Any] = {
     "sha256": "245043679E4A7A75628519829C1B16372A8FD085A1CC7F0F4EE97F52BB66BA60",
     "size": 1_048_043,
     "raw_sha256": "F7DB831E850F191CC6320E54BF878DCC8B7F3DC4F5D51AD66379D64617F553ED",
     "raw_size": 1_043_924,
 }
+W101_ROOT = REPO / "tmp" / "pc_event_kanto_quality_wave101_v1" / "candidate-final"
+W101_EVENT = W101_ROOT / RESOURCE
+W101_AUDIT = W101_ROOT / "audit.v1.json"
+W101_MANIFEST = W101_ROOT / "candidate_manifest.v1.json"
+W101_PROFILE: Mapping[str, Any] = {
+    "sha256": "96DBB584AE96157E3B7013CAF86A4876CDB0B87EFF66433CB9236206996C2D91",
+    "size": 1_048_079,
+    "raw_sha256": "507F8FB7CF75D327F8CC88725E17BE3DA1084C4BD96237B9F1A1E8CE5F9D3B41",
+    "raw_size": 1_043_960,
+}
+W101_AUDIT_SHA256 = "AFEFF861A1DD28C688657A00CB08DFA0C615C933983A3D2723D7428796ABACBC"
+W101_MANIFEST_SHA256 = "85C1894EE95C844A6F14B542A127D73768717325139B73D28D791B840536CDAD"
+W101_CHANGED_IDS = (3489, 3490, 3491, 3493, 3497, 3500, 3502, 3505, 3506, 3508, 3510, 3514, 3516, 3522, 3526)
+W101_CHANGE_WINDOW = (3489, 3526)
 
 STEAM = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 DIRECT_SOURCES: Mapping[str, tuple[Path, Mapping[str, Any]]] = {
@@ -252,6 +267,10 @@ def profile(packed: bytes, raw: bytes) -> Mapping[str, Any]:
     }
 
 
+def candidate_files(root: Path) -> set[str]:
+    return {path.relative_to(root).as_posix() for path in root.rglob("*") if path.is_file()}
+
+
 def load_table(path: Path, expected: Mapping[str, Any], row_count: int, label: str) -> tuple[tuple[str, ...], Mapping[str, Any]]:
     require(path.is_file(), f"{label}: missing: {path}")
     packed = path.read_bytes()
@@ -378,14 +397,33 @@ def assert_public_output(path: Path) -> None:
 
 
 def build_document() -> Mapping[str, Any]:
-    candidate, candidate_profile = load_table(W100_EVENT, W100_PROFILE, ROW_COUNT, "Wave100 private candidate")
-    require(W100_AUDIT.is_file() and W100_MANIFEST.is_file(), "Wave100 audit/manifest missing")
-    candidate_audit = json.loads(W100_AUDIT.read_text(encoding="utf-8"))
-    candidate_manifest = json.loads(W100_MANIFEST.read_text(encoding="utf-8"))
-    require(candidate_audit.get("candidate_only") is True, "Wave100 audit is not candidate-only")
-    require(candidate_manifest.get("candidate_only") is True, "Wave100 manifest is not candidate-only")
-    require(candidate_audit.get("output_event_profile") == candidate_profile, "Wave100 audit profile drift")
-    require(candidate_manifest.get("output") == candidate_profile, "Wave100 manifest profile drift")
+    w100_texts, w100_profile = load_table(W100_EVENT, W100_PROFILE, ROW_COUNT, "Wave100 predecessor")
+    w101_root = W101_ROOT.resolve(strict=True)
+    require(w101_root.is_relative_to((REPO / "tmp").resolve()), "Wave101 strict input escapes private tmp")
+    require(
+        candidate_files(w101_root) == {RESOURCE.as_posix(), "audit.v1.json", "candidate_manifest.v1.json"},
+        "Wave101 strict input file scope drift",
+    )
+    candidate, candidate_profile = load_table(W101_EVENT, W101_PROFILE, ROW_COUNT, "Wave101 strict candidate")
+    require(W101_AUDIT.is_file() and W101_MANIFEST.is_file(), "Wave101 audit/manifest missing")
+    require(sha256(W101_AUDIT.read_bytes()) == W101_AUDIT_SHA256, "Wave101 audit hash drift")
+    require(sha256(W101_MANIFEST.read_bytes()) == W101_MANIFEST_SHA256, "Wave101 manifest hash drift")
+    candidate_audit = json.loads(W101_AUDIT.read_text(encoding="utf-8"))
+    candidate_manifest = json.loads(W101_MANIFEST.read_text(encoding="utf-8"))
+    require(candidate_audit.get("candidate_only") is True, "Wave101 audit is not candidate-only")
+    require(candidate_manifest.get("candidate_only") is True, "Wave101 manifest is not candidate-only")
+    require(candidate_audit.get("output_event_profile") == candidate_profile, "Wave101 audit profile drift")
+    require(candidate_manifest.get("output") == candidate_profile, "Wave101 manifest profile drift")
+    require(candidate_manifest.get("applied_row_ids") == list(W101_CHANGED_IDS), "Wave101 applied row scope drift")
+
+    changed_ids = tuple(
+        entry_id
+        for entry_id, (w100_value, w101_value) in enumerate(zip(w100_texts, candidate))
+        if w100_value != w101_value
+    )
+    require(changed_ids == W101_CHANGED_IDS, f"Wave101 predecessor diff drift: {changed_ids}")
+    require(all(W101_CHANGE_WINDOW[0] <= entry_id <= W101_CHANGE_WINDOW[1] for entry_id in changed_ids), "Wave101 changes escape Kanto window")
+    require(all(w100_texts[entry_id] == candidate[entry_id] for entry_id in TARGET_IDS), "held outlier rows changed during Wave101 rebase")
 
     sources: dict[str, tuple[str, ...]] = {}
     source_profiles: dict[str, Mapping[str, Any]] = {}
@@ -477,7 +515,7 @@ def build_document() -> Mapping[str, Any]:
         "scope": {
             "target_ids": list(TARGET_IDS),
             "target_count": len(TARGET_IDS),
-            "reason": "These are the only three static one-line values over raw 1440/effective 912 in the Wave100 all-row scan.",
+            "reason": "These are the only three static one-line values over raw 1440/effective 912 in the all-row scan rebased to Wave101.",
         },
         "static_patch_007_baseline": {
             "font_px": DRAW_FONT_PX,
@@ -491,9 +529,19 @@ def build_document() -> Mapping[str, Any]:
             "application_statement": "Recorded as an audit measurement. It is not treated as a proven renderer contract for the three held UI-path rows.",
         },
         "input": {
+            "workstream": "pc_event_kanto_quality_wave101_v1",
+            "candidate_relative_path": relative(W101_ROOT),
+            "event_profile": candidate_profile,
+            "audit_sha256": W101_AUDIT_SHA256,
+            "candidate_manifest_sha256": W101_MANIFEST_SHA256,
+        },
+        "rebase_from_wave100": {
             "workstream": "pc_event_ending_regions_quality_wave100_v1",
             "candidate_relative_path": relative(W100_ROOT),
-            "event_profile": candidate_profile,
+            "event_profile": w100_profile,
+            "wave101_changed_ids": list(changed_ids),
+            "wave101_change_window": list(W101_CHANGE_WINDOW),
+            "target_rows_identical_to_wave100": True,
         },
         "direct_pc_source_profiles": source_profiles,
         "base_jp_duplicate_source_profile": base_profile,

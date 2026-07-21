@@ -30,6 +30,13 @@ class StaticOutlierAuditTests(unittest.TestCase):
         self.assertEqual(self.document["scope"]["target_ids"], [17862, 17863, 17864])
         self.assertEqual(self.document["conclusion"]["approved_manual_line_break_count"], 0)
         self.assertEqual(self.document["conclusion"]["status"], "renderer_path_hold")
+        self.assertEqual(self.document["input"]["workstream"], "pc_event_kanto_quality_wave101_v1")
+        self.assertEqual(self.document["rebase_from_wave100"]["wave101_change_window"], [3489, 3526])
+        self.assertTrue(self.document["rebase_from_wave100"]["target_rows_identical_to_wave100"])
+        self.assertEqual(
+            self.document["rebase_from_wave100"]["wave101_changed_ids"],
+            [3489, 3490, 3491, 3493, 3497, 3500, 3502, 3505, 3506, 3508, 3510, 3514, 3516, 3522, 3526],
+        )
 
     def test_static007_measurements_are_complete(self) -> None:
         expected = {
