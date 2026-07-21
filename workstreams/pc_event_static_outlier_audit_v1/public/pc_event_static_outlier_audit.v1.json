@@ -242,6 +242,19 @@
     }
   ],
   "input": {
+    "audit_sha256": "AFEFF861A1DD28C688657A00CB08DFA0C615C933983A3D2723D7428796ABACBC",
+    "candidate_manifest_sha256": "85C1894EE95C844A6F14B542A127D73768717325139B73D28D791B840536CDAD",
+    "candidate_relative_path": "tmp/pc_event_kanto_quality_wave101_v1/candidate-final",
+    "event_profile": {
+      "raw_sha256": "507F8FB7CF75D327F8CC88725E17BE3DA1084C4BD96237B9F1A1E8CE5F9D3B41",
+      "raw_size": 1043960,
+      "sha256": "96DBB584AE96157E3B7013CAF86A4876CDB0B87EFF66433CB9236206996C2D91",
+      "size": 1048079
+    },
+    "workstream": "pc_event_kanto_quality_wave101_v1"
+  },
+  "mutation_scope": "read_only_audit_public_json_only",
+  "rebase_from_wave100": {
     "candidate_relative_path": "tmp/pc_event_ending_regions_quality_wave100_v1/candidate-final",
     "event_profile": {
       "raw_sha256": "F7DB831E850F191CC6320E54BF878DCC8B7F3DC4F5D51AD66379D64617F553ED",
@@ -249,13 +262,34 @@
       "sha256": "245043679E4A7A75628519829C1B16372A8FD085A1CC7F0F4EE97F52BB66BA60",
       "size": 1048043
     },
+    "target_rows_identical_to_wave100": true,
+    "wave101_change_window": [
+      3489,
+      3526
+    ],
+    "wave101_changed_ids": [
+      3489,
+      3490,
+      3491,
+      3493,
+      3497,
+      3500,
+      3502,
+      3505,
+      3506,
+      3508,
+      3510,
+      3514,
+      3516,
+      3522,
+      3526
+    ],
     "workstream": "pc_event_ending_regions_quality_wave100_v1"
   },
-  "mutation_scope": "read_only_audit_public_json_only",
   "resource": "MSG_PK/JP/msgev.bin",
   "schema": "nobu16.kr.pc-event-static-outlier-audit.v1",
   "scope": {
-    "reason": "These are the only three static one-line values over raw 1440/effective 912 in the Wave100 all-row scan.",
+    "reason": "These are the only three static one-line values over raw 1440/effective 912 in the all-row scan rebased to Wave101.",
     "target_count": 3,
     "target_ids": [
       17862,

@@ -1,6 +1,8 @@
 # PK 이벤트 폭 초과 3행 UI 경로 감사
 
-Wave100 private candidate의 `MSG_PK/JP/msgev.bin` 전체 정적 스캔에서 raw G1N 1440px(실효 912px)를 넘는 한 줄은 17862–17864 세 행뿐이다. 이 작업물은 세 행에 개행을 임의로 넣지 않고, 해당 문자열이 Static Patch 007의 4줄 이벤트 대사 상자인지 별도 조건·결과 UI인지 판정하기 위한 읽기 전용 감사다.
+최신 Wave101 private candidate의 `MSG_PK/JP/msgev.bin` 전체 정적 스캔에서 raw G1N 1440px(실효 912px)를 넘는 한 줄은 17862–17864 세 행뿐이다. 이 작업물은 세 행에 개행을 임의로 넣지 않고, 해당 문자열이 Static Patch 007의 4줄 이벤트 대사 상자인지 별도 조건·결과 UI인지 판정하기 위한 읽기 전용 감사다.
+
+Wave101은 Wave100 대비 3489–3526 범위의 15행만 바꾼 후보다. 빌더는 실제 변화 ID가 그 15행과 정확히 일치하고, 17862–17864가 Wave100과 바이트상 문자열 단위로 동일함을 매번 검증한다.
 
 ## 판정
 
@@ -15,7 +17,7 @@ Wave100 private candidate의 `MSG_PK/JP/msgev.bin` 전체 정적 스캔에서 ra
 ## 산출물과 검증
 
 - 공개 ledger: [pc_event_static_outlier_audit.v1.json](public/pc_event_static_outlier_audit.v1.json)
-- 입력: `tmp/pc_event_ending_regions_quality_wave100_v1/candidate-final/`
+- 입력: `tmp/pc_event_kanto_quality_wave101_v1/candidate-final/`
 - Steam 설치본·Git·릴리스·네트워크에는 쓰지 않는다.
 
 ```powershell
