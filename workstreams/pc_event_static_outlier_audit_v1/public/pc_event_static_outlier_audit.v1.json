@@ -1,0 +1,435 @@
+{
+  "base_jp_duplicate_source_profile": {
+    "raw_sha256": "5FBD960A4870FA4850BD725C58E67BE3A7F191960737C36E4505151FE4B7C528",
+    "raw_size": 789260,
+    "sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
+    "size": 496819
+  },
+  "candidate_only": true,
+  "conclusion": {
+    "approved_manual_line_break_count": 0,
+    "remaining_static_width_outlier_count": 3,
+    "status": "renderer_path_hold",
+    "summary": "All three strings exceed the 912px Static Patch 007 measurement only as one-line text, but static evidence places them in a historical-event condition/result UI block and does not prove the patched event-dialogue box. Preserve text and one-line topology until runtime/UI-path evidence is collected."
+  },
+  "direct_flow_le32_probe": {
+    "conclusion": "No direct match proves neither absence nor a renderer route; indirect table references remain possible.",
+    "files": [
+      "FLOW/ENDING_00.bsf",
+      "FLOW/OPENING_00.bsf",
+      "FLOW/REKISHI_00.bsf",
+      "FLOW/TUTORIAL_00.bsf",
+      "FLOW/TUTORIAL_01.bsf",
+      "FLOW_PK/ENDING_00.bsf",
+      "FLOW_PK/OPENING_00.bsf",
+      "FLOW_PK/REKISHI_00.bsf",
+      "FLOW_PK/REKISHI_01.bsf",
+      "FLOW_PK/REKISHI_02.bsf",
+      "FLOW_PK/REKISHI_03.bsf",
+      "FLOW_PK/TUTORIAL_00.bsf",
+      "FLOW_PK/TUTORIAL_01.bsf"
+    ],
+    "matches": {
+      "17862": [],
+      "17863": [],
+      "17864": []
+    },
+    "method": "Search FLOW and FLOW_PK .bsf files for each table index encoded as direct 32-bit little-endian value."
+  },
+  "direct_pc_source_profiles": {
+    "en": {
+      "raw_sha256": "6A1F3891412EBFF5AC3188F498C9951431154192D69E82B7ABB6F25AA934D911",
+      "raw_size": 1878836,
+      "sha256": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+      "size": 762196
+    },
+    "jp": {
+      "raw_sha256": "07D7512BE0235753FC7BB0C7C548B61F471D9CDED01379E63B8AF8EAE013813E",
+      "raw_size": 894800,
+      "sha256": "A9D4434F589C231298D824617847574AEBE2E3302389517B322BE18E85050A84",
+      "size": 562226
+    },
+    "sc": {
+      "raw_sha256": "3ACE267E6B9774D8C940C9D7940F168B61744ADDF7C082F2CB1EA7E9BBD82B5E",
+      "raw_size": 754708,
+      "sha256": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+      "size": 522177
+    },
+    "tc": {
+      "raw_sha256": "42DC893AA9FF9D3E7B75FBCFFBEFD7C3DFC338CAB71E942C081BDC52C9024BF6",
+      "raw_size": 744212,
+      "sha256": "89D183BA95C3BB83B52A5EE408664D5247C695A1DB192105A5D906737E6F78B6",
+      "size": 524909
+    }
+  },
+  "entries": [
+    {
+      "base_duplicate_evidence": {
+        "entry_id": 17814,
+        "interpretation": "The identical JP text occurs in Base at a shifted index, consistent with a shared event-condition/result string pool. This does not establish that Base and PK use the same renderer.",
+        "jp_text_utf16le_sha256": "55BAC27BFC6189BBA8C1989C538E59157B3C3E2885BCDB5CAA271B3036BB5889",
+        "resource": "MSG/JP/ev_strdata.bin",
+        "same_as_pk_direct_jp": true
+      },
+      "candidate_text_utf16le_sha256": "A3DC6FA61EEADD6E300B0875EEE62E6BAF0EA0604070F35620C9BD8DA4D2789E",
+      "classification": "ui_or_notification_path_evidence_hold",
+      "control_signature": {
+        "esc_tokens": [],
+        "other_controls": []
+      },
+      "decision": "retain_one_line_no_candidate_mutation",
+      "direct_pc_witnesses": {
+        "line_break_character_count": {
+          "en": 0,
+          "jp": 0,
+          "sc": 0,
+          "tc": 0
+        },
+        "semantic_witness": "All four direct PC languages describe officers leaving a clan and the resulting clan formation; the Korean preserves that event-result meaning.",
+        "text_utf16le_sha256": {
+          "en": "2DA83D14386A2E8E2089D3CA6FC63E63E8BF93865C089A3547E57B7C5FC74E43",
+          "jp": "55BAC27BFC6189BBA8C1989C538E59157B3C3E2885BCDB5CAA271B3036BB5889",
+          "sc": "F76D2AB45AB6C3A7E7913B98068C183815B26F53682D245DD60BCF5D47E97CAA",
+          "tc": "441425D326F217F99D3D5F0A262A52E6CFB678C2CAB4BE7ECB61DB88BC65753E"
+        }
+      },
+      "entry_id": 17862,
+      "no_shortening_or_source_lf_import": true,
+      "static_patch_007_measurement": {
+        "line_count": 1,
+        "lines": [
+          {
+            "display_string": "오다 가문에서 일부 무장이 이탈하여 아케치 가문, 시바타 가문, 하시바 가문이 탄생",
+            "effective_width_px": 1185,
+            "full_width_character_count": 33,
+            "half_width_character_count": 13,
+            "line_number": 1,
+            "over_effective_912px": true,
+            "over_raw_1440px": true,
+            "passes_static_patch_007": false,
+            "raw_g1n_width_px": 1896
+          }
+        ],
+        "max_effective_width_px": 1185,
+        "max_raw_g1n_width_px": 1896,
+        "over_912px": true
+      },
+      "widget_judgement": {
+        "action": "Do not insert a manual LF until an observed UI route or code-path trace identifies this string's renderer and available width.",
+        "is_separate_widget_proven": false,
+        "is_static_patch_007_dialogue_box_proven": false,
+        "likely_section": "historical-event condition/result selection or notification UI",
+        "reason": "The immediate surrounding rows are condition selectors, relationship/resource states, historical-event titles, result-count choices, appointment buttons, and outcome-change notices rather than a contiguous prose dialogue scene."
+      }
+    },
+    {
+      "base_duplicate_evidence": {
+        "entry_id": 17815,
+        "interpretation": "The identical JP text occurs in Base at a shifted index, consistent with a shared event-condition/result string pool. This does not establish that Base and PK use the same renderer.",
+        "jp_text_utf16le_sha256": "2C26881899F0F674D820589A75F1724B7D6A515843EB61EA0921DF4D8D816CF8",
+        "resource": "MSG/JP/ev_strdata.bin",
+        "same_as_pk_direct_jp": true
+      },
+      "candidate_text_utf16le_sha256": "2FFC95FF21B515D99483692DF7CCBE86229BDD2DC75390336610E07C584300E8",
+      "classification": "ui_or_notification_path_evidence_hold",
+      "control_signature": {
+        "esc_tokens": [],
+        "other_controls": []
+      },
+      "decision": "retain_one_line_no_candidate_mutation",
+      "direct_pc_witnesses": {
+        "line_break_character_count": {
+          "en": 0,
+          "jp": 0,
+          "sc": 0,
+          "tc": 0
+        },
+        "semantic_witness": "All four direct PC languages describe officers leaving a clan and the resulting clan formation; the Korean preserves that event-result meaning.",
+        "text_utf16le_sha256": {
+          "en": "4E8A7093D3B378AD6E7612FC70C1F8CCC6232963DF6F3B7B9CFF5D4F33D505D0",
+          "jp": "2C26881899F0F674D820589A75F1724B7D6A515843EB61EA0921DF4D8D816CF8",
+          "sc": "8EAE646B735E49FECFB13A665470FA70119C408E5258E592BA4F1487DC3BFD55",
+          "tc": "D7592D0797401F6413E6700354E478C1C8C4419B19189CFE92C1CBC74859753E"
+        }
+      },
+      "entry_id": 17863,
+      "no_shortening_or_source_lf_import": true,
+      "static_patch_007_measurement": {
+        "line_count": 1,
+        "lines": [
+          {
+            "display_string": "이마가와 가문에서 일부 무장이 이탈하여 마쓰다이라 가문이 탄생",
+            "effective_width_px": 915,
+            "full_width_character_count": 27,
+            "half_width_character_count": 7,
+            "line_number": 1,
+            "over_effective_912px": true,
+            "over_raw_1440px": true,
+            "passes_static_patch_007": false,
+            "raw_g1n_width_px": 1464
+          }
+        ],
+        "max_effective_width_px": 915,
+        "max_raw_g1n_width_px": 1464,
+        "over_912px": true
+      },
+      "widget_judgement": {
+        "action": "Do not insert a manual LF until an observed UI route or code-path trace identifies this string's renderer and available width.",
+        "is_separate_widget_proven": false,
+        "is_static_patch_007_dialogue_box_proven": false,
+        "likely_section": "historical-event condition/result selection or notification UI",
+        "reason": "The immediate surrounding rows are condition selectors, relationship/resource states, historical-event titles, result-count choices, appointment buttons, and outcome-change notices rather than a contiguous prose dialogue scene."
+      }
+    },
+    {
+      "base_duplicate_evidence": {
+        "entry_id": 17816,
+        "interpretation": "The identical JP text occurs in Base at a shifted index, consistent with a shared event-condition/result string pool. This does not establish that Base and PK use the same renderer.",
+        "jp_text_utf16le_sha256": "1E82AD78F18EDDB4B8891BCEFAF7212230D3D324462FE6C0F74AEBAFA84A19FC",
+        "resource": "MSG/JP/ev_strdata.bin",
+        "same_as_pk_direct_jp": true
+      },
+      "candidate_text_utf16le_sha256": "017943FE2FBF009E3C8E3E154D41019802C8720D2C9961B99DC64A9BDE0D238B",
+      "classification": "ui_or_notification_path_evidence_hold",
+      "control_signature": {
+        "esc_tokens": [],
+        "other_controls": []
+      },
+      "decision": "retain_one_line_no_candidate_mutation",
+      "direct_pc_witnesses": {
+        "line_break_character_count": {
+          "en": 0,
+          "jp": 0,
+          "sc": 0,
+          "tc": 0
+        },
+        "semantic_witness": "All four direct PC languages describe officers leaving a clan and the resulting clan formation; the Korean preserves that event-result meaning.",
+        "text_utf16le_sha256": {
+          "en": "794FB2B8278A1292E360D8F4CE95CD1044B3CFFFFD4648D77E7651777E589FEF",
+          "jp": "1E82AD78F18EDDB4B8891BCEFAF7212230D3D324462FE6C0F74AEBAFA84A19FC",
+          "sc": "F78B3D7A49E527BD06E50062BFA3DF6BE25992E0B14052827A41D6223E7212A8",
+          "tc": "9F87E18ACEB7BC855D41C5BC2D4FEF7DBD5EC2B93AB7D6EEA152C8C48188BECA"
+        }
+      },
+      "entry_id": 17864,
+      "no_shortening_or_source_lf_import": true,
+      "static_patch_007_measurement": {
+        "line_count": 1,
+        "lines": [
+          {
+            "display_string": "나가오가에서 일부 무장이 이탈하여, 야마노우치 우에스기가가 탄생",
+            "effective_width_px": 945,
+            "full_width_character_count": 28,
+            "half_width_character_count": 7,
+            "line_number": 1,
+            "over_effective_912px": true,
+            "over_raw_1440px": true,
+            "passes_static_patch_007": false,
+            "raw_g1n_width_px": 1512
+          }
+        ],
+        "max_effective_width_px": 945,
+        "max_raw_g1n_width_px": 1512,
+        "over_912px": true
+      },
+      "widget_judgement": {
+        "action": "Do not insert a manual LF until an observed UI route or code-path trace identifies this string's renderer and available width.",
+        "is_separate_widget_proven": false,
+        "is_static_patch_007_dialogue_box_proven": false,
+        "likely_section": "historical-event condition/result selection or notification UI",
+        "reason": "The immediate surrounding rows are condition selectors, relationship/resource states, historical-event titles, result-count choices, appointment buttons, and outcome-change notices rather than a contiguous prose dialogue scene."
+      }
+    }
+  ],
+  "input": {
+    "candidate_relative_path": "tmp/pc_event_ending_regions_quality_wave100_v1/candidate-final",
+    "event_profile": {
+      "raw_sha256": "F7DB831E850F191CC6320E54BF878DCC8B7F3DC4F5D51AD66379D64617F553ED",
+      "raw_size": 1043924,
+      "sha256": "245043679E4A7A75628519829C1B16372A8FD085A1CC7F0F4EE97F52BB66BA60",
+      "size": 1048043
+    },
+    "workstream": "pc_event_ending_regions_quality_wave100_v1"
+  },
+  "mutation_scope": "read_only_audit_public_json_only",
+  "resource": "MSG_PK/JP/msgev.bin",
+  "schema": "nobu16.kr.pc-event-static-outlier-audit.v1",
+  "scope": {
+    "reason": "These are the only three static one-line values over raw 1440/effective 912 in the Wave100 all-row scan.",
+    "target_count": 3,
+    "target_ids": [
+      17862,
+      17863,
+      17864
+    ]
+  },
+  "static_patch_007_baseline": {
+    "application_statement": "Recorded as an audit measurement. It is not treated as a proven renderer contract for the three held UI-path rows.",
+    "effective_line_width_px": 912,
+    "effective_width_formula": "ceil(raw_g1n_width_px * 30 / 48)",
+    "font_px": 30,
+    "line_spacing_setting": 8,
+    "max_dialogue_lines": 4,
+    "raw_equivalent_limit_px": 1440,
+    "raw_full_width_px": 48,
+    "raw_half_width_px": 24
+  },
+  "ui_neighbor_evidence": [
+    {
+      "display_string": "아니다",
+      "entry_id": 17817
+    },
+    {
+      "display_string": "이전",
+      "entry_id": 17818
+    },
+    {
+      "display_string": "이후",
+      "entry_id": 17820
+    },
+    {
+      "display_string": "%d일 이내",
+      "entry_id": 17821
+    },
+    {
+      "display_string": "%s와 혼인 동맹 중",
+      "entry_id": 17828
+    },
+    {
+      "display_string": "탄생 전",
+      "entry_id": 17835
+    },
+    {
+      "display_string": "겐푸쿠 전",
+      "entry_id": 17836
+    },
+    {
+      "display_string": "사망",
+      "entry_id": 17842
+    },
+    {
+      "display_string": "병량",
+      "entry_id": 17847
+    },
+    {
+      "display_string": "금전",
+      "entry_id": 17848
+    },
+    {
+      "display_string": "철포",
+      "entry_id": 17849
+    },
+    {
+      "display_string": "군마",
+      "entry_id": 17850
+    },
+    {
+      "display_string": "증가",
+      "entry_id": 17851
+    },
+    {
+      "display_string": "감소",
+      "entry_id": 17852
+    },
+    {
+      "display_string": "%d일",
+      "entry_id": 17853
+    },
+    {
+      "display_string": "무기한",
+      "entry_id": 17854
+    },
+    {
+      "display_string": "%d개월",
+      "entry_id": 17855
+    },
+    {
+      "display_string": "적대시",
+      "entry_id": 17856
+    },
+    {
+      "display_string": "험악",
+      "entry_id": 17857
+    },
+    {
+      "display_string": "불화",
+      "entry_id": 17858
+    },
+    {
+      "display_string": "평상",
+      "entry_id": 17859
+    },
+    {
+      "display_string": "우호",
+      "entry_id": 17860
+    },
+    {
+      "display_string": "친밀",
+      "entry_id": 17861
+    },
+    {
+      "display_string": "가게토라의 자질",
+      "entry_id": 17865
+    },
+    {
+      "display_string": "간스케의 비책",
+      "entry_id": 17866
+    },
+    {
+      "display_string": "오니미노, 신겐을 타이르다",
+      "entry_id": 17867
+    },
+    {
+      "display_string": "1개 이상",
+      "entry_id": 17872
+    },
+    {
+      "display_string": "과반수 이상",
+      "entry_id": 17873
+    },
+    {
+      "display_string": "전체",
+      "entry_id": 17874
+    },
+    {
+      "display_string": "(종속 세력 포함)",
+      "entry_id": 17875
+    },
+    {
+      "display_string": "취임",
+      "entry_id": 17876
+    },
+    {
+      "display_string": "해임",
+      "entry_id": 17877
+    },
+    {
+      "display_string": "※추가로 다음 조건을 만족하는 경우, 결과에 변동이 생깁니다※",
+      "entry_id": 17879
+    },
+    {
+      "display_string": "자기 세력",
+      "entry_id": 17880
+    },
+    {
+      "display_string": "(기존의 외교 관계를 우선)",
+      "entry_id": 17881
+    },
+    {
+      "display_string": "아군",
+      "entry_id": 17882
+    },
+    {
+      "display_string": "적군",
+      "entry_id": 17883
+    },
+    {
+      "display_string": "각 세력의 정세가 크게 변동",
+      "entry_id": 17884
+    },
+    {
+      "display_string": "※가상 전개로 진행하면 결과가 달라집니다※",
+      "entry_id": 17885
+    }
+  ]
+}
