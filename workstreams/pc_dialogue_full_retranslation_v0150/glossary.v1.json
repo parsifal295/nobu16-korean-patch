@@ -109,6 +109,16 @@
       ]
     },
     {
+      "source_term": "普請",
+      "default_ko": "토목",
+      "context_rules": [
+        "use 토목 for the policy-department label alongside 권농, 상공, 문화, 치안",
+        "use 건설, 축조, or 보수 공사 according to the object when the sentence describes an actual project",
+        "do not use 부역 unless the source specifically foregrounds compulsory labor rather than the works"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%99%AE%E8%AB%8B-124735"
+    },
+    {
       "source_term": "征夷大将軍",
       "default_ko": "정이대장군",
       "context_rules": [
