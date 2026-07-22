@@ -189,6 +189,36 @@
       ]
     },
     {
+      "source_term": "評定衆",
+      "default_ko": "평정중",
+      "context_rules": [
+        "retain 평정중 as the council-member group label",
+        "do not expand it to a modern committee unless explanatory prose requires clarification"
+      ]
+    },
+    {
+      "source_term": "連歌",
+      "default_ko": "렌가",
+      "context_rules": [
+        "retain the linked-verse form as a phonetic historical proper term"
+      ]
+    },
+    {
+      "source_term": "将棋",
+      "default_ko": "쇼기",
+      "context_rules": [
+        "use 쇼기 for the Japanese board game",
+        "do not substitute Korean 장기 in historical character dialogue"
+      ]
+    },
+    {
+      "source_term": "犬馬の労",
+      "default_ko": "견마지로",
+      "context_rules": [
+        "retain the established humble service idiom in period-flavored retainer dialogue"
+      ]
+    },
+    {
       "source_term": "史実",
       "default_ko": "사실",
       "context_rules": [
