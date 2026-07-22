@@ -1,0 +1,80 @@
+{
+  "schema": "nobu16.kr.release-validation.v1",
+  "release": "v0.15.0",
+  "distribution": {
+    "zip": "releases/v0.15.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.15.0.zip",
+    "size": 134592423,
+    "sha256": "50C1886C587EA0634506F32428D6EEF35EAECCA1FA6DF7CF117EA1B49F2F5CA0",
+    "member_count": 138,
+    "complete_game_resource_count": 0,
+    "game_executable_count": 0,
+    "deterministic_repeat_match": true,
+    "embedded_manifest_matches_sidecar": true
+  },
+  "resources": {
+    "total_profile_count": 121,
+    "mandatory_count": 16,
+    "text_count": 10,
+    "image_atlas_count": 6,
+    "binary_delta_count": 111,
+    "optional_dlc_count": 105,
+    "optional_dlc_missing_policy": "skip",
+    "optional_dlc_later_install_policy": "rerun patches only newly present pristine DLC files",
+    "reviewed_image_targets": {
+      "RES_JP/res_lang.bin": "952B97FAE48F5D077E4663EFBE7B2975ADDBC0A521E63F9EDE373D7A77D55600",
+      "RES_JP_PK_PORT/res_lang_pk_port1.bin": "E2B22DFD399E87DF109947F0F98FC58D1BF360B1B54299A6BB4D2051CE53EEA5",
+      "RES_JP_PK_PORT/res_lang_pk_port3.bin": "BA739C28A8EE1A47C8085339F98FDCF4F317302316F93C3F74E413DB2AFEADC9"
+    }
+  },
+  "castle_name_layout_profiles": {
+    "1": {
+      "name": "Vertical",
+      "patch_ids": ["001", "002", "003", "007", "009", "010"],
+      "excluded_patch_ids": ["004", "005", "006", "008"],
+      "output_sha256": "3964E160B789982E1E197F77CBA3F592AFF0144F063E7AFCAC4DCEB4C6C99CB4"
+    },
+    "2": {
+      "name": "Horizontal",
+      "patch_ids": ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010"],
+      "output_sha256": "C1E9123539506055C1ACB96A15A446C43952AED607DEA2C9646F690813FA53D5"
+    }
+  },
+  "validation": {
+    "python_tests": {
+      "count": 18,
+      "result": "pass"
+    },
+    "powershell_syntax": {
+      "files": 2,
+      "result": "pass"
+    },
+    "live_steam_read_only_preflight": {
+      "result": "already_target",
+      "target_resource_count": 121,
+      "writes_performed": false,
+      "ledger_sha256": "128FB86E49D6DB1DE0711F1D30C892AFCACEB51AA9C029C7291D8E10E7E993BF"
+    },
+    "isolated_e2e": {
+      "initial_dlc_files_present": 0,
+      "vertical_apply": "pass",
+      "missing_optional_skipped": 105,
+      "later_added_dlc": "DLC_PK/JP/evm_014.n16",
+      "later_added_dlc_target_sha256": "177219AAB0C5FEC5B4F2C56B78AB4D3F50E74D5FB1EAA0E0931DCA881C78D690",
+      "vertical_to_horizontal_switch": "pass",
+      "restore": "pass",
+      "restored_present_resource_count": 17,
+      "restored_resource_mismatch_count": 0,
+      "restored_exe_sha256": "29BC1ED66D27B9AEF5EB6CE3D126BA2BDBF86099E12B09615FE9F988F41E2246"
+    }
+  },
+  "release_creation_environment": {
+    "steam_write_performed": false,
+    "real_game_image_qa_performed": false,
+    "selected_resolution": null,
+    "full_game_process_restart_completed": false,
+    "note": "Release validation used exact file hashes and an isolated game fixture; the live Steam installation was not modified."
+  },
+  "excluded_in_progress_scope": [
+    "workstreams/pc_dialogue_full_retranslation_v0150"
+  ]
+}
