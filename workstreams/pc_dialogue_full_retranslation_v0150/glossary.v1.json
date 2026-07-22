@@ -123,6 +123,22 @@
       ]
     },
     {
+      "source_term": "方針",
+      "default_ko": "방침",
+      "context_rules": [
+        "use 방침 for a newly announced operational or house policy",
+        "do not collapse it into 지침 when the same scene distinguishes 方針 from 指針"
+      ]
+    },
+    {
+      "source_term": "指針",
+      "default_ko": "지침",
+      "context_rules": [
+        "use 지침 for the guiding direction established by a policy decision",
+        "preserve the 方針=방침 and 指針=지침 distinction within the same scene"
+      ]
+    },
+    {
       "source_term": "代替わり",
       "default_ko": "당주 교체",
       "context_rules": [
@@ -131,11 +147,50 @@
       ]
     },
     {
+      "source_term": "家督",
+      "default_ko": "가독",
+      "context_rules": [
+        "retain 가독 when Japanese family headship or its succession is foregrounded",
+        "use 가독을 잇다 or 가독을 물려주다 instead of treating it as a physical possession"
+      ]
+    },
+    {
+      "source_term": "隠居",
+      "default_ko": "은거",
+      "context_rules": [
+        "retain 은거 for formal retirement from family or domain headship",
+        "do not flatten it to ordinary seclusion when succession is the gameplay context"
+      ]
+    },
+    {
+      "source_term": "信賞必罰",
+      "default_ko": "신상필벌",
+      "context_rules": [
+        "retain the established four-character governance principle in reward and punishment dialogue"
+      ]
+    },
+    {
       "source_term": "金子",
       "default_ko": "돈",
       "context_rules": [
         "use 돈 or 금전 according to the speaker and UI register",
         "do not use the opaque literal reading 금자"
+      ]
+    },
+    {
+      "source_term": "兵糧",
+      "default_ko": "병량",
+      "context_rules": [
+        "retain 병량 as the established military-provisions system term",
+        "use 쌀 or 식량 only when the speaker deliberately uses a non-system everyday expression"
+      ]
+    },
+    {
+      "source_term": "異動",
+      "default_ko": "이동",
+      "context_rules": [
+        "use 인사이동 when officer reassignment as a personnel action is foregrounded",
+        "use 이동 in dialogue focused on the destination or the act of moving"
       ]
     },
     {
