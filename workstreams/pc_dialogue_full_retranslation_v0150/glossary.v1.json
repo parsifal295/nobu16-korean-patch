@@ -123,6 +123,36 @@
       ]
     },
     {
+      "source_term": "代替わり",
+      "default_ko": "당주 교체",
+      "context_rules": [
+        "use 당주가 바뀌다 in retainer dialogue about succession",
+        "use 대물림 only when the hereditary process rather than the new ruler is foregrounded"
+      ]
+    },
+    {
+      "source_term": "金子",
+      "default_ko": "돈",
+      "context_rules": [
+        "use 돈 or 금전 according to the speaker and UI register",
+        "do not use the opaque literal reading 금자"
+      ]
+    },
+    {
+      "source_term": "番衆",
+      "default_ko": "수비 병력",
+      "context_rules": [
+        "use 성을 지키는 병력 when the castle-garrison role needs to be explicit"
+      ]
+    },
+    {
+      "source_term": "祝言",
+      "default_ko": "혼례",
+      "context_rules": [
+        "use 혼례를 올리다 for the marriage ceremony in congratulatory dialogue"
+      ]
+    },
+    {
       "source_term": "史実",
       "default_ko": "사실",
       "context_rules": [
