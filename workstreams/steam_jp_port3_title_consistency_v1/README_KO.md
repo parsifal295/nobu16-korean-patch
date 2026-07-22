@@ -52,3 +52,12 @@ python -X utf8 -B `
 후보 아카이브는
 `tmp/port3_title_consistency_dimibang_full_v1/candidate/RES_JP_PK_PORT/res_lang_pk_port3.bin`에만
 생성된다. 배포 또는 Steam 적용은 별도 승인 단계다.
+
+명시적으로 승인된 로컬 Steam 적용은 게임이 종료된 상태에서 다음 스크립트로
+수행한다. 현재 설치본과 후보 해시를 고정 검증하고, 기존 PORT3을 `tmp` 아래에
+백업한 후 적용한다. 실패하면 백업본으로 롤백한다.
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File `
+  workstreams\steam_jp_port3_title_consistency_v1\apply_steam_port3_title_consistency.ps1
+```
