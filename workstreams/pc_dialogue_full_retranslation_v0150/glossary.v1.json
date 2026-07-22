@@ -84,6 +84,31 @@
       ]
     },
     {
+      "source_term": "手切れ",
+      "default_ko": "단교",
+      "context_rules": [
+        "use 단교 for the diplomatic act or status",
+        "a speaker may say 관계를 끊다 only when colloquial voice is more important than the status label",
+        "do not use 절연 for routine inter-faction diplomacy"
+      ]
+    },
+    {
+      "source_term": "従属",
+      "default_ko": "종속",
+      "context_rules": [
+        "use 종속 for the diplomatic relation and system status",
+        "use 굴복하다 or 복종하다 only when the sentence foregrounds submission rather than the relation label"
+      ]
+    },
+    {
+      "source_term": "取次",
+      "default_ko": "중개자",
+      "context_rules": [
+        "use 중개자 for the officer maintaining a diplomatic or court connection",
+        "do not transliterate the Japanese administrative term as 취차"
+      ]
+    },
+    {
       "source_term": "征夷大将軍",
       "default_ko": "정이대장군",
       "context_rules": [
