@@ -159,6 +159,15 @@
       ]
     },
     {
+      "source_term": "一揆",
+      "default_ko": "잇키",
+      "context_rules": [
+        "use 잇키 for the historical collective and uprising category in Sengoku-period system events",
+        "do not flatten it to 농민 반란 when the actor type is not specified because the category also covered warrior and religious leagues"
+      ],
+      "evidence_url": "https://contents.history.go.kr/mobile/nh/view.do?levelId=nh_029_0020_0010_0020"
+    },
+    {
       "source_term": "宗主",
       "default_ko": "종주",
       "context_rules": [
