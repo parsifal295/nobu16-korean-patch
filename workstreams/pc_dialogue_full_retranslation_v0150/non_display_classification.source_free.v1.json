@@ -81,6 +81,21 @@
       "candidate_policy": "preserve_current_literal",
       "commercial_source_text_embedded": false,
       "steam_write_performed": false
+    },
+    {
+      "resource": "base_msggame",
+      "first_record_coordinate": "2:424",
+      "last_record_coordinate": "2:482",
+      "visible_literal_count": 59,
+      "classification": "confirmed_non_display",
+      "evidence": [
+        "the full contiguous run carries the same explicit unused additional-trait placeholder label",
+        "the run directly continues the unused slot table from the preceding generated review batch",
+        "PC localized context is absent across the run"
+      ],
+      "candidate_policy": "preserve_current_literal",
+      "commercial_source_text_embedded": false,
+      "steam_write_performed": false
     }
   ]
 }

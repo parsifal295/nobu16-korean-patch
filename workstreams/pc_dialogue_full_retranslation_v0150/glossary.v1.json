@@ -164,6 +164,47 @@
         "describe it as 검술 only in surrounding explanatory prose"
       ],
       "evidence_url": "https://www.city.hino.lg.jp/shisei/keywords/1014655/1014762.html"
+    },
+    {
+      "source_term": "蜻蛉切",
+      "default_ko": "돈보키리",
+      "context_rules": [
+        "retain Honda Tadakatsu's named spear as a phonetic proper name",
+        "do not flatten the named weapon to a generic spear"
+      ],
+      "evidence_url": "https://www.city.okazaki.lg.jp/shiseidayori/shiseiback30_d/fil/20180601.pdf"
+    },
+    {
+      "source_term": "独眼竜",
+      "default_ko": "독안룡",
+      "context_rules": [
+        "retain Date Masamune's sobriquet",
+        "do not expand it into a factual statement about portraiture or appearance"
+      ],
+      "evidence_url": "https://www.city.sendai.jp/shiminkoho/shise/koho/koho/shisedayori/2017-04/date.html"
+    },
+    {
+      "source_term": "赤備え",
+      "default_ko": "붉은 갑옷 군단",
+      "context_rules": [
+        "use the descriptive Korean form in ordinary dialogue",
+        "use 아카조나에 only when the Japanese formation name itself is foregrounded"
+      ]
+    },
+    {
+      "source_term": "鬼若子",
+      "default_ko": "오니와코",
+      "context_rules": [
+        "retain the Chosokabe-associated sobriquet as a phonetic proper name",
+        "do not confuse it with the separate childhood epithet 姫若子"
+      ]
+    },
+    {
+      "source_term": "槍の又左",
+      "default_ko": "창의 마타자",
+      "context_rules": [
+        "retain the sobriquet as a proper name in Maeda Toshiie dialogue"
+      ]
     }
   ],
   "policy": {
