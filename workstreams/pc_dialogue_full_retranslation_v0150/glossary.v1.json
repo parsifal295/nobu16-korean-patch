@@ -119,6 +119,22 @@
       "evidence_url": "https://kotobank.jp/word/%E6%99%AE%E8%AB%8B-124735"
     },
     {
+      "source_term": "役職",
+      "default_ko": "역직",
+      "context_rules": [
+        "use 역직 for diplomatic or institutional positions granted by a house or the shogunate",
+        "keep it distinct from 官職"
+      ]
+    },
+    {
+      "source_term": "官職",
+      "default_ko": "관직",
+      "context_rules": [
+        "use 관직 for court office and rank appointment context",
+        "keep it distinct from 役職"
+      ]
+    },
+    {
       "source_term": "征夷大将軍",
       "default_ko": "정이대장군",
       "context_rules": [
