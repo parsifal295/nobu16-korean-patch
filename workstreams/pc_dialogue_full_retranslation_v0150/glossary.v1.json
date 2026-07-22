@@ -130,6 +130,40 @@
         "use 조총 only in explanatory prose where the weapon type must be clarified",
         "keep 기마 철포대 for 騎馬鉄砲隊"
       ]
+    },
+    {
+      "source_term": "切支丹",
+      "default_ko": "기리시탄",
+      "context_rules": [
+        "retain the period-specific term in historical dialogue",
+        "use 그리스도교 신자 only in modern explanatory prose"
+      ]
+    },
+    {
+      "source_term": "夜叉美濃",
+      "default_ko": "야샤미노",
+      "context_rules": [
+        "retain the attested sobriquet of Hara Toratane as a phonetic proper name",
+        "do not silently substitute the separate sobriquet 鬼美濃"
+      ],
+      "evidence_url": "https://rekishikaido.php.co.jp/detail/4716"
+    },
+    {
+      "source_term": "大一大万大吉",
+      "default_ko": "대일대만대길",
+      "context_rules": [
+        "retain the emblematic phrase without adding a disputed interpretation",
+        "use 기치 or 깃발 only for surrounding 旗印 context"
+      ]
+    },
+    {
+      "source_term": "天然理心流",
+      "default_ko": "덴넨리신류",
+      "context_rules": [
+        "retain the sword-school name as a proper noun",
+        "describe it as 검술 only in surrounding explanatory prose"
+      ],
+      "evidence_url": "https://www.city.hino.lg.jp/shisei/keywords/1014655/1014762.html"
     }
   ],
   "policy": {

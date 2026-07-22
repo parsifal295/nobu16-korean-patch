@@ -254,6 +254,94 @@
       "switch_korean_used": false,
       "historic_korean_used": false,
       "steam_write_performed": false
+    },
+    {
+      "segment_id": "base_msggame_B001_S12",
+      "resource": "base_msggame",
+      "first_coordinate": "2:272:0",
+      "last_coordinate": "2:300:1",
+      "decision_count": 41,
+      "semantic_review_approved": 41,
+      "runtime_review_not_required": 19,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 22,
+      "scope_classification_counts": {
+        "confirmed_non_display": 5,
+        "retranslated": 14,
+        "runtime_fragment_pending": 22
+      },
+      "queue_batch_ids": [
+        "base_msggame-B010"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "base_msggame_B001_S13",
+      "resource": "base_msggame",
+      "first_coordinate": "2:301:0",
+      "last_coordinate": "2:343:0",
+      "decision_count": 70,
+      "semantic_review_approved": 70,
+      "runtime_review_not_required": 21,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 49,
+      "scope_classification_counts": {
+        "confirmed_non_display": 13,
+        "retranslated": 8,
+        "runtime_fragment_pending": 49
+      },
+      "queue_batch_ids": [
+        "base_msggame-B010"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "base_msggame_B001_S14",
+      "resource": "base_msggame",
+      "first_coordinate": "2:344:0",
+      "last_coordinate": "2:400:0",
+      "decision_count": 57,
+      "semantic_review_approved": 57,
+      "runtime_review_not_required": 57,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 57,
+        "retranslated": 0,
+        "runtime_fragment_pending": 0
+      },
+      "queue_batch_ids": [
+        "base_msggame-B010"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "base_msggame_B001_S15",
+      "resource": "base_msggame",
+      "first_coordinate": "2:401:0",
+      "last_coordinate": "2:423:0",
+      "decision_count": 32,
+      "semantic_review_approved": 32,
+      "runtime_review_not_required": 17,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 15,
+      "scope_classification_counts": {
+        "confirmed_non_display": 11,
+        "retranslated": 6,
+        "runtime_fragment_pending": 15
+      },
+      "queue_batch_ids": [
+        "base_msggame-B010"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
     }
   ],
   "queue_batch_coverage": [
@@ -288,16 +376,32 @@
         "runtime_fragment_pending": 153
       },
       "semantic_complete": true
+    },
+    {
+      "batch_id": "base_msggame-B010",
+      "resource": "base_msggame",
+      "first_record_coordinate": "2:272",
+      "last_record_coordinate": "2:423",
+      "visible_target_count": 200,
+      "decision_count": 200,
+      "runtime_review_pending": 86,
+      "fully_candidate_eligible": 114,
+      "scope_classification_counts": {
+        "confirmed_non_display": 86,
+        "retranslated": 28,
+        "runtime_fragment_pending": 86
+      },
+      "semantic_complete": true
     }
   ],
   "totals": {
-    "semantic_review_approved": 398,
-    "runtime_review_pending": 257,
-    "fully_candidate_eligible": 141,
+    "semantic_review_approved": 598,
+    "runtime_review_pending": 343,
+    "fully_candidate_eligible": 255,
     "scope_classification_counts": {
-      "confirmed_non_display": 71,
-      "retranslated": 70,
-      "runtime_fragment_pending": 257
+      "confirmed_non_display": 157,
+      "retranslated": 98,
+      "runtime_fragment_pending": 343
     },
     "semantic_completion": false,
     "candidate_build_complete": false
