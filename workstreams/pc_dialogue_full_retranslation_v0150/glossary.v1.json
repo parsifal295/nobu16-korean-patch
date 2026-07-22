@@ -1,0 +1,141 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-full-retranslation-glossary.v1",
+  "release_target": "0.15.0",
+  "status": "active_grows_during_review",
+  "entries": [
+    {
+      "source_term": "姫",
+      "default_ko": "공주",
+      "context_rules": [
+        "system_role_or_status_label: 공주",
+        "retainer_addressing_a_young_noblewoman: 아씨 may be used when the scene supports it"
+      ]
+    },
+    {
+      "source_term": "奥方",
+      "default_ko": "부인",
+      "context_rules": [
+        "use 정실 only when legal wife status is the point"
+      ]
+    },
+    {
+      "source_term": "息女",
+      "default_ko": "따님",
+      "context_rules": [
+        "use 딸 in neutral narration when honorific distance is absent"
+      ]
+    },
+    {
+      "source_term": "元服",
+      "default_ko": "원복",
+      "context_rules": [
+        "do not flatten a deliberate 元服/髪結い contrast when both occur"
+      ]
+    },
+    {
+      "source_term": "髪結いの儀",
+      "default_ko": "성인식",
+      "context_rules": [
+        "use descriptive 머리 올리는 의식 only when the ritual itself is being explained"
+      ]
+    },
+    {
+      "source_term": "殿",
+      "default_ko": "주군",
+      "context_rules": [
+        "direct name suffix: 님",
+        "do not use 전하 unless the actual title and addressee justify it"
+      ]
+    },
+    {
+      "source_term": "国衆",
+      "default_ko": "국인중",
+      "context_rules": [
+        "keep project-wide established terminology"
+      ]
+    },
+    {
+      "source_term": "城代",
+      "default_ko": "성대",
+      "context_rules": [
+        "keep project-wide established terminology"
+      ]
+    },
+    {
+      "source_term": "幕府",
+      "default_ko": "막부",
+      "context_rules": [
+        "do not expand to 막부 정권 unless the political system itself is being explained"
+      ]
+    },
+    {
+      "source_term": "朝廷",
+      "default_ko": "조정",
+      "context_rules": [
+        "use 조정 consistently for the imperial court as an institution"
+      ]
+    },
+    {
+      "source_term": "征夷大将軍",
+      "default_ko": "정이대장군",
+      "context_rules": [
+        "retain the historical office title; do not shorten to 장군 when the office is the condition"
+      ]
+    },
+    {
+      "source_term": "一向宗",
+      "default_ko": "일향종",
+      "context_rules": [
+        "keep the established msggame system-term reading",
+        "use 잇코슈 only when a separately reviewed scene deliberately requires the Japanese phonetic form"
+      ]
+    },
+    {
+      "source_term": "宗主",
+      "default_ko": "종주",
+      "context_rules": [
+        "preserve the religious or organizational headship meaning"
+      ]
+    },
+    {
+      "source_term": "当家",
+      "default_ko": "우리 가문",
+      "context_rules": [
+        "use 우리 가문 in dialogue and system prose unless a compact fixed label requires 가문",
+        "avoid the literal 당가 in ordinary Korean prose"
+      ]
+    },
+    {
+      "source_term": "天下布武",
+      "default_ko": "천하포무",
+      "context_rules": [
+        "retain the established historical slogan as one lexical item",
+        "a verb such as 내걸다 or 펼치다 may follow when the Japanese sentence predicates 布く"
+      ],
+      "evidence_url": "https://www.city.gifu.lg.jp/kankoubunka/bunkazai/1019997/1020076.html"
+    },
+    {
+      "source_term": "禄寿応穏",
+      "default_ko": "녹수응온",
+      "context_rules": [
+        "retain the four-character Hojo tiger-seal motto",
+        "do not paraphrase away the motto when the seal or house tradition is foregrounded"
+      ],
+      "evidence_url": "https://www.city.odawara.kanagawa.jp/kanko/hojo/p09347.html"
+    },
+    {
+      "source_term": "鉄砲",
+      "default_ko": "철포",
+      "context_rules": [
+        "use 조총 only in explanatory prose where the weapon type must be clarified",
+        "keep 기마 철포대 for 騎馬鉄砲隊"
+      ]
+    }
+  ],
+  "policy": {
+    "unknown_historical_term": "historical_review_required",
+    "conflicting_reading": "hold_until_evidence",
+    "switch_korean_is_authority": false,
+    "historic_korean_is_authority": false
+  }
+}

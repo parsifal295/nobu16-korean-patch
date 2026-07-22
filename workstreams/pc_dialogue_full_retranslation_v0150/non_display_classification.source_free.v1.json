@@ -1,0 +1,23 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-full-retranslation-non-display.v1",
+  "release_target": "0.15.0",
+  "classifications": [
+    {
+      "resource": "base_msggame",
+      "first_record_coordinate": "1:7",
+      "last_record_coordinate": "1:30",
+      "visible_literal_count": 71,
+      "classification": "confirmed_non_display",
+      "evidence": [
+        "structurally isolated record run bounded by non-visible records",
+        "the same run contains dummy-placeholder patterns and glyph-coverage grids",
+        "the same run contains arbitrary test values and fragmented inflection exercises",
+        "PC localized context is absent across the run",
+        "the run does not form a coherent dialogue or UI sequence"
+      ],
+      "candidate_policy": "preserve_current_literal",
+      "commercial_source_text_embedded": false,
+      "steam_write_performed": false
+    }
+  ]
+}
