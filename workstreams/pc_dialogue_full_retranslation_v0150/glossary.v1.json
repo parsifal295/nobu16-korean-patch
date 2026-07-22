@@ -12,6 +12,14 @@
       ]
     },
     {
+      "source_term": "縁組",
+      "default_ko": "결연",
+      "context_rules": [
+        "use 결연 in system prose for arranging a kinship or marriage bond",
+        "do not use the opaque literal reading 연조"
+      ]
+    },
+    {
       "source_term": "奥方",
       "default_ko": "부인",
       "context_rules": [
@@ -83,6 +91,15 @@
       ]
     },
     {
+      "source_term": "公方",
+      "default_ko": "쇼군",
+      "context_rules": [
+        "use 쇼군 when Sengoku dialogue clearly denotes the Ashikaga military ruler",
+        "re-evaluate regional compounds such as 鎌倉公方 instead of applying this default mechanically"
+      ],
+      "evidence_url": "https://www.rekihaku.ac.jp/education_research/gallery/webgallery/rakutyuu/theme/house09.html"
+    },
+    {
       "source_term": "一向宗",
       "default_ko": "일향종",
       "context_rules": [
@@ -103,6 +120,22 @@
       "context_rules": [
         "use 우리 가문 in dialogue and system prose unless a compact fixed label requires 가문",
         "avoid the literal 당가 in ordinary Korean prose"
+      ]
+    },
+    {
+      "source_term": "史実",
+      "default_ko": "사실",
+      "context_rules": [
+        "use 사실 for compact game-setting labels and 사실에 따르다 in their explanations",
+        "use 역사적 사실 in prose when 사실 alone could be misunderstood"
+      ]
+    },
+    {
+      "source_term": "調略",
+      "default_ko": "조략",
+      "context_rules": [
+        "retain 조략 as the established menu-category label",
+        "use 공작 in explanatory prose describing operations against another force"
       ]
     },
     {
@@ -182,6 +215,14 @@
         "do not expand it into a factual statement about portraiture or appearance"
       ],
       "evidence_url": "https://www.city.sendai.jp/shiminkoho/shise/koho/koho/shisedayori/2017-04/date.html"
+    },
+    {
+      "source_term": "武者震い",
+      "default_ko": "무사로서의 흥분으로 떨리다",
+      "context_rules": [
+        "in battle dialogue treat it as excited anticipation rather than fear",
+        "rewrite naturally for the speaker instead of forcing a fixed noun phrase"
+      ]
     },
     {
       "source_term": "赤備え",
