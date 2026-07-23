@@ -1420,6 +1420,69 @@
         "use a natural descriptive phrase before a dynamic personal name",
         "avoid the opaque Sino-Korean 귀종 in player-facing dialogue"
       ]
+    },
+    {
+      "source_term": "牢人",
+      "default_ko": "낭인",
+      "context_rules": [
+        "use the established historical label for an unattached warrior",
+        "do not alternate with 재야 무장 when the source explicitly says 牢人"
+      ]
+    },
+    {
+      "source_term": "仕官",
+      "default_ko": "사관",
+      "context_rules": [
+        "use for entering a lord's service",
+        "keep it distinct from 登用=등용, which is the lord's act of recruiting"
+      ]
+    },
+    {
+      "source_term": "登用",
+      "default_ko": "등용",
+      "context_rules": [
+        "use for a lord recruiting an officer into service",
+        "keep it distinct from the officer-side 仕官=사관"
+      ]
+    },
+    {
+      "source_term": "城下",
+      "default_ko": "성하",
+      "context_rules": [
+        "use the established current PC label for the castle town and its immediate district",
+        "do not expand it to 성 아래 in historical dialogue"
+      ]
+    },
+    {
+      "source_term": "引見",
+      "default_ko": "인견",
+      "context_rules": [
+        "use the historical audience term when a lord receives a prospective retainer",
+        "do not flatten it to generic 접견 in this recruitment context"
+      ]
+    },
+    {
+      "source_term": "帰順",
+      "default_ko": "귀순",
+      "context_rules": [
+        "use when a person or force submits and comes over to the speaker's side",
+        "preserve the destination or recipient when a dynamic house name follows"
+      ]
+    },
+    {
+      "source_term": "覇業",
+      "default_ko": "패업",
+      "context_rules": [
+        "use in formal retainer pledges for the lord's work of attaining hegemony"
+      ]
+    },
+    {
+      "source_term": "末席を汚す",
+      "default_ko": "말석에 들다",
+      "context_rules": [
+        "translate the self-effacing idiom naturally in retainer self-introductions",
+        "do not render 汚す literally as 더럽히다"
+      ]
     }
   ],
   "policy": {
