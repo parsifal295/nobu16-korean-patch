@@ -907,6 +907,77 @@
         "use the established game button and tutorial term",
         "preserve runtime button-glyph token boundaries in menu guidance"
       ]
+    },
+    {
+      "source_term": "制度改新",
+      "default_ko": "제도 개신",
+      "context_rules": [
+        "use the established policy and tutorial label",
+        "do not normalize the named game term to 제도 개혁"
+      ]
+    },
+    {
+      "source_term": "小競り合い",
+      "default_ko": "소규모 접전",
+      "context_rules": [
+        "use the established battle-system label",
+        "keep it distinct from a full 合戦=합전"
+      ]
+    },
+    {
+      "source_term": "要所",
+      "default_ko": "요충지",
+      "context_rules": [
+        "use the established tactical-object label",
+        "keep it distinct from 要地=요지 and 急所=급소"
+      ]
+    },
+    {
+      "source_term": "特殊要所",
+      "default_ko": "특수 요충지",
+      "context_rules": [
+        "use the established tactical-object label",
+        "preserve the distinction from ordinary 要所=요충지"
+      ]
+    },
+    {
+      "source_term": "総士気",
+      "default_ko": "총사기",
+      "context_rules": [
+        "use the compact established battle UI term",
+        "do not expand it to 전체 사기 in named win-condition prose"
+      ]
+    },
+    {
+      "source_term": "郡代",
+      "default_ko": "군다이",
+      "context_rules": [
+        "use the project-established historical office label",
+        "keep it distinct from 城代=성대 and 代官=대관"
+      ]
+    },
+    {
+      "source_term": "腰兵糧",
+      "default_ko": "휴대 군량",
+      "context_rules": [
+        "use the established unit-provisions UI label",
+        "keep it distinct from ordinary 兵糧=병량 prose"
+      ]
+    },
+    {
+      "source_term": "退き口",
+      "default_ko": "퇴각로",
+      "context_rules": [
+        "use the established battle-system exit and objective label",
+        "keep it distinct from ordinary 退路=퇴로"
+      ]
+    },
+    {
+      "source_term": "中継点",
+      "default_ko": "중계점",
+      "context_rules": [
+        "use the established route and movement UI term"
+      ]
     }
   ],
   "policy": {
