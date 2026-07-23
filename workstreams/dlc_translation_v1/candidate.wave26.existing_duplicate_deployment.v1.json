@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "candidate_decoded_xl_sha256": "68bc7c3df1042dd5a76031a7431a504755340d52b56b87e3cca3b39ec945cffe",
+      "changed_rows": [
+        {
+          "ko_utf16le_sha256": "aca1378de9e050fd9fbb60919e83866c06ce8bf7df5d0deaaf44cdc1c8601d4e",
+          "row": 39,
+          "source_id": "jp-aca1378de9e050fd9fbb"
+        }
+      ],
+      "input_sha256": "70ab4207330ae04826572124631322cb9e436efebd415417e9b332827eef02b0",
+      "output_sha256": "88ba0344e6c9c36d0ccfb1e392083f7621d8066d4c3ef38abf02aa9d952d56af",
+      "path": "DLC/JP/evm_003.n16",
+      "source_decoded_xl_sha256": "68bc7c3df1042dd5a76031a7431a504755340d52b56b87e3cca3b39ec945cffe",
+      "unchanged_rows": 267,
+      "wrapper_mode": "compressed_raw_lz4",
+      "xl_sets": 268
+    },
+    {
+      "candidate_decoded_xl_sha256": "93fae34c4bfa17baafe3354feaeb84a14c501f204a8c7a103332ad63bcea1b4e",
+      "changed_rows": [
+        {
+          "ko_utf16le_sha256": "7790dc31d5413d18013eea561173bd41369a33fdfb60733929a8cc4d0ecbabc5",
+          "row": 0,
+          "source_id": "jp-9d125c3e5d3bae89685e"
+        }
+      ],
+      "input_sha256": "23614a48ab731956e25a950152529762c3bd7f0a4cf50a24fcf402539a872c7b",
+      "output_sha256": "833da975a4fa6dd876f88ef0f5428722774860c1d4221789a7677887dc77b639",
+      "path": "DLC/JP/scem_042.n16",
+      "source_decoded_xl_sha256": "ff9f51ecc73717fb295015c4c64d3d3655ad9576ef9a0b32ee8f4444f92e915d",
+      "unchanged_rows": 5,
+      "wrapper_mode": "compressed_raw_lz4",
+      "xl_sets": 6
+    },
+    {
+      "candidate_decoded_xl_sha256": "68bc7c3df1042dd5a76031a7431a504755340d52b56b87e3cca3b39ec945cffe",
+      "changed_rows": [
+        {
+          "ko_utf16le_sha256": "aca1378de9e050fd9fbb60919e83866c06ce8bf7df5d0deaaf44cdc1c8601d4e",
+          "row": 39,
+          "source_id": "jp-aca1378de9e050fd9fbb"
+        }
+      ],
+      "input_sha256": "006ff72c489e824eaa84b0a2c1e71ecba9e7b0300d1cc30e20c4ef1e7bdc8491",
+      "output_sha256": "106a571bc52d5cbb7cdc05ba10789fa040a4db49b4fc7204aa7b12a7b86de998",
+      "path": "DLC_PK/JP/evm_003.n16",
+      "source_decoded_xl_sha256": "68bc7c3df1042dd5a76031a7431a504755340d52b56b87e3cca3b39ec945cffe",
+      "unchanged_rows": 267,
+      "wrapper_mode": "compressed_raw_lz4",
+      "xl_sets": 268
+    },
+    {
+      "candidate_decoded_xl_sha256": "93fae34c4bfa17baafe3354feaeb84a14c501f204a8c7a103332ad63bcea1b4e",
+      "changed_rows": [
+        {
+          "ko_utf16le_sha256": "7790dc31d5413d18013eea561173bd41369a33fdfb60733929a8cc4d0ecbabc5",
+          "row": 0,
+          "source_id": "jp-9d125c3e5d3bae89685e"
+        }
+      ],
+      "input_sha256": "764a188234601f79f76a878b089fe03faeecb829e33cb2cf041e7f75cf4bda27",
+      "output_sha256": "79c60adee8de4875131cce5e437bad913f575cb3f2de6e2a0432bb72c22c662e",
+      "path": "DLC_PK/JP/scem_042.n16",
+      "source_decoded_xl_sha256": "ff9f51ecc73717fb295015c4c64d3d3655ad9576ef9a0b32ee8f4444f92e915d",
+      "unchanged_rows": 5,
+      "wrapper_mode": "compressed_raw_lz4",
+      "xl_sets": 6
+    },
+    {
+      "candidate_decoded_xl_sha256": "f6545282a9e60edf7fba60075dec46e3196f8c019bb842cb0479ccee17b85875",
+      "changed_rows": [
+        {
+          "ko_utf16le_sha256": "4e97771dfa372109532ba4da29774f2d4ab1744b0b008a2628de17201f065830",
+          "row": 0,
+          "source_id": "jp-3a9d557fee37401a9fdd"
+        }
+      ],
+      "input_sha256": "42860fe73113845f4c30fd5742171d1c0d19432bca27ee603a186e62bef84645",
+      "output_sha256": "cb667b3e5b4b039fdbe1c4d7c262e98f4a69609769aa3f3027a54579524afcad",
+      "path": "DLC_PK/JP/scem_043.n16",
+      "source_decoded_xl_sha256": "a7b580a83956e4c5125b623fcafc64b965b83cf92d9ff0a45030fb9cfbf76b83",
+      "unchanged_rows": 5,
+      "wrapper_mode": "compressed_raw_lz4",
+      "xl_sets": 6
+    }
+  ],
+  "overlay_sha256": "2d6558f9cefe2afe96111152ea0106478cec4f307be1702afbb540de79bb0ebe",
+  "private_catalog_sha256": "8e86790b01a477be316c59c6521efd9b67105d67f31dcb06e5cf0655356a5116",
+  "schema": "nobu16.kr.dlc-translation-candidate.v1",
+  "status": "static_roundtrip_validated_pending_runtime_qa",
+  "summary": {
+    "candidate_files": 5,
+    "encrypted_roundtrip_failures": 0,
+    "row_text_failures": 0,
+    "runtime_qa_complete": false,
+    "steam_writes": 0,
+    "translated_placements": 5,
+    "wrapper_roundtrip_failures": 0,
+    "xl_metadata_failures": 0
+  },
+  "wave": "wave26_existing_duplicate_deployment"
+}
