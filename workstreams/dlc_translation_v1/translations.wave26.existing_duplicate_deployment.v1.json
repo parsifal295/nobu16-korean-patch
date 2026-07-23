@@ -1,0 +1,27 @@
+{
+  "schema": "nobu16.kr.dlc-translation-overlay.v1",
+  "wave": "wave26_existing_duplicate_deployment",
+  "status": "authored_static_validation_pending_runtime_qa",
+  "scope": {
+    "placement_ids": [
+      "DLC/JP/evm_003.n16#row39",
+      "DLC/JP/scem_042.n16#row0",
+      "DLC_PK/JP/evm_003.n16#row39",
+      "DLC_PK/JP/scem_042.n16#row0",
+      "DLC_PK/JP/scem_043.n16#row0"
+    ]
+  },
+  "policy": {
+    "base_language": "JP",
+    "crosscheck_languages": ["SC", "TC", "EN"],
+    "contains_commercial_source_text": false,
+    "coordinate_override_supported": true,
+    "event_layout_baseline": "static_patch_007_30px_912px_4lines",
+    "translation_origin": "previous_validated_wave_exact_source_reuse"
+  },
+  "entries": [
+    {"source_id": "jp-aca1378de9e050fd9fbb", "ko": "……"},
+    {"source_id": "jp-9d125c3e5d3bae89685e", "ko": "고마키 나가쿠테 전투"},
+    {"source_id": "jp-3a9d557fee37401a9fdd", "ko": "철포 전래"}
+  ]
+}

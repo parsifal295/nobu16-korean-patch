@@ -1,0 +1,30 @@
+{
+  "schema": "nobu16.kr.dlc-translation-overlay.v1",
+  "wave": "wave20_new_duplicate_deployment",
+  "status": "authored_static_validation_pending_runtime_qa",
+  "scope": {
+    "placement_ids": [
+      "DLC_PK/JP/evm_008.n16#row8",
+      "DLC_PK/JP/evm_015.n16#row256",
+      "DLC_PK/JP/evm_019.n16#row9",
+      "DLC_PK/JP/evm_020.n16#row18",
+      "DLC_PK/JP/evm_023.n16#row4",
+      "DLC_PK/JP/evm_024.n16#row12",
+      "DLC_PK/JP/evm_027.n16#row13",
+      "DLC_PK/JP/evm_032.n16#row19"
+    ]
+  },
+  "policy": {
+    "base_language": "JP",
+    "crosscheck_languages": ["SC", "TC", "EN"],
+    "contains_commercial_source_text": false,
+    "coordinate_override_supported": true,
+    "event_layout_baseline": "static_patch_007_30px_912px_4lines",
+    "translation_origin": "previous_validated_wave_exact_source_reuse"
+  },
+  "entries": [
+    {"source_id": "jp-b884f74fb428d9b06445", "ko": "예!"},
+    {"source_id": "jp-fefc7f789da32f89a148", "ko": "노부나가 탄생"},
+    {"source_id": "jp-aca1378de9e050fd9fbb", "ko": "……"}
+  ]
+}

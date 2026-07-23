@@ -1,0 +1,2287 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-07-22",
+  "inputs": {
+    "game_root": "F:\\SteamLibrary\\steamapps\\common\\NOBU16",
+    "legacy_root": "I:\\Workspaces\\NOBU16-Korean\\private-inputs\\legacy-pc-root",
+    "executable_sha256": "c1e9123539506055c1acb96a15a446c43952aed607dea2c9646f690813fa53d5"
+  },
+  "filesystem_delta": {
+    "DLC": {
+      "current_files": 47,
+      "legacy_files": 47,
+      "new_paths": 0,
+      "changed_existing_paths": 0,
+      "unchanged_existing_paths": 47,
+      "removed_paths": 0
+    },
+    "DLC_PK": {
+      "current_files": 507,
+      "legacy_files": 113,
+      "new_paths": 394,
+      "changed_existing_paths": 95,
+      "unchanged_existing_paths": 18,
+      "removed_paths": 0
+    }
+  },
+  "new_translation_scope": {
+    "summary": {
+      "files": 77,
+      "xl_slots": 7104,
+      "nonempty_records": 791,
+      "excluded_internal_records": 121,
+      "translation_records": 670,
+      "unique_source_strings": 662,
+      "source_code_units": 27971,
+      "unique_source_code_units": 27947
+    },
+    "by_family": {
+      "bmt": {
+        "files": 41,
+        "xl_slots": 82,
+        "nonempty_records": 82,
+        "excluded_internal_records": 0,
+        "translation_records": 82,
+        "source_code_units": 544
+      },
+      "evm": {
+        "files": 26,
+        "xl_slots": 6968,
+        "nonempty_records": 659,
+        "excluded_internal_records": 118,
+        "translation_records": 541,
+        "source_code_units": 25108
+      },
+      "gm": {
+        "files": 1,
+        "xl_slots": 9,
+        "nonempty_records": 5,
+        "excluded_internal_records": 0,
+        "translation_records": 5,
+        "source_code_units": 82
+      },
+      "scem": {
+        "files": 6,
+        "xl_slots": 36,
+        "nonempty_records": 36,
+        "excluded_internal_records": 0,
+        "translation_records": 36,
+        "source_code_units": 2175
+      },
+      "tom": {
+        "files": 3,
+        "xl_slots": 9,
+        "nonempty_records": 9,
+        "excluded_internal_records": 3,
+        "translation_records": 6,
+        "source_code_units": 62
+      }
+    },
+    "files": [
+      {
+        "path": "DLC_PK/JP/bmt_55.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 9,
+        "decoded_xl_sha256": "493bc8d66de0595ac1a95ce553af966a993653290ccbfda1010d015b84055e23"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_56.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "25c18d0d57d020cbbcbd6c2ef60d1ae9865621565fe70da613a0f4619972732e"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_57.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "33f18c4226a8fc1c717b474210fbc3e501c6743bf47f3e0ee817f411742b0c3a"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_58.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "38e4a46d69042c809de7af660cdddbed11b9c9a1bd417975307aaeb1f54b0db5"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_59.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "5e14140fe0d9f25f4ce46945749103d2bc76a77561fbc8955887365d98162d9f"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_60.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "7d5e19865325f30b48016fc679ba374afc3909139e2c8e73ecca1d72056caf05"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_61.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "8b9b0b5fada28221bab7c81ec3a253eccfc72c61fc708d8bbdf787ee63f1ecf4"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_62.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "1913ad34f6630b0fb74f73de873f9d04adf80b0f228d3926e72982f1a7456f73"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_63.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "05d5990d9df5e5e81247ada589546d35915253c73e13039b1ef04434d75ca0c1"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_64.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "005d0000c0e684fce753045362f78baf057d4d95289a3ff1f32b9d45f3791295"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_65.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "55d4226a88971d1815cd887ddeb6eb57a357d0fc63b0e3cabc7e2cbbfe98b99c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_66.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 18,
+        "decoded_xl_sha256": "52de3ff4ee1f89e33e1c12f5dfcc4fe22fea8fb2937f5d6f1a25c0b7d51e5d2d"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_67.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "8e417b49c09d564bbf2a3f58620e45854f593cde985224ae51f44ac851afc7a8"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_68.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "a172773385307f64318df6d6b59e681164f363400b992625e1ef3d565d763676"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_69.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "35cd4cf37dd6ec4178074d03782aab914049458b1a9ff35ad72fdf9eaeb093d5"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_70.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "07f2d550ff3a5285918bbe979488043f1b9927274cf05116a098fd7c52a58c76"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_71.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "1daa46c1a8b30393b538592b286b702376da01a2681fefe94a76fd78ae204786"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_72.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "3d447852cc127fc6f6605a09bdae16a0bf58124f815e30d8535da13bd9c16344"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_73.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 16,
+        "decoded_xl_sha256": "58b0bfa9c7b92f4911f445b4bd862693beb0b4537d9dbc4e2e73641b6cc89c33"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_74.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 17,
+        "decoded_xl_sha256": "b3edc063ce2bb074804a35e2ac46ca7ea2a49a0cc44b4d49db1e60a2547f0f1c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_75.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "c2ebad50be6e521765fae733224654dace69b4448d89ff75149875c3ccdfb886"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_76.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 17,
+        "decoded_xl_sha256": "3065d5e820a7f0c21c9bcc0a9a631c8e8625567a881cdc8cbc32b617b35dbb00"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_77.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "44beb88acba0b30a2060ba4db3f37584a1f77c1f0e28c724f0bb2566cac145db"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_78.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "6614e42b5e3984e1e4545c192e4fe7db4702c975b46d31eb3010532c63bb776c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_79.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "a7c5535deeab387eb63c6425820007859561cd1380f615a77646eeabd86fd57a"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_80.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "84d76b918b2f8c01d55ab5fad48f5b3e8406ac9204f0d753745ad339af436c11"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_81.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "b7240e6b8544b49ec9ee42d937468d14cf52fb57ecd99be189a787eecc828b76"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_82.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "8ed9c27e353576b038dfb21a91b15818dfb7377a8bd359de2a5a44a5f1eb108b"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_83.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "e02b47a7e142c8a42bbf0d8ec21131bb763d50675774d12df78782ae2fcb7dcf"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_84.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "b5e856bd187e518dd5081980fbfcafb4e903ad6283109798546a8ef0e099f802"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_85.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "183ca28cc4c9d8323224b8bba94095300628ad280512271fd0363074f2c2c0d8"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_86.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "05f67ddf22d5cc4c4f6f2805237a11e6baeef3379985bfefd79e4753da7e26ff"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_87.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "b1ad1d9bdcadce567cd37ae29a3564af4c7aa724148362feb477860e3dcb5a23"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_88.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "140ddcdd0c9cf3c80bfd8069c84d27921ab9788f5c6e8974c816a9db7725ecdb"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_89.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "6cf5826d192551016321b2c303923b740b1e9c5549be1f4381dc780152fe5f8c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_90.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 16,
+        "decoded_xl_sha256": "41e3c58c45e3c4e8078fd22a4af5861b13b1a676c939cd4b695ac5b92ce65de0"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_91.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "a27afe5eb0621b4e142bca5a45c55461e7dc6e1935a43f12196a3c07e3ac1c5f"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_92.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "bda272615543edddb0a00b6265532ad99832fe26f2c6bcd307f452b9fd963191"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_93.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "4f05b0bda5ba93adc980941501a34f342ab4ab29fbad2c2b6cfd7f819596c693"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_94.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "1088b54cde3fbb692c5909cfd450231ceff6663e337ae91ee73016e4108eff76"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_95.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "f9cd3b40aab30a22c02b61663dcbcbcdc4ed72f96989808748e7f158af356813"
+      },
+      {
+        "path": "DLC_PK/JP/evm_007.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 50,
+        "excluded_internal_records": 11,
+        "translation_records": 39,
+        "unique_source_strings_in_file": 39,
+        "source_code_units": 1611,
+        "decoded_xl_sha256": "0090fd5b13641365ba5e182902f1b0b5bc9201ef7bc469b9985d9ed2fd8a72f9"
+      },
+      {
+        "path": "DLC_PK/JP/evm_008.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 22,
+        "excluded_internal_records": 11,
+        "translation_records": 11,
+        "unique_source_strings_in_file": 11,
+        "source_code_units": 483,
+        "decoded_xl_sha256": "4daff008d0b2104e00a4d54d88931dcaf8422af1d8500e9e2e5e55bac5001ac6"
+      },
+      {
+        "path": "DLC_PK/JP/evm_009.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 358,
+        "decoded_xl_sha256": "4eb912e63a5e020055f0740fbf989d73e0513377ac34317002fa06ee0b37e8c7"
+      },
+      {
+        "path": "DLC_PK/JP/evm_010.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 346,
+        "decoded_xl_sha256": "c499f85c9e14a53ed12d75bba0e9144907129b06c352e2df54263da81e8318d7"
+      },
+      {
+        "path": "DLC_PK/JP/evm_011.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 402,
+        "decoded_xl_sha256": "106ef39763719f8f778fbbfc9a342073301e0a1658ed2880987b68311fc1acb5"
+      },
+      {
+        "path": "DLC_PK/JP/evm_012.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 14,
+        "excluded_internal_records": 4,
+        "translation_records": 10,
+        "unique_source_strings_in_file": 10,
+        "source_code_units": 442,
+        "decoded_xl_sha256": "6b15af16dc6860023737579a07a26452a84bceb96261749aea85f52c08868e88"
+      },
+      {
+        "path": "DLC_PK/JP/evm_013.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 29,
+        "excluded_internal_records": 4,
+        "translation_records": 25,
+        "unique_source_strings_in_file": 25,
+        "source_code_units": 1381,
+        "decoded_xl_sha256": "195ef38bc840fc30649a212406ec094d32fc060ca258d0c0d24e14af11492e51"
+      },
+      {
+        "path": "DLC_PK/JP/evm_014.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 34,
+        "excluded_internal_records": 4,
+        "translation_records": 30,
+        "unique_source_strings_in_file": 30,
+        "source_code_units": 1473,
+        "decoded_xl_sha256": "b09e3659155d11862ec036504e5b5158657a53321cb664866b246267df6b6819"
+      },
+      {
+        "path": "DLC_PK/JP/evm_015.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 18,
+        "excluded_internal_records": 4,
+        "translation_records": 14,
+        "unique_source_strings_in_file": 14,
+        "source_code_units": 545,
+        "decoded_xl_sha256": "927a63557d5de43ada00200abf69acb056521e76e5f7daab4362d46418b299a5"
+      },
+      {
+        "path": "DLC_PK/JP/evm_016.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 16,
+        "excluded_internal_records": 4,
+        "translation_records": 12,
+        "unique_source_strings_in_file": 12,
+        "source_code_units": 622,
+        "decoded_xl_sha256": "36e8e906823bbfc7a37bc264af0ce796951a5c0c50becd3152ed06ebf022fc7f"
+      },
+      {
+        "path": "DLC_PK/JP/evm_017.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 25,
+        "excluded_internal_records": 4,
+        "translation_records": 21,
+        "unique_source_strings_in_file": 21,
+        "source_code_units": 1040,
+        "decoded_xl_sha256": "6fbd62ca41eb2733d523f2c698ffe05612bd93574b8f79a5b523bd81cd87ae35"
+      },
+      {
+        "path": "DLC_PK/JP/evm_018.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 30,
+        "excluded_internal_records": 4,
+        "translation_records": 26,
+        "unique_source_strings_in_file": 26,
+        "source_code_units": 1319,
+        "decoded_xl_sha256": "43c1a8807bda4b9fea02266b54c23b7aa3d4f9bc1a70412e1d144f00b4670bc6"
+      },
+      {
+        "path": "DLC_PK/JP/evm_019.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 19,
+        "excluded_internal_records": 4,
+        "translation_records": 15,
+        "unique_source_strings_in_file": 15,
+        "source_code_units": 534,
+        "decoded_xl_sha256": "d1dc584f0d3af6819719c391bf39e7f8a194eeeec1ec91f82b513e9b00fc9141"
+      },
+      {
+        "path": "DLC_PK/JP/evm_020.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 25,
+        "excluded_internal_records": 4,
+        "translation_records": 21,
+        "unique_source_strings_in_file": 21,
+        "source_code_units": 734,
+        "decoded_xl_sha256": "61065677ce6a85eeff3940954c57b4ce627502954e357acb0e672f9620f911f4"
+      },
+      {
+        "path": "DLC_PK/JP/evm_021.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 17,
+        "excluded_internal_records": 4,
+        "translation_records": 13,
+        "unique_source_strings_in_file": 13,
+        "source_code_units": 537,
+        "decoded_xl_sha256": "0248fd80ef0fd07cd379aaf62141b27229cf601e34e948d489572f199ea70e47"
+      },
+      {
+        "path": "DLC_PK/JP/evm_022.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 23,
+        "excluded_internal_records": 4,
+        "translation_records": 19,
+        "unique_source_strings_in_file": 19,
+        "source_code_units": 681,
+        "decoded_xl_sha256": "d7f1a42fcd2956257fcd382de92959cab6536a4e61b0f3f96492a85bad918116"
+      },
+      {
+        "path": "DLC_PK/JP/evm_023.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 15,
+        "excluded_internal_records": 4,
+        "translation_records": 11,
+        "unique_source_strings_in_file": 11,
+        "source_code_units": 274,
+        "decoded_xl_sha256": "e5f181bad8087d60396f4996e650ab8dd4e0359b79ac2248cdc1c7376c4448d8"
+      },
+      {
+        "path": "DLC_PK/JP/evm_024.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 24,
+        "excluded_internal_records": 4,
+        "translation_records": 20,
+        "unique_source_strings_in_file": 20,
+        "source_code_units": 967,
+        "decoded_xl_sha256": "700648e989ddf7ea8ac41e51f7ddd025b584e0aff88e4ff145a2a672f135483c"
+      },
+      {
+        "path": "DLC_PK/JP/evm_025.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 36,
+        "excluded_internal_records": 4,
+        "translation_records": 32,
+        "unique_source_strings_in_file": 32,
+        "source_code_units": 1744,
+        "decoded_xl_sha256": "6c1ad9747d570c6db664898259c979fd57f27c3ecdc7755606e945420d0efb7c"
+      },
+      {
+        "path": "DLC_PK/JP/evm_026.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 28,
+        "excluded_internal_records": 4,
+        "translation_records": 24,
+        "unique_source_strings_in_file": 24,
+        "source_code_units": 1071,
+        "decoded_xl_sha256": "4ba3ea6f534b82752bd6287448d6c3b95a3879e7713d91fd66df19d04a5a1e2a"
+      },
+      {
+        "path": "DLC_PK/JP/evm_027.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 25,
+        "excluded_internal_records": 4,
+        "translation_records": 21,
+        "unique_source_strings_in_file": 21,
+        "source_code_units": 721,
+        "decoded_xl_sha256": "09ceb8443b2a3bea1ed58b7305ad21372ab3aa26838da76fe8de03f18077aa4d"
+      },
+      {
+        "path": "DLC_PK/JP/evm_028.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 43,
+        "excluded_internal_records": 4,
+        "translation_records": 39,
+        "unique_source_strings_in_file": 39,
+        "source_code_units": 2012,
+        "decoded_xl_sha256": "e3102132ea171e2d80937af444c802de620f23707e02f312ed51230da7fe4148"
+      },
+      {
+        "path": "DLC_PK/JP/evm_029.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 42,
+        "excluded_internal_records": 4,
+        "translation_records": 38,
+        "unique_source_strings_in_file": 38,
+        "source_code_units": 1967,
+        "decoded_xl_sha256": "df539b8e1a4b73e7202787972046d83e33edeb62cfbfe9c177f7265b9610142f"
+      },
+      {
+        "path": "DLC_PK/JP/evm_030.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 35,
+        "excluded_internal_records": 4,
+        "translation_records": 31,
+        "unique_source_strings_in_file": 31,
+        "source_code_units": 1119,
+        "decoded_xl_sha256": "e4ee0ef884eeb47593dd2355badc990ad3ef433b7c8446a22f92e9895e5cd242"
+      },
+      {
+        "path": "DLC_PK/JP/evm_031.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 24,
+        "excluded_internal_records": 4,
+        "translation_records": 20,
+        "unique_source_strings_in_file": 20,
+        "source_code_units": 1087,
+        "decoded_xl_sha256": "982c748d4720fbbd0f12f9febdfdf5f13b137adf9304e6a33664a42b9674988d"
+      },
+      {
+        "path": "DLC_PK/JP/evm_032.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 38,
+        "excluded_internal_records": 4,
+        "translation_records": 34,
+        "unique_source_strings_in_file": 34,
+        "source_code_units": 1638,
+        "decoded_xl_sha256": "81d7cf8ac440ea37204c053eb47b7791551776a2a0567d5facf3cb8b83da2813"
+      },
+      {
+        "path": "DLC_PK/JP/gm_2356.n16",
+        "family": "gm",
+        "xl_slots": 9,
+        "nonempty_records": 5,
+        "excluded_internal_records": 0,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 82,
+        "decoded_xl_sha256": "76f769fc4f380eb00bf587efb327e91dd9fb1c4433daac094282e5fb6eff567e"
+      },
+      {
+        "path": "DLC_PK/JP/scem_046.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 361,
+        "decoded_xl_sha256": "9f5803a7b2551f07eb9a9c6a7fee5c8672d4ebd57e839966cc67f2d8927fcb09"
+      },
+      {
+        "path": "DLC_PK/JP/scem_047.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 360,
+        "decoded_xl_sha256": "09291c980132a74f03b4aac8ddbc5b73bd3f90d87ee2ca6b70248b8f14a56989"
+      },
+      {
+        "path": "DLC_PK/JP/scem_048.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 354,
+        "decoded_xl_sha256": "4b8907827618d8c89e4c8f33cccc8c39a6bdf4f0c61edd69e3eccc604c61b337"
+      },
+      {
+        "path": "DLC_PK/JP/scem_049.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 367,
+        "decoded_xl_sha256": "83ec2989c15767303f8a481e08d9dc59115eec831ecd88449c65eef4b34f6199"
+      },
+      {
+        "path": "DLC_PK/JP/scem_050.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 367,
+        "decoded_xl_sha256": "abf365771dec3748bb5b1c12132094aaa47fec349beacf9c5bf8111658b72c8d"
+      },
+      {
+        "path": "DLC_PK/JP/scem_051.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 366,
+        "decoded_xl_sha256": "313e2ecd012644d5ae7ebfb59c8f76dbf5fa614f911c305ec459d43105d0ba7c"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0206.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 19,
+        "decoded_xl_sha256": "7ff5abfd8ffa4b3655ee76c38a5a3647e1973c421856cd0bb051e5bc34c4e5cc"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0207.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 21,
+        "decoded_xl_sha256": "433902d33cd2c9ed88a9be1bb68f891f58e327721816aac1cc5d5ee3dd88f684"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0208.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 22,
+        "decoded_xl_sha256": "1962455012e14f43655f24712a50c4a546fe7dc38e3252326fe7ec47179f1bdb"
+      }
+    ]
+  },
+  "full_current_translation_scope": {
+    "summary": {
+      "files": 105,
+      "xl_slots": 9612,
+      "nonempty_records": 1037,
+      "excluded_internal_records": 156,
+      "translation_records": 881,
+      "unique_source_strings": 786,
+      "source_code_units": 39243,
+      "unique_source_code_units": 34626
+    },
+    "by_area": {
+      "DLC": {
+        "files": 8,
+        "translation_records": 83
+      },
+      "DLC_PK": {
+        "files": 97,
+        "translation_records": 798
+      }
+    },
+    "by_family": {
+      "bmt": {
+        "files": 41,
+        "xl_slots": 82,
+        "nonempty_records": 82,
+        "excluded_internal_records": 0,
+        "translation_records": 82,
+        "source_code_units": 544
+      },
+      "evm": {
+        "files": 35,
+        "xl_slots": 9380,
+        "nonempty_records": 817,
+        "excluded_internal_records": 145,
+        "translation_records": 672,
+        "source_code_units": 32937
+      },
+      "gm": {
+        "files": 3,
+        "xl_slots": 27,
+        "nonempty_records": 15,
+        "excluded_internal_records": 0,
+        "translation_records": 15,
+        "source_code_units": 232
+      },
+      "scem": {
+        "files": 15,
+        "xl_slots": 90,
+        "nonempty_records": 90,
+        "excluded_internal_records": 0,
+        "translation_records": 90,
+        "source_code_units": 5304
+      },
+      "tom": {
+        "files": 11,
+        "xl_slots": 33,
+        "nonempty_records": 33,
+        "excluded_internal_records": 11,
+        "translation_records": 22,
+        "source_code_units": 226
+      }
+    },
+    "files": [
+      {
+        "path": "DLC/JP/evm_001.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 383,
+        "decoded_xl_sha256": "73dc07a15e849c46fc6963c057811ea719d4de89998d373f0f6d407dc55fc46f"
+      },
+      {
+        "path": "DLC/JP/evm_002.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 341,
+        "decoded_xl_sha256": "20fc2e3ff8096b8210f9787898cefb9de837c292b7ef86f8ac8668b6b099ee5d"
+      },
+      {
+        "path": "DLC/JP/evm_003.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 52,
+        "excluded_internal_records": 4,
+        "translation_records": 48,
+        "unique_source_strings_in_file": 48,
+        "source_code_units": 2715,
+        "decoded_xl_sha256": "68bc7c3df1042dd5a76031a7431a504755340d52b56b87e3cca3b39ec945cffe"
+      },
+      {
+        "path": "DLC/JP/gm_2355.n16",
+        "family": "gm",
+        "xl_slots": 9,
+        "nonempty_records": 5,
+        "excluded_internal_records": 0,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 4,
+        "source_code_units": 75,
+        "decoded_xl_sha256": "0ff0c064ec9efe2cb05831eee43f35fc2f4d7e07265196f7d78e8795312cccaa"
+      },
+      {
+        "path": "DLC/JP/scem_040.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 355,
+        "decoded_xl_sha256": "b9b4d6adbefb844427779b354ff7713c6811816aef46179747d60c9e97319976"
+      },
+      {
+        "path": "DLC/JP/scem_041.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 342,
+        "decoded_xl_sha256": "93b1442634ff95f412c4beadda0cb7b11d026ac1f7a9d237701d4272a7ccc997"
+      },
+      {
+        "path": "DLC/JP/scem_042.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 347,
+        "decoded_xl_sha256": "ff9f51ecc73717fb295015c4c64d3d3655ad9576ef9a0b32ee8f4444f92e915d"
+      },
+      {
+        "path": "DLC/JP/tom_0180.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 18,
+        "decoded_xl_sha256": "001b39ef182d4d20353a1301eb1e65cf1206129f9887785221b6689afea8bf6d"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_55.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 9,
+        "decoded_xl_sha256": "493bc8d66de0595ac1a95ce553af966a993653290ccbfda1010d015b84055e23"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_56.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "25c18d0d57d020cbbcbd6c2ef60d1ae9865621565fe70da613a0f4619972732e"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_57.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "33f18c4226a8fc1c717b474210fbc3e501c6743bf47f3e0ee817f411742b0c3a"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_58.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "38e4a46d69042c809de7af660cdddbed11b9c9a1bd417975307aaeb1f54b0db5"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_59.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "5e14140fe0d9f25f4ce46945749103d2bc76a77561fbc8955887365d98162d9f"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_60.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "7d5e19865325f30b48016fc679ba374afc3909139e2c8e73ecca1d72056caf05"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_61.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "8b9b0b5fada28221bab7c81ec3a253eccfc72c61fc708d8bbdf787ee63f1ecf4"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_62.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "1913ad34f6630b0fb74f73de873f9d04adf80b0f228d3926e72982f1a7456f73"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_63.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "05d5990d9df5e5e81247ada589546d35915253c73e13039b1ef04434d75ca0c1"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_64.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "005d0000c0e684fce753045362f78baf057d4d95289a3ff1f32b9d45f3791295"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_65.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "55d4226a88971d1815cd887ddeb6eb57a357d0fc63b0e3cabc7e2cbbfe98b99c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_66.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 18,
+        "decoded_xl_sha256": "52de3ff4ee1f89e33e1c12f5dfcc4fe22fea8fb2937f5d6f1a25c0b7d51e5d2d"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_67.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "8e417b49c09d564bbf2a3f58620e45854f593cde985224ae51f44ac851afc7a8"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_68.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "a172773385307f64318df6d6b59e681164f363400b992625e1ef3d565d763676"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_69.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "35cd4cf37dd6ec4178074d03782aab914049458b1a9ff35ad72fdf9eaeb093d5"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_70.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "07f2d550ff3a5285918bbe979488043f1b9927274cf05116a098fd7c52a58c76"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_71.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "1daa46c1a8b30393b538592b286b702376da01a2681fefe94a76fd78ae204786"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_72.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "3d447852cc127fc6f6605a09bdae16a0bf58124f815e30d8535da13bd9c16344"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_73.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 16,
+        "decoded_xl_sha256": "58b0bfa9c7b92f4911f445b4bd862693beb0b4537d9dbc4e2e73641b6cc89c33"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_74.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 17,
+        "decoded_xl_sha256": "b3edc063ce2bb074804a35e2ac46ca7ea2a49a0cc44b4d49db1e60a2547f0f1c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_75.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "c2ebad50be6e521765fae733224654dace69b4448d89ff75149875c3ccdfb886"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_76.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 17,
+        "decoded_xl_sha256": "3065d5e820a7f0c21c9bcc0a9a631c8e8625567a881cdc8cbc32b617b35dbb00"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_77.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "44beb88acba0b30a2060ba4db3f37584a1f77c1f0e28c724f0bb2566cac145db"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_78.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "6614e42b5e3984e1e4545c192e4fe7db4702c975b46d31eb3010532c63bb776c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_79.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 13,
+        "decoded_xl_sha256": "a7c5535deeab387eb63c6425820007859561cd1380f615a77646eeabd86fd57a"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_80.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "84d76b918b2f8c01d55ab5fad48f5b3e8406ac9204f0d753745ad339af436c11"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_81.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "b7240e6b8544b49ec9ee42d937468d14cf52fb57ecd99be189a787eecc828b76"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_82.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "8ed9c27e353576b038dfb21a91b15818dfb7377a8bd359de2a5a44a5f1eb108b"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_83.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "e02b47a7e142c8a42bbf0d8ec21131bb763d50675774d12df78782ae2fcb7dcf"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_84.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "b5e856bd187e518dd5081980fbfcafb4e903ad6283109798546a8ef0e099f802"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_85.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "183ca28cc4c9d8323224b8bba94095300628ad280512271fd0363074f2c2c0d8"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_86.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "05f67ddf22d5cc4c4f6f2805237a11e6baeef3379985bfefd79e4753da7e26ff"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_87.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "b1ad1d9bdcadce567cd37ae29a3564af4c7aa724148362feb477860e3dcb5a23"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_88.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "140ddcdd0c9cf3c80bfd8069c84d27921ab9788f5c6e8974c816a9db7725ecdb"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_89.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "6cf5826d192551016321b2c303923b740b1e9c5549be1f4381dc780152fe5f8c"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_90.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 16,
+        "decoded_xl_sha256": "41e3c58c45e3c4e8078fd22a4af5861b13b1a676c939cd4b695ac5b92ce65de0"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_91.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "a27afe5eb0621b4e142bca5a45c55461e7dc6e1935a43f12196a3c07e3ac1c5f"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_92.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "bda272615543edddb0a00b6265532ad99832fe26f2c6bcd307f452b9fd963191"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_93.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 11,
+        "decoded_xl_sha256": "4f05b0bda5ba93adc980941501a34f342ab4ab29fbad2c2b6cfd7f819596c693"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_94.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 12,
+        "decoded_xl_sha256": "1088b54cde3fbb692c5909cfd450231ceff6663e337ae91ee73016e4108eff76"
+      },
+      {
+        "path": "DLC_PK/JP/bmt_95.n16",
+        "family": "bmt",
+        "xl_slots": 2,
+        "nonempty_records": 2,
+        "excluded_internal_records": 0,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 14,
+        "decoded_xl_sha256": "f9cd3b40aab30a22c02b61663dcbcbcdc4ed72f96989808748e7f158af356813"
+      },
+      {
+        "path": "DLC_PK/JP/evm_001.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 383,
+        "decoded_xl_sha256": "73dc07a15e849c46fc6963c057811ea719d4de89998d373f0f6d407dc55fc46f"
+      },
+      {
+        "path": "DLC_PK/JP/evm_002.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 341,
+        "decoded_xl_sha256": "20fc2e3ff8096b8210f9787898cefb9de837c292b7ef86f8ac8668b6b099ee5d"
+      },
+      {
+        "path": "DLC_PK/JP/evm_003.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 52,
+        "excluded_internal_records": 4,
+        "translation_records": 48,
+        "unique_source_strings_in_file": 48,
+        "source_code_units": 2715,
+        "decoded_xl_sha256": "68bc7c3df1042dd5a76031a7431a504755340d52b56b87e3cca3b39ec945cffe"
+      },
+      {
+        "path": "DLC_PK/JP/evm_004.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 6,
+        "excluded_internal_records": 1,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 270,
+        "decoded_xl_sha256": "9096e159b0e524107429257e32d15a87f62341f1215ee401959b8d37952ce59c"
+      },
+      {
+        "path": "DLC_PK/JP/evm_005.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 6,
+        "excluded_internal_records": 1,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 329,
+        "decoded_xl_sha256": "31d7b3cfb9a3350fbd5e32c3f92bcbb37f694970d890dbfbdce331ef8c0468af"
+      },
+      {
+        "path": "DLC_PK/JP/evm_006.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 6,
+        "excluded_internal_records": 1,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 352,
+        "decoded_xl_sha256": "3f9f1ae4c4db6a0df879e29bf409f5e5ffbab15c3ee2717aaf784c77d6ae4f22"
+      },
+      {
+        "path": "DLC_PK/JP/evm_007.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 50,
+        "excluded_internal_records": 11,
+        "translation_records": 39,
+        "unique_source_strings_in_file": 39,
+        "source_code_units": 1611,
+        "decoded_xl_sha256": "0090fd5b13641365ba5e182902f1b0b5bc9201ef7bc469b9985d9ed2fd8a72f9"
+      },
+      {
+        "path": "DLC_PK/JP/evm_008.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 22,
+        "excluded_internal_records": 11,
+        "translation_records": 11,
+        "unique_source_strings_in_file": 11,
+        "source_code_units": 483,
+        "decoded_xl_sha256": "4daff008d0b2104e00a4d54d88931dcaf8422af1d8500e9e2e5e55bac5001ac6"
+      },
+      {
+        "path": "DLC_PK/JP/evm_009.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 358,
+        "decoded_xl_sha256": "4eb912e63a5e020055f0740fbf989d73e0513377ac34317002fa06ee0b37e8c7"
+      },
+      {
+        "path": "DLC_PK/JP/evm_010.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 346,
+        "decoded_xl_sha256": "c499f85c9e14a53ed12d75bba0e9144907129b06c352e2df54263da81e8318d7"
+      },
+      {
+        "path": "DLC_PK/JP/evm_011.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 9,
+        "excluded_internal_records": 4,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 402,
+        "decoded_xl_sha256": "106ef39763719f8f778fbbfc9a342073301e0a1658ed2880987b68311fc1acb5"
+      },
+      {
+        "path": "DLC_PK/JP/evm_012.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 14,
+        "excluded_internal_records": 4,
+        "translation_records": 10,
+        "unique_source_strings_in_file": 10,
+        "source_code_units": 442,
+        "decoded_xl_sha256": "6b15af16dc6860023737579a07a26452a84bceb96261749aea85f52c08868e88"
+      },
+      {
+        "path": "DLC_PK/JP/evm_013.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 29,
+        "excluded_internal_records": 4,
+        "translation_records": 25,
+        "unique_source_strings_in_file": 25,
+        "source_code_units": 1381,
+        "decoded_xl_sha256": "195ef38bc840fc30649a212406ec094d32fc060ca258d0c0d24e14af11492e51"
+      },
+      {
+        "path": "DLC_PK/JP/evm_014.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 34,
+        "excluded_internal_records": 4,
+        "translation_records": 30,
+        "unique_source_strings_in_file": 30,
+        "source_code_units": 1473,
+        "decoded_xl_sha256": "b09e3659155d11862ec036504e5b5158657a53321cb664866b246267df6b6819"
+      },
+      {
+        "path": "DLC_PK/JP/evm_015.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 18,
+        "excluded_internal_records": 4,
+        "translation_records": 14,
+        "unique_source_strings_in_file": 14,
+        "source_code_units": 545,
+        "decoded_xl_sha256": "927a63557d5de43ada00200abf69acb056521e76e5f7daab4362d46418b299a5"
+      },
+      {
+        "path": "DLC_PK/JP/evm_016.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 16,
+        "excluded_internal_records": 4,
+        "translation_records": 12,
+        "unique_source_strings_in_file": 12,
+        "source_code_units": 622,
+        "decoded_xl_sha256": "36e8e906823bbfc7a37bc264af0ce796951a5c0c50becd3152ed06ebf022fc7f"
+      },
+      {
+        "path": "DLC_PK/JP/evm_017.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 25,
+        "excluded_internal_records": 4,
+        "translation_records": 21,
+        "unique_source_strings_in_file": 21,
+        "source_code_units": 1040,
+        "decoded_xl_sha256": "6fbd62ca41eb2733d523f2c698ffe05612bd93574b8f79a5b523bd81cd87ae35"
+      },
+      {
+        "path": "DLC_PK/JP/evm_018.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 30,
+        "excluded_internal_records": 4,
+        "translation_records": 26,
+        "unique_source_strings_in_file": 26,
+        "source_code_units": 1319,
+        "decoded_xl_sha256": "43c1a8807bda4b9fea02266b54c23b7aa3d4f9bc1a70412e1d144f00b4670bc6"
+      },
+      {
+        "path": "DLC_PK/JP/evm_019.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 19,
+        "excluded_internal_records": 4,
+        "translation_records": 15,
+        "unique_source_strings_in_file": 15,
+        "source_code_units": 534,
+        "decoded_xl_sha256": "d1dc584f0d3af6819719c391bf39e7f8a194eeeec1ec91f82b513e9b00fc9141"
+      },
+      {
+        "path": "DLC_PK/JP/evm_020.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 25,
+        "excluded_internal_records": 4,
+        "translation_records": 21,
+        "unique_source_strings_in_file": 21,
+        "source_code_units": 734,
+        "decoded_xl_sha256": "61065677ce6a85eeff3940954c57b4ce627502954e357acb0e672f9620f911f4"
+      },
+      {
+        "path": "DLC_PK/JP/evm_021.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 17,
+        "excluded_internal_records": 4,
+        "translation_records": 13,
+        "unique_source_strings_in_file": 13,
+        "source_code_units": 537,
+        "decoded_xl_sha256": "0248fd80ef0fd07cd379aaf62141b27229cf601e34e948d489572f199ea70e47"
+      },
+      {
+        "path": "DLC_PK/JP/evm_022.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 23,
+        "excluded_internal_records": 4,
+        "translation_records": 19,
+        "unique_source_strings_in_file": 19,
+        "source_code_units": 681,
+        "decoded_xl_sha256": "d7f1a42fcd2956257fcd382de92959cab6536a4e61b0f3f96492a85bad918116"
+      },
+      {
+        "path": "DLC_PK/JP/evm_023.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 15,
+        "excluded_internal_records": 4,
+        "translation_records": 11,
+        "unique_source_strings_in_file": 11,
+        "source_code_units": 274,
+        "decoded_xl_sha256": "e5f181bad8087d60396f4996e650ab8dd4e0359b79ac2248cdc1c7376c4448d8"
+      },
+      {
+        "path": "DLC_PK/JP/evm_024.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 24,
+        "excluded_internal_records": 4,
+        "translation_records": 20,
+        "unique_source_strings_in_file": 20,
+        "source_code_units": 967,
+        "decoded_xl_sha256": "700648e989ddf7ea8ac41e51f7ddd025b584e0aff88e4ff145a2a672f135483c"
+      },
+      {
+        "path": "DLC_PK/JP/evm_025.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 36,
+        "excluded_internal_records": 4,
+        "translation_records": 32,
+        "unique_source_strings_in_file": 32,
+        "source_code_units": 1744,
+        "decoded_xl_sha256": "6c1ad9747d570c6db664898259c979fd57f27c3ecdc7755606e945420d0efb7c"
+      },
+      {
+        "path": "DLC_PK/JP/evm_026.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 28,
+        "excluded_internal_records": 4,
+        "translation_records": 24,
+        "unique_source_strings_in_file": 24,
+        "source_code_units": 1071,
+        "decoded_xl_sha256": "4ba3ea6f534b82752bd6287448d6c3b95a3879e7713d91fd66df19d04a5a1e2a"
+      },
+      {
+        "path": "DLC_PK/JP/evm_027.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 25,
+        "excluded_internal_records": 4,
+        "translation_records": 21,
+        "unique_source_strings_in_file": 21,
+        "source_code_units": 721,
+        "decoded_xl_sha256": "09ceb8443b2a3bea1ed58b7305ad21372ab3aa26838da76fe8de03f18077aa4d"
+      },
+      {
+        "path": "DLC_PK/JP/evm_028.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 43,
+        "excluded_internal_records": 4,
+        "translation_records": 39,
+        "unique_source_strings_in_file": 39,
+        "source_code_units": 2012,
+        "decoded_xl_sha256": "e3102132ea171e2d80937af444c802de620f23707e02f312ed51230da7fe4148"
+      },
+      {
+        "path": "DLC_PK/JP/evm_029.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 42,
+        "excluded_internal_records": 4,
+        "translation_records": 38,
+        "unique_source_strings_in_file": 38,
+        "source_code_units": 1967,
+        "decoded_xl_sha256": "df539b8e1a4b73e7202787972046d83e33edeb62cfbfe9c177f7265b9610142f"
+      },
+      {
+        "path": "DLC_PK/JP/evm_030.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 35,
+        "excluded_internal_records": 4,
+        "translation_records": 31,
+        "unique_source_strings_in_file": 31,
+        "source_code_units": 1119,
+        "decoded_xl_sha256": "e4ee0ef884eeb47593dd2355badc990ad3ef433b7c8446a22f92e9895e5cd242"
+      },
+      {
+        "path": "DLC_PK/JP/evm_031.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 24,
+        "excluded_internal_records": 4,
+        "translation_records": 20,
+        "unique_source_strings_in_file": 20,
+        "source_code_units": 1087,
+        "decoded_xl_sha256": "982c748d4720fbbd0f12f9febdfdf5f13b137adf9304e6a33664a42b9674988d"
+      },
+      {
+        "path": "DLC_PK/JP/evm_032.n16",
+        "family": "evm",
+        "xl_slots": 268,
+        "nonempty_records": 38,
+        "excluded_internal_records": 4,
+        "translation_records": 34,
+        "unique_source_strings_in_file": 34,
+        "source_code_units": 1638,
+        "decoded_xl_sha256": "81d7cf8ac440ea37204c053eb47b7791551776a2a0567d5facf3cb8b83da2813"
+      },
+      {
+        "path": "DLC_PK/JP/gm_2355.n16",
+        "family": "gm",
+        "xl_slots": 9,
+        "nonempty_records": 5,
+        "excluded_internal_records": 0,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 4,
+        "source_code_units": 75,
+        "decoded_xl_sha256": "0ff0c064ec9efe2cb05831eee43f35fc2f4d7e07265196f7d78e8795312cccaa"
+      },
+      {
+        "path": "DLC_PK/JP/gm_2356.n16",
+        "family": "gm",
+        "xl_slots": 9,
+        "nonempty_records": 5,
+        "excluded_internal_records": 0,
+        "translation_records": 5,
+        "unique_source_strings_in_file": 5,
+        "source_code_units": 82,
+        "decoded_xl_sha256": "76f769fc4f380eb00bf587efb327e91dd9fb1c4433daac094282e5fb6eff567e"
+      },
+      {
+        "path": "DLC_PK/JP/scem_040.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 355,
+        "decoded_xl_sha256": "b9b4d6adbefb844427779b354ff7713c6811816aef46179747d60c9e97319976"
+      },
+      {
+        "path": "DLC_PK/JP/scem_041.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 342,
+        "decoded_xl_sha256": "93b1442634ff95f412c4beadda0cb7b11d026ac1f7a9d237701d4272a7ccc997"
+      },
+      {
+        "path": "DLC_PK/JP/scem_042.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 347,
+        "decoded_xl_sha256": "ff9f51ecc73717fb295015c4c64d3d3655ad9576ef9a0b32ee8f4444f92e915d"
+      },
+      {
+        "path": "DLC_PK/JP/scem_043.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 353,
+        "decoded_xl_sha256": "a7b580a83956e4c5125b623fcafc64b965b83cf92d9ff0a45030fb9cfbf76b83"
+      },
+      {
+        "path": "DLC_PK/JP/scem_044.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 343,
+        "decoded_xl_sha256": "f228bd23628bda678870d198fa166b9409e8efecf56b08e73c8ff255d8e1f0cb"
+      },
+      {
+        "path": "DLC_PK/JP/scem_045.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 345,
+        "decoded_xl_sha256": "994dffc3ce1c7cfaba2c9c0038064e361f7f1c4a841f88fa6ec3c9ffab0401f2"
+      },
+      {
+        "path": "DLC_PK/JP/scem_046.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 361,
+        "decoded_xl_sha256": "9f5803a7b2551f07eb9a9c6a7fee5c8672d4ebd57e839966cc67f2d8927fcb09"
+      },
+      {
+        "path": "DLC_PK/JP/scem_047.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 360,
+        "decoded_xl_sha256": "09291c980132a74f03b4aac8ddbc5b73bd3f90d87ee2ca6b70248b8f14a56989"
+      },
+      {
+        "path": "DLC_PK/JP/scem_048.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 354,
+        "decoded_xl_sha256": "4b8907827618d8c89e4c8f33cccc8c39a6bdf4f0c61edd69e3eccc604c61b337"
+      },
+      {
+        "path": "DLC_PK/JP/scem_049.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 367,
+        "decoded_xl_sha256": "83ec2989c15767303f8a481e08d9dc59115eec831ecd88449c65eef4b34f6199"
+      },
+      {
+        "path": "DLC_PK/JP/scem_050.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 367,
+        "decoded_xl_sha256": "abf365771dec3748bb5b1c12132094aaa47fec349beacf9c5bf8111658b72c8d"
+      },
+      {
+        "path": "DLC_PK/JP/scem_051.n16",
+        "family": "scem",
+        "xl_slots": 6,
+        "nonempty_records": 6,
+        "excluded_internal_records": 0,
+        "translation_records": 6,
+        "unique_source_strings_in_file": 6,
+        "source_code_units": 366,
+        "decoded_xl_sha256": "313e2ecd012644d5ae7ebfb59c8f76dbf5fa614f911c305ec459d43105d0ba7c"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0180.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 18,
+        "decoded_xl_sha256": "001b39ef182d4d20353a1301eb1e65cf1206129f9887785221b6689afea8bf6d"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0200.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "998b3964711517db9996f3c3d25f86fea5ee7d3ce4412651e9dbeef49cbb17ab"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0201.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 26,
+        "decoded_xl_sha256": "181f8eea43bcf3f393014db53c0eb42952e3cf6d53f5d342644cf4c5aacf3d9d"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0202.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 27,
+        "decoded_xl_sha256": "8abea5f706bdf5758e1db8e5a19cbce143dd91589b6af47e91388f3767be92e5"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0203.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 20,
+        "decoded_xl_sha256": "7259846d8cbe6dffb2d7ca21d306fb636d876c4793d7f2e68f9a90b3f8058190"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0204.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 25,
+        "decoded_xl_sha256": "b1e59cf65f6fe248d3c9affa3db21ea07962f8487ee983e6cb68400515333dac"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0205.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 15,
+        "decoded_xl_sha256": "0fe242ec3bb5c61868484fd3410153aec37d96773d8441702a7fac8a1d925db5"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0206.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 19,
+        "decoded_xl_sha256": "7ff5abfd8ffa4b3655ee76c38a5a3647e1973c421856cd0bb051e5bc34c4e5cc"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0207.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 21,
+        "decoded_xl_sha256": "433902d33cd2c9ed88a9be1bb68f891f58e327721816aac1cc5d5ee3dd88f684"
+      },
+      {
+        "path": "DLC_PK/JP/tom_0208.n16",
+        "family": "tom",
+        "xl_slots": 3,
+        "nonempty_records": 3,
+        "excluded_internal_records": 1,
+        "translation_records": 2,
+        "unique_source_strings_in_file": 2,
+        "source_code_units": 22,
+        "decoded_xl_sha256": "1962455012e14f43655f24712a50c4a546fe7dc38e3252326fe7ec47179f1bdb"
+      }
+    ],
+    "new_only_unique_source_strings": 662,
+    "preexisting_only_unique_source_strings": 124
+  },
+  "legacy_localized_payload_check": {
+    "compared_payloads": 80,
+    "equal_payloads": 80,
+    "different_payloads": []
+  },
+  "new_common_gfpk_check": {
+    "files": 23,
+    "stil_files": 23,
+    "files_with_five_gt1g_images": 23,
+    "items": [
+      {
+        "file": "gfPK_04036.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04037.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04038.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04039.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04040.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04041.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04042.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04043.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04044.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04045.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04046.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04047.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04048.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04049.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04051.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04053.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04054.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04058.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04059.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04060.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04061.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04062.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      },
+      {
+        "file": "gfPK_04506.n16",
+        "stil_container": true,
+        "embedded_gt1g_images": 5
+      }
+    ]
+  },
+  "counting_policy": {
+    "empty_xl_records": "excluded",
+    "evm_rows_257_267": "excluded as sort keys / event-condition metadata",
+    "tom_row_1": "excluded as locale sort key",
+    "physical_translation_record": "one visible XL pointer record in one JP file",
+    "unique_source_string": "exact tuple of JP 16-bit source code units"
+  }
+}
