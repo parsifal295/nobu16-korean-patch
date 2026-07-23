@@ -1190,6 +1190,158 @@
         "use the repeated current PC UI and data label",
         "keep it distinct from the glossary default 史実=사실 in compact standalone contexts"
       ]
+    },
+    {
+      "source_term": "相性",
+      "default_ko": "상성",
+      "context_rules": [
+        "use the established officer-affinity system label",
+        "do not alternate with 궁합 in system prose"
+      ]
+    },
+    {
+      "source_term": "体調",
+      "default_ko": "몸 상태",
+      "context_rules": [
+        "use the current PC UI label for an officer's health condition",
+        "do not retain the erroneous 체조 transfer"
+      ]
+    },
+    {
+      "source_term": "威信",
+      "default_ko": "위신",
+      "context_rules": [
+        "use the established faction-prestige system label"
+      ]
+    },
+    {
+      "source_term": "流言",
+      "default_ko": "유언비어",
+      "context_rules": [
+        "use the current PC scheme-command label",
+        "ordinary narrative rumor context may use 소문; do not shorten the named command to 유언"
+      ]
+    },
+    {
+      "source_term": "引抜",
+      "default_ko": "빼내기",
+      "context_rules": [
+        "use the current PC officer-poaching command label",
+        "do not use the literal Sino-Korean 인발"
+      ]
+    },
+    {
+      "source_term": "煽動",
+      "default_ko": "선동",
+      "context_rules": [
+        "use the current PC scheme-command label"
+      ]
+    },
+    {
+      "source_term": "焼討",
+      "default_ko": "방화",
+      "context_rules": [
+        "use the current PC scheme-command label",
+        "keep it distinct from an ordinary battlefield 火攻=화공 context"
+      ]
+    },
+    {
+      "source_term": "貢物",
+      "default_ko": "공물",
+      "context_rules": [
+        "use the established diplomacy and scheme-command label"
+      ]
+    },
+    {
+      "source_term": "転封",
+      "default_ko": "전봉",
+      "context_rules": [
+        "use the established historical relocation and mass-fief-transfer label"
+      ]
+    },
+    {
+      "source_term": "呼寄",
+      "default_ko": "소환",
+      "context_rules": [
+        "use the current PC subcommand label under 転封=전봉",
+        "do not alternate with generic 호출"
+      ]
+    },
+    {
+      "source_term": "荷駄詰所",
+      "default_ko": "치중 집결소",
+      "context_rules": [
+        "use the current PC castle-facility label"
+      ]
+    },
+    {
+      "source_term": "小荷駄隊配備",
+      "default_ko": "치중대 배치",
+      "context_rules": [
+        "use the current PC policy label"
+      ]
+    },
+    {
+      "source_term": "馬牧場",
+      "default_ko": "목마장",
+      "context_rules": [
+        "use the current PC settlement label",
+        "do not alternate with the descriptive 말 목장"
+      ]
+    },
+    {
+      "source_term": "三職推任",
+      "default_ko": "삼직 추임",
+      "context_rules": [
+        "use the established historical ending-condition label",
+        "preserve the nomination-to-one-of-three-offices sense rather than flattening it to generic 관직 추천"
+      ]
+    },
+    {
+      "source_term": "大大名",
+      "default_ko": "대다이묘",
+      "context_rules": [
+        "use the established historical great-daimyo label"
+      ]
+    },
+    {
+      "source_term": "伊忍道",
+      "default_ko": "이닌도",
+      "context_rules": [
+        "use the established named trait reading"
+      ]
+    },
+    {
+      "source_term": "職名",
+      "default_ko": "직명",
+      "context_rules": [
+        "use for the officer's assigned role or position name",
+        "keep it distinct from 身分=신분, 役職=역직, and 官職=관직"
+      ]
+    },
+    {
+      "source_term": "身分",
+      "default_ko": "신분",
+      "context_rules": [
+        "use for the officer's household rank tier",
+        "keep it distinct from 職名=직명 and 勲功=훈공"
+      ]
+    },
+    {
+      "source_term": "母衣衆結成",
+      "default_ko": "호로슈 결성",
+      "context_rules": [
+        "use the established named policy label",
+        "preserve the historical 母衣衆 reading"
+      ]
+    },
+    {
+      "source_term": "敵視",
+      "default_ko": "적대",
+      "context_rules": [
+        "use the current PC diplomacy-attitude label",
+        "do not use the literal 적시"
+      ]
     }
   ],
   "policy": {
