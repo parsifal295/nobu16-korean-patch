@@ -40,7 +40,7 @@ from msggame_format import iter_literals, parse_packed_msggame  # noqa: E402
 
 DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 LIVE_KO = DEFAULT_STEAM_ROOT / "MSG" / "JP" / "msggame.bin"
-PRISTINE_JP = Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin")
+PRISTINE_JP = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin")
 REFERENCE_FILES = {
     "sc": DEFAULT_STEAM_ROOT / "MSG" / "SC" / "msggame.bin",
     "tc": DEFAULT_STEAM_ROOT / "MSG" / "TC" / "msggame.bin",

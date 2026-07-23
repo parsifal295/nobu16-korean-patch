@@ -33,7 +33,7 @@ OUTPUT = (
     / "private_candidates.v1.jsonl"
 )
 STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
-LOCAL_PRISTINE_BASE_JP = Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin")
+LOCAL_PRISTINE_BASE_JP = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin")
 PC_ORIGINAL_ROOT = (
     STEAM_ROOT
     / "KR_PATCH_BACKUP"

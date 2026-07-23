@@ -71,7 +71,7 @@ TARGET_SHA256 = {
 
 PRISTINE_SOURCES = {
     "MSG/JP/msggame.bin": (
-        Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin"),
+        Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin"),
         "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
     ),
     "MSG_PK/JP/msggame.bin": (

@@ -113,7 +113,7 @@ TARGET_PACKED_SIZES = {BASE_MSGGAME: 1_504_671, PK_MSGGAME: 1_806_771}
 # to the Korean candidate reconstruction itself.
 PC_JP_SOURCES = {
     BASE_MSGGAME: (
-        Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin"),
+        Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin"),
         "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
     ),
     PK_MSGGAME: (

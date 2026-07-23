@@ -51,7 +51,7 @@ COVERAGE_SCHEMA = "nobu16.kr.pc-only-coverage-merged-disposition.v1"
 
 BASE_RELATIVE = Path("MSG/JP/msggame.bin")
 PK_RELATIVE = Path("MSG_PK/JP/msggame.bin")
-BASE_PRISTINE = Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin")
+BASE_PRISTINE = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin")
 PK_PRISTINE_RELATIVE = Path(
     "KR_PATCH_BACKUP/file_only_transaction/steam-jp-1.1.7-v0.6.0/originals/MSG_PK/JP/msggame.bin"
 )
