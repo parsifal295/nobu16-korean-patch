@@ -1881,6 +1881,102 @@
         "use 단교하다 when allied houses sever diplomatic relations",
         "do not translate the idiom literally as 손을 끊다"
       ]
+    },
+    {
+      "source_term": "離間計",
+      "default_ko": "이간 공작",
+      "context_rules": [
+        "use the same command-family term as 離間工作 when the scheme creates discord between two houses",
+        "avoid alternating with 이간계 inside the same diplomacy UI flow"
+      ]
+    },
+    {
+      "source_term": "勝手口",
+      "default_ko": "뒷문",
+      "context_rules": [
+        "use the rear or side entrance sense in castle-assault dialogue",
+        "keep the source's contrast between limited 攻め口 and creating a new 뒷문; do not flatten it to a generic 길"
+      ]
+    },
+    {
+      "source_term": "街道",
+      "default_ko": "가도",
+      "context_rules": [
+        "use for the constructed road linking counties or opening a strategic route",
+        "use ordinary 길 only when the speaker deliberately refers to the road generically"
+      ]
+    },
+    {
+      "source_term": "軍道",
+      "default_ko": "군도",
+      "context_rules": [
+        "use for a deliberately constructed military road",
+        "an explanatory 군용로 may be used only when 군도 would obscure the sentence outside the command context"
+      ]
+    },
+    {
+      "source_term": "交通の要所",
+      "default_ko": "교통의 요지",
+      "context_rules": [
+        "use for a county or location that serves as a strategic transportation hub"
+      ]
+    },
+    {
+      "source_term": "用兵",
+      "default_ko": "병력 운용",
+      "context_rules": [
+        "use 병력 운용 or 용병술 for deploying and maneuvering troops",
+        "avoid bare 용병 where Korean readers could misread it as mercenary troops"
+      ]
+    },
+    {
+      "source_term": "侵攻路",
+      "default_ko": "침공로",
+      "context_rules": [
+        "use for a route by which a target is invaded",
+        "keep it distinct from 進軍路=진군로"
+      ]
+    },
+    {
+      "source_term": "進軍路",
+      "default_ko": "진군로",
+      "context_rules": [
+        "use for a route along which forces advance or march",
+        "keep it distinct from 侵攻路=침공로"
+      ]
+    },
+    {
+      "source_term": "友好度",
+      "default_ko": "우호도",
+      "context_rules": [
+        "use for the numeric diplomacy relationship stat",
+        "keep it distinct from prose 관계 and from 信用=신용"
+      ]
+    },
+    {
+      "source_term": "甘味",
+      "default_ko": "단것",
+      "context_rules": [
+        "use 단것 when characters discuss sweets as gifts",
+        "use 이국 과자 when the line emphasizes the appearance and foreign origin of the confection; do not reduce the object to abstract 단맛"
+      ]
+    },
+    {
+      "source_term": "こんぺいとう",
+      "default_ko": "콘페이토",
+      "context_rules": [
+        "preserve the unfamiliar Nanban confection name and the speaker's hesitation rather than replacing it with modern 별사탕",
+        "the standard written form is 金平糖 and the name derives from Portuguese confeito"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%87%91%E5%B9%B3%E7%B3%96-67583"
+    },
+    {
+      "source_term": "信用",
+      "default_ko": "신용",
+      "context_rules": [
+        "use 신용 for the numeric diplomacy stat",
+        "translate prose 信用できない naturally as 믿을 수 없다"
+      ]
     }
   ],
   "policy": {
