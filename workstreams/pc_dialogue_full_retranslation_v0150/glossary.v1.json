@@ -1667,6 +1667,70 @@
         "translate the shared-fate idiom naturally in dialogue",
         "avoid the stilted literal 한배에 운명을 맡긴 사이"
       ]
+    },
+    {
+      "source_term": "徴兵／徴集",
+      "default_ko": "징병",
+      "context_rules": [
+        "use 징병 for the emergency or large-scale levy action and its system result",
+        "in character dialogue, use the natural 병사를 모으다 when the source describes the act rather than naming the command"
+      ]
+    },
+    {
+      "source_term": "民心",
+      "default_ko": "민심",
+      "context_rules": [
+        "use for popular sentiment lost through an emergency levy",
+        "keep it distinct from the numeric game stat 民忠=민충"
+      ]
+    },
+    {
+      "source_term": "民忠",
+      "default_ko": "민충",
+      "context_rules": [
+        "use the established compact game-stat label",
+        "do not expand it to 백성의 충성도 inside effect UI"
+      ]
+    },
+    {
+      "source_term": "掌握",
+      "default_ko": "장악",
+      "context_rules": [
+        "use for the settlement-control state and its release",
+        "keep it distinct from a house's wider 領土=영토 or 領地=영지"
+      ]
+    },
+    {
+      "source_term": "間者",
+      "default_ko": "간자",
+      "context_rules": [
+        "use the established historical espionage term",
+        "do not alternate with 현대적인 스파이 in Sengoku-period reports"
+      ]
+    },
+    {
+      "source_term": "門徒",
+      "default_ko": "문도",
+      "context_rules": [
+        "use for religious adherents rising in an 一揆 context",
+        "do not flatten the actor to generic 백성 when the source identifies 門徒"
+      ]
+    },
+    {
+      "source_term": "苛政",
+      "default_ko": "학정",
+      "context_rules": [
+        "use the concise historical term in dialogue about people suffering under harsh rule",
+        "avoid the explanatory but flatter 가혹한 정치 when the register supports 학정"
+      ]
+    },
+    {
+      "source_term": "決起",
+      "default_ko": "궐기",
+      "context_rules": [
+        "use for adherents or neighboring castles rising in response to an 一揆",
+        "keep the action distinct from the category label 一揆=잇키"
+      ]
     }
   ],
   "policy": {
