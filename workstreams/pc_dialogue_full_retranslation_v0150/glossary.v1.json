@@ -1104,7 +1104,8 @@
       "context_rules": [
         "use the established land-yield and castle-stat label",
         "keep the historical koku-assessment sense distinct from generic 생산력"
-      ]
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%9F%B3%E9%AB%98-64107"
     },
     {
       "source_term": "城下方針",
@@ -2418,6 +2419,59 @@
         "prefer 싸울 때, 출병할 때, or 싸움에 나설 때 over the opaque Sino-Korean calque 전기"
       ],
       "evidence_url": "https://kotobank.jp/word/%E6%88%A6%E6%A9%9F-549536"
+    },
+    {
+      "source_term": "版図",
+      "default_ko": "판도",
+      "context_rules": [
+        "use 판도 for a house's territorial or political sphere",
+        "keep it distinct from a single 領地=영지 and the governed domain 領国=영내"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%89%88%E5%9B%B3-606968"
+    },
+    {
+      "source_term": "砲術",
+      "default_ko": "포술",
+      "context_rules": [
+        "use 포술 for training in the operation of firearms or artillery",
+        "keep the military skill distinct from generic 사격 and weapon-item labels"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%A0%B2%E8%A1%93-132108"
+    },
+    {
+      "source_term": "馬術",
+      "default_ko": "기마술",
+      "context_rules": [
+        "use 기마술 in military training and troop-strength contexts",
+        "never shorten it to 마술, which means magic in modern Korean"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A6%AC%E8%A1%93-169116"
+    },
+    {
+      "source_term": "当主",
+      "default_ko": "당주",
+      "context_rules": [
+        "use 당주 for the current head of a house",
+        "keep it distinct from 主君=주군 and an office title"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BD%93%E4%B8%BB-580477"
+    },
+    {
+      "source_term": "戦巧者",
+      "default_ko": "싸움에 능하다",
+      "context_rules": [
+        "render the person's established practical skill in battle",
+        "align with 戦上手=싸움에 능하다 and do not invent a formal title"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%B7%A7%E8%80%85-495515"
+    },
+    {
+      "source_term": "政策発令水準",
+      "default_ko": "정책 발령 수준",
+      "context_rules": [
+        "use the exact spaced UI label in policy-level objectives",
+        "preserve the numeric target, current value, and ASCII (LV) unit order from the JP runtime skeleton"
+      ]
     }
   ],
   "policy": {
