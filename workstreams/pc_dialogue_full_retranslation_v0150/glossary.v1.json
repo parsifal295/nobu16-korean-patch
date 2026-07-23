@@ -1595,6 +1595,78 @@
         "use for coming under a house's control or umbrella",
         "keep it distinct from the completed 国衆取込=국인중 편입 command"
       ]
+    },
+    {
+      "source_term": "従属度",
+      "default_ko": "종속도",
+      "context_rules": [
+        "use for the numeric or system-level degree of a 国衆 faction's subordination",
+        "keep it distinct from 従属段階=종속 단계 and the diplomatic relation 従属=종속"
+      ]
+    },
+    {
+      "source_term": "従属段階",
+      "default_ko": "종속 단계",
+      "context_rules": [
+        "use the system label with the fixed progression 낮음 → 보통 → 높음 → 최고",
+        "do not alternate 中 between 중간 and 보통 inside the same progression"
+      ]
+    },
+    {
+      "source_term": "出陣",
+      "default_ko": "출진",
+      "context_rules": [
+        "use for becoming available to march or taking the field",
+        "keep it distinct from 参陣=참전하다 when a 国衆 force joins another house's battle"
+      ]
+    },
+    {
+      "source_term": "取り込み／取込",
+      "default_ko": "편입",
+      "context_rules": [
+        "use for the completed incorporation of a 国衆 faction into a house",
+        "preserve the staged distinction from 懐柔=회유 and earlier reinforcement participation"
+      ]
+    },
+    {
+      "source_term": "家臣",
+      "default_ko": "가신",
+      "context_rules": [
+        "use for an individual retainer serving a house",
+        "keep it distinct from the collective 家中 or 家臣団=가신단"
+      ]
+    },
+    {
+      "source_term": "家臣団",
+      "default_ko": "가신단",
+      "context_rules": [
+        "use for the collective body of retainers",
+        "keep individual 家臣 references as 가신"
+      ]
+    },
+    {
+      "source_term": "直参",
+      "default_ko": "직속 가신",
+      "context_rules": [
+        "use for a retainer serving the lord directly",
+        "do not leave it as opaque 직참 in ordinary character dialogue"
+      ]
+    },
+    {
+      "source_term": "配下",
+      "default_ko": "휘하",
+      "context_rules": [
+        "use for being under a house or lord's direct command",
+        "do not imply that the separate 国衆取込 command is already complete unless the context says so"
+      ]
+    },
+    {
+      "source_term": "一蓮托生",
+      "default_ko": "한배를 탄 사이",
+      "context_rules": [
+        "translate the shared-fate idiom naturally in dialogue",
+        "avoid the stilted literal 한배에 운명을 맡긴 사이"
+      ]
     }
   ],
   "policy": {
