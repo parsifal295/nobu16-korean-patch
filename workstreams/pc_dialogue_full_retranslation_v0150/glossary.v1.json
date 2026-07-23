@@ -1088,6 +1088,108 @@
         "use the established castle-stat UI label",
         "keep it distinct from a generic 包囲耐性=포위 내성 label and ordinary 방어력"
       ]
+    },
+    {
+      "source_term": "石高",
+      "default_ko": "석고",
+      "context_rules": [
+        "use the established land-yield and castle-stat label",
+        "keep the historical koku-assessment sense distinct from generic 생산력"
+      ]
+    },
+    {
+      "source_term": "城下方針",
+      "default_ko": "성하 방침",
+      "context_rules": [
+        "use the established castle-town policy label"
+      ]
+    },
+    {
+      "source_term": "領内諸策",
+      "default_ko": "영내 제책",
+      "context_rules": [
+        "use the established domain-development command label",
+        "do not flatten the named system to generic 영내 정책"
+      ]
+    },
+    {
+      "source_term": "国衆懐柔",
+      "default_ko": "국인중 회유",
+      "context_rules": [
+        "use the established command label",
+        "preserve 国衆=국인중 rather than flattening it to 호족"
+      ]
+    },
+    {
+      "source_term": "国衆取込",
+      "default_ko": "국인중 편입",
+      "context_rules": [
+        "use the established incorporation command label",
+        "preserve 国衆=국인중 rather than flattening it to 호족"
+      ]
+    },
+    {
+      "source_term": "修復",
+      "default_ko": "수복",
+      "context_rules": [
+        "use 수복 for the named castle-repair command",
+        "use ordinary 수리 only when the source is not the command label"
+      ]
+    },
+    {
+      "source_term": "攻略目標",
+      "default_ko": "공략 목표",
+      "context_rules": [
+        "use the established corps and strategy target label"
+      ]
+    },
+    {
+      "source_term": "対包囲",
+      "default_ko": "대포위",
+      "context_rules": [
+        "use the established compact castle ability label",
+        "keep it aligned with 対包囲力 while preserving the shorter source label"
+      ]
+    },
+    {
+      "source_term": "城乗",
+      "default_ko": "성타기",
+      "context_rules": [
+        "use the established named castle-assault trait label",
+        "do not expand the compact UI name into descriptive prose"
+      ]
+    },
+    {
+      "source_term": "髪結い",
+      "default_ko": "머리 올리기",
+      "context_rules": [
+        "use for the explicitly named female coming-of-age ritual",
+        "keep it distinct from 元服=원복"
+      ]
+    },
+    {
+      "source_term": "姫武将",
+      "default_ko": "공주 무장",
+      "context_rules": [
+        "use the established female-officer system label",
+        "keep it distinct from ordinary 姫=공주"
+      ]
+    },
+    {
+      "source_term": "軍評定",
+      "default_ko": "군평정",
+      "context_rules": [
+        "use the established council-event label",
+        "do not append an unverified Japanese-reading parenthetical"
+      ]
+    },
+    {
+      "source_term": "史実武将",
+      "default_ko": "실존 무장",
+      "context_rules": [
+        "use the repeated current PC UI and data label",
+        "keep it distinct from the glossary default 史実=사실 in compact standalone contexts"
+      ]
     }
   ],
   "policy": {
