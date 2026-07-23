@@ -45,7 +45,7 @@ from nobu16_msg_table import parse_message_table  # noqa: E402
 STEAM = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 SOURCE_PATHS = {
     "base_current_ko": STEAM / "MSG" / "JP" / "msggame.bin",
-    "base_pristine_pc_jp": Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin"),
+    "base_pristine_pc_jp": Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin"),
     "base_pc_sc": STEAM / "MSG" / "SC" / "msggame.bin",
     "base_pc_tc": STEAM / "MSG" / "TC" / "msggame.bin",
     "pk_current_ko": STEAM / "MSG_PK" / "JP" / "msggame.bin",

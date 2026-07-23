@@ -30,7 +30,7 @@ from typing import Any, Mapping
 SCRIPT = Path(__file__).resolve()
 REPO = SCRIPT.parents[2]
 STEAM = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
-PRISTINE_JP = Path(r"F:\Games\NOBU16\MSG\JP\ev_strdata.bin")
+PRISTINE_JP = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\ev_strdata.bin")
 AUDIT_ROOT = REPO / "tmp" / "translation_quality_audit_v1"
 SEMANTIC = AUDIT_ROOT / "semantic"
 BUILDER = REPO / "workstreams" / "translation_quality_corrections_v1" / "build_translation_quality_corrections_v1.py"

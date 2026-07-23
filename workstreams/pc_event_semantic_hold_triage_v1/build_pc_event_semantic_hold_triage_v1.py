@@ -35,7 +35,7 @@ DEFAULT_OUTPUT_ROOT = TMP_ROOT / "pc_event_semantic_hold_triage_v1"
 VALIDATION_PATH = HERE / "validation.v1.json"
 
 STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
-BASE_PRISTINE_ROOT = Path(r"F:\Games\NOBU16")
+BASE_PRISTINE_ROOT = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root")
 PK_PRISTINE = (
     STEAM_ROOT
     / "KR_PATCH_BACKUP"
