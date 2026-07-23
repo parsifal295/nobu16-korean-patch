@@ -1342,6 +1342,84 @@
         "use the current PC diplomacy-attitude label",
         "do not use the literal 적시"
       ]
+    },
+    {
+      "source_term": "合戦",
+      "default_ko": "합전",
+      "context_rules": [
+        "use the established current PC tactical-battle label",
+        "keep it distinct from ordinary 戦=전투 and 戦争=전쟁"
+      ]
+    },
+    {
+      "source_term": "威風",
+      "default_ko": "위풍",
+      "context_rules": [
+        "use the established named post-battle influence system label"
+      ]
+    },
+    {
+      "source_term": "出奔",
+      "default_ko": "출분",
+      "context_rules": [
+        "use the established historical and current PC officer-departure label",
+        "do not flatten the named action to generic 도주 or 이탈"
+      ]
+    },
+    {
+      "source_term": "国衆親善",
+      "default_ko": "국인중 친선",
+      "context_rules": [
+        "use the autonomous-domain action label",
+        "preserve 国衆=국인중 rather than 호족"
+      ]
+    },
+    {
+      "source_term": "領地巡察",
+      "default_ko": "영지 순찰",
+      "context_rules": [
+        "use the autonomous-domain action label"
+      ]
+    },
+    {
+      "source_term": "砦",
+      "default_ko": "요새",
+      "context_rules": [
+        "use the current PC settlement and battlefield-object label",
+        "do not alternate with 성채 in this UI context"
+      ]
+    },
+    {
+      "source_term": "一門",
+      "default_ko": "일문",
+      "context_rules": [
+        "use for the daimyo's blood, spouse-line, and adoptive-father kin group",
+        "keep the established current PC historical label rather than flattening it to generic 친족"
+      ]
+    },
+    {
+      "source_term": "カノン砲",
+      "default_ko": "카논포",
+      "context_rules": [
+        "use the established early-modern cannon transliteration in historical retainer dialogue"
+      ]
+    },
+    {
+      "source_term": "伴天連",
+      "default_ko": "바테렌",
+      "context_rules": [
+        "preserve the period Japanese name for a Christian missionary in historical retainer dialogue",
+        "use generic 선교사 only when the period term itself is not foregrounded"
+      ],
+      "evidence_url": "https://online.bunka.go.jp/db/heritages/detail/450940"
+    },
+    {
+      "source_term": "貴種",
+      "default_ko": "고귀한 혈통",
+      "context_rules": [
+        "use a natural descriptive phrase before a dynamic personal name",
+        "avoid the opaque Sino-Korean 귀종 in player-facing dialogue"
+      ]
     }
   ],
   "policy": {
