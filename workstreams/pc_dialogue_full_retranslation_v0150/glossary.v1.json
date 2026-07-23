@@ -1813,6 +1813,74 @@
         "use the established game-stat label for castle or object durability",
         "keep it distinct from descriptive 견고함 and from troops 兵力=병력"
       ]
+    },
+    {
+      "source_term": "吸収",
+      "default_ko": "편입",
+      "context_rules": [
+        "use 편입 when an independent 国衆 is finally incorporated into a house",
+        "natural dialogue may use 우리 가문으로 받아들이다 or 우리의 일부로 삼다; avoid corporate-sounding 흡수"
+      ]
+    },
+    {
+      "source_term": "主筋",
+      "default_ko": "주군 가문",
+      "context_rules": [
+        "use for the lord or the lord's lineage to which the other party has a longstanding subordinate relationship",
+        "do not infer 동맹 가문 or 우호 세력 merely from contextual localization"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%BB%E7%AD%8B-527027"
+    },
+    {
+      "source_term": "軍門に降る",
+      "default_ko": "군문에 항복하다",
+      "context_rules": [
+        "use for surrendering after defeat or submitting to the opposing house",
+        "preserve the historical military register when the line allows it; do not interpret it as ordinary enlistment"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%BB%8D%E9%96%80%E3%81%AB%E9%99%8D%E3%82%8B-487925"
+    },
+    {
+      "source_term": "接収",
+      "default_ko": "접수",
+      "context_rules": [
+        "use for taking control of castles, troops, retainers, money, provisions, or treasures after incorporation",
+        "keep it distinct from 登用=등용 for employing officers"
+      ]
+    },
+    {
+      "source_term": "飼い殺し",
+      "default_ko": "능력을 쓰지 못한 채 붙들어 두다",
+      "context_rules": [
+        "translate the figurative sense of retaining someone without allowing a meaningful role or use of their ability",
+        "do not render the livestock image literally in this vassal-incorporation context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A3%BC%E6%AE%BA%E3%81%97-457347"
+    },
+    {
+      "source_term": "離間工作",
+      "default_ko": "이간 공작",
+      "context_rules": [
+        "use for covertly creating discord between allied houses",
+        "keep 仲違い as contextual 반목 or 사이를 틀어놓다 rather than repeating the command label"
+      ]
+    },
+    {
+      "source_term": "心証",
+      "default_ko": "인상",
+      "context_rules": [
+        "use 인상 for a house's opinion or impression of another house in diplomatic reputation text",
+        "do not use Korean legal 심증 in this relationship context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BF%83%E8%A8%BC-81951"
+    },
+    {
+      "source_term": "手を切る",
+      "default_ko": "단교하다",
+      "context_rules": [
+        "use 단교하다 when allied houses sever diplomatic relations",
+        "do not translate the idiom literally as 손을 끊다"
+      ]
     }
   ],
   "policy": {
