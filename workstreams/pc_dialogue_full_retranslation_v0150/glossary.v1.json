@@ -464,6 +464,110 @@
       "evidence_url": "https://kotobank.jp/word/%E4%B8%80%E7%95%AA%E6%A7%8D-433621"
     },
     {
+      "source_term": "釣り野伏",
+      "default_ko": "츠리노부세",
+      "context_rules": [
+        "retain the Shimazu tactic as a phonetic historical proper term",
+        "put the lure-and-ambush explanation in review prose rather than expanding the dialogue"
+      ],
+      "evidence_url": "https://www.kagoshima-kankou.com/feature/shimadu2019/introduction2"
+    },
+    {
+      "source_term": "鬼島津",
+      "default_ko": "오니시마즈",
+      "context_rules": [
+        "retain Shimazu Yoshihiro's sobriquet as a phonetic historical proper term",
+        "keep it consistent with the project's 오니미노, 오니소고, and other 鬼 sobriquets"
+      ],
+      "evidence_url": "https://www.city.hioki.kagoshima.jp/documents/776/5989.pdf"
+    },
+    {
+      "source_term": "九州探題",
+      "default_ko": "규슈 단다이",
+      "context_rules": [
+        "retain the Japanese Muromachi-period office as a phonetic institutional term",
+        "do not flatten it to a generic regional commander when the office title is foregrounded"
+      ],
+      "evidence_url": "https://www.city.kikuchi.lg.jp/article/view/800/12012.html"
+    },
+    {
+      "source_term": "三職",
+      "default_ko": "삼직",
+      "context_rules": [
+        "use 삼직 for the game's collective label covering 관백, 태정대신, and 정이대장군",
+        "keep the three individual office names unchanged in choices and confirmation text"
+      ]
+    },
+    {
+      "source_term": "関白",
+      "default_ko": "관백",
+      "context_rules": [
+        "retain the historical court office title in dialogue, choices, and ending text",
+        "do not replace it with a generic regent when the office itself is selected"
+      ]
+    },
+    {
+      "source_term": "太政大臣",
+      "default_ko": "태정대신",
+      "context_rules": [
+        "retain the historical court office title in dialogue, choices, and ending text",
+        "keep it distinct from other ministerial and military offices"
+      ]
+    },
+    {
+      "source_term": "高城川",
+      "default_ko": "다카조가와",
+      "context_rules": [
+        "retain the historical river name as a Japanese proper name",
+        "do not mix it with the modern river name 오마루가와 or translate 川 as a separate 강 suffix"
+      ],
+      "evidence_url": "https://www.qsr.mlit.go.jp/miyazaki/site_files/file/omaru_keikaku/pdf/03/03_4.pdf"
+    },
+    {
+      "source_term": "奥羽",
+      "default_ko": "오우",
+      "context_rules": [
+        "retain the historical regional name formed from Mutsu and Dewa",
+        "do not silently replace it with the modern broader label 도호쿠"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%A5%A5%E7%BE%BD-448727"
+    },
+    {
+      "source_term": "坂東",
+      "default_ko": "반도",
+      "context_rules": [
+        "retain the historical regional name by its Japanese reading",
+        "keep it distinct from the common Korean noun 반도 and from the separate game label 간토"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9D%82%E6%9D%B1-118455"
+    },
+    {
+      "source_term": "関東",
+      "default_ko": "간토",
+      "context_rules": [
+        "use the established Japanese regional name",
+        "keep it distinct from the historical label 반도 when both occur"
+      ],
+      "evidence_url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/tiikimei.html"
+    },
+    {
+      "source_term": "北陸",
+      "default_ko": "호쿠리쿠",
+      "context_rules": [
+        "use the established Japanese regional name in ending and system text"
+      ],
+      "evidence_url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/tiikimei.html"
+    },
+    {
+      "source_term": "甲信",
+      "default_ko": "고신",
+      "context_rules": [
+        "retain the regional compound for Kai and Shinano",
+        "do not expand it to the larger modern meteorological region when the source says only 甲信"
+      ],
+      "evidence_url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/tiikimei.html"
+    },
+    {
       "source_term": "大一大万大吉",
       "default_ko": "대일대만대길",
       "context_rules": [

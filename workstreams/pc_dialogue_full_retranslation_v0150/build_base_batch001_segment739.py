@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""Build Base authoring segment 739 decisions for the v0.15.0 retranslation."""
+
+from __future__ import annotations
+
+import importlib.util
+import sys
+from pathlib import Path
+from typing import Any
+
+
+SCRIPT = Path(__file__).resolve()
+WORKSTREAM = SCRIPT.parent
+REPO = WORKSTREAM.parents[1]
+ENGINE_PATH = WORKSTREAM / "build_pc_dialogue_full_retranslation_v0150.py"
+OUTPUT = REPO / "tmp" / WORKSTREAM.name / "decisions" / "base_msggame_B001_S739.private.v1.jsonl"
+
+
+def load_engine() -> Any:
+    spec = importlib.util.spec_from_file_location("pc_dialogue_full_retranslation_v0150_engine_s739", ENGINE_PATH)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot import {ENGINE_PATH}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+ENGINE = load_engine()
+TRANSLATIONS: dict[str, str] = {
+    "12:48:0": "마침내 ",
+    "12:48:1": "간토",
+    "12:48:2": " 전역에\n평온을 가져올 수 있었군…\n모두, 수고했다",
+    "12:48:3": "!",
+    "12:49:0": "축하드립니다",
+    "12:49:1": "!\n",
+    "12:49:2": "호쿠리쿠",
+    "12:49:3": "의 성은 모조리 우리 가문이 장악했습니다",
+    "12:49:4": ".\n전대미문의 쾌거입니다",
+    "12:49:5": "!",
+    "12:50:0": "호쿠리쿠",
+    "12:50:1": "의 땅에 사는 모든 백성에게\n평온을 가져다줄 수 있었군…\n모두, 수고했다",
+    "12:50:2": "!",
+    "12:51:0": "참으로 경사스럽기 그지없습니다!\n「",
+    "12:51:1": "고신",
+    "12:51:2": "」에 있는 성을 모두\n우리 가문이 장악했습니다",
+    "12:51:3": "!",
+    "12:52:0": "이토록 빨리 ",
+    "12:52:1": "고신",
+    "12:52:2": "의 땅을\n통일할 수 있게 되다니…\n모두, 수고했다",
+    "12:52:3": "!",
+}
+
+COLOURED_REGION_RECORD_IDS = {48, 49, 50, 51, 52}
+STATIC_COORDINATES = set(TRANSLATIONS)
+
+
+def assert_static_colour_scope(prepared: Any) -> None:
+    source_records = ENGINE.archive_records(prepared.resources["base_msggame"].pristine_archive)
+    current_records = ENGINE.archive_records(prepared.resources["base_msggame"].current_archive)
+    for record_id in COLOURED_REGION_RECORD_IDS:
+        source = source_records[(12, record_id)].data
+        current = current_records[(12, record_id)].data
+        if b"\x01\x43" not in source:
+            raise RuntimeError(f"pristine inflection opcode is absent: 12:{record_id}")
+        if b"\x01\x43" in current:
+            raise RuntimeError(f"removed inflection opcode unexpectedly survives: 12:{record_id}")
+        if current.count(b"\x1b\x43\x43") != 1 or current.count(b"\x1b\x43\x5a") != 1:
+            raise RuntimeError(f"regional colour wrapper drift: 12:{record_id}")
+
+
+def build_rows() -> tuple[Any, list[dict[str, object]]]:
+    prepared = ENGINE.prepare_artifacts(
+        ENGINE.DEFAULT_STEAM_ROOT,
+        ENGINE.DEFAULT_BASE_PRISTINE,
+        ENGINE.DEFAULT_PK_PRISTINE,
+    )
+    assert_static_colour_scope(prepared)
+    rows: list[dict[str, object]] = []
+    for coordinate, translation in TRANSLATIONS.items():
+        block_id, record_id, literal_id = (int(value) for value in coordinate.split(":"))
+        target = prepared.visible_targets.get(("base_msggame", block_id, record_id, literal_id))
+        if target is None:
+            raise RuntimeError(f"decision target is absent from the current Base universe: {coordinate}")
+        rows.append(
+            {
+                "schema": ENGINE.DECISION_SCHEMA,
+                "resource": "base_msggame",
+                "coordinate": coordinate,
+                "source_record_raw_sha256": target["source_record_raw_sha256"],
+                "current_ko_utf16le_sha256": target["current_ko_utf16le_sha256"],
+                "translation": translation,
+                "semantic_review": "approved",
+                "scope_classification": "retranslated",
+                "layout_review": "unchanged_from_current",
+                "runtime_review": "not_required",
+                "basis": (
+                    "pristine_base_pc_jp_with_base_sc_tc_and_corresponding_pk_en_sc_tc_context_where_available"
+                ),
+                "historic_korean_used": False,
+                "switch_korean_used": False,
+            }
+        )
+    return prepared, rows
+
+
+def main() -> int:
+    prepared, rows = build_rows()
+    ENGINE.atomic_write(OUTPUT, ENGINE.jsonl(rows))
+    validated = ENGINE.validate_decisions(prepared, OUTPUT, require_complete=False)
+    if len(validated) != len(TRANSLATIONS):
+        raise RuntimeError("validated decision count differs from the segment translation count")
+    print(
+        ENGINE.json.dumps(
+            {
+                "status": "ok",
+                "segment": "base_msggame_B001_S739",
+                "decision_count": len(rows),
+                "retranslated": len(STATIC_COORDINATES),
+                "dynamic_runtime_review_pending": 0,
+                "confirmed_non_display": 0,
+                "steam_write_performed": False,
+                "output": str(OUTPUT),
+            },
+            ensure_ascii=True,
+            separators=(",", ":"),
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
