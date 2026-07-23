@@ -1731,6 +1731,88 @@
         "use for adherents or neighboring castles rising in response to an 一揆",
         "keep the action distinct from the category label 一揆=잇키"
       ]
+    },
+    {
+      "source_term": "支配率",
+      "default_ko": "지배율",
+      "context_rules": [
+        "use for the numeric territorial-control percentage and its increase UI",
+        "keep it distinct from prose 支配=지배 and 支配力=지배력"
+      ]
+    },
+    {
+      "source_term": "工作",
+      "default_ko": "공작",
+      "context_rules": [
+        "use for covert weakening or sabotage performed before a siege and for its result UI",
+        "do not flatten the command sense to generic 작업 or 세공"
+      ]
+    },
+    {
+      "source_term": "城攻め",
+      "default_ko": "공성",
+      "context_rules": [
+        "use the established compact term for attacking a castle",
+        "keep explicit 攻城戦 as 공성전 and generic 攻略 as 공략"
+      ]
+    },
+    {
+      "source_term": "先鋒",
+      "default_ko": "선봉",
+      "context_rules": [
+        "use for the vanguard person or force",
+        "keep it distinct from 先陣=선봉대 and the first-spear distinction 一番槍"
+      ]
+    },
+    {
+      "source_term": "城壁",
+      "default_ko": "성벽",
+      "context_rules": [
+        "use for the walls of a castle",
+        "keep it distinct from the more general defensive wall 防壁=방벽"
+      ]
+    },
+    {
+      "source_term": "防壁",
+      "default_ko": "방벽",
+      "context_rules": [
+        "use when the source names a defensive wall rather than the castle-wall term 城壁",
+        "do not normalize both terms to 성벽 when the source distinguishes them"
+      ]
+    },
+    {
+      "source_term": "防備",
+      "default_ko": "방비",
+      "context_rules": [
+        "use for a castle or territory's prepared defensive state",
+        "keep it distinct from 防衛=방어 and 守備=수비"
+      ]
+    },
+    {
+      "source_term": "忍び",
+      "default_ko": "시노비",
+      "context_rules": [
+        "use the established project term when the source names covert operatives or their arts",
+        "translate verbal 忍ばせる by context as 잠입시키다 rather than forcing the noun 시노비"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BF%8D%E3%81%AE%E8%80%85-2047130"
+    },
+    {
+      "source_term": "搦手",
+      "default_ko": "성의 뒤편",
+      "context_rules": [
+        "retain the castle-assault sense of a rear or secondary approach",
+        "when the surrounding sabotage context also stresses a weak point, use 뒤쪽의 허점 rather than the overly specific 뒷문"
+      ],
+      "evidence_url": "https://www.kanjipedia.jp/kotoba/0003025900"
+    },
+    {
+      "source_term": "耐久",
+      "default_ko": "내구",
+      "context_rules": [
+        "use the established game-stat label for castle or object durability",
+        "keep it distinct from descriptive 견고함 and from troops 兵力=병력"
+      ]
     }
   ],
   "policy": {
