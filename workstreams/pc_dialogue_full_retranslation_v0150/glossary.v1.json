@@ -978,6 +978,116 @@
       "context_rules": [
         "use the established route and movement UI term"
       ]
+    },
+    {
+      "source_term": "裁量権委譲",
+      "default_ko": "재량권 위양",
+      "context_rules": [
+        "use the established policy and tutorial label",
+        "preserve the institutional delegation sense of 委譲; do not drift to 재량권 이양"
+      ]
+    },
+    {
+      "source_term": "評定",
+      "default_ko": "평정",
+      "context_rules": [
+        "use the established council and command-screen label",
+        "keep it distinct from 評定衆=평정중"
+      ]
+    },
+    {
+      "source_term": "地方統一",
+      "default_ko": "지방 통일",
+      "context_rules": [
+        "use the established campaign-goal label"
+      ]
+    },
+    {
+      "source_term": "外交姿勢",
+      "default_ko": "외교 자세",
+      "context_rules": [
+        "use the established diplomacy-system label"
+      ]
+    },
+    {
+      "source_term": "上位集落",
+      "default_ko": "상위 취락",
+      "context_rules": [
+        "use the established settlement-tier label",
+        "do not flatten it to an ordinary 취락"
+      ]
+    },
+    {
+      "source_term": "楽市楽座",
+      "default_ko": "라쿠이치라쿠자",
+      "context_rules": [
+        "use the canonical public policy and historical-system label",
+        "do not alternate with 낙시낙좌 inside game UI or tutorial prose"
+      ]
+    },
+    {
+      "source_term": "家中役職",
+      "default_ko": "가문 내 역직",
+      "context_rules": [
+        "use the established household-office label",
+        "keep it distinct from 身分=신분 and 職名=직명"
+      ]
+    },
+    {
+      "source_term": "切取許可",
+      "default_ko": "절취 허가",
+      "context_rules": [
+        "use the canonical corps-policy UI label",
+        "do not replace the named command with the descriptive 점유 허가"
+      ]
+    },
+    {
+      "source_term": "位階",
+      "default_ko": "위계",
+      "context_rules": [
+        "use 위계 when the source denotes rank order or grade",
+        "keep it distinct from 官位=관위 and 官職=관직"
+      ]
+    },
+    {
+      "source_term": "官位",
+      "default_ko": "관위",
+      "context_rules": [
+        "use 관위 for the court-rank asset or status",
+        "keep it distinct from 位階=위계 and 官職=관직"
+      ]
+    },
+    {
+      "source_term": "一門武将",
+      "default_ko": "일문 무장",
+      "context_rules": [
+        "use the established kinship-system label",
+        "preserve the historical household-group sense rather than expanding it to a generic 친족 무장"
+      ]
+    },
+    {
+      "source_term": "正室",
+      "default_ko": "정실",
+      "context_rules": [
+        "use 정실 when the legal principal-wife status is explicit",
+        "keep it distinct from 側室=측실 and general 奥方=부인"
+      ]
+    },
+    {
+      "source_term": "側室",
+      "default_ko": "측실",
+      "context_rules": [
+        "use 측실 for the explicitly named historical spouse status",
+        "keep it distinct from 正室=정실"
+      ]
+    },
+    {
+      "source_term": "対包囲力",
+      "default_ko": "대포위",
+      "context_rules": [
+        "use the established castle-stat UI label",
+        "keep it distinct from a generic 包囲耐性=포위 내성 label and ordinary 방어력"
+      ]
     }
   ],
   "policy": {
