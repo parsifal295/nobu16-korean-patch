@@ -363,7 +363,7 @@ def source_free_validation(rows: list[dict[str, Any]], resource_reports: dict[st
                 "Switch / Switch repository",
                 "historic Korean payload",
                 "generic overlay",
-                "F:/Games/NOBU16/MSG_PK/SC",
+                "I:/Workspaces/NOBU16-Korean/private-inputs/legacy-pc-root/MSG_PK/SC",
             ],
             "source_content_in_validation": False,
         },

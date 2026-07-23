@@ -33,7 +33,7 @@ from typing import Any, Callable
 SCRIPT = Path(__file__).resolve()
 REPO = SCRIPT.parents[2]
 STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
-PC_BASE_SOURCE_ROOT = Path(r"F:\Games\NOBU16")
+PC_BASE_SOURCE_ROOT = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root")
 PC_PK_JP_ORIGINAL = (
     STEAM_ROOT
     / "KR_PATCH_BACKUP"

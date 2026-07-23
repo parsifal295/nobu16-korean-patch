@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 
-WORK = Path(r"F:\Games\NOBU16\KR_PATCH_WORK")
+WORK = Path(r"I:\Workspaces\NOBU16-Korean\repository\KR_PATCH_WORK")
 STEAM = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 BACKUP = STEAM / "KR_PATCH_BACKUP" / "file_only_transaction" / "steam-jp-1.1.7-v0.6.0" / "originals"
 PRIVATE_OUTPUT = WORK / "tmp" / "pc_translation_residuals_pc_only_v1" / "private_findings.v1.jsonl"
