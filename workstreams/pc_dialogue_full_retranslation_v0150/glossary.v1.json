@@ -66,8 +66,10 @@
       "source_term": "城代",
       "default_ko": "성대",
       "context_rules": [
-        "keep project-wide established terminology"
-      ]
+        "keep project-wide established terminology",
+        "use it for the retainer who administers or guards a castle on the castle lord's behalf; keep it distinct from 城主=성주"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9F%8E%E4%BB%A3-79488"
     },
     {
       "source_term": "幕府",
@@ -106,7 +108,8 @@
       "context_rules": [
         "use 중개자 for the officer maintaining a diplomatic or court connection",
         "do not transliterate the Japanese administrative term as 취차"
-      ]
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%8F%96%E6%AC%A1-183015"
     },
     {
       "source_term": "普請",
@@ -898,8 +901,10 @@
       "source_term": "論功行賞",
       "default_ko": "논공행상",
       "context_rules": [
-        "use the established game UI and historical merit-review term"
-      ]
+        "use the established game UI and historical merit-review term",
+        "preserve the process of assessing merit and granting rewards rather than reducing it to a generic meeting"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%AB%96%E5%8A%9F%E8%A1%8C%E8%B3%9E-664062"
     },
     {
       "source_term": "時間進行",
@@ -2279,6 +2284,119 @@
         "retain 몰수지 only where a compact administrative label is required"
       ],
       "evidence_url": "https://kotobank.jp/word/%E9%97%95%E6%89%80%E5%9C%B0-1310134"
+    },
+    {
+      "source_term": "軍団",
+      "default_ko": "군단",
+      "context_rules": [
+        "use the established organization and command label 군단",
+        "use 편성 for forming a new corps and 신설 only when the source foregrounds establishment"
+      ]
+    },
+    {
+      "source_term": "政策",
+      "default_ko": "정책",
+      "context_rules": [
+        "use 정책 consistently for named policy research and issuance",
+        "preserve runtime policy-name token and ASCII quote boundaries"
+      ]
+    },
+    {
+      "source_term": "施設",
+      "default_ko": "시설",
+      "context_rules": [
+        "use 시설 for buildings and installations when no more specific established UI label applies",
+        "retain 城下施設=성하 시설 as the compound game term"
+      ]
+    },
+    {
+      "source_term": "領主",
+      "default_ko": "영주",
+      "context_rules": [
+        "use 영주 for the person who owns or governs a domain or granted land",
+        "keep the person distinct from 領地=영지 and 領国=the governed domain"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A0%98%E4%B8%BB-659300"
+    },
+    {
+      "source_term": "城主",
+      "default_ko": "성주",
+      "context_rules": [
+        "use 성주 for the lord appointed to hold a castle",
+        "keep it distinct from 城代=성대, who administers or guards a castle on another lord's behalf"
+      ]
+    },
+    {
+      "source_term": "権威",
+      "default_ko": "권위",
+      "context_rules": [
+        "use 권위 for political and institutional prestige",
+        "do not substitute 위신 when the source explicitly contrasts authority conferred by the shogunate"
+      ]
+    },
+    {
+      "source_term": "同盟",
+      "default_ko": "동맹",
+      "context_rules": [
+        "use 동맹 for the diplomatic relation and its extension",
+        "keep it distinct from 婚姻同盟 and ordinary 친선"
+      ]
+    },
+    {
+      "source_term": "婚姻同盟",
+      "default_ko": "혼인 동맹",
+      "context_rules": [
+        "use the established spaced form 혼인 동맹",
+        "do not collapse it to 혼인동맹 or generic 동맹 when marriage is explicit"
+      ]
+    },
+    {
+      "source_term": "停戦",
+      "default_ko": "정전",
+      "context_rules": [
+        "use 정전 for a negotiated halt to hostilities",
+        "preserve the target force and intermediary as separate runtime actors"
+      ]
+    },
+    {
+      "source_term": "仲介",
+      "default_ko": "중개",
+      "context_rules": [
+        "use 중개 for the act of mediation and 중개자 for the mediator",
+        "keep the mediator distinct from the two forces negotiating a truce"
+      ]
+    },
+    {
+      "source_term": "昇進",
+      "default_ko": "승진",
+      "context_rules": [
+        "use 승진 for advancement recorded by the merit-award results",
+        "keep it distinct from granting additional 知行=영지"
+      ]
+    },
+    {
+      "source_term": "指揮",
+      "default_ko": "지휘",
+      "context_rules": [
+        "use 지휘 for personally commanding a battle or troops",
+        "preserve the runtime commander token and honorific when Korean grammar requires it"
+      ]
+    },
+    {
+      "source_term": "親睦",
+      "default_ko": "친선",
+      "context_rules": [
+        "use 친선 for cultivating relations with another force in diplomacy dialogue",
+        "do not use 친목 where it would sound like a private social club rather than inter-house relations"
+      ]
+    },
+    {
+      "source_term": "戦上手",
+      "default_ko": "싸움에 능하다",
+      "context_rules": [
+        "render practical skill in battle as 싸움에 능하다 rather than narrowing it to theoretical 전술가",
+        "in 戦上手を返上する, naturalize the self-deprecation as 싸움에 능하다는 이름을 내려놓다"
+      ]
     }
   ],
   "policy": {
