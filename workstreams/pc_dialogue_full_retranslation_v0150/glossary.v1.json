@@ -59,8 +59,11 @@
       "source_term": "国衆",
       "default_ko": "국인중",
       "context_rules": [
-        "keep project-wide established terminology"
-      ]
+        "keep project-wide established terminology",
+        "use for the game faction category based on medieval local landholding warrior lords",
+        "do not flatten it to generic 호족"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9B%BD%E8%A1%86-55714"
     },
     {
       "source_term": "城代",
@@ -2397,6 +2400,24 @@
         "render practical skill in battle as 싸움에 능하다 rather than narrowing it to theoretical 전술가",
         "in 戦上手を返上する, naturalize the self-deprecation as 싸움에 능하다는 이름을 내려놓다"
       ]
+    },
+    {
+      "source_term": "軍議",
+      "default_ko": "군의",
+      "context_rules": [
+        "use 군의 for a military council or deliberation",
+        "keep it distinct from ordinary meeting language and the broader 評定=평정 interface"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%BB%8D%E8%AD%B0-487629"
+    },
+    {
+      "source_term": "戦機",
+      "default_ko": "싸울 때",
+      "context_rules": [
+        "render the favorable time or opportunity to fight according to sentence context",
+        "prefer 싸울 때, 출병할 때, or 싸움에 나설 때 over the opaque Sino-Korean calque 전기"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%88%A6%E6%A9%9F-549536"
     }
   ],
   "policy": {
