@@ -641,6 +641,178 @@
         "do not mechanically preserve the reversed source word order as 근공원교"
       ],
       "evidence_url": "https://www.81.cn/gfbmap/content/2018-06/28/content_209576.htm"
+    },
+    {
+      "source_term": "鎮西",
+      "default_ko": "진제이",
+      "context_rules": [
+        "use the Japanese historical regional reading for Kyushu in regional and institutional prose",
+        "keep context-specific established compounds under separate review instead of mechanically replacing every 鎮西 occurrence"
+      ],
+      "evidence_url": "https://ndlsearch.ndl.go.jp/books/R000000004-I1866668"
+    },
+    {
+      "source_term": "千秋万歳",
+      "default_ko": "천추만세",
+      "context_rules": [
+        "retain the historical auspicious formula when it appears as an independent blessing",
+        "do not add an unstated subject such as 영광 when the source gives only the formula"
+      ],
+      "evidence_url": "https://www.museum.go.kr/MUSEUM/contents/M0502000000.do?relicId=1875&schM=view&searchId=search"
+    },
+    {
+      "source_term": "空前絶後",
+      "default_ko": "전무후무",
+      "context_rules": [
+        "use the natural Korean four-character equivalent in achievement and ending prose"
+      ]
+    },
+    {
+      "source_term": "年貢",
+      "default_ko": "연공",
+      "context_rules": [
+        "retain the historical levy term in Sengoku fiscal explanations",
+        "do not flatten it to a generic 세금 when it is contrasted with other levies"
+      ],
+      "evidence_url": "https://www.nta.go.jp/about/organization/ntc/sozei/shiryou/library/01.htm"
+    },
+    {
+      "source_term": "知行地",
+      "default_ko": "지행지",
+      "context_rules": [
+        "retain the historical landholding term in vassalage and domain administration prose"
+      ],
+      "evidence_url": "https://online.bunka.go.jp/heritages/detail/551915"
+    },
+    {
+      "source_term": "段銭",
+      "default_ko": "단전",
+      "context_rules": [
+        "retain the historical land-assessment levy term",
+        "keep it distinct from 棟別銭 and 関銭 when the source enumerates them"
+      ],
+      "evidence_url": "https://www.ioc.u-tokyo.ac.jp/~5jimu/reports/PDF/Pf_sakurai2.pdf"
+    },
+    {
+      "source_term": "棟別銭",
+      "default_ko": "동별전",
+      "context_rules": [
+        "retain the historical house-based levy term",
+        "keep it distinct from 段銭 and 関銭 when the source enumerates them"
+      ],
+      "evidence_url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000305874&page=ref_view"
+    },
+    {
+      "source_term": "関銭",
+      "default_ko": "관전",
+      "context_rules": [
+        "retain the historical checkpoint or passage levy term",
+        "keep it distinct from 段銭 and 棟別銭 when the source enumerates them"
+      ],
+      "evidence_url": "https://jpsearch.go.jp/gallery/ndl-ZNnp6ogBEkuopZ"
+    },
+    {
+      "source_term": "所領安堵",
+      "default_ko": "소령 안도",
+      "context_rules": [
+        "retain the historical confirmation of a vassal's holdings",
+        "do not reduce it to a generic promise of safety"
+      ],
+      "evidence_url": "https://online.bunka.go.jp/heritages/detail/551915"
+    },
+    {
+      "source_term": "軍役",
+      "default_ko": "군역",
+      "context_rules": [
+        "use the historical military-service obligation term when retainers must furnish troops, weapons, or provisions"
+      ],
+      "evidence_url": "https://khirin.rekihaku.ac.jp/pid/nmjh_collection/H-1506.html"
+    },
+    {
+      "source_term": "戦国大名",
+      "default_ko": "전국 다이묘",
+      "context_rules": [
+        "retain the established Japanese historical category",
+        "do not translate it as a generic 전국시대 영주 when the category itself is being explained"
+      ]
+    },
+    {
+      "source_term": "国人",
+      "default_ko": "국인",
+      "context_rules": [
+        "use 국인 for the historical local warrior-landholder category",
+        "keep it distinct from the game faction category 国衆=국인중",
+        "do not flatten either term to 호족"
+      ],
+      "evidence_url": "https://ndlsearch.ndl.go.jp/books/R100000002-I029339630"
+    },
+    {
+      "source_term": "組頭",
+      "default_ko": "조두",
+      "context_rules": [
+        "use the established game rank label",
+        "keep the six-rank sequence 조두, 아시가루 대장, 사무라이 대장, 부장, 가로, 숙로"
+      ]
+    },
+    {
+      "source_term": "足軽大将",
+      "default_ko": "아시가루 대장",
+      "context_rules": [
+        "use the established game rank label",
+        "do not join the words as 아시가루대장 in prose"
+      ]
+    },
+    {
+      "source_term": "侍大将",
+      "default_ko": "사무라이 대장",
+      "context_rules": [
+        "use the established game rank label"
+      ]
+    },
+    {
+      "source_term": "部将",
+      "default_ko": "부장",
+      "context_rules": [
+        "use the established game rank label"
+      ]
+    },
+    {
+      "source_term": "家老",
+      "default_ko": "가로",
+      "context_rules": [
+        "use the established game rank label",
+        "do not replace it with the modern household noun 가신"
+      ]
+    },
+    {
+      "source_term": "宿老",
+      "default_ko": "숙로",
+      "context_rules": [
+        "use the established game rank label"
+      ]
+    },
+    {
+      "source_term": "勲功",
+      "default_ko": "훈공",
+      "context_rules": [
+        "use the established merit term in rank and promotion explanations"
+      ]
+    },
+    {
+      "source_term": "代官",
+      "default_ko": "대관",
+      "context_rules": [
+        "use the historical or game office label",
+        "keep it distinct from 郡=군 and 知行地=지행지 in domain-administration prose"
+      ]
+    },
+    {
+      "source_term": "特性",
+      "default_ko": "특성",
+      "context_rules": [
+        "use the established game system term in ability explanations",
+        "preserve surrounding runtime officer-name and trait-name token boundaries"
+      ]
     }
   ],
   "policy": {
