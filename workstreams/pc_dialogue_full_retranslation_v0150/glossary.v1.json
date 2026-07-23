@@ -813,6 +813,100 @@
         "use the established game system term in ability explanations",
         "preserve surrounding runtime officer-name and trait-name token boundaries"
       ]
+    },
+    {
+      "source_term": "小姓",
+      "default_ko": "고쇼",
+      "context_rules": [
+        "use the project-established historical attendant label",
+        "do not alternate with 시동 inside the same tutorial or role-label sequence"
+      ]
+    },
+    {
+      "source_term": "本拠",
+      "default_ko": "본거지",
+      "context_rules": [
+        "use the established game UI term",
+        "avoid the clipped form 본거 in player-facing prose"
+      ]
+    },
+    {
+      "source_term": "城下施設",
+      "default_ko": "성하 시설",
+      "context_rules": [
+        "use the established game UI term for facilities attached to a castle"
+      ]
+    },
+    {
+      "source_term": "攻城戦",
+      "default_ko": "공성전",
+      "context_rules": [
+        "retain the explicit siege-battle term",
+        "do not flatten it to a generic 성 공략 when the source distinguishes 攻城戦 from 城攻め"
+      ]
+    },
+    {
+      "source_term": "労力",
+      "default_ko": "노동력",
+      "context_rules": [
+        "use 노동력 when the text refers to the named game resource",
+        "use 노력 only for ordinary human effort outside the resource system"
+      ]
+    },
+    {
+      "source_term": "領土",
+      "default_ko": "영토",
+      "context_rules": [
+        "use 영토 for the territorial extent of a house or polity",
+        "keep it distinct from 領地=영지 and 土地=토지"
+      ]
+    },
+    {
+      "source_term": "領地",
+      "default_ko": "영지",
+      "context_rules": [
+        "use 영지 for land held or administered by a lord or retainer",
+        "keep it distinct from 領土=영토 and the historical grant term 知行地=지행지"
+      ]
+    },
+    {
+      "source_term": "土地",
+      "default_ko": "토지",
+      "context_rules": [
+        "use 토지 for land as a physical or taxable area",
+        "do not replace it with 영토 unless political territory is foregrounded"
+      ]
+    },
+    {
+      "source_term": "郡",
+      "default_ko": "군",
+      "context_rules": [
+        "use the established game administrative-unit term",
+        "do not confuse it with 군대 or a generic 영지 when the unit itself is named"
+      ]
+    },
+    {
+      "source_term": "自勢力",
+      "default_ko": "자세력",
+      "context_rules": [
+        "use the established compact game UI term",
+        "expand to 자신의 세력 only when ordinary prose requires it"
+      ]
+    },
+    {
+      "source_term": "論功行賞",
+      "default_ko": "논공행상",
+      "context_rules": [
+        "use the established game UI and historical merit-review term"
+      ]
+    },
+    {
+      "source_term": "時間進行",
+      "default_ko": "시간 진행",
+      "context_rules": [
+        "use the established game button and tutorial term",
+        "preserve runtime button-glyph token boundaries in menu guidance"
+      ]
     }
   ],
   "policy": {
