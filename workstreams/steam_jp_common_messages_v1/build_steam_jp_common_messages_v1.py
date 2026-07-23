@@ -58,7 +58,7 @@ VALIDATION_PATH = WORKSTREAM_ROOT / "validation.v1.json"
 
 DEFAULT_STEAM_ROOT = Path("F:/SteamLibrary/steamapps/common/NOBU16")
 DEFAULT_LEGACY_STOCK_ROOT = Path(
-    "F:/Games/NOBU16/KR_PATCH_BACKUP/file_only_transaction/"
+    "I:/Workspaces/NOBU16-Korean/archive/legacy-root/KR_PATCH_BACKUP/file_only_transaction/"
     "jp-runtime-wave05-20260715-v1/originals"
 )
 DEFAULT_LEGACY_CANDIDATE_A = REPO_ROOT / "tmp" / "jp_pk_message_route_audit_v1_candidate_a_20260715" / "native_exact_subset"

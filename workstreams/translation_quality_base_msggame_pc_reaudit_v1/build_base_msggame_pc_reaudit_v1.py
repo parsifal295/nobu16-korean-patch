@@ -35,7 +35,7 @@ REPO = WORKSTREAM.parents[1]
 TMP_ROOT = REPO / "tmp"
 VALIDATION_PATH = WORKSTREAM / "validation.v1.json"
 
-DEFAULT_PRISTINE_ROOT = Path(r"F:\Games\NOBU16")
+DEFAULT_PRISTINE_ROOT = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root")
 DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 DEFAULT_OUTPUT_ROOT = TMP_ROOT / "translation_quality_base_msggame_pc_reaudit_v1"
 SOURCE_FREE_LEDGER = (

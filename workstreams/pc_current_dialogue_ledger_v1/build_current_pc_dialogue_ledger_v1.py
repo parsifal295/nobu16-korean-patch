@@ -34,7 +34,7 @@ WORKSTREAM = SCRIPT.parent
 REPO = WORKSTREAM.parents[1]
 TMP = REPO / "tmp"
 DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
-BASE_PRISTINE = Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin")
+BASE_PRISTINE = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin")
 PK_PRISTINE_RELATIVE = Path(
     "KR_PATCH_BACKUP/file_only_transaction/steam-jp-1.1.7-v0.6.0/originals/MSG_PK/JP/msggame.bin"
 )

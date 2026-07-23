@@ -53,7 +53,7 @@ PC_FILES = {
         "languages": ("JP", "SC", "TC"),
         # The base-event pristine PC Japanese file is preserved separately
         # from the PK backup, and is pinned by the same v1.1.7 source hash.
-        "pristine_path": Path(r"F:\Games\NOBU16\MSG\JP\ev_strdata.bin"),
+        "pristine_path": Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\ev_strdata.bin"),
         "pristine_sha256": "EADCD167EF9684C7F077694A1A7F68966E34FD2E2EEF9DEFB7817031C3D773EB",
     },
     "pk_msggame": {

@@ -22,7 +22,7 @@ from typing import Any
 SCRIPT = Path(__file__).resolve()
 REPO = SCRIPT.parents[2]
 STEAM = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
-PRISTINE_JP = Path(r"F:\Games\NOBU16\MSG\JP\ev_strdata.bin")
+PRISTINE_JP = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\ev_strdata.bin")
 LIVE_KO = STEAM / "MSG" / "JP" / "ev_strdata.bin"
 TMP_ROOT = REPO / "tmp"
 LEGACY = TMP_ROOT / "translation_quality_audit_v1" / "semantic" / "ev_strdata_findings.v1.jsonl"

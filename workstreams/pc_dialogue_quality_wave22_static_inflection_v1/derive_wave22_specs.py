@@ -50,7 +50,7 @@ FAMILIES = (
 )
 
 REFERENCE_PATHS = {
-    "BASE_JP": Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin"),
+    "BASE_JP": Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin"),
     "PK_JP": STEAM / "KR_PATCH_BACKUP/file_only_transaction/steam-jp-1.1.7-v0.6.0/originals/MSG_PK/JP/msggame.bin",
     "EN": STEAM / "MSG_PK/EN/msggame.bin",
     "SC": STEAM / "MSG_PK/SC/msggame.bin",
