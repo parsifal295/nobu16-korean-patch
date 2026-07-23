@@ -1977,6 +1977,48 @@
         "use 신용 for the numeric diplomacy stat",
         "translate prose 信用できない naturally as 믿을 수 없다"
       ]
+    },
+    {
+      "source_term": "土竜攻め",
+      "default_ko": "땅굴 공략",
+      "context_rules": [
+        "use for the siege-mining tactic in which specialists tunnel into or beneath a castle's defenses",
+        "do not use the literal 두더지 공격 or alternate with 땅굴 공격 or 갱도 공격 inside this command family"
+      ],
+      "evidence_url": "https://shirobito.jp/article/1272"
+    },
+    {
+      "source_term": "金堀衆",
+      "default_ko": "광부대",
+      "context_rules": [
+        "write 광부대 as one specialist-group name in 土竜攻め dialogue",
+        "preserve the group's mining and civil-engineering expertise rather than reducing it to generic soldiers"
+      ],
+      "evidence_url": "https://shirobito.jp/article/1272"
+    },
+    {
+      "source_term": "兵の補充",
+      "default_ko": "병력 보충",
+      "context_rules": [
+        "use 병력 보충 for the command, proposal, acceptance, and completion-report concept",
+        "use natural action prose such as 병사를 이끌다 or 병사를 합류시키다 when the source describes the physical movement of troops"
+      ]
+    },
+    {
+      "source_term": "力攻め",
+      "default_ko": "강공",
+      "context_rules": [
+        "use 강공 for taking a castle by a direct forceful assault after a scheme fails",
+        "use 힘으로 밀어붙이다 only when the line is ordinary explanatory prose rather than the siege-method label"
+      ]
+    },
+    {
+      "source_term": "合流",
+      "default_ko": "합류",
+      "context_rules": [
+        "use 합류 for joining reinforcing soldiers or a unit to forces already in the field",
+        "preserve causative source forms such as 合流させる as 병사를 합류시키다 rather than making the named actor join personally"
+      ]
     }
   ],
   "policy": {
