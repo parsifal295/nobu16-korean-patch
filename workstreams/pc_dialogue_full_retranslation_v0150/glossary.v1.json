@@ -2577,6 +2577,119 @@
         "use 추진하다 for carrying forward a dynamic action, policy, or proposal",
         "use 진행하다 only for time, procedure, or work progress where the source context requires it"
       ]
+    },
+    {
+      "source_term": "米五郎左",
+      "default_ko": "고메 고로자",
+      "context_rules": [
+        "retain the sobriquet as a phonetic proper name",
+        "the historical referent is Niwa Nagahide; never attribute it to Mori Yoshinari",
+        "do not insert the personal name when the source dialogue uses only the sobriquet"
+      ],
+      "evidence_url": "https://www.pref.fukui.lg.jp/doc/brandeigyou/brand/senngokuhiwa_d/fil/fukui_sengoku_37.pdf"
+    },
+    {
+      "source_term": "愛宕権現",
+      "default_ko": "아타고 권현",
+      "context_rules": [
+        "retain the pre-Meiji syncretic religious title in period dialogue",
+        "do not modernize it to 아타고 신사 when the source explicitly says 権現"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%84%9B%E5%AE%95%E7%A5%9E%E7%A4%BE-25762"
+    },
+    {
+      "source_term": "梟雄",
+      "default_ko": "효웅",
+      "context_rules": [
+        "retain the period-flavored label for a fierce and often ruthless strongman",
+        "do not flatten it to neutral 영웅"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%A2%9F%E9%9B%84-479072"
+    },
+    {
+      "source_term": "黒衣",
+      "default_ko": "검은 승복",
+      "context_rules": [
+        "in Buddhist speaker dialogue, preserve the monk's black robe and clerical identity",
+        "when the robe metonymically denotes the speaker, a natural phrase such as 이 승려 may be used",
+        "do not confuse it with the stagehand reading くろご"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%BB%92%E8%A1%A3-57854"
+    },
+    {
+      "source_term": "方便",
+      "default_ko": "방편",
+      "context_rules": [
+        "preserve the Buddhist sense of a skillful provisional means when the speaker and nearby 黒衣 establish that context",
+        "use 수단 or 방책 only when the surrounding prose is clearly secular"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%96%B9%E4%BE%BF-132435"
+    },
+    {
+      "source_term": "雄武英略",
+      "default_ko": "웅무영략",
+      "context_rules": [
+        "retain the compact Sino-Korean praise formula in period-flavored character dialogue",
+        "do not split it into unrelated modern ability labels"
+      ]
+    },
+    {
+      "source_term": "上申",
+      "default_ko": "상신",
+      "context_rules": [
+        "use 상신 when a subordinate formally submits an opinion or circumstances upward",
+        "keep it distinct from 具申=건의, 進言=진언, and 献言=헌언 in the source"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%8A%E7%94%B3-532126"
+    },
+    {
+      "source_term": "挟撃",
+      "default_ko": "협격",
+      "context_rules": [
+        "use 협격 for attacking from two sides",
+        "preserve whether the speaker's force receives or carries out the flanking attack"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%8C%9F%E6%92%83-478039"
+    },
+    {
+      "source_term": "撤兵",
+      "default_ko": "철병",
+      "context_rules": [
+        "retain 철병 in formal military recommendations to withdraw troops",
+        "use 철수 for ordinary 撤退 wording and do not collapse the two source terms in the same dialogue family"
+      ]
+    },
+    {
+      "source_term": "帰城",
+      "default_ko": "성으로 돌아오다",
+      "context_rules": [
+        "render the military action as returning to a castle",
+        "never use 귀성, whose modern Korean sense is returning to one's hometown"
+      ]
+    },
+    {
+      "source_term": "郡開発",
+      "default_ko": "군 개발",
+      "context_rules": [
+        "use the spaced game-system label 군 개발",
+        "keep it distinct from 城下 development and generic regional development"
+      ]
+    },
+    {
+      "source_term": "狼藉",
+      "default_ko": "행패",
+      "context_rules": [
+        "use 행패 for repeated violent disorder or depredation against the speaker's domain",
+        "do not reduce it to a neutral 실수 or 소동"
+      ]
+    },
+    {
+      "source_term": "撤去",
+      "default_ko": "철거",
+      "context_rules": [
+        "use 철거 for removing a castle-town facility",
+        "keep it distinct from military withdrawal terms such as 撤退 and 撤兵"
+      ]
     }
   ],
   "policy": {
