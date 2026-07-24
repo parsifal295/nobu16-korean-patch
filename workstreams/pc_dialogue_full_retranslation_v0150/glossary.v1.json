@@ -2472,6 +2472,111 @@
         "use the exact spaced UI label in policy-level objectives",
         "preserve the numeric target, current value, and ASCII (LV) unit order from the JP runtime skeleton"
       ]
+    },
+    {
+      "source_term": "風聞",
+      "default_ko": "풍문",
+      "context_rules": [
+        "use 풍문 for hearsay or news circulating by rumor",
+        "keep it distinct from the speaker's neutral 噂=소문 when both appear in the same report family"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A2%A8%E8%81%9E-616033"
+    },
+    {
+      "source_term": "顛末",
+      "default_ko": "전말",
+      "context_rules": [
+        "use 전말 for the whole course of an incident from beginning to end",
+        "keep it distinct from いきさつ=경위 and 子細=상세한 사정"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A1%9B%E6%9C%AB-578979"
+    },
+    {
+      "source_term": "いきさつ",
+      "default_ko": "경위",
+      "context_rules": [
+        "use 경위 for the course or circumstances by which an incident developed",
+        "do not flatten it to 전말 when the source separately uses 顛末"
+      ]
+    },
+    {
+      "source_term": "子細",
+      "default_ko": "상세한 사정",
+      "context_rules": [
+        "use 상세한 사정 or 자세한 내막 when the report concerns incident details",
+        "reserve 자초지종 for a context explicitly asking for the whole story"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%AD%90%E7%B4%B0-518842"
+    },
+    {
+      "source_term": "下賜",
+      "default_ko": "하사",
+      "context_rules": [
+        "use 하사 when a superior grants an item to a lower-ranking person",
+        "keep the status direction distinct from neutral 증여 or 지급"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%8B%E8%B3%9C-461909"
+    },
+    {
+      "source_term": "忠勤",
+      "default_ko": "충근",
+      "context_rules": [
+        "retain 충근 for a retainer's loyal service in formal reward dialogue",
+        "translate 賞する as 포상하다; 충근 itself is the service being rewarded"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BF%A0%E5%8B%A4-567324"
+    },
+    {
+      "source_term": "集落",
+      "default_ko": "취락",
+      "context_rules": [
+        "use 취락 for the game's governed settlement unit",
+        "do not replace the established system category with generic 마을 inside facility-unlock reports"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%9B%86%E8%90%BD-77470"
+    },
+    {
+      "source_term": "郡施設",
+      "default_ko": "군 시설",
+      "context_rules": [
+        "use the spaced game-system label 군 시설",
+        "keep it distinct from 城下施設=성하 시설 and generic facility prose"
+      ],
+      "evidence_url": "https://gw.gamecity.ne.jp/manual/shinsei/jp/4200.html"
+    },
+    {
+      "source_term": "城下町",
+      "default_ko": "성하 마을",
+      "context_rules": [
+        "use the established spaced game-system label 성하 마을 in commands and unlock reports",
+        "when discussing the historical urban form rather than the UI category, translate by context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9F%8E%E4%B8%8B%E7%94%BA-78941"
+    },
+    {
+      "source_term": "賦課",
+      "default_ko": "부과",
+      "context_rules": [
+        "use 부과 for assigning provisions, taxes, or another burden",
+        "preserve the burden imposed on the people when the sentence mentions backlash"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%B3%A6%E8%AA%B2-616650"
+    },
+    {
+      "source_term": "実行",
+      "default_ko": "실행",
+      "context_rules": [
+        "use 실행 when the source explicitly names 実行",
+        "when Korean only supplies a verb after a dynamic action-title token, use the project complement 시행 instead"
+      ]
+    },
+    {
+      "source_term": "進める",
+      "default_ko": "추진하다",
+      "context_rules": [
+        "use 추진하다 for carrying forward a dynamic action, policy, or proposal",
+        "use 진행하다 only for time, procedure, or work progress where the source context requires it"
+      ]
     }
   ],
   "policy": {
