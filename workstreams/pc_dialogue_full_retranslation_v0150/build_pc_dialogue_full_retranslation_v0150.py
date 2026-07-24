@@ -85,6 +85,10 @@ KANA_OR_HAN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\uf
 ESC_TAG_RE = re.compile(r"\x1bC.")
 PRINTF_RE = re.compile(r"%(?:\d+\$)?[-+#0 ]*\d*(?:\.\d+)?[A-Za-z]")
 BRACKET_TOKEN_RE = re.compile(r"\[[A-Za-z]+\d+\]")
+EMPTY_RUNTIME_MORPHEME_SOURCE_BY_KIND = {
+    "japanese_sentence_final_particle": frozenset({"\u308f", "\u305e"}),
+    "japanese_honorific_prefix": frozenset({"\u304a", "\u3054"}),
+}
 
 
 class RetranslationError(ValueError):
@@ -512,9 +516,20 @@ def parse_coordinate(value: object, label: str) -> tuple[int, int, int]:
     return result  # type: ignore[return-value]
 
 
-def validate_translation_shape(current_text: str, translation: str, layout_review: object, label: str) -> None:
-    if not translation.strip():
+def validate_translation_shape(
+    current_text: str,
+    translation: str,
+    layout_review: object,
+    label: str,
+    *,
+    allow_empty_runtime_morpheme: bool = False,
+) -> None:
+    if not translation.strip() and not allow_empty_runtime_morpheme:
         raise RetranslationError(f"{label} replacement is blank")
+    if allow_empty_runtime_morpheme and translation != "":
+        raise RetranslationError(
+            f"{label} empty runtime morpheme replacement must be exactly empty"
+        )
     if protected_signature(translation) != protected_signature(current_text):
         raise RetranslationError(f"{label} changes protected runtime tokens or outer whitespace")
     if KANA_OR_HAN_RE.search(translation):
@@ -568,6 +583,57 @@ def validate_decisions(
             raise RetranslationError(f"{label} retranslated cannot still have runtime_review=pending")
         if scope_classification == "confirmed_non_display" and runtime_review != "not_required":
             raise RetranslationError(f"{label} confirmed_non_display must have runtime_review=not_required")
+        if "empty_runtime_morpheme" in row and row.get("empty_runtime_morpheme") is not True:
+            raise RetranslationError(
+                f"{label}.empty_runtime_morpheme must be true when present"
+            )
+        empty_runtime_morpheme = row.get("empty_runtime_morpheme") is True
+        if "empty_runtime_morpheme_kind" in row and not empty_runtime_morpheme:
+            raise RetranslationError(
+                f"{label}.empty_runtime_morpheme_kind requires empty_runtime_morpheme=true"
+            )
+        if empty_runtime_morpheme:
+            if scope_classification != "runtime_fragment_pending":
+                raise RetranslationError(
+                    f"{label} empty_runtime_morpheme requires runtime_fragment_pending"
+                )
+            morpheme_kind = row.get("empty_runtime_morpheme_kind")
+            allowed_sources = (
+                EMPTY_RUNTIME_MORPHEME_SOURCE_BY_KIND.get(morpheme_kind)
+                if isinstance(morpheme_kind, str)
+                else None
+            )
+            if allowed_sources is None:
+                raise RetranslationError(
+                    f"{label} has an invalid empty_runtime_morpheme_kind"
+                )
+            resource_input = prepared.resources[str(resource)]
+            pristine_records = archive_records(resource_input.pristine_archive)
+            source_text = parse_record_literals(
+                pristine_records[(block_id, record_id)]
+            )[literal_id].text
+            if source_text not in allowed_sources:
+                raise RetranslationError(
+                    f"{label} pristine source is not valid for "
+                    f"empty_runtime_morpheme_kind={morpheme_kind}"
+                )
+            assembly_evidence = row.get("runtime_assembly_evidence")
+            if not isinstance(assembly_evidence, dict):
+                raise RetranslationError(
+                    f"{label} empty_runtime_morpheme requires "
+                    "runtime_assembly_evidence"
+                )
+            if (
+                assembly_evidence.get("empty_runtime_morpheme_source_jp")
+                != source_text
+                or assembly_evidence.get("korean_zero_morpheme_caller_review")
+                != "approved"
+                or assembly_evidence.get("runtime_integration_required") is not True
+                or assembly_evidence.get("automatic_space_inserted") is not False
+            ):
+                raise RetranslationError(
+                    f"{label} empty runtime morpheme evidence is incomplete"
+                )
         if require_complete and runtime_review == "pending":
             raise RetranslationError(f"{label} still requires runtime context review")
         resource = prepared.resources[str(resource)]
@@ -581,7 +647,13 @@ def validate_decisions(
             translation = row.get("translation")
             if not isinstance(translation, str):
                 raise RetranslationError(f"{label}.translation must be a string")
-            validate_translation_shape(current_text, translation, row.get("layout_review"), label)
+            validate_translation_shape(
+                current_text,
+                translation,
+                row.get("layout_review"),
+                label,
+                allow_empty_runtime_morpheme=empty_runtime_morpheme,
+            )
         replacements[key] = translation
     missing = expected_keys.difference(replacements)
     extra = set(replacements).difference(expected_keys)
