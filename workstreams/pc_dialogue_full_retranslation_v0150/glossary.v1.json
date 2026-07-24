@@ -2690,6 +2690,78 @@
         "use 철거 for removing a castle-town facility",
         "keep it distinct from military withdrawal terms such as 撤退 and 撤兵"
       ]
+    },
+    {
+      "source_term": "領国",
+      "default_ko": "영내",
+      "context_rules": [
+        "use 영내 for the lands collectively governed by the speaker's house",
+        "keep it distinct from a single 領地=영지 and 版図=territorial sphere"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A0%98%E5%9B%BD-659230"
+    },
+    {
+      "source_term": "糧秣",
+      "default_ko": "군량",
+      "context_rules": [
+        "use 군량 when the source collectively means provisions for soldiers and fodder for military horses",
+        "keep the source distinction from ordinary 兵糧=병량 even when both support a similar Korean military-provisions context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%B3%A7%E7%A7%A3-659566"
+    },
+    {
+      "source_term": "鍛治町",
+      "default_ko": "대장간 마을",
+      "context_rules": [
+        "retain the game's source spelling 鍛治町 in the glossary key",
+        "render the castle-town resource settlement as 대장간 마을"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%8D%9B%E5%86%B6%E7%94%BA-1040397"
+    },
+    {
+      "source_term": "拮抗",
+      "default_ko": "팽팽히 맞서다",
+      "context_rules": [
+        "use 팽팽히 맞서다 or 대등하다 when opposing forces are balanced",
+        "do not imply an alliance or a stalemate unless the surrounding source says so"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%8B%AE%E6%8A%97-474707"
+    },
+    {
+      "source_term": "将兵",
+      "default_ko": "장병",
+      "context_rules": [
+        "use the collective military term 장병 for officers and soldiers",
+        "do not flatten it to 장수 alone"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%B0%86%E5%85%B5-533207"
+    },
+    {
+      "source_term": "万端",
+      "default_ko": "모두 갖추다",
+      "context_rules": [
+        "in readiness reports, render 準備万端 as 준비를 모두 마치다 or 만반의 준비",
+        "preserve the sense that every necessary part is ready"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%87%E7%AB%AF-606854"
+    },
+    {
+      "source_term": "事を構える",
+      "default_ko": "분쟁을 일으키다",
+      "context_rules": [
+        "use 분쟁을 일으키다 or 맞서 싸우다 according to the diplomatic context",
+        "preserve the warning against deliberately entering conflict"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%BA%8B%E3%82%92%E6%A7%8B%E3%81%88%E3%82%8B-502884"
+    },
+    {
+      "source_term": "めぼしい",
+      "default_ko": "눈에 띄는",
+      "context_rules": [
+        "use 눈에 띄는 or 쓸 만한 for a noteworthy candidate",
+        "do not use the dismissive 별 볼 일 없는 when the source only says no notable candidate exists"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E3%82%81%E3%81%BC%E3%81%97%E3%81%84-396520"
     }
   ],
   "policy": {
