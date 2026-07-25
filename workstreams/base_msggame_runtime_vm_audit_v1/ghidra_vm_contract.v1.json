@@ -1,0 +1,241 @@
+{
+  "schema": "nobu16.kr.base-msggame-runtime-vm-ghidra-contract.v1",
+  "program": {
+    "ghidra_program_path": "/NOBU16PK.exe.unpacked.exe",
+    "image_base": "0x140000000",
+    "steam_version": "1.1.7",
+    "unpacked_exe_sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+  },
+  "functions": {
+    "base_message_object_vtable_binder": "0x1409F6D10",
+    "load_base_msggame": "0x1409F8710",
+    "pk_message_name_table_builder": "0x1408066D0",
+    "evaluate_message_id": "0x1409F7490",
+    "select_record": "0x140A00FC0",
+    "execute_record_vm": "0x1409F7610",
+    "dispatch_opcode": "0x140A013B0",
+    "read_u32_le": "0x1409FD270",
+    "read_byte": "0x1409FD690",
+    "resolve_expression": "0x1409FF7C0",
+    "resolve_selector": "0x1409FF8F0",
+    "classify_selector_group": "0x1409FFBA0",
+    "handle_return_or_block": "0x140A01090",
+    "pop_record_return": "0x1409FD4D0"
+  },
+  "message_route_proof": {
+    "base_msggame": {
+      "basename_string": "msggame",
+      "basename_string_address": "0x14154C500",
+      "basename_pointer_address": "0x141C01CE0",
+      "message_object_vtable_address": "0x14154C538",
+      "object_vtable_binder": "0x1409F6D10",
+      "loader": "0x1409F8710",
+      "constructed_path_components": [
+        "/",
+        "msggame",
+        ".bin"
+      ],
+      "loaded_data_pointer_field": "object+0x30",
+      "loaded_data_size_field": "object+0x38",
+      "vtable_evaluator": "0x1409F7490",
+      "evaluator_select_record_call": "0x140A00FC0",
+      "evaluator_record_vm_call": "0x1409F7610",
+      "conclusion": "Base msggame.bin is loaded into the same message object whose vtable exposes the audited evaluator, record selector, and record VM path."
+    },
+    "route": [
+      "base_msggame_load",
+      "vtable_evaluator",
+      "record_offset_selection",
+      "record_vm_execution",
+      "opcode_dispatch"
+    ],
+    "supplemental_pk_table_evidence": {
+      "scope": "PK message name table only; not used as proof of the Base msggame route",
+      "pk_record_count_constant": 21751,
+      "pk_record_count_constant_hex": "0x54F7",
+      "message_id_base": 120000,
+      "message_id_base_hex": "0x1D4C0"
+    }
+  },
+  "select_record_contract": {
+    "function": "0x140A00FC0",
+    "maximum_operand": 1999999,
+    "packed_coordinate_formula": "block_id = operand // 10000; record_id = operand % 10000",
+    "operand_below_10000_selects_block_zero": true,
+    "nonzero_block_offset_is_rebased_after_the_base_block": true
+  },
+  "literal_contract": {
+    "start_marker_hex": "070701",
+    "end_marker_hex": "070702",
+    "encoding": "UTF-16LE",
+    "append_semantics": "code_units_copied_verbatim"
+  },
+  "opcode_contract": {
+    "0143": {
+      "operand": "u32_le_packed_record_coordinate",
+      "semantics": "push_return_address_then_call_record"
+    },
+    "014A": {
+      "operand": "u32_le_packed_record_coordinate",
+      "semantics": "jump_to_record"
+    },
+    "02": {
+      "semantics": "resolve_dynamic_value_then_copy_utf16_code_units_to_output",
+      "selector_atom_contract": {
+        "encoding": "02 + selector_byte + optional_property_byte",
+        "handler_lookahead_semantics": "The selector handler reads one lookahead byte after the selector.",
+        "lookahead_below_0x20": "rewind_one_byte; the lookahead is not part of the selector atom",
+        "lookahead_at_or_above_0x20": "consume_as_property_byte"
+      },
+      "expression_continuation_contract": {
+        "encoding": "03 + one ASCII operator from %*+-/ + another selector atom",
+        "prefix_hex": "03",
+        "operators_ascii": "%*+-/"
+      },
+      "automatic_space_inserted": false,
+      "automatic_punctuation_inserted": false
+    },
+    "05": {
+      "semantics": "block_control_or_record_return"
+    },
+    "1B": {
+      "semantics": "explicit_control_tag_dispatch"
+    }
+  },
+  "selector_groups": [
+    {
+      "group": 0,
+      "selector_min_hex": "32",
+      "selector_max_hex": "3B",
+      "slot_base_hex": "32",
+      "handler": "0x140A00EA0",
+      "value_class": "integer_slot"
+    },
+    {
+      "group": 1,
+      "selector_min_hex": "3C",
+      "selector_max_hex": "45",
+      "slot_base_hex": "3C",
+      "handler": "0x140A00C30",
+      "value_class": "string_slot"
+    },
+    {
+      "group": 2,
+      "selector_min_hex": "46",
+      "selector_max_hex": "4F",
+      "slot_base_hex": "46",
+      "handler": "0x140A00020",
+      "value_class": "person_slot"
+    },
+    {
+      "group": 3,
+      "selector_min_hex": "64",
+      "selector_max_hex": "6D",
+      "slot_base_hex": "64",
+      "handler": "0x1409FDA70",
+      "value_class": "castle_slot"
+    },
+    {
+      "group": 4,
+      "selector_min_hex": "50",
+      "selector_max_hex": "59",
+      "slot_base_hex": "50",
+      "handler": "0x1409FDD80",
+      "value_class": "clan_slot"
+    },
+    {
+      "group": 5,
+      "selector_min_hex": "5A",
+      "selector_max_hex": "63",
+      "slot_base_hex": "5A",
+      "handler": "0x1409FF2A0",
+      "value_class": "person_relation_slot"
+    },
+    {
+      "group": 6,
+      "selector_min_hex": "6E",
+      "selector_max_hex": "77",
+      "slot_base_hex": "6E",
+      "handler": "0x1409FD710",
+      "value_class": "unit_slot"
+    },
+    {
+      "group": 7,
+      "selector_min_hex": "78",
+      "selector_max_hex": "81",
+      "slot_base_hex": "78",
+      "handler": "0x140A00A50",
+      "value_class": "province_slot"
+    },
+    {
+      "group": 8,
+      "selector_min_hex": "82",
+      "selector_max_hex": "8B",
+      "slot_base_hex": "82",
+      "handler": "0x1409FF580",
+      "value_class": "landmark_slot"
+    },
+    {
+      "group": 9,
+      "selector_min_hex": "8C",
+      "selector_max_hex": "95",
+      "slot_base_hex": "8C",
+      "handler": "0x140A00D60",
+      "value_class": "generic_named_object_slot"
+    },
+    {
+      "group": 10,
+      "selector_min_hex": "96",
+      "selector_max_hex": "9F",
+      "slot_base_hex": "96",
+      "handler": "0x1409FFD70",
+      "value_class": "tribe_slot"
+    },
+    {
+      "group": 11,
+      "selector_min_hex": "AA",
+      "selector_max_hex": "B3",
+      "slot_base_hex": "AA",
+      "handler": "0x1409FE040",
+      "value_class": "runtime_object_slot"
+    },
+    {
+      "group": 12,
+      "selector_min_hex": "B4",
+      "selector_max_hex": "BD",
+      "slot_base_hex": "B4",
+      "handler": null,
+      "value_class": "reserved_or_assignment_only"
+    },
+    {
+      "group": 13,
+      "selector_min_hex": "BE",
+      "selector_max_hex": "C7",
+      "slot_base_hex": "BE",
+      "handler": "0x1409FFF00",
+      "value_class": "localized_table_slot"
+    },
+    {
+      "group": 14,
+      "selector_min_hex": "C8",
+      "selector_max_hex": "C8",
+      "slot_base_hex": "C8",
+      "handler": "0x1409FE6E0",
+      "value_class": "predicate_or_derived_expression"
+    }
+  ],
+  "adjudication_boundary": {
+    "proves_literal_and_dynamic_value_order": true,
+    "proves_no_implicit_separator": true,
+    "proves_0143_014a_control_flow": true,
+    "proves_packed_record_coordinate_routing": true,
+    "does_not_replace_semantic_translation_review": true,
+    "does_not_require_per_row_game_playback": true
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_decompiled_function_body": false,
+    "contains_only_addresses_and_behavioral_conclusions": true
+  }
+}

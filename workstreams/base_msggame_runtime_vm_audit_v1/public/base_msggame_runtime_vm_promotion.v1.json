@@ -1,0 +1,38 @@
+{
+  "distribution_policy": {
+    "private_merged_decision_stays_below_tmp": true,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "evidence": {
+    "coverage_report": "workstreams/base_msggame_runtime_vm_audit_v1/public/base_msggame_runtime_vm_coverage.v1.json",
+    "coverage_report_sha256": "76F32FE95B2693D496A0FD4C73E5890B6D451C59539283E658A093DBF5546E5D",
+    "normal_v0150_decision_validator_rechecked": true,
+    "pending_universe_digest_sha256": "7BE50C7ED9A3154F55F49FA9DACBC2BB80799303C6F8726A10ED1D576A777338",
+    "semantic_review_approved_reused": true,
+    "source_record_hash_guards_rechecked": true
+  },
+  "input": {
+    "already_candidate_eligible_before": 8114,
+    "base_visible_decision_count": 23765,
+    "decision_segment_count": 1023,
+    "runtime_pending_before": 15651
+  },
+  "qa_boundary": {
+    "per_row_game_playback_required": false,
+    "pk_msggame_scope_untouched": true,
+    "representative_game_smoke_test_required_before_release": true,
+    "representative_game_smoke_test_status": "not_run"
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG/JP/msggame.bin",
+  "result": {
+    "base_candidate_eligible_after": 23765,
+    "private_merged_decision_sha256": "D4A16DE987E182CF616DE175E4771DA828FA4794509454263170E82ABA3600CF",
+    "runtime_pending_after": 0,
+    "runtime_verified_promoted": 15651
+  },
+  "schema": "nobu16.kr.base-msggame-runtime-vm-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

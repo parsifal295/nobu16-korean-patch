@@ -53,6 +53,13 @@ DEFAULT_PK_PRISTINE = (
     / "msggame.bin"
 )
 CONTRACT_PATH = WORKSTREAM / "review_contract.v1.json"
+RUNTIME_VM_COVERAGE_PATH = (
+    REPO
+    / "workstreams"
+    / "base_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "base_msggame_runtime_vm_coverage.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -74,6 +81,11 @@ BATCH_SCHEMA = f"{SCHEMA}.source-free-batches"
 SUMMARY_SCHEMA = f"{SCHEMA}.source-free-summary"
 DECISION_SCHEMA = f"{SCHEMA}.private-decision"
 MANIFEST_SCHEMA = f"{SCHEMA}.candidate-manifest"
+RUNTIME_VM_COVERAGE_SCHEMA = "nobu16.kr.base-msggame-runtime-vm-coverage.v1"
+RUNTIME_VM_ROW_VERIFICATION_SCHEMA = (
+    "nobu16.kr.base-msggame-runtime-vm-row-verification.v1"
+)
+RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 BATCH_VISIBLE_TARGET_SIZE = 200
 SCOPE_CLASSIFICATIONS = {
     "retranslated",
@@ -136,6 +148,15 @@ def sha256_text(value: str) -> str:
 
 def canonical_json(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n"
+
+
+def canonical_ascii_json(value: Any) -> bytes:
+    return json.dumps(
+        value,
+        ensure_ascii=True,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("ascii")
 
 
 def jsonl(rows: Iterable[Mapping[str, Any]]) -> str:
@@ -516,6 +537,148 @@ def parse_coordinate(value: object, label: str) -> tuple[int, int, int]:
     return result  # type: ignore[return-value]
 
 
+def load_runtime_vm_coverage() -> tuple[dict[str, Any], str]:
+    if not RUNTIME_VM_COVERAGE_PATH.is_file():
+        raise RetranslationError(
+            f"tracked runtime VM coverage report is absent: {RUNTIME_VM_COVERAGE_PATH}"
+        )
+    raw = RUNTIME_VM_COVERAGE_PATH.read_bytes()
+    try:
+        report = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise RetranslationError(
+            f"tracked runtime VM coverage report is invalid: {RUNTIME_VM_COVERAGE_PATH}"
+        ) from exc
+    if not isinstance(report, dict):
+        raise RetranslationError("tracked runtime VM coverage report is not an object")
+    if report.get("schema") != RUNTIME_VM_COVERAGE_SCHEMA:
+        raise RetranslationError(
+            "tracked runtime VM coverage report has an unexpected schema"
+        )
+    if report.get("status") != "PASS":
+        raise RetranslationError("tracked runtime VM coverage report is not PASS")
+    guards = report.get("guards")
+    if not isinstance(guards, dict):
+        raise RetranslationError("tracked runtime VM coverage report has no guards object")
+    if not isinstance(guards.get("row_verification_guards"), dict):
+        raise RetranslationError(
+            "tracked runtime VM coverage report has no row verification guards"
+        )
+    if not isinstance(guards.get("record_template_guards"), dict):
+        raise RetranslationError(
+            "tracked runtime VM coverage report has no record template guards"
+        )
+    return report, sha256_bytes(raw)
+
+
+def validate_runtime_vm_verification(
+    *,
+    evidence: Mapping[str, Any],
+    coverage: Mapping[str, Any],
+    coverage_sha256: str,
+    coordinate_value: str,
+    record_coordinate_value: str,
+    source_record_raw_sha256: str,
+    current_ko_utf16le_sha256: str,
+    translation: str,
+    label: str,
+) -> None:
+    if evidence.get("schema") != RUNTIME_VM_ROW_VERIFICATION_SCHEMA:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification has an unexpected schema"
+        )
+    if evidence.get("method") != RUNTIME_VM_VERIFICATION_METHOD:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification has an unexpected method"
+        )
+    if evidence.get("result") != "verified":
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification result is not verified"
+        )
+    if evidence.get("coverage_report_sha256") != coverage_sha256:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification coverage report hash does not match"
+        )
+
+    guards = coverage["guards"]
+    assert isinstance(guards, dict)
+    universe_digest = guards.get("pending_universe_digest_sha256")
+    legacy_universe_digest = guards.get(
+        "pending_coordinate_and_translation_digest_sha256"
+    )
+    if universe_digest is None:
+        universe_digest = legacy_universe_digest
+    elif (
+        legacy_universe_digest is not None
+        and legacy_universe_digest != universe_digest
+    ):
+        raise RetranslationError(
+            "tracked runtime VM coverage report has conflicting universe digests"
+        )
+    if not isinstance(universe_digest, str):
+        raise RetranslationError(
+            "tracked runtime VM coverage report has no pending universe digest"
+        )
+    if evidence.get("pending_universe_digest_sha256") != universe_digest:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification pending universe digest does not match"
+        )
+
+    record_guards = guards["record_template_guards"]
+    row_guards = guards["row_verification_guards"]
+    assert isinstance(record_guards, dict)
+    assert isinstance(row_guards, dict)
+    record_guard = record_guards.get(record_coordinate_value)
+    if not isinstance(record_guard, dict):
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification has no audited record template guard"
+        )
+    record_template_sha256 = record_guard.get("template_sha256")
+    candidate_record_raw_sha256 = record_guard.get(
+        "candidate_record_raw_sha256"
+    )
+    if not isinstance(record_template_sha256, str) or not isinstance(
+        candidate_record_raw_sha256, str
+    ):
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification record template guard is incomplete"
+        )
+    if evidence.get("record_template_sha256") != record_template_sha256:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification record template hash does not match"
+        )
+    if (
+        evidence.get("candidate_record_raw_sha256")
+        != candidate_record_raw_sha256
+    ):
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification candidate record hash does not match"
+        )
+
+    proof_payload = {
+        "candidate_record_raw_sha256": candidate_record_raw_sha256,
+        "coordinate": coordinate_value,
+        "current_ko_utf16le_sha256": current_ko_utf16le_sha256,
+        "record_template_sha256": record_template_sha256,
+        "source_record_raw_sha256": source_record_raw_sha256,
+        "translation_utf16le_sha256": sha256_text(translation),
+    }
+    computed_proof = sha256_bytes(canonical_ascii_json(proof_payload))
+    tracked_proof = row_guards.get(coordinate_value)
+    if not isinstance(tracked_proof, str):
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification has no audited row guard"
+        )
+    if evidence.get("row_verification_sha256") != tracked_proof:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification row guard does not match"
+        )
+    if computed_proof != tracked_proof:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification row proof recomputation failed"
+        )
+
+
 def validate_translation_shape(
     current_text: str,
     translation: str,
@@ -551,6 +714,16 @@ def validate_decisions(
     decisions = load_decisions(decision_path)
     expected_keys = set(prepared.visible_targets)
     replacements: dict[tuple[str, int, int, int], str] = {}
+    current_records_by_resource = {
+        name: archive_records(resource.current_archive)
+        for name, resource in prepared.resources.items()
+    }
+    pristine_records_by_resource = {
+        name: archive_records(resource.pristine_archive)
+        for name, resource in prepared.resources.items()
+    }
+    runtime_vm_coverage: tuple[dict[str, Any], str] | None = None
+    runtime_vm_verified_record_hashes: dict[tuple[int, int], str] = {}
     for ordinal, row in enumerate(decisions, start=1):
         label = f"decision[{ordinal}]"
         if row.get("schema") != DECISION_SCHEMA:
@@ -583,6 +756,31 @@ def validate_decisions(
             raise RetranslationError(f"{label} retranslated cannot still have runtime_review=pending")
         if scope_classification == "confirmed_non_display" and runtime_review != "not_required":
             raise RetranslationError(f"{label} confirmed_non_display must have runtime_review=not_required")
+        runtime_vm_evidence = row.get("runtime_vm_verification")
+        if runtime_vm_evidence is not None and not isinstance(
+            runtime_vm_evidence, dict
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification must be an object when present"
+            )
+        runtime_vm_method = (
+            runtime_vm_evidence.get("method")
+            if isinstance(runtime_vm_evidence, dict)
+            else None
+        )
+        if runtime_vm_evidence is not None and (
+            runtime_vm_method != RUNTIME_VM_VERIFICATION_METHOD
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification has an unsupported method"
+            )
+        if (
+            runtime_vm_method == RUNTIME_VM_VERIFICATION_METHOD
+            and runtime_review != "verified"
+        ):
+            raise RetranslationError(
+                f"{label} reversed VM evidence requires runtime_review=verified"
+            )
         if "empty_runtime_morpheme" in row and row.get("empty_runtime_morpheme") is not True:
             raise RetranslationError(
                 f"{label}.empty_runtime_morpheme must be true when present"
@@ -593,9 +791,18 @@ def validate_decisions(
                 f"{label}.empty_runtime_morpheme_kind requires empty_runtime_morpheme=true"
             )
         if empty_runtime_morpheme:
-            if scope_classification != "runtime_fragment_pending":
+            if scope_classification not in {"runtime_fragment_pending", "retranslated"}:
                 raise RetranslationError(
-                    f"{label} empty_runtime_morpheme requires runtime_fragment_pending"
+                    f"{label} empty_runtime_morpheme requires runtime_fragment_pending "
+                    "or a runtime-verified retranslated decision"
+                )
+            if (
+                scope_classification == "retranslated"
+                and runtime_review != "verified"
+            ):
+                raise RetranslationError(
+                    f"{label} retranslated empty_runtime_morpheme requires "
+                    "runtime_review=verified"
                 )
             morpheme_kind = row.get("empty_runtime_morpheme_kind")
             allowed_sources = (
@@ -607,8 +814,7 @@ def validate_decisions(
                 raise RetranslationError(
                     f"{label} has an invalid empty_runtime_morpheme_kind"
                 )
-            resource_input = prepared.resources[str(resource)]
-            pristine_records = archive_records(resource_input.pristine_archive)
+            pristine_records = pristine_records_by_resource[str(resource)]
             source_text = parse_record_literals(
                 pristine_records[(block_id, record_id)]
             )[literal_id].text
@@ -636,8 +842,7 @@ def validate_decisions(
                 )
         if require_complete and runtime_review == "pending":
             raise RetranslationError(f"{label} still requires runtime context review")
-        resource = prepared.resources[str(resource)]
-        records = archive_records(resource.current_archive)
+        records = current_records_by_resource[str(resource)]
         current_text = parse_record_literals(records[(block_id, record_id)])[literal_id].text
         if scope_classification == "confirmed_non_display":
             if row.get("translation") is not None:
@@ -654,7 +859,110 @@ def validate_decisions(
                 label,
                 allow_empty_runtime_morpheme=empty_runtime_morpheme,
             )
+        audited_base_coordinate = False
+        if resource == "base_msggame" and runtime_review == "verified":
+            if runtime_vm_coverage is None:
+                runtime_vm_coverage = load_runtime_vm_coverage()
+            audited_base_coordinate = (
+                f"{block_id}:{record_id}:{literal_id}"
+                in runtime_vm_coverage[0]["guards"]["row_verification_guards"]
+            )
+            if (
+                audited_base_coordinate
+                and runtime_vm_method != RUNTIME_VM_VERIFICATION_METHOD
+            ):
+                raise RetranslationError(
+                    f"{label} is in the reversed-VM audited Base universe and "
+                    "requires its bound row evidence"
+                )
+        runtime_vm_bound = False
+        if (
+            runtime_review == "verified"
+            and runtime_vm_method == RUNTIME_VM_VERIFICATION_METHOD
+        ):
+            if resource != "base_msggame":
+                raise RetranslationError(
+                    f"{label} reversed VM evidence is only valid for base_msggame"
+                )
+            if runtime_vm_coverage is None:
+                runtime_vm_coverage = load_runtime_vm_coverage()
+            coverage, coverage_sha256 = runtime_vm_coverage
+            assert isinstance(runtime_vm_evidence, dict)
+            validate_runtime_vm_verification(
+                evidence=runtime_vm_evidence,
+                coverage=coverage,
+                coverage_sha256=coverage_sha256,
+                coordinate_value=f"{block_id}:{record_id}:{literal_id}",
+                record_coordinate_value=f"{block_id}:{record_id}",
+                source_record_raw_sha256=str(
+                    target["source_record_raw_sha256"]
+                ),
+                current_ko_utf16le_sha256=str(
+                    target["current_ko_utf16le_sha256"]
+                ),
+                translation=translation,
+                label=label,
+            )
+            record_key = (block_id, record_id)
+            candidate_record_hash = str(
+                runtime_vm_evidence["candidate_record_raw_sha256"]
+            )
+            previous_hash = runtime_vm_verified_record_hashes.setdefault(
+                record_key,
+                candidate_record_hash,
+            )
+            if previous_hash != candidate_record_hash:
+                raise RetranslationError(
+                    f"{label} conflicts with another row's candidate record hash"
+                )
+            runtime_vm_bound = True
+        if (
+            empty_runtime_morpheme
+            and scope_classification == "retranslated"
+            and not runtime_vm_bound
+        ):
+            raise RetranslationError(
+                f"{label} retranslated empty_runtime_morpheme requires "
+                "evidence bound to the tracked reversed VM coverage"
+            )
         replacements[key] = translation
+    if runtime_vm_verified_record_hashes:
+        expected_base_keys = {
+            key
+            for key in expected_keys
+            if key[0] == "base_msggame"
+        }
+        actual_base_keys = {
+            key
+            for key in replacements
+            if key[0] == "base_msggame"
+        }
+        if actual_base_keys != expected_base_keys:
+            raise RetranslationError(
+                "runtime-verified Base decisions require the complete Base decision universe"
+            )
+        base_replacements = {
+            (block_id, record_id, literal_id): translation
+            for (resource_name, block_id, record_id, literal_id), translation
+            in replacements.items()
+            if resource_name == "base_msggame"
+        }
+        candidate_blob = rebuild_packed_with_literals(
+            prepared.resources["base_msggame"].current_blob,
+            base_replacements,
+        )
+        candidate_records = archive_records(
+            parse_packed_msggame(candidate_blob).archive
+        )
+        for record_key, expected_hash in sorted(
+            runtime_vm_verified_record_hashes.items()
+        ):
+            actual_hash = sha256_bytes(candidate_records[record_key].data)
+            if actual_hash != expected_hash:
+                raise RetranslationError(
+                    "assembled Base candidate record differs from its audited "
+                    f"runtime VM guard: {record_key[0]}:{record_key[1]}"
+                )
     missing = expected_keys.difference(replacements)
     extra = set(replacements).difference(expected_keys)
     if extra or (require_complete and missing):
