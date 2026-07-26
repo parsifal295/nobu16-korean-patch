@@ -34,6 +34,10 @@ SEGMENT = 1245
 QUEUE_BATCH_ID = "pk_msggame-B080"
 QUEUE_START = 67
 QUEUE_STOP = 134
+QUEUE_SLICE_FIRST = "9:543:0"
+QUEUE_SLICE_LAST = "9:607:0"
+QUEUE_SLICE_VISIBLE_COUNT = 67
+QUEUE_SLICE_PREFILL_COUNT = 63
 BLOCK_ID = 9
 PK_RECORD_COUNT = 21_751
 TARGET_COORDINATES = (
@@ -248,9 +252,9 @@ def queue_evidence(
         raise RuntimeError(f"segment {SEGMENT} B080 queue universe drifted")
     queue_slice = visible[QUEUE_START:QUEUE_STOP]
     if (
-        len(queue_slice) != 67
-        or queue_slice[0] != "9:543:0"
-        or queue_slice[-1] != "9:607:0"
+        len(queue_slice) != QUEUE_SLICE_VISIBLE_COUNT
+        or queue_slice[0] != QUEUE_SLICE_FIRST
+        or queue_slice[-1] != QUEUE_SLICE_LAST
     ):
         raise RuntimeError(f"segment {SEGMENT} queue bounds drifted")
     prefill_rows = {
@@ -262,7 +266,10 @@ def queue_evidence(
     residual = tuple(
         coordinate for coordinate in queue_slice if coordinate not in prefill_rows
     )
-    if len(prefilled) != 63 or residual != TARGET_COORDINATES:
+    if (
+        len(prefilled) != QUEUE_SLICE_PREFILL_COUNT
+        or residual != TARGET_COORDINATES
+    ):
         raise RuntimeError(f"segment {SEGMENT} prefill slice drifted")
     prefill_context = tuple(
         (
@@ -338,8 +345,8 @@ def build_combined_slice_candidate(
     )
     touched_records = {key[:2] for key in replacements}
     if (
-        len(replacements) != 67
-        or len(prefilled) != 63
+        len(replacements) != QUEUE_SLICE_VISIBLE_COUNT
+        or len(prefilled) != QUEUE_SLICE_PREFILL_COUNT
         or any(
             candidate_records[key].data != record.data
             for key, record in current.items()
