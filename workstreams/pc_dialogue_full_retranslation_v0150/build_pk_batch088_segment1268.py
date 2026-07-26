@@ -1,0 +1,211 @@
+#!/usr/bin/env python3
+"""Build source-redacted PK B088 segment 1268 residual decisions."""
+
+from __future__ import annotations
+
+import importlib.util
+import sys
+from pathlib import Path
+from typing import Any
+
+
+SCRIPT = Path(__file__).resolve()
+WORKSTREAM = SCRIPT.parent
+REPO = WORKSTREAM.parents[1]
+BASE_PATH = WORKSTREAM / "build_pk_batch085_segment1261.py"
+DECISIONS_ROOT = REPO / "tmp" / WORKSTREAM.name / "decisions"
+OUTPUT = DECISIONS_ROOT / "pk_msggame_B088_S1268.private.v1.jsonl"
+PREFILL = (
+    DECISIONS_ROOT / "pk_msggame_base_exact_reuse_prefill.private.v1.jsonl"
+)
+BASE_PROMOTED = (
+    REPO
+    / "tmp"
+    / WORKSTREAM.name
+    / "base_msggame_runtime_vm_verified.private.v1.jsonl"
+)
+OPTIONAL_NEIGHBORS = (
+    DECISIONS_ROOT / "pk_msggame_B088_S1269.private.v1.jsonl",
+)
+STEAM_PK = Path(
+    r"F:\SteamLibrary\steamapps\common\NOBU16\MSG_PK\JP\msggame.bin"
+)
+
+SEGMENT = 1268
+SEGMENT_NAME = "pk_msggame_B088_S1268"
+QUEUE_BATCH_ID = "pk_msggame-B088"
+QUEUE_START = 0
+QUEUE_STOP = 67
+QUEUE_RECORD_COUNT = 182
+QUEUE_VISIBLE_COUNT = 200
+QUEUE_VISIBLE_FIRST = "9:1996:0"
+QUEUE_VISIBLE_LAST = "9:2177:0"
+SLICE_VISIBLE_COUNT = 67
+SLICE_FIRST = "9:1996:0"
+SLICE_LAST = "9:2059:0"
+PREFILL_COUNT = 66
+RESIDUAL_COUNT = 1
+BLOCK_ID = 9
+PK_RECORD_COUNT = 21_751
+TARGET_COORDINATES = ("9:2029:0",)
+TRANSLATIONS = {
+    "9:2029:0": "다음은―",
+}
+TARGET_RECORD_IDS = (2029,)
+STATIC_RECORD_IDS: tuple[int, ...] = ()
+DYNAMIC_RECORD_IDS = TARGET_RECORD_IDS
+STATIC_COORDINATES: set[str] = set()
+DYNAMIC_COORDINATES = set(TARGET_COORDINATES)
+EXPECTED_ARITY = {2029: 2}
+PREFILL_COMPANION_COORDINATES = ("9:2029:1",)
+CROSS_SEGMENT_DONOR_COMPANION_COORDINATES: tuple[str, ...] = ()
+HIDDEN_CURRENT_COMPANION_COORDINATES: tuple[str, ...] = ()
+EXACT_BASE_DONOR = {2029: (9, 1955)}
+SEMANTIC_BASE_CONTEXT: dict[int, tuple[str, ...]] = {}
+EXPECTED_BASE_RAW_MATCHES = {2029: ((9, 1955),)}
+EXPECTED_BASE_LITERAL_MATCHES = EXPECTED_BASE_RAW_MATCHES
+EXPECTED_BASE_MASKED_MATCHES = EXPECTED_BASE_RAW_MATCHES
+BOUNDARY_RECORD_KEYS = tuple(
+    (9, record_id) for record_id in range(1993, 2063)
+)
+SOURCE_CALL_ROOTS = (9, 1)
+CURRENT_CALL_ROOTS = SOURCE_CALL_ROOTS
+EXPECTED_CONTROLS_BY_RECORD = {2029: ((1,), ())}
+EXPECTED_SOURCE_CONTROLS_BY_RECORD = EXPECTED_CONTROLS_BY_RECORD
+EXPECTED_CURRENT_CONTROLS_BY_RECORD = EXPECTED_CONTROLS_BY_RECORD
+SOURCE_CURRENT_GAP_MISMATCH_RECORDS: tuple[int, ...] = ()
+SPEAKER_STYLE = ((2029, "polite_next_merit_prediction"),)
+TERMINOLOGY_POLICY = (
+    ("military merit", "공"),
+    ("establish merit", "공을 세우다"),
+    ("project em dash", "―"),
+    ("dynamic Korean particle", "이(가)"),
+)
+
+EXPECTED_STEAM_PK_SHA256 = (
+    "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766"
+)
+EXPECTED_PRISTINE_PK_SHA256 = (
+    "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210"
+)
+EXPECTED_PREFILL_SHA256 = (
+    "4E1F7B18F96C9E2B1F85A2E69176A4A67B9BF53B404281A55AAD39A83FE598FD"
+)
+EXPECTED_BASE_PROMOTED_SHA256 = (
+    "D4A16DE987E182CF616DE175E4771DA828FA4794509454263170E82ABA3600CF"
+)
+EXPECTED_QUEUE_UNIVERSE_SHA256 = (
+    "585BE812EC301A0249575C09E7200961F89EB5FA7DB561490F5F14F5FFBC86A6"
+)
+EXPECTED_QUEUE_SLICE_SHA256 = (
+    "DA87DCD2317651B896B3AF1A773B14F32A5CA519042C9A4872132D91D1A18672"
+)
+EXPECTED_PREFILLED_COORDINATE_SHA256 = (
+    "EE63383AFADBF94C273613A7384088716CE15497883DA5BFFC8065469776664D"
+)
+EXPECTED_PREFILL_SLICE_CONTEXT_SHA256 = (
+    "126E8963F196C3649CC4E89F9B5939EA6271CD7D053F05DE108B45495956EF23"
+)
+EXPECTED_TARGET_COORDINATE_SHA256 = (
+    "8F6DF999F26AA77BC5211B8C5A77DA0E66D044CB335C11BF1C50F34630970661"
+)
+EXPECTED_SOURCE_TARGET_SHA256 = (
+    "1F6C3BB4C8D08B9AB1FD85528FEE662995A47F46808AF500AEE5C3395437C4AB"
+)
+EXPECTED_CURRENT_TARGET_SHA256 = (
+    "AF05392B9B2BB76EF493A935210963D5635504EF1BFAF3EB6DB3F0490610ECE1"
+)
+EXPECTED_CONTEXT_CORPUS_SHA256 = (
+    "90965DEC63F54132F8D2F5834C114514A54883A5D916F9E27F51ED348613E775"
+)
+EXPECTED_GAP_CONTRACT_SHA256 = (
+    "8A3691622B434BBA32553284815F65ED48D19436CBD8A2C7C6DD891DDD9FB559"
+)
+EXPECTED_BOUNDARY_SHA256 = (
+    "17129D3D7F99DD2C203D3F05F8A2DCFF433273790721E5A2EDF8705380AB98E0"
+)
+EXPECTED_RUNTIME_CONTROL_SHA256 = (
+    "BEBF87CE52EA0389A855FC1B8671ED20043564317F0EF1BA32ADEF1E1D8F6C75"
+)
+EXPECTED_BASE_SEARCH_SHA256 = (
+    "AD45C5DD28E7C4F240DEA122B7540513AE95BCA7D45C756786A43FDD591E1F43"
+)
+EXPECTED_COMPLETE_ASSEMBLY_SHA256 = (
+    "A7FC94001D15904B76F7A2E235C46F69750459C11E716AACE618680A9665F6C8"
+)
+EXPECTED_CALL_GRAPH_SHA256 = (
+    "E267D5C8242BC5741176EE87BC523EBB1BF0906A10D4B5EE375030EC269B0E7E"
+)
+EXPECTED_SPEAKER_STYLE_SHA256 = (
+    "F3EE1C062FFA90DB601C4AA8BB3BBFE2B50573A6EA13053C4C64A27756C7669D"
+)
+EXPECTED_TERMINOLOGY_POLICY_SHA256 = (
+    "51AAB04D284C30282D8631C49A08A4F6ACD7BC8284F4D824DA8452A4FBCC76E9"
+)
+EXPECTED_TRANSLATION_POLICY_SHA256 = (
+    "83FD0555F0F07AA9380A3CE169D53BE2663800EB675A0ECEBA019A2164D339B7"
+)
+EXPECTED_CANDIDATE_SHA256 = (
+    "429CD7AE2B29F2F8B12E9B4523346B25210395258424E6BA69C17BB86BE1DBCC"
+)
+EXPECTED_COMBINED_SLICE_CANDIDATE_SHA256 = (
+    "A9419C58370110A0C9EC4956BECE8ADE77508268ED3F6B28F78039D9B7FE2A75"
+)
+EXPECTED_CHANGED_LITERAL_COUNT = 1
+EXPECTED_COMBINED_CHANGED_LITERAL_COUNT = 58
+
+DISCOVERED_PINS: dict[str, str] = {}
+BASIS = (
+    "pristine PK PC Japanese is authoritative and the empty PK English, "
+    "Simplified Chinese and Traditional Chinese auxiliary records were "
+    "recorded; the completed Base record is the exact raw, literal and "
+    "operand-masked donor, and the one manually reviewed residual plus its "
+    "approved same-record prefill companion reproduce the complete polite "
+    "next-merit prediction without inheriting Base runtime or VM state; the "
+    "historical military-merit term 공, polite register, project em dash, "
+    "dynamic officer call and particle, protected whitespace, gap, all "
+    "sixty-six slice prefills, mutual boundaries, both overlay orders, "
+    "byte-exact reversal, two-run reproduction, tamper rejection, outside-"
+    "scope identity and Steam read-only state are guarded; the fragment "
+    "remains PK runtime pending and discovered pins are immutable"
+)
+
+
+def load_base() -> Any:
+    spec = importlib.util.spec_from_file_location(
+        "pc_dialogue_full_retranslation_v0150_pk_s1268_base",
+        BASE_PATH,
+    )
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot import {BASE_PATH}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+BASE = load_base()
+CORE = BASE.CORE
+ENGINE = BASE.ENGINE
+sha256_bytes = BASE.sha256_bytes
+OVERRIDES = BASE.OVERRIDES
+
+
+def install_base_globals() -> None:
+    for name in OVERRIDES:
+        if name in globals():
+            setattr(BASE, name, globals()[name])
+
+
+def build_rows() -> tuple[Any, ...]:
+    install_base_globals()
+    return BASE.build_rows()
+
+
+def main() -> int:
+    install_base_globals()
+    return BASE.main()
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
