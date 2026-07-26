@@ -1,0 +1,104 @@
+{
+  "schema": "nobu16.kr.female-officer-component-fix.v1",
+  "overlay_id": "msgdata-female-officer-component-fix.v1",
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "base_language": "JP",
+  "active_baseline": {
+    "packed_size": 481948,
+    "packed_sha256": "6E2B883004545B2DD7D28360AFEED7D3BFDFEF2BF45E8333FD95CD0A49E95C70",
+    "raw_size": 480040,
+    "raw_sha256": "EED37E2756D34130F169D85D3EC9185AE92E4C221E925A48483CC47510CEE4E9",
+    "string_count": 29218
+  },
+  "entry_count": 11,
+  "entries": [
+    {
+      "id": 287,
+      "baseline_ko_utf16le_sha256": "F24FD7273D612A108C8AB1450EE571957B46FC5A7DD5781A4D7C4965B8D374E2",
+      "ko": "네",
+      "ko_utf16le_sha256": "707CFA320F0B2E284385156B037F337344FE287AAFA64202EEF2BCCBAC199D93",
+      "affected_msgev_ids": [1582]
+    },
+    {
+      "id": 376,
+      "baseline_ko_utf16le_sha256": "B8091B8C1584CEB3B0A0492E8BF99FC08BB6CC676A2A805FB57E87C1114127E4",
+      "ko": "요시",
+      "ko_utf16le_sha256": "D05822E47E5998740711B8BAD8BFDBF23712CCF8164E25010FD87229F2E19838",
+      "affected_msgev_ids": [2147]
+    },
+    {
+      "id": 386,
+      "baseline_ko_utf16le_sha256": "128652858A1E6B0A8AEF0918EDB320B0912AB8FD486C29DBFD8A18CAB3940281",
+      "ko": "메고",
+      "ko_utf16le_sha256": "E327248059AF4DBB3CDB0FE0C44C1702682FC693EAA9440F6CD62C8D138187A2",
+      "affected_msgev_ids": [2007]
+    },
+    {
+      "id": 434,
+      "baseline_ko_utf16le_sha256": "993E5B201B13CCFC26D9A242047DFF5913DC4ED0A95FC50B7DA89CA0BDF2AC39",
+      "ko": "오바이",
+      "ko_utf16le_sha256": "352EA4927CA0C62A23C33B5A7D18DCA43127CD8E7D85B733F16B81EC6FDF50E4",
+      "affected_msgev_ids": [410]
+    },
+    {
+      "id": 773,
+      "baseline_ko_utf16le_sha256": "D8E1DE8F5C1845EAB6330C2313C26FBAA888B31D087DCAD0B11E20D2DEF2975C",
+      "ko": "조케이",
+      "ko_utf16le_sha256": "4AC42C00EAD9A22A3FE5EF21F9D49FBCA80693326943A6B22D311E1F7A94DD05",
+      "affected_msgev_ids": [1094]
+    },
+    {
+      "id": 791,
+      "baseline_ko_utf16le_sha256": "55F1F060DA5B169B076D26FA96E7011107F93BB4131A13743ED7988BFE1587FE",
+      "ko": "후유",
+      "ko_utf16le_sha256": "4A20022A912C8F13FB52AAE5DDEACC11E662C311539700B859612C266D8F80A3",
+      "affected_msgev_ids": [1724]
+    },
+    {
+      "id": 2081,
+      "baseline_ko_utf16le_sha256": "7802879BF88695FF3E8C74BE36A97B57358A62A5F72EA6E8E1EC736BAB2A2BFA",
+      "ko": "초",
+      "ko_utf16le_sha256": "DC07BF37B1D20AB6CADBEF0D9C0B960A523889713F67A8F999759ECF11DD6839",
+      "affected_msgev_ids": [715]
+    },
+    {
+      "id": 2082,
+      "baseline_ko_utf16le_sha256": "63BBEA1544AB415C24C491D3A4C63E7A2271E6E5CB14F2463697D471F9D82987",
+      "ko": "히메",
+      "ko_utf16le_sha256": "8824478D09577F64755EFF640D0392C1DD491F970CAD67C6FACC01ADEDA74F37",
+      "affected_msgev_ids": [719, 1157, 1170, 1171, 1390, 1391, 1724, 1861, 2007, 2147]
+    },
+    {
+      "id": 2083,
+      "baseline_ko_utf16le_sha256": "20539974F0B90DB7F8B073DD783893E5AFFF7D0963D241DF173F73DCD6678F55",
+      "ko": "이치",
+      "ko_utf16le_sha256": "CBB95FC20E22E2A00375BE3E0F078575E22007AF2787AF4E74FBAABA69E2AADD",
+      "affected_msgev_ids": [404]
+    },
+    {
+      "id": 2087,
+      "baseline_ko_utf16le_sha256": "7EC967F953CAF45217910952660B7618356914D8B158C2A530BD64E89B8B0B6E",
+      "ko": "큐",
+      "ko_utf16le_sha256": "9E1162334348838C9273520FC204A3FC7BE856E6BB6933468F9BDFD2292E52FB",
+      "affected_msgev_ids": [1969]
+    },
+    {
+      "id": 6708,
+      "baseline_ko_utf16le_sha256": "7802879BF88695FF3E8C74BE36A97B57358A62A5F72EA6E8E1EC736BAB2A2BFA",
+      "ko": "초",
+      "ko_utf16le_sha256": "DC07BF37B1D20AB6CADBEF0D9C0B960A523889713F67A8F999759ECF11DD6839",
+      "affected_msgev_ids": [715]
+    }
+  ],
+  "static_evidence": {
+    "name_combiner": "FUN_1405F40D0",
+    "text_resolver": "FUN_1409F9BE0",
+    "component_id_upper_bound_inclusive": "0x22DB",
+    "female_msgev_ids_covered": [404, 410, 715, 719, 1094, 1157, 1170, 1171, 1390, 1391, 1582, 1724, 1861, 1969, 2007, 2147]
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "installed_game_files_modified": false
+  }
+}
