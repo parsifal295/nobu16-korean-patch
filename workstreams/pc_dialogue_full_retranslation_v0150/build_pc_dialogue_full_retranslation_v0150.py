@@ -38,7 +38,12 @@ WORKSTREAM = SCRIPT.parent
 REPO = WORKSTREAM.parents[1]
 TMP = REPO / "tmp"
 DEFAULT_OUTPUT_ROOT = TMP / WORKSTREAM.name
-DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
+DEFAULT_STEAM_ROOT = Path(
+    os.environ.get(
+        "NOBU16_DIALOGUE_STEAM_ROOT",
+        r"F:\SteamLibrary\steamapps\common\NOBU16",
+    )
+)
 DEFAULT_BASE_PRISTINE = Path(
     r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin"
 )
