@@ -52,17 +52,17 @@ TRANSLATIONS: dict[str, str] = {
 TRANSLATIONS.update(
     {
         "6:1275:0": (
-            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선— "
+            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선 "
         ),
         "6:1275:1": "의 ",
         "6:1275:2": " 을(를)\n함락해 전력을 보강하지요",
         "6:1276:0": (
-            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선— "
+            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선 "
         ),
         "6:1276:1": "의 ",
         "6:1276:2": " 을(를)\n함락해 전력을 보강하지요",
         "6:1277:0": (
-            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선— "
+            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선 "
         ),
         "6:1277:1": "의 ",
         "6:1277:2": " 을(를)\n함락해 전력을 보강하지요",
@@ -149,13 +149,13 @@ EXPECTED_COMPANION_SHA256 = (
     "A50E47EE7DA24EC4FAE260551FFF7310B443460630DEA48652406BF56B8FE4A7"
 )
 EXPECTED_ASSEMBLY_SHA256 = (
-    "30959B8BEDDCBC5B47969F637BDB55DD25F3F0DEA987A58AFDF1D82A7A9BCDD0"
+    "779E53C54B97D4BCFF5C70F0D352B9288F76FEA7179E8642A5DCB44D6EA4DB4F"
 )
 EXPECTED_TRANSLATION_POLICY_SHA256 = (
-    "2D3897A768BABDEA295E00F9D3B09774432944ED77BEE4BFD4B1AD712EBBB029"
+    "F6E2F9894D0392E58339F5CF930EE3404AE18157A3DB310164C22DB9E5224941"
 )
 EXPECTED_CANDIDATE_SHA256 = (
-    "1CAF34C69B3AA08779AFD9024BCF2F6388007A1044316738C4DA2159E8BC28EB"
+    "68F569713A244C014D086F7BA6DAB4D5B5B71F935E333B2FC1DB83C11418B3AB"
 )
 EXPECTED_CHANGED_LITERAL_COUNT = 30
 
@@ -168,8 +168,9 @@ BASIS = (
     "excluded; the continuous strategic-advice register and all complete "
     "multi-literal runtime assemblies are reviewed; dynamic force, clan and "
     "castle ordering, provisions, military preparations, capture wording, "
-    "the S1074/S1075 em-dash target-name boundary contract, preserved outer "
-    "whitespace, particles, protected signatures, line "
+    "the S1074/S1075 single-target em-dash contract and the B020 three-token "
+    "force-possessive-castle no-dash contract, preserved outer whitespace, "
+    "particles, protected signatures, line "
     "counts, bytecode gaps, outside-scope records, reverse overlay, two-run "
     "reproduction, tamper rejection and read-only inputs are guarded; Base "
     "runtime state is not inherited and every row remains pending"
@@ -706,7 +707,7 @@ def assert_semantics(
         )
     if any(
         TRANSLATIONS[f"6:{record_id}:0"]
-        != "은(는) 강대하여 지금은 맞설 수 없습니다\n우선— "
+        != "은(는) 강대하여 지금은 맞설 수 없습니다\n우선 "
         or TRANSLATIONS[f"6:{record_id}:1"] != "의 "
         or TRANSLATIONS[f"6:{record_id}:2"]
         != " 을(를)\n함락해 전력을 보강하지요"
@@ -792,7 +793,7 @@ def assert_semantics(
     if any(
         assembly_map[record_id]
         != (
-            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선— ",
+            "은(는) 강대하여 지금은 맞설 수 없습니다\n우선 ",
             "의 ",
             " 을(를)\n함락해 전력을 보강하지요",
         )
@@ -950,17 +951,19 @@ def runtime_control_evidence(
         ] = True
         evidence["capture_unit_not_duplicated"] = True
         evidence["target_name_runtime_token_hex"] = "026432"
-        if key[1] <= 1277:
-            evidence["visible_dynamic_boundary_inserted"] = True
-            evidence["visible_dynamic_boundary"] = "em_dash"
-            evidence["prefix_outer_trailing_space_preserved"] = True
-        else:
-            evidence[
-                "prefill_prefix_boundary_outside_current_ownership"
-            ] = True
-            evidence[
-                "prefill_prefix_boundary_followup_required"
-            ] = True
+        evidence["possessive_relation_preserved"] = True
+        evidence["single_target_dash_rule_applicable"] = False
+        evidence["visible_dynamic_boundary_inserted"] = False
+        evidence["visible_dynamic_boundary"] = "possessive_relation"
+        evidence["prefix_outer_trailing_space_preserved"] = (
+            key[1] <= 1277
+        )
+        evidence[
+            "prefill_prefix_boundary_outside_current_ownership"
+        ] = key[1] >= 1278
+        evidence[
+            "prefill_prefix_boundary_followup_required"
+        ] = False
     return evidence
 
 
@@ -1211,18 +1214,16 @@ def main() -> int:
                 "separator_contract_cross_checked_against": [
                     "B019_S1074",
                     "B019_S1075",
+                    "B020_S1077",
+                    "B020_S1078",
                 ],
                 "em_dash_target_name_boundary_normalized_records": [
-                    "6:1251-1277",
+                    "6:1251-1274",
                 ],
-                "outer_spacing_followup_records": [
+                "possessive_relation_preserved_records": [
                     "6:1275-1280",
                 ],
-                "prefill_prefix_boundary_followup_records": [
-                    "6:1278",
-                    "6:1279",
-                    "6:1280",
-                ],
+                "prefill_owned_prefix_followup_required": False,
                 "outside_scope_records_exact": True,
                 "source_current_runtime_gaps_exact": True,
                 "protected_signatures_exact": True,
