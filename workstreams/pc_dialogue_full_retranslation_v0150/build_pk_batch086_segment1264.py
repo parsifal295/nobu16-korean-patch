@@ -1,0 +1,220 @@
+#!/usr/bin/env python3
+"""Build source-redacted PK B086 segment 1264 residual decisions."""
+
+from __future__ import annotations
+
+import importlib.util
+import sys
+from pathlib import Path
+from typing import Any
+
+
+SCRIPT = Path(__file__).resolve()
+WORKSTREAM = SCRIPT.parent
+REPO = WORKSTREAM.parents[1]
+PARENT_PATH = WORKSTREAM / "build_pk_batch083_segment1253.py"
+DECISIONS_ROOT = REPO / "tmp" / WORKSTREAM.name / "decisions"
+OUTPUT = DECISIONS_ROOT / "pk_msggame_B086_S1264.private.v1.jsonl"
+PREFILL = DECISIONS_ROOT / "pk_msggame_base_exact_reuse_prefill.private.v1.jsonl"
+BASE_PROMOTED = (
+    REPO / "tmp" / WORKSTREAM.name
+    / "base_msggame_runtime_vm_verified.private.v1.jsonl"
+)
+OPTIONAL_NEIGHBORS = (
+    DECISIONS_ROOT / "pk_msggame_B086_S1263.private.v1.jsonl",
+    DECISIONS_ROOT / "pk_msggame_B087_S1265.private.v1.jsonl",
+)
+STEAM_PK = Path(
+    r"F:\SteamLibrary\steamapps\common\NOBU16\MSG_PK\JP\msggame.bin"
+)
+
+SEGMENT = 1264
+REPORT_SEGMENT_ID = "pk_msggame_B086_S1264"
+QUEUE_BATCH_ID = "pk_msggame-B086"
+QUEUE_RECORD_COUNT = 189
+QUEUE_UNIVERSE_VISIBLE_COUNT = 200
+QUEUE_UNIVERSE_FIRST = "9:1628:0"
+QUEUE_UNIVERSE_LAST = "9:1816:0"
+QUEUE_START = 134
+QUEUE_STOP = 200
+QUEUE_SLICE_FIRST = "9:1755:0"
+QUEUE_SLICE_LAST = "9:1816:0"
+QUEUE_SLICE_VISIBLE_COUNT = 66
+QUEUE_SLICE_PREFILL_COUNT = 64
+BLOCK_ID = 9
+PK_RECORD_COUNT = 21_751
+TARGET_COORDINATES = ("9:1756:0", "9:1764:0")
+TRANSLATIONS = {
+    "9:1756:0": "자―",
+    "9:1764:0": "……",
+}
+TARGET_RECORD_IDS = (1756, 1764)
+STATIC_RECORD_IDS: tuple[int, ...] = ()
+DYNAMIC_RECORD_IDS = TARGET_RECORD_IDS
+STATIC_COORDINATES: set[str] = set()
+DYNAMIC_COORDINATES = set(TARGET_COORDINATES)
+EXPECTED_ARITY = {1756: 2, 1764: 2}
+PREFILL_COMPANION_COORDINATES = ("9:1756:1", "9:1764:1")
+HIDDEN_CURRENT_COMPANION_COORDINATES: tuple[str, ...] = ()
+SEMANTIC_BASE_RECORD = {1756: (9, 1682), 1764: (9, 1690)}
+EXACT_BASE_DONOR: dict[int, tuple[int, int]] = {}
+SEMANTIC_BASE_CONTEXT = {
+    1756: ("9:1682:0", "9:1682:1"),
+    1764: ("9:1690:0", "9:1690:1"),
+}
+PREFILL_COMPANION_DONOR = {
+    "9:1756:1": "9:1682:1",
+    "9:1764:1": "9:1690:1",
+}
+EXPECTED_BASE_RAW_MATCHES = {
+    1756: ((9, 1682),),
+    1764: ((9, 1690),),
+}
+EXPECTED_BASE_LITERAL_MATCHES = EXPECTED_BASE_RAW_MATCHES
+EXPECTED_BASE_MASKED_MATCHES = EXPECTED_BASE_RAW_MATCHES
+BOUNDARY_RECORD_KEYS = (
+    (9, 1681), (9, 1682), (9, 1683),
+    (9, 1689), (9, 1690), (9, 1691),
+    (9, 1754), (9, 1755), (9, 1756), (9, 1757),
+    (9, 1763), (9, 1764), (9, 1765), (9, 1816),
+)
+SOURCE_CALL_ROOTS = (7, 17)
+CURRENT_CALL_ROOTS = SOURCE_CALL_ROOTS
+EXPECTED_CONTROLS_BY_RECORD = {
+    1756: ((7,), ()),
+    1764: ((17,), ()),
+}
+EXPECTED_SOURCE_CONTROLS_BY_RECORD = EXPECTED_CONTROLS_BY_RECORD
+EXPECTED_CURRENT_CONTROLS_BY_RECORD = EXPECTED_CONTROLS_BY_RECORD
+SOURCE_CURRENT_GAP_VARIANT_RECORD_IDS: tuple[int, ...] = ()
+SPEAKER_STYLE = (
+    (1756, "polite_dynamic_battle_entry"),
+    (1764, "hostile_dynamic_rejection"),
+)
+TERMINOLOGY_POLICY = (
+    ("project em dash", "―"),
+    ("standard ellipsis", "……"),
+    ("battle turn", "차례"),
+    ("hostile command", "사라져라"),
+)
+
+EXPECTED_STEAM_PK_SHA256 = (
+    "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766"
+)
+EXPECTED_PRISTINE_PK_SHA256 = (
+    "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210"
+)
+EXPECTED_PREFILL_SHA256 = (
+    "4E1F7B18F96C9E2B1F85A2E69176A4A67B9BF53B404281A55AAD39A83FE598FD"
+)
+EXPECTED_BASE_PROMOTED_SHA256 = (
+    "D4A16DE987E182CF616DE175E4771DA828FA4794509454263170E82ABA3600CF"
+)
+EXPECTED_QUEUE_UNIVERSE_SHA256 = (
+    "E8B19CC0E07C3B01D3A35124CD6BB2CD3105F44D4F37FB7480D7EF73CCE6E3B1"
+)
+EXPECTED_QUEUE_SLICE_SHA256 = (
+    "F167A0DF8D2C57E38753D224B058274B177839428C31DDB0272DA9F8A4843E30"
+)
+EXPECTED_PREFILLED_COORDINATE_SHA256 = (
+    "EFEDDEC9DFC3603FACF16DDCD4D26630C1411B5DC26779CB215ACB41FC794FDB"
+)
+EXPECTED_PREFILL_SLICE_CONTEXT_SHA256 = (
+    "63F5EE1DF4D51A0AB0FF2BAC8F8ED57098E6F91AEECA2101D581123FF3F7F7BF"
+)
+EXPECTED_TARGET_COORDINATE_SHA256 = (
+    "10CCAE30A40DD550ED2A8BE141781A073BB47B07E459BFE090202B45C4970A15"
+)
+EXPECTED_SOURCE_TARGET_SHA256 = (
+    "54C1AB6175ED59720EFE33203F4181FCA4E234388180EA7689DDE4C573168B06"
+)
+EXPECTED_CURRENT_TARGET_SHA256 = (
+    "40F407A2B3ACB8C261EF01886B38D0883B41146BF942DFF868A055582F1F806C"
+)
+EXPECTED_CONTEXT_CORPUS_SHA256 = (
+    "5BBF0941B3C879CA4F973073B5DC66345FB3B016CDDCF813228792F5981A56A5"
+)
+EXPECTED_GAP_CONTRACT_SHA256 = (
+    "77EFB577876024B0DCFAD7A8FA3C21D80B62B787A6CC2F8C1A573267AB338420"
+)
+EXPECTED_BOUNDARY_SHA256 = (
+    "DBE3C85D36614AED34CC7718C70B3D7ED6BE2633FADD6BF1879DF7183A3EFA49"
+)
+EXPECTED_RUNTIME_CONTROL_SHA256 = (
+    "46F5A2C5AA6335773D8505BDBFBC224D4372407CC48CB9FBE0599757AD49F608"
+)
+EXPECTED_BASE_SEARCH_SHA256 = (
+    "6946BB20D6D1507E588FD1BBBAA7914D296C49CF5EA2B8CC5710DDF2BDF3B7AE"
+)
+EXPECTED_COMPLETE_ASSEMBLY_SHA256 = (
+    "49CEB59B877DF73A25C8D7249DCE428D9F2165024B0A72E17CA5B585A880BE82"
+)
+EXPECTED_CALL_GRAPH_SHA256 = (
+    "71129757D6C66CAA34AAC4AD66A10696A0E226898C6D79D9B067CE00A4FC2EA9"
+)
+EXPECTED_SPEAKER_STYLE_SHA256 = (
+    "2836EC75E0D570A64571E9CCC082BB76BE568A34E404370A352C768EF352B5F5"
+)
+EXPECTED_TERMINOLOGY_POLICY_SHA256 = (
+    "F1D7EFE57DE8D555134C59ECB6A58AA6DB7076D307FCCC25375FB6355B6DF904"
+)
+EXPECTED_TRANSLATION_POLICY_SHA256 = (
+    "337A11F37A3470899CE74B0A0D5CB6370302ECC131E52B750277CB209B3428B6"
+)
+EXPECTED_CANDIDATE_SHA256 = (
+    "BABCD97D6BD4A42C94B30A700B4F3F337E85E24DD71131AEF221D63FB0D2140D"
+)
+EXPECTED_COMBINED_SLICE_CANDIDATE_SHA256 = (
+    "CC25704CB57F752C5A8793A88C004FE553292B758910BDDE1676C30E05AF3818"
+)
+EXPECTED_CHANGED_LITERAL_COUNT = 2
+EXPECTED_COMBINED_CHANGED_LITERAL_COUNT = 58
+
+DISCOVERED_PINS: dict[str, str] = {}
+BASIS = (
+    "pristine PK PC Japanese source authoritative; PC English, Simplified "
+    "Chinese and Traditional Chinese emptiness was reviewed; completed Base "
+    "records were used only as semantic, terminology and speaker-register "
+    "context without inheriting Base runtime or VM state; the polite battle "
+    "entry and hostile rejection reuse the exact completed Base fragments, "
+    "preserving dynamic calls, the project em dash, standard ellipsis and "
+    "complete-record morphology; two residual translations plus two approved "
+    "prefill companions assemble both complete records; all sixty-four "
+    "prefills in the sixty-six-row final slice, source/current gaps, calls, "
+    "controls, protected whitespace and complete assemblies are guarded; both "
+    "overlay orders, byte-exact reversal, two-run reproduction, tamper "
+    "rejection, outside-scope identity and Steam read-only state are verified; "
+    "discovered pins are immutable and Base runtime state is never inherited"
+)
+
+
+def load_parent() -> Any:
+    spec = importlib.util.spec_from_file_location(
+        "pc_dialogue_full_retranslation_v0150_pk_s1264_parent",
+        PARENT_PATH,
+    )
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot import {PARENT_PATH}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+PARENT = load_parent()
+CHILD_CONFIG_NAMES = (
+    "REPORT_SEGMENT_ID", "QUEUE_RECORD_COUNT",
+    "QUEUE_UNIVERSE_VISIBLE_COUNT", "QUEUE_UNIVERSE_FIRST",
+    "QUEUE_UNIVERSE_LAST",
+) + PARENT.CONFIG_NAMES
+
+
+def main() -> int:
+    namespace = globals()
+    for name in CHILD_CONFIG_NAMES:
+        setattr(PARENT, name, namespace[name])
+    return PARENT.run_segment()
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
