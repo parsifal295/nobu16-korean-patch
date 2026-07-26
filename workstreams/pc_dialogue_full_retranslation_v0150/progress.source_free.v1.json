@@ -26051,6 +26051,28 @@
       "steam_write_performed": false
     },
     {
+      "segment_id": "pk_msggame_B057_S1184",
+      "resource": "pk_msggame",
+      "first_coordinate": "7:984:0",
+      "last_coordinate": "7:1002:0",
+      "decision_count": 29,
+      "semantic_review_approved": 29,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 29,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 29
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B057"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
       "segment_id": "pk_msggame_base_exact_reuse_prefill",
       "resource": "pk_msggame",
       "first_coordinate": "2:242:0",
@@ -29027,15 +29049,15 @@
       "first_record_coordinate": "7:891",
       "last_record_coordinate": "7:1002",
       "visible_target_count": 200,
-      "decision_count": 171,
-      "runtime_review_pending": 121,
+      "decision_count": 200,
+      "runtime_review_pending": 150,
       "fully_candidate_eligible": 50,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
         "retranslated": 50,
-        "runtime_fragment_pending": 121
+        "runtime_fragment_pending": 150
       },
-      "semantic_complete": false
+      "semantic_complete": true
     },
     {
       "batch_id": "pk_msggame-B058",
@@ -30367,13 +30389,13 @@
     }
   ],
   "totals": {
-    "semantic_review_approved": 46464,
-    "runtime_review_pending": 30040,
+    "semantic_review_approved": 46493,
+    "runtime_review_pending": 30069,
     "fully_candidate_eligible": 16424,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
       "retranslated": 16079,
-      "runtime_fragment_pending": 30040
+      "runtime_fragment_pending": 30069
     },
     "semantic_completion": false,
     "candidate_build_complete": false
