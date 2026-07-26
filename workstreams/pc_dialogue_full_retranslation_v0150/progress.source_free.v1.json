@@ -25567,6 +25567,28 @@
       "steam_write_performed": false
     },
     {
+      "segment_id": "pk_msggame_B051_S1164",
+      "resource": "pk_msggame",
+      "first_coordinate": "6:4911:0",
+      "last_coordinate": "6:4938:0",
+      "decision_count": 62,
+      "semantic_review_approved": 62,
+      "runtime_review_not_required": 8,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 54,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 8,
+        "runtime_fragment_pending": 54
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B051"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
       "segment_id": "pk_msggame_B051_S1165",
       "resource": "pk_msggame",
       "first_coordinate": "6:4938:1",
@@ -28491,15 +28513,15 @@
       "first_record_coordinate": "6:4911",
       "last_record_coordinate": "7:208",
       "visible_target_count": 200,
-      "decision_count": 138,
-      "runtime_review_pending": 71,
-      "fully_candidate_eligible": 67,
+      "decision_count": 200,
+      "runtime_review_pending": 125,
+      "fully_candidate_eligible": 75,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 67,
-        "runtime_fragment_pending": 71
+        "retranslated": 75,
+        "runtime_fragment_pending": 125
       },
-      "semantic_complete": false
+      "semantic_complete": true
     },
     {
       "batch_id": "pk_msggame-B052",
@@ -29927,13 +29949,13 @@
     }
   ],
   "totals": {
-    "semantic_review_approved": 45902,
-    "runtime_review_pending": 29504,
-    "fully_candidate_eligible": 16398,
+    "semantic_review_approved": 45964,
+    "runtime_review_pending": 29558,
+    "fully_candidate_eligible": 16406,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
-      "retranslated": 16053,
-      "runtime_fragment_pending": 29504
+      "retranslated": 16061,
+      "runtime_fragment_pending": 29558
     },
     "semantic_completion": false,
     "candidate_build_complete": false
