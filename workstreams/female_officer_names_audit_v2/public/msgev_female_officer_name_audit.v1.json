@@ -1,0 +1,218 @@
+{
+  "schema": "nobu16.kr.female-officer-name-audit.v1",
+  "scope": {
+    "classification": "hime_officer_roster",
+    "roster_count": 21,
+    "historical_officer_id_range": [
+      0,
+      2206
+    ],
+    "audited_rendering_route": "MSG_PK/*/msgev.bin"
+  },
+  "source_text_policy": {
+    "commercial_source_text_included": false,
+    "complete_game_resource_included": false,
+    "source_text_is_stored_as_hash_only": true
+  },
+  "input_tables": {
+    "SC": {
+      "relative_path": "MSG_PK/SC/msgev.bin",
+      "wrapped_sha256": "7C443515D8B42DD5D1A516FE606DB8880F21296F7BEF0C5D067FEA7D9FC991BA",
+      "wrapped_size": 522177,
+      "raw_sha256": "3ACE267E6B9774D8C940C9D7940F168B61744ADDF7C082F2CB1EA7E9BBD82B5E",
+      "raw_size": 754708,
+      "string_count": 17916,
+      "wrapper_uncompressed_size": 754708
+    },
+    "JP": {
+      "relative_path": "MSG_PK/JP/msgev.bin",
+      "wrapped_sha256": "D8BFACEB7422BEB3460EFC6B9509882759E6D5374A8B0AC41E920514FACC5BA4",
+      "wrapped_size": 1048316,
+      "raw_sha256": "08E806C0C182A713E59DACFF1A33B939FBEB5F39A949BE325269E59133B9B237",
+      "raw_size": 1044196,
+      "string_count": 17916,
+      "wrapper_uncompressed_size": 1044196
+    },
+    "EN": {
+      "relative_path": "MSG_PK/EN/msgev.bin",
+      "wrapped_sha256": "BDC7705CDFBEF483363679AAD5F4377E1D7CBA161D6D130639DD42312725FF4E",
+      "wrapped_size": 762196,
+      "raw_sha256": "6A1F3891412EBFF5AC3188F498C9951431154192D69E82B7ABB6F25AA934D911",
+      "raw_size": 1878836,
+      "string_count": 17916,
+      "wrapper_uncompressed_size": 1878836
+    }
+  },
+  "rows": [
+    {
+      "id": 404,
+      "ko": "오이치",
+      "ko_utf16le_sha256": "B6D3BF61053C18F153543742D8BBD6E32A4FD2D8F87E16B8C68E8914A59D39CD",
+      "source_sc_utf16le_sha256": "4EE9D083DE7460171418623A7F444A328D44E37A25FF67B09EED5C8678ADE44B",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 410,
+      "ko": "오바이인",
+      "ko_utf16le_sha256": "1A05411C56603082B6A4683A9350E4FB70189657F9B5296F557E7FCC02C2E27F",
+      "source_sc_utf16le_sha256": "18054B8D3922B6DEB11F384B39AEE08CDF15B732F25434CC540E28FAB0DA696C",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 406,
+      "ko": "오센",
+      "ko_utf16le_sha256": "8FC6FC15CE1FD60422CA41F457BAAC64D79501DDBE3C6DD495561C3DBBCF4D8A",
+      "source_sc_utf16le_sha256": "D77ADA2D12E1AE0147E14F8710A145D02546B9B0345701661FCF837774D17085",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 692,
+      "ko": "가라샤",
+      "ko_utf16le_sha256": "042AB0878BAAF223B0DFB2ACD6D3FFCA7521A82D303894A965F584561C4C3F83",
+      "source_sc_utf16le_sha256": "DA622337396AEE467BAF49DBB930E6241E4B639BFAFB3E3CEBB89F02ADE1388B",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 719,
+      "ko": "기쿠히메",
+      "ko_utf16le_sha256": "82B89F3B6A2360AFB56AB425C1CC0A41363E0FA5A01888DEC64E31A5611379F0",
+      "source_sc_utf16le_sha256": "F8C4003915E57C377D36ABB05150431868F25C7A06194F9B2ABBA555AF1A8A20",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 715,
+      "ko": "기초",
+      "ko_utf16le_sha256": "FEA309C770FB42E543D8BC4F4D1C16DE5DBC826C48D7B2DBD10816AA59D952BF",
+      "source_sc_utf16le_sha256": "41FEE138A1F27C444D8C3C82B4E8086F781B534053D813F4A27797001A24B9E1",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1016,
+      "ko": "산조노카타",
+      "ko_utf16le_sha256": "11849C90ED8917BCA2CB4FED91253C2E768A0CF283412AB348A31D97F8ADCF60",
+      "source_sc_utf16le_sha256": "746F0C131C66455FF7CC1A1ACA89DA1C3003E8F55CBD4B8DBC1DFE075A05D6BF",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1094,
+      "ko": "조케이인",
+      "ko_utf16le_sha256": "6E15F39526517B599C046ACE5C56EAF0058BA7B9E9D2E95B663AA25DB44B88EE",
+      "source_sc_utf16le_sha256": "DDF524707BA4ED0720A227052F3B2AC2473773E31FFA23A4D28FE6AFFF48AF6E",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1157,
+      "ko": "스와히메",
+      "ko_utf16le_sha256": "3E366F5215AA27926D4D636B2D55D2C6C068D55DA8CC2C1E2F104970D8A54FCA",
+      "source_sc_utf16le_sha256": "1DDFCFF5F6F74E75170062248B36179D253F6056FFACA2FDDC1CA4C5D01B4BF5",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1170,
+      "ko": "세나히메",
+      "ko_utf16le_sha256": "6148FD553048FDA9A50EEC57CB5CA06A2D308E4A28D6C5C68992817E7F0E58DC",
+      "source_sc_utf16le_sha256": "291EF59B1D54F2D87071DE76069EA6C73A03AF2041967C8A63C3C359E2D5D27B",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1176,
+      "ko": "센토인",
+      "ko_utf16le_sha256": "48FC0E91CB86A8E8CF886DFDE82B35F6EAE619284035BD4ABAA71CED5D2B6F9E",
+      "source_sc_utf16le_sha256": "51DDF33E175D34BCF768C5C971272599EB5108365F499AC1986B054ABD8A455E",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1179,
+      "ko": "조슌인",
+      "ko_utf16le_sha256": "CE2F84667306D6429596DA551733E6104F2D138E8BF0D6C2921FAD177990F2EA",
+      "source_sc_utf16le_sha256": "9A3BCB8FDFCE14A1CD146EEC59BB9BA3775E28E1ABFBE378B9BE43B3D0CDF329",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1310,
+      "ko": "차차",
+      "ko_utf16le_sha256": "560F387FE184039544AE32D27C719355D3DA38E54F0F01BB1E4DE2BC8BABC7DD",
+      "source_sc_utf16le_sha256": "7B38FFB94895D28A82277F40F33FEC510851B9C140D2D64E07692BFDEEFC2A07",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1390,
+      "ko": "도쿠히메",
+      "ko_utf16le_sha256": "78701CAB01306CC29851E847FE471410D937BA40D85B3348BF2AE71AED60F688",
+      "source_sc_utf16le_sha256": "EEC4DC86929BF17473209E7AB7CE86CDE8A565C746511538341777179D605AC0",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1391,
+      "ko": "도쿠히메",
+      "ko_utf16le_sha256": "78701CAB01306CC29851E847FE471410D937BA40D85B3348BF2AE71AED60F688",
+      "source_sc_utf16le_sha256": "47FFEA46036E49F142B2C69BF8773F367E31D0E08B57366F3AE32BFEF6F723BA",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1582,
+      "ko": "네 네",
+      "ko_utf16le_sha256": "DDD229D6C4B0338B6A2697327F673FA6BE868925A2C4E550E6B7E4116E0ACE40",
+      "source_sc_utf16le_sha256": "D39C3D4530AC264A2181CF7B4D3992FC766CAE723014C3B459C9710CAFA1DF04",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1583,
+      "ko": "네네",
+      "ko_utf16le_sha256": "AC796207AAD5FAE58E7BA1CE5FBC888FF7C8077B6484F556B8B62B53FCE6D10E",
+      "source_sc_utf16le_sha256": "778C97579D72C6ABFAEF0623FBCB753F8535280809D5A893FB97CBACCC1CBBD1",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1827,
+      "ko": "마츠",
+      "ko_utf16le_sha256": "112B75C8191FAB3431BFE2FCD5B2A63C60CF863C176A491D11A545423BCF71FB",
+      "source_sc_utf16le_sha256": "32854CFEAB4C8394F7F300E3EAC8737EFF96147C0486353D82903248C712CEE1",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 1969,
+      "ko": "묘큐",
+      "ko_utf16le_sha256": "F12554C2678A05AD57C534F9ACB6BCC740716575EDF43FCD0CF1435287C4F209",
+      "source_sc_utf16le_sha256": "E50E25237D74D68EF85828CB22AB5EE9AC07742892A4400C1AE9AA1056715288",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 2147,
+      "ko": "요시히메",
+      "ko_utf16le_sha256": "D962213A358A2519B33D16C4C2035AC0397FEA7F97AF9D2F0503282626614799",
+      "source_sc_utf16le_sha256": "B90DE4E31B94BBBFB597C22BE4C0D1019A7B6FE019820BD8108452DCBAFEF380",
+      "rendering_route": "msgev_direct"
+    },
+    {
+      "id": 2177,
+      "ko": "레이쇼인",
+      "ko_utf16le_sha256": "A60154879EA1BC53EEC88B13A29080B191703054EB74EF7958D9B1C80B531D20",
+      "source_sc_utf16le_sha256": "2851B75CD64B69F0CCA48DC15B39C8EFA3331E339D19EE34B2B93E6D1D9D550D",
+      "rendering_route": "msgev_direct"
+    }
+  ],
+  "special_cases": {
+    "same_korean_display_requires_id": [
+      {
+        "ko": "도쿠히메",
+        "ids": [
+          1390,
+          1391
+        ],
+        "identity_key": "msgev_id"
+      }
+    ],
+    "spacing_is_intentional": [
+      {
+        "id": 1582,
+        "ko": "네 네"
+      }
+    ]
+  },
+  "result": {
+    "status": "PASS",
+    "audited": 21,
+    "failed": 0
+  }
+}
