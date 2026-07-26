@@ -23112,6 +23112,158 @@
       "switch_korean_used": false,
       "historic_korean_used": false,
       "steam_write_performed": false
+    },
+    {
+      "segment_id": "pk_msggame_base_exact_reuse_prefill",
+      "resource": "pk_msggame",
+      "first_coordinate": "2:242:0",
+      "last_coordinate": "17:1054:0",
+      "decision_count": 17652,
+      "semantic_review_approved": 17652,
+      "runtime_review_not_required": 7882,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 9770,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 7882,
+        "runtime_fragment_pending": 9770
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B010",
+        "pk_msggame-B011",
+        "pk_msggame-B012",
+        "pk_msggame-B013",
+        "pk_msggame-B014",
+        "pk_msggame-B015",
+        "pk_msggame-B016",
+        "pk_msggame-B017",
+        "pk_msggame-B018",
+        "pk_msggame-B019",
+        "pk_msggame-B020",
+        "pk_msggame-B021",
+        "pk_msggame-B022",
+        "pk_msggame-B023",
+        "pk_msggame-B024",
+        "pk_msggame-B025",
+        "pk_msggame-B026",
+        "pk_msggame-B027",
+        "pk_msggame-B028",
+        "pk_msggame-B029",
+        "pk_msggame-B030",
+        "pk_msggame-B031",
+        "pk_msggame-B032",
+        "pk_msggame-B033",
+        "pk_msggame-B034",
+        "pk_msggame-B035",
+        "pk_msggame-B036",
+        "pk_msggame-B037",
+        "pk_msggame-B038",
+        "pk_msggame-B039",
+        "pk_msggame-B040",
+        "pk_msggame-B041",
+        "pk_msggame-B042",
+        "pk_msggame-B043",
+        "pk_msggame-B044",
+        "pk_msggame-B045",
+        "pk_msggame-B046",
+        "pk_msggame-B047",
+        "pk_msggame-B048",
+        "pk_msggame-B049",
+        "pk_msggame-B050",
+        "pk_msggame-B051",
+        "pk_msggame-B052",
+        "pk_msggame-B053",
+        "pk_msggame-B054",
+        "pk_msggame-B055",
+        "pk_msggame-B056",
+        "pk_msggame-B057",
+        "pk_msggame-B058",
+        "pk_msggame-B059",
+        "pk_msggame-B060",
+        "pk_msggame-B061",
+        "pk_msggame-B062",
+        "pk_msggame-B063",
+        "pk_msggame-B064",
+        "pk_msggame-B065",
+        "pk_msggame-B066",
+        "pk_msggame-B067",
+        "pk_msggame-B068",
+        "pk_msggame-B069",
+        "pk_msggame-B070",
+        "pk_msggame-B071",
+        "pk_msggame-B072",
+        "pk_msggame-B073",
+        "pk_msggame-B074",
+        "pk_msggame-B075",
+        "pk_msggame-B076",
+        "pk_msggame-B077",
+        "pk_msggame-B078",
+        "pk_msggame-B079",
+        "pk_msggame-B080",
+        "pk_msggame-B081",
+        "pk_msggame-B082",
+        "pk_msggame-B083",
+        "pk_msggame-B084",
+        "pk_msggame-B085",
+        "pk_msggame-B086",
+        "pk_msggame-B087",
+        "pk_msggame-B088",
+        "pk_msggame-B089",
+        "pk_msggame-B090",
+        "pk_msggame-B091",
+        "pk_msggame-B092",
+        "pk_msggame-B093",
+        "pk_msggame-B094",
+        "pk_msggame-B095",
+        "pk_msggame-B096",
+        "pk_msggame-B097",
+        "pk_msggame-B098",
+        "pk_msggame-B099",
+        "pk_msggame-B100",
+        "pk_msggame-B101",
+        "pk_msggame-B102",
+        "pk_msggame-B103",
+        "pk_msggame-B104",
+        "pk_msggame-B105",
+        "pk_msggame-B106",
+        "pk_msggame-B107",
+        "pk_msggame-B108",
+        "pk_msggame-B109",
+        "pk_msggame-B110",
+        "pk_msggame-B111",
+        "pk_msggame-B112",
+        "pk_msggame-B113",
+        "pk_msggame-B114",
+        "pk_msggame-B115",
+        "pk_msggame-B116",
+        "pk_msggame-B117",
+        "pk_msggame-B118",
+        "pk_msggame-B119",
+        "pk_msggame-B120",
+        "pk_msggame-B121",
+        "pk_msggame-B122",
+        "pk_msggame-B123",
+        "pk_msggame-B124",
+        "pk_msggame-B125",
+        "pk_msggame-B126",
+        "pk_msggame-B127",
+        "pk_msggame-B128",
+        "pk_msggame-B129",
+        "pk_msggame-B130",
+        "pk_msggame-B131",
+        "pk_msggame-B132",
+        "pk_msggame-B133",
+        "pk_msggame-B134",
+        "pk_msggame-B135",
+        "pk_msggame-B140",
+        "pk_msggame-B142",
+        "pk_msggame-B143",
+        "pk_msggame-B144",
+        "pk_msggame-B145"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
     }
   ],
   "queue_batch_coverage": [
@@ -25178,16 +25330,2112 @@
         "runtime_fragment_pending": 163
       },
       "semantic_complete": true
+    },
+    {
+      "batch_id": "pk_msggame-B010",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "2:242",
+      "last_record_coordinate": "2:380",
+      "visible_target_count": 200,
+      "decision_count": 124,
+      "runtime_review_pending": 27,
+      "fully_candidate_eligible": 97,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 97,
+        "runtime_fragment_pending": 27
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B011",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "2:381",
+      "last_record_coordinate": "2:546",
+      "visible_target_count": 200,
+      "decision_count": 155,
+      "runtime_review_pending": 19,
+      "fully_candidate_eligible": 136,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 136,
+        "runtime_fragment_pending": 19
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B012",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "2:547",
+      "last_record_coordinate": "2:666",
+      "visible_target_count": 200,
+      "decision_count": 146,
+      "runtime_review_pending": 73,
+      "fully_candidate_eligible": 73,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 73,
+        "runtime_fragment_pending": 73
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B013",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "2:667",
+      "last_record_coordinate": "4:93",
+      "visible_target_count": 200,
+      "decision_count": 79,
+      "runtime_review_pending": 14,
+      "fully_candidate_eligible": 65,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 65,
+        "runtime_fragment_pending": 14
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B014",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "4:94",
+      "last_record_coordinate": "6:416",
+      "visible_target_count": 200,
+      "decision_count": 139,
+      "runtime_review_pending": 1,
+      "fully_candidate_eligible": 138,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 138,
+        "runtime_fragment_pending": 1
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B015",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:417",
+      "last_record_coordinate": "6:604",
+      "visible_target_count": 200,
+      "decision_count": 189,
+      "runtime_review_pending": 41,
+      "fully_candidate_eligible": 148,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 148,
+        "runtime_fragment_pending": 41
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B016",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:605",
+      "last_record_coordinate": "6:792",
+      "visible_target_count": 200,
+      "decision_count": 191,
+      "runtime_review_pending": 71,
+      "fully_candidate_eligible": 120,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 120,
+        "runtime_fragment_pending": 71
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B017",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:793",
+      "last_record_coordinate": "6:984",
+      "visible_target_count": 200,
+      "decision_count": 191,
+      "runtime_review_pending": 24,
+      "fully_candidate_eligible": 167,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 167,
+        "runtime_fragment_pending": 24
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B018",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:985",
+      "last_record_coordinate": "6:1166",
+      "visible_target_count": 200,
+      "decision_count": 181,
+      "runtime_review_pending": 21,
+      "fully_candidate_eligible": 160,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 160,
+        "runtime_fragment_pending": 21
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B019",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:1167",
+      "last_record_coordinate": "6:1280",
+      "visible_target_count": 200,
+      "decision_count": 114,
+      "runtime_review_pending": 81,
+      "fully_candidate_eligible": 33,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 33,
+        "runtime_fragment_pending": 81
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B020",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:1281",
+      "last_record_coordinate": "6:1346",
+      "visible_target_count": 198,
+      "decision_count": 106,
+      "runtime_review_pending": 106,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 106
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B021",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:1347",
+      "last_record_coordinate": "6:1449",
+      "visible_target_count": 200,
+      "decision_count": 131,
+      "runtime_review_pending": 86,
+      "fully_candidate_eligible": 45,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 45,
+        "runtime_fragment_pending": 86
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B022",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:1450",
+      "last_record_coordinate": "6:1566",
+      "visible_target_count": 200,
+      "decision_count": 136,
+      "runtime_review_pending": 115,
+      "fully_candidate_eligible": 21,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 21,
+        "runtime_fragment_pending": 115
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B023",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:1567",
+      "last_record_coordinate": "6:1675",
+      "visible_target_count": 196,
+      "decision_count": 148,
+      "runtime_review_pending": 125,
+      "fully_candidate_eligible": 23,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 23,
+        "runtime_fragment_pending": 125
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B024",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:1676",
+      "last_record_coordinate": "6:1835",
+      "visible_target_count": 200,
+      "decision_count": 173,
+      "runtime_review_pending": 44,
+      "fully_candidate_eligible": 129,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 129,
+        "runtime_fragment_pending": 44
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B025",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:1836",
+      "last_record_coordinate": "6:2031",
+      "visible_target_count": 200,
+      "decision_count": 197,
+      "runtime_review_pending": 6,
+      "fully_candidate_eligible": 191,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 191,
+        "runtime_fragment_pending": 6
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B026",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:2032",
+      "last_record_coordinate": "6:2128",
+      "visible_target_count": 198,
+      "decision_count": 107,
+      "runtime_review_pending": 80,
+      "fully_candidate_eligible": 27,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 27,
+        "runtime_fragment_pending": 80
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B027",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:2129",
+      "last_record_coordinate": "6:2248",
+      "visible_target_count": 200,
+      "decision_count": 148,
+      "runtime_review_pending": 109,
+      "fully_candidate_eligible": 39,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 39,
+        "runtime_fragment_pending": 109
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B028",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:2249",
+      "last_record_coordinate": "6:2422",
+      "visible_target_count": 200,
+      "decision_count": 191,
+      "runtime_review_pending": 54,
+      "fully_candidate_eligible": 137,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 137,
+        "runtime_fragment_pending": 54
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B029",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:2423",
+      "last_record_coordinate": "6:2614",
+      "visible_target_count": 200,
+      "decision_count": 197,
+      "runtime_review_pending": 16,
+      "fully_candidate_eligible": 181,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 181,
+        "runtime_fragment_pending": 16
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B030",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:2615",
+      "last_record_coordinate": "6:2758",
+      "visible_target_count": 200,
+      "decision_count": 180,
+      "runtime_review_pending": 126,
+      "fully_candidate_eligible": 54,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 54,
+        "runtime_fragment_pending": 126
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B031",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:2759",
+      "last_record_coordinate": "6:2902",
+      "visible_target_count": 199,
+      "decision_count": 162,
+      "runtime_review_pending": 112,
+      "fully_candidate_eligible": 50,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 50,
+        "runtime_fragment_pending": 112
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B032",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:2903",
+      "last_record_coordinate": "6:3053",
+      "visible_target_count": 199,
+      "decision_count": 171,
+      "runtime_review_pending": 89,
+      "fully_candidate_eligible": 82,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 82,
+        "runtime_fragment_pending": 89
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B033",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3054",
+      "last_record_coordinate": "6:3166",
+      "visible_target_count": 199,
+      "decision_count": 177,
+      "runtime_review_pending": 120,
+      "fully_candidate_eligible": 57,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 57,
+        "runtime_fragment_pending": 120
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B034",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3167",
+      "last_record_coordinate": "6:3331",
+      "visible_target_count": 200,
+      "decision_count": 171,
+      "runtime_review_pending": 75,
+      "fully_candidate_eligible": 96,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 96,
+        "runtime_fragment_pending": 75
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B035",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3332",
+      "last_record_coordinate": "6:3440",
+      "visible_target_count": 200,
+      "decision_count": 133,
+      "runtime_review_pending": 92,
+      "fully_candidate_eligible": 41,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 41,
+        "runtime_fragment_pending": 92
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B036",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3441",
+      "last_record_coordinate": "6:3539",
+      "visible_target_count": 197,
+      "decision_count": 163,
+      "runtime_review_pending": 140,
+      "fully_candidate_eligible": 23,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 23,
+        "runtime_fragment_pending": 140
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B037",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3540",
+      "last_record_coordinate": "6:3643",
+      "visible_target_count": 200,
+      "decision_count": 137,
+      "runtime_review_pending": 101,
+      "fully_candidate_eligible": 36,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 36,
+        "runtime_fragment_pending": 101
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B038",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3644",
+      "last_record_coordinate": "6:3751",
+      "visible_target_count": 199,
+      "decision_count": 149,
+      "runtime_review_pending": 147,
+      "fully_candidate_eligible": 2,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 2,
+        "runtime_fragment_pending": 147
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B039",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3752",
+      "last_record_coordinate": "6:3866",
+      "visible_target_count": 198,
+      "decision_count": 139,
+      "runtime_review_pending": 96,
+      "fully_candidate_eligible": 43,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 43,
+        "runtime_fragment_pending": 96
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B040",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3867",
+      "last_record_coordinate": "6:3979",
+      "visible_target_count": 199,
+      "decision_count": 154,
+      "runtime_review_pending": 115,
+      "fully_candidate_eligible": 39,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 39,
+        "runtime_fragment_pending": 115
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B041",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:3980",
+      "last_record_coordinate": "6:4090",
+      "visible_target_count": 200,
+      "decision_count": 127,
+      "runtime_review_pending": 98,
+      "fully_candidate_eligible": 29,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 29,
+        "runtime_fragment_pending": 98
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B042",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4091",
+      "last_record_coordinate": "6:4155",
+      "visible_target_count": 199,
+      "decision_count": 45,
+      "runtime_review_pending": 44,
+      "fully_candidate_eligible": 1,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 1,
+        "runtime_fragment_pending": 44
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B043",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4156",
+      "last_record_coordinate": "6:4262",
+      "visible_target_count": 200,
+      "decision_count": 141,
+      "runtime_review_pending": 99,
+      "fully_candidate_eligible": 42,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 42,
+        "runtime_fragment_pending": 99
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B044",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4263",
+      "last_record_coordinate": "6:4369",
+      "visible_target_count": 200,
+      "decision_count": 29,
+      "runtime_review_pending": 18,
+      "fully_candidate_eligible": 11,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 11,
+        "runtime_fragment_pending": 18
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B045",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4370",
+      "last_record_coordinate": "6:4467",
+      "visible_target_count": 199,
+      "decision_count": 152,
+      "runtime_review_pending": 129,
+      "fully_candidate_eligible": 23,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 23,
+        "runtime_fragment_pending": 129
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B046",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4468",
+      "last_record_coordinate": "6:4565",
+      "visible_target_count": 196,
+      "decision_count": 103,
+      "runtime_review_pending": 95,
+      "fully_candidate_eligible": 8,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 8,
+        "runtime_fragment_pending": 95
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B047",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4566",
+      "last_record_coordinate": "6:4626",
+      "visible_target_count": 199,
+      "decision_count": 2,
+      "runtime_review_pending": 2,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 2
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B048",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4627",
+      "last_record_coordinate": "6:4709",
+      "visible_target_count": 200,
+      "decision_count": 3,
+      "runtime_review_pending": 3,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 3
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B049",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4710",
+      "last_record_coordinate": "6:4807",
+      "visible_target_count": 199,
+      "decision_count": 8,
+      "runtime_review_pending": 8,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 8
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B050",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4808",
+      "last_record_coordinate": "6:4910",
+      "visible_target_count": 199,
+      "decision_count": 4,
+      "runtime_review_pending": 3,
+      "fully_candidate_eligible": 1,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 1,
+        "runtime_fragment_pending": 3
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B051",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "6:4911",
+      "last_record_coordinate": "7:208",
+      "visible_target_count": 200,
+      "decision_count": 102,
+      "runtime_review_pending": 44,
+      "fully_candidate_eligible": 58,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 58,
+        "runtime_fragment_pending": 44
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B052",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:209",
+      "last_record_coordinate": "7:366",
+      "visible_target_count": 200,
+      "decision_count": 180,
+      "runtime_review_pending": 61,
+      "fully_candidate_eligible": 119,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 119,
+        "runtime_fragment_pending": 61
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B053",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:367",
+      "last_record_coordinate": "7:544",
+      "visible_target_count": 200,
+      "decision_count": 185,
+      "runtime_review_pending": 73,
+      "fully_candidate_eligible": 112,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 112,
+        "runtime_fragment_pending": 73
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B054",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:545",
+      "last_record_coordinate": "7:673",
+      "visible_target_count": 199,
+      "decision_count": 105,
+      "runtime_review_pending": 84,
+      "fully_candidate_eligible": 21,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 21,
+        "runtime_fragment_pending": 84
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B055",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:674",
+      "last_record_coordinate": "7:797",
+      "visible_target_count": 199,
+      "decision_count": 57,
+      "runtime_review_pending": 38,
+      "fully_candidate_eligible": 19,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 19,
+        "runtime_fragment_pending": 38
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B056",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:798",
+      "last_record_coordinate": "7:890",
+      "visible_target_count": 200,
+      "decision_count": 118,
+      "runtime_review_pending": 99,
+      "fully_candidate_eligible": 19,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 19,
+        "runtime_fragment_pending": 99
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B057",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:891",
+      "last_record_coordinate": "7:1002",
+      "visible_target_count": 200,
+      "decision_count": 154,
+      "runtime_review_pending": 104,
+      "fully_candidate_eligible": 50,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 50,
+        "runtime_fragment_pending": 104
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B058",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:1003",
+      "last_record_coordinate": "7:1176",
+      "visible_target_count": 200,
+      "decision_count": 169,
+      "runtime_review_pending": 167,
+      "fully_candidate_eligible": 2,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 2,
+        "runtime_fragment_pending": 167
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B059",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:1177",
+      "last_record_coordinate": "7:1359",
+      "visible_target_count": 200,
+      "decision_count": 197,
+      "runtime_review_pending": 197,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 197
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B060",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:1360",
+      "last_record_coordinate": "7:1550",
+      "visible_target_count": 200,
+      "decision_count": 195,
+      "runtime_review_pending": 194,
+      "fully_candidate_eligible": 1,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 1,
+        "runtime_fragment_pending": 194
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B061",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:1551",
+      "last_record_coordinate": "7:1693",
+      "visible_target_count": 200,
+      "decision_count": 181,
+      "runtime_review_pending": 181,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 181
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B062",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:1694",
+      "last_record_coordinate": "7:1834",
+      "visible_target_count": 200,
+      "decision_count": 169,
+      "runtime_review_pending": 129,
+      "fully_candidate_eligible": 40,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 40,
+        "runtime_fragment_pending": 129
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B063",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:1835",
+      "last_record_coordinate": "7:1989",
+      "visible_target_count": 200,
+      "decision_count": 172,
+      "runtime_review_pending": 152,
+      "fully_candidate_eligible": 20,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 20,
+        "runtime_fragment_pending": 152
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B064",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:1990",
+      "last_record_coordinate": "7:2117",
+      "visible_target_count": 200,
+      "decision_count": 149,
+      "runtime_review_pending": 149,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 149
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B065",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:2118",
+      "last_record_coordinate": "7:2315",
+      "visible_target_count": 199,
+      "decision_count": 198,
+      "runtime_review_pending": 78,
+      "fully_candidate_eligible": 120,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 120,
+        "runtime_fragment_pending": 78
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B066",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:2316",
+      "last_record_coordinate": "7:2468",
+      "visible_target_count": 200,
+      "decision_count": 183,
+      "runtime_review_pending": 119,
+      "fully_candidate_eligible": 64,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 64,
+        "runtime_fragment_pending": 119
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B067",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:2469",
+      "last_record_coordinate": "7:2579",
+      "visible_target_count": 200,
+      "decision_count": 113,
+      "runtime_review_pending": 48,
+      "fully_candidate_eligible": 65,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 65,
+        "runtime_fragment_pending": 48
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B068",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:2580",
+      "last_record_coordinate": "7:2733",
+      "visible_target_count": 200,
+      "decision_count": 181,
+      "runtime_review_pending": 114,
+      "fully_candidate_eligible": 67,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 67,
+        "runtime_fragment_pending": 114
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B069",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:2734",
+      "last_record_coordinate": "7:2858",
+      "visible_target_count": 200,
+      "decision_count": 140,
+      "runtime_review_pending": 98,
+      "fully_candidate_eligible": 42,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 42,
+        "runtime_fragment_pending": 98
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B070",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "7:2859",
+      "last_record_coordinate": "8:237",
+      "visible_target_count": 200,
+      "decision_count": 152,
+      "runtime_review_pending": 68,
+      "fully_candidate_eligible": 84,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 84,
+        "runtime_fragment_pending": 68
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B071",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:238",
+      "last_record_coordinate": "8:320",
+      "visible_target_count": 199,
+      "decision_count": 172,
+      "runtime_review_pending": 170,
+      "fully_candidate_eligible": 2,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 2,
+        "runtime_fragment_pending": 170
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B072",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:321",
+      "last_record_coordinate": "8:426",
+      "visible_target_count": 200,
+      "decision_count": 169,
+      "runtime_review_pending": 136,
+      "fully_candidate_eligible": 33,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 33,
+        "runtime_fragment_pending": 136
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B073",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:427",
+      "last_record_coordinate": "8:566",
+      "visible_target_count": 199,
+      "decision_count": 136,
+      "runtime_review_pending": 48,
+      "fully_candidate_eligible": 88,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 88,
+        "runtime_fragment_pending": 48
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B074",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:567",
+      "last_record_coordinate": "8:742",
+      "visible_target_count": 200,
+      "decision_count": 192,
+      "runtime_review_pending": 80,
+      "fully_candidate_eligible": 112,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 112,
+        "runtime_fragment_pending": 80
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B075",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:743",
+      "last_record_coordinate": "8:900",
+      "visible_target_count": 200,
+      "decision_count": 179,
+      "runtime_review_pending": 85,
+      "fully_candidate_eligible": 94,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 94,
+        "runtime_fragment_pending": 85
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B076",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:901",
+      "last_record_coordinate": "8:994",
+      "visible_target_count": 200,
+      "decision_count": 112,
+      "runtime_review_pending": 94,
+      "fully_candidate_eligible": 18,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 18,
+        "runtime_fragment_pending": 94
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B077",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:995",
+      "last_record_coordinate": "8:1101",
+      "visible_target_count": 199,
+      "decision_count": 146,
+      "runtime_review_pending": 93,
+      "fully_candidate_eligible": 53,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 53,
+        "runtime_fragment_pending": 93
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B078",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:1102",
+      "last_record_coordinate": "8:1232",
+      "visible_target_count": 200,
+      "decision_count": 51,
+      "runtime_review_pending": 13,
+      "fully_candidate_eligible": 38,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 38,
+        "runtime_fragment_pending": 13
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B079",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "8:1233",
+      "last_record_coordinate": "9:486",
+      "visible_target_count": 199,
+      "decision_count": 103,
+      "runtime_review_pending": 54,
+      "fully_candidate_eligible": 49,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 49,
+        "runtime_fragment_pending": 54
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B080",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:487",
+      "last_record_coordinate": "9:672",
+      "visible_target_count": 200,
+      "decision_count": 179,
+      "runtime_review_pending": 35,
+      "fully_candidate_eligible": 144,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 144,
+        "runtime_fragment_pending": 35
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B081",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:673",
+      "last_record_coordinate": "9:857",
+      "visible_target_count": 200,
+      "decision_count": 185,
+      "runtime_review_pending": 50,
+      "fully_candidate_eligible": 135,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 135,
+        "runtime_fragment_pending": 50
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B082",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:858",
+      "last_record_coordinate": "9:1048",
+      "visible_target_count": 200,
+      "decision_count": 190,
+      "runtime_review_pending": 19,
+      "fully_candidate_eligible": 171,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 171,
+        "runtime_fragment_pending": 19
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B083",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:1049",
+      "last_record_coordinate": "9:1240",
+      "visible_target_count": 200,
+      "decision_count": 179,
+      "runtime_review_pending": 11,
+      "fully_candidate_eligible": 168,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 168,
+        "runtime_fragment_pending": 11
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B084",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:1241",
+      "last_record_coordinate": "9:1437",
+      "visible_target_count": 200,
+      "decision_count": 196,
+      "runtime_review_pending": 4,
+      "fully_candidate_eligible": 192,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 192,
+        "runtime_fragment_pending": 4
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B085",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:1438",
+      "last_record_coordinate": "9:1627",
+      "visible_target_count": 200,
+      "decision_count": 188,
+      "runtime_review_pending": 41,
+      "fully_candidate_eligible": 147,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 147,
+        "runtime_fragment_pending": 41
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B086",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:1628",
+      "last_record_coordinate": "9:1816",
+      "visible_target_count": 200,
+      "decision_count": 190,
+      "runtime_review_pending": 43,
+      "fully_candidate_eligible": 147,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 147,
+        "runtime_fragment_pending": 43
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B087",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:1817",
+      "last_record_coordinate": "9:1995",
+      "visible_target_count": 200,
+      "decision_count": 173,
+      "runtime_review_pending": 62,
+      "fully_candidate_eligible": 111,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 111,
+        "runtime_fragment_pending": 62
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B088",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:1996",
+      "last_record_coordinate": "9:2177",
+      "visible_target_count": 200,
+      "decision_count": 181,
+      "runtime_review_pending": 35,
+      "fully_candidate_eligible": 146,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 146,
+        "runtime_fragment_pending": 35
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B089",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:2178",
+      "last_record_coordinate": "9:2343",
+      "visible_target_count": 200,
+      "decision_count": 168,
+      "runtime_review_pending": 75,
+      "fully_candidate_eligible": 93,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 93,
+        "runtime_fragment_pending": 75
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B090",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:2344",
+      "last_record_coordinate": "9:2513",
+      "visible_target_count": 200,
+      "decision_count": 172,
+      "runtime_review_pending": 62,
+      "fully_candidate_eligible": 110,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 110,
+        "runtime_fragment_pending": 62
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B091",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:2514",
+      "last_record_coordinate": "9:2671",
+      "visible_target_count": 200,
+      "decision_count": 154,
+      "runtime_review_pending": 60,
+      "fully_candidate_eligible": 94,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 94,
+        "runtime_fragment_pending": 60
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B092",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:2672",
+      "last_record_coordinate": "9:2865",
+      "visible_target_count": 200,
+      "decision_count": 165,
+      "runtime_review_pending": 24,
+      "fully_candidate_eligible": 141,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 141,
+        "runtime_fragment_pending": 24
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B093",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:2866",
+      "last_record_coordinate": "9:3063",
+      "visible_target_count": 200,
+      "decision_count": 132,
+      "runtime_review_pending": 12,
+      "fully_candidate_eligible": 120,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 120,
+        "runtime_fragment_pending": 12
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B094",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:3064",
+      "last_record_coordinate": "9:3263",
+      "visible_target_count": 200,
+      "decision_count": 169,
+      "runtime_review_pending": 0,
+      "fully_candidate_eligible": 169,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 169,
+        "runtime_fragment_pending": 0
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B095",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:3264",
+      "last_record_coordinate": "9:3455",
+      "visible_target_count": 200,
+      "decision_count": 197,
+      "runtime_review_pending": 45,
+      "fully_candidate_eligible": 152,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 152,
+        "runtime_fragment_pending": 45
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B096",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:3456",
+      "last_record_coordinate": "9:3595",
+      "visible_target_count": 200,
+      "decision_count": 146,
+      "runtime_review_pending": 98,
+      "fully_candidate_eligible": 48,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 48,
+        "runtime_fragment_pending": 98
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B097",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:3596",
+      "last_record_coordinate": "9:3785",
+      "visible_target_count": 200,
+      "decision_count": 193,
+      "runtime_review_pending": 88,
+      "fully_candidate_eligible": 105,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 105,
+        "runtime_fragment_pending": 88
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B098",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:3786",
+      "last_record_coordinate": "9:3942",
+      "visible_target_count": 200,
+      "decision_count": 116,
+      "runtime_review_pending": 15,
+      "fully_candidate_eligible": 101,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 101,
+        "runtime_fragment_pending": 15
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B099",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:3943",
+      "last_record_coordinate": "9:4082",
+      "visible_target_count": 200,
+      "decision_count": 106,
+      "runtime_review_pending": 31,
+      "fully_candidate_eligible": 75,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 75,
+        "runtime_fragment_pending": 31
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B100",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "9:4083",
+      "last_record_coordinate": "12:45",
+      "visible_target_count": 197,
+      "decision_count": 66,
+      "runtime_review_pending": 15,
+      "fully_candidate_eligible": 51,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 51,
+        "runtime_fragment_pending": 15
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B101",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "12:46",
+      "last_record_coordinate": "13:98",
+      "visible_target_count": 200,
+      "decision_count": 139,
+      "runtime_review_pending": 49,
+      "fully_candidate_eligible": 90,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 90,
+        "runtime_fragment_pending": 49
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B102",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "13:99",
+      "last_record_coordinate": "13:253",
+      "visible_target_count": 200,
+      "decision_count": 179,
+      "runtime_review_pending": 78,
+      "fully_candidate_eligible": 101,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 101,
+        "runtime_fragment_pending": 78
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B103",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "13:254",
+      "last_record_coordinate": "13:444",
+      "visible_target_count": 198,
+      "decision_count": 130,
+      "runtime_review_pending": 7,
+      "fully_candidate_eligible": 123,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 123,
+        "runtime_fragment_pending": 7
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B104",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "13:445",
+      "last_record_coordinate": "13:620",
+      "visible_target_count": 200,
+      "decision_count": 96,
+      "runtime_review_pending": 0,
+      "fully_candidate_eligible": 96,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 96,
+        "runtime_fragment_pending": 0
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B105",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "13:621",
+      "last_record_coordinate": "14:44",
+      "visible_target_count": 199,
+      "decision_count": 106,
+      "runtime_review_pending": 0,
+      "fully_candidate_eligible": 106,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 106,
+        "runtime_fragment_pending": 0
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B106",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "14:45",
+      "last_record_coordinate": "14:85",
+      "visible_target_count": 198,
+      "decision_count": 133,
+      "runtime_review_pending": 0,
+      "fully_candidate_eligible": 133,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 133,
+        "runtime_fragment_pending": 0
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B107",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "14:86",
+      "last_record_coordinate": "14:138",
+      "visible_target_count": 198,
+      "decision_count": 120,
+      "runtime_review_pending": 0,
+      "fully_candidate_eligible": 120,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 120,
+        "runtime_fragment_pending": 0
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B108",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "14:139",
+      "last_record_coordinate": "14:181",
+      "visible_target_count": 197,
+      "decision_count": 103,
+      "runtime_review_pending": 0,
+      "fully_candidate_eligible": 103,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 103,
+        "runtime_fragment_pending": 0
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B109",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "14:182",
+      "last_record_coordinate": "14:230",
+      "visible_target_count": 194,
+      "decision_count": 96,
+      "runtime_review_pending": 0,
+      "fully_candidate_eligible": 96,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 96,
+        "runtime_fragment_pending": 0
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B110",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "14:231",
+      "last_record_coordinate": "15:281",
+      "visible_target_count": 200,
+      "decision_count": 101,
+      "runtime_review_pending": 57,
+      "fully_candidate_eligible": 44,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 44,
+        "runtime_fragment_pending": 57
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B111",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:282",
+      "last_record_coordinate": "15:394",
+      "visible_target_count": 199,
+      "decision_count": 146,
+      "runtime_review_pending": 120,
+      "fully_candidate_eligible": 26,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 26,
+        "runtime_fragment_pending": 120
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B112",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:395",
+      "last_record_coordinate": "15:483",
+      "visible_target_count": 199,
+      "decision_count": 154,
+      "runtime_review_pending": 130,
+      "fully_candidate_eligible": 24,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 24,
+        "runtime_fragment_pending": 130
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B113",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:484",
+      "last_record_coordinate": "15:590",
+      "visible_target_count": 200,
+      "decision_count": 129,
+      "runtime_review_pending": 112,
+      "fully_candidate_eligible": 17,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 17,
+        "runtime_fragment_pending": 112
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B114",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:591",
+      "last_record_coordinate": "15:730",
+      "visible_target_count": 200,
+      "decision_count": 170,
+      "runtime_review_pending": 170,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 170
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B115",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:731",
+      "last_record_coordinate": "15:866",
+      "visible_target_count": 199,
+      "decision_count": 138,
+      "runtime_review_pending": 126,
+      "fully_candidate_eligible": 12,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 12,
+        "runtime_fragment_pending": 126
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B116",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:867",
+      "last_record_coordinate": "15:984",
+      "visible_target_count": 199,
+      "decision_count": 155,
+      "runtime_review_pending": 135,
+      "fully_candidate_eligible": 20,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 20,
+        "runtime_fragment_pending": 135
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B117",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:985",
+      "last_record_coordinate": "15:1105",
+      "visible_target_count": 198,
+      "decision_count": 155,
+      "runtime_review_pending": 155,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 155
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B118",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1106",
+      "last_record_coordinate": "15:1216",
+      "visible_target_count": 200,
+      "decision_count": 149,
+      "runtime_review_pending": 149,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 149
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B119",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1217",
+      "last_record_coordinate": "15:1325",
+      "visible_target_count": 200,
+      "decision_count": 143,
+      "runtime_review_pending": 108,
+      "fully_candidate_eligible": 35,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 35,
+        "runtime_fragment_pending": 108
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B120",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1326",
+      "last_record_coordinate": "15:1399",
+      "visible_target_count": 200,
+      "decision_count": 107,
+      "runtime_review_pending": 107,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 107
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B121",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1400",
+      "last_record_coordinate": "15:1466",
+      "visible_target_count": 199,
+      "decision_count": 110,
+      "runtime_review_pending": 109,
+      "fully_candidate_eligible": 1,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 1,
+        "runtime_fragment_pending": 109
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B122",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1467",
+      "last_record_coordinate": "15:1535",
+      "visible_target_count": 199,
+      "decision_count": 116,
+      "runtime_review_pending": 114,
+      "fully_candidate_eligible": 2,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 2,
+        "runtime_fragment_pending": 114
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B123",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1536",
+      "last_record_coordinate": "15:1613",
+      "visible_target_count": 199,
+      "decision_count": 114,
+      "runtime_review_pending": 111,
+      "fully_candidate_eligible": 3,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 3,
+        "runtime_fragment_pending": 111
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B124",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1614",
+      "last_record_coordinate": "15:1714",
+      "visible_target_count": 200,
+      "decision_count": 169,
+      "runtime_review_pending": 144,
+      "fully_candidate_eligible": 25,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 25,
+        "runtime_fragment_pending": 144
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B125",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1715",
+      "last_record_coordinate": "15:1822",
+      "visible_target_count": 200,
+      "decision_count": 185,
+      "runtime_review_pending": 185,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 185
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B126",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1823",
+      "last_record_coordinate": "15:1927",
+      "visible_target_count": 200,
+      "decision_count": 162,
+      "runtime_review_pending": 154,
+      "fully_candidate_eligible": 8,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 8,
+        "runtime_fragment_pending": 154
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B127",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1928",
+      "last_record_coordinate": "15:1998",
+      "visible_target_count": 199,
+      "decision_count": 122,
+      "runtime_review_pending": 122,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 122
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B128",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:1999",
+      "last_record_coordinate": "15:2094",
+      "visible_target_count": 199,
+      "decision_count": 145,
+      "runtime_review_pending": 145,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 145
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B129",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:2095",
+      "last_record_coordinate": "15:2192",
+      "visible_target_count": 198,
+      "decision_count": 162,
+      "runtime_review_pending": 161,
+      "fully_candidate_eligible": 1,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 1,
+        "runtime_fragment_pending": 161
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B130",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:2193",
+      "last_record_coordinate": "15:2289",
+      "visible_target_count": 199,
+      "decision_count": 150,
+      "runtime_review_pending": 107,
+      "fully_candidate_eligible": 43,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 43,
+        "runtime_fragment_pending": 107
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B131",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:2290",
+      "last_record_coordinate": "15:2395",
+      "visible_target_count": 199,
+      "decision_count": 160,
+      "runtime_review_pending": 148,
+      "fully_candidate_eligible": 12,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 12,
+        "runtime_fragment_pending": 148
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B132",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:2396",
+      "last_record_coordinate": "15:2474",
+      "visible_target_count": 200,
+      "decision_count": 106,
+      "runtime_review_pending": 105,
+      "fully_candidate_eligible": 1,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 1,
+        "runtime_fragment_pending": 105
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B133",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:2475",
+      "last_record_coordinate": "15:2547",
+      "visible_target_count": 197,
+      "decision_count": 1,
+      "runtime_review_pending": 1,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 1
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B134",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "15:2548",
+      "last_record_coordinate": "16:19",
+      "visible_target_count": 200,
+      "decision_count": 31,
+      "runtime_review_pending": 25,
+      "fully_candidate_eligible": 6,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 6,
+        "runtime_fragment_pending": 25
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B135",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "16:20",
+      "last_record_coordinate": "17:57",
+      "visible_target_count": 200,
+      "decision_count": 67,
+      "runtime_review_pending": 11,
+      "fully_candidate_eligible": 56,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 56,
+        "runtime_fragment_pending": 11
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B140",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "17:437",
+      "last_record_coordinate": "17:533",
+      "visible_target_count": 200,
+      "decision_count": 1,
+      "runtime_review_pending": 1,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 1
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B142",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "17:628",
+      "last_record_coordinate": "17:733",
+      "visible_target_count": 200,
+      "decision_count": 1,
+      "runtime_review_pending": 1,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 1
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B143",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "17:734",
+      "last_record_coordinate": "17:845",
+      "visible_target_count": 200,
+      "decision_count": 1,
+      "runtime_review_pending": 1,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 1
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B144",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "17:846",
+      "last_record_coordinate": "17:960",
+      "visible_target_count": 200,
+      "decision_count": 1,
+      "runtime_review_pending": 1,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 1
+      },
+      "semantic_complete": false
+    },
+    {
+      "batch_id": "pk_msggame-B145",
+      "resource": "pk_msggame",
+      "first_record_coordinate": "17:961",
+      "last_record_coordinate": "17:1068",
+      "visible_target_count": 198,
+      "decision_count": 1,
+      "runtime_review_pending": 1,
+      "fully_candidate_eligible": 0,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 1
+      },
+      "semantic_complete": false
     }
   ],
   "totals": {
-    "semantic_review_approved": 25564,
-    "runtime_review_pending": 17316,
-    "fully_candidate_eligible": 8248,
+    "semantic_review_approved": 43216,
+    "runtime_review_pending": 27086,
+    "fully_candidate_eligible": 16130,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
-      "retranslated": 7903,
-      "runtime_fragment_pending": 17316
+      "retranslated": 15785,
+      "runtime_fragment_pending": 27086
     },
     "semantic_completion": false,
     "candidate_build_complete": false

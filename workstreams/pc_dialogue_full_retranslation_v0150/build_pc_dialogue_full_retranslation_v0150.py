@@ -702,9 +702,19 @@ def validate_translation_shape(
         raise RetranslationError(f"{label} changes protected runtime tokens or outer whitespace")
     if KANA_OR_HAN_RE.search(translation):
         raise RetranslationError(f"{label} replacement retains kana or CJK Han text")
-    if translation.count("\n") != current_text.count("\n") and layout_review != "runtime_verified":
-        raise RetranslationError(f"{label} changes line count without runtime_verified layout review")
-    if layout_review not in {"unchanged_from_current", "runtime_verified", "not_needed"}:
+    if (
+        translation.count("\n") != current_text.count("\n")
+        and layout_review not in {"runtime_verified", "runtime_pending"}
+    ):
+        raise RetranslationError(
+            f"{label} changes line count without runtime layout review"
+        )
+    if layout_review not in {
+        "unchanged_from_current",
+        "runtime_verified",
+        "runtime_pending",
+        "not_needed",
+    }:
         raise RetranslationError(f"{label} has an invalid layout_review status")
     if layout_review == "not_needed" and current_text.count("\n"):
         raise RetranslationError(f"{label} has line breaks and cannot use not_needed layout review")
@@ -761,6 +771,10 @@ def validate_decisions(
             raise RetranslationError(f"{label} retranslated cannot still have runtime_review=pending")
         if scope_classification == "confirmed_non_display" and runtime_review != "not_required":
             raise RetranslationError(f"{label} confirmed_non_display must have runtime_review=not_required")
+        if row.get("layout_review") == "runtime_pending" and runtime_review != "pending":
+            raise RetranslationError(
+                f"{label} layout_review=runtime_pending requires runtime_review=pending"
+            )
         runtime_vm_evidence = row.get("runtime_vm_verification")
         if runtime_vm_evidence is not None and not isinstance(
             runtime_vm_evidence, dict

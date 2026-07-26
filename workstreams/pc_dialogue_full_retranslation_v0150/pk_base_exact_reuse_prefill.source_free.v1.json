@@ -1,0 +1,28 @@
+{
+  "actual_runtime_pending_rows": 9770,
+  "any_base_candidate_exact_dynamic_match_rows": 7039,
+  "any_base_candidate_operand_masked_dynamic_match_rows": 9743,
+  "any_base_candidate_operand_masked_dynamic_novel_rows": 25,
+  "base_candidate_packed_sha256": "2E42421F3E96B4B45FA5DC6283666B8810BE03CB237E9CD4F0DC9CEF48D146CB",
+  "candidate_packed_sha256": "98B832C4EDED63ACD024D0F358967F8FD042CD2BC1DBF358D6C89D4A01DF20B0",
+  "exact_source_donor_operand_masked_dynamic_match_rows": 9685,
+  "exact_source_donor_operand_masked_dynamic_mismatch_rows": 83,
+  "existing_pk_decisions_excluded": 1799,
+  "funnel": {
+    "exact_source": 22397,
+    "meaningful_length": 17652,
+    "protected_signature": 19515,
+    "remaining": 27239,
+    "unanimous_translation": 19636
+  },
+  "layout_change_pending_rows": 4,
+  "mapping_universe_sha256": "F3B1E8DB5F3F75DE987F8AC30D79BBDE532EFDE622AF49EFE2FDBD4B23050DD9",
+  "prefilled_rows": 17652,
+  "remaining_pk_rows": 27239,
+  "rough_dynamic_pending_rows": 9768,
+  "rough_static_rows": 7884,
+  "runtime_promotion_performed": false,
+  "schema": "nobu16.kr.pk-msggame-base-exact-reuse-prefill.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}
