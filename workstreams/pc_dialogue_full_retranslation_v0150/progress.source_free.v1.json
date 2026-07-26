@@ -26689,6 +26689,28 @@
       "steam_write_performed": false
     },
     {
+      "segment_id": "pk_msggame_B069_S1213",
+      "resource": "pk_msggame",
+      "first_coordinate": "7:2835:1",
+      "last_coordinate": "7:2858:1",
+      "decision_count": 38,
+      "semantic_review_approved": 38,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 38,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 38
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B069"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
       "segment_id": "pk_msggame_base_exact_reuse_prefill",
       "resource": "pk_msggame",
       "first_coordinate": "2:242:0",
@@ -29857,15 +29879,15 @@
       "first_record_coordinate": "7:2734",
       "last_record_coordinate": "7:2858",
       "visible_target_count": 200,
-      "decision_count": 162,
-      "runtime_review_pending": 120,
+      "decision_count": 200,
+      "runtime_review_pending": 158,
       "fully_candidate_eligible": 42,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
         "retranslated": 42,
-        "runtime_fragment_pending": 120
+        "runtime_fragment_pending": 158
       },
-      "semantic_complete": false
+      "semantic_complete": true
     },
     {
       "batch_id": "pk_msggame-B070",
@@ -31005,13 +31027,13 @@
     }
   ],
   "totals": {
-    "semantic_review_approved": 46807,
-    "runtime_review_pending": 30383,
+    "semantic_review_approved": 46845,
+    "runtime_review_pending": 30421,
     "fully_candidate_eligible": 16424,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
       "retranslated": 16079,
-      "runtime_fragment_pending": 30383
+      "runtime_fragment_pending": 30421
     },
     "semantic_completion": false,
     "candidate_build_complete": false
