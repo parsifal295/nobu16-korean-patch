@@ -91,6 +91,12 @@ RUNTIME_VM_ROW_VERIFICATION_SCHEMA = (
     "nobu16.kr.base-msggame-runtime-vm-row-verification.v1"
 )
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
+SOURCE_OUTER_WHITESPACE_REPAIR_EVIDENCE_SCHEMA = (
+    "nobu16.kr.pk-msggame-runtime-gap-repair.v1.private-evidence"
+)
+SOURCE_OUTER_WHITESPACE_REPAIR_CANDIDATE_RECORD_SHA256 = (
+    "290E5692BD4B6DBD047F83745D07E4AEFDB3C194C98E0A351CB93822BE4E058D"
+)
 BATCH_VISIBLE_TARGET_SIZE = 200
 SCOPE_CLASSIFICATIONS = {
     "retranslated",
@@ -223,6 +229,25 @@ def protected_signature(text: str) -> dict[str, Any]:
         "leading_whitespace": text[: len(text) - len(text.lstrip())],
         "trailing_whitespace": text[len(text.rstrip()) :],
     }
+
+
+def record_gap_bytes(record: MsgGameRecord) -> tuple[bytes, ...]:
+    literals = parse_record_literals(record)
+    if not literals:
+        return (record.data,)
+    gaps: list[bytes] = [record.data[: literals[0].marker_offset]]
+    for left, right in zip(literals, literals[1:]):
+        gaps.append(record.data[left.marker_end : right.marker_offset])
+    gaps.append(record.data[literals[-1].marker_end :])
+    return tuple(gaps)
+
+
+def direct_call_operands(record: MsgGameRecord) -> tuple[int, ...]:
+    return tuple(
+        int.from_bytes(match.group(1), "little")
+        for gap in record_gap_bytes(record)
+        for match in re.finditer(b"\x01\x43(.{4})", gap, re.DOTALL)
+    )
 
 
 def resource_specs(steam_root: Path, base_pristine: Path, pk_pristine: Path) -> tuple[ResourceSpec, ...]:
@@ -775,6 +800,16 @@ def validate_decisions(
             raise RetranslationError(
                 f"{label} layout_review=runtime_pending requires runtime_review=pending"
             )
+        if (
+            "source_outer_whitespace_restored" in row
+            and row.get("source_outer_whitespace_restored") is not True
+        ):
+            raise RetranslationError(
+                f"{label}.source_outer_whitespace_restored must be true when present"
+            )
+        source_outer_whitespace_restored = (
+            row.get("source_outer_whitespace_restored") is True
+        )
         runtime_vm_evidence = row.get("runtime_vm_verification")
         if runtime_vm_evidence is not None and not isinstance(
             runtime_vm_evidence, dict
@@ -862,7 +897,8 @@ def validate_decisions(
         if require_complete and runtime_review == "pending":
             raise RetranslationError(f"{label} still requires runtime context review")
         records = current_records_by_resource[str(resource)]
-        current_text = parse_record_literals(records[(block_id, record_id)])[literal_id].text
+        current_record = records[(block_id, record_id)]
+        current_text = parse_record_literals(current_record)[literal_id].text
         if scope_classification == "confirmed_non_display":
             if row.get("translation") is not None:
                 raise RetranslationError(f"{label} confirmed_non_display must not carry a translation")
@@ -871,8 +907,96 @@ def validate_decisions(
             translation = row.get("translation")
             if not isinstance(translation, str):
                 raise RetranslationError(f"{label}.translation must be a string")
+            shape_baseline = current_text
+            if source_outer_whitespace_restored:
+                pristine_record = pristine_records_by_resource[
+                    str(resource)
+                ][(block_id, record_id)]
+                source_text = parse_record_literals(pristine_record)[
+                    literal_id
+                ].text
+                assembly_evidence = row.get("runtime_assembly_evidence")
+                source_calls = direct_call_operands(pristine_record)
+                current_calls = direct_call_operands(current_record)
+                missing_current_calls = tuple(
+                    call
+                    for call in source_calls
+                    if call not in current_calls
+                )
+                if (
+                    resource != "pk_msggame"
+                    or (block_id, record_id, literal_id)
+                    != (6, 3887, 0)
+                    or scope_classification
+                    != "runtime_fragment_pending"
+                    or runtime_review != "pending"
+                    or row.get("layout_review") != "runtime_pending"
+                    or record_gap_bytes(pristine_record)
+                    == record_gap_bytes(current_record)
+                    or not source_calls
+                    or current_calls
+                    or missing_current_calls != source_calls
+                    or not isinstance(assembly_evidence, dict)
+                    or assembly_evidence.get(
+                        "current_runtime_gap_anomaly"
+                    )
+                    is not True
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_required"
+                    )
+                    is not True
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_integrated_for_evidence_only"
+                    )
+                    is not True
+                    or assembly_evidence.get(
+                        "source_outer_whitespace_restored"
+                    )
+                    is not True
+                    or assembly_evidence.get(
+                        "runtime_promotion_authorized"
+                    )
+                    is not False
+                    or assembly_evidence.get(
+                        "missing_current_call_operands"
+                    )
+                    not in (source_calls, list(source_calls))
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_evidence_schema"
+                    )
+                    != SOURCE_OUTER_WHITESPACE_REPAIR_EVIDENCE_SCHEMA
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_builder"
+                    )
+                    != "build_pk_runtime_gap_repair_3887.py"
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_record_coordinate"
+                    )
+                    != f"{block_id}:{record_id}"
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_source_record_sha256"
+                    )
+                    != sha256_bytes(pristine_record.data)
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_current_record_sha256"
+                    )
+                    != sha256_bytes(current_record.data)
+                    or assembly_evidence.get(
+                        "source_runtime_gap_repair_candidate_record_sha256"
+                    )
+                    != SOURCE_OUTER_WHITESPACE_REPAIR_CANDIDATE_RECORD_SHA256
+                    or protected_signature(source_text)
+                    == protected_signature(current_text)
+                    or protected_signature(translation)
+                    != protected_signature(source_text)
+                ):
+                    raise RetranslationError(
+                        f"{label} has invalid source outer-whitespace "
+                        "restoration evidence"
+                    )
+                shape_baseline = source_text
             validate_translation_shape(
-                current_text,
+                shape_baseline,
                 translation,
                 row.get("layout_review"),
                 label,

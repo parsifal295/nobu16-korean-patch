@@ -89,7 +89,7 @@ EXPECTED_BASE_ROW_SHA256 = (
     "F02BFA28E42DD5EF9AB9B98751BC04C09B8C33E5B7840289AB0DFB6F4D4C6B93"
 )
 EXPECTED_CONTROL_REPAIRS_SHA256 = (
-    "E2242269B09B66057D7734398ABE1FCFC3D6AEC3E6BD607D25EFE8207B3577C3"
+    "240D504BDA7D92021E37A6E2387B84BBD7249C6ED2362F57CE61177EFC51F8AB"
 )
 EXPECTED_CURRENT_GAPS = ("", "050505")
 EXPECTED_SOURCE_GAPS = ("", "01432A040000050505")
@@ -110,7 +110,7 @@ EXPECTED_ASSEMBLED_RECORD_SHA256 = (
     "640BE59047587DBA06A2E983E07DC9CA1639A72CB75304F38CA18F2FD2FAEF11"
 )
 EXPECTED_EVIDENCE_SHA256 = (
-    "4E82E287745A8E7C9A9160C59FC819A04245FD2C66F3E6EB018E14B77015B45E"
+    "1A91B942E3EDD0EF0B4421CC96766F2BF0934D2C407090DA5D074C3C4305C185"
 )
 EXPECTED_CURRENT_PACKED_SIZE = 1_806_586
 EXPECTED_CANDIDATE_PACKED_SIZE = 1_806_594
@@ -242,10 +242,20 @@ def load_control_repair_entry() -> dict[str, Any]:
         or document.get("release_target") != "0.15.0"
         or document.get("source_text_present") is not False
         or document.get("semantic_decision_count_delta") != 0
-        or len(document.get("entries", [])) != 1
+        or len(document.get("entries", [])) != 2
     ):
         raise RuntimeError("source-free control repair ledger invalid")
-    entry = document["entries"][0]
+    matches = [
+        entry
+        for entry in document["entries"]
+        if entry.get("resource") == RESOURCE
+        and entry.get("coordinate") == COORDINATE
+    ]
+    if len(matches) != 1:
+        raise RuntimeError(
+            "source-free control repair entry binding drifted"
+        )
+    entry = matches[0]
     expected = {
         "resource": RESOURCE,
         "coordinate": COORDINATE,

@@ -23,6 +23,26 @@
       "repair_status": "prepared_pending_runtime_validation",
       "semantic_decision_duplicate_added": false,
       "steam_write_performed": false
+    },
+    {
+      "resource": "pk_msggame",
+      "coordinate": "6:3887:0",
+      "record_coordinate": "6:3887",
+      "source_decision_segment_id": "pk_msggame_B040_S1131",
+      "source_decision_file_sha256": "4423DE02F2CDB4499F9C88557DDBF1CB1BB83198DE70702C227E39CC0D0E6C30",
+      "source_decision_row_canonical_sha256": "9657D420BBA47D0DECCEAC22F3F0F7B89A642F9C2B972EC5325249A027729D14",
+      "original_scope_classification": "runtime_fragment_pending",
+      "original_runtime_review": "pending",
+      "effective_scope_classification": "runtime_fragment_pending",
+      "effective_runtime_review": "pending",
+      "override_reason": "control_gap_repair_pending_runtime_validation",
+      "repair_builder": "build_pk_runtime_gap_repair_3887.py",
+      "repair_evidence_schema": "nobu16.kr.pk-msggame-runtime-gap-repair.v1.private-evidence",
+      "repair_candidate_sha256": "5438FA8699FCCDA9279AE06113E1130324E212C592D4C309FD6EE0F243CD9A55",
+      "repair_candidate_required_for_release": true,
+      "repair_status": "prepared_pending_runtime_validation",
+      "semantic_decision_duplicate_added": false,
+      "steam_write_performed": false
     }
   ]
 }
