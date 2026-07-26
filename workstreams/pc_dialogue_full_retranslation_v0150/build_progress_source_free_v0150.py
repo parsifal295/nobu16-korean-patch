@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import importlib.util
 import json
 import sys
@@ -22,6 +23,11 @@ QUEUE_PATH = OUTPUT_ROOT / "review_queue.private.v1.jsonl"
 BATCHES_PATH = OUTPUT_ROOT / "review_batches.source_free.v1.json"
 CANDIDATE_MANIFEST = OUTPUT_ROOT / "candidate" / "candidate_manifest.source_free.v1.json"
 PROGRESS_PATH = WORKSTREAM / "progress.source_free.v1.json"
+CONTROL_REPAIRS_PATH = WORKSTREAM / "runtime_control_repairs.source_free.v1.json"
+CONTROL_REPAIRS_SCHEMA = (
+    "nobu16.kr.pc-dialogue-full-retranslation-runtime-control-repairs.v1"
+)
+RUNTIME_REVIEW_STATES = {"not_required", "verified", "pending"}
 
 
 def load_engine() -> Any:
@@ -70,6 +76,119 @@ def segment_id(path: Path) -> str:
     return path.name[: -len(suffix)]
 
 
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest().upper()
+
+
+def canonical_row_sha256(row: dict[str, Any]) -> str:
+    encoded = json.dumps(
+        row,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return sha256_bytes(encoded)
+
+
+def load_control_repairs() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    if not CONTROL_REPAIRS_PATH.is_file():
+        raise RuntimeError(
+            "source-free runtime control repair ledger is absent: "
+            f"{CONTROL_REPAIRS_PATH}"
+        )
+    raw_bytes = CONTROL_REPAIRS_PATH.read_bytes()
+    ledger = json.loads(raw_bytes.decode("utf-8"))
+    if not isinstance(ledger, dict):
+        raise RuntimeError("runtime control repair ledger is not a JSON object")
+    if (
+        ledger.get("schema") != CONTROL_REPAIRS_SCHEMA
+        or ledger.get("release_target") != "0.15.0"
+        or ledger.get("source_text_present") is not False
+        or ledger.get("semantic_decision_count_delta") != 0
+    ):
+        raise RuntimeError("runtime control repair ledger metadata drifted")
+    entries = ledger.get("entries")
+    if not isinstance(entries, list):
+        raise RuntimeError("runtime control repair entries are not a list")
+
+    repairs: dict[tuple[str, str], dict[str, Any]] = {}
+    required_keys = {
+        "resource",
+        "coordinate",
+        "record_coordinate",
+        "source_decision_segment_id",
+        "source_decision_file_sha256",
+        "source_decision_row_canonical_sha256",
+        "original_scope_classification",
+        "original_runtime_review",
+        "effective_scope_classification",
+        "effective_runtime_review",
+        "override_reason",
+        "repair_builder",
+        "repair_evidence_schema",
+        "repair_candidate_sha256",
+        "repair_candidate_required_for_release",
+        "repair_status",
+        "semantic_decision_duplicate_added",
+        "steam_write_performed",
+    }
+    for ordinal, entry in enumerate(entries):
+        if not isinstance(entry, dict) or set(entry) != required_keys:
+            raise RuntimeError(
+                f"runtime control repair entry {ordinal} shape drifted"
+            )
+        resource = str(entry["resource"])
+        coordinate = str(entry["coordinate"])
+        parts = coordinate_key(coordinate)
+        if str(entry["record_coordinate"]) != f"{parts[0]}:{parts[1]}":
+            raise RuntimeError(
+                f"runtime control repair record coordinate drifted: {coordinate}"
+            )
+        original_scope = str(entry["original_scope_classification"])
+        effective_scope = str(entry["effective_scope_classification"])
+        original_runtime = str(entry["original_runtime_review"])
+        effective_runtime = str(entry["effective_runtime_review"])
+        if (
+            original_scope not in ENGINE.SCOPE_CLASSIFICATIONS
+            or effective_scope not in ENGINE.SCOPE_CLASSIFICATIONS
+            or original_runtime not in RUNTIME_REVIEW_STATES
+            or effective_runtime not in RUNTIME_REVIEW_STATES
+        ):
+            raise RuntimeError(
+                f"runtime control repair classification is invalid: "
+                f"{resource}:{coordinate}"
+            )
+        if (
+            entry["semantic_decision_duplicate_added"] is not False
+            or entry["steam_write_performed"] is not False
+            or entry["repair_candidate_required_for_release"] is not True
+            or entry["repair_status"] != "prepared_pending_runtime_validation"
+            or effective_scope != "runtime_fragment_pending"
+            or effective_runtime != "pending"
+        ):
+            raise RuntimeError(
+                f"runtime control repair safety state drifted: "
+                f"{resource}:{coordinate}"
+            )
+        key = (resource, coordinate)
+        if key in repairs:
+            raise RuntimeError(f"duplicate runtime control repair: {key}")
+        repairs[key] = entry
+
+    metadata = {
+        "path": CONTROL_REPAIRS_PATH.relative_to(REPO).as_posix(),
+        "schema": CONTROL_REPAIRS_SCHEMA,
+        "sha256": sha256_bytes(raw_bytes),
+        "source_text_present": False,
+        "entry_count": len(entries),
+        "semantic_decision_count_delta": 0,
+    }
+    return repairs, metadata
+
+
 def build_progress() -> dict[str, Any]:
     prepared = ENGINE.prepare_artifacts(
         ENGINE.DEFAULT_STEAM_ROOT,
@@ -79,6 +198,8 @@ def build_progress() -> dict[str, Any]:
     decision_paths = sorted(DECISIONS_DIR.glob("*.private.v1.jsonl"))
     if not decision_paths:
         raise RuntimeError(f"no private decision segments found below {DECISIONS_DIR}")
+    control_repairs, control_repair_metadata = load_control_repairs()
+    consumed_control_repairs: set[tuple[str, str]] = set()
 
     queue_rows = load_jsonl(QUEUE_PATH)
     batch_catalog_raw = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
@@ -111,8 +232,9 @@ def build_progress() -> dict[str, Any]:
         resource = next(iter(resources))
         coordinates = sorted((str(row["coordinate"]) for row in rows), key=coordinate_key)
         queue_batch_ids: set[str] = set()
-        runtime_counts = Counter(str(row["runtime_review"]) for row in rows)
-        segment_scope_counts = Counter(str(row["scope_classification"]) for row in rows)
+        runtime_counts: Counter[str] = Counter()
+        segment_scope_counts: Counter[str] = Counter()
+        segment_control_override_count = 0
 
         for row in rows:
             key = (resource, str(row["coordinate"]))
@@ -126,18 +248,50 @@ def build_progress() -> dict[str, Any]:
             classification = str(row["scope_classification"])
             if classification not in ENGINE.SCOPE_CLASSIFICATIONS:
                 raise RuntimeError(f"invalid scope classification in {path}: {key}")
+            runtime_review = str(row["runtime_review"])
+            if runtime_review not in RUNTIME_REVIEW_STATES:
+                raise RuntimeError(f"invalid runtime review in {path}: {key}")
+            effective_row = row
+            repair = control_repairs.get(key)
+            if repair is not None:
+                if (
+                    str(repair["source_decision_segment_id"])
+                    != segment_id(path)
+                    or str(repair["source_decision_file_sha256"])
+                    != sha256_bytes(path.read_bytes())
+                    or str(repair["source_decision_row_canonical_sha256"])
+                    != canonical_row_sha256(row)
+                    or str(repair["original_scope_classification"])
+                    != classification
+                    or str(repair["original_runtime_review"])
+                    != runtime_review
+                ):
+                    raise RuntimeError(
+                        f"runtime control repair source binding drifted: {key}"
+                    )
+                effective_row = dict(row)
+                classification = str(
+                    repair["effective_scope_classification"]
+                )
+                runtime_review = str(repair["effective_runtime_review"])
+                effective_row["scope_classification"] = classification
+                effective_row["runtime_review"] = runtime_review
+                consumed_control_repairs.add(key)
+                segment_control_override_count += 1
             batch_id = target_to_batch.get(key)
             if batch_id is None:
                 raise RuntimeError(f"decision target is absent from private queue: {key}")
             queue_batch_ids.add(batch_id)
             batch_decisions[batch_id] += 1
+            runtime_counts[runtime_review] += 1
+            segment_scope_counts[classification] += 1
             scope_classification_counts[classification] += 1
             batch_scope_classifications[batch_id][classification] += 1
-            if row["runtime_review"] == "pending":
+            if runtime_review == "pending":
                 batch_pending[batch_id] += 1
             else:
                 batch_eligible[batch_id] += 1
-            all_rows.append(row)
+            all_rows.append(effective_row)
 
         segments.append(
             {
@@ -154,11 +308,25 @@ def build_progress() -> dict[str, Any]:
                     classification: segment_scope_counts[classification]
                     for classification in sorted(ENGINE.SCOPE_CLASSIFICATIONS)
                 },
+                **(
+                    {
+                        "runtime_control_override_count":
+                        segment_control_override_count
+                    }
+                    if segment_control_override_count
+                    else {}
+                ),
                 "queue_batch_ids": sorted(queue_batch_ids, key=batch_key),
                 "switch_korean_used": False,
                 "historic_korean_used": False,
                 "steam_write_performed": False,
             }
+        )
+
+    if consumed_control_repairs != set(control_repairs):
+        missing = sorted(set(control_repairs) - consumed_control_repairs)
+        raise RuntimeError(
+            f"runtime control repairs were not bound to decisions: {missing}"
         )
 
     touched_batch_ids = sorted(batch_decisions, key=batch_key)
@@ -209,6 +377,14 @@ def build_progress() -> dict[str, Any]:
             "segment B-numbers are authoring work-package identifiers; "
             "queue_batch_ids records the generated review-queue batches"
         ),
+        "runtime_control_repairs": {
+            **control_repair_metadata,
+            "consumed_entry_count": len(consumed_control_repairs),
+            "effective_runtime_review_pending": sum(
+                repair["effective_runtime_review"] == "pending"
+                for repair in control_repairs.values()
+            ),
+        },
         "segments": segments,
         "queue_batch_coverage": queue_batch_coverage,
         "totals": {
