@@ -25457,6 +25457,72 @@
       "steam_write_performed": false
     },
     {
+      "segment_id": "pk_msggame_B049_S1159",
+      "resource": "pk_msggame",
+      "first_coordinate": "6:4741:0",
+      "last_coordinate": "6:4766:0",
+      "decision_count": 66,
+      "semantic_review_approved": 66,
+      "runtime_review_not_required": 3,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 63,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 3,
+        "runtime_fragment_pending": 63
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B049"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "pk_msggame_B049_S1160",
+      "resource": "pk_msggame",
+      "first_coordinate": "6:4766:1",
+      "last_coordinate": "6:4806:1",
+      "decision_count": 58,
+      "semantic_review_approved": 58,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 58,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 58
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B049"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "pk_msggame_B050_S1163",
+      "resource": "pk_msggame",
+      "first_coordinate": "6:4876:3",
+      "last_coordinate": "6:4910:0",
+      "decision_count": 65,
+      "semantic_review_approved": 65,
+      "runtime_review_not_required": 14,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 51,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 14,
+        "runtime_fragment_pending": 51
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B050"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
       "segment_id": "pk_msggame_base_exact_reuse_prefill",
       "resource": "pk_msggame",
       "first_coordinate": "2:242:0",
@@ -28305,13 +28371,13 @@
       "first_record_coordinate": "6:4710",
       "last_record_coordinate": "6:4807",
       "visible_target_count": 199,
-      "decision_count": 8,
-      "runtime_review_pending": 8,
-      "fully_candidate_eligible": 0,
+      "decision_count": 132,
+      "runtime_review_pending": 129,
+      "fully_candidate_eligible": 3,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 0,
-        "runtime_fragment_pending": 8
+        "retranslated": 3,
+        "runtime_fragment_pending": 129
       },
       "semantic_complete": false
     },
@@ -28321,13 +28387,13 @@
       "first_record_coordinate": "6:4808",
       "last_record_coordinate": "6:4910",
       "visible_target_count": 199,
-      "decision_count": 4,
-      "runtime_review_pending": 3,
-      "fully_candidate_eligible": 1,
+      "decision_count": 69,
+      "runtime_review_pending": 54,
+      "fully_candidate_eligible": 15,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 1,
-        "runtime_fragment_pending": 3
+        "retranslated": 15,
+        "runtime_fragment_pending": 54
       },
       "semantic_complete": false
     },
@@ -29773,13 +29839,13 @@
     }
   ],
   "totals": {
-    "semantic_review_approved": 45543,
-    "runtime_review_pending": 29172,
-    "fully_candidate_eligible": 16371,
+    "semantic_review_approved": 45732,
+    "runtime_review_pending": 29344,
+    "fully_candidate_eligible": 16388,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
-      "retranslated": 16026,
-      "runtime_fragment_pending": 29172
+      "retranslated": 16043,
+      "runtime_fragment_pending": 29344
     },
     "semantic_completion": false,
     "candidate_build_complete": false
