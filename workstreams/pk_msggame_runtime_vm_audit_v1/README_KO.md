@@ -89,3 +89,43 @@ python -B workstreams/pk_msggame_runtime_vm_audit_v1/test_pk_msggame_runtime_vm_
 4,717개를 실제 decision으로 승격하려면 이 보고서의 row/pair proof를 묶는
 별도 private decision builder와 shared engine의 PK evidence validator가
 필요하다.
+
+## 안전 집합 verification overlay
+
+감사에서 `promotion_eligible`로 판정된 4,717개만 별도 source-free private
+overlay로 만들 수 있다.
+
+```powershell
+python -B workstreams/pk_msggame_runtime_vm_audit_v1/build_pk_msggame_runtime_verified_overlay_v1.py
+python -B workstreams/pk_msggame_runtime_vm_audit_v1/build_pk_msggame_runtime_verified_overlay_v1.py --check
+python -B workstreams/pk_msggame_runtime_vm_audit_v1/test_pk_msggame_runtime_verified_overlay_v1.py
+```
+
+기본 private 출력:
+
+```text
+tmp/pc_dialogue_full_retranslation_v0150/decisions/runtime_verification_overlays/
+  pk_msggame_exact_reuse_runtime_vm_verified.private.v1.jsonl
+```
+
+`runtime_verification_overlays/` 하위에 두는 이유는 이 파일이 번역 본문을
+가진 full decision이 아니기 때문이다. 기존 `decisions/pk_msggame_*.jsonl`
+수집기에 섞이거나 원본 prefill 행과 중복되지 않는다.
+
+각 overlay 행은 다음 값만 가진다.
+
+- PK 좌표와 `verified` 상태
+- 원본 prefill decision/evidence/translation 해시
+- audit report file/payload 해시
+- audit row verification guard와 row adjudication 해시
+- synchronized Base→PK pair key, pair proof와 pair guard 해시
+- Base donor 좌표, Base VM row guard와 Base coverage 해시
+
+번역문과 상용 원문은 복제하지 않는다. public promotion 보고서
+[`public/pk_msggame_runtime_vm_promotion.v1.json`](public/pk_msggame_runtime_vm_promotion.v1.json)도
+개수와 해시만 기록한다.
+
+승격기는 정확히 4,717개가 모두 있어야 통과한다. blocked, novel, layout,
+donor, closure, sibling taint 행은 한 건도 포함할 수 없다. 이 overlay는
+shared engine이나 중앙 progress를 직접 변경하지 않으며, B011 이후 별도
+통합 단계에서 원본 prefill과 결합해야 한다.

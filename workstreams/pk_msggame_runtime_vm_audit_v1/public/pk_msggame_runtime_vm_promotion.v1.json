@@ -1,0 +1,58 @@
+{
+  "distribution_policy": {
+    "private_overlay_contains_commercial_source_text": false,
+    "private_overlay_contains_translated_dialogue_text": false,
+    "private_overlay_stays_below_tmp": true,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "evidence": {
+    "base_coverage_report_sha256": "76F32FE95B2693D496A0FD4C73E5890B6D451C59539283E658A093DBF5546E5D",
+    "base_donor_vm_guards_rechecked": true,
+    "coverage_pair_guard_universe_sha256": "0DDBBE30CBD984F35548E0E60DBD2EDFDC15CD298A16FB87A062785BE76F92B2",
+    "coverage_report": "workstreams/pk_msggame_runtime_vm_audit_v1/public/pk_msggame_runtime_vm_coverage.v1.json",
+    "coverage_report_file_sha256": "97B96240F7EEE1A20567398623C477B02AF27C851E2B2F86C4A12FF4FEBDC2BC",
+    "coverage_report_payload_sha256": "91924E0909594F477A56CD9C48AE8B200C730E6CE28E1395DAF6EBD961065FD6",
+    "coverage_row_guard_universe_sha256": "F401DFAA9736681EC93688727AA20A210718A63072310FDB090548B1B487B7B3",
+    "original_prefill_row_and_evidence_hashes_rechecked": true,
+    "translation_utf16le_hashes_rechecked": true
+  },
+  "exclusion_policy": {
+    "blocked_rows_included": 0,
+    "closure_taint_rows_included": 0,
+    "donor_taint_rows_included": 0,
+    "full_completeness_required": 4717,
+    "layout_taint_rows_included": 0,
+    "novel_taint_rows_included": 0,
+    "sibling_taint_rows_included": 0
+  },
+  "input": {
+    "blocked_rows_excluded": 5053,
+    "promotion_eligible_rows": 4717,
+    "runtime_pending_prefill_rows": 9770
+  },
+  "integration_boundary": {
+    "central_progress_modified": false,
+    "overlay_is_not_a_full_dialogue_decision_file": true,
+    "prefill_builder_modified": false,
+    "separate_integration_required": true,
+    "shared_engine_modified": false
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "eligible_coordinate_universe_sha256": "52222FCBCAA705A35BFAE1FDF52E8EB6B1A0D282EF650DBCC473EE8183D89CF7",
+    "private_overlay_rows": 4717,
+    "private_overlay_sha256": "C311BCB8578CCA58D333CEE2A0E738A995FF055C953016FFF06E42420B047C88",
+    "translation_body_copied": false
+  },
+  "schema": "nobu16.kr.pk-msggame-runtime-vm-promotion.v1",
+  "status": "PASS",
+  "steam_read_guard": {
+    "after_sha256": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766",
+    "before_sha256": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766",
+    "path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\MSG_PK\\JP\\msggame.bin",
+    "unchanged": true
+  },
+  "steam_write_performed": false
+}
