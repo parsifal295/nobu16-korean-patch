@@ -63,6 +63,10 @@ EXPECTED_SOURCE_DONOR_MASKED_DYNAMIC_MISMATCH = 83
 EXPECTED_ANY_BASE_EXACT_DYNAMIC_MATCH = 7_039
 EXPECTED_ANY_BASE_MASKED_DYNAMIC_MATCH = 9_743
 EXPECTED_ANY_BASE_MASKED_DYNAMIC_NOVEL = 25
+PREFILL_PREDECESSOR_MAX_SEGMENT = 1_050
+PK_SEGMENT_FILENAME_RE = re.compile(
+    r"pk_msggame_B\d+_S(?P<segment>\d+)\.private\.v1\.jsonl"
+)
 CONTROL_TARGET_RE = re.compile(b"\x01([\x43\x4A]).{4}", re.DOTALL)
 
 
@@ -183,6 +187,12 @@ def existing_pk_coordinates() -> set[str]:
     paths = sorted(DECISIONS_ROOT.glob("pk_msggame_*.private.v1.jsonl"))
     for path in paths:
         if path.resolve(strict=False) == OUTPUT.resolve(strict=False):
+            continue
+        match = PK_SEGMENT_FILENAME_RE.fullmatch(path.name)
+        if (
+            match is None
+            or int(match.group("segment")) > PREFILL_PREDECESSOR_MAX_SEGMENT
+        ):
             continue
         for row in read_jsonl(path):
             require(row.get("resource") == "pk_msggame", f"{path} mixes resources")
