@@ -1,0 +1,250 @@
+{
+  "schema": "nobu16.kr.pk-msggame-runtime-vm-ghidra-contract.v1",
+  "program": {
+    "ghidra_program_path": "/NOBU16PK.exe.unpacked.exe",
+    "image_base": "0x140000000",
+    "steam_version": "1.1.7",
+    "unpacked_exe_sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+  },
+  "functions": {
+    "message_object_vtable_binder": "0x1409F6D10",
+    "locale_path_builder": "0x1409F7A70",
+    "message_object_initializer_and_loader": "0x1409F8710",
+    "evaluate_message_id": "0x1409F7490",
+    "select_record": "0x140A00FC0",
+    "execute_record_vm": "0x1409F7610",
+    "dispatch_opcode": "0x140A013B0",
+    "read_vm_block_token": "0x1409FD530",
+    "skip_vm_block": "0x1409FC160",
+    "read_u32_le": "0x1409FD270",
+    "read_byte": "0x1409FD690",
+    "resolve_expression": "0x1409FF7C0",
+    "resolve_selector": "0x1409FF8F0",
+    "classify_selector_group": "0x1409FFBA0",
+    "handle_return_or_block": "0x140A01090",
+    "pop_record_return": "0x1409FD4D0"
+  },
+  "pk_message_route_proof": {
+    "basename_table": {
+      "memory_range_start": "0x14154C4D0",
+      "basename_string": "msggame",
+      "basename_string_address": "0x14154C500",
+      "basename_pointer_address": "0x141C01CE0",
+      "following_named_entry": {
+        "string": "msgev",
+        "address": "0x14154C530"
+      }
+    },
+    "locale_directories": {
+      "JP": {
+        "string": "MSG_PK/JP",
+        "address": "0x14154C908"
+      },
+      "TC": {
+        "string": "MSG_PK/TC",
+        "address": "0x14154C918"
+      },
+      "SC": {
+        "string": "MSG_PK/SC",
+        "address": "0x14154C928"
+      },
+      "EN": {
+        "string": "MSG_PK/EN",
+        "address": "0x14154C938"
+      }
+    },
+    "path_construction": {
+      "builder": "0x1409F7A70",
+      "loader": "0x1409F8710",
+      "separator_string_address": "0x1413D094C",
+      "extension_string": ".bin",
+      "extension_string_address": "0x14154C944",
+      "jp_result": "MSG_PK/JP/msggame.bin"
+    },
+    "loaded_object_binding": {
+      "vtable_address": "0x14154C538",
+      "vtable_slots": {
+        "+0x00": "0x1409F6D10",
+        "+0x08": "0x1409F8710",
+        "+0x10": "0x1409FD210",
+        "+0x18": "0x1409F7490",
+        "+0x20": "0x1409F75D0"
+      },
+      "loaded_data_pointer_field": "object+0x30",
+      "loaded_data_size_field": "object+0x38"
+    },
+    "execution_chain": [
+      "0x1409F8710 loads MSG_PK/<locale>/msggame.bin into object+0x30/+0x38",
+      "vtable +0x18 dispatches to 0x1409F7490",
+      "0x1409F7490 calls 0x140A00FC0 to select a record",
+      "0x1409F7490 calls 0x1409F7610 to execute the selected record",
+      "0x1409F7610 dispatches control opcodes through 0x140A013B0"
+    ],
+    "conclusion": "The audited object and evaluator execute MSG_PK/JP/msggame.bin; this is a PK route, not merely supplemental evidence from the PK name table."
+  },
+  "select_record_contract": {
+    "function": "0x140A00FC0",
+    "maximum_operand": 1999999,
+    "packed_coordinate_formula": "block_id = operand // 10000; record_id = operand % 10000",
+    "operand_below_10000_selects_block_zero": true,
+    "target_must_exist_in_selected_archive": true
+  },
+  "literal_contract": {
+    "start_marker_hex": "070701",
+    "end_marker_hex": "070702",
+    "encoding": "UTF-16LE",
+    "append_semantics": "code_units_copied_verbatim",
+    "boundary_is_semantically_ordered": true
+  },
+  "opcode_contract": {
+    "0143": {
+      "operand": "u32_le_packed_record_coordinate",
+      "semantics": "push_return_address_then_call_record"
+    },
+    "014A": {
+      "operand": "u32_le_packed_record_coordinate",
+      "semantics": "jump_to_record"
+    },
+    "0153": {
+      "prefix": "percent_sign_followed_by_ascii_decimal_count",
+      "continuation": "one VM expression followed by the selected alternatives"
+    },
+    "02": {
+      "semantics": "resolve_dynamic_value_then_copy_utf16_code_units_to_output",
+      "selector_atom_contract": {
+        "encoding": "02 + selector_byte + optional_property_byte",
+        "lookahead_below_0x20": "rewind_one_byte; lookahead is the next VM opcode",
+        "lookahead_at_or_above_0x20": "consume_as_property_byte"
+      },
+      "expression_continuation_contract": {
+        "arithmetic": "03 + one ASCII operator from %*+-/ + another atom",
+        "comparison": "04 + comparison operator",
+        "logical": "06 + logical operator"
+      },
+      "automatic_space_inserted": false,
+      "automatic_punctuation_inserted": false
+    },
+    "05_block_tokens": {
+      "decoder": "0x1409FD530",
+      "recognized_triplets_hex": [
+        "050504",
+        "050505",
+        "050506",
+        "050507",
+        "050508",
+        "050509"
+      ],
+      "audit_rule": "decode each triplet at a VM boundary; never discover 0143 or 014A with an unparsed regex scan"
+    },
+    "1B": {
+      "semantics": "explicit_control_tag_dispatch"
+    }
+  },
+  "selector_groups": [
+    {
+      "group": 0,
+      "selector_min_hex": "32",
+      "selector_max_hex": "3B"
+    },
+    {
+      "group": 1,
+      "selector_min_hex": "3C",
+      "selector_max_hex": "45"
+    },
+    {
+      "group": 2,
+      "selector_min_hex": "46",
+      "selector_max_hex": "4F"
+    },
+    {
+      "group": 3,
+      "selector_min_hex": "64",
+      "selector_max_hex": "6D"
+    },
+    {
+      "group": 4,
+      "selector_min_hex": "50",
+      "selector_max_hex": "59"
+    },
+    {
+      "group": 5,
+      "selector_min_hex": "5A",
+      "selector_max_hex": "63"
+    },
+    {
+      "group": 6,
+      "selector_min_hex": "6E",
+      "selector_max_hex": "77"
+    },
+    {
+      "group": 7,
+      "selector_min_hex": "78",
+      "selector_max_hex": "81"
+    },
+    {
+      "group": 8,
+      "selector_min_hex": "82",
+      "selector_max_hex": "8B"
+    },
+    {
+      "group": 9,
+      "selector_min_hex": "8C",
+      "selector_max_hex": "95"
+    },
+    {
+      "group": 10,
+      "selector_min_hex": "96",
+      "selector_max_hex": "9F"
+    },
+    {
+      "group": 11,
+      "selector_min_hex": "AA",
+      "selector_max_hex": "B3"
+    },
+    {
+      "group": 12,
+      "selector_min_hex": "B4",
+      "selector_max_hex": "BD"
+    },
+    {
+      "group": 13,
+      "selector_min_hex": "BE",
+      "selector_max_hex": "C7"
+    },
+    {
+      "group": 14,
+      "selector_min_hex": "C8",
+      "selector_max_hex": "C8"
+    }
+  ],
+  "reuse_adjudication_contract": {
+    "root_pair": "Base donor record and PK target record are paired explicitly by evidence, never by numeric delta",
+    "closure_pairing": "aligned 0143/014A occurrences pair their decoded actual targets recursively",
+    "required_equivalence": [
+      "component kind and order",
+      "literal slot count and boundary order",
+      "selector group, slot, optional property, and expression operators",
+      "0143 versus 014A edge kind and occurrence order",
+      "actual operand range and target existence",
+      "Base source and candidate Korean equality for sibling and closure literals"
+    ],
+    "taint_propagation": [
+      "novel root structure taints the root row",
+      "a divergent sibling literal taints every audited row in the paired root",
+      "a divergent or conflicting descendant pair taints every ancestor root"
+    ],
+    "forbidden_shortcuts": [
+      "raw regex operand masking",
+      "constant block or record delta",
+      "template equality without actual target closure",
+      "promotion of a novel or tainted row"
+    ]
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_translated_dialogue_text": false,
+    "contains_complete_game_resource": false,
+    "contains_decompiled_function_body": false,
+    "contains_only_addresses_and_behavioral_conclusions": true
+  }
+}
