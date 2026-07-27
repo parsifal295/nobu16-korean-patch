@@ -599,7 +599,8 @@ def base_and_assembly_evidence(
                     coordinate not in companion_set
                     or companion is None
                     or companion.get("semantic_review") != "approved"
-                    or companion.get("runtime_review") != "pending"
+                    or companion.get("runtime_review")
+                    not in {"pending", "not_required"}
                     or companion["base_exact_reuse_prefill"][
                         "runtime_promotion_authorized"
                     ]
@@ -624,7 +625,8 @@ def base_and_assembly_evidence(
                 coordinate not in companion_set
                 or companion is None
                 or companion.get("semantic_review") != "approved"
-                or companion.get("runtime_review") != "pending"
+                or companion.get("runtime_review")
+                not in {"pending", "not_required"}
                 or companion["base_exact_reuse_prefill"][
                     "runtime_promotion_authorized"
                 ]
