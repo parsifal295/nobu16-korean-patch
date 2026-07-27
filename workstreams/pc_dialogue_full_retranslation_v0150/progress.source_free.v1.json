@@ -46,12 +46,35 @@
   "runtime_vm_integration": {
     "path": "workstreams/pc_dialogue_full_retranslation_v0150/runtime_vm_integration.source_free.v1.json",
     "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
-    "sha256": "1F38F0B45DA6D7FBFDCC47F2F2C1E5353F89DBA862A86799D1F20C6C69B09F5D",
-    "private_integrated_decision_sha256": "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2",
-    "promoted_total": 27689,
-    "runtime_review_pending_after": 8645,
+    "sha256": "666AF905447C274202CF5D528922B63C53C2766602D21EEEE735BCC08E7F82F0",
+    "private_integrated_decision_sha256": "F6BAA43C22404365E49D40C6B306C850C3B123681CD0A42D5A63EDB73D8018FB",
+    "promoted_total": 27693,
+    "runtime_review_pending_after": 8641,
+    "bound_terminal_family_layer_included": true,
+    "bound_terminal_family": {
+      "actual_eligible_coordinate_sha256": "4DF163871B35C27A3A241492B9131F496C5A0EDC8EC4AA6055F17C358EA507F9",
+      "actual_eligible_root_sha256": "47E9F29977B5F25A8717A1FDF1A51D22CB0F61A7EDD692CBEE71A9ACD7A693EC",
+      "actual_rejected_coordinate_sha256": "ECE23521BA93F5822F07CC3A8C969E30924947DDE46F7E72032F9F5A335B874C",
+      "actual_rejected_root_sha256": "C11B5D1208D21973E3961980F29E540C3584E2C43C2F2CEA0336FA307B026565",
+      "audit_report_payload_sha256": "4955A1F11075E895BBCC9A915AF62787121B601DDDBF026D65E2B315F9FBBCA6",
+      "audit_report_sha256": "132B857E1108BA42F1FBB9F410B1096576E52598D121111DFD4B67585F22CD3A",
+      "override_coordinate_sha256": "FEBEB0D830C5820B55B4E9C8CF6B99D8734FA09A5CF3BEF2504D968E45C5AF15",
+      "override_manifest_sha256": "8D8FA45A379098A0E6FDF311DB5879E632B3C5AC9DD51DF03EA1A911B27031A0",
+      "pending_override_count": 6,
+      "pk_candidate_packed_sha256": "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628",
+      "pk_predecessor_candidate_packed_sha256": "18F9E09F7D0FE71317733208B25B22EE47A45B5D927C2B583F6AA44B8019D41E",
+      "private_evidence_sha256": "91C1E97FCC6FB65DFB769C8CD58B262CABC1A1827E58F0CAC6D34F31830F6DE7",
+      "private_update_sha256": "74235120686C819652A4ADE6F0892C7F46D5155D6DB3837C0B9364858185EC1C",
+      "promotion_count": 4,
+      "promotion_report_sha256": "50A60FD3B2F7E16DAFED4B1B67F5C925E6E09A57FEFEBD3125AD56433735A37D",
+      "steam_write_performed": false,
+      "translation_override_count": 14,
+      "updated_row_count": 695,
+      "verification_renewal_count": 685
+    },
     "steam_write_performed": false,
-    "dynamic_honorific_spacing_override_count": 4
+    "dynamic_honorific_spacing_override_count": 4,
+    "bound_terminal_family_override_count": 14
   },
   "segments": [
     {
@@ -22767,12 +22790,12 @@
       "decision_count": 67,
       "semantic_review_approved": 67,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 54,
-      "runtime_review_pending": 13,
+      "runtime_review_verified": 56,
+      "runtime_review_pending": 11,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 54,
-        "runtime_fragment_pending": 13
+        "retranslated": 56,
+        "runtime_fragment_pending": 11
       },
       "queue_batch_ids": [
         "pk_msggame-B004"
@@ -22987,12 +23010,12 @@
       "decision_count": 67,
       "semantic_review_approved": 67,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 0,
-      "runtime_review_pending": 67,
+      "runtime_review_verified": 1,
+      "runtime_review_pending": 66,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 0,
-        "runtime_fragment_pending": 67
+        "retranslated": 1,
+        "runtime_fragment_pending": 66
       },
       "queue_batch_ids": [
         "pk_msggame-B007"
@@ -27300,12 +27323,12 @@
       "decision_count": 19,
       "semantic_review_approved": 19,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 2,
-      "runtime_review_pending": 17,
+      "runtime_review_verified": 3,
+      "runtime_review_pending": 16,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 2,
-        "runtime_fragment_pending": 17
+        "retranslated": 3,
+        "runtime_fragment_pending": 16
       },
       "queue_batch_ids": [
         "pk_msggame-B079"
@@ -33646,12 +33669,12 @@
       "last_record_coordinate": "0:2067",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 26,
-      "fully_candidate_eligible": 174,
+      "runtime_review_pending": 24,
+      "fully_candidate_eligible": 176,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 174,
-        "runtime_fragment_pending": 26
+        "retranslated": 176,
+        "runtime_fragment_pending": 24
       },
       "semantic_complete": true
     },
@@ -33694,12 +33717,12 @@
       "last_record_coordinate": "0:2676",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 180,
-      "fully_candidate_eligible": 20,
+      "runtime_review_pending": 179,
+      "fully_candidate_eligible": 21,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 20,
-        "runtime_fragment_pending": 180
+        "retranslated": 21,
+        "runtime_fragment_pending": 179
       },
       "semantic_complete": true
     },
@@ -34846,12 +34869,12 @@
       "last_record_coordinate": "9:486",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 95,
-      "fully_candidate_eligible": 104,
+      "runtime_review_pending": 94,
+      "fully_candidate_eligible": 105,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 104,
-        "runtime_fragment_pending": 95
+        "retranslated": 105,
+        "runtime_fragment_pending": 94
       },
       "semantic_complete": true
     },
@@ -35930,12 +35953,12 @@
   ],
   "totals": {
     "semantic_review_approved": 52803,
-    "runtime_review_pending": 8645,
-    "fully_candidate_eligible": 44158,
+    "runtime_review_pending": 8641,
+    "fully_candidate_eligible": 44162,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
-      "retranslated": 43813,
-      "runtime_fragment_pending": 8645
+      "retranslated": 43817,
+      "runtime_fragment_pending": 8641
     },
     "semantic_completion": true,
     "candidate_build_complete": false

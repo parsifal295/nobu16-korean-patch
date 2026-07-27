@@ -156,6 +156,19 @@ PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_REPORT_PATH = (
     / "public"
     / "pk_msggame_dynamic_honorific_spacing_closure_promotion.v1.json"
 )
+PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_EVIDENCE_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_bound_terminal_family_exact_closure_evidence.private.v1.jsonl"
+)
+PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_REPORT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_bound_terminal_family_exact_closure_promotion.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -202,6 +215,9 @@ BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
 PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
     "nobu16.kr.pk-msggame-dynamic-honorific-spacing-closure-row.v1"
 )
+PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
+    "nobu16.kr.pk-bound-terminal-family-exact-closure-evidence-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
@@ -221,6 +237,9 @@ BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD = (
 PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_dynamic_honorific_spacing_closure_analysis"
 )
+PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_pk_bound_terminal_family_exact_closure_analysis"
+)
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
@@ -230,6 +249,7 @@ PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
         PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD,
         BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
         PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES = frozenset(
@@ -826,6 +846,17 @@ def load_pk_runtime_vm_overlays() -> dict[
             ),
             "pk_msggame",
         ),
+        (
+            PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_EVIDENCE_PATH,
+            PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_REPORT_PATH,
+            PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA,
+            PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD,
+            (
+                "nobu16.kr.pk-bound-terminal-family-exact-closure-"
+                "promotion.v1"
+            ),
+            "pk_msggame",
+        ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
     for (
@@ -852,6 +883,15 @@ def load_pk_runtime_vm_overlays() -> dict[
             raise RetranslationError(
                 f"tracked PK runtime VM overlay is invalid: {overlay_path}"
             ) from exc
+        terminal_family = (
+            method
+            == PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+        )
+        private_hash_field = (
+            "private_evidence_sha256"
+            if terminal_family
+            else "private_overlay_sha256"
+        )
         if (
             not isinstance(promotion, dict)
             or promotion.get("schema") != promotion_schema
@@ -865,7 +905,14 @@ def load_pk_runtime_vm_overlays() -> dict[
                     or promotion.get("method") != method
                 )
             )
-            or promotion.get("result", {}).get("private_overlay_sha256")
+            or (
+                terminal_family
+                and (
+                    promotion.get("resource") != "MSG_PK/JP/msggame.bin"
+                    or promotion.get("method") != method
+                )
+            )
+            or promotion.get("result", {}).get(private_hash_field)
             != sha256_bytes(raw_overlay)
         ):
             raise RetranslationError(
@@ -905,11 +952,101 @@ def load_pk_runtime_vm_overlays() -> dict[
             base_row_valid = (
                 row.get("schema") == row_schema
                 and row.get("resource") == expected_resource
-                and row.get("status") == "verified"
+                and (
+                    row.get("status") in {"verified", "pending"}
+                    if terminal_family
+                    else row.get("status") == "verified"
+                )
                 and row.get("method") == method
                 and row.get("per_row_game_playback_required") is False
             )
-            if dynamic_honorific:
+            if terminal_family:
+                action = row.get("action")
+                delta_binding = row.get("terminal_family_delta_binding")
+                predecessor_binding = row.get(
+                    "predecessor_integrated_binding"
+                )
+                promoted_binding = row.get("actual_promotion_binding")
+                dynamic_transition_valid = (
+                    action
+                    in {
+                        "translation_override",
+                        "verification_renewal",
+                        "runtime_promotion",
+                        "translation_override_and_runtime_promotion",
+                        "translation_override_pending",
+                    }
+                    and isinstance(delta_binding, dict)
+                    and isinstance(delta_binding.get("root"), list)
+                    and isinstance(
+                        delta_binding.get("reachable_repaired_targets"),
+                        list,
+                    )
+                    and all(
+                        isinstance(delta_binding.get(field), str)
+                        for field in (
+                            "root_delta_proof_sha256",
+                            "target_delta_manifest_sha256",
+                            "pk_candidate_packed_sha256",
+                            "ghidra_vm_contract_file_sha256",
+                            "ghidra_layout_contract_file_sha256",
+                            "audit_report_file_sha256",
+                            "audit_report_payload_sha256",
+                        )
+                    )
+                    and isinstance(predecessor_binding, dict)
+                    and all(
+                        isinstance(predecessor_binding.get(field), str)
+                        for field in (
+                            "row_sha256",
+                            "checkpoint_private_sha256",
+                            "checkpoint_report_file_sha256",
+                            "checkpoint_builder_sha256",
+                        )
+                    )
+                    and (
+                        (
+                            action
+                            in {
+                                "runtime_promotion",
+                                (
+                                    "translation_override_and_runtime_"
+                                    "promotion"
+                                ),
+                            }
+                            and row.get("status") == "verified"
+                            and isinstance(promoted_binding, dict)
+                            and promoted_binding.get(
+                                "manual_full_assembly_verified"
+                            )
+                            is True
+                            and promoted_binding.get(
+                                "hard_grammar_risk_absent"
+                            )
+                            is True
+                            and promoted_binding.get(
+                                "relative_full_closure_line_envelope_"
+                                "nonexpanding"
+                            )
+                            is True
+                        )
+                        or (
+                            action == "translation_override_pending"
+                            and row.get("status") == "pending"
+                            and promoted_binding is None
+                        )
+                        or (
+                            action
+                            in {
+                                "translation_override",
+                                "verification_renewal",
+                            }
+                            and row.get("status") == "verified"
+                            and promoted_binding is None
+                        )
+                    )
+                )
+            elif dynamic_honorific:
                 action = row.get("action")
                 scope_transition = row.get("scope_transition")
                 layout_transition = row.get("layout_transition")
@@ -1011,7 +1148,13 @@ def load_pk_runtime_vm_overlays() -> dict[
             source_count += 1
         if (
             not source_count
-            or promotion.get("result", {}).get("private_overlay_rows")
+            or promotion.get("result", {}).get(
+                (
+                    "private_evidence_rows"
+                    if terminal_family
+                    else "private_overlay_rows"
+                )
+            )
             != source_count
         ):
             raise RetranslationError(
@@ -1051,7 +1194,74 @@ def validate_pk_runtime_vm_verification(
             f"{label}.runtime_vm_verification translation hash does not match"
         )
     method = evidence.get("method")
-    if method in DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHODS:
+    if method == PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD:
+        action = evidence.get("action")
+        delta_binding = evidence.get("terminal_family_delta_binding")
+        predecessor_binding = evidence.get("predecessor_integrated_binding")
+        promoted_binding = evidence.get("actual_promotion_binding")
+        if (
+            resource != "pk_msggame"
+            or evidence.get("resource") != resource
+            or evidence.get("status") != "verified"
+            or not isinstance(delta_binding, dict)
+            or not isinstance(delta_binding.get("root"), list)
+            or not isinstance(
+                delta_binding.get("reachable_repaired_targets"),
+                list,
+            )
+            or not isinstance(predecessor_binding, dict)
+            or any(
+                not isinstance(delta_binding.get(field), str)
+                for field in (
+                    "root_delta_proof_sha256",
+                    "target_delta_manifest_sha256",
+                    "pk_candidate_packed_sha256",
+                    "ghidra_vm_contract_file_sha256",
+                    "ghidra_layout_contract_file_sha256",
+                    "audit_report_file_sha256",
+                    "audit_report_payload_sha256",
+                )
+            )
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification terminal binding is incomplete"
+            )
+        if action in {
+            "runtime_promotion",
+            "translation_override_and_runtime_promotion",
+        }:
+            if (
+                scope_classification != "retranslated"
+                or layout_review != "runtime_verified"
+                or not isinstance(promoted_binding, dict)
+                or promoted_binding.get("manual_full_assembly_verified")
+                is not True
+                or promoted_binding.get("hard_grammar_risk_absent")
+                is not True
+                or promoted_binding.get(
+                    "relative_full_closure_line_envelope_nonexpanding"
+                )
+                is not True
+            ):
+                raise RetranslationError(
+                    f"{label}.runtime_vm_verification terminal promotion "
+                    "proof is incomplete"
+                )
+        elif action in {"translation_override", "verification_renewal"}:
+            if (
+                promoted_binding is not None
+                or evidence.get("preexisting_verified_evidence_renewed")
+                is not True
+            ):
+                raise RetranslationError(
+                    f"{label}.runtime_vm_verification terminal renewal "
+                    "binding drifted"
+                )
+        else:
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification has an invalid terminal action"
+            )
+    elif method in DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHODS:
         expected_method = (
             BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
             if resource == "base_msggame"
@@ -1425,6 +1635,64 @@ def validate_decisions(
             if isinstance(runtime_vm_evidence, dict)
             else None
         )
+        terminal_pending_evidence = row.get(
+            "terminal_family_runtime_evidence"
+        )
+        if terminal_pending_evidence is not None:
+            if (
+                resource != "pk_msggame"
+                or runtime_review != "pending"
+                or runtime_vm_evidence is not None
+                or not isinstance(terminal_pending_evidence, dict)
+                or terminal_pending_evidence.get("schema")
+                != PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA
+                or terminal_pending_evidence.get("method")
+                != PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                or terminal_pending_evidence.get("status") != "pending"
+                or terminal_pending_evidence.get("action")
+                != "translation_override_pending"
+                or terminal_pending_evidence.get("coordinate")
+                != f"{block_id}:{record_id}:{literal_id}"
+                or terminal_pending_evidence.get(
+                    "translation_utf16le_sha256"
+                )
+                != sha256_text(str(row.get("translation")))
+            ):
+                raise RetranslationError(
+                    f"{label}.terminal_family_runtime_evidence is invalid"
+                )
+            if pk_runtime_vm_overlays is None:
+                pk_runtime_vm_overlays = load_pk_runtime_vm_overlays()
+            expected_terminal_pending = pk_runtime_vm_overlays.get(
+                (
+                    PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA,
+                    f"{block_id}:{record_id}:{literal_id}",
+                )
+            )
+            if (
+                expected_terminal_pending is None
+                or dict(terminal_pending_evidence)
+                != expected_terminal_pending
+            ):
+                raise RetranslationError(
+                    f"{label}.terminal_family_runtime_evidence differs "
+                    "from the tracked overlay"
+                )
+        terminal_action = row.get("terminal_family_update_action")
+        if terminal_action is not None:
+            bound_evidence = (
+                runtime_vm_evidence
+                if runtime_vm_method
+                == PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                else terminal_pending_evidence
+            )
+            if (
+                not isinstance(bound_evidence, dict)
+                or terminal_action != bound_evidence.get("action")
+            ):
+                raise RetranslationError(
+                    f"{label}.terminal_family_update_action is unbound"
+                )
         if (
             "runtime_boundary_leading_space_inserted" in row
             and row.get("runtime_boundary_leading_space_inserted") is not True

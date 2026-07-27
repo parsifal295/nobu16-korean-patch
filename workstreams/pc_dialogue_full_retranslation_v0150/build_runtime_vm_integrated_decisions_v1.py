@@ -131,6 +131,12 @@ DYNAMIC_HONORIFIC_SPACING_BUILDER_PATH = (
     / "pk_msggame_runtime_vm_audit_v1"
     / "build_dynamic_honorific_spacing_closure_v1.py"
 )
+BOUND_TERMINAL_FAMILY_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_bound_terminal_family_exact_closure_v1.py"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -165,12 +171,18 @@ EXPECTED_PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTIONS = 50
 EXPECTED_PK_INTEGRATED_PROMOTIONS = 11_981
 EXPECTED_DYNAMIC_HONORIFIC_SPACING_PROMOTIONS = 57
 EXPECTED_PK_FINAL_PROMOTIONS = 12_038
+EXPECTED_BOUND_TERMINAL_FAMILY_PROMOTIONS = 4
+EXPECTED_PK_BOUND_TERMINAL_FINAL_PROMOTIONS = 12_042
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
 EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
 EXPECTED_PENDING_AFTER = 8_702
 EXPECTED_FINAL_PENDING_AFTER = 8_645
+EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER = 8_641
 EXPECTED_POST_CROSS_PRIVATE_SHA256 = (
     "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC"
+)
+EXPECTED_POST_DYNAMIC_PRIVATE_SHA256 = (
+    "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2"
 )
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
@@ -220,6 +232,7 @@ REFLOW_OVERRIDE = load_module(
 PK_ONLY_EXACT_BLOCKED_OVERLAY: Any | None = None
 PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY: Any | None = None
 DYNAMIC_HONORIFIC_SPACING: Any | None = None
+BOUND_TERMINAL_FAMILY: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -256,6 +269,16 @@ def load_dynamic_honorific_spacing() -> Any:
             DYNAMIC_HONORIFIC_SPACING_BUILDER_PATH,
         )
     return DYNAMIC_HONORIFIC_SPACING
+
+
+def load_bound_terminal_family() -> Any:
+    global BOUND_TERMINAL_FAMILY
+    if BOUND_TERMINAL_FAMILY is None:
+        BOUND_TERMINAL_FAMILY = load_module(
+            "pc_dialogue_runtime_vm_bound_terminal_family",
+            BOUND_TERMINAL_FAMILY_BUILDER_PATH,
+        )
+    return BOUND_TERMINAL_FAMILY
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -985,6 +1008,127 @@ def validated_dynamic_honorific_spacing_updates() -> tuple[
     }
 
 
+def validated_bound_terminal_family_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    layer = load_bound_terminal_family()
+    (
+        decision_content,
+        evidence_content,
+        audit_content,
+        promotion_content,
+        audit,
+        bundle,
+    ) = layer.build_outputs()
+    layer.validate_outputs(
+        decision_content=decision_content,
+        evidence_content=evidence_content,
+        audit_content=audit_content,
+        promotion_content=promotion_content,
+        audit=audit,
+        bundle=bundle,
+    )
+    expected_files = (
+        (layer.DEFAULT_DECISION_OUTPUT, decision_content),
+        (layer.DEFAULT_EVIDENCE_OUTPUT, evidence_content),
+        (layer.DEFAULT_AUDIT_OUTPUT, audit_content),
+        (layer.DEFAULT_PROMOTION_OUTPUT, promotion_content),
+    )
+    for path, content in expected_files:
+        require(
+            path.is_file() and path.read_text(encoding="utf-8") == content,
+            f"bound terminal family artifact drifted: {path}",
+        )
+    updates: dict[tuple[str, str], dict[str, Any]] = {}
+    action_counts: Counter[str] = Counter()
+    for row in bundle["updated_rows"]:
+        key = (str(row["resource"]), str(row["coordinate"]))
+        require(
+            key not in updates and key[0] == "pk_msggame",
+            f"duplicate or non-PK terminal family update: {key}",
+        )
+        action = str(row.get("terminal_family_update_action"))
+        action_counts[action] += 1
+        evidence = (
+            row.get("runtime_vm_verification")
+            if row.get("runtime_review") == "verified"
+            else row.get("terminal_family_runtime_evidence")
+        )
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("action") == action
+            and evidence.get("method")
+            == layer.METHOD,
+            f"bound terminal family evidence is absent: {key}",
+        )
+        updates[key] = row
+    require(
+        action_counts
+        == {
+            "translation_override": 5,
+            "verification_renewal": 680,
+            "translation_override_and_runtime_promotion": 3,
+            "translation_override_pending": 6,
+            "runtime_promotion": 1,
+        }
+        and audit["scope"]["post_layer_pending_rows"]
+        == EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER
+        and audit["scope"]["affected_existing_verified_pk_rows"] == 685
+        and audit["scope"]["affected_existing_verified_base_rows"] == 0,
+        f"bound terminal family action counts drifted: {action_counts}",
+    )
+    return updates, {
+        "translation_override_count": len(layer.TRANSLATION_OVERRIDES),
+        "verification_renewal_count": 685,
+        "promotion_count": EXPECTED_BOUND_TERMINAL_FAMILY_PROMOTIONS,
+        "pending_override_count": action_counts[
+            "translation_override_pending"
+        ],
+        "updated_row_count": len(updates),
+        "private_update_sha256": sha256_bytes(
+            decision_content.encode("utf-8")
+        ),
+        "private_evidence_sha256": sha256_bytes(
+            evidence_content.encode("utf-8")
+        ),
+        "audit_report_sha256": sha256_bytes(
+            audit_content.encode("utf-8")
+        ),
+        "audit_report_payload_sha256": audit["guards"][
+            "report_payload_sha256"
+        ],
+        "promotion_report_sha256": sha256_bytes(
+            promotion_content.encode("utf-8")
+        ),
+        "pk_predecessor_candidate_packed_sha256": audit["guards"][
+            "pk_predecessor_candidate_packed_sha256"
+        ],
+        "pk_candidate_packed_sha256": audit["guards"][
+            "pk_candidate_packed_sha256"
+        ],
+        "override_coordinate_sha256": audit["guards"][
+            "override_coordinate_sha256"
+        ],
+        "override_manifest_sha256": audit["guards"][
+            "override_manifest_sha256"
+        ],
+        "actual_eligible_coordinate_sha256": audit["guards"][
+            "actual_eligible_coordinate_sha256"
+        ],
+        "actual_eligible_root_sha256": audit["guards"][
+            "actual_eligible_root_sha256"
+        ],
+        "actual_rejected_coordinate_sha256": audit["guards"][
+            "actual_rejected_coordinate_sha256"
+        ],
+        "actual_rejected_root_sha256": audit["guards"][
+            "actual_rejected_root_sha256"
+        ],
+        "steam_write_performed": False,
+    }
+
+
 def validate_combined_private(
     prepared: Any,
     content: str,
@@ -1016,6 +1160,7 @@ def build_outputs(
     include_pk_only: bool = True,
     include_cross_resource: bool | None = None,
     include_dynamic_honorific_spacing: bool = False,
+    include_bound_terminal_family: bool = False,
 ) -> tuple[str, str, dict[str, Any]]:
     if include_cross_resource is None:
         include_cross_resource = include_pk_only
@@ -1026,6 +1171,11 @@ def build_outputs(
     require(
         include_cross_resource or not include_dynamic_honorific_spacing,
         "dynamic honorific spacing requires cross-resource integration",
+    )
+    require(
+        include_dynamic_honorific_spacing
+        or not include_bound_terminal_family,
+        "bound terminal family requires dynamic honorific integration",
     )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
     source_rows, segment_paths, segment_universe_sha256 = load_source_decisions(
@@ -1295,11 +1445,151 @@ def build_outputs(
                 f"{dynamic_honorific_promotions}"
             ),
         )
+    post_dynamic_rows = sorted(merged.values(), key=coordinate_sort_key)
+    post_dynamic_private_sha256 = sha256_bytes(
+        canonical_jsonl(post_dynamic_rows).encode("utf-8")
+    )
+    bound_terminal_promotions = 0
+    bound_terminal_metadata: dict[str, Any] | None = None
+    if include_bound_terminal_family:
+        require(
+            post_dynamic_private_sha256
+            == EXPECTED_POST_DYNAMIC_PRIVATE_SHA256,
+            (
+                "bound terminal predecessor checkpoint drifted: "
+                f"{post_dynamic_private_sha256}"
+            ),
+        )
+        terminal_layer = load_bound_terminal_family()
+        terminal_updates, bound_terminal_metadata = (
+            validated_bound_terminal_family_updates()
+        )
+        for key, updated in terminal_updates.items():
+            predecessor = merged.get(key)
+            require(
+                predecessor is not None,
+                f"bound terminal predecessor row is absent: {key}",
+            )
+            action = str(updated.get("terminal_family_update_action"))
+            evidence = (
+                updated.get("runtime_vm_verification")
+                if updated.get("runtime_review") == "verified"
+                else updated.get("terminal_family_runtime_evidence")
+            )
+            require(
+                isinstance(evidence, dict)
+                and evidence.get("action") == action
+                and evidence.get("method") == terminal_layer.METHOD
+                and evidence.get("predecessor_integrated_binding", {}).get(
+                    "row_sha256"
+                )
+                == terminal_layer.canonical_sha256(predecessor),
+                f"bound terminal predecessor evidence drifted: {key}",
+            )
+            changed_fields = {
+                field
+                for field in set(predecessor) | set(updated)
+                if predecessor.get(field) != updated.get(field)
+            }
+            if action == "verification_renewal":
+                require(
+                    changed_fields
+                    == {
+                        "runtime_vm_verification",
+                        "terminal_family_update_action",
+                    }
+                    and predecessor.get("runtime_review") == "verified",
+                    f"bound terminal renewal transition drifted: {key}",
+                )
+            elif action == "translation_override":
+                require(
+                    changed_fields
+                    == {
+                        "translation",
+                        "runtime_vm_verification",
+                        "terminal_family_exact_override_evidence",
+                        "terminal_family_update_action",
+                    }
+                    and predecessor.get("runtime_review") == "verified"
+                    and key[1] in terminal_layer.TRANSLATION_OVERRIDES
+                    and updated.get("translation")
+                    == terminal_layer.TRANSLATION_OVERRIDES[key[1]],
+                    f"bound terminal verified override drifted: {key}",
+                )
+            elif action == "runtime_promotion":
+                require(
+                    changed_fields
+                    == RUNTIME_MUTABLE_FIELDS
+                    | {"terminal_family_update_action"}
+                    and predecessor.get("runtime_review") == "pending"
+                    and updated.get("runtime_review") == "verified"
+                    and updated.get("scope_classification")
+                    == "retranslated"
+                    and updated.get("layout_review")
+                    == "runtime_verified",
+                    f"bound terminal promotion transition drifted: {key}",
+                )
+                bound_terminal_promotions += 1
+            elif action == "translation_override_and_runtime_promotion":
+                required = RUNTIME_MUTABLE_FIELDS | {
+                    "translation",
+                    "terminal_family_exact_override_evidence",
+                    "terminal_family_update_action",
+                }
+                require(
+                    frozenset(changed_fields) in {
+                        frozenset(required),
+                        frozenset(required | {"runtime_assembly_evidence"}),
+                    }
+                    and predecessor.get("runtime_review") == "pending"
+                    and updated.get("runtime_review") == "verified"
+                    and updated.get("scope_classification")
+                    == "retranslated"
+                    and updated.get("layout_review")
+                    == "runtime_verified"
+                    and key[1] in terminal_layer.TRANSLATION_OVERRIDES
+                    and updated.get("translation")
+                    == terminal_layer.TRANSLATION_OVERRIDES[key[1]],
+                    f"bound terminal override promotion drifted: {key}",
+                )
+                bound_terminal_promotions += 1
+            elif action == "translation_override_pending":
+                require(
+                    changed_fields
+                    == {
+                        "translation",
+                        "runtime_assembly_evidence",
+                        "terminal_family_exact_override_evidence",
+                        "terminal_family_runtime_evidence",
+                        "terminal_family_update_action",
+                    }
+                    and predecessor.get("runtime_review")
+                    == updated.get("runtime_review")
+                    == "pending"
+                    and key[1] in terminal_layer.TRANSLATION_OVERRIDES
+                    and updated.get("translation")
+                    == terminal_layer.TRANSLATION_OVERRIDES[key[1]],
+                    f"bound terminal pending override drifted: {key}",
+                )
+            else:
+                raise IntegrationError(
+                    f"bound terminal action is invalid: {key}"
+                )
+            merged[key] = dict(updated)
+        require(
+            bound_terminal_promotions
+            == EXPECTED_BOUND_TERMINAL_FAMILY_PROMOTIONS,
+            (
+                "bound terminal promotion count drifted: "
+                f"{bound_terminal_promotions}"
+            ),
+        )
     pk_integrated_promotions = (
         predecessor_promotions
         + pk_only_promotions
         + cross_resource_promotions
         + dynamic_honorific_promotions
+        + bound_terminal_promotions
     )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
@@ -1324,9 +1614,19 @@ def build_outputs(
             dynamic_honorific_metadata
         )
         pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_bound_terminal_family:
+        assert bound_terminal_metadata is not None
+        pk_metadata["bound_terminal_family_layer_included"] = True
+        pk_metadata["rebuilt_post_dynamic_integrated_private_sha256"] = (
+            post_dynamic_private_sha256
+        )
+        pk_metadata["bound_terminal_family"] = bound_terminal_metadata
+        pk_metadata["promotion_count"] = pk_integrated_promotions
 
     expected_pk_promotions = (
-        EXPECTED_PK_FINAL_PROMOTIONS
+        EXPECTED_PK_BOUND_TERMINAL_FINAL_PROMOTIONS
+        if include_bound_terminal_family
+        else EXPECTED_PK_FINAL_PROMOTIONS
         if include_dynamic_honorific_spacing
         else EXPECTED_PK_INTEGRATED_PROMOTIONS
         if include_cross_resource
@@ -1352,7 +1652,9 @@ def build_outputs(
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
-        EXPECTED_FINAL_PENDING_AFTER
+        EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER
+        if include_bound_terminal_family
+        else EXPECTED_FINAL_PENDING_AFTER
         if include_dynamic_honorific_spacing
         else EXPECTED_PENDING_AFTER
         if include_cross_resource
@@ -1455,6 +1757,19 @@ def build_outputs(
                 "raw_g1n_full_closure_width_guard_rechecked": True,
             }
         )
+    if include_bound_terminal_family:
+        report["validation"].update(
+            {
+                "bound_terminal_family_layer_included": True,
+                "post_dynamic_predecessor_checkpoint_rebuilt_and_matched":
+                post_dynamic_private_sha256
+                == EXPECTED_POST_DYNAMIC_PRIVATE_SHA256,
+                "bound_terminal_semantic_overrides_rechecked": True,
+                "affected_verified_pk_runtime_evidence_renewed": True,
+                "actual_four_pending_promotions_rechecked": True,
+                "uncertain_pending_roots_remain_rejected": True,
+            }
+        )
     return private_content, canonical_json(report), report
 
 
@@ -1501,6 +1816,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         pk_pristine=args.pk_pristine,
         private_output=args.private_output,
         include_dynamic_honorific_spacing=True,
+        include_bound_terminal_family=True,
     )
     if args.write:
         ENGINE.atomic_write(args.private_output, private_content)

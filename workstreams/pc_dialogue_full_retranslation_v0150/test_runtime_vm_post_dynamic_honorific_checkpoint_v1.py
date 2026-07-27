@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import importlib.util
+import inspect
 import sys
 import unittest
 from pathlib import Path
@@ -35,6 +36,22 @@ BUILDER = load_module(
 
 
 class PostDynamicHonorificCheckpointTests(unittest.TestCase):
+    def test_later_terminal_layer_is_disabled_for_frozen_checkpoint(
+        self,
+    ) -> None:
+        parameter = inspect.signature(
+            BUILDER.INTEGRATION.build_outputs
+        ).parameters["include_bound_terminal_family"]
+        self.assertIs(parameter.default, False)
+        self.assertEqual(
+            BUILDER.INTEGRATION.EXPECTED_FINAL_PENDING_AFTER,
+            8_645,
+        )
+        self.assertEqual(
+            BUILDER.INTEGRATION.EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER,
+            8_641,
+        )
+
     def test_default_paths_preserve_private_public_boundary(self) -> None:
         args = argparse.Namespace(
             private_output=BUILDER.DEFAULT_PRIVATE_OUTPUT,

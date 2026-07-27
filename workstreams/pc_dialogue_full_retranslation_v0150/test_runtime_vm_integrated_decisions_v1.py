@@ -81,11 +81,11 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 27_689)
-        self.assertEqual(report["result"]["runtime_review_pending"], 8_645)
+        self.assertEqual(report["promotions"]["promoted_total"], 27_693)
+        self.assertEqual(report["result"]["runtime_review_pending"], 8_641)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            12_038,
+            12_042,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
@@ -162,13 +162,40 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            8_645,
+            8_641,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
                 "private_integrated_decision_sha256"
             ],
             report["result"]["private_integrated_decision_sha256"],
+        )
+        self.assertTrue(
+            report["promotions"]["pk_msggame"][
+                "bound_terminal_family_layer_included"
+            ]
+        )
+        terminal = report["promotions"]["pk_msggame"][
+            "bound_terminal_family"
+        ]
+        self.assertEqual(terminal["translation_override_count"], 14)
+        self.assertEqual(terminal["verification_renewal_count"], 685)
+        self.assertEqual(terminal["promotion_count"], 4)
+        self.assertEqual(terminal["pending_override_count"], 6)
+        self.assertEqual(
+            terminal["pk_candidate_packed_sha256"],
+            "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628",
+        )
+        self.assertTrue(
+            progress["runtime_vm_integration"][
+                "bound_terminal_family_layer_included"
+            ]
+        )
+        self.assertEqual(
+            progress["runtime_vm_integration"][
+                "bound_terminal_family_override_count"
+            ],
+            14,
         )
 
     def test_pk_verified_row_is_bound_to_exact_overlay(self) -> None:
@@ -339,6 +366,128 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         ] = False
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([bad_width])
+
+    def test_bound_terminal_exact_overrides_and_pending_rejections(
+        self,
+    ) -> None:
+        targets = [
+            row
+            for row in self.rows
+            if row.get("terminal_family_exact_override_evidence")
+            is not None
+        ]
+        self.assertEqual(len(targets), 14)
+        self.assertEqual(
+            {row["coordinate"] for row in targets},
+            {
+                *(f"0:{record_id}:0" for record_id in range(1916, 1923)),
+                *(f"0:{record_id}:0" for record_id in range(2546, 2553)),
+            },
+        )
+        pending = [
+            row
+            for row in targets
+            if row["terminal_family_update_action"]
+            == "translation_override_pending"
+        ]
+        self.assertEqual(
+            {row["coordinate"] for row in pending},
+            {
+                "0:2546:0",
+                "0:2547:0",
+                "0:2548:0",
+                "0:2549:0",
+                "0:2550:0",
+                "0:2552:0",
+            },
+        )
+        for source in targets:
+            exact = source["terminal_family_exact_override_evidence"]
+            self.assertTrue(exact["bound_ending_only"])
+            self.assertTrue(exact["lexical_predicate_removed"])
+            self.assertTrue(exact["caller_predicate_stem_required"])
+            self.validate_rows([source])
+        for source in pending:
+            self.assertEqual(source["runtime_review"], "pending")
+            self.assertNotIn("runtime_vm_verification", source)
+            self.assertEqual(
+                source["terminal_family_runtime_evidence"]["status"],
+                "pending",
+            )
+            tampered = copy.deepcopy(source)
+            tampered["terminal_family_runtime_evidence"]["status"] = (
+                "verified"
+            )
+            with self.assertRaises(ENGINE.RetranslationError):
+                self.validate_rows([tampered])
+
+    def test_bound_terminal_promotions_require_exact_closure_proof(
+        self,
+    ) -> None:
+        promotions = [
+            row
+            for row in self.rows
+            if row.get("runtime_vm_verification", {}).get("method")
+            == (
+                "reversed_vm_pk_bound_terminal_family_exact_"
+                "closure_analysis"
+            )
+            and row["runtime_vm_verification"]["action"]
+            in {
+                "runtime_promotion",
+                "translation_override_and_runtime_promotion",
+            }
+        ]
+        self.assertEqual(
+            {row["coordinate"] for row in promotions},
+            {"0:1917:0", "0:1922:0", "0:2551:0", "8:1241:0"},
+        )
+        for source in promotions:
+            self.validate_rows([source])
+            binding = source["runtime_vm_verification"][
+                "actual_promotion_binding"
+            ]
+            self.assertTrue(binding["manual_full_assembly_verified"])
+            self.assertTrue(binding["hard_grammar_risk_absent"])
+            self.assertTrue(
+                binding[
+                    "relative_full_closure_line_envelope_nonexpanding"
+                ]
+            )
+        tampered = copy.deepcopy(promotions[0])
+        tampered["runtime_vm_verification"][
+            "actual_promotion_binding"
+        ]["manual_full_assembly_verified"] = False
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([tampered])
+
+    def test_bound_terminal_verified_evidence_renewal_is_bound(self) -> None:
+        renewed = [
+            row
+            for row in self.rows
+            if row.get("runtime_vm_verification", {}).get("method")
+            == (
+                "reversed_vm_pk_bound_terminal_family_exact_"
+                "closure_analysis"
+            )
+            and row["runtime_vm_verification"]["action"]
+            in {"verification_renewal", "translation_override"}
+        ]
+        self.assertEqual(len(renewed), 685)
+        source = renewed[0]
+        self.assertTrue(
+            source["runtime_vm_verification"][
+                "preexisting_verified_evidence_renewed"
+            ]
+        )
+        self.validate_rows([source])
+
+        tampered = copy.deepcopy(source)
+        tampered["runtime_vm_verification"][
+            "translation_utf16le_sha256"
+        ] = "0" * 64
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([tampered])
 
 
 if __name__ == "__main__":

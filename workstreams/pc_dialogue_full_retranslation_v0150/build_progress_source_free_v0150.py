@@ -51,6 +51,15 @@ RUNTIME_VM_INTEGRATION_SCHEMA = (
     "nobu16.kr.pc-dialogue-runtime-vm-integration.v1"
 )
 RUNTIME_REVIEW_STATES = {"not_required", "verified", "pending"}
+BOUND_TERMINAL_OVERRIDE_COORDINATES = frozenset(
+    {
+        ("pk_msggame", f"0:{record_id}:0")
+        for record_id in (
+            *range(1916, 1923),
+            *range(2546, 2553),
+        )
+    }
+)
 
 
 def load_engine() -> Any:
@@ -159,6 +168,9 @@ def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
             "layout_review",
             "runtime_review",
             "runtime_vm_verification",
+            "terminal_family_runtime_evidence",
+            "terminal_family_update_action",
+            "terminal_family_exact_override_evidence",
         }
     }
 
@@ -227,6 +239,13 @@ def load_runtime_vm_integration(
         "private_integrated_decision_sha256": private_sha256,
         "promoted_total": report["promotions"]["promoted_total"],
         "runtime_review_pending_after": pending,
+        "bound_terminal_family_layer_included": report["promotions"][
+            "pk_msggame"
+        ].get("bound_terminal_family_layer_included")
+        is True,
+        "bound_terminal_family": report["promotions"]["pk_msggame"].get(
+            "bound_terminal_family"
+        ),
         "steam_write_performed": False,
     }
     return by_coordinate, metadata
@@ -421,6 +440,7 @@ def build_progress() -> dict[str, Any]:
     consumed_dynamic_honorific_overrides: set[
         tuple[str, str]
     ] = set()
+    consumed_bound_terminal_overrides: set[tuple[str, str]] = set()
 
     queue_rows = load_jsonl(QUEUE_PATH)
     batch_catalog_raw = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
@@ -563,6 +583,59 @@ def build_progress() -> dict[str, Any]:
                     "runtime_boundary_leading_space_inserted"
                 )
                 consumed_dynamic_honorific_overrides.add(key)
+            terminal_override_evidence = integrated_row.get(
+                "terminal_family_exact_override_evidence"
+            )
+            if terminal_override_evidence is not None:
+                terminal_runtime_evidence = (
+                    integrated_row.get("runtime_vm_verification")
+                    if integrated_row.get("runtime_review") == "verified"
+                    else integrated_row.get(
+                        "terminal_family_runtime_evidence"
+                    )
+                )
+                if (
+                    key not in BOUND_TERMINAL_OVERRIDE_COORDINATES
+                    or not isinstance(terminal_override_evidence, dict)
+                    or terminal_override_evidence.get("bound_ending_only")
+                    is not True
+                    or terminal_override_evidence.get(
+                        "lexical_predicate_removed"
+                    )
+                    is not True
+                    or terminal_override_evidence.get(
+                        "caller_predicate_stem_required"
+                    )
+                    is not True
+                    or not isinstance(terminal_runtime_evidence, dict)
+                    or terminal_runtime_evidence.get("method")
+                    != ENGINE.PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                    or terminal_runtime_evidence.get("action")
+                    != integrated_row.get("terminal_family_update_action")
+                    or terminal_runtime_evidence.get(
+                        "translation_utf16le_sha256"
+                    )
+                    != ENGINE.sha256_text(
+                        str(integrated_row.get("translation"))
+                    )
+                ):
+                    raise RuntimeError(
+                        f"bound terminal semantic override drifted: {key}"
+                    )
+                immutable_integrated_row = dict(
+                    immutable_integrated_row
+                )
+                immutable_integrated_row["translation"] = effective_row[
+                    "translation"
+                ]
+                if (
+                    integrated_row.get("runtime_assembly_evidence")
+                    != effective_row.get("runtime_assembly_evidence")
+                ):
+                    immutable_integrated_row[
+                        "runtime_assembly_evidence"
+                    ] = effective_row.get("runtime_assembly_evidence")
+                consumed_bound_terminal_overrides.add(key)
             if runtime_immutable_row(effective_row) != runtime_immutable_row(
                 immutable_integrated_row
             ):
@@ -611,6 +684,23 @@ def build_progress() -> dict[str, Any]:
                         "to": integrated_row.get("layout_review"),
                     }
                 )
+                terminal_predecessor_renewal = (
+                    evidence.get("method")
+                    == ENGINE.PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                    and evidence.get("action")
+                    in {"translation_override", "verification_renewal"}
+                    and evidence.get(
+                        "preexisting_verified_evidence_renewed"
+                    )
+                    is True
+                    and isinstance(predecessor_binding, dict)
+                    and isinstance(
+                        predecessor_binding.get(
+                            "previous_runtime_vm_verification_sha256"
+                        ),
+                        str,
+                    )
+                )
                 if (
                     evidence.get("action")
                     in {"translation_override", "verification_renewal"}
@@ -623,6 +713,17 @@ def build_progress() -> dict[str, Any]:
                 ):
                     raise RuntimeError(
                         "dynamic runtime evidence did not bind its verified "
+                        f"predecessor: {key}"
+                    )
+                if (
+                    evidence.get("action")
+                    in {"translation_override", "verification_renewal"}
+                    and evidence.get("method")
+                    == ENGINE.PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                    and not terminal_predecessor_renewal
+                ):
+                    raise RuntimeError(
+                        "terminal runtime evidence did not bind its verified "
                         f"predecessor: {key}"
                     )
                 if integrated_row.get("layout_review") != effective_row.get(
@@ -647,16 +748,41 @@ def build_progress() -> dict[str, Any]:
                                 "reversed_vm_dynamic_honorific_"
                                 "spacing_closure_analysis"
                             ),
+                            (
+                                "reversed_vm_pk_bound_terminal_family_"
+                                "exact_closure_analysis"
+                            ),
                         }
-                        and evidence.get("layout_transition")
-                        == {
-                            "from": effective_row.get("layout_review"),
-                            "to": "runtime_verified",
-                        }
+                        and (
+                            evidence.get("layout_transition")
+                            == {
+                                "from": effective_row.get("layout_review"),
+                                "to": "runtime_verified",
+                            }
+                            or (
+                                evidence.get("method")
+                                == (
+                                    "reversed_vm_pk_bound_terminal_"
+                                    "family_exact_closure_analysis"
+                                )
+                                and evidence.get(
+                                    "actual_promotion_binding",
+                                    {},
+                                ).get(
+                                    "manual_full_assembly_verified"
+                                )
+                                is True
+                            )
+                        )
                         or (
                             dynamic_predecessor_renewal
                             and integrated_row.get("layout_review")
                             == "runtime_verified"
+                        )
+                        or (
+                            terminal_predecessor_renewal
+                            and integrated_row.get("runtime_review")
+                            == "verified"
                         )
                     ):
                         raise RuntimeError(
@@ -768,6 +894,25 @@ def build_progress() -> dict[str, Any]:
     runtime_vm_integration_metadata[
         "dynamic_honorific_spacing_override_count"
     ] = len(consumed_dynamic_honorific_overrides)
+    if (
+        consumed_bound_terminal_overrides
+        != BOUND_TERMINAL_OVERRIDE_COORDINATES
+    ):
+        missing = sorted(
+            BOUND_TERMINAL_OVERRIDE_COORDINATES
+            - consumed_bound_terminal_overrides
+        )
+        extra = sorted(
+            consumed_bound_terminal_overrides
+            - BOUND_TERMINAL_OVERRIDE_COORDINATES
+        )
+        raise RuntimeError(
+            "bound terminal overrides were not exactly consumed: "
+            f"missing={missing} extra={extra}"
+        )
+    runtime_vm_integration_metadata[
+        "bound_terminal_family_override_count"
+    ] = len(consumed_bound_terminal_overrides)
 
     touched_batch_ids = sorted(batch_decisions, key=batch_key)
     queue_batch_coverage: list[dict[str, Any]] = []
