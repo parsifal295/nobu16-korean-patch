@@ -5,9 +5,9 @@ A target is eligible only when a previously verified Base or PK record has
 the same source literals, final Korean literals, and local non-operand VM
 structure; the donor/target call-and-jump closure is taint-free; and the
 target PK source/current/final closure independently passes control,
-grammar, and relative line-envelope gates.  Promotion is atomic per target
-root.  The private overlay contains hashes and predicates only and stays
-below ``tmp``.  Steam is read only.
+grammar, and raw-G1N full-closure current-relative width gates.  Promotion
+is atomic per target root.  The private overlay contains hashes and
+predicates only and stays below ``tmp``.  Steam is read only.
 """
 
 from __future__ import annotations
@@ -34,6 +34,9 @@ DIALOGUE_TMP = REPO / "tmp" / "pc_dialogue_full_retranslation_v0150"
 OVERLAY_DIR = DIALOGUE_TMP / "decisions" / "runtime_verification_overlays"
 PK_ONLY_BUILDER_PATH = (
     WORKSTREAM / "build_pk_msggame_exact_blocked_pk_only_closure_v1.py"
+)
+RESIDUAL_AUDIT_BUILDER_PATH = (
+    WORKSTREAM / "build_pk_msggame_residual_runtime_vm_audit_v1.py"
 )
 CHECKPOINT_PRIVATE_PATH = (
     DIALOGUE_TMP
@@ -103,21 +106,50 @@ EXPECTED_LOCAL_MATCH_ROWS = 3_841
 EXPECTED_LOCAL_MATCH_ROOTS = 2_990
 EXPECTED_TARGET_GUARD_FAILED_ROWS = 1_289
 EXPECTED_TARGET_GUARD_FAILED_ROOTS = 1_095
-EXPECTED_ELIGIBLE_ROWS = 2_552
-EXPECTED_ELIGIBLE_ROOTS = 1_895
-EXPECTED_ELIGIBLE_COORDINATE_SHA256 = (
+EXPECTED_PRE_LAYOUT_ELIGIBLE_ROWS = 2_552
+EXPECTED_PRE_LAYOUT_ELIGIBLE_ROOTS = 1_895
+EXPECTED_LAYOUT_FAILED_ROWS = 2_502
+EXPECTED_LAYOUT_FAILED_ROOTS = 1_849
+EXPECTED_DIRECT_LAYOUT_FAILED_ROWS = 2_482
+EXPECTED_DIRECT_LAYOUT_FAILED_ROOTS = 1_834
+EXPECTED_DESCENDANT_ONLY_LAYOUT_FAILED_ROWS = 20
+EXPECTED_DESCENDANT_ONLY_LAYOUT_FAILED_ROOTS = 15
+EXPECTED_ELIGIBLE_ROWS = 50
+EXPECTED_ELIGIBLE_ROOTS = 46
+EXPECTED_PRE_LAYOUT_ELIGIBLE_COORDINATE_SHA256 = (
     "45ED0A53FCE6345E83000F2790B5A52F48C124FC019CA86CC09CB9D7BCA5178B"
 )
-EXPECTED_ELIGIBLE_RECORD_SHA256 = (
+EXPECTED_PRE_LAYOUT_ELIGIBLE_RECORD_SHA256 = (
     "4D88405A8FFD87856D0ED453406DA5127F4BBDB820B5E9FA4EF28DD9E52E319D"
 )
-EXPECTED_ANALYSIS_MANIFEST_SHA256 = (
+EXPECTED_LAYOUT_FAILED_COORDINATE_SHA256 = (
+    "0DB7436B1BA5DFB0279B4ABE2EB435D0A8624C154741AB354E60E52ABC0F137D"
+)
+EXPECTED_LAYOUT_FAILED_RECORD_SHA256 = (
+    "103325B62E878270ED094A7860B2C4F871B843B2A304D228006F5FDD30FB7E78"
+)
+EXPECTED_DIRECT_LAYOUT_FAILED_COORDINATE_SHA256 = (
+    "D7BA84C6D766B57CE1823C8F1BE362F8B2C208F284EF3D2CF70E9230BDF3F951"
+)
+EXPECTED_DIRECT_LAYOUT_FAILED_RECORD_SHA256 = (
+    "30980B65055BBD039195085A1BAE68F26D70DCAB60AE7AD292807E62DCCB0CB2"
+)
+EXPECTED_ELIGIBLE_COORDINATE_SHA256 = (
+    "D8B39779B08B72F5E4C563ADBB3965180097F34BD83AC534E3FB71EC4D8B2AC2"
+)
+EXPECTED_ELIGIBLE_RECORD_SHA256 = (
+    "61BC9E2F7610AC4C4433177C1266A4F4B559E0EBD8ED2F04BEF12E81BC6A4D81"
+)
+EXPECTED_PRE_LAYOUT_ANALYSIS_MANIFEST_SHA256 = (
     "8806BA38A2991CE7E8BC34BCD7965400E87C629B76A051B068D0544AAFBFBBFE"
 )
+EXPECTED_PROOF_MANIFEST_SHA256 = (
+    "CD0E05400607DB0439A4EDCED0BB17F0B192889F9891A1A1ED3047AA6662B2EE"
+)
 EXPECTED_DONOR_EXCLUSIVE = {
-    "base_only": {"rows": 696, "roots": 412},
-    "pk_only": {"rows": 509, "roots": 406},
-    "base_and_pk": {"rows": 1_347, "roots": 1_077},
+    "base_only": {"rows": 0, "roots": 0},
+    "pk_only": {"rows": 46, "roots": 43},
+    "base_and_pk": {"rows": 4, "roots": 3},
 }
 
 
@@ -142,6 +174,10 @@ def load_module(name: str, path: Path) -> Any:
 PK_ONLY = load_module(
     "pk_pending_cross_resource_exact_closure_pk_only",
     PK_ONLY_BUILDER_PATH,
+)
+RESIDUAL_AUDIT = load_module(
+    "pk_pending_cross_resource_exact_closure_residual_audit",
+    RESIDUAL_AUDIT_BUILDER_PATH,
 )
 BASE_AUDIT = PK_ONLY.BASE_AUDIT
 FULL_AUDIT = PK_ONLY.FULL_AUDIT
@@ -415,12 +451,106 @@ def target_guard_passes(guard: Mapping[str, Any]) -> bool:
     )
 
 
+def relative_layout_closure_guard(
+    root: tuple[int, int],
+    *,
+    profiles: Mapping[tuple[int, int], Mapping[str, Any]],
+    edges: Mapping[tuple[int, int], Sequence[tuple[int, int]]],
+) -> dict[str, Any]:
+    """Prove raw-G1N current-to-candidate nonexpansion over full closure.
+
+    The older PK-only guard named a line-count predicate an "envelope".
+    This guard uses the residual audit's actual per-line raw-G1N widths:
+    48px for W/F/A characters, 24px otherwise, and zero for Cc controls.
+    It follows every decoded 0143/014A edge and rejects any profile reason.
+    """
+
+    queue = [root]
+    seen: set[tuple[int, int]] = set()
+    manifest: list[dict[str, Any]] = []
+    edge_manifest: list[dict[str, Any]] = []
+    reason_codes: set[str] = set()
+    while queue:
+        record = queue.pop()
+        if record in seen:
+            continue
+        seen.add(record)
+        profile = profiles.get(record)
+        if profile is None:
+            reason_codes.add("record_profile_missing")
+            continue
+        profile_reasons = tuple(str(value) for value in profile["reason_codes"])
+        reason_codes.update(profile_reasons)
+        manifest.append(
+            {
+                "record": list(record),
+                "profile_sha256": canonical_sha256(profile),
+                "reason_codes": list(profile_reasons),
+            }
+        )
+        for occurrence, target in enumerate(edges.get(record, ())):
+            edge_manifest.append(
+                {
+                    "source": list(record),
+                    "occurrence": occurrence,
+                    "target": list(target),
+                }
+            )
+            queue.append(target)
+    proof = {
+        "root": list(root),
+        "raw_g1n_width_contract": {
+            "wide_fullwidth_or_ambiguous_px": 48,
+            "other_visible_px": 24,
+            "control_px": 0,
+            "comparison": "candidate_per_line_lte_current_per_line",
+            "absolute_msggame_gate_used": False,
+            "pk_msgev_912px_rule_used": False,
+        },
+        "visited_records": sorted(manifest, key=lambda row: row["record"]),
+        "edges": sorted(
+            edge_manifest,
+            key=lambda row: (
+                row["source"],
+                row["occurrence"],
+                row["target"],
+            ),
+        ),
+        "reason_codes": sorted(reason_codes),
+    }
+    root_reasons = (
+        tuple(str(value) for value in profiles[root]["reason_codes"])
+        if root in profiles
+        else ("record_profile_missing",)
+    )
+    return {
+        "status": "verified" if not reason_codes else "blocked",
+        "proof_sha256": canonical_sha256(proof),
+        "profile_manifest_sha256": canonical_sha256(manifest),
+        "edge_manifest_sha256": canonical_sha256(edge_manifest),
+        "visited_record_count": len(seen),
+        "reason_codes": sorted(reason_codes),
+        "root_reason_codes": list(root_reasons),
+        "direct_relative_line_width_expansion": (
+            "relative_line_width_expansion" in root_reasons
+        ),
+        "descendant_only_relative_line_width_expansion": (
+            "relative_line_width_expansion" in reason_codes
+            and "relative_line_width_expansion" not in root_reasons
+        ),
+        "relative_full_closure_line_envelope_nonexpanding": (
+            not reason_codes
+        ),
+    }
+
+
 def proof_universe(
     *,
     context: Mapping[str, Any],
     checkpoint_rows: Mapping[tuple[str, str], Mapping[str, Any]],
 ) -> dict[str, Any]:
     inputs = context["inputs"]
+    profiles, edges = RESIDUAL_AUDIT.build_record_profiles(inputs=inputs)
     witnesses = donor_witnesses(checkpoint_rows)
     signature_index: defaultdict[
         str,
@@ -457,6 +587,8 @@ def proof_universe(
 
     local_matches: list[dict[str, Any]] = []
     target_guard_failures: list[dict[str, Any]] = []
+    pre_layout_eligible: list[dict[str, Any]] = []
+    layout_failures: list[dict[str, Any]] = []
     eligible: list[dict[str, Any]] = []
     pair_cache: dict[
         tuple[str, tuple[int, int], tuple[int, int]],
@@ -551,20 +683,38 @@ def proof_universe(
                 }
             )
             continue
+        guarded_entry = {
+            **analysis_entry,
+            "root_member_pending_coordinate_sha256": coordinate_digest(
+                members
+            ),
+            "pk_target_guard": {
+                "source_current_control_equal": True,
+                "source_final_control_equal": True,
+                "current_final_control_equal": True,
+                "line_count_not_above_current": True,
+                "hard_grammar_risk_absent": True,
+                "failure_codes": [],
+            },
+        }
+        pre_layout_eligible.append(guarded_entry)
+        layout_guard = relative_layout_closure_guard(
+            target_root,
+            profiles=profiles,
+            edges=edges,
+        )
+        if layout_guard["status"] != "verified":
+            layout_failures.append(
+                {
+                    **guarded_entry,
+                    "relative_layout_guard": layout_guard,
+                }
+            )
+            continue
         eligible.append(
             {
-                **analysis_entry,
-                "root_member_pending_coordinate_sha256": coordinate_digest(
-                    members
-                ),
-                "pk_target_guard": {
-                    "source_current_control_equal": True,
-                    "source_final_control_equal": True,
-                    "current_final_control_equal": True,
-                    "final_line_envelope_not_above_current": True,
-                    "hard_grammar_risk_absent": True,
-                    "failure_codes": [],
-                },
+                **guarded_entry,
+                "relative_layout_guard": layout_guard,
             }
         )
 
@@ -572,6 +722,48 @@ def proof_universe(
     failed_rows = sum(
         len(entry["member_coordinates"]) for entry in target_guard_failures
     )
+    pre_layout_rows = [
+        coordinate
+        for entry in pre_layout_eligible
+        for coordinate in entry["member_coordinates"]
+    ]
+    pre_layout_roots = {
+        tuple(entry["root"])
+        for entry in pre_layout_eligible
+    }
+    layout_failed_rows = [
+        coordinate
+        for entry in layout_failures
+        for coordinate in entry["member_coordinates"]
+    ]
+    layout_failed_roots = {
+        tuple(entry["root"])
+        for entry in layout_failures
+    }
+    direct_layout_failures = [
+        entry
+        for entry in layout_failures
+        if entry["relative_layout_guard"][
+            "direct_relative_line_width_expansion"
+        ]
+    ]
+    descendant_only_layout_failures = [
+        entry
+        for entry in layout_failures
+        if entry["relative_layout_guard"][
+            "descendant_only_relative_line_width_expansion"
+        ]
+    ]
+    direct_layout_failed_rows = [
+        coordinate
+        for entry in direct_layout_failures
+        for coordinate in entry["member_coordinates"]
+    ]
+    descendant_only_layout_failed_rows = [
+        coordinate
+        for entry in descendant_only_layout_failures
+        for coordinate in entry["member_coordinates"]
+    ]
     eligible_rows = [
         coordinate
         for entry in eligible
@@ -592,6 +784,40 @@ def proof_universe(
         and failed_rows == EXPECTED_TARGET_GUARD_FAILED_ROWS,
         "target PK guard failure funnel drifted: "
         f"roots={len(target_guard_failures)} rows={failed_rows}",
+    )
+    require(
+        len(pre_layout_roots) == EXPECTED_PRE_LAYOUT_ELIGIBLE_ROOTS
+        and len(pre_layout_rows) == EXPECTED_PRE_LAYOUT_ELIGIBLE_ROWS
+        and coordinate_digest(pre_layout_rows)
+        == EXPECTED_PRE_LAYOUT_ELIGIBLE_COORDINATE_SHA256
+        and record_digest(pre_layout_roots)
+        == EXPECTED_PRE_LAYOUT_ELIGIBLE_RECORD_SHA256,
+        "pre-layout eligible cross-resource closure universe drifted",
+    )
+    require(
+        len(layout_failed_roots) == EXPECTED_LAYOUT_FAILED_ROOTS
+        and len(layout_failed_rows) == EXPECTED_LAYOUT_FAILED_ROWS
+        and coordinate_digest(layout_failed_rows)
+        == EXPECTED_LAYOUT_FAILED_COORDINATE_SHA256
+        and record_digest(layout_failed_roots)
+        == EXPECTED_LAYOUT_FAILED_RECORD_SHA256,
+        "full-closure relative-layout failure universe drifted",
+    )
+    require(
+        len(direct_layout_failures) == EXPECTED_DIRECT_LAYOUT_FAILED_ROOTS
+        and len(direct_layout_failed_rows)
+        == EXPECTED_DIRECT_LAYOUT_FAILED_ROWS
+        and coordinate_digest(direct_layout_failed_rows)
+        == EXPECTED_DIRECT_LAYOUT_FAILED_COORDINATE_SHA256
+        and record_digest(
+            {tuple(entry["root"]) for entry in direct_layout_failures}
+        )
+        == EXPECTED_DIRECT_LAYOUT_FAILED_RECORD_SHA256
+        and len(descendant_only_layout_failures)
+        == EXPECTED_DESCENDANT_ONLY_LAYOUT_FAILED_ROOTS
+        and len(descendant_only_layout_failed_rows)
+        == EXPECTED_DESCENDANT_ONLY_LAYOUT_FAILED_ROWS,
+        "direct/descendant relative-layout failure funnel drifted",
     )
     require(
         len(eligible) == EXPECTED_ELIGIBLE_ROOTS
@@ -619,11 +845,11 @@ def proof_universe(
             ],
             "pk_closure_proof_sha256": entry["pk_closure_proof_sha256"],
         }
-        for entry in eligible
+        for entry in pre_layout_eligible
     ]
     require(
         canonical_sha256(analysis_manifest)
-        == EXPECTED_ANALYSIS_MANIFEST_SHA256,
+        == EXPECTED_PRE_LAYOUT_ANALYSIS_MANIFEST_SHA256,
         "independent analysis manifest was not reproduced",
     )
 
@@ -645,7 +871,13 @@ def proof_universe(
         exclusive[category]["rows"] += len(entry["member_coordinates"])
     require(
         exclusive == EXPECTED_DONOR_EXCLUSIVE,
-        f"exclusive donor distribution drifted: {exclusive}",
+        f"exclusive donor distribution drifted: actual={exclusive}",
+    )
+    proof_manifest_sha256 = canonical_sha256(eligible)
+    require(
+        proof_manifest_sha256 == EXPECTED_PROOF_MANIFEST_SHA256,
+        "safe proof manifest drifted: "
+        f"actual={proof_manifest_sha256}",
     )
     return {
         "eligible": eligible,
@@ -657,8 +889,20 @@ def proof_universe(
         "local_match_roots": len(local_matches),
         "target_guard_failed_rows": failed_rows,
         "target_guard_failed_roots": len(target_guard_failures),
+        "pre_layout_eligible_rows": len(pre_layout_rows),
+        "pre_layout_eligible_roots": len(pre_layout_roots),
+        "layout_failed_rows": len(layout_failed_rows),
+        "layout_failed_roots": len(layout_failed_roots),
+        "direct_layout_failed_rows": len(direct_layout_failed_rows),
+        "direct_layout_failed_roots": len(direct_layout_failures),
+        "descendant_only_layout_failed_rows": len(
+            descendant_only_layout_failed_rows
+        ),
+        "descendant_only_layout_failed_roots": len(
+            descendant_only_layout_failures
+        ),
         "analysis_manifest_sha256": canonical_sha256(analysis_manifest),
-        "proof_manifest_sha256": canonical_sha256(eligible),
+        "proof_manifest_sha256": proof_manifest_sha256,
         "donor_exclusive": exclusive,
     }
 
@@ -711,6 +955,30 @@ def build_audit(
             "target_pk_guard_failed_roots": proof[
                 "target_guard_failed_roots"
             ],
+            "pre_layout_eligible_rows": proof[
+                "pre_layout_eligible_rows"
+            ],
+            "pre_layout_eligible_roots": proof[
+                "pre_layout_eligible_roots"
+            ],
+            "full_closure_relative_layout_failed_rows": proof[
+                "layout_failed_rows"
+            ],
+            "full_closure_relative_layout_failed_roots": proof[
+                "layout_failed_roots"
+            ],
+            "direct_relative_layout_failed_rows": proof[
+                "direct_layout_failed_rows"
+            ],
+            "direct_relative_layout_failed_roots": proof[
+                "direct_layout_failed_roots"
+            ],
+            "descendant_only_relative_layout_failed_rows": proof[
+                "descendant_only_layout_failed_rows"
+            ],
+            "descendant_only_relative_layout_failed_roots": proof[
+                "descendant_only_layout_failed_roots"
+            ],
             "promotion_eligible_rows": len(proof["eligible_coordinates"]),
             "promotion_eligible_roots": len(root_proofs),
             "manual_review_remaining_rows": (
@@ -725,7 +993,11 @@ def build_audit(
             "donor_and_target_local_nonoperand_vm_sequence_equal": True,
             "actual_0143_014a_closure_pair_must_be_taint_free": True,
             "target_source_current_final_control_closure_equal": True,
-            "target_final_line_envelope_not_above_current": True,
+            "target_line_count_not_above_current": True,
+            "target_raw_g1n_relative_full_closure_width_nonexpanding": True,
+            "raw_g1n_fullwidth_or_ambiguous_px": 48,
+            "raw_g1n_other_visible_px": 24,
+            "raw_g1n_control_px": 0,
             "target_hard_grammar_risk_absent": True,
             "target_root_pending_members_promoted_atomically": True,
             "base_runtime_state_inherited": False,
@@ -845,6 +1117,9 @@ def overlay_row(
         "translation_utf16le_sha256": translation_sha256,
         "checkpoint_row_sha256": canonical_sha256(checkpoint_row),
         "pk_closure_proof_sha256": entry["pk_closure_proof_sha256"],
+        "relative_layout_closure_proof_sha256": entry[
+            "relative_layout_guard"
+        ]["proof_sha256"],
         "donor_proof_sha256": canonical_sha256(entry["donors"]),
         "audit_file_sha256": audit_file_sha256,
         "audit_payload_sha256": audit["guards"]["report_payload_sha256"],
@@ -887,6 +1162,7 @@ def overlay_row(
             "donors": entry["donors"],
             "pk_closure_proof_sha256": entry["pk_closure_proof_sha256"],
             "pk_target_guard": entry["pk_target_guard"],
+            "relative_layout_guard": entry["relative_layout_guard"],
             "audit_report_file_sha256": audit_file_sha256,
             "audit_report_payload_sha256": audit["guards"][
                 "report_payload_sha256"
@@ -980,6 +1256,9 @@ def build_promotion_report(
         },
         "exclusion_policy": {
             "target_pk_guard_failed_rows_included": 0,
+            "relative_full_closure_width_expanding_rows_included": 0,
+            "relative_full_closure_width_expanding_rows_excluded":
+            EXPECTED_LAYOUT_FAILED_ROWS,
             "exact_manual_review_rows_included": 0,
             "normalized_or_partial_match_rows_included": 0,
             "unsafe_rows_included": 0,

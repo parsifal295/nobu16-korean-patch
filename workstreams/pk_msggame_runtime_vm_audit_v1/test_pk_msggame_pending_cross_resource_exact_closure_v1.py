@@ -55,6 +55,18 @@ class PendingCrossResourceExactClosureTests(unittest.TestCase):
             MODULE.EXPECTED_TARGET_GUARD_FAILED_ROWS,
         )
         self.assertEqual(
+            scope["pre_layout_eligible_rows"],
+            MODULE.EXPECTED_PRE_LAYOUT_ELIGIBLE_ROWS,
+        )
+        self.assertEqual(
+            scope["full_closure_relative_layout_failed_rows"],
+            MODULE.EXPECTED_LAYOUT_FAILED_ROWS,
+        )
+        self.assertEqual(
+            scope["descendant_only_relative_layout_failed_rows"],
+            MODULE.EXPECTED_DESCENDANT_ONLY_LAYOUT_FAILED_ROWS,
+        )
+        self.assertEqual(
             scope["promotion_eligible_rows"],
             MODULE.EXPECTED_ELIGIBLE_ROWS,
         )
@@ -72,7 +84,7 @@ class PendingCrossResourceExactClosureTests(unittest.TestCase):
         )
         self.assertEqual(
             self.audit["guards"]["independent_analysis_manifest_sha256"],
-            MODULE.EXPECTED_ANALYSIS_MANIFEST_SHA256,
+            MODULE.EXPECTED_PRE_LAYOUT_ANALYSIS_MANIFEST_SHA256,
         )
 
     def test_overlay_is_atomic_and_hash_only(self) -> None:
@@ -105,6 +117,14 @@ class PendingCrossResourceExactClosureTests(unittest.TestCase):
             binding = row["cross_resource_closure_binding"]
             self.assertTrue(binding["donors"])
             self.assertEqual(binding["pk_target_guard"]["failure_codes"], [])
+            layout = binding["relative_layout_guard"]
+            self.assertEqual(layout["status"], "verified")
+            self.assertEqual(layout["reason_codes"], [])
+            self.assertTrue(
+                layout[
+                    "relative_full_closure_line_envelope_nonexpanding"
+                ]
+            )
 
     def test_public_outputs_are_source_free_and_steam_read_only(self) -> None:
         public = self.audit_content + self.promotion_content
@@ -128,6 +148,9 @@ class PendingCrossResourceExactClosureTests(unittest.TestCase):
             self.context["steam_hash_after"],
         )
         policy = self.audit["proof_policy"]
+        self.assertTrue(
+            policy["target_raw_g1n_relative_full_closure_width_nonexpanding"]
+        )
         self.assertFalse(policy["absolute_msggame_width_gate_used"])
         self.assertFalse(policy["pk_msgev_912px_rule_used"])
 

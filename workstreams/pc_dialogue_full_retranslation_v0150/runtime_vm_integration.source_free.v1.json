@@ -25,11 +25,11 @@
     "pk_msggame": {
       "cross_resource_exact_closure": {
         "base_runtime_proof_inherited": false,
-        "coverage_file_sha256": "310529B49C6F34BCD7AAC2CE69AC383390D9386B5FE743B6E3DF387C0FDE5BDA",
+        "coverage_file_sha256": "B9BC31F4DD68C5E812395895DB209A3652E08D0BF5C0959F1EAAE2A87F3E3C09",
         "predecessor_integrated_private_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
-        "private_sha256": "684B3C32909ED86051B9BD19AFC4FB63FE8470F62E7FAF9F250F5D8183A82F83",
-        "promotion_count": 2552,
-        "promotion_report_sha256": "A0746F1B746B16D23B70048FB20EA2FA25B7AE937CEB21FC7FCED10A6FC3E221"
+        "private_sha256": "0DC4642EDFB233A9E05C3411765F3CEDF69AAC7358B2B7FF55942100DF0278DE",
+        "promotion_count": 50,
+        "promotion_report_sha256": "0CB3CCDB67AD3FFFB3B9353186679F88FB7B25425406CCD0FE7788F826FBC7F2"
       },
       "cross_resource_layer_included": true,
       "cross_resource_predecessor_checkpoint_match": true,
@@ -50,7 +50,7 @@
       },
       "pk_only_layer_included": true,
       "pk_only_predecessor_checkpoint_match": true,
-      "promotion_count": 14483,
+      "promotion_count": 11981,
       "rebuilt_post_pk_only_integrated_private_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
       "rebuilt_predecessor_integrated_private_sha256": "29ECB2446AD89D0F9F122B280D2E66DAB2A36F2F0050174239EB4D1F0D27E757",
       "residual": {
@@ -61,7 +61,7 @@
         "promotion_report_sha256": "F5F726453552D13B29F6C5A7D85CFB945D0DD8C1211452F80E61DB957C261E02"
       }
     },
-    "promoted_total": 30134,
+    "promoted_total": 27632,
     "relative_reflow_override": {
       "after_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
       "before_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
@@ -87,9 +87,9 @@
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 46603,
-    "private_integrated_decision_sha256": "EF5E954FD4F5042CBF6630D810B5ACB988DF69722B7EFF243E6754477C7D7AC9",
-    "runtime_review_pending": 6200,
+    "fully_candidate_eligible": 44101,
+    "private_integrated_decision_sha256": "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC",
+    "runtime_review_pending": 8702,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",

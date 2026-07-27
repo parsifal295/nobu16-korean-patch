@@ -845,6 +845,29 @@ def load_pk_runtime_vm_overlays() -> dict[
                     "PK runtime VM overlay lacks its layout proof: "
                     f"{coordinate}"
                 )
+            if (
+                method
+                == PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD
+            ):
+                binding = row.get("cross_resource_closure_binding")
+                layout_guard = (
+                    binding.get("relative_layout_guard")
+                    if isinstance(binding, dict)
+                    else None
+                )
+                if (
+                    not isinstance(layout_guard, dict)
+                    or layout_guard.get("status") != "verified"
+                    or layout_guard.get("reason_codes") != []
+                    or layout_guard.get(
+                        "relative_full_closure_line_envelope_nonexpanding"
+                    )
+                    is not True
+                ):
+                    raise RetranslationError(
+                        "PK cross-resource runtime VM overlay lacks its "
+                        f"raw-G1N full-closure width proof: {coordinate}"
+                    )
             rows[key] = row
             source_count += 1
         if (
@@ -904,6 +927,29 @@ def validate_pk_runtime_vm_verification(
                 "to": layout_review,
             }
             or layout_review != "runtime_verified"
+            or not isinstance(
+                evidence.get("cross_resource_closure_binding"), dict
+            )
+            or not isinstance(
+                evidence["cross_resource_closure_binding"].get(
+                    "relative_layout_guard"
+                ),
+                dict,
+            )
+            or evidence["cross_resource_closure_binding"][
+                "relative_layout_guard"
+            ].get("status")
+            != "verified"
+            or evidence["cross_resource_closure_binding"][
+                "relative_layout_guard"
+            ].get("reason_codes")
+            != []
+            or evidence["cross_resource_closure_binding"][
+                "relative_layout_guard"
+            ].get(
+                "relative_full_closure_line_envelope_nonexpanding"
+            )
+            is not True
         )
     ):
         raise RetranslationError(

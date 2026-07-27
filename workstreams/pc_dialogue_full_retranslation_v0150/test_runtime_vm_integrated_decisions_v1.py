@@ -81,11 +81,11 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 30_134)
-        self.assertEqual(report["result"]["runtime_review_pending"], 6_200)
+        self.assertEqual(report["promotions"]["promoted_total"], 27_632)
+        self.assertEqual(report["result"]["runtime_review_pending"], 8_702)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            14_483,
+            11_981,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
@@ -114,7 +114,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             report["promotions"]["pk_msggame"][
                 "cross_resource_exact_closure"
             ]["promotion_count"],
-            2_552,
+            50,
         )
         self.assertTrue(
             report["promotions"]["pk_msggame"][
@@ -145,7 +145,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            6_200,
+            8_702,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
@@ -258,6 +258,15 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         ] = "runtime_verified"
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([bad_binding])
+
+        bad_width_proof = copy.deepcopy(source)
+        bad_width_proof["runtime_vm_verification"][
+            "cross_resource_closure_binding"
+        ]["relative_layout_guard"]["reason_codes"] = [
+            "relative_line_width_expansion"
+        ]
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([bad_width_proof])
 
 
 if __name__ == "__main__":
