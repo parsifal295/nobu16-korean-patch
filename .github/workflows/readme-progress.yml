@@ -2,7 +2,19 @@ name: README translation progress
 
 on:
   push:
+    paths:
+      - README.md
+      - data/public/steam_jp_117_candidate_v10_progress.v1.json
+      - tools/update_readme_progress.py
+      - tests/test_readme_progress.py
+      - .github/workflows/readme-progress.yml
   pull_request:
+    paths:
+      - README.md
+      - data/public/steam_jp_117_candidate_v10_progress.v1.json
+      - tools/update_readme_progress.py
+      - tests/test_readme_progress.py
+      - .github/workflows/readme-progress.yml
 
 permissions:
   contents: read
