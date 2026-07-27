@@ -3,9 +3,7 @@
 ## Rust 통합 패처로 배포 파일 교체
 
 2026-07-27부터 v0.15.1의 기존 배치·PowerShell 기반 ZIP을 Rust 통합 패처
-ZIP으로 교체합니다. 기존 다운로드 파일명과 릴리스 URL은 유지되지만 파일
-내용과 SHA-256이 바뀌었으므로, 이전 ZIP을 받은 사용자는 새 파일을 다시
-내려받으십시오.
+ZIP으로 교체합니다. 
 
 새 배포본은 다음 작업을 `N16KoreanPatcher.exe` 하나에서 처리합니다.
 
@@ -72,12 +70,6 @@ NOBU16_v0.15.1_FULL_HORIZONTAL.n16p
 README_KO.txt
 SHA256SUMS.txt
 ```
-
-`N16KoreanPatcher.exe`는 유료 Authenticode 인증서가 없어 `NotSigned`
-상태이며 Windows SmartScreen 경고가 표시될 수 있습니다. 공식 Releases에서
-받은 ZIP인지와 아래 SHA-256을 확인한 뒤 사용하십시오. 두 `.n16p` 번들은
-패처에 고정된 제품 루트 키가 인증한 Ed25519 릴리스 서명으로 검증됩니다.
-
 ## 검증 결과
 
 - ZIP 내부 파일 4개의 `SHA256SUMS.txt` 대조: 불일치 0
