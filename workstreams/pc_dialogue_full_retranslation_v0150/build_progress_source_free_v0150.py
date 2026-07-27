@@ -486,14 +486,14 @@ def build_progress() -> dict[str, Any]:
                 ):
                     if not (
                         effective_row.get("layout_review")
-                        == "runtime_pending"
+                        in {"runtime_pending", "unchanged_from_current"}
                         and integrated_row.get("layout_review")
                         == "runtime_verified"
                         and evidence.get("method")
                         == "reversed_vm_residual_full_closure_nonexpansion_analysis"
                         and evidence.get("layout_transition")
                         == {
-                            "from": "runtime_pending",
+                            "from": effective_row.get("layout_review"),
                             "to": "runtime_verified",
                         }
                     ):

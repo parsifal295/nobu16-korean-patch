@@ -46,7 +46,7 @@ OVERLAY_ROW_SCHEMA = (
     "nobu16.kr.pk-msggame-residual-runtime-vm-verification-overlay-row.v1"
 )
 METHOD = "reversed_vm_residual_full_closure_nonexpansion_analysis"
-EXPECTED_ROWS = 1_889
+EXPECTED_ROWS = 2_908
 
 
 class ResidualPromotionError(ValueError):
@@ -130,13 +130,19 @@ def expected_overlay_row(
         and source.get("runtime_review") == "pending"
         and source.get("scope_classification")
         == "runtime_fragment_pending"
-        and source.get("layout_review") == "runtime_pending",
+        and source.get("layout_review")
+        in {"runtime_pending", "unchanged_from_current"},
         f"residual source row is not promotable: {coordinate}",
     )
     require(
         isinstance(adjudication, dict)
         and adjudication.get("status") == "promotion_eligible"
-        and adjudication.get("tier") == "A"
+        and adjudication.get("tier") in {"A", "B", "C"}
+        and adjudication.get("evidence_origin")
+        in {
+            "complete_metadata_tier_a",
+            "binary_recomputed_tier_bc",
+        }
         and adjudication.get("layout_adjudication")
         == "relative_full_closure_line_envelope_nonexpanding",
         f"residual adjudication is not eligible: {coordinate}",
@@ -170,7 +176,7 @@ def expected_overlay_row(
             "to": "retranslated",
         },
         "layout_transition": {
-            "from": "runtime_pending",
+            "from": source["layout_review"],
             "to": "runtime_verified",
         },
         "translation_utf16le_sha256": adjudication[

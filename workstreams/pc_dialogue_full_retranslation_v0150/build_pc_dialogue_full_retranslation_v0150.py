@@ -769,11 +769,13 @@ def load_pk_runtime_vm_overlays() -> dict[
                 )
             if (
                 method == PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD
-                and row.get("layout_transition")
-                != {
-                    "from": "runtime_pending",
-                    "to": "runtime_verified",
-                }
+                and (
+                    not isinstance(row.get("layout_transition"), dict)
+                    or row["layout_transition"].get("from")
+                    not in {"runtime_pending", "unchanged_from_current"}
+                    or row["layout_transition"].get("to")
+                    != "runtime_verified"
+                )
             ):
                 raise RetranslationError(
                     "PK residual runtime VM overlay lacks its layout proof: "

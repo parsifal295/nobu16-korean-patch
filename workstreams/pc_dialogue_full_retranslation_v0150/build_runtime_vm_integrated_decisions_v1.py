@@ -98,9 +98,9 @@ EXPECTED_BASE_ROWS = 23_765
 EXPECTED_PK_ROWS = 29_038
 EXPECTED_BASE_PROMOTIONS = 15_651
 EXPECTED_PK_EXACT_PROMOTIONS = 7_453
-EXPECTED_PK_RESIDUAL_PROMOTIONS = 1_889
-EXPECTED_PK_INTEGRATED_PROMOTIONS = 9_342
-EXPECTED_PENDING_AFTER = 11_341
+EXPECTED_PK_RESIDUAL_PROMOTIONS = 2_908
+EXPECTED_PK_INTEGRATED_PROMOTIONS = 10_361
+EXPECTED_PENDING_AFTER = 10_322
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
@@ -635,10 +635,11 @@ def build_outputs(
             == "reversed_vm_residual_full_closure_nonexpansion_analysis"
         ):
             require(
-                row.get("layout_review") == "runtime_pending"
+                row.get("layout_review")
+                in {"runtime_pending", "unchanged_from_current"}
                 and evidence.get("layout_transition")
                 == {
-                    "from": "runtime_pending",
+                    "from": row.get("layout_review"),
                     "to": "runtime_verified",
                 },
                 f"PK residual layout transition drifted: {coordinate}",

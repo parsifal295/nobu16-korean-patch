@@ -61,12 +61,28 @@ class PkResidualRuntimeVmTests(unittest.TestCase):
             6_737,
         )
         self.assertEqual(
+            coverage["scope"]["recomputed_tier_bc_safe_rows"],
+            1_785,
+        )
+        self.assertEqual(
+            coverage["scope"]["recomputed_tier_bc_safe_records"],
+            1_351,
+        )
+        self.assertEqual(
+            coverage["scope"]["unified_safe_rows"],
+            8_522,
+        )
+        self.assertEqual(
+            coverage["scope"]["unified_safe_records"],
+            5_201,
+        )
+        self.assertEqual(
             coverage["scope"]["promotion_eligible_rows"],
-            1_889,
+            2_908,
         )
         self.assertEqual(
             coverage["scope"]["promotion_eligible_records"],
-            1_073,
+            1_925,
         )
         self.assertFalse(
             coverage["layout_contract"][
@@ -76,16 +92,21 @@ class PkResidualRuntimeVmTests(unittest.TestCase):
         self.assertFalse(
             coverage["layout_contract"]["pk_msgev_912px_rule_applied"]
         )
-        self.assertEqual(len(self.rows), 1_889)
-        self.assertTrue(
-            all(
-                row["layout_transition"]
-                == {
-                    "from": "runtime_pending",
-                    "to": "runtime_verified",
-                }
-                for row in self.rows
+        self.assertEqual(len(self.rows), 2_908)
+        transition_counts: dict[str, int] = {}
+        for row in self.rows:
+            transition = row["layout_transition"]
+            self.assertEqual(transition["to"], "runtime_verified")
+            source_status = transition["from"]
+            transition_counts[source_status] = (
+                transition_counts.get(source_status, 0) + 1
             )
+        self.assertEqual(
+            transition_counts,
+            {
+                "runtime_pending": 2_253,
+                "unchanged_from_current": 655,
+            },
         )
         self.assertFalse(self.promotion["steam_write_performed"])
 

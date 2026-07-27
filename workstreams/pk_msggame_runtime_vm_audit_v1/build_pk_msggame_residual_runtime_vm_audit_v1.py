@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Audit a conservative PK residual runtime/layout promotion layer.
 
-Only Tier-A records with complete assembly evidence are considered.  A root
-is promoted only when its complete final-candidate call/jump closure:
+Tier-A records with complete assembly evidence are considered directly.
+Tier-B/C records may join the same safe set only when their missing metadata
+can be regenerated from exact source/current/candidate bytes.  A root is
+promoted only when its complete final-candidate call/jump closure:
 
 * preserves the pristine PK VM control structure and the current KO gaps;
 * reaches no Tier-B/C/D residual record and no blocked exact-reuse row;
@@ -55,8 +57,12 @@ EXPECTED_TIER_ROWS = {"A": 7_295, "B": 1_375, "C": 907, "D": 1_336}
 EXPECTED_TIER_RECORDS = {"A": 4_244, "B": 869, "C": 844, "D": 964}
 EXPECTED_A_SAFE_ROWS = 6_737
 EXPECTED_A_SAFE_RECORDS = 3_850
-EXPECTED_ELIGIBLE_ROWS = 1_889
-EXPECTED_ELIGIBLE_RECORDS = 1_073
+EXPECTED_RECOMPUTED_BC_SAFE_ROWS = 1_785
+EXPECTED_RECOMPUTED_BC_SAFE_RECORDS = 1_351
+EXPECTED_UNIFIED_SAFE_ROWS = 8_522
+EXPECTED_UNIFIED_SAFE_RECORDS = 5_201
+EXPECTED_ELIGIBLE_ROWS = 2_908
+EXPECTED_ELIGIBLE_RECORDS = 1_925
 EXPECTED_RESIDUAL_COORDINATE_SHA256 = (
     "8AF1915EEF84F2ED004DA86428A50C9A29A420DDB68FB00FA3C3E4FD13C96C65"
 )
@@ -66,11 +72,17 @@ EXPECTED_TIER_A_COORDINATE_SHA256 = (
 EXPECTED_A_SAFE_COORDINATE_SHA256 = (
     "1F4ECC1528D0E320CD1C8EBD8389F64EEAF753AAEF4469E033065C6E17D4660B"
 )
+EXPECTED_RECOMPUTED_BC_SAFE_COORDINATE_SHA256 = (
+    "606784B8573A253373FE22CDA1061AAF9EBF3E954C007B175DCA7F5DD1B79F72"
+)
+EXPECTED_RECOMPUTED_BC_SAFE_RECORD_SHA256 = (
+    "08C9F97426B9552CA1295CEF395457B332D33160A5DACACB1924444DAFDD6390"
+)
 EXPECTED_ELIGIBLE_COORDINATE_SHA256 = (
-    "B58796ECBACEA20C0332527A6A14077C64AD171FC4CAFD62C3534F65567DF8FC"
+    "9EA9913C685ADB015A088B64AC5A4CA8E57FD08B5489CFA9996B529D670A2420"
 )
 EXPECTED_ELIGIBLE_RECORD_SHA256 = (
-    "8B36CCB0E30038CA5A79860F0DB1195DA19DE5B07E0A3435A95813380C77C00E"
+    "2FF19EE6732AEE025981DA2EBECB54D6B3FE8A04B212DEEF0D42C290C9457026"
 )
 
 HAZARD_FIELDS = frozenset(
@@ -368,6 +380,86 @@ def build_record_profiles(
     return profiles, edges
 
 
+def recomputed_bc_safe_records(
+    *,
+    inputs: Any,
+    residual_tiers: Mapping[tuple[int, int], str],
+    residual_by_record: Mapping[
+        tuple[int, int], Sequence[Mapping[str, Any]]
+    ],
+    profiles: Mapping[tuple[int, int], Mapping[str, Any]],
+    exact_statuses: Mapping[tuple[int, int], Sequence[str]],
+) -> set[tuple[int, int]]:
+    result: set[tuple[int, int]] = set()
+    disallowed_profile_reasons = {
+        "record_missing",
+        "current_candidate_gap_mismatch",
+        "candidate_decode_failure",
+        "candidate_target_missing",
+        "literal_count_mismatch",
+        "line_count_mismatch",
+        "protected_signature_mismatch",
+    }
+    for record, tier in residual_tiers.items():
+        if tier not in {"B", "C"}:
+            continue
+        if "blocked" in exact_statuses.get(record, ()):
+            continue
+        source = inputs.pk_source_records.get(record)
+        current = inputs.pk_current_records.get(record)
+        candidate = inputs.pk_candidate_records.get(record)
+        if source is None or current is None or candidate is None:
+            continue
+        if not (
+            ENGINE.record_gap_bytes(source)
+            == ENGINE.record_gap_bytes(current)
+            == ENGINE.record_gap_bytes(candidate)
+        ):
+            continue
+        current_literals = ENGINE.parse_record_literals(current)
+        candidate_literals = ENGINE.parse_record_literals(candidate)
+        if len(current_literals) != len(candidate_literals):
+            continue
+        if any(
+            len(current_literal.text.split("\n"))
+            != len(candidate_literal.text.split("\n"))
+            for current_literal, candidate_literal in zip(
+                current_literals,
+                candidate_literals,
+            )
+        ):
+            continue
+        if any(
+            reason in disallowed_profile_reasons
+            for reason in profiles[record]["reason_codes"]
+        ):
+            continue
+        if any(row_hazard(row) for row in residual_by_record[record]):
+            continue
+        control_guard = FULL_AUDIT.pk_source_candidate_closure_guard(
+            record,
+            inputs=inputs,
+        )
+        if control_guard["taints"]:
+            continue
+        result.add(record)
+    coordinates = [
+        str(row["coordinate"])
+        for record in sorted(result)
+        for row in residual_by_record[record]
+    ]
+    require(
+        len(result) == EXPECTED_RECOMPUTED_BC_SAFE_RECORDS
+        and len(coordinates) == EXPECTED_RECOMPUTED_BC_SAFE_ROWS
+        and coordinate_digest(coordinates)
+        == EXPECTED_RECOMPUTED_BC_SAFE_COORDINATE_SHA256
+        and record_digest(list(result))
+        == EXPECTED_RECOMPUTED_BC_SAFE_RECORD_SHA256,
+        "recomputed Tier-B/C safe universe drifted",
+    )
+    return result
+
+
 def closure_proof(
     root: tuple[int, int],
     *,
@@ -517,17 +609,35 @@ def build_report() -> tuple[dict[str, Any], Any, dict[str, Any]]:
         "final-exact-safe Tier-A universe drifted",
     )
     profiles, edges = build_record_profiles(inputs=inputs)
+    recomputed_bc_records = recomputed_bc_safe_records(
+        inputs=inputs,
+        residual_tiers=tiers,
+        residual_by_record=residual_by_record,
+        profiles=profiles,
+        exact_statuses=exact_statuses,
+    )
+    unified_safe_records = a_safe_records | recomputed_bc_records
+    unified_safe_coordinates = [
+        str(row["coordinate"])
+        for record in sorted(unified_safe_records)
+        for row in residual_by_record[record]
+    ]
+    require(
+        len(unified_safe_records) == EXPECTED_UNIFIED_SAFE_RECORDS
+        and len(unified_safe_coordinates) == EXPECTED_UNIFIED_SAFE_ROWS,
+        "unified Tier-A/recomputed-B/C safe universe drifted",
+    )
     record_proofs: dict[str, dict[str, Any]] = {}
     blocker_counts: Counter[str] = Counter()
     eligible_records: list[tuple[int, int]] = []
-    for record in sorted(a_safe_records):
+    for record in sorted(unified_safe_records):
         proof = closure_proof(
             record,
             inputs=inputs,
             profiles=profiles,
             edges=edges,
             residual_tiers=tiers,
-            a_safe_records=a_safe_records,
+            a_safe_records=unified_safe_records,
             exact_statuses=exact_statuses,
         )
         record_proofs[f"{record[0]}:{record[1]}"] = proof
@@ -589,7 +699,12 @@ def build_report() -> tuple[dict[str, Any], Any, dict[str, Any]]:
         row_guards[coordinate] = guard
         row_adjudications[coordinate] = {
             "status": "promotion_eligible",
-            "tier": "A",
+            "tier": tiers[record],
+            "evidence_origin": (
+                "complete_metadata_tier_a"
+                if record in a_safe_records
+                else "binary_recomputed_tier_bc"
+            ),
             "record": list(record),
             "translation_utf16le_sha256":
             guard_payload["translation_utf16le_sha256"],
@@ -615,10 +730,17 @@ def build_report() -> tuple[dict[str, Any], Any, dict[str, Any]]:
             "tier_records": dict(sorted(tier_records.items())),
             "tier_a_final_exact_safe_rows": len(a_safe_coordinates),
             "tier_a_final_exact_safe_records": len(a_safe_records),
+            "recomputed_tier_bc_safe_rows":
+            EXPECTED_RECOMPUTED_BC_SAFE_ROWS,
+            "recomputed_tier_bc_safe_records": len(
+                recomputed_bc_records
+            ),
+            "unified_safe_rows": len(unified_safe_coordinates),
+            "unified_safe_records": len(unified_safe_records),
             "promotion_eligible_rows": len(eligible_coordinates),
             "promotion_eligible_records": len(eligible_records),
             "blocked_after_conservative_closure_rows":
-            len(a_safe_coordinates) - len(eligible_coordinates),
+            len(unified_safe_coordinates) - len(eligible_coordinates),
         },
         "candidate_binding": {
             "pk_full_candidate_packed_sha256":
@@ -654,6 +776,13 @@ def build_report() -> tuple[dict[str, Any], Any, dict[str, Any]]:
                 sorted(TOKEN_FIELDS)
             ),
             "blocked_exact_companion_precedence": True,
+            "tier_bc_binary_recomputation": {
+                "source_current_candidate_gap_exact": True,
+                "actual_line_count_recomputed": True,
+                "decoded_target_existence_recomputed": True,
+                "source_candidate_closure_recomputed": True,
+                "metadata_promotion_flags_trusted": False,
+            },
         },
         "layout_contract": {
             "comparison": "candidate line <= current KO corresponding line",
@@ -673,6 +802,16 @@ def build_report() -> tuple[dict[str, Any], Any, dict[str, Any]]:
             EXPECTED_TIER_A_COORDINATE_SHA256,
             "tier_a_final_exact_safe_coordinate_sha256":
             EXPECTED_A_SAFE_COORDINATE_SHA256,
+            "recomputed_tier_bc_safe_coordinate_sha256":
+            EXPECTED_RECOMPUTED_BC_SAFE_COORDINATE_SHA256,
+            "recomputed_tier_bc_safe_record_sha256":
+            EXPECTED_RECOMPUTED_BC_SAFE_RECORD_SHA256,
+            "unified_safe_coordinate_sha256": coordinate_digest(
+                unified_safe_coordinates
+            ),
+            "unified_safe_record_sha256": record_digest(
+                list(unified_safe_records)
+            ),
             "eligible_coordinate_sha256":
             EXPECTED_ELIGIBLE_COORDINATE_SHA256,
             "eligible_record_sha256":
