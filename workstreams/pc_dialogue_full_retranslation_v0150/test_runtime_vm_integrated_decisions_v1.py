@@ -81,11 +81,11 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 23_114)
-        self.assertEqual(report["result"]["runtime_review_pending"], 13_221)
+        self.assertEqual(report["promotions"]["promoted_total"], 23_104)
+        self.assertEqual(report["result"]["runtime_review_pending"], 13_231)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            7_463,
+            7_453,
         )
         self.assertTrue(
             report["promotions"]["pk_msggame"]["full_candidate_bound"]
@@ -93,7 +93,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            13_221,
+            13_231,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][

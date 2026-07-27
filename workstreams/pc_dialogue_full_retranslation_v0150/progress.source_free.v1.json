@@ -24,10 +24,10 @@
   "runtime_vm_integration": {
     "path": "workstreams/pc_dialogue_full_retranslation_v0150/runtime_vm_integration.source_free.v1.json",
     "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
-    "sha256": "BC272E5A85BA21F8D20125D8EF86149AA8ED3EA4135393E0C0BAF9EDB545B5EA",
-    "private_integrated_decision_sha256": "722D026FFD70A2D2243391D58309A1722A13706CBD2A2859C924DB512A9D4BA8",
-    "promoted_total": 23114,
-    "runtime_review_pending_after": 13221,
+    "sha256": "1CFD2855EFB7E1F7D247B9E23AC62B8E041B6436B91AE8E2EA85037533A5B17F",
+    "private_integrated_decision_sha256": "3155D5BE4D78910E46B295B81ACAA5EB9E03561948D8FF77FA19FE449F34CFE8",
+    "promoted_total": 23104,
+    "runtime_review_pending_after": 13231,
     "steam_write_performed": false
   },
   "segments": [
@@ -31501,12 +31501,12 @@
       "decision_count": 17652,
       "semantic_review_approved": 17652,
       "runtime_review_not_required": 7881,
-      "runtime_review_verified": 7463,
-      "runtime_review_pending": 2308,
+      "runtime_review_verified": 7453,
+      "runtime_review_pending": 2318,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 15344,
-        "runtime_fragment_pending": 2308
+        "retranslated": 15334,
+        "runtime_fragment_pending": 2318
       },
       "runtime_control_override_count": 1,
       "queue_batch_ids": [
@@ -33911,12 +33911,12 @@
       "last_record_coordinate": "6:1566",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 81,
-      "fully_candidate_eligible": 119,
+      "runtime_review_pending": 87,
+      "fully_candidate_eligible": 113,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 119,
-        "runtime_fragment_pending": 81
+        "retranslated": 113,
+        "runtime_fragment_pending": 87
       },
       "semantic_complete": true
     },
@@ -35319,12 +35319,12 @@
       "last_record_coordinate": "15:281",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 129,
-      "fully_candidate_eligible": 71,
+      "runtime_review_pending": 131,
+      "fully_candidate_eligible": 69,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 71,
-        "runtime_fragment_pending": 129
+        "retranslated": 69,
+        "runtime_fragment_pending": 131
       },
       "semantic_complete": true
     },
@@ -35335,12 +35335,12 @@
       "last_record_coordinate": "15:394",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 99,
-      "fully_candidate_eligible": 100,
+      "runtime_review_pending": 101,
+      "fully_candidate_eligible": 98,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 100,
-        "runtime_fragment_pending": 99
+        "retranslated": 98,
+        "runtime_fragment_pending": 101
       },
       "semantic_complete": true
     },
@@ -35907,12 +35907,12 @@
   ],
   "totals": {
     "semantic_review_approved": 52803,
-    "runtime_review_pending": 13221,
-    "fully_candidate_eligible": 39582,
+    "runtime_review_pending": 13231,
+    "fully_candidate_eligible": 39572,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
-      "retranslated": 39237,
-      "runtime_fragment_pending": 13221
+      "retranslated": 39227,
+      "runtime_fragment_pending": 13231
     },
     "semantic_completion": true,
     "candidate_build_complete": false

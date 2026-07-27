@@ -3832,11 +3832,14 @@ $py = 'C:\Users\melse\.cache\codex-runtimes\codex-primary-runtime\dependencies\p
   residual 형제 리터럴이 달라 full-candidate 레코드 해시가 바뀌므로
   기존 승격에서 제외한다. 반대로 기존 차단 `5,053`개 중 `2,794`개는
   최종 형제 번역으로 폐포 불일치가 해소됐다. full-candidate 전용
-  재감사 결과 실제 PK 승격은 `7,463`개, 차단은 `2,307`개다. 두 증거는
+  재감사에 PK 순정→후보 제어 폐포 동일성까지 더한 결과 실제 PK
+  승격은 `7,453`개, 차단은 `2,317`개다. 순정 `0143` 호출이
+  현행 후보에서 빠진 13개 행 가운데 기존 승격 대상 10개를 추가로
+  차단했다. 두 증거는
   `build_runtime_vm_integrated_decisions_v1.py`가 원래 의미 결정을
   바꾸지 못하게 고정한 채 private 통합 원장에 병합한다.
-- 현재 후보 자격 보유는 `39,582`개, PK 런타임 결합 검증 대기는
-  `13,221`개다. 이 수치는 control-gap 보수 때문에 원래
+- 현재 후보 자격 보유는 `39,572`개, PK 런타임 결합 검증 대기는
+  `13,231`개다. 이 수치는 control-gap 보수 때문에 원래
   `not_required`에서 pending으로 전환된 `6:3421:0` 한 건을 포함한다.
   두 control-gap 보수 후보는 정적 VM 결합 의미가 별도로 승인되기
   전에는 최종 후보에 적용하지 않는다.

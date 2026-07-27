@@ -50,25 +50,29 @@ EXPECTED_SOURCE_SEGMENTS = 408
 EXPECTED_PK_ROWS = 29_038
 EXPECTED_STRING_REPLACEMENTS = 28_956
 EXPECTED_EXACT_ROWS = 9_770
-EXPECTED_ELIGIBLE_ROWS = 7_463
-EXPECTED_BLOCKED_ROWS = 2_307
-EXPECTED_KEPT_ELIGIBLE_ROWS = 4_669
-EXPECTED_NEW_ELIGIBLE_ROWS = 2_794
-EXPECTED_NEW_BLOCKED_ROWS = 48
+EXPECTED_ELIGIBLE_ROWS = 7_453
+EXPECTED_BLOCKED_ROWS = 2_317
+EXPECTED_KEPT_ELIGIBLE_ROWS = 4_663
+EXPECTED_NEW_ELIGIBLE_ROWS = 2_790
+EXPECTED_NEW_BLOCKED_ROWS = 54
 EXPECTED_FULL_CANDIDATE_SHA256 = (
     "5480D65CE6BF15A35549FE6013DC7F03787A5713E06BDD3E2C50418F31B1CA22"
 )
 EXPECTED_ELIGIBLE_COORDINATE_SHA256 = (
-    "52D4C0DB343349AC6374510ED5BF47CF0047E3FEB792217B00C51D1BFA4171A1"
+    "0D9D424C2EEBBD652EFF807BEF604164C9691011839C724658F5808BD4A64147"
 )
 EXPECTED_BLOCKED_COORDINATE_SHA256 = (
-    "9648609056240A9D6848482BE2963182462652ED1DAC9528741A56B1FA432FC3"
+    "AD52864FFA21C9B1158E5C1EABCB2D6D9D8B16796BF6F84695D53B721337ADA4"
 )
 EXPECTED_NEW_ELIGIBLE_COORDINATE_SHA256 = (
-    "E6A20302BB5BFC7BC252B9EF16F202B0157F084A6788B15FAB77982C5BAE4CA2"
+    "8019ED8335DF4CC02896770ED512C759DC9A927A5B10D998AD1A00F641D84DBE"
 )
 EXPECTED_NEW_BLOCKED_COORDINATE_SHA256 = (
-    "6DE2645FEF2DB076D9460AE18B6E07797F8FA6CED3E89AE2F9F2FB311BECAB51"
+    "22F8BAC68A5C05130BE1A6EABE6268AF5E056A245FFF0590BCB0F45950A5F6D5"
+)
+EXPECTED_PK_SOURCE_CANDIDATE_TAINT_ROWS = 13
+EXPECTED_PK_SOURCE_CANDIDATE_TAINT_COORDINATE_SHA256 = (
+    "3811287253C5634BA0A9B3A6FDE6FEF97429F0727271F7EFB1A5C0F87494AC1A"
 )
 
 
@@ -240,6 +244,205 @@ def full_candidate_inputs() -> tuple[Any, dict[str, Any]]:
     return inputs, metadata
 
 
+def pk_component_signature(component: Mapping[str, Any]) -> dict[str, Any]:
+    result = BASE_AUDIT.structural_component(component)
+    if component["kind"] in {"call", "jump"}:
+        result = {
+            **result,
+            "operand": component["operand"],
+            "target": component["target"],
+        }
+    return result
+
+
+def pk_source_candidate_closure_guard(
+    root: tuple[int, int],
+    *,
+    inputs: Any,
+) -> dict[str, Any]:
+    queue: list[tuple[tuple[int, int], int]] = [(root, 0)]
+    seen: set[tuple[int, int]] = set()
+    proof_records: list[dict[str, Any]] = []
+    proof_edges: list[dict[str, Any]] = []
+    taints: set[str] = set()
+    reasons: set[str] = set()
+    call_count = 0
+    jump_count = 0
+    while queue:
+        coordinate, depth = queue.pop()
+        if coordinate in seen:
+            continue
+        seen.add(coordinate)
+        source = inputs.pk_source_records.get(coordinate)
+        candidate = inputs.pk_candidate_records.get(coordinate)
+        if source is None or candidate is None:
+            taints.add("pk_source_candidate_control_taint")
+            reasons.add(
+                "pk_source_candidate_closure_target_missing"
+                if depth
+                else "pk_source_candidate_target_missing"
+            )
+            continue
+        try:
+            source_components = BASE_AUDIT.decode_record(source)
+            candidate_components = BASE_AUDIT.decode_record(candidate)
+        except BASE_AUDIT.AuditError:
+            taints.add("pk_source_candidate_control_taint")
+            reasons.add(
+                "pk_source_candidate_closure_decode_failure"
+                if depth
+                else "pk_source_candidate_decode_failure"
+            )
+            continue
+        source_signatures = [
+            pk_component_signature(component)
+            for component in source_components
+        ]
+        candidate_signatures = [
+            pk_component_signature(component)
+            for component in candidate_components
+        ]
+        proof_records.append(
+            {
+                "coordinate": list(coordinate),
+                "source_record_sha256": sha256_bytes(source.data),
+                "candidate_record_sha256": sha256_bytes(candidate.data),
+                "source_component_sha256": canonical_sha256(
+                    source_signatures
+                ),
+                "candidate_component_sha256": canonical_sha256(
+                    candidate_signatures
+                ),
+            }
+        )
+        if source_signatures != candidate_signatures:
+            taints.add("pk_source_candidate_control_taint")
+            reasons.add(
+                "pk_source_candidate_closure_component_mismatch"
+                if depth
+                else "pk_source_candidate_component_mismatch"
+            )
+        for occurrence, component in enumerate(source_components):
+            if component["kind"] not in {"call", "jump"}:
+                continue
+            target = tuple(component["target"])
+            proof_edges.append(
+                {
+                    "source": list(coordinate),
+                    "occurrence": occurrence,
+                    "kind": component["kind"],
+                    "operand": component["operand"],
+                    "target": list(target),
+                }
+            )
+            if component["kind"] == "call":
+                call_count += 1
+            else:
+                jump_count += 1
+            queue.append((target, depth + 1))
+    proof = {
+        "root": list(root),
+        "records": sorted(
+            proof_records,
+            key=lambda value: value["coordinate"],
+        ),
+        "edges": sorted(
+            proof_edges,
+            key=lambda value: (
+                value["source"],
+                value["occurrence"],
+                value["kind"],
+            ),
+        ),
+        "taints": sorted(taints),
+        "reason_codes": sorted(reasons),
+    }
+    return {
+        "proof_sha256": canonical_sha256(proof),
+        "taints": sorted(taints),
+        "reason_codes": sorted(reasons),
+        "visited_record_count": len(seen),
+        "0143_occurrences": call_count,
+        "014a_occurrences": jump_count,
+    }
+
+
+def pk_source_candidate_closure_guards(
+    inputs: Any,
+) -> dict[str, dict[str, Any]]:
+    roots = {
+        BASE_AUDIT.parse_literal_coordinate(row["coordinate"])[:2]
+        for row in inputs.rows
+    }
+    return {
+        f"{root[0]}:{root[1]}": pk_source_candidate_closure_guard(
+            root,
+            inputs=inputs,
+        )
+        for root in sorted(roots)
+    }
+
+
+def apply_pk_source_candidate_gate(
+    report: dict[str, Any],
+    *,
+    inputs: Any,
+) -> dict[str, dict[str, Any]]:
+    closure_guards = pk_source_candidate_closure_guards(inputs)
+    for coordinate, adjudication in report["row_adjudications"].items():
+        block_id, record_id, _literal_id = (
+            BASE_AUDIT.parse_literal_coordinate(coordinate)
+        )
+        guard = closure_guards[f"{block_id}:{record_id}"]
+        adjudication[
+            "pk_source_candidate_closure_proof_sha256"
+        ] = guard["proof_sha256"]
+        if guard["taints"]:
+            adjudication["taints"] = sorted(
+                set(adjudication["taints"]) | set(guard["taints"])
+            )
+            adjudication["reason_codes"] = sorted(
+                set(adjudication["reason_codes"])
+                | set(guard["reason_codes"])
+            )
+            adjudication["status"] = "blocked"
+    eligible_count = sum(
+        row["status"] == "promotion_eligible"
+        for row in report["row_adjudications"].values()
+    )
+    report["scope"]["promotion_eligible_rows"] = eligible_count
+    report["scope"]["blocked_rows"] = (
+        len(report["row_adjudications"]) - eligible_count
+    )
+    taint_counts: Counter[str] = Counter()
+    reason_counts: Counter[str] = Counter()
+    for adjudication in report["row_adjudications"].values():
+        taint_counts.update(adjudication["taints"])
+        reason_counts.update(adjudication["reason_codes"])
+    report["blockers"]["taint_row_counts"] = dict(
+        sorted(taint_counts.items())
+    )
+    report["blockers"]["reason_row_counts"] = dict(
+        sorted(reason_counts.items())
+    )
+    tainted_coordinates = [
+        coordinate
+        for coordinate, adjudication in report["row_adjudications"].items()
+        if "pk_source_candidate_control_taint"
+        in adjudication["taints"]
+    ]
+    require(
+        len(tainted_coordinates) == EXPECTED_PK_SOURCE_CANDIDATE_TAINT_ROWS
+        and coordinate_digest(tainted_coordinates)
+        == EXPECTED_PK_SOURCE_CANDIDATE_TAINT_COORDINATE_SHA256,
+        "PK source-candidate control-taint universe drifted",
+    )
+    report["blockers"]["pk_source_candidate_control_taint_rows"] = len(
+        tainted_coordinates
+    )
+    return closure_guards
+
+
 def row_guard_payload(
     *,
     bound: Mapping[str, Any],
@@ -265,6 +468,9 @@ def row_guard_payload(
         ],
         "pair_key": adjudication["pair_key"],
         "pair_proof_sha256": pair_guard["proof_sha256"],
+        "pk_source_candidate_closure_proof_sha256": adjudication[
+            "pk_source_candidate_closure_proof_sha256"
+        ],
         "pk_source_root_record_sha256": sha256_bytes(
             inputs.pk_source_records[pk_record].data
         ),
@@ -388,6 +594,10 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
     BASE_AUDIT.validate_report(report)
     report = copy.deepcopy(report)
     report["schema"] = SCHEMA
+    closure_guards = apply_pk_source_candidate_gate(
+        report,
+        inputs=inputs,
+    )
     report["candidate_scope"] = {
         "binding": "complete final PK literal decision universe",
         "source_decision_rows": EXPECTED_PK_ROWS,
@@ -431,6 +641,9 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
     report["guards"].update(
         {
             "row_verification_guards_sha256": canonical_sha256(row_guards),
+            "pk_source_candidate_closure_guards_sha256": canonical_sha256(
+                closure_guards
+            ),
             "eligible_coordinate_universe_sha256":
             coordinate_digest(eligible),
             "blocked_coordinate_universe_sha256":
@@ -443,6 +656,7 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
             ],
         }
     )
+    report["pk_source_candidate_closure_guards"] = closure_guards
     report["distribution_policy"].update(
         {
             "contains_translated_dialogue_text": False,
@@ -494,9 +708,16 @@ def validate_report(
         report=rebuilt,
         inputs=inputs,
     )
+    expected_closure_guards = pk_source_candidate_closure_guards(inputs)
     require(
         report["guards"]["row_verification_guards_sha256"]
         == canonical_sha256(rebuilt_guards)
+        and report["pk_source_candidate_closure_guards"]
+        == expected_closure_guards
+        and report["guards"][
+            "pk_source_candidate_closure_guards_sha256"
+        ]
+        == canonical_sha256(expected_closure_guards)
         and report["guards"]["source_decision_segment_universe_sha256"]
         == metadata["source_decision_segment_universe_sha256"]
         and report["guards"]["replacement_manifest_sha256"]
