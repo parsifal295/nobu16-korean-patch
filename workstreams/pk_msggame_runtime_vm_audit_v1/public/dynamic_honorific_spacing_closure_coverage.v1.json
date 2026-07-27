@@ -1,0 +1,84 @@
+{
+  "adjudication": {
+    "automatic_space_inserted": false,
+    "base_pk_semantic_pairs_kept_equal": true,
+    "candidate_current_relative_nonexpanding": true,
+    "candidate_raw_g1n_width_px": 72,
+    "control_bytes_unchanged": true,
+    "current_raw_g1n_width_px": 96,
+    "historical_honorific_semantics_preserved": true,
+    "literal_owned_ascii_leading_space": true,
+    "one_absolute_widget_gate_assumed": false,
+    "pre_layout_theoretical_rows_not_promoted": 377,
+    "predecessor_raw_g1n_width_px": 48,
+    "promotion_requires_full_closure_current_relative_nonexpansion": true
+  },
+  "distribution_policy": {
+    "private_decisions_stay_below_tmp": true,
+    "private_overlays_contain_translation_bodies": false,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "guards": {
+    "base_affected_record_sha256": "0C53141EDDA348BD94F621B925046CEDAA5257E9EA79D0A24CE17003B3FFCAC9",
+    "base_candidate_packed_sha256": "44828B27368FB74EF906DC167DCAF1BA54129A4313F7EDA3C0668777BB86E276",
+    "base_changed_record_sha256": "56B23B153069AD923CF73C6C601D778A7B3794C60B0BBD30A12607ED64889865",
+    "base_renewal_coordinate_sha256": "322AD1F2983B7CD18600C1CD1D7E7C1AF08558B6CB4E61A65E53221E63D226A7",
+    "base_replacement_manifest_sha256": "1F451BFD7DD8DB8CBE8CCCEDEFED35C1C634F82DBFF2A44D142620BC38F94A39",
+    "base_root_delta_proof_sha256": "7A3E5246EA6651985F9E40A4145C91035D281F49FF0B9FB46B78283A84A68331",
+    "base_target_delta_manifest_sha256": "792598D71B9CAE92E04FAD91F364EEE4BA05B18753D76036770581820B289F3F",
+    "checkpoint_builder_sha256": "1993385F70DBF22D41798B9FEC008E89AB0EF2404C307526DEAA9E29DB079B48",
+    "checkpoint_private_sha256": "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC",
+    "checkpoint_report_file_sha256": "2D38AB416E87E83C5DBCF8485F18F970BC8F712693CE5ED8C7C59D9255D22D08",
+    "checkpoint_report_payload_sha256": "B857C608A6BB7A1EFF70B0781738D1B082D49E2A7AC1F430F0F9F9F2E01B025C",
+    "eligible_coordinate_sha256": "C4887CCB23507CBB78B3CA430F4309716E989352DB12E479229E3F17154B6731",
+    "eligible_proof_manifest_sha256": "329E2DEDA948251A6641263724B23988F5F4464605E88BB4134F399811DE12AB",
+    "eligible_root_sha256": "A33A4763DAA9ACAD8C8EC40734B4B574B57F5FEA9AE4F34527504E50DA4ADAD1",
+    "ghidra_layout_contract_file_sha256": "EE28501EE41586025518325DE5CEE9722B99E1063FBE7B8E9049DFA6E310F9AC",
+    "ghidra_vm_contract_file_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461",
+    "pk_affected_record_sha256": "89E5C1F8641E98DCF33F2C239DE88F87A1BA7A190F32BC186797514E8846EFFE",
+    "pk_candidate_packed_sha256": "18F9E09F7D0FE71317733208B25B22EE47A45B5D927C2B583F6AA44B8019D41E",
+    "pk_changed_record_sha256": "AAC8B671FF3AF4F8A9508E76A63EF0F607D1A21F70ED5DDE5FAFE7B8B2417896",
+    "pk_renewal_coordinate_sha256": "A745E82291299FB947DB51074C8031279DEC9BF0B3E95D20B1B5F5DA3312A8B6",
+    "pk_replacement_manifest_sha256": "18815CEFDD9239EA5A72178B28A4EC0C170C49710ABCC89859751CC15883122F",
+    "pk_root_delta_proof_sha256": "A2E39AE21C86BA3027051F1DA6D7E7FC9FF1CAF75B157E5AC3A22128C793AC2A",
+    "pk_target_delta_manifest_sha256": "2BB096846EFAF8E45D7B64EF4C4E82D8D0320E9D3C1F76996460DFB7271F575F",
+    "report_payload_sha256": "1C143486A73977168E1B6A1FF5994269068A7D32CB19DA33F4F05624BEA29C37",
+    "translation_override_coordinate_sha256": "CCB737CFC50B5F370D7E516E5902702160924E8C83BAD52CDAAA7F6961387BC8"
+  },
+  "rejections": {
+    "reason_root_counts": {
+      "grammar_risk": 54,
+      "relative_line_width_expansion": 186
+    },
+    "reason_row_counts": {
+      "grammar_risk": 143,
+      "relative_line_width_expansion": 369
+    },
+    "rejected_manifest_sha256": "626BFAA673F483BEE539AF5AE6AC4219ABC8F1B7BFC0E689DFD9338C687331C5"
+  },
+  "release_target": "0.15.0",
+  "resources": [
+    "MSG/JP/msggame.bin",
+    "MSG_PK/JP/msggame.bin"
+  ],
+  "schema": "nobu16.kr.dynamic-honorific-spacing-closure-coverage.v1",
+  "scope": {
+    "base_affected_records": 270,
+    "base_verified_renewal_rows": 420,
+    "pk_affected_pending_roots": 229,
+    "pk_affected_pending_rows": 434,
+    "pk_affected_records": 289,
+    "pk_promotion_eligible_roots": 40,
+    "pk_promotion_eligible_rows": 57,
+    "pk_rejected_roots": 189,
+    "pk_rejected_rows": 377,
+    "pk_verified_renewal_rows": 50,
+    "post_layer_pending_rows": 8645,
+    "predecessor_pending_rows": 8702,
+    "predecessor_rows": 52803,
+    "translation_override_rows": 4
+  },
+  "status": "PASS",
+  "steam_write_performed": false
+}

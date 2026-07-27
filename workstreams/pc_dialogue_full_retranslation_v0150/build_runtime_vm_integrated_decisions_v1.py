@@ -125,6 +125,12 @@ PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_pending_cross_resource_exact_closure_promotion.v1.json"
 )
+DYNAMIC_HONORIFIC_SPACING_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_dynamic_honorific_spacing_closure_v1.py"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -157,9 +163,15 @@ EXPECTED_PK_ONLY_EXACT_BLOCKED_PROMOTIONS = 1_536
 EXPECTED_PK_POST_PK_ONLY_PROMOTIONS = 11_931
 EXPECTED_PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTIONS = 50
 EXPECTED_PK_INTEGRATED_PROMOTIONS = 11_981
+EXPECTED_DYNAMIC_HONORIFIC_SPACING_PROMOTIONS = 57
+EXPECTED_PK_FINAL_PROMOTIONS = 12_038
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
 EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
 EXPECTED_PENDING_AFTER = 8_702
+EXPECTED_FINAL_PENDING_AFTER = 8_645
+EXPECTED_POST_CROSS_PRIVATE_SHA256 = (
+    "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC"
+)
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
@@ -207,6 +219,7 @@ REFLOW_OVERRIDE = load_module(
 )
 PK_ONLY_EXACT_BLOCKED_OVERLAY: Any | None = None
 PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY: Any | None = None
+DYNAMIC_HONORIFIC_SPACING: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -233,6 +246,16 @@ def load_pk_cross_resource_exact_closure_overlay() -> Any:
             PK_CROSS_RESOURCE_EXACT_CLOSURE_BUILDER_PATH,
         )
     return PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY
+
+
+def load_dynamic_honorific_spacing() -> Any:
+    global DYNAMIC_HONORIFIC_SPACING
+    if DYNAMIC_HONORIFIC_SPACING is None:
+        DYNAMIC_HONORIFIC_SPACING = load_module(
+            "pc_dialogue_runtime_vm_dynamic_honorific_spacing",
+            DYNAMIC_HONORIFIC_SPACING_BUILDER_PATH,
+        )
+    return DYNAMIC_HONORIFIC_SPACING
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -863,6 +886,105 @@ def validated_pk_overlay(
     return by_coordinate, metadata
 
 
+def validated_dynamic_honorific_spacing_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    layer = load_dynamic_honorific_spacing()
+    (
+        decision_content,
+        base_overlay_content,
+        pk_overlay_content,
+        audit_content,
+        base_report_content,
+        pk_report_content,
+        audit,
+        bundle,
+    ) = layer.build_outputs()
+    layer.validate_outputs(
+        decision_content=decision_content,
+        base_overlay_content=base_overlay_content,
+        pk_overlay_content=pk_overlay_content,
+        audit_content=audit_content,
+        base_report_content=base_report_content,
+        pk_report_content=pk_report_content,
+        audit=audit,
+        bundle=bundle,
+    )
+    expected_files = (
+        (layer.DEFAULT_DECISION_OUTPUT, decision_content),
+        (layer.DEFAULT_BASE_OVERLAY_OUTPUT, base_overlay_content),
+        (layer.DEFAULT_PK_OVERLAY_OUTPUT, pk_overlay_content),
+        (layer.DEFAULT_AUDIT_OUTPUT, audit_content),
+        (layer.DEFAULT_BASE_REPORT_OUTPUT, base_report_content),
+        (layer.DEFAULT_PK_REPORT_OUTPUT, pk_report_content),
+    )
+    for path, content in expected_files:
+        require(
+            path.is_file() and path.read_text(encoding="utf-8") == content,
+            f"dynamic honorific spacing artifact drifted: {path}",
+        )
+    updates: dict[tuple[str, str], dict[str, Any]] = {}
+    action_counts: Counter[str] = Counter()
+    for row in bundle["updated_rows"]:
+        key = (str(row["resource"]), str(row["coordinate"]))
+        require(
+            key not in updates,
+            f"duplicate dynamic honorific spacing update: {key}",
+        )
+        evidence = row.get("runtime_vm_verification")
+        require(
+            isinstance(evidence, dict),
+            f"dynamic honorific spacing evidence is absent: {key}",
+        )
+        action_counts[str(evidence.get("action"))] += 1
+        updates[key] = row
+    require(
+        action_counts
+        == {
+            "translation_override": 4,
+            "verification_renewal": 466,
+            "runtime_promotion":
+            EXPECTED_DYNAMIC_HONORIFIC_SPACING_PROMOTIONS,
+        }
+        and audit["scope"]["post_layer_pending_rows"]
+        == EXPECTED_FINAL_PENDING_AFTER,
+        f"dynamic honorific spacing action counts drifted: {action_counts}",
+    )
+    return updates, {
+        "translation_override_count": action_counts[
+            "translation_override"
+        ],
+        "verification_renewal_count": action_counts[
+            "verification_renewal"
+        ],
+        "promotion_count": action_counts["runtime_promotion"],
+        "updated_row_count": len(updates),
+        "private_update_sha256": sha256_bytes(
+            decision_content.encode("utf-8")
+        ),
+        "audit_report_sha256": sha256_bytes(
+            audit_content.encode("utf-8")
+        ),
+        "audit_report_payload_sha256": audit["guards"][
+            "report_payload_sha256"
+        ],
+        "base_candidate_packed_sha256": audit["guards"][
+            "base_candidate_packed_sha256"
+        ],
+        "pk_candidate_packed_sha256": audit["guards"][
+            "pk_candidate_packed_sha256"
+        ],
+        "eligible_coordinate_sha256": audit["guards"][
+            "eligible_coordinate_sha256"
+        ],
+        "eligible_root_sha256": audit["guards"][
+            "eligible_root_sha256"
+        ],
+        "steam_write_performed": False,
+    }
+
+
 def validate_combined_private(
     prepared: Any,
     content: str,
@@ -893,12 +1015,17 @@ def build_outputs(
     private_output: Path,
     include_pk_only: bool = True,
     include_cross_resource: bool | None = None,
+    include_dynamic_honorific_spacing: bool = False,
 ) -> tuple[str, str, dict[str, Any]]:
     if include_cross_resource is None:
         include_cross_resource = include_pk_only
     require(
         include_pk_only or not include_cross_resource,
         "cross-resource integration requires PK-only integration",
+    )
+    require(
+        include_cross_resource or not include_dynamic_honorific_spacing,
+        "dynamic honorific spacing requires cross-resource integration",
     )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
     source_rows, segment_paths, segment_universe_sha256 = load_source_decisions(
@@ -1086,10 +1213,93 @@ def build_outputs(
     cross_resource_promotions = integrate_overlay(
         cross_resource_final_overlay
     )
+    post_cross_rows = sorted(merged.values(), key=coordinate_sort_key)
+    post_cross_private_sha256 = sha256_bytes(
+        canonical_jsonl(post_cross_rows).encode("utf-8")
+    )
+    dynamic_honorific_promotions = 0
+    dynamic_honorific_metadata: dict[str, Any] | None = None
+    if include_dynamic_honorific_spacing:
+        require(
+            post_cross_private_sha256
+            == EXPECTED_POST_CROSS_PRIVATE_SHA256,
+            (
+                "dynamic honorific predecessor checkpoint drifted: "
+                f"{post_cross_private_sha256}"
+            ),
+        )
+        honorific_updates, dynamic_honorific_metadata = (
+            validated_dynamic_honorific_spacing_updates()
+        )
+        for key, updated in honorific_updates.items():
+            predecessor = merged.get(key)
+            require(
+                predecessor is not None,
+                f"dynamic honorific predecessor row is absent: {key}",
+            )
+            evidence = updated.get("runtime_vm_verification")
+            require(
+                isinstance(evidence, dict),
+                f"dynamic honorific evidence is absent: {key}",
+            )
+            action = str(evidence.get("action"))
+            changed_fields = {
+                field
+                for field in set(predecessor) | set(updated)
+                if predecessor.get(field) != updated.get(field)
+            }
+            if action == "translation_override":
+                require(
+                    changed_fields
+                    == {
+                        "translation",
+                        "runtime_vm_verification",
+                        "honorific_spacing_evidence",
+                        "runtime_boundary_leading_space_inserted",
+                    }
+                    and key
+                    in ENGINE.RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES
+                    and updated.get(
+                        "runtime_boundary_leading_space_inserted"
+                    )
+                    is True,
+                    f"dynamic honorific override transition drifted: {key}",
+                )
+            elif action == "verification_renewal":
+                require(
+                    changed_fields == {"runtime_vm_verification"},
+                    f"dynamic honorific renewal transition drifted: {key}",
+                )
+            elif action == "runtime_promotion":
+                require(
+                    changed_fields == RUNTIME_MUTABLE_FIELDS
+                    and predecessor.get("runtime_review") == "pending"
+                    and updated.get("runtime_review") == "verified"
+                    and updated.get("scope_classification")
+                    == "retranslated"
+                    and updated.get("layout_review")
+                    == "runtime_verified",
+                    f"dynamic honorific promotion transition drifted: {key}",
+                )
+                dynamic_honorific_promotions += 1
+            else:
+                raise IntegrationError(
+                    f"dynamic honorific action is invalid: {key}"
+                )
+            merged[key] = dict(updated)
+        require(
+            dynamic_honorific_promotions
+            == EXPECTED_DYNAMIC_HONORIFIC_SPACING_PROMOTIONS,
+            (
+                "dynamic honorific promotion count drifted: "
+                f"{dynamic_honorific_promotions}"
+            ),
+        )
     pk_integrated_promotions = (
         predecessor_promotions
         + pk_only_promotions
         + cross_resource_promotions
+        + dynamic_honorific_promotions
     )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
@@ -1104,9 +1314,21 @@ def build_outputs(
         pk_metadata["cross_resource_predecessor_checkpoint_match"] = (
             post_pk_only_checkpoint_match
         )
+    if include_dynamic_honorific_spacing:
+        assert dynamic_honorific_metadata is not None
+        pk_metadata["dynamic_honorific_spacing_layer_included"] = True
+        pk_metadata["rebuilt_post_cross_integrated_private_sha256"] = (
+            post_cross_private_sha256
+        )
+        pk_metadata["dynamic_honorific_spacing"] = (
+            dynamic_honorific_metadata
+        )
+        pk_metadata["promotion_count"] = pk_integrated_promotions
 
     expected_pk_promotions = (
-        EXPECTED_PK_INTEGRATED_PROMOTIONS
+        EXPECTED_PK_FINAL_PROMOTIONS
+        if include_dynamic_honorific_spacing
+        else EXPECTED_PK_INTEGRATED_PROMOTIONS
         if include_cross_resource
         else EXPECTED_PK_POST_PK_ONLY_PROMOTIONS
         if include_pk_only
@@ -1130,7 +1352,9 @@ def build_outputs(
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
-        EXPECTED_PENDING_AFTER
+        EXPECTED_FINAL_PENDING_AFTER
+        if include_dynamic_honorific_spacing
+        else EXPECTED_PENDING_AFTER
         if include_cross_resource
         else EXPECTED_POST_PK_ONLY_PENDING_AFTER
         if include_pk_only
@@ -1220,6 +1444,17 @@ def build_outputs(
                 ): post_pk_only_checkpoint_match,
             }
         )
+    if include_dynamic_honorific_spacing:
+        report["validation"].update(
+            {
+                "dynamic_honorific_spacing_layer_included": True,
+                "post_cross_predecessor_checkpoint_rebuilt_and_matched":
+                post_cross_private_sha256
+                == EXPECTED_POST_CROSS_PRIVATE_SHA256,
+                "affected_verified_runtime_evidence_renewed": True,
+                "raw_g1n_full_closure_width_guard_rechecked": True,
+            }
+        )
     return private_content, canonical_json(report), report
 
 
@@ -1265,6 +1500,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         base_pristine=args.base_pristine,
         pk_pristine=args.pk_pristine,
         private_output=args.private_output,
+        include_dynamic_honorific_spacing=True,
     )
     if args.write:
         ENGINE.atomic_write(args.private_output, private_content)

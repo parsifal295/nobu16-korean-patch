@@ -81,11 +81,11 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 27_632)
-        self.assertEqual(report["result"]["runtime_review_pending"], 8_702)
+        self.assertEqual(report["promotions"]["promoted_total"], 27_689)
+        self.assertEqual(report["result"]["runtime_review_pending"], 8_645)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            11_981,
+            12_038,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
@@ -127,6 +127,23 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             ]
         )
         self.assertTrue(
+            report["promotions"]["pk_msggame"][
+                "dynamic_honorific_spacing_layer_included"
+            ]
+        )
+        self.assertEqual(
+            report["promotions"]["pk_msggame"][
+                "dynamic_honorific_spacing"
+            ]["promotion_count"],
+            57,
+        )
+        self.assertEqual(
+            report["promotions"]["pk_msggame"][
+                "dynamic_honorific_spacing"
+            ]["translation_override_count"],
+            4,
+        )
+        self.assertTrue(
             report["validation"][
                 "pk_only_predecessor_checkpoint_rebuilt_and_matched"
             ]
@@ -145,7 +162,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            8_702,
+            8_645,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
@@ -267,6 +284,61 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         ]
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([bad_width_proof])
+
+    def test_dynamic_honorific_override_is_exact_and_bound(self) -> None:
+        targets = [
+            row
+            for row in self.rows
+            if row.get("runtime_boundary_leading_space_inserted") is True
+        ]
+        self.assertEqual(len(targets), 4)
+        self.assertEqual(
+            {
+                (row["resource"], row["coordinate"])
+                for row in targets
+            },
+            ENGINE.RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES,
+        )
+        for source in targets:
+            self.assertEqual(source["translation"], " 공")
+            self.assertEqual(
+                source["runtime_vm_verification"]["action"],
+                "translation_override",
+            )
+            self.validate_rows([source])
+
+            missing_flag = copy.deepcopy(source)
+            missing_flag.pop("runtime_boundary_leading_space_inserted")
+            with self.assertRaises(ENGINE.RetranslationError):
+                self.validate_rows([missing_flag])
+
+            doubled_space = copy.deepcopy(source)
+            doubled_space["translation"] = "  공"
+            doubled_space["runtime_vm_verification"][
+                "translation_utf16le_sha256"
+            ] = ENGINE.sha256_text("  공")
+            with self.assertRaises(ENGINE.RetranslationError):
+                self.validate_rows([doubled_space])
+
+    def test_dynamic_honorific_promotion_requires_width_proof(self) -> None:
+        source = next(
+            row
+            for row in self.rows
+            if row["resource"] == "pk_msggame"
+            and row.get("runtime_vm_verification", {}).get("method")
+            == "reversed_vm_dynamic_honorific_spacing_closure_analysis"
+            and row["runtime_vm_verification"]["action"]
+            == "runtime_promotion"
+        )
+        self.assertEqual(source["layout_review"], "runtime_verified")
+        self.validate_rows([source])
+
+        bad_width = copy.deepcopy(source)
+        bad_width["runtime_vm_verification"]["pk_promoted_root_binding"][
+            "relative_full_closure_line_envelope_nonexpanding"
+        ] = False
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([bad_width])
 
 
 if __name__ == "__main__":

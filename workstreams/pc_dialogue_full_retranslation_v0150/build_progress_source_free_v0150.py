@@ -418,6 +418,9 @@ def build_progress() -> dict[str, Any]:
         load_runtime_vm_integration(prepared)
     )
     consumed_runtime_vm_integrated: set[tuple[str, str]] = set()
+    consumed_dynamic_honorific_overrides: set[
+        tuple[str, str]
+    ] = set()
 
     queue_rows = load_jsonl(QUEUE_PATH)
     batch_catalog_raw = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
@@ -511,8 +514,57 @@ def build_progress() -> dict[str, Any]:
                 raise RuntimeError(
                     f"runtime VM integrated decision is absent: {key}"
                 )
+            immutable_integrated_row = integrated_row
+            if (
+                integrated_row.get(
+                    "runtime_boundary_leading_space_inserted"
+                )
+                is True
+            ):
+                evidence = integrated_row.get("runtime_vm_verification")
+                expected_method = (
+                    ENGINE.BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
+                    if resource == "base_msggame"
+                    else ENGINE.PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
+                )
+                if (
+                    key
+                    not in ENGINE.RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES
+                    or effective_row.get("translation") != "공"
+                    or integrated_row.get("translation") != " 공"
+                    or not isinstance(evidence, dict)
+                    or evidence.get("method") != expected_method
+                    or evidence.get("action") != "translation_override"
+                    or not isinstance(
+                        effective_row.get("honorific_spacing_evidence"),
+                        dict,
+                    )
+                    or not isinstance(
+                        integrated_row.get("honorific_spacing_evidence"),
+                        dict,
+                    )
+                    or integrated_row["honorific_spacing_evidence"].get(
+                        "boundary_space_literal_owned"
+                    )
+                    is not True
+                ):
+                    raise RuntimeError(
+                        "dynamic honorific semantic override drifted: "
+                        f"{key}"
+                    )
+                immutable_integrated_row = dict(integrated_row)
+                immutable_integrated_row["translation"] = effective_row[
+                    "translation"
+                ]
+                immutable_integrated_row["honorific_spacing_evidence"] = (
+                    effective_row["honorific_spacing_evidence"]
+                )
+                immutable_integrated_row.pop(
+                    "runtime_boundary_leading_space_inserted"
+                )
+                consumed_dynamic_honorific_overrides.add(key)
             if runtime_immutable_row(effective_row) != runtime_immutable_row(
-                integrated_row
+                immutable_integrated_row
             ):
                 raise RuntimeError(
                     f"runtime VM integration changed semantic decision data: {key}"
@@ -525,6 +577,53 @@ def build_progress() -> dict[str, Any]:
                 if not isinstance(evidence, dict):
                     raise RuntimeError(
                         f"runtime VM promotion lacks row evidence: {key}"
+                    )
+                predecessor_binding = evidence.get(
+                    "predecessor_integrated_binding"
+                )
+                dynamic_predecessor_renewal = (
+                    evidence.get("method")
+                    in {
+                        ENGINE.BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+                        ENGINE.PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+                    }
+                    and evidence.get("action")
+                    in {"translation_override", "verification_renewal"}
+                    and isinstance(predecessor_binding, dict)
+                    and isinstance(
+                        predecessor_binding.get(
+                            "previous_runtime_vm_verification_sha256"
+                        ),
+                        str,
+                    )
+                    and evidence.get("scope_transition")
+                    == {
+                        "from": integrated_row.get(
+                            "scope_classification"
+                        ),
+                        "to": integrated_row.get(
+                            "scope_classification"
+                        ),
+                    }
+                    and evidence.get("layout_transition")
+                    == {
+                        "from": integrated_row.get("layout_review"),
+                        "to": integrated_row.get("layout_review"),
+                    }
+                )
+                if (
+                    evidence.get("action")
+                    in {"translation_override", "verification_renewal"}
+                    and evidence.get("method")
+                    in {
+                        ENGINE.BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+                        ENGINE.PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+                    }
+                    and not dynamic_predecessor_renewal
+                ):
+                    raise RuntimeError(
+                        "dynamic runtime evidence did not bind its verified "
+                        f"predecessor: {key}"
                     )
                 if integrated_row.get("layout_review") != effective_row.get(
                     "layout_review"
@@ -544,12 +643,21 @@ def build_progress() -> dict[str, Any]:
                                 "reversed_vm_cross_resource_exact_"
                                 "closure_analysis"
                             ),
+                            (
+                                "reversed_vm_dynamic_honorific_"
+                                "spacing_closure_analysis"
+                            ),
                         }
                         and evidence.get("layout_transition")
                         == {
                             "from": effective_row.get("layout_review"),
                             "to": "runtime_verified",
                         }
+                        or (
+                            dynamic_predecessor_renewal
+                            and integrated_row.get("layout_review")
+                            == "runtime_verified"
+                        )
                     ):
                         raise RuntimeError(
                             "unsupported runtime layout transition: "
@@ -641,6 +749,25 @@ def build_progress() -> dict[str, Any]:
             "runtime VM integrated decisions were not bound to source segments: "
             f"{missing[:8]}"
         )
+    if (
+        consumed_dynamic_honorific_overrides
+        != ENGINE.RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES
+    ):
+        missing = sorted(
+            ENGINE.RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES
+            - consumed_dynamic_honorific_overrides
+        )
+        extra = sorted(
+            consumed_dynamic_honorific_overrides
+            - ENGINE.RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES
+        )
+        raise RuntimeError(
+            "dynamic honorific overrides were not exactly consumed: "
+            f"missing={missing} extra={extra}"
+        )
+    runtime_vm_integration_metadata[
+        "dynamic_honorific_spacing_override_count"
+    ] = len(consumed_dynamic_honorific_overrides)
 
     touched_batch_ids = sorted(batch_decisions, key=batch_key)
     queue_batch_coverage: list[dict[str, Any]] = []

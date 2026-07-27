@@ -33,6 +33,21 @@
       },
       "cross_resource_layer_included": true,
       "cross_resource_predecessor_checkpoint_match": true,
+      "dynamic_honorific_spacing": {
+        "audit_report_payload_sha256": "1C143486A73977168E1B6A1FF5994269068A7D32CB19DA33F4F05624BEA29C37",
+        "audit_report_sha256": "9244283925590D00C4070F140AEE10060EF36466ACD4BEB202715633670CFADC",
+        "base_candidate_packed_sha256": "44828B27368FB74EF906DC167DCAF1BA54129A4313F7EDA3C0668777BB86E276",
+        "eligible_coordinate_sha256": "C4887CCB23507CBB78B3CA430F4309716E989352DB12E479229E3F17154B6731",
+        "eligible_root_sha256": "A33A4763DAA9ACAD8C8EC40734B4B574B57F5FEA9AE4F34527504E50DA4ADAD1",
+        "pk_candidate_packed_sha256": "18F9E09F7D0FE71317733208B25B22EE47A45B5D927C2B583F6AA44B8019D41E",
+        "private_update_sha256": "9E560E8AE89551451CAC3CDCA6B60C272B9E923BF71A48EF2BC242149607F197",
+        "promotion_count": 57,
+        "steam_write_performed": false,
+        "translation_override_count": 4,
+        "updated_row_count": 527,
+        "verification_renewal_count": 466
+      },
+      "dynamic_honorific_spacing_layer_included": true,
       "exact": {
         "coverage_file_sha256": "DB596688BF87AE07F04E80FE83CB194541A74B1DACE56423A2A39DDF715089A0",
         "private_sha256": "2671809B99ED88F56A6D2386F36EACC7D618EECA8336D8119E4F1BF4001C6BD5",
@@ -50,7 +65,8 @@
       },
       "pk_only_layer_included": true,
       "pk_only_predecessor_checkpoint_match": true,
-      "promotion_count": 11981,
+      "promotion_count": 12038,
+      "rebuilt_post_cross_integrated_private_sha256": "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC",
       "rebuilt_post_pk_only_integrated_private_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
       "rebuilt_predecessor_integrated_private_sha256": "29ECB2446AD89D0F9F122B280D2E66DAB2A36F2F0050174239EB4D1F0D27E757",
       "residual": {
@@ -61,7 +77,7 @@
         "promotion_report_sha256": "F5F726453552D13B29F6C5A7D85CFB945D0DD8C1211452F80E61DB957C261E02"
       }
     },
-    "promoted_total": 27632,
+    "promoted_total": 27689,
     "relative_reflow_override": {
       "after_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
       "before_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
@@ -87,25 +103,29 @@
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 44101,
-    "private_integrated_decision_sha256": "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC",
-    "runtime_review_pending": 8702,
+    "fully_candidate_eligible": 44158,
+    "private_integrated_decision_sha256": "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2",
+    "runtime_review_pending": 8645,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
   "status": "PASS",
   "steam_write_performed": false,
   "validation": {
+    "affected_verified_runtime_evidence_renewed": true,
     "base_candidate_record_guards_rechecked": true,
     "control_repair_bindings_rechecked": true,
     "cross_resource_layer_included": true,
     "cross_resource_predecessor_checkpoint_rebuilt_and_matched": true,
+    "dynamic_honorific_spacing_layer_included": true,
     "normal_v0150_decision_validator_rechecked": true,
     "per_row_game_playback_required_for_promotions": false,
     "pk_full_candidate_records_and_closures_rechecked": true,
     "pk_only_layer_included": true,
     "pk_only_predecessor_checkpoint_rebuilt_and_matched": true,
     "pk_overlay_rebuilt_and_rechecked": true,
+    "post_cross_predecessor_checkpoint_rebuilt_and_matched": true,
+    "raw_g1n_full_closure_width_guard_rechecked": true,
     "relative_reflow_override_rebuilt_and_rechecked": true,
     "representative_game_smoke_test_required_before_release": true,
     "runtime_only_transitions_enforced": true,

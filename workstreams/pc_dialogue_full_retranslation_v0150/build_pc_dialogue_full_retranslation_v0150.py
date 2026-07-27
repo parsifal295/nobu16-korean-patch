@@ -130,6 +130,32 @@ PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_pending_cross_resource_exact_closure_promotion.v1.json"
 )
+BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "base_msggame_dynamic_honorific_spacing_delta_verified.private.v1.jsonl"
+)
+BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_REPORT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "base_msggame_dynamic_honorific_spacing_delta.v1.json"
+)
+PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_msggame_dynamic_honorific_spacing_closure_verified.private.v1.jsonl"
+)
+PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_REPORT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_dynamic_honorific_spacing_closure_promotion.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -170,6 +196,12 @@ PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
 PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
     "nobu16.kr.pk-msggame-pending-cross-resource-exact-closure-overlay-row.v1"
 )
+BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
+    "nobu16.kr.base-msggame-dynamic-honorific-spacing-delta-row.v1"
+)
+PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
+    "nobu16.kr.pk-msggame-dynamic-honorific-spacing-closure-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
@@ -183,6 +215,12 @@ PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD = (
 PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_cross_resource_exact_closure_analysis"
 )
+BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_dynamic_honorific_spacing_delta_analysis"
+)
+PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_dynamic_honorific_spacing_closure_analysis"
+)
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
@@ -190,6 +228,22 @@ PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
         PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
         PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD,
         PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD,
+        BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+    }
+)
+RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES = frozenset(
+    {
+        ("base_msggame", "0:1271:0"),
+        ("base_msggame", "0:1275:0"),
+        ("pk_msggame", "0:1325:0"),
+        ("pk_msggame", "0:1329:0"),
+    }
+)
+DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
+    {
+        BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 SOURCE_OUTER_WHITESPACE_REPAIR_EVIDENCE_SCHEMA = (
@@ -713,6 +767,7 @@ def load_pk_runtime_vm_overlays() -> dict[
             PK_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
             RUNTIME_VM_VERIFICATION_METHOD,
             "nobu16.kr.pk-msggame-runtime-vm-promotion.v1",
+            "pk_msggame",
         ),
         (
             PK_FULL_CANDIDATE_RUNTIME_VM_OVERLAY_PATH,
@@ -720,6 +775,7 @@ def load_pk_runtime_vm_overlays() -> dict[
             PK_FULL_CANDIDATE_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
             PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD,
             "nobu16.kr.pk-msggame-full-candidate-runtime-vm-promotion.v1",
+            "pk_msggame",
         ),
         (
             PK_RESIDUAL_RUNTIME_VM_OVERLAY_PATH,
@@ -727,6 +783,7 @@ def load_pk_runtime_vm_overlays() -> dict[
             PK_RESIDUAL_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
             PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
             "nobu16.kr.pk-msggame-residual-runtime-vm-promotion.v1",
+            "pk_msggame",
         ),
         (
             PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_OVERLAY_PATH,
@@ -737,6 +794,7 @@ def load_pk_runtime_vm_overlays() -> dict[
                 "nobu16.kr.pk-msggame-exact-blocked-pk-only-closure-"
                 "promotion.v1"
             ),
+            "pk_msggame",
         ),
         (
             PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_OVERLAY_PATH,
@@ -747,6 +805,26 @@ def load_pk_runtime_vm_overlays() -> dict[
                 "nobu16.kr.pk-msggame-pending-cross-resource-exact-"
                 "closure-promotion.v1"
             ),
+            "pk_msggame",
+        ),
+        (
+            BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_PATH,
+            BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_REPORT_PATH,
+            BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
+            BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+            "nobu16.kr.base-msggame-dynamic-honorific-spacing-delta.v1",
+            "base_msggame",
+        ),
+        (
+            PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_PATH,
+            PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_REPORT_PATH,
+            PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
+            PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+            (
+                "nobu16.kr.pk-msggame-dynamic-honorific-spacing-closure-"
+                "promotion.v1"
+            ),
+            "pk_msggame",
         ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
@@ -756,6 +834,7 @@ def load_pk_runtime_vm_overlays() -> dict[
         row_schema,
         method,
         promotion_schema,
+        expected_resource,
     ) in specs:
         if not overlay_path.is_file() or not promotion_path.is_file():
             continue
@@ -778,6 +857,14 @@ def load_pk_runtime_vm_overlays() -> dict[
             or promotion.get("schema") != promotion_schema
             or promotion.get("status") != "PASS"
             or promotion.get("steam_write_performed") is not False
+            or (
+                method
+                in DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHODS
+                and (
+                    promotion.get("resource") != expected_resource
+                    or promotion.get("method") != method
+                )
+            )
             or promotion.get("result", {}).get("private_overlay_sha256")
             != sha256_bytes(raw_overlay)
         ):
@@ -811,18 +898,70 @@ def load_pk_runtime_vm_overlays() -> dict[
                 raise RetranslationError(
                     f"duplicate PK runtime VM overlay coordinate: {key}"
                 )
-            if (
-                row.get("schema") != row_schema
-                or row.get("resource") != "pk_msggame"
-                or row.get("status") != "verified"
-                or row.get("method") != method
-                or row.get("scope_transition")
-                != {
-                    "from": "runtime_fragment_pending",
-                    "to": "retranslated",
-                }
-                or row.get("per_row_game_playback_required") is not False
-            ):
+            dynamic_honorific = (
+                method
+                in DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHODS
+            )
+            base_row_valid = (
+                row.get("schema") == row_schema
+                and row.get("resource") == expected_resource
+                and row.get("status") == "verified"
+                and row.get("method") == method
+                and row.get("per_row_game_playback_required") is False
+            )
+            if dynamic_honorific:
+                action = row.get("action")
+                scope_transition = row.get("scope_transition")
+                layout_transition = row.get("layout_transition")
+                dynamic_transition_valid = (
+                    action
+                    in {
+                        "translation_override",
+                        "verification_renewal",
+                        "runtime_promotion",
+                    }
+                    and isinstance(scope_transition, dict)
+                    and isinstance(layout_transition, dict)
+                    and (
+                        (
+                            action == "runtime_promotion"
+                            and expected_resource == "pk_msggame"
+                            and scope_transition
+                            == {
+                                "from": "runtime_fragment_pending",
+                                "to": "retranslated",
+                            }
+                            and layout_transition.get("from")
+                            in {
+                                "runtime_pending",
+                                "unchanged_from_current",
+                            }
+                            and layout_transition.get("to")
+                            == "runtime_verified"
+                        )
+                        or (
+                            action
+                            in {
+                                "translation_override",
+                                "verification_renewal",
+                            }
+                            and scope_transition.get("from")
+                            == scope_transition.get("to")
+                            == "retranslated"
+                            and layout_transition.get("from")
+                            == layout_transition.get("to")
+                        )
+                    )
+                )
+            else:
+                dynamic_transition_valid = (
+                    row.get("scope_transition")
+                    == {
+                        "from": "runtime_fragment_pending",
+                        "to": "retranslated",
+                    }
+                )
+            if not base_row_valid or not dynamic_transition_valid:
                 raise RetranslationError(
                     "PK runtime VM overlay evidence is incomplete: "
                     f"{coordinate}"
@@ -893,6 +1032,8 @@ def validate_pk_runtime_vm_verification(
     coordinate_value: str,
     translation: str,
     layout_review: str,
+    resource: str,
+    scope_classification: str,
     label: str,
 ) -> None:
     evidence_schema = str(evidence.get("schema"))
@@ -910,6 +1051,90 @@ def validate_pk_runtime_vm_verification(
             f"{label}.runtime_vm_verification translation hash does not match"
         )
     method = evidence.get("method")
+    if method in DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHODS:
+        expected_method = (
+            BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
+            if resource == "base_msggame"
+            else PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
+        )
+        action = evidence.get("action")
+        scope_transition = evidence.get("scope_transition")
+        layout_transition = evidence.get("layout_transition")
+        delta_binding = evidence.get("honorific_spacing_delta_binding")
+        predecessor_binding = evidence.get("predecessor_integrated_binding")
+        promoted_binding = evidence.get("pk_promoted_root_binding")
+        if (
+            method != expected_method
+            or evidence.get("resource") != resource
+            or not isinstance(scope_transition, dict)
+            or scope_transition.get("to") != scope_classification
+            or not isinstance(layout_transition, dict)
+            or layout_transition.get("to") != layout_review
+            or not isinstance(delta_binding, dict)
+            or not isinstance(delta_binding.get("root"), list)
+            or not isinstance(
+                delta_binding.get("reachable_repaired_targets"),
+                list,
+            )
+            or any(
+                not isinstance(delta_binding.get(field), str)
+                for field in (
+                    "root_delta_proof_sha256",
+                    "target_delta_manifest_sha256",
+                    "candidate_packed_sha256",
+                    "ghidra_vm_contract_file_sha256",
+                    "ghidra_layout_contract_file_sha256",
+                    "audit_report_file_sha256",
+                    "audit_report_payload_sha256",
+                )
+            )
+            or not isinstance(predecessor_binding, dict)
+            or any(
+                not isinstance(predecessor_binding.get(field), str)
+                for field in (
+                    "row_sha256",
+                    "private_integrated_decision_sha256",
+                    "source_free_report_file_sha256",
+                    "integrated_builder_sha256",
+                )
+            )
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification honorific binding is incomplete"
+            )
+        if action == "runtime_promotion":
+            if (
+                resource != "pk_msggame"
+                or scope_transition
+                != {
+                    "from": "runtime_fragment_pending",
+                    "to": "retranslated",
+                }
+                or layout_transition.get("to") != "runtime_verified"
+                or not isinstance(promoted_binding, dict)
+                or promoted_binding.get("hard_grammar_risk_absent")
+                is not True
+                or promoted_binding.get(
+                    "relative_full_closure_line_envelope_nonexpanding"
+                )
+                is not True
+            ):
+                raise RetranslationError(
+                    f"{label}.runtime_vm_verification promotion proof is incomplete"
+                )
+        elif action in {"translation_override", "verification_renewal"}:
+            if (
+                scope_transition.get("from") != scope_transition.get("to")
+                or layout_transition.get("from") != layout_transition.get("to")
+                or promoted_binding is not None
+            ):
+                raise RetranslationError(
+                    f"{label}.runtime_vm_verification renewal transition drifted"
+                )
+        else:
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification has an invalid honorific action"
+            )
     if (
         method == PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD
         and evidence.get("layout_review_binding") != {"status": layout_review}
@@ -1072,14 +1297,32 @@ def validate_translation_shape(
     label: str,
     *,
     allow_empty_runtime_morpheme: bool = False,
+    allow_runtime_boundary_leading_space: bool = False,
 ) -> None:
+    if allow_empty_runtime_morpheme and allow_runtime_boundary_leading_space:
+        raise RetranslationError(
+            f"{label} cannot combine empty-morpheme and boundary-space exceptions"
+        )
     if not translation.strip() and not allow_empty_runtime_morpheme:
         raise RetranslationError(f"{label} replacement is blank")
     if allow_empty_runtime_morpheme and translation != "":
         raise RetranslationError(
             f"{label} empty runtime morpheme replacement must be exactly empty"
         )
-    if protected_signature(translation) != protected_signature(current_text):
+    if allow_runtime_boundary_leading_space:
+        shape_translation = translation[1:]
+        if (
+            not translation.startswith(" ")
+            or translation.startswith("  ")
+            or translation != " 공"
+        ):
+            raise RetranslationError(
+                f"{label} runtime boundary repair must add exactly one ASCII "
+                "space before 공"
+            )
+    else:
+        shape_translation = translation
+    if protected_signature(shape_translation) != protected_signature(current_text):
         raise RetranslationError(f"{label} changes protected runtime tokens or outer whitespace")
     if KANA_OR_HAN_RE.search(translation):
         raise RetranslationError(f"{label} replacement retains kana or CJK Han text")
@@ -1182,6 +1425,30 @@ def validate_decisions(
             if isinstance(runtime_vm_evidence, dict)
             else None
         )
+        if (
+            "runtime_boundary_leading_space_inserted" in row
+            and row.get("runtime_boundary_leading_space_inserted") is not True
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_boundary_leading_space_inserted must be true "
+                "when present"
+            )
+        runtime_boundary_leading_space_inserted = (
+            row.get("runtime_boundary_leading_space_inserted") is True
+        )
+        expected_honorific_method = (
+            BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
+            if resource == "base_msggame"
+            else PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
+        )
+        if runtime_boundary_leading_space_inserted and (
+            (str(resource), f"{block_id}:{record_id}:{literal_id}")
+            not in RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES
+            or runtime_vm_method != expected_honorific_method
+        ):
+            raise RetranslationError(
+                f"{label} has an unauthorized runtime-boundary leading space"
+            )
         if runtime_vm_evidence is not None and (
             runtime_vm_method not in PK_RUNTIME_VM_VERIFICATION_METHODS
         ):
@@ -1369,6 +1636,9 @@ def validate_decisions(
                 row.get("layout_review"),
                 label,
                 allow_empty_runtime_morpheme=empty_runtime_morpheme,
+                allow_runtime_boundary_leading_space=(
+                    runtime_boundary_leading_space_inserted
+                ),
             )
         audited_base_coordinate = False
         if resource == "base_msggame" and runtime_review == "verified":
@@ -1380,7 +1650,11 @@ def validate_decisions(
             )
             if (
                 audited_base_coordinate
-                and runtime_vm_method != RUNTIME_VM_VERIFICATION_METHOD
+                and runtime_vm_method
+                not in {
+                    RUNTIME_VM_VERIFICATION_METHOD,
+                    BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
+                }
             ):
                 raise RetranslationError(
                     f"{label} is in the reversed-VM audited Base universe and "
@@ -1393,35 +1667,59 @@ def validate_decisions(
         ):
             assert isinstance(runtime_vm_evidence, dict)
             if resource == "base_msggame":
-                if runtime_vm_coverage is None:
-                    runtime_vm_coverage = load_runtime_vm_coverage()
-                coverage, coverage_sha256 = runtime_vm_coverage
-                validate_runtime_vm_verification(
-                    evidence=runtime_vm_evidence,
-                    coverage=coverage,
-                    coverage_sha256=coverage_sha256,
-                    coordinate_value=f"{block_id}:{record_id}:{literal_id}",
-                    record_coordinate_value=f"{block_id}:{record_id}",
-                    source_record_raw_sha256=str(
-                        target["source_record_raw_sha256"]
-                    ),
-                    current_ko_utf16le_sha256=str(
-                        target["current_ko_utf16le_sha256"]
-                    ),
-                    translation=translation,
-                    label=label,
-                )
-                record_key = (block_id, record_id)
-                candidate_record_hash = str(
-                    runtime_vm_evidence["candidate_record_raw_sha256"]
-                )
-                previous_hash = runtime_vm_verified_record_hashes.setdefault(
-                    record_key,
-                    candidate_record_hash,
-                )
-                if previous_hash != candidate_record_hash:
+                if runtime_vm_method == RUNTIME_VM_VERIFICATION_METHOD:
+                    if runtime_vm_coverage is None:
+                        runtime_vm_coverage = load_runtime_vm_coverage()
+                    coverage, coverage_sha256 = runtime_vm_coverage
+                    validate_runtime_vm_verification(
+                        evidence=runtime_vm_evidence,
+                        coverage=coverage,
+                        coverage_sha256=coverage_sha256,
+                        coordinate_value=f"{block_id}:{record_id}:{literal_id}",
+                        record_coordinate_value=f"{block_id}:{record_id}",
+                        source_record_raw_sha256=str(
+                            target["source_record_raw_sha256"]
+                        ),
+                        current_ko_utf16le_sha256=str(
+                            target["current_ko_utf16le_sha256"]
+                        ),
+                        translation=translation,
+                        label=label,
+                    )
+                    record_key = (block_id, record_id)
+                    candidate_record_hash = str(
+                        runtime_vm_evidence["candidate_record_raw_sha256"]
+                    )
+                    previous_hash = runtime_vm_verified_record_hashes.setdefault(
+                        record_key,
+                        candidate_record_hash,
+                    )
+                    if previous_hash != candidate_record_hash:
+                        raise RetranslationError(
+                            f"{label} conflicts with another row's candidate "
+                            "record hash"
+                        )
+                elif (
+                    runtime_vm_method
+                    == BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD
+                ):
+                    if pk_runtime_vm_overlays is None:
+                        pk_runtime_vm_overlays = load_pk_runtime_vm_overlays()
+                    validate_pk_runtime_vm_verification(
+                        evidence=runtime_vm_evidence,
+                        overlay_rows=pk_runtime_vm_overlays,
+                        coordinate_value=(
+                            f"{block_id}:{record_id}:{literal_id}"
+                        ),
+                        translation=translation,
+                        layout_review=str(row.get("layout_review")),
+                        resource=str(resource),
+                        scope_classification=str(scope_classification),
+                        label=label,
+                    )
+                else:
                     raise RetranslationError(
-                        f"{label} conflicts with another row's candidate record hash"
+                        f"{label} Base reversed VM evidence uses the wrong method"
                     )
             elif resource == "pk_msggame":
                 if pk_runtime_vm_overlays is None:
@@ -1432,6 +1730,8 @@ def validate_decisions(
                     coordinate_value=f"{block_id}:{record_id}:{literal_id}",
                     translation=translation,
                     layout_review=str(row.get("layout_review")),
+                    resource=str(resource),
+                    scope_classification=str(scope_classification),
                     label=label,
                 )
             else:
