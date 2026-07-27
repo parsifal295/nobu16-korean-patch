@@ -1,0 +1,46 @@
+{
+  "action_counts": {
+    "runtime_promotion": 1,
+    "translation_override": 5,
+    "translation_override_and_runtime_promotion": 3,
+    "translation_override_pending": 6,
+    "verification_renewal": 680
+  },
+  "distribution_policy": {
+    "private_decision_bodies_stay_below_tmp": true,
+    "private_evidence_overlay_contains_translation_bodies": false,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "evidence": {
+    "actual_eligible_coordinate_sha256": "4DF163871B35C27A3A241492B9131F496C5A0EDC8EC4AA6055F17C358EA507F9",
+    "actual_eligible_root_sha256": "47E9F29977B5F25A8717A1FDF1A51D22CB0F61A7EDD692CBEE71A9ACD7A693EC",
+    "audit_report_file_sha256": "132B857E1108BA42F1FBB9F410B1096576E52598D121111DFD4B67585F22CD3A",
+    "audit_report_payload_sha256": "4955A1F11075E895BBCC9A915AF62787121B601DDDBF026D65E2B315F9FBBCA6",
+    "checkpoint_private_sha256": "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2",
+    "pk_candidate_packed_sha256": "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628"
+  },
+  "guards": {
+    "report_payload_sha256": "23C50FE5DDA68723142488CDF735F6219CB65907526E9A8F8E5EFC2E19B34044"
+  },
+  "method": "reversed_vm_pk_bound_terminal_family_exact_closure_analysis",
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "decision_delta_rows": 695,
+    "existing_verified_base_evidence_renewal_rows": 0,
+    "existing_verified_pk_evidence_renewal_rows": 685,
+    "pending_rows_after": 8641,
+    "private_decision_delta_sha256": "74235120686C819652A4ADE6F0892C7F46D5155D6DB3837C0B9364858185EC1C",
+    "private_evidence_rows": 695,
+    "private_evidence_sha256": "91C1E97FCC6FB65DFB769C8CD58B262CABC1A1827E58F0CAC6D34F31830F6DE7",
+    "rejected_pending_rows": 916,
+    "runtime_promotion_roots": 4,
+    "runtime_promotion_rows": 4,
+    "translation_body_copied_to_evidence_overlay": false,
+    "translation_override_rows": 14
+  },
+  "schema": "nobu16.kr.pk-bound-terminal-family-exact-closure-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}
