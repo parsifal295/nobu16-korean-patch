@@ -1454,9 +1454,31 @@ def validate_output_paths(args: argparse.Namespace) -> None:
     )
 
 
+def validate_written_outputs(
+    args: argparse.Namespace,
+    *,
+    decision_content: str,
+    evidence_content: str,
+    audit_content: str,
+    promotion_content: str,
+) -> None:
+    for path, content, encoding in (
+        (args.decision_output, decision_content, "utf-8"),
+        (args.evidence_output, evidence_content, "utf-8"),
+        (args.audit_output, audit_content, "ascii"),
+        (args.promotion_output, promotion_content, "ascii"),
+    ):
+        require(
+            path.is_file()
+            and path.read_text(encoding=encoding) == content,
+            f"frozen closure output drifted: {path}",
+        )
+
+
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--check", action="store_true")
     parser.add_argument(
         "--audit-output",
         type=Path,
@@ -1512,6 +1534,14 @@ def main(argv: Sequence[str] | None = None) -> int:
                 encoding="ascii" if path.suffix == ".json" else "utf-8",
                 newline="\n",
             )
+    if args.check:
+        validate_written_outputs(
+            args,
+            decision_content=decision_content,
+            evidence_content=evidence_content,
+            audit_content=audit_content,
+            promotion_content=promotion_content,
+        )
     print(
         "status=PASS "
         f"promotion={EXPECTED_PROMOTION_ROWS} "

@@ -38,6 +38,7 @@ def default_args(**updates: Path | bool) -> argparse.Namespace:
         "decision_output": BUILDER.DEFAULT_DECISION_OUTPUT,
         "evidence_output": BUILDER.DEFAULT_EVIDENCE_OUTPUT,
         "write": False,
+        "check": False,
     }
     values.update(updates)
     return argparse.Namespace(**values)
@@ -242,6 +243,17 @@ class CategoryBDeferredFullVmClosureTests(unittest.TestCase):
         self.assertFalse(self.audit["steam_write_performed"])
         self.assertFalse(
             self.bundle["promotion"]["steam_write_performed"]
+        )
+
+    def test_check_mode_binds_all_frozen_outputs(self) -> None:
+        parsed = BUILDER.parse_args(["--check"])
+        self.assertTrue(parsed.check)
+        BUILDER.validate_written_outputs(
+            parsed,
+            decision_content=self.decision_content,
+            evidence_content=self.evidence_content,
+            audit_content=self.audit_content,
+            promotion_content=self.promotion_content,
         )
 
     def test_public_reports_parse_without_private_rows(self) -> None:
