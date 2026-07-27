@@ -1,0 +1,43 @@
+{
+  "action_counts": {
+    "runtime_promotion": 1,
+    "translation_override_and_runtime_promotion": 22,
+    "translation_override_and_verification_renewal": 53
+  },
+  "distribution_policy": {
+    "private_decision_bodies_stay_below_tmp": true,
+    "private_evidence_contains_translation_bodies": false,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "evidence": {
+    "assembly_manifest_sha256": "93F1F8B14FE43A05943BE9828D3A6ECC19BA570140ABBB5BB2DA930CA99C440A",
+    "audit_report_file_sha256": "9B1553E359CAA26627C02058EBE594BFCCB2EB628E2F6F6C5097792E9A37FB69",
+    "audit_report_payload_sha256": "BF7EC8A09E119A1B710122573F3583FBCB312B7D79DBB6AFF4D015B9E1F75E91",
+    "pending_eligible_coordinate_sha256": "7AC0764A958A0D994099C74F1786B29462E3D59FEE00907D25220808B45D462F",
+    "pk_candidate_packed_sha256": "174E3BDBA63E38782531ADBF864FA95FFB75823A679DAC029594FFF1D66F23F4",
+    "verified_renewal_coordinate_sha256": "FD51975BCCC485F80DB24F996E09182D3656D4F012D835B791E3C69B36FA2C0B"
+  },
+  "guards": {
+    "report_payload_sha256": "D9771DAFC3B524EE1C54EFE58EDFEDE9134A7147C097ED8657B0FDFDBF2676A7"
+  },
+  "method": "reversed_vm_pk_thought_predicate_family_exact_closure_analysis",
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "decision_delta_rows": 76,
+    "existing_verified_evidence_renewal_rows": 53,
+    "pending_rows_after": 8618,
+    "pending_rows_before": 8641,
+    "private_decision_delta_sha256": "5D516DBC69F8E78BC07E78C3BA032DEC68941E453DA687F6CD46E757C70333BD",
+    "private_evidence_rows": 76,
+    "private_evidence_sha256": "76722DBB632D9CBB78C5BE089C18BDA8AD66C79C8A302B79DBE7DA9C03F32399",
+    "rejected_rows": 0,
+    "runtime_promotion_rows": 23,
+    "translation_body_copied_to_evidence": false,
+    "translation_override_rows": 75
+  },
+  "schema": "nobu16.kr.pk-thought-predicate-family-exact-closure-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}
