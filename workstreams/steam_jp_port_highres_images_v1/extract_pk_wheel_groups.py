@@ -66,13 +66,26 @@ def main() -> None:
     groups = []
     strips = []
 
-    main_cell = (204, 188) if scale == 2 else (104, 96)
+    main_record = records[6]
+    main_core = (main_record[2], main_record[3], main_record[4])
+    if scale == 2:
+        if main_core == (196, 180, 0):
+            main_cell = (204, 188)
+        elif main_core == (192, 176, 0):
+            # TC/SC/EN high-resolution PK archives use the detail-sized
+            # geometry for the six main-wheel states.
+            main_cell = (200, 184)
+        else:
+            raise ValueError(f"unexpected high PK main geometry: {main_core}")
+    else:
+        if main_core != (96, 88, 0):
+            raise ValueError(f"unexpected low PK main geometry: {main_core}")
+        main_cell = (104, 96)
     main_strip = Image.new("RGBA", (main_cell[0] * 6, main_cell[1]), (0, 0, 0, 0))
     main_positions = []
     for state, index in enumerate(range(6, 12)):
         x, y, width, height, third = records[index]
-        expected = (196, 180, 0) if scale == 2 else (96, 88, 0)
-        if (width, height, third) != expected:
+        if (width, height, third) != main_core:
             raise ValueError(f"record {index} is not the PK main state: {(width, height, third)}")
         rect = (x - 4, y - 4, x - 4 + main_cell[0], y - 4 + main_cell[1])
         main_strip.alpha_composite(atlas.crop(rect), (state * main_cell[0], 0))
