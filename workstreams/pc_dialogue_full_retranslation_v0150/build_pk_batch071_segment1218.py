@@ -493,14 +493,16 @@ def base_and_assembly_evidence(
                 seen_companion.add(coordinate)
             elif coordinate in hidden_set:
                 if (
-                    source_literals[literal_id] != "\n"
-                    or current_literals[literal_id] != "\n"
+                    source_literals[literal_id]
+                    not in {"", "\n"}
+                    or current_literals[literal_id]
+                    != source_literals[literal_id]
                 ):
                     raise RuntimeError(
-                        f"segment {SEGMENT} hidden newline drifted: "
+                        f"segment {SEGMENT} hidden literal drifted: "
                         f"{coordinate}"
                     )
-                assembled.append("\n")
+                assembled.append(source_literals[literal_id])
                 owners.append("source_identical_hidden_newline")
                 seen_hidden.add(coordinate)
             else:
