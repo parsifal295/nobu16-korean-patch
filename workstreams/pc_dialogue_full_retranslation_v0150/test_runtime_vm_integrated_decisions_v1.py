@@ -81,11 +81,11 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 27_582)
-        self.assertEqual(report["result"]["runtime_review_pending"], 8_752)
+        self.assertEqual(report["promotions"]["promoted_total"], 30_134)
+        self.assertEqual(report["result"]["runtime_review_pending"], 6_200)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            11_931,
+            14_483,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
@@ -110,9 +110,30 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
                 "pk_only_predecessor_checkpoint_match"
             ]
         )
+        self.assertEqual(
+            report["promotions"]["pk_msggame"][
+                "cross_resource_exact_closure"
+            ]["promotion_count"],
+            2_552,
+        )
+        self.assertTrue(
+            report["promotions"]["pk_msggame"][
+                "cross_resource_layer_included"
+            ]
+        )
+        self.assertTrue(
+            report["promotions"]["pk_msggame"][
+                "cross_resource_predecessor_checkpoint_match"
+            ]
+        )
         self.assertTrue(
             report["validation"][
                 "pk_only_predecessor_checkpoint_rebuilt_and_matched"
+            ]
+        )
+        self.assertTrue(
+            report["validation"][
+                "cross_resource_predecessor_checkpoint_rebuilt_and_matched"
             ]
         )
         self.assertEqual(
@@ -124,7 +145,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            8_752,
+            6_200,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
@@ -200,6 +221,36 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         bad_layout["layout_review"] = "runtime_verified"
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([bad_layout])
+
+        bad_binding = copy.deepcopy(source)
+        bad_binding["runtime_vm_verification"]["layout_review_binding"][
+            "status"
+        ] = "runtime_verified"
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([bad_binding])
+
+    def test_cross_resource_exact_closure_row_preserves_layout_binding(
+        self,
+    ) -> None:
+        source = next(
+            row
+            for row in self.rows
+            if row["resource"] == "pk_msggame"
+            and row["runtime_review"] == "verified"
+            and row["runtime_vm_verification"]["method"]
+            == "reversed_vm_cross_resource_exact_closure_analysis"
+        )
+        self.assertEqual(source["layout_review"], "runtime_verified")
+        self.assertEqual(
+            source["runtime_vm_verification"]["layout_transition"],
+            {
+                "from": source["runtime_vm_verification"][
+                    "layout_review_binding"
+                ]["status"],
+                "to": "runtime_verified",
+            },
+        )
+        self.validate_rows([source])
 
         bad_binding = copy.deepcopy(source)
         bad_binding["runtime_vm_verification"]["layout_review_binding"][

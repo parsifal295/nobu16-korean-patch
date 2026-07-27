@@ -100,6 +100,31 @@ PK_ONLY_EXACT_BLOCKED_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_exact_blocked_pk_only_closure_promotion.v1.json"
 )
+PK_CROSS_RESOURCE_EXACT_CLOSURE_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_msggame_pending_cross_resource_exact_closure_v1.py"
+)
+PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY_PATH = (
+    DECISIONS_DIR
+    / "runtime_verification_overlays"
+    / "pk_msggame_pending_cross_resource_exact_closure_verified.private.v1.jsonl"
+)
+PK_CROSS_RESOURCE_EXACT_CLOSURE_AUDIT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_pending_cross_resource_exact_closure_coverage.v1.json"
+)
+PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTION_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_pending_cross_resource_exact_closure_promotion.v1.json"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -129,9 +154,12 @@ EXPECTED_PK_EXACT_PROMOTIONS = 7_450
 EXPECTED_PK_RESIDUAL_PROMOTIONS = 2_945
 EXPECTED_PK_PREDECESSOR_PROMOTIONS = 10_395
 EXPECTED_PK_ONLY_EXACT_BLOCKED_PROMOTIONS = 1_536
-EXPECTED_PK_INTEGRATED_PROMOTIONS = 11_931
+EXPECTED_PK_POST_PK_ONLY_PROMOTIONS = 11_931
+EXPECTED_PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTIONS = 2_552
+EXPECTED_PK_INTEGRATED_PROMOTIONS = 14_483
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
-EXPECTED_PENDING_AFTER = 8_752
+EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
+EXPECTED_PENDING_AFTER = 6_200
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
@@ -178,6 +206,7 @@ REFLOW_OVERRIDE = load_module(
     REFLOW_OVERRIDE_LOADER_PATH,
 )
 PK_ONLY_EXACT_BLOCKED_OVERLAY: Any | None = None
+PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -191,6 +220,19 @@ def load_pk_only_exact_blocked_overlay() -> Any:
             PK_ONLY_EXACT_BLOCKED_BUILDER_PATH,
         )
     return PK_ONLY_EXACT_BLOCKED_OVERLAY
+
+
+def load_pk_cross_resource_exact_closure_overlay() -> Any:
+    global PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY
+    if PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY is None:
+        PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY = load_module(
+            (
+                "pc_dialogue_runtime_vm_integration_"
+                "pk_cross_resource_exact_closure_overlay"
+            ),
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_BUILDER_PATH,
+        )
+    return PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -484,6 +526,7 @@ def validated_base_rows(
 def validated_pk_overlay(
     *,
     include_pk_only: bool,
+    include_cross_resource: bool,
 ) -> tuple[
     dict[str, dict[str, Any]],
     dict[str, Any],
@@ -572,6 +615,10 @@ def validated_pk_overlay(
         == sha256_bytes(PK_RESIDUAL_OVERLAY_PATH.read_bytes())
         and len(residual_rows) == EXPECTED_PK_RESIDUAL_PROMOTIONS,
         "PK residual VM promotion report drifted",
+    )
+    require(
+        include_pk_only or not include_cross_resource,
+        "cross-resource layer requires the PK-only predecessor",
     )
     if not include_pk_only:
         by_coordinate = {str(row["coordinate"]): row for row in rows}
@@ -686,12 +733,7 @@ def validated_pk_overlay(
             f"PK promoted overlay overlap: {coordinate}",
         )
         by_coordinate[coordinate] = row
-    require(
-        len(by_coordinate)
-        == EXPECTED_PK_INTEGRATED_PROMOTIONS,
-        "PK VM overlay completeness drifted",
-    )
-    return by_coordinate, {
+    metadata = {
         "promotion_count": len(by_coordinate),
         "pk_only_layer_included": True,
         "exact": {
@@ -731,6 +773,94 @@ def validated_pk_overlay(
         },
         "full_candidate_bound": True,
     }
+    require(
+        len(by_coordinate) == EXPECTED_PK_POST_PK_ONLY_PROMOTIONS,
+        "post-PK-only VM overlay completeness drifted",
+    )
+    if not include_cross_resource:
+        return by_coordinate, metadata
+
+    cross_overlay = load_pk_cross_resource_exact_closure_overlay()
+    (
+        cross_audit_content,
+        cross_private_content,
+        cross_promotion_content,
+        cross_audit,
+        cross_promotion,
+        cross_context,
+    ) = cross_overlay.build_outputs()
+    require(
+        PK_CROSS_RESOURCE_EXACT_CLOSURE_AUDIT_PATH.is_file()
+        and PK_CROSS_RESOURCE_EXACT_CLOSURE_AUDIT_PATH.read_text(
+            encoding="utf-8"
+        )
+        == cross_audit_content,
+        "tracked cross-resource closure audit drifted",
+    )
+    require(
+        PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY_PATH.is_file()
+        and PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY_PATH.read_text(
+            encoding="utf-8"
+        )
+        == cross_private_content,
+        "private cross-resource closure overlay drifted",
+    )
+    require(
+        PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTION_PATH.is_file()
+        and PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTION_PATH.read_text(
+            encoding="utf-8"
+        )
+        == cross_promotion_content,
+        "tracked cross-resource closure promotion drifted",
+    )
+    cross_rows = cross_overlay.read_jsonl(
+        PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY_PATH
+    )
+    cross_overlay.validate_audit(cross_audit)
+    require(
+        cross_promotion.get("schema")
+        == (
+            "nobu16.kr.pk-msggame-pending-cross-resource-exact-"
+            "closure-promotion.v1"
+        )
+        and cross_promotion.get("status") == "PASS"
+        and cross_promotion.get("steam_write_performed") is False
+        and cross_promotion.get("result", {}).get("private_overlay_sha256")
+        == sha256_bytes(
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY_PATH.read_bytes()
+        )
+        and len(cross_rows)
+        == EXPECTED_PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTIONS,
+        "cross-resource closure promotion report drifted",
+    )
+    for row in cross_rows:
+        coordinate = str(row["coordinate"])
+        require(
+            coordinate not in by_coordinate,
+            f"cross-resource promoted overlay overlap: {coordinate}",
+        )
+        by_coordinate[coordinate] = row
+    require(
+        len(by_coordinate) == EXPECTED_PK_INTEGRATED_PROMOTIONS,
+        "final PK VM overlay completeness drifted",
+    )
+    metadata["promotion_count"] = len(by_coordinate)
+    metadata["cross_resource_layer_included"] = True
+    metadata["cross_resource_exact_closure"] = {
+        "promotion_count": len(cross_rows),
+        "private_sha256": sha256_bytes(
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY_PATH.read_bytes()
+        ),
+        "promotion_report_sha256": sha256_bytes(
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTION_PATH.read_bytes()
+        ),
+        "coverage_file_sha256": cross_context["audit_file_sha256"],
+        "predecessor_integrated_private_sha256": cross_audit["guards"][
+            "checkpoint_private_sha256"
+        ],
+        "base_runtime_proof_inherited": False,
+    }
+    return by_coordinate, metadata
 
 
 def validate_combined_private(
@@ -762,7 +892,14 @@ def build_outputs(
     pk_pristine: Path,
     private_output: Path,
     include_pk_only: bool = True,
+    include_cross_resource: bool | None = None,
 ) -> tuple[str, str, dict[str, Any]]:
+    if include_cross_resource is None:
+        include_cross_resource = include_pk_only
+    require(
+        include_pk_only or not include_cross_resource,
+        "cross-resource integration requires PK-only integration",
+    )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
     source_rows, segment_paths, segment_universe_sha256 = load_source_decisions(
         prepared
@@ -812,21 +949,31 @@ def build_outputs(
     merged.update(base_rows)
 
     pk_overlay, pk_metadata = validated_pk_overlay(
-        include_pk_only=include_pk_only
+        include_pk_only=include_pk_only,
+        include_cross_resource=include_cross_resource,
     )
     pk_only_method = (
         "reversed_vm_pk_only_exact_blocked_closure_"
         "nonexpansion_analysis"
     )
+    cross_resource_method = (
+        "reversed_vm_cross_resource_exact_closure_analysis"
+    )
     predecessor_overlay = {
         coordinate: evidence
         for coordinate, evidence in pk_overlay.items()
-        if evidence.get("method") != pk_only_method
+        if evidence.get("method")
+        not in {pk_only_method, cross_resource_method}
     }
     pk_only_final_overlay = {
         coordinate: evidence
         for coordinate, evidence in pk_overlay.items()
         if evidence.get("method") == pk_only_method
+    }
+    cross_resource_final_overlay = {
+        coordinate: evidence
+        for coordinate, evidence in pk_overlay.items()
+        if evidence.get("method") == cross_resource_method
     }
     require(
         len(predecessor_overlay) == EXPECTED_PK_PREDECESSOR_PROMOTIONS
@@ -837,6 +984,15 @@ def build_outputs(
             else 0
         ),
         "PK predecessor/final overlay partition drifted",
+    )
+    require(
+        len(cross_resource_final_overlay)
+        == (
+            EXPECTED_PK_CROSS_RESOURCE_EXACT_CLOSURE_PROMOTIONS
+            if include_cross_resource
+            else 0
+        ),
+        "PK cross-resource overlay partition drifted",
     )
 
     def integrate_overlay(
@@ -862,7 +1018,13 @@ def build_outputs(
             promoted["runtime_review"] = "verified"
             if (
                 evidence.get("method")
-                == "reversed_vm_residual_full_closure_nonexpansion_analysis"
+                in {
+                    (
+                        "reversed_vm_residual_full_closure_"
+                        "nonexpansion_analysis"
+                    ),
+                    "reversed_vm_cross_resource_exact_closure_analysis",
+                }
             ):
                 require(
                     row.get("layout_review")
@@ -872,7 +1034,7 @@ def build_outputs(
                         "from": row.get("layout_review"),
                         "to": "runtime_verified",
                     },
-                    f"PK residual layout transition drifted: {coordinate}",
+                    f"PK runtime layout transition drifted: {coordinate}",
                 )
                 promoted["layout_review"] = "runtime_verified"
             promoted["runtime_vm_verification"] = evidence
@@ -904,16 +1066,49 @@ def build_outputs(
         )
         predecessor_checkpoint_match = True
     pk_only_promotions = integrate_overlay(pk_only_final_overlay)
-    pk_integrated_promotions = predecessor_promotions + pk_only_promotions
+    post_pk_only_rows = sorted(merged.values(), key=coordinate_sort_key)
+    post_pk_only_private_sha256 = sha256_bytes(
+        canonical_jsonl(post_pk_only_rows).encode("utf-8")
+    )
+    post_pk_only_checkpoint_match = False
+    if include_cross_resource:
+        expected_post_pk_only_sha256 = pk_metadata[
+            "cross_resource_exact_closure"
+        ]["predecessor_integrated_private_sha256"]
+        require(
+            post_pk_only_private_sha256 == expected_post_pk_only_sha256,
+            (
+                "cross-resource predecessor checkpoint drifted: "
+                f"{post_pk_only_private_sha256}"
+            ),
+        )
+        post_pk_only_checkpoint_match = True
+    cross_resource_promotions = integrate_overlay(
+        cross_resource_final_overlay
+    )
+    pk_integrated_promotions = (
+        predecessor_promotions
+        + pk_only_promotions
+        + cross_resource_promotions
+    )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
     )
     pk_metadata["pk_only_predecessor_checkpoint_match"] = (
         predecessor_checkpoint_match
     )
+    if include_cross_resource:
+        pk_metadata["rebuilt_post_pk_only_integrated_private_sha256"] = (
+            post_pk_only_private_sha256
+        )
+        pk_metadata["cross_resource_predecessor_checkpoint_match"] = (
+            post_pk_only_checkpoint_match
+        )
 
     expected_pk_promotions = (
         EXPECTED_PK_INTEGRATED_PROMOTIONS
+        if include_cross_resource
+        else EXPECTED_PK_POST_PK_ONLY_PROMOTIONS
         if include_pk_only
         else EXPECTED_PK_PREDECESSOR_PROMOTIONS
     )
@@ -936,6 +1131,8 @@ def build_outputs(
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
         EXPECTED_PENDING_AFTER
+        if include_cross_resource
+        else EXPECTED_POST_PK_ONLY_PENDING_AFTER
         if include_pk_only
         else EXPECTED_PREDECESSOR_PENDING_AFTER
     )
@@ -1013,6 +1210,16 @@ def build_outputs(
         },
         "steam_write_performed": False,
     }
+    if include_cross_resource:
+        report["validation"].update(
+            {
+                "cross_resource_layer_included": True,
+                (
+                    "cross_resource_predecessor_checkpoint_"
+                    "rebuilt_and_matched"
+                ): post_pk_only_checkpoint_match,
+            }
+        )
     return private_content, canonical_json(report), report
 
 

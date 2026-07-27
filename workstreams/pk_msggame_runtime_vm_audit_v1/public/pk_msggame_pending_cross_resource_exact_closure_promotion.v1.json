@@ -1,0 +1,45 @@
+{
+  "distribution_policy": {
+    "private_overlay_contains_commercial_source_text": false,
+    "private_overlay_contains_translated_dialogue_text": false,
+    "private_overlay_stays_below_tmp": true,
+    "tracked_reports_contain_commercial_source_text": false,
+    "tracked_reports_contain_translated_dialogue_text": false
+  },
+  "evidence": {
+    "audit_report_file_sha256": "310529B49C6F34BCD7AAC2CE69AC383390D9386B5FE743B6E3DF387C0FDE5BDA",
+    "audit_report_payload_sha256": "2CEDCC0B0DBFCC804A3D927FA2EE0CCD97613A563BDFFF707DB0551B79C11CE3",
+    "checkpoint_private_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
+    "ghidra_contract_file_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461",
+    "proof_manifest_sha256": "E4E4C181EB12B73C2D4AC99F94517EDB9AC5E4DAD2FA3AD4CB5BD1A11CE188A9"
+  },
+  "exclusion_policy": {
+    "base_runtime_proof_inherited": false,
+    "exact_manual_review_rows_included": 0,
+    "normalized_or_partial_match_rows_included": 0,
+    "target_pk_guard_failed_rows_included": 0,
+    "unsafe_rows_included": 0
+  },
+  "guards": {
+    "report_payload_sha256": "65412A1954F7F29478D702D2FE47C1B31A1DFCBC796CF7C2CD90BE067A8A43C2"
+  },
+  "input": {
+    "full_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+    "predecessor_pending_rows": 8752,
+    "promotion_eligible_roots": 1895,
+    "promotion_eligible_rows": 2552
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "eligible_coordinate_universe_sha256": "45ED0A53FCE6345E83000F2790B5A52F48C124FC019CA86CC09CB9D7BCA5178B",
+    "eligible_record_universe_sha256": "4D88405A8FFD87856D0ED453406DA5127F4BBDB820B5E9FA4EF28DD9E52E319D",
+    "private_overlay_rows": 2552,
+    "private_overlay_sha256": "684B3C32909ED86051B9BD19AFC4FB63FE8470F62E7FAF9F250F5D8183A82F83",
+    "remaining_rows": 6200,
+    "translation_body_copied": false
+  },
+  "schema": "nobu16.kr.pk-msggame-pending-cross-resource-exact-closure-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

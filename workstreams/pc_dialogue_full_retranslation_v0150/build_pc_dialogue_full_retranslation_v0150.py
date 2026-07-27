@@ -117,6 +117,19 @@ PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_exact_blocked_pk_only_closure_promotion.v1.json"
 )
+PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_OVERLAY_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_msggame_pending_cross_resource_exact_closure_verified.private.v1.jsonl"
+)
+PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_PROMOTION_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_pending_cross_resource_exact_closure_promotion.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -154,6 +167,9 @@ PK_RESIDUAL_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
 PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
     "nobu16.kr.pk-msggame-exact-blocked-pk-only-closure-overlay-row.v1"
 )
+PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
+    "nobu16.kr.pk-msggame-pending-cross-resource-exact-closure-overlay-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
@@ -164,12 +180,16 @@ PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD = (
 PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis"
 )
+PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_cross_resource_exact_closure_analysis"
+)
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
         PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD,
         PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
         PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 SOURCE_OUTER_WHITESPACE_REPAIR_EVIDENCE_SCHEMA = (
@@ -718,6 +738,16 @@ def load_pk_runtime_vm_overlays() -> dict[
                 "promotion.v1"
             ),
         ),
+        (
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_OVERLAY_PATH,
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_PROMOTION_PATH,
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
+            PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD,
+            (
+                "nobu16.kr.pk-msggame-pending-cross-resource-exact-"
+                "closure-promotion.v1"
+            ),
+        ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
     for (
@@ -798,7 +828,11 @@ def load_pk_runtime_vm_overlays() -> dict[
                     f"{coordinate}"
                 )
             if (
-                method == PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD
+                method
+                in {
+                    PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
+                    PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD,
+                }
                 and (
                     not isinstance(row.get("layout_transition"), dict)
                     or row["layout_transition"].get("from")
@@ -808,7 +842,7 @@ def load_pk_runtime_vm_overlays() -> dict[
                 )
             ):
                 raise RetranslationError(
-                    "PK residual runtime VM overlay lacks its layout proof: "
+                    "PK runtime VM overlay lacks its layout proof: "
                     f"{coordinate}"
                 )
             rows[key] = row
@@ -852,14 +886,28 @@ def validate_pk_runtime_vm_verification(
         raise RetranslationError(
             f"{label}.runtime_vm_verification translation hash does not match"
         )
+    method = evidence.get("method")
     if (
-        evidence.get("method")
-        == PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD
-        and evidence.get("layout_review_binding")
-        != {"status": layout_review}
+        method == PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD
+        and evidence.get("layout_review_binding") != {"status": layout_review}
     ):
         raise RetranslationError(
             f"{label}.runtime_vm_verification layout binding does not match"
+        )
+    if (
+        method == PK_CROSS_RESOURCE_EXACT_CLOSURE_RUNTIME_VM_VERIFICATION_METHOD
+        and (
+            not isinstance(evidence.get("layout_review_binding"), dict)
+            or evidence.get("layout_transition")
+            != {
+                "from": evidence["layout_review_binding"].get("status"),
+                "to": layout_review,
+            }
+            or layout_review != "runtime_verified"
+        )
+    ):
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification layout transition does not match"
         )
 
 

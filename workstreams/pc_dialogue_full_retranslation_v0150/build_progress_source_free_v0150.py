@@ -535,7 +535,16 @@ def build_progress() -> dict[str, Any]:
                         and integrated_row.get("layout_review")
                         == "runtime_verified"
                         and evidence.get("method")
-                        == "reversed_vm_residual_full_closure_nonexpansion_analysis"
+                        in {
+                            (
+                                "reversed_vm_residual_full_closure_"
+                                "nonexpansion_analysis"
+                            ),
+                            (
+                                "reversed_vm_cross_resource_exact_"
+                                "closure_analysis"
+                            ),
+                        }
                         and evidence.get("layout_transition")
                         == {
                             "from": effective_row.get("layout_review"),
