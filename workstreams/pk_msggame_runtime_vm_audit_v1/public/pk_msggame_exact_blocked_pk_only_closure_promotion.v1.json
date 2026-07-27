@@ -1,0 +1,54 @@
+{
+  "distribution_policy": {
+    "private_overlay_contains_commercial_source_text": false,
+    "private_overlay_contains_translated_dialogue_text": false,
+    "private_overlay_stays_below_tmp": true,
+    "tracked_reports_contain_commercial_source_text": false,
+    "tracked_reports_contain_translated_dialogue_text": false
+  },
+  "evidence": {
+    "audit_report": "workstreams/pk_msggame_runtime_vm_audit_v1/public/pk_msggame_exact_blocked_pk_only_closure_coverage.v1.json",
+    "audit_report_file_sha256": "6836FF8CB431944E78EFFC7424C3FA58DB87DD65F9808BEAAEE4F197B3B8C940",
+    "audit_report_payload_sha256": "2F6FCE03FB5826DE54D14ED33CED547FD97A9235E7F968072CE05F5B89C7133A",
+    "closure_guard_universe_sha256": "8F1875729F9FAC89A858080B251FB469078C574302F48A0E433544BEEFAB924C",
+    "full_candidate_coverage_file_sha256": "99FF832F2EB74DB205DE37B0079FA275471BF31A224F81E3FF422003A9B2D910",
+    "predecessor_integrated_private_sha256": "093E41EAD51FC9CECF21DC1675EBEE98CB5BF86E60223304FCCC6A0D81781545",
+    "row_adjudication_universe_sha256": "BB988DDED51DADDF0BE26BC439CCAFABB55F8F36982AA81149EA494ED99BEA77",
+    "semantic_override_public_sha256": "7D2DECA73B1D37AD741BC0D101028FE3E2CC0383526973B15325AD5F0E77E9F1"
+  },
+  "exclusion_policy": {
+    "base_runtime_proof_inherited": false,
+    "grammar_risk_rows_included": 0,
+    "layout_or_line_envelope_risk_rows_included": 0,
+    "source_candidate_control_taint_rows_included": 0,
+    "unsafe_rows_included": 0
+  },
+  "guards": {
+    "report_payload_sha256": "11943088D7C52298102CBBA2FF0EB0E7270CF6D35D588F39C4E02E45BD1C7607"
+  },
+  "input": {
+    "full_candidate_blocked_rows": 2317,
+    "full_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
+    "manual_review_remaining_rows": 784,
+    "pk_only_promotion_eligible_rows": 1533
+  },
+  "integration_boundary": {
+    "live_integrated_ledger_is_input": false,
+    "overlay_is_not_a_full_dialogue_decision_file": true,
+    "predecessor_integrated_checkpoint_is_immutable_input": true
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "eligible_coordinate_universe_sha256": "BA8E691816F3CD45D6C862635035888DD44830A498E6EC503FE39A4AF96D0639",
+    "eligible_record_universe_sha256": "C57EB4571E25E489C3AECBE8A92BAC31C3A55C61B936033CF7228C18DC4DF9CC",
+    "private_overlay_rows": 1533,
+    "private_overlay_sha256": "95C474A3A6626F86EE3D23E49083AA3A4BC85F33BA3BCEDFEDFBC8D41AE392E4",
+    "remaining_coordinate_universe_sha256": "5D10C7ACECD8FBD4E846F4F85FA05BA4270BC7E3C9AD36CE1BE5E8C0BBB0B178",
+    "remaining_rows": 784,
+    "translation_body_copied": false
+  },
+  "schema": "nobu16.kr.pk-msggame-exact-blocked-pk-only-closure-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

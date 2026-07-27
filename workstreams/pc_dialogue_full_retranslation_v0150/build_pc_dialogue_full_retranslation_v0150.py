@@ -104,6 +104,19 @@ PK_RESIDUAL_RUNTIME_VM_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_residual_runtime_vm_promotion.v1.json"
 )
+PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_OVERLAY_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_msggame_exact_blocked_pk_only_closure_verified.private.v1.jsonl"
+)
+PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_PROMOTION_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_exact_blocked_pk_only_closure_promotion.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -138,6 +151,9 @@ PK_FULL_CANDIDATE_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
 PK_RESIDUAL_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
     "nobu16.kr.pk-msggame-residual-runtime-vm-verification-overlay-row.v1"
 )
+PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
+    "nobu16.kr.pk-msggame-exact-blocked-pk-only-closure-overlay-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
@@ -145,11 +161,15 @@ PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
 PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_residual_full_closure_nonexpansion_analysis"
 )
+PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis"
+)
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
         PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD,
         PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 SOURCE_OUTER_WHITESPACE_REPAIR_EVIDENCE_SCHEMA = (
@@ -688,6 +708,16 @@ def load_pk_runtime_vm_overlays() -> dict[
             PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
             "nobu16.kr.pk-msggame-residual-runtime-vm-promotion.v1",
         ),
+        (
+            PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_OVERLAY_PATH,
+            PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_PROMOTION_PATH,
+            PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
+            PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD,
+            (
+                "nobu16.kr.pk-msggame-exact-blocked-pk-only-closure-"
+                "promotion.v1"
+            ),
+        ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
     for (
@@ -805,6 +835,7 @@ def validate_pk_runtime_vm_verification(
     overlay_rows: Mapping[tuple[str, str], dict[str, Any]],
     coordinate_value: str,
     translation: str,
+    layout_review: str,
     label: str,
 ) -> None:
     evidence_schema = str(evidence.get("schema"))
@@ -820,6 +851,15 @@ def validate_pk_runtime_vm_verification(
     if evidence.get("translation_utf16le_sha256") != sha256_text(translation):
         raise RetranslationError(
             f"{label}.runtime_vm_verification translation hash does not match"
+        )
+    if (
+        evidence.get("method")
+        == PK_ONLY_EXACT_BLOCKED_RUNTIME_VM_VERIFICATION_METHOD
+        and evidence.get("layout_review_binding")
+        != {"status": layout_review}
+    ):
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification layout binding does not match"
         )
 
 
@@ -1297,6 +1337,7 @@ def validate_decisions(
                     overlay_rows=pk_runtime_vm_overlays,
                     coordinate_value=f"{block_id}:{record_id}:{literal_id}",
                     translation=translation,
+                    layout_review=str(row.get("layout_review")),
                     label=label,
                 )
             else:

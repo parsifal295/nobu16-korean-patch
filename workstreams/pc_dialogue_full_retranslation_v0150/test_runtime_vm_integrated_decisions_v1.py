@@ -81,11 +81,11 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 26_012)
-        self.assertEqual(report["result"]["runtime_review_pending"], 10_322)
+        self.assertEqual(report["promotions"]["promoted_total"], 27_545)
+        self.assertEqual(report["result"]["runtime_review_pending"], 8_789)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            10_361,
+            11_894,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
@@ -93,13 +93,19 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             ],
             2_908,
         )
+        self.assertEqual(
+            report["promotions"]["pk_msggame"]["pk_only_exact_blocked"][
+                "promotion_count"
+            ],
+            1_533,
+        )
         self.assertTrue(
             report["promotions"]["pk_msggame"]["full_candidate_bound"]
         )
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            10_322,
+            8_789,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
@@ -154,6 +160,34 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         ] = "runtime_pending"
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([bad_evidence])
+
+    def test_pk_only_exact_blocked_row_preserves_layout_binding(self) -> None:
+        source = next(
+            row
+            for row in self.rows
+            if row["resource"] == "pk_msggame"
+            and row["runtime_review"] == "verified"
+            and row["runtime_vm_verification"]["method"]
+            == "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis"
+        )
+        self.assertEqual(source["layout_review"], "unchanged_from_current")
+        self.assertEqual(
+            source["runtime_vm_verification"]["layout_review_binding"],
+            {"status": "unchanged_from_current"},
+        )
+        self.validate_rows([source])
+
+        bad_layout = copy.deepcopy(source)
+        bad_layout["layout_review"] = "runtime_verified"
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([bad_layout])
+
+        bad_binding = copy.deepcopy(source)
+        bad_binding["runtime_vm_verification"]["layout_review_binding"][
+            "status"
+        ] = "runtime_verified"
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([bad_binding])
 
 
 if __name__ == "__main__":

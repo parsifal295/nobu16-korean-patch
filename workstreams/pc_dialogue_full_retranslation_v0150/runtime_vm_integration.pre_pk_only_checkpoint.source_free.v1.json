@@ -30,14 +30,7 @@
         "promotion_report_sha256": "A3FC592ADFC5B3E96E63573010CA06B9025D6217187F0F79A8EBF715A5447474"
       },
       "full_candidate_bound": true,
-      "pk_only_exact_blocked": {
-        "base_runtime_proof_inherited": false,
-        "coverage_file_sha256": "6836FF8CB431944E78EFFC7424C3FA58DB87DD65F9808BEAAEE4F197B3B8C940",
-        "private_sha256": "95C474A3A6626F86EE3D23E49083AA3A4BC85F33BA3BCEDFEDFBC8D41AE392E4",
-        "promotion_count": 1533,
-        "promotion_report_sha256": "CE6E872BCBC44B021A1504DF0A9D94AC678A09F1746881F638037CBC1CB7B3E2"
-      },
-      "promotion_count": 11894,
+      "promotion_count": 10361,
       "residual": {
         "coverage_file_sha256": "C418C07ECFCFF4AA040DCE9EF57D3907BA5DEB460C89B6F98360785939136D42",
         "layout_transition_bound": true,
@@ -46,7 +39,7 @@
         "promotion_report_sha256": "71EE9A7B62BB6E5444BA6A666278D8EC4AE2915630DAFB50B12FAB0124AA2F2C"
       }
     },
-    "promoted_total": 27545,
+    "promoted_total": 26012,
     "semantic_override": {
       "coordinate": "6:3421:0",
       "override_count": 1,
@@ -59,9 +52,9 @@
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 44014,
-    "private_integrated_decision_sha256": "8189CE09D2B4437004D17C07AA66E766B88ECD6F9E7BF3D9CF3AC874E11F6D10",
-    "runtime_review_pending": 8789,
+    "fully_candidate_eligible": 42481,
+    "private_integrated_decision_sha256": "093E41EAD51FC9CECF21DC1675EBEE98CB5BF86E60223304FCCC6A0D81781545",
+    "runtime_review_pending": 10322,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",

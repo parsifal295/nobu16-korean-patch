@@ -75,6 +75,31 @@ PK_RESIDUAL_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_residual_runtime_vm_promotion.v1.json"
 )
+PK_ONLY_EXACT_BLOCKED_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_msggame_exact_blocked_pk_only_closure_v1.py"
+)
+PK_ONLY_EXACT_BLOCKED_OVERLAY_PATH = (
+    DECISIONS_DIR
+    / "runtime_verification_overlays"
+    / "pk_msggame_exact_blocked_pk_only_closure_verified.private.v1.jsonl"
+)
+PK_ONLY_EXACT_BLOCKED_AUDIT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_exact_blocked_pk_only_closure_coverage.v1.json"
+)
+PK_ONLY_EXACT_BLOCKED_PROMOTION_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_exact_blocked_pk_only_closure_promotion.v1.json"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -99,8 +124,9 @@ EXPECTED_PK_ROWS = 29_038
 EXPECTED_BASE_PROMOTIONS = 15_651
 EXPECTED_PK_EXACT_PROMOTIONS = 7_453
 EXPECTED_PK_RESIDUAL_PROMOTIONS = 2_908
-EXPECTED_PK_INTEGRATED_PROMOTIONS = 10_361
-EXPECTED_PENDING_AFTER = 10_322
+EXPECTED_PK_ONLY_EXACT_BLOCKED_PROMOTIONS = 1_533
+EXPECTED_PK_INTEGRATED_PROMOTIONS = 11_894
+EXPECTED_PENDING_AFTER = 8_789
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
@@ -137,6 +163,10 @@ PK_OVERLAY = load_module(
 PK_RESIDUAL_OVERLAY = load_module(
     "pc_dialogue_runtime_vm_integration_pk_residual_overlay",
     PK_RESIDUAL_OVERLAY_BUILDER_PATH,
+)
+PK_ONLY_EXACT_BLOCKED_OVERLAY = load_module(
+    "pc_dialogue_runtime_vm_integration_pk_only_exact_blocked_overlay",
+    PK_ONLY_EXACT_BLOCKED_BUILDER_PATH,
 )
 SEMANTIC_OVERRIDE = load_module(
     "pc_dialogue_runtime_vm_integration_semantic_override",
@@ -521,12 +551,79 @@ def validated_pk_overlay() -> tuple[
         and len(residual_rows) == EXPECTED_PK_RESIDUAL_PROMOTIONS,
         "PK residual VM promotion report drifted",
     )
+    (
+        pk_only_audit_content,
+        pk_only_private_content,
+        pk_only_promotion_content,
+        pk_only_audit,
+        pk_only_promotion,
+        pk_only_context,
+    ) = PK_ONLY_EXACT_BLOCKED_OVERLAY.build_outputs()
+    require(
+        PK_ONLY_EXACT_BLOCKED_AUDIT_PATH.is_file()
+        and PK_ONLY_EXACT_BLOCKED_AUDIT_PATH.read_text(encoding="utf-8")
+        == pk_only_audit_content,
+        "tracked PK-only exact-blocked audit report drifted",
+    )
+    require(
+        PK_ONLY_EXACT_BLOCKED_OVERLAY_PATH.is_file()
+        and PK_ONLY_EXACT_BLOCKED_OVERLAY_PATH.read_text(encoding="utf-8")
+        == pk_only_private_content,
+        "tracked PK-only exact-blocked overlay drifted",
+    )
+    require(
+        PK_ONLY_EXACT_BLOCKED_PROMOTION_PATH.is_file()
+        and PK_ONLY_EXACT_BLOCKED_PROMOTION_PATH.read_text(encoding="utf-8")
+        == pk_only_promotion_content,
+        "tracked PK-only exact-blocked promotion report drifted",
+    )
+    pk_only_rows = PK_ONLY_EXACT_BLOCKED_OVERLAY.read_jsonl(
+        PK_ONLY_EXACT_BLOCKED_OVERLAY_PATH
+    )
+    PK_ONLY_EXACT_BLOCKED_OVERLAY.validate_audit(
+        pk_only_audit,
+        context=pk_only_context,
+    )
+    PK_ONLY_EXACT_BLOCKED_OVERLAY.validate_overlay_rows(
+        pk_only_rows,
+        audit=pk_only_audit,
+        audit_file_sha256=pk_only_context["audit_file_sha256"],
+    )
+    PK_ONLY_EXACT_BLOCKED_OVERLAY.validate_promotion_report(
+        pk_only_promotion,
+        audit=pk_only_audit,
+        audit_file_sha256=pk_only_context["audit_file_sha256"],
+        private_content=pk_only_private_content,
+    )
+    require(
+        pk_only_promotion.get("schema")
+        == (
+            "nobu16.kr.pk-msggame-exact-blocked-pk-only-closure-"
+            "promotion.v1"
+        )
+        and pk_only_promotion.get("status") == "PASS"
+        and pk_only_promotion.get("steam_write_performed") is False
+        and pk_only_promotion.get("result", {}).get(
+            "private_overlay_sha256"
+        )
+        == sha256_bytes(PK_ONLY_EXACT_BLOCKED_OVERLAY_PATH.read_bytes())
+        and len(pk_only_rows)
+        == EXPECTED_PK_ONLY_EXACT_BLOCKED_PROMOTIONS,
+        "PK-only exact-blocked promotion report drifted",
+    )
     by_coordinate = {str(row["coordinate"]): row for row in rows}
     for row in residual_rows:
         coordinate = str(row["coordinate"])
         require(
             coordinate not in by_coordinate,
             f"PK exact/residual overlay overlap: {coordinate}",
+        )
+        by_coordinate[coordinate] = row
+    for row in pk_only_rows:
+        coordinate = str(row["coordinate"])
+        require(
+            coordinate not in by_coordinate,
+            f"PK promoted overlay overlap: {coordinate}",
         )
         by_coordinate[coordinate] = row
     require(
@@ -554,6 +651,19 @@ def validated_pk_overlay() -> tuple[
             ),
             "coverage_file_sha256": residual_coverage_file_sha256,
             "layout_transition_bound": True,
+        },
+        "pk_only_exact_blocked": {
+            "promotion_count": len(pk_only_rows),
+            "private_sha256": sha256_bytes(
+                PK_ONLY_EXACT_BLOCKED_OVERLAY_PATH.read_bytes()
+            ),
+            "promotion_report_sha256": sha256_bytes(
+                PK_ONLY_EXACT_BLOCKED_PROMOTION_PATH.read_bytes()
+            ),
+            "coverage_file_sha256": pk_only_context[
+                "audit_file_sha256"
+            ],
+            "base_runtime_proof_inherited": False,
         },
         "full_candidate_bound": True,
     }
