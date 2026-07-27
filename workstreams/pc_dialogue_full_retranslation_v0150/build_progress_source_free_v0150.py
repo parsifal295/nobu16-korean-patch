@@ -181,6 +181,9 @@ def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
             "terminal_family_update_action",
             "terminal_family_exact_override_evidence",
             "thought_predicate_family_update_action",
+            "bound_terminal_caller_runtime_evidence",
+            "bound_terminal_caller_update_action",
+            "bound_terminal_caller_override_evidence",
         }
     }
 
@@ -262,6 +265,13 @@ def load_runtime_vm_integration(
         is True,
         "thought_predicate_family": report["promotions"]["pk_msggame"].get(
             "thought_predicate_family"
+        ),
+        "bound_terminal_caller_layer_included": report["promotions"][
+            "pk_msggame"
+        ].get("bound_terminal_caller_layer_included")
+        is True,
+        "bound_terminal_caller": report["promotions"]["pk_msggame"].get(
+            "bound_terminal_caller"
         ),
         "steam_write_performed": False,
     }
@@ -495,12 +505,51 @@ def build_progress() -> dict[str, Any]:
         raise RuntimeError(
             "thought-predicate semantic override universe drifted"
         )
+    caller_metadata = runtime_vm_integration_metadata.get(
+        "bound_terminal_caller"
+    )
+    if (
+        runtime_vm_integration_metadata.get(
+            "bound_terminal_caller_layer_included"
+        )
+        is not True
+        or not isinstance(caller_metadata, dict)
+    ):
+        raise RuntimeError(
+            "bound-terminal caller integration metadata is absent"
+        )
+    caller_override_coordinates = {
+        key
+        for key, integrated_row in runtime_vm_integrated.items()
+        if str(
+            integrated_row.get("bound_terminal_caller_update_action", "")
+        ).startswith("translation_override")
+    }
+    if (
+        len(caller_override_coordinates)
+        != caller_metadata.get("ledger_backed_override_count")
+        or any(
+            resource != "pk_msggame"
+            for resource, _coordinate in caller_override_coordinates
+        )
+        or coordinate_digest(
+            [
+                coordinate
+                for _resource, coordinate in caller_override_coordinates
+            ]
+        )
+        != caller_metadata.get("ledger_override_coordinate_sha256")
+    ):
+        raise RuntimeError(
+            "bound-terminal caller semantic override universe drifted"
+        )
     consumed_runtime_vm_integrated: set[tuple[str, str]] = set()
     consumed_dynamic_honorific_overrides: set[
         tuple[str, str]
     ] = set()
     consumed_bound_terminal_overrides: set[tuple[str, str]] = set()
     consumed_thought_predicate_overrides: set[tuple[str, str]] = set()
+    consumed_caller_overrides: set[tuple[str, str]] = set()
 
     queue_rows = load_jsonl(QUEUE_PATH)
     batch_catalog_raw = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
@@ -706,31 +755,55 @@ def build_progress() -> dict[str, Any]:
                 thought_evidence = integrated_row.get(
                     "runtime_vm_verification"
                 )
+                thought_evidence_preserved_by_caller = (
+                    key
+                    == ENGINE.CALLER_SUPERSEDED_THOUGHT_ACTION_COORDINATE
+                    and isinstance(thought_evidence, dict)
+                    and thought_evidence.get("method")
+                    == ENGINE.PK_BOUND_TERMINAL_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+                    and thought_evidence.get("action")
+                    == "verification_renewal"
+                    and thought_evidence.get(
+                        "translation_utf16le_sha256"
+                    )
+                    == ENGINE.sha256_text(
+                        str(integrated_row.get("translation"))
+                    )
+                    and thought_evidence.get(
+                        "combined_final_binding", {}
+                    ).get("thought_translation_preserved")
+                    is True
+                )
                 if (
                     key not in thought_predicate_override_coordinates
                     or not isinstance(thought_evidence, dict)
-                    or thought_evidence.get("method")
-                    != ENGINE.PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
-                    or thought_evidence.get("action")
-                    != thought_predicate_action
-                    or thought_evidence.get(
-                        "updated_translation_utf16le_sha256"
+                    or (
+                        not thought_evidence_preserved_by_caller
+                        and (
+                            thought_evidence.get("method")
+                            != ENGINE.PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                            or thought_evidence.get("action")
+                            != thought_predicate_action
+                            or thought_evidence.get(
+                                "updated_translation_utf16le_sha256"
+                            )
+                            != ENGINE.sha256_text(
+                                str(integrated_row.get("translation"))
+                            )
+                            or thought_evidence.get(
+                                "full_incoming_closure_verified"
+                            )
+                            is not True
+                            or thought_evidence.get(
+                                "grammar_complete_for_all_registers"
+                            )
+                            is not True
+                            or thought_evidence.get(
+                                "actual_current_relative_nonexpanding"
+                            )
+                            is not True
+                        )
                     )
-                    != ENGINE.sha256_text(
-                        str(integrated_row.get("translation"))
-                    )
-                    or thought_evidence.get(
-                        "full_incoming_closure_verified"
-                    )
-                    is not True
-                    or thought_evidence.get(
-                        "grammar_complete_for_all_registers"
-                    )
-                    is not True
-                    or thought_evidence.get(
-                        "actual_current_relative_nonexpanding"
-                    )
-                    is not True
                 ):
                     raise RuntimeError(
                         f"thought-predicate semantic override drifted: {key}"
@@ -742,6 +815,43 @@ def build_progress() -> dict[str, Any]:
                     "translation"
                 ]
                 consumed_thought_predicate_overrides.add(key)
+            caller_action = integrated_row.get(
+                "bound_terminal_caller_update_action"
+            )
+            if str(caller_action).startswith("translation_override"):
+                caller_evidence = (
+                    integrated_row.get("runtime_vm_verification")
+                    if integrated_row.get("runtime_review") == "verified"
+                    else integrated_row.get(
+                        "bound_terminal_caller_runtime_evidence"
+                    )
+                )
+                if (
+                    key not in caller_override_coordinates
+                    or not isinstance(caller_evidence, dict)
+                    or caller_evidence.get("method")
+                    != ENGINE.PK_BOUND_TERMINAL_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+                    or caller_evidence.get("action") != caller_action
+                    or caller_evidence.get("translation_utf16le_sha256")
+                    != ENGINE.sha256_text(
+                        str(integrated_row.get("translation"))
+                    )
+                ):
+                    raise RuntimeError(
+                        f"bound-terminal caller semantic override drifted: {key}"
+                    )
+                immutable_integrated_row = dict(immutable_integrated_row)
+                immutable_integrated_row["translation"] = effective_row[
+                    "translation"
+                ]
+                if (
+                    integrated_row.get("runtime_assembly_evidence")
+                    != effective_row.get("runtime_assembly_evidence")
+                ):
+                    immutable_integrated_row[
+                        "runtime_assembly_evidence"
+                    ] = effective_row.get("runtime_assembly_evidence")
+                consumed_caller_overrides.add(key)
             if runtime_immutable_row(effective_row) != runtime_immutable_row(
                 immutable_integrated_row
             ):
@@ -815,6 +925,29 @@ def build_progress() -> dict[str, Any]:
                     and evidence.get("predecessor_runtime_review")
                     == "verified"
                 )
+                caller_predecessor_binding = evidence.get(
+                    "predecessor_binding"
+                )
+                caller_predecessor_renewal = (
+                    evidence.get("method")
+                    == ENGINE.PK_BOUND_TERMINAL_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+                    and evidence.get("action")
+                    in {
+                        "verification_renewal",
+                        "translation_override_and_verification_renewal",
+                    }
+                    and evidence.get(
+                        "preexisting_verified_evidence_renewed"
+                    )
+                    is True
+                    and isinstance(caller_predecessor_binding, dict)
+                    and isinstance(
+                        caller_predecessor_binding.get(
+                            "previous_runtime_vm_verification_sha256"
+                        ),
+                        str,
+                    )
+                )
                 if (
                     evidence.get("action")
                     in {"translation_override", "verification_renewal"}
@@ -827,6 +960,20 @@ def build_progress() -> dict[str, Any]:
                 ):
                     raise RuntimeError(
                         "dynamic runtime evidence did not bind its verified "
+                        f"predecessor: {key}"
+                    )
+                if (
+                    evidence.get("action")
+                    in {
+                        "verification_renewal",
+                        "translation_override_and_verification_renewal",
+                    }
+                    and evidence.get("method")
+                    == ENGINE.PK_BOUND_TERMINAL_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+                    and not caller_predecessor_renewal
+                ):
+                    raise RuntimeError(
+                        "caller runtime evidence did not bind its verified "
                         f"predecessor: {key}"
                     )
                 if (
@@ -881,6 +1028,10 @@ def build_progress() -> dict[str, Any]:
                                 "reversed_vm_pk_thought_predicate_family_"
                                 "exact_closure_analysis"
                             ),
+                            (
+                                "reversed_vm_pk_bound_terminal_caller_"
+                                "full_closure_analysis"
+                            ),
                         }
                         and (
                             evidence.get("layout_transition")
@@ -902,6 +1053,18 @@ def build_progress() -> dict[str, Any]:
                                 )
                                 is True
                             )
+                            or (
+                                evidence.get("method")
+                                == (
+                                    "reversed_vm_pk_bound_terminal_caller_"
+                                    "full_closure_analysis"
+                                )
+                                and evidence.get(
+                                    "actual_promotion_binding",
+                                    {},
+                                ).get("manual_full_assembly_verified")
+                                is True
+                            )
                         )
                         or (
                             dynamic_predecessor_renewal
@@ -915,6 +1078,11 @@ def build_progress() -> dict[str, Any]:
                         )
                         or (
                             thought_predecessor_renewal
+                            and integrated_row.get("runtime_review")
+                            == "verified"
+                        )
+                        or (
+                            caller_predecessor_renewal
                             and integrated_row.get("runtime_review")
                             == "verified"
                         )
@@ -1089,6 +1257,20 @@ def build_progress() -> dict[str, Any]:
     runtime_vm_integration_metadata[
         "thought_predicate_family_override_count"
     ] = len(consumed_thought_predicate_overrides)
+    if consumed_caller_overrides != caller_override_coordinates:
+        missing = sorted(
+            caller_override_coordinates - consumed_caller_overrides
+        )
+        extra = sorted(
+            consumed_caller_overrides - caller_override_coordinates
+        )
+        raise RuntimeError(
+            "bound-terminal caller overrides were not exactly consumed: "
+            f"missing={missing} extra={extra}"
+        )
+    runtime_vm_integration_metadata[
+        "bound_terminal_caller_override_count"
+    ] = len(consumed_caller_overrides)
 
     touched_batch_ids = sorted(batch_decisions, key=batch_key)
     queue_batch_coverage: list[dict[str, Any]] = []

@@ -47,6 +47,10 @@ class PostDynamicHonorificCheckpointTests(unittest.TestCase):
             BUILDER.INTEGRATION.build_outputs
         ).parameters["include_thought_predicate_family"]
         self.assertIs(thought_parameter.default, False)
+        caller_parameter = inspect.signature(
+            BUILDER.INTEGRATION.build_outputs
+        ).parameters["include_bound_terminal_caller"]
+        self.assertIs(caller_parameter.default, False)
         self.assertEqual(
             BUILDER.INTEGRATION.EXPECTED_FINAL_PENDING_AFTER,
             8_645,
