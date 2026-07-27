@@ -33,10 +33,14 @@ PROPOSAL_BUILDER_PATH = (
     / "build_pk_bound_terminal_2546_simple_caller_retranslation_proposal_v1.py"
 )
 PREDECESSOR_PRIVATE_PATH = (
-    DIALOGUE_TMP / "runtime_vm_integrated.private.v1.jsonl"
+    DIALOGUE_TMP
+    / "runtime_vm_integrated."
+    "post_bound_terminal_2546_checkpoint.private.v1.jsonl"
 )
 PREDECESSOR_PUBLIC_PATH = (
-    DIALOGUE_WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
+    DIALOGUE_WORKSTREAM
+    / "runtime_vm_integration."
+    "post_bound_terminal_2546_checkpoint.source_free.v1.json"
 )
 PROPOSAL_PRIVATE_PATH = (
     DIALOGUE_TMP

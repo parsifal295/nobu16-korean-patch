@@ -31,7 +31,11 @@ TRANSLATION_INPUT_PATH = (
     DIALOGUE_TMP
     / "family2546_simple_caller_retranslation_translations.private.v1.json"
 )
-CHECKPOINT_PATH = DIALOGUE_TMP / "runtime_vm_integrated.private.v1.jsonl"
+CHECKPOINT_PATH = (
+    DIALOGUE_TMP
+    / "runtime_vm_integrated."
+    "post_bound_terminal_2546_checkpoint.private.v1.jsonl"
+)
 LEDGER_PATH = DIALOGUE_TMP / "family2546_full_ledger.private.v1.json"
 HANDOFF_000_151_PATH = (
     DIALOGUE_TMP / "family2546_ord000_151_analysis.private.v1.json"

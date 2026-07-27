@@ -222,6 +222,31 @@ PK_BOUND_TERMINAL_2546_PREDECESSOR_CHECKPOINT_PATH = (
     / "runtime_vm_integrated."
     "post_bound_terminal_caller_checkpoint.private.v1.jsonl"
 )
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_EVIDENCE_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_bound_terminal_2546_simple_caller_closure_evidence.private.v1.jsonl"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_REPORT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_bound_terminal_2546_simple_caller_closure_promotion.v1.json"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_AUDIT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_bound_terminal_2546_simple_caller_closure_coverage.v1.json"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PREDECESSOR_CHECKPOINT_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "runtime_vm_integrated."
+    "post_bound_terminal_2546_checkpoint.private.v1.jsonl"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -280,6 +305,9 @@ PK_BOUND_TERMINAL_CALLER_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
 PK_BOUND_TERMINAL_2546_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
     "nobu16.kr.pk-bound-terminal-2546-full-caller-closure-evidence-row.v1"
 )
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
+    "nobu16.kr.pk-bound-terminal-2546-simple-caller-closure-evidence-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
@@ -311,6 +339,10 @@ PK_BOUND_TERMINAL_CALLER_RUNTIME_VM_VERIFICATION_METHOD = (
 PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_pk_bound_terminal_2546_full_caller_closure"
 )
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_pk_bound_terminal_2546_"
+    "simple_caller_retranslation_closure"
+)
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
@@ -324,6 +356,7 @@ PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
         PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD,
         PK_BOUND_TERMINAL_CALLER_RUNTIME_VM_VERIFICATION_METHOD,
         PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES = frozenset(
@@ -431,6 +464,68 @@ PK_BOUND_TERMINAL_2546_HANDOFF_152_303_SHA256 = (
 )
 PK_BOUND_TERMINAL_2546_RESIDUAL_LEDGER_SHA256 = (
     "90987EC88A5AA06DA1BAB681E84D59ECD1E8090EE1AFCD472A0A5D646C3399EE"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD = (
+    "bound_terminal_2546_simple_caller_update_action"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RECOGNIZED_ACTIONS = frozenset(
+    {
+        "runtime_promotion",
+        "translation_override_and_runtime_promotion",
+        "translation_override_and_verification_renewal",
+        "verification_renewal",
+    }
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_EXPECTED_ACTION_COUNTS = {
+    "runtime_promotion": 9,
+    "translation_override_and_runtime_promotion": 14,
+    "translation_override_and_verification_renewal": 3,
+    "verification_renewal": 2,
+}
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PREDECESSOR_CHECKPOINT_SHA256 = (
+    "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_EVIDENCE_SHA256 = (
+    "36F5EE8A90BE6EE0FE54EAEC6556B9AB60243A5440420650265524F8DA42F99A"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_REPORT_SHA256 = (
+    "54F73AE0CAAB57088D593812147BDBC92DE4C445AA5B5FFB49C0C658F8F70938"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_AUDIT_SHA256 = (
+    "F68983910EFD2EAFBC869C5AC3D7C7E86C11812410ECCFDFD1CC2E6D75A2EE9E"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_CANDIDATE_SHA256 = (
+    "C59CA74634E8A1FB0BBBFA3FE3A324AFC0ED06FDF7D707444116D5862A6C2C75"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_DECISION_COORDINATE_SHA256 = (
+    "196FC4887A53E1F01647B2A47D6BB650D5CA48B4962EA83A9639A39D4DAD65EF"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_TERMINAL_COORDINATE_SHA256 = (
+    "DD975EDD56BA114A8BB46274BF5B141E18A3A28C0153A769F586059E6C9F810A"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_AUDIT_SCHEMA = (
+    "nobu16.kr.pk-bound-terminal-2546-simple-caller-closure-coverage.v1"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROMOTION_SCHEMA = (
+    "nobu16.kr.pk-bound-terminal-2546-simple-caller-closure-promotion.v1"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROPOSAL_PRIVATE_SHA256 = (
+    "EE9978A8D2B6E432618A0B5A70286C8B2E7EC6CC2AA6671AD77B02D002F50DBB"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROPOSAL_PUBLIC_SHA256 = (
+    "712A4D767F2E8C6F8E82FCADF4AA2C827AA5AE7CF5948E328D455EDB77161A2E"
+)
+PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_ASSEMBLY_MANIFEST_SHA256 = (
+    "801CA6616376313B8F2D49F58053C9131F061FE8DD270BE63C17A52FAE62E704"
+)
+BOUND_TERMINAL_2546_SIMPLE_CALLER_SUPERSEDED_COORDINATES = frozenset(
+    {
+        ("pk_msggame", "15:313:0"),
+        ("pk_msggame", "15:313:1"),
+        ("pk_msggame", "15:2095:1"),
+        ("pk_msggame", "15:2095:2"),
+        ("pk_msggame", "15:2326:0"),
+    }
 )
 PK_BOUND_TERMINAL_2546_HARD_TRUE_GRAMMAR_RISK_FIELDS = frozenset(
     {
@@ -1076,6 +1171,67 @@ def load_bound_terminal_2546_predecessor_rows() -> dict[
     return rows
 
 
+@functools.lru_cache(maxsize=1)
+def load_bound_terminal_2546_simple_caller_predecessor_rows() -> dict[
+    tuple[str, str],
+    dict[str, Any],
+]:
+    try:
+        raw = (
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PREDECESSOR_CHECKPOINT_PATH
+            .read_bytes()
+        )
+        text = raw.decode("utf-8", errors="strict")
+    except (UnicodeDecodeError, OSError) as exc:
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller predecessor "
+            "checkpoint is invalid"
+        ) from exc
+    if sha256_bytes(raw) != (
+        PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PREDECESSOR_CHECKPOINT_SHA256
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller predecessor "
+            "checkpoint hash drifted"
+        )
+    rows: dict[tuple[str, str], dict[str, Any]] = {}
+    try:
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            if not line:
+                continue
+            row = json.loads(line)
+            if not isinstance(row, dict):
+                raise RetranslationError(
+                    "PK bound-terminal 2546 simple-caller predecessor "
+                    f"row is not an object: {line_number}"
+                )
+            key = (str(row.get("resource")), str(row.get("coordinate")))
+            if key in rows:
+                raise RetranslationError(
+                    "duplicate PK bound-terminal 2546 simple-caller "
+                    f"predecessor row: {key}"
+                )
+            rows[key] = row
+    except json.JSONDecodeError as exc:
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller predecessor "
+            "checkpoint JSON is invalid"
+        ) from exc
+    if (
+        len(rows) != 52_803
+        or sum(
+            row.get("runtime_review") == "pending"
+            for row in rows.values()
+        )
+        != 8_213
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller predecessor "
+            "row universe drifted"
+        )
+    return rows
+
+
 def load_bound_terminal_2546_public_contract() -> tuple[
     dict[str, Any],
     dict[str, Any],
@@ -1168,6 +1324,114 @@ def load_bound_terminal_2546_public_contract() -> tuple[
     ):
         raise RetranslationError(
             "PK bound-terminal 2546 public closure contract drifted"
+        )
+    return promotion, audit
+
+
+def load_bound_terminal_2546_simple_caller_public_contract() -> tuple[
+    dict[str, Any],
+    dict[str, Any],
+]:
+    try:
+        promotion_raw = (
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_REPORT_PATH
+            .read_bytes()
+        )
+        audit_raw = (
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_AUDIT_PATH
+            .read_bytes()
+        )
+        promotion = json.loads(promotion_raw.decode("utf-8", errors="strict"))
+        audit = json.loads(audit_raw.decode("utf-8", errors="strict"))
+    except (UnicodeDecodeError, json.JSONDecodeError, OSError) as exc:
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller public closure "
+            "contract is invalid"
+        ) from exc
+    if (
+        sha256_bytes(promotion_raw)
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_REPORT_SHA256
+        or sha256_bytes(audit_raw)
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_AUDIT_SHA256
+        or not isinstance(promotion, dict)
+        or not isinstance(audit, dict)
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller public closure "
+            "hash drifted"
+        )
+    promotion_payload_sha256 = validate_source_free_report_seal(
+        promotion,
+        "PK bound-terminal 2546 simple-caller promotion report",
+    )
+    audit_payload_sha256 = validate_source_free_report_seal(
+        audit,
+        "PK bound-terminal 2546 simple-caller coverage report",
+    )
+    result = promotion.get("result", {})
+    proof = audit.get("proof", {})
+    if (
+        promotion.get("schema")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROMOTION_SCHEMA
+        or audit.get("schema")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_AUDIT_SCHEMA
+        or promotion.get("status") != "PASS"
+        or audit.get("status") != "PASS"
+        or promotion.get("resource") != "MSG_PK/JP/msggame.bin"
+        or audit.get("resource") != "MSG_PK/JP/msggame.bin"
+        or promotion.get("method")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+        or audit.get("method")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+        or promotion.get("steam_write_performed") is not False
+        or audit.get("steam_write_performed") is not False
+        or promotion.get("action_counts")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_EXPECTED_ACTION_COUNTS
+        or set(promotion.get("action_counts", {}))
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RECOGNIZED_ACTIONS
+        or result.get("exact_override_rows") != 17
+        or result.get("runtime_promotion_rows") != 23
+        or result.get("runtime_promotion_roots") != 9
+        or result.get("verification_renewal_rows") != 5
+        or result.get("verification_renewal_roots") != 3
+        or result.get("pending_rows_before") != 8_213
+        or result.get("pending_rows_after") != 8_190
+        or result.get("decision_delta_rows") != 28
+        or result.get("private_evidence_rows") != 28
+        or result.get("private_evidence_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_EVIDENCE_SHA256
+        or audit.get("scope", {}).get("exact_override_rows") != 17
+        or audit.get("scope", {}).get("runtime_promotion_rows") != 23
+        or audit.get("scope", {}).get("verification_renewal_rows") != 5
+        or audit.get("scope", {}).get("post_layer_pending_rows") != 8_190
+        or proof.get("register_assemblies_recomputed") != 63
+        or proof.get(
+            "all_7_register_assemblies_current_relative_raw_g1n_"
+            "nonexpanding"
+        )
+        is not True
+        or proof.get("all_7_register_assemblies_grammar_pass") is not True
+        or proof.get("control_topology_preserved_for_all_roots") is not True
+        or proof.get("protected_tokens_preserved_for_all_coordinates")
+        is not True
+        or audit.get("guards", {}).get("candidate_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_CANDIDATE_SHA256
+        or audit.get("guards", {}).get("decision_coordinate_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_DECISION_COORDINATE_SHA256
+        or audit.get("guards", {}).get("predecessor_private_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PREDECESSOR_CHECKPOINT_SHA256
+        or promotion.get("evidence", {}).get("audit_report_file_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_AUDIT_SHA256
+        or promotion.get("evidence", {}).get(
+            "audit_report_payload_sha256"
+        )
+        != audit_payload_sha256
+        or promotion.get("guards", {}).get("report_payload_sha256")
+        != promotion_payload_sha256
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller public closure "
+            "contract drifted"
         )
     return promotion, audit
 
@@ -1327,6 +1591,172 @@ def validate_bound_terminal_2546_overlay_row(
     return special_supersession
 
 
+def validate_bound_terminal_2546_simple_caller_overlay_row(
+    row: Mapping[str, Any],
+    *,
+    predecessor_rows: Mapping[tuple[str, str], Mapping[str, Any]],
+    audit: Mapping[str, Any],
+) -> bool:
+    coordinate = str(row.get("coordinate"))
+    key = ("pk_msggame", coordinate)
+    predecessor = predecessor_rows.get(key)
+    action = row.get("action")
+    closure_binding = row.get("closure_binding")
+    predecessor_binding = row.get("predecessor_binding")
+    proof = row.get("proof")
+    expected_top_keys = {
+        "action",
+        "closure_binding",
+        "coordinate",
+        "method",
+        "per_row_game_playback_required",
+        "predecessor_binding",
+        "preexisting_verified_evidence_renewed",
+        "proof",
+        "resource",
+        "schema",
+        "status",
+        "translation_utf16le_sha256",
+    }
+    expected_closure_keys = {
+        "assembly_manifest_sha256",
+        "audit_report_file_sha256",
+        "audit_report_payload_sha256",
+        "candidate_sha256",
+        "component_manifest_sha256",
+        "decision_coordinate_sha256",
+        "proposal_decision_manifest_sha256",
+        "proposal_private_sha256",
+        "proposal_public_sha256",
+        "residual_ledger_sha256",
+        "selector",
+        "terminal_coordinate_sha256",
+    }
+    expected_proof = {
+        "control_topology_preserved": True,
+        "grammar_pass_for_all_7_register_assemblies": True,
+        "protected_tokens_preserved": True,
+        "raw_g1n_nonexpanding_for_all_7_register_assemblies": True,
+    }
+    if (
+        set(row) != expected_top_keys
+        or not isinstance(predecessor, Mapping)
+        or row.get("schema")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_EVIDENCE_ROW_SCHEMA
+        or row.get("method")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+        or row.get("resource") != "pk_msggame"
+        or row.get("status") != "verified"
+        or row.get("per_row_game_playback_required") is not False
+        or action
+        not in PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RECOGNIZED_ACTIONS
+        or not isinstance(closure_binding, dict)
+        or set(closure_binding) != expected_closure_keys
+        or closure_binding.get("selector") != 1066
+        or closure_binding.get("terminal_coordinate_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_TERMINAL_COORDINATE_SHA256
+        or closure_binding.get("candidate_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_CANDIDATE_SHA256
+        or closure_binding.get("decision_coordinate_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_DECISION_COORDINATE_SHA256
+        or closure_binding.get("audit_report_file_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_AUDIT_SHA256
+        or closure_binding.get("audit_report_payload_sha256")
+        != audit.get("guards", {}).get("report_payload_sha256")
+        or closure_binding.get("proposal_private_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROPOSAL_PRIVATE_SHA256
+        or closure_binding.get("proposal_public_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROPOSAL_PUBLIC_SHA256
+        or closure_binding.get("assembly_manifest_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_ASSEMBLY_MANIFEST_SHA256
+        or not isinstance(predecessor_binding, dict)
+        or set(predecessor_binding) != {"checkpoint_sha256", "row_sha256"}
+        or predecessor_binding.get("checkpoint_sha256")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PREDECESSOR_CHECKPOINT_SHA256
+        or predecessor_binding.get("row_sha256")
+        != canonical_sha256(predecessor)
+        or proof != expected_proof
+        or not isinstance(row.get("translation_utf16le_sha256"), str)
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller overlay row "
+            f"binding is incomplete: {coordinate}"
+        )
+    predecessor_status = predecessor.get("runtime_review")
+    predecessor_translation_hash = sha256_text(
+        str(predecessor.get("translation"))
+    )
+    override_action = action in {
+        "translation_override_and_runtime_promotion",
+        "translation_override_and_verification_renewal",
+    }
+    promotion_action = action in {
+        "runtime_promotion",
+        "translation_override_and_runtime_promotion",
+    }
+    if (
+        (
+            promotion_action
+            and (
+                predecessor_status != "pending"
+                or row.get("preexisting_verified_evidence_renewed") is not False
+            )
+        )
+        or (
+            not promotion_action
+            and (
+                predecessor_status != "verified"
+                or row.get("preexisting_verified_evidence_renewed") is not True
+            )
+        )
+        or (
+            override_action
+            and row.get("translation_utf16le_sha256")
+            == predecessor_translation_hash
+        )
+        or (
+            not override_action
+            and row.get("translation_utf16le_sha256")
+            != predecessor_translation_hash
+        )
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller overlay transition "
+            f"drifted: {coordinate}"
+        )
+    predecessor_runtime_evidence = predecessor.get(
+        "runtime_vm_verification"
+    )
+    supersedes_full_2546 = (
+        isinstance(predecessor_runtime_evidence, dict)
+        and predecessor_runtime_evidence.get("method")
+        == PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD
+    )
+    if supersedes_full_2546 != (
+        key in BOUND_TERMINAL_2546_SIMPLE_CALLER_SUPERSEDED_COORDINATES
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller evidence supersession "
+            f"escaped its exact set: {coordinate}"
+        )
+    if supersedes_full_2546 and (
+        predecessor.get(PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD)
+        != predecessor_runtime_evidence.get("action")
+        or predecessor.get(PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD)
+        != "verification_renewal"
+        or action
+        not in {
+            "verification_renewal",
+            "translation_override_and_verification_renewal",
+        }
+    ):
+        raise RetranslationError(
+            "PK bound-terminal 2546 simple-caller superseded historical "
+            f"metadata drifted: {coordinate}"
+        )
+    return supersedes_full_2546
+
+
 def load_pk_runtime_vm_overlays() -> dict[
     tuple[str, str],
     dict[str, Any],
@@ -1438,6 +1868,14 @@ def load_pk_runtime_vm_overlays() -> dict[
             PK_BOUND_TERMINAL_2546_PROMOTION_SCHEMA,
             "pk_msggame",
         ),
+        (
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_EVIDENCE_PATH,
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_REPORT_PATH,
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_EVIDENCE_ROW_SCHEMA,
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD,
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROMOTION_SCHEMA,
+            "pk_msggame",
+        ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
     for (
@@ -1480,11 +1918,16 @@ def load_pk_runtime_vm_overlays() -> dict[
             method
             == PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD
         )
+        bound_terminal_2546_simple_caller_family = (
+            method
+            == PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+        )
         evidence_family = (
             terminal_family
             or thought_predicate_family
             or caller_family
             or bound_terminal_2546_family
+            or bound_terminal_2546_simple_caller_family
         )
         private_hash_field = (
             "private_evidence_sha256"
@@ -1537,9 +1980,34 @@ def load_pk_runtime_vm_overlays() -> dict[
                 raise RetranslationError(
                     "PK bound-terminal 2546 private evidence hash drifted"
                 )
+        bound_terminal_2546_simple_caller_audit: (
+            Mapping[str, Any] | None
+        ) = None
+        bound_terminal_2546_simple_caller_predecessor_rows: Mapping[
+            tuple[str, str],
+            Mapping[str, Any],
+        ] | None = None
+        if bound_terminal_2546_simple_caller_family:
+            _, bound_terminal_2546_simple_caller_audit = (
+                load_bound_terminal_2546_simple_caller_public_contract()
+            )
+            bound_terminal_2546_simple_caller_predecessor_rows = (
+                load_bound_terminal_2546_simple_caller_predecessor_rows()
+            )
+            if (
+                sha256_bytes(raw_overlay)
+                != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_EVIDENCE_SHA256
+            ):
+                raise RetranslationError(
+                    "PK bound-terminal 2546 simple-caller private "
+                    "evidence hash drifted"
+                )
         source_count = 0
         source_actions: Counter[str] = Counter()
         superseded_verified_caller_coordinates: set[
+            tuple[str, str]
+        ] = set()
+        superseded_full_2546_coordinates: set[
             tuple[str, str]
         ] = set()
         for line_number, line in enumerate(overlay_lines, start=1):
@@ -1596,6 +2064,29 @@ def load_pk_runtime_vm_overlays() -> dict[
                 )
                 if supersedes_verified_caller:
                     superseded_verified_caller_coordinates.add(
+                        ("pk_msggame", str(coordinate))
+                    )
+                source_actions[str(row.get("action"))] += 1
+                dynamic_transition_valid = True
+            elif bound_terminal_2546_simple_caller_family:
+                assert (
+                    bound_terminal_2546_simple_caller_audit is not None
+                )
+                assert (
+                    bound_terminal_2546_simple_caller_predecessor_rows
+                    is not None
+                )
+                supersedes_full_2546 = (
+                    validate_bound_terminal_2546_simple_caller_overlay_row(
+                        row,
+                        predecessor_rows=(
+                            bound_terminal_2546_simple_caller_predecessor_rows
+                        ),
+                        audit=bound_terminal_2546_simple_caller_audit,
+                    )
+                )
+                if supersedes_full_2546:
+                    superseded_full_2546_coordinates.add(
                         ("pk_msggame", str(coordinate))
                     )
                 source_actions[str(row.get("action"))] += 1
@@ -1962,6 +2453,20 @@ def load_pk_runtime_vm_overlays() -> dict[
             raise RetranslationError(
                 "PK bound-terminal 2546 action/supersession universe drifted"
             )
+        if bound_terminal_2546_simple_caller_family and (
+            {
+                action: source_actions.get(action, 0)
+                for action in
+                PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RECOGNIZED_ACTIONS
+            }
+            != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_EXPECTED_ACTION_COUNTS
+            or superseded_full_2546_coordinates
+            != BOUND_TERMINAL_2546_SIMPLE_CALLER_SUPERSEDED_COORDINATES
+        ):
+            raise RetranslationError(
+                "PK bound-terminal 2546 simple-caller "
+                "action/supersession universe drifted"
+            )
     if not rows:
         raise RetranslationError(
             "no private PK runtime VM verification overlay is available"
@@ -2047,7 +2552,66 @@ def validate_pk_runtime_vm_verification(
         raise RetranslationError(
             f"{label}.runtime_vm_verification translation hash does not match"
         )
-    if method == PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD:
+    if (
+        method
+        == PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+    ):
+        predecessor = (
+            load_bound_terminal_2546_simple_caller_predecessor_rows().get(
+                (resource, coordinate_value)
+            )
+        )
+        action = evidence.get("action")
+        promotion_action = action in {
+            "runtime_promotion",
+            "translation_override_and_runtime_promotion",
+        }
+        if (
+            resource != "pk_msggame"
+            or evidence.get("resource") != resource
+            or evidence.get("status") != "verified"
+            or evidence.get("per_row_game_playback_required") is not False
+            or not isinstance(predecessor, dict)
+            or evidence.get("predecessor_binding", {}).get("row_sha256")
+            != canonical_sha256(predecessor)
+            or evidence.get("proof")
+            != {
+                "control_topology_preserved": True,
+                "grammar_pass_for_all_7_register_assemblies": True,
+                "protected_tokens_preserved": True,
+                "raw_g1n_nonexpanding_for_all_7_register_assemblies": True,
+            }
+            or (
+                promotion_action
+                and (
+                    predecessor.get("runtime_review") != "pending"
+                    or scope_classification != "retranslated"
+                    or layout_review != "runtime_verified"
+                )
+            )
+            or (
+                not promotion_action
+                and (
+                    action
+                    not in {
+                        "verification_renewal",
+                        (
+                            "translation_override_and_verification_"
+                            "renewal"
+                        ),
+                    }
+                    or predecessor.get("runtime_review") != "verified"
+                    or scope_classification
+                    != predecessor.get("scope_classification")
+                    or layout_review != predecessor.get("layout_review")
+                )
+            )
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification 2546 simple-caller "
+                "closure transition drifted"
+            )
+    elif method == PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD:
         predecessor = load_bound_terminal_2546_predecessor_rows().get(
             (resource, coordinate_value)
         )
@@ -2689,6 +3253,93 @@ def validate_bound_terminal_2546_decision_row(
         )
 
 
+def validate_bound_terminal_2546_simple_caller_decision_row(
+    row: Mapping[str, Any],
+    *,
+    predecessor: Mapping[str, Any],
+    label: str,
+) -> None:
+    evidence = row.get("runtime_vm_verification")
+    action = row.get(
+        PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD
+    )
+    if (
+        not isinstance(evidence, dict)
+        or evidence.get("method")
+        != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+        or action != evidence.get("action")
+        or action
+        not in PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RECOGNIZED_ACTIONS
+    ):
+        raise RetranslationError(
+            f"{label}."
+            f"{PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD} "
+            "is unbound"
+        )
+    override_action = action in {
+        "translation_override_and_runtime_promotion",
+        "translation_override_and_verification_renewal",
+    }
+    promotion_action = action in {
+        "runtime_promotion",
+        "translation_override_and_runtime_promotion",
+    }
+    expected = copy.deepcopy(dict(predecessor))
+    override_field = (
+        "bound_terminal_2546_simple_caller_exact_override_evidence"
+    )
+    if override_action:
+        override_evidence = row.get(override_field)
+        expected_override_evidence = {
+            "schema":
+            "nobu16.kr.pk-bound-terminal-2546-simple-caller-"
+            "exact-override.v1",
+            "private_proposal_sha256":
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROPOSAL_PRIVATE_SHA256,
+            "proposal_public_sha256":
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROPOSAL_PUBLIC_SHA256,
+            "exact_override_coordinate_sha256":
+            "8F75484BA98CEECCF591CBEF8FC0174587E497F8734EECFA3626A7E4A591A9FD",
+            "exact_override_map_sha256":
+            "B12AD98F0AF23266F8AD057A1256F2558B810451EE96D4668FA06A1997408704",
+            "translation_utf16le_sha256": sha256_text(
+                str(row.get("translation"))
+            ),
+            "control_topology_preserved": True,
+            "protected_tokens_preserved": True,
+            "all_7_register_assemblies_recomputed": True,
+        }
+        if override_evidence != expected_override_evidence:
+            raise RetranslationError(
+                f"{label} has invalid 2546 simple-caller "
+                "exact override evidence"
+            )
+        expected["translation"] = row.get("translation")
+        repair_bound_terminal_2546_hard_risks(expected)
+        expected[override_field] = expected_override_evidence
+    elif (
+        row.get("translation") != predecessor.get("translation")
+        or override_field in row
+    ):
+        raise RetranslationError(
+            f"{label} has an unbound 2546 simple-caller "
+            "translation override"
+        )
+    if promotion_action:
+        expected["runtime_review"] = "verified"
+        expected["scope_classification"] = "retranslated"
+        expected["layout_review"] = "runtime_verified"
+    expected[
+        PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD
+    ] = action
+    expected["runtime_vm_verification"] = evidence
+    if dict(row) != expected:
+        raise RetranslationError(
+            f"{label} does not preserve its frozen 2546 "
+            "simple-caller predecessor metadata"
+        )
+
+
 def validate_decisions(
     prepared: PreparedArtifacts,
     decision_path: Path,
@@ -2772,6 +3423,28 @@ def validate_decisions(
         )
         bound_terminal_2546_predecessor: Mapping[str, Any] | None = None
         if (
+            runtime_vm_method
+            == PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+        ):
+            bound_terminal_2546_predecessor = (
+                load_bound_terminal_2546_simple_caller_predecessor_rows().get(
+                    (
+                        str(resource),
+                        f"{block_id}:{record_id}:{literal_id}",
+                    )
+                )
+            )
+            if not isinstance(bound_terminal_2546_predecessor, Mapping):
+                raise RetranslationError(
+                    f"{label} has no frozen 2546 simple-caller "
+                    "predecessor row"
+                )
+            validate_bound_terminal_2546_simple_caller_decision_row(
+                row,
+                predecessor=bound_terminal_2546_predecessor,
+                label=label,
+            )
+        elif (
             runtime_vm_method
             == PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD
         ):
@@ -3036,6 +3709,21 @@ def validate_decisions(
         bound_terminal_2546_action = row.get(
             PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
         )
+        bound_terminal_2546_simple_superseded_action = (
+            runtime_vm_method
+            == PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+            and (
+                str(resource),
+                f"{block_id}:{record_id}:{literal_id}",
+            )
+            in BOUND_TERMINAL_2546_SIMPLE_CALLER_SUPERSEDED_COORDINATES
+            and bound_terminal_2546_predecessor is not None
+            and bound_terminal_2546_action
+            == bound_terminal_2546_predecessor.get(
+                PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
+            )
+            == "verification_renewal"
+        )
         if (
             bound_terminal_2546_action is not None
             or runtime_vm_method
@@ -3046,9 +3734,28 @@ def validate_decisions(
             or not isinstance(runtime_vm_evidence, dict)
             or bound_terminal_2546_action
             != runtime_vm_evidence.get("action")
-        ):
+        ) and not bound_terminal_2546_simple_superseded_action:
             raise RetranslationError(
                 f"{label}.{PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD} "
+                "is unbound"
+            )
+        bound_terminal_2546_simple_action = row.get(
+            PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD
+        )
+        if (
+            bound_terminal_2546_simple_action is not None
+            or runtime_vm_method
+            == PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+        ) and (
+            runtime_vm_method
+            != PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_RUNTIME_VM_VERIFICATION_METHOD
+            or not isinstance(runtime_vm_evidence, dict)
+            or bound_terminal_2546_simple_action
+            != runtime_vm_evidence.get("action")
+        ):
+            raise RetranslationError(
+                f"{label}."
+                f"{PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD} "
                 "is unbound"
             )
         if (
