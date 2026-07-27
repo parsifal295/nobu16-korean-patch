@@ -30649,6 +30649,72 @@
       "steam_write_performed": false
     },
     {
+      "segment_id": "pk_msggame_B134_S1406",
+      "resource": "pk_msggame",
+      "first_coordinate": "15:2548:0",
+      "last_coordinate": "15:2566:0",
+      "decision_count": 66,
+      "semantic_review_approved": 66,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 66,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 66
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B134"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "pk_msggame_B134_S1407",
+      "resource": "pk_msggame",
+      "first_coordinate": "15:2567:0",
+      "last_coordinate": "15:2587:5",
+      "decision_count": 55,
+      "semantic_review_approved": 55,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 55,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 55
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B134"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "pk_msggame_B134_S1408",
+      "resource": "pk_msggame",
+      "first_coordinate": "15:2588:0",
+      "last_coordinate": "16:7:1",
+      "decision_count": 48,
+      "semantic_review_approved": 48,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 48,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 48
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B134"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
       "segment_id": "pk_msggame_base_exact_reuse_prefill",
       "resource": "pk_msggame",
       "first_coordinate": "2:242:0",
@@ -34857,15 +34923,15 @@
       "first_record_coordinate": "15:2548",
       "last_record_coordinate": "16:19",
       "visible_target_count": 200,
-      "decision_count": 31,
-      "runtime_review_pending": 25,
+      "decision_count": 200,
+      "runtime_review_pending": 194,
       "fully_candidate_eligible": 6,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
         "retranslated": 6,
-        "runtime_fragment_pending": 25
+        "runtime_fragment_pending": 194
       },
-      "semantic_complete": false
+      "semantic_complete": true
     },
     {
       "batch_id": "pk_msggame-B135",
@@ -34965,13 +35031,13 @@
     }
   ],
   "totals": {
-    "semantic_review_approved": 50396,
-    "runtime_review_pending": 33928,
+    "semantic_review_approved": 50565,
+    "runtime_review_pending": 34097,
     "fully_candidate_eligible": 16468,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
       "retranslated": 16123,
-      "runtime_fragment_pending": 33928
+      "runtime_fragment_pending": 34097
     },
     "semantic_completion": false,
     "candidate_build_complete": false
