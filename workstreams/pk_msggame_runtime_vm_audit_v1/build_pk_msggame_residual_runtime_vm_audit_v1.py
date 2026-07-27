@@ -55,14 +55,14 @@ EXPECTED_RESIDUAL_ROWS = 10_913
 EXPECTED_RESIDUAL_RECORDS = 6_921
 EXPECTED_TIER_ROWS = {"A": 7_295, "B": 1_375, "C": 907, "D": 1_336}
 EXPECTED_TIER_RECORDS = {"A": 4_244, "B": 869, "C": 844, "D": 964}
-EXPECTED_A_SAFE_ROWS = 6_737
-EXPECTED_A_SAFE_RECORDS = 3_850
+EXPECTED_A_SAFE_ROWS = 6_735
+EXPECTED_A_SAFE_RECORDS = 3_848
 EXPECTED_RECOMPUTED_BC_SAFE_ROWS = 1_785
 EXPECTED_RECOMPUTED_BC_SAFE_RECORDS = 1_351
-EXPECTED_UNIFIED_SAFE_ROWS = 8_522
-EXPECTED_UNIFIED_SAFE_RECORDS = 5_201
-EXPECTED_ELIGIBLE_ROWS = 2_908
-EXPECTED_ELIGIBLE_RECORDS = 1_925
+EXPECTED_UNIFIED_SAFE_ROWS = 8_520
+EXPECTED_UNIFIED_SAFE_RECORDS = 5_199
+EXPECTED_ELIGIBLE_ROWS = 2_945
+EXPECTED_ELIGIBLE_RECORDS = 1_949
 EXPECTED_RESIDUAL_COORDINATE_SHA256 = (
     "8AF1915EEF84F2ED004DA86428A50C9A29A420DDB68FB00FA3C3E4FD13C96C65"
 )
@@ -70,7 +70,7 @@ EXPECTED_TIER_A_COORDINATE_SHA256 = (
     "0B7533B42A62AB9295E32113A12682F48508FAE60B33E3CF3E7C1F36C6F140D0"
 )
 EXPECTED_A_SAFE_COORDINATE_SHA256 = (
-    "1F4ECC1528D0E320CD1C8EBD8389F64EEAF753AAEF4469E033065C6E17D4660B"
+    "9B24580A30A211B5D35C32EDE12E2687F597DC82D1DF7C8F607D8BCB250996D1"
 )
 EXPECTED_RECOMPUTED_BC_SAFE_COORDINATE_SHA256 = (
     "606784B8573A253373FE22CDA1061AAF9EBF3E954C007B175DCA7F5DD1B79F72"
@@ -79,10 +79,10 @@ EXPECTED_RECOMPUTED_BC_SAFE_RECORD_SHA256 = (
     "08C9F97426B9552CA1295CEF395457B332D33160A5DACACB1924444DAFDD6390"
 )
 EXPECTED_ELIGIBLE_COORDINATE_SHA256 = (
-    "9EA9913C685ADB015A088B64AC5A4CA8E57FD08B5489CFA9996B529D670A2420"
+    "BB4493A6727655F963BECF89FE4B26020CA03EC98479651AFA4A08D1E7107B58"
 )
 EXPECTED_ELIGIBLE_RECORD_SHA256 = (
-    "2FF19EE6732AEE025981DA2EBECB54D6B3FE8A04B212DEEF0D42C290C9457026"
+    "7950E61F6A6DD07C3B22BA3A589C0F1C730682F130DC76ED335DFC8E3D2C6F6E"
 )
 
 HAZARD_FIELDS = frozenset(
@@ -538,6 +538,68 @@ def closure_proof(
     }
 
 
+def effective_source_rows(
+    source_rows: Sequence[Mapping[str, Any]],
+    *,
+    full_metadata: Mapping[str, Any],
+) -> list[dict[str, Any]]:
+    rows = [copy.deepcopy(dict(row)) for row in source_rows]
+    (
+        semantic_private_content,
+        semantic_public_content,
+        semantic_report,
+        semantic_row,
+    ) = FULL_AUDIT.SEMANTIC_OVERRIDE.build_outputs()
+    FULL_AUDIT.SEMANTIC_OVERRIDE.validate_outputs(
+        semantic_private_content,
+        semantic_public_content,
+        semantic_report,
+        semantic_row,
+    )
+    semantic_coordinate = str(semantic_row["coordinate"])
+    semantic_matches = [
+        index
+        for index, row in enumerate(rows)
+        if str(row["coordinate"]) == semantic_coordinate
+    ]
+    require(
+        len(semantic_matches) == 1,
+        "semantic override coordinate is absent or duplicated",
+    )
+    rows[semantic_matches[0]] = semantic_row
+    reflow_overrides, _reflow_metadata = (
+        FULL_AUDIT.REFLOW_OVERRIDE.load_overrides(rows)
+    )
+    consumed: set[str] = set()
+    for index, row in enumerate(rows):
+        coordinate = str(row["coordinate"])
+        override = reflow_overrides.get(coordinate)
+        if override is None:
+            continue
+        rows[index] = override
+        consumed.add(coordinate)
+    require(
+        consumed == set(reflow_overrides),
+        "relative reflow override universe was not fully applied",
+    )
+    replacement_manifest = [
+        {
+            "coordinate": str(row["coordinate"]),
+            "translation_utf16le_sha256": ENGINE.sha256_text(
+                str(row["translation"])
+            ),
+        }
+        for row in rows
+        if isinstance(row.get("translation"), str)
+    ]
+    require(
+        canonical_sha256(replacement_manifest)
+        == full_metadata["replacement_manifest_sha256"],
+        "effective residual replacement manifest drifted",
+    )
+    return rows
+
+
 def build_report() -> tuple[dict[str, Any], Any, dict[str, Any]]:
     inputs, full_metadata = FULL_AUDIT.full_candidate_inputs()
     exact_report = json.loads(EXACT_COVERAGE_PATH.read_text(encoding="utf-8"))
@@ -547,6 +609,10 @@ def build_report() -> tuple[dict[str, Any], Any, dict[str, Any]]:
         metadata=full_metadata,
     )
     source_rows, source_metadata = FULL_AUDIT.source_decisions()
+    source_rows = effective_source_rows(
+        source_rows,
+        full_metadata=full_metadata,
+    )
     exact_coordinates = set(exact_report["row_adjudications"])
     residual_rows = [
         row

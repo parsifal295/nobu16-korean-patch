@@ -24,22 +24,38 @@
     },
     "pk_msggame": {
       "exact": {
-        "coverage_file_sha256": "99FF832F2EB74DB205DE37B0079FA275471BF31A224F81E3FF422003A9B2D910",
-        "private_sha256": "F6704365880F135E29CE4D0FF4DEA474F07E71AA6A6A4B359ADD8660B769D160",
-        "promotion_count": 7453,
-        "promotion_report_sha256": "A3FC592ADFC5B3E96E63573010CA06B9025D6217187F0F79A8EBF715A5447474"
+        "coverage_file_sha256": "DB596688BF87AE07F04E80FE83CB194541A74B1DACE56423A2A39DDF715089A0",
+        "private_sha256": "2671809B99ED88F56A6D2386F36EACC7D618EECA8336D8119E4F1BF4001C6BD5",
+        "promotion_count": 7450,
+        "promotion_report_sha256": "6D5000A6F3D42E0084429A1E67510208B9A6FEF7EE13861C3969010E5126820B"
       },
       "full_candidate_bound": true,
-      "promotion_count": 10361,
+      "pk_only_layer_included": false,
+      "pk_only_predecessor_checkpoint_match": false,
+      "promotion_count": 10395,
+      "rebuilt_predecessor_integrated_private_sha256": "29ECB2446AD89D0F9F122B280D2E66DAB2A36F2F0050174239EB4D1F0D27E757",
       "residual": {
-        "coverage_file_sha256": "C418C07ECFCFF4AA040DCE9EF57D3907BA5DEB460C89B6F98360785939136D42",
+        "coverage_file_sha256": "58DEFAFDC69A2BCC6390CF429B8BE118AEE28C94846ED857E210E2386FC7EE38",
         "layout_transition_bound": true,
-        "private_sha256": "7F5F764DAC90FD36D00473F5F8A34ADA68124D8BD956013C1551B285933423EA",
-        "promotion_count": 2908,
-        "promotion_report_sha256": "71EE9A7B62BB6E5444BA6A666278D8EC4AE2915630DAFB50B12FAB0124AA2F2C"
+        "private_sha256": "B1E5D89D13158AE4597F3B91A3D350F1271570F4625A39F8C83426CA6BF5E96B",
+        "promotion_count": 2945,
+        "promotion_report_sha256": "F5F726453552D13B29F6C5A7D85CFB945D0DD8C1211452F80E61DB957C261E02"
       }
     },
-    "promoted_total": 26012,
+    "promoted_total": 26046,
+    "relative_reflow_override": {
+      "after_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+      "before_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
+      "layout_review_transition_performed": false,
+      "override_coordinate_sha256": "E0FC03945EA080A33BD7ACC71F8114279DB385D085F6A63A31974E77B9E0B0EE",
+      "override_count": 26,
+      "override_manifest_sha256": "1C809ACF49B5DEF55F54FC781513C8C190BC91A766C3EBF4D86138B3C5296368",
+      "private_file_sha256": "2E195A308AC1CEE5859D28C58F1F3E3DEEA7B8A2E5F692CE2B24C2DBCDBBBE76",
+      "public_file_sha256": "35E450099DF5964348F0306722F6D72919972E34ED96749067B558E48A4193C2",
+      "report_payload_sha256": "1B70F3F8ECDEC3C8FB053FA8C65A9F904C2D868B74F5F80B512605263FDD78BF",
+      "runtime_review_transition_performed": false,
+      "steam_write_performed": false
+    },
     "semantic_override": {
       "coordinate": "6:3421:0",
       "override_count": 1,
@@ -52,9 +68,9 @@
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 42481,
-    "private_integrated_decision_sha256": "093E41EAD51FC9CECF21DC1675EBEE98CB5BF86E60223304FCCC6A0D81781545",
-    "runtime_review_pending": 10322,
+    "fully_candidate_eligible": 42515,
+    "private_integrated_decision_sha256": "29ECB2446AD89D0F9F122B280D2E66DAB2A36F2F0050174239EB4D1F0D27E757",
+    "runtime_review_pending": 10288,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
@@ -66,7 +82,10 @@
     "normal_v0150_decision_validator_rechecked": true,
     "per_row_game_playback_required_for_promotions": false,
     "pk_full_candidate_records_and_closures_rechecked": true,
+    "pk_only_layer_included": false,
+    "pk_only_predecessor_checkpoint_rebuilt_and_matched": false,
     "pk_overlay_rebuilt_and_rechecked": true,
+    "relative_reflow_override_rebuilt_and_rechecked": true,
     "representative_game_smoke_test_required_before_release": true,
     "runtime_only_transitions_enforced": true,
     "semantic_override_rebuilt_and_rechecked": true

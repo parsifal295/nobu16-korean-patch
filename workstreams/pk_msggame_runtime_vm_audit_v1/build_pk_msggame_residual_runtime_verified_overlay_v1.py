@@ -46,7 +46,7 @@ OVERLAY_ROW_SCHEMA = (
     "nobu16.kr.pk-msggame-residual-runtime-vm-verification-overlay-row.v1"
 )
 METHOD = "reversed_vm_residual_full_closure_nonexpansion_analysis"
-EXPECTED_ROWS = 2_908
+EXPECTED_ROWS = 2_945
 
 
 class ResidualPromotionError(ValueError):
@@ -232,6 +232,14 @@ def build_overlay_rows(
     inputs: Any,
 ) -> list[dict[str, Any]]:
     source_values, _source_metadata = FULL_AUDIT.source_decisions()
+    source_values = AUDIT.effective_source_rows(
+        source_values,
+        full_metadata={
+            "replacement_manifest_sha256": report["candidate_binding"][
+                "replacement_manifest_sha256"
+            ],
+        },
+    )
     source_rows = {
         str(row["coordinate"]): row for row in source_values
     }

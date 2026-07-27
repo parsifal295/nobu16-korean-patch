@@ -81,31 +81,50 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 27_545)
-        self.assertEqual(report["result"]["runtime_review_pending"], 8_789)
+        self.assertEqual(report["promotions"]["promoted_total"], 27_582)
+        self.assertEqual(report["result"]["runtime_review_pending"], 8_752)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            11_894,
+            11_931,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
                 "promotion_count"
             ],
-            2_908,
+            2_945,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["pk_only_exact_blocked"][
                 "promotion_count"
             ],
-            1_533,
+            1_536,
         )
         self.assertTrue(
             report["promotions"]["pk_msggame"]["full_candidate_bound"]
         )
+        self.assertTrue(
+            report["promotions"]["pk_msggame"]["pk_only_layer_included"]
+        )
+        self.assertTrue(
+            report["promotions"]["pk_msggame"][
+                "pk_only_predecessor_checkpoint_match"
+            ]
+        )
+        self.assertTrue(
+            report["validation"][
+                "pk_only_predecessor_checkpoint_rebuilt_and_matched"
+            ]
+        )
+        self.assertEqual(
+            report["promotions"]["relative_reflow_override"][
+                "override_count"
+            ],
+            26,
+        )
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            8_789,
+            8_752,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][

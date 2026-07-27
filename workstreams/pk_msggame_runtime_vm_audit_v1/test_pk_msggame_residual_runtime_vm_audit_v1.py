@@ -18,6 +18,11 @@ OVERLAY_PATH = (
     WORKSTREAM
     / "build_pk_msggame_residual_runtime_verified_overlay_v1.py"
 )
+REFLOW_REPORT_PATH = (
+    WORKSTREAM
+    / "public"
+    / "pk_msggame_residual_a_relative_reflow.v1.json"
+)
 
 
 def load_module(name: str, path: Path) -> Any:
@@ -58,7 +63,7 @@ class PkResidualRuntimeVmTests(unittest.TestCase):
         )
         self.assertEqual(
             coverage["scope"]["tier_a_final_exact_safe_rows"],
-            6_737,
+            6_735,
         )
         self.assertEqual(
             coverage["scope"]["recomputed_tier_bc_safe_rows"],
@@ -70,19 +75,19 @@ class PkResidualRuntimeVmTests(unittest.TestCase):
         )
         self.assertEqual(
             coverage["scope"]["unified_safe_rows"],
-            8_522,
+            8_520,
         )
         self.assertEqual(
             coverage["scope"]["unified_safe_records"],
-            5_201,
+            5_199,
         )
         self.assertEqual(
             coverage["scope"]["promotion_eligible_rows"],
-            2_908,
+            2_945,
         )
         self.assertEqual(
             coverage["scope"]["promotion_eligible_records"],
-            1_925,
+            1_949,
         )
         self.assertFalse(
             coverage["layout_contract"][
@@ -92,7 +97,7 @@ class PkResidualRuntimeVmTests(unittest.TestCase):
         self.assertFalse(
             coverage["layout_contract"]["pk_msgev_912px_rule_applied"]
         )
-        self.assertEqual(len(self.rows), 2_908)
+        self.assertEqual(len(self.rows), 2_945)
         transition_counts: dict[str, int] = {}
         for row in self.rows:
             transition = row["layout_transition"]
@@ -104,11 +109,42 @@ class PkResidualRuntimeVmTests(unittest.TestCase):
         self.assertEqual(
             transition_counts,
             {
-                "runtime_pending": 2_253,
+                "runtime_pending": 2_290,
                 "unchanged_from_current": 655,
             },
         )
         self.assertFalse(self.promotion["steam_write_performed"])
+
+    def test_reflowed_residual_row_uses_effective_translation_binding(
+        self,
+    ) -> None:
+        reflow_report = json.loads(
+            REFLOW_REPORT_PATH.read_text(encoding="utf-8")
+        )
+        overlays = {row["coordinate"]: row for row in self.rows}
+        shared = sorted(
+            set(overlays) & set(reflow_report["row_adjudications"])
+        )
+        self.assertEqual(len(shared), 23)
+        for coordinate in shared:
+            overlay_row = overlays[coordinate]
+            coverage_row = self.context["coverage"][
+                "row_adjudications"
+            ][coordinate]
+            self.assertEqual(
+                overlay_row["translation_utf16le_sha256"],
+                coverage_row["translation_utf16le_sha256"],
+            )
+            self.assertEqual(
+                overlay_row["translation_utf16le_sha256"],
+                reflow_report["row_adjudications"][coordinate][
+                    "after_translation_utf16le_sha256"
+                ],
+            )
+            self.assertEqual(
+                overlay_row["source_decision_binding"]["decision_sha256"],
+                coverage_row["source_decision_sha256"],
+            )
 
     def test_overlay_and_report_tampering_are_rejected(self) -> None:
         tampered_rows = copy.deepcopy(self.rows)

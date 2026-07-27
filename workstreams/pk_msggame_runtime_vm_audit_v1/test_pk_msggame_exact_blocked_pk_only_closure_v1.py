@@ -54,12 +54,12 @@ class PkExactBlockedPkOnlyClosureTests(unittest.TestCase):
 
     def test_exact_split_and_upstream_bindings(self) -> None:
         scope = self.audit["scope"]
-        self.assertEqual(scope["full_candidate_blocked_rows"], 2_317)
-        self.assertEqual(scope["full_candidate_blocked_records"], 1_616)
-        self.assertEqual(scope["pk_only_promotion_eligible_rows"], 1_533)
+        self.assertEqual(scope["full_candidate_blocked_rows"], 2_320)
+        self.assertEqual(scope["full_candidate_blocked_records"], 1_618)
+        self.assertEqual(scope["pk_only_promotion_eligible_rows"], 1_536)
         self.assertEqual(
             scope["pk_only_promotion_eligible_records"],
-            1_126,
+            1_128,
         )
         self.assertEqual(scope["manual_review_remaining_rows"], 784)
         self.assertEqual(scope["manual_review_remaining_records"], 490)
@@ -85,10 +85,10 @@ class PkExactBlockedPkOnlyClosureTests(unittest.TestCase):
         )
 
     def test_overlay_is_complete_source_free_and_pk_only(self) -> None:
-        self.assertEqual(len(self.rows), 1_533)
+        self.assertEqual(len(self.rows), 1_536)
         self.assertEqual(
             len({row["coordinate"] for row in self.rows}),
-            1_533,
+            1_536,
         )
         self.assertTrue(all(row["status"] == "verified" for row in self.rows))
         self.assertTrue(
@@ -146,7 +146,7 @@ class PkExactBlockedPkOnlyClosureTests(unittest.TestCase):
         )
         self.assertEqual(
             failures["combination_row_counts"]["PASS"],
-            1_533,
+            1_536,
         )
         self.assertEqual(
             failures["combination_row_counts"]["grammar_risk"],

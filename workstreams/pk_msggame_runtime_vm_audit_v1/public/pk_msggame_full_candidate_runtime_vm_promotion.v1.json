@@ -9,21 +9,21 @@
   "evidence": {
     "all_rows_recomputed_from_full_candidate": true,
     "coverage_report": "workstreams/pk_msggame_runtime_vm_audit_v1/public/pk_msggame_full_candidate_runtime_vm_coverage.v1.json",
-    "coverage_report_file_sha256": "99FF832F2EB74DB205DE37B0079FA275471BF31A224F81E3FF422003A9B2D910",
-    "coverage_report_payload_sha256": "899B84A721D7881D1A75EEE7BB2E8491B864DB2EC001640AC4B2760ADF74FE54",
+    "coverage_report_file_sha256": "DB596688BF87AE07F04E80FE83CB194541A74B1DACE56423A2A39DDF715089A0",
+    "coverage_report_payload_sha256": "9A524E15B20B3B96E764BD09607F14C663B5F9A61B65A42FB3A6FE2A8C6B5E73",
     "pair_guard_universe_sha256": "2AC038F7833AB871906E7CF2096E281F75681B3ED6BDE380B6A57BBB5B10F305",
-    "replacement_manifest_sha256": "E920E5DD7AE52C406433570B596B67EA6F0E942DC13430A26214D8F376078D80",
-    "row_guard_universe_sha256": "62B51524EF6B20BBF66BE995C60BB3CB0DE77BCDB10D7E1FEED3E78727104289"
+    "replacement_manifest_sha256": "D50117EECC53C34097D257D9304454B150675B46EABA1E5E6D9B2588EB6C06A8",
+    "row_guard_universe_sha256": "206E07B85ABE27E21AE2E79138F377031F65D8927160F602B75E23CDB32B43E0"
   },
   "exclusion_policy": {
     "blocked_rows_included": 0,
-    "full_completeness_required": 7453,
+    "full_completeness_required": 7450,
     "layout_taint_rows_included": 0
   },
   "input": {
-    "blocked_rows_excluded": 2317,
-    "full_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
-    "promotion_eligible_rows": 7453,
+    "blocked_rows_excluded": 2320,
+    "full_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+    "promotion_eligible_rows": 7450,
     "runtime_pending_exact_reuse_rows": 9770
   },
   "integration_boundary": {
@@ -34,9 +34,9 @@
   "release_target": "0.15.0",
   "resource": "MSG_PK/JP/msggame.bin",
   "result": {
-    "eligible_coordinate_universe_sha256": "0D9D424C2EEBBD652EFF807BEF604164C9691011839C724658F5808BD4A64147",
-    "private_overlay_rows": 7453,
-    "private_overlay_sha256": "F6704365880F135E29CE4D0FF4DEA474F07E71AA6A6A4B359ADD8660B769D160",
+    "eligible_coordinate_universe_sha256": "DAC4B405D79BDD860BDD80E5B85F4DEA471BE388493BCFE6E39689A241F353CC",
+    "private_overlay_rows": 7450,
+    "private_overlay_sha256": "2671809B99ED88F56A6D2386F36EACC7D618EECA8336D8119E4F1BF4001C6BD5",
     "translation_body_copied": false
   },
   "schema": "nobu16.kr.pk-msggame-full-candidate-runtime-vm-promotion.v1",

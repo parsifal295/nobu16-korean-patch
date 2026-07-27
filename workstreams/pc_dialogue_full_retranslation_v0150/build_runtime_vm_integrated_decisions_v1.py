@@ -111,6 +111,9 @@ SEMANTIC_OVERRIDE_PRIVATE_PATH = (
 SEMANTIC_OVERRIDE_PUBLIC_PATH = (
     WORKSTREAM / "pk_semantic_flattening_3421.source_free.v1.json"
 )
+REFLOW_OVERRIDE_LOADER_PATH = (
+    WORKSTREAM / "load_pk_relative_reflow_override_v1.py"
+)
 DEFAULT_PRIVATE_OUTPUT = OUTPUT_ROOT / "runtime_vm_integrated.private.v1.jsonl"
 DEFAULT_PUBLIC_OUTPUT = WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
 
@@ -122,11 +125,13 @@ EXPECTED_VISIBLE_ROWS = 52_803
 EXPECTED_BASE_ROWS = 23_765
 EXPECTED_PK_ROWS = 29_038
 EXPECTED_BASE_PROMOTIONS = 15_651
-EXPECTED_PK_EXACT_PROMOTIONS = 7_453
-EXPECTED_PK_RESIDUAL_PROMOTIONS = 2_908
-EXPECTED_PK_ONLY_EXACT_BLOCKED_PROMOTIONS = 1_533
-EXPECTED_PK_INTEGRATED_PROMOTIONS = 11_894
-EXPECTED_PENDING_AFTER = 8_789
+EXPECTED_PK_EXACT_PROMOTIONS = 7_450
+EXPECTED_PK_RESIDUAL_PROMOTIONS = 2_945
+EXPECTED_PK_PREDECESSOR_PROMOTIONS = 10_395
+EXPECTED_PK_ONLY_EXACT_BLOCKED_PROMOTIONS = 1_536
+EXPECTED_PK_INTEGRATED_PROMOTIONS = 11_931
+EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
+EXPECTED_PENDING_AFTER = 8_752
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
@@ -164,14 +169,28 @@ PK_RESIDUAL_OVERLAY = load_module(
     "pc_dialogue_runtime_vm_integration_pk_residual_overlay",
     PK_RESIDUAL_OVERLAY_BUILDER_PATH,
 )
-PK_ONLY_EXACT_BLOCKED_OVERLAY = load_module(
-    "pc_dialogue_runtime_vm_integration_pk_only_exact_blocked_overlay",
-    PK_ONLY_EXACT_BLOCKED_BUILDER_PATH,
-)
 SEMANTIC_OVERRIDE = load_module(
     "pc_dialogue_runtime_vm_integration_semantic_override",
     SEMANTIC_OVERRIDE_BUILDER_PATH,
 )
+REFLOW_OVERRIDE = load_module(
+    "pc_dialogue_runtime_vm_integration_relative_reflow_override",
+    REFLOW_OVERRIDE_LOADER_PATH,
+)
+PK_ONLY_EXACT_BLOCKED_OVERLAY: Any | None = None
+
+
+def load_pk_only_exact_blocked_overlay() -> Any:
+    global PK_ONLY_EXACT_BLOCKED_OVERLAY
+    if PK_ONLY_EXACT_BLOCKED_OVERLAY is None:
+        PK_ONLY_EXACT_BLOCKED_OVERLAY = load_module(
+            (
+                "pc_dialogue_runtime_vm_integration_"
+                "pk_only_exact_blocked_overlay"
+            ),
+            PK_ONLY_EXACT_BLOCKED_BUILDER_PATH,
+        )
+    return PK_ONLY_EXACT_BLOCKED_OVERLAY
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -462,7 +481,10 @@ def validated_base_rows(
     }
 
 
-def validated_pk_overlay() -> tuple[
+def validated_pk_overlay(
+    *,
+    include_pk_only: bool,
+) -> tuple[
     dict[str, dict[str, Any]],
     dict[str, Any],
 ]:
@@ -551,6 +573,44 @@ def validated_pk_overlay() -> tuple[
         and len(residual_rows) == EXPECTED_PK_RESIDUAL_PROMOTIONS,
         "PK residual VM promotion report drifted",
     )
+    if not include_pk_only:
+        by_coordinate = {str(row["coordinate"]): row for row in rows}
+        for row in residual_rows:
+            coordinate = str(row["coordinate"])
+            require(
+                coordinate not in by_coordinate,
+                f"PK exact/residual overlay overlap: {coordinate}",
+            )
+            by_coordinate[coordinate] = row
+        require(
+            len(by_coordinate) == EXPECTED_PK_PREDECESSOR_PROMOTIONS,
+            "pre-PK-only VM overlay completeness drifted",
+        )
+        return by_coordinate, {
+            "promotion_count": len(by_coordinate),
+            "pk_only_layer_included": False,
+            "exact": {
+                "promotion_count": len(rows),
+                "private_sha256": sha256_bytes(PK_OVERLAY_PATH.read_bytes()),
+                "promotion_report_sha256": sha256_bytes(
+                    PK_PROMOTION_PATH.read_bytes()
+                ),
+                "coverage_file_sha256": coverage_file_sha256,
+            },
+            "residual": {
+                "promotion_count": len(residual_rows),
+                "private_sha256": sha256_bytes(
+                    PK_RESIDUAL_OVERLAY_PATH.read_bytes()
+                ),
+                "promotion_report_sha256": sha256_bytes(
+                    PK_RESIDUAL_PROMOTION_PATH.read_bytes()
+                ),
+                "coverage_file_sha256": residual_coverage_file_sha256,
+                "layout_transition_bound": True,
+            },
+            "full_candidate_bound": True,
+        }
+    pk_only_overlay = load_pk_only_exact_blocked_overlay()
     (
         pk_only_audit_content,
         pk_only_private_content,
@@ -558,7 +618,7 @@ def validated_pk_overlay() -> tuple[
         pk_only_audit,
         pk_only_promotion,
         pk_only_context,
-    ) = PK_ONLY_EXACT_BLOCKED_OVERLAY.build_outputs()
+    ) = pk_only_overlay.build_outputs()
     require(
         PK_ONLY_EXACT_BLOCKED_AUDIT_PATH.is_file()
         and PK_ONLY_EXACT_BLOCKED_AUDIT_PATH.read_text(encoding="utf-8")
@@ -577,19 +637,19 @@ def validated_pk_overlay() -> tuple[
         == pk_only_promotion_content,
         "tracked PK-only exact-blocked promotion report drifted",
     )
-    pk_only_rows = PK_ONLY_EXACT_BLOCKED_OVERLAY.read_jsonl(
+    pk_only_rows = pk_only_overlay.read_jsonl(
         PK_ONLY_EXACT_BLOCKED_OVERLAY_PATH
     )
-    PK_ONLY_EXACT_BLOCKED_OVERLAY.validate_audit(
+    pk_only_overlay.validate_audit(
         pk_only_audit,
         context=pk_only_context,
     )
-    PK_ONLY_EXACT_BLOCKED_OVERLAY.validate_overlay_rows(
+    pk_only_overlay.validate_overlay_rows(
         pk_only_rows,
         audit=pk_only_audit,
         audit_file_sha256=pk_only_context["audit_file_sha256"],
     )
-    PK_ONLY_EXACT_BLOCKED_OVERLAY.validate_promotion_report(
+    pk_only_overlay.validate_promotion_report(
         pk_only_promotion,
         audit=pk_only_audit,
         audit_file_sha256=pk_only_context["audit_file_sha256"],
@@ -633,6 +693,7 @@ def validated_pk_overlay() -> tuple[
     )
     return by_coordinate, {
         "promotion_count": len(by_coordinate),
+        "pk_only_layer_included": True,
         "exact": {
             "promotion_count": len(rows),
             "private_sha256": sha256_bytes(PK_OVERLAY_PATH.read_bytes()),
@@ -663,6 +724,9 @@ def validated_pk_overlay() -> tuple[
             "coverage_file_sha256": pk_only_context[
                 "audit_file_sha256"
             ],
+            "predecessor_integrated_private_sha256": pk_only_audit[
+                "guards"
+            ]["integrated_private_sha256"],
             "base_runtime_proof_inherited": False,
         },
         "full_candidate_bound": True,
@@ -697,6 +761,7 @@ def build_outputs(
     base_pristine: Path,
     pk_pristine: Path,
     private_output: Path,
+    include_pk_only: bool = True,
 ) -> tuple[str, str, dict[str, Any]]:
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
     source_rows, segment_paths, segment_universe_sha256 = load_source_decisions(
@@ -712,6 +777,28 @@ def build_outputs(
         validated_semantic_override(source_rows)
     )
     merged[semantic_key] = semantic_row
+    pk_effective_rows = [
+        row
+        for (resource, _coordinate), row in merged.items()
+        if resource == "pk_msggame"
+    ]
+    reflow_overrides, reflow_metadata = REFLOW_OVERRIDE.load_overrides(
+        pk_effective_rows
+    )
+    for coordinate, reflowed in reflow_overrides.items():
+        key = ("pk_msggame", coordinate)
+        before = merged.get(key)
+        require(before is not None, f"reflow decision is absent: {coordinate}")
+        changed_fields = {
+            field
+            for field in set(before) | set(reflowed)
+            if before.get(field) != reflowed.get(field)
+        }
+        require(
+            changed_fields == {"translation"},
+            f"reflow changed fields other than translation: {coordinate}",
+        )
+        merged[key] = reflowed
     for key, entry in repairs.items():
         merged[key]["scope_classification"] = entry[
             "effective_scope_classification"
@@ -724,48 +811,114 @@ def build_outputs(
     base_rows, base_metadata = validated_base_rows(prepared, source_rows)
     merged.update(base_rows)
 
-    pk_overlay, pk_metadata = validated_pk_overlay()
-    pk_integrated_promotions = 0
-    for coordinate, evidence in pk_overlay.items():
-        key = ("pk_msggame", coordinate)
-        row = merged.get(key)
-        require(row is not None, f"PK overlay decision is absent: {coordinate}")
-        require(
-            row.get("scope_classification") == "runtime_fragment_pending"
-            and row.get("runtime_review") == "pending"
-            and ENGINE.sha256_text(str(row.get("translation")))
-            == evidence.get("translation_utf16le_sha256"),
-            f"PK overlay source decision drifted: {coordinate}",
-        )
-        promoted = dict(row)
-        promoted["scope_classification"] = "retranslated"
-        promoted["runtime_review"] = "verified"
-        if (
-            evidence.get("method")
-            == "reversed_vm_residual_full_closure_nonexpansion_analysis"
-        ):
-            require(
-                row.get("layout_review")
-                in {"runtime_pending", "unchanged_from_current"}
-                and evidence.get("layout_transition")
-                == {
-                    "from": row.get("layout_review"),
-                    "to": "runtime_verified",
-                },
-                f"PK residual layout transition drifted: {coordinate}",
-            )
-            promoted["layout_review"] = "runtime_verified"
-        promoted["runtime_vm_verification"] = evidence
-        validate_runtime_only_transition(
-            row,
-            promoted,
-            label=f"PK {coordinate}",
-        )
-        merged[key] = promoted
-        pk_integrated_promotions += 1
-
+    pk_overlay, pk_metadata = validated_pk_overlay(
+        include_pk_only=include_pk_only
+    )
+    pk_only_method = (
+        "reversed_vm_pk_only_exact_blocked_closure_"
+        "nonexpansion_analysis"
+    )
+    predecessor_overlay = {
+        coordinate: evidence
+        for coordinate, evidence in pk_overlay.items()
+        if evidence.get("method") != pk_only_method
+    }
+    pk_only_final_overlay = {
+        coordinate: evidence
+        for coordinate, evidence in pk_overlay.items()
+        if evidence.get("method") == pk_only_method
+    }
     require(
-        pk_integrated_promotions == EXPECTED_PK_INTEGRATED_PROMOTIONS,
+        len(predecessor_overlay) == EXPECTED_PK_PREDECESSOR_PROMOTIONS
+        and len(pk_only_final_overlay)
+        == (
+            EXPECTED_PK_ONLY_EXACT_BLOCKED_PROMOTIONS
+            if include_pk_only
+            else 0
+        ),
+        "PK predecessor/final overlay partition drifted",
+    )
+
+    def integrate_overlay(
+        overlay: Mapping[str, Mapping[str, Any]],
+    ) -> int:
+        integrated = 0
+        for coordinate, evidence in overlay.items():
+            key = ("pk_msggame", coordinate)
+            row = merged.get(key)
+            require(
+                row is not None,
+                f"PK overlay decision is absent: {coordinate}",
+            )
+            require(
+                row.get("scope_classification") == "runtime_fragment_pending"
+                and row.get("runtime_review") == "pending"
+                and ENGINE.sha256_text(str(row.get("translation")))
+                == evidence.get("translation_utf16le_sha256"),
+                f"PK overlay source decision drifted: {coordinate}",
+            )
+            promoted = dict(row)
+            promoted["scope_classification"] = "retranslated"
+            promoted["runtime_review"] = "verified"
+            if (
+                evidence.get("method")
+                == "reversed_vm_residual_full_closure_nonexpansion_analysis"
+            ):
+                require(
+                    row.get("layout_review")
+                    in {"runtime_pending", "unchanged_from_current"}
+                    and evidence.get("layout_transition")
+                    == {
+                        "from": row.get("layout_review"),
+                        "to": "runtime_verified",
+                    },
+                    f"PK residual layout transition drifted: {coordinate}",
+                )
+                promoted["layout_review"] = "runtime_verified"
+            promoted["runtime_vm_verification"] = evidence
+            validate_runtime_only_transition(
+                row,
+                promoted,
+                label=f"PK {coordinate}",
+            )
+            merged[key] = promoted
+            integrated += 1
+        return integrated
+
+    predecessor_promotions = integrate_overlay(predecessor_overlay)
+    predecessor_rows = sorted(merged.values(), key=coordinate_sort_key)
+    predecessor_private_sha256 = sha256_bytes(
+        canonical_jsonl(predecessor_rows).encode("utf-8")
+    )
+    predecessor_checkpoint_match = False
+    if include_pk_only:
+        expected_predecessor_sha256 = pk_metadata[
+            "pk_only_exact_blocked"
+        ]["predecessor_integrated_private_sha256"]
+        require(
+            predecessor_private_sha256 == expected_predecessor_sha256,
+            (
+                "PK-only predecessor checkpoint drifted: "
+                f"{predecessor_private_sha256}"
+            ),
+        )
+        predecessor_checkpoint_match = True
+    pk_only_promotions = integrate_overlay(pk_only_final_overlay)
+    pk_integrated_promotions = predecessor_promotions + pk_only_promotions
+    pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
+        predecessor_private_sha256
+    )
+    pk_metadata["pk_only_predecessor_checkpoint_match"] = (
+        predecessor_checkpoint_match
+    )
+
+    expected_pk_promotions = (
+        EXPECTED_PK_INTEGRATED_PROMOTIONS
+        if include_pk_only
+        else EXPECTED_PK_PREDECESSOR_PROMOTIONS
+    )
+    require(
+        pk_integrated_promotions == expected_pk_promotions,
         f"PK integrated promotion count drifted: {pk_integrated_promotions}",
     )
 
@@ -781,8 +934,13 @@ def build_outputs(
         f"integrated resource counts drifted: {resource_counts}",
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
+    expected_pending_after = (
+        EXPECTED_PENDING_AFTER
+        if include_pk_only
+        else EXPECTED_PREDECESSOR_PENDING_AFTER
+    )
     require(
-        pending_after == EXPECTED_PENDING_AFTER,
+        pending_after == expected_pending_after,
         f"integrated pending count drifted: {pending_after}",
     )
     private_content = canonical_jsonl(rows)
@@ -817,6 +975,7 @@ def build_outputs(
         },
         "promotions": {
             "semantic_override": semantic_metadata,
+            "relative_reflow_override": reflow_metadata,
             "base_msggame": base_metadata,
             "pk_msggame": pk_metadata,
             "promoted_total": (
@@ -840,6 +999,10 @@ def build_outputs(
             "pk_full_candidate_records_and_closures_rechecked": True,
             "control_repair_bindings_rechecked": True,
             "semantic_override_rebuilt_and_rechecked": True,
+            "relative_reflow_override_rebuilt_and_rechecked": True,
+            "pk_only_layer_included": include_pk_only,
+            "pk_only_predecessor_checkpoint_rebuilt_and_matched":
+            predecessor_checkpoint_match,
             "per_row_game_playback_required_for_promotions": False,
             "representative_game_smoke_test_required_before_release": True,
         },

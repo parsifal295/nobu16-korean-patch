@@ -41,6 +41,9 @@ SEMANTIC_OVERRIDE_PRIVATE_PATH = (
 SEMANTIC_OVERRIDE_PUBLIC_PATH = (
     WORKSTREAM / "pk_semantic_flattening_3421.source_free.v1.json"
 )
+REFLOW_OVERRIDE_LOADER_PATH = (
+    WORKSTREAM / "load_pk_relative_reflow_override_v1.py"
+)
 CONTROL_REPAIRS_SCHEMA = (
     "nobu16.kr.pc-dialogue-full-retranslation-runtime-control-repairs.v1"
 )
@@ -79,6 +82,24 @@ def load_semantic_override_builder() -> Any:
 
 
 SEMANTIC_OVERRIDE = load_semantic_override_builder()
+
+
+def load_reflow_override_loader() -> Any:
+    spec = importlib.util.spec_from_file_location(
+        "pc_dialogue_progress_relative_reflow_override",
+        REFLOW_OVERRIDE_LOADER_PATH,
+    )
+    if spec is None or spec.loader is None:
+        raise RuntimeError(
+            f"cannot import {REFLOW_OVERRIDE_LOADER_PATH}"
+        )
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+REFLOW_OVERRIDE = load_reflow_override_loader()
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -375,6 +396,24 @@ def build_progress() -> dict[str, Any]:
         load_semantic_override()
     )
     consumed_semantic_overrides: set[tuple[str, str]] = set()
+    pk_effective_source_rows: list[dict[str, Any]] = []
+    for path in decision_paths:
+        for row in load_jsonl(path):
+            if row.get("resource") != "pk_msggame":
+                continue
+            key = ("pk_msggame", str(row["coordinate"]))
+            pk_effective_source_rows.append(
+                semantic_overrides.get(key, row)
+            )
+    (
+        reflow_by_coordinate,
+        relative_reflow_metadata,
+    ) = REFLOW_OVERRIDE.load_overrides(pk_effective_source_rows)
+    reflow_overrides = {
+        ("pk_msggame", coordinate): row
+        for coordinate, row in reflow_by_coordinate.items()
+    }
+    consumed_reflow_overrides: set[tuple[str, str]] = set()
     runtime_vm_integrated, runtime_vm_integration_metadata = (
         load_runtime_vm_integration(prepared)
     )
@@ -435,6 +474,12 @@ def build_progress() -> dict[str, Any]:
                 classification = str(effective_row["scope_classification"])
                 runtime_review = str(effective_row["runtime_review"])
                 consumed_semantic_overrides.add(key)
+            reflowed = reflow_overrides.get(key)
+            if reflowed is not None:
+                effective_row = reflowed
+                classification = str(effective_row["scope_classification"])
+                runtime_review = str(effective_row["runtime_review"])
+                consumed_reflow_overrides.add(key)
             repair = control_repairs.get(key)
             if repair is not None:
                 if (
@@ -572,6 +617,13 @@ def build_progress() -> dict[str, Any]:
         raise RuntimeError(
             f"semantic overrides were not bound to decisions: {missing}"
         )
+    if consumed_reflow_overrides != set(reflow_overrides):
+        missing = sorted(
+            set(reflow_overrides) - consumed_reflow_overrides
+        )
+        raise RuntimeError(
+            f"relative reflow overrides were not bound to decisions: {missing}"
+        )
     if consumed_runtime_vm_integrated != set(runtime_vm_integrated):
         missing = sorted(
             set(runtime_vm_integrated) - consumed_runtime_vm_integrated
@@ -641,6 +693,12 @@ def build_progress() -> dict[str, Any]:
             **semantic_override_metadata,
             "consumed_override_count": len(
                 consumed_semantic_overrides
+            ),
+        },
+        "relative_reflow_override": {
+            **relative_reflow_metadata,
+            "consumed_override_count": len(
+                consumed_reflow_overrides
             ),
         },
         "runtime_vm_integration": runtime_vm_integration_metadata,

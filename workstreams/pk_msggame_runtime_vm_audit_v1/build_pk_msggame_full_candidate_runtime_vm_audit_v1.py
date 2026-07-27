@@ -4,8 +4,9 @@
 The earlier PK audit deliberately used the Base-exact prefill candidate.  A
 later residual translation can change a sibling literal in the same record,
 so this audit rebuilds all 29,038 PK decisions first and binds every row and
-transitive pair proof to that complete candidate.  It writes only a
-source-free report and never writes Steam.
+transitive pair proof to that complete candidate.  The proved relative-reflow
+override is applied after the semantic override and before candidate packing.
+It writes only a source-free report and never writes Steam.
 """
 
 from __future__ import annotations
@@ -52,6 +53,9 @@ SEMANTIC_OVERRIDE_PUBLIC_PATH = (
     DIALOGUE_WORKSTREAM
     / "pk_semantic_flattening_3421.source_free.v1.json"
 )
+REFLOW_LOADER_PATH = (
+    DIALOGUE_WORKSTREAM / "load_pk_relative_reflow_override_v1.py"
+)
 DEFAULT_OUTPUT = (
     WORKSTREAM
     / "public"
@@ -63,25 +67,25 @@ EXPECTED_SOURCE_SEGMENTS = 408
 EXPECTED_PK_ROWS = 29_038
 EXPECTED_STRING_REPLACEMENTS = 28_956
 EXPECTED_EXACT_ROWS = 9_770
-EXPECTED_ELIGIBLE_ROWS = 7_453
-EXPECTED_BLOCKED_ROWS = 2_317
-EXPECTED_KEPT_ELIGIBLE_ROWS = 4_663
+EXPECTED_ELIGIBLE_ROWS = 7_450
+EXPECTED_BLOCKED_ROWS = 2_320
+EXPECTED_KEPT_ELIGIBLE_ROWS = 4_660
 EXPECTED_NEW_ELIGIBLE_ROWS = 2_790
-EXPECTED_NEW_BLOCKED_ROWS = 54
+EXPECTED_NEW_BLOCKED_ROWS = 57
 EXPECTED_FULL_CANDIDATE_SHA256 = (
-    "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707"
+    "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F"
 )
 EXPECTED_ELIGIBLE_COORDINATE_SHA256 = (
-    "0D9D424C2EEBBD652EFF807BEF604164C9691011839C724658F5808BD4A64147"
+    "DAC4B405D79BDD860BDD80E5B85F4DEA471BE388493BCFE6E39689A241F353CC"
 )
 EXPECTED_BLOCKED_COORDINATE_SHA256 = (
-    "AD52864FFA21C9B1158E5C1EABCB2D6D9D8B16796BF6F84695D53B721337ADA4"
+    "31795756CA5D3C68E05C4CC1BEE726D9E4869D1EB3FAF512F115F72613AAAFD8"
 )
 EXPECTED_NEW_ELIGIBLE_COORDINATE_SHA256 = (
     "8019ED8335DF4CC02896770ED512C759DC9A927A5B10D998AD1A00F641D84DBE"
 )
 EXPECTED_NEW_BLOCKED_COORDINATE_SHA256 = (
-    "22F8BAC68A5C05130BE1A6EABE6268AF5E056A245FFF0590BCB0F45950A5F6D5"
+    "118A375576BCC479C0852BA082994ADC27442A4743B6344E2F14C38F06037CF5"
 )
 EXPECTED_PK_SOURCE_CANDIDATE_TAINT_ROWS = 13
 EXPECTED_PK_SOURCE_CANDIDATE_TAINT_COORDINATE_SHA256 = (
@@ -112,6 +116,10 @@ BASE_AUDIT = load_module("pk_full_candidate_base_audit", BASE_AUDIT_PATH)
 SEMANTIC_OVERRIDE = load_module(
     "pk_full_candidate_semantic_override",
     SEMANTIC_OVERRIDE_BUILDER_PATH,
+)
+REFLOW_OVERRIDE = load_module(
+    "pk_full_candidate_relative_reflow_override",
+    REFLOW_LOADER_PATH,
 )
 
 
@@ -221,7 +229,10 @@ def source_decisions() -> tuple[
     }
 
 
-def full_candidate_inputs() -> tuple[Any, dict[str, Any]]:
+def full_candidate_inputs(
+    *,
+    apply_reflow: bool = True,
+) -> tuple[Any, dict[str, Any]]:
     rows, metadata = source_decisions()
     (
         semantic_private_content,
@@ -258,6 +269,23 @@ def full_candidate_inputs() -> tuple[Any, dict[str, Any]]:
         "semantic override coordinate is absent or duplicated",
     )
     rows[semantic_matches[0]] = semantic_row
+    pre_reflow_rows = copy.deepcopy(rows)
+    reflow_overrides: dict[str, dict[str, Any]] = {}
+    reflow_metadata: dict[str, Any] | None = None
+    if apply_reflow:
+        reflow_overrides, reflow_metadata = REFLOW_OVERRIDE.load_overrides(rows)
+        consumed_reflow: set[str] = set()
+        for index, row in enumerate(rows):
+            coordinate = str(row["coordinate"])
+            override = reflow_overrides.get(coordinate)
+            if override is None:
+                continue
+            rows[index] = override
+            consumed_reflow.add(coordinate)
+        require(
+            consumed_reflow == set(reflow_overrides),
+            "relative reflow override universe was not fully applied",
+        )
     replacement_manifest = [
         {
             "coordinate": row["coordinate"],
@@ -290,21 +318,88 @@ def full_candidate_inputs() -> tuple[Any, dict[str, Any]]:
             ],
         }
     )
+    if apply_reflow:
+        require(reflow_metadata is not None, "relative reflow metadata is absent")
+        metadata.update(
+            {
+                "reflow_override_rows": len(reflow_overrides),
+                "reflow_override_coordinates": sorted(
+                    reflow_overrides,
+                    key=BASE_AUDIT.parse_literal_coordinate,
+                ),
+                "reflow_override_records": sorted(
+                    {
+                        BASE_AUDIT.parse_literal_coordinate(coordinate)[:2]
+                        for coordinate in reflow_overrides
+                    }
+                ),
+                "reflow_override_private_sha256": reflow_metadata[
+                    "private_file_sha256"
+                ],
+                "reflow_override_public_sha256": reflow_metadata[
+                    "public_file_sha256"
+                ],
+                "reflow_override_report_payload_sha256": reflow_metadata[
+                    "report_payload_sha256"
+                ],
+                "reflow_override_manifest_sha256": reflow_metadata[
+                    "override_manifest_sha256"
+                ],
+                "pre_reflow_candidate_packed_sha256": reflow_metadata[
+                    "before_candidate_packed_sha256"
+                ],
+            }
+        )
     baseline = BASE_AUDIT.build_inputs()
+    current_blob = BASE_AUDIT.DEFAULT_PK_CURRENT.read_bytes()
+    if apply_reflow:
+        require(reflow_metadata is not None, "relative reflow metadata is absent")
+        pre_reflow_replacements = {
+            BASE_AUDIT.parse_literal_coordinate(row["coordinate"]):
+            row["translation"]
+            for row in pre_reflow_rows
+            if isinstance(row.get("translation"), str)
+        }
+        pre_reflow_blob = BASE_AUDIT.rebuild_packed_with_literals(
+            current_blob,
+            pre_reflow_replacements,
+        )
+        pre_reflow_sha256 = sha256_bytes(pre_reflow_blob)
+        require(
+            pre_reflow_sha256
+            == reflow_metadata["before_candidate_packed_sha256"],
+            f"pre-reflow full candidate hash drifted: {pre_reflow_sha256}",
+        )
+        pre_reflow_artifact_hashes = dict(baseline.artifact_hashes)
+        pre_reflow_artifact_hashes.update(
+            {
+                "pk_candidate_packed_sha256": pre_reflow_sha256,
+                "pk_full_candidate_packed_sha256": pre_reflow_sha256,
+            }
+        )
+        metadata["pre_reflow_inputs"] = dataclasses.replace(
+            baseline,
+            pk_candidate_records=BASE_AUDIT.records_from_blob(pre_reflow_blob),
+            artifact_hashes=pre_reflow_artifact_hashes,
+        )
     replacements = {
         BASE_AUDIT.parse_literal_coordinate(row["coordinate"]):
         row["translation"]
         for row in rows
         if isinstance(row.get("translation"), str)
     }
-    current_blob = BASE_AUDIT.DEFAULT_PK_CURRENT.read_bytes()
     candidate_blob = BASE_AUDIT.rebuild_packed_with_literals(
         current_blob,
         replacements,
     )
     candidate_sha256 = sha256_bytes(candidate_blob)
+    expected_candidate_sha256 = (
+        EXPECTED_FULL_CANDIDATE_SHA256
+        if apply_reflow
+        else REFLOW_OVERRIDE.EXPECTED_BEFORE_CANDIDATE_SHA256
+    )
     require(
-        candidate_sha256 == EXPECTED_FULL_CANDIDATE_SHA256,
+        candidate_sha256 == expected_candidate_sha256,
         f"PK full literal candidate hash drifted: {candidate_sha256}",
     )
     artifact_hashes = dict(baseline.artifact_hashes)
@@ -574,11 +669,15 @@ def strengthened_row_guards(
     *,
     report: dict[str, Any],
     inputs: Any,
+    superseded_coordinates: set[str],
 ) -> dict[str, str]:
     row_guards: dict[str, str] = {}
     adjudications = report["row_adjudications"]
     pair_guards = report["pair_proof_guards"]
     for row in inputs.rows:
+        row_coordinate = str(row["coordinate"])
+        if row_coordinate in superseded_coordinates:
+            continue
         bound = BASE_AUDIT.validate_row_binding(
             row,
             prefill_report=inputs.prefill_report,
@@ -606,6 +705,39 @@ def strengthened_row_guards(
     return row_guards
 
 
+def apply_reflow_exact_supersession(
+    report: dict[str, Any],
+    *,
+    reflow_records: set[tuple[int, int]],
+) -> set[str]:
+    superseded = {
+        coordinate
+        for coordinate in report["row_adjudications"]
+        if BASE_AUDIT.parse_literal_coordinate(coordinate)[:2]
+        in reflow_records
+    }
+    require(
+        len(superseded) == 3,
+        f"reflow/exact supersession universe drifted: {len(superseded)}",
+    )
+    for coordinate in superseded:
+        adjudication = report["row_adjudications"][coordinate]
+        require(
+            adjudication["status"] == "promotion_eligible",
+            f"reflow-superseded exact row was not eligible: {coordinate}",
+        )
+        adjudication["status"] = "blocked"
+        adjudication["taints"] = sorted(
+            set(adjudication["taints"])
+            | {"relative_reflow_supersedes_exact_reuse"}
+        )
+        adjudication["reason_codes"] = sorted(
+            set(adjudication["reason_codes"])
+            | {"relative_reflow_verified_by_separate_layer"}
+        )
+    return superseded
+
+
 def transition_summary(
     new_report: Mapping[str, Any],
 ) -> dict[str, Any]:
@@ -629,18 +761,27 @@ def transition_summary(
     newly_eligible = new_eligible - old_eligible
     newly_blocked = old_eligible - new_eligible
     kept_blocked = set(new_adjudications) - new_eligible - newly_blocked
+    newly_eligible_digest = coordinate_digest(sorted(newly_eligible))
+    newly_blocked_digest = coordinate_digest(sorted(newly_blocked))
     require(
         len(kept_eligible) == EXPECTED_KEPT_ELIGIBLE_ROWS
         and len(newly_eligible) == EXPECTED_NEW_ELIGIBLE_ROWS
         and len(newly_blocked) == EXPECTED_NEW_BLOCKED_ROWS,
-        "full-candidate status transition counts drifted",
+        (
+            "full-candidate status transition counts drifted: "
+            f"kept={len(kept_eligible)} "
+            f"new={len(newly_eligible)} "
+            f"blocked={len(newly_blocked)}"
+        ),
     )
     require(
-        coordinate_digest(sorted(newly_eligible))
-        == EXPECTED_NEW_ELIGIBLE_COORDINATE_SHA256
-        and coordinate_digest(sorted(newly_blocked))
-        == EXPECTED_NEW_BLOCKED_COORDINATE_SHA256,
-        "full-candidate transition coordinate universe drifted",
+        newly_eligible_digest == EXPECTED_NEW_ELIGIBLE_COORDINATE_SHA256
+        and newly_blocked_digest == EXPECTED_NEW_BLOCKED_COORDINATE_SHA256,
+        (
+            "full-candidate transition coordinate universe drifted: "
+            f"new={newly_eligible_digest} "
+            f"blocked={newly_blocked_digest}"
+        ),
     )
     old_blocker_counts: Counter[str] = Counter()
     old_reason_counts: Counter[str] = Counter()
@@ -674,10 +815,17 @@ def transition_summary(
 
 
 def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
-    report = BASE_AUDIT.build_report(inputs)
+    baseline_inputs = metadata["pre_reflow_inputs"]
+    report = BASE_AUDIT.build_report(baseline_inputs)
     BASE_AUDIT.validate_report(report)
     report = copy.deepcopy(report)
     report["schema"] = SCHEMA
+    superseded_coordinates = apply_reflow_exact_supersession(
+        report,
+        reflow_records={
+            tuple(record) for record in metadata["reflow_override_records"]
+        },
+    )
     closure_guards = apply_pk_source_candidate_gate(
         report,
         inputs=inputs,
@@ -690,12 +838,20 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
             "source_decision_segment_count"
         ],
         "semantic_override_rows": metadata["semantic_override_rows"],
+        "relative_reflow_override_rows": metadata["reflow_override_rows"],
+        "relative_reflow_exact_rows_superseded": len(
+            superseded_coordinates
+        ),
         "control_gap_repairs_applied": False,
         "literal_candidate_packed_sha256": inputs.artifact_hashes[
             "pk_full_candidate_packed_sha256"
         ],
     }
-    row_guards = strengthened_row_guards(report=report, inputs=inputs)
+    row_guards = strengthened_row_guards(
+        report=report,
+        inputs=inputs,
+        superseded_coordinates=superseded_coordinates,
+    )
     eligible = [
         coordinate
         for coordinate, row in report["row_adjudications"].items()
@@ -709,7 +865,10 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
     require(
         len(eligible) == EXPECTED_ELIGIBLE_ROWS
         and len(blocked) == EXPECTED_BLOCKED_ROWS,
-        "full-candidate adjudication counts drifted",
+        (
+            "full-candidate adjudication counts drifted: "
+            f"eligible={len(eligible)} blocked={len(blocked)}"
+        ),
     )
     require(
         coordinate_digest(eligible) == EXPECTED_ELIGIBLE_COORDINATE_SHA256
@@ -747,6 +906,21 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
             ],
             "semantic_override_report_payload_sha256": metadata[
                 "semantic_override_report_payload_sha256"
+            ],
+            "reflow_override_private_sha256": metadata[
+                "reflow_override_private_sha256"
+            ],
+            "reflow_override_public_sha256": metadata[
+                "reflow_override_public_sha256"
+            ],
+            "reflow_override_report_payload_sha256": metadata[
+                "reflow_override_report_payload_sha256"
+            ],
+            "reflow_override_manifest_sha256": metadata[
+                "reflow_override_manifest_sha256"
+            ],
+            "pre_reflow_candidate_packed_sha256": metadata[
+                "pre_reflow_candidate_packed_sha256"
             ],
         }
     )
@@ -792,6 +966,9 @@ def validate_report(
         and candidate_scope.get("string_replacement_rows")
         == EXPECTED_STRING_REPLACEMENTS
         and candidate_scope.get("semantic_override_rows") == 1
+        and candidate_scope.get("relative_reflow_override_rows") == 26
+        and candidate_scope.get("relative_reflow_exact_rows_superseded")
+        == 3
         and candidate_scope.get("literal_candidate_packed_sha256")
         == EXPECTED_FULL_CANDIDATE_SHA256
         and candidate_scope.get("control_gap_repairs_applied") is False,
@@ -802,6 +979,17 @@ def validate_report(
     rebuilt_guards = strengthened_row_guards(
         report=rebuilt,
         inputs=inputs,
+        superseded_coordinates=(
+            {
+                coordinate
+                for coordinate in rebuilt["row_adjudications"]
+                if BASE_AUDIT.parse_literal_coordinate(coordinate)[:2]
+                in {
+                    tuple(record)
+                    for record in metadata["reflow_override_records"]
+                }
+            }
+        ),
     )
     expected_closure_guards = pk_source_candidate_closure_guards(inputs)
     require(
@@ -827,6 +1015,19 @@ def validate_report(
         and report["guards"]["semantic_override_report_payload_sha256"]
         == metadata["semantic_override_report_payload_sha256"],
         "full-candidate semantic override binding drifted",
+    )
+    require(
+        report["guards"]["reflow_override_private_sha256"]
+        == metadata["reflow_override_private_sha256"]
+        and report["guards"]["reflow_override_public_sha256"]
+        == metadata["reflow_override_public_sha256"]
+        and report["guards"]["reflow_override_report_payload_sha256"]
+        == metadata["reflow_override_report_payload_sha256"]
+        and report["guards"]["reflow_override_manifest_sha256"]
+        == metadata["reflow_override_manifest_sha256"]
+        and report["guards"]["pre_reflow_candidate_packed_sha256"]
+        == metadata["pre_reflow_candidate_packed_sha256"],
+        "full-candidate relative reflow binding drifted",
     )
     require(
         transition_summary(report) == report["full_candidate_transitions"],

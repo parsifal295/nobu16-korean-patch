@@ -56,6 +56,9 @@ INTEGRATED_REPORT_PATH = (
     DIALOGUE_WORKSTREAM
     / "runtime_vm_integration.pre_pk_only_checkpoint.source_free.v1.json"
 )
+INTEGRATED_BUILDER_PATH = (
+    DIALOGUE_WORKSTREAM / "build_runtime_vm_pre_pk_only_checkpoint_v2.py"
+)
 SEMANTIC_OVERRIDE_PUBLIC_PATH = (
     DIALOGUE_WORKSTREAM / "pk_semantic_flattening_3421.source_free.v1.json"
 )
@@ -88,23 +91,23 @@ OVERLAY_ROW_SCHEMA = (
 )
 METHOD = "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis"
 
-EXPECTED_BLOCKED_ROWS = 2_317
-EXPECTED_BLOCKED_RECORDS = 1_616
-EXPECTED_SAFE_ROWS = 1_533
-EXPECTED_SAFE_RECORDS = 1_126
+EXPECTED_BLOCKED_ROWS = 2_320
+EXPECTED_BLOCKED_RECORDS = 1_618
+EXPECTED_SAFE_ROWS = 1_536
+EXPECTED_SAFE_RECORDS = 1_128
 EXPECTED_REMAINING_ROWS = 784
 EXPECTED_REMAINING_RECORDS = 490
 EXPECTED_BLOCKED_COORDINATE_SHA256 = (
-    "AD52864FFA21C9B1158E5C1EABCB2D6D9D8B16796BF6F84695D53B721337ADA4"
+    "31795756CA5D3C68E05C4CC1BEE726D9E4869D1EB3FAF512F115F72613AAAFD8"
 )
 EXPECTED_BLOCKED_RECORD_SHA256 = (
-    "8AE00C9C923FC1120B4E7FC3885003105B5FEA376BDFEA7EE5CBE679A6A63D6B"
+    "023105EA5F2F54DD309601A628189808BB31C20D54744A5438FB6107A8C6815D"
 )
 EXPECTED_SAFE_COORDINATE_SHA256 = (
-    "BA8E691816F3CD45D6C862635035888DD44830A498E6EC503FE39A4AF96D0639"
+    "37D72476B42334E9B938657D4B4DB0D8194054CE7D9FC77C76A283EF1C14753B"
 )
 EXPECTED_SAFE_RECORD_SHA256 = (
-    "C57EB4571E25E489C3AECBE8A92BAC31C3A55C61B936033CF7228C18DC4DF9CC"
+    "464186C1EC6B93CBE3A62003848E389ABE18B61F2B8906AD885486FA5BD9FB7F"
 )
 EXPECTED_REMAINING_COORDINATE_SHA256 = (
     "5D10C7ACECD8FBD4E846F4F85FA05BA4270BC7E3C9AD36CE1BE5E8C0BBB0B178"
@@ -118,10 +121,10 @@ EXPECTED_SOURCE_FINAL_CONTROL_TAINT_COORDINATE_SHA256 = (
     "3811287253C5634BA0A9B3A6FDE6FEF97429F0727271F7EFB1A5C0F87494AC1A"
 )
 EXPECTED_FULL_COVERAGE_FILE_SHA256 = (
-    "99FF832F2EB74DB205DE37B0079FA275471BF31A224F81E3FF422003A9B2D910"
+    "DB596688BF87AE07F04E80FE83CB194541A74B1DACE56423A2A39DDF715089A0"
 )
 EXPECTED_FULL_COVERAGE_PAYLOAD_SHA256 = (
-    "899B84A721D7881D1A75EEE7BB2E8491B864DB2EC001640AC4B2760ADF74FE54"
+    "9A524E15B20B3B96E764BD09607F14C663B5F9A61B65A42FB3A6FE2A8C6B5E73"
 )
 EXPECTED_EXACT_COVERAGE_FILE_SHA256 = (
     "97B96240F7EEE1A20567398623C477B02AF27C851E2B2F86C4A12FF4FEBDC2BC"
@@ -130,14 +133,16 @@ EXPECTED_EXACT_COVERAGE_PAYLOAD_SHA256 = (
     "91924E0909594F477A56CD9C48AE8B200C730E6CE28E1395DAF6EBD961065FD6"
 )
 EXPECTED_INTEGRATED_PRIVATE_SHA256 = (
-    "093E41EAD51FC9CECF21DC1675EBEE98CB5BF86E60223304FCCC6A0D81781545"
+    "29ECB2446AD89D0F9F122B280D2E66DAB2A36F2F0050174239EB4D1F0D27E757"
 )
 EXPECTED_INTEGRATED_REPORT_FILE_SHA256 = (
-    "6108E0787486B9002D87E3E9D44C931301B53E458DF2D5B50E9092D6610CA3B0"
+    "126D47703C38F58B28B887150AEAEDF1366303257AAC119BE798665174769D0B"
 )
 EXPECTED_INTEGRATED_BUILDER_SHA256 = (
-    "C681C1FFBC9E21D46AE9D36DB42156E56E09170A74B0E5E5785A6B4CE86FB73B"
+    "2AC133BA38B7FB79B0274D7DA023A803FF4B32DC93441B59EA14E0E86AA5B656"
 )
+EXPECTED_INTEGRATED_RUNTIME_PENDING = 10_288
+EXPECTED_INTEGRATED_PK_PROMOTIONS = 10_395
 EXPECTED_SEMANTIC_OVERRIDE_PUBLIC_SHA256 = (
     "7D2DECA73B1D37AD741BC0D101028FE3E2CC0383526973B15325AD5F0E77E9F1"
 )
@@ -272,7 +277,10 @@ def validate_seal(report: Mapping[str, Any]) -> None:
     require(expected == canonical_sha256(unsealed), "report payload seal drifted")
 
 
-def source_decision_rows() -> tuple[
+def source_decision_rows(
+    *,
+    full_metadata: Mapping[str, Any],
+) -> tuple[
     list[dict[str, Any]],
     dict[str, Any],
 ]:
@@ -308,12 +316,76 @@ def source_decision_rows() -> tuple[
     rows.sort(
         key=lambda row: BASE_AUDIT.parse_literal_coordinate(row["coordinate"])
     )
+    (
+        semantic_private_content,
+        semantic_public_content,
+        semantic_report,
+        semantic_row,
+    ) = FULL_AUDIT.SEMANTIC_OVERRIDE.build_outputs()
+    FULL_AUDIT.SEMANTIC_OVERRIDE.validate_outputs(
+        semantic_private_content,
+        semantic_public_content,
+        semantic_report,
+        semantic_row,
+    )
+    semantic_coordinate = str(semantic_row["coordinate"])
+    semantic_matches = [
+        index
+        for index, row in enumerate(rows)
+        if str(row["coordinate"]) == semantic_coordinate
+    ]
+    require(
+        len(semantic_matches) == 1,
+        "semantic override coordinate is absent or duplicated",
+    )
+    rows[semantic_matches[0]] = semantic_row
+    reflow_overrides, reflow_metadata = (
+        FULL_AUDIT.REFLOW_OVERRIDE.load_overrides(rows)
+    )
+    consumed: set[str] = set()
+    for index, row in enumerate(rows):
+        coordinate = str(row["coordinate"])
+        override = reflow_overrides.get(coordinate)
+        if override is None:
+            continue
+        rows[index] = override
+        consumed.add(coordinate)
+    require(
+        consumed == set(reflow_overrides),
+        "relative reflow override universe was not fully applied",
+    )
+    replacement_manifest = [
+        {
+            "coordinate": str(row["coordinate"]),
+            "translation_utf16le_sha256": ENGINE.sha256_text(
+                str(row["translation"])
+            ),
+        }
+        for row in rows
+        if isinstance(row.get("translation"), str)
+    ]
+    require(
+        canonical_sha256(replacement_manifest)
+        == full_metadata["replacement_manifest_sha256"],
+        "effective PK-only source replacement manifest drifted",
+    )
     return rows, {
         "source_decision_segment_count": len(paths),
         "source_decision_segment_universe_sha256": canonical_sha256(
             segment_guards
         ),
         "source_decision_coordinate_universe_sha256": coordinate_digest(seen),
+        "semantic_override_rows": 1,
+        "relative_reflow_override_rows": len(reflow_overrides),
+        "relative_reflow_private_sha256": reflow_metadata[
+            "private_file_sha256"
+        ],
+        "relative_reflow_public_sha256": reflow_metadata[
+            "public_file_sha256"
+        ],
+        "relative_reflow_manifest_sha256": reflow_metadata[
+            "override_manifest_sha256"
+        ],
     }
 
 
@@ -518,7 +590,7 @@ def load_integrated_ledger() -> tuple[
 ]:
     integrated_sha256 = sha256_bytes(INTEGRATED_PRIVATE_PATH.read_bytes())
     report_file_sha256 = sha256_bytes(INTEGRATED_REPORT_PATH.read_bytes())
-    builder_sha256 = EXPECTED_INTEGRATED_BUILDER_SHA256
+    builder_sha256 = sha256_bytes(INTEGRATED_BUILDER_PATH.read_bytes())
     require(
         integrated_sha256 == EXPECTED_INTEGRATED_PRIVATE_SHA256,
         f"predecessor integrated private ledger drifted: {integrated_sha256}",
@@ -527,6 +599,10 @@ def load_integrated_ledger() -> tuple[
         report_file_sha256 == EXPECTED_INTEGRATED_REPORT_FILE_SHA256,
         "predecessor integrated source-free report drifted: "
         f"{report_file_sha256}",
+    )
+    require(
+        builder_sha256 == EXPECTED_INTEGRATED_BUILDER_SHA256,
+        f"predecessor integrated builder drifted: {builder_sha256}",
     )
     report = read_json(INTEGRATED_REPORT_PATH)
     require(
@@ -539,6 +615,25 @@ def load_integrated_ledger() -> tuple[
         == integrated_sha256
         and report.get("steam_write_performed") is False,
         "predecessor integrated ledger report binding failed",
+    )
+    require(
+        report.get("result", {}).get("runtime_review_pending")
+        == EXPECTED_INTEGRATED_RUNTIME_PENDING
+        and report.get("promotions", {}).get("pk_msggame", {}).get(
+            "promotion_count"
+        )
+        == EXPECTED_INTEGRATED_PK_PROMOTIONS
+        and report.get("promotions", {}).get("pk_msggame", {}).get(
+            "pk_only_layer_included"
+        )
+        is False
+        and report.get("validation", {}).get("pk_only_layer_included")
+        is False
+        and report.get("validation", {}).get(
+            "pk_only_predecessor_checkpoint_rebuilt_and_matched"
+        )
+        is False,
+        "predecessor integrated checkpoint boundary drifted",
     )
     pk_rows: dict[str, dict[str, Any]] = {}
     for row in read_jsonl(INTEGRATED_PRIVATE_PATH):
@@ -592,7 +687,9 @@ def input_context() -> dict[str, Any]:
         == EXPECTED_EXACT_COVERAGE_PAYLOAD_SHA256,
         "exact coverage binding drifted",
     )
-    source_rows, source_metadata = source_decision_rows()
+    source_rows, source_metadata = source_decision_rows(
+        full_metadata=full_metadata
+    )
     require(
         source_metadata["source_decision_segment_universe_sha256"]
         == full_report["guards"][
@@ -655,6 +752,15 @@ def input_context() -> dict[str, Any]:
             "semantic_override_report_payload_sha256": full_report[
                 "guards"
             ]["semantic_override_report_payload_sha256"],
+            "relative_reflow_private_sha256": source_metadata[
+                "relative_reflow_private_sha256"
+            ],
+            "relative_reflow_public_sha256": source_metadata[
+                "relative_reflow_public_sha256"
+            ],
+            "relative_reflow_manifest_sha256": source_metadata[
+                "relative_reflow_manifest_sha256"
+            ],
             **integrated_metadata,
         },
     }

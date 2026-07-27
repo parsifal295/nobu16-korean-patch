@@ -42,7 +42,10 @@ RESIDUAL_AUDIT_PATH = (
 EXACT_COVERAGE_PATH = (
     WORKSTREAM
     / "public"
-    / "pk_msggame_full_candidate_runtime_vm_coverage.v1.json"
+    / (
+        "pk_msggame_full_candidate_runtime_vm_coverage."
+        "pre_reflow_checkpoint.v1.json"
+    )
 )
 DEFAULT_PRIVATE_OUTPUT = (
     DIALOGUE_TMP
@@ -75,6 +78,20 @@ EXPECTED_EXACT_SAFE_ROOT_RECORD_SHA256 = (
 )
 EXPECTED_OVERRIDE_COORDINATE_SHA256 = (
     "E0FC03945EA080A33BD7ACC71F8114279DB385D085F6A63A31974E77B9E0B0EE"
+)
+EXPECTED_PRE_REFLOW_COVERAGE_FILE_SHA256 = (
+    "99FF832F2EB74DB205DE37B0079FA275471BF31A224F81E3FF422003A9B2D910"
+)
+EXPECTED_PRE_REFLOW_COVERAGE_PAYLOAD_SHA256 = (
+    "899B84A721D7881D1A75EEE7BB2E8491B864DB2EC001640AC4B2760ADF74FE54"
+)
+EXPECTED_PRE_REFLOW_ELIGIBLE_ROWS = 7_453
+EXPECTED_PRE_REFLOW_BLOCKED_ROWS = 2_317
+EXPECTED_PRE_REFLOW_ELIGIBLE_COORDINATE_SHA256 = (
+    "0D9D424C2EEBBD652EFF807BEF604164C9691011839C724658F5808BD4A64147"
+)
+EXPECTED_PRE_REFLOW_BLOCKED_COORDINATE_SHA256 = (
+    "AD52864FFA21C9B1158E5C1EABCB2D6D9D8B16796BF6F84695D53B721337ADA4"
 )
 STALE_EXACT_PROBE_ROOT_ROWS = 31
 STALE_EXACT_PROBE_ROOT_RECORDS = 19
@@ -549,6 +566,77 @@ def record_reflow_plan(
     return plan
 
 
+def validate_pre_reflow_exact_report(
+    report: Mapping[str, Any],
+    *,
+    inputs: Any,
+    full_metadata: Mapping[str, Any],
+) -> None:
+    require(
+        sha256_bytes(EXACT_COVERAGE_PATH.read_bytes())
+        == EXPECTED_PRE_REFLOW_COVERAGE_FILE_SHA256,
+        "immutable pre-reflow exact coverage file drifted",
+    )
+    unsealed = copy.deepcopy(dict(report))
+    guards = unsealed.get("guards")
+    require(isinstance(guards, dict), "pre-reflow coverage guards are absent")
+    payload_sha256 = guards.pop("report_payload_sha256", None)
+    adjudications = report.get("row_adjudications")
+    require(
+        isinstance(adjudications, dict),
+        "pre-reflow exact adjudications are absent",
+    )
+    eligible = [
+        coordinate
+        for coordinate, row in adjudications.items()
+        if row.get("status") == "promotion_eligible"
+    ]
+    blocked = [
+        coordinate
+        for coordinate, row in adjudications.items()
+        if row.get("status") == "blocked"
+    ]
+    require(
+        report.get("schema")
+        == "nobu16.kr.pk-msggame-full-candidate-runtime-vm-coverage.v1"
+        and report.get("status") == "PASS"
+        and payload_sha256 == EXPECTED_PRE_REFLOW_COVERAGE_PAYLOAD_SHA256
+        and payload_sha256 == canonical_sha256(unsealed)
+        and report.get("candidate_scope", {}).get(
+            "literal_candidate_packed_sha256"
+        )
+        == inputs.artifact_hashes["pk_full_candidate_packed_sha256"]
+        and report.get("candidate_scope", {}).get("source_decision_rows")
+        == EXPECTED_PK_ROWS
+        and report.get("candidate_scope", {}).get("string_replacement_rows")
+        == FULL_AUDIT.EXPECTED_STRING_REPLACEMENTS
+        and report.get("candidate_scope", {}).get(
+            "source_decision_segment_count"
+        )
+        == FULL_AUDIT.EXPECTED_SOURCE_SEGMENTS
+        and report.get("guards", {}).get("replacement_manifest_sha256")
+        == full_metadata["replacement_manifest_sha256"]
+        and report.get("guards", {}).get(
+            "source_decision_segment_universe_sha256"
+        )
+        == full_metadata["source_decision_segment_universe_sha256"]
+        and report.get("promotion", {}).get("runtime_promotion_performed")
+        is False
+        and report.get("promotion", {}).get("steam_write_performed") is False,
+        "pre-reflow exact coverage binding drifted",
+    )
+    require(
+        len(eligible) == EXPECTED_PRE_REFLOW_ELIGIBLE_ROWS
+        and len(blocked) == EXPECTED_PRE_REFLOW_BLOCKED_ROWS
+        and len(eligible) + len(blocked) == FULL_AUDIT.EXPECTED_EXACT_ROWS
+        and FULL_AUDIT.coordinate_digest(eligible)
+        == EXPECTED_PRE_REFLOW_ELIGIBLE_COORDINATE_SHA256
+        and FULL_AUDIT.coordinate_digest(blocked)
+        == EXPECTED_PRE_REFLOW_BLOCKED_COORDINATE_SHA256,
+        "pre-reflow exact coverage universe drifted",
+    )
+
+
 def build_scope(
     *,
     inputs: Any,
@@ -556,10 +644,10 @@ def build_scope(
     full_metadata: Mapping[str, Any],
 ) -> dict[str, Any]:
     exact_report = read_json(EXACT_COVERAGE_PATH)
-    FULL_AUDIT.validate_report(
+    validate_pre_reflow_exact_report(
         exact_report,
         inputs=inputs,
-        metadata=full_metadata,
+        full_metadata=full_metadata,
     )
     exact_coordinates = set(exact_report["row_adjudications"])
     residual_rows = [
@@ -1329,7 +1417,9 @@ def build_outputs() -> tuple[
     dict[str, Any],
     dict[str, Any],
 ]:
-    inputs, full_metadata = FULL_AUDIT.full_candidate_inputs()
+    inputs, full_metadata = FULL_AUDIT.full_candidate_inputs(
+        apply_reflow=False
+    )
     original_rows, effective_rows, source_metadata = load_effective_rows(
         full_metadata=full_metadata
     )

@@ -52,23 +52,29 @@ class PkFullCandidateRuntimeVmTests(unittest.TestCase):
     def test_full_candidate_scope_and_transitions(self) -> None:
         coverage = self.context["coverage"]
         self.assertEqual(coverage["scope"]["runtime_pending_rows"], 9_770)
-        self.assertEqual(coverage["scope"]["promotion_eligible_rows"], 7_453)
-        self.assertEqual(coverage["scope"]["blocked_rows"], 2_317)
+        self.assertEqual(coverage["scope"]["promotion_eligible_rows"], 7_450)
+        self.assertEqual(coverage["scope"]["blocked_rows"], 2_320)
         self.assertEqual(
             coverage["candidate_scope"]["literal_candidate_packed_sha256"],
             FULL_AUDIT.EXPECTED_FULL_CANDIDATE_SHA256,
         )
         transitions = coverage["full_candidate_transitions"]
-        self.assertEqual(transitions["kept_eligible_rows"], 4_663)
+        self.assertEqual(transitions["kept_eligible_rows"], 4_660)
         self.assertEqual(transitions["newly_eligible_rows"], 2_790)
-        self.assertEqual(transitions["newly_blocked_rows"], 54)
+        self.assertEqual(transitions["newly_blocked_rows"], 57)
+        self.assertEqual(
+            coverage["candidate_scope"][
+                "relative_reflow_exact_rows_superseded"
+            ],
+            3,
+        )
         self.assertEqual(
             coverage["blockers"][
                 "pk_source_candidate_control_taint_rows"
             ],
             13,
         )
-        self.assertEqual(len(self.rows), 7_453)
+        self.assertEqual(len(self.rows), 7_450)
         self.assertFalse(self.promotion["steam_write_performed"])
 
     def test_overlay_and_report_tampering_are_rejected(self) -> None:
