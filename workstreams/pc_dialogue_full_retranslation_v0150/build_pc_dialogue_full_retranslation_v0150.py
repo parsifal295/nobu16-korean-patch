@@ -65,6 +65,19 @@ RUNTIME_VM_COVERAGE_PATH = (
     / "public"
     / "base_msggame_runtime_vm_coverage.v1.json"
 )
+PK_RUNTIME_VM_OVERLAY_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_msggame_exact_reuse_runtime_vm_verified.private.v1.jsonl"
+)
+PK_RUNTIME_VM_PROMOTION_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_runtime_vm_promotion.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -89,6 +102,9 @@ MANIFEST_SCHEMA = f"{SCHEMA}.candidate-manifest"
 RUNTIME_VM_COVERAGE_SCHEMA = "nobu16.kr.base-msggame-runtime-vm-coverage.v1"
 RUNTIME_VM_ROW_VERIFICATION_SCHEMA = (
     "nobu16.kr.base-msggame-runtime-vm-row-verification.v1"
+)
+PK_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
+    "nobu16.kr.pk-msggame-exact-reuse-runtime-vm-verification-overlay-row.v1"
 )
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 SOURCE_OUTER_WHITESPACE_REPAIR_EVIDENCE_SCHEMA = (
@@ -601,6 +617,113 @@ def load_runtime_vm_coverage() -> tuple[dict[str, Any], str]:
     return report, sha256_bytes(raw)
 
 
+def load_pk_runtime_vm_overlay() -> dict[str, dict[str, Any]]:
+    if not PK_RUNTIME_VM_OVERLAY_PATH.is_file():
+        raise RetranslationError(
+            "private PK runtime VM verification overlay is absent: "
+            f"{PK_RUNTIME_VM_OVERLAY_PATH}"
+        )
+    if not PK_RUNTIME_VM_PROMOTION_PATH.is_file():
+        raise RetranslationError(
+            "tracked PK runtime VM promotion report is absent: "
+            f"{PK_RUNTIME_VM_PROMOTION_PATH}"
+        )
+    try:
+        promotion = json.loads(
+            PK_RUNTIME_VM_PROMOTION_PATH.read_text(encoding="utf-8")
+        )
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise RetranslationError(
+            "tracked PK runtime VM promotion report is invalid"
+        ) from exc
+    raw_overlay = PK_RUNTIME_VM_OVERLAY_PATH.read_bytes()
+    if (
+        not isinstance(promotion, dict)
+        or promotion.get("schema")
+        != "nobu16.kr.pk-msggame-runtime-vm-promotion.v1"
+        or promotion.get("status") != "PASS"
+        or promotion.get("steam_write_performed") is not False
+        or promotion.get("result", {}).get("private_overlay_sha256")
+        != sha256_bytes(raw_overlay)
+    ):
+        raise RetranslationError(
+            "tracked PK runtime VM promotion report or overlay hash drifted"
+        )
+    rows: dict[str, dict[str, Any]] = {}
+    for line_number, line in enumerate(
+        raw_overlay.decode("utf-8").splitlines(),
+        start=1,
+    ):
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise RetranslationError(
+                "invalid PK runtime VM overlay JSON at line "
+                f"{line_number}"
+            ) from exc
+        if not isinstance(row, dict):
+            raise RetranslationError(
+                f"PK runtime VM overlay row {line_number} is not an object"
+            )
+        coordinate = row.get("coordinate")
+        parse_coordinate(
+            coordinate,
+            f"PK runtime VM overlay row {line_number}.coordinate",
+        )
+        if not isinstance(coordinate, str) or coordinate in rows:
+            raise RetranslationError(
+                f"duplicate PK runtime VM overlay coordinate: {coordinate}"
+            )
+        if (
+            row.get("schema") != PK_RUNTIME_VM_OVERLAY_ROW_SCHEMA
+            or row.get("resource") != "pk_msggame"
+            or row.get("status") != "verified"
+            or row.get("method") != RUNTIME_VM_VERIFICATION_METHOD
+            or row.get("scope_transition")
+            != {
+                "from": "runtime_fragment_pending",
+                "to": "retranslated",
+            }
+            or row.get("per_row_game_playback_required") is not False
+        ):
+            raise RetranslationError(
+                f"PK runtime VM overlay evidence is incomplete: {coordinate}"
+            )
+        rows[coordinate] = row
+    if not rows:
+        raise RetranslationError("private PK runtime VM verification overlay is empty")
+    if promotion.get("result", {}).get("private_overlay_rows") != len(rows):
+        raise RetranslationError(
+            "tracked PK runtime VM promotion row count drifted"
+        )
+    return rows
+
+
+def validate_pk_runtime_vm_verification(
+    *,
+    evidence: Mapping[str, Any],
+    overlay_rows: Mapping[str, dict[str, Any]],
+    coordinate_value: str,
+    translation: str,
+    label: str,
+) -> None:
+    expected = overlay_rows.get(coordinate_value)
+    if expected is None:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification has no tracked PK overlay row"
+        )
+    if dict(evidence) != expected:
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification differs from the tracked PK overlay"
+        )
+    if evidence.get("translation_utf16le_sha256") != sha256_text(translation):
+        raise RetranslationError(
+            f"{label}.runtime_vm_verification translation hash does not match"
+        )
+
+
 def validate_runtime_vm_verification(
     *,
     evidence: Mapping[str, Any],
@@ -763,6 +886,7 @@ def validate_decisions(
         for name, resource in prepared.resources.items()
     }
     runtime_vm_coverage: tuple[dict[str, Any], str] | None = None
+    pk_runtime_vm_overlay: dict[str, dict[str, Any]] | None = None
     runtime_vm_verified_record_hashes: dict[tuple[int, int], str] = {}
     for ordinal, row in enumerate(decisions, start=1):
         label = f"decision[{ordinal}]"
@@ -834,6 +958,14 @@ def validate_decisions(
         ):
             raise RetranslationError(
                 f"{label} reversed VM evidence requires runtime_review=verified"
+            )
+        if (
+            resource == "pk_msggame"
+            and runtime_review == "verified"
+            and runtime_vm_method != RUNTIME_VM_VERIFICATION_METHOD
+        ):
+            raise RetranslationError(
+                f"{label} verified PK runtime row requires reversed VM evidence"
             )
         if "empty_runtime_morpheme" in row and row.get("empty_runtime_morpheme") is not True:
             raise RetranslationError(
@@ -1023,40 +1155,51 @@ def validate_decisions(
             runtime_review == "verified"
             and runtime_vm_method == RUNTIME_VM_VERIFICATION_METHOD
         ):
-            if resource != "base_msggame":
-                raise RetranslationError(
-                    f"{label} reversed VM evidence is only valid for base_msggame"
-                )
-            if runtime_vm_coverage is None:
-                runtime_vm_coverage = load_runtime_vm_coverage()
-            coverage, coverage_sha256 = runtime_vm_coverage
             assert isinstance(runtime_vm_evidence, dict)
-            validate_runtime_vm_verification(
-                evidence=runtime_vm_evidence,
-                coverage=coverage,
-                coverage_sha256=coverage_sha256,
-                coordinate_value=f"{block_id}:{record_id}:{literal_id}",
-                record_coordinate_value=f"{block_id}:{record_id}",
-                source_record_raw_sha256=str(
-                    target["source_record_raw_sha256"]
-                ),
-                current_ko_utf16le_sha256=str(
-                    target["current_ko_utf16le_sha256"]
-                ),
-                translation=translation,
-                label=label,
-            )
-            record_key = (block_id, record_id)
-            candidate_record_hash = str(
-                runtime_vm_evidence["candidate_record_raw_sha256"]
-            )
-            previous_hash = runtime_vm_verified_record_hashes.setdefault(
-                record_key,
-                candidate_record_hash,
-            )
-            if previous_hash != candidate_record_hash:
+            if resource == "base_msggame":
+                if runtime_vm_coverage is None:
+                    runtime_vm_coverage = load_runtime_vm_coverage()
+                coverage, coverage_sha256 = runtime_vm_coverage
+                validate_runtime_vm_verification(
+                    evidence=runtime_vm_evidence,
+                    coverage=coverage,
+                    coverage_sha256=coverage_sha256,
+                    coordinate_value=f"{block_id}:{record_id}:{literal_id}",
+                    record_coordinate_value=f"{block_id}:{record_id}",
+                    source_record_raw_sha256=str(
+                        target["source_record_raw_sha256"]
+                    ),
+                    current_ko_utf16le_sha256=str(
+                        target["current_ko_utf16le_sha256"]
+                    ),
+                    translation=translation,
+                    label=label,
+                )
+                record_key = (block_id, record_id)
+                candidate_record_hash = str(
+                    runtime_vm_evidence["candidate_record_raw_sha256"]
+                )
+                previous_hash = runtime_vm_verified_record_hashes.setdefault(
+                    record_key,
+                    candidate_record_hash,
+                )
+                if previous_hash != candidate_record_hash:
+                    raise RetranslationError(
+                        f"{label} conflicts with another row's candidate record hash"
+                    )
+            elif resource == "pk_msggame":
+                if pk_runtime_vm_overlay is None:
+                    pk_runtime_vm_overlay = load_pk_runtime_vm_overlay()
+                validate_pk_runtime_vm_verification(
+                    evidence=runtime_vm_evidence,
+                    overlay_rows=pk_runtime_vm_overlay,
+                    coordinate_value=f"{block_id}:{record_id}:{literal_id}",
+                    translation=translation,
+                    label=label,
+                )
+            else:
                 raise RetranslationError(
-                    f"{label} conflicts with another row's candidate record hash"
+                    f"{label} reversed VM evidence has an unsupported resource"
                 )
             runtime_vm_bound = True
         if (

@@ -3821,19 +3821,30 @@ $py = 'C:\Users\melse\.cache\codex-runtimes\codex-primary-runtime\dependencies\p
   `DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766`
   이며 쓰지 않았다. PK `msggame.bin`에 PK 이벤트 대사의 `912px`
   규칙도 임의 적용하지 않았다.
-- 생성 검토 큐 `base_msggame-B001`~`base_msggame-B120`은 의미 범위
-  분류가 완료됐다.
-  `base_msggame-B008`~`base_msggame-B120`은 표시 대상 30개짜리 한
-  배치, 196개짜리 세 배치, 197개짜리 세 배치, 198개짜리 아홉 배치,
-  199개짜리 25개 배치, 200개짜리 72개 배치 전부가
-  분류되어 의미 범위 검토가 완료됐다.
-  작성용 segment의 `B001` 명칭과 생성 큐 batch 번호는 서로 다른 식별자다.
-- 생성 검토 큐 `pk_msggame-B001`~`pk_msggame-B146` 가운데
-  `pk_msggame-B001`~`B008`의 표시 대상 1,600개가 완료됐고, PK는
-  29,038개 중 1,600개를 승인·분류했다.
-- 누적 승인·분류는 25,365개다. 실제 재번역 7,867개, 런타임 조각 17,153개,
-  비표시 내부 데이터 345개로 구성된다.
-- 정적 재번역 7,867개와 비표시 보존 345개, 합계 8,212개는 후보 반영 자격을 갖췄다.
-  동적 인명·세력·수치·활용 명령과 결합되는 17,153개는 의미 검증을 통과했으며
-  실게임 조사 결합 검수가 남았다.
-- 진행 수치는 `progress.source_free.v1.json`에 원문 없이 기록한다.
+- 생성 검토 큐 `base_msggame-B001`~`B120`과
+  `pk_msggame-B001`~`B146`의 표시 대상 `52,803`개는 전부 의미
+  승인·분류를 마쳤다. Base는 `23,765/23,765`, PK는
+  `29,038/29,038`이다. 작성용 segment의 B 번호와 생성 큐 batch
+  번호는 서로 다른 식별자다.
+- Base 역공학 VM 감사가 동적 조각 `15,651`개를 승격했고, PK
+  Base-exact-reuse VM 감사가 추가 `4,717`개를 승격했다. 두 증거는
+  `build_runtime_vm_integrated_decisions_v1.py`가 원래 의미 결정을
+  바꾸지 못하게 고정한 채 private 통합 원장에 병합한다.
+- 현재 후보 자격 보유는 `36,836`개, PK 런타임 결합 검증 대기는
+  `15,967`개다. 이 수치는 control-gap 보수 때문에 원래
+  `not_required`에서 pending으로 전환된 `6:3421:0` 한 건을 포함한다.
+  두 control-gap 보수 후보는 정적 VM 결합 의미가 별도로 승인되기
+  전에는 최종 후보에 적용하지 않는다.
+- 다음 명령은 고정된 개발 Steam root를 입력으로 사용해 검증 완료
+  증거를 다시 병합하고 source-free 중앙 진행 원장을 재현한다.
+
+```powershell
+$env:NOBU16_DIALOGUE_STEAM_ROOT = '<development-shadow-root>'
+& $py -B workstreams\pc_dialogue_full_retranslation_v0150\build_runtime_vm_integrated_decisions_v1.py --write --check
+& $py -B workstreams\pc_dialogue_full_retranslation_v0150\build_progress_source_free_v0150.py --write --validate
+```
+
+- `runtime_vm_integration.source_free.v1.json`은 통합 입력·출력 해시,
+  Base/PK 승격 수, 잔여 수와 Steam 미기록을 원문 없이 고정한다.
+  `progress.source_free.v1.json`은 같은 private 통합 원장을 다시
+  검증한 뒤 전체 진행 수치를 원문 없이 기록한다.

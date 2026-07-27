@@ -24,8 +24,17 @@ BATCHES_PATH = OUTPUT_ROOT / "review_batches.source_free.v1.json"
 CANDIDATE_MANIFEST = OUTPUT_ROOT / "candidate" / "candidate_manifest.source_free.v1.json"
 PROGRESS_PATH = WORKSTREAM / "progress.source_free.v1.json"
 CONTROL_REPAIRS_PATH = WORKSTREAM / "runtime_control_repairs.source_free.v1.json"
+RUNTIME_VM_INTEGRATED_DECISIONS = (
+    OUTPUT_ROOT / "runtime_vm_integrated.private.v1.jsonl"
+)
+RUNTIME_VM_INTEGRATION_REPORT = (
+    WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
+)
 CONTROL_REPAIRS_SCHEMA = (
     "nobu16.kr.pc-dialogue-full-retranslation-runtime-control-repairs.v1"
+)
+RUNTIME_VM_INTEGRATION_SCHEMA = (
+    "nobu16.kr.pc-dialogue-runtime-vm-integration.v1"
 )
 RUNTIME_REVIEW_STATES = {"not_required", "verified", "pending"}
 
@@ -88,6 +97,88 @@ def canonical_row_sha256(row: dict[str, Any]) -> str:
         separators=(",", ":"),
     ).encode("utf-8")
     return sha256_bytes(encoded)
+
+
+def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
+    return {
+        key: value
+        for key, value in row.items()
+        if key
+        not in {
+            "scope_classification",
+            "runtime_review",
+            "runtime_vm_verification",
+        }
+    }
+
+
+def load_runtime_vm_integration(
+    prepared: Any,
+) -> tuple[dict[tuple[str, str], dict[str, Any]], dict[str, Any]]:
+    if not RUNTIME_VM_INTEGRATION_REPORT.is_file():
+        raise RuntimeError(
+            "source-free runtime VM integration report is absent: "
+            f"{RUNTIME_VM_INTEGRATION_REPORT}"
+        )
+    if not RUNTIME_VM_INTEGRATED_DECISIONS.is_file():
+        raise RuntimeError(
+            "private runtime VM integrated decisions are absent: "
+            f"{RUNTIME_VM_INTEGRATED_DECISIONS}"
+        )
+    report_bytes = RUNTIME_VM_INTEGRATION_REPORT.read_bytes()
+    report = json.loads(report_bytes.decode("utf-8"))
+    if (
+        not isinstance(report, dict)
+        or report.get("schema") != RUNTIME_VM_INTEGRATION_SCHEMA
+        or report.get("status") != "PASS"
+        or report.get("release_target") != "0.15.0"
+        or report.get("steam_write_performed") is not False
+    ):
+        raise RuntimeError("runtime VM integration report metadata drifted")
+    private_sha256 = sha256_bytes(RUNTIME_VM_INTEGRATED_DECISIONS.read_bytes())
+    result = report.get("result")
+    if (
+        not isinstance(result, dict)
+        or result.get("private_integrated_decision_sha256") != private_sha256
+        or result.get("semantic_review_approved")
+        != len(prepared.visible_targets)
+    ):
+        raise RuntimeError("runtime VM integrated decision guard drifted")
+    ENGINE.validate_decisions(
+        prepared,
+        RUNTIME_VM_INTEGRATED_DECISIONS,
+        require_complete=False,
+    )
+    rows = load_jsonl(RUNTIME_VM_INTEGRATED_DECISIONS)
+    by_coordinate: dict[tuple[str, str], dict[str, Any]] = {}
+    for row in rows:
+        key = (str(row["resource"]), str(row["coordinate"]))
+        if key in by_coordinate:
+            raise RuntimeError(
+                f"duplicate runtime VM integrated decision: {key}"
+            )
+        by_coordinate[key] = row
+    pending = sum(
+        row.get("runtime_review") == "pending"
+        for row in by_coordinate.values()
+    )
+    if (
+        len(by_coordinate) != len(prepared.visible_targets)
+        or result.get("runtime_review_pending") != pending
+        or result.get("fully_candidate_eligible")
+        != len(by_coordinate) - pending
+    ):
+        raise RuntimeError("runtime VM integration result counts drifted")
+    metadata = {
+        "path": RUNTIME_VM_INTEGRATION_REPORT.relative_to(REPO).as_posix(),
+        "schema": RUNTIME_VM_INTEGRATION_SCHEMA,
+        "sha256": sha256_bytes(report_bytes),
+        "private_integrated_decision_sha256": private_sha256,
+        "promoted_total": report["promotions"]["promoted_total"],
+        "runtime_review_pending_after": pending,
+        "steam_write_performed": False,
+    }
+    return by_coordinate, metadata
 
 
 def load_control_repairs() -> tuple[
@@ -200,6 +291,10 @@ def build_progress() -> dict[str, Any]:
         raise RuntimeError(f"no private decision segments found below {DECISIONS_DIR}")
     control_repairs, control_repair_metadata = load_control_repairs()
     consumed_control_repairs: set[tuple[str, str]] = set()
+    runtime_vm_integrated, runtime_vm_integration_metadata = (
+        load_runtime_vm_integration(prepared)
+    )
+    consumed_runtime_vm_integrated: set[tuple[str, str]] = set()
 
     queue_rows = load_jsonl(QUEUE_PATH)
     batch_catalog_raw = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
@@ -278,6 +373,34 @@ def build_progress() -> dict[str, Any]:
                 effective_row["runtime_review"] = runtime_review
                 consumed_control_repairs.add(key)
                 segment_control_override_count += 1
+            integrated_row = runtime_vm_integrated.get(key)
+            if integrated_row is None:
+                raise RuntimeError(
+                    f"runtime VM integrated decision is absent: {key}"
+                )
+            if runtime_immutable_row(effective_row) != runtime_immutable_row(
+                integrated_row
+            ):
+                raise RuntimeError(
+                    f"runtime VM integration changed semantic decision data: {key}"
+                )
+            if (
+                runtime_review == "pending"
+                and integrated_row.get("runtime_review") == "verified"
+            ):
+                evidence = integrated_row.get("runtime_vm_verification")
+                if not isinstance(evidence, dict):
+                    raise RuntimeError(
+                        f"runtime VM promotion lacks row evidence: {key}"
+                    )
+            elif integrated_row.get("runtime_review") != runtime_review:
+                raise RuntimeError(
+                    f"unsupported runtime VM state transition: {key}"
+                )
+            effective_row = integrated_row
+            classification = str(effective_row["scope_classification"])
+            runtime_review = str(effective_row["runtime_review"])
+            consumed_runtime_vm_integrated.add(key)
             batch_id = target_to_batch.get(key)
             if batch_id is None:
                 raise RuntimeError(f"decision target is absent from private queue: {key}")
@@ -327,6 +450,14 @@ def build_progress() -> dict[str, Any]:
         missing = sorted(set(control_repairs) - consumed_control_repairs)
         raise RuntimeError(
             f"runtime control repairs were not bound to decisions: {missing}"
+        )
+    if consumed_runtime_vm_integrated != set(runtime_vm_integrated):
+        missing = sorted(
+            set(runtime_vm_integrated) - consumed_runtime_vm_integrated
+        )
+        raise RuntimeError(
+            "runtime VM integrated decisions were not bound to source segments: "
+            f"{missing[:8]}"
         )
 
     touched_batch_ids = sorted(batch_decisions, key=batch_key)
@@ -385,6 +516,7 @@ def build_progress() -> dict[str, Any]:
                 for repair in control_repairs.values()
             ),
         },
+        "runtime_vm_integration": runtime_vm_integration_metadata,
         "segments": segments,
         "queue_batch_coverage": queue_batch_coverage,
         "totals": {
