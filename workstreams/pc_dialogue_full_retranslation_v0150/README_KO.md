@@ -3830,11 +3830,13 @@ $py = 'C:\Users\melse\.cache\codex-runtimes\codex-primary-runtime\dependencies\p
   Base-exact-reuse VM 감사는 `4,717`개를 prefill-only 후보에서
   안전하다고 판정했다. 이 가운데 `48`개는 같은 레코드의 최종
   residual 형제 리터럴이 달라 full-candidate 레코드 해시가 바뀌므로
-  통합 단계에서 제외한다. 실제 PK 승격은 `4,669`개다. 두 증거는
+  기존 승격에서 제외한다. 반대로 기존 차단 `5,053`개 중 `2,794`개는
+  최종 형제 번역으로 폐포 불일치가 해소됐다. full-candidate 전용
+  재감사 결과 실제 PK 승격은 `7,463`개, 차단은 `2,307`개다. 두 증거는
   `build_runtime_vm_integrated_decisions_v1.py`가 원래 의미 결정을
   바꾸지 못하게 고정한 채 private 통합 원장에 병합한다.
-- 현재 후보 자격 보유는 `36,788`개, PK 런타임 결합 검증 대기는
-  `16,015`개다. 이 수치는 control-gap 보수 때문에 원래
+- 현재 후보 자격 보유는 `39,582`개, PK 런타임 결합 검증 대기는
+  `13,221`개다. 이 수치는 control-gap 보수 때문에 원래
   `not_required`에서 pending으로 전환된 `6:3421:0` 한 건을 포함한다.
   두 control-gap 보수 후보는 정적 VM 결합 의미가 별도로 승인되기
   전에는 최종 후보에 적용하지 않는다.

@@ -43,19 +43,19 @@ PK_OVERLAY_BUILDER_PATH = (
     REPO
     / "workstreams"
     / "pk_msggame_runtime_vm_audit_v1"
-    / "build_pk_msggame_runtime_verified_overlay_v1.py"
+    / "build_pk_msggame_full_candidate_runtime_verified_overlay_v1.py"
 )
 PK_OVERLAY_PATH = (
     DECISIONS_DIR
     / "runtime_verification_overlays"
-    / "pk_msggame_exact_reuse_runtime_vm_verified.private.v1.jsonl"
+    / "pk_msggame_full_candidate_runtime_vm_verified.private.v1.jsonl"
 )
 PK_PROMOTION_PATH = (
     REPO
     / "workstreams"
     / "pk_msggame_runtime_vm_audit_v1"
     / "public"
-    / "pk_msggame_runtime_vm_promotion.v1.json"
+    / "pk_msggame_full_candidate_runtime_vm_promotion.v1.json"
 )
 DEFAULT_PRIVATE_OUTPUT = OUTPUT_ROOT / "runtime_vm_integrated.private.v1.jsonl"
 DEFAULT_PUBLIC_OUTPUT = WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
@@ -68,13 +68,8 @@ EXPECTED_VISIBLE_ROWS = 52_803
 EXPECTED_BASE_ROWS = 23_765
 EXPECTED_PK_ROWS = 29_038
 EXPECTED_BASE_PROMOTIONS = 15_651
-EXPECTED_PK_AUDIT_PROMOTIONS = 4_717
-EXPECTED_PK_INTEGRATED_PROMOTIONS = 4_669
-EXPECTED_PK_FULL_CANDIDATE_SIBLING_EXCLUSIONS = 48
-EXPECTED_PK_FULL_CANDIDATE_SIBLING_EXCLUSION_DIGEST = (
-    "DD24887C06E3F0C6738EF5425A1C49BA3883D92B08E9522A65C4B6B5E7C0C559"
-)
-EXPECTED_PENDING_AFTER = 16_015
+EXPECTED_PK_INTEGRATED_PROMOTIONS = 7_463
+EXPECTED_PENDING_AFTER = 13_221
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
@@ -340,9 +335,28 @@ def validated_base_rows(
 def validated_pk_overlay() -> tuple[
     dict[str, dict[str, Any]],
     dict[str, Any],
-    Any,
 ]:
-    inputs, coverage, coverage_file_sha256 = PK_OVERLAY.verified_audit()
+    (
+        private_content,
+        public_content,
+        promotion,
+        context,
+    ) = PK_OVERLAY.build_outputs()
+    coverage = context["coverage"]
+    coverage_file_sha256 = context["coverage_file_sha256"]
+    inputs = context["inputs"]
+    require(
+        PK_OVERLAY_PATH.is_file()
+        and PK_OVERLAY_PATH.read_text(encoding="utf-8")
+        == private_content,
+        "tracked PK full-candidate overlay drifted",
+    )
+    require(
+        PK_PROMOTION_PATH.is_file()
+        and PK_PROMOTION_PATH.read_text(encoding="utf-8")
+        == public_content,
+        "tracked PK full-candidate promotion report drifted",
+    )
     rows = PK_OVERLAY.read_overlay(PK_OVERLAY_PATH)
     PK_OVERLAY.validate_overlay_rows(
         rows,
@@ -350,10 +364,9 @@ def validated_pk_overlay() -> tuple[
         report=coverage,
         report_file_sha256=coverage_file_sha256,
     )
-    promotion = load_json(PK_PROMOTION_PATH)
     require(
         promotion.get("schema")
-        == "nobu16.kr.pk-msggame-runtime-vm-promotion.v1"
+        == "nobu16.kr.pk-msggame-full-candidate-runtime-vm-promotion.v1"
         and promotion.get("status") == "PASS"
         and promotion.get("steam_write_performed") is False
         and promotion.get("result", {}).get("private_overlay_sha256")
@@ -362,15 +375,18 @@ def validated_pk_overlay() -> tuple[
     )
     by_coordinate = {str(row["coordinate"]): row for row in rows}
     require(
-        len(by_coordinate) == len(rows) == EXPECTED_PK_AUDIT_PROMOTIONS,
+        len(by_coordinate)
+        == len(rows)
+        == EXPECTED_PK_INTEGRATED_PROMOTIONS,
         "PK VM overlay completeness drifted",
     )
     return by_coordinate, {
-        "audit_promotion_eligible_count": len(rows),
+        "promotion_count": len(rows),
         "private_sha256": sha256_bytes(PK_OVERLAY_PATH.read_bytes()),
         "promotion_report_sha256": sha256_bytes(PK_PROMOTION_PATH.read_bytes()),
         "coverage_file_sha256": coverage_file_sha256,
-    }, inputs
+        "full_candidate_bound": True,
+    }
 
 
 def validate_combined_private(
@@ -424,24 +440,7 @@ def build_outputs(
     base_rows, base_metadata = validated_base_rows(prepared, source_rows)
     merged.update(base_rows)
 
-    pk_overlay, pk_metadata, pk_audit_inputs = validated_pk_overlay()
-    pk_literal_replacements = {
-        ENGINE.parse_coordinate(
-            row["coordinate"],
-            "PK integrated decision.coordinate",
-        ): row["translation"]
-        for row in merged.values()
-        if row["resource"] == "pk_msggame"
-        and isinstance(row.get("translation"), str)
-    }
-    full_pk_candidate = ENGINE.rebuild_packed_with_literals(
-        prepared.resources["pk_msggame"].current_blob,
-        pk_literal_replacements,
-    )
-    full_pk_candidate_records = ENGINE.archive_records(
-        ENGINE.parse_packed_msggame(full_pk_candidate).archive
-    )
-    sibling_exclusions: list[str] = []
+    pk_overlay, pk_metadata = validated_pk_overlay()
     pk_integrated_promotions = 0
     for coordinate, evidence in pk_overlay.items():
         key = ("pk_msggame", coordinate)
@@ -454,17 +453,6 @@ def build_outputs(
             == evidence.get("translation_utf16le_sha256"),
             f"PK overlay source decision drifted: {coordinate}",
         )
-        block_id, record_id, _literal_id = ENGINE.parse_coordinate(
-            coordinate,
-            "PK overlay.coordinate",
-        )
-        record_key = (block_id, record_id)
-        if (
-            full_pk_candidate_records[record_key].data
-            != pk_audit_inputs.pk_candidate_records[record_key].data
-        ):
-            sibling_exclusions.append(coordinate)
-            continue
         promoted = dict(row)
         promoted["scope_classification"] = "retranslated"
         promoted["runtime_review"] = "verified"
@@ -477,30 +465,9 @@ def build_outputs(
         merged[key] = promoted
         pk_integrated_promotions += 1
 
-    sibling_exclusion_digest = sha256_bytes(
-        "\n".join(sibling_exclusions).encode("ascii")
-    )
-    require(
-        len(sibling_exclusions)
-        == EXPECTED_PK_FULL_CANDIDATE_SIBLING_EXCLUSIONS
-        and sibling_exclusion_digest
-        == EXPECTED_PK_FULL_CANDIDATE_SIBLING_EXCLUSION_DIGEST,
-        "PK full-candidate sibling exclusion universe drifted",
-    )
     require(
         pk_integrated_promotions == EXPECTED_PK_INTEGRATED_PROMOTIONS,
         f"PK integrated promotion count drifted: {pk_integrated_promotions}",
-    )
-    pk_metadata.update(
-        {
-            "promotion_count": pk_integrated_promotions,
-            "full_candidate_sibling_exclusion_count": len(
-                sibling_exclusions
-            ),
-            "full_candidate_sibling_exclusion_coordinate_digest_sha256":
-            sibling_exclusion_digest,
-            "full_candidate_record_hashes_rechecked": True,
-        }
     )
 
     rows = sorted(merged.values(), key=coordinate_sort_key)
@@ -570,7 +537,7 @@ def build_outputs(
             "runtime_only_transitions_enforced": True,
             "base_candidate_record_guards_rechecked": True,
             "pk_overlay_rebuilt_and_rechecked": True,
-            "pk_full_candidate_sibling_records_rechecked": True,
+            "pk_full_candidate_records_and_closures_rechecked": True,
             "control_repair_bindings_rechecked": True,
             "per_row_game_playback_required_for_promotions": False,
             "representative_game_smoke_test_required_before_release": True,
