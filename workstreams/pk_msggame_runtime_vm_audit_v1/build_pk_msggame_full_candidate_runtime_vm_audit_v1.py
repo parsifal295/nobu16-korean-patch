@@ -39,6 +39,19 @@ BASE_AUDIT_PATH = WORKSTREAM / "build_pk_msggame_runtime_vm_audit_v1.py"
 BASE_PREFILL_COVERAGE_PATH = (
     WORKSTREAM / "public" / "pk_msggame_runtime_vm_coverage.v1.json"
 )
+SEMANTIC_OVERRIDE_BUILDER_PATH = (
+    DIALOGUE_WORKSTREAM
+    / "build_pk_semantic_flattening_override_3421_v1.py"
+)
+SEMANTIC_OVERRIDE_PRIVATE_PATH = (
+    DIALOGUE_TMP
+    / "semantic_overrides"
+    / "pk_msggame_3421_semantic_override.private.v1.jsonl"
+)
+SEMANTIC_OVERRIDE_PUBLIC_PATH = (
+    DIALOGUE_WORKSTREAM
+    / "pk_semantic_flattening_3421.source_free.v1.json"
+)
 DEFAULT_OUTPUT = (
     WORKSTREAM
     / "public"
@@ -56,7 +69,7 @@ EXPECTED_KEPT_ELIGIBLE_ROWS = 4_663
 EXPECTED_NEW_ELIGIBLE_ROWS = 2_790
 EXPECTED_NEW_BLOCKED_ROWS = 54
 EXPECTED_FULL_CANDIDATE_SHA256 = (
-    "5480D65CE6BF15A35549FE6013DC7F03787A5713E06BDD3E2C50418F31B1CA22"
+    "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707"
 )
 EXPECTED_ELIGIBLE_COORDINATE_SHA256 = (
     "0D9D424C2EEBBD652EFF807BEF604164C9691011839C724658F5808BD4A64147"
@@ -96,6 +109,10 @@ def load_module(name: str, path: Path) -> Any:
 
 ENGINE = load_module("pk_full_candidate_runtime_engine", ENGINE_PATH)
 BASE_AUDIT = load_module("pk_full_candidate_base_audit", BASE_AUDIT_PATH)
+SEMANTIC_OVERRIDE = load_module(
+    "pk_full_candidate_semantic_override",
+    SEMANTIC_OVERRIDE_BUILDER_PATH,
+)
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -206,6 +223,73 @@ def source_decisions() -> tuple[
 
 def full_candidate_inputs() -> tuple[Any, dict[str, Any]]:
     rows, metadata = source_decisions()
+    (
+        semantic_private_content,
+        semantic_public_content,
+        semantic_report,
+        semantic_row,
+    ) = SEMANTIC_OVERRIDE.build_outputs()
+    SEMANTIC_OVERRIDE.validate_outputs(
+        semantic_private_content,
+        semantic_public_content,
+        semantic_report,
+        semantic_row,
+    )
+    require(
+        SEMANTIC_OVERRIDE_PRIVATE_PATH.is_file()
+        and SEMANTIC_OVERRIDE_PRIVATE_PATH.read_text(encoding="utf-8")
+        == semantic_private_content,
+        "private semantic override drifted",
+    )
+    require(
+        SEMANTIC_OVERRIDE_PUBLIC_PATH.is_file()
+        and SEMANTIC_OVERRIDE_PUBLIC_PATH.read_text(encoding="utf-8")
+        == semantic_public_content,
+        "tracked semantic override report drifted",
+    )
+    semantic_coordinate = str(semantic_row["coordinate"])
+    semantic_matches = [
+        index
+        for index, row in enumerate(rows)
+        if str(row["coordinate"]) == semantic_coordinate
+    ]
+    require(
+        len(semantic_matches) == 1,
+        "semantic override coordinate is absent or duplicated",
+    )
+    rows[semantic_matches[0]] = semantic_row
+    replacement_manifest = [
+        {
+            "coordinate": row["coordinate"],
+            "translation_utf16le_sha256": ENGINE.sha256_text(
+                row["translation"]
+            ),
+        }
+        for row in rows
+        if isinstance(row.get("translation"), str)
+    ]
+    require(
+        len(replacement_manifest) == EXPECTED_STRING_REPLACEMENTS,
+        "semantic override replacement universe drifted",
+    )
+    metadata.update(
+        {
+            "replacement_manifest_sha256": canonical_sha256(
+                replacement_manifest
+            ),
+            "semantic_override_rows": 1,
+            "semantic_override_coordinate": semantic_coordinate,
+            "semantic_override_private_sha256": sha256_bytes(
+                semantic_private_content.encode("utf-8")
+            ),
+            "semantic_override_public_sha256": sha256_bytes(
+                semantic_public_content.encode("utf-8")
+            ),
+            "semantic_override_report_payload_sha256": semantic_report[
+                "report_payload_sha256"
+            ],
+        }
+    )
     baseline = BASE_AUDIT.build_inputs()
     replacements = {
         BASE_AUDIT.parse_literal_coordinate(row["coordinate"]):
@@ -605,6 +689,7 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
         "source_decision_segment_count": metadata[
             "source_decision_segment_count"
         ],
+        "semantic_override_rows": metadata["semantic_override_rows"],
         "control_gap_repairs_applied": False,
         "literal_candidate_packed_sha256": inputs.artifact_hashes[
             "pk_full_candidate_packed_sha256"
@@ -654,6 +739,15 @@ def build_report(inputs: Any, metadata: Mapping[str, Any]) -> dict[str, Any]:
             "replacement_manifest_sha256": metadata[
                 "replacement_manifest_sha256"
             ],
+            "semantic_override_private_sha256": metadata[
+                "semantic_override_private_sha256"
+            ],
+            "semantic_override_public_sha256": metadata[
+                "semantic_override_public_sha256"
+            ],
+            "semantic_override_report_payload_sha256": metadata[
+                "semantic_override_report_payload_sha256"
+            ],
         }
     )
     report["pk_source_candidate_closure_guards"] = closure_guards
@@ -697,6 +791,7 @@ def validate_report(
         and candidate_scope.get("source_decision_rows") == EXPECTED_PK_ROWS
         and candidate_scope.get("string_replacement_rows")
         == EXPECTED_STRING_REPLACEMENTS
+        and candidate_scope.get("semantic_override_rows") == 1
         and candidate_scope.get("literal_candidate_packed_sha256")
         == EXPECTED_FULL_CANDIDATE_SHA256
         and candidate_scope.get("control_gap_repairs_applied") is False,
@@ -723,6 +818,15 @@ def validate_report(
         and report["guards"]["replacement_manifest_sha256"]
         == metadata["replacement_manifest_sha256"],
         "full-candidate row or input guard universe drifted",
+    )
+    require(
+        report["guards"]["semantic_override_private_sha256"]
+        == metadata["semantic_override_private_sha256"]
+        and report["guards"]["semantic_override_public_sha256"]
+        == metadata["semantic_override_public_sha256"]
+        and report["guards"]["semantic_override_report_payload_sha256"]
+        == metadata["semantic_override_report_payload_sha256"],
+        "full-candidate semantic override binding drifted",
     )
     require(
         transition_summary(report) == report["full_candidate_transitions"],

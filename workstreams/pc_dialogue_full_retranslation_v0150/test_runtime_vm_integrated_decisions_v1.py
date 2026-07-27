@@ -81,11 +81,17 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 23_104)
-        self.assertEqual(report["result"]["runtime_review_pending"], 13_231)
+        self.assertEqual(report["promotions"]["promoted_total"], 24_993)
+        self.assertEqual(report["result"]["runtime_review_pending"], 11_341)
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            7_453,
+            9_342,
+        )
+        self.assertEqual(
+            report["promotions"]["pk_msggame"]["residual"][
+                "promotion_count"
+            ],
+            1_889,
         )
         self.assertTrue(
             report["promotions"]["pk_msggame"]["full_candidate_bound"]
@@ -93,7 +99,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            13_231,
+            11_341,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
@@ -108,6 +114,8 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             for row in self.rows
             if row["resource"] == "pk_msggame"
             and row["runtime_review"] == "verified"
+            and row["runtime_vm_verification"]["method"]
+            == "reversed_vm_full_candidate_static_analysis"
         )
         self.validate_rows([source])
 
@@ -122,6 +130,30 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         ] = "0" * 64
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([tampered])
+
+    def test_pk_residual_row_binds_runtime_and_layout_transitions(self) -> None:
+        source = next(
+            row
+            for row in self.rows
+            if row["resource"] == "pk_msggame"
+            and row["runtime_review"] == "verified"
+            and row["runtime_vm_verification"]["method"]
+            == "reversed_vm_residual_full_closure_nonexpansion_analysis"
+        )
+        self.assertEqual(source["layout_review"], "runtime_verified")
+        self.validate_rows([source])
+
+        bad_layout = copy.deepcopy(source)
+        bad_layout["layout_review"] = "runtime_pending"
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([bad_layout])
+
+        bad_evidence = copy.deepcopy(source)
+        bad_evidence["runtime_vm_verification"]["layout_transition"][
+            "to"
+        ] = "runtime_pending"
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([bad_evidence])
 
 
 if __name__ == "__main__":

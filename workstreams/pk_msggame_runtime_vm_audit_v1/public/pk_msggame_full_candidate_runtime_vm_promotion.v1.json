@@ -9,11 +9,11 @@
   "evidence": {
     "all_rows_recomputed_from_full_candidate": true,
     "coverage_report": "workstreams/pk_msggame_runtime_vm_audit_v1/public/pk_msggame_full_candidate_runtime_vm_coverage.v1.json",
-    "coverage_report_file_sha256": "F0CE6A83E13E33EE5F18D8EBE10C207ACDA4E339442429E3394765D989D69B78",
-    "coverage_report_payload_sha256": "5F4CC86B586128D63ED7153BDBBB51E3709FE16E8678065A330A806E2BAB614B",
+    "coverage_report_file_sha256": "99FF832F2EB74DB205DE37B0079FA275471BF31A224F81E3FF422003A9B2D910",
+    "coverage_report_payload_sha256": "899B84A721D7881D1A75EEE7BB2E8491B864DB2EC001640AC4B2760ADF74FE54",
     "pair_guard_universe_sha256": "2AC038F7833AB871906E7CF2096E281F75681B3ED6BDE380B6A57BBB5B10F305",
-    "replacement_manifest_sha256": "FCCCB62A7DA6D5EE8DCA886661058086D5EFC56D9BCF8ED696505CC6B6063CDA",
-    "row_guard_universe_sha256": "80381562703C45EE82D44EBC388EB78CB7A09DD1139D187D30951C6AADF3D5C3"
+    "replacement_manifest_sha256": "E920E5DD7AE52C406433570B596B67EA6F0E942DC13430A26214D8F376078D80",
+    "row_guard_universe_sha256": "62B51524EF6B20BBF66BE995C60BB3CB0DE77BCDB10D7E1FEED3E78727104289"
   },
   "exclusion_policy": {
     "blocked_rows_included": 0,
@@ -22,7 +22,7 @@
   },
   "input": {
     "blocked_rows_excluded": 2317,
-    "full_candidate_packed_sha256": "5480D65CE6BF15A35549FE6013DC7F03787A5713E06BDD3E2C50418F31B1CA22",
+    "full_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
     "promotion_eligible_rows": 7453,
     "runtime_pending_exact_reuse_rows": 9770
   },
@@ -36,7 +36,7 @@
   "result": {
     "eligible_coordinate_universe_sha256": "0D9D424C2EEBBD652EFF807BEF604164C9691011839C724658F5808BD4A64147",
     "private_overlay_rows": 7453,
-    "private_overlay_sha256": "8027F9D4D2CDE4AE21C2B0994B84DAAEC1FCD8D6FDD48EC99752B0B3B72D90C1",
+    "private_overlay_sha256": "F6704365880F135E29CE4D0FF4DEA474F07E71AA6A6A4B359ADD8660B769D160",
     "translation_body_copied": false
   },
   "schema": "nobu16.kr.pk-msggame-full-candidate-runtime-vm-promotion.v1",

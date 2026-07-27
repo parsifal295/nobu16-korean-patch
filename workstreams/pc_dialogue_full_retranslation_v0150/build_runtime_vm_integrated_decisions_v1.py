@@ -57,6 +57,35 @@ PK_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_full_candidate_runtime_vm_promotion.v1.json"
 )
+PK_RESIDUAL_OVERLAY_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_msggame_residual_runtime_verified_overlay_v1.py"
+)
+PK_RESIDUAL_OVERLAY_PATH = (
+    DECISIONS_DIR
+    / "runtime_verification_overlays"
+    / "pk_msggame_residual_runtime_vm_verified.private.v1.jsonl"
+)
+PK_RESIDUAL_PROMOTION_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_residual_runtime_vm_promotion.v1.json"
+)
+SEMANTIC_OVERRIDE_BUILDER_PATH = (
+    WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
+)
+SEMANTIC_OVERRIDE_PRIVATE_PATH = (
+    OUTPUT_ROOT
+    / "semantic_overrides"
+    / "pk_msggame_3421_semantic_override.private.v1.jsonl"
+)
+SEMANTIC_OVERRIDE_PUBLIC_PATH = (
+    WORKSTREAM / "pk_semantic_flattening_3421.source_free.v1.json"
+)
 DEFAULT_PRIVATE_OUTPUT = OUTPUT_ROOT / "runtime_vm_integrated.private.v1.jsonl"
 DEFAULT_PUBLIC_OUTPUT = WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
 
@@ -68,11 +97,14 @@ EXPECTED_VISIBLE_ROWS = 52_803
 EXPECTED_BASE_ROWS = 23_765
 EXPECTED_PK_ROWS = 29_038
 EXPECTED_BASE_PROMOTIONS = 15_651
-EXPECTED_PK_INTEGRATED_PROMOTIONS = 7_453
-EXPECTED_PENDING_AFTER = 13_231
+EXPECTED_PK_EXACT_PROMOTIONS = 7_453
+EXPECTED_PK_RESIDUAL_PROMOTIONS = 1_889
+EXPECTED_PK_INTEGRATED_PROMOTIONS = 9_342
+EXPECTED_PENDING_AFTER = 11_341
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
+        "layout_review",
         "runtime_review",
         "runtime_vm_verification",
     }
@@ -101,6 +133,14 @@ ENGINE = load_module("pc_dialogue_runtime_vm_integration_engine", ENGINE_PATH)
 PK_OVERLAY = load_module(
     "pc_dialogue_runtime_vm_integration_pk_overlay",
     PK_OVERLAY_BUILDER_PATH,
+)
+PK_RESIDUAL_OVERLAY = load_module(
+    "pc_dialogue_runtime_vm_integration_pk_residual_overlay",
+    PK_RESIDUAL_OVERLAY_BUILDER_PATH,
+)
+SEMANTIC_OVERRIDE = load_module(
+    "pc_dialogue_runtime_vm_integration_semantic_override",
+    SEMANTIC_OVERRIDE_BUILDER_PATH,
 )
 
 
@@ -265,7 +305,10 @@ def load_control_repairs(
             == source.get("scope_classification")
             and entry.get("original_runtime_review")
             == source.get("runtime_review")
-            and entry.get("repair_candidate_required_for_release") is True
+            and entry.get("repair_candidate_required_for_release") is False
+            and entry.get("repair_candidate_application_forbidden") is True
+            and entry.get("repair_status") == "rejected_not_required"
+            and entry.get("adjudication") == "repair_not_required"
             and entry.get("steam_write_performed") is False,
             f"runtime control repair source binding drifted: {key}",
         )
@@ -273,6 +316,63 @@ def load_control_repairs(
     return repairs, {
         "entry_count": len(repairs),
         "sha256": sha256_bytes(CONTROL_REPAIRS_PATH.read_bytes()),
+    }
+
+
+def validated_semantic_override(
+    source_rows: Mapping[tuple[str, str], dict[str, Any]],
+) -> tuple[tuple[str, str], dict[str, Any], dict[str, Any]]:
+    private_content, public_content, report, row = (
+        SEMANTIC_OVERRIDE.build_outputs()
+    )
+    SEMANTIC_OVERRIDE.validate_outputs(
+        private_content,
+        public_content,
+        report,
+        row,
+    )
+    require(
+        SEMANTIC_OVERRIDE_PRIVATE_PATH.is_file()
+        and SEMANTIC_OVERRIDE_PRIVATE_PATH.read_text(encoding="utf-8")
+        == private_content,
+        "private semantic override drifted",
+    )
+    require(
+        SEMANTIC_OVERRIDE_PUBLIC_PATH.is_file()
+        and SEMANTIC_OVERRIDE_PUBLIC_PATH.read_text(encoding="utf-8")
+        == public_content,
+        "tracked semantic override report drifted",
+    )
+    key = (str(row["resource"]), str(row["coordinate"]))
+    original = source_rows.get(key)
+    require(
+        original is not None
+        and key == ("pk_msggame", "6:3421:0")
+        and row.get("semantic_review") == "approved"
+        and row.get("runtime_review") == "not_required"
+        and row.get("layout_review") == "unchanged_from_current"
+        and isinstance(row.get("semantic_flattening_verification"), dict),
+        "semantic override row contract drifted",
+    )
+    require(
+        original.get("source_record_raw_sha256")
+        == row.get("source_record_raw_sha256")
+        and original.get("current_ko_utf16le_sha256")
+        == row.get("current_ko_utf16le_sha256")
+        and original.get("historic_korean_used") is False
+        and row.get("historic_korean_used") is False
+        and original.get("switch_korean_used") is False
+        and row.get("switch_korean_used") is False,
+        "semantic override changed a source or authority guard",
+    )
+    return key, row, {
+        "override_count": 1,
+        "private_sha256": sha256_bytes(private_content.encode("utf-8")),
+        "public_report_sha256": sha256_bytes(
+            public_content.encode("utf-8")
+        ),
+        "report_payload_sha256": report["report_payload_sha256"],
+        "coordinate": key[1],
     }
 
 
@@ -373,18 +473,88 @@ def validated_pk_overlay() -> tuple[
         == sha256_bytes(PK_OVERLAY_PATH.read_bytes()),
         "PK VM promotion report drifted",
     )
+    require(
+        len(rows) == EXPECTED_PK_EXACT_PROMOTIONS,
+        "PK exact VM overlay completeness drifted",
+    )
+    (
+        residual_private_content,
+        residual_public_content,
+        residual_promotion,
+        residual_context,
+    ) = PK_RESIDUAL_OVERLAY.build_outputs()
+    residual_coverage = residual_context["coverage"]
+    residual_coverage_file_sha256 = residual_context[
+        "coverage_file_sha256"
+    ]
+    residual_inputs = residual_context["inputs"]
+    require(
+        PK_RESIDUAL_OVERLAY_PATH.is_file()
+        and PK_RESIDUAL_OVERLAY_PATH.read_text(encoding="utf-8")
+        == residual_private_content,
+        "tracked PK residual overlay drifted",
+    )
+    require(
+        PK_RESIDUAL_PROMOTION_PATH.is_file()
+        and PK_RESIDUAL_PROMOTION_PATH.read_text(encoding="utf-8")
+        == residual_public_content,
+        "tracked PK residual promotion report drifted",
+    )
+    residual_rows = PK_RESIDUAL_OVERLAY.read_overlay(
+        PK_RESIDUAL_OVERLAY_PATH
+    )
+    PK_RESIDUAL_OVERLAY.validate_overlay_rows(
+        residual_rows,
+        inputs=residual_inputs,
+        report=residual_coverage,
+        report_file_sha256=residual_coverage_file_sha256,
+    )
+    require(
+        residual_promotion.get("schema")
+        == "nobu16.kr.pk-msggame-residual-runtime-vm-promotion.v1"
+        and residual_promotion.get("status") == "PASS"
+        and residual_promotion.get("steam_write_performed") is False
+        and residual_promotion.get("result", {}).get(
+            "private_overlay_sha256"
+        )
+        == sha256_bytes(PK_RESIDUAL_OVERLAY_PATH.read_bytes())
+        and len(residual_rows) == EXPECTED_PK_RESIDUAL_PROMOTIONS,
+        "PK residual VM promotion report drifted",
+    )
     by_coordinate = {str(row["coordinate"]): row for row in rows}
+    for row in residual_rows:
+        coordinate = str(row["coordinate"])
+        require(
+            coordinate not in by_coordinate,
+            f"PK exact/residual overlay overlap: {coordinate}",
+        )
+        by_coordinate[coordinate] = row
     require(
         len(by_coordinate)
-        == len(rows)
         == EXPECTED_PK_INTEGRATED_PROMOTIONS,
         "PK VM overlay completeness drifted",
     )
     return by_coordinate, {
-        "promotion_count": len(rows),
-        "private_sha256": sha256_bytes(PK_OVERLAY_PATH.read_bytes()),
-        "promotion_report_sha256": sha256_bytes(PK_PROMOTION_PATH.read_bytes()),
-        "coverage_file_sha256": coverage_file_sha256,
+        "promotion_count": len(by_coordinate),
+        "exact": {
+            "promotion_count": len(rows),
+            "private_sha256": sha256_bytes(PK_OVERLAY_PATH.read_bytes()),
+            "promotion_report_sha256": sha256_bytes(
+                PK_PROMOTION_PATH.read_bytes()
+            ),
+            "coverage_file_sha256": coverage_file_sha256,
+        },
+        "residual": {
+            "promotion_count": len(residual_rows),
+            "private_sha256": sha256_bytes(
+                PK_RESIDUAL_OVERLAY_PATH.read_bytes()
+            ),
+            "promotion_report_sha256": sha256_bytes(
+                PK_RESIDUAL_PROMOTION_PATH.read_bytes()
+            ),
+            "coverage_file_sha256": residual_coverage_file_sha256,
+            "layout_transition_bound": True,
+        },
         "full_candidate_bound": True,
     }
 
@@ -428,6 +598,10 @@ def build_outputs(
     )
     repairs, repair_metadata = load_control_repairs(source_rows, segment_paths)
     merged = {key: dict(row) for key, row in source_rows.items()}
+    semantic_key, semantic_row, semantic_metadata = (
+        validated_semantic_override(source_rows)
+    )
+    merged[semantic_key] = semantic_row
     for key, entry in repairs.items():
         merged[key]["scope_classification"] = entry[
             "effective_scope_classification"
@@ -456,6 +630,20 @@ def build_outputs(
         promoted = dict(row)
         promoted["scope_classification"] = "retranslated"
         promoted["runtime_review"] = "verified"
+        if (
+            evidence.get("method")
+            == "reversed_vm_residual_full_closure_nonexpansion_analysis"
+        ):
+            require(
+                row.get("layout_review") == "runtime_pending"
+                and evidence.get("layout_transition")
+                == {
+                    "from": "runtime_pending",
+                    "to": "runtime_verified",
+                },
+                f"PK residual layout transition drifted: {coordinate}",
+            )
+            promoted["layout_review"] = "runtime_verified"
         promoted["runtime_vm_verification"] = evidence
         validate_runtime_only_transition(
             row,
@@ -517,6 +705,7 @@ def build_outputs(
             "runtime_control_repairs": repair_metadata,
         },
         "promotions": {
+            "semantic_override": semantic_metadata,
             "base_msggame": base_metadata,
             "pk_msggame": pk_metadata,
             "promoted_total": (
@@ -539,6 +728,7 @@ def build_outputs(
             "pk_overlay_rebuilt_and_rechecked": True,
             "pk_full_candidate_records_and_closures_rechecked": True,
             "control_repair_bindings_rechecked": True,
+            "semantic_override_rebuilt_and_rechecked": True,
             "per_row_game_playback_required_for_promotions": False,
             "representative_game_smoke_test_required_before_release": True,
         },

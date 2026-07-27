@@ -6,12 +6,12 @@
   },
   "input": {
     "base_rows": 23765,
-    "effective_runtime_pending_after_control_repairs": 36335,
+    "effective_runtime_pending_after_control_repairs": 36334,
     "pk_rows": 29038,
     "raw_runtime_pending": 36334,
     "runtime_control_repairs": {
       "entry_count": 2,
-      "sha256": "240D504BDA7D92021E37A6E2387B84BBD7249C6ED2362F57CE61177EFC51F8AB"
+      "sha256": "CF725E2989D4225752709A9A07F7D1B663CDD1BBFDA4DEDD605F66CBF71FD74B"
     },
     "source_segment_universe_sha256": "20C1541171E6D8F69CB393E416590F80F3AD27551E02E1981BAC2E8E0C7330C5",
     "visible_decision_rows": 52803
@@ -23,21 +23,38 @@
       "promotion_report_sha256": "940ABA9223E53D467B3D63CB3ADF08D5A24E86FEAC7B391D7055CC96F3A17580"
     },
     "pk_msggame": {
-      "coverage_file_sha256": "F0CE6A83E13E33EE5F18D8EBE10C207ACDA4E339442429E3394765D989D69B78",
+      "exact": {
+        "coverage_file_sha256": "99FF832F2EB74DB205DE37B0079FA275471BF31A224F81E3FF422003A9B2D910",
+        "private_sha256": "F6704365880F135E29CE4D0FF4DEA474F07E71AA6A6A4B359ADD8660B769D160",
+        "promotion_count": 7453,
+        "promotion_report_sha256": "A3FC592ADFC5B3E96E63573010CA06B9025D6217187F0F79A8EBF715A5447474"
+      },
       "full_candidate_bound": true,
-      "private_sha256": "8027F9D4D2CDE4AE21C2B0994B84DAAEC1FCD8D6FDD48EC99752B0B3B72D90C1",
-      "promotion_count": 7453,
-      "promotion_report_sha256": "69E7B623349D5E2159BDF24113C686D8CFECE91647DB670D154C63FA097F970D"
+      "promotion_count": 9342,
+      "residual": {
+        "coverage_file_sha256": "48FC1C61855022136AD425AA35FB3108950487EEA96274D828D4C502E7DCF279",
+        "layout_transition_bound": true,
+        "private_sha256": "376BF47FB834BC6214F87AEEAFE91F938DDE58B6D11569C0163261C5E9FAC9BF",
+        "promotion_count": 1889,
+        "promotion_report_sha256": "989C4FD73349DA389DDEA911AED664DD50602DAEBCB87AE63137269AA756D0DF"
+      }
     },
-    "promoted_total": 23104
+    "promoted_total": 24993,
+    "semantic_override": {
+      "coordinate": "6:3421:0",
+      "override_count": 1,
+      "private_sha256": "226BAFFD8B783264609B24B5DD9B6991F5FD6DEEDD8CF1A5F9325FE5D922E92D",
+      "public_report_sha256": "7D2DECA73B1D37AD741BC0D101028FE3E2CC0383526973B15325AD5F0E77E9F1",
+      "report_payload_sha256": "0AB600F8FA8E2E65C37D6C3BF3724F1AFE8D9D5FF622A5111C485D2A7E5015F2"
+    }
   },
   "release_target": "0.15.0",
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 39572,
-    "private_integrated_decision_sha256": "3155D5BE4D78910E46B295B81ACAA5EB9E03561948D8FF77FA19FE449F34CFE8",
-    "runtime_review_pending": 13231,
+    "fully_candidate_eligible": 41462,
+    "private_integrated_decision_sha256": "2ED6B6DB9C7AA41976D37FF6C61BCA9D91B0014D775FB478FD235D3874F15CE6",
+    "runtime_review_pending": 11341,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
@@ -51,6 +68,7 @@
     "pk_full_candidate_records_and_closures_rechecked": true,
     "pk_overlay_rebuilt_and_rechecked": true,
     "representative_game_smoke_test_required_before_release": true,
-    "runtime_only_transitions_enforced": true
+    "runtime_only_transitions_enforced": true,
+    "semantic_override_rebuilt_and_rechecked": true
   }
 }

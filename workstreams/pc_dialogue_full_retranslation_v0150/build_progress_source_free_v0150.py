@@ -30,6 +30,17 @@ RUNTIME_VM_INTEGRATED_DECISIONS = (
 RUNTIME_VM_INTEGRATION_REPORT = (
     WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
 )
+SEMANTIC_OVERRIDE_BUILDER_PATH = (
+    WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
+)
+SEMANTIC_OVERRIDE_PRIVATE_PATH = (
+    OUTPUT_ROOT
+    / "semantic_overrides"
+    / "pk_msggame_3421_semantic_override.private.v1.jsonl"
+)
+SEMANTIC_OVERRIDE_PUBLIC_PATH = (
+    WORKSTREAM / "pk_semantic_flattening_3421.source_free.v1.json"
+)
 CONTROL_REPAIRS_SCHEMA = (
     "nobu16.kr.pc-dialogue-full-retranslation-runtime-control-repairs.v1"
 )
@@ -50,6 +61,24 @@ def load_engine() -> Any:
 
 
 ENGINE = load_engine()
+
+
+def load_semantic_override_builder() -> Any:
+    spec = importlib.util.spec_from_file_location(
+        "pc_dialogue_progress_semantic_override",
+        SEMANTIC_OVERRIDE_BUILDER_PATH,
+    )
+    if spec is None or spec.loader is None:
+        raise RuntimeError(
+            f"cannot import {SEMANTIC_OVERRIDE_BUILDER_PATH}"
+        )
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+SEMANTIC_OVERRIDE = load_semantic_override_builder()
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -106,6 +135,7 @@ def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
         if key
         not in {
             "scope_classification",
+            "layout_review",
             "runtime_review",
             "runtime_vm_verification",
         }
@@ -222,12 +252,19 @@ def load_control_repairs() -> tuple[
         "repair_evidence_schema",
         "repair_candidate_sha256",
         "repair_candidate_required_for_release",
+        "repair_candidate_application_forbidden",
         "repair_status",
+        "adjudication",
         "semantic_decision_duplicate_added",
         "steam_write_performed",
     }
+    allowed_keys = required_keys | {"semantic_override_report"}
     for ordinal, entry in enumerate(entries):
-        if not isinstance(entry, dict) or set(entry) != required_keys:
+        if (
+            not isinstance(entry, dict)
+            or not required_keys.issubset(entry)
+            or not set(entry).issubset(allowed_keys)
+        ):
             raise RuntimeError(
                 f"runtime control repair entry {ordinal} shape drifted"
             )
@@ -255,10 +292,12 @@ def load_control_repairs() -> tuple[
         if (
             entry["semantic_decision_duplicate_added"] is not False
             or entry["steam_write_performed"] is not False
-            or entry["repair_candidate_required_for_release"] is not True
-            or entry["repair_status"] != "prepared_pending_runtime_validation"
-            or effective_scope != "runtime_fragment_pending"
-            or effective_runtime != "pending"
+            or entry["repair_candidate_required_for_release"] is not False
+            or entry["repair_candidate_application_forbidden"] is not True
+            or entry["repair_status"] != "rejected_not_required"
+            or entry["adjudication"] != "repair_not_required"
+            or effective_scope != original_scope
+            or effective_runtime != original_runtime
         ):
             raise RuntimeError(
                 f"runtime control repair safety state drifted: "
@@ -280,6 +319,47 @@ def load_control_repairs() -> tuple[
     return repairs, metadata
 
 
+def load_semantic_override() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    private_content, public_content, report, row = (
+        SEMANTIC_OVERRIDE.build_outputs()
+    )
+    SEMANTIC_OVERRIDE.validate_outputs(
+        private_content,
+        public_content,
+        report,
+        row,
+    )
+    if (
+        not SEMANTIC_OVERRIDE_PRIVATE_PATH.is_file()
+        or SEMANTIC_OVERRIDE_PRIVATE_PATH.read_text(encoding="utf-8")
+        != private_content
+        or not SEMANTIC_OVERRIDE_PUBLIC_PATH.is_file()
+        or SEMANTIC_OVERRIDE_PUBLIC_PATH.read_text(encoding="utf-8")
+        != public_content
+    ):
+        raise RuntimeError("semantic override artifacts drifted")
+    key = (str(row["resource"]), str(row["coordinate"]))
+    if (
+        key != ("pk_msggame", "6:3421:0")
+        or row.get("semantic_review") != "approved"
+    ):
+        raise RuntimeError("semantic override row contract drifted")
+    return {key: row}, {
+        "coordinate": key[1],
+        "override_count": 1,
+        "private_sha256": sha256_bytes(
+            private_content.encode("utf-8")
+        ),
+        "public_report_sha256": sha256_bytes(
+            public_content.encode("utf-8")
+        ),
+        "report_payload_sha256": report["report_payload_sha256"],
+    }
+
+
 def build_progress() -> dict[str, Any]:
     prepared = ENGINE.prepare_artifacts(
         ENGINE.DEFAULT_STEAM_ROOT,
@@ -291,6 +371,10 @@ def build_progress() -> dict[str, Any]:
         raise RuntimeError(f"no private decision segments found below {DECISIONS_DIR}")
     control_repairs, control_repair_metadata = load_control_repairs()
     consumed_control_repairs: set[tuple[str, str]] = set()
+    semantic_overrides, semantic_override_metadata = (
+        load_semantic_override()
+    )
+    consumed_semantic_overrides: set[tuple[str, str]] = set()
     runtime_vm_integrated, runtime_vm_integration_metadata = (
         load_runtime_vm_integration(prepared)
     )
@@ -346,7 +430,11 @@ def build_progress() -> dict[str, Any]:
             runtime_review = str(row["runtime_review"])
             if runtime_review not in RUNTIME_REVIEW_STATES:
                 raise RuntimeError(f"invalid runtime review in {path}: {key}")
-            effective_row = row
+            effective_row = semantic_overrides.get(key, row)
+            if effective_row is not row:
+                classification = str(effective_row["scope_classification"])
+                runtime_review = str(effective_row["runtime_review"])
+                consumed_semantic_overrides.add(key)
             repair = control_repairs.get(key)
             if repair is not None:
                 if (
@@ -364,7 +452,7 @@ def build_progress() -> dict[str, Any]:
                     raise RuntimeError(
                         f"runtime control repair source binding drifted: {key}"
                     )
-                effective_row = dict(row)
+                effective_row = dict(effective_row)
                 classification = str(
                     repair["effective_scope_classification"]
                 )
@@ -393,9 +481,35 @@ def build_progress() -> dict[str, Any]:
                     raise RuntimeError(
                         f"runtime VM promotion lacks row evidence: {key}"
                     )
+                if integrated_row.get("layout_review") != effective_row.get(
+                    "layout_review"
+                ):
+                    if not (
+                        effective_row.get("layout_review")
+                        == "runtime_pending"
+                        and integrated_row.get("layout_review")
+                        == "runtime_verified"
+                        and evidence.get("method")
+                        == "reversed_vm_residual_full_closure_nonexpansion_analysis"
+                        and evidence.get("layout_transition")
+                        == {
+                            "from": "runtime_pending",
+                            "to": "runtime_verified",
+                        }
+                    ):
+                        raise RuntimeError(
+                            "unsupported runtime layout transition: "
+                            f"{key}"
+                        )
             elif integrated_row.get("runtime_review") != runtime_review:
                 raise RuntimeError(
                     f"unsupported runtime VM state transition: {key}"
+                )
+            elif integrated_row.get("layout_review") != effective_row.get(
+                "layout_review"
+            ):
+                raise RuntimeError(
+                    f"layout changed without runtime promotion: {key}"
                 )
             effective_row = integrated_row
             classification = str(effective_row["scope_classification"])
@@ -450,6 +564,13 @@ def build_progress() -> dict[str, Any]:
         missing = sorted(set(control_repairs) - consumed_control_repairs)
         raise RuntimeError(
             f"runtime control repairs were not bound to decisions: {missing}"
+        )
+    if consumed_semantic_overrides != set(semantic_overrides):
+        missing = sorted(
+            set(semantic_overrides) - consumed_semantic_overrides
+        )
+        raise RuntimeError(
+            f"semantic overrides were not bound to decisions: {missing}"
         )
     if consumed_runtime_vm_integrated != set(runtime_vm_integrated):
         missing = sorted(
@@ -514,6 +635,12 @@ def build_progress() -> dict[str, Any]:
             "effective_runtime_review_pending": sum(
                 repair["effective_runtime_review"] == "pending"
                 for repair in control_repairs.values()
+            ),
+        },
+        "semantic_override": {
+            **semantic_override_metadata,
+            "consumed_override_count": len(
+                consumed_semantic_overrides
             ),
         },
         "runtime_vm_integration": runtime_vm_integration_metadata,

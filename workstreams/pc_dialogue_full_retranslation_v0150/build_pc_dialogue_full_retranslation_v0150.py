@@ -91,6 +91,19 @@ PK_FULL_CANDIDATE_RUNTIME_VM_PROMOTION_PATH = (
     / "public"
     / "pk_msggame_full_candidate_runtime_vm_promotion.v1.json"
 )
+PK_RESIDUAL_RUNTIME_VM_OVERLAY_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_msggame_residual_runtime_vm_verified.private.v1.jsonl"
+)
+PK_RESIDUAL_RUNTIME_VM_PROMOTION_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_msggame_residual_runtime_vm_promotion.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -122,14 +135,21 @@ PK_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
 PK_FULL_CANDIDATE_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
     "nobu16.kr.pk-msggame-full-candidate-runtime-vm-verification-overlay-row.v1"
 )
+PK_RESIDUAL_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
+    "nobu16.kr.pk-msggame-residual-runtime-vm-verification-overlay-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
+)
+PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_residual_full_closure_nonexpansion_analysis"
 )
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
         PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 SOURCE_OUTER_WHITESPACE_REPAIR_EVIDENCE_SCHEMA = (
@@ -661,6 +681,13 @@ def load_pk_runtime_vm_overlays() -> dict[
             PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD,
             "nobu16.kr.pk-msggame-full-candidate-runtime-vm-promotion.v1",
         ),
+        (
+            PK_RESIDUAL_RUNTIME_VM_OVERLAY_PATH,
+            PK_RESIDUAL_RUNTIME_VM_PROMOTION_PATH,
+            PK_RESIDUAL_RUNTIME_VM_OVERLAY_ROW_SCHEMA,
+            PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD,
+            "nobu16.kr.pk-msggame-residual-runtime-vm-promotion.v1",
+        ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
     for (
@@ -738,6 +765,18 @@ def load_pk_runtime_vm_overlays() -> dict[
             ):
                 raise RetranslationError(
                     "PK runtime VM overlay evidence is incomplete: "
+                    f"{coordinate}"
+                )
+            if (
+                method == PK_RESIDUAL_RUNTIME_VM_VERIFICATION_METHOD
+                and row.get("layout_transition")
+                != {
+                    "from": "runtime_pending",
+                    "to": "runtime_verified",
+                }
+            ):
+                raise RetranslationError(
+                    "PK residual runtime VM overlay lacks its layout proof: "
                     f"{coordinate}"
                 )
             rows[key] = row
