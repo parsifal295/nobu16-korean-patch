@@ -28185,6 +28185,50 @@
       "steam_write_performed": false
     },
     {
+      "segment_id": "pk_msggame_B094_S1286",
+      "resource": "pk_msggame",
+      "first_coordinate": "9:3064:0",
+      "last_coordinate": "9:3126:0",
+      "decision_count": 19,
+      "semantic_review_approved": 19,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 19,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 19
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B094"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
+      "segment_id": "pk_msggame_B094_S1288",
+      "resource": "pk_msggame",
+      "first_coordinate": "9:3239:0",
+      "last_coordinate": "9:3250:0",
+      "decision_count": 12,
+      "semantic_review_approved": 12,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 12,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 12
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B094"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
       "segment_id": "pk_msggame_base_exact_reuse_prefill",
       "resource": "pk_msggame",
       "first_coordinate": "2:242:0",
@@ -31753,15 +31797,15 @@
       "first_record_coordinate": "9:3064",
       "last_record_coordinate": "9:3263",
       "visible_target_count": 200,
-      "decision_count": 169,
-      "runtime_review_pending": 0,
+      "decision_count": 200,
+      "runtime_review_pending": 31,
       "fully_candidate_eligible": 169,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
         "retranslated": 169,
-        "runtime_fragment_pending": 0
+        "runtime_fragment_pending": 31
       },
-      "semantic_complete": false
+      "semantic_complete": true
     },
     {
       "batch_id": "pk_msggame-B095",
@@ -32501,13 +32545,13 @@
     }
   ],
   "totals": {
-    "semantic_review_approved": 47777,
-    "runtime_review_pending": 31353,
+    "semantic_review_approved": 47808,
+    "runtime_review_pending": 31384,
     "fully_candidate_eligible": 16424,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
       "retranslated": 16079,
-      "runtime_fragment_pending": 31353
+      "runtime_fragment_pending": 31384
     },
     "semantic_completion": false,
     "candidate_build_complete": false
