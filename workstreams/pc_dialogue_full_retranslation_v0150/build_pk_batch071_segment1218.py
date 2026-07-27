@@ -476,7 +476,8 @@ def base_and_assembly_evidence(
                 if (
                     prefill is None
                     or prefill.get("semantic_review") != "approved"
-                    or prefill.get("runtime_review") != "pending"
+                    or prefill.get("runtime_review")
+                    not in {"pending", "not_required"}
                     or prefill["base_exact_reuse_prefill"][
                         "runtime_promotion_authorized"
                     ]
