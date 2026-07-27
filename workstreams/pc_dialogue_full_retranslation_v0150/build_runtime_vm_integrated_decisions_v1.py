@@ -150,6 +150,12 @@ BOUND_TERMINAL_CALLER_BUILDER_PATH = (
     / "pk_msggame_runtime_vm_audit_v1"
     / "build_pk_bound_terminal_caller_full_closure_v1.py"
 )
+BOUND_TERMINAL_2546_FULL_CALLER_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_bound_terminal_2546_full_caller_closure_v1.py"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -190,6 +196,8 @@ EXPECTED_THOUGHT_PREDICATE_FAMILY_PROMOTIONS = 23
 EXPECTED_PK_THOUGHT_PREDICATE_FINAL_PROMOTIONS = 12_065
 EXPECTED_BOUND_TERMINAL_CALLER_PROMOTIONS = 41
 EXPECTED_PK_BOUND_TERMINAL_CALLER_FINAL_PROMOTIONS = 12_106
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTIONS = 364
+EXPECTED_PK_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PROMOTIONS = 12_470
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
 EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
 EXPECTED_PENDING_AFTER = 8_702
@@ -197,6 +205,7 @@ EXPECTED_FINAL_PENDING_AFTER = 8_645
 EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER = 8_641
 EXPECTED_THOUGHT_PREDICATE_FINAL_PENDING_AFTER = 8_618
 EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PENDING_AFTER = 8_577
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PENDING_AFTER = 8_213
 EXPECTED_POST_CROSS_PRIVATE_SHA256 = (
     "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC"
 )
@@ -239,6 +248,56 @@ EXPECTED_BOUND_TERMINAL_CALLER_RENEWAL_MANIFEST_SHA256 = (
 BOUND_TERMINAL_CALLER_OVERLAP_KEY = ("pk_msggame", "15:1068:0")
 BOUND_TERMINAL_CALLER_RENEWAL_REFERENCE_SHA256 = (
     "56766E27D4B786BE1ED3AFEDDC61F1743E3C2CEF2A72111EF7F70AE920C680DA"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PRIVATE_SHA256 = (
+    "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_CANDIDATE_SHA256 = (
+    "D5F704C82DD9CBDFB92CD6502B90B11D95C883DEA7EFCC1BD50A05A4758B9C0E"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_OVERRIDE_COUNT = 216
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_RENEWAL_COUNT = 292
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_UPDATED_ROW_COUNT = 656
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_REJECTED_PENDING_COUNT = 74
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_ACTION_COUNTS = {
+    "runtime_promotion": 279,
+    "translation_override_and_runtime_promotion": 85,
+    "translation_override_and_verification_renewal": 131,
+    "verification_renewal": 161,
+}
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_AUDIT_SHA256 = (
+    "567FE83E1BD6ED9B4A8D7C1E303CC4760A5DCFB3061C622C55F0565B9960AF57"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTION_SHA256 = (
+    "58F734F65A6D0C48BB245ED0E515A05EF51F844D53D8FA50ECC8A84DEAB4005B"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_DECISION_SHA256 = (
+    "39652CFB6923E43D30D0CF422642C3B996DDC0495E620EFCE1B3B310E5D7D82F"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_EVIDENCE_SHA256 = (
+    "3D5AA831D7F891DEABE0E79667416F96C12366A968F1E662F4519FC1C4025DD6"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_AUDIT_PAYLOAD_SHA256 = (
+    "835A3534A56D7F0446A24A09BEF7BC810B5540FF1202611B70E244F3DEB68DB3"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTION_PAYLOAD_SHA256 = (
+    "B7C1FE333D96587399DEE18639A2738DA0CAD10BCEA2589208E0916B5C6A7707"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_OVERRIDE_COORDINATE_SHA256 = (
+    "212DEF7EE8B508CEA406FF223BADE5E2DC0DC7D7B1EE5255AD828764B6A866B5"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_DECISION_COORDINATE_SHA256 = (
+    "F176E7D99EC74F07AE6041B29EC5CCB3DB36A356B7600CF291B2B61B51ABC349"
+)
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_ASSEMBLY_UPDATE_COUNT = 10
+EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_ASSEMBLY_UPDATE_SHA256 = (
+    "5B434879A5EB34454E65DCC5E6BD7CEC4EAF6E5CE9F1351D624B14DB1B35DE43"
+)
+BOUND_TERMINAL_2546_FULL_CALLER_SUPERSEDED_CALLER_KEYS = frozenset(
+    {
+        ("pk_msggame", "15:277:1"),
+        ("pk_msggame", "15:278:1"),
+    }
 )
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
@@ -291,6 +350,7 @@ DYNAMIC_HONORIFIC_SPACING: Any | None = None
 BOUND_TERMINAL_FAMILY: Any | None = None
 THOUGHT_PREDICATE_FAMILY: Any | None = None
 BOUND_TERMINAL_CALLER: Any | None = None
+BOUND_TERMINAL_2546_FULL_CALLER: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -357,6 +417,16 @@ def load_bound_terminal_caller() -> Any:
             BOUND_TERMINAL_CALLER_BUILDER_PATH,
         )
     return BOUND_TERMINAL_CALLER
+
+
+def load_bound_terminal_2546_full_caller() -> Any:
+    global BOUND_TERMINAL_2546_FULL_CALLER
+    if BOUND_TERMINAL_2546_FULL_CALLER is None:
+        BOUND_TERMINAL_2546_FULL_CALLER = load_module(
+            "pc_dialogue_runtime_vm_bound_terminal_2546_full_caller",
+            BOUND_TERMINAL_2546_FULL_CALLER_BUILDER_PATH,
+        )
+    return BOUND_TERMINAL_2546_FULL_CALLER
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -1850,6 +1920,365 @@ def apply_bound_terminal_caller_updates(
     return promotions, metadata
 
 
+def validated_bound_terminal_2546_full_caller_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, str],
+    dict[str, Any],
+    dict[str, Any],
+]:
+    layer = load_bound_terminal_2546_full_caller()
+    (
+        decision_content,
+        evidence_content,
+        audit_content,
+        promotion_content,
+        audit,
+        bundle,
+    ) = layer.build_outputs()
+    layer.validate_outputs(
+        decision_content=decision_content,
+        evidence_content=evidence_content,
+        audit_content=audit_content,
+        promotion_content=promotion_content,
+        audit=audit,
+        bundle=bundle,
+    )
+    for path, content in (
+        (layer.DEFAULT_DECISION_OUTPUT, decision_content),
+        (layer.DEFAULT_EVIDENCE_OUTPUT, evidence_content),
+        (layer.DEFAULT_AUDIT_OUTPUT, audit_content),
+        (layer.DEFAULT_PROMOTION_OUTPUT, promotion_content),
+    ):
+        require(
+            path.is_file() and path.read_text(encoding="utf-8") == content,
+            f"bound-terminal 2546 full-caller artifact drifted: {path}",
+        )
+    file_hashes = {
+        "audit": sha256_bytes(audit_content.encode("utf-8")),
+        "promotion": sha256_bytes(promotion_content.encode("utf-8")),
+        "decision": sha256_bytes(decision_content.encode("utf-8")),
+        "evidence": sha256_bytes(evidence_content.encode("utf-8")),
+    }
+    require(
+        file_hashes
+        == {
+            "audit": EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_AUDIT_SHA256,
+            "promotion":
+            EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTION_SHA256,
+            "decision":
+            EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_DECISION_SHA256,
+            "evidence":
+            EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_EVIDENCE_SHA256,
+        }
+        and audit["guards"]["report_payload_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_AUDIT_PAYLOAD_SHA256
+        and bundle["promotion"]["guards"]["report_payload_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTION_PAYLOAD_SHA256,
+        "bound-terminal 2546 full-caller frozen artifact digest drifted",
+    )
+    all_predecessors = {
+        (str(resource), str(coordinate)): dict(row)
+        for (resource, coordinate), row
+        in bundle["predecessor_rows"].items()
+    }
+    updates: dict[tuple[str, str], dict[str, Any]] = {}
+    evidence_by_key: dict[tuple[str, str], dict[str, Any]] = {}
+    for evidence in bundle["evidence_rows"]:
+        key = ("pk_msggame", str(evidence["coordinate"]))
+        require(
+            key not in evidence_by_key,
+            f"duplicate bound-terminal 2546 evidence: {key}",
+        )
+        evidence_by_key[key] = dict(evidence)
+    action_counts: Counter[str] = Counter()
+    for row in bundle["updated_rows"]:
+        key = (str(row["resource"]), str(row["coordinate"]))
+        action = str(row.get(layer.UPDATE_ACTION_FIELD))
+        require(
+            key not in updates
+            and key[0] == "pk_msggame"
+            and key in all_predecessors
+            and row.get("runtime_vm_verification") == evidence_by_key.get(key)
+            and row["runtime_vm_verification"].get("method") == layer.METHOD
+            and row["runtime_vm_verification"].get("action") == action,
+            f"bound-terminal 2546 update/evidence binding drifted: {key}",
+        )
+        action_counts[action] += 1
+        updates[key] = dict(row)
+    predecessors = {
+        key: all_predecessors[key]
+        for key in updates
+    }
+    overrides = {
+        str(coordinate): str(translation)
+        for coordinate, translation in bundle["overrides"].items()
+    }
+    promotion = bundle["promotion"]
+    require(
+        len(updates)
+        == len(evidence_by_key)
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_UPDATED_ROW_COUNT
+        and len(overrides)
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_OVERRIDE_COUNT
+        and dict(action_counts)
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_ACTION_COUNTS
+        and promotion["action_counts"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_ACTION_COUNTS
+        and promotion["result"]["runtime_promotion_rows"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTIONS
+        and promotion["result"]["verification_renewal_rows"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_RENEWAL_COUNT
+        and promotion["result"]["rejected_pending_rows"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_REJECTED_PENDING_COUNT
+        and promotion["result"]["pending_rows_after"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PENDING_AFTER
+        and audit["guards"]["candidate_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_CANDIDATE_SHA256
+        and audit["guards"]["override_coordinate_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_OVERRIDE_COORDINATE_SHA256
+        and audit["guards"]["decision_coordinate_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_DECISION_COORDINATE_SHA256,
+        "bound-terminal 2546 layer counts or guards drifted",
+    )
+    metadata = {
+        "translation_override_count":
+        EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_OVERRIDE_COUNT,
+        "verification_renewal_count":
+        EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_RENEWAL_COUNT,
+        "promotion_count":
+        EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTIONS,
+        "updated_row_count":
+        EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_UPDATED_ROW_COUNT,
+        "rejected_pending_count":
+        EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_REJECTED_PENDING_COUNT,
+        "action_counts": dict(sorted(action_counts.items())),
+        "private_source_update_sha256": file_hashes["decision"],
+        "private_source_evidence_sha256": file_hashes["evidence"],
+        "audit_report_sha256": file_hashes["audit"],
+        "audit_report_payload_sha256": audit["guards"][
+            "report_payload_sha256"
+        ],
+        "promotion_report_sha256": file_hashes["promotion"],
+        "promotion_report_payload_sha256": promotion["guards"][
+            "report_payload_sha256"
+        ],
+        "predecessor_integrated_private_sha256": audit["guards"][
+            "predecessor_private_sha256"
+        ],
+        "predecessor_pk_candidate_packed_sha256": audit["guards"][
+            "predecessor_candidate_sha256"
+        ],
+        "pk_candidate_packed_sha256": audit["guards"]["candidate_sha256"],
+        "override_coordinate_sha256": audit["guards"][
+            "override_coordinate_sha256"
+        ],
+        "promotion_coordinate_sha256": audit["guards"][
+            "promotion_coordinate_sha256"
+        ],
+        "renewal_coordinate_sha256": audit["guards"][
+            "renewal_coordinate_sha256"
+        ],
+        "decision_coordinate_sha256": audit["guards"][
+            "decision_coordinate_sha256"
+        ],
+        "steam_write_performed": False,
+    }
+    return updates, predecessors, overrides, bundle["analysis"], metadata
+
+
+def apply_bound_terminal_2546_full_caller_updates(
+    merged: dict[tuple[str, str], dict[str, Any]],
+) -> tuple[int, dict[str, Any]]:
+    layer = load_bound_terminal_2546_full_caller()
+    (
+        updates,
+        predecessors,
+        overrides,
+        _analysis,
+        metadata,
+    ) = validated_bound_terminal_2546_full_caller_updates()
+    require(
+        set(updates) == set(predecessors),
+        "bound-terminal 2546 predecessor/update universe drifted",
+    )
+    promotions = 0
+    renewals = 0
+    override_count = 0
+    assembly_update_coordinates: list[str] = []
+    for key, updated in updates.items():
+        predecessor = merged.get(key)
+        require(
+            predecessor is not None and predecessor == predecessors[key],
+            f"bound-terminal 2546 predecessor row drifted: {key}",
+        )
+        action = str(updated.get(layer.UPDATE_ACTION_FIELD))
+        evidence = updated.get("runtime_vm_verification")
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("schema") == layer.EVIDENCE_SCHEMA
+            and evidence.get("resource") == "pk_msggame"
+            and evidence.get("coordinate") == key[1]
+            and evidence.get("status") == "verified"
+            and evidence.get("method") == layer.METHOD
+            and evidence.get("action") == action
+            and evidence.get("translation_utf16le_sha256")
+            == layer.ENGINE.sha256_text(str(updated.get("translation")))
+            and evidence.get("predecessor_binding")
+            == {
+                "row_sha256": layer.canonical_sha256(predecessor),
+                "checkpoint_sha256":
+                EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PRIVATE_SHA256,
+            }
+            and evidence.get("closure_binding", {}).get("candidate_sha256")
+            == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_CANDIDATE_SHA256
+            and evidence.get("closure_binding", {}).get(
+                "decision_coordinate_sha256"
+            )
+            == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_DECISION_COORDINATE_SHA256
+            and evidence.get("closure_binding", {}).get(
+                "audit_report_file_sha256"
+            )
+            == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_AUDIT_SHA256
+            and evidence.get("closure_binding", {}).get(
+                "audit_report_payload_sha256"
+            )
+            == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_AUDIT_PAYLOAD_SHA256
+            and evidence.get("per_row_game_playback_required") is False,
+            f"bound-terminal 2546 row evidence drifted: {key}",
+        )
+        changed_fields = {
+            field
+            for field in set(predecessor) | set(updated)
+            if predecessor.get(field) != updated.get(field)
+        }
+        override_action = action.startswith("translation_override")
+        expected_changed = {
+            "runtime_vm_verification",
+            layer.UPDATE_ACTION_FIELD,
+        }
+        if override_action:
+            expected_changed.update(
+                {
+                    "translation",
+                    "bound_terminal_2546_exact_override_evidence",
+                }
+            )
+            override_evidence = updated.get(
+                "bound_terminal_2546_exact_override_evidence"
+            )
+            require(
+                key[1] in overrides
+                and updated.get("translation") == overrides[key[1]]
+                and isinstance(override_evidence, dict)
+                and override_evidence.get("schema")
+                == "nobu16.kr.pk-bound-terminal-2546-exact-override.v1"
+                and override_evidence.get("automatic_space_inserted") is False
+                and override_evidence.get("control_bytes_preserved") is True
+                and override_evidence.get("private_handoff_hash_bound") is True
+                and override_evidence.get("translation_utf16le_sha256")
+                == layer.ENGINE.sha256_text(str(updated.get("translation"))),
+                f"bound-terminal 2546 translation override drifted: {key}",
+            )
+            override_count += 1
+        assembly_updated = (
+            predecessor.get("runtime_assembly_evidence")
+            != updated.get("runtime_assembly_evidence")
+        )
+        allowed_changed_fields = {
+            frozenset(
+                expected_changed
+                if predecessor.get("runtime_review") == "verified"
+                else expected_changed | RUNTIME_MUTABLE_FIELDS
+            )
+        }
+        if assembly_updated:
+            assembly_evidence = updated.get("runtime_assembly_evidence")
+            require(
+                override_action
+                and isinstance(assembly_evidence, dict)
+                and assembly_evidence.get("automatic_space_inserted") is False,
+                f"bound-terminal 2546 assembly evidence drifted: {key}",
+            )
+            allowed_changed_fields.add(
+                frozenset(
+                    (
+                        expected_changed
+                        if predecessor.get("runtime_review") == "verified"
+                        else expected_changed | RUNTIME_MUTABLE_FIELDS
+                    )
+                    | {"runtime_assembly_evidence"}
+                )
+            )
+            assembly_update_coordinates.append(key[1])
+        require(
+            frozenset(changed_fields) in allowed_changed_fields,
+            f"bound-terminal 2546 changed-field set drifted: {key}",
+        )
+        if action in {
+            "runtime_promotion",
+            "translation_override_and_runtime_promotion",
+        }:
+            require(
+                predecessor.get("runtime_review") == "pending"
+                and updated.get("runtime_review") == "verified"
+                and updated.get("scope_classification") == "retranslated"
+                and updated.get("layout_review") == "runtime_verified"
+                and evidence.get("preexisting_verified_evidence_renewed")
+                is False,
+                f"bound-terminal 2546 promotion transition drifted: {key}",
+            )
+            promotions += 1
+        elif action in {
+            "verification_renewal",
+            "translation_override_and_verification_renewal",
+        }:
+            require(
+                predecessor.get("runtime_review")
+                == updated.get("runtime_review")
+                == "verified"
+                and evidence.get("preexisting_verified_evidence_renewed")
+                is True,
+                f"bound-terminal 2546 renewal transition drifted: {key}",
+            )
+            renewals += 1
+        else:
+            raise IntegrationError(
+                f"bound-terminal 2546 action is invalid: {key}"
+            )
+        if key in BOUND_TERMINAL_2546_FULL_CALLER_SUPERSEDED_CALLER_KEYS:
+            require(
+                predecessor.get("terminal_family_update_action")
+                == updated.get("terminal_family_update_action")
+                == "verification_renewal"
+                and predecessor.get("bound_terminal_caller_update_action")
+                == updated.get("bound_terminal_caller_update_action")
+                == "translation_override_and_verification_renewal"
+                and action
+                == "translation_override_and_verification_renewal",
+                f"bound-terminal 2546 caller supersession drifted: {key}",
+            )
+        merged[key] = dict(updated)
+    require(
+        promotions == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTIONS
+        and renewals == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_RENEWAL_COUNT
+        and override_count
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_OVERRIDE_COUNT
+        and len(assembly_update_coordinates)
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_ASSEMBLY_UPDATE_COUNT
+        and layer.coordinate_digest(assembly_update_coordinates)
+        == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_ASSEMBLY_UPDATE_SHA256,
+        "bound-terminal 2546 applied action counts drifted",
+    )
+    metadata["runtime_assembly_evidence_update_count"] = len(
+        assembly_update_coordinates
+    )
+    metadata["runtime_assembly_evidence_update_coordinate_sha256"] = (
+        layer.coordinate_digest(assembly_update_coordinates)
+    )
+    return promotions, metadata
+
+
 def validate_combined_private(
     prepared: Any,
     content: str,
@@ -1884,6 +2313,7 @@ def build_outputs(
     include_bound_terminal_family: bool = False,
     include_thought_predicate_family: bool = False,
     include_bound_terminal_caller: bool = False,
+    include_bound_terminal_2546_full_caller: bool = False,
 ) -> tuple[str, str, dict[str, Any]]:
     if include_cross_resource is None:
         include_cross_resource = include_pk_only
@@ -1909,6 +2339,14 @@ def build_outputs(
         include_thought_predicate_family
         or not include_bound_terminal_caller,
         "bound-terminal caller requires thought-predicate integration",
+    )
+    require(
+        include_bound_terminal_caller
+        or not include_bound_terminal_2546_full_caller,
+        (
+            "bound-terminal 2546 full-caller closure requires "
+            "bound-terminal caller integration"
+        ),
     )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
     source_rows, segment_paths, segment_universe_sha256 = load_source_decisions(
@@ -2356,6 +2794,28 @@ def build_outputs(
             bound_terminal_caller_promotions,
             bound_terminal_caller_metadata,
         ) = apply_bound_terminal_caller_updates(merged)
+    post_bound_terminal_caller_rows = sorted(
+        merged.values(),
+        key=coordinate_sort_key,
+    )
+    post_bound_terminal_caller_private_sha256 = sha256_bytes(
+        canonical_jsonl(post_bound_terminal_caller_rows).encode("utf-8")
+    )
+    bound_terminal_2546_full_caller_promotions = 0
+    bound_terminal_2546_full_caller_metadata: dict[str, Any] | None = None
+    if include_bound_terminal_2546_full_caller:
+        require(
+            post_bound_terminal_caller_private_sha256
+            == EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PRIVATE_SHA256,
+            (
+                "bound-terminal 2546 full-caller predecessor checkpoint "
+                f"drifted: {post_bound_terminal_caller_private_sha256}"
+            ),
+        )
+        (
+            bound_terminal_2546_full_caller_promotions,
+            bound_terminal_2546_full_caller_metadata,
+        ) = apply_bound_terminal_2546_full_caller_updates(merged)
     pk_integrated_promotions = (
         predecessor_promotions
         + pk_only_promotions
@@ -2364,6 +2824,7 @@ def build_outputs(
         + bound_terminal_promotions
         + thought_predicate_promotions
         + bound_terminal_caller_promotions
+        + bound_terminal_2546_full_caller_promotions
     )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
@@ -2416,9 +2877,23 @@ def build_outputs(
             bound_terminal_caller_metadata
         )
         pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_bound_terminal_2546_full_caller:
+        assert bound_terminal_2546_full_caller_metadata is not None
+        pk_metadata[
+            "bound_terminal_2546_full_caller_layer_included"
+        ] = True
+        pk_metadata[
+            "rebuilt_post_bound_terminal_caller_integrated_private_sha256"
+        ] = post_bound_terminal_caller_private_sha256
+        pk_metadata["bound_terminal_2546_full_caller"] = (
+            bound_terminal_2546_full_caller_metadata
+        )
+        pk_metadata["promotion_count"] = pk_integrated_promotions
 
     expected_pk_promotions = (
-        EXPECTED_PK_BOUND_TERMINAL_CALLER_FINAL_PROMOTIONS
+        EXPECTED_PK_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PROMOTIONS
+        if include_bound_terminal_2546_full_caller
+        else EXPECTED_PK_BOUND_TERMINAL_CALLER_FINAL_PROMOTIONS
         if include_bound_terminal_caller
         else EXPECTED_PK_THOUGHT_PREDICATE_FINAL_PROMOTIONS
         if include_thought_predicate_family
@@ -2450,7 +2925,9 @@ def build_outputs(
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
-        EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PENDING_AFTER
+        EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PENDING_AFTER
+        if include_bound_terminal_2546_full_caller
+        else EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PENDING_AFTER
         if include_bound_terminal_caller
         else EXPECTED_THOUGHT_PREDICATE_FINAL_PENDING_AFTER
         if include_thought_predicate_family
@@ -2471,7 +2948,16 @@ def build_outputs(
     private_content = canonical_jsonl(rows)
     validate_combined_private(prepared, private_content, private_output)
     private_sha256 = sha256_bytes(private_content.encode("utf-8"))
-    if include_bound_terminal_caller:
+    if include_bound_terminal_2546_full_caller:
+        require(
+            private_sha256
+            == EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PRIVATE_SHA256,
+            (
+                "bound-terminal 2546 full-caller final private digest "
+                f"drifted: {private_sha256}"
+            ),
+        )
+    elif include_bound_terminal_caller:
         require(
             private_sha256
             == EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PRIVATE_SHA256,
@@ -2611,6 +3097,24 @@ def build_outputs(
                 "combined_candidate_record_and_root_rebound": True,
             }
         )
+    if include_bound_terminal_2546_full_caller:
+        report["validation"].update(
+            {
+                "bound_terminal_2546_full_caller_layer_included": True,
+                (
+                    "post_bound_terminal_caller_predecessor_checkpoint_"
+                    "rebuilt_and_matched"
+                ): post_bound_terminal_caller_private_sha256
+                == EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PRIVATE_SHA256,
+                "selector_1066_terminal_2546_full_closure_rechecked": True,
+                "exact_216_translation_overrides_rechecked": True,
+                "affected_292_verified_pk_runtime_evidence_renewed": True,
+                "actual_364_pending_promotions_rechecked": True,
+                "uncertain_74_pending_rows_remain_rejected": True,
+                "caller_overlap_actions_preserved_and_superseded": True,
+                "combined_candidate_record_and_root_rebound": True,
+            }
+        )
     return private_content, canonical_json(report), report
 
 
@@ -2660,6 +3164,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         include_bound_terminal_family=True,
         include_thought_predicate_family=True,
         include_bound_terminal_caller=True,
+        include_bound_terminal_2546_full_caller=True,
     )
     if args.write:
         ENGINE.atomic_write(args.private_output, private_content)
