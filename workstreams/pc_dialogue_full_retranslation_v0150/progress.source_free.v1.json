@@ -28339,6 +28339,28 @@
       "steam_write_performed": false
     },
     {
+      "segment_id": "pk_msggame_B097_S1296",
+      "resource": "pk_msggame",
+      "first_coordinate": "9:3680:0",
+      "last_coordinate": "9:3694:0",
+      "decision_count": 7,
+      "semantic_review_approved": 7,
+      "runtime_review_not_required": 0,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 7,
+      "scope_classification_counts": {
+        "confirmed_non_display": 0,
+        "retranslated": 0,
+        "runtime_fragment_pending": 7
+      },
+      "queue_batch_ids": [
+        "pk_msggame-B097"
+      ],
+      "switch_korean_used": false,
+      "historic_korean_used": false,
+      "steam_write_performed": false
+    },
+    {
       "segment_id": "pk_msggame_base_exact_reuse_prefill",
       "resource": "pk_msggame",
       "first_coordinate": "2:242:0",
@@ -31955,15 +31977,15 @@
       "first_record_coordinate": "9:3596",
       "last_record_coordinate": "9:3785",
       "visible_target_count": 200,
-      "decision_count": 193,
-      "runtime_review_pending": 88,
+      "decision_count": 200,
+      "runtime_review_pending": 95,
       "fully_candidate_eligible": 105,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
         "retranslated": 105,
-        "runtime_fragment_pending": 88
+        "runtime_fragment_pending": 95
       },
-      "semantic_complete": false
+      "semantic_complete": true
     },
     {
       "batch_id": "pk_msggame-B098",
@@ -32655,13 +32677,13 @@
     }
   ],
   "totals": {
-    "semantic_review_approved": 47865,
-    "runtime_review_pending": 31441,
+    "semantic_review_approved": 47872,
+    "runtime_review_pending": 31448,
     "fully_candidate_eligible": 16424,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
       "retranslated": 16079,
-      "runtime_fragment_pending": 31441
+      "runtime_fragment_pending": 31448
     },
     "semantic_completion": false,
     "candidate_build_complete": false
