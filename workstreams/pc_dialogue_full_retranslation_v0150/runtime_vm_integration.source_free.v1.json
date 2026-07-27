@@ -23,20 +23,24 @@
       "promotion_report_sha256": "940ABA9223E53D467B3D63CB3ADF08D5A24E86FEAC7B391D7055CC96F3A17580"
     },
     "pk_msggame": {
+      "audit_promotion_eligible_count": 4717,
       "coverage_file_sha256": "97B96240F7EEE1A20567398623C477B02AF27C851E2B2F86C4A12FF4FEBDC2BC",
+      "full_candidate_record_hashes_rechecked": true,
+      "full_candidate_sibling_exclusion_coordinate_digest_sha256": "DD24887C06E3F0C6738EF5425A1C49BA3883D92B08E9522A65C4B6B5E7C0C559",
+      "full_candidate_sibling_exclusion_count": 48,
       "private_sha256": "C311BCB8578CCA58D333CEE2A0E738A995FF055C953016FFF06E42420B047C88",
-      "promotion_count": 4717,
+      "promotion_count": 4669,
       "promotion_report_sha256": "B3DBFA214D188ABA5CAFDED9DB19496347F50327D0B0C8C6FB2BAE7E7E1C67CA"
     },
-    "promoted_total": 20368
+    "promoted_total": 20320
   },
   "release_target": "0.15.0",
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 36836,
-    "private_integrated_decision_sha256": "105C00CDBFDFA2EA55BADD56BBA4CC98D9B9A8AE357C6C11C741154B631E0B34",
-    "runtime_review_pending": 15967,
+    "fully_candidate_eligible": 36788,
+    "private_integrated_decision_sha256": "A23D788766CD34DCBEFF4BB9088F387DB089FA32BF89023813F0F46AD6242598",
+    "runtime_review_pending": 16015,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
@@ -47,6 +51,7 @@
     "control_repair_bindings_rechecked": true,
     "normal_v0150_decision_validator_rechecked": true,
     "per_row_game_playback_required_for_promotions": false,
+    "pk_full_candidate_sibling_records_rechecked": true,
     "pk_overlay_rebuilt_and_rechecked": true,
     "representative_game_smoke_test_required_before_release": true,
     "runtime_only_transitions_enforced": true

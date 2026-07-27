@@ -24,10 +24,10 @@
   "runtime_vm_integration": {
     "path": "workstreams/pc_dialogue_full_retranslation_v0150/runtime_vm_integration.source_free.v1.json",
     "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
-    "sha256": "8449EA4895859DF0EF8B7CED1A464436FA216BE66603348DEBEB52B5E07C04DC",
-    "private_integrated_decision_sha256": "105C00CDBFDFA2EA55BADD56BBA4CC98D9B9A8AE357C6C11C741154B631E0B34",
-    "promoted_total": 20368,
-    "runtime_review_pending_after": 15967,
+    "sha256": "636953260430C03014C72A3DB146F888B89276F34B441974C5E178F161C28BFD",
+    "private_integrated_decision_sha256": "A23D788766CD34DCBEFF4BB9088F387DB089FA32BF89023813F0F46AD6242598",
+    "promoted_total": 20320,
+    "runtime_review_pending_after": 16015,
     "steam_write_performed": false
   },
   "segments": [
@@ -31501,12 +31501,12 @@
       "decision_count": 17652,
       "semantic_review_approved": 17652,
       "runtime_review_not_required": 7881,
-      "runtime_review_verified": 4717,
-      "runtime_review_pending": 5054,
+      "runtime_review_verified": 4669,
+      "runtime_review_pending": 5102,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 12598,
-        "runtime_fragment_pending": 5054
+        "retranslated": 12550,
+        "runtime_fragment_pending": 5102
       },
       "runtime_control_override_count": 1,
       "queue_batch_ids": [
@@ -33863,12 +33863,12 @@
       "last_record_coordinate": "6:1280",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 108,
-      "fully_candidate_eligible": 92,
+      "runtime_review_pending": 156,
+      "fully_candidate_eligible": 44,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 92,
-        "runtime_fragment_pending": 108
+        "retranslated": 44,
+        "runtime_fragment_pending": 156
       },
       "semantic_complete": true
     },
@@ -35907,12 +35907,12 @@
   ],
   "totals": {
     "semantic_review_approved": 52803,
-    "runtime_review_pending": 15967,
-    "fully_candidate_eligible": 36836,
+    "runtime_review_pending": 16015,
+    "fully_candidate_eligible": 36788,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
-      "retranslated": 36491,
-      "runtime_fragment_pending": 15967
+      "retranslated": 36443,
+      "runtime_fragment_pending": 16015
     },
     "semantic_completion": true,
     "candidate_build_complete": false
