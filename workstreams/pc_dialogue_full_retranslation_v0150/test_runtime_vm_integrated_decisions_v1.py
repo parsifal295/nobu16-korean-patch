@@ -81,11 +81,15 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 27_693)
-        self.assertEqual(report["result"]["runtime_review_pending"], 8_641)
+        self.assertEqual(report["promotions"]["promoted_total"], 27_716)
+        self.assertEqual(report["result"]["runtime_review_pending"], 8_618)
+        self.assertEqual(
+            report["result"]["private_integrated_decision_sha256"],
+            "9245DED68D1A8DFA51B0587E5E2B1B7165BF610CB4618460654D4032B04E1F10",
+        )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            12_042,
+            12_065,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
@@ -162,7 +166,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            8_641,
+            8_618,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
@@ -196,6 +200,40 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
                 "bound_terminal_family_override_count"
             ],
             14,
+        )
+        self.assertTrue(
+            report["promotions"]["pk_msggame"][
+                "thought_predicate_family_layer_included"
+            ]
+        )
+        thought = report["promotions"]["pk_msggame"][
+            "thought_predicate_family"
+        ]
+        self.assertEqual(
+            report["promotions"]["pk_msggame"][
+                "rebuilt_post_bound_integrated_private_sha256"
+            ],
+            "F6BAA43C22404365E49D40C6B306C850C3B123681CD0A42D5A63EDB73D8018FB",
+        )
+        self.assertEqual(thought["translation_override_count"], 75)
+        self.assertEqual(thought["verification_renewal_count"], 53)
+        self.assertEqual(thought["promotion_count"], 23)
+        self.assertEqual(thought["updated_row_count"], 76)
+        self.assertTrue(
+            progress["runtime_vm_integration"][
+                "thought_predicate_family_layer_included"
+            ]
+        )
+        self.assertEqual(
+            progress["runtime_vm_integration"][
+                "thought_predicate_family_override_count"
+            ],
+            75,
+        )
+        self.assertTrue(
+            report["validation"][
+                "post_bound_predecessor_checkpoint_rebuilt_and_matched"
+            ]
         )
 
     def test_pk_verified_row_is_bound_to_exact_overlay(self) -> None:
@@ -473,7 +511,9 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             and row["runtime_vm_verification"]["action"]
             in {"verification_renewal", "translation_override"}
         ]
-        self.assertEqual(len(renewed), 685)
+        # Five earlier bound renewals are superseded by exact
+        # thought-predicate renewal evidence in the final layer.
+        self.assertEqual(len(renewed), 680)
         source = renewed[0]
         self.assertTrue(
             source["runtime_vm_verification"][
@@ -486,6 +526,109 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         tampered["runtime_vm_verification"][
             "translation_utf16le_sha256"
         ] = "0" * 64
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([tampered])
+
+    def test_thought_predicate_actions_and_overrides_are_exact(self) -> None:
+        targets = [
+            row
+            for row in self.rows
+            if row.get("runtime_vm_verification", {}).get("method")
+            == (
+                "reversed_vm_pk_thought_predicate_family_exact_"
+                "closure_analysis"
+            )
+        ]
+        self.assertEqual(len(targets), 76)
+        actions = {
+            action: sum(
+                row["thought_predicate_family_update_action"] == action
+                for row in targets
+            )
+            for action in {
+                "runtime_promotion",
+                "translation_override_and_runtime_promotion",
+                "translation_override_and_verification_renewal",
+            }
+        }
+        self.assertEqual(
+            actions,
+            {
+                "runtime_promotion": 1,
+                "translation_override_and_runtime_promotion": 22,
+                "translation_override_and_verification_renewal": 53,
+            },
+        )
+        overrides = [
+            row
+            for row in targets
+            if row["thought_predicate_family_update_action"]
+            != "runtime_promotion"
+        ]
+        self.assertEqual(len(overrides), 75)
+        for source in targets:
+            evidence = source["runtime_vm_verification"]
+            self.assertTrue(evidence["full_incoming_closure_verified"])
+            self.assertTrue(evidence["grammar_complete_for_all_registers"])
+            self.assertTrue(
+                evidence["actual_current_relative_nonexpanding"]
+            )
+            self.validate_rows([source])
+
+    def test_thought_predicate_evidence_and_action_are_bound(self) -> None:
+        source = next(
+            row
+            for row in self.rows
+            if row.get("runtime_vm_verification", {}).get("method")
+            == (
+                "reversed_vm_pk_thought_predicate_family_exact_"
+                "closure_analysis"
+            )
+            and row["thought_predicate_family_update_action"]
+            == "translation_override_and_runtime_promotion"
+        )
+        tampered_hash = copy.deepcopy(source)
+        tampered_hash["runtime_vm_verification"][
+            "updated_translation_utf16le_sha256"
+        ] = "0" * 64
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([tampered_hash])
+
+        tampered_proof = copy.deepcopy(source)
+        tampered_proof["runtime_vm_verification"][
+            "grammar_complete_for_all_registers"
+        ] = False
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([tampered_proof])
+
+        missing_action = copy.deepcopy(source)
+        missing_action.pop("thought_predicate_family_update_action")
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([missing_action])
+
+    def test_thought_predicate_supersedes_exact_bound_renewals(self) -> None:
+        superseded = [
+            row
+            for row in self.rows
+            if row.get("thought_predicate_family_update_action")
+            == "translation_override_and_verification_renewal"
+            and row.get("terminal_family_update_action")
+            == "verification_renewal"
+        ]
+        self.assertEqual(
+            {row["coordinate"] for row in superseded},
+            {
+                "6:3551:1",
+                "6:4398:0",
+                "6:4437:0",
+                "15:1430:1",
+                "15:1698:1",
+            },
+        )
+        for source in superseded:
+            self.validate_rows([source])
+        tampered = copy.deepcopy(superseded[0])
+        tampered["terminal_family_update_action"] = "runtime_promotion"
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([tampered])
 

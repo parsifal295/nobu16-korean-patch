@@ -137,6 +137,12 @@ BOUND_TERMINAL_FAMILY_BUILDER_PATH = (
     / "pk_msggame_runtime_vm_audit_v1"
     / "build_pk_bound_terminal_family_exact_closure_v1.py"
 )
+THOUGHT_PREDICATE_FAMILY_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_thought_predicate_family_exact_closure_v1.py"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -173,16 +179,25 @@ EXPECTED_DYNAMIC_HONORIFIC_SPACING_PROMOTIONS = 57
 EXPECTED_PK_FINAL_PROMOTIONS = 12_038
 EXPECTED_BOUND_TERMINAL_FAMILY_PROMOTIONS = 4
 EXPECTED_PK_BOUND_TERMINAL_FINAL_PROMOTIONS = 12_042
+EXPECTED_THOUGHT_PREDICATE_FAMILY_PROMOTIONS = 23
+EXPECTED_PK_THOUGHT_PREDICATE_FINAL_PROMOTIONS = 12_065
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
 EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
 EXPECTED_PENDING_AFTER = 8_702
 EXPECTED_FINAL_PENDING_AFTER = 8_645
 EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER = 8_641
+EXPECTED_THOUGHT_PREDICATE_FINAL_PENDING_AFTER = 8_618
 EXPECTED_POST_CROSS_PRIVATE_SHA256 = (
     "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC"
 )
 EXPECTED_POST_DYNAMIC_PRIVATE_SHA256 = (
     "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2"
+)
+EXPECTED_POST_BOUND_PRIVATE_SHA256 = (
+    "F6BAA43C22404365E49D40C6B306C850C3B123681CD0A42D5A63EDB73D8018FB"
+)
+EXPECTED_THOUGHT_PREDICATE_FINAL_PRIVATE_SHA256 = (
+    "9245DED68D1A8DFA51B0587E5E2B1B7165BF610CB4618460654D4032B04E1F10"
 )
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
@@ -233,6 +248,7 @@ PK_ONLY_EXACT_BLOCKED_OVERLAY: Any | None = None
 PK_CROSS_RESOURCE_EXACT_CLOSURE_OVERLAY: Any | None = None
 DYNAMIC_HONORIFIC_SPACING: Any | None = None
 BOUND_TERMINAL_FAMILY: Any | None = None
+THOUGHT_PREDICATE_FAMILY: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -279,6 +295,16 @@ def load_bound_terminal_family() -> Any:
             BOUND_TERMINAL_FAMILY_BUILDER_PATH,
         )
     return BOUND_TERMINAL_FAMILY
+
+
+def load_thought_predicate_family() -> Any:
+    global THOUGHT_PREDICATE_FAMILY
+    if THOUGHT_PREDICATE_FAMILY is None:
+        THOUGHT_PREDICATE_FAMILY = load_module(
+            "pc_dialogue_runtime_vm_thought_predicate_family",
+            THOUGHT_PREDICATE_FAMILY_BUILDER_PATH,
+        )
+    return THOUGHT_PREDICATE_FAMILY
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -1129,6 +1155,226 @@ def validated_bound_terminal_family_updates() -> tuple[
     }
 
 
+def validated_thought_predicate_family_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, str],
+    dict[str, Any],
+]:
+    layer = load_thought_predicate_family()
+    (
+        decision_content,
+        evidence_content,
+        audit_content,
+        promotion_content,
+        audit,
+        bundle,
+    ) = layer.build_outputs()
+    layer.validate_outputs(
+        decision_content=decision_content,
+        evidence_content=evidence_content,
+        audit_content=audit_content,
+        promotion_content=promotion_content,
+        audit=audit,
+        bundle=bundle,
+    )
+    expected_files = (
+        (layer.DEFAULT_DECISION_OUTPUT, decision_content),
+        (layer.DEFAULT_EVIDENCE_OUTPUT, evidence_content),
+        (layer.DEFAULT_AUDIT_OUTPUT, audit_content),
+        (layer.DEFAULT_PROMOTION_OUTPUT, promotion_content),
+    )
+    for path, content in expected_files:
+        require(
+            path.is_file() and path.read_text(encoding="utf-8") == content,
+            f"thought-predicate family artifact drifted: {path}",
+        )
+    updates: dict[tuple[str, str], dict[str, Any]] = {}
+    predecessors: dict[tuple[str, str], dict[str, Any]] = {}
+    action_counts: Counter[str] = Counter()
+    for row in bundle["updated_rows"]:
+        key = (str(row["resource"]), str(row["coordinate"]))
+        require(
+            key not in updates and key[0] == "pk_msggame",
+            f"duplicate or non-PK thought-predicate update: {key}",
+        )
+        action = str(row.get("thought_predicate_family_update_action"))
+        evidence = row.get("runtime_vm_verification")
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("action") == action
+            and evidence.get("method") == layer.METHOD,
+            f"thought-predicate family evidence is absent: {key}",
+        )
+        predecessor = bundle["analysis"]["predecessor_rows"].get(key)
+        require(
+            isinstance(predecessor, dict),
+            f"thought-predicate predecessor row is absent: {key}",
+        )
+        action_counts[action] += 1
+        updates[key] = row
+        predecessors[key] = predecessor
+    require(
+        action_counts
+        == {
+            "runtime_promotion": 1,
+            "translation_override_and_runtime_promotion": 22,
+            "translation_override_and_verification_renewal": 53,
+        }
+        and audit["scope"]["post_layer_pending_rows"]
+        == EXPECTED_THOUGHT_PREDICATE_FINAL_PENDING_AFTER
+        and audit["scope"]["translation_override_rows"] == 75
+        and audit["scope"]["existing_verified_evidence_renewal_rows"] == 53
+        and audit["scope"]["pending_eligible_rows"]
+        == EXPECTED_THOUGHT_PREDICATE_FAMILY_PROMOTIONS,
+        f"thought-predicate family action counts drifted: {action_counts}",
+    )
+    overrides = {
+        str(coordinate): str(translation)
+        for coordinate, translation in bundle["analysis"]["overrides"].items()
+    }
+    require(
+        len(overrides) == 75,
+        "thought-predicate override map count drifted",
+    )
+    return updates, predecessors, overrides, {
+        "translation_override_count": 75,
+        "verification_renewal_count": 53,
+        "promotion_count": EXPECTED_THOUGHT_PREDICATE_FAMILY_PROMOTIONS,
+        "updated_row_count": len(updates),
+        "private_update_sha256": sha256_bytes(
+            decision_content.encode("utf-8")
+        ),
+        "private_evidence_sha256": sha256_bytes(
+            evidence_content.encode("utf-8")
+        ),
+        "audit_report_sha256": sha256_bytes(
+            audit_content.encode("utf-8")
+        ),
+        "audit_report_payload_sha256": audit["guards"][
+            "report_payload_sha256"
+        ],
+        "promotion_report_sha256": sha256_bytes(
+            promotion_content.encode("utf-8")
+        ),
+        "pk_predecessor_candidate_packed_sha256": audit["guards"][
+            "pk_predecessor_candidate_packed_sha256"
+        ],
+        "pk_candidate_packed_sha256": audit["guards"][
+            "pk_candidate_packed_sha256"
+        ],
+        "override_coordinate_sha256": audit["guards"][
+            "override_coordinate_sha256"
+        ],
+        "override_manifest_sha256": audit["guards"][
+            "override_manifest_sha256"
+        ],
+        "assembly_manifest_sha256": audit["guards"][
+            "assembly_manifest_sha256"
+        ],
+        "pending_eligible_coordinate_sha256": audit["guards"][
+            "pending_eligible_coordinate_sha256"
+        ],
+        "verified_renewal_coordinate_sha256": audit["guards"][
+            "verified_renewal_coordinate_sha256"
+        ],
+        "steam_write_performed": False,
+    }
+
+
+def apply_thought_predicate_family_updates(
+    merged: dict[tuple[str, str], dict[str, Any]],
+) -> tuple[int, dict[str, Any]]:
+    thought_layer = load_thought_predicate_family()
+    (
+        thought_updates,
+        thought_predecessors,
+        thought_overrides,
+        thought_metadata,
+    ) = validated_thought_predicate_family_updates()
+    thought_promotions = 0
+    for key, updated in thought_updates.items():
+        predecessor = merged.get(key)
+        require(
+            predecessor is not None
+            and predecessor == thought_predecessors.get(key),
+            f"thought-predicate predecessor row drifted: {key}",
+        )
+        action = str(
+            updated.get("thought_predicate_family_update_action")
+        )
+        evidence = updated.get("runtime_vm_verification")
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("action") == action
+            and evidence.get("method") == thought_layer.METHOD,
+            f"thought-predicate evidence drifted: {key}",
+        )
+        changed_fields = {
+            field
+            for field in set(predecessor) | set(updated)
+            if predecessor.get(field) != updated.get(field)
+        }
+        if action == "runtime_promotion":
+            require(
+                changed_fields
+                == RUNTIME_MUTABLE_FIELDS
+                | {"thought_predicate_family_update_action"}
+                and predecessor.get("runtime_review") == "pending"
+                and updated.get("runtime_review") == "verified"
+                and updated.get("scope_classification") == "retranslated"
+                and updated.get("layout_review") == "runtime_verified",
+                f"thought-predicate promotion transition drifted: {key}",
+            )
+            thought_promotions += 1
+        elif action == "translation_override_and_runtime_promotion":
+            require(
+                changed_fields
+                == RUNTIME_MUTABLE_FIELDS
+                | {
+                    "translation",
+                    "thought_predicate_family_update_action",
+                }
+                and predecessor.get("runtime_review") == "pending"
+                and updated.get("runtime_review") == "verified"
+                and updated.get("scope_classification") == "retranslated"
+                and updated.get("layout_review") == "runtime_verified"
+                and key[1] in thought_overrides
+                and updated.get("translation") == thought_overrides[key[1]],
+                f"thought-predicate override promotion drifted: {key}",
+            )
+            thought_promotions += 1
+        elif action == "translation_override_and_verification_renewal":
+            require(
+                changed_fields
+                == {
+                    "translation",
+                    "runtime_vm_verification",
+                    "thought_predicate_family_update_action",
+                }
+                and predecessor.get("runtime_review")
+                == updated.get("runtime_review")
+                == "verified"
+                and key[1] in thought_overrides
+                and updated.get("translation") == thought_overrides[key[1]],
+                f"thought-predicate renewal transition drifted: {key}",
+            )
+        else:
+            raise IntegrationError(
+                f"thought-predicate action is invalid: {key}"
+            )
+        merged[key] = dict(updated)
+    require(
+        thought_promotions
+        == EXPECTED_THOUGHT_PREDICATE_FAMILY_PROMOTIONS,
+        (
+            "thought-predicate promotion count drifted: "
+            f"{thought_promotions}"
+        ),
+    )
+    return thought_promotions, thought_metadata
+
+
 def validate_combined_private(
     prepared: Any,
     content: str,
@@ -1161,6 +1407,7 @@ def build_outputs(
     include_cross_resource: bool | None = None,
     include_dynamic_honorific_spacing: bool = False,
     include_bound_terminal_family: bool = False,
+    include_thought_predicate_family: bool = False,
 ) -> tuple[str, str, dict[str, Any]]:
     if include_cross_resource is None:
         include_cross_resource = include_pk_only
@@ -1176,6 +1423,11 @@ def build_outputs(
         include_dynamic_honorific_spacing
         or not include_bound_terminal_family,
         "bound terminal family requires dynamic honorific integration",
+    )
+    require(
+        include_bound_terminal_family
+        or not include_thought_predicate_family,
+        "thought-predicate family requires bound terminal integration",
     )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
     source_rows, segment_paths, segment_universe_sha256 = load_source_decisions(
@@ -1584,12 +1836,33 @@ def build_outputs(
                 f"{bound_terminal_promotions}"
             ),
         )
+    post_bound_rows = sorted(merged.values(), key=coordinate_sort_key)
+    post_bound_private_sha256 = sha256_bytes(
+        canonical_jsonl(post_bound_rows).encode("utf-8")
+    )
+    thought_predicate_promotions = 0
+    thought_predicate_metadata: dict[str, Any] | None = None
+    if include_thought_predicate_family:
+        require(
+            post_bound_private_sha256 == EXPECTED_POST_BOUND_PRIVATE_SHA256,
+            (
+                "thought-predicate predecessor checkpoint drifted: "
+                f"{post_bound_private_sha256}"
+            ),
+        )
+        (
+            thought_predicate_promotions,
+            thought_predicate_metadata,
+        ) = apply_thought_predicate_family_updates(
+            merged,
+        )
     pk_integrated_promotions = (
         predecessor_promotions
         + pk_only_promotions
         + cross_resource_promotions
         + dynamic_honorific_promotions
         + bound_terminal_promotions
+        + thought_predicate_promotions
     )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
@@ -1622,9 +1895,21 @@ def build_outputs(
         )
         pk_metadata["bound_terminal_family"] = bound_terminal_metadata
         pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_thought_predicate_family:
+        assert thought_predicate_metadata is not None
+        pk_metadata["thought_predicate_family_layer_included"] = True
+        pk_metadata["rebuilt_post_bound_integrated_private_sha256"] = (
+            post_bound_private_sha256
+        )
+        pk_metadata["thought_predicate_family"] = (
+            thought_predicate_metadata
+        )
+        pk_metadata["promotion_count"] = pk_integrated_promotions
 
     expected_pk_promotions = (
-        EXPECTED_PK_BOUND_TERMINAL_FINAL_PROMOTIONS
+        EXPECTED_PK_THOUGHT_PREDICATE_FINAL_PROMOTIONS
+        if include_thought_predicate_family
+        else EXPECTED_PK_BOUND_TERMINAL_FINAL_PROMOTIONS
         if include_bound_terminal_family
         else EXPECTED_PK_FINAL_PROMOTIONS
         if include_dynamic_honorific_spacing
@@ -1652,7 +1937,9 @@ def build_outputs(
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
-        EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER
+        EXPECTED_THOUGHT_PREDICATE_FINAL_PENDING_AFTER
+        if include_thought_predicate_family
+        else EXPECTED_BOUND_TERMINAL_FINAL_PENDING_AFTER
         if include_bound_terminal_family
         else EXPECTED_FINAL_PENDING_AFTER
         if include_dynamic_honorific_spacing
@@ -1669,6 +1956,12 @@ def build_outputs(
     private_content = canonical_jsonl(rows)
     validate_combined_private(prepared, private_content, private_output)
     private_sha256 = sha256_bytes(private_content.encode("utf-8"))
+    if include_thought_predicate_family:
+        require(
+            private_sha256
+            == EXPECTED_THOUGHT_PREDICATE_FINAL_PRIVATE_SHA256,
+            f"thought-predicate final private digest drifted: {private_sha256}",
+        )
     coordinate_universe_sha256 = sha256_bytes(
         "\n".join(
             f"{row['resource']}:{row['coordinate']}" for row in rows
@@ -1770,6 +2063,19 @@ def build_outputs(
                 "uncertain_pending_roots_remain_rejected": True,
             }
         )
+    if include_thought_predicate_family:
+        report["validation"].update(
+            {
+                "thought_predicate_family_layer_included": True,
+                "post_bound_predecessor_checkpoint_rebuilt_and_matched":
+                post_bound_private_sha256
+                == EXPECTED_POST_BOUND_PRIVATE_SHA256,
+                "thought_predicate_semantic_overrides_rechecked": True,
+                "affected_verified_pk_runtime_evidence_renewed": True,
+                "actual_twenty_three_pending_promotions_rechecked": True,
+                "all_483_assemblies_grammar_complete": True,
+            }
+        )
     return private_content, canonical_json(report), report
 
 
@@ -1817,6 +2123,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         private_output=args.private_output,
         include_dynamic_honorific_spacing=True,
         include_bound_terminal_family=True,
+        include_thought_predicate_family=True,
     )
     if args.write:
         ENGINE.atomic_write(args.private_output, private_content)

@@ -169,6 +169,19 @@ PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_REPORT_PATH = (
     / "public"
     / "pk_bound_terminal_family_exact_closure_promotion.v1.json"
 )
+PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_EVIDENCE_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_thought_predicate_family_exact_closure_evidence.private.v1.jsonl"
+)
+PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_REPORT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_thought_predicate_family_exact_closure_promotion.v1.json"
+)
 
 sys.path[:0] = [str(REPO / "tools"), str(REPO / "workstreams" / "msggame")]
 
@@ -218,6 +231,9 @@ PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_OVERLAY_ROW_SCHEMA = (
 PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
     "nobu16.kr.pk-bound-terminal-family-exact-closure-evidence-row.v1"
 )
+PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
+    "nobu16.kr.pk-thought-predicate-family-exact-closure-evidence-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
@@ -240,6 +256,9 @@ PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD = (
 PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_pk_bound_terminal_family_exact_closure_analysis"
 )
+PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_pk_thought_predicate_family_exact_closure_analysis"
+)
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
@@ -250,6 +269,7 @@ PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
         BASE_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
         PK_DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHOD,
         PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES = frozenset(
@@ -258,6 +278,15 @@ RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES = frozenset(
         ("base_msggame", "0:1275:0"),
         ("pk_msggame", "0:1325:0"),
         ("pk_msggame", "0:1329:0"),
+    }
+)
+THOUGHT_PREDICATE_SUPERSEDED_TERMINAL_ACTION_COORDINATES = frozenset(
+    {
+        ("pk_msggame", "6:3551:1"),
+        ("pk_msggame", "6:4398:0"),
+        ("pk_msggame", "6:4437:0"),
+        ("pk_msggame", "15:1430:1"),
+        ("pk_msggame", "15:1698:1"),
     }
 )
 DYNAMIC_HONORIFIC_SPACING_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
@@ -857,6 +886,17 @@ def load_pk_runtime_vm_overlays() -> dict[
             ),
             "pk_msggame",
         ),
+        (
+            PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_EVIDENCE_PATH,
+            PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_REPORT_PATH,
+            PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA,
+            PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD,
+            (
+                "nobu16.kr.pk-thought-predicate-family-exact-closure-"
+                "promotion.v1"
+            ),
+            "pk_msggame",
+        ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
     for (
@@ -887,9 +927,14 @@ def load_pk_runtime_vm_overlays() -> dict[
             method
             == PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
         )
+        thought_predicate_family = (
+            method
+            == PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+        )
+        evidence_family = terminal_family or thought_predicate_family
         private_hash_field = (
             "private_evidence_sha256"
-            if terminal_family
+            if evidence_family
             else "private_overlay_sha256"
         )
         if (
@@ -906,7 +951,7 @@ def load_pk_runtime_vm_overlays() -> dict[
                 )
             )
             or (
-                terminal_family
+                evidence_family
                 and (
                     promotion.get("resource") != "MSG_PK/JP/msggame.bin"
                     or promotion.get("method") != method
@@ -960,7 +1005,74 @@ def load_pk_runtime_vm_overlays() -> dict[
                 and row.get("method") == method
                 and row.get("per_row_game_playback_required") is False
             )
-            if terminal_family:
+            if thought_predicate_family:
+                action = row.get("action")
+                dynamic_transition_valid = (
+                    action
+                    in {
+                        "runtime_promotion",
+                        "translation_override_and_runtime_promotion",
+                        (
+                            "translation_override_and_verification_"
+                            "renewal"
+                        ),
+                    }
+                    and row.get("result") == "verified"
+                    and isinstance(
+                        row.get("predecessor_runtime_review"),
+                        str,
+                    )
+                    and all(
+                        isinstance(row.get(field), str)
+                        for field in (
+                            "candidate_record_raw_sha256",
+                            "predecessor_record_raw_sha256",
+                            "current_record_raw_sha256",
+                            "predecessor_literal_utf16le_sha256",
+                            "candidate_literal_utf16le_sha256",
+                            "updated_translation_utf16le_sha256",
+                            "coverage_report_file_sha256",
+                            "coverage_report_payload_sha256",
+                            "assembly_manifest_sha256",
+                            "pk_candidate_packed_sha256",
+                            "row_verification_sha256",
+                        )
+                    )
+                    and all(
+                        row.get(field) is True
+                        for field in (
+                            "full_incoming_closure_verified",
+                            "grammar_complete_for_all_registers",
+                            "actual_current_relative_nonexpanding",
+                            "control_components_preserved",
+                            "protected_signature_preserved",
+                        )
+                    )
+                    and (
+                        (
+                            action
+                            in {
+                                "runtime_promotion",
+                                (
+                                    "translation_override_and_runtime_"
+                                    "promotion"
+                                ),
+                            }
+                            and row.get("predecessor_runtime_review")
+                            == "pending"
+                        )
+                        or (
+                            action
+                            == (
+                                "translation_override_and_verification_"
+                                "renewal"
+                            )
+                            and row.get("predecessor_runtime_review")
+                            == "verified"
+                        )
+                    )
+                )
+            elif terminal_family:
                 action = row.get("action")
                 delta_binding = row.get("terminal_family_delta_binding")
                 predecessor_binding = row.get(
@@ -1151,7 +1263,7 @@ def load_pk_runtime_vm_overlays() -> dict[
             or promotion.get("result", {}).get(
                 (
                     "private_evidence_rows"
-                    if terminal_family
+                    if evidence_family
                     else "private_overlay_rows"
                 )
             )
@@ -1189,12 +1301,81 @@ def validate_pk_runtime_vm_verification(
         raise RetranslationError(
             f"{label}.runtime_vm_verification differs from the tracked PK overlay"
         )
-    if evidence.get("translation_utf16le_sha256") != sha256_text(translation):
+    translation_hash_field = (
+        "updated_translation_utf16le_sha256"
+        if evidence.get("method")
+        == PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+        else "translation_utf16le_sha256"
+    )
+    if evidence.get(translation_hash_field) != sha256_text(translation):
         raise RetranslationError(
             f"{label}.runtime_vm_verification translation hash does not match"
         )
     method = evidence.get("method")
-    if method == PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD:
+    if method == PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD:
+        action = evidence.get("action")
+        promotion_actions = {
+            "runtime_promotion",
+            "translation_override_and_runtime_promotion",
+        }
+        if (
+            resource != "pk_msggame"
+            or evidence.get("resource") != resource
+            or evidence.get("result") != "verified"
+            or evidence.get("status") != "verified"
+            or evidence.get("per_row_game_playback_required") is not False
+            or any(
+                not isinstance(evidence.get(field), str)
+                for field in (
+                    "candidate_record_raw_sha256",
+                    "predecessor_record_raw_sha256",
+                    "current_record_raw_sha256",
+                    "predecessor_literal_utf16le_sha256",
+                    "candidate_literal_utf16le_sha256",
+                    "coverage_report_file_sha256",
+                    "coverage_report_payload_sha256",
+                    "assembly_manifest_sha256",
+                    "pk_candidate_packed_sha256",
+                    "row_verification_sha256",
+                )
+            )
+            or any(
+                evidence.get(field) is not True
+                for field in (
+                    "full_incoming_closure_verified",
+                    "grammar_complete_for_all_registers",
+                    "actual_current_relative_nonexpanding",
+                    "control_components_preserved",
+                    "protected_signature_preserved",
+                )
+            )
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification thought-predicate proof "
+                "is incomplete"
+            )
+        if action in promotion_actions:
+            if (
+                evidence.get("predecessor_runtime_review") != "pending"
+                or scope_classification != "retranslated"
+                or layout_review != "runtime_verified"
+            ):
+                raise RetranslationError(
+                    f"{label}.runtime_vm_verification thought-predicate "
+                    "promotion transition drifted"
+                )
+        elif action == "translation_override_and_verification_renewal":
+            if evidence.get("predecessor_runtime_review") != "verified":
+                raise RetranslationError(
+                    f"{label}.runtime_vm_verification thought-predicate "
+                    "renewal transition drifted"
+                )
+        else:
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification has an invalid "
+                "thought-predicate action"
+            )
+    elif method == PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD:
         action = evidence.get("action")
         delta_binding = evidence.get("terminal_family_delta_binding")
         predecessor_binding = evidence.get("predecessor_integrated_binding")
@@ -1686,12 +1867,46 @@ def validate_decisions(
                 == PK_BOUND_TERMINAL_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
                 else terminal_pending_evidence
             )
+            superseded_terminal_renewal = (
+                runtime_vm_method
+                == PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                and (
+                    str(resource),
+                    f"{block_id}:{record_id}:{literal_id}",
+                )
+                in THOUGHT_PREDICATE_SUPERSEDED_TERMINAL_ACTION_COORDINATES
+                and terminal_action == "verification_renewal"
+                and isinstance(runtime_vm_evidence, dict)
+                and runtime_vm_evidence.get("action")
+                == "translation_override_and_verification_renewal"
+                and runtime_vm_evidence.get("predecessor_runtime_review")
+                == "verified"
+            )
             if (
                 not isinstance(bound_evidence, dict)
                 or terminal_action != bound_evidence.get("action")
-            ):
+            ) and not superseded_terminal_renewal:
                 raise RetranslationError(
                     f"{label}.terminal_family_update_action is unbound"
+                )
+        thought_predicate_action = row.get(
+            "thought_predicate_family_update_action"
+        )
+        if (
+            thought_predicate_action is not None
+            or runtime_vm_method
+            == PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+        ):
+            if (
+                runtime_vm_method
+                != PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                or not isinstance(runtime_vm_evidence, dict)
+                or thought_predicate_action
+                != runtime_vm_evidence.get("action")
+            ):
+                raise RetranslationError(
+                    f"{label}.thought_predicate_family_update_action is "
+                    "unbound"
                 )
         if (
             "runtime_boundary_leading_space_inserted" in row

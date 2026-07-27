@@ -158,6 +158,15 @@ def canonical_row_sha256(row: dict[str, Any]) -> str:
     return sha256_bytes(encoded)
 
 
+def coordinate_digest(values: Sequence[str]) -> str:
+    coordinates = sorted(set(values), key=coordinate_key)
+    return sha256_bytes(
+        "".join(f"{coordinate}\n" for coordinate in coordinates).encode(
+            "ascii"
+        )
+    )
+
+
 def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
     return {
         key: value
@@ -171,6 +180,7 @@ def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
             "terminal_family_runtime_evidence",
             "terminal_family_update_action",
             "terminal_family_exact_override_evidence",
+            "thought_predicate_family_update_action",
         }
     }
 
@@ -245,6 +255,13 @@ def load_runtime_vm_integration(
         is True,
         "bound_terminal_family": report["promotions"]["pk_msggame"].get(
             "bound_terminal_family"
+        ),
+        "thought_predicate_family_layer_included": report["promotions"][
+            "pk_msggame"
+        ].get("thought_predicate_family_layer_included")
+        is True,
+        "thought_predicate_family": report["promotions"]["pk_msggame"].get(
+            "thought_predicate_family"
         ),
         "steam_write_performed": False,
     }
@@ -436,11 +453,54 @@ def build_progress() -> dict[str, Any]:
     runtime_vm_integrated, runtime_vm_integration_metadata = (
         load_runtime_vm_integration(prepared)
     )
+    thought_predicate_metadata = runtime_vm_integration_metadata.get(
+        "thought_predicate_family"
+    )
+    if (
+        runtime_vm_integration_metadata.get(
+            "thought_predicate_family_layer_included"
+        )
+        is not True
+        or not isinstance(thought_predicate_metadata, dict)
+    ):
+        raise RuntimeError(
+            "thought-predicate family integration metadata is absent"
+        )
+    thought_predicate_override_coordinates = {
+        key
+        for key, integrated_row in runtime_vm_integrated.items()
+        if integrated_row.get("thought_predicate_family_update_action")
+        in {
+            "translation_override_and_runtime_promotion",
+            "translation_override_and_verification_renewal",
+        }
+    }
+    if (
+        len(thought_predicate_override_coordinates)
+        != thought_predicate_metadata.get("translation_override_count")
+        or any(
+            resource != "pk_msggame"
+            for resource, _coordinate
+            in thought_predicate_override_coordinates
+        )
+        or coordinate_digest(
+            [
+                coordinate
+                for _resource, coordinate
+                in thought_predicate_override_coordinates
+            ]
+        )
+        != thought_predicate_metadata.get("override_coordinate_sha256")
+    ):
+        raise RuntimeError(
+            "thought-predicate semantic override universe drifted"
+        )
     consumed_runtime_vm_integrated: set[tuple[str, str]] = set()
     consumed_dynamic_honorific_overrides: set[
         tuple[str, str]
     ] = set()
     consumed_bound_terminal_overrides: set[tuple[str, str]] = set()
+    consumed_thought_predicate_overrides: set[tuple[str, str]] = set()
 
     queue_rows = load_jsonl(QUEUE_PATH)
     batch_catalog_raw = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
@@ -636,6 +696,52 @@ def build_progress() -> dict[str, Any]:
                         "runtime_assembly_evidence"
                     ] = effective_row.get("runtime_assembly_evidence")
                 consumed_bound_terminal_overrides.add(key)
+            thought_predicate_action = integrated_row.get(
+                "thought_predicate_family_update_action"
+            )
+            if thought_predicate_action in {
+                "translation_override_and_runtime_promotion",
+                "translation_override_and_verification_renewal",
+            }:
+                thought_evidence = integrated_row.get(
+                    "runtime_vm_verification"
+                )
+                if (
+                    key not in thought_predicate_override_coordinates
+                    or not isinstance(thought_evidence, dict)
+                    or thought_evidence.get("method")
+                    != ENGINE.PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                    or thought_evidence.get("action")
+                    != thought_predicate_action
+                    or thought_evidence.get(
+                        "updated_translation_utf16le_sha256"
+                    )
+                    != ENGINE.sha256_text(
+                        str(integrated_row.get("translation"))
+                    )
+                    or thought_evidence.get(
+                        "full_incoming_closure_verified"
+                    )
+                    is not True
+                    or thought_evidence.get(
+                        "grammar_complete_for_all_registers"
+                    )
+                    is not True
+                    or thought_evidence.get(
+                        "actual_current_relative_nonexpanding"
+                    )
+                    is not True
+                ):
+                    raise RuntimeError(
+                        f"thought-predicate semantic override drifted: {key}"
+                    )
+                immutable_integrated_row = dict(
+                    immutable_integrated_row
+                )
+                immutable_integrated_row["translation"] = effective_row[
+                    "translation"
+                ]
+                consumed_thought_predicate_overrides.add(key)
             if runtime_immutable_row(effective_row) != runtime_immutable_row(
                 immutable_integrated_row
             ):
@@ -701,6 +807,14 @@ def build_progress() -> dict[str, Any]:
                         str,
                     )
                 )
+                thought_predecessor_renewal = (
+                    evidence.get("method")
+                    == ENGINE.PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                    and evidence.get("action")
+                    == "translation_override_and_verification_renewal"
+                    and evidence.get("predecessor_runtime_review")
+                    == "verified"
+                )
                 if (
                     evidence.get("action")
                     in {"translation_override", "verification_renewal"}
@@ -714,6 +828,17 @@ def build_progress() -> dict[str, Any]:
                     raise RuntimeError(
                         "dynamic runtime evidence did not bind its verified "
                         f"predecessor: {key}"
+                    )
+                if (
+                    evidence.get("action")
+                    == "translation_override_and_verification_renewal"
+                    and evidence.get("method")
+                    == ENGINE.PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
+                    and not thought_predecessor_renewal
+                ):
+                    raise RuntimeError(
+                        "thought-predicate runtime evidence did not bind its "
+                        f"verified predecessor: {key}"
                     )
                 if (
                     evidence.get("action")
@@ -752,6 +877,10 @@ def build_progress() -> dict[str, Any]:
                                 "reversed_vm_pk_bound_terminal_family_"
                                 "exact_closure_analysis"
                             ),
+                            (
+                                "reversed_vm_pk_thought_predicate_family_"
+                                "exact_closure_analysis"
+                            ),
                         }
                         and (
                             evidence.get("layout_transition")
@@ -783,6 +912,34 @@ def build_progress() -> dict[str, Any]:
                             terminal_predecessor_renewal
                             and integrated_row.get("runtime_review")
                             == "verified"
+                        )
+                        or (
+                            thought_predecessor_renewal
+                            and integrated_row.get("runtime_review")
+                            == "verified"
+                        )
+                        or (
+                            evidence.get("method")
+                            == (
+                                "reversed_vm_pk_thought_predicate_family_"
+                                "exact_closure_analysis"
+                            )
+                            and evidence.get("action")
+                            in {
+                                "runtime_promotion",
+                                (
+                                    "translation_override_and_runtime_"
+                                    "promotion"
+                                ),
+                            }
+                            and evidence.get(
+                                "grammar_complete_for_all_registers"
+                            )
+                            is True
+                            and evidence.get(
+                                "actual_current_relative_nonexpanding"
+                            )
+                            is True
                         )
                     ):
                         raise RuntimeError(
@@ -913,6 +1070,25 @@ def build_progress() -> dict[str, Any]:
     runtime_vm_integration_metadata[
         "bound_terminal_family_override_count"
     ] = len(consumed_bound_terminal_overrides)
+    if (
+        consumed_thought_predicate_overrides
+        != thought_predicate_override_coordinates
+    ):
+        missing = sorted(
+            thought_predicate_override_coordinates
+            - consumed_thought_predicate_overrides
+        )
+        extra = sorted(
+            consumed_thought_predicate_overrides
+            - thought_predicate_override_coordinates
+        )
+        raise RuntimeError(
+            "thought-predicate overrides were not exactly consumed: "
+            f"missing={missing} extra={extra}"
+        )
+    runtime_vm_integration_metadata[
+        "thought_predicate_family_override_count"
+    ] = len(consumed_thought_predicate_overrides)
 
     touched_batch_ids = sorted(batch_decisions, key=batch_key)
     queue_batch_coverage: list[dict[str, Any]] = []

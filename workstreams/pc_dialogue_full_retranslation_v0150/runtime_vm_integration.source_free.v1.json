@@ -87,7 +87,8 @@
       },
       "pk_only_layer_included": true,
       "pk_only_predecessor_checkpoint_match": true,
-      "promotion_count": 12042,
+      "promotion_count": 12065,
+      "rebuilt_post_bound_integrated_private_sha256": "F6BAA43C22404365E49D40C6B306C850C3B123681CD0A42D5A63EDB73D8018FB",
       "rebuilt_post_cross_integrated_private_sha256": "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC",
       "rebuilt_post_dynamic_integrated_private_sha256": "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2",
       "rebuilt_post_pk_only_integrated_private_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
@@ -98,9 +99,29 @@
         "private_sha256": "B1E5D89D13158AE4597F3B91A3D350F1271570F4625A39F8C83426CA6BF5E96B",
         "promotion_count": 2945,
         "promotion_report_sha256": "F5F726453552D13B29F6C5A7D85CFB945D0DD8C1211452F80E61DB957C261E02"
-      }
+      },
+      "thought_predicate_family": {
+        "assembly_manifest_sha256": "93F1F8B14FE43A05943BE9828D3A6ECC19BA570140ABBB5BB2DA930CA99C440A",
+        "audit_report_payload_sha256": "BF7EC8A09E119A1B710122573F3583FBCB312B7D79DBB6AFF4D015B9E1F75E91",
+        "audit_report_sha256": "9B1553E359CAA26627C02058EBE594BFCCB2EB628E2F6F6C5097792E9A37FB69",
+        "override_coordinate_sha256": "44910093D3966EA9D1B60B55AE0211BD14B1AFAE624DF23523D8C6FDD4A12630",
+        "override_manifest_sha256": "3E7A5694DE3EC10BF7969FF0A3DDF6AAA3F0EC47937996EDBE7E6669E034D144",
+        "pending_eligible_coordinate_sha256": "7AC0764A958A0D994099C74F1786B29462E3D59FEE00907D25220808B45D462F",
+        "pk_candidate_packed_sha256": "174E3BDBA63E38782531ADBF864FA95FFB75823A679DAC029594FFF1D66F23F4",
+        "pk_predecessor_candidate_packed_sha256": "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628",
+        "private_evidence_sha256": "76722DBB632D9CBB78C5BE089C18BDA8AD66C79C8A302B79DBE7DA9C03F32399",
+        "private_update_sha256": "5D516DBC69F8E78BC07E78C3BA032DEC68941E453DA687F6CD46E757C70333BD",
+        "promotion_count": 23,
+        "promotion_report_sha256": "624C93B1DE92A25B9D7ECBD0A0B0A3AE549A754ADAAF92ABC977896BA25C9F47",
+        "steam_write_performed": false,
+        "translation_override_count": 75,
+        "updated_row_count": 76,
+        "verification_renewal_count": 53,
+        "verified_renewal_coordinate_sha256": "FD51975BCCC485F80DB24F996E09182D3656D4F012D835B791E3C69B36FA2C0B"
+      },
+      "thought_predicate_family_layer_included": true
     },
-    "promoted_total": 27693,
+    "promoted_total": 27716,
     "relative_reflow_override": {
       "after_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
       "before_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
@@ -126,9 +147,9 @@
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 44162,
-    "private_integrated_decision_sha256": "F6BAA43C22404365E49D40C6B306C850C3B123681CD0A42D5A63EDB73D8018FB",
-    "runtime_review_pending": 8641,
+    "fully_candidate_eligible": 44185,
+    "private_integrated_decision_sha256": "9245DED68D1A8DFA51B0587E5E2B1B7165BF610CB4618460654D4032B04E1F10",
+    "runtime_review_pending": 8618,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
@@ -136,8 +157,10 @@
   "steam_write_performed": false,
   "validation": {
     "actual_four_pending_promotions_rechecked": true,
+    "actual_twenty_three_pending_promotions_rechecked": true,
     "affected_verified_pk_runtime_evidence_renewed": true,
     "affected_verified_runtime_evidence_renewed": true,
+    "all_483_assemblies_grammar_complete": true,
     "base_candidate_record_guards_rechecked": true,
     "bound_terminal_family_layer_included": true,
     "bound_terminal_semantic_overrides_rechecked": true,
@@ -151,6 +174,7 @@
     "pk_only_layer_included": true,
     "pk_only_predecessor_checkpoint_rebuilt_and_matched": true,
     "pk_overlay_rebuilt_and_rechecked": true,
+    "post_bound_predecessor_checkpoint_rebuilt_and_matched": true,
     "post_cross_predecessor_checkpoint_rebuilt_and_matched": true,
     "post_dynamic_predecessor_checkpoint_rebuilt_and_matched": true,
     "raw_g1n_full_closure_width_guard_rechecked": true,
@@ -158,6 +182,8 @@
     "representative_game_smoke_test_required_before_release": true,
     "runtime_only_transitions_enforced": true,
     "semantic_override_rebuilt_and_rechecked": true,
+    "thought_predicate_family_layer_included": true,
+    "thought_predicate_semantic_overrides_rechecked": true,
     "uncertain_pending_roots_remain_rejected": true
   }
 }
