@@ -60,6 +60,70 @@ BOUND_TERMINAL_OVERRIDE_COORDINATES = frozenset(
         )
     }
 )
+EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256 = (
+    "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5"
+)
+EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256 = (
+    "838D162126925ECF706577688D35570853CDA68226AF3C8FFB7FE14C3943D072"
+)
+BOUND_TERMINAL_2546_OVERRIDE_COORDINATE_SHA256 = (
+    "212DEF7EE8B508CEA406FF223BADE5E2DC0DC7D7B1EE5255AD828764B6A866B5"
+)
+BOUND_TERMINAL_2546_PROMOTION_COORDINATE_SHA256 = (
+    "667E25717B1F8CB5E8AD4C26DC4615CD2D52B38D69529BCB9E62AB562FD23320"
+)
+BOUND_TERMINAL_2546_RENEWAL_COORDINATE_SHA256 = (
+    "203B38F2EFD645D710467F7663ECE6B65EDAB32D1BF376B17C092BCFE898FA5F"
+)
+BOUND_TERMINAL_2546_DECISION_COORDINATE_SHA256 = (
+    "F176E7D99EC74F07AE6041B29EC5CCB3DB36A356B7600CF291B2B61B51ABC349"
+)
+BOUND_TERMINAL_2546_EXPECTED_ACTION_COUNTS = {
+    "runtime_promotion": 279,
+    "translation_override_and_runtime_promotion": 85,
+    "translation_override_and_verification_renewal": 131,
+    "verification_renewal": 161,
+}
+BOUND_TERMINAL_2546_SUPERSEDED_TERMINAL_OVERRIDES = frozenset(
+    {
+        ("pk_msggame", f"0:{record_id}:0")
+        for record_id in range(2546, 2553)
+    }
+)
+BOUND_TERMINAL_2546_SUPERSEDED_THOUGHT_OVERRIDES = frozenset(
+    {
+        ("pk_msggame", "6:3551:1"),
+        ("pk_msggame", "6:4398:0"),
+        ("pk_msggame", "6:4437:0"),
+    }
+)
+BOUND_TERMINAL_2546_SUPERSEDED_CALLER_OVERRIDES = frozenset(
+    {
+        ("pk_msggame", "6:3863:0"),
+        ("pk_msggame", "6:3863:1"),
+        ("pk_msggame", "6:4713:0"),
+        ("pk_msggame", "6:4713:1"),
+        ("pk_msggame", "6:4757:0"),
+        ("pk_msggame", "6:4757:1"),
+        ("pk_msggame", "6:4758:0"),
+        ("pk_msggame", "6:4758:1"),
+        ("pk_msggame", "6:4896:1"),
+        ("pk_msggame", "6:4896:2"),
+        ("pk_msggame", "15:277:1"),
+        ("pk_msggame", "15:277:2"),
+        ("pk_msggame", "15:278:1"),
+        ("pk_msggame", "15:278:2"),
+    }
+)
+BOUND_TERMINAL_2546_NEW_CALLER_OVERRIDE_OVERLAP = frozenset(
+    {
+        ("pk_msggame", "6:4713:1"),
+        ("pk_msggame", "6:4758:1"),
+        ("pk_msggame", "6:4896:2"),
+        ("pk_msggame", "15:277:1"),
+        ("pk_msggame", "15:278:1"),
+    }
+)
 
 
 def load_engine() -> Any:
@@ -184,6 +248,8 @@ def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
             "bound_terminal_caller_runtime_evidence",
             "bound_terminal_caller_update_action",
             "bound_terminal_caller_override_evidence",
+            "bound_terminal_2546_full_caller_update_action",
+            "bound_terminal_2546_exact_override_evidence",
         }
     }
 
@@ -204,6 +270,9 @@ def load_runtime_vm_integration(
     report_bytes = RUNTIME_VM_INTEGRATION_REPORT.read_bytes()
     report = json.loads(report_bytes.decode("utf-8"))
     if (
+        sha256_bytes(report_bytes)
+        != EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256
+        or
         not isinstance(report, dict)
         or report.get("schema") != RUNTIME_VM_INTEGRATION_SCHEMA
         or report.get("status") != "PASS"
@@ -214,6 +283,8 @@ def load_runtime_vm_integration(
     private_sha256 = sha256_bytes(RUNTIME_VM_INTEGRATED_DECISIONS.read_bytes())
     result = report.get("result")
     if (
+        private_sha256 != EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256
+        or
         not isinstance(result, dict)
         or result.get("private_integrated_decision_sha256") != private_sha256
         or result.get("semantic_review_approved")
@@ -243,8 +314,55 @@ def load_runtime_vm_integration(
         or result.get("runtime_review_pending") != pending
         or result.get("fully_candidate_eligible")
         != len(by_coordinate) - pending
+        or pending != 8_213
+        or result.get("fully_candidate_eligible") != 44_590
     ):
         raise RuntimeError("runtime VM integration result counts drifted")
+    pk_promotions = report.get("promotions", {}).get("pk_msggame", {})
+    bound_terminal_2546 = pk_promotions.get(
+        "bound_terminal_2546_full_caller"
+    )
+    if (
+        pk_promotions.get(
+            "bound_terminal_2546_full_caller_layer_included"
+        )
+        is not True
+        or not isinstance(bound_terminal_2546, dict)
+        or bound_terminal_2546.get("translation_override_count") != 216
+        or bound_terminal_2546.get("override_coordinate_sha256")
+        != BOUND_TERMINAL_2546_OVERRIDE_COORDINATE_SHA256
+        or bound_terminal_2546.get("promotion_count") != 364
+        or bound_terminal_2546.get("promotion_coordinate_sha256")
+        != BOUND_TERMINAL_2546_PROMOTION_COORDINATE_SHA256
+        or bound_terminal_2546.get("verification_renewal_count") != 292
+        or bound_terminal_2546.get("renewal_coordinate_sha256")
+        != BOUND_TERMINAL_2546_RENEWAL_COORDINATE_SHA256
+        or bound_terminal_2546.get("updated_row_count") != 656
+        or bound_terminal_2546.get("decision_coordinate_sha256")
+        != BOUND_TERMINAL_2546_DECISION_COORDINATE_SHA256
+        or bound_terminal_2546.get("action_counts")
+        != BOUND_TERMINAL_2546_EXPECTED_ACTION_COUNTS
+        or bound_terminal_2546.get("steam_write_performed") is not False
+        or report.get("validation", {}).get(
+            "bound_terminal_2546_full_caller_layer_included"
+        )
+        is not True
+        or report.get("validation", {}).get(
+            "exact_216_translation_overrides_rechecked"
+        )
+        is not True
+        or report.get("validation", {}).get(
+            "actual_364_pending_promotions_rechecked"
+        )
+        is not True
+        or report.get("validation", {}).get(
+            "affected_292_verified_pk_runtime_evidence_renewed"
+        )
+        is not True
+    ):
+        raise RuntimeError(
+            "bound-terminal 2546 integration metadata drifted"
+        )
     metadata = {
         "path": RUNTIME_VM_INTEGRATION_REPORT.relative_to(REPO).as_posix(),
         "schema": RUNTIME_VM_INTEGRATION_SCHEMA,
@@ -273,6 +391,8 @@ def load_runtime_vm_integration(
         "bound_terminal_caller": report["promotions"]["pk_msggame"].get(
             "bound_terminal_caller"
         ),
+        "bound_terminal_2546_full_caller_layer_included": True,
+        "bound_terminal_2546_full_caller": bound_terminal_2546,
         "steam_write_performed": False,
     }
     return by_coordinate, metadata
@@ -543,6 +663,94 @@ def build_progress() -> dict[str, Any]:
         raise RuntimeError(
             "bound-terminal caller semantic override universe drifted"
         )
+    bound_terminal_2546_metadata = runtime_vm_integration_metadata.get(
+        "bound_terminal_2546_full_caller"
+    )
+    if (
+        runtime_vm_integration_metadata.get(
+            "bound_terminal_2546_full_caller_layer_included"
+        )
+        is not True
+        or not isinstance(bound_terminal_2546_metadata, dict)
+    ):
+        raise RuntimeError(
+            "bound-terminal 2546 integration metadata is absent"
+        )
+    bound_terminal_2546_updated_coordinates = {
+        key
+        for key, integrated_row in runtime_vm_integrated.items()
+        if integrated_row.get(
+            ENGINE.PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
+        )
+        is not None
+    }
+    bound_terminal_2546_override_coordinates = {
+        key
+        for key in bound_terminal_2546_updated_coordinates
+        if str(
+            runtime_vm_integrated[key].get(
+                ENGINE.PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD,
+                "",
+            )
+        ).startswith("translation_override")
+    }
+    bound_terminal_2546_action_counts = Counter(
+        str(
+            runtime_vm_integrated[key][
+                ENGINE.PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
+            ]
+        )
+        for key in bound_terminal_2546_updated_coordinates
+    )
+    if (
+        len(bound_terminal_2546_updated_coordinates) != 656
+        or coordinate_digest(
+            [
+                coordinate
+                for _resource, coordinate
+                in bound_terminal_2546_updated_coordinates
+            ]
+        )
+        != BOUND_TERMINAL_2546_DECISION_COORDINATE_SHA256
+        or len(bound_terminal_2546_override_coordinates) != 216
+        or coordinate_digest(
+            [
+                coordinate
+                for _resource, coordinate
+                in bound_terminal_2546_override_coordinates
+            ]
+        )
+        != BOUND_TERMINAL_2546_OVERRIDE_COORDINATE_SHA256
+        or dict(bound_terminal_2546_action_counts)
+        != BOUND_TERMINAL_2546_EXPECTED_ACTION_COUNTS
+        or sum(
+            bound_terminal_2546_action_counts[action]
+            for action in (
+                "runtime_promotion",
+                "translation_override_and_runtime_promotion",
+            )
+        )
+        != 364
+        or sum(
+            bound_terminal_2546_action_counts[action]
+            for action in (
+                "verification_renewal",
+                "translation_override_and_verification_renewal",
+            )
+        )
+        != 292
+        or any(
+            resource != "pk_msggame"
+            for resource, _coordinate
+            in bound_terminal_2546_updated_coordinates
+        )
+    ):
+        raise RuntimeError(
+            "bound-terminal 2546 update/override universe drifted"
+        )
+    bound_terminal_2546_predecessor_rows = (
+        ENGINE.load_bound_terminal_2546_predecessor_rows()
+    )
     consumed_runtime_vm_integrated: set[tuple[str, str]] = set()
     consumed_dynamic_honorific_overrides: set[
         tuple[str, str]
@@ -550,6 +758,18 @@ def build_progress() -> dict[str, Any]:
     consumed_bound_terminal_overrides: set[tuple[str, str]] = set()
     consumed_thought_predicate_overrides: set[tuple[str, str]] = set()
     consumed_caller_overrides: set[tuple[str, str]] = set()
+    consumed_bound_terminal_2546_overrides: set[
+        tuple[str, str]
+    ] = set()
+    consumed_bound_terminal_2546_superseded_terminal: set[
+        tuple[str, str]
+    ] = set()
+    consumed_bound_terminal_2546_superseded_thought: set[
+        tuple[str, str]
+    ] = set()
+    consumed_bound_terminal_2546_superseded_caller: set[
+        tuple[str, str]
+    ] = set()
 
     queue_rows = load_jsonl(QUEUE_PATH)
     batch_catalog_raw = json.loads(BATCHES_PATH.read_text(encoding="utf-8"))
@@ -644,6 +864,68 @@ def build_progress() -> dict[str, Any]:
                     f"runtime VM integrated decision is absent: {key}"
                 )
             immutable_integrated_row = integrated_row
+            bound_terminal_2546_evidence = (
+                integrated_row.get("runtime_vm_verification")
+                if key in bound_terminal_2546_updated_coordinates
+                else None
+            )
+            bound_terminal_2546_predecessor = (
+                bound_terminal_2546_predecessor_rows.get(key)
+                if key in bound_terminal_2546_updated_coordinates
+                else None
+            )
+            if key in bound_terminal_2546_updated_coordinates:
+                if (
+                    not isinstance(bound_terminal_2546_evidence, dict)
+                    or not isinstance(
+                        bound_terminal_2546_predecessor,
+                        dict,
+                    )
+                    or bound_terminal_2546_evidence.get("method")
+                    != (
+                        ENGINE
+                        .PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD
+                    )
+                    or bound_terminal_2546_evidence.get("action")
+                    != integrated_row.get(
+                        ENGINE.PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
+                    )
+                    or bound_terminal_2546_evidence.get(
+                        "translation_utf16le_sha256"
+                    )
+                    != ENGINE.sha256_text(
+                        str(integrated_row.get("translation"))
+                    )
+                    or bound_terminal_2546_evidence.get(
+                        "predecessor_binding",
+                        {},
+                    ).get("checkpoint_sha256")
+                    != (
+                        ENGINE
+                        .PK_BOUND_TERMINAL_2546_PREDECESSOR_CHECKPOINT_SHA256
+                    )
+                    or bound_terminal_2546_evidence.get(
+                        "predecessor_binding",
+                        {},
+                    ).get("row_sha256")
+                    != ENGINE.canonical_sha256(
+                        bound_terminal_2546_predecessor
+                    )
+                    or bound_terminal_2546_evidence.get(
+                        "closure_binding",
+                        {},
+                    ).get("candidate_sha256")
+                    != ENGINE.PK_BOUND_TERMINAL_2546_CANDIDATE_SHA256
+                    or bound_terminal_2546_evidence.get(
+                        "closure_binding",
+                        {},
+                    ).get("decision_coordinate_sha256")
+                    != BOUND_TERMINAL_2546_DECISION_COORDINATE_SHA256
+                ):
+                    raise RuntimeError(
+                        "bound-terminal 2546 integrated row binding drifted: "
+                        f"{key}"
+                    )
             if (
                 integrated_row.get(
                     "runtime_boundary_leading_space_inserted"
@@ -696,13 +978,70 @@ def build_progress() -> dict[str, Any]:
                 "terminal_family_exact_override_evidence"
             )
             if terminal_override_evidence is not None:
-                terminal_runtime_evidence = (
-                    integrated_row.get("runtime_vm_verification")
-                    if integrated_row.get("runtime_review") == "verified"
-                    else integrated_row.get(
-                        "terminal_family_runtime_evidence"
-                    )
+                terminal_superseded_by_2546 = (
+                    key
+                    in BOUND_TERMINAL_2546_SUPERSEDED_TERMINAL_OVERRIDES
+                    and isinstance(bound_terminal_2546_evidence, dict)
                 )
+                if terminal_superseded_by_2546:
+                    assert isinstance(
+                        bound_terminal_2546_predecessor,
+                        dict,
+                    )
+                    predecessor_terminal_evidence = (
+                        bound_terminal_2546_predecessor.get(
+                            "runtime_vm_verification"
+                        )
+                        if bound_terminal_2546_predecessor.get(
+                            "runtime_review"
+                        )
+                        == "verified"
+                        else bound_terminal_2546_predecessor.get(
+                            "terminal_family_runtime_evidence"
+                        )
+                    )
+                    if (
+                        integrated_row.get(
+                            "terminal_family_update_action"
+                        )
+                        != bound_terminal_2546_predecessor.get(
+                            "terminal_family_update_action"
+                        )
+                        or terminal_override_evidence
+                        != bound_terminal_2546_predecessor.get(
+                            "terminal_family_exact_override_evidence"
+                        )
+                        or integrated_row.get(
+                            "terminal_family_runtime_evidence"
+                        )
+                        != bound_terminal_2546_predecessor.get(
+                            "terminal_family_runtime_evidence"
+                        )
+                    ):
+                        raise RuntimeError(
+                            "superseded terminal metadata was not preserved: "
+                            f"{key}"
+                        )
+                    terminal_runtime_evidence = (
+                        predecessor_terminal_evidence
+                    )
+                    terminal_translation = str(
+                        bound_terminal_2546_predecessor.get("translation")
+                    )
+                    consumed_bound_terminal_2546_superseded_terminal.add(
+                        key
+                    )
+                else:
+                    terminal_runtime_evidence = (
+                        integrated_row.get("runtime_vm_verification")
+                        if integrated_row.get("runtime_review") == "verified"
+                        else integrated_row.get(
+                            "terminal_family_runtime_evidence"
+                        )
+                    )
+                    terminal_translation = str(
+                        integrated_row.get("translation")
+                    )
                 if (
                     key not in BOUND_TERMINAL_OVERRIDE_COORDINATES
                     or not isinstance(terminal_override_evidence, dict)
@@ -725,7 +1064,7 @@ def build_progress() -> dict[str, Any]:
                         "translation_utf16le_sha256"
                     )
                     != ENGINE.sha256_text(
-                        str(integrated_row.get("translation"))
+                        terminal_translation
                     )
                 ):
                     raise RuntimeError(
@@ -752,9 +1091,44 @@ def build_progress() -> dict[str, Any]:
                 "translation_override_and_runtime_promotion",
                 "translation_override_and_verification_renewal",
             }:
-                thought_evidence = integrated_row.get(
-                    "runtime_vm_verification"
+                thought_superseded_by_2546 = (
+                    key
+                    in BOUND_TERMINAL_2546_SUPERSEDED_THOUGHT_OVERRIDES
+                    and isinstance(bound_terminal_2546_evidence, dict)
                 )
+                if thought_superseded_by_2546:
+                    assert isinstance(
+                        bound_terminal_2546_predecessor,
+                        dict,
+                    )
+                    thought_evidence = (
+                        bound_terminal_2546_predecessor.get(
+                            "runtime_vm_verification"
+                        )
+                    )
+                    if (
+                        thought_predicate_action
+                        != bound_terminal_2546_predecessor.get(
+                            "thought_predicate_family_update_action"
+                        )
+                    ):
+                        raise RuntimeError(
+                            "superseded thought metadata was not preserved: "
+                            f"{key}"
+                        )
+                    thought_translation = str(
+                        bound_terminal_2546_predecessor.get("translation")
+                    )
+                    consumed_bound_terminal_2546_superseded_thought.add(
+                        key
+                    )
+                else:
+                    thought_evidence = integrated_row.get(
+                        "runtime_vm_verification"
+                    )
+                    thought_translation = str(
+                        integrated_row.get("translation")
+                    )
                 thought_evidence_preserved_by_caller = (
                     key
                     == ENGINE.CALLER_SUPERSEDED_THOUGHT_ACTION_COORDINATE
@@ -788,7 +1162,7 @@ def build_progress() -> dict[str, Any]:
                                 "updated_translation_utf16le_sha256"
                             )
                             != ENGINE.sha256_text(
-                                str(integrated_row.get("translation"))
+                                thought_translation
                             )
                             or thought_evidence.get(
                                 "full_incoming_closure_verified"
@@ -819,13 +1193,67 @@ def build_progress() -> dict[str, Any]:
                 "bound_terminal_caller_update_action"
             )
             if str(caller_action).startswith("translation_override"):
-                caller_evidence = (
-                    integrated_row.get("runtime_vm_verification")
-                    if integrated_row.get("runtime_review") == "verified"
-                    else integrated_row.get(
-                        "bound_terminal_caller_runtime_evidence"
-                    )
+                caller_superseded_by_2546 = (
+                    key
+                    in BOUND_TERMINAL_2546_SUPERSEDED_CALLER_OVERRIDES
+                    and isinstance(bound_terminal_2546_evidence, dict)
                 )
+                if caller_superseded_by_2546:
+                    assert isinstance(
+                        bound_terminal_2546_predecessor,
+                        dict,
+                    )
+                    caller_evidence = (
+                        bound_terminal_2546_predecessor.get(
+                            "runtime_vm_verification"
+                        )
+                        if bound_terminal_2546_predecessor.get(
+                            "runtime_review"
+                        )
+                        == "verified"
+                        else bound_terminal_2546_predecessor.get(
+                            "bound_terminal_caller_runtime_evidence"
+                        )
+                    )
+                    if (
+                        caller_action
+                        != bound_terminal_2546_predecessor.get(
+                            "bound_terminal_caller_update_action"
+                        )
+                        or integrated_row.get(
+                            "bound_terminal_caller_runtime_evidence"
+                        )
+                        != bound_terminal_2546_predecessor.get(
+                            "bound_terminal_caller_runtime_evidence"
+                        )
+                        or integrated_row.get(
+                            "bound_terminal_caller_override_evidence"
+                        )
+                        != bound_terminal_2546_predecessor.get(
+                            "bound_terminal_caller_override_evidence"
+                        )
+                    ):
+                        raise RuntimeError(
+                            "superseded caller metadata was not preserved: "
+                            f"{key}"
+                        )
+                    caller_translation = str(
+                        bound_terminal_2546_predecessor.get("translation")
+                    )
+                    consumed_bound_terminal_2546_superseded_caller.add(
+                        key
+                    )
+                else:
+                    caller_evidence = (
+                        integrated_row.get("runtime_vm_verification")
+                        if integrated_row.get("runtime_review") == "verified"
+                        else integrated_row.get(
+                            "bound_terminal_caller_runtime_evidence"
+                        )
+                    )
+                    caller_translation = str(
+                        integrated_row.get("translation")
+                    )
                 if (
                     key not in caller_override_coordinates
                     or not isinstance(caller_evidence, dict)
@@ -834,7 +1262,7 @@ def build_progress() -> dict[str, Any]:
                     or caller_evidence.get("action") != caller_action
                     or caller_evidence.get("translation_utf16le_sha256")
                     != ENGINE.sha256_text(
-                        str(integrated_row.get("translation"))
+                        caller_translation
                     )
                 ):
                     raise RuntimeError(
@@ -852,6 +1280,69 @@ def build_progress() -> dict[str, Any]:
                         "runtime_assembly_evidence"
                     ] = effective_row.get("runtime_assembly_evidence")
                 consumed_caller_overrides.add(key)
+            bound_terminal_2546_action = integrated_row.get(
+                ENGINE.PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
+            )
+            if str(bound_terminal_2546_action).startswith(
+                "translation_override"
+            ):
+                override_evidence = integrated_row.get(
+                    "bound_terminal_2546_exact_override_evidence"
+                )
+                if (
+                    key not in bound_terminal_2546_override_coordinates
+                    or key in consumed_bound_terminal_2546_overrides
+                    or not isinstance(bound_terminal_2546_evidence, dict)
+                    or bound_terminal_2546_evidence.get("action")
+                    != bound_terminal_2546_action
+                    or bound_terminal_2546_evidence.get(
+                        "translation_utf16le_sha256"
+                    )
+                    != ENGINE.sha256_text(
+                        str(integrated_row.get("translation"))
+                    )
+                    or not isinstance(override_evidence, dict)
+                    or override_evidence.get("schema")
+                    != (
+                        "nobu16.kr.pk-bound-terminal-2546-"
+                        "exact-override.v1"
+                    )
+                    or override_evidence.get(
+                        "private_handoff_hash_bound"
+                    )
+                    is not True
+                    or override_evidence.get("control_bytes_preserved")
+                    is not True
+                    or override_evidence.get("automatic_space_inserted")
+                    is not False
+                    or override_evidence.get(
+                        "translation_utf16le_sha256"
+                    )
+                    != ENGINE.sha256_text(
+                        str(integrated_row.get("translation"))
+                    )
+                ):
+                    raise RuntimeError(
+                        "bound-terminal 2546 semantic override drifted: "
+                        f"{key}"
+                    )
+                immutable_integrated_row = dict(immutable_integrated_row)
+                immutable_integrated_row["translation"] = effective_row[
+                    "translation"
+                ]
+                if (
+                    integrated_row.get("runtime_assembly_evidence")
+                    != effective_row.get("runtime_assembly_evidence")
+                ):
+                    immutable_integrated_row[
+                        "runtime_assembly_evidence"
+                    ] = effective_row.get("runtime_assembly_evidence")
+                if key in consumed_bound_terminal_2546_overrides:
+                    raise RuntimeError(
+                        "bound-terminal 2546 override was consumed twice: "
+                        f"{key}"
+                    )
+                consumed_bound_terminal_2546_overrides.add(key)
             if runtime_immutable_row(effective_row) != runtime_immutable_row(
                 immutable_integrated_row
             ):
@@ -948,6 +1439,75 @@ def build_progress() -> dict[str, Any]:
                         str,
                     )
                 )
+                bound_terminal_2546_action = evidence.get("action")
+                bound_terminal_2546_predecessor_state_matches = (
+                    isinstance(bound_terminal_2546_predecessor, dict)
+                    and evidence.get("method")
+                    == (
+                        ENGINE
+                        .PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD
+                    )
+                    and (
+                        (
+                            bound_terminal_2546_action
+                            in {
+                                "runtime_promotion",
+                                (
+                                    "translation_override_and_"
+                                    "runtime_promotion"
+                                ),
+                            }
+                            and bound_terminal_2546_predecessor.get(
+                                "runtime_review"
+                            )
+                            == "pending"
+                            and evidence.get(
+                                "preexisting_verified_evidence_renewed"
+                            )
+                            is False
+                        )
+                        or (
+                            bound_terminal_2546_action
+                            in {
+                                "verification_renewal",
+                                (
+                                    "translation_override_and_"
+                                    "verification_renewal"
+                                ),
+                            }
+                            and bound_terminal_2546_predecessor.get(
+                                "runtime_review"
+                            )
+                            == "verified"
+                            and evidence.get(
+                                "preexisting_verified_evidence_renewed"
+                            )
+                            is True
+                        )
+                    )
+                )
+                bound_terminal_2546_transition = (
+                    evidence.get("method")
+                    == (
+                        ENGINE
+                        .PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD
+                    )
+                    and bound_terminal_2546_predecessor_state_matches
+                    and isinstance(
+                        evidence.get("predecessor_binding"),
+                        dict,
+                    )
+                    and evidence["predecessor_binding"].get(
+                        "row_sha256"
+                    )
+                    == ENGINE.canonical_sha256(
+                        bound_terminal_2546_predecessor
+                    )
+                    and evidence.get("closure_binding", {}).get(
+                        "decision_coordinate_sha256"
+                    )
+                    == BOUND_TERMINAL_2546_DECISION_COORDINATE_SHA256
+                )
                 if (
                     evidence.get("action")
                     in {"translation_override", "verification_renewal"}
@@ -986,6 +1546,18 @@ def build_progress() -> dict[str, Any]:
                     raise RuntimeError(
                         "thought-predicate runtime evidence did not bind its "
                         f"verified predecessor: {key}"
+                    )
+                if (
+                    evidence.get("method")
+                    == (
+                        ENGINE
+                        .PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD
+                    )
+                    and not bound_terminal_2546_transition
+                ):
+                    raise RuntimeError(
+                        "bound-terminal 2546 transition did not bind its "
+                        f"expected predecessor state: {key}"
                     )
                 if (
                     evidence.get("action")
@@ -1032,6 +1604,10 @@ def build_progress() -> dict[str, Any]:
                                 "reversed_vm_pk_bound_terminal_caller_"
                                 "full_closure_analysis"
                             ),
+                            (
+                                "reversed_vm_pk_bound_terminal_2546_"
+                                "full_caller_closure"
+                            ),
                         }
                         and (
                             evidence.get("layout_transition")
@@ -1065,6 +1641,7 @@ def build_progress() -> dict[str, Any]:
                                 ).get("manual_full_assembly_verified")
                                 is True
                             )
+                            or bound_terminal_2546_transition
                         )
                         or (
                             dynamic_predecessor_renewal
@@ -1271,6 +1848,67 @@ def build_progress() -> dict[str, Any]:
     runtime_vm_integration_metadata[
         "bound_terminal_caller_override_count"
     ] = len(consumed_caller_overrides)
+    if (
+        consumed_bound_terminal_2546_overrides
+        != bound_terminal_2546_override_coordinates
+    ):
+        missing = sorted(
+            bound_terminal_2546_override_coordinates
+            - consumed_bound_terminal_2546_overrides
+        )
+        extra = sorted(
+            consumed_bound_terminal_2546_overrides
+            - bound_terminal_2546_override_coordinates
+        )
+        raise RuntimeError(
+            "bound-terminal 2546 overrides were not exactly consumed: "
+            f"missing={missing[:8]} extra={extra[:8]}"
+        )
+    if (
+        consumed_bound_terminal_2546_superseded_terminal
+        != BOUND_TERMINAL_2546_SUPERSEDED_TERMINAL_OVERRIDES
+        or consumed_bound_terminal_2546_superseded_thought
+        != BOUND_TERMINAL_2546_SUPERSEDED_THOUGHT_OVERRIDES
+        or consumed_bound_terminal_2546_superseded_caller
+        != BOUND_TERMINAL_2546_SUPERSEDED_CALLER_OVERRIDES
+    ):
+        raise RuntimeError(
+            "bound-terminal 2546 superseded predecessor override sets "
+            "were not exactly preserved"
+        )
+    if (
+        bound_terminal_2546_override_coordinates
+        & BOUND_TERMINAL_OVERRIDE_COORDINATES
+        or bound_terminal_2546_override_coordinates
+        & thought_predicate_override_coordinates
+        or (
+            bound_terminal_2546_override_coordinates
+            & caller_override_coordinates
+        )
+        != BOUND_TERMINAL_2546_NEW_CALLER_OVERRIDE_OVERLAP
+    ):
+        raise RuntimeError(
+            "bound-terminal 2546 override overlap universe drifted"
+        )
+    runtime_vm_integration_metadata.update(
+        {
+            "bound_terminal_2546_full_caller_override_count": len(
+                consumed_bound_terminal_2546_overrides
+            ),
+            "bound_terminal_2546_superseded_terminal_override_count": len(
+                consumed_bound_terminal_2546_superseded_terminal
+            ),
+            "bound_terminal_2546_superseded_thought_override_count": len(
+                consumed_bound_terminal_2546_superseded_thought
+            ),
+            "bound_terminal_2546_superseded_caller_override_count": len(
+                consumed_bound_terminal_2546_superseded_caller
+            ),
+            "bound_terminal_2546_prior_caller_override_overlap_count": len(
+                BOUND_TERMINAL_2546_NEW_CALLER_OVERRIDE_OVERLAP
+            ),
+        }
+    )
 
     touched_batch_ids = sorted(batch_decisions, key=batch_key)
     queue_batch_coverage: list[dict[str, Any]] = []
@@ -1304,6 +1942,26 @@ def build_progress() -> dict[str, Any]:
     eligible = approved - pending
     semantic_complete = approved == total_targets
     candidate_complete = semantic_complete and pending == 0 and CANDIDATE_MANIFEST.is_file()
+    expected_scope_counts = Counter(
+        {
+            "confirmed_non_display": 345,
+            "retranslated": 44_245,
+            "runtime_fragment_pending": 8_213,
+        }
+    )
+    if (
+        total_targets != 52_803
+        or approved != 52_803
+        or pending != 8_213
+        or eligible != 44_590
+        or scope_classification_counts != expected_scope_counts
+    ):
+        raise RuntimeError(
+            "bound-terminal 2546 progress totals drifted: "
+            f"targets={total_targets} approved={approved} "
+            f"pending={pending} eligible={eligible} "
+            f"scope={dict(scope_classification_counts)}"
+        )
     return {
         "schema": "nobu16.kr.pc-dialogue-full-retranslation-progress.v1",
         "release_target": "0.15.0",
