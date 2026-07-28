@@ -40,6 +40,14 @@ class Selector5681096CrossFamilyConsolidatedTests(unittest.TestCase):
         BUILDER.validate_frozen(cls.bundle)
 
     def test_frozen_inputs_and_outputs_match(self) -> None:
+        self.assertIn(
+            "post_selector538_family_checkpoint",
+            str(BUILDER.OFFICIAL_PRIVATE_PATH),
+        )
+        self.assertIn(
+            "post_selector538_family_checkpoint",
+            str(BUILDER.OFFICIAL_PUBLIC_PATH),
+        )
         inputs = {
             BUILDER.OFFICIAL_PRIVATE_PATH:
                 BUILDER.EXPECTED_OFFICIAL_PRIVATE_SHA256,
@@ -106,6 +114,18 @@ class Selector5681096CrossFamilyConsolidatedTests(unittest.TestCase):
         self.assertEqual(
             result["final_candidate_sha256"],
             BUILDER.EXPECTED_FINAL_CANDIDATE_SHA256,
+        )
+        promoted = [
+            row for row in self.bundle["updated_rows"]
+            if row["coordinate"] in union["actual_promotions"]
+        ]
+        self.assertEqual(len(promoted), 431)
+        self.assertTrue(
+            all(
+                row["scope_classification"] == "retranslated"
+                and row["layout_review"] == "runtime_verified"
+                for row in promoted
+            )
         )
 
     def test_all_family_and_cross_assemblies_are_bound(self) -> None:

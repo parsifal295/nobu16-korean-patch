@@ -38,10 +38,14 @@ FAMILY1096_BUILDER_PATH = (
     WORKSTREAM / "build_pk_selector1096_family_consolidated_closure_v1.py"
 )
 OFFICIAL_PRIVATE_PATH = (
-    DIALOGUE_TMP / "runtime_vm_integrated.private.v1.jsonl"
+    DIALOGUE_TMP
+    / "runtime_vm_integrated."
+    "post_selector538_family_checkpoint.private.v1.jsonl"
 )
 OFFICIAL_PUBLIC_PATH = (
-    DIALOGUE_WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
+    DIALOGUE_WORKSTREAM
+    / "runtime_vm_integration."
+    "post_selector538_family_checkpoint.source_free.v1.json"
 )
 CROSS_DEFERRED_PATH = (
     DIALOGUE_TMP / "selector1096_cross568_deferred.private.v1.json"
@@ -160,10 +164,10 @@ EXPECTED_AUDIT_OUTPUT_SHA256 = (
     "2F3D7A91874B373568AE38BDB0C8202A7AF46ACFB36BE8236BD4D61BA3018F36"
 )
 EXPECTED_PROMOTION_OUTPUT_SHA256 = (
-    "2D07E21DA780490DF1600C8AECAE19BE738D77957E462BC45AAB674E1B143350"
+    "FC08FCA8A03B2D5BC10C113AED16D76E1A0463165F20047E80BBF554DCCF7CF3"
 )
 EXPECTED_DECISION_OUTPUT_SHA256 = (
-    "4E94C59979119F7956C695CD75D506F848109C6A42F64DE2600904C5BCC354B9"
+    "E3C97823C70FBD441D420722AE306E2DEBE62CB8919FBA5426A91BC00DCBA5ED"
 )
 EXPECTED_EVIDENCE_OUTPUT_SHA256 = (
     "7CBCDC7D541EECD3B0946A61535B0030A288292F0C3C1C3DF750908BB4510799"
@@ -862,12 +866,20 @@ def build_rows(
                     True,
             }
         row = copy.deepcopy(dict(preferred))
+        is_runtime_promotion = (
+            coordinate in union["actual_promotions"]
+        )
         row["layout_review"] = (
             "runtime_verified"
-            if coordinate in union["cross_coordinates"]
+            if (
+                is_runtime_promotion
+                or coordinate in union["cross_coordinates"]
+            )
             else row.get("layout_review", "runtime_verified")
         )
         row["runtime_review"] = "verified"
+        if is_runtime_promotion:
+            row["scope_classification"] = "retranslated"
         row["semantic_review"] = "approved"
         row["translation"] = translation
         row[UPDATE_ACTION_FIELD] = union[
