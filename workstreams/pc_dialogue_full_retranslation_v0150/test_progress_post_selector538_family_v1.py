@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regression tests for progress after the PK 2546 full-caller layer."""
+"""Regression tests for progress after D5 and selector-538-family closure."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ WORKSTREAM = SCRIPT.parent
 BUILDER_PATH = WORKSTREAM / "build_progress_source_free_v0150.py"
 PROGRESS_PATH = WORKSTREAM / "progress.source_free.v1.json"
 EXPECTED_PROGRESS_SHA256 = (
-    "7B35B09FB119CFDF4AC27311FADAB6F6817E17588DD3993E96987652710F81DC"
+    "17AF6E25DB0D873D00D5D850991161F17E30FA1917157C1EC4A33619EFA5971C"
 )
 
 
@@ -32,10 +32,10 @@ def load_module(name: str, path: Path) -> Any:
     return module
 
 
-BUILDER = load_module("progress_post_bound_terminal_2546_builder", BUILDER_PATH)
+BUILDER = load_module("progress_post_selector538_family_builder", BUILDER_PATH)
 
 
-class ProgressPostBoundTerminal2546Tests(unittest.TestCase):
+class ProgressPostSelector538FamilyTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.raw = PROGRESS_PATH.read_bytes()
@@ -75,19 +75,19 @@ class ProgressPostBoundTerminal2546Tests(unittest.TestCase):
             self.progress["totals"],
             {
                 "semantic_review_approved": 52_803,
-                "runtime_review_pending": 8_213,
-                "fully_candidate_eligible": 44_590,
+                "runtime_review_pending": 7_896,
+                "fully_candidate_eligible": 44_907,
                 "scope_classification_counts": {
                     "confirmed_non_display": 345,
-                    "retranslated": 44_245,
-                    "runtime_fragment_pending": 8_213,
+                    "retranslated": 44_562,
+                    "runtime_fragment_pending": 7_896,
                 },
                 "semantic_completion": True,
                 "candidate_build_complete": False,
             },
         )
 
-    def test_2546_layer_and_override_consumption_are_published(self) -> None:
+    def test_historical_and_final_layers_are_published(self) -> None:
         integration = self.progress["runtime_vm_integration"]
         self.assertEqual(
             integration["sha256"],
@@ -96,6 +96,16 @@ class ProgressPostBoundTerminal2546Tests(unittest.TestCase):
         self.assertEqual(
             integration["private_integrated_decision_sha256"],
             BUILDER.EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256,
+        )
+        self.assertEqual(integration["runtime_review_pending_after"], 7_896)
+        self.assertTrue(
+            integration[
+                "historical_layers_revalidated_from_immutable_checkpoint"
+            ]
+        )
+        self.assertEqual(
+            integration["historical_checkpoint_private_sha256"],
+            BUILDER.EXPECTED_HISTORICAL_PRIVATE_SHA256,
         )
         self.assertTrue(
             integration[
@@ -138,8 +148,24 @@ class ProgressPostBoundTerminal2546Tests(unittest.TestCase):
             ],
             5,
         )
+        final = integration["final_exact_layers"]
+        self.assertEqual(final["d5_decision_rows"], 7)
+        self.assertEqual(final["selector538_decision_rows"], 697)
+        self.assertTrue(final["d5_selector538_disjoint"])
+        self.assertEqual(
+            final["final_pk_candidate_sha256"],
+            BUILDER.EXPECTED_FINAL_PK_CANDIDATE_SHA256,
+        )
+        self.assertEqual(
+            final["d5_decision_sha256"],
+            BUILDER.EXPECTED_D5_DECISION_SHA256,
+        )
+        self.assertEqual(
+            final["selector538_decision_sha256"],
+            BUILDER.EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
+        )
 
-    def test_runtime_immutable_row_excludes_new_mutable_layer_fields(
+    def test_runtime_immutable_row_excludes_final_mutable_layer_fields(
         self,
     ) -> None:
         row = {
@@ -147,6 +173,9 @@ class ProgressPostBoundTerminal2546Tests(unittest.TestCase):
             "bound_terminal_2546_full_caller_update_action":
             "runtime_promotion",
             "bound_terminal_2546_exact_override_evidence": {"x": 1},
+            "bound_terminal_2546_category_b_deferred_full_vm_update_action":
+            "runtime_promotion",
+            "selector538_family_update_action": "verification_renewal",
         }
         self.assertEqual(
             BUILDER.runtime_immutable_row(row),

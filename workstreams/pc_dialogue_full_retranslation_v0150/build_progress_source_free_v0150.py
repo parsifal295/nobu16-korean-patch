@@ -30,6 +30,40 @@ RUNTIME_VM_INTEGRATED_DECISIONS = (
 RUNTIME_VM_INTEGRATION_REPORT = (
     WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
 )
+HISTORICAL_RUNTIME_VM_INTEGRATED_DECISIONS = (
+    OUTPUT_ROOT
+    / "runtime_vm_integrated."
+    "post_bound_terminal_2546_checkpoint.private.v1.jsonl"
+)
+HISTORICAL_RUNTIME_VM_INTEGRATION_REPORT = (
+    WORKSTREAM
+    / "runtime_vm_integration."
+    "post_bound_terminal_2546_checkpoint.source_free.v1.json"
+)
+D5_DECISION_PATH = (
+    OUTPUT_ROOT
+    / "semantic_overrides"
+    / "pk_bound_terminal_2546_category_b_deferred_full_vm_"
+    "closure_integrated_decisions.private.v1.jsonl"
+)
+D5_EVIDENCE_PATH = (
+    OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_bound_terminal_2546_category_b_deferred_full_vm_"
+    "closure_evidence.private.v1.jsonl"
+)
+SELECTOR538_FAMILY_DECISION_PATH = (
+    OUTPUT_ROOT
+    / "semantic_overrides"
+    / "pk_selector538_family_consolidated_closure_decisions.private.v1.jsonl"
+)
+SELECTOR538_FAMILY_EVIDENCE_PATH = (
+    OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_selector538_family_consolidated_closure_evidence.private.v1.jsonl"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -61,10 +95,31 @@ BOUND_TERMINAL_OVERRIDE_COORDINATES = frozenset(
     }
 )
 EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256 = (
-    "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5"
+    "81B4E22C3C20AA5F7FF8B8251A2829AEEB0C6E0A0D9FA2B93748B6249F23F6CB"
 )
 EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256 = (
+    "46270F70A019484EFB1F99851D436467C8FD2DE32EB222BDC048DA1B5BC080FA"
+)
+EXPECTED_HISTORICAL_PRIVATE_SHA256 = (
+    "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5"
+)
+EXPECTED_HISTORICAL_REPORT_SHA256 = (
     "838D162126925ECF706577688D35570853CDA68226AF3C8FFB7FE14C3943D072"
+)
+EXPECTED_D5_DECISION_SHA256 = (
+    "54343C398C7D8E22A957AE47CA9B8AA5C11DD7F64C6BEF4EFF50DFA4EF466095"
+)
+EXPECTED_D5_EVIDENCE_SHA256 = (
+    "C328430233A81E4457BD253844D65622B7305AEB20FACB30E011C2EEF7B58BD0"
+)
+EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256 = (
+    "5640EB7FB7E4EA9B32309B7FA280637DA9F26F96CA500BCD4FA9847D997456C0"
+)
+EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256 = (
+    "910C0A59823C2B6B083F58257D6203053738EFEFC2E49E6271D553FF44CAB940"
+)
+EXPECTED_FINAL_PK_CANDIDATE_SHA256 = (
+    "DCB19B0D85422F7C0EA5888F9A0C47667D75A88D100BABAE11DDAF4A8DD2000E"
 )
 BOUND_TERMINAL_2546_OVERRIDE_COORDINATE_SHA256 = (
     "212DEF7EE8B508CEA406FF223BADE5E2DC0DC7D7B1EE5255AD828764B6A866B5"
@@ -222,6 +277,16 @@ def canonical_row_sha256(row: dict[str, Any]) -> str:
     return sha256_bytes(encoded)
 
 
+def canonical_ascii_row_sha256(row: dict[str, Any]) -> str:
+    encoded = json.dumps(
+        row,
+        ensure_ascii=True,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return sha256_bytes(encoded)
+
+
 def coordinate_digest(values: Sequence[str]) -> str:
     coordinates = sorted(set(values), key=coordinate_key)
     return sha256_bytes(
@@ -250,28 +315,34 @@ def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
             "bound_terminal_caller_override_evidence",
             "bound_terminal_2546_full_caller_update_action",
             "bound_terminal_2546_exact_override_evidence",
+            "bound_terminal_2546_simple_caller_update_action",
+            "bound_terminal_2546_category_b_immediate_update_action",
+            "bound_terminal_2546_category_b_deferred_full_vm_update_action",
+            "bound_terminal_2546_category_b_deferred_full_vm_exact_override_evidence",
+            "selector538_chunk0_update_action",
+            "selector538_family_update_action",
         }
     }
 
 
-def load_runtime_vm_integration(
+def load_historical_runtime_vm_integration(
     prepared: Any,
 ) -> tuple[dict[tuple[str, str], dict[str, Any]], dict[str, Any]]:
-    if not RUNTIME_VM_INTEGRATION_REPORT.is_file():
+    if not HISTORICAL_RUNTIME_VM_INTEGRATION_REPORT.is_file():
         raise RuntimeError(
-            "source-free runtime VM integration report is absent: "
-            f"{RUNTIME_VM_INTEGRATION_REPORT}"
+            "historical source-free runtime VM integration report is absent: "
+            f"{HISTORICAL_RUNTIME_VM_INTEGRATION_REPORT}"
         )
-    if not RUNTIME_VM_INTEGRATED_DECISIONS.is_file():
+    if not HISTORICAL_RUNTIME_VM_INTEGRATED_DECISIONS.is_file():
         raise RuntimeError(
-            "private runtime VM integrated decisions are absent: "
-            f"{RUNTIME_VM_INTEGRATED_DECISIONS}"
+            "historical private runtime VM integrated decisions are absent: "
+            f"{HISTORICAL_RUNTIME_VM_INTEGRATED_DECISIONS}"
         )
-    report_bytes = RUNTIME_VM_INTEGRATION_REPORT.read_bytes()
+    report_bytes = HISTORICAL_RUNTIME_VM_INTEGRATION_REPORT.read_bytes()
     report = json.loads(report_bytes.decode("utf-8"))
     if (
         sha256_bytes(report_bytes)
-        != EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256
+        != EXPECTED_HISTORICAL_REPORT_SHA256
         or
         not isinstance(report, dict)
         or report.get("schema") != RUNTIME_VM_INTEGRATION_SCHEMA
@@ -280,10 +351,12 @@ def load_runtime_vm_integration(
         or report.get("steam_write_performed") is not False
     ):
         raise RuntimeError("runtime VM integration report metadata drifted")
-    private_sha256 = sha256_bytes(RUNTIME_VM_INTEGRATED_DECISIONS.read_bytes())
+    private_sha256 = sha256_bytes(
+        HISTORICAL_RUNTIME_VM_INTEGRATED_DECISIONS.read_bytes()
+    )
     result = report.get("result")
     if (
-        private_sha256 != EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256
+        private_sha256 != EXPECTED_HISTORICAL_PRIVATE_SHA256
         or
         not isinstance(result, dict)
         or result.get("private_integrated_decision_sha256") != private_sha256
@@ -293,10 +366,10 @@ def load_runtime_vm_integration(
         raise RuntimeError("runtime VM integrated decision guard drifted")
     ENGINE.validate_decisions(
         prepared,
-        RUNTIME_VM_INTEGRATED_DECISIONS,
+        HISTORICAL_RUNTIME_VM_INTEGRATED_DECISIONS,
         require_complete=False,
     )
-    rows = load_jsonl(RUNTIME_VM_INTEGRATED_DECISIONS)
+    rows = load_jsonl(HISTORICAL_RUNTIME_VM_INTEGRATED_DECISIONS)
     by_coordinate: dict[tuple[str, str], dict[str, Any]] = {}
     for row in rows:
         key = (str(row["resource"]), str(row["coordinate"]))
@@ -364,7 +437,10 @@ def load_runtime_vm_integration(
             "bound-terminal 2546 integration metadata drifted"
         )
     metadata = {
-        "path": RUNTIME_VM_INTEGRATION_REPORT.relative_to(REPO).as_posix(),
+        "historical_path":
+            HISTORICAL_RUNTIME_VM_INTEGRATION_REPORT
+            .relative_to(REPO)
+            .as_posix(),
         "schema": RUNTIME_VM_INTEGRATION_SCHEMA,
         "sha256": sha256_bytes(report_bytes),
         "private_integrated_decision_sha256": private_sha256,
@@ -396,6 +472,290 @@ def load_runtime_vm_integration(
         "steam_write_performed": False,
     }
     return by_coordinate, metadata
+
+
+def keyed_rows(
+    path: Path,
+) -> dict[tuple[str, str], dict[str, Any]]:
+    result: dict[tuple[str, str], dict[str, Any]] = {}
+    for row in load_jsonl(path):
+        key = (str(row["resource"]), str(row["coordinate"]))
+        if key in result:
+            raise RuntimeError(f"duplicate exact layer row: {path}/{key}")
+        result[key] = row
+    return result
+
+
+def validate_final_exact_layers(
+    *,
+    historical_rows: dict[tuple[str, str], dict[str, Any]],
+    final_rows: dict[tuple[str, str], dict[str, Any]],
+    report: dict[str, Any],
+) -> dict[str, Any]:
+    pk = report.get("promotions", {}).get("pk_msggame", {})
+    d5 = pk.get("bound_terminal_2546_category_b_deferred")
+    selector538 = pk.get("selector538_family")
+    validation = report.get("validation", {})
+    if (
+        pk.get(
+            "bound_terminal_2546_category_b_deferred_layer_included"
+        )
+        is not True
+        or pk.get("selector538_family_layer_included") is not True
+        or not isinstance(d5, dict)
+        or not isinstance(selector538, dict)
+        or d5.get("private_source_update_sha256")
+        != EXPECTED_D5_DECISION_SHA256
+        or d5.get("private_source_evidence_sha256")
+        != EXPECTED_D5_EVIDENCE_SHA256
+        or d5.get("audit_report_sha256")
+        != "6DF07C5897901C6807AF02FAFFDF45B2433423162D2FBE5CD1D0BEF0B3593C17"
+        or d5.get("promotion_report_sha256")
+        != "7488765148CF320B66D28F5820DD3321629A7962F54A3AF5D528CB79CF48757F"
+        or d5.get("combined_candidate_packed_sha256")
+        != "7A2FFBC5A175BDE9B78169EE6D6212BCEC73A949652A92863C35F93EC9B8A04F"
+        or d5.get("source_candidate_packed_sha256")
+        != "1E57A600BE7EC64F2D923816121D16E2444B460527291347322ADCEE48110053"
+        or d5.get("promotion_count") != 5
+        or d5.get("verification_renewal_count") != 2
+        or d5.get("translation_override_count") != 6
+        or d5.get("updated_row_count") != 7
+        or d5.get("action_counts")
+        != {
+            "runtime_promotion": 1,
+            "translation_override_and_runtime_promotion": 4,
+            "translation_override_and_verification_renewal": 2,
+        }
+        or d5.get("steam_write_performed") is not False
+        or selector538.get("private_source_update_sha256")
+        != EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256
+        or selector538.get("private_source_evidence_sha256")
+        != EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256
+        or selector538.get("audit_report_sha256")
+        != "39E287858CDF49ABDA329A6C3E8EB1E9497E415CDE25F4348C3E12113A1C07A8"
+        or selector538.get("promotion_report_sha256")
+        != "6F7DDA159299CC9B1923C14A55B5341CFBDB9E9DB3CADA5D7CB77453EAEF3E85"
+        or selector538.get("source_candidate_sha256")
+        != "24E0E9CCAAD469C0EEFB41EDB032A17F0DAE9BF3EEB471688D452C2FC2A37C56"
+        or selector538.get("combined_candidate_packed_sha256")
+        != EXPECTED_FINAL_PK_CANDIDATE_SHA256
+        or selector538.get("promotion_count") != 212
+        or selector538.get("total_family_promotion_count") != 277
+        or selector538.get("verification_renewal_count") != 420
+        or selector538.get("translation_override_count") != 142
+        or selector538.get("updated_row_count") != 697
+        or selector538.get("decision_union_coordinate_sha256")
+        != "CE46C3E9524D6FB61DA1B24B58F3EB6EC863BC3860727A4B7BCB2F9D2D23AABF"
+        or selector538.get("promotion_union_coordinate_sha256")
+        != "B6D1D61B1681F9CA92AD6DCD2C43F4913D83916C0DC5BFE05A4C0BFEC3BED5C1"
+        or selector538.get("renewal_common_coordinate_sha256")
+        != "36058C249C73F5B42C0DC7426FA68879F4BDC515F40F9C50B6CFEC07C7FD4D59"
+        or selector538.get("override_union_coordinate_sha256")
+        != "8DA1C9C2491E145FD1EBAD2C326F48FDD344E91766758B68644EDDD53131C1A5"
+        or selector538.get("action_counts")
+        != {
+            "runtime_promotion": 220,
+            "translation_override_and_runtime_promotion": 57,
+            "translation_override_and_verification_renewal": 85,
+            "verification_renewal": 335,
+        }
+        or selector538.get("steam_write_performed") is not False
+        or validation.get("d5_selector538_family_disjointness_rechecked")
+        is not True
+        or validation.get("all_1057_register_assemblies_rechecked")
+        is not True
+        or validation.get(
+            "unique_renewal_override_owner_union_preserved"
+        )
+        is not True
+    ):
+        raise RuntimeError("final D5/selector-538 report binding drifted")
+
+    expected_files = {
+        D5_DECISION_PATH: EXPECTED_D5_DECISION_SHA256,
+        D5_EVIDENCE_PATH: EXPECTED_D5_EVIDENCE_SHA256,
+        SELECTOR538_FAMILY_DECISION_PATH:
+            EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
+        SELECTOR538_FAMILY_EVIDENCE_PATH:
+            EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256,
+    }
+    for path, expected in expected_files.items():
+        if sha256_bytes(path.read_bytes()) != expected:
+            raise RuntimeError(f"final exact layer file drifted: {path}")
+
+    d5_decisions = keyed_rows(D5_DECISION_PATH)
+    d5_evidence = keyed_rows(D5_EVIDENCE_PATH)
+    family_decisions = keyed_rows(SELECTOR538_FAMILY_DECISION_PATH)
+    family_evidence = keyed_rows(SELECTOR538_FAMILY_EVIDENCE_PATH)
+    if (
+        len(d5_decisions) != 7
+        or set(d5_decisions) != set(d5_evidence)
+        or len(family_decisions) != 697
+        or set(family_decisions) != set(family_evidence)
+        or set(d5_decisions) & set(family_decisions)
+    ):
+        raise RuntimeError("final exact layer coordinate universe drifted")
+
+    def validate_rows(
+        decisions: dict[tuple[str, str], dict[str, Any]],
+        evidence_rows: dict[tuple[str, str], dict[str, Any]],
+        *,
+        action_field: str,
+        method: str,
+        historical_hash_field: str,
+        historical_ascii: bool,
+    ) -> None:
+        for key, decision in decisions.items():
+            evidence = evidence_rows[key]
+            final = final_rows.get(key)
+            historical = historical_rows.get(key)
+            if (
+                final != decision
+                or not isinstance(historical, dict)
+                or final.get("runtime_vm_verification") != evidence
+                or final.get(action_field) != evidence.get("action")
+                or evidence.get("method") != method
+                or evidence.get("status") != "verified"
+                or evidence.get("translation_utf16le_sha256")
+                != ENGINE.sha256_text(str(final.get("translation")))
+                or evidence.get("predecessor_binding", {}).get(
+                    historical_hash_field
+                )
+                != (
+                    canonical_ascii_row_sha256(historical)
+                    if historical_ascii
+                    else canonical_row_sha256(historical)
+                )
+            ):
+                raise RuntimeError(
+                    f"final exact layer row binding drifted: {key}"
+                )
+
+    validate_rows(
+        d5_decisions,
+        d5_evidence,
+        action_field=(
+            "bound_terminal_2546_category_b_deferred_full_vm_"
+            "update_action"
+        ),
+        method=(
+            "reversed_vm_pk_bound_terminal_2546_category_b_deferred_"
+            "dependency_inclusive_full_closure"
+        ),
+        historical_hash_field="row_sha256",
+        historical_ascii=False,
+    )
+    validate_rows(
+        family_decisions,
+        family_evidence,
+        action_field="selector538_family_update_action",
+        method=(
+            "reversed_vm_pk_selector538_chunks_0_3_consolidated_closure"
+        ),
+        historical_hash_field="baseline_row_sha256",
+        historical_ascii=True,
+    )
+    return {
+        "d5_action_counts": d5["action_counts"],
+        "d5_decision_rows": len(d5_decisions),
+        "d5_decision_sha256": EXPECTED_D5_DECISION_SHA256,
+        "d5_evidence_sha256": EXPECTED_D5_EVIDENCE_SHA256,
+        "d5_selector538_disjoint": True,
+        "final_pk_candidate_sha256": EXPECTED_FINAL_PK_CANDIDATE_SHA256,
+        "selector538_action_counts": selector538["action_counts"],
+        "selector538_decision_rows": len(family_decisions),
+        "selector538_decision_sha256":
+            EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
+        "selector538_evidence_sha256":
+            EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256,
+    }
+
+
+def load_runtime_vm_integration(
+    prepared: Any,
+) -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    historical_rows, metadata = (
+        load_historical_runtime_vm_integration(prepared)
+    )
+    if (
+        not RUNTIME_VM_INTEGRATION_REPORT.is_file()
+        or not RUNTIME_VM_INTEGRATED_DECISIONS.is_file()
+    ):
+        raise RuntimeError("final runtime VM integration artifacts are absent")
+    report_bytes = RUNTIME_VM_INTEGRATION_REPORT.read_bytes()
+    private_bytes = RUNTIME_VM_INTEGRATED_DECISIONS.read_bytes()
+    report = json.loads(report_bytes.decode("utf-8"))
+    private_sha256 = sha256_bytes(private_bytes)
+    result = report.get("result", {})
+    pk = report.get("promotions", {}).get("pk_msggame", {})
+    if (
+        sha256_bytes(report_bytes)
+        != EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256
+        or private_sha256
+        != EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256
+        or report.get("schema") != RUNTIME_VM_INTEGRATION_SCHEMA
+        or report.get("status") != "PASS"
+        or report.get("release_target") != "0.15.0"
+        or report.get("steam_write_performed") is not False
+        or result.get("private_integrated_decision_sha256")
+        != private_sha256
+        or result.get("semantic_review_approved") != 52_803
+        or result.get("runtime_review_pending") != 7_896
+        or result.get("fully_candidate_eligible") != 44_907
+        or report.get("promotions", {}).get("promoted_total") != 28_438
+        or pk.get("promotion_count") != 12_787
+    ):
+        raise RuntimeError("final runtime VM integration guard drifted")
+    ENGINE.validate_decisions(
+        prepared,
+        RUNTIME_VM_INTEGRATED_DECISIONS,
+        require_complete=False,
+    )
+    final_rows = keyed_rows(RUNTIME_VM_INTEGRATED_DECISIONS)
+    pending = sum(
+        row.get("runtime_review") == "pending"
+        for row in final_rows.values()
+    )
+    if (
+        len(final_rows) != 52_803
+        or pending != 7_896
+        or set(final_rows) != set(historical_rows)
+    ):
+        raise RuntimeError("final runtime VM row/status universe drifted")
+    exact = validate_final_exact_layers(
+        historical_rows=historical_rows,
+        final_rows=final_rows,
+        report=report,
+    )
+    metadata.update(
+        {
+            "path":
+                RUNTIME_VM_INTEGRATION_REPORT.relative_to(REPO).as_posix(),
+            "sha256": EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256,
+            "private_integrated_decision_sha256": private_sha256,
+            "promoted_total": 28_438,
+            "runtime_review_pending_after": pending,
+            "historical_checkpoint_private_sha256":
+                EXPECTED_HISTORICAL_PRIVATE_SHA256,
+            "historical_checkpoint_report_sha256":
+                EXPECTED_HISTORICAL_REPORT_SHA256,
+            "historical_layers_revalidated_from_immutable_checkpoint":
+                True,
+            "final_exact_layers": exact,
+            "bound_terminal_2546_category_b_deferred_layer_included":
+                True,
+            "bound_terminal_2546_category_b_deferred":
+                pk["bound_terminal_2546_category_b_deferred"],
+            "selector538_family_layer_included": True,
+            "selector538_family": pk["selector538_family"],
+            "steam_write_performed": False,
+        }
+    )
+    return historical_rows, final_rows, metadata
 
 
 def load_control_repairs() -> tuple[
@@ -580,9 +940,11 @@ def build_progress() -> dict[str, Any]:
         for coordinate, row in reflow_by_coordinate.items()
     }
     consumed_reflow_overrides: set[tuple[str, str]] = set()
-    runtime_vm_integrated, runtime_vm_integration_metadata = (
-        load_runtime_vm_integration(prepared)
-    )
+    (
+        runtime_vm_integrated,
+        runtime_vm_final,
+        runtime_vm_integration_metadata,
+    ) = load_runtime_vm_integration(prepared)
     thought_predicate_metadata = runtime_vm_integration_metadata.get(
         "thought_predicate_family"
     )
@@ -1701,7 +2063,12 @@ def build_progress() -> dict[str, Any]:
                 raise RuntimeError(
                     f"layout changed without runtime promotion: {key}"
                 )
-            effective_row = integrated_row
+            final_integrated_row = runtime_vm_final.get(key)
+            if final_integrated_row is None:
+                raise RuntimeError(
+                    f"final runtime VM integrated decision is absent: {key}"
+                )
+            effective_row = final_integrated_row
             classification = str(effective_row["scope_classification"])
             runtime_review = str(effective_row["runtime_review"])
             consumed_runtime_vm_integrated.add(key)
@@ -1945,19 +2312,19 @@ def build_progress() -> dict[str, Any]:
     expected_scope_counts = Counter(
         {
             "confirmed_non_display": 345,
-            "retranslated": 44_245,
-            "runtime_fragment_pending": 8_213,
+            "retranslated": 44_562,
+            "runtime_fragment_pending": 7_896,
         }
     )
     if (
         total_targets != 52_803
         or approved != 52_803
-        or pending != 8_213
-        or eligible != 44_590
+        or pending != 7_896
+        or eligible != 44_907
         or scope_classification_counts != expected_scope_counts
     ):
         raise RuntimeError(
-            "bound-terminal 2546 progress totals drifted: "
+            "post-selector538-family progress totals drifted: "
             f"targets={total_targets} approved={approved} "
             f"pending={pending} eligible={eligible} "
             f"scope={dict(scope_classification_counts)}"
