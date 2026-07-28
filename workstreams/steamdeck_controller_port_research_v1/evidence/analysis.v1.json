@@ -111,6 +111,28 @@
       "purpose": "force Deck input postprocessing for internal key code 0 only"
     }
   ],
+  "patcher_v0_90_integration": {
+    "source_baseline": {
+      "size": 31978264,
+      "sha256": "29BC1ED66D27B9AEF5EB6CE3D126BA2BDBF86099E12B09615FE9F988F41E2246"
+    },
+    "normalized_base": {
+      "size": 31747848,
+      "sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+    },
+    "existing_recipe_patch_counts": {
+      "horizontal": 12,
+      "vertical": 8
+    },
+    "candidate_site_overlap_with_existing_patches": false,
+    "existing_target_preimages_verified": {
+      "horizontal": true,
+      "vertical": true
+    },
+    "recommended_distribution": "retain standard horizontal and vertical bundles, and add separate experimental controller-enabled horizontal and vertical signed bundles",
+    "shared_resource_bundle_unchanged": true,
+    "switching_policy": "restore verified stock backup before applying another layout/controller variant"
+  },
   "decision": {
     "feasibility": "high",
     "full_controller_code_transplant_required": false,
