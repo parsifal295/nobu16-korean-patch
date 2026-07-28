@@ -1,6 +1,6 @@
 {
   "schema": "nobu16.steamdeck_controller_port_research.v1",
-  "status": "static-analysis-complete-runtime-validation-pending",
+  "status": "first-runtime-candidate-failed-root-cause-analysis-pending",
   "steam": {
     "app_id": 1336980,
     "build_id": 18823764,
@@ -157,10 +157,27 @@
       "stopped_after_launch_check": true
     }
   },
+  "failed_runtime_candidate": {
+    "result": "controller control was not enabled",
+    "candidate_invalidated": true,
+    "corrected_role": "postprocess state bits on an already selected input device; does not create or register an XInput device",
+    "pc_sd_comparison": {
+      "input_manager_semantically_equivalent": true,
+      "xinput_device_creation_semantically_equivalent": true,
+      "xinput_polling_semantically_equivalent": true,
+      "deck_predicate_call_count_each": 23
+    },
+    "xinput_probe_after_failure": {
+      "xinput1_3_slots_0_through_3": 1167,
+      "xinput1_4_slots_0_through_3": 1167,
+      "meaning": "ERROR_DEVICE_NOT_CONNECTED"
+    },
+    "leading_hypothesis": "Steam Input did not expose a virtual XInput device to the PC executable, or the controller was not connected as an XInput device at probe time"
+  },
   "decision": {
-    "feasibility": "high",
+    "feasibility": "undetermined-after-first-candidate-failed",
     "full_controller_code_transplant_required": false,
-    "recommended_approach": "selectively enable the existing PC XInput path without globally forcing the Steam Deck predicate",
+    "recommended_approach": "compare Steam Input and XInput device exposure for PC and SD launches before selecting another binary patch",
     "runtime_validation_required": true
   }
 }
