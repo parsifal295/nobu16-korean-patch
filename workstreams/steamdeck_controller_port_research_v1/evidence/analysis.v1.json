@@ -1,0 +1,120 @@
+{
+  "schema": "nobu16.steamdeck_controller_port_research.v1",
+  "status": "static-analysis-complete-runtime-validation-pending",
+  "steam": {
+    "app_id": 1336980,
+    "build_id": 18823764,
+    "installation_modified": false
+  },
+  "baseline": {
+    "pc_packed": {
+      "name": "NOBU16PK.exe",
+      "size": 31978264,
+      "sha256": "29BC1ED66D27B9AEF5EB6CE3D126BA2BDBF86099E12B09615FE9F988F41E2246"
+    },
+    "steamdeck_packed": {
+      "name": "NOBU16PK_SD.exe",
+      "size": 31969048,
+      "sha256": "6218F8987404BB20E1771D4E7BA032405DB9788C212F5E89F96B9AEFADA21FCD"
+    },
+    "pc_unpacked": {
+      "size": 31747848,
+      "sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+    },
+    "steamdeck_unpacked": {
+      "size": 31738632,
+      "sha256": "2411BF032F382FCD200D522E87A6D3551322CA28408518439003EB443CDF4A5B"
+    }
+  },
+  "pe_comparison": {
+    "architecture": "x86-64",
+    "image_base": "0x140000000",
+    "pc_text_raw_size": "0x1364600",
+    "steamdeck_text_raw_size": "0x1362600",
+    "text_raw_size_delta": "0x2000",
+    "shared_xinput_imports": [
+      {
+        "dll": "XINPUT1_3.DLL",
+        "symbol": "XInputGetState",
+        "ordinal": 2
+      },
+      {
+        "dll": "XINPUT1_3.DLL",
+        "symbol": "XInputSetState",
+        "ordinal": 3
+      },
+      {
+        "dll": "XINPUT1_3.DLL",
+        "symbol": "XInputEnable",
+        "ordinal": 5
+      }
+    ]
+  },
+  "matched_functions": [
+    {
+      "role": "xinput-device-enumeration-and-construction",
+      "pc_va": "0x140FDFA80",
+      "steamdeck_va": "0x140FE0000",
+      "result": "same behavior after address rebasing"
+    },
+    {
+      "role": "xinput-state-poll-and-translation",
+      "pc_va": "0x140FE0720",
+      "steamdeck_va": "0x140FE0CA0",
+      "result": "same behavior after address rebasing"
+    },
+    {
+      "role": "steamdeck-runtime-predicate",
+      "pc_va": "0x1409C07A0",
+      "steamdeck_va": "0x1409C02E0",
+      "result": "same Steamworks vtable call at offset 0x110"
+    },
+    {
+      "role": "graphics-config-load",
+      "pc_va": "0x1408B0000",
+      "steamdeck_va": "0x1408AFC80",
+      "result": "same 1280x720 and window-mode-2 Deck branch"
+    },
+    {
+      "role": "input-device-postprocessing",
+      "pc_va": "0x140C5DE90",
+      "steamdeck_va": "0x140C5E0B0",
+      "result": "same Deck-gated input flag adjustment"
+    }
+  ],
+  "resolution_branch": {
+    "predicate": "ISteamUtils::IsSteamRunningOnSteamDeck",
+    "deck_true": {
+      "width": 1280,
+      "height": 720,
+      "window_mode": 2
+    },
+    "deck_false": {
+      "width_source": "Configs/WIDTH",
+      "height_source": "Configs/HEIGHT",
+      "window_mode_source": "Configs/WINDOW_MODE"
+    }
+  },
+  "candidate_input_patches": [
+    {
+      "virtual_address": "0x140C5E256",
+      "unpacked_file_offset": "0x00C5D656",
+      "expected_hex": "E84525D6FF",
+      "replacement_hex": "B801000000",
+      "purpose": "force Deck input postprocessing for internal key code 0x27 only"
+    },
+    {
+      "virtual_address": "0x140C5E292",
+      "unpacked_file_offset": "0x00C5D692",
+      "expected_hex": "E80925D6FF",
+      "replacement_hex": "B801000000",
+      "purpose": "force Deck input postprocessing for internal key code 0 only"
+    }
+  ],
+  "decision": {
+    "feasibility": "high",
+    "full_controller_code_transplant_required": false,
+    "recommended_approach": "selectively enable the existing PC XInput path without globally forcing the Steam Deck predicate",
+    "runtime_validation_required": true
+  }
+}
