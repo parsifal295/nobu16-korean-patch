@@ -88,7 +88,7 @@ class Selector142Chunk0ReviewTests(unittest.TestCase):
 
     def test_private_decision_actions_are_exact(self) -> None:
         rows = B.BASE.load_decisions()
-        self.assertEqual(len(rows), 48)
+        self.assertEqual(len(rows), 46)
         self.assertEqual(
             Counter(row["action"] for row in rows),
             Counter(B.BASE.EXPECTED_ACTION_COUNTS),
@@ -97,6 +97,34 @@ class Selector142Chunk0ReviewTests(unittest.TestCase):
             B.BASE.coordinate_digest(str(row["coordinate"]) for row in rows),
             B.BASE.EXPECTED_DIGESTS["decision"],
         )
+
+    def test_actions_match_predecessor_runtime_scope(self) -> None:
+        predecessors = {
+            (row["resource"], row["coordinate"]): row
+            for row in (
+                json.loads(line)
+                for line in B.BASE.OFFICIAL_LEDGER_PATH.read_text(
+                    encoding="utf-8"
+                ).splitlines()
+                if line
+            )
+        }
+        for row in B.BASE.load_decisions():
+            predecessor = predecessors[(row["resource"], row["coordinate"])]
+            expected = (
+                "pending"
+                if "runtime_promotion" in row["action"]
+                else "verified"
+            )
+            self.assertEqual(predecessor["runtime_review"], expected)
+            self.assertEqual(
+                predecessor["scope_classification"],
+                (
+                    "runtime_fragment_pending"
+                    if expected == "pending"
+                    else "retranslated"
+                ),
+            )
 
     def test_encoding_controls_and_reverse_overlay_pass(self) -> None:
         proof = self.report["proof"]
