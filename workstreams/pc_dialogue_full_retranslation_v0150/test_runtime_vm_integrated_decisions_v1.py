@@ -19,6 +19,11 @@ REPO = WORKSTREAM.parents[1]
 ENGINE_PATH = WORKSTREAM / "build_pc_dialogue_full_retranslation_v0150.py"
 OUTPUT_ROOT = REPO / "tmp" / WORKSTREAM.name
 INTEGRATED = OUTPUT_ROOT / "runtime_vm_integrated.private.v1.jsonl"
+PRE_SELECTOR538 = (
+    OUTPUT_ROOT
+    / "runtime_vm_integrated."
+    "post_bound_terminal_2546_checkpoint.private.v1.jsonl"
+)
 REPORT = WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
 PROGRESS = WORKSTREAM / "progress.source_free.v1.json"
 SHADOW_STEAM_ROOT = (
@@ -65,6 +70,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             ),
         )
         cls.rows = read_jsonl(INTEGRATED)
+        cls.pre_selector538_rows = read_jsonl(PRE_SELECTOR538)
 
     def validate_rows(self, rows: list[dict[str, Any]]) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -81,16 +87,16 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         report = json.loads(REPORT.read_text(encoding="utf-8"))
         progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["promotions"]["promoted_total"], 28_144)
-        self.assertEqual(report["result"]["runtime_review_pending"], 8_190)
-        self.assertEqual(report["result"]["fully_candidate_eligible"], 44_613)
+        self.assertEqual(report["promotions"]["promoted_total"], 28_221)
+        self.assertEqual(report["result"]["runtime_review_pending"], 8_113)
+        self.assertEqual(report["result"]["fully_candidate_eligible"], 44_690)
         self.assertEqual(
             report["result"]["private_integrated_decision_sha256"],
-            "5A789D888F3BB353F37BC74779D2C91F5BCB5542CD17842C9371F49AB53C1ABF",
+            "6945B4CBAD745A808CE306599FCC5BB7C17068414AD7B085E59B02BC20818165",
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["promotion_count"],
-            12_493,
+            12_570,
         )
         self.assertEqual(
             report["promotions"]["pk_msggame"]["residual"][
@@ -369,6 +375,73 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
                 "historical_actions_preserved_and_exactly_superseded"
             ]
         )
+        category_b = report["promotions"]["pk_msggame"][
+            "bound_terminal_2546_category_b_immediate"
+        ]
+        self.assertEqual(category_b["translation_override_count"], 7)
+        self.assertEqual(category_b["verification_renewal_count"], 0)
+        self.assertEqual(category_b["promotion_count"], 12)
+        self.assertEqual(category_b["updated_row_count"], 12)
+        self.assertEqual(
+            category_b["source_candidate_packed_sha256"],
+            "2AE326439AC0A503104A245774FA4D2CA3B833E05AAE7E8E40F5CFCF7F5B31E2",
+        )
+        self.assertEqual(
+            category_b["combined_candidate_packed_sha256"],
+            "A7892555300CAC0F8A20608937BFF420E000CA77A68E524174974DAC2308EE88",
+        )
+        selector538 = report["promotions"]["pk_msggame"][
+            "selector538_chunk0"
+        ]
+        self.assertEqual(selector538["translation_override_count"], 33)
+        self.assertEqual(selector538["verification_renewal_count"], 420)
+        self.assertEqual(selector538["promotion_count"], 65)
+        self.assertEqual(selector538["updated_row_count"], 485)
+        self.assertEqual(
+            selector538["source_candidate_packed_sha256"],
+            "583E53881F3099163F4E43E955C9363EDD597F82CA5B280BA96231A02A7673B4",
+        )
+        self.assertEqual(
+            selector538["combined_candidate_packed_sha256"],
+            "207E2FADFDD997BFAA9BB5974B48D9DE59B373F7BE57F15197DDCD7568C909F0",
+        )
+        self.assertEqual(
+            selector538["predecessor_evidence_method_counts"],
+            {
+                "reversed_vm_pk_bound_terminal_2546_full_caller_closure": 22,
+                "reversed_vm_pk_bound_terminal_caller_full_closure_analysis": 6,
+                "reversed_vm_pk_bound_terminal_family_exact_closure_analysis": 389,
+                "reversed_vm_pk_thought_predicate_family_exact_closure_analysis": 3,
+            },
+        )
+        self.assertEqual(
+            selector538[
+                "predecessor_evidence_method_coordinate_sha256"
+            ],
+            {
+                "reversed_vm_pk_bound_terminal_2546_full_caller_closure":
+                "3834E87A3718BA22617C583D1A5C4E903BFFF216553E366881EFF4DA740ED4CD",
+                "reversed_vm_pk_bound_terminal_caller_full_closure_analysis":
+                "9BF997BADFDE541B9770CC84F584A74660ACEE629F9D5AC601DDE2CF1241B05E",
+                "reversed_vm_pk_bound_terminal_family_exact_closure_analysis":
+                "A6665C54EEE7FAA7BFDA3B993762ADC6BDFD502D956B8193AE607A1A4550484C",
+                "reversed_vm_pk_thought_predicate_family_exact_closure_analysis":
+                "BC6BB84A972A37C50CDFE724DC84AA8D81C6FCFB2E4E81C8E4D60CB1933CF710",
+            },
+        )
+        overlap = report["promotions"]["pk_msggame"][
+            "closure_delta_exact_overlap_proof"
+        ]
+        self.assertEqual(overlap["all_exact_coordinate_overlap_count"], 0)
+        self.assertEqual(overlap["translation_override_conflict_count"], 0)
+        self.assertEqual(
+            overlap["manifest_canonical_sha256"],
+            "344946A2D2A1CED9B39F59403CC9A2C9D6A7ACCA9DF195D22F663D1AEE4CAE2F",
+        )
+        self.assertTrue(
+            report["validation"]["selector538_chunk0_layer_included"]
+        )
+        self.assertFalse(report["steam_write_performed"])
 
     def test_pk_verified_row_is_bound_to_exact_overlay(self) -> None:
         source = next(
@@ -603,9 +676,9 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
     def test_bound_terminal_promotions_require_exact_closure_proof(
         self,
     ) -> None:
-        promotions = [
+        predecessor_promotions = [
             row
-            for row in self.rows
+            for row in self.pre_selector538_rows
             if row.get("runtime_vm_verification", {}).get("method")
             == (
                 "reversed_vm_pk_bound_terminal_family_exact_"
@@ -618,55 +691,88 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             }
         ]
         self.assertEqual(
-            {row["coordinate"] for row in promotions},
+            {row["coordinate"] for row in predecessor_promotions},
             {"0:1917:0", "0:1922:0", "8:1241:0"},
         )
+        self.assertEqual(
+            ENGINE.coordinate_digest(
+                row["coordinate"] for row in predecessor_promotions
+            ),
+            "ABE91D7F452BEFA12A51B9D6B27B9488C725299422827463B75645F866209756",
+        )
+        final_by_coordinate = {
+            row["coordinate"]: row
+            for row in self.rows
+            if row["resource"] == "pk_msggame"
+        }
+        promotions = [
+            final_by_coordinate[row["coordinate"]]
+            for row in predecessor_promotions
+        ]
         for source in promotions:
-            self.validate_rows([source])
-            binding = source["runtime_vm_verification"][
-                "actual_promotion_binding"
-            ]
-            self.assertTrue(binding["manual_full_assembly_verified"])
-            self.assertTrue(binding["hard_grammar_risk_absent"])
-            self.assertTrue(
-                binding[
-                    "relative_full_closure_line_envelope_nonexpanding"
-                ]
+            self.assertEqual(
+                source["runtime_vm_verification"]["method"],
+                "reversed_vm_pk_selector538_chunk0_independent_closure",
             )
+            self.assertEqual(
+                source["runtime_vm_verification"]["action"],
+                "verification_renewal",
+            )
+            self.validate_rows([source])
         tampered = copy.deepcopy(promotions[0])
-        tampered["runtime_vm_verification"][
-            "actual_promotion_binding"
-        ]["manual_full_assembly_verified"] = False
+        tampered["terminal_family_update_action"] = "verification_renewal"
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([tampered])
 
     def test_bound_terminal_verified_evidence_renewal_is_bound(self) -> None:
-        renewed = [
+        predecessor_renewed = [
             row
-            for row in self.rows
+            for row in self.pre_selector538_rows
             if row.get("runtime_vm_verification", {}).get("method")
             == (
                 "reversed_vm_pk_bound_terminal_family_exact_"
                 "closure_analysis"
             )
             and row["runtime_vm_verification"]["action"]
-            in {"verification_renewal", "translation_override"}
+                in {"verification_renewal", "translation_override"}
         ]
-        # Later thought, caller, and selector-1066 closure layers supersede
-        # this evidence while retaining its historical action metadata.
-        self.assertEqual(len(renewed), 386)
+        self.assertEqual(len(predecessor_renewed), 386)
+        self.assertEqual(
+            ENGINE.coordinate_digest(
+                row["coordinate"] for row in predecessor_renewed
+            ),
+            "AE33F9DA308166F145DC141E76974D632C600D93031DB73489EB3274F3DC235D",
+        )
+        final_by_coordinate = {
+            row["coordinate"]: row
+            for row in self.rows
+            if row["resource"] == "pk_msggame"
+        }
+        renewed = [
+            final_by_coordinate[row["coordinate"]]
+            for row in predecessor_renewed
+        ]
+        self.assertTrue(
+            all(
+                row["runtime_vm_verification"]["method"]
+                == "reversed_vm_pk_selector538_chunk0_independent_closure"
+                for row in renewed
+            )
+        )
         source = renewed[0]
         self.assertTrue(
             source["runtime_vm_verification"][
                 "preexisting_verified_evidence_renewed"
             ]
         )
+        self.assertIn(
+            source["terminal_family_update_action"],
+            {"verification_renewal", "translation_override"},
+        )
         self.validate_rows([source])
 
         tampered = copy.deepcopy(source)
-        tampered["runtime_vm_verification"][
-            "translation_utf16le_sha256"
-        ] = "0" * 64
+        tampered["terminal_family_update_action"] = "runtime_promotion"
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([tampered])
 
@@ -680,7 +786,13 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
                 "closure_analysis"
             )
         ]
-        self.assertEqual(len(targets), 72)
+        self.assertEqual(len(targets), 69)
+        self.assertEqual(
+            ENGINE.coordinate_digest(
+                row["coordinate"] for row in targets
+            ),
+            "4ED572697737E51E9DD5059A24D4104F8438791DF10D8F052F54216E3808D887",
+        )
         actions = {
             action: sum(
                 row["thought_predicate_family_update_action"] == action
@@ -696,8 +808,8 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             actions,
             {
                 "runtime_promotion": 1,
-                "translation_override_and_runtime_promotion": 22,
-                "translation_override_and_verification_renewal": 49,
+                "translation_override_and_runtime_promotion": 21,
+                "translation_override_and_verification_renewal": 47,
             },
         )
         overrides = [
@@ -706,7 +818,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             if row["thought_predicate_family_update_action"]
             != "runtime_promotion"
         ]
-        self.assertEqual(len(overrides), 71)
+        self.assertEqual(len(overrides), 68)
         for source in targets:
             evidence = source["runtime_vm_verification"]
             self.assertTrue(evidence["full_incoming_closure_verified"])
@@ -714,6 +826,42 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             self.assertTrue(
                 evidence["actual_current_relative_nonexpanding"]
             )
+            self.validate_rows([source])
+        selector_superseded = [
+            row
+            for row in self.rows
+            if row.get("runtime_vm_verification", {}).get("method")
+            == "reversed_vm_pk_selector538_chunk0_independent_closure"
+            and row.get("thought_predicate_family_update_action")
+            is not None
+        ]
+        self.assertEqual(
+            {row["coordinate"] for row in selector_superseded},
+            {"15:1430:1", "15:1540:4", "15:1698:1"},
+        )
+        self.assertEqual(
+            ENGINE.coordinate_digest(
+                row["coordinate"] for row in selector_superseded
+            ),
+            "BC6BB84A972A37C50CDFE724DC84AA8D81C6FCFB2E4E81C8E4D60CB1933CF710",
+        )
+        self.assertEqual(
+            {
+                action: sum(
+                    row["thought_predicate_family_update_action"] == action
+                    for row in selector_superseded
+                )
+                for action in {
+                    "translation_override_and_runtime_promotion",
+                    "translation_override_and_verification_renewal",
+                }
+            },
+            {
+                "translation_override_and_runtime_promotion": 1,
+                "translation_override_and_verification_renewal": 2,
+            },
+        )
+        for source in selector_superseded:
             self.validate_rows([source])
 
     def test_thought_predicate_evidence_and_action_are_bound(self) -> None:
@@ -861,13 +1009,27 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             and row["coordinate"] in expected
         ]
         self.assertEqual({row["coordinate"] for row in superseded}, expected)
+        selector_superseded = {
+            "6:3941:0",
+            "6:3941:1",
+            "6:3941:2",
+            "15:703:0",
+            "15:703:1",
+            "15:703:2",
+        }
+        self.assertEqual(
+            ENGINE.coordinate_digest(selector_superseded),
+            "9BF997BADFDE541B9770CC84F584A74660ACEE629F9D5AC601DDE2CF1241B05E",
+        )
         for source in superseded:
             self.assertEqual(
                 source["terminal_family_update_action"],
                 "verification_renewal",
             )
             expected_method = (
-                "reversed_vm_pk_bound_terminal_2546_full_caller_closure"
+                "reversed_vm_pk_selector538_chunk0_independent_closure"
+                if source["coordinate"] in selector_superseded
+                else "reversed_vm_pk_bound_terminal_2546_full_caller_closure"
                 if source["coordinate"]
                 in {
                     "6:3863:0",
@@ -991,6 +1153,45 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
             "15:2095:2",
             "15:2326:0",
         }
+        selector_superseded = {
+            row["coordinate"]
+            for row in targets
+            if row["runtime_vm_verification"]["method"]
+            == "reversed_vm_pk_selector538_chunk0_independent_closure"
+        }
+        self.assertEqual(len(selector_superseded), 22)
+        self.assertEqual(
+            ENGINE.coordinate_digest(selector_superseded),
+            "3834E87A3718BA22617C583D1A5C4E903BFFF216553E366881EFF4DA740ED4CD",
+        )
+        self.assertEqual(
+            {
+                action: sum(
+                    row["coordinate"] in selector_superseded
+                    and row[field] == action
+                    for row in targets
+                )
+                for action in {
+                    "runtime_promotion",
+                    "translation_override_and_runtime_promotion",
+                    "translation_override_and_verification_renewal",
+                    "verification_renewal",
+                }
+            },
+            {
+                "runtime_promotion": 6,
+                "translation_override_and_runtime_promotion": 5,
+                "translation_override_and_verification_renewal": 1,
+                "verification_renewal": 10,
+            },
+        )
+        nonoverlap = [
+            row
+            for row in targets
+            if row["coordinate"]
+            not in simple_superseded | selector_superseded
+        ]
+        self.assertEqual(len(nonoverlap), 629)
         self.assertTrue(
             all(
                 row["runtime_vm_verification"]["method"]
@@ -1010,8 +1211,7 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
                     "D5F704C82DD9CBDFB92CD6502B90B11"
                     "D95C883DEA7EFCC1BD50A05A4758B9C0E"
                 )
-                for row in targets
-                if row["coordinate"] not in simple_superseded
+                for row in nonoverlap
             )
         )
         source = promoted[0]
@@ -1189,6 +1389,149 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         action_tamper[field] = "verification_renewal"
         with self.assertRaises(ENGINE.RetranslationError):
             self.validate_rows([action_tamper])
+
+    def test_bound_terminal_2546_category_b_is_exactly_integrated(
+        self,
+    ) -> None:
+        field = "bound_terminal_2546_category_b_immediate_update_action"
+        method = (
+            "reversed_vm_pk_bound_terminal_2546_"
+            "category_b_immediate_relative_width_closure"
+        )
+        targets = [row for row in self.rows if row.get(field) is not None]
+        self.assertEqual(len(targets), 12)
+        self.assertEqual(
+            {
+                action: sum(row[field] == action for row in targets)
+                for action in {
+                    "runtime_promotion",
+                    "translation_override_and_runtime_promotion",
+                }
+            },
+            {
+                "runtime_promotion": 5,
+                "translation_override_and_runtime_promotion": 7,
+            },
+        )
+        self.assertEqual(
+            sum(
+                (
+                    "bound_terminal_2546_category_b_immediate_"
+                    "exact_override_evidence"
+                )
+                in row
+                for row in targets
+            ),
+            7,
+        )
+        for source in targets:
+            self.assertEqual(
+                source["runtime_vm_verification"]["method"],
+                method,
+            )
+            self.assertEqual(
+                source["runtime_vm_verification"]["predecessor_binding"][
+                    "checkpoint_sha256"
+                ],
+                (
+                    "BF7B89E425502144C0A1992872895A774"
+                    "C56BADCA1FE8DD34ED6778CF3A627C5"
+                ),
+            )
+            self.assertEqual(
+                source["runtime_vm_verification"]["closure_binding"][
+                    "candidate_sha256"
+                ],
+                (
+                    "2AE326439AC0A503104A245774FA4D2CA"
+                    "3B833E05AAE7E8E40F5CFCF7F5B31E2"
+                ),
+            )
+            self.validate_rows([source])
+        tampered = copy.deepcopy(targets[0])
+        tampered["runtime_vm_verification"]["predecessor_binding"][
+            "row_sha256"
+        ] = "0" * 64
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([tampered])
+
+    def test_selector538_chunk0_is_exactly_integrated(self) -> None:
+        field = "selector538_chunk0_update_action"
+        method = "reversed_vm_pk_selector538_chunk0_independent_closure"
+        targets = [row for row in self.rows if row.get(field) is not None]
+        self.assertEqual(len(targets), 485)
+        self.assertEqual(
+            {
+                action: sum(row[field] == action for row in targets)
+                for action in {
+                    "runtime_promotion",
+                    "translation_override_and_runtime_promotion",
+                    "translation_override_and_verification_renewal",
+                    "verification_renewal",
+                }
+            },
+            {
+                "runtime_promotion": 48,
+                "translation_override_and_runtime_promotion": 17,
+                "translation_override_and_verification_renewal": 16,
+                "verification_renewal": 404,
+            },
+        )
+        self.assertEqual(
+            sum(
+                "selector538_chunk0_exact_override_evidence" in row
+                for row in targets
+            ),
+            33,
+        )
+        self.assertEqual(
+            sum(
+                row[field]
+                in {
+                    "runtime_promotion",
+                    "translation_override_and_runtime_promotion",
+                }
+                for row in targets
+            ),
+            65,
+        )
+        samples = {
+            action: next(row for row in targets if row[field] == action)
+            for action in {
+                "runtime_promotion",
+                "translation_override_and_runtime_promotion",
+                "translation_override_and_verification_renewal",
+                "verification_renewal",
+            }
+        }
+        for source in samples.values():
+            self.assertEqual(
+                source["runtime_vm_verification"]["method"],
+                method,
+            )
+            self.assertEqual(
+                source["runtime_vm_verification"]["closure_binding"][
+                    "candidate_sha256"
+                ],
+                (
+                    "583E53881F3099163F4E43E955C9363E"
+                    "DD597F82CA5B280BA96231A02A7673B4"
+                ),
+            )
+            self.validate_rows([source])
+        historical = next(
+            row
+            for row in targets
+            if row.get("bound_terminal_2546_full_caller_update_action")
+            is not None
+        )
+        self.validate_rows([historical])
+        historical_tamper = copy.deepcopy(historical)
+        historical_tamper[
+            "bound_terminal_2546_full_caller_update_action"
+        ] = "runtime_promotion"
+        with self.assertRaises(ENGINE.RetranslationError):
+            self.validate_rows([historical_tamper])
 
 
 if __name__ == "__main__":

@@ -162,6 +162,18 @@ BOUND_TERMINAL_2546_SIMPLE_CALLER_BUILDER_PATH = (
     / "pk_msggame_runtime_vm_audit_v1"
     / "build_pk_bound_terminal_2546_simple_caller_closure_v1.py"
 )
+BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_bound_terminal_2546_category_b_immediate_closure_v1.py"
+)
+SELECTOR538_CHUNK0_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_selector538_chunk0_closure_v1.py"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -206,6 +218,10 @@ EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_PROMOTIONS = 364
 EXPECTED_PK_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PROMOTIONS = 12_470
 EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_PROMOTIONS = 23
 EXPECTED_PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PROMOTIONS = 12_493
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE_PROMOTIONS = 12
+EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PROMOTIONS = 12_505
+EXPECTED_SELECTOR538_CHUNK0_PROMOTIONS = 65
+EXPECTED_PK_SELECTOR538_CHUNK0_FINAL_PROMOTIONS = 12_570
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
 EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
 EXPECTED_PENDING_AFTER = 8_702
@@ -215,6 +231,8 @@ EXPECTED_THOUGHT_PREDICATE_FINAL_PENDING_AFTER = 8_618
 EXPECTED_BOUND_TERMINAL_CALLER_FINAL_PENDING_AFTER = 8_577
 EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PENDING_AFTER = 8_213
 EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PENDING_AFTER = 8_190
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PENDING_AFTER = 8_178
+EXPECTED_SELECTOR538_CHUNK0_FINAL_PENDING_AFTER = 8_113
 EXPECTED_POST_CROSS_PRIVATE_SHA256 = (
     "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC"
 )
@@ -363,6 +381,106 @@ BOUND_TERMINAL_2546_SIMPLE_CALLER_SUPERSEDED_KEYS = frozenset(
         ("pk_msggame", "15:2326:0"),
     }
 )
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_COMBINED_CANDIDATE_SHA256 = (
+    "A7892555300CAC0F8A20608937BFF420E000CA77A68E524174974DAC2308EE88"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_SOURCE_CANDIDATE_SHA256 = (
+    "2AE326439AC0A503104A245774FA4D2CA3B833E05AAE7E8E40F5CFCF7F5B31E2"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_OVERRIDE_COUNT = 7
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_RENEWAL_COUNT = 0
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_UPDATED_ROW_COUNT = 12
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_ACTION_COUNTS = {
+    "runtime_promotion": 5,
+    "translation_override_and_runtime_promotion": 7,
+}
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_AUDIT_SHA256 = (
+    "19E869B8D1DF6B0896F39E79ECC0397F8C8B2B7CF3D28BB2547AC7587D72AAAD"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_PROMOTION_SHA256 = (
+    "92CEF30654AF571D21F56DDA3A3796E728578A64EEDFF2426572E8060E750610"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DECISION_SHA256 = (
+    "8A44196B7EB20267FAC4ADD6953350257FCB9C5DA92406241B23F0B70133FABA"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_EVIDENCE_SHA256 = (
+    "9741F68BB504CEFF3750F56A4AD4D296E249B3656AFD6EB9F5D131F53A32509B"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_AUDIT_PAYLOAD_SHA256 = (
+    "545780F7B4D7732ED19A706507E1DD891B1E0DA1F4D9E88AB5EF9D1340DC963A"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_PROMOTION_PAYLOAD_SHA256 = (
+    "5E81E11818950005F7B225649C9E48E24D0DCC4439DF627A4407536D58BE1349"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_ASSEMBLY_UPDATE_COUNT = 2
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_ASSEMBLY_UPDATE_SHA256 = (
+    "88E591664CB357931FA298CB6ECEC4A8F27D8CE0B181804A76395E101B809BCC"
+)
+EXPECTED_SELECTOR538_CHUNK0_COMBINED_CANDIDATE_SHA256 = (
+    "207E2FADFDD997BFAA9BB5974B48D9DE59B373F7BE57F15197DDCD7568C909F0"
+)
+EXPECTED_SELECTOR538_CHUNK0_SOURCE_CANDIDATE_SHA256 = (
+    "583E53881F3099163F4E43E955C9363EDD597F82CA5B280BA96231A02A7673B4"
+)
+EXPECTED_SELECTOR538_CHUNK0_OVERRIDE_COUNT = 33
+EXPECTED_SELECTOR538_CHUNK0_RENEWAL_COUNT = 420
+EXPECTED_SELECTOR538_CHUNK0_UPDATED_ROW_COUNT = 485
+EXPECTED_SELECTOR538_CHUNK0_ACTION_COUNTS = {
+    "runtime_promotion": 48,
+    "translation_override_and_runtime_promotion": 17,
+    "translation_override_and_verification_renewal": 16,
+    "verification_renewal": 404,
+}
+EXPECTED_SELECTOR538_CHUNK0_AUDIT_SHA256 = (
+    "BD5BCE9A82BCE6D38B5D4175253D8C0D025F464B9D6FA01ACBC0675B0841C43C"
+)
+EXPECTED_SELECTOR538_CHUNK0_PROMOTION_SHA256 = (
+    "E08B23BAEB01C6EA3DA61AA9C2C85B6E5CBC981A646ED3DD494F90A7B230771D"
+)
+EXPECTED_SELECTOR538_CHUNK0_DECISION_SHA256 = (
+    "6B002FF3565B1BAAED58064BA2351232B443A3B43350BD7BE9ADAFD1ED117BBF"
+)
+EXPECTED_SELECTOR538_CHUNK0_EVIDENCE_SHA256 = (
+    "AA38C99D83D42733BA8E271D26F9EB711FE0F1B626B9F9C266E8045FFBBF5F54"
+)
+EXPECTED_SELECTOR538_CHUNK0_AUDIT_PAYLOAD_SHA256 = (
+    "186ACA3BE8277A6484AF95C16B04978ADE9A831F1CEB719D78D707A3343B77C1"
+)
+EXPECTED_SELECTOR538_CHUNK0_PROMOTION_PAYLOAD_SHA256 = (
+    "41BF9A59B25C032DD17539FF9EDE8C7CF234F68649BD21272ACBFE029C02AFBE"
+)
+EXPECTED_SELECTOR538_CHUNK0_ASSEMBLY_UPDATE_COUNT = 1
+EXPECTED_SELECTOR538_CHUNK0_ASSEMBLY_UPDATE_SHA256 = (
+    "5FFF6C8F8A26C073ECF20771EAA52A9BE18FE6197F11CE7C6D2B3B183DB9F505"
+)
+EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256 = (
+    "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+)
+EXPECTED_CLOSURE_OVERLAP_MANIFEST_SHA256 = (
+    "344946A2D2A1CED9B39F59403CC9A2C9D6A7ACCA9DF195D22F663D1AEE4CAE2F"
+)
+EXPECTED_SELECTOR538_PREDECESSOR_EVIDENCE_METHOD_COUNTS = {
+    "reversed_vm_pk_bound_terminal_2546_full_caller_closure": 22,
+    "reversed_vm_pk_bound_terminal_caller_full_closure_analysis": 6,
+    "reversed_vm_pk_bound_terminal_family_exact_closure_analysis": 389,
+    "reversed_vm_pk_thought_predicate_family_exact_closure_analysis": 3,
+}
+EXPECTED_SELECTOR538_PREDECESSOR_EVIDENCE_METHOD_DIGESTS = {
+    "reversed_vm_pk_bound_terminal_2546_full_caller_closure":
+    "3834E87A3718BA22617C583D1A5C4E903BFFF216553E366881EFF4DA740ED4CD",
+    "reversed_vm_pk_bound_terminal_caller_full_closure_analysis":
+    "9BF997BADFDE541B9770CC84F584A74660ACEE629F9D5AC601DDE2CF1241B05E",
+    "reversed_vm_pk_bound_terminal_family_exact_closure_analysis":
+    "A6665C54EEE7FAA7BFDA3B993762ADC6BDFD502D956B8193AE607A1A4550484C",
+    "reversed_vm_pk_thought_predicate_family_exact_closure_analysis":
+    "BC6BB84A972A37C50CDFE724DC84AA8D81C6FCFB2E4E81C8E4D60CB1933CF710",
+}
+EXPECTED_FINAL_SELECTOR538_PRIVATE_SHA256: str | None = (
+    "6945B4CBAD745A808CE306599FCC5BB7C17068414AD7B085E59B02BC20818165"
+)
+EXPECTED_FINAL_SELECTOR538_PUBLIC_SHA256: str | None = (
+    "B49011D2FA5BB8018D9852106461367439D4E018DF3F3F80D2455FCB0729A77D"
+)
 RUNTIME_MUTABLE_FIELDS = frozenset(
     {
         "scope_classification",
@@ -416,6 +534,8 @@ THOUGHT_PREDICATE_FAMILY: Any | None = None
 BOUND_TERMINAL_CALLER: Any | None = None
 BOUND_TERMINAL_2546_FULL_CALLER: Any | None = None
 BOUND_TERMINAL_2546_SIMPLE_CALLER: Any | None = None
+BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE: Any | None = None
+SELECTOR538_CHUNK0: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -502,6 +622,26 @@ def load_bound_terminal_2546_simple_caller() -> Any:
             BOUND_TERMINAL_2546_SIMPLE_CALLER_BUILDER_PATH,
         )
     return BOUND_TERMINAL_2546_SIMPLE_CALLER
+
+
+def load_bound_terminal_2546_category_b_immediate() -> Any:
+    global BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE
+    if BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE is None:
+        BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE = load_module(
+            "pc_dialogue_runtime_vm_bound_terminal_2546_category_b",
+            BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE_BUILDER_PATH,
+        )
+    return BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE
+
+
+def load_selector538_chunk0() -> Any:
+    global SELECTOR538_CHUNK0
+    if SELECTOR538_CHUNK0 is None:
+        SELECTOR538_CHUNK0 = load_module(
+            "pc_dialogue_runtime_vm_selector538_chunk0",
+            SELECTOR538_CHUNK0_BUILDER_PATH,
+        )
+    return SELECTOR538_CHUNK0
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -2714,6 +2854,513 @@ def apply_bound_terminal_2546_simple_caller_updates(
     return promotions, metadata
 
 
+def closure_delta_sets(
+    *,
+    path: Path,
+    expected_sha256: str,
+    action_field: str,
+) -> dict[str, Any]:
+    require(
+        sha256_bytes(path.read_bytes()) == expected_sha256,
+        f"closure delta hash drifted: {path}",
+    )
+    rows = load_jsonl(path)
+    actions = {
+        str(row["coordinate"]): str(row[action_field])
+        for row in rows
+    }
+    translations = {
+        str(row["coordinate"]): str(row["translation"])
+        for row in rows
+        if str(row[action_field]).startswith("translation_override")
+    }
+    return {
+        "promotion": {
+            coordinate
+            for coordinate, action in actions.items()
+            if "runtime_promotion" in action
+        },
+        "renewal": {
+            coordinate
+            for coordinate, action in actions.items()
+            if "verification_renewal" in action
+        },
+        "override": set(translations),
+        "delta": set(actions),
+        "translations": translations,
+    }
+
+
+def build_closure_overlap_proof() -> dict[str, Any]:
+    a = load_bound_terminal_2546_simple_caller()
+    b = load_bound_terminal_2546_category_b_immediate()
+    selector = load_selector538_chunk0()
+    layers = {
+        "a": closure_delta_sets(
+            path=a.DEFAULT_DECISION_OUTPUT,
+            expected_sha256=EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_DECISION_SHA256,
+            action_field=a.UPDATE_ACTION_FIELD,
+        ),
+        "b": closure_delta_sets(
+            path=b.DEFAULT_DECISION_OUTPUT,
+            expected_sha256=EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DECISION_SHA256,
+            action_field=b.UPDATE_ACTION_FIELD,
+        ),
+        "selector": closure_delta_sets(
+            path=selector.DEFAULT_DECISION_OUTPUT,
+            expected_sha256=EXPECTED_SELECTOR538_CHUNK0_DECISION_SHA256,
+            action_field=selector.UPDATE_ACTION_FIELD,
+        ),
+    }
+    manifest = {
+        "a_b_delta_overlap": sorted(
+            layers["a"]["delta"] & layers["b"]["delta"],
+            key=a.parse_coordinate,
+        ),
+        "a_b_override_overlap": sorted(
+            layers["a"]["override"] & layers["b"]["override"],
+            key=a.parse_coordinate,
+        ),
+        "a_b_promotion_overlap": sorted(
+            layers["a"]["promotion"] & layers["b"]["promotion"],
+            key=a.parse_coordinate,
+        ),
+        "a_b_renewal_overlap": sorted(
+            layers["a"]["renewal"] & layers["b"]["renewal"],
+            key=a.parse_coordinate,
+        ),
+        "a_selector_delta_overlap": sorted(
+            layers["a"]["delta"] & layers["selector"]["delta"],
+            key=a.parse_coordinate,
+        ),
+        "a_selector_override_overlap": sorted(
+            layers["a"]["override"] & layers["selector"]["override"],
+            key=a.parse_coordinate,
+        ),
+        "a_selector_promotion_overlap": sorted(
+            layers["a"]["promotion"] & layers["selector"]["promotion"],
+            key=a.parse_coordinate,
+        ),
+        "a_selector_renewal_overlap": sorted(
+            layers["a"]["delta"] & layers["selector"]["renewal"],
+            key=a.parse_coordinate,
+        ),
+        "b_selector_delta_overlap": sorted(
+            layers["b"]["delta"] & layers["selector"]["delta"],
+            key=a.parse_coordinate,
+        ),
+        "b_selector_override_overlap": sorted(
+            layers["b"]["override"] & layers["selector"]["override"],
+            key=a.parse_coordinate,
+        ),
+        "b_selector_promotion_overlap": sorted(
+            layers["b"]["promotion"] & layers["selector"]["promotion"],
+            key=a.parse_coordinate,
+        ),
+        "b_selector_renewal_overlap": sorted(
+            layers["b"]["delta"] & layers["selector"]["renewal"],
+            key=a.parse_coordinate,
+        ),
+    }
+    all_overlap_coordinates = {
+        coordinate
+        for coordinates in manifest.values()
+        for coordinate in coordinates
+    }
+    override_conflicts = set()
+    for left, right in (("a", "b"), ("a", "selector"), ("b", "selector")):
+        overlap = (
+            layers[left]["override"] & layers[right]["override"]
+        )
+        override_conflicts.update(
+            coordinate
+            for coordinate in overlap
+            if layers[left]["translations"][coordinate]
+            != layers[right]["translations"][coordinate]
+        )
+    require(
+        not any(manifest.values())
+        and not override_conflicts
+        and a.coordinate_digest(all_overlap_coordinates)
+        == EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256
+        and canonical_sha256(manifest)
+        == EXPECTED_CLOSURE_OVERLAP_MANIFEST_SHA256,
+        "A/B/selector exact overlap proof drifted",
+    )
+    return {
+        "all_exact_coordinate_overlap_count": 0,
+        "all_exact_coordinate_overlap_sha256":
+        EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256,
+        "manifest_canonical_sha256":
+        EXPECTED_CLOSURE_OVERLAP_MANIFEST_SHA256,
+        "translation_override_conflict_count": 0,
+        "translation_override_conflict_sha256":
+        EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256,
+    }
+
+
+def combined_pk_candidate_sha256(
+    merged: Mapping[tuple[str, str], Mapping[str, Any]],
+    layer: Any,
+) -> str:
+    replacements = {
+        layer.parse_coordinate(coordinate): str(row["translation"])
+        for (resource, coordinate), row in merged.items()
+        if resource == "pk_msggame"
+        and isinstance(row.get("translation"), str)
+    }
+    blob = layer.BASE_AUDIT.rebuild_packed_with_literals(
+        layer.BASE_AUDIT.DEFAULT_PK_CURRENT.read_bytes(),
+        replacements,
+    )
+    return sha256_bytes(blob)
+
+
+def validated_bound_terminal_2546_category_b_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    layer = load_bound_terminal_2546_category_b_immediate()
+    (
+        decision_content,
+        evidence_content,
+        audit_content,
+        promotion_content,
+        audit,
+        bundle,
+    ) = layer.build_outputs()
+    layer.validate_outputs(
+        decision_content=decision_content,
+        evidence_content=evidence_content,
+        audit_content=audit_content,
+        promotion_content=promotion_content,
+        audit=audit,
+        bundle=bundle,
+    )
+    artifacts = {
+        "audit": (
+            layer.DEFAULT_AUDIT_OUTPUT,
+            audit_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_AUDIT_SHA256,
+        ),
+        "promotion": (
+            layer.DEFAULT_PROMOTION_OUTPUT,
+            promotion_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_PROMOTION_SHA256,
+        ),
+        "decision": (
+            layer.DEFAULT_DECISION_OUTPUT,
+            decision_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DECISION_SHA256,
+        ),
+        "evidence": (
+            layer.DEFAULT_EVIDENCE_OUTPUT,
+            evidence_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_EVIDENCE_SHA256,
+        ),
+    }
+    for name, (path, content, expected_hash) in artifacts.items():
+        require(
+            path.is_file()
+            and path.read_text(encoding="utf-8") == content
+            and sha256_bytes(content.encode("utf-8")) == expected_hash,
+            f"category-B {name} artifact drifted: {path}",
+        )
+    updates = {
+        ("pk_msggame", str(row["coordinate"])): dict(row)
+        for row in bundle["updated_rows"]
+    }
+    predecessors = {
+        key: dict(bundle["predecessor_rows"][key]) for key in updates
+    }
+    actions = Counter(
+        str(row[layer.UPDATE_ACTION_FIELD])
+        for row in bundle["updated_rows"]
+    )
+    require(
+        len(updates)
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_UPDATED_ROW_COUNT
+        and dict(actions)
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_ACTION_COUNTS
+        and audit["guards"]["candidate_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_SOURCE_CANDIDATE_SHA256
+        and audit["guards"]["report_payload_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_AUDIT_PAYLOAD_SHA256
+        and bundle["promotion"]["guards"]["report_payload_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_PROMOTION_PAYLOAD_SHA256,
+        "category-B frozen closure contract drifted",
+    )
+    metadata = {
+        "translation_override_count":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_OVERRIDE_COUNT,
+        "verification_renewal_count": 0,
+        "promotion_count":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE_PROMOTIONS,
+        "updated_row_count":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_UPDATED_ROW_COUNT,
+        "action_counts": dict(sorted(actions.items())),
+        "source_candidate_packed_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_SOURCE_CANDIDATE_SHA256,
+        "private_source_update_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DECISION_SHA256,
+        "private_source_evidence_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_EVIDENCE_SHA256,
+        "audit_report_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_AUDIT_SHA256,
+        "audit_report_payload_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_AUDIT_PAYLOAD_SHA256,
+        "promotion_report_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_PROMOTION_SHA256,
+        "promotion_report_payload_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_PROMOTION_PAYLOAD_SHA256,
+        "steam_write_performed": False,
+    }
+    return updates, predecessors, metadata
+
+
+def apply_bound_terminal_2546_category_b_updates(
+    merged: dict[tuple[str, str], dict[str, Any]],
+) -> tuple[int, dict[str, Any]]:
+    layer = load_bound_terminal_2546_category_b_immediate()
+    updates, predecessors, metadata = (
+        validated_bound_terminal_2546_category_b_updates()
+    )
+    assembly_updates: list[str] = []
+    for key, updated in updates.items():
+        predecessor = merged.get(key)
+        require(
+            predecessor is not None and predecessor == predecessors[key],
+            f"category-B rebased predecessor row drifted: {key}",
+        )
+        evidence = updated.get("runtime_vm_verification")
+        action = str(updated.get(layer.UPDATE_ACTION_FIELD))
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("schema") == layer.EVIDENCE_SCHEMA
+            and evidence.get("method") == layer.METHOD
+            and evidence.get("action") == action
+            and evidence.get("predecessor_binding", {}).get("row_sha256")
+            == layer.canonical_sha256(predecessor)
+            and evidence.get("predecessor_binding", {}).get(
+                "checkpoint_sha256"
+            )
+            == layer.EXPECTED_PREDECESSOR_PRIVATE_SHA256
+            and evidence.get("closure_binding", {}).get("candidate_sha256")
+            == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_SOURCE_CANDIDATE_SHA256,
+            f"category-B rebased evidence drifted: {key}",
+        )
+        if (
+            predecessor.get("runtime_assembly_evidence")
+            != updated.get("runtime_assembly_evidence")
+        ):
+            assembly_updates.append(key[1])
+        merged[key] = dict(updated)
+    require(
+        len(assembly_updates)
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_ASSEMBLY_UPDATE_COUNT
+        and layer.coordinate_digest(assembly_updates)
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_ASSEMBLY_UPDATE_SHA256,
+        "category-B assembly evidence update universe drifted",
+    )
+    combined_candidate = combined_pk_candidate_sha256(merged, layer)
+    require(
+        combined_candidate
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_COMBINED_CANDIDATE_SHA256,
+        "A+B combined PK candidate drifted",
+    )
+    metadata["combined_candidate_packed_sha256"] = combined_candidate
+    metadata["runtime_assembly_evidence_update_count"] = len(
+        assembly_updates
+    )
+    metadata["runtime_assembly_evidence_update_coordinate_sha256"] = (
+        layer.coordinate_digest(assembly_updates)
+    )
+    return EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE_PROMOTIONS, metadata
+
+
+def validated_selector538_chunk0_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    layer = load_selector538_chunk0()
+    (
+        decision_content,
+        evidence_content,
+        audit_content,
+        promotion_content,
+        audit,
+        bundle,
+    ) = layer.build_outputs()
+    layer.validate_outputs(
+        decision_content=decision_content,
+        evidence_content=evidence_content,
+        audit_content=audit_content,
+        promotion_content=promotion_content,
+        audit=audit,
+        bundle=bundle,
+    )
+    artifacts = {
+        "audit": (
+            layer.DEFAULT_AUDIT_OUTPUT,
+            audit_content,
+            EXPECTED_SELECTOR538_CHUNK0_AUDIT_SHA256,
+        ),
+        "promotion": (
+            layer.DEFAULT_PROMOTION_OUTPUT,
+            promotion_content,
+            EXPECTED_SELECTOR538_CHUNK0_PROMOTION_SHA256,
+        ),
+        "decision": (
+            layer.DEFAULT_DECISION_OUTPUT,
+            decision_content,
+            EXPECTED_SELECTOR538_CHUNK0_DECISION_SHA256,
+        ),
+        "evidence": (
+            layer.DEFAULT_EVIDENCE_OUTPUT,
+            evidence_content,
+            EXPECTED_SELECTOR538_CHUNK0_EVIDENCE_SHA256,
+        ),
+    }
+    for name, (path, content, expected_hash) in artifacts.items():
+        require(
+            path.is_file()
+            and path.read_text(encoding="utf-8") == content
+            and sha256_bytes(content.encode("utf-8")) == expected_hash,
+            f"selector538 chunk0 {name} artifact drifted: {path}",
+        )
+    updates = {
+        ("pk_msggame", str(row["coordinate"])): dict(row)
+        for row in bundle["updated_rows"]
+    }
+    predecessors = {
+        key: dict(bundle["predecessor_rows"][key]) for key in updates
+    }
+    actions = Counter(
+        str(row[layer.UPDATE_ACTION_FIELD])
+        for row in bundle["updated_rows"]
+    )
+    predecessor_methods: dict[str, set[str]] = {}
+    for key, predecessor in predecessors.items():
+        evidence = predecessor.get("runtime_vm_verification")
+        if not isinstance(evidence, dict):
+            continue
+        predecessor_methods.setdefault(
+            str(evidence.get("method")), set()
+        ).add(key[1])
+    require(
+        len(updates) == EXPECTED_SELECTOR538_CHUNK0_UPDATED_ROW_COUNT
+        and dict(actions) == EXPECTED_SELECTOR538_CHUNK0_ACTION_COUNTS
+        and {
+            method: len(coordinates)
+            for method, coordinates in predecessor_methods.items()
+        }
+        == EXPECTED_SELECTOR538_PREDECESSOR_EVIDENCE_METHOD_COUNTS
+        and all(
+            layer.coordinate_digest(predecessor_methods[method])
+            == digest
+            for method, digest
+            in EXPECTED_SELECTOR538_PREDECESSOR_EVIDENCE_METHOD_DIGESTS.items()
+        )
+        and audit["guards"]["candidate_sha256"]
+        == EXPECTED_SELECTOR538_CHUNK0_SOURCE_CANDIDATE_SHA256
+        and audit["guards"]["report_payload_sha256"]
+        == EXPECTED_SELECTOR538_CHUNK0_AUDIT_PAYLOAD_SHA256
+        and bundle["promotion"]["guards"]["report_payload_sha256"]
+        == EXPECTED_SELECTOR538_CHUNK0_PROMOTION_PAYLOAD_SHA256,
+        "selector538 chunk0 frozen closure contract drifted",
+    )
+    metadata = {
+        "translation_override_count":
+        EXPECTED_SELECTOR538_CHUNK0_OVERRIDE_COUNT,
+        "verification_renewal_count":
+        EXPECTED_SELECTOR538_CHUNK0_RENEWAL_COUNT,
+        "promotion_count": EXPECTED_SELECTOR538_CHUNK0_PROMOTIONS,
+        "updated_row_count": EXPECTED_SELECTOR538_CHUNK0_UPDATED_ROW_COUNT,
+        "action_counts": dict(sorted(actions.items())),
+        "source_candidate_packed_sha256":
+        EXPECTED_SELECTOR538_CHUNK0_SOURCE_CANDIDATE_SHA256,
+        "private_source_update_sha256":
+        EXPECTED_SELECTOR538_CHUNK0_DECISION_SHA256,
+        "private_source_evidence_sha256":
+        EXPECTED_SELECTOR538_CHUNK0_EVIDENCE_SHA256,
+        "audit_report_sha256": EXPECTED_SELECTOR538_CHUNK0_AUDIT_SHA256,
+        "audit_report_payload_sha256":
+        EXPECTED_SELECTOR538_CHUNK0_AUDIT_PAYLOAD_SHA256,
+        "promotion_report_sha256":
+        EXPECTED_SELECTOR538_CHUNK0_PROMOTION_SHA256,
+        "promotion_report_payload_sha256":
+        EXPECTED_SELECTOR538_CHUNK0_PROMOTION_PAYLOAD_SHA256,
+        "predecessor_evidence_method_counts": dict(
+            sorted(EXPECTED_SELECTOR538_PREDECESSOR_EVIDENCE_METHOD_COUNTS.items())
+        ),
+        "predecessor_evidence_method_coordinate_sha256": dict(
+            sorted(EXPECTED_SELECTOR538_PREDECESSOR_EVIDENCE_METHOD_DIGESTS.items())
+        ),
+        "steam_write_performed": False,
+    }
+    return updates, predecessors, metadata
+
+
+def apply_selector538_chunk0_updates(
+    merged: dict[tuple[str, str], dict[str, Any]],
+) -> tuple[int, dict[str, Any]]:
+    layer = load_selector538_chunk0()
+    updates, predecessors, metadata = validated_selector538_chunk0_updates()
+    assembly_updates: list[str] = []
+    for key, updated in updates.items():
+        predecessor = merged.get(key)
+        require(
+            predecessor is not None and predecessor == predecessors[key],
+            f"selector538 chunk0 rebased predecessor row drifted: {key}",
+        )
+        evidence = updated.get("runtime_vm_verification")
+        action = str(updated.get(layer.UPDATE_ACTION_FIELD))
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("schema") == layer.EVIDENCE_SCHEMA
+            and evidence.get("method") == layer.METHOD
+            and evidence.get("action") == action
+            and evidence.get("predecessor_binding", {}).get("row_sha256")
+            == layer.canonical_sha256(predecessor)
+            and evidence.get("predecessor_binding", {}).get(
+                "checkpoint_sha256"
+            )
+            == layer.EXPECTED_PREDECESSOR_PRIVATE_SHA256
+            and evidence.get("closure_binding", {}).get("candidate_sha256")
+            == EXPECTED_SELECTOR538_CHUNK0_SOURCE_CANDIDATE_SHA256,
+            f"selector538 chunk0 rebased evidence drifted: {key}",
+        )
+        if (
+            predecessor.get("runtime_assembly_evidence")
+            != updated.get("runtime_assembly_evidence")
+        ):
+            assembly_updates.append(key[1])
+        merged[key] = dict(updated)
+    require(
+        len(assembly_updates)
+        == EXPECTED_SELECTOR538_CHUNK0_ASSEMBLY_UPDATE_COUNT
+        and layer.coordinate_digest(assembly_updates)
+        == EXPECTED_SELECTOR538_CHUNK0_ASSEMBLY_UPDATE_SHA256,
+        "selector538 chunk0 assembly update universe drifted",
+    )
+    combined_candidate = combined_pk_candidate_sha256(merged, layer)
+    require(
+        combined_candidate
+        == EXPECTED_SELECTOR538_CHUNK0_COMBINED_CANDIDATE_SHA256,
+        "A+B+selector538 combined PK candidate drifted",
+    )
+    metadata["combined_candidate_packed_sha256"] = combined_candidate
+    metadata["runtime_assembly_evidence_update_count"] = len(
+        assembly_updates
+    )
+    metadata["runtime_assembly_evidence_update_coordinate_sha256"] = (
+        layer.coordinate_digest(assembly_updates)
+    )
+    return EXPECTED_SELECTOR538_CHUNK0_PROMOTIONS, metadata
+
+
 def validate_combined_private(
     prepared: Any,
     content: str,
@@ -2750,6 +3397,8 @@ def build_outputs(
     include_bound_terminal_caller: bool = False,
     include_bound_terminal_2546_full_caller: bool = False,
     include_bound_terminal_2546_simple_caller: bool = False,
+    include_bound_terminal_2546_category_b_immediate: bool = False,
+    include_selector538_chunk0: bool = False,
 ) -> tuple[str, str, dict[str, Any]]:
     if include_cross_resource is None:
         include_cross_resource = include_pk_only
@@ -2790,6 +3439,22 @@ def build_outputs(
         (
             "bound-terminal 2546 simple-caller closure requires "
             "bound-terminal 2546 full-caller integration"
+        ),
+    )
+    require(
+        include_bound_terminal_2546_simple_caller
+        or not include_bound_terminal_2546_category_b_immediate,
+        (
+            "bound-terminal 2546 category-B immediate closure requires "
+            "bound-terminal 2546 simple-caller integration"
+        ),
+    )
+    require(
+        include_bound_terminal_2546_category_b_immediate
+        or not include_selector538_chunk0,
+        (
+            "selector538 chunk0 closure requires bound-terminal 2546 "
+            "category-B immediate integration"
         ),
     )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
@@ -3284,6 +3949,49 @@ def build_outputs(
             bound_terminal_2546_simple_caller_promotions,
             bound_terminal_2546_simple_caller_metadata,
         ) = apply_bound_terminal_2546_simple_caller_updates(merged)
+    post_bound_terminal_2546_simple_caller_rows = sorted(
+        merged.values(),
+        key=coordinate_sort_key,
+    )
+    post_bound_terminal_2546_simple_caller_private_sha256 = sha256_bytes(
+        canonical_jsonl(
+            post_bound_terminal_2546_simple_caller_rows
+        ).encode("utf-8")
+    )
+    closure_overlap_proof: dict[str, Any] | None = None
+    bound_terminal_2546_category_b_promotions = 0
+    bound_terminal_2546_category_b_metadata: dict[str, Any] | None = None
+    if include_bound_terminal_2546_category_b_immediate:
+        require(
+            post_bound_terminal_2546_simple_caller_private_sha256
+            == EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PRIVATE_SHA256,
+            (
+                "bound-terminal 2546 category-B predecessor checkpoint "
+                "drifted: "
+                f"{post_bound_terminal_2546_simple_caller_private_sha256}"
+            ),
+        )
+        closure_overlap_proof = build_closure_overlap_proof()
+        (
+            bound_terminal_2546_category_b_promotions,
+            bound_terminal_2546_category_b_metadata,
+        ) = apply_bound_terminal_2546_category_b_updates(merged)
+    post_bound_terminal_2546_category_b_rows = sorted(
+        merged.values(),
+        key=coordinate_sort_key,
+    )
+    post_bound_terminal_2546_category_b_private_sha256 = sha256_bytes(
+        canonical_jsonl(
+            post_bound_terminal_2546_category_b_rows
+        ).encode("utf-8")
+    )
+    selector538_chunk0_promotions = 0
+    selector538_chunk0_metadata: dict[str, Any] | None = None
+    if include_selector538_chunk0:
+        (
+            selector538_chunk0_promotions,
+            selector538_chunk0_metadata,
+        ) = apply_selector538_chunk0_updates(merged)
     pk_integrated_promotions = (
         predecessor_promotions
         + pk_only_promotions
@@ -3294,6 +4002,8 @@ def build_outputs(
         + bound_terminal_caller_promotions
         + bound_terminal_2546_full_caller_promotions
         + bound_terminal_2546_simple_caller_promotions
+        + bound_terminal_2546_category_b_promotions
+        + selector538_chunk0_promotions
     )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
@@ -3371,9 +4081,39 @@ def build_outputs(
             bound_terminal_2546_simple_caller_metadata
         )
         pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_bound_terminal_2546_category_b_immediate:
+        assert bound_terminal_2546_category_b_metadata is not None
+        assert closure_overlap_proof is not None
+        pk_metadata[
+            "bound_terminal_2546_category_b_immediate_layer_included"
+        ] = True
+        pk_metadata[
+            "rebuilt_post_bound_terminal_2546_simple_caller_"
+            "integrated_private_sha256"
+        ] = post_bound_terminal_2546_simple_caller_private_sha256
+        pk_metadata["bound_terminal_2546_category_b_immediate"] = (
+            bound_terminal_2546_category_b_metadata
+        )
+        pk_metadata["closure_delta_exact_overlap_proof"] = (
+            closure_overlap_proof
+        )
+        pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_selector538_chunk0:
+        assert selector538_chunk0_metadata is not None
+        pk_metadata["selector538_chunk0_layer_included"] = True
+        pk_metadata[
+            "rebuilt_post_bound_terminal_2546_category_b_"
+            "integrated_private_sha256"
+        ] = post_bound_terminal_2546_category_b_private_sha256
+        pk_metadata["selector538_chunk0"] = selector538_chunk0_metadata
+        pk_metadata["promotion_count"] = pk_integrated_promotions
 
     expected_pk_promotions = (
-        EXPECTED_PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PROMOTIONS
+        EXPECTED_PK_SELECTOR538_CHUNK0_FINAL_PROMOTIONS
+        if include_selector538_chunk0
+        else EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PROMOTIONS
+        if include_bound_terminal_2546_category_b_immediate
+        else EXPECTED_PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PROMOTIONS
         if include_bound_terminal_2546_simple_caller
         else EXPECTED_PK_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PROMOTIONS
         if include_bound_terminal_2546_full_caller
@@ -3409,7 +4149,11 @@ def build_outputs(
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
-        EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PENDING_AFTER
+        EXPECTED_SELECTOR538_CHUNK0_FINAL_PENDING_AFTER
+        if include_selector538_chunk0
+        else EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PENDING_AFTER
+        if include_bound_terminal_2546_category_b_immediate
+        else EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PENDING_AFTER
         if include_bound_terminal_2546_simple_caller
         else EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PENDING_AFTER
         if include_bound_terminal_2546_full_caller
@@ -3434,7 +4178,16 @@ def build_outputs(
     private_content = canonical_jsonl(rows)
     validate_combined_private(prepared, private_content, private_output)
     private_sha256 = sha256_bytes(private_content.encode("utf-8"))
-    if include_bound_terminal_2546_simple_caller:
+    if include_selector538_chunk0:
+        if EXPECTED_FINAL_SELECTOR538_PRIVATE_SHA256 is not None:
+            require(
+                private_sha256 == EXPECTED_FINAL_SELECTOR538_PRIVATE_SHA256,
+                (
+                    "selector538 chunk0 final private digest drifted: "
+                    f"{private_sha256}"
+                ),
+            )
+    elif include_bound_terminal_2546_simple_caller:
         if (
             EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PRIVATE_SHA256
             is not None
@@ -3632,8 +4385,51 @@ def build_outputs(
                 "combined_candidate_record_and_root_rebound": True,
             }
         )
+    if include_bound_terminal_2546_category_b_immediate:
+        report["validation"].update(
+            {
+                (
+                    "bound_terminal_2546_category_b_immediate_"
+                    "layer_included"
+                ): True,
+                (
+                    "post_bound_terminal_2546_simple_caller_"
+                    "predecessor_checkpoint_rebuilt_and_matched"
+                ): post_bound_terminal_2546_simple_caller_private_sha256
+                == EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PRIVATE_SHA256,
+                "exact_7_translation_overrides_rechecked": True,
+                "actual_12_pending_promotions_rechecked": True,
+                "category_b_runtime_assembly_evidence_rechecked": True,
+                "closure_delta_exact_overlap_proof_rechecked": True,
+                "combined_candidate_record_and_root_rebound": True,
+            }
+        )
+    if include_selector538_chunk0:
+        report["validation"].update(
+            {
+                "selector538_chunk0_layer_included": True,
+                (
+                    "post_bound_terminal_2546_category_b_"
+                    "predecessor_rebuilt"
+                ): True,
+                "exact_33_translation_overrides_rechecked": True,
+                "affected_420_verified_pk_runtime_evidence_renewed": True,
+                "actual_65_pending_promotions_rechecked": True,
+                "selector538_predecessor_method_universe_rechecked": True,
+                "selector538_runtime_assembly_evidence_rechecked": True,
+                "closure_delta_exact_overlap_proof_rechecked": True,
+                "combined_candidate_record_and_root_rebound": True,
+            }
+        )
     public_content = canonical_json(report)
-    if (
+    if include_selector538_chunk0:
+        if EXPECTED_FINAL_SELECTOR538_PUBLIC_SHA256 is not None:
+            require(
+                sha256_bytes(public_content.encode("utf-8"))
+                == EXPECTED_FINAL_SELECTOR538_PUBLIC_SHA256,
+                "selector538 chunk0 final public digest drifted",
+            )
+    elif (
         include_bound_terminal_2546_simple_caller
         and EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PUBLIC_SHA256
         is not None
@@ -3694,6 +4490,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         include_bound_terminal_caller=True,
         include_bound_terminal_2546_full_caller=True,
         include_bound_terminal_2546_simple_caller=True,
+        include_bound_terminal_2546_category_b_immediate=True,
+        include_selector538_chunk0=True,
     )
     if args.write:
         ENGINE.atomic_write(args.private_output, private_content)

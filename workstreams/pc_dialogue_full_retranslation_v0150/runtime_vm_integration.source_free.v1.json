@@ -23,6 +23,28 @@
       "promotion_report_sha256": "940ABA9223E53D467B3D63CB3ADF08D5A24E86FEAC7B391D7055CC96F3A17580"
     },
     "pk_msggame": {
+      "bound_terminal_2546_category_b_immediate": {
+        "action_counts": {
+          "runtime_promotion": 5,
+          "translation_override_and_runtime_promotion": 7
+        },
+        "audit_report_payload_sha256": "545780F7B4D7732ED19A706507E1DD891B1E0DA1F4D9E88AB5EF9D1340DC963A",
+        "audit_report_sha256": "19E869B8D1DF6B0896F39E79ECC0397F8C8B2B7CF3D28BB2547AC7587D72AAAD",
+        "combined_candidate_packed_sha256": "A7892555300CAC0F8A20608937BFF420E000CA77A68E524174974DAC2308EE88",
+        "private_source_evidence_sha256": "9741F68BB504CEFF3750F56A4AD4D296E249B3656AFD6EB9F5D131F53A32509B",
+        "private_source_update_sha256": "8A44196B7EB20267FAC4ADD6953350257FCB9C5DA92406241B23F0B70133FABA",
+        "promotion_count": 12,
+        "promotion_report_payload_sha256": "5E81E11818950005F7B225649C9E48E24D0DCC4439DF627A4407536D58BE1349",
+        "promotion_report_sha256": "92CEF30654AF571D21F56DDA3A3796E728578A64EEDFF2426572E8060E750610",
+        "runtime_assembly_evidence_update_coordinate_sha256": "88E591664CB357931FA298CB6ECEC4A8F27D8CE0B181804A76395E101B809BCC",
+        "runtime_assembly_evidence_update_count": 2,
+        "source_candidate_packed_sha256": "2AE326439AC0A503104A245774FA4D2CA3B833E05AAE7E8E40F5CFCF7F5B31E2",
+        "steam_write_performed": false,
+        "translation_override_count": 7,
+        "updated_row_count": 12,
+        "verification_renewal_count": 0
+      },
+      "bound_terminal_2546_category_b_immediate_layer_included": true,
       "bound_terminal_2546_full_caller": {
         "action_counts": {
           "runtime_promotion": 279,
@@ -139,6 +161,13 @@
         "verification_renewal_count": 685
       },
       "bound_terminal_family_layer_included": true,
+      "closure_delta_exact_overlap_proof": {
+        "all_exact_coordinate_overlap_count": 0,
+        "all_exact_coordinate_overlap_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "manifest_canonical_sha256": "344946A2D2A1CED9B39F59403CC9A2C9D6A7ACCA9DF195D22F663D1AEE4CAE2F",
+        "translation_override_conflict_count": 0,
+        "translation_override_conflict_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
       "cross_resource_exact_closure": {
         "base_runtime_proof_inherited": false,
         "coverage_file_sha256": "B9BC31F4DD68C5E812395895DB209A3652E08D0BF5C0959F1EAAE2A87F3E3C09",
@@ -181,9 +210,11 @@
       },
       "pk_only_layer_included": true,
       "pk_only_predecessor_checkpoint_match": true,
-      "promotion_count": 12493,
+      "promotion_count": 12570,
       "rebuilt_post_bound_integrated_private_sha256": "F6BAA43C22404365E49D40C6B306C850C3B123681CD0A42D5A63EDB73D8018FB",
+      "rebuilt_post_bound_terminal_2546_category_b_integrated_private_sha256": "CBF9A37C8BA8BC9AB1353B5B105735CBC0D32D549F29EB8EBABC8E3C95658400",
       "rebuilt_post_bound_terminal_2546_full_caller_integrated_private_sha256": "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5",
+      "rebuilt_post_bound_terminal_2546_simple_caller_integrated_private_sha256": "5A789D888F3BB353F37BC74779D2C91F5BCB5542CD17842C9371F49AB53C1ABF",
       "rebuilt_post_bound_terminal_caller_integrated_private_sha256": "54B4255C29F256B84E1CA4EE8A9B5D21FE254100A2A71CA28657F7EF6EB34E45",
       "rebuilt_post_cross_integrated_private_sha256": "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC",
       "rebuilt_post_dynamic_integrated_private_sha256": "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2",
@@ -197,6 +228,42 @@
         "promotion_count": 2945,
         "promotion_report_sha256": "F5F726453552D13B29F6C5A7D85CFB945D0DD8C1211452F80E61DB957C261E02"
       },
+      "selector538_chunk0": {
+        "action_counts": {
+          "runtime_promotion": 48,
+          "translation_override_and_runtime_promotion": 17,
+          "translation_override_and_verification_renewal": 16,
+          "verification_renewal": 404
+        },
+        "audit_report_payload_sha256": "186ACA3BE8277A6484AF95C16B04978ADE9A831F1CEB719D78D707A3343B77C1",
+        "audit_report_sha256": "BD5BCE9A82BCE6D38B5D4175253D8C0D025F464B9D6FA01ACBC0675B0841C43C",
+        "combined_candidate_packed_sha256": "207E2FADFDD997BFAA9BB5974B48D9DE59B373F7BE57F15197DDCD7568C909F0",
+        "predecessor_evidence_method_coordinate_sha256": {
+          "reversed_vm_pk_bound_terminal_2546_full_caller_closure": "3834E87A3718BA22617C583D1A5C4E903BFFF216553E366881EFF4DA740ED4CD",
+          "reversed_vm_pk_bound_terminal_caller_full_closure_analysis": "9BF997BADFDE541B9770CC84F584A74660ACEE629F9D5AC601DDE2CF1241B05E",
+          "reversed_vm_pk_bound_terminal_family_exact_closure_analysis": "A6665C54EEE7FAA7BFDA3B993762ADC6BDFD502D956B8193AE607A1A4550484C",
+          "reversed_vm_pk_thought_predicate_family_exact_closure_analysis": "BC6BB84A972A37C50CDFE724DC84AA8D81C6FCFB2E4E81C8E4D60CB1933CF710"
+        },
+        "predecessor_evidence_method_counts": {
+          "reversed_vm_pk_bound_terminal_2546_full_caller_closure": 22,
+          "reversed_vm_pk_bound_terminal_caller_full_closure_analysis": 6,
+          "reversed_vm_pk_bound_terminal_family_exact_closure_analysis": 389,
+          "reversed_vm_pk_thought_predicate_family_exact_closure_analysis": 3
+        },
+        "private_source_evidence_sha256": "AA38C99D83D42733BA8E271D26F9EB711FE0F1B626B9F9C266E8045FFBBF5F54",
+        "private_source_update_sha256": "6B002FF3565B1BAAED58064BA2351232B443A3B43350BD7BE9ADAFD1ED117BBF",
+        "promotion_count": 65,
+        "promotion_report_payload_sha256": "41BF9A59B25C032DD17539FF9EDE8C7CF234F68649BD21272ACBFE029C02AFBE",
+        "promotion_report_sha256": "E08B23BAEB01C6EA3DA61AA9C2C85B6E5CBC981A646ED3DD494F90A7B230771D",
+        "runtime_assembly_evidence_update_coordinate_sha256": "5FFF6C8F8A26C073ECF20771EAA52A9BE18FE6197F11CE7C6D2B3B183DB9F505",
+        "runtime_assembly_evidence_update_count": 1,
+        "source_candidate_packed_sha256": "583E53881F3099163F4E43E955C9363EDD597F82CA5B280BA96231A02A7673B4",
+        "steam_write_performed": false,
+        "translation_override_count": 33,
+        "updated_row_count": 485,
+        "verification_renewal_count": 420
+      },
+      "selector538_chunk0_layer_included": true,
       "thought_predicate_family": {
         "assembly_manifest_sha256": "93F1F8B14FE43A05943BE9828D3A6ECC19BA570140ABBB5BB2DA930CA99C440A",
         "audit_report_payload_sha256": "BF7EC8A09E119A1B710122573F3583FBCB312B7D79DBB6AFF4D015B9E1F75E91",
@@ -218,7 +285,7 @@
       },
       "thought_predicate_family_layer_included": true
     },
-    "promoted_total": 28144,
+    "promoted_total": 28221,
     "relative_reflow_override": {
       "after_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
       "before_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
@@ -244,27 +311,31 @@
   "result": {
     "candidate_ready": false,
     "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
-    "fully_candidate_eligible": 44613,
-    "private_integrated_decision_sha256": "5A789D888F3BB353F37BC74779D2C91F5BCB5542CD17842C9371F49AB53C1ABF",
-    "runtime_review_pending": 8190,
+    "fully_candidate_eligible": 44690,
+    "private_integrated_decision_sha256": "6945B4CBAD745A808CE306599FCC5BB7C17068414AD7B085E59B02BC20818165",
+    "runtime_review_pending": 8113,
     "semantic_review_approved": 52803
   },
   "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
   "status": "PASS",
   "steam_write_performed": false,
   "validation": {
+    "actual_12_pending_promotions_rechecked": true,
     "actual_23_pending_promotions_rechecked": true,
     "actual_364_pending_promotions_rechecked": true,
+    "actual_65_pending_promotions_rechecked": true,
     "actual_forty_one_pending_promotions_rechecked": true,
     "actual_four_pending_promotions_rechecked": true,
     "actual_twenty_three_pending_promotions_rechecked": true,
     "affected_292_verified_pk_runtime_evidence_renewed": true,
+    "affected_420_verified_pk_runtime_evidence_renewed": true,
     "affected_5_verified_pk_runtime_evidence_renewed": true,
     "affected_verified_pk_runtime_evidence_renewed": true,
     "affected_verified_runtime_evidence_renewed": true,
     "all_483_assemblies_grammar_complete": true,
     "all_63_register_assemblies_rechecked": true,
     "base_candidate_record_guards_rechecked": true,
+    "bound_terminal_2546_category_b_immediate_layer_included": true,
     "bound_terminal_2546_full_caller_layer_included": true,
     "bound_terminal_2546_simple_caller_layer_included": true,
     "bound_terminal_caller_layer_included": true,
@@ -272,6 +343,8 @@
     "bound_terminal_semantic_overrides_rechecked": true,
     "caller_overlap_actions_preserved_and_superseded": true,
     "caller_semantic_overrides_rechecked": true,
+    "category_b_runtime_assembly_evidence_rechecked": true,
+    "closure_delta_exact_overlap_proof_rechecked": true,
     "combined_candidate_record_and_root_rebound": true,
     "combined_overlap_thought_translation_preserved": true,
     "control_repair_bindings_rechecked": true,
@@ -280,6 +353,8 @@
     "dynamic_honorific_spacing_layer_included": true,
     "exact_17_translation_overrides_rechecked": true,
     "exact_216_translation_overrides_rechecked": true,
+    "exact_33_translation_overrides_rechecked": true,
+    "exact_7_translation_overrides_rechecked": true,
     "historical_actions_preserved_and_exactly_superseded": true,
     "normal_v0150_decision_validator_rechecked": true,
     "per_row_game_playback_required_for_promotions": false,
@@ -288,7 +363,9 @@
     "pk_only_predecessor_checkpoint_rebuilt_and_matched": true,
     "pk_overlay_rebuilt_and_rechecked": true,
     "post_bound_predecessor_checkpoint_rebuilt_and_matched": true,
+    "post_bound_terminal_2546_category_b_predecessor_rebuilt": true,
     "post_bound_terminal_2546_full_caller_predecessor_checkpoint_rebuilt_and_matched": true,
+    "post_bound_terminal_2546_simple_caller_predecessor_checkpoint_rebuilt_and_matched": true,
     "post_bound_terminal_caller_predecessor_checkpoint_rebuilt_and_matched": true,
     "post_cross_predecessor_checkpoint_rebuilt_and_matched": true,
     "post_dynamic_predecessor_checkpoint_rebuilt_and_matched": true,
@@ -297,6 +374,9 @@
     "relative_reflow_override_rebuilt_and_rechecked": true,
     "representative_game_smoke_test_required_before_release": true,
     "runtime_only_transitions_enforced": true,
+    "selector538_chunk0_layer_included": true,
+    "selector538_predecessor_method_universe_rechecked": true,
+    "selector538_runtime_assembly_evidence_rechecked": true,
     "selector_1066_simple_caller_retranslation_rechecked": true,
     "selector_1066_terminal_2546_full_closure_rechecked": true,
     "semantic_override_rebuilt_and_rechecked": true,

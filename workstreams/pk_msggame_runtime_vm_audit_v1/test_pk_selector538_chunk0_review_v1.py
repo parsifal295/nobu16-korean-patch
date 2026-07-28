@@ -178,7 +178,13 @@ class Selector538Chunk0ReviewTests(unittest.TestCase):
             self.report["guards"]["steam_archive_sha256_after"],
         )
         self.assertEqual(
-            BUILDER.sha256_file(BUILDER.ASSIGN.INTEGRATED_LEDGER),
+            BUILDER.sha256_file(
+                BUILDER.DIALOGUE_TMP
+                / (
+                    "runtime_vm_integrated."
+                    "post_bound_terminal_2546_checkpoint.private.v1.jsonl"
+                )
+            ),
             BUILDER.EXPECTED_LEDGER_SHA256,
         )
 
