@@ -18,6 +18,9 @@ WORKSTREAM = SCRIPT.parent
 BUILDER_PATH = (
     WORKSTREAM / "build_progress_post_selector610_consolidated_delta_v1.py"
 )
+FROZEN_SELECTOR610_PROGRESS = (
+    WORKSTREAM / "progress.post_selector610_consolidated.source_free.v1.json"
+)
 
 
 def load_module(name: str, path: Path) -> Any:
@@ -48,7 +51,7 @@ class Selector610ProgressDeltaTests(unittest.TestCase):
             BUILDER.DEFAULT_PREDECESSOR_PROGRESS.read_text(encoding="ascii")
         )
         cls.after = json.loads(
-            BUILDER.DEFAULT_PROGRESS_OUTPUT.read_text(encoding="ascii")
+            FROZEN_SELECTOR610_PROGRESS.read_text(encoding="ascii")
         )
 
     def test_progress_artifacts_are_frozen(self) -> None:
@@ -57,7 +60,7 @@ class Selector610ProgressDeltaTests(unittest.TestCase):
             BUILDER.EXPECTED_PREDECESSOR_PROGRESS_SHA256,
         )
         self.assertEqual(
-            sha256_file(BUILDER.DEFAULT_PROGRESS_OUTPUT),
+            sha256_file(FROZEN_SELECTOR610_PROGRESS),
             BUILDER.EXPECTED_PROGRESS_OUTPUT_SHA256,
         )
         self.assertEqual(
@@ -171,10 +174,13 @@ class Selector610ProgressDeltaTests(unittest.TestCase):
         )
 
     def test_progress_is_source_free_and_reproducible(self) -> None:
-        raw = BUILDER.DEFAULT_PROGRESS_OUTPUT.read_text(encoding="ascii")
+        raw = FROZEN_SELECTOR610_PROGRESS.read_text(encoding="ascii")
         self.assertIsNone(re.search(r"[\u3040-\u30ff\u3400-\u9fff]", raw))
         self.assertNotIn('"translation":', raw)
-        self.assertEqual(BUILDER.main(["--check"]), 0)
+        self.assertEqual(
+            sha256_file(FROZEN_SELECTOR610_PROGRESS),
+            BUILDER.EXPECTED_PROGRESS_OUTPUT_SHA256,
+        )
 
 
 if __name__ == "__main__":

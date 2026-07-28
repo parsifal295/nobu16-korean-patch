@@ -45,11 +45,11 @@
   },
   "runtime_vm_integration": {
     "historical_path": "workstreams/pc_dialogue_full_retranslation_v0150/runtime_vm_integration.post_bound_terminal_2546_checkpoint.source_free.v1.json",
-    "schema": "nobu16.kr.pc-dialogue-runtime-vm-selector550-delta-checkpoint.source-free.v1",
-    "sha256": "2120F85E7450E58667C784D0ED2035589E1E6674563B94A938545A51B9C573CC",
-    "private_integrated_decision_sha256": "F2CB7279F71D33CFA9D73BD4A6DA8E7E90692047F8ECF1D521FD70512D71846E",
-    "promoted_total": 29354,
-    "runtime_review_pending_after": 6980,
+    "schema": "nobu16.kr.pc-dialogue-runtime-vm-selector610-delta-checkpoint.source-free.v1",
+    "sha256": "42BB33CD2F7553EE3E251DDD78933F85D181F140AA133C5843F6DBDF379B53D3",
+    "private_integrated_decision_sha256": "0218C3D198C9930C8920ED8DAEB2DDD85987878035AC59DD5ECC8179D38DE12B",
+    "promoted_total": 29233,
+    "runtime_review_pending_after": 7101,
     "bound_terminal_family_layer_included": true,
     "bound_terminal_family": {
       "actual_eligible_coordinate_sha256": "4DF163871B35C27A3A241492B9131F496C5A0EDC8EC4AA6055F17C358EA507F9",
@@ -156,7 +156,7 @@
       "verification_renewal_count": 292
     },
     "steam_write_performed": false,
-    "path": "workstreams/pc_dialogue_full_retranslation_v0150/runtime_vm_integration.post_selector550_consolidated_checkpoint.source_free.v1.json",
+    "path": "workstreams/pc_dialogue_full_retranslation_v0150/runtime_vm_integration.post_selector610_consolidated_checkpoint.source_free.v1.json",
     "historical_checkpoint_private_sha256": "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5",
     "historical_checkpoint_report_sha256": "838D162126925ECF706577688D35570853CDA68226AF3C8FFB7FE14C3943D072",
     "historical_layers_revalidated_from_immutable_checkpoint": true,
@@ -174,7 +174,7 @@
       "d5_evidence_sha256": "C328430233A81E4457BD253844D65622B7305AEB20FACB30E011C2EEF7B58BD0",
       "d5_selector538_disjoint": true,
       "d5_consolidated_disjoint": true,
-      "final_pk_candidate_sha256": "15C3BF1B4CC2E29020E5A8A6F40669555B54EEE57B04C3F7F77DF3AC680CFB93",
+      "final_pk_candidate_sha256": "F80EA5958757F097885279BAB53A8456758BB99B1CE47E214FE0F54AB7152807",
       "selector538_action_counts": {
         "runtime_promotion": 220,
         "translation_override_and_runtime_promotion": 57,
@@ -202,13 +202,7 @@
       "selector610_consolidated_renewal_count": 147,
       "selector610_consolidated_override_count": 193,
       "selector610_consolidated_decision_sha256": "C619DD5D1A3D5CE5EF7DCBD536A5C6D676502A5500E097C7E4877A1D5954C7BE",
-      "selector610_consolidated_final_candidate_sha256": "F80EA5958757F097885279BAB53A8456758BB99B1CE47E214FE0F54AB7152807",
-      "selector550_consolidated_decision_rows": 224,
-      "selector550_consolidated_promotion_count": 121,
-      "selector550_consolidated_renewal_count": 103,
-      "selector550_consolidated_override_count": 131,
-      "selector550_consolidated_decision_sha256": "6F483AF06164F922C590F8FC7933E130AFE6CEF453A2D55901954975067DBF5E",
-      "selector550_consolidated_final_candidate_sha256": "15C3BF1B4CC2E29020E5A8A6F40669555B54EEE57B04C3F7F77DF3AC680CFB93"
+      "selector610_consolidated_final_candidate_sha256": "F80EA5958757F097885279BAB53A8456758BB99B1CE47E214FE0F54AB7152807"
     },
     "bound_terminal_2546_category_b_deferred_layer_included": true,
     "bound_terminal_2546_category_b_deferred": {
@@ -343,42 +337,6 @@
       "promotion_count": 167,
       "changed_segment_count": 36,
       "changed_batch_count": 25,
-      "full_dialogue_rebuild_performed": false,
-      "steam_write_performed": false
-    },
-    "selector550_consolidated_layer_included": true,
-    "selector550_consolidated": {
-      "owner_decision_row_count": 225,
-      "updated_coordinate_count": 224,
-      "promotion_count": 121,
-      "verification_renewal_count": 103,
-      "semantic_override_count": 131,
-      "action_counts": {
-        "runtime_promotion": 93,
-        "translation_override_and_runtime_promotion": 28,
-        "translation_override_and_verification_renewal": 103
-      },
-      "decision_coordinate_sha256": "6F483AF06164F922C590F8FC7933E130AFE6CEF453A2D55901954975067DBF5E",
-      "promotion_coordinate_sha256": "F8C2CF55D1BA2BC4774BED272102DD34E513D324BEC98B2DBA2822EC61E4B644",
-      "renewal_coordinate_sha256": "1A3F07E583A179D622921643BA018A516F0FE1F6AEEEE7C85C0272E8D9DF504B",
-      "override_coordinate_sha256": "E9948002912296EFF51065967A19A70809FBCB00E352A49F4308796A23D2EF90",
-      "reviewed_site_count": 169,
-      "reviewed_site_sha256": "C192D4C89E340FF974BB38DC57039AA28626976597B12DA976AC9D9BA0C49741",
-      "source_only_repair_site_count": 8,
-      "source_only_site_sha256": "D621F264506A41110B53B8D83022C4D73AE331EB2BFFF662ADBD81352A7E5308",
-      "source_only_action_count": 0,
-      "predecessor_candidate_sha256": "F80EA5958757F097885279BAB53A8456758BB99B1CE47E214FE0F54AB7152807",
-      "final_candidate_sha256": "15C3BF1B4CC2E29020E5A8A6F40669555B54EEE57B04C3F7F77DF3AC680CFB93",
-      "reverse_overlay_sha256": "F80EA5958757F097885279BAB53A8456758BB99B1CE47E214FE0F54AB7152807",
-      "single_coordinate_union_used": true,
-      "identical_terminal_owner_overlap_deduplicated": true,
-      "sequential_chunk_overlays_used": false,
-      "steam_write_performed": false
-    },
-    "selector550_targeted_progress_delta": {
-      "promotion_count": 121,
-      "changed_segment_count": 26,
-      "changed_batch_count": 24,
       "full_dialogue_rebuild_performed": false,
       "steam_write_performed": false
     }
@@ -23405,12 +23363,12 @@
       "decision_count": 66,
       "semantic_review_approved": 66,
       "runtime_review_not_required": 15,
-      "runtime_review_verified": 5,
-      "runtime_review_pending": 46,
+      "runtime_review_verified": 3,
+      "runtime_review_pending": 48,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 20,
-        "runtime_fragment_pending": 46
+        "retranslated": 18,
+        "runtime_fragment_pending": 48
       },
       "queue_batch_ids": [
         "pk_msggame-B008"
@@ -23427,12 +23385,12 @@
       "decision_count": 67,
       "semantic_review_approved": 67,
       "runtime_review_not_required": 8,
-      "runtime_review_verified": 12,
-      "runtime_review_pending": 47,
+      "runtime_review_verified": 10,
+      "runtime_review_pending": 49,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 20,
-        "runtime_fragment_pending": 47
+        "retranslated": 18,
+        "runtime_fragment_pending": 49
       },
       "queue_batch_ids": [
         "pk_msggame-B009"
@@ -24439,12 +24397,12 @@
       "decision_count": 30,
       "semantic_review_approved": 30,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 22,
-      "runtime_review_pending": 8,
+      "runtime_review_verified": 10,
+      "runtime_review_pending": 20,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 22,
-        "runtime_fragment_pending": 8
+        "retranslated": 10,
+        "runtime_fragment_pending": 20
       },
       "queue_batch_ids": [
         "pk_msggame-B026"
@@ -24835,12 +24793,12 @@
       "decision_count": 9,
       "semantic_review_approved": 9,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 3,
-      "runtime_review_pending": 6,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 9,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 3,
-        "runtime_fragment_pending": 6
+        "retranslated": 0,
+        "runtime_fragment_pending": 9
       },
       "queue_batch_ids": [
         "pk_msggame-B033"
@@ -24945,12 +24903,12 @@
       "decision_count": 30,
       "semantic_review_approved": 30,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 18,
-      "runtime_review_pending": 12,
+      "runtime_review_verified": 16,
+      "runtime_review_pending": 14,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 18,
-        "runtime_fragment_pending": 12
+        "retranslated": 16,
+        "runtime_fragment_pending": 14
       },
       "queue_batch_ids": [
         "pk_msggame-B035"
@@ -24967,12 +24925,12 @@
       "decision_count": 28,
       "semantic_review_approved": 28,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 21,
-      "runtime_review_pending": 7,
+      "runtime_review_verified": 19,
+      "runtime_review_pending": 9,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 21,
-        "runtime_fragment_pending": 7
+        "retranslated": 19,
+        "runtime_fragment_pending": 9
       },
       "queue_batch_ids": [
         "pk_msggame-B035"
@@ -25033,12 +24991,12 @@
       "decision_count": 15,
       "semantic_review_approved": 15,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 5,
-      "runtime_review_pending": 10,
+      "runtime_review_verified": 1,
+      "runtime_review_pending": 14,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 5,
-        "runtime_fragment_pending": 10
+        "retranslated": 1,
+        "runtime_fragment_pending": 14
       },
       "queue_batch_ids": [
         "pk_msggame-B036"
@@ -25143,12 +25101,12 @@
       "decision_count": 15,
       "semantic_review_approved": 15,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 1,
-      "runtime_review_pending": 14,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 15,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 1,
-        "runtime_fragment_pending": 14
+        "retranslated": 0,
+        "runtime_fragment_pending": 15
       },
       "queue_batch_ids": [
         "pk_msggame-B038"
@@ -25187,12 +25145,12 @@
       "decision_count": 26,
       "semantic_review_approved": 26,
       "runtime_review_not_required": 11,
-      "runtime_review_verified": 11,
-      "runtime_review_pending": 4,
+      "runtime_review_verified": 8,
+      "runtime_review_pending": 7,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 22,
-        "runtime_fragment_pending": 4
+        "retranslated": 19,
+        "runtime_fragment_pending": 7
       },
       "queue_batch_ids": [
         "pk_msggame-B039"
@@ -25474,12 +25432,12 @@
       "decision_count": 26,
       "semantic_review_approved": 26,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 22,
-      "runtime_review_pending": 4,
+      "runtime_review_verified": 21,
+      "runtime_review_pending": 5,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 22,
-        "runtime_fragment_pending": 4
+        "retranslated": 21,
+        "runtime_fragment_pending": 5
       },
       "queue_batch_ids": [
         "pk_msggame-B043"
@@ -25628,12 +25586,12 @@
       "decision_count": 20,
       "semantic_review_approved": 20,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 7,
-      "runtime_review_pending": 13,
+      "runtime_review_verified": 4,
+      "runtime_review_pending": 16,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 7,
-        "runtime_fragment_pending": 13
+        "retranslated": 4,
+        "runtime_fragment_pending": 16
       },
       "queue_batch_ids": [
         "pk_msggame-B045"
@@ -25694,12 +25652,12 @@
       "decision_count": 55,
       "semantic_review_approved": 55,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 14,
-      "runtime_review_pending": 41,
+      "runtime_review_verified": 10,
+      "runtime_review_pending": 45,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 14,
-        "runtime_fragment_pending": 41
+        "retranslated": 10,
+        "runtime_fragment_pending": 45
       },
       "queue_batch_ids": [
         "pk_msggame-B046"
@@ -25760,12 +25718,12 @@
       "decision_count": 64,
       "semantic_review_approved": 64,
       "runtime_review_not_required": 1,
-      "runtime_review_verified": 16,
-      "runtime_review_pending": 47,
+      "runtime_review_verified": 12,
+      "runtime_review_pending": 51,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 17,
-        "runtime_fragment_pending": 47
+        "retranslated": 13,
+        "runtime_fragment_pending": 51
       },
       "queue_batch_ids": [
         "pk_msggame-B047"
@@ -29654,12 +29612,12 @@
       "decision_count": 35,
       "semantic_review_approved": 35,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 30,
-      "runtime_review_pending": 5,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 35,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 30,
-        "runtime_fragment_pending": 5
+        "retranslated": 0,
+        "runtime_fragment_pending": 35
       },
       "queue_batch_ids": [
         "pk_msggame-B112"
@@ -29676,12 +29634,12 @@
       "decision_count": 11,
       "semantic_review_approved": 11,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 3,
-      "runtime_review_pending": 8,
+      "runtime_review_verified": 0,
+      "runtime_review_pending": 11,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 3,
-        "runtime_fragment_pending": 8
+        "retranslated": 0,
+        "runtime_fragment_pending": 11
       },
       "queue_batch_ids": [
         "pk_msggame-B113"
@@ -30380,12 +30338,12 @@
       "decision_count": 7,
       "semantic_review_approved": 7,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 4,
-      "runtime_review_pending": 3,
+      "runtime_review_verified": 3,
+      "runtime_review_pending": 4,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 4,
-        "runtime_fragment_pending": 3
+        "retranslated": 3,
+        "runtime_fragment_pending": 4
       },
       "queue_batch_ids": [
         "pk_msggame-B123"
@@ -30446,12 +30404,12 @@
       "decision_count": 9,
       "semantic_review_approved": 9,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 4,
-      "runtime_review_pending": 5,
+      "runtime_review_verified": 2,
+      "runtime_review_pending": 7,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 4,
-        "runtime_fragment_pending": 5
+        "retranslated": 2,
+        "runtime_fragment_pending": 7
       },
       "queue_batch_ids": [
         "pk_msggame-B124"
@@ -30468,12 +30426,12 @@
       "decision_count": 15,
       "semantic_review_approved": 15,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 6,
-      "runtime_review_pending": 9,
+      "runtime_review_verified": 5,
+      "runtime_review_pending": 10,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 6,
-        "runtime_fragment_pending": 9
+        "retranslated": 5,
+        "runtime_fragment_pending": 10
       },
       "queue_batch_ids": [
         "pk_msggame-B125"
@@ -30490,12 +30448,12 @@
       "decision_count": 20,
       "semantic_review_approved": 20,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 12,
-      "runtime_review_pending": 8,
+      "runtime_review_verified": 11,
+      "runtime_review_pending": 9,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 12,
-        "runtime_fragment_pending": 8
+        "retranslated": 11,
+        "runtime_fragment_pending": 9
       },
       "queue_batch_ids": [
         "pk_msggame-B126"
@@ -30556,12 +30514,12 @@
       "decision_count": 26,
       "semantic_review_approved": 26,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 13,
-      "runtime_review_pending": 13,
+      "runtime_review_verified": 5,
+      "runtime_review_pending": 21,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 13,
-        "runtime_fragment_pending": 13
+        "retranslated": 5,
+        "runtime_fragment_pending": 21
       },
       "queue_batch_ids": [
         "pk_msggame-B127"
@@ -30578,12 +30536,12 @@
       "decision_count": 40,
       "semantic_review_approved": 40,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 24,
-      "runtime_review_pending": 16,
+      "runtime_review_verified": 21,
+      "runtime_review_pending": 19,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 24,
-        "runtime_fragment_pending": 16
+        "retranslated": 21,
+        "runtime_fragment_pending": 19
       },
       "queue_batch_ids": [
         "pk_msggame-B127"
@@ -30754,12 +30712,12 @@
       "decision_count": 17,
       "semantic_review_approved": 17,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 4,
-      "runtime_review_pending": 13,
+      "runtime_review_verified": 3,
+      "runtime_review_pending": 14,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 4,
-        "runtime_fragment_pending": 13
+        "retranslated": 3,
+        "runtime_fragment_pending": 14
       },
       "queue_batch_ids": [
         "pk_msggame-B130"
@@ -30820,12 +30778,12 @@
       "decision_count": 23,
       "semantic_review_approved": 23,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 4,
-      "runtime_review_pending": 19,
+      "runtime_review_verified": 1,
+      "runtime_review_pending": 22,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 4,
-        "runtime_fragment_pending": 19
+        "retranslated": 1,
+        "runtime_fragment_pending": 22
       },
       "queue_batch_ids": [
         "pk_msggame-B131"
@@ -30864,12 +30822,12 @@
       "decision_count": 8,
       "semantic_review_approved": 8,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 4,
-      "runtime_review_pending": 4,
+      "runtime_review_verified": 3,
+      "runtime_review_pending": 5,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 4,
-        "runtime_fragment_pending": 4
+        "retranslated": 3,
+        "runtime_fragment_pending": 5
       },
       "queue_batch_ids": [
         "pk_msggame-B131"
@@ -30886,12 +30844,12 @@
       "decision_count": 17,
       "semantic_review_approved": 17,
       "runtime_review_not_required": 0,
-      "runtime_review_verified": 13,
-      "runtime_review_pending": 4,
+      "runtime_review_verified": 10,
+      "runtime_review_pending": 7,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 13,
-        "runtime_fragment_pending": 4
+        "retranslated": 10,
+        "runtime_fragment_pending": 7
       },
       "queue_batch_ids": [
         "pk_msggame-B132"
@@ -31854,12 +31812,12 @@
       "decision_count": 17652,
       "semantic_review_approved": 17652,
       "runtime_review_not_required": 7882,
-      "runtime_review_verified": 9285,
-      "runtime_review_pending": 485,
+      "runtime_review_verified": 9264,
+      "runtime_review_pending": 506,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 17167,
-        "runtime_fragment_pending": 485
+        "retranslated": 17146,
+        "runtime_fragment_pending": 506
       },
       "runtime_control_override_count": 1,
       "queue_batch_ids": [
@@ -34040,12 +33998,12 @@
       "last_record_coordinate": "2:130",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 95,
-      "fully_candidate_eligible": 105,
+      "runtime_review_pending": 97,
+      "fully_candidate_eligible": 103,
       "scope_classification_counts": {
         "confirmed_non_display": 82,
-        "retranslated": 23,
-        "runtime_fragment_pending": 95
+        "retranslated": 21,
+        "runtime_fragment_pending": 97
       },
       "semantic_complete": true
     },
@@ -34056,12 +34014,12 @@
       "last_record_coordinate": "2:241",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 144,
-      "fully_candidate_eligible": 55,
+      "runtime_review_pending": 146,
+      "fully_candidate_eligible": 53,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 55,
-        "runtime_fragment_pending": 144
+        "retranslated": 53,
+        "runtime_fragment_pending": 146
       },
       "semantic_complete": true
     },
@@ -34328,12 +34286,12 @@
       "last_record_coordinate": "6:2128",
       "visible_target_count": 198,
       "decision_count": 198,
-      "runtime_review_pending": 53,
-      "fully_candidate_eligible": 145,
+      "runtime_review_pending": 65,
+      "fully_candidate_eligible": 133,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 145,
-        "runtime_fragment_pending": 53
+        "retranslated": 133,
+        "runtime_fragment_pending": 65
       },
       "semantic_complete": true
     },
@@ -34440,12 +34398,12 @@
       "last_record_coordinate": "6:3166",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 43,
-      "fully_candidate_eligible": 156,
+      "runtime_review_pending": 46,
+      "fully_candidate_eligible": 153,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 156,
-        "runtime_fragment_pending": 43
+        "retranslated": 153,
+        "runtime_fragment_pending": 46
       },
       "semantic_complete": true
     },
@@ -34472,12 +34430,12 @@
       "last_record_coordinate": "6:3440",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 33,
-      "fully_candidate_eligible": 167,
+      "runtime_review_pending": 37,
+      "fully_candidate_eligible": 163,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 167,
-        "runtime_fragment_pending": 33
+        "retranslated": 163,
+        "runtime_fragment_pending": 37
       },
       "semantic_complete": true
     },
@@ -34488,12 +34446,12 @@
       "last_record_coordinate": "6:3539",
       "visible_target_count": 197,
       "decision_count": 197,
-      "runtime_review_pending": 42,
-      "fully_candidate_eligible": 155,
+      "runtime_review_pending": 46,
+      "fully_candidate_eligible": 151,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 155,
-        "runtime_fragment_pending": 42
+        "retranslated": 151,
+        "runtime_fragment_pending": 46
       },
       "semantic_complete": true
     },
@@ -34520,12 +34478,12 @@
       "last_record_coordinate": "6:3751",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 65,
-      "fully_candidate_eligible": 134,
+      "runtime_review_pending": 66,
+      "fully_candidate_eligible": 133,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 134,
-        "runtime_fragment_pending": 65
+        "retranslated": 133,
+        "runtime_fragment_pending": 66
       },
       "semantic_complete": true
     },
@@ -34536,12 +34494,12 @@
       "last_record_coordinate": "6:3866",
       "visible_target_count": 198,
       "decision_count": 198,
-      "runtime_review_pending": 27,
-      "fully_candidate_eligible": 171,
+      "runtime_review_pending": 31,
+      "fully_candidate_eligible": 167,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 171,
-        "runtime_fragment_pending": 27
+        "retranslated": 167,
+        "runtime_fragment_pending": 31
       },
       "semantic_complete": true
     },
@@ -34600,12 +34558,12 @@
       "last_record_coordinate": "6:4262",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 26,
-      "fully_candidate_eligible": 174,
+      "runtime_review_pending": 27,
+      "fully_candidate_eligible": 173,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 174,
-        "runtime_fragment_pending": 26
+        "retranslated": 173,
+        "runtime_fragment_pending": 27
       },
       "semantic_complete": true
     },
@@ -34632,12 +34590,12 @@
       "last_record_coordinate": "6:4467",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 56,
-      "fully_candidate_eligible": 143,
+      "runtime_review_pending": 59,
+      "fully_candidate_eligible": 140,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 143,
-        "runtime_fragment_pending": 56
+        "retranslated": 140,
+        "runtime_fragment_pending": 59
       },
       "semantic_complete": true
     },
@@ -34648,12 +34606,12 @@
       "last_record_coordinate": "6:4565",
       "visible_target_count": 196,
       "decision_count": 196,
-      "runtime_review_pending": 74,
-      "fully_candidate_eligible": 122,
+      "runtime_review_pending": 78,
+      "fully_candidate_eligible": 118,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 122,
-        "runtime_fragment_pending": 74
+        "retranslated": 118,
+        "runtime_fragment_pending": 78
       },
       "semantic_complete": true
     },
@@ -34664,12 +34622,12 @@
       "last_record_coordinate": "6:4626",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 145,
-      "fully_candidate_eligible": 54,
+      "runtime_review_pending": 150,
+      "fully_candidate_eligible": 49,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 54,
-        "runtime_fragment_pending": 145
+        "retranslated": 49,
+        "runtime_fragment_pending": 150
       },
       "semantic_complete": true
     },
@@ -35048,12 +35006,12 @@
       "last_record_coordinate": "8:320",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 40,
-      "fully_candidate_eligible": 159,
+      "runtime_review_pending": 43,
+      "fully_candidate_eligible": 156,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 159,
-        "runtime_fragment_pending": 40
+        "retranslated": 156,
+        "runtime_fragment_pending": 43
       },
       "semantic_complete": true
     },
@@ -35064,12 +35022,12 @@
       "last_record_coordinate": "8:426",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 38,
-      "fully_candidate_eligible": 162,
+      "runtime_review_pending": 45,
+      "fully_candidate_eligible": 155,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 162,
-        "runtime_fragment_pending": 38
+        "retranslated": 155,
+        "runtime_fragment_pending": 45
       },
       "semantic_complete": true
     },
@@ -35704,12 +35662,12 @@
       "last_record_coordinate": "15:483",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 17,
-      "fully_candidate_eligible": 182,
+      "runtime_review_pending": 47,
+      "fully_candidate_eligible": 152,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 182,
-        "runtime_fragment_pending": 17
+        "retranslated": 152,
+        "runtime_fragment_pending": 47
       },
       "semantic_complete": true
     },
@@ -35720,12 +35678,12 @@
       "last_record_coordinate": "15:590",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 66,
-      "fully_candidate_eligible": 134,
+      "runtime_review_pending": 69,
+      "fully_candidate_eligible": 131,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 134,
-        "runtime_fragment_pending": 66
+        "retranslated": 131,
+        "runtime_fragment_pending": 69
       },
       "semantic_complete": true
     },
@@ -35880,12 +35838,12 @@
       "last_record_coordinate": "15:1613",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 23,
-      "fully_candidate_eligible": 176,
+      "runtime_review_pending": 24,
+      "fully_candidate_eligible": 175,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 176,
-        "runtime_fragment_pending": 23
+        "retranslated": 175,
+        "runtime_fragment_pending": 24
       },
       "semantic_complete": true
     },
@@ -35896,12 +35854,12 @@
       "last_record_coordinate": "15:1714",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 22,
-      "fully_candidate_eligible": 178,
+      "runtime_review_pending": 24,
+      "fully_candidate_eligible": 176,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 178,
-        "runtime_fragment_pending": 22
+        "retranslated": 176,
+        "runtime_fragment_pending": 24
       },
       "semantic_complete": true
     },
@@ -35912,12 +35870,12 @@
       "last_record_coordinate": "15:1822",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 9,
-      "fully_candidate_eligible": 191,
+      "runtime_review_pending": 10,
+      "fully_candidate_eligible": 190,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 191,
-        "runtime_fragment_pending": 9
+        "retranslated": 190,
+        "runtime_fragment_pending": 10
       },
       "semantic_complete": true
     },
@@ -35928,12 +35886,12 @@
       "last_record_coordinate": "15:1927",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 22,
-      "fully_candidate_eligible": 178,
+      "runtime_review_pending": 24,
+      "fully_candidate_eligible": 176,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 178,
-        "runtime_fragment_pending": 22
+        "retranslated": 176,
+        "runtime_fragment_pending": 24
       },
       "semantic_complete": true
     },
@@ -35944,12 +35902,12 @@
       "last_record_coordinate": "15:1998",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 43,
-      "fully_candidate_eligible": 156,
+      "runtime_review_pending": 54,
+      "fully_candidate_eligible": 145,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 156,
-        "runtime_fragment_pending": 43
+        "retranslated": 145,
+        "runtime_fragment_pending": 54
       },
       "semantic_complete": true
     },
@@ -35992,12 +35950,12 @@
       "last_record_coordinate": "15:2289",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 29,
-      "fully_candidate_eligible": 170,
+      "runtime_review_pending": 30,
+      "fully_candidate_eligible": 169,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 170,
-        "runtime_fragment_pending": 29
+        "retranslated": 169,
+        "runtime_fragment_pending": 30
       },
       "semantic_complete": true
     },
@@ -36008,12 +35966,12 @@
       "last_record_coordinate": "15:2395",
       "visible_target_count": 199,
       "decision_count": 199,
-      "runtime_review_pending": 37,
-      "fully_candidate_eligible": 162,
+      "runtime_review_pending": 49,
+      "fully_candidate_eligible": 150,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 162,
-        "runtime_fragment_pending": 37
+        "retranslated": 150,
+        "runtime_fragment_pending": 49
       },
       "semantic_complete": true
     },
@@ -36024,12 +35982,12 @@
       "last_record_coordinate": "15:2474",
       "visible_target_count": 200,
       "decision_count": 200,
-      "runtime_review_pending": 52,
-      "fully_candidate_eligible": 148,
+      "runtime_review_pending": 55,
+      "fully_candidate_eligible": 145,
       "scope_classification_counts": {
         "confirmed_non_display": 0,
-        "retranslated": 148,
-        "runtime_fragment_pending": 52
+        "retranslated": 145,
+        "runtime_fragment_pending": 55
       },
       "semantic_complete": true
     },
@@ -36260,12 +36218,12 @@
   ],
   "totals": {
     "semantic_review_approved": 52803,
-    "runtime_review_pending": 6980,
-    "fully_candidate_eligible": 45823,
+    "runtime_review_pending": 7101,
+    "fully_candidate_eligible": 45702,
     "scope_classification_counts": {
       "confirmed_non_display": 345,
-      "retranslated": 45478,
-      "runtime_fragment_pending": 6980
+      "retranslated": 45357,
+      "runtime_fragment_pending": 7101
     },
     "semantic_completion": true,
     "candidate_build_complete": false
