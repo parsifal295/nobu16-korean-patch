@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the reviewed v0.90.0 horizontal controller-input runtime candidate."""
+"""Build the reviewed v0.90.0 NOBU16PK_XINPUT.exe runtime candidate."""
 
 from __future__ import annotations
 
@@ -10,15 +10,53 @@ import struct
 from pathlib import Path
 
 
-EXPECTED_SOURCE_SIZE = 67_024_896
-EXPECTED_SOURCE_SHA256 = (
-    "7A0DF96C72A93F551F283EF14F06159F50E6A265A3BAC9C14151A1C2895D4DA0"
-)
+EXPECTED_SOURCES = {
+    31_748_608: {
+        "9507DBEDDBCA9CE7202C6818A2621C52CA4B6DED8271626B0F5D90AF93825189":
+            "v0.90.0-static-vertical",
+    },
+    67_024_896: {
+        "7A0DF96C72A93F551F283EF14F06159F50E6A265A3BAC9C14151A1C2895D4DA0":
+            "v0.90.0-static-horizontal",
+    },
+}
 EXPECTED_ENTRY_POINT_RVA = 0x12FE4D0
-PATCH_SITES = (
-    (0x00C5D656, bytes.fromhex("E84525D6FF"), bytes.fromhex("B801000000")),
-    (0x00C5D692, bytes.fromhex("E80925D6FF"), bytes.fromhex("B801000000")),
-)
+PATCH_SITES = {
+    "v0.90.0-static-horizontal": (
+        (
+            0x000003C0,
+            bytes.fromhex("E7451A02"),
+            bytes.fromhex("00461A02"),
+        ),
+        (
+            0x00570840,
+            bytes.fromhex("48895C2410"),
+            bytes.fromhex("E9A2E12404"),
+        ),
+        (
+            0x03FEB7E7,
+            bytes.fromhex("0000000000000000000000000000000000000000"),
+            bytes.fromhex("C7056BE19BFD0100000048895C2410E94A1EDBFB"),
+        ),
+    ),
+    "v0.90.0-static-vertical": (
+        (
+            0x00000398,
+            bytes.fromhex("E7010000"),
+            bytes.fromhex("00020000"),
+        ),
+        (
+            0x00570840,
+            bytes.fromhex("48895C2410"),
+            bytes.fromhex("E9A29D0A02"),
+        ),
+        (
+            0x01E471E7,
+            bytes.fromhex("0000000000000000000000000000000000000000"),
+            bytes.fromhex("C7056B25B6FF0100000048895C2410E94A62F5FD"),
+        ),
+    ),
+}
 
 
 def sha256(data: bytes | bytearray) -> str:
@@ -66,19 +104,25 @@ def main() -> int:
     args = parser.parse_args()
 
     source = args.source.read_bytes()
-    if len(source) != EXPECTED_SOURCE_SIZE:
-        raise RuntimeError(
-            f"source size mismatch: {len(source)}/{EXPECTED_SOURCE_SIZE}"
-        )
     source_hash = sha256(source)
-    if source_hash != EXPECTED_SOURCE_SHA256:
+    expected_hashes = EXPECTED_SOURCES.get(len(source))
+    if expected_hashes is None:
         raise RuntimeError(
-            f"source SHA-256 mismatch: {source_hash}/{EXPECTED_SOURCE_SHA256}"
+            f"unsupported source size: {len(source)}/"
+            f"{sorted(EXPECTED_SOURCES)}"
         )
+    source_profile = expected_hashes.get(source_hash)
+    if source_profile is None:
+        raise RuntimeError(
+            f"source SHA-256 mismatch: {source_hash}/"
+            f"{sorted(expected_hashes)}"
+        )
+    patch_sites = PATCH_SITES[source_profile]
 
     candidate = bytearray(source)
     patch_offsets: set[int] = set()
-    for offset, before, after in PATCH_SITES:
+    expected_patch_changes: set[int] = set()
+    for offset, before, after in patch_sites:
         actual = bytes(candidate[offset : offset + len(before)])
         if actual != before:
             raise RuntimeError(
@@ -87,6 +131,11 @@ def main() -> int:
             )
         candidate[offset : offset + len(after)] = after
         patch_offsets.update(range(offset, offset + len(after)))
+        expected_patch_changes.update(
+            offset + index
+            for index, (old, new) in enumerate(zip(before, after))
+            if old != new
+        )
 
     checksum_offset, checksum = set_pe_checksum(candidate)
     allowed_changes = patch_offsets | set(range(checksum_offset, checksum_offset + 4))
@@ -99,16 +148,18 @@ def main() -> int:
     if unexpected_changes:
         first = min(unexpected_changes)
         raise RuntimeError(f"unexpected byte change at 0x{first:X}")
-    if not patch_offsets.issubset(actual_changes):
+    if not expected_patch_changes.issubset(actual_changes):
         raise RuntimeError("one or more reviewed patch bytes did not change")
 
     args.output.parent.mkdir(parents=True, exist_ok=False)
     args.output.write_bytes(candidate)
 
     report = {
+        "recommended_output_name": "NOBU16PK_XINPUT.exe",
         "source": str(args.source.resolve()),
         "source_size": len(source),
         "source_sha256": source_hash,
+        "source_profile": source_profile,
         "output": str(args.output.resolve()),
         "output_size": len(candidate),
         "output_sha256": sha256(candidate),
@@ -122,7 +173,7 @@ def main() -> int:
                 "before_hex": before.hex().upper(),
                 "after_hex": after.hex().upper(),
             }
-            for offset, before, after in PATCH_SITES
+            for offset, before, after in patch_sites
         ],
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))
