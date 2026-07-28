@@ -176,18 +176,18 @@ class RuntimeVmIntegrationTests(unittest.TestCase):
         self.assertFalse(report["steam_write_performed"])
         self.assertEqual(
             progress["totals"]["runtime_review_pending"],
-            8_213,
+            7_896,
         )
         self.assertEqual(
             progress["runtime_vm_integration"][
                 "private_integrated_decision_sha256"
             ],
             (
-                "BF7B89E425502144C0A1992872895A774"
-                "C56BADCA1FE8DD34ED6778CF3A627C5"
+                "81B4E22C3C20AA5F7FF8B8251A2829A"
+                "EEB0C6E0A0D9FA2B93748B6249F23F6CB"
             ),
         )
-        self.assertNotEqual(
+        self.assertEqual(
             progress["runtime_vm_integration"][
                 "private_integrated_decision_sha256"
             ],

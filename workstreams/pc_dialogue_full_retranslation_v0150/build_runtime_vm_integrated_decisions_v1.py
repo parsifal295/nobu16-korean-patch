@@ -189,6 +189,12 @@ SELECTOR538_FAMILY_BUILDER_PATH = (
     / "pk_msggame_runtime_vm_audit_v1"
     / "build_pk_selector538_family_consolidated_closure_v1.py"
 )
+SELECTOR568_1096_1174_CONSOLIDATED_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_selector568_1096_1174_consolidated_closure_v1.py"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -205,6 +211,20 @@ REFLOW_OVERRIDE_LOADER_PATH = (
 )
 DEFAULT_PRIVATE_OUTPUT = OUTPUT_ROOT / "runtime_vm_integrated.private.v1.jsonl"
 DEFAULT_PUBLIC_OUTPUT = WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
+SELECTOR568_1096_1174_CONSOLIDATED_PRIVATE_OUTPUT = (
+    OUTPUT_ROOT
+    / (
+        "runtime_vm_integrated.post_selector568_1096_1174_consolidated_"
+        "checkpoint.private.v1.jsonl"
+    )
+)
+SELECTOR568_1096_1174_CONSOLIDATED_PUBLIC_OUTPUT = (
+    WORKSTREAM
+    / (
+        "runtime_vm_integration.post_selector568_1096_1174_consolidated_"
+        "checkpoint.source_free.v1.json"
+    )
+)
 
 SCHEMA = "nobu16.kr.pc-dialogue-runtime-vm-integration.v1"
 CONTROL_REPAIRS_SCHEMA = (
@@ -243,6 +263,8 @@ EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PROMOTIONS = (
 )
 EXPECTED_SELECTOR538_FAMILY_INCREMENTAL_PROMOTIONS = 212
 EXPECTED_PK_SELECTOR538_FAMILY_FINAL_PROMOTIONS = 12_787
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTIONS = 628
+EXPECTED_PK_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_PROMOTIONS = 13_415
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
 EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
 EXPECTED_PENDING_AFTER = 8_702
@@ -258,6 +280,7 @@ EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PENDING_AFTER = (
     8_108
 )
 EXPECTED_SELECTOR538_FAMILY_FINAL_PENDING_AFTER = 7_896
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_PENDING_AFTER = 7_268
 EXPECTED_POST_CROSS_PRIVATE_SHA256 = (
     "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC"
 )
@@ -579,6 +602,89 @@ EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256 = (
 EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PUBLIC_SHA256 = (
     "46270F70A019484EFB1F99851D436467C8FD2DE32EB222BDC048DA1B5BC080FA"
 )
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_CANDIDATE_SHA256 = (
+    "07E65E6338D32C1FD13F17408F82A4133E55541C722874632948C7B36C909805"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_UPDATED_ROW_COUNT = 1_173
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_RENEWAL_COUNT = 545
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_COUNT = 440
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACCEPTED_ASSEMBLY_COUNT = 2_114
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_COUNT = 805
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PENDING_OVERLAP_COUNT = 18
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OWNER_OVERLAP_COUNT = 23
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CONFLICT_COUNT = 12
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_ROOT_COUNT = 2
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_COORDINATE_COUNT = 10
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_OVERRIDE_COUNT = 4
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1174_BRANCH_COUNT = 14
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1096_BRANCH_COUNT = 7
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CHUNK0_OVERLAP_BRANCH_COUNT = 14
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACTION_COUNTS = {
+    "runtime_promotion": 413,
+    "translation_override_and_runtime_promotion": 215,
+    "translation_override_and_verification_renewal": 225,
+    "verification_renewal": 320,
+}
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SHA256 = (
+    "1C70A12C107DB79B1402F5879364F5AAEA31F34B3933F4C53524C89B570F9990"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_SHA256 = (
+    "E16B597EF856822350D3FD0E0FAB7A9737E3D40D6FE156ED39EA778E5DE85AA0"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_PAYLOAD_SHA256 = (
+    "86DE9E64EC96670278EE389AD9510DFA97181AF3D21A73CB9FE3C5F8A29F8B9E"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_PAYLOAD_SHA256 = (
+    "396B5867D2FD260C9C9B5D15478B5A3831A56A2D1529F34D94629B008FB68E11"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256 = (
+    "3260FCF12561EE116228907E1619FDB368DBDF9D0BA8565C03CD014440669B38"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256 = (
+    "3AA3CB05106CA921F22B96D26B8FA74A4F7C7D15A4D3AE122738F92E10A34C25"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_COORDINATE_SHA256 = (
+    "87ABCD0EE44FA7A020D8EE210452956DEA10A362EEA355F3A32523E90F97F794"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_COORDINATE_SHA256 = (
+    "68C1F1020153F158E416DDD8500563F3701AE14497791F06806B7F61B27C0FAF"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_RENEWAL_COORDINATE_SHA256 = (
+    "56BFC0325D9EF5C975FC0836374F1BA3B705FB4ED7BEEA75FC91850E43A88E62"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_COORDINATE_SHA256 = (
+    "44DE6C534744440519CB4A8B427E33D3B8B1ECF263B722E2702DCD9BEC6624A7"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CONFLICT_COORDINATE_SHA256 = (
+    "1432F79D87F0F518E561495082827D3D9919A7B2DB8637256F80ECF265C39B6A"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_COORDINATE_SHA256 = (
+    "50823D1FD202901C73E69143B7C84ED0FB3C420A02A245B05D585AEC88D79716"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_OVERRIDE_SHA256 = (
+    "3B63D42531EF0C89D25953E58CA8FF7E037500ED688F2D259532502B8D207FC9"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACCEPTED_ASSEMBLY_SHA256 = (
+    "CF1E913421B067D01BE226421C42BA37F4DB95C32DDA58E20902C2A20D10E67C"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_SHA256 = (
+    "5B3D42EF8F0B2B9D4C72AB783ECB7FBA40ABE3906E84DC14FE751CC129489C45"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1174_BRANCH_SHA256 = (
+    "41FD197B143561B43DB4BD20AC425BE71D4C7A282645EF6C5CE8C35D2637CF76"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1096_BRANCH_SHA256 = (
+    "9F3D7E45118D3759A7B10E5F1D45D9089177ADFE88F46B66F472B0400FB2A9AE"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CHUNK0_OVERLAP_BRANCH_SHA256 = (
+    "5DC19DB412FC4B4BECFA5245418B5F2D8E312D80D47A8AF831FDC4F82F3AE702"
+)
+EXPECTED_FINAL_SELECTOR568_1096_1174_CONSOLIDATED_PRIVATE_SHA256: (
+    str | None
+) = "FC157A9907686D0EA6DC6C61C7785E81AC7F750100F2E1CDDE02DBF4F09F2DCA"
+EXPECTED_FINAL_SELECTOR568_1096_1174_CONSOLIDATED_PUBLIC_SHA256: (
+    str | None
+) = "1FCF033F1F75FC43473152CFB7115D170657519952C19D563C36C3F9BAB4CBD1"
 EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256 = (
     "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
 )
@@ -664,6 +770,7 @@ BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE: Any | None = None
 SELECTOR538_CHUNK0: Any | None = None
 BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED: Any | None = None
 SELECTOR538_FAMILY: Any | None = None
+SELECTOR568_1096_1174_CONSOLIDATED: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -793,6 +900,16 @@ def load_selector538_family() -> Any:
             SELECTOR538_FAMILY_BUILDER_PATH,
         )
     return SELECTOR538_FAMILY
+
+
+def load_selector568_1096_1174_consolidated() -> Any:
+    global SELECTOR568_1096_1174_CONSOLIDATED
+    if SELECTOR568_1096_1174_CONSOLIDATED is None:
+        SELECTOR568_1096_1174_CONSOLIDATED = load_module(
+            "pc_dialogue_runtime_vm_selector568_1096_1174_consolidated",
+            SELECTOR568_1096_1174_CONSOLIDATED_BUILDER_PATH,
+        )
+    return SELECTOR568_1096_1174_CONSOLIDATED
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -3921,6 +4038,351 @@ def apply_selector538_family_updates(
     return EXPECTED_SELECTOR538_FAMILY_INCREMENTAL_PROMOTIONS, metadata
 
 
+def validated_selector568_1096_1174_consolidated_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    layer = load_selector568_1096_1174_consolidated()
+    bundle = layer.build_outputs()
+    layer.validate_frozen(bundle)
+    artifacts = {
+        "audit": (
+            layer.DEFAULT_AUDIT_OUTPUT,
+            bundle["audit_content"],
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SHA256,
+        ),
+        "promotion": (
+            layer.DEFAULT_PROMOTION_OUTPUT,
+            bundle["promotion_content"],
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_SHA256,
+        ),
+        "decision": (
+            layer.DEFAULT_DECISION_OUTPUT,
+            bundle["decision_content"],
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256,
+        ),
+        "evidence": (
+            layer.DEFAULT_EVIDENCE_OUTPUT,
+            bundle["evidence_content"],
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256,
+        ),
+    }
+    for name, (path, content, expected_hash) in artifacts.items():
+        require(
+            path.is_file()
+            and path.read_text(encoding="utf-8") == content
+            and sha256_bytes(content.encode("utf-8")) == expected_hash,
+            (
+                "selector568/1096/1174 consolidated "
+                f"{name} artifact drifted: {path}"
+            ),
+        )
+    updates = {
+        ("pk_msggame", str(row["coordinate"])): dict(row)
+        for row in bundle["updated_rows"]
+    }
+    predecessors = {
+        (str(row["resource"]), str(row["coordinate"])): dict(row)
+        for row in layer.load_jsonl(layer.OFFICIAL_PRIVATE_PATH)
+    }
+    predecessors = {key: predecessors[key] for key in updates}
+    actions = Counter(
+        str(row[layer.UPDATE_ACTION_FIELD])
+        for row in bundle["updated_rows"]
+    )
+    audit = bundle["audit"]
+    promotion = bundle["promotion"]
+    proof = audit["proof"]
+    repair = proof["repair"]
+    selector1174 = proof["selector1174"]
+    result = audit["result"]
+    decision_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_COORDINATE_SHA256
+    )
+    promotion_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_COORDINATE_SHA256
+    )
+    renewal_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_RENEWAL_COORDINATE_SHA256
+    )
+    override_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_COORDINATE_SHA256
+    )
+    accepted_assembly_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACCEPTED_ASSEMBLY_SHA256
+    )
+    conflict_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CONFLICT_COORDINATE_SHA256
+    )
+    repair_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_COORDINATE_SHA256
+    )
+    repair_override_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_OVERRIDE_SHA256
+    )
+    repair_selector1174_count = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1174_BRANCH_COUNT
+    )
+    repair_selector1174_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1174_BRANCH_SHA256
+    )
+    repair_selector1096_count = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1096_BRANCH_COUNT
+    )
+    repair_selector1096_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_SELECTOR1096_BRANCH_SHA256
+    )
+    selector1174_count = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_COUNT
+    )
+    selector1174_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_SHA256
+    )
+    chunk0_overlap_count = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CHUNK0_OVERLAP_BRANCH_COUNT
+    )
+    chunk0_overlap_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CHUNK0_OVERLAP_BRANCH_SHA256
+    )
+    require(
+        len(updates)
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_UPDATED_ROW_COUNT
+        and dict(actions)
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACTION_COUNTS
+        and result["actual_promotion_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTIONS
+        and result["verification_renewal_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_RENEWAL_COUNT
+        and result["semantic_override_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_COUNT
+        and result["pending_rows_before"]
+        == EXPECTED_SELECTOR538_FAMILY_FINAL_PENDING_AFTER
+        and result["pending_rows_after"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_PENDING_AFTER
+        and result["decision_sha256"] == decision_coordinate_sha
+        and result["actual_promotion_sha256"] == promotion_coordinate_sha
+        and result["verification_renewal_sha256"] == renewal_coordinate_sha
+        and result["semantic_override_sha256"] == override_coordinate_sha
+        and result["final_candidate_sha256"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_CANDIDATE_SHA256
+        and proof["coordinate_union_built_directly_on_frozen_predecessor"]
+        is True
+        and proof["single_archive_rebuild_from_resolved_coordinate_union"]
+        is True
+        and proof["demotion_rows"] == 0
+        and proof["cross_accepted_assembly_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACCEPTED_ASSEMBLY_COUNT
+        and proof["cross_accepted_assembly_sha256"] == accepted_assembly_sha
+        and proof["pending_overlap_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PENDING_OVERLAP_COUNT
+        and proof["owner_overlap_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OWNER_OVERLAP_COUNT
+        and proof["explicit_owner_conflict_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CONFLICT_COUNT
+        and proof["explicit_owner_conflict_sha256"]
+        == conflict_coordinate_sha
+        and repair["two_root_coordinate_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_COORDINATE_COUNT
+        and repair["two_root_coordinate_sha256"] == repair_coordinate_sha
+        and repair["exact_override_rows"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_OVERRIDE_COUNT
+        and repair["exact_override_sha256"] == repair_override_sha
+        and repair["selector1174_branch_rows"] == repair_selector1174_count
+        and repair["selector1174_branch_sha256"] == repair_selector1174_sha
+        and repair["selector1096_dependency_branch_rows"]
+        == repair_selector1096_count
+        and repair["selector1096_dependency_branch_sha256"]
+        == repair_selector1096_sha
+        and selector1174["branch_rows"] == selector1174_count
+        and selector1174["branch_sha256"] == selector1174_sha
+        and selector1174["chunk0_cross_overlap_branch_rows"]
+        == chunk0_overlap_count
+        and selector1174["chunk0_cross_overlap_branch_sha256"]
+        == chunk0_overlap_sha
+        and selector1174["current_relative_raw_g1n_nonexpanding"] is True
+        and audit["guards"]["report_payload_sha256"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_PAYLOAD_SHA256
+        and promotion["guards"]["report_payload_sha256"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_PAYLOAD_SHA256
+        and promotion["evidence"]["action_counts"]
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACTION_COUNTS,
+        "selector568/1096/1174 consolidated frozen closure contract drifted",
+    )
+    metadata = {
+        "semantic_override_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_COUNT,
+        "verification_renewal_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_RENEWAL_COUNT,
+        "promotion_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTIONS,
+        "updated_row_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_UPDATED_ROW_COUNT,
+        "cross_accepted_assembly_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACCEPTED_ASSEMBLY_COUNT,
+        "selector1174_assembly_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_COUNT,
+        "pending_overlap_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PENDING_OVERLAP_COUNT,
+        "owner_overlap_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OWNER_OVERLAP_COUNT,
+        "explicit_owner_conflict_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CONFLICT_COUNT,
+        "repair_root_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_ROOT_COUNT,
+        "repair_coordinate_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_COORDINATE_COUNT,
+        "repair_override_count":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_OVERRIDE_COUNT,
+        "action_counts": dict(sorted(actions.items())),
+        "private_source_update_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256,
+        "private_source_evidence_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256,
+        "audit_report_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SHA256,
+        "audit_report_payload_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_PAYLOAD_SHA256,
+        "promotion_report_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_SHA256,
+        "promotion_report_payload_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_PAYLOAD_SHA256,
+        "decision_coordinate_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_COORDINATE_SHA256,
+        "promotion_coordinate_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_COORDINATE_SHA256,
+        "renewal_coordinate_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_RENEWAL_COORDINATE_SHA256,
+        "override_coordinate_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_COORDINATE_SHA256,
+        "accepted_assembly_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACCEPTED_ASSEMBLY_SHA256,
+        "selector1174_assembly_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_SHA256,
+        "conflict_coordinate_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_CONFLICT_COORDINATE_SHA256,
+        "repair_coordinate_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_COORDINATE_SHA256,
+        "repair_override_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_REPAIR_OVERRIDE_SHA256,
+        "source_candidate_packed_sha256":
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_CANDIDATE_SHA256,
+        "official_predecessor_private_sha256":
+        EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256,
+        "steam_write_performed": False,
+    }
+    return updates, predecessors, metadata
+
+
+def apply_selector568_1096_1174_consolidated_updates(
+    merged: dict[tuple[str, str], dict[str, Any]],
+) -> tuple[int, dict[str, Any]]:
+    layer = load_selector568_1096_1174_consolidated()
+    updates, predecessors, metadata = (
+        validated_selector568_1096_1174_consolidated_updates()
+    )
+    decision_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_COORDINATE_SHA256
+    )
+    promotion_coordinate_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_COORDINATE_SHA256
+    )
+    accepted_assembly_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_ACCEPTED_ASSEMBLY_SHA256
+    )
+    selector1174_assembly_sha = (
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_SHA256
+    )
+    promotions: list[str] = []
+    for key, updated in updates.items():
+        predecessor = merged.get(key)
+        require(
+            predecessor is not None and predecessor == predecessors[key],
+            (
+                "selector568/1096/1174 consolidated official predecessor "
+                f"row drifted: {key}"
+            ),
+        )
+        evidence = updated.get("runtime_vm_verification")
+        action = str(updated.get(layer.UPDATE_ACTION_FIELD))
+        promotion = (
+            predecessor.get("runtime_review") == "pending"
+            and updated.get("runtime_review") == "verified"
+        )
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("schema") == layer.EVIDENCE_SCHEMA
+            and evidence.get("method") == layer.METHOD
+            and evidence.get("action") == action
+            and evidence.get("predecessor_binding", {}).get(
+                "checkpoint_sha256"
+            )
+            == EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256
+            and evidence.get("predecessor_binding", {}).get("row_sha256")
+            == layer.canonical_sha256(predecessor)
+            and evidence.get("closure_binding", {}).get(
+                "official_predecessor_sha256"
+            )
+            == EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256
+            and evidence.get("closure_binding", {}).get(
+                "decision_coordinate_sha256"
+            )
+            == decision_coordinate_sha
+            and evidence.get("closure_binding", {}).get(
+                "final_candidate_sha256"
+            )
+            == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_CANDIDATE_SHA256
+            and evidence.get("closure_binding", {}).get(
+                "cross_accepted_assembly_sha256"
+            )
+            == accepted_assembly_sha
+            and evidence.get("closure_binding", {}).get(
+                "selector1174_assembly_sha256"
+            )
+            == selector1174_assembly_sha
+            and evidence.get("current81b4_rebase", {}).get(
+                "actual_runtime_promotion"
+            )
+            is promotion
+            and evidence.get("current81b4_rebase", {}).get(
+                "official_runtime_review_before"
+            )
+            == predecessor.get("runtime_review"),
+            (
+                "selector568/1096/1174 consolidated rebased evidence "
+                f"drifted: {key}"
+            ),
+        )
+        if promotion:
+            require(
+                updated.get("scope_classification") == "retranslated"
+                and updated.get("layout_review") == "runtime_verified",
+                (
+                    "selector568/1096/1174 consolidated promotion "
+                    f"contract drifted: {key}"
+                ),
+            )
+            promotions.append(key[1])
+        merged[key] = dict(updated)
+    require(
+        len(promotions)
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTIONS
+        and layer.coordinate_digest(promotions) == promotion_coordinate_sha,
+        "selector568/1096/1174 consolidated promotion universe drifted",
+    )
+    combined_candidate = combined_pk_candidate_sha256(
+        merged,
+        load_selector538_family(),
+    )
+    require(
+        combined_candidate
+        == EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_CANDIDATE_SHA256,
+        "selector568/1096/1174 consolidated PK candidate drifted",
+    )
+    metadata["combined_candidate_packed_sha256"] = combined_candidate
+    return EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTIONS, metadata
+
+
 def validate_combined_private(
     prepared: Any,
     content: str,
@@ -3961,6 +4423,7 @@ def build_outputs(
     include_selector538_chunk0: bool = False,
     include_bound_terminal_2546_category_b_deferred: bool = False,
     include_selector538_family: bool = False,
+    include_selector568_1096_1174_consolidated: bool = False,
 ) -> tuple[str, str, dict[str, Any]]:
     if include_cross_resource is None:
         include_cross_resource = include_pk_only
@@ -4033,6 +4496,14 @@ def build_outputs(
         (
             "selector538 family consolidation requires category-B "
             "deferred integration"
+        ),
+    )
+    require(
+        include_selector538_family
+        or not include_selector568_1096_1174_consolidated,
+        (
+            "selector568/1096/1174 consolidation requires "
+            "selector538-family integration"
         ),
     )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
@@ -4616,6 +5087,27 @@ def build_outputs(
             selector538_family_promotions,
             selector538_family_metadata,
         ) = apply_selector538_family_updates(merged)
+    post_selector538_family_rows = sorted(
+        merged.values(), key=coordinate_sort_key
+    )
+    post_selector538_family_private_sha256 = sha256_bytes(
+        canonical_jsonl(post_selector538_family_rows).encode("utf-8")
+    )
+    selector568_1096_1174_consolidated_promotions = 0
+    selector568_1096_1174_consolidated_metadata: dict[str, Any] | None = None
+    if include_selector568_1096_1174_consolidated:
+        require(
+            post_selector538_family_private_sha256
+            == EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256,
+            (
+                "selector568/1096/1174 predecessor checkpoint "
+                f"drifted: {post_selector538_family_private_sha256}"
+            ),
+        )
+        (
+            selector568_1096_1174_consolidated_promotions,
+            selector568_1096_1174_consolidated_metadata,
+        ) = apply_selector568_1096_1174_consolidated_updates(merged)
     pk_integrated_promotions = (
         predecessor_promotions
         + pk_only_promotions
@@ -4630,6 +5122,7 @@ def build_outputs(
         + selector538_chunk0_promotions
         + bound_terminal_2546_category_b_deferred_promotions
         + selector538_family_promotions
+        + selector568_1096_1174_consolidated_promotions
     )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
@@ -4762,9 +5255,23 @@ def build_outputs(
         )
         pk_metadata["selector538_family"] = selector538_family_metadata
         pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_selector568_1096_1174_consolidated:
+        assert selector568_1096_1174_consolidated_metadata is not None
+        pk_metadata[
+            "selector568_1096_1174_consolidated_layer_included"
+        ] = True
+        pk_metadata[
+            "rebuilt_post_selector538_family_integrated_private_sha256"
+        ] = post_selector538_family_private_sha256
+        pk_metadata["selector568_1096_1174_consolidated"] = (
+            selector568_1096_1174_consolidated_metadata
+        )
+        pk_metadata["promotion_count"] = pk_integrated_promotions
 
     expected_pk_promotions = (
-        EXPECTED_PK_SELECTOR538_FAMILY_FINAL_PROMOTIONS
+        EXPECTED_PK_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_PROMOTIONS
+        if include_selector568_1096_1174_consolidated
+        else EXPECTED_PK_SELECTOR538_FAMILY_FINAL_PROMOTIONS
         if include_selector538_family
         else EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PROMOTIONS
         if include_bound_terminal_2546_category_b_deferred
@@ -4808,7 +5315,9 @@ def build_outputs(
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
-        EXPECTED_SELECTOR538_FAMILY_FINAL_PENDING_AFTER
+        EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_FINAL_PENDING_AFTER
+        if include_selector568_1096_1174_consolidated
+        else EXPECTED_SELECTOR538_FAMILY_FINAL_PENDING_AFTER
         if include_selector538_family
         else EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PENDING_AFTER
         if include_bound_terminal_2546_category_b_deferred
@@ -4841,7 +5350,20 @@ def build_outputs(
     private_content = canonical_jsonl(rows)
     validate_combined_private(prepared, private_content, private_output)
     private_sha256 = sha256_bytes(private_content.encode("utf-8"))
-    if include_selector538_family:
+    if include_selector568_1096_1174_consolidated:
+        if (
+            EXPECTED_FINAL_SELECTOR568_1096_1174_CONSOLIDATED_PRIVATE_SHA256
+            is not None
+        ):
+            require(
+                private_sha256
+                == EXPECTED_FINAL_SELECTOR568_1096_1174_CONSOLIDATED_PRIVATE_SHA256,
+                (
+                    "selector568/1096/1174 final private digest "
+                    f"drifted: {private_sha256}"
+                ),
+            )
+    elif include_selector538_family:
         if EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256 is not None:
             require(
                 private_sha256
@@ -5129,8 +5651,42 @@ def build_outputs(
                 "combined_candidate_record_and_root_rebound": True,
             }
         )
+    if include_selector568_1096_1174_consolidated:
+        report["validation"].update(
+            {
+                "selector568_1096_1174_consolidated_layer_included": True,
+                "post_selector538_family_predecessor_checkpoint_"
+                "rebuilt_and_matched":
+                post_selector538_family_private_sha256
+                == EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256,
+                "single_combined_coordinate_union_used": True,
+                "sequential_cross_and_selector1174_overlays_used": False,
+                "exact_1173_decision_union_rechecked": True,
+                "actual_628_pending_promotions_rechecked": True,
+                "affected_545_verified_pk_runtime_evidence_renewed": True,
+                "exact_440_semantic_overrides_rechecked": True,
+                "all_2114_cross_assemblies_rechecked": True,
+                "all_805_selector1174_assemblies_rechecked": True,
+                "pending_overlap_18_rows_rechecked": True,
+                "owner_overlap_23_rows_rechecked": True,
+                "explicit_owner_conflict_12_rows_resolved": True,
+                "two_root_10_coordinate_repair_rechecked": True,
+                "exact_4_repair_overrides_rechecked": True,
+                "combined_candidate_record_and_root_rebound": True,
+            }
+        )
     public_content = canonical_json(report)
-    if include_selector538_family:
+    if include_selector568_1096_1174_consolidated:
+        if (
+            EXPECTED_FINAL_SELECTOR568_1096_1174_CONSOLIDATED_PUBLIC_SHA256
+            is not None
+        ):
+            require(
+                sha256_bytes(public_content.encode("utf-8"))
+                == EXPECTED_FINAL_SELECTOR568_1096_1174_CONSOLIDATED_PUBLIC_SHA256,
+                "selector568/1096/1174 final public digest drifted",
+            )
+    elif include_selector538_family:
         if EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PUBLIC_SHA256 is not None:
             require(
                 sha256_bytes(public_content.encode("utf-8"))
@@ -5182,6 +5738,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--check", action="store_true")
+    parser.add_argument(
+        "--include-selector568-1096-1174-consolidated",
+        action="store_true",
+        help=(
+            "apply the frozen selector568/1096/1174 layer directly "
+            "to the post-selector538-family checkpoint"
+        ),
+    )
     return parser
 
 
@@ -5190,10 +5754,26 @@ def main(argv: Sequence[str] | None = None) -> int:
     require(args.write or args.check, "choose --write, --check, or both")
     private_root = OUTPUT_ROOT.resolve(strict=False)
     resolved_private = args.private_output.resolve(strict=False)
+    resolved_public = args.public_output.resolve(strict=False)
     require(
         resolved_private != private_root and private_root in resolved_private.parents,
         f"private output must remain below {private_root}",
     )
+    if args.include_selector568_1096_1174_consolidated:
+        require(
+            resolved_private
+            == SELECTOR568_1096_1174_CONSOLIDATED_PRIVATE_OUTPUT.resolve(
+                strict=False
+            )
+            and resolved_public
+            == SELECTOR568_1096_1174_CONSOLIDATED_PUBLIC_OUTPUT.resolve(
+                strict=False
+            ),
+            (
+                "selector568/1096/1174 consolidation requires its "
+                "immutable checkpoint output paths"
+            ),
+        )
     private_content, public_content, report = build_outputs(
         steam_root=args.steam_root,
         base_pristine=args.base_pristine,
@@ -5209,6 +5789,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         include_selector538_chunk0=True,
         include_bound_terminal_2546_category_b_deferred=True,
         include_selector538_family=True,
+        include_selector568_1096_1174_consolidated=(
+            args.include_selector568_1096_1174_consolidated
+        ),
     )
     if args.write:
         ENGINE.atomic_write(args.private_output, private_content)

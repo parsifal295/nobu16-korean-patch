@@ -342,6 +342,44 @@ PK_SELECTOR538_FAMILY_RUNTIME_VM_AUDIT_PATH = (
     / "public"
     / "pk_selector538_family_consolidated_closure_coverage.v1.json"
 )
+PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_EVIDENCE_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / (
+        "pk_selector568_1096_1174_consolidated_closure_"
+        "evidence.private.v1.jsonl"
+    )
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_REPORT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_selector568_1096_1174_consolidated_closure_promotion.v1.json"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_AUDIT_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "public"
+    / "pk_selector568_1096_1174_consolidated_closure_coverage.v1.json"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / "semantic_overrides"
+    / (
+        "pk_selector568_1096_1174_consolidated_closure_"
+        "decisions.private.v1.jsonl"
+    )
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_PATH = (
+    DEFAULT_OUTPUT_ROOT
+    / (
+        "runtime_vm_integrated.post_selector538_family_"
+        "checkpoint.private.v1.jsonl"
+    )
+)
 PK_SELECTOR538_CHUNK0_DECISION_PATH = (
     DEFAULT_OUTPUT_ROOT
     / "semantic_overrides"
@@ -423,6 +461,10 @@ PK_SELECTOR538_FAMILY_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
     "nobu16.kr.pk-selector538-family-consolidated-"
     "closure-evidence-row.v1"
 )
+PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_EVIDENCE_ROW_SCHEMA = (
+    "nobu16.kr.pk-selector568-1096-1174-consolidated-"
+    "closure-evidence-row.v1"
+)
 RUNTIME_VM_VERIFICATION_METHOD = "reversed_vm_static_analysis"
 PK_FULL_CANDIDATE_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_full_candidate_static_analysis"
@@ -472,6 +514,9 @@ PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_RUNTIME_VM_VERIFICATION_METHOD = (
 PK_SELECTOR538_FAMILY_RUNTIME_VM_VERIFICATION_METHOD = (
     "reversed_vm_pk_selector538_chunks_0_3_consolidated_closure"
 )
+PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD = (
+    "reversed_vm_pk_selector568_1096_1174_current81b4_coordinate_union"
+)
 PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
     {
         RUNTIME_VM_VERIFICATION_METHOD,
@@ -490,6 +535,7 @@ PK_RUNTIME_VM_VERIFICATION_METHODS = frozenset(
         PK_SELECTOR538_CHUNK0_RUNTIME_VM_VERIFICATION_METHOD,
         PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_RUNTIME_VM_VERIFICATION_METHOD,
         PK_SELECTOR538_FAMILY_RUNTIME_VM_VERIFICATION_METHOD,
+        PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD,
     }
 )
 RUNTIME_BOUNDARY_LEADING_SPACE_COORDINATES = frozenset(
@@ -873,6 +919,67 @@ PK_SELECTOR538_FAMILY_AUDIT_SCHEMA = (
 )
 PK_SELECTOR538_FAMILY_PROMOTION_SCHEMA = (
     "nobu16.kr.pk-selector538-family-consolidated-closure-promotion.v1"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_UPDATE_ACTION_FIELD = (
+    "selector568_1096_1174_consolidated_update_action"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_RECOGNIZED_ACTIONS = frozenset(
+    {
+        "runtime_promotion",
+        "translation_override_and_runtime_promotion",
+        "translation_override_and_verification_renewal",
+        "verification_renewal",
+    }
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_EXPECTED_ACTION_COUNTS = {
+    "runtime_promotion": 413,
+    "translation_override_and_runtime_promotion": 215,
+    "translation_override_and_verification_renewal": 225,
+    "verification_renewal": 320,
+}
+PK_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256 = (
+    "3AA3CB05106CA921F22B96D26B8FA74A4F7C7D15A4D3AE122738F92E10A34C25"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256 = (
+    "3260FCF12561EE116228907E1619FDB368DBDF9D0BA8565C03CD014440669B38"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_REPORT_SHA256 = (
+    "E16B597EF856822350D3FD0E0FAB7A9737E3D40D6FE156ED39EA778E5DE85AA0"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SHA256 = (
+    "1C70A12C107DB79B1402F5879364F5AAEA31F34B3933F4C53524C89B570F9990"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_SHA256 = (
+    "81B4E22C3C20AA5F7FF8B8251A2829AEEB0C6E0A0D9FA2B93748B6249F23F6CB"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_CANDIDATE_SHA256 = (
+    "07E65E6338D32C1FD13F17408F82A4133E55541C722874632948C7B36C909805"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_COORDINATE_SHA256 = (
+    "87ABCD0EE44FA7A020D8EE210452956DEA10A362EEA355F3A32523E90F97F794"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_CROSS_ASSEMBLY_SHA256 = (
+    "CF1E913421B067D01BE226421C42BA37F4DB95C32DDA58E20902C2A20D10E67C"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_SHA256 = (
+    "5B3D42EF8F0B2B9D4C72AB783ECB7FBA40ABE3906E84DC14FE751CC129489C45"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_PAYLOAD_SHA256 = (
+    "86DE9E64EC96670278EE389AD9510DFA97181AF3D21A73CB9FE3C5F8A29F8B9E"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_SCHEMA = (
+    "nobu16.kr.pk-selector568-1096-1174-consolidated-"
+    "closure-promotion.v1"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SCHEMA = (
+    "nobu16.kr.pk-selector568-1096-1174-consolidated-"
+    "closure-coverage.v1"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_FIELD = (
+    "selector568_1096_1174_exact_override_evidence"
+)
+PK_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_SCHEMA = (
+    "nobu16.kr.pk-selector568-1096-1174-exact-override.v1"
 )
 PK_SELECTOR538_PREDECESSOR_EVIDENCE_METHOD_COUNTS = {
     PK_BOUND_TERMINAL_2546_RUNTIME_VM_VERIFICATION_METHOD: 22,
@@ -1673,6 +1780,125 @@ def load_selector538_family_predecessor_rows() -> dict[
     if count != 485:
         raise RetranslationError(
             "PK selector538 family C0 predecessor count drifted"
+        )
+    return rows
+
+
+@functools.lru_cache(maxsize=1)
+def load_selector568_1096_1174_consolidated_predecessor_rows() -> dict[
+    tuple[str, str],
+    dict[str, Any],
+]:
+    try:
+        raw = (
+            PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_PATH.read_bytes()
+        )
+        lines = raw.decode("utf-8", errors="strict").splitlines()
+    except (UnicodeDecodeError, OSError) as exc:
+        raise RetranslationError(
+            "PK selector568/1096/1174 predecessor is invalid"
+        ) from exc
+    if (
+        sha256_bytes(raw)
+        != PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_SHA256
+    ):
+        raise RetranslationError(
+            "PK selector568/1096/1174 predecessor hash drifted"
+        )
+    rows: dict[tuple[str, str], dict[str, Any]] = {}
+    try:
+        for line_number, line in enumerate(lines, start=1):
+            if not line:
+                continue
+            row = json.loads(line)
+            if not isinstance(row, dict):
+                raise RetranslationError(
+                    "PK selector568/1096/1174 predecessor row "
+                    f"is not an object: {line_number}"
+                )
+            key = (str(row.get("resource")), str(row.get("coordinate")))
+            if key in rows:
+                raise RetranslationError(
+                    "duplicate PK selector568/1096/1174 "
+                    f"predecessor row: {key}"
+                )
+            rows[key] = row
+    except json.JSONDecodeError as exc:
+        raise RetranslationError(
+            "PK selector568/1096/1174 predecessor JSON is invalid"
+        ) from exc
+    if (
+        len(rows) != 52_803
+        or sum(
+            row.get("runtime_review") == "pending"
+            for row in rows.values()
+        )
+        != 7_896
+    ):
+        raise RetranslationError(
+            "PK selector568/1096/1174 predecessor universe drifted"
+        )
+    return rows
+
+
+@functools.lru_cache(maxsize=1)
+def load_selector568_1096_1174_consolidated_decision_rows() -> dict[
+    tuple[str, str],
+    dict[str, Any],
+]:
+    try:
+        raw = PK_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_PATH.read_bytes()
+        lines = raw.decode("utf-8", errors="strict").splitlines()
+    except (UnicodeDecodeError, OSError) as exc:
+        raise RetranslationError(
+            "PK selector568/1096/1174 decisions are invalid"
+        ) from exc
+    if (
+        sha256_bytes(raw)
+        != PK_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256
+    ):
+        raise RetranslationError(
+            "PK selector568/1096/1174 decision hash drifted"
+        )
+    rows: dict[tuple[str, str], dict[str, Any]] = {}
+    actions: Counter[str] = Counter()
+    try:
+        for line_number, line in enumerate(lines, start=1):
+            if not line:
+                continue
+            row = json.loads(line)
+            if not isinstance(row, dict):
+                raise RetranslationError(
+                    "PK selector568/1096/1174 decision row "
+                    f"is not an object: {line_number}"
+                )
+            key = (str(row.get("resource")), str(row.get("coordinate")))
+            action = row.get(
+                PK_SELECTOR568_1096_1174_CONSOLIDATED_UPDATE_ACTION_FIELD
+            )
+            if (
+                key in rows
+                or key[0] != "pk_msggame"
+                or action
+                not in PK_SELECTOR568_1096_1174_CONSOLIDATED_RECOGNIZED_ACTIONS
+            ):
+                raise RetranslationError(
+                    "PK selector568/1096/1174 decision row "
+                    f"drifted: {line_number}"
+                )
+            rows[key] = row
+            actions[str(action)] += 1
+    except json.JSONDecodeError as exc:
+        raise RetranslationError(
+            "PK selector568/1096/1174 decision JSON is invalid"
+        ) from exc
+    if (
+        len(rows) != 1_173
+        or dict(actions)
+        != PK_SELECTOR568_1096_1174_CONSOLIDATED_EXPECTED_ACTION_COUNTS
+    ):
+        raise RetranslationError(
+            "PK selector568/1096/1174 decision universe drifted"
         )
     return rows
 
@@ -3039,6 +3265,14 @@ def load_pk_runtime_vm_overlays() -> dict[
             PK_SELECTOR538_FAMILY_PROMOTION_SCHEMA,
             "pk_msggame",
         ),
+        (
+            PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_EVIDENCE_PATH,
+            PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_REPORT_PATH,
+            PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_EVIDENCE_ROW_SCHEMA,
+            PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD,
+            PK_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_SCHEMA,
+            "pk_msggame",
+        ),
     )
     rows: dict[tuple[str, str], dict[str, Any]] = {}
     for (
@@ -3101,6 +3335,12 @@ def load_pk_runtime_vm_overlays() -> dict[
         selector538_family = (
             method == PK_SELECTOR538_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
         )
+        selector568_1096_1174_consolidated = (
+            method
+            == (
+                PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD
+            )
+        )
         evidence_family = (
             terminal_family
             or thought_predicate_family
@@ -3111,6 +3351,7 @@ def load_pk_runtime_vm_overlays() -> dict[
             or selector538_chunk0_family
             or bound_terminal_2546_category_b_deferred_family
             or selector538_family
+            or selector568_1096_1174_consolidated
         )
         private_hash_field = (
             "private_evidence_sha256"
@@ -3132,13 +3373,22 @@ def load_pk_runtime_vm_overlays() -> dict[
             )
             or (
                 evidence_family
+                and not selector568_1096_1174_consolidated
                 and (
                     promotion.get("resource") != "MSG_PK/JP/msggame.bin"
                     or promotion.get("method") != method
                 )
             )
-            or promotion.get("result", {}).get(private_hash_field)
-            != sha256_bytes(raw_overlay)
+            or (
+                (
+                    promotion.get("evidence", {}).get(
+                        "evidence_private_sha256"
+                    )
+                    if selector568_1096_1174_consolidated
+                    else promotion.get("result", {}).get(private_hash_field)
+                )
+                != sha256_bytes(raw_overlay)
+            )
         ):
             raise RetranslationError(
                 "tracked PK runtime VM promotion report or overlay hash "
@@ -3228,6 +3478,73 @@ def load_pk_runtime_vm_overlays() -> dict[
                 raise RetranslationError(
                     f"PK {extended_family} private evidence hash drifted"
                 )
+        selector568_1096_1174_consolidated_audit: (
+            Mapping[str, Any] | None
+        ) = None
+        selector568_1096_1174_consolidated_predecessor_rows: Mapping[
+            tuple[str, str],
+            Mapping[str, Any],
+        ] | None = None
+        if selector568_1096_1174_consolidated:
+            try:
+                audit_raw = (
+                    PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_AUDIT_PATH
+                    .read_bytes()
+                )
+                selector568_1096_1174_consolidated_audit = json.loads(
+                    audit_raw.decode("utf-8", errors="strict")
+                )
+            except (
+                UnicodeDecodeError,
+                json.JSONDecodeError,
+                OSError,
+            ) as exc:
+                raise RetranslationError(
+                    "PK selector568/1096/1174 audit is invalid"
+                ) from exc
+            if (
+                sha256_bytes(audit_raw)
+                != PK_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SHA256
+                or not isinstance(
+                    selector568_1096_1174_consolidated_audit,
+                    dict,
+                )
+                or selector568_1096_1174_consolidated_audit.get("schema")
+                != PK_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SCHEMA
+                or selector568_1096_1174_consolidated_audit.get("status")
+                != "PASS"
+                or selector568_1096_1174_consolidated_audit.get("method")
+                != method
+                or selector568_1096_1174_consolidated_audit.get(
+                    "steam_write_performed"
+                )
+                is not False
+                or selector568_1096_1174_consolidated_audit.get(
+                    "guards", {}
+                ).get("report_payload_sha256")
+                != PK_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_PAYLOAD_SHA256
+                or sha256_bytes(raw_overlay)
+                != PK_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256
+                or promotion.get("evidence", {}).get(
+                    "decision_private_sha256"
+                )
+                != PK_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256
+                or promotion.get("evidence", {}).get(
+                    "official_predecessor_sha256"
+                )
+                != PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_SHA256
+                or promotion.get("evidence", {}).get(
+                    "final_candidate_sha256"
+                )
+                != PK_SELECTOR568_1096_1174_CONSOLIDATED_CANDIDATE_SHA256
+            ):
+                raise RetranslationError(
+                    "PK selector568/1096/1174 public/private "
+                    "contract drifted"
+                )
+            selector568_1096_1174_consolidated_predecessor_rows = (
+                load_selector568_1096_1174_consolidated_predecessor_rows()
+            )
         source_count = 0
         source_actions: Counter[str] = Counter()
         superseded_verified_caller_coordinates: set[
@@ -3280,7 +3597,83 @@ def load_pk_runtime_vm_overlays() -> dict[
                 and row.get("method") == method
                 and row.get("per_row_game_playback_required") is False
             )
-            if bound_terminal_2546_family:
+            if selector568_1096_1174_consolidated:
+                assert (
+                    selector568_1096_1174_consolidated_audit is not None
+                )
+                assert (
+                    selector568_1096_1174_consolidated_predecessor_rows
+                    is not None
+                )
+                predecessor = (
+                    selector568_1096_1174_consolidated_predecessor_rows.get(
+                        ("pk_msggame", str(coordinate))
+                    )
+                )
+                action = row.get("action")
+                promotion_action = action in {
+                    "runtime_promotion",
+                    "translation_override_and_runtime_promotion",
+                }
+                closure = row.get("closure_binding")
+                binding = row.get("predecessor_binding")
+                current_rebase = row.get("current81b4_rebase")
+                owners = row.get("owners")
+                repair = row.get("repair_binding")
+                if (
+                    not isinstance(predecessor, Mapping)
+                    or action
+                    not in (
+                        PK_SELECTOR568_1096_1174_CONSOLIDATED_RECOGNIZED_ACTIONS
+                    )
+                    or not isinstance(closure, dict)
+                    or closure.get("cross_accepted_assembly_sha256")
+                    != PK_SELECTOR568_1096_1174_CONSOLIDATED_CROSS_ASSEMBLY_SHA256
+                    or closure.get("audit_report_payload_sha256")
+                    != PK_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_PAYLOAD_SHA256
+                    or closure.get("selector1174_assembly_sha256")
+                    != PK_SELECTOR568_1096_1174_CONSOLIDATED_SELECTOR1174_ASSEMBLY_SHA256
+                    or closure.get("decision_coordinate_sha256")
+                    != PK_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_COORDINATE_SHA256
+                    or closure.get("final_candidate_sha256")
+                    != PK_SELECTOR568_1096_1174_CONSOLIDATED_CANDIDATE_SHA256
+                    or closure.get("official_predecessor_sha256")
+                    != PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_SHA256
+                    or not isinstance(binding, dict)
+                    or binding.get("checkpoint_sha256")
+                    != PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_SHA256
+                    or binding.get("row_sha256")
+                    != canonical_ascii_sha256(predecessor)
+                    or not isinstance(current_rebase, dict)
+                    or current_rebase.get("actual_runtime_promotion")
+                    is not promotion_action
+                    or current_rebase.get("official_runtime_review_before")
+                    != predecessor.get("runtime_review")
+                    or not isinstance(owners, list)
+                    or not owners
+                    or not set(owners)
+                    <= {"cross", "chunk0", "chunk1"}
+                    or not isinstance(repair, dict)
+                    or repair.get("selector1096_dependency_branch_sha256")
+                    != "9F3D7E45118D3759A7B10E5F1D45D9089177ADFE88F46B66F472B0400FB2A9AE"
+                    or repair.get("selector1174_repair_branch_sha256")
+                    != "41FD197B143561B43DB4BD20AC425BE71D4C7A282645EF6C5CE8C35D2637CF76"
+                    or (
+                        promotion_action
+                        and predecessor.get("runtime_review") != "pending"
+                    )
+                    or (
+                        not promotion_action
+                        and predecessor.get("runtime_review") != "verified"
+                    )
+                ):
+                    raise RetranslationError(
+                        "PK selector568/1096/1174 overlay "
+                        f"binding drifted: {coordinate}"
+                    )
+                source_actions[str(action)] += 1
+                dynamic_transition_valid = True
+            elif bound_terminal_2546_family:
                 assert bound_terminal_2546_audit is not None
                 assert bound_terminal_2546_predecessor_rows is not None
                 supersedes_verified_caller = (
@@ -3787,6 +4180,17 @@ def load_pk_runtime_vm_overlays() -> dict[
             raise RetranslationError(
                 "PK selector538 family action universe drifted"
             )
+        if selector568_1096_1174_consolidated and (
+            {
+                action: source_actions.get(action, 0)
+                for action in
+                PK_SELECTOR568_1096_1174_CONSOLIDATED_RECOGNIZED_ACTIONS
+            }
+            != PK_SELECTOR568_1096_1174_CONSOLIDATED_EXPECTED_ACTION_COUNTS
+        ):
+            raise RetranslationError(
+                "PK selector568/1096/1174 action universe drifted"
+            )
     if not rows:
         raise RetranslationError(
             "no private PK runtime VM verification overlay is available"
@@ -3917,6 +4321,59 @@ def validate_pk_runtime_vm_verification(
         ):
             raise RetranslationError(
                 f"{label}.runtime_vm_verification deferred closure "
+                "transition drifted"
+            )
+    elif (
+        method
+        == PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD
+    ):
+        predecessor = (
+            load_selector568_1096_1174_consolidated_predecessor_rows().get(
+                (resource, coordinate_value)
+            )
+        )
+        action = evidence.get("action")
+        promotion_action = action in {
+            "runtime_promotion",
+            "translation_override_and_runtime_promotion",
+        }
+        if (
+            resource != "pk_msggame"
+            or evidence.get("resource") != resource
+            or evidence.get("status") != "verified"
+            or evidence.get("per_row_game_playback_required") is not False
+            or not isinstance(predecessor, dict)
+            or evidence.get("predecessor_binding", {}).get(
+                "checkpoint_sha256"
+            )
+            != PK_SELECTOR568_1096_1174_CONSOLIDATED_PREDECESSOR_SHA256
+            or evidence.get("predecessor_binding", {}).get("row_sha256")
+            != canonical_ascii_sha256(predecessor)
+            or (
+                promotion_action
+                and (
+                    predecessor.get("runtime_review") != "pending"
+                    or scope_classification != "retranslated"
+                    or layout_review != "runtime_verified"
+                )
+            )
+            or (
+                not promotion_action
+                and (
+                    action
+                    not in {
+                        "verification_renewal",
+                        (
+                            "translation_override_and_verification_"
+                            "renewal"
+                        ),
+                    }
+                    or predecessor.get("runtime_review") != "verified"
+                )
+            )
+        ):
+            raise RetranslationError(
+                f"{label}.runtime_vm_verification selector568/1096/1174 "
                 "transition drifted"
             )
     elif method == PK_SELECTOR538_FAMILY_RUNTIME_VM_VERIFICATION_METHOD:
@@ -4607,6 +5064,7 @@ def validate_translation_shape(
         not translation.strip()
         and not allow_empty_runtime_morpheme
         and not allow_runtime_structural_newline
+        and not allow_runtime_assembly_boundary_reflow
     ):
         raise RetranslationError(f"{label} replacement is blank")
     if allow_empty_runtime_morpheme and translation != "":
@@ -5017,6 +5475,82 @@ def validate_extended_closure_decision_row(
         )
 
 
+def validate_selector568_1096_1174_consolidated_decision_row(
+    row: Mapping[str, Any],
+    *,
+    label: str,
+) -> Mapping[str, Any]:
+    key = (str(row.get("resource")), str(row.get("coordinate")))
+    expected = (
+        load_selector568_1096_1174_consolidated_decision_rows().get(key)
+    )
+    predecessor = (
+        load_selector568_1096_1174_consolidated_predecessor_rows().get(key)
+    )
+    evidence = row.get("runtime_vm_verification")
+    action = row.get(
+        PK_SELECTOR568_1096_1174_CONSOLIDATED_UPDATE_ACTION_FIELD
+    )
+    promotion_action = action in {
+        "runtime_promotion",
+        "translation_override_and_runtime_promotion",
+    }
+    override_action = action in {
+        "translation_override_and_runtime_promotion",
+        "translation_override_and_verification_renewal",
+    }
+    if (
+        not isinstance(expected, Mapping)
+        or not isinstance(predecessor, Mapping)
+        or dict(row) != dict(expected)
+        or not isinstance(evidence, Mapping)
+        or evidence.get("method")
+        != PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD
+        or evidence.get("action") != action
+        or action
+        not in PK_SELECTOR568_1096_1174_CONSOLIDATED_RECOGNIZED_ACTIONS
+        or evidence.get("predecessor_binding", {}).get("row_sha256")
+        != canonical_ascii_sha256(predecessor)
+        or evidence.get("translation_utf16le_sha256")
+        != sha256_text(str(row.get("translation")))
+        or row.get("runtime_review") != "verified"
+        or (
+            promotion_action
+            and (
+                predecessor.get("runtime_review") != "pending"
+                or row.get("scope_classification") != "retranslated"
+                or row.get("layout_review") != "runtime_verified"
+            )
+        )
+        or (
+            not promotion_action
+            and predecessor.get("runtime_review") != "verified"
+        )
+        or (
+            override_action
+            and (
+                row.get(
+                    PK_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_FIELD
+                )
+                != {
+                    "schema":
+                    PK_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_SCHEMA,
+                    "translation_utf16le_sha256":
+                    sha256_text(str(row.get("translation"))),
+                }
+            )
+        )
+        or (
+            not override_action
+            and PK_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_FIELD in row
+        )
+    ):
+        raise RetranslationError(
+            f"{label} is not the frozen selector568/1096/1174 decision"
+        )
+    return predecessor
+
+
 def validate_decisions(
     prepared: PreparedArtifacts,
     decision_path: Path,
@@ -5099,7 +5633,28 @@ def validate_decisions(
             else None
         )
         bound_terminal_2546_predecessor: Mapping[str, Any] | None = None
-        if runtime_vm_method in {
+        selector568_1096_1174_consolidated_predecessor: (
+            Mapping[str, Any] | None
+        ) = None
+        if (
+            runtime_vm_method
+            == (
+                PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD
+            )
+        ):
+            selector568_1096_1174_consolidated_predecessor = (
+                validate_selector568_1096_1174_consolidated_decision_row(
+                    row,
+                    label=label,
+                )
+            )
+            # The combined layer directly supersedes the frozen 81B4 row.
+            # Reuse that exact row for legacy pending-evidence/action
+            # preservation checks below.
+            bound_terminal_2546_predecessor = (
+                selector568_1096_1174_consolidated_predecessor
+            )
+        elif runtime_vm_method in {
             PK_BOUND_TERMINAL_2546_CATEGORY_B_RUNTIME_VM_VERIFICATION_METHOD,
             PK_SELECTOR538_CHUNK0_RUNTIME_VM_VERIFICATION_METHOD,
             (
@@ -5347,6 +5902,13 @@ def validate_decisions(
                     "terminal_family_update_action"
                 )
             )
+            consolidated_superseded_terminal_action = (
+                selector568_1096_1174_consolidated_predecessor is not None
+                and terminal_action
+                == selector568_1096_1174_consolidated_predecessor.get(
+                    "terminal_family_update_action"
+                )
+            )
             if (
                 not isinstance(bound_evidence, dict)
                 or terminal_action != bound_evidence.get("action")
@@ -5354,6 +5916,7 @@ def validate_decisions(
                 superseded_terminal_renewal
                 or caller_superseded_terminal_renewal
                 or bound_2546_superseded_terminal_action
+                or consolidated_superseded_terminal_action
             ):
                 raise RetranslationError(
                     f"{label}.terminal_family_update_action is unbound"
@@ -5387,6 +5950,13 @@ def validate_decisions(
                     "thought_predicate_family_update_action"
                 )
             )
+            consolidated_superseded_thought = (
+                selector568_1096_1174_consolidated_predecessor is not None
+                and thought_predicate_action
+                == selector568_1096_1174_consolidated_predecessor.get(
+                    "thought_predicate_family_update_action"
+                )
+            )
             if (
                 runtime_vm_method
                 != PK_THOUGHT_PREDICATE_FAMILY_RUNTIME_VM_VERIFICATION_METHOD
@@ -5396,6 +5966,7 @@ def validate_decisions(
             ) and not (
                 caller_superseded_thought
                 or bound_2546_superseded_thought
+                or consolidated_superseded_thought
             ):
                 raise RetranslationError(
                     f"{label}.thought_predicate_family_update_action is "
@@ -5421,10 +5992,20 @@ def validate_decisions(
                     "bound_terminal_caller_update_action"
                 )
             )
+            consolidated_superseded_caller = (
+                selector568_1096_1174_consolidated_predecessor is not None
+                and caller_action
+                == selector568_1096_1174_consolidated_predecessor.get(
+                    "bound_terminal_caller_update_action"
+                )
+            )
             if (
                 not isinstance(caller_evidence, dict)
                 or caller_action != caller_evidence.get("action")
-            ) and not bound_2546_superseded_caller:
+            ) and not (
+                bound_2546_superseded_caller
+                or consolidated_superseded_caller
+            ):
                 raise RetranslationError(
                     f"{label}.bound_terminal_caller_update_action is unbound"
                 )
@@ -5462,6 +6043,13 @@ def validate_decisions(
                 PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
             )
         )
+        consolidated_superseded_bound_terminal_2546_action = (
+            selector568_1096_1174_consolidated_predecessor is not None
+            and bound_terminal_2546_action
+            == selector568_1096_1174_consolidated_predecessor.get(
+                PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD
+            )
+        )
         if (
             bound_terminal_2546_action is not None
             or runtime_vm_method
@@ -5475,6 +6063,7 @@ def validate_decisions(
         ) and not (
             bound_terminal_2546_simple_superseded_action
             or bound_terminal_2546_extended_superseded_action
+            or consolidated_superseded_bound_terminal_2546_action
         ):
             raise RetranslationError(
                 f"{label}.{PK_BOUND_TERMINAL_2546_UPDATE_ACTION_FIELD} "
@@ -5482,6 +6071,13 @@ def validate_decisions(
             )
         bound_terminal_2546_simple_action = row.get(
             PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD
+        )
+        consolidated_superseded_bound_terminal_2546_simple_action = (
+            selector568_1096_1174_consolidated_predecessor is not None
+            and bound_terminal_2546_simple_action
+            == selector568_1096_1174_consolidated_predecessor.get(
+                PK_BOUND_TERMINAL_2546_SIMPLE_CALLER_UPDATE_ACTION_FIELD
+            )
         )
         if (
             bound_terminal_2546_simple_action is not None
@@ -5493,6 +6089,8 @@ def validate_decisions(
             or not isinstance(runtime_vm_evidence, dict)
             or bound_terminal_2546_simple_action
             != runtime_vm_evidence.get("action")
+        ) and not (
+            consolidated_superseded_bound_terminal_2546_simple_action
         ):
             raise RetranslationError(
                 f"{label}."
@@ -5501,6 +6099,13 @@ def validate_decisions(
             )
         bound_terminal_2546_category_b_action = row.get(
             PK_BOUND_TERMINAL_2546_CATEGORY_B_UPDATE_ACTION_FIELD
+        )
+        consolidated_superseded_category_b_action = (
+            selector568_1096_1174_consolidated_predecessor is not None
+            and bound_terminal_2546_category_b_action
+            == selector568_1096_1174_consolidated_predecessor.get(
+                PK_BOUND_TERMINAL_2546_CATEGORY_B_UPDATE_ACTION_FIELD
+            )
         )
         if (
             bound_terminal_2546_category_b_action is not None
@@ -5512,7 +6117,7 @@ def validate_decisions(
             or not isinstance(runtime_vm_evidence, dict)
             or bound_terminal_2546_category_b_action
             != runtime_vm_evidence.get("action")
-        ):
+        ) and not consolidated_superseded_category_b_action:
             raise RetranslationError(
                 f"{label}."
                 f"{PK_BOUND_TERMINAL_2546_CATEGORY_B_UPDATE_ACTION_FIELD} "
@@ -5530,6 +6135,13 @@ def validate_decisions(
                 PK_SELECTOR538_CHUNK0_UPDATE_ACTION_FIELD
             )
         )
+        consolidated_superseded_selector538_chunk0_action = (
+            selector568_1096_1174_consolidated_predecessor is not None
+            and selector538_chunk0_action
+            == selector568_1096_1174_consolidated_predecessor.get(
+                PK_SELECTOR538_CHUNK0_UPDATE_ACTION_FIELD
+            )
+        )
         if (
             selector538_chunk0_action is not None
             or runtime_vm_method
@@ -5540,13 +6152,23 @@ def validate_decisions(
             or not isinstance(runtime_vm_evidence, dict)
             or selector538_chunk0_action
             != runtime_vm_evidence.get("action")
-        ) and not selector538_family_superseded_chunk0_action:
+        ) and not (
+            selector538_family_superseded_chunk0_action
+            or consolidated_superseded_selector538_chunk0_action
+        ):
             raise RetranslationError(
                 f"{label}.{PK_SELECTOR538_CHUNK0_UPDATE_ACTION_FIELD} "
                 "is unbound"
             )
         bound_terminal_2546_category_b_deferred_action = row.get(
             PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_UPDATE_ACTION_FIELD
+        )
+        consolidated_superseded_category_b_deferred_action = (
+            selector568_1096_1174_consolidated_predecessor is not None
+            and bound_terminal_2546_category_b_deferred_action
+            == selector568_1096_1174_consolidated_predecessor.get(
+                PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_UPDATE_ACTION_FIELD
+            )
         )
         if (
             bound_terminal_2546_category_b_deferred_action is not None
@@ -5562,7 +6184,7 @@ def validate_decisions(
             or not isinstance(runtime_vm_evidence, dict)
             or bound_terminal_2546_category_b_deferred_action
             != runtime_vm_evidence.get("action")
-        ):
+        ) and not consolidated_superseded_category_b_deferred_action:
             raise RetranslationError(
                 f"{label}."
                 f"{PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_UPDATE_ACTION_FIELD} "
@@ -5570,6 +6192,13 @@ def validate_decisions(
             )
         selector538_family_action = row.get(
             PK_SELECTOR538_FAMILY_UPDATE_ACTION_FIELD
+        )
+        consolidated_superseded_selector538_family_action = (
+            selector568_1096_1174_consolidated_predecessor is not None
+            and selector538_family_action
+            == selector568_1096_1174_consolidated_predecessor.get(
+                PK_SELECTOR538_FAMILY_UPDATE_ACTION_FIELD
+            )
         )
         if (
             selector538_family_action is not None
@@ -5581,9 +6210,32 @@ def validate_decisions(
             or not isinstance(runtime_vm_evidence, dict)
             or selector538_family_action
             != runtime_vm_evidence.get("action")
-        ):
+        ) and not consolidated_superseded_selector538_family_action:
             raise RetranslationError(
                 f"{label}.{PK_SELECTOR538_FAMILY_UPDATE_ACTION_FIELD} "
+                "is unbound"
+            )
+        selector568_1096_1174_consolidated_action = row.get(
+            PK_SELECTOR568_1096_1174_CONSOLIDATED_UPDATE_ACTION_FIELD
+        )
+        if (
+            selector568_1096_1174_consolidated_action is not None
+            or runtime_vm_method
+            == (
+                PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD
+            )
+        ) and (
+            runtime_vm_method
+            != (
+                PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD
+            )
+            or not isinstance(runtime_vm_evidence, dict)
+            or selector568_1096_1174_consolidated_action
+            != runtime_vm_evidence.get("action")
+        ):
+            raise RetranslationError(
+                f"{label}."
+                f"{PK_SELECTOR568_1096_1174_CONSOLIDATED_UPDATE_ACTION_FIELD} "
                 "is unbound"
             )
         if (
@@ -5811,6 +6463,29 @@ def validate_decisions(
                     runtime_vm_method
                     == (
                         PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_RUNTIME_VM_VERIFICATION_METHOD
+                    )
+                    or (
+                        runtime_vm_method
+                        == (
+                            PK_SELECTOR568_1096_1174_CONSOLIDATED_RUNTIME_VM_VERIFICATION_METHOD
+                        )
+                        and selector568_1096_1174_consolidated_action
+                        in {
+                            "translation_override_and_runtime_promotion",
+                            (
+                                "translation_override_and_verification_"
+                                "renewal"
+                            ),
+                        }
+                        and row.get(
+                            PK_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_FIELD
+                        )
+                        == {
+                            "schema":
+                            PK_SELECTOR568_1096_1174_CONSOLIDATED_OVERRIDE_SCHEMA,
+                            "translation_utf16le_sha256":
+                            sha256_text(translation),
+                        }
                     )
                     or (
                         (
