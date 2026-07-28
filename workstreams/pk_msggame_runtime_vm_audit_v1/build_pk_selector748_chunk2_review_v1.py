@@ -33,15 +33,15 @@ DECISION_SCHEMA = "nobu16.kr.pk-selector748-chunk2-review-decision.private.v1"
 EVIDENCE_SCHEMA = "nobu16.kr.pk-selector748-chunk2-review-evidence.private.v1"
 PUBLIC_SCHEMA = "nobu16.kr.pk-selector748-chunk2-review.source-free.v1"
 EXPECTED = {
-    "decision_file": "53EB8F5C84ED37095CDD62D25882FE7AA1E9E7050191B3BA76F1B9F322F1A439",
-    "evidence_file": "10FEDDD99BE9CDE691C300E80F5E5225853727A59128EE6B2AF8A7233250E027",
-    "public_file": "0D28483D93B3450F503795DB6C408C3FD6EF90AF9912806F45206952E6B6F4F5",
+    "decision_file": "8007506A3B1A9C5005DCD7A98570A5DF544D6817EE3B1A89B7C6BE0776271003",
+    "evidence_file": "A64A7DD43C994702E1EDD8601775CB982A11C130DE37CFEC93D759C8C0DB0E23",
+    "public_file": "0944B05216AF81013B92D8943315C2FDE152024D8C33E2764FD6A97A0566C138",
     "official_candidate": "15C3BF1B4CC2E29020E5A8A6F40669555B54EEE57B04C3F7F77DF3AC680CFB93",
     "reviewed_candidate": "5B5AAF275F2E5945815E0BC67C1F6A6E9E1298B0110B07AE1A2E6BCBC313B286",
     "assembly": "A85257B41450D1D3FDF93C641178337B8424D3992A63813BA576ECDF3D771664",
     "decision_coordinates": "4314CA29BE1F7D0D504B5A22CA6E7DC02C83A39EE24226E7CD98C12C8A47F394",
     "override_coordinates": "C88895797583BC4879CBF0F513D5E1D0AA389DD59DBC3FAC710940CB1F40D037",
-    "promoted_coordinates": "520061BC4AD6D6C3E8AFD0AD381C9B88BF03BB2666E27A6505517911BFC6F548",
+    "promoted_coordinates": "747B6F247F7A10B43536104AEC7F713EBD329F3F16E92AFFAA8CFAAF38602728",
     "steam": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766",
 }
 COUNTS = {
@@ -52,7 +52,7 @@ COUNTS = {
     "blocked_pending_rows": 20,
     "blocked_sites": 17,
     "decision_rows": 46,
-    "promoted_pending_rows": 27,
+    "promoted_pending_rows": 34,
     "roots": 34,
     "same_gap_branches": 56,
     "shared_override_rows": 7,
@@ -61,8 +61,8 @@ COUNTS = {
 }
 ACTIONS = {
     "runtime_promotion": 13,
-    "translation_override_and_runtime_promotion": 14,
-    "translation_override_and_verification_renewal": 19,
+    "translation_override_and_runtime_promotion": 21,
+    "translation_override_and_verification_renewal": 12,
 }
 
 
@@ -255,7 +255,7 @@ def main(argv=None) -> int:
         )
     else:
         PUBLIC_OUTPUT.write_bytes(content)
-    print("selector748 chunk2 review: PASS sites=34 promoted=27 blocked=20")
+    print("selector748 chunk2 review: PASS sites=34 promoted=34 blocked=20")
     return 0
 
 

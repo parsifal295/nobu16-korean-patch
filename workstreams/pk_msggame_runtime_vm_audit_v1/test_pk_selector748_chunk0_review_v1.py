@@ -74,7 +74,7 @@ class Selector748Chunk0ReviewTests(unittest.TestCase):
         self.assertTrue(
             all(
                 row["action"]
-                == "translation_override_and_verification_renewal"
+                == "translation_override_and_runtime_promotion"
                 for row in shared
             )
         )

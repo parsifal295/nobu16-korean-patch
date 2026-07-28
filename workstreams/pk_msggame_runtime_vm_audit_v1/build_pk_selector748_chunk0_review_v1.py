@@ -39,15 +39,15 @@ PUBLIC_SCHEMA = "nobu16.kr.pk-selector748-chunk0-review.source-free.v1"
 EXPECTED = {
     "assignment": "CE5FBC60D33426695E86FBC8E76205E99917956EE55DBF10375B8933CE91B17E",
     "assignment_public": "68615492AC049EF3B87D5840ACDB67A8E05D6E8F2EED63CBC89905A8DF5515B2",
-    "decision_file": "731378E3F4F8B3211814C7FCB7C43E3E8B0DF68CF37023A2A80245A0C73B7E93",
-    "evidence_file": "D47573CA550B4DE6A86BE840B19DC2CEC93F12F8BEEDD4D0167D137563876DB7",
-    "public_file": "E844D56FA280B747ACAF73AB35F9AE068682C5E5FD204C38C2078CEEC6D10993",
+    "decision_file": "5FF46AC38DE81A7D5485B0FB6F2E489B55BDA5350DBD3A6DC4CB1BDA4464993D",
+    "evidence_file": "DAF703CC333DC10CAE1F75507F76243CF25CB1D9DACFFB21FE5B1D983E377A13",
+    "public_file": "5B22B5863E673E009E3E200DFF30B47A8E9E29E541C85BE72B466464F423224A",
     "official_candidate": "15C3BF1B4CC2E29020E5A8A6F40669555B54EEE57B04C3F7F77DF3AC680CFB93",
     "reviewed_candidate": "69320B45F4054DC16E350EA046E0A448A5B251D4B29272ACCFC8014FF121EAF3",
     "assembly": "0F6C81FAF68F0692B136BDB0DDE14171C05B3EF8025031ADEC60E882FF62C38D",
     "decision_coordinates": "AB3F13BDC38E5A2A5AABC91D4DA0E138907FCC0E16F05E85837150F629F48396",
     "override_coordinates": "B96B71886EA6DF49ED12BE428F76BDFC2FC68950E833C485BBAF00BD822F537C",
-    "promoted_coordinates": "F3112F0E8EF69EBEB77FFD90E9CA64EC9162111C416C788675565E08B7CE1BCE",
+    "promoted_coordinates": "E1AED024D63635F1567B835A6D08C923129E2DF7257C26C49799908E14AE4F9B",
     "steam": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766",
 }
 COUNTS = {
@@ -57,7 +57,7 @@ COUNTS = {
     "blocked_pending_rows": 19,
     "blocked_sites": 7,
     "decision_rows": 72,
-    "promoted_pending_rows": 49,
+    "promoted_pending_rows": 56,
     "roots": 33,
     "shared_terminal_overrides": 7,
     "sites": 34,
@@ -65,8 +65,8 @@ COUNTS = {
 }
 ACTIONS = {
     "runtime_promotion": 29,
-    "translation_override_and_runtime_promotion": 20,
-    "translation_override_and_verification_renewal": 23,
+    "translation_override_and_runtime_promotion": 27,
+    "translation_override_and_verification_renewal": 16,
 }
 
 
@@ -251,7 +251,7 @@ def main(argv=None) -> int:
         )
     else:
         PUBLIC_OUTPUT.write_bytes(content)
-    print("selector748 chunk0 review: PASS sites=34 promoted=49 blocked=19")
+    print("selector748 chunk0 review: PASS sites=34 promoted=56 blocked=19")
     return 0
 
 

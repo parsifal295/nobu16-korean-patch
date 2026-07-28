@@ -73,7 +73,7 @@ class Selector748Chunk2ReviewTests(unittest.TestCase):
         self.assertTrue(
             all(
                 row["action"]
-                == "translation_override_and_verification_renewal"
+                == "translation_override_and_runtime_promotion"
                 for row in shared
             )
         )
@@ -84,7 +84,7 @@ class Selector748Chunk2ReviewTests(unittest.TestCase):
             for row in self.decisions
             if row["action"].endswith("runtime_promotion")
         ]
-        self.assertEqual(len(promoted), 27)
+        self.assertEqual(len(promoted), 34)
 
     def test_candidate_and_reverse_overlay_are_frozen(self) -> None:
         digests = self.evidence["digests"]
