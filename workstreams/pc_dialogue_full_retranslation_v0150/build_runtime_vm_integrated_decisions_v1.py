@@ -174,6 +174,21 @@ SELECTOR538_CHUNK0_BUILDER_PATH = (
     / "pk_msggame_runtime_vm_audit_v1"
     / "build_pk_selector538_chunk0_closure_v1.py"
 )
+BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / (
+        "build_pk_bound_terminal_2546_category_b_deferred_"
+        "full_vm_closure_v1.py"
+    )
+)
+SELECTOR538_FAMILY_BUILDER_PATH = (
+    REPO
+    / "workstreams"
+    / "pk_msggame_runtime_vm_audit_v1"
+    / "build_pk_selector538_family_consolidated_closure_v1.py"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -222,6 +237,12 @@ EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE_PROMOTIONS = 12
 EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PROMOTIONS = 12_505
 EXPECTED_SELECTOR538_CHUNK0_PROMOTIONS = 65
 EXPECTED_PK_SELECTOR538_CHUNK0_FINAL_PROMOTIONS = 12_570
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTIONS = 5
+EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PROMOTIONS = (
+    12_575
+)
+EXPECTED_SELECTOR538_FAMILY_INCREMENTAL_PROMOTIONS = 212
+EXPECTED_PK_SELECTOR538_FAMILY_FINAL_PROMOTIONS = 12_787
 EXPECTED_PREDECESSOR_PENDING_AFTER = 10_288
 EXPECTED_POST_PK_ONLY_PENDING_AFTER = 8_752
 EXPECTED_PENDING_AFTER = 8_702
@@ -233,6 +254,10 @@ EXPECTED_BOUND_TERMINAL_2546_FULL_CALLER_FINAL_PENDING_AFTER = 8_213
 EXPECTED_BOUND_TERMINAL_2546_SIMPLE_CALLER_FINAL_PENDING_AFTER = 8_190
 EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PENDING_AFTER = 8_178
 EXPECTED_SELECTOR538_CHUNK0_FINAL_PENDING_AFTER = 8_113
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PENDING_AFTER = (
+    8_108
+)
+EXPECTED_SELECTOR538_FAMILY_FINAL_PENDING_AFTER = 7_896
 EXPECTED_POST_CROSS_PRIVATE_SHA256 = (
     "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC"
 )
@@ -453,6 +478,107 @@ EXPECTED_SELECTOR538_CHUNK0_ASSEMBLY_UPDATE_COUNT = 1
 EXPECTED_SELECTOR538_CHUNK0_ASSEMBLY_UPDATE_SHA256 = (
     "5FFF6C8F8A26C073ECF20771EAA52A9BE18FE6197F11CE7C6D2B3B183DB9F505"
 )
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_COMBINED_CANDIDATE_SHA256 = (
+    "7A2FFBC5A175BDE9B78169EE6D6212BCEC73A949652A92863C35F93EC9B8A04F"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_SOURCE_CANDIDATE_SHA256 = (
+    "1E57A600BE7EC64F2D923816121D16E2444B460527291347322ADCEE48110053"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_OVERRIDE_COUNT = 6
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_RENEWAL_COUNT = 2
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_UPDATED_ROW_COUNT = 7
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_ACTION_COUNTS = {
+    "runtime_promotion": 1,
+    "translation_override_and_runtime_promotion": 4,
+    "translation_override_and_verification_renewal": 2,
+}
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_AUDIT_SHA256 = (
+    "6DF07C5897901C6807AF02FAFFDF45B2433423162D2FBE5CD1D0BEF0B3593C17"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTION_SHA256 = (
+    "7488765148CF320B66D28F5820DD3321629A7962F54A3AF5D528CB79CF48757F"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_DECISION_SHA256 = (
+    "54343C398C7D8E22A957AE47CA9B8AA5C11DD7F64C6BEF4EFF50DFA4EF466095"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_EVIDENCE_SHA256 = (
+    "C328430233A81E4457BD253844D65622B7305AEB20FACB30E011C2EEF7B58BD0"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_AUDIT_PAYLOAD_SHA256 = (
+    "AB1F932882D9EFFC5DC0797D9E9435789BE3D7C0D2A139524E4158EAAA4C36C8"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTION_PAYLOAD_SHA256 = (
+    "6F33DA4193FDF21E40AEEA2578DF5A614954486DA8F489F5C09D75DA2650AB57"
+)
+EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_DECISION_COORDINATE_SHA256 = (
+    "FC939D8F82428C9455C5FB2609F8C047FEADB3C893812BAE7590A3BDD4B2997B"
+)
+EXPECTED_SELECTOR538_FAMILY_COMBINED_CANDIDATE_SHA256 = (
+    "DCB19B0D85422F7C0EA5888F9A0C47667D75A88D100BABAE11DDAF4A8DD2000E"
+)
+EXPECTED_SELECTOR538_FAMILY_SOURCE_CANDIDATE_SHA256 = (
+    "24E0E9CCAAD469C0EEFB41EDB032A17F0DAE9BF3EEB471688D452C2FC2A37C56"
+)
+EXPECTED_SELECTOR538_FAMILY_OVERRIDE_COUNT = 142
+EXPECTED_SELECTOR538_FAMILY_RENEWAL_COUNT = 420
+EXPECTED_SELECTOR538_FAMILY_TOTAL_PROMOTION_COUNT = 277
+EXPECTED_SELECTOR538_FAMILY_UPDATED_ROW_COUNT = 697
+EXPECTED_SELECTOR538_FAMILY_SUPERSEDED_CHUNK0_PROMOTIONS = 65
+EXPECTED_SELECTOR538_FAMILY_SUPERSEDED_RENEWALS = 69
+EXPECTED_SELECTOR538_FAMILY_ACTION_COUNTS = {
+    "runtime_promotion": 220,
+    "translation_override_and_runtime_promotion": 57,
+    "translation_override_and_verification_renewal": 85,
+    "verification_renewal": 335,
+}
+EXPECTED_SELECTOR538_FAMILY_AUDIT_SHA256 = (
+    "39E287858CDF49ABDA329A6C3E8EB1E9497E415CDE25F4348C3E12113A1C07A8"
+)
+EXPECTED_SELECTOR538_FAMILY_PROMOTION_SHA256 = (
+    "6F7DDA159299CC9B1923C14A55B5341CFBDB9E9DB3CADA5D7CB77453EAEF3E85"
+)
+EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256 = (
+    "5640EB7FB7E4EA9B32309B7FA280637DA9F26F96CA500BCD4FA9847D997456C0"
+)
+EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256 = (
+    "910C0A59823C2B6B083F58257D6203053738EFEFC2E49E6271D553FF44CAB940"
+)
+EXPECTED_SELECTOR538_FAMILY_AUDIT_PAYLOAD_SHA256 = (
+    "2C9F8462A7BE486BA2931BEE5F782C4888A38EBEC19788110D298021A4210996"
+)
+EXPECTED_SELECTOR538_FAMILY_PROMOTION_PAYLOAD_SHA256 = (
+    "87CFB1614033EC42993393B1ADEB24231BEAAE840A1BEB9639269B9CCFEEC5EF"
+)
+EXPECTED_SELECTOR538_FAMILY_DECISION_COORDINATE_SHA256 = (
+    "CE46C3E9524D6FB61DA1B24B58F3EB6EC863BC3860727A4B7BCB2F9D2D23AABF"
+)
+EXPECTED_SELECTOR538_FAMILY_PROMOTION_COORDINATE_SHA256 = (
+    "B6D1D61B1681F9CA92AD6DCD2C43F4913D83916C0DC5BFE05A4C0BFEC3BED5C1"
+)
+EXPECTED_SELECTOR538_FAMILY_RENEWAL_COORDINATE_SHA256 = (
+    "36058C249C73F5B42C0DC7426FA68879F4BDC515F40F9C50B6CFEC07C7FD4D59"
+)
+EXPECTED_SELECTOR538_FAMILY_OVERRIDE_COORDINATE_SHA256 = (
+    "8DA1C9C2491E145FD1EBAD2C326F48FDD344E91766758B68644EDDD53131C1A5"
+)
+EXPECTED_SELECTOR538_FAMILY_LATER_PROMOTION_COORDINATE_SHA256 = (
+    "C30259266763AF5012B213BB12FFC005A9ED8D4214727E37C69015C68D465F25"
+)
+EXPECTED_SELECTOR538_FAMILY_SUPERSEDED_RENEWAL_COORDINATE_SHA256 = (
+    "BE139F9096DAF7F6F47335FFAFD1458DEE95AAC2987E4F5FCC10BA2287267BC1"
+)
+EXPECTED_D5_SELECTOR538_FAMILY_DECISION_UNION_COORDINATE_SHA256 = (
+    "40F27C11D8C7A1BF4544E8D883F0A21DFC50081E92498D3D04556E66D3DE97CB"
+)
+EXPECTED_D5_SELECTOR538_FAMILY_PROMOTION_UNION_COORDINATE_SHA256 = (
+    "0B2054A53C3D91C05AFDC9574C2E19AD09DF90C60CA38D59CBD698A29020A7B6"
+)
+EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256 = (
+    "81B4E22C3C20AA5F7FF8B8251A2829AEEB0C6E0A0D9FA2B93748B6249F23F6CB"
+)
+EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PUBLIC_SHA256 = (
+    "46270F70A019484EFB1F99851D436467C8FD2DE32EB222BDC048DA1B5BC080FA"
+)
 EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256 = (
     "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
 )
@@ -536,6 +662,8 @@ BOUND_TERMINAL_2546_FULL_CALLER: Any | None = None
 BOUND_TERMINAL_2546_SIMPLE_CALLER: Any | None = None
 BOUND_TERMINAL_2546_CATEGORY_B_IMMEDIATE: Any | None = None
 SELECTOR538_CHUNK0: Any | None = None
+BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED: Any | None = None
+SELECTOR538_FAMILY: Any | None = None
 
 
 def load_pk_only_exact_blocked_overlay() -> Any:
@@ -642,6 +770,29 @@ def load_selector538_chunk0() -> Any:
             SELECTOR538_CHUNK0_BUILDER_PATH,
         )
     return SELECTOR538_CHUNK0
+
+
+def load_bound_terminal_2546_category_b_deferred() -> Any:
+    global BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED
+    if BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED is None:
+        BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED = load_module(
+            (
+                "pc_dialogue_runtime_vm_bound_terminal_2546_"
+                "category_b_deferred"
+            ),
+            BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_BUILDER_PATH,
+        )
+    return BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED
+
+
+def load_selector538_family() -> Any:
+    global SELECTOR538_FAMILY
+    if SELECTOR538_FAMILY is None:
+        SELECTOR538_FAMILY = load_module(
+            "pc_dialogue_runtime_vm_selector538_family",
+            SELECTOR538_FAMILY_BUILDER_PATH,
+        )
+    return SELECTOR538_FAMILY
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -3009,8 +3160,15 @@ def combined_pk_candidate_sha256(
         if resource == "pk_msggame"
         and isinstance(row.get("translation"), str)
     }
-    blob = layer.BASE_AUDIT.rebuild_packed_with_literals(
-        layer.BASE_AUDIT.DEFAULT_PK_CURRENT.read_bytes(),
+    base_audit = getattr(layer, "BASE_AUDIT", None)
+    if base_audit is None:
+        require(
+            layer is load_selector538_family(),
+            "combined PK candidate layer has no packed rebuild adapter",
+        )
+        base_audit = load_selector538_chunk0().BASE_AUDIT
+    blob = base_audit.rebuild_packed_with_literals(
+        base_audit.DEFAULT_PK_CURRENT.read_bytes(),
         replacements,
     )
     return sha256_bytes(blob)
@@ -3361,6 +3519,408 @@ def apply_selector538_chunk0_updates(
     return EXPECTED_SELECTOR538_CHUNK0_PROMOTIONS, metadata
 
 
+def build_d5_selector538_family_consolidation_proof() -> dict[str, Any]:
+    deferred = load_bound_terminal_2546_category_b_deferred()
+    family = load_selector538_family()
+    layers = {
+        "deferred": closure_delta_sets(
+            path=deferred.DEFAULT_DECISION_OUTPUT,
+            expected_sha256=(
+                EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_DECISION_SHA256
+            ),
+            action_field=deferred.UPDATE_ACTION_FIELD,
+        ),
+        "family": closure_delta_sets(
+            path=family.DEFAULT_DECISION_OUTPUT,
+            expected_sha256=EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
+            action_field=family.UPDATE_ACTION_FIELD,
+        ),
+    }
+    intersection = layers["deferred"]["delta"] & layers["family"]["delta"]
+    decision_union = (
+        layers["deferred"]["delta"] | layers["family"]["delta"]
+    )
+    promotion_union = (
+        layers["deferred"]["promotion"]
+        | layers["family"]["promotion"]
+    )
+    require(
+        not intersection
+        and family.coordinate_digest(intersection)
+        == EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256
+        and family.coordinate_digest(decision_union)
+        == EXPECTED_D5_SELECTOR538_FAMILY_DECISION_UNION_COORDINATE_SHA256
+        and family.coordinate_digest(promotion_union)
+        == EXPECTED_D5_SELECTOR538_FAMILY_PROMOTION_UNION_COORDINATE_SHA256,
+        "D5/selector538 family exact disjointness proof drifted",
+    )
+    return {
+        "decision_overlap_count": 0,
+        "decision_overlap_coordinate_sha256":
+        EXPECTED_CLOSURE_OVERLAP_EMPTY_SHA256,
+        "decision_union_count": len(decision_union),
+        "decision_union_coordinate_sha256":
+        EXPECTED_D5_SELECTOR538_FAMILY_DECISION_UNION_COORDINATE_SHA256,
+        "promotion_union_count": len(promotion_union),
+        "promotion_union_coordinate_sha256":
+        EXPECTED_D5_SELECTOR538_FAMILY_PROMOTION_UNION_COORDINATE_SHA256,
+        "translation_override_conflict_count": 0,
+    }
+
+
+def validated_bound_terminal_2546_category_b_deferred_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    layer = load_bound_terminal_2546_category_b_deferred()
+    (
+        decision_content,
+        evidence_content,
+        audit_content,
+        promotion_content,
+        audit,
+        bundle,
+    ) = layer.build_outputs()
+    layer.validate_outputs(
+        decision_content=decision_content,
+        evidence_content=evidence_content,
+        audit_content=audit_content,
+        promotion_content=promotion_content,
+        audit=audit,
+        bundle=bundle,
+    )
+    artifacts = {
+        "audit": (
+            layer.DEFAULT_AUDIT_OUTPUT,
+            audit_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_AUDIT_SHA256,
+        ),
+        "promotion": (
+            layer.DEFAULT_PROMOTION_OUTPUT,
+            promotion_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTION_SHA256,
+        ),
+        "decision": (
+            layer.DEFAULT_DECISION_OUTPUT,
+            decision_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_DECISION_SHA256,
+        ),
+        "evidence": (
+            layer.DEFAULT_EVIDENCE_OUTPUT,
+            evidence_content,
+            EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_EVIDENCE_SHA256,
+        ),
+    }
+    for name, (path, content, expected_hash) in artifacts.items():
+        require(
+            path.is_file()
+            and path.read_text(encoding="utf-8") == content
+            and sha256_bytes(content.encode("utf-8")) == expected_hash,
+            f"category-B deferred {name} artifact drifted: {path}",
+        )
+    updates = {
+        ("pk_msggame", str(row["coordinate"])): dict(row)
+        for row in bundle["updated_rows"]
+    }
+    predecessors = {
+        key: dict(bundle["inputs"]["predecessor_rows"][key])
+        for key in updates
+    }
+    actions = Counter(
+        str(row[layer.UPDATE_ACTION_FIELD])
+        for row in bundle["updated_rows"]
+    )
+    require(
+        len(updates)
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_UPDATED_ROW_COUNT
+        and dict(actions)
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_ACTION_COUNTS
+        and audit["guards"]["candidate_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_SOURCE_CANDIDATE_SHA256
+        and audit["guards"]["decision_coordinate_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_DECISION_COORDINATE_SHA256
+        and audit["guards"]["report_payload_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_AUDIT_PAYLOAD_SHA256
+        and bundle["promotion"]["guards"]["report_payload_sha256"]
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTION_PAYLOAD_SHA256,
+        "category-B deferred frozen closure contract drifted",
+    )
+    metadata = {
+        "translation_override_count":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_OVERRIDE_COUNT,
+        "verification_renewal_count":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_RENEWAL_COUNT,
+        "promotion_count":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTIONS,
+        "updated_row_count":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_UPDATED_ROW_COUNT,
+        "action_counts": dict(sorted(actions.items())),
+        "source_candidate_packed_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_SOURCE_CANDIDATE_SHA256,
+        "private_source_update_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_DECISION_SHA256,
+        "private_source_evidence_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_EVIDENCE_SHA256,
+        "audit_report_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_AUDIT_SHA256,
+        "audit_report_payload_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_AUDIT_PAYLOAD_SHA256,
+        "promotion_report_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTION_SHA256,
+        "promotion_report_payload_sha256":
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTION_PAYLOAD_SHA256,
+        "steam_write_performed": False,
+    }
+    return updates, predecessors, metadata
+
+
+def apply_bound_terminal_2546_category_b_deferred_updates(
+    merged: dict[tuple[str, str], dict[str, Any]],
+) -> tuple[int, dict[str, Any]]:
+    layer = load_bound_terminal_2546_category_b_deferred()
+    updates, predecessors, metadata = (
+        validated_bound_terminal_2546_category_b_deferred_updates()
+    )
+    for key, updated in updates.items():
+        predecessor = merged.get(key)
+        require(
+            predecessor is not None and predecessor == predecessors[key],
+            f"category-B deferred rebased predecessor row drifted: {key}",
+        )
+        evidence = updated.get("runtime_vm_verification")
+        action = str(updated.get(layer.UPDATE_ACTION_FIELD))
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("schema") == layer.EVIDENCE_SCHEMA
+            and evidence.get("method") == layer.METHOD
+            and evidence.get("action") == action
+            and evidence.get("predecessor_binding", {}).get("row_sha256")
+            == layer.canonical_sha256(predecessor)
+            and evidence.get("predecessor_binding", {}).get(
+                "immutable_checkpoint_sha256"
+            )
+            == layer.IMMEDIATE.EXPECTED_PREDECESSOR_PRIVATE_SHA256
+            and evidence.get("closure_binding", {}).get("candidate_sha256")
+            == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_SOURCE_CANDIDATE_SHA256,
+            f"category-B deferred rebased evidence drifted: {key}",
+        )
+        merged[key] = dict(updated)
+    combined_candidate = combined_pk_candidate_sha256(merged, layer)
+    require(
+        combined_candidate
+        == EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_COMBINED_CANDIDATE_SHA256,
+        "A+B+selector538 C0+D5 combined PK candidate drifted",
+    )
+    metadata["combined_candidate_packed_sha256"] = combined_candidate
+    return (
+        EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_PROMOTIONS,
+        metadata,
+    )
+
+
+def validated_selector538_family_updates() -> tuple[
+    dict[tuple[str, str], dict[str, Any]],
+    dict[tuple[str, str], dict[str, Any]],
+    dict[str, Any],
+]:
+    layer = load_selector538_family()
+    bundle = layer.build_outputs()
+    layer.validate_output_hashes(bundle)
+    artifacts = {
+        "audit": (
+            layer.DEFAULT_AUDIT_OUTPUT,
+            bundle["audit_content"],
+            EXPECTED_SELECTOR538_FAMILY_AUDIT_SHA256,
+        ),
+        "promotion": (
+            layer.DEFAULT_PROMOTION_OUTPUT,
+            bundle["promotion_content"],
+            EXPECTED_SELECTOR538_FAMILY_PROMOTION_SHA256,
+        ),
+        "decision": (
+            layer.DEFAULT_DECISION_OUTPUT,
+            bundle["decision_content"],
+            EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
+        ),
+        "evidence": (
+            layer.DEFAULT_EVIDENCE_OUTPUT,
+            bundle["evidence_content"],
+            EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256,
+        ),
+    }
+    for name, (path, content, expected_hash) in artifacts.items():
+        require(
+            path.is_file()
+            and path.read_text(encoding="utf-8") == content
+            and sha256_bytes(content.encode("utf-8")) == expected_hash,
+            f"selector538 family {name} artifact drifted: {path}",
+        )
+    frozen = layer.load_frozen_chunks()
+    chunk0_rows = frozen["chunks"][0]["decision_rows"]
+    baseline_rows = layer.index_rows(
+        layer.load_jsonl(layer.PREDECESSOR_PRIVATE_PATH)
+    )
+    updates = {
+        ("pk_msggame", str(row["coordinate"])): dict(row)
+        for row in bundle["updated_rows"]
+    }
+    predecessors = {
+        key: dict(
+            chunk0_rows[key[1]]
+            if key[1] in chunk0_rows
+            else baseline_rows[key]
+        )
+        for key in updates
+    }
+    actions = Counter(
+        str(row[layer.UPDATE_ACTION_FIELD])
+        for row in bundle["updated_rows"]
+    )
+    audit = bundle["audit"]
+    promotion = bundle["promotion"]
+    require(
+        len(updates) == EXPECTED_SELECTOR538_FAMILY_UPDATED_ROW_COUNT
+        and dict(actions) == EXPECTED_SELECTOR538_FAMILY_ACTION_COUNTS
+        and audit["scope"]["runtime_promotion_rows"]
+        == EXPECTED_SELECTOR538_FAMILY_TOTAL_PROMOTION_COUNT
+        and audit["scope"]["incremental_runtime_promotion_rows"]
+        == EXPECTED_SELECTOR538_FAMILY_INCREMENTAL_PROMOTIONS
+        and audit["scope"]["verification_renewal_rows"]
+        == EXPECTED_SELECTOR538_FAMILY_RENEWAL_COUNT
+        and audit["scope"]["exact_override_union_rows"]
+        == EXPECTED_SELECTOR538_FAMILY_OVERRIDE_COUNT
+        and audit["guards"]["decision_union_coordinate_sha256"]
+        == EXPECTED_SELECTOR538_FAMILY_DECISION_COORDINATE_SHA256
+        and audit["guards"]["promotion_union_coordinate_sha256"]
+        == EXPECTED_SELECTOR538_FAMILY_PROMOTION_COORDINATE_SHA256
+        and audit["guards"]["renewal_common_coordinate_sha256"]
+        == EXPECTED_SELECTOR538_FAMILY_RENEWAL_COORDINATE_SHA256
+        and audit["guards"]["override_union_coordinate_sha256"]
+        == EXPECTED_SELECTOR538_FAMILY_OVERRIDE_COORDINATE_SHA256
+        and audit["guards"]["report_payload_sha256"]
+        == EXPECTED_SELECTOR538_FAMILY_AUDIT_PAYLOAD_SHA256
+        and promotion["guards"]["report_payload_sha256"]
+        == EXPECTED_SELECTOR538_FAMILY_PROMOTION_PAYLOAD_SHA256
+        and bundle["candidate_sha256"]
+        == EXPECTED_SELECTOR538_FAMILY_SOURCE_CANDIDATE_SHA256,
+        "selector538 family frozen closure contract drifted",
+    )
+    metadata = {
+        "translation_override_count":
+        EXPECTED_SELECTOR538_FAMILY_OVERRIDE_COUNT,
+        "verification_renewal_count":
+        EXPECTED_SELECTOR538_FAMILY_RENEWAL_COUNT,
+        "promotion_count":
+        EXPECTED_SELECTOR538_FAMILY_INCREMENTAL_PROMOTIONS,
+        "total_family_promotion_count":
+        EXPECTED_SELECTOR538_FAMILY_TOTAL_PROMOTION_COUNT,
+        "superseded_chunk0_promotion_count":
+        EXPECTED_SELECTOR538_FAMILY_SUPERSEDED_CHUNK0_PROMOTIONS,
+        "superseded_chunk0_renewal_count":
+        EXPECTED_SELECTOR538_FAMILY_SUPERSEDED_RENEWALS,
+        "updated_row_count":
+        EXPECTED_SELECTOR538_FAMILY_UPDATED_ROW_COUNT,
+        "action_counts": dict(sorted(actions.items())),
+        "source_candidate_sha256":
+        EXPECTED_SELECTOR538_FAMILY_SOURCE_CANDIDATE_SHA256,
+        "private_source_update_sha256":
+        EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
+        "private_source_evidence_sha256":
+        EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256,
+        "audit_report_sha256": EXPECTED_SELECTOR538_FAMILY_AUDIT_SHA256,
+        "audit_report_payload_sha256":
+        EXPECTED_SELECTOR538_FAMILY_AUDIT_PAYLOAD_SHA256,
+        "promotion_report_sha256":
+        EXPECTED_SELECTOR538_FAMILY_PROMOTION_SHA256,
+        "promotion_report_payload_sha256":
+        EXPECTED_SELECTOR538_FAMILY_PROMOTION_PAYLOAD_SHA256,
+        "decision_union_coordinate_sha256":
+        EXPECTED_SELECTOR538_FAMILY_DECISION_COORDINATE_SHA256,
+        "promotion_union_coordinate_sha256":
+        EXPECTED_SELECTOR538_FAMILY_PROMOTION_COORDINATE_SHA256,
+        "renewal_common_coordinate_sha256":
+        EXPECTED_SELECTOR538_FAMILY_RENEWAL_COORDINATE_SHA256,
+        "override_union_coordinate_sha256":
+        EXPECTED_SELECTOR538_FAMILY_OVERRIDE_COORDINATE_SHA256,
+        "steam_write_performed": False,
+    }
+    return updates, predecessors, metadata
+
+
+def apply_selector538_family_updates(
+    merged: dict[tuple[str, str], dict[str, Any]],
+) -> tuple[int, dict[str, Any]]:
+    layer = load_selector538_family()
+    updates, predecessors, metadata = validated_selector538_family_updates()
+    incremental_promotions: list[str] = []
+    superseded_renewals: list[str] = []
+    for key, updated in updates.items():
+        predecessor = merged.get(key)
+        require(
+            predecessor is not None and predecessor == predecessors[key],
+            f"selector538 family official predecessor row drifted: {key}",
+        )
+        evidence = updated.get("runtime_vm_verification")
+        action = str(updated.get(layer.UPDATE_ACTION_FIELD))
+        require(
+            isinstance(evidence, dict)
+            and evidence.get("schema") == layer.EVIDENCE_SCHEMA
+            and evidence.get("method") == layer.METHOD
+            and evidence.get("action") == action
+            and evidence.get("predecessor_binding", {}).get(
+                "official_row_sha256"
+            )
+            == layer.canonical_sha256(predecessor)
+            and evidence.get("predecessor_binding", {}).get(
+                "official_checkpoint_sha256"
+            )
+            == layer.EXPECTED_OFFICIAL_PREDECESSOR_PRIVATE_SHA256
+            and evidence.get("closure_binding", {}).get(
+                "decision_union_coordinate_sha256"
+            )
+            == EXPECTED_SELECTOR538_FAMILY_DECISION_COORDINATE_SHA256,
+            f"selector538 family rebased evidence drifted: {key}",
+        )
+        if (
+            predecessor.get("runtime_review") == "pending"
+            and updated.get("runtime_review") == "verified"
+        ):
+            incremental_promotions.append(key[1])
+        if (
+            "verification_renewal" in action
+            and predecessor.get("translation")
+            != updated.get("translation")
+        ):
+            superseded_renewals.append(key[1])
+        merged[key] = dict(updated)
+    require(
+        len(incremental_promotions)
+        == EXPECTED_SELECTOR538_FAMILY_INCREMENTAL_PROMOTIONS
+        and layer.coordinate_digest(incremental_promotions)
+        == EXPECTED_SELECTOR538_FAMILY_LATER_PROMOTION_COORDINATE_SHA256
+        and len(superseded_renewals)
+        == EXPECTED_SELECTOR538_FAMILY_SUPERSEDED_RENEWALS
+        and layer.coordinate_digest(superseded_renewals)
+        == EXPECTED_SELECTOR538_FAMILY_SUPERSEDED_RENEWAL_COORDINATE_SHA256,
+        "selector538 family exact C0 supersession drifted",
+    )
+    combined_candidate = combined_pk_candidate_sha256(merged, layer)
+    require(
+        combined_candidate
+        == EXPECTED_SELECTOR538_FAMILY_COMBINED_CANDIDATE_SHA256,
+        "D5+selector538 family combined PK candidate drifted",
+    )
+    metadata["combined_candidate_packed_sha256"] = combined_candidate
+    metadata["incremental_promotion_coordinate_sha256"] = (
+        layer.coordinate_digest(incremental_promotions)
+    )
+    metadata["superseded_renewal_coordinate_sha256"] = (
+        layer.coordinate_digest(superseded_renewals)
+    )
+    return EXPECTED_SELECTOR538_FAMILY_INCREMENTAL_PROMOTIONS, metadata
+
+
 def validate_combined_private(
     prepared: Any,
     content: str,
@@ -3399,6 +3959,8 @@ def build_outputs(
     include_bound_terminal_2546_simple_caller: bool = False,
     include_bound_terminal_2546_category_b_immediate: bool = False,
     include_selector538_chunk0: bool = False,
+    include_bound_terminal_2546_category_b_deferred: bool = False,
+    include_selector538_family: bool = False,
 ) -> tuple[str, str, dict[str, Any]]:
     if include_cross_resource is None:
         include_cross_resource = include_pk_only
@@ -3455,6 +4017,22 @@ def build_outputs(
         (
             "selector538 chunk0 closure requires bound-terminal 2546 "
             "category-B immediate integration"
+        ),
+    )
+    require(
+        include_selector538_chunk0
+        or not include_bound_terminal_2546_category_b_deferred,
+        (
+            "bound-terminal 2546 category-B deferred closure requires "
+            "selector538 chunk0 integration"
+        ),
+    )
+    require(
+        include_bound_terminal_2546_category_b_deferred
+        or not include_selector538_family,
+        (
+            "selector538 family consolidation requires category-B "
+            "deferred integration"
         ),
     )
     prepared = ENGINE.prepare_artifacts(steam_root, base_pristine, pk_pristine)
@@ -3992,6 +4570,52 @@ def build_outputs(
             selector538_chunk0_promotions,
             selector538_chunk0_metadata,
         ) = apply_selector538_chunk0_updates(merged)
+    post_selector538_chunk0_rows = sorted(
+        merged.values(), key=coordinate_sort_key
+    )
+    post_selector538_chunk0_private_sha256 = sha256_bytes(
+        canonical_jsonl(post_selector538_chunk0_rows).encode("utf-8")
+    )
+    d5_selector538_family_consolidation_proof: (
+        dict[str, Any] | None
+    ) = None
+    bound_terminal_2546_category_b_deferred_promotions = 0
+    bound_terminal_2546_category_b_deferred_metadata: (
+        dict[str, Any] | None
+    ) = None
+    if include_bound_terminal_2546_category_b_deferred:
+        require(
+            post_selector538_chunk0_private_sha256
+            == EXPECTED_FINAL_SELECTOR538_PRIVATE_SHA256,
+            (
+                "category-B deferred official predecessor drifted: "
+                f"{post_selector538_chunk0_private_sha256}"
+            ),
+        )
+        d5_selector538_family_consolidation_proof = (
+            build_d5_selector538_family_consolidation_proof()
+        )
+        (
+            bound_terminal_2546_category_b_deferred_promotions,
+            bound_terminal_2546_category_b_deferred_metadata,
+        ) = apply_bound_terminal_2546_category_b_deferred_updates(merged)
+    post_bound_terminal_2546_category_b_deferred_rows = sorted(
+        merged.values(), key=coordinate_sort_key
+    )
+    post_bound_terminal_2546_category_b_deferred_private_sha256 = (
+        sha256_bytes(
+            canonical_jsonl(
+                post_bound_terminal_2546_category_b_deferred_rows
+            ).encode("utf-8")
+        )
+    )
+    selector538_family_promotions = 0
+    selector538_family_metadata: dict[str, Any] | None = None
+    if include_selector538_family:
+        (
+            selector538_family_promotions,
+            selector538_family_metadata,
+        ) = apply_selector538_family_updates(merged)
     pk_integrated_promotions = (
         predecessor_promotions
         + pk_only_promotions
@@ -4004,6 +4628,8 @@ def build_outputs(
         + bound_terminal_2546_simple_caller_promotions
         + bound_terminal_2546_category_b_promotions
         + selector538_chunk0_promotions
+        + bound_terminal_2546_category_b_deferred_promotions
+        + selector538_family_promotions
     )
     pk_metadata["rebuilt_predecessor_integrated_private_sha256"] = (
         predecessor_private_sha256
@@ -4107,9 +4733,42 @@ def build_outputs(
         ] = post_bound_terminal_2546_category_b_private_sha256
         pk_metadata["selector538_chunk0"] = selector538_chunk0_metadata
         pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_bound_terminal_2546_category_b_deferred:
+        assert (
+            bound_terminal_2546_category_b_deferred_metadata is not None
+        )
+        assert d5_selector538_family_consolidation_proof is not None
+        pk_metadata[
+            "bound_terminal_2546_category_b_deferred_layer_included"
+        ] = True
+        pk_metadata[
+            "rebuilt_post_selector538_chunk0_integrated_private_sha256"
+        ] = post_selector538_chunk0_private_sha256
+        pk_metadata["bound_terminal_2546_category_b_deferred"] = (
+            bound_terminal_2546_category_b_deferred_metadata
+        )
+        pk_metadata["d5_selector538_family_consolidation_proof"] = (
+            d5_selector538_family_consolidation_proof
+        )
+        pk_metadata["promotion_count"] = pk_integrated_promotions
+    if include_selector538_family:
+        assert selector538_family_metadata is not None
+        pk_metadata["selector538_family_layer_included"] = True
+        pk_metadata[
+            "rebuilt_post_bound_terminal_2546_category_b_deferred_"
+            "integrated_private_sha256"
+        ] = (
+            post_bound_terminal_2546_category_b_deferred_private_sha256
+        )
+        pk_metadata["selector538_family"] = selector538_family_metadata
+        pk_metadata["promotion_count"] = pk_integrated_promotions
 
     expected_pk_promotions = (
-        EXPECTED_PK_SELECTOR538_CHUNK0_FINAL_PROMOTIONS
+        EXPECTED_PK_SELECTOR538_FAMILY_FINAL_PROMOTIONS
+        if include_selector538_family
+        else EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PROMOTIONS
+        if include_bound_terminal_2546_category_b_deferred
+        else EXPECTED_PK_SELECTOR538_CHUNK0_FINAL_PROMOTIONS
         if include_selector538_chunk0
         else EXPECTED_PK_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PROMOTIONS
         if include_bound_terminal_2546_category_b_immediate
@@ -4149,7 +4808,11 @@ def build_outputs(
     )
     pending_after = sum(row["runtime_review"] == "pending" for row in rows)
     expected_pending_after = (
-        EXPECTED_SELECTOR538_CHUNK0_FINAL_PENDING_AFTER
+        EXPECTED_SELECTOR538_FAMILY_FINAL_PENDING_AFTER
+        if include_selector538_family
+        else EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_DEFERRED_FINAL_PENDING_AFTER
+        if include_bound_terminal_2546_category_b_deferred
+        else EXPECTED_SELECTOR538_CHUNK0_FINAL_PENDING_AFTER
         if include_selector538_chunk0
         else EXPECTED_BOUND_TERMINAL_2546_CATEGORY_B_FINAL_PENDING_AFTER
         if include_bound_terminal_2546_category_b_immediate
@@ -4178,7 +4841,17 @@ def build_outputs(
     private_content = canonical_jsonl(rows)
     validate_combined_private(prepared, private_content, private_output)
     private_sha256 = sha256_bytes(private_content.encode("utf-8"))
-    if include_selector538_chunk0:
+    if include_selector538_family:
+        if EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256 is not None:
+            require(
+                private_sha256
+                == EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PRIVATE_SHA256,
+                (
+                    "D5/selector538 family final private digest "
+                    f"drifted: {private_sha256}"
+                ),
+            )
+    elif include_selector538_chunk0:
         if EXPECTED_FINAL_SELECTOR538_PRIVATE_SHA256 is not None:
             require(
                 private_sha256 == EXPECTED_FINAL_SELECTOR538_PRIVATE_SHA256,
@@ -4421,8 +5094,50 @@ def build_outputs(
                 "combined_candidate_record_and_root_rebound": True,
             }
         )
+    if include_bound_terminal_2546_category_b_deferred:
+        report["validation"].update(
+            {
+                (
+                    "bound_terminal_2546_category_b_deferred_"
+                    "layer_included"
+                ): True,
+                "official_a19_predecessor_rebuilt_and_matched":
+                post_selector538_chunk0_private_sha256
+                == EXPECTED_FINAL_SELECTOR538_PRIVATE_SHA256,
+                "exact_6_deferred_translation_overrides_rechecked": True,
+                "affected_2_deferred_verified_rows_renewed": True,
+                "actual_5_deferred_pending_promotions_rechecked": True,
+                "all_14_deferred_register_assemblies_rechecked": True,
+                "d5_selector538_family_disjointness_rechecked": True,
+                "combined_candidate_record_and_root_rebound": True,
+            }
+        )
+    if include_selector538_family:
+        report["validation"].update(
+            {
+                "selector538_family_layer_included": True,
+                "all_4_independent_chunk_artifacts_rechecked": True,
+                "exact_142_translation_override_union_rechecked": True,
+                "affected_420_verified_pk_runtime_evidence_renewed": True,
+                "actual_212_incremental_pending_promotions_rechecked": True,
+                "chunk0_65_promotions_exactly_superseded": True,
+                "chunk0_69_renewal_rows_exactly_superseded": True,
+                "chunk0_351_renewal_rows_retained": True,
+                "all_1057_register_assemblies_rechecked": True,
+                "sequential_renewal_row_replacement_used": False,
+                "unique_renewal_override_owner_union_preserved": True,
+                "combined_candidate_record_and_root_rebound": True,
+            }
+        )
     public_content = canonical_json(report)
-    if include_selector538_chunk0:
+    if include_selector538_family:
+        if EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PUBLIC_SHA256 is not None:
+            require(
+                sha256_bytes(public_content.encode("utf-8"))
+                == EXPECTED_FINAL_D5_SELECTOR538_FAMILY_PUBLIC_SHA256,
+                "D5/selector538 family final public digest drifted",
+            )
+    elif include_selector538_chunk0:
         if EXPECTED_FINAL_SELECTOR538_PUBLIC_SHA256 is not None:
             require(
                 sha256_bytes(public_content.encode("utf-8"))
@@ -4492,6 +5207,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         include_bound_terminal_2546_simple_caller=True,
         include_bound_terminal_2546_category_b_immediate=True,
         include_selector538_chunk0=True,
+        include_bound_terminal_2546_category_b_deferred=True,
+        include_selector538_family=True,
     )
     if args.write:
         ENGINE.atomic_write(args.private_output, private_content)
