@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Boundary tests for the frozen post-selector-538-family checkpoint."""
+"""Boundary tests for the frozen selector568/1096/1174 checkpoint."""
 
 from __future__ import annotations
 
@@ -18,7 +18,9 @@ from typing import Any
 SCRIPT = Path(__file__).resolve()
 WORKSTREAM = SCRIPT.parent
 BUILDER_PATH = (
-    WORKSTREAM / "build_runtime_vm_post_selector538_family_checkpoint_v1.py"
+    WORKSTREAM
+    / "build_runtime_vm_post_selector568_1096_1174_"
+    "consolidated_checkpoint_v1.py"
 )
 
 
@@ -41,12 +43,12 @@ def sha256_file(path: Path) -> str:
 
 
 BUILDER = load_module(
-    "runtime_vm_post_selector538_family_checkpoint_test_builder",
+    "runtime_vm_post_selector568_1096_1174_checkpoint_test_builder",
     BUILDER_PATH,
 )
 
 
-class PostSelector538FamilyCheckpointTests(unittest.TestCase):
+class PostSelector56810961174CheckpointTests(unittest.TestCase):
     def test_all_required_closure_flags_are_explicit_and_default_off(
         self,
     ) -> None:
@@ -70,33 +72,42 @@ class PostSelector538FamilyCheckpointTests(unittest.TestCase):
 
     def test_frozen_counts_and_digests_match_final_integration(self) -> None:
         self.assertEqual(BUILDER.EXPECTED_ROWS, 52_803)
-        self.assertEqual(BUILDER.EXPECTED_PENDING, 7_896)
-        self.assertEqual(BUILDER.EXPECTED_PK_PROMOTIONS, 12_787)
-        self.assertEqual(BUILDER.EXPECTED_PROMOTED_TOTAL, 28_438)
+        self.assertEqual(BUILDER.EXPECTED_PENDING, 7_268)
+        self.assertEqual(BUILDER.EXPECTED_ELIGIBLE, 45_535)
+        self.assertEqual(BUILDER.EXPECTED_PK_PROMOTIONS, 13_415)
+        self.assertEqual(BUILDER.EXPECTED_PROMOTED_TOTAL, 29_066)
+        self.assertEqual(BUILDER.EXPECTED_UPDATED_ROWS, 1_173)
+        self.assertEqual(BUILDER.EXPECTED_LAYER_PROMOTIONS, 628)
+        self.assertEqual(BUILDER.EXPECTED_LAYER_RENEWALS, 545)
+        self.assertEqual(BUILDER.EXPECTED_LAYER_OVERRIDES, 440)
         self.assertEqual(
             BUILDER.EXPECTED_PRIVATE_SHA256,
             (
-                "81B4E22C3C20AA5F7FF8B8251A2829A"
-                "EEB0C6E0A0D9FA2B93748B6249F23F6CB"
+                "FC157A9907686D0EA6DC6C61C7785E81"
+                "AC7F750100F2E1CDDE02DBF4F09F2DCA"
             ),
         )
         self.assertEqual(
             BUILDER.EXPECTED_PK_CANDIDATE_SHA256,
             (
-                "DCB19B0D85422F7C0EA5888F9A0C4766"
-                "7D75A88D100BABAE11DDAF4A8DD2000E"
+                "07E65E6338D32C1FD13F17408F82A413"
+                "3E55541C722874632948C7B36C909805"
             ),
         )
 
-    def test_integration_builder_and_report_are_exactly_bound(self) -> None:
+    def test_frozen_inputs_are_exactly_bound(self) -> None:
         BUILDER.validate_frozen_inputs()
         self.assertEqual(
             sha256_file(BUILDER.INTEGRATION_PATH),
             BUILDER.EXPECTED_INTEGRATION_BUILDER_SHA256,
         )
         self.assertEqual(
-            sha256_file(BUILDER.INTEGRATION_REPORT_PATH),
-            BUILDER.EXPECTED_INTEGRATION_REPORT_SHA256,
+            sha256_file(BUILDER.PREDECESSOR_PRIVATE_PATH),
+            BUILDER.EXPECTED_PREDECESSOR_PRIVATE_SHA256,
+        )
+        self.assertEqual(
+            sha256_file(BUILDER.PREDECESSOR_PUBLIC_PATH),
+            BUILDER.EXPECTED_PREDECESSOR_PUBLIC_SHA256,
         )
 
     def test_default_paths_preserve_private_public_boundary(self) -> None:
@@ -114,21 +125,18 @@ class PostSelector538FamilyCheckpointTests(unittest.TestCase):
             WORKSTREAM.resolve(strict=False),
         )
 
-    def test_private_output_cannot_escape_tmp_output_root(self) -> None:
-        args = argparse.Namespace(
-            private_output=WORKSTREAM / "private.jsonl",
-            public_output=BUILDER.DEFAULT_PUBLIC_OUTPUT,
-        )
-        with self.assertRaises(BUILDER.CheckpointError):
-            BUILDER.validate_output_paths(args)
-
-    def test_private_output_cannot_equal_output_root(self) -> None:
-        args = argparse.Namespace(
-            private_output=BUILDER.OUTPUT_ROOT,
-            public_output=BUILDER.DEFAULT_PUBLIC_OUTPUT,
-        )
-        with self.assertRaises(BUILDER.CheckpointError):
-            BUILDER.validate_output_paths(args)
+    def test_private_output_cannot_escape_or_change_checkpoint(self) -> None:
+        for private_output in (
+            WORKSTREAM / "private.jsonl",
+            BUILDER.OUTPUT_ROOT,
+            BUILDER.OUTPUT_ROOT / "different.private.v1.jsonl",
+        ):
+            args = argparse.Namespace(
+                private_output=private_output,
+                public_output=BUILDER.DEFAULT_PUBLIC_OUTPUT,
+            )
+            with self.assertRaises(BUILDER.CheckpointError):
+                BUILDER.validate_output_paths(args)
 
     def test_public_output_is_fixed(self) -> None:
         args = argparse.Namespace(
@@ -151,11 +159,7 @@ class PostSelector538FamilyCheckpointTests(unittest.TestCase):
         BUILDER.validate_checkpoint_report(report)
         self.assertEqual(
             hashlib.sha256(raw.encode("utf-8")).hexdigest().upper(),
-            BUILDER.EXPECTED_INTEGRATION_REPORT_SHA256,
-        )
-        self.assertEqual(
-            raw,
-            BUILDER.INTEGRATION_REPORT_PATH.read_text(encoding="utf-8"),
+            BUILDER.EXPECTED_PUBLIC_SHA256,
         )
         self.assertFalse(report["steam_write_performed"])
         self.assertFalse(

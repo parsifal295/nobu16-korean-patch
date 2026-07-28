@@ -25,10 +25,24 @@ CANDIDATE_MANIFEST = OUTPUT_ROOT / "candidate" / "candidate_manifest.source_free
 PROGRESS_PATH = WORKSTREAM / "progress.source_free.v1.json"
 CONTROL_REPAIRS_PATH = WORKSTREAM / "runtime_control_repairs.source_free.v1.json"
 RUNTIME_VM_INTEGRATED_DECISIONS = (
-    OUTPUT_ROOT / "runtime_vm_integrated.private.v1.jsonl"
+    OUTPUT_ROOT
+    / "runtime_vm_integrated."
+    "post_selector568_1096_1174_consolidated_checkpoint.private.v1.jsonl"
 )
 RUNTIME_VM_INTEGRATION_REPORT = (
-    WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
+    WORKSTREAM
+    / "runtime_vm_integration."
+    "post_selector568_1096_1174_consolidated_checkpoint.source_free.v1.json"
+)
+SELECTOR538_PREDECESSOR_DECISIONS = (
+    OUTPUT_ROOT
+    / "runtime_vm_integrated."
+    "post_selector538_family_checkpoint.private.v1.jsonl"
+)
+SELECTOR538_PREDECESSOR_REPORT = (
+    WORKSTREAM
+    / "runtime_vm_integration."
+    "post_selector538_family_checkpoint.source_free.v1.json"
 )
 HISTORICAL_RUNTIME_VM_INTEGRATED_DECISIONS = (
     OUTPUT_ROOT
@@ -64,6 +78,19 @@ SELECTOR538_FAMILY_EVIDENCE_PATH = (
     / "runtime_verification_overlays"
     / "pk_selector538_family_consolidated_closure_evidence.private.v1.jsonl"
 )
+SELECTOR568_1096_1174_CONSOLIDATED_DECISION_PATH = (
+    OUTPUT_ROOT
+    / "semantic_overrides"
+    / "pk_selector568_1096_1174_consolidated_closure_"
+    "decisions.private.v1.jsonl"
+)
+SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_PATH = (
+    OUTPUT_ROOT
+    / "decisions"
+    / "runtime_verification_overlays"
+    / "pk_selector568_1096_1174_consolidated_closure_"
+    "evidence.private.v1.jsonl"
+)
 SEMANTIC_OVERRIDE_BUILDER_PATH = (
     WORKSTREAM / "build_pk_semantic_flattening_override_3421_v1.py"
 )
@@ -95,9 +122,15 @@ BOUND_TERMINAL_OVERRIDE_COORDINATES = frozenset(
     }
 )
 EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256 = (
-    "81B4E22C3C20AA5F7FF8B8251A2829AEEB0C6E0A0D9FA2B93748B6249F23F6CB"
+    "FC157A9907686D0EA6DC6C61C7785E81AC7F750100F2E1CDDE02DBF4F09F2DCA"
 )
 EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256 = (
+    "1FCF033F1F75FC43473152CFB7115D170657519952C19D563C36C3F9BAB4CBD1"
+)
+EXPECTED_SELECTOR538_PREDECESSOR_PRIVATE_SHA256 = (
+    "81B4E22C3C20AA5F7FF8B8251A2829AEEB0C6E0A0D9FA2B93748B6249F23F6CB"
+)
+EXPECTED_SELECTOR538_PREDECESSOR_REPORT_SHA256 = (
     "46270F70A019484EFB1F99851D436467C8FD2DE32EB222BDC048DA1B5BC080FA"
 )
 EXPECTED_HISTORICAL_PRIVATE_SHA256 = (
@@ -118,9 +151,25 @@ EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256 = (
 EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256 = (
     "910C0A59823C2B6B083F58257D6203053738EFEFC2E49E6271D553FF44CAB940"
 )
-EXPECTED_FINAL_PK_CANDIDATE_SHA256 = (
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256 = (
+    "3260FCF12561EE116228907E1619FDB368DBDF9D0BA8565C03CD014440669B38"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256 = (
+    "3AA3CB05106CA921F22B96D26B8FA74A4F7C7D15A4D3AE122738F92E10A34C25"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SHA256 = (
+    "1C70A12C107DB79B1402F5879364F5AAEA31F34B3933F4C53524C89B570F9990"
+)
+EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_SHA256 = (
+    "E16B597EF856822350D3FD0E0FAB7A9737E3D40D6FE156ED39EA778E5DE85AA0"
+)
+EXPECTED_SELECTOR538_PK_CANDIDATE_SHA256 = (
     "DCB19B0D85422F7C0EA5888F9A0C47667D75A88D100BABAE11DDAF4A8DD2000E"
 )
+EXPECTED_FINAL_PK_CANDIDATE_SHA256 = (
+    "07E65E6338D32C1FD13F17408F82A4133E55541C722874632948C7B36C909805"
+)
+EXPECTED_SELECTOR538_CONSOLIDATED_OVERLAP_COUNT = 72
 BOUND_TERMINAL_2546_OVERRIDE_COORDINATE_SHA256 = (
     "212DEF7EE8B508CEA406FF223BADE5E2DC0DC7D7B1EE5255AD828764B6A866B5"
 )
@@ -321,6 +370,14 @@ def runtime_immutable_row(row: dict[str, Any]) -> dict[str, Any]:
             "bound_terminal_2546_category_b_deferred_full_vm_exact_override_evidence",
             "selector538_chunk0_update_action",
             "selector538_family_update_action",
+            "selector568_family_update_action",
+            "selector568_family_exact_override_evidence",
+            "selector1096_family_update_action",
+            "selector1096_family_exact_override_evidence",
+            "selector568_1096_cross_family_update_action",
+            "selector568_1096_cross_family_exact_override_evidence",
+            "selector568_1096_1174_consolidated_update_action",
+            "selector568_1096_1174_exact_override_evidence",
         }
     }
 
@@ -489,12 +546,17 @@ def keyed_rows(
 def validate_final_exact_layers(
     *,
     historical_rows: dict[tuple[str, str], dict[str, Any]],
+    selector538_predecessor_rows: dict[
+        tuple[str, str],
+        dict[str, Any],
+    ],
     final_rows: dict[tuple[str, str], dict[str, Any]],
     report: dict[str, Any],
 ) -> dict[str, Any]:
     pk = report.get("promotions", {}).get("pk_msggame", {})
     d5 = pk.get("bound_terminal_2546_category_b_deferred")
     selector538 = pk.get("selector538_family")
+    consolidated = pk.get("selector568_1096_1174_consolidated")
     validation = report.get("validation", {})
     if (
         pk.get(
@@ -502,8 +564,13 @@ def validate_final_exact_layers(
         )
         is not True
         or pk.get("selector538_family_layer_included") is not True
+        or pk.get(
+            "selector568_1096_1174_consolidated_layer_included"
+        )
+        is not True
         or not isinstance(d5, dict)
         or not isinstance(selector538, dict)
+        or not isinstance(consolidated, dict)
         or d5.get("private_source_update_sha256")
         != EXPECTED_D5_DECISION_SHA256
         or d5.get("private_source_evidence_sha256")
@@ -538,7 +605,7 @@ def validate_final_exact_layers(
         or selector538.get("source_candidate_sha256")
         != "24E0E9CCAAD469C0EEFB41EDB032A17F0DAE9BF3EEB471688D452C2FC2A37C56"
         or selector538.get("combined_candidate_packed_sha256")
-        != EXPECTED_FINAL_PK_CANDIDATE_SHA256
+        != EXPECTED_SELECTOR538_PK_CANDIDATE_SHA256
         or selector538.get("promotion_count") != 212
         or selector538.get("total_family_promotion_count") != 277
         or selector538.get("verification_renewal_count") != 420
@@ -560,6 +627,32 @@ def validate_final_exact_layers(
             "verification_renewal": 335,
         }
         or selector538.get("steam_write_performed") is not False
+        or consolidated.get("private_source_update_sha256")
+        != EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256
+        or consolidated.get("private_source_evidence_sha256")
+        != EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256
+        or consolidated.get("audit_report_sha256")
+        != EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_AUDIT_SHA256
+        or consolidated.get("promotion_report_sha256")
+        != EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_PROMOTION_SHA256
+        or consolidated.get("official_predecessor_private_sha256")
+        != EXPECTED_SELECTOR538_PREDECESSOR_PRIVATE_SHA256
+        or consolidated.get("source_candidate_packed_sha256")
+        != EXPECTED_FINAL_PK_CANDIDATE_SHA256
+        or consolidated.get("combined_candidate_packed_sha256")
+        != EXPECTED_FINAL_PK_CANDIDATE_SHA256
+        or consolidated.get("promotion_count") != 628
+        or consolidated.get("verification_renewal_count") != 545
+        or consolidated.get("semantic_override_count") != 440
+        or consolidated.get("updated_row_count") != 1_173
+        or consolidated.get("action_counts")
+        != {
+            "runtime_promotion": 413,
+            "translation_override_and_runtime_promotion": 215,
+            "translation_override_and_verification_renewal": 225,
+            "verification_renewal": 320,
+        }
+        or consolidated.get("steam_write_performed") is not False
         or validation.get("d5_selector538_family_disjointness_rechecked")
         is not True
         or validation.get("all_1057_register_assemblies_rechecked")
@@ -568,8 +661,26 @@ def validate_final_exact_layers(
             "unique_renewal_override_owner_union_preserved"
         )
         is not True
+        or validation.get(
+            "selector568_1096_1174_consolidated_layer_included"
+        )
+        is not True
+        or validation.get("single_combined_coordinate_union_used")
+        is not True
+        or validation.get("sequential_cross_and_selector1174_overlays_used")
+        is not False
+        or validation.get("actual_628_pending_promotions_rechecked")
+        is not True
+        or validation.get(
+            "affected_545_verified_pk_runtime_evidence_renewed"
+        )
+        is not True
+        or validation.get("exact_440_semantic_overrides_rechecked")
+        is not True
     ):
-        raise RuntimeError("final D5/selector-538 report binding drifted")
+        raise RuntimeError(
+            "final D5/selector-538/consolidated report binding drifted"
+        )
 
     expected_files = {
         D5_DECISION_PATH: EXPECTED_D5_DECISION_SHA256,
@@ -578,6 +689,10 @@ def validate_final_exact_layers(
             EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
         SELECTOR538_FAMILY_EVIDENCE_PATH:
             EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256,
+        SELECTOR568_1096_1174_CONSOLIDATED_DECISION_PATH:
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256,
+        SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_PATH:
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256,
     }
     for path, expected in expected_files.items():
         if sha256_bytes(path.read_bytes()) != expected:
@@ -587,12 +702,26 @@ def validate_final_exact_layers(
     d5_evidence = keyed_rows(D5_EVIDENCE_PATH)
     family_decisions = keyed_rows(SELECTOR538_FAMILY_DECISION_PATH)
     family_evidence = keyed_rows(SELECTOR538_FAMILY_EVIDENCE_PATH)
+    consolidated_decisions = keyed_rows(
+        SELECTOR568_1096_1174_CONSOLIDATED_DECISION_PATH
+    )
+    consolidated_evidence = keyed_rows(
+        SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_PATH
+    )
+    selector538_overlap = set(family_decisions) & set(
+        consolidated_decisions
+    )
     if (
         len(d5_decisions) != 7
         or set(d5_decisions) != set(d5_evidence)
         or len(family_decisions) != 697
         or set(family_decisions) != set(family_evidence)
         or set(d5_decisions) & set(family_decisions)
+        or len(consolidated_decisions) != 1_173
+        or set(consolidated_decisions) != set(consolidated_evidence)
+        or set(d5_decisions) & set(consolidated_decisions)
+        or len(selector538_overlap)
+        != EXPECTED_SELECTOR538_CONSOLIDATED_OVERLAP_COUNT
     ):
         raise RuntimeError("final exact layer coordinate universe drifted")
 
@@ -600,6 +729,7 @@ def validate_final_exact_layers(
         decisions: dict[tuple[str, str], dict[str, Any]],
         evidence_rows: dict[tuple[str, str], dict[str, Any]],
         *,
+        target_rows: dict[tuple[str, str], dict[str, Any]],
         action_field: str,
         method: str,
         historical_hash_field: str,
@@ -607,7 +737,7 @@ def validate_final_exact_layers(
     ) -> None:
         for key, decision in decisions.items():
             evidence = evidence_rows[key]
-            final = final_rows.get(key)
+            final = target_rows.get(key)
             historical = historical_rows.get(key)
             if (
                 final != decision
@@ -634,6 +764,7 @@ def validate_final_exact_layers(
     validate_rows(
         d5_decisions,
         d5_evidence,
+        target_rows=selector538_predecessor_rows,
         action_field=(
             "bound_terminal_2546_category_b_deferred_full_vm_"
             "update_action"
@@ -648,6 +779,7 @@ def validate_final_exact_layers(
     validate_rows(
         family_decisions,
         family_evidence,
+        target_rows=selector538_predecessor_rows,
         action_field="selector538_family_update_action",
         method=(
             "reversed_vm_pk_selector538_chunks_0_3_consolidated_closure"
@@ -655,12 +787,73 @@ def validate_final_exact_layers(
         historical_hash_field="baseline_row_sha256",
         historical_ascii=True,
     )
+
+    if (
+        set(selector538_predecessor_rows) != set(final_rows)
+        or any(
+            final_rows[key] != predecessor
+            for key, predecessor in selector538_predecessor_rows.items()
+            if key not in consolidated_decisions
+        )
+    ):
+        raise RuntimeError(
+            "consolidated final changed rows outside its exact union"
+        )
+
+    consolidated_action_counts: Counter[str] = Counter()
+    promotion_count = 0
+    renewal_count = 0
+    override_count = 0
+    for key, decision in consolidated_decisions.items():
+        final = final_rows.get(key)
+        predecessor = selector538_predecessor_rows.get(key)
+        evidence = consolidated_evidence[key]
+        action = str(
+            decision.get(
+                ENGINE
+                .PK_SELECTOR568_1096_1174_CONSOLIDATED_UPDATE_ACTION_FIELD
+            )
+        )
+        if (
+            final != decision
+            or not isinstance(predecessor, dict)
+            or decision.get("runtime_vm_verification") != evidence
+        ):
+            raise RuntimeError(
+                f"consolidated final row binding drifted: {key}"
+            )
+        ENGINE.validate_selector568_1096_1174_consolidated_decision_row(
+            decision,
+            label=f"progress consolidated row {key}",
+        )
+        consolidated_action_counts[action] += 1
+        if action in {
+            "runtime_promotion",
+            "translation_override_and_runtime_promotion",
+        }:
+            promotion_count += 1
+        else:
+            renewal_count += 1
+        if action.startswith("translation_override"):
+            override_count += 1
+    if (
+        dict(consolidated_action_counts)
+        != consolidated["action_counts"]
+        or promotion_count != 628
+        or renewal_count != 545
+        or override_count != 440
+    ):
+        raise RuntimeError(
+            "consolidated action/promotion/renewal universe drifted"
+        )
+
     return {
         "d5_action_counts": d5["action_counts"],
         "d5_decision_rows": len(d5_decisions),
         "d5_decision_sha256": EXPECTED_D5_DECISION_SHA256,
         "d5_evidence_sha256": EXPECTED_D5_EVIDENCE_SHA256,
         "d5_selector538_disjoint": True,
+        "d5_consolidated_disjoint": True,
         "final_pk_candidate_sha256": EXPECTED_FINAL_PK_CANDIDATE_SHA256,
         "selector538_action_counts": selector538["action_counts"],
         "selector538_decision_rows": len(family_decisions),
@@ -668,6 +861,22 @@ def validate_final_exact_layers(
             EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
         "selector538_evidence_sha256":
             EXPECTED_SELECTOR538_FAMILY_EVIDENCE_SHA256,
+        "selector538_consolidated_overlap_count": len(
+            selector538_overlap
+        ),
+        "selector568_1096_1174_action_counts": dict(
+            consolidated_action_counts
+        ),
+        "selector568_1096_1174_decision_rows": len(
+            consolidated_decisions
+        ),
+        "selector568_1096_1174_decision_sha256":
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256,
+        "selector568_1096_1174_evidence_sha256":
+            EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_EVIDENCE_SHA256,
+        "selector568_1096_1174_promotion_count": promotion_count,
+        "selector568_1096_1174_renewal_count": renewal_count,
+        "selector568_1096_1174_override_count": override_count,
     }
 
 
@@ -684,13 +893,26 @@ def load_runtime_vm_integration(
     if (
         not RUNTIME_VM_INTEGRATION_REPORT.is_file()
         or not RUNTIME_VM_INTEGRATED_DECISIONS.is_file()
+        or not SELECTOR538_PREDECESSOR_REPORT.is_file()
+        or not SELECTOR538_PREDECESSOR_DECISIONS.is_file()
     ):
         raise RuntimeError("final runtime VM integration artifacts are absent")
     report_bytes = RUNTIME_VM_INTEGRATION_REPORT.read_bytes()
     private_bytes = RUNTIME_VM_INTEGRATED_DECISIONS.read_bytes()
+    predecessor_report_bytes = SELECTOR538_PREDECESSOR_REPORT.read_bytes()
+    predecessor_private_bytes = (
+        SELECTOR538_PREDECESSOR_DECISIONS.read_bytes()
+    )
     report = json.loads(report_bytes.decode("utf-8"))
+    predecessor_report = json.loads(
+        predecessor_report_bytes.decode("utf-8")
+    )
     private_sha256 = sha256_bytes(private_bytes)
+    predecessor_private_sha256 = sha256_bytes(
+        predecessor_private_bytes
+    )
     result = report.get("result", {})
+    predecessor_result = predecessor_report.get("result", {})
     pk = report.get("promotions", {}).get("pk_msggame", {})
     if (
         sha256_bytes(report_bytes)
@@ -704,16 +926,37 @@ def load_runtime_vm_integration(
         or result.get("private_integrated_decision_sha256")
         != private_sha256
         or result.get("semantic_review_approved") != 52_803
-        or result.get("runtime_review_pending") != 7_896
-        or result.get("fully_candidate_eligible") != 44_907
-        or report.get("promotions", {}).get("promoted_total") != 28_438
-        or pk.get("promotion_count") != 12_787
+        or result.get("runtime_review_pending") != 7_268
+        or result.get("fully_candidate_eligible") != 45_535
+        or report.get("promotions", {}).get("promoted_total") != 29_066
+        or pk.get("promotion_count") != 13_415
+        or sha256_bytes(predecessor_report_bytes)
+        != EXPECTED_SELECTOR538_PREDECESSOR_REPORT_SHA256
+        or predecessor_private_sha256
+        != EXPECTED_SELECTOR538_PREDECESSOR_PRIVATE_SHA256
+        or predecessor_report.get("schema")
+        != RUNTIME_VM_INTEGRATION_SCHEMA
+        or predecessor_report.get("status") != "PASS"
+        or predecessor_report.get("steam_write_performed") is not False
+        or predecessor_result.get("private_integrated_decision_sha256")
+        != predecessor_private_sha256
+        or predecessor_result.get("semantic_review_approved") != 52_803
+        or predecessor_result.get("runtime_review_pending") != 7_896
+        or predecessor_result.get("fully_candidate_eligible") != 44_907
     ):
         raise RuntimeError("final runtime VM integration guard drifted")
     ENGINE.validate_decisions(
         prepared,
+        SELECTOR538_PREDECESSOR_DECISIONS,
+        require_complete=False,
+    )
+    ENGINE.validate_decisions(
+        prepared,
         RUNTIME_VM_INTEGRATED_DECISIONS,
         require_complete=False,
+    )
+    selector538_predecessor_rows = keyed_rows(
+        SELECTOR538_PREDECESSOR_DECISIONS
     )
     final_rows = keyed_rows(RUNTIME_VM_INTEGRATED_DECISIONS)
     pending = sum(
@@ -722,12 +965,14 @@ def load_runtime_vm_integration(
     )
     if (
         len(final_rows) != 52_803
-        or pending != 7_896
+        or pending != 7_268
         or set(final_rows) != set(historical_rows)
+        or set(selector538_predecessor_rows) != set(historical_rows)
     ):
         raise RuntimeError("final runtime VM row/status universe drifted")
     exact = validate_final_exact_layers(
         historical_rows=historical_rows,
+        selector538_predecessor_rows=selector538_predecessor_rows,
         final_rows=final_rows,
         report=report,
     )
@@ -737,7 +982,7 @@ def load_runtime_vm_integration(
                 RUNTIME_VM_INTEGRATION_REPORT.relative_to(REPO).as_posix(),
             "sha256": EXPECTED_RUNTIME_VM_INTEGRATION_REPORT_SHA256,
             "private_integrated_decision_sha256": private_sha256,
-            "promoted_total": 28_438,
+            "promoted_total": 29_066,
             "runtime_review_pending_after": pending,
             "historical_checkpoint_private_sha256":
                 EXPECTED_HISTORICAL_PRIVATE_SHA256,
@@ -745,6 +990,14 @@ def load_runtime_vm_integration(
                 EXPECTED_HISTORICAL_REPORT_SHA256,
             "historical_layers_revalidated_from_immutable_checkpoint":
                 True,
+            "selector538_predecessor_path":
+                SELECTOR538_PREDECESSOR_REPORT
+                .relative_to(REPO)
+                .as_posix(),
+            "selector538_predecessor_private_sha256":
+                predecessor_private_sha256,
+            "selector538_predecessor_report_sha256":
+                EXPECTED_SELECTOR538_PREDECESSOR_REPORT_SHA256,
             "final_exact_layers": exact,
             "bound_terminal_2546_category_b_deferred_layer_included":
                 True,
@@ -752,6 +1005,9 @@ def load_runtime_vm_integration(
                 pk["bound_terminal_2546_category_b_deferred"],
             "selector538_family_layer_included": True,
             "selector538_family": pk["selector538_family"],
+            "selector568_1096_1174_consolidated_layer_included": True,
+            "selector568_1096_1174_consolidated":
+                pk["selector568_1096_1174_consolidated"],
             "steam_write_performed": False,
         }
     )
@@ -2312,19 +2568,19 @@ def build_progress() -> dict[str, Any]:
     expected_scope_counts = Counter(
         {
             "confirmed_non_display": 345,
-            "retranslated": 44_562,
-            "runtime_fragment_pending": 7_896,
+            "retranslated": 45_190,
+            "runtime_fragment_pending": 7_268,
         }
     )
     if (
         total_targets != 52_803
         or approved != 52_803
-        or pending != 7_896
-        or eligible != 44_907
+        or pending != 7_268
+        or eligible != 45_535
         or scope_classification_counts != expected_scope_counts
     ):
         raise RuntimeError(
-            "post-selector538-family progress totals drifted: "
+            "post-selector568/1096/1174 progress totals drifted: "
             f"targets={total_targets} approved={approved} "
             f"pending={pending} eligible={eligible} "
             f"scope={dict(scope_classification_counts)}"

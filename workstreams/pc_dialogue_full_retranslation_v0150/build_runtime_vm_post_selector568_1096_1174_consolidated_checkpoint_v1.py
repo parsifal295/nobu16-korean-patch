@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Freeze the 7,896-pending checkpoint after D5/selector-538-family closure.
+"""Freeze the 7,268-pending checkpoint after selector568/1096/1174 closure.
 
 Dialogue-bearing JSONL remains below ``tmp``.  The tracked checkpoint report
 is source-free, and live Steam remains read only.
@@ -20,56 +20,77 @@ SCRIPT = Path(__file__).resolve()
 WORKSTREAM = SCRIPT.parent
 REPO = WORKSTREAM.parents[1]
 INTEGRATION_PATH = WORKSTREAM / "build_runtime_vm_integrated_decisions_v1.py"
-INTEGRATION_REPORT_PATH = (
-    WORKSTREAM / "runtime_vm_integration.source_free.v1.json"
-)
 OUTPUT_ROOT = REPO / "tmp" / WORKSTREAM.name
-DEFAULT_PRIVATE_OUTPUT = (
+PREDECESSOR_PRIVATE_PATH = (
     OUTPUT_ROOT
     / "runtime_vm_integrated."
     "post_selector538_family_checkpoint.private.v1.jsonl"
 )
-DEFAULT_PUBLIC_OUTPUT = (
+PREDECESSOR_PUBLIC_PATH = (
     WORKSTREAM
     / "runtime_vm_integration."
     "post_selector538_family_checkpoint.source_free.v1.json"
 )
+DEFAULT_PRIVATE_OUTPUT = (
+    OUTPUT_ROOT
+    / "runtime_vm_integrated."
+    "post_selector568_1096_1174_consolidated_checkpoint.private.v1.jsonl"
+)
+DEFAULT_PUBLIC_OUTPUT = (
+    WORKSTREAM
+    / "runtime_vm_integration."
+    "post_selector568_1096_1174_consolidated_checkpoint.source_free.v1.json"
+)
 
 EXPECTED_ROWS = 52_803
-EXPECTED_PENDING = 7_896
-EXPECTED_PK_PROMOTIONS = 12_787
-EXPECTED_PROMOTED_TOTAL = 28_438
+EXPECTED_PENDING = 7_268
+EXPECTED_ELIGIBLE = 45_535
+EXPECTED_PK_PROMOTIONS = 13_415
+EXPECTED_PROMOTED_TOTAL = 29_066
+EXPECTED_UPDATED_ROWS = 1_173
+EXPECTED_LAYER_PROMOTIONS = 628
+EXPECTED_LAYER_RENEWALS = 545
+EXPECTED_LAYER_OVERRIDES = 440
+EXPECTED_ACTION_COUNTS = {
+    "runtime_promotion": 413,
+    "translation_override_and_runtime_promotion": 215,
+    "translation_override_and_verification_renewal": 225,
+    "verification_renewal": 320,
+}
 EXPECTED_PRIVATE_SHA256 = (
-    "81B4E22C3C20AA5F7FF8B8251A2829AEEB0C6E0A0D9FA2B93748B6249F23F6CB"
+    "FC157A9907686D0EA6DC6C61C7785E81AC7F750100F2E1CDDE02DBF4F09F2DCA"
+)
+EXPECTED_PUBLIC_SHA256 = (
+    "1FCF033F1F75FC43473152CFB7115D170657519952C19D563C36C3F9BAB4CBD1"
 )
 EXPECTED_INTEGRATION_BUILDER_SHA256 = (
     "8DEDEED85915D85FD49D1092B5571E49EDCDD3FEDFD08E1EBD16AD3B459221BA"
 )
-EXPECTED_INTEGRATION_REPORT_SHA256 = (
+EXPECTED_PREDECESSOR_PRIVATE_SHA256 = (
+    "81B4E22C3C20AA5F7FF8B8251A2829AEEB0C6E0A0D9FA2B93748B6249F23F6CB"
+)
+EXPECTED_PREDECESSOR_PUBLIC_SHA256 = (
     "46270F70A019484EFB1F99851D436467C8FD2DE32EB222BDC048DA1B5BC080FA"
 )
-EXPECTED_PREDECESSOR_PRIVATE_SHA256 = (
-    "BF7B89E425502144C0A1992872895A774C56BADCA1FE8DD34ED6778CF3A627C5"
-)
 EXPECTED_PK_CANDIDATE_SHA256 = (
-    "DCB19B0D85422F7C0EA5888F9A0C47667D75A88D100BABAE11DDAF4A8DD2000E"
+    "07E65E6338D32C1FD13F17408F82A4133E55541C722874632948C7B36C909805"
 )
-EXPECTED_D5_DECISION_SHA256 = (
-    "54343C398C7D8E22A957AE47CA9B8AA5C11DD7F64C6BEF4EFF50DFA4EF466095"
+EXPECTED_DECISION_SHA256 = (
+    "3260FCF12561EE116228907E1619FDB368DBDF9D0BA8565C03CD014440669B38"
 )
-EXPECTED_D5_EVIDENCE_SHA256 = (
-    "C328430233A81E4457BD253844D65622B7305AEB20FACB30E011C2EEF7B58BD0"
+EXPECTED_EVIDENCE_SHA256 = (
+    "3AA3CB05106CA921F22B96D26B8FA74A4F7C7D15A4D3AE122738F92E10A34C25"
 )
-EXPECTED_SELECTOR538_DECISION_SHA256 = (
-    "5640EB7FB7E4EA9B32309B7FA280637DA9F26F96CA500BCD4FA9847D997456C0"
+EXPECTED_AUDIT_SHA256 = (
+    "1C70A12C107DB79B1402F5879364F5AAEA31F34B3933F4C53524C89B570F9990"
 )
-EXPECTED_SELECTOR538_EVIDENCE_SHA256 = (
-    "910C0A59823C2B6B083F58257D6203053738EFEFC2E49E6271D553FF44CAB940"
+EXPECTED_PROMOTION_SHA256 = (
+    "E16B597EF856822350D3FD0E0FAB7A9737E3D40D6FE156ED39EA778E5DE85AA0"
 )
 
 
 class CheckpointError(ValueError):
-    """Raised when the post-selector-538-family contract drifts."""
+    """Raised when the consolidated checkpoint contract drifts."""
 
 
 def require(condition: bool, message: str) -> None:
@@ -103,7 +124,7 @@ def load_module(name: str, path: Path) -> Any:
 
 
 INTEGRATION = load_module(
-    "pc_dialogue_runtime_vm_post_selector538_family_checkpoint_integration",
+    "pc_dialogue_runtime_vm_post_selector568_1096_1174_checkpoint_integration",
     INTEGRATION_PATH,
 )
 
@@ -149,13 +170,16 @@ def validate_output_paths(args: argparse.Namespace) -> None:
         f"private output must remain below {private_root}",
     )
     require(
+        resolved_private == DEFAULT_PRIVATE_OUTPUT.resolve(strict=False),
+        "private checkpoint must use its immutable consolidated path",
+    )
+    require(
         args.public_output.resolve(strict=False)
         == DEFAULT_PUBLIC_OUTPUT.resolve(strict=False),
         "public checkpoint must use its tracked source-free path",
     )
     require(
-        resolved_private
-        != args.public_output.resolve(strict=False),
+        resolved_private != args.public_output.resolve(strict=False),
         "private and public checkpoint outputs must be distinct",
     )
 
@@ -167,9 +191,14 @@ def validate_frozen_inputs() -> None:
         "integrated decision builder digest drifted",
     )
     require(
-        sha256_file(INTEGRATION_REPORT_PATH)
-        == EXPECTED_INTEGRATION_REPORT_SHA256,
-        "integrated source-free report digest drifted",
+        sha256_file(PREDECESSOR_PRIVATE_PATH)
+        == EXPECTED_PREDECESSOR_PRIVATE_SHA256,
+        "post-selector538 predecessor private digest drifted",
+    )
+    require(
+        sha256_file(PREDECESSOR_PUBLIC_PATH)
+        == EXPECTED_PREDECESSOR_PUBLIC_SHA256,
+        "post-selector538 predecessor public digest drifted",
     )
 
 
@@ -177,61 +206,57 @@ def validate_checkpoint_report(report: dict[str, Any]) -> None:
     pk = report.get("promotions", {}).get("pk_msggame", {})
     result = report.get("result", {})
     validation = report.get("validation", {})
-    d5 = pk.get("bound_terminal_2546_category_b_deferred", {})
-    family = pk.get("selector538_family", {})
+    layer = pk.get("selector568_1096_1174_consolidated", {})
     distribution = report.get("distribution_policy", {})
     require(
         result.get("semantic_review_approved") == EXPECTED_ROWS
         and result.get("runtime_review_pending") == EXPECTED_PENDING
-        and result.get("fully_candidate_eligible")
-        == EXPECTED_ROWS - EXPECTED_PENDING
+        and result.get("fully_candidate_eligible") == EXPECTED_ELIGIBLE
         and result.get("private_integrated_decision_sha256")
         == EXPECTED_PRIVATE_SHA256
         and report.get("promotions", {}).get("promoted_total")
         == EXPECTED_PROMOTED_TOTAL
         and pk.get("promotion_count") == EXPECTED_PK_PROMOTIONS
         and pk.get(
-            "bound_terminal_2546_category_b_deferred_layer_included"
+            "selector568_1096_1174_consolidated_layer_included"
         )
         is True
-        and pk.get("selector538_family_layer_included") is True
         and pk.get(
-            "rebuilt_post_bound_terminal_2546_full_caller_"
-            "integrated_private_sha256"
+            "rebuilt_post_selector538_family_integrated_private_sha256"
         )
         == EXPECTED_PREDECESSOR_PRIVATE_SHA256
-        and d5.get("private_source_update_sha256")
-        == EXPECTED_D5_DECISION_SHA256
-        and d5.get("private_source_evidence_sha256")
-        == EXPECTED_D5_EVIDENCE_SHA256
-        and d5.get("promotion_count") == 5
-        and d5.get("verification_renewal_count") == 2
-        and d5.get("translation_override_count") == 6
-        and d5.get("updated_row_count") == 7
-        and family.get("private_source_update_sha256")
-        == EXPECTED_SELECTOR538_DECISION_SHA256
-        and family.get("private_source_evidence_sha256")
-        == EXPECTED_SELECTOR538_EVIDENCE_SHA256
-        and family.get("promotion_count") == 212
-        and family.get("total_family_promotion_count") == 277
-        and family.get("verification_renewal_count") == 420
-        and family.get("translation_override_count") == 142
-        and family.get("updated_row_count") == 697
-        and family.get("combined_candidate_packed_sha256")
+        and layer.get("private_source_update_sha256")
+        == EXPECTED_DECISION_SHA256
+        and layer.get("private_source_evidence_sha256")
+        == EXPECTED_EVIDENCE_SHA256
+        and layer.get("audit_report_sha256") == EXPECTED_AUDIT_SHA256
+        and layer.get("promotion_report_sha256")
+        == EXPECTED_PROMOTION_SHA256
+        and layer.get("combined_candidate_packed_sha256")
         == EXPECTED_PK_CANDIDATE_SHA256
+        and layer.get("updated_row_count") == EXPECTED_UPDATED_ROWS
+        and layer.get("promotion_count") == EXPECTED_LAYER_PROMOTIONS
+        and layer.get("verification_renewal_count")
+        == EXPECTED_LAYER_RENEWALS
+        and layer.get("semantic_override_count")
+        == EXPECTED_LAYER_OVERRIDES
+        and layer.get("action_counts") == EXPECTED_ACTION_COUNTS
+        and layer.get("steam_write_performed") is False
         and validation.get(
-            "official_a19_predecessor_rebuilt_and_matched"
+            "selector568_1096_1174_consolidated_layer_included"
         )
         is True
+        and validation.get("single_combined_coordinate_union_used")
+        is True
+        and validation.get("sequential_cross_and_selector1174_overlays_used")
+        is False
+        and validation.get("actual_628_pending_promotions_rechecked")
+        is True
         and validation.get(
-            "d5_selector538_family_disjointness_rechecked"
+            "affected_545_verified_pk_runtime_evidence_renewed"
         )
         is True
-        and validation.get("all_1057_register_assemblies_rechecked")
-        is True
-        and validation.get(
-            "unique_renewal_override_owner_union_preserved"
-        )
+        and validation.get("exact_440_semantic_overrides_rechecked")
         is True
         and distribution.get(
             "tracked_report_contains_commercial_source_text"
@@ -242,7 +267,7 @@ def validate_checkpoint_report(report: dict[str, Any]) -> None:
         )
         is False
         and report.get("steam_write_performed") is False,
-        "post-selector538-family checkpoint result drifted",
+        "post-selector568/1096/1174 checkpoint result drifted",
     )
 
 
@@ -268,19 +293,18 @@ def main(argv: Sequence[str] | None = None) -> int:
         include_selector538_chunk0=True,
         include_bound_terminal_2546_category_b_deferred=True,
         include_selector538_family=True,
+        include_selector568_1096_1174_consolidated=True,
     )
     validate_checkpoint_report(report)
     require(
         sha256_bytes(private_content.encode("utf-8"))
         == EXPECTED_PRIVATE_SHA256,
-        "private post-selector538-family checkpoint digest drifted",
+        "private consolidated checkpoint digest drifted",
     )
     require(
         sha256_bytes(public_content.encode("utf-8"))
-        == EXPECTED_INTEGRATION_REPORT_SHA256
-        and INTEGRATION_REPORT_PATH.read_text(encoding="utf-8")
-        == public_content,
-        "public post-selector538-family checkpoint binding drifted",
+        == EXPECTED_PUBLIC_SHA256,
+        "public consolidated checkpoint digest drifted",
     )
     if args.write:
         INTEGRATION.ENGINE.atomic_write(
@@ -296,20 +320,20 @@ def main(argv: Sequence[str] | None = None) -> int:
             args.private_output.is_file()
             and args.private_output.read_text(encoding="utf-8")
             == private_content,
-            "private post-selector538-family checkpoint drifted",
+            "private consolidated checkpoint drifted",
         )
         require(
             args.public_output.is_file()
             and args.public_output.read_text(encoding="utf-8")
             == public_content,
-            "public post-selector538-family checkpoint drifted",
+            "public consolidated checkpoint drifted",
         )
     print(
         "PASS "
         f"rows={report['result']['semantic_review_approved']} "
         f"pk_promoted={report['promotions']['pk_msggame']['promotion_count']} "
         f"pending={report['result']['runtime_review_pending']} "
-        "selector538_family=true steam_write=false"
+        "selector568_1096_1174_consolidated=true steam_write=false"
     )
     return 0
 

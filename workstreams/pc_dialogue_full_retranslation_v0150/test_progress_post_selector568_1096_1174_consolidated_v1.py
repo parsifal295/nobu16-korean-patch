@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regression tests for progress after D5 and selector-538-family closure."""
+"""Regression tests for progress after selector568/1096/1174 closure."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ WORKSTREAM = SCRIPT.parent
 BUILDER_PATH = WORKSTREAM / "build_progress_source_free_v0150.py"
 PROGRESS_PATH = WORKSTREAM / "progress.source_free.v1.json"
 EXPECTED_PROGRESS_SHA256 = (
-    "17AF6E25DB0D873D00D5D850991161F17E30FA1917157C1EC4A33619EFA5971C"
+    "C569482EFC544942F989C3323BC534A393923FE7BCB279B56A6E6B5975EC980D"
 )
 
 
@@ -32,10 +32,13 @@ def load_module(name: str, path: Path) -> Any:
     return module
 
 
-BUILDER = load_module("progress_post_selector538_family_builder", BUILDER_PATH)
+BUILDER = load_module(
+    "progress_post_selector568_1096_1174_consolidated_builder",
+    BUILDER_PATH,
+)
 
 
-class ProgressPostSelector538FamilyTests(unittest.TestCase):
+class ProgressPostSelector56810961174ConsolidatedTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.raw = PROGRESS_PATH.read_bytes()
@@ -75,12 +78,12 @@ class ProgressPostSelector538FamilyTests(unittest.TestCase):
             self.progress["totals"],
             {
                 "semantic_review_approved": 52_803,
-                "runtime_review_pending": 7_896,
-                "fully_candidate_eligible": 44_907,
+                "runtime_review_pending": 7_268,
+                "fully_candidate_eligible": 45_535,
                 "scope_classification_counts": {
                     "confirmed_non_display": 345,
-                    "retranslated": 44_562,
-                    "runtime_fragment_pending": 7_896,
+                    "retranslated": 45_190,
+                    "runtime_fragment_pending": 7_268,
                 },
                 "semantic_completion": True,
                 "candidate_build_complete": False,
@@ -97,7 +100,8 @@ class ProgressPostSelector538FamilyTests(unittest.TestCase):
             integration["private_integrated_decision_sha256"],
             BUILDER.EXPECTED_RUNTIME_VM_INTEGRATED_PRIVATE_SHA256,
         )
-        self.assertEqual(integration["runtime_review_pending_after"], 7_896)
+        self.assertEqual(integration["runtime_review_pending_after"], 7_268)
+        self.assertEqual(integration["promoted_total"], 29_066)
         self.assertTrue(
             integration[
                 "historical_layers_revalidated_from_immutable_checkpoint"
@@ -106,6 +110,14 @@ class ProgressPostSelector538FamilyTests(unittest.TestCase):
         self.assertEqual(
             integration["historical_checkpoint_private_sha256"],
             BUILDER.EXPECTED_HISTORICAL_PRIVATE_SHA256,
+        )
+        self.assertEqual(
+            integration["selector538_predecessor_private_sha256"],
+            BUILDER.EXPECTED_SELECTOR538_PREDECESSOR_PRIVATE_SHA256,
+        )
+        self.assertEqual(
+            integration["selector538_predecessor_report_sha256"],
+            BUILDER.EXPECTED_SELECTOR538_PREDECESSOR_REPORT_SHA256,
         )
         self.assertTrue(
             integration[
@@ -152,6 +164,27 @@ class ProgressPostSelector538FamilyTests(unittest.TestCase):
         self.assertEqual(final["d5_decision_rows"], 7)
         self.assertEqual(final["selector538_decision_rows"], 697)
         self.assertTrue(final["d5_selector538_disjoint"])
+        self.assertTrue(final["d5_consolidated_disjoint"])
+        self.assertEqual(
+            final["selector538_consolidated_overlap_count"],
+            72,
+        )
+        self.assertEqual(
+            final["selector568_1096_1174_decision_rows"],
+            1_173,
+        )
+        self.assertEqual(
+            final["selector568_1096_1174_promotion_count"],
+            628,
+        )
+        self.assertEqual(
+            final["selector568_1096_1174_renewal_count"],
+            545,
+        )
+        self.assertEqual(
+            final["selector568_1096_1174_override_count"],
+            440,
+        )
         self.assertEqual(
             final["final_pk_candidate_sha256"],
             BUILDER.EXPECTED_FINAL_PK_CANDIDATE_SHA256,
@@ -164,6 +197,25 @@ class ProgressPostSelector538FamilyTests(unittest.TestCase):
             final["selector538_decision_sha256"],
             BUILDER.EXPECTED_SELECTOR538_FAMILY_DECISION_SHA256,
         )
+        self.assertEqual(
+            final["selector568_1096_1174_decision_sha256"],
+            (
+                BUILDER
+                .EXPECTED_SELECTOR568_1096_1174_CONSOLIDATED_DECISION_SHA256
+            ),
+        )
+        self.assertTrue(
+            integration[
+                "selector568_1096_1174_consolidated_layer_included"
+            ]
+        )
+        layer = integration[
+            "selector568_1096_1174_consolidated"
+        ]
+        self.assertEqual(layer["updated_row_count"], 1_173)
+        self.assertEqual(layer["promotion_count"], 628)
+        self.assertEqual(layer["verification_renewal_count"], 545)
+        self.assertEqual(layer["semantic_override_count"], 440)
 
     def test_runtime_immutable_row_excludes_final_mutable_layer_fields(
         self,
@@ -176,6 +228,17 @@ class ProgressPostSelector538FamilyTests(unittest.TestCase):
             "bound_terminal_2546_category_b_deferred_full_vm_update_action":
             "runtime_promotion",
             "selector538_family_update_action": "verification_renewal",
+            "selector568_family_update_action": "verification_renewal",
+            "selector568_family_exact_override_evidence": {"x": 1},
+            "selector1096_family_update_action": "verification_renewal",
+            "selector1096_family_exact_override_evidence": {"x": 1},
+            "selector568_1096_cross_family_update_action":
+            "verification_renewal",
+            "selector568_1096_cross_family_exact_override_evidence":
+            {"x": 1},
+            "selector568_1096_1174_consolidated_update_action":
+            "verification_renewal",
+            "selector568_1096_1174_exact_override_evidence": {"x": 1},
         }
         self.assertEqual(
             BUILDER.runtime_immutable_row(row),
