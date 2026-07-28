@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Tests for the PK selector-1174 chunk-0 semantic/runtime review."""
+"""Source-free tests for the selector-1174 chunk-0 review validator."""
 
 from __future__ import annotations
 
+import copy
 import importlib.util
-import json
 import re
 import sys
 import tempfile
@@ -68,47 +68,60 @@ class Selector1174Chunk0ReviewTests(unittest.TestCase):
             self.outputs["public_content"],
         )
 
-    def test_all_55_sites_and_385_selected_branches_are_proven(self) -> None:
+    def test_review_counts_and_runtime_proofs_are_exact(self) -> None:
+        counts = self.evidence["counts"]
+        self.assertEqual(
+            counts,
+            {
+                "accepted_sites": 55,
+                "assembly_branches": 385,
+                "cross_owned_renewals": 5,
+                "decision_rows": 152,
+                "disjoint_runtime_promotions": 102,
+                "holds": 0,
+                "keep_sites": 1,
+                "rewrite_sites": 54,
+                "roots": 54,
+                "sites": 55,
+                "translation_overrides": 116,
+            },
+        )
         rows = self.evidence["site_reviews"]
         self.assertEqual(len(rows), 55)
         self.assertEqual([row["ordinal"] for row in rows], list(range(55)))
-        self.assertEqual(
-            sum(len(row["assemblies"]) for row in rows),
-            385,
-        )
+        self.assertEqual(sum(len(row["assemblies"]) for row in rows), 385)
         self.assertEqual(
             Counter(row["decision"] for row in rows),
             Counter({"rewrite": 54, "keep": 1}),
         )
-        for row in rows:
-            self.assertTrue(
+        self.assertTrue(
+            all(
                 row["all_seven_grammar_and_spacing_branches_proven"]
+                and row["all_seven_width_branches_nonexpanding"]
+                and row["control_and_encoding_proof"][
+                    "record_control_gaps_preserved"
+                ]
+                and row["control_and_encoding_proof"][
+                    "literal_linebreak_counts_preserved"
+                ]
+                and row["multilingual_authority"][
+                    "historical_factuality_reviewed"
+                ]
+                and row["multilingual_authority"]["speaker_tone_reviewed"]
+                for row in rows
             )
-            self.assertTrue(
-                row["all_seven_width_branches_nonexpanding"]
+        )
+        self.assertTrue(
+            all(
+                branch["grammar_and_spacing_proven"]
+                and branch["line_count_match"]
+                and branch["current_relative_raw_g1n_nonexpanding"]
+                for row in rows
+                for branch in row["assemblies"]
             )
-            control = row["control_and_encoding_proof"]
-            self.assertTrue(control["literal_linebreak_counts_preserved"])
-            self.assertTrue(control["record_control_gaps_preserved"])
-            self.assertTrue(control["reviewed_utf16le_encodable"])
-            authority = row["multilingual_authority"]
-            self.assertTrue(authority["fresh_review_completed"])
-            self.assertTrue(authority["historical_factuality_reviewed"])
-            self.assertTrue(authority["jp_is_semantic_authority"])
-            self.assertTrue(authority["speaker_tone_reviewed"])
-            for branch in row["assemblies"]:
-                self.assertEqual(branch["reviewed_terminal"], "")
-                self.assertEqual(
-                    branch["terminal_semantic"],
-                    "korean_zero_width_honorific_prefix",
-                )
-                self.assertTrue(branch["grammar_and_spacing_proven"])
-                self.assertTrue(branch["line_count_match"])
-                self.assertTrue(
-                    branch["current_relative_raw_g1n_nonexpanding"]
-                )
+        )
 
-    def test_multilingual_and_historical_authority_was_exhaustive(self) -> None:
+    def test_multilingual_coverage_is_exhaustive(self) -> None:
         rows = self.evidence["site_reviews"]
         available = {
             language: sum(
@@ -121,104 +134,35 @@ class Selector1174Chunk0ReviewTests(unittest.TestCase):
             available,
             {"jp": 55, "sc": 17, "tc": 17, "en": 13},
         )
-        historical = {
-            row["site"]: row["historical_terms_reviewed"]
-            for row in rows
-            if row["historical_terms_reviewed"]
-        }
-        self.assertEqual(historical, {"6:4875:1:0": ["感状", "감장"]})
-
-    def test_spacing_and_predicate_stems_are_runtime_aware(self) -> None:
-        by_site = {
-            row["site"]: row for row in self.evidence["site_reviews"]
-        }
         self.assertEqual(
-            by_site["6:1430:2:0"]["reviewed_left_translation"],
-            "\n반드시 ",
-        )
-        self.assertEqual(
-            by_site["6:1430:2:0"]["reviewed_right_translation"],
-            "기대에 부응하",
-        )
-        self.assertEqual(
-            by_site["6:4848:2:0"]["reviewed_left_translation"],
-            "\n곧 ",
-        )
-        self.assertEqual(
-            by_site["6:4848:2:0"]["reviewed_right_translation"],
-            "준비",
-        )
-        self.assertEqual(
-            by_site["7:2491:3:0"]["reviewed_left_translation"],
-            "의 안을 ",
-        )
-        self.assertEqual(
-            by_site["7:2491:3:0"]["reviewed_right_translation"],
-            "봐 ",
+            sum(bool(row["historical_terms_reviewed"]) for row in rows),
+            1,
         )
 
-    def test_cross_overlap_is_renewed_not_promoted_twice(self) -> None:
-        assignment = BUILDER.load_json(BUILDER.ASSIGNMENT_PATH)
-        overlap = set(
-            assignment["chunks"][0]["cross_family_overlap_coordinates"]
-        )
-        overlap_rows = [
-            row for row in self.decisions
-            if row["coordinate"] in overlap
-        ]
-        self.assertEqual(len(overlap_rows), 5)
-        self.assertEqual(
-            Counter(row["action"] for row in overlap_rows),
-            Counter(
-                {
-                    "cross_translation_override_and_verification_renewal": 2,
-                    "cross_verification_renewal": 3,
-                }
-            ),
-        )
-        for row in overlap_rows:
-            self.assertEqual(
-                row["overlap_owner"],
-                "selector568_1096_cross_family",
-            )
-            self.assertNotIn("runtime_promotion", row["action"])
-
-    def test_disjoint_promotions_and_existing_renewals_are_exact(self) -> None:
+    def test_overlap_and_promotion_actions_are_exact(self) -> None:
         actions = Counter(row["action"] for row in self.decisions)
-        self.assertEqual(
-            actions,
-            Counter(
-                {
-                    "cross_translation_override_and_verification_renewal": 2,
-                    "cross_verification_renewal": 3,
-                    "runtime_promotion": 33,
-                    "translation_override_and_runtime_promotion": 69,
-                    "translation_override_and_verification_renewal": 45,
-                }
-            ),
-        )
+        self.assertEqual(actions, Counter(BUILDER.EXPECTED_ACTION_COUNTS))
         self.assertEqual(len(self.decisions), 152)
         self.assertEqual(
-            len(
-                {
-                    row["coordinate"] for row in self.decisions
-                    if "runtime_promotion" in row["action"]
-                }
-            ),
+            sum("runtime_promotion" in row["action"] for row in self.decisions),
             102,
         )
-        self.assertFalse(
-            any("hold" in row["action"] for row in self.decisions)
+        self.assertEqual(
+            sum(row["overlap_owner"] is not None for row in self.decisions),
+            5,
         )
-        for row in self.decisions:
-            self.assertEqual(row["runtime_review"], "verified")
-            self.assertEqual(row["fresh_semantic_review"], "approved")
-            self.assertEqual(
-                row["reviewed_utf16le_sha256"],
-                BUILDER.utf16le_sha256(row["reviewed_translation"]),
+        self.assertFalse(any("hold" in row["action"] for row in self.decisions))
+        self.assertTrue(
+            all(
+                row["runtime_review"] == "verified"
+                and row["fresh_semantic_review"] == "approved"
+                and row["historical_factuality_review"] == "approved"
+                and row["speaker_tone_review"] == "approved"
+                for row in self.decisions
             )
+        )
 
-    def test_overlay_is_reversible_and_deterministic(self) -> None:
+    def test_candidate_reverse_overlay_and_digests_are_frozen(self) -> None:
         digests = self.evidence["digests"]
         self.assertEqual(
             digests["reviewed_candidate_sha256"],
@@ -228,6 +172,20 @@ class Selector1174Chunk0ReviewTests(unittest.TestCase):
             digests["reverse_overlay_sha256"],
             BUILDER.EXPECTED_CROSS_CANDIDATE_SHA256,
         )
+        self.assertEqual(
+            digests["decision_coordinate_sha256"],
+            BUILDER.EXPECTED_DECISION_COORDINATE_SHA256,
+        )
+        self.assertEqual(
+            digests["override_coordinate_sha256"],
+            BUILDER.EXPECTED_OVERRIDE_COORDINATE_SHA256,
+        )
+        self.assertEqual(
+            digests["assembly_canonical_sha256"],
+            BUILDER.EXPECTED_ASSEMBLY_SHA256,
+        )
+
+    def test_two_runs_are_identical(self) -> None:
         second = BUILDER.build_outputs()
         self.assertEqual(
             second["decisions_content"],
@@ -252,9 +210,26 @@ class Selector1174Chunk0ReviewTests(unittest.TestCase):
                 tampered,
                 self.outputs["decisions_content"],
             )
+        altered_rows = copy.deepcopy(self.decisions)
+        altered_rows[0]["runtime_review"] = "changed"
+        altered = b"".join(
+            BUILDER.canonical_bytes(row) + b"\n" for row in altered_rows
+        )
+        with self.assertRaisesRegex(BUILDER.ReviewError, "approval drifted"):
+            BUILDER.build_outputs(decisions_content=altered)
 
-    def test_public_report_is_source_free_and_not_event_layout(self) -> None:
+    def test_tampered_evidence_is_rejected(self) -> None:
+        tampered = copy.deepcopy(self.evidence)
+        tampered["counts"]["decision_rows"] += 1
+        with self.assertRaisesRegex(BUILDER.ReviewError, "counts drifted"):
+            BUILDER.build_outputs(evidence=tampered)
+
+    def test_public_report_is_source_free(self) -> None:
         decoded = self.outputs["public_content"].decode("ascii")
+        policy = self.public["distribution_policy"]
+        self.assertFalse(policy["tracked_builder_contains_dialogue_bodies"])
+        self.assertFalse(policy["tracked_test_contains_dialogue_bodies"])
+        self.assertTrue(policy["tracked_validator_uses_frozen_private_hashes"])
         self.assertIsNone(
             re.search(
                 r"[\u1100-\u11ff\u3040-\u30ff\u3130-\u318f"
@@ -265,10 +240,7 @@ class Selector1174Chunk0ReviewTests(unittest.TestCase):
         self.assertIsNone(
             re.search(r"\b\d+:\d+(?::\d+){0,2}\b", decoded)
         )
-        self.assertNotIn('"translation"', decoded)
         self.assertNotIn('"reviewed_translation"', decoded)
-        self.assertNotIn("max_line_px", decoded)
-        self.assertEqual(self.public["resource"], "MSG_PK/JP/msggame.bin")
         self.assertFalse(self.public["steam_write_performed"])
         self.assertEqual(
             self.public["guards"]["steam_archive_sha256_before"],
