@@ -145,7 +145,10 @@ def test_frozen_hashes_and_tamper_rejection() -> None:
             C.EXPECTED_OUTPUT_SHA256["public_promotion"],
         K.DEFAULT_PRIVATE_OUTPUT: K.EXPECTED_PRIVATE_OUTPUT_SHA256,
         K.DEFAULT_PUBLIC_OUTPUT: K.EXPECTED_PUBLIC_OUTPUT_SHA256,
+        P.DEFAULT_PREDECESSOR_PROGRESS:
+            P.EXPECTED_PREDECESSOR_PROGRESS_SHA256,
         P.DEFAULT_PROGRESS_OUTPUT: P.EXPECTED_PROGRESS_OUTPUT_SHA256,
+        P.IMMUTABLE_PROGRESS_OUTPUT: P.EXPECTED_PROGRESS_OUTPUT_SHA256,
     }
     assert all(sha256_file(path) == digest for path, digest in expected.items())
     original = K.CLOSURE_DECISIONS_PATH
@@ -216,18 +219,26 @@ def test_tracked_artifacts_are_source_free() -> None:
         C.PUBLIC_COVERAGE_OUTPUT,
         C.PUBLIC_PROMOTION_OUTPUT,
         K.DEFAULT_PUBLIC_OUTPUT,
+        P.DEFAULT_PREDECESSOR_PROGRESS,
         P.DEFAULT_PROGRESS_OUTPUT,
+        P.IMMUTABLE_PROGRESS_OUTPUT,
     )
     for path in tracked:
         content = path.read_text(encoding="utf-8")
         assert cjk.search(content) is None
-        if path != P.DEFAULT_PROGRESS_OUTPUT:
+        if path not in (
+            P.DEFAULT_PREDECESSOR_PROGRESS,
+            P.DEFAULT_PROGRESS_OUTPUT,
+            P.IMMUTABLE_PROGRESS_OUTPUT,
+        ):
             assert coordinate.search(content) is None
     for path in (
         C.PUBLIC_COVERAGE_OUTPUT,
         C.PUBLIC_PROMOTION_OUTPUT,
         K.DEFAULT_PUBLIC_OUTPUT,
+        P.DEFAULT_PREDECESSOR_PROGRESS,
         P.DEFAULT_PROGRESS_OUTPUT,
+        P.IMMUTABLE_PROGRESS_OUTPUT,
     ):
         content = path.read_text(encoding="ascii")
         assert '"reviewed_translation"' not in content

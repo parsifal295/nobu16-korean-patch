@@ -35,8 +35,12 @@ CLOSURE_DECISIONS_PATH = (
     / "semantic_overrides"
     / "pk_selector1126_consolidated_closure_decisions.private.v1.jsonl"
 )
-DEFAULT_PREDECESSOR_PROGRESS = WORKSTREAM / "progress.source_free.v1.json"
-DEFAULT_PROGRESS_OUTPUT = (
+PREDECESSOR_SOURCE_PATH = WORKSTREAM / "progress.source_free.v1.json"
+DEFAULT_PREDECESSOR_PROGRESS = (
+    WORKSTREAM / "progress.post_selector748_consolidated.source_free.v1.json"
+)
+DEFAULT_PROGRESS_OUTPUT = WORKSTREAM / "progress.source_free.v1.json"
+IMMUTABLE_PROGRESS_OUTPUT = (
     WORKSTREAM / "progress.post_selector1126_consolidated.source_free.v1.json"
 )
 
@@ -225,10 +229,34 @@ def main(argv: Sequence[str] | None = None) -> int:
         BASE.sha256_file(BASE_BUILDER_PATH) == EXPECTED_BASE_BUILDER_SHA256,
         "selector748 progress delta base drifted",
     )
+    arguments = tuple(sys.argv[1:] if argv is None else argv)
+    if "--write" in arguments and not DEFAULT_PREDECESSOR_PROGRESS.is_file():
+        BASE.require(
+            BASE.sha256_file(PREDECESSOR_SOURCE_PATH)
+            == EXPECTED_PREDECESSOR_PROGRESS_SHA256,
+            "post-selector748 progress source drifted",
+        )
+        BASE.atomic_write(
+            DEFAULT_PREDECESSOR_PROGRESS,
+            PREDECESSOR_SOURCE_PATH.read_bytes(),
+        )
+    BASE.require(
+        BASE.sha256_file(DEFAULT_PREDECESSOR_PROGRESS)
+        == EXPECTED_PREDECESSOR_PROGRESS_SHA256,
+        "post-selector748 progress snapshot drifted",
+    )
     configure_base()
     BASE.validate_baseline_progress = validate_baseline_progress
     BASE.build_progress_delta = build_progress_delta
-    return BASE.main(argv)
+    result = BASE.main(argv)
+    BASE.require(
+        BASE.sha256_file(DEFAULT_PROGRESS_OUTPUT)
+        == EXPECTED_PROGRESS_OUTPUT_SHA256
+        and BASE.sha256_file(IMMUTABLE_PROGRESS_OUTPUT)
+        == EXPECTED_PROGRESS_OUTPUT_SHA256,
+        "post-selector1126 progress alias drifted",
+    )
+    return result
 
 
 if __name__ == "__main__":
