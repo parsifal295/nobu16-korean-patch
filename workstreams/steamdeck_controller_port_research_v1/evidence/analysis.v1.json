@@ -4,7 +4,7 @@
   "steam": {
     "app_id": 1336980,
     "build_id": 18823764,
-    "installation_modified": false
+    "installation_modified": true
   },
   "baseline": {
     "pc_packed": {
@@ -132,6 +132,30 @@
     "recommended_distribution": "retain standard horizontal and vertical bundles, and add separate experimental controller-enabled horizontal and vertical signed bundles",
     "shared_resource_bundle_unchanged": true,
     "switching_policy": "restore verified stock backup before applying another layout/controller variant"
+  },
+  "runtime_deployment": {
+    "timestamp": "2026-07-28T15:03:42+09:00",
+    "installation_path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\NOBU16PK.exe",
+    "before": {
+      "size": 67024896,
+      "sha256": "7A0DF96C72A93F551F283EF14F06159F50E6A265A3BAC9C14151A1C2895D4DA0"
+    },
+    "after": {
+      "size": 67024896,
+      "sha256": "8D11D5EB70133016ED97E295109406E07BB3FFDA700314EF35E98638EB01A1A7",
+      "pe_checksum": "0x03FEE060",
+      "changed_byte_count": 12
+    },
+    "backup": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\controller-input-experimental-20260728-150300\\NOBU16PK.exe",
+    "launch_check": {
+      "selected_resolution": "3840x2160",
+      "window_mode": 2,
+      "full_process_restart": true,
+      "responding_after_seconds": 45,
+      "controller_input_validated": false,
+      "process_left_running_for_user_test": false,
+      "stopped_after_launch_check": true
+    }
   },
   "decision": {
     "feasibility": "high",
