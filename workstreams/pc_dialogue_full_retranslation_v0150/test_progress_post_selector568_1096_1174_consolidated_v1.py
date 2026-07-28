@@ -16,7 +16,11 @@ from typing import Any
 SCRIPT = Path(__file__).resolve()
 WORKSTREAM = SCRIPT.parent
 BUILDER_PATH = WORKSTREAM / "build_progress_source_free_v0150.py"
-PROGRESS_PATH = WORKSTREAM / "progress.source_free.v1.json"
+PROGRESS_PATH = (
+    WORKSTREAM
+    / "progress."
+    "post_selector568_1096_1174_consolidated.source_free.v1.json"
+)
 EXPECTED_PROGRESS_SHA256 = (
     "C569482EFC544942F989C3323BC534A393923FE7BCB279B56A6E6B5975EC980D"
 )
