@@ -4,7 +4,7 @@
   "steam": {
     "app_id": 1336980,
     "build_id": 18823764,
-    "installation_modified": true
+    "installation_modified": false
   },
   "baseline": {
     "pc_packed": {
@@ -173,6 +173,12 @@
       "meaning": "ERROR_DEVICE_NOT_CONNECTED"
     },
     "leading_hypothesis": "Steam Input did not expose a virtual XInput device to the PC executable, or the controller was not connected as an XInput device at probe time"
+  },
+  "rollback": {
+    "completed": true,
+    "restored_install_sha256": "7A0DF96C72A93F551F283EF14F06159F50E6A265A3BAC9C14151A1C2895D4DA0",
+    "failed_candidate_archive": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\controller-input-experimental-20260728-150300\\NOBU16PK.failed-controller-candidate.exe",
+    "failed_candidate_sha256": "8D11D5EB70133016ED97E295109406E07BB3FFDA700314EF35E98638EB01A1A7"
   },
   "decision": {
     "feasibility": "undetermined-after-first-candidate-failed",
