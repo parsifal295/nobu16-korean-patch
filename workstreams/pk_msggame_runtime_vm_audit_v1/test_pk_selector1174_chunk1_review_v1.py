@@ -84,18 +84,20 @@ class Selector1174Chunk1ReviewTests(unittest.TestCase):
         self.assertEqual(
             self.private["counts"],
             {
-                "accepted_pending_coordinates": 98,
-                "accepted_roots": 41,
-                "accepted_sites": 42,
+                "accepted_pending_coordinates": 108,
+                "accepted_roots": 43,
+                "accepted_sites": 44,
                 "assemblies": 420,
-                "blocked_pending_coordinates": 37,
-                "blocked_roots": 18,
-                "cross_overlap_blocked": 10,
-                "cross_overlap_renewals": 3,
+                "blocked_pending_coordinates": 27,
+                "blocked_roots": 16,
+                "cross_overlap_blocked": 0,
+                "cross_overlap_renewals": 13,
+                "cross_renewal_required_overrides": 7,
+                "dependency_assemblies": 7,
                 "disjoint_potential_promotions": 95,
                 "keep": 7,
-                "reject": 18,
-                "rewrite": 35,
+                "reject": 16,
+                "rewrite": 39,
                 "sites": 60,
             },
         )
@@ -133,8 +135,8 @@ class Selector1174Chunk1ReviewTests(unittest.TestCase):
             for row in self.private["site_reviews"]
             if row["decision"] == "reject"
         ]
-        self.assertEqual(len(accepted), 42)
-        self.assertEqual(len(rejected), 18)
+        self.assertEqual(len(accepted), 44)
+        self.assertEqual(len(rejected), 16)
         for row in accepted:
             self.assertTrue(row["all_seven_register_branches_proven"])
             self.assertTrue(row["all_seven_width_branches_nonexpanding"])
@@ -154,24 +156,66 @@ class Selector1174Chunk1ReviewTests(unittest.TestCase):
 
     def test_pending_and_cross_overlap_disposition_is_exact(self) -> None:
         result = self.report["result"]
-        self.assertEqual(result["accepted_pending_coordinate_count"], 98)
-        self.assertEqual(result["blocked_pending_coordinate_count"], 37)
-        self.assertEqual(result["cross_verification_renewal_count"], 3)
-        self.assertEqual(result["blocked_cross_overlap_count"], 10)
+        self.assertEqual(result["accepted_pending_coordinate_count"], 108)
+        self.assertEqual(result["blocked_pending_coordinate_count"], 27)
+        self.assertEqual(result["cross_verification_renewal_count"], 13)
+        self.assertEqual(result["blocked_cross_overlap_count"], 0)
         self.assertEqual(result["disjoint_potential_promotion_count"], 95)
-        self.assertEqual(result["translation_override_count"], 35)
-        self.assertEqual(result["pending_translation_override_count"], 19)
+        self.assertEqual(result["translation_override_count"], 39)
+        self.assertEqual(result["pending_translation_override_count"], 23)
         self.assertEqual(result["nonpending_translation_override_count"], 16)
         exact = self.private["exact_maps"]
         self.assertEqual(
-            set(exact["cross_overlap_renewal_coordinates"])
-            | set(exact["cross_overlap_blocked_coordinates"]),
+            set(exact["cross_overlap_renewal_coordinates"]),
             set(self.chunk["cross_family_overlap_coordinates"]),
+        )
+        self.assertEqual(exact["cross_overlap_blocked_coordinates"], [])
+        self.assertEqual(
+            len(exact["cross_renewal_required_override_coordinates"]),
+            7,
         )
         self.assertTrue(
             set(exact["cross_overlap_renewal_coordinates"]).isdisjoint(
                 exact["disjoint_potential_promotion_coordinates"]
             )
+        )
+
+    def test_repaired_cross_roots_have_14_plus_7_dependency_branches(
+        self,
+    ) -> None:
+        repaired = [
+            row
+            for row in self.private["site_reviews"]
+            if row["ordinal"] in {57, 76}
+        ]
+        self.assertEqual(len(repaired), 2)
+        self.assertEqual(sum(len(row["assemblies"]) for row in repaired), 14)
+        self.assertTrue(
+            all(
+                branch["current_relative_raw_g1n_nonexpanding"]
+                for row in repaired
+                for branch in row["assemblies"]
+            )
+        )
+        dependency = next(
+            row["dependency_assemblies"]
+            for row in repaired
+            if row["ordinal"] == 76
+        )
+        self.assertEqual(len(dependency), 7)
+        self.assertTrue(
+            all(
+                branch["current_relative_raw_g1n_nonexpanding"]
+                for branch in dependency
+            )
+        )
+        self.assertEqual(
+            self.report["result"]["four_repair_only_candidate_sha256"],
+            BUILDER.EXPECTED_FOUR_REPAIR_ONLY_CANDIDATE_SHA256,
+        )
+        self.assertEqual(
+            self.report["result"]["full_chunk_proposal_candidate_sha256"],
+            BUILDER.EXPECTED_PROPOSAL_CANDIDATE_SHA256,
         )
 
     def test_translation_overrides_are_strict_utf16_and_reverse_cleanly(self) -> None:

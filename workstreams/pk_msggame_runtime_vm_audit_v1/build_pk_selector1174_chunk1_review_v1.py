@@ -76,7 +76,7 @@ EXPECTED_CROSS_DECISIONS_SHA256 = (
     "E3C97823C70FBD441D420722AE306E2DEBE62CB8919FBA5426A91BC00DCBA5ED"
 )
 EXPECTED_PRIVATE_REVIEW_SHA256 = (
-    "DE34DF913C01DE9301D038C8BC76EA384257E0BEDD0387DCBBF872389B9AD967"
+    "7FEACBC29E0C4F9F46670B0A7781620AE7F54639FF58CED00D3C0453166C86EF"
 )
 EXPECTED_PRE_CROSS_CANDIDATE_SHA256 = (
     "DCB19B0D85422F7C0EA5888F9A0C47667D75A88D100BABAE11DDAF4A8DD2000E"
@@ -85,7 +85,10 @@ EXPECTED_CROSS_CANDIDATE_SHA256 = (
     "FF424B8C66BECD398E7617EA95904BFBEBFADEA581870CE5A142CD9BF3CA4845"
 )
 EXPECTED_PROPOSAL_CANDIDATE_SHA256 = (
-    "909790E80F317B08E7C5D7D2B3211EE0E5646F16B218115DFAC323797EEE76AA"
+    "8A982B3FE79CA7EC16899AF7E58339C81EEA9179675AE788C89CC65457614BCE"
+)
+EXPECTED_FOUR_REPAIR_ONLY_CANDIDATE_SHA256 = (
+    "9681A11B89FAA93E18F4C100537D0B29DF18974CF75085099024D876D6A43784"
 )
 EXPECTED_STEAM_PK_SHA256 = (
     "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766"
@@ -93,21 +96,23 @@ EXPECTED_STEAM_PK_SHA256 = (
 EXPECTED_SITE_COUNT = 60
 EXPECTED_ROOT_COUNT = 59
 EXPECTED_ASSEMBLY_COUNT = 420
-EXPECTED_ACCEPTED_SITES = 42
-EXPECTED_ACCEPTED_ROOTS = 41
-EXPECTED_REJECTED_SITES = 18
-EXPECTED_REJECTED_ROOTS = 18
-EXPECTED_REWRITES = 35
+EXPECTED_ACCEPTED_SITES = 44
+EXPECTED_ACCEPTED_ROOTS = 43
+EXPECTED_REJECTED_SITES = 16
+EXPECTED_REJECTED_ROOTS = 16
+EXPECTED_REWRITES = 39
 EXPECTED_KEEPS = 7
 EXPECTED_PENDING = 135
-EXPECTED_ACCEPTED_PENDING = 98
-EXPECTED_BLOCKED_PENDING = 37
-EXPECTED_CROSS_RENEWALS = 3
-EXPECTED_CROSS_BLOCKED = 10
+EXPECTED_ACCEPTED_PENDING = 108
+EXPECTED_BLOCKED_PENDING = 27
+EXPECTED_CROSS_RENEWALS = 13
+EXPECTED_CROSS_BLOCKED = 0
 EXPECTED_DISJOINT_PROMOTIONS = 95
 EXPECTED_NONPENDING_OVERRIDES = 16
-EXPECTED_PENDING_OVERRIDES = 19
-EXPECTED_BOUNDARY_WHITESPACE_CHANGES = 30
+EXPECTED_PENDING_OVERRIDES = 23
+EXPECTED_BOUNDARY_WHITESPACE_CHANGES = 32
+EXPECTED_DEPENDENCY_ASSEMBLIES = 7
+EXPECTED_CROSS_REQUIRED_OVERRIDES = 7
 EXPECTED_SITE_SHA256 = (
     "FEC5A84EB99E4937789C883D67A40C33F5EB2EB83DD5293E55FF9823081F59D6"
 )
@@ -124,37 +129,43 @@ EXPECTED_DISJOINT_SHA256 = (
     "4330F9F977AC63A2CBDBDF66A5091939BDD0AF8D9BD7DDBEB106513C31173147"
 )
 EXPECTED_ACCEPTED_PENDING_SHA256 = (
-    "41AEC5A0EB50DC7D54F6F30332779AC1BB6A38A059C1E24D2D1AE487BB554B2F"
+    "5F9C87CCD58EAA5B5D98A857C73468AF0FB35B6C6B205F6D39523E0655823F64"
 )
 EXPECTED_BLOCKED_PENDING_SHA256 = (
-    "E72896359A34393EFD923E0BB915C0EC3C7763CD768D4F869FA83C2BCB96CA0A"
+    "5F07D4B36AB87B6E68576E7981AAF4DA248A3A1F1CFA7635078139212023916C"
 )
 EXPECTED_CROSS_RENEWAL_SHA256 = (
-    "0E794BAFD962CFA5547743730440A8569AC83A232B7B09EE39911D510E19649B"
+    "5DD9365211CEB69D9A1069EA19F8929250A2E71207E0DE4D226D031EDE9A4E27"
 )
 EXPECTED_CROSS_BLOCKED_SHA256 = (
-    "E806F2F847E19B4A3C3E2D26C06A0022803535F3121B737871B8CDBC5E5F7D33"
+    "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
 )
 EXPECTED_DISJOINT_PROMOTION_SHA256 = (
     "B428311B38312FABA6EE224EA19A9E1798C8DE4BD661D2EDC8AF7CF4BECC8039"
 )
 EXPECTED_OVERRIDE_SHA256 = (
-    "34F922E3333F3EAC5B3F89DE378E12BAF823945BD970D6231728AB4EC137EAA0"
+    "CE35B7388E6DDCBDEE7EF33AE918672A999F5EF7A437C7EF72593E6AD0073D40"
 )
 EXPECTED_KEEP_SHA256 = (
     "E4C4135DBDADC06C8F065E3F9186CA8EF15C7D34FDBC8BA9481493A3AD7D1F03"
 )
 EXPECTED_ACCEPTED_SITE_SHA256 = (
-    "DE3254853B67A48D7C39E05A1D3E2FAF878FA10C11A66D90502F4DCF90D8110B"
+    "D81A76F7C8B8CE0146879FD9DB2F5EFFC62C5077608064BAECFBA5FA4963C56B"
 )
 EXPECTED_REJECTED_SITE_SHA256 = (
-    "CA9DF855ACDAD34A6995AE3C8AFD81E583B77C44A9B33EB11B2256C482EE460D"
+    "CF7D60CC393CED8B44F705D14EE8391392C157065F258533A0A770E961835763"
 )
 EXPECTED_ASSEMBLY_SHA256 = (
-    "E74920AC8E8EA83866F55B07687D6ED2696AFF1D40D09001F4D74D756355F8B8"
+    "8BEB5BCFA5CC36BAB14A421BD0459C5F575753F190CB87CD71F67E7FE8221DBE"
+)
+EXPECTED_DEPENDENCY_ASSEMBLY_SHA256 = (
+    "9F3D7E45118D3759A7B10E5F1D45D9089177ADFE88F46B66F472B0400FB2A9AE"
+)
+EXPECTED_CROSS_REQUIRED_OVERRIDE_SHA256 = (
+    "5FA76FD488FEA55E62E970D941D8F57F4EAEBC4F8B176F090AE63DC03D9DE3BF"
 )
 EXPECTED_PUBLIC_FILE_SHA256: str | None = (
-    "F4F3D48EC50EB3054C9232EE81514B6CDAD1015D30FBA298947D937176E9AE35"
+    "00BCA825E39953B1E0A6DD86842F78BAD32CF7EC0166BFC8F41F594EC50B82CC"
 )
 
 
@@ -382,6 +393,9 @@ def validate_private(
             "blocked_roots": EXPECTED_REJECTED_ROOTS,
             "cross_overlap_blocked": EXPECTED_CROSS_BLOCKED,
             "cross_overlap_renewals": EXPECTED_CROSS_RENEWALS,
+            "cross_renewal_required_overrides":
+                EXPECTED_CROSS_REQUIRED_OVERRIDES,
+            "dependency_assemblies": EXPECTED_DEPENDENCY_ASSEMBLIES,
             "disjoint_potential_promotions": EXPECTED_DISJOINT_PROMOTIONS,
             "keep": EXPECTED_KEEPS,
             "reject": EXPECTED_REJECTED_SITES,
@@ -394,9 +408,13 @@ def validate_private(
     exact = handoff.get("exact_maps", {})
     overrides = exact.get("translation_overrides")
     keep_coordinates = exact.get("keep_coordinates")
+    required_cross_overrides = exact.get(
+        "cross_renewal_required_override_coordinates"
+    )
     require(
         isinstance(overrides, dict)
         and isinstance(keep_coordinates, list)
+        and isinstance(required_cross_overrides, list)
         and len(overrides) == EXPECTED_REWRITES
         and len(keep_coordinates) == EXPECTED_KEEPS,
         "private exact maps drifted",
@@ -450,9 +468,11 @@ def validate_private(
     blocker_counts: Counter[str] = Counter()
     language_counts: Counter[str] = Counter()
     assembly_manifest: list[list[Any]] = []
+    dependency_assembly_manifest: list[list[Any]] = []
     whitespace_changes = 0
     seen_override_coordinates: set[str] = set()
     seen_keep_coordinates: set[str] = set()
+    repair_only_override_coordinates: set[str] = set()
     for assignment_row, row in zip(assignment_rows, site_rows):
         ordinal = int(assignment_row["ordinal"])
         site = str(assignment_row["site"])
@@ -463,12 +483,14 @@ def validate_private(
         root = site_root(site)
         decision = row.get("decision")
         reviewed_left = row.get("reviewed_left_translation")
+        reviewed_right = row.get("reviewed_right_translation")
         require(
             row.get("ordinal") == ordinal
             and row.get("site") == site
             and row.get("coordinate") == coordinate
             and decision in {"rewrite", "keep", "reject"}
-            and isinstance(reviewed_left, str),
+            and isinstance(reviewed_left, str)
+            and isinstance(reviewed_right, str),
             f"site identity/decision drifted at ordinal {ordinal}",
         )
         baseline_left, baseline_right = ASSIGN.adjacent_literals(
@@ -489,6 +511,11 @@ def validate_private(
             and row.get("pre_cross_right") == pre_cross_right,
             f"Korean predecessor context drifted at {site}",
         )
+        require(
+            reviewed_right == baseline_right
+            or decision == "rewrite",
+            f"right-fragment override lacks rewrite decision at {site}",
+        )
         if decision == "rewrite":
             require(
                 coordinate is not None
@@ -497,6 +524,20 @@ def validate_private(
                 f"rewrite map drifted at {site}",
             )
             seen_override_coordinates.add(coordinate)
+            if ordinal in {57, 76}:
+                repair_only_override_coordinates.add(coordinate)
+            if reviewed_right != baseline_right:
+                block_id, record_id, gap_id, _offset = (
+                    ASSIGN.RANKING.site_key(site)
+                )
+                right_coordinate = f"{block_id}:{record_id}:{gap_id}"
+                require(
+                    overrides.get(right_coordinate) == reviewed_right,
+                    f"right-fragment override map drifted at {site}",
+                )
+                seen_override_coordinates.add(right_coordinate)
+                if ordinal in {57, 76}:
+                    repair_only_override_coordinates.add(right_coordinate)
             accepted_sites.append(site)
         elif decision == "keep":
             require(
@@ -559,7 +600,7 @@ def validate_private(
             zip(TERMINALS, branches)
         ):
             reviewed_assembly = (
-                reviewed_left + terminal_candidate[terminal] + baseline_right
+                reviewed_left + terminal_candidate[terminal] + reviewed_right
             )
             current_assembly = (
                 current_left + terminal_current[terminal] + current_right
@@ -608,6 +649,82 @@ def validate_private(
                     register_proven,
                 ]
             )
+        dependency_branches = row.get("dependency_assemblies")
+        require(
+            isinstance(dependency_branches, list)
+            and len(dependency_branches)
+            == (EXPECTED_DEPENDENCY_ASSEMBLIES if ordinal == 76 else 0),
+            f"selector1096 dependency branch count drifted at {site}",
+        )
+        if ordinal == 76:
+            candidate_literals = [
+                literal.text
+                for literal in ENGINE.parse_record_literals(
+                    candidate_records[root]
+                )
+            ]
+            current_literals = [
+                literal.text
+                for literal in ENGINE.parse_record_literals(
+                    current_records[root]
+                )
+            ]
+            for branch_index, (terminal, dependency) in enumerate(
+                zip(range(2581, 2588), dependency_branches)
+            ):
+                candidate_terminal = ENGINE.parse_record_literals(
+                    candidate_records[(0, terminal)]
+                )[0].text
+                current_terminal = ENGINE.parse_record_literals(
+                    current_records[(0, terminal)]
+                )[0].text
+                reviewed_dependency = (
+                    candidate_literals[3]
+                    + candidate_terminal
+                    + reviewed_left
+                )
+                current_dependency = (
+                    current_literals[3]
+                    + current_terminal
+                    + current_left
+                )
+                reviewed_dependency_lines = line_metrics(
+                    reviewed_dependency
+                )
+                current_dependency_lines = line_metrics(current_dependency)
+                dependency_nonexpanding = current_relative_nonexpanding(
+                    reviewed_dependency_lines,
+                    current_dependency_lines,
+                )
+                require(
+                    dependency.get("branch_index") == branch_index
+                    and dependency.get("selector") == 1096
+                    and dependency.get("terminal_coordinate")
+                    == f"0:{terminal}:0"
+                    and dependency.get("reviewed_assembly")
+                    == reviewed_dependency
+                    and dependency.get("current_assembly")
+                    == current_dependency
+                    and dependency.get("reviewed_lines")
+                    == reviewed_dependency_lines
+                    and dependency.get("current_lines")
+                    == current_dependency_lines
+                    and dependency.get(
+                        "current_relative_raw_g1n_nonexpanding"
+                    )
+                    is dependency_nonexpanding
+                    and dependency_nonexpanding,
+                    f"selector1096 dependency proof drifted at {site}/{terminal}",
+                )
+                dependency_assembly_manifest.append(
+                    [
+                        site,
+                        terminal,
+                        sha256_bytes(reviewed_dependency.encode("utf-8")),
+                        sha256_bytes(current_dependency.encode("utf-8")),
+                        dependency_nonexpanding,
+                    ]
+                )
         require(
             row.get("all_seven_width_branches_nonexpanding") is all_width
             and row.get("all_seven_register_branches_proven") is all_register,
@@ -677,7 +794,17 @@ def validate_private(
         and coordinate_digest(keep_coordinates) == EXPECTED_KEEP_SHA256
         and ASSIGN.site_digest(accepted_sites) == EXPECTED_ACCEPTED_SITE_SHA256
         and ASSIGN.site_digest(rejected_sites) == EXPECTED_REJECTED_SITE_SHA256
-        and canonical_sha256(assembly_manifest) == EXPECTED_ASSEMBLY_SHA256,
+        and canonical_sha256(assembly_manifest) == EXPECTED_ASSEMBLY_SHA256
+        and len(dependency_assembly_manifest)
+        == EXPECTED_DEPENDENCY_ASSEMBLIES
+        and canonical_sha256(dependency_assembly_manifest)
+        == EXPECTED_DEPENDENCY_ASSEMBLY_SHA256
+        and len(required_cross_overrides)
+        == EXPECTED_CROSS_REQUIRED_OVERRIDES
+        and set(required_cross_overrides).issubset(overrides)
+        and coordinate_digest(required_cross_overrides)
+        == EXPECTED_CROSS_REQUIRED_OVERRIDE_SHA256
+        and len(repair_only_override_coordinates) == 4,
         "review digest contract drifted",
     )
     private_digests = handoff.get("digests", {})
@@ -701,10 +828,26 @@ def validate_private(
         and private_digests.get("rejected_site_sha256")
         == EXPECTED_REJECTED_SITE_SHA256
         and private_digests.get("assembly_canonical_sha256")
-        == EXPECTED_ASSEMBLY_SHA256,
+        == EXPECTED_ASSEMBLY_SHA256
+        and private_digests.get("dependency_assembly_canonical_sha256")
+        == EXPECTED_DEPENDENCY_ASSEMBLY_SHA256
+        and private_digests.get("cross_renewal_required_override_sha256")
+        == EXPECTED_CROSS_REQUIRED_OVERRIDE_SHA256,
         "private digest self-binding drifted",
     )
 
+    four_repair_blob = ENGINE.rebuild_packed_with_literals(
+        world["candidate_blob"],
+        {
+            parse_coordinate(coordinate): str(overrides[coordinate])
+            for coordinate in repair_only_override_coordinates
+        },
+    )
+    require(
+        sha256_bytes(four_repair_blob)
+        == EXPECTED_FOUR_REPAIR_ONLY_CANDIDATE_SHA256,
+        "four-repair-only candidate drifted",
+    )
     proposal_blob = ENGINE.rebuild_packed_with_literals(
         world["candidate_blob"],
         {
@@ -742,6 +885,9 @@ def validate_private(
         "accepted_sites": accepted_sites,
         "assembly_manifest": assembly_manifest,
         "blocker_counts": dict(sorted(blocker_counts.items())),
+        "dependency_assembly_manifest": dependency_assembly_manifest,
+        "four_repair_candidate_sha256":
+            sha256_bytes(four_repair_blob),
         "language_counts": dict(language_counts),
         "proposal_blob": proposal_blob,
         "rejected_roots": rejected_roots,
@@ -857,6 +1003,11 @@ def build_report() -> dict[str, Any]:
                 validated["whitespace_changes"],
             "jp_authority_sites": EXPECTED_SITE_COUNT,
             "msggame_event_912px_rule_applied": False,
+            "repaired_cross_dependency_selector1096_branches":
+                EXPECTED_DEPENDENCY_ASSEMBLIES,
+            "repaired_cross_dependency_selector1096_sha256":
+                EXPECTED_DEPENDENCY_ASSEMBLY_SHA256,
+            "repaired_cross_selector1174_branches": 14,
             "speaker_tone_review_sites": EXPECTED_SITE_COUNT,
             "terminal_branch_count_per_site": len(TERMINALS),
         },
@@ -877,6 +1028,10 @@ def build_report() -> dict[str, Any]:
             "cross_verification_renewal_count": EXPECTED_CROSS_RENEWALS,
             "cross_verification_renewal_sha256":
                 EXPECTED_CROSS_RENEWAL_SHA256,
+            "cross_renewal_required_override_count":
+                EXPECTED_CROSS_REQUIRED_OVERRIDES,
+            "cross_renewal_required_override_sha256":
+                EXPECTED_CROSS_REQUIRED_OVERRIDE_SHA256,
             "disjoint_potential_promotion_count":
                 EXPECTED_DISJOINT_PROMOTIONS,
             "disjoint_potential_promotion_sha256":
@@ -887,7 +1042,10 @@ def build_report() -> dict[str, Any]:
                 EXPECTED_NONPENDING_OVERRIDES,
             "pending_translation_override_count":
                 EXPECTED_PENDING_OVERRIDES,
-            "proposal_candidate_sha256": EXPECTED_PROPOSAL_CANDIDATE_SHA256,
+            "four_repair_only_candidate_sha256":
+                EXPECTED_FOUR_REPAIR_ONLY_CANDIDATE_SHA256,
+            "full_chunk_proposal_candidate_sha256":
+                EXPECTED_PROPOSAL_CANDIDATE_SHA256,
             "rejected_root_count": EXPECTED_REJECTED_ROOTS,
             "rejected_site_count": EXPECTED_REJECTED_SITES,
             "rejected_site_sha256": EXPECTED_REJECTED_SITE_SHA256,
