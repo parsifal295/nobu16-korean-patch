@@ -1,0 +1,89 @@
+{
+  "digests": {
+    "accepted_coordinate_sha256": "39B6603096EBF5338946AA4A7D5032A6D70158C3C9B137AD4DD00024C7057B58",
+    "accepted_root_sha256": "712F12130C25B76D5EB90B7FC1BCCC1AC6225154B40AC12C13C6CC967D83B7B0",
+    "candidate_after_sha256": "A2811CA8B9A53C84678727737FDA1729520FB4AB16F19AAB537C51292D1EEE78",
+    "candidate_before_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0",
+    "decision_payload_sha256": "C11954FF36D41141915749A90A8B2DE43A2D0A4ACB747298167114BBF40D3647",
+    "override_coordinate_sha256": "D7120A390FDAE62E9BF710A4C9DCDD5E27136FC598798FA675865B40FDAE1C99",
+    "promotion_coordinate_sha256": "460521BB120D818DA0370D79AEA2E2100781245258B9BAAA93CC3D6E90E2E7B5",
+    "promotion_root_sha256": "712F12130C25B76D5EB90B7FC1BCCC1AC6225154B40AC12C13C6CC967D83B7B0",
+    "renewal_coordinate_sha256": "21B778EEF09A13E9524E758167A0AD7FC71FB533EEDD1E0F8D249BE9E4244324",
+    "renewal_root_sha256": "61BA89FE77506A78DF41FAE85F7E0FB97D2D799389D6EE2EE91FB0C42AD4E389"
+  },
+  "inputs": {
+    "assignment_sha256": "352BA44152920A269D092237DA70F5278FADB295D3AEB4B8F52BD8B7DA78448F",
+    "checkpoint_sha256": "502C274DB571359D6C028381F1E77CE70A0AA191CAEC39FD41499044537964ED",
+    "engine_builder_sha256": "CF32112EB7B0BA578DF9EF2E9D2A5C92818E25AC2217FE867BE7968F92D8372E",
+    "ghidra_recheck_sha256": "938CEF5DFA0DADD21B48650C2CFFCCA09300A735706AA3131498D531B2EAC386",
+    "packet_sha256": [
+      "E45B355C4606E8BA56E34CFD89D48668E5ACF25889C4562B44388F7FA69AB4A2",
+      "EE59AF760C9940C259A27B0813A7777B2B63A7E9DDE3C18F2DDF53EA6DAB41B7",
+      "EB87B46196D03354E7E6B22658F929D9CF7CD961FDC5A76ACAD29A1C09924823"
+    ],
+    "review_artifact_sha256": {
+      "a0_builder": "6B322FECD3F77177B560C43398421BA14F1AAA27A55FF858AAF31B28BF58B041",
+      "a0_decisions": "A8F28D61C219902B5307FCD61EC75A9B77B2C164B99ED3DC151446BCD9DB65FE",
+      "a0_evidence": "4A15C85C3881EC50DCF48EE2E154EE15D9A373FB1C901AC9CD691E6624D1EDC0",
+      "a0_public": "DA63ECB2B2620BCC855033FB2E0B0D23306195A1757D049D80AE64CE5D8EA214",
+      "a1_initial_builder": "04D2C7E887A1B0775D8484D0B2250ADAB07F62EB6F09B7EAE34DFEF0A55E92F0",
+      "a1_initial_decisions": "4386DB744DA9F0F4E71B641CB1AF9E09A9E58FA32DAF9565E42A9B9B85FB4440",
+      "a1_initial_evidence": "91A423A5C882565D19B62B7F9027D71312E48BE190520CA88C05D9D6A8FCCE11",
+      "a1_initial_public": "C7BC6D53E0673FF5CE06E795BEA2A4F264738405F35D4005DFF6CE885D9708C1",
+      "a1_remediation_builder": "E30681AEB01011C61CE05F19581E30634F700A93DFB9368C64E85163058A1C1E",
+      "a1_remediation_decisions": "4F00ACFBB33EFDE226FB078032B13E92ADF9BBC9C59A523C5E6587750DF015F7",
+      "a1_remediation_evidence": "14A90B49D6427C04FB0B755C00E43A4EB9421A3665AEBC193DEA2813F18760C7",
+      "a1_remediation_proposals": "9A22A4ECC328D32F68F322497EA02060BF862C1000265A1000BA19D7FC0857EA",
+      "a1_remediation_public": "1AE6593D532C2F7AE22A65B1A7C3AAAE3A3E0D746F49740AF1C062257FBDAD08",
+      "a2_initial_builder": "E8A2E642633174EBD2C6BBDA14F020F82C8CA5FA523989D464C9F1578DC564BB",
+      "a2_initial_decisions": "735E8D05DA8A8455CF7EDA09F2B2F672FFA9B6D5E18E504C83C89EADE00344CB",
+      "a2_initial_evidence": "6B1293C673E025CC0F1F634131AC16615BE69939D1F6B572FC205157CB460FA6",
+      "a2_remediation_builder": "68B50A66B8512E88441E73D2EAB24623B92EB03AA63620F6654FE26FBCEE8115",
+      "a2_remediation_decisions": "A29D47D38B4033D087E70F1CEE700A8DC16D38DAF2EB924918583F7C57E4BC4B",
+      "a2_remediation_evidence": "292C7FD5436CDA9935423F1CFD0956D56573FDB7FA4D0367C9DDECC069D419F4",
+      "a2_remediation_proposals": "FBFC49B7E8AEACE64514B9A98DCC04DA985AB3989977BBD0C139F919C2655B4C",
+      "a2_remediation_public": "65EE6E4DAC13CAF748CE953562CCDC1B1ECFFCD391C1D4C3F01424D0E503B2D8"
+    }
+  },
+  "method": "three_packet_root_atomic_review_union_and_candidate_rebuild",
+  "privacy": {
+    "contains_dialogue_bodies": false,
+    "contains_translations": false,
+    "private_review_artifacts_stay_below_tmp": true,
+    "source_free": true
+  },
+  "proof": {
+    "accepted_coordinate_overlap_count": 0,
+    "all_actual_selector_and_terminal_branches_rechecked": true,
+    "all_predecessor_rows_bound": true,
+    "all_translation_hashes_bound": true,
+    "current_relative_raw_g1n_nonexpansion_required": true,
+    "en_sc_tc_used_as_auxiliary_context_only": true,
+    "full_integration_rebuild_performed": false,
+    "historical_factuality_and_speaker_register_reviewed": true,
+    "jp_used_as_semantic_authority": true,
+    "partial_unit_promotion_count": 0,
+    "pk_msgev_912px_rule_applied": false,
+    "root_atomic": true,
+    "source_only_action_count": 0,
+    "steam_write_performed": false
+  },
+  "release_target": "0.15.0",
+  "result": {
+    "accepted_coordinates": 1372,
+    "accepted_roots": 864,
+    "classification_only_promotions": 561,
+    "observed_block_rows": 1970,
+    "pending_after": 3293,
+    "pending_before": 4647,
+    "promoted_coordinates": 1354,
+    "promoted_roots": 864,
+    "promoted_units": 566,
+    "renewal_coordinates": 18,
+    "renewal_roots": 18,
+    "translation_overrides": 811
+  },
+  "schema": "nobu16.kr.pk-msggame-waveA-consolidated-closure.source-free.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}
