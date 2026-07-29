@@ -1,0 +1,50 @@
+{
+  "contracts": {
+    "layout_contract_file_sha256": "EE28501EE41586025518325DE5CEE9722B99E1063FBE7B8E9049DFA6E310F9AC",
+    "runtime_vm_contract_file_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461"
+  },
+  "live_program": {
+    "address_size_bits": 64,
+    "function_count": 37923,
+    "ghidra_project": "dfg",
+    "image_base": "0x140000000",
+    "path": "/NOBU16PK.exe.unpacked.exe",
+    "program_sha256_binding": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+  },
+  "method": "live_ghidra_mcp_decompile_recheck_against_frozen_source_free_contracts",
+  "observations": {
+    "dispatch_opcode_0x140A013B0": {
+      "dynamic_value_opcode_02_copies_utf16_code_units_without_implicit_separator": true,
+      "opcode_0143_pushes_a_return_address_then_selects_the_target_record": true,
+      "opcode_014A_selects_the_target_record_without_a_return_push": true,
+      "output_controls_08_09_0A_are_copied_explicitly": true
+    },
+    "execute_record_vm_0x1409F7610": {
+      "literal_utf16_code_units_are_copied_verbatim": true,
+      "output_buffer_bytes": 2048,
+      "output_capacity_code_units_before_terminator": 2046,
+      "runtime_control_bytes_below_0x20_are_dispatched": true
+    },
+    "normalized_wrap_entry_0x1409F92E0": {
+      "gate_formula": "floor(widget_width_times_18_div_font_size)",
+      "wrap_engine": "0x1409F8B00"
+    },
+    "wrap_engine_0x1409F8B00": {
+      "explicit_line_feed_inserter": "0x140203410",
+      "glyph_advance_function": "0x140C8F4E0",
+      "normalized_measurement_size": 18,
+      "tag_width_function": "0x140C91CA0"
+    }
+  },
+  "proof": {
+    "absolute_msggame_widget_width_assumed": false,
+    "current_relative_nonexpansion_remains_the_consumer_independent_gate": true,
+    "decompiled_function_body_distributed": false,
+    "per_row_manual_playback_required": false,
+    "pk_msgev_912px_rule_applied": false,
+    "source_or_translation_text_distributed": false
+  },
+  "schema": "nobu16.kr.pk-msggame-ghidra-live-recheck.source-free.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}
