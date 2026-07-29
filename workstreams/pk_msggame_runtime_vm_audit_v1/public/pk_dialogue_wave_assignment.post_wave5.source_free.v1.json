@@ -1,0 +1,407 @@
+{
+  "distribution_policy": {
+    "private_assignment_stays_below_tmp": true,
+    "private_decisions_and_evidence_stay_below_tmp": true,
+    "tracked_wave_artifact_counts": {
+      "assignment_summary": 1,
+      "checkpoint": 1,
+      "closure": 1,
+      "progress": 1
+    },
+    "tracked_wave_intermediate_reviews": 0
+  },
+  "guards": {
+    "candidate_sha256": "41CBC25028A3251C954597B2EA6797E503D8F8D6887D79C99BB7191FEBD5617F",
+    "private_assignment_sha256": "5FBBD6DCFDF7092EFCE17B74513F004AFA2413C4420E88BFA21A3150D2425610",
+    "ranking_builder_sha256": "DE1082D629B91D52EAA946005D7783E31506A963D7D9793E35D4F292CF6C710E",
+    "ranking_private_sha256": "071D7F15C860B8F8D051C89815CFC591BBC65F7B8FE12D1C779796C6F38E21F7",
+    "ranking_public_sha256": "29D3286D710C9B4072ECA71A18C7EC11270163315F7022227D02BAFCF234E46B",
+    "selection_profile_sha256": "E155972D94C9EA29288175FBE3644EA1B9F7010A96B238A18213F7C6B58CCCE5",
+    "agent_bundle_manifest_sha256": "8E30B2977F32AB46C032D47B7991E8541D009C985F1AE4A28F0AE49623FF9A1D"
+  },
+  "independence": {
+    "atomic_template_signature_overlap": 0,
+    "closure_node_overlap": 0,
+    "pair_count": 153,
+    "reachable_pending_root_overlap": 0,
+    "site_root_overlap": 0,
+    "terminal_root_overlap": 0
+  },
+  "method": "post_selector292_wave5_rank_order_greedy_wide_eighteen_way_root_terminal_and_atomic_independent_assignment",
+  "packets": [
+    {
+      "candidate_site_count": 32,
+      "chunk_count": 1,
+      "packet_id": 0,
+      "packet_sha256": "31BBC15DC747C262F82B1E139C9CB3120BA2942020C6FD95CA83B6349B1ADA8E",
+      "pending_coordinate_count": 15,
+      "rank": 1,
+      "reachable_pending_root_count": 5,
+      "selector": 772,
+      "source_only_site_count": 1,
+      "terminal_count": 7,
+      "bundle_id": 0
+    },
+    {
+      "candidate_site_count": 27,
+      "chunk_count": 1,
+      "packet_id": 1,
+      "packet_sha256": "A0CC87E8C042BE8664D08B5D5B1E0ECB02ACE583208B2B5C21B1F5ED68AFC1DD",
+      "pending_coordinate_count": 14,
+      "rank": 2,
+      "reachable_pending_root_count": 9,
+      "selector": 160,
+      "source_only_site_count": 0,
+      "terminal_count": 7,
+      "bundle_id": 1
+    },
+    {
+      "candidate_site_count": 9,
+      "chunk_count": 1,
+      "packet_id": 2,
+      "packet_sha256": "ED89DACE41471D79C01579A8AB2A2D4CCC15D9479C2463F5E1432103D5E4146D",
+      "pending_coordinate_count": 14,
+      "rank": 3,
+      "reachable_pending_root_count": 8,
+      "selector": 616,
+      "source_only_site_count": 2,
+      "terminal_count": 7,
+      "bundle_id": 1
+    },
+    {
+      "candidate_site_count": 18,
+      "chunk_count": 1,
+      "packet_id": 3,
+      "packet_sha256": "83F2604DE7468AD026500EAFFFB865680D989F12B67810B2706A4E4F62DDC1EB",
+      "pending_coordinate_count": 13,
+      "rank": 4,
+      "reachable_pending_root_count": 7,
+      "selector": 280,
+      "source_only_site_count": 0,
+      "terminal_count": 7,
+      "bundle_id": 2
+    },
+    {
+      "candidate_site_count": 9,
+      "chunk_count": 1,
+      "packet_id": 4,
+      "packet_sha256": "627B4DA52BC8D4EF4CAB6BAD91D8FE6D4436CA9B53E767E549D16259A2A92221",
+      "pending_coordinate_count": 13,
+      "rank": 5,
+      "reachable_pending_root_count": 5,
+      "selector": 1204,
+      "source_only_site_count": 1,
+      "terminal_count": 7,
+      "bundle_id": 1
+    },
+    {
+      "candidate_site_count": 12,
+      "chunk_count": 1,
+      "packet_id": 5,
+      "packet_sha256": "AC225D05FC9CEE225581271B9B851D64A9569AC526AF88398B221B12136753CC",
+      "pending_coordinate_count": 12,
+      "rank": 6,
+      "reachable_pending_root_count": 5,
+      "selector": 256,
+      "source_only_site_count": 2,
+      "terminal_count": 7,
+      "bundle_id": 2
+    },
+    {
+      "candidate_site_count": 13,
+      "chunk_count": 1,
+      "packet_id": 6,
+      "packet_sha256": "8FB848C54043E8B5A2F167239271EF401210614FB9EE24DD56A7FFB4D3B34950",
+      "pending_coordinate_count": 12,
+      "rank": 7,
+      "reachable_pending_root_count": 5,
+      "selector": 634,
+      "source_only_site_count": 2,
+      "terminal_count": 7,
+      "bundle_id": 2
+    },
+    {
+      "candidate_site_count": 11,
+      "chunk_count": 1,
+      "packet_id": 7,
+      "packet_sha256": "F0F9B367D848E061C1207C67050DB301DEDF7B84A2F49D22A242498B44727133",
+      "pending_coordinate_count": 12,
+      "rank": 9,
+      "reachable_pending_root_count": 6,
+      "selector": 778,
+      "source_only_site_count": 2,
+      "terminal_count": 7,
+      "bundle_id": 0
+    },
+    {
+      "candidate_site_count": 11,
+      "chunk_count": 1,
+      "packet_id": 8,
+      "packet_sha256": "496679FBB154099248B1D9E9FA9622B9C2E5E210F4F6ED804A86DFF0CA05E82A",
+      "pending_coordinate_count": 11,
+      "rank": 11,
+      "reachable_pending_root_count": 4,
+      "selector": 298,
+      "source_only_site_count": 0,
+      "terminal_count": 7,
+      "bundle_id": 0
+    },
+    {
+      "candidate_site_count": 8,
+      "chunk_count": 1,
+      "packet_id": 9,
+      "packet_sha256": "392AB39CCB87ABED820492897550BF3CE07A44E51E28D33B6D92BFD8EDEFA43C",
+      "pending_coordinate_count": 11,
+      "rank": 12,
+      "reachable_pending_root_count": 6,
+      "selector": 898,
+      "source_only_site_count": 0,
+      "terminal_count": 7,
+      "bundle_id": 2
+    },
+    {
+      "candidate_site_count": 6,
+      "chunk_count": 1,
+      "packet_id": 10,
+      "packet_sha256": "6EE6B994BBCC20F7ACF35928E5E272C926221CC6D406E21ACC333A53E4F99E07",
+      "pending_coordinate_count": 11,
+      "rank": 13,
+      "reachable_pending_root_count": 4,
+      "selector": 1036,
+      "source_only_site_count": 2,
+      "terminal_count": 7,
+      "bundle_id": 2
+    },
+    {
+      "candidate_site_count": 15,
+      "chunk_count": 1,
+      "packet_id": 11,
+      "packet_sha256": "CBB6154BD81B8F25429AD6F22E242670FDEAA6346F41F2FAC9D2063B1C94BEA1",
+      "pending_coordinate_count": 11,
+      "rank": 14,
+      "reachable_pending_root_count": 5,
+      "selector": 1072,
+      "source_only_site_count": 2,
+      "terminal_count": 7,
+      "bundle_id": 0
+    },
+    {
+      "candidate_site_count": 13,
+      "chunk_count": 1,
+      "packet_id": 12,
+      "packet_sha256": "6A04F6900270F2D35754D70878C664D4977A3689CAFC13B7414BC2722A59F4A4",
+      "pending_coordinate_count": 9,
+      "rank": 17,
+      "reachable_pending_root_count": 4,
+      "selector": 70,
+      "source_only_site_count": 0,
+      "terminal_count": 7,
+      "bundle_id": 0
+    },
+    {
+      "candidate_site_count": 5,
+      "chunk_count": 1,
+      "packet_id": 13,
+      "packet_sha256": "0A599621BBFA8745ABD2E2F813B0085B7F40FD4933ABAB3C3F5F0F0D1BA00F47",
+      "pending_coordinate_count": 9,
+      "rank": 19,
+      "reachable_pending_root_count": 4,
+      "selector": 850,
+      "source_only_site_count": 4,
+      "terminal_count": 7,
+      "bundle_id": 1
+    },
+    {
+      "candidate_site_count": 28,
+      "chunk_count": 1,
+      "packet_id": 14,
+      "packet_sha256": "2B80D808023CD1881925ED45F97BE768FBF6C270315CF284D09064FDD07BC705",
+      "pending_coordinate_count": 9,
+      "rank": 20,
+      "reachable_pending_root_count": 4,
+      "selector": 862,
+      "source_only_site_count": 1,
+      "terminal_count": 7,
+      "bundle_id": 1
+    },
+    {
+      "candidate_site_count": 7,
+      "chunk_count": 1,
+      "packet_id": 15,
+      "packet_sha256": "D4E77CDEC7562AC8B1DB7B5174A0C4CA44D4EB15D3A6F45080AE9BD480DA3992",
+      "pending_coordinate_count": 9,
+      "rank": 21,
+      "reachable_pending_root_count": 4,
+      "selector": 928,
+      "source_only_site_count": 0,
+      "terminal_count": 7,
+      "bundle_id": 0
+    },
+    {
+      "candidate_site_count": 11,
+      "chunk_count": 1,
+      "packet_id": 16,
+      "packet_sha256": "1133C81193FFDCABE93BF4BA86B0EB6D63EBAA433CC9FA945E2D201850D2DCF4",
+      "pending_coordinate_count": 9,
+      "rank": 22,
+      "reachable_pending_root_count": 4,
+      "selector": 940,
+      "source_only_site_count": 1,
+      "terminal_count": 7,
+      "bundle_id": 1
+    },
+    {
+      "candidate_site_count": 31,
+      "chunk_count": 1,
+      "packet_id": 17,
+      "packet_sha256": "57836A89B2DA8BA44C78F1116D5E48AE602C3E98AAF1BBE5E81F4765F584B97E",
+      "pending_coordinate_count": 8,
+      "rank": 23,
+      "reachable_pending_root_count": 5,
+      "selector": 202,
+      "source_only_site_count": 2,
+      "terminal_count": 7,
+      "bundle_id": 2
+    }
+  ],
+  "release_target": "0.15.0",
+  "result": {
+    "packet_count": 18,
+    "selected_selector_count": 18,
+    "total_candidate_sites": 266,
+    "total_chunks": 18,
+    "total_pending_coordinates": 202,
+    "total_reachable_pending_roots": 94,
+    "total_source_only_sites": 22,
+    "total_terminal_rows": 126
+  },
+  "schema": "nobu16.kr.pk-dialogue-wave-assignment.source-free.v1",
+  "status": "READY",
+  "steam_write_performed": false,
+  "wave_id": "post_selector292_wave6",
+  "agent_bundle_manifest": {
+    "balance_totals": {
+      "candidate_site_count": 266,
+      "pending_coordinate_count": 202
+    },
+    "bundle_count": 3,
+    "exact_disjoint_packet_assignment": true,
+    "policy": "normalized_pending_rows_and_candidate_sites_largest_first_minimum_pairwise_imbalance_v1",
+    "bundles": [
+      {
+        "bundle_id": 0,
+        "candidate_site_count": 89,
+        "packet_count": 6,
+        "packet_ids": [
+          0,
+          7,
+          8,
+          11,
+          12,
+          15
+        ],
+        "packet_sha256": [
+          "31BBC15DC747C262F82B1E139C9CB3120BA2942020C6FD95CA83B6349B1ADA8E",
+          "F0F9B367D848E061C1207C67050DB301DEDF7B84A2F49D22A242498B44727133",
+          "496679FBB154099248B1D9E9FA9622B9C2E5E210F4F6ED804A86DFF0CA05E82A",
+          "CBB6154BD81B8F25429AD6F22E242670FDEAA6346F41F2FAC9D2063B1C94BEA1",
+          "6A04F6900270F2D35754D70878C664D4977A3689CAFC13B7414BC2722A59F4A4",
+          "D4E77CDEC7562AC8B1DB7B5174A0C4CA44D4EB15D3A6F45080AE9BD480DA3992"
+        ],
+        "pending_coordinate_count": 67,
+        "selection_ranks": [
+          1,
+          9,
+          11,
+          14,
+          17,
+          21
+        ],
+        "selectors": [
+          772,
+          778,
+          298,
+          1072,
+          70,
+          928
+        ]
+      },
+      {
+        "bundle_id": 1,
+        "candidate_site_count": 89,
+        "packet_count": 6,
+        "packet_ids": [
+          1,
+          2,
+          4,
+          13,
+          14,
+          16
+        ],
+        "packet_sha256": [
+          "A0CC87E8C042BE8664D08B5D5B1E0ECB02ACE583208B2B5C21B1F5ED68AFC1DD",
+          "ED89DACE41471D79C01579A8AB2A2D4CCC15D9479C2463F5E1432103D5E4146D",
+          "627B4DA52BC8D4EF4CAB6BAD91D8FE6D4436CA9B53E767E549D16259A2A92221",
+          "0A599621BBFA8745ABD2E2F813B0085B7F40FD4933ABAB3C3F5F0F0D1BA00F47",
+          "2B80D808023CD1881925ED45F97BE768FBF6C270315CF284D09064FDD07BC705",
+          "1133C81193FFDCABE93BF4BA86B0EB6D63EBAA433CC9FA945E2D201850D2DCF4"
+        ],
+        "pending_coordinate_count": 68,
+        "selection_ranks": [
+          2,
+          3,
+          5,
+          19,
+          20,
+          22
+        ],
+        "selectors": [
+          160,
+          616,
+          1204,
+          850,
+          862,
+          940
+        ]
+      },
+      {
+        "bundle_id": 2,
+        "candidate_site_count": 88,
+        "packet_count": 6,
+        "packet_ids": [
+          3,
+          5,
+          6,
+          9,
+          10,
+          17
+        ],
+        "packet_sha256": [
+          "83F2604DE7468AD026500EAFFFB865680D989F12B67810B2706A4E4F62DDC1EB",
+          "AC225D05FC9CEE225581271B9B851D64A9569AC526AF88398B221B12136753CC",
+          "8FB848C54043E8B5A2F167239271EF401210614FB9EE24DD56A7FFB4D3B34950",
+          "392AB39CCB87ABED820492897550BF3CE07A44E51E28D33B6D92BFD8EDEFA43C",
+          "6EE6B994BBCC20F7ACF35928E5E272C926221CC6D406E21ACC333A53E4F99E07",
+          "57836A89B2DA8BA44C78F1116D5E48AE602C3E98AAF1BBE5E81F4765F584B97E"
+        ],
+        "pending_coordinate_count": 67,
+        "selection_ranks": [
+          4,
+          6,
+          7,
+          12,
+          13,
+          23
+        ],
+        "selectors": [
+          280,
+          256,
+          634,
+          898,
+          1036,
+          202
+        ]
+      }
+    ]
+  }
+}
