@@ -1,0 +1,47 @@
+{
+  "schema": "nobu16.kr.movie-subtitle-msgdata-honnoji-correction.v1",
+  "status": "PASS",
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "source": {
+    "packed_size": 482068,
+    "packed_sha256": "4071B4CF9071318F1ED89502F8920E1290C7D8A71F3CB93EF4F7D8D766574210",
+    "raw_size": 480160,
+    "raw_sha256": "04533CC133604AC0E624CE57CD6B900BB6A8F46BE5E9E154333D6FEF79030526",
+    "string_count": 29218
+  },
+  "candidate": {
+    "packed_size": 482093,
+    "packed_sha256": "36AA074DCEBD5E26D3679E5468F0529A996E54DAF65188C71C96EAC11862B982",
+    "raw_size": 480184,
+    "raw_sha256": "A149C67EC7C165DA3CFB15BD6661A47D3C547B94555ECEB0C9DF54A44851180F",
+    "string_count": 29218
+  },
+  "correction_count": 2,
+  "correction_ids": [
+    18025,
+    18032
+  ],
+  "movie_subtitle_audit": {
+    "video_count": 10,
+    "video_slot_count": 249,
+    "populated_slot_count": 249,
+    "empty_slot_count": 0,
+    "kana_slot_count": 0,
+    "max_explicit_lines": 2,
+    "max_line_characters": 40,
+    "changed_ids": [
+      18025,
+      18032
+    ],
+    "honnoji": {
+      "first_id": 18019,
+      "last_id": 18049,
+      "slot_count": 31,
+      "populated_slot_count": 31
+    }
+  },
+  "non_target_texts_preserved": true,
+  "wrapper_round_trip": true,
+  "deterministic_ab_equal": true,
+  "steam_installation_written": false
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "nobu16.kr.movie-subtitle-msgdata-fix.v1",
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "source": {
+    "packed_size": 481956,
+    "packed_sha256": "E671FD84377E269E8B9BC27535493BD0467C6586A032C8FBA37CEC3C63E2E74B",
+    "raw_size": 480048,
+    "raw_sha256": "96331FFF15EB84A19DA7F5A45B8B1F6737593158BFB6C2AB1C11769DE4AB1BBC",
+    "string_count": 29218
+  },
+  "candidate": {
+    "packed_size": 482068,
+    "packed_sha256": "4071B4CF9071318F1ED89502F8920E1290C7D8A71F3CB93EF4F7D8D766574210",
+    "raw_size": 480160,
+    "raw_sha256": "04533CC133604AC0E624CE57CD6B900BB6A8F46BE5E9E154333D6FEF79030526",
+    "string_count": 29218
+  },
+  "correction_count": 8,
+  "correction_ids": [
+    18017,
+    18119,
+    18129,
+    18153,
+    18160,
+    18162,
+    18186,
+    18220
+  ],
+  "movie_subtitle_audit": {
+    "range": {
+      "first_id": 17989,
+      "last_id": 18240,
+      "entry_count": 252
+    },
+    "populated_entry_count": 252,
+    "empty_entry_count": 0,
+    "kana_entry_count": 0,
+    "max_explicit_lines": 2,
+    "max_line_characters": 40,
+    "changed_ids": [
+      18017,
+      18119,
+      18129,
+      18153,
+      18160,
+      18162,
+      18186,
+      18220
+    ],
+    "rejected_term_hits": 0
+  },
+  "determinism": {
+    "independent_input_copies_built": 2,
+    "candidate_sha256_equal": true
+  },
+  "fail_closed": {
+    "already_patched_input_rejected": true
+  },
+  "steam_installation_written": false
+}

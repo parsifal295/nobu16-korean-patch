@@ -1,0 +1,25 @@
+{
+  "audit_source_free_sha256": "1BD54B8B78A3C2E9317196A17220142A5B55687BD1E6D15905428BF55DC5B6C9",
+  "candidate_deployed_to_steam": false,
+  "private_decision_file_sha256": "19F6858E6A29DE84910B56D745F4585584B2925B056DCC2963BB7B092CB5D406",
+  "release_target": "0.15.0",
+  "resources": [
+    {
+      "output_candidate_sha256": "44828B27368FB74EF906DC167DCAF1BA54129A4313F7EDA3C0668777BB86E276",
+      "relative_path": "MSG/JP/msggame.bin",
+      "resource": "base_msggame",
+      "visible_replacement_count": 23765
+    },
+    {
+      "output_candidate_sha256": "0330917524A47974618317A8EC56C4B471672DA5AD07000A8C5D8A7CCFB8A05F",
+      "relative_path": "MSG_PK/JP/msggame.bin",
+      "resource": "pk_msggame",
+      "visible_replacement_count": 29038
+    }
+  ],
+  "runtime_completion": true,
+  "schema": "nobu16.kr.pc-dialogue-52803-candidate-manifest.source-free.v1",
+  "semantic_completion": true,
+  "steam_write_performed": false,
+  "validated_visible_current_literal_count": 52803
+}
