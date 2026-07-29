@@ -1,0 +1,94 @@
+{
+  "bundles": [
+    {
+      "actions_authorized": true,
+      "actual_branch_cross_product_sha256": "D53B739EEDB5503DC5C57895A3A9276089AB4C859BD4643EB5CB2F5421748748",
+      "branch_count": 202301,
+      "bundle_id": 0,
+      "changed_terminal_root_count": 12,
+      "packet_sha256": "00CBDA5E313291F3DF6CE9A5CECEF43843E54B108B7875B015F09B0E6F3C47A1",
+      "pending_coordinate_count": 396,
+      "post_waveA_terminal_snapshot_sha256": "B39DF4B9F7BE63A3ED9D0C3FCC70EA3F5F3960069F77799A077EC2CCB3DCD181",
+      "root_count": 238,
+      "unique_terminal_root_count": 592
+    },
+    {
+      "actions_authorized": true,
+      "actual_branch_cross_product_sha256": "4469778130ADE46A3978F0E3089B0BCDB3EDBA1150D942EC1218BBBD257C97F1",
+      "branch_count": 202300,
+      "bundle_id": 1,
+      "changed_terminal_root_count": 27,
+      "packet_sha256": "12A125F5891F1C4DEF3934F0E635649DDB2B71C31D88FF276D0743B35AA536CF",
+      "pending_coordinate_count": 411,
+      "post_waveA_terminal_snapshot_sha256": "6495FED264036C13B3CA2F47C23DEC87056CEACB9411DAEE513D486E26DD606A",
+      "root_count": 240,
+      "unique_terminal_root_count": 653
+    },
+    {
+      "actions_authorized": true,
+      "actual_branch_cross_product_sha256": "A0AEC2DC97940FDA6473B8D2D802760008ED708343BD45AE43602084C189DE93",
+      "branch_count": 202301,
+      "bundle_id": 2,
+      "changed_terminal_root_count": 16,
+      "packet_sha256": "9BEBF0FD1ED359925DD5C5B99A3B002C6D83B06893ECFCB74A66CBFD27899EC9",
+      "pending_coordinate_count": 407,
+      "post_waveA_terminal_snapshot_sha256": "57483734B2747B619F29384AE73A872DA6B7B6B8226B059E6842DAA2425615FD",
+      "root_count": 239,
+      "unique_terminal_root_count": 661
+    }
+  ],
+  "freeze": {
+    "binding_mode": "explicit_sha256_freeze",
+    "expected_candidate_sha256": "A2811CA8B9A53C84678727737FDA1729520FB4AB16F19AAB537C51292D1EEE78",
+    "expected_checkpoint_sha256": "F7B2AA9642E6FDC80920B091991C41F7EC08590E5DE778326EB72E3C8BA67E1A",
+    "review_start_authorized": true
+  },
+  "inputs": {
+    "post_waveA_candidate_sha256": "A2811CA8B9A53C84678727737FDA1729520FB4AB16F19AAB537C51292D1EEE78",
+    "post_waveA_checkpoint_sha256": "F7B2AA9642E6FDC80920B091991C41F7EC08590E5DE778326EB72E3C8BA67E1A",
+    "provisional_assignment_sha256": "10484CE4CD3D4413C770CE1F23FF165B658762C3B4FB022D1F4CE711A2F915BA",
+    "provisional_builder_sha256": "778C53339CF43F9D0916644553048D5523411E16E239CB444E874D2FD299FA1E"
+  },
+  "method": "frozen_post_waveA_candidate_exact_0143_caller_cross_product_provisional_topology_identity_terminal_snapshot_refreeze",
+  "privacy": {
+    "contains_dialogue_bodies": false,
+    "contains_translations": false,
+    "private_packets_stay_below_tmp": true,
+    "source_free": true
+  },
+  "proof": {
+    "actual_branch_cross_products_recomputed": true,
+    "archive_root_set_identical_to_provisional": true,
+    "bundle_branch_balance_max_minus_min": 1,
+    "bundle_coordinates_pairwise_disjoint": true,
+    "bundle_roots_pairwise_disjoint": true,
+    "candidate_rebuilt_from_checkpoint": true,
+    "full_control_graph_identical_to_provisional": true,
+    "full_rebuild_performed": false,
+    "pending_direct_call_coordinate_universe_exact": true,
+    "pending_direct_call_root_universe_exact": true,
+    "post_waveA_control_graph_sha256": "4645FBFF241754AD7CCFC6B2D7F222919511F12D092709E49D480BE3B4C80687",
+    "provisional_control_graph_sha256": "4645FBFF241754AD7CCFC6B2D7F222919511F12D092709E49D480BE3B4C80687",
+    "source_only_action_count": 0,
+    "steam_write_performed": false,
+    "terminal_snapshots_replaced": true
+  },
+  "result": {
+    "actual_branch_count": 606902,
+    "actual_branch_cross_product_sha256": "EC3F4F0FDF665DC7A509FD0807B4C9B4313D4BE7D402453A5737A8EBF8C85B63",
+    "bundle_count": 3,
+    "caller_pending_coordinate_count": 1214,
+    "caller_pending_coordinate_sha256": "E72E4ADF21D1C1E11AA4600C6EDE37335D226D5A74E56284485890932FE5E62E",
+    "caller_root_count": 717,
+    "caller_root_sha256": "5F3CA7E82DF2F69CE027E805988C19A39331CE583552552EC9A85E1378B4AE98",
+    "changed_terminal_root_count": 40,
+    "changed_terminal_root_sha256": "5E45539F8DAE575E3C46CE446FE254B15ECA75C3FA1DADAB320B492D88F66A33",
+    "pending_checkpoint_row_count": 3293,
+    "unique_closure_target_count": 140,
+    "unique_closure_target_sha256": "AEDF7B7EDAEF0061A3AB03ADB89B60DCD980B2A594F4D35D974FD1D236BDE9ED",
+    "unique_terminal_root_count": 884,
+    "unique_terminal_root_sha256": "9BE55D156E753AC660C1FAE5313BB724B2DA6C345476E009CC457E8777581BF1"
+  },
+  "schema": "nobu16.kr.pk-msggame-post-waveA-waveB-caller-assignment.final.source-free.v1",
+  "status": "PASS_FROZEN_WAVE_A_BOUND_REVIEW_AUTHORIZED"
+}
