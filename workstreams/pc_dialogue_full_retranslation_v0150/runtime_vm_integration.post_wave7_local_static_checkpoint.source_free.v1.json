@@ -1,0 +1,61 @@
+{
+  "candidate": {
+    "after_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0",
+    "before_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0",
+    "byte_change_count": 0
+  },
+  "inputs": {
+    "predecessor_builder_sha256": "825D7AA13B5750697CB7A0A548CBE5C90D2F2A5BD7762985F1F17B1FEB556DFF",
+    "predecessor_private_sha256": "B1CF7F4523DE9411BA5172E7C9DEA946C7646085C83A1480C51807E2DD0C90E7",
+    "predecessor_public_sha256": "96E03D3EA32FAB5E6701DB75060038A5E967F9617EB0E22E5C91352944626930",
+    "static_builder_sha256": "372146CEDED272C1D4B00EA9B647EDA54973087103BACDA279225F9CB32B0ABC",
+    "static_decisions_sha256": "1F026C793D9B8E0A8D5139B5B1B1EFFC7B23899244AE6C38F7C37911E7D423FE",
+    "static_evidence_sha256": "CFC6ADCCE55D3374AF69D4B3D6002DE6E013E6BFD0E9685915E2F7457713C7A2",
+    "static_public_sha256": "82B3A5E1C2B8E7558E1992BA65D0B001EC6778B60C9BC12EB2A5483F887E60F4"
+  },
+  "method": "post_wave7_local_static_1254_classification_only_targeted_ledger_delta",
+  "privacy": {
+    "contains_dialogue_bodies": false,
+    "contains_translations": false,
+    "coordinate_lists_kept_private": true,
+    "source_free": true
+  },
+  "release_target": "0.15.0",
+  "result": {
+    "affected_row_count": 1254,
+    "confirmed_non_display": 345,
+    "fully_candidate_eligible": 48156,
+    "pk_msggame_promotion_count": 16036,
+    "private_integrated_decision_sha256": "502C274DB571359D6C028381F1E77CE70A0AA191CAEC39FD41499044537964ED",
+    "promoted_total": 31687,
+    "retranslated": 47811,
+    "row_count": 52803,
+    "runtime_review_pending": 4647,
+    "semantic_review_approved": 52803,
+    "unaffected_raw_line_copy_count": 51549
+  },
+  "schema": "nobu16.kr.pc-dialogue-runtime-vm-post-wave7-local-static-delta-checkpoint.source-free.v1",
+  "status": "PASS",
+  "steam_write_performed": false,
+  "targeted_delta": {
+    "action": "runtime_promotion",
+    "control_or_token_change_count": 0,
+    "coordinate_sha256": "7AD1E0AE524392364726462241867FBFA16A937826B016EA3C719AAB7DA3F7C5",
+    "decision_count": 1254,
+    "layout_change_count": 0,
+    "promotion_count": 1254,
+    "root_count": 674,
+    "root_sha256": "956C1695A6FDBD2F355F3BACC2E76DD28B15C7DE51E40DC8C8963D2BF58CEE73",
+    "semantic_override_count": 0,
+    "translation_change_count": 0
+  },
+  "validation": {
+    "full_dialogue_rebuild_performed": false,
+    "full_integration_engine_invoked": false,
+    "predecessor_row_hashes_matched": 1254,
+    "steam_archives_read_only": true,
+    "targeted_affected_rows_rechecked": 1254,
+    "translation_hashes_matched": 1254,
+    "unaffected_rows_byte_copied": 51549
+  }
+}
