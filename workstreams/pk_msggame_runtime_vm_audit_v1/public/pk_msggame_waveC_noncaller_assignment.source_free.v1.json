@@ -1,0 +1,71 @@
+{
+  "bundles": [
+    {
+      "coordinate_count": 693,
+      "coordinate_sha256": "D8D406C7BE04EB13BECE7F35AA52C6F541ED96928255169EC370818325C4C6E3",
+      "packet_id": 0,
+      "packet_sha256": "00D0DBE15DA431656B28A3FB3071AFEA39D9CE7B3734E1F25E58CD96ADE7A9C1",
+      "root_count": 557,
+      "root_sha256": "084447A6661435DE7EB6C2778E765ACFEF1CFF4246C4010969D1827F8E628C9C",
+      "unit_count": 242
+    },
+    {
+      "coordinate_count": 693,
+      "coordinate_sha256": "32108405A3FF630A2D2C8E2A1F75CECA032D9BC2E97FD75D53930F4DF13FF272",
+      "packet_id": 1,
+      "packet_sha256": "B2E0340202AC6A093BF06EE736F779D4878200055728A40A72CCD195F18ABAFB",
+      "root_count": 557,
+      "root_sha256": "20911033E861D120C9C996A02FBE137FD8A53E80B8CF3524F0E8E2F828846DEF",
+      "unit_count": 242
+    },
+    {
+      "coordinate_count": 693,
+      "coordinate_sha256": "DB629CD2A12D069406484D5C4254D95F41E7D17E88066BBDF2612AED8F64BE48",
+      "packet_id": 2,
+      "packet_sha256": "82E2722A3596C2DD4E5C80AE51745E164DF9BD594D0C88B095941310AA1C86DF",
+      "root_count": 564,
+      "root_sha256": "1A86152AE39351E56098E0CBB9E0D462CCA154D928FE882EAD49AEC127E9E3E8",
+      "unit_count": 242
+    }
+  ],
+  "inputs": {
+    "packet_sha256": [
+      "00D0DBE15DA431656B28A3FB3071AFEA39D9CE7B3734E1F25E58CD96ADE7A9C1",
+      "B2E0340202AC6A093BF06EE736F779D4878200055728A40A72CCD195F18ABAFB",
+      "82E2722A3596C2DD4E5C80AE51745E164DF9BD594D0C88B095941310AA1C86DF"
+    ],
+    "private_builder_sha256": "E661086CC0A9648B86C38B0BCCDFBB20292CC8639FCC46D698A028BF73433F4F",
+    "private_manifest_sha256": "59771CEFF36F531C795DCF11F881AA2907F07FAC361C73A154100C4AC62051FB"
+  },
+  "method": "post_waveA_pending_noncaller_incoming_J_atomic_unit_three_way_LPT",
+  "privacy": {
+    "contains_dialogue_bodies": false,
+    "contains_translations": false,
+    "private_packets_stay_below_tmp": true,
+    "source_free": true
+  },
+  "proof": {
+    "WaveB_and_noncaller_units_mixed_count": 0,
+    "all_noncaller_coordinates_assigned_once": true,
+    "coordinate_overlap_count": 0,
+    "global_unit_ids_unique": true,
+    "noncaller_outgoing_dependency_to_WaveB_count": 0,
+    "private_builder_reproduced": true,
+    "private_manifest_reproduced": true,
+    "private_packets_reproduced": true,
+    "steam_write_performed": false
+  },
+  "release_target": "0.15.0",
+  "schema": "nobu16.kr.pk-msggame-waveC-noncaller-assignment.source-free.v1",
+  "scope": {
+    "WaveB_caller_coordinate_count": 1214,
+    "checkpoint_pending_coordinate_count": 3293,
+    "noncaller_coordinate_count": 2079,
+    "noncaller_coordinate_sha256": "E8025C1EBE6454E7BD1EEF9DE02836F7379461BDB29F63FB04DDE3E8A148A795",
+    "noncaller_root_count": 1678,
+    "noncaller_root_sha256": "DAC0DDD16737FE85E5ED00BEEDF4C227EA8928040FA17E9DB0DE6CAC9D956DC6",
+    "noncaller_unit_count": 726
+  },
+  "status": "PASS",
+  "steam_write_performed": false
+}
