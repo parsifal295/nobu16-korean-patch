@@ -36,7 +36,7 @@ TMP_ROOT = REPO / "tmp"
 VALIDATION_PATH = WORKSTREAM / "validation.v1.json"
 DEFAULT_OUTPUT_ROOT = TMP_ROOT / "translation_quality_ev_manual_linebreak_repair_v1"
 DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
-DEFAULT_PRISTINE_ROOT = Path(r"F:\Games\NOBU16")
+DEFAULT_PRISTINE_ROOT = Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root")
 
 RESOURCE = Path("MSG") / "JP" / "ev_strdata.bin"
 SC_RESOURCE = Path("MSG") / "SC" / "ev_strdata.bin"

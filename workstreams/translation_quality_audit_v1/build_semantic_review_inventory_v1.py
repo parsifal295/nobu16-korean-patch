@@ -31,8 +31,8 @@ DEFAULT_STEAM_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 DEFAULT_ORIGINAL_ROOT = DEFAULT_STEAM_ROOT / "KR_PATCH_BACKUP" / "file_only_transaction" / "steam-jp-1.1.7-v0.6.0" / "originals"
 DEFAULT_OUTPUT = TMP / "translation_quality_audit_v1" / "semantic_inventory_v1"
 BASE_ORIGINALS = {
-    "MSG/JP/ev_strdata.bin": Path(r"F:\Games\NOBU16\MSG\JP\ev_strdata.bin"),
-    "MSG/JP/msggame.bin": Path(r"F:\Games\NOBU16\MSG\JP\msggame.bin"),
+    "MSG/JP/ev_strdata.bin": Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\ev_strdata.bin"),
+    "MSG/JP/msggame.bin": Path(r"I:\Workspaces\NOBU16-Korean\private-inputs\legacy-pc-root\MSG\JP\msggame.bin"),
 }
 # This audit is pinned to the PC v1.1.7 Japanese originals used to build the
 # installed Korean patch.  In particular, the live Steam ``JP`` route is a

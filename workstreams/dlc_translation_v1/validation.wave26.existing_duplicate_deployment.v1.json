@@ -1,0 +1,87 @@
+{
+  "entries": [
+    {
+      "ko_utf16le_sha256": "4e97771dfa372109532ba4da29774f2d4ab1744b0b008a2628de17201f065830",
+      "line_count": 1,
+      "protected_tokens": [],
+      "source_id": "jp-3a9d557fee37401a9fdd",
+      "target_placements": [
+        "DLC_PK/JP/scem_043.n16#row0"
+      ]
+    },
+    {
+      "ko_utf16le_sha256": "7790dc31d5413d18013eea561173bd41369a33fdfb60733929a8cc4d0ecbabc5",
+      "line_count": 1,
+      "protected_tokens": [],
+      "source_id": "jp-9d125c3e5d3bae89685e",
+      "target_placements": [
+        "DLC/JP/scem_042.n16#row0",
+        "DLC_PK/JP/scem_042.n16#row0"
+      ]
+    },
+    {
+      "event_layout": [
+        {
+          "line_count": 1,
+          "lines": [
+            {
+              "exceeds_912px": false,
+              "full_width_character_count": 0,
+              "half_width_character_count": 2,
+              "raw_g1n_width_px": 48,
+              "runtime_token_reservations": [],
+              "scaled_effective_width_px": 30,
+              "visible_string": "……"
+            }
+          ],
+          "placement_id": "DLC/JP/evm_003.n16#row39"
+        },
+        {
+          "line_count": 1,
+          "lines": [
+            {
+              "exceeds_912px": false,
+              "full_width_character_count": 0,
+              "half_width_character_count": 2,
+              "raw_g1n_width_px": 48,
+              "runtime_token_reservations": [],
+              "scaled_effective_width_px": 30,
+              "visible_string": "……"
+            }
+          ],
+          "placement_id": "DLC_PK/JP/evm_003.n16#row39"
+        }
+      ],
+      "ko_utf16le_sha256": "aca1378de9e050fd9fbb60919e83866c06ce8bf7df5d0deaaf44cdc1c8601d4e",
+      "line_count": 1,
+      "protected_tokens": [],
+      "source_id": "jp-aca1378de9e050fd9fbb",
+      "target_placements": [
+        "DLC/JP/evm_003.n16#row39",
+        "DLC_PK/JP/evm_003.n16#row39"
+      ]
+    }
+  ],
+  "overlay_sha256": "2d6558f9cefe2afe96111152ea0106478cec4f307be1702afbb540de79bb0ebe",
+  "private_catalog_sha256": "8e86790b01a477be316c59c6521efd9b67105d67f31dcb06e5cf0655356a5116",
+  "schema": "nobu16.kr.dlc-translation-overlay-validation.v1",
+  "summary": {
+    "entries": 3,
+    "event_layout_baseline": {
+      "effective_scale": "30/48",
+      "max_effective_width_px": 912,
+      "max_lines": 4,
+      "raw_full_width_px": 48,
+      "raw_half_width_px": 24
+    },
+    "event_layout_failures": 0,
+    "event_layout_rows": 2,
+    "protected_token_failures": 0,
+    "scenario_line_count_failures": 0,
+    "source_script_residuals": 0,
+    "steam_writes": 0,
+    "target_placements": 5,
+    "unique_sources": 3
+  },
+  "wave": "wave26_existing_duplicate_deployment"
+}

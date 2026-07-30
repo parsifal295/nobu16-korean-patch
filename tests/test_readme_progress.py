@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import subprocess
 import sys
 import unittest
@@ -17,6 +18,13 @@ SPEC = importlib.util.spec_from_file_location(
 assert SPEC and SPEC.loader
 readme_progress = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(readme_progress)
+
+# README is living documentation. Historical release wording belongs in the
+# versioned release notes, so this contract deliberately does not pin a version.
+CURRENT_RELEASE_RE = re.compile(
+    r"현재 공개 안정판은 \[(v\d+\.\d+\.\d+)\]"
+    r"\([^)\s]+/releases/tag/\1\)입니다\."
+)
 
 
 class ReadmeProgressTests(unittest.TestCase):
@@ -69,54 +77,35 @@ class ReadmeProgressTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
-    def test_readme_keeps_installation_release_and_rights_information(self) -> None:
+    def test_readme_has_one_generated_progress_block(self) -> None:
         readme = README.read_text(encoding="utf-8")
-        self.assertIn("**Japanese**", readme)
-        self.assertIn("현재 공개 안정판은 [v0.11.3]", readme)
-        self.assertIn("비공식 팬메이드", readme)
-        self.assertIn("KOEI TECMO GAMES", readme)
-        self.assertNotIn("<!-- active-text-audit:start -->", readme)
-
-    def test_readme_documents_the_v0110_static_officer_editor_fix(self) -> None:
-        readme = README.read_text(encoding="utf-8")
-        self.assertIn("build `18823764`", readme)
-        self.assertIn(
-            "29BC1ED66D27B9AEF5EB6CE3D126BA2BDBF86099E12B09615FE9F988F41E2246",
-            readme,
+        self.assertEqual(readme.count(readme_progress.START), 1)
+        self.assertEqual(readme.count(readme_progress.END), 1)
+        self.assertLess(
+            readme.index(readme_progress.START),
+            readme.index(readme_progress.END),
         )
-        self.assertIn("한 번 교체", readme)
-        self.assertIn("메모리를 건드리는 helper가 아닙니다", readme)
-        self.assertIn("NOBU16PK.exe.staticfix.original_1.1.7", readme)
-        self.assertIn("RESTORE_ORIGINAL_NOBU16PK_EXE.bat", readme)
-        self.assertIn("Steam 보호 래퍼", readme)
-        self.assertIn("NotSigned", readme)
-        self.assertIn("2E098ECB5E4335DC264F865306B990B724EA7C242B1B9F87FFC5EE2E7191797C", readme)
-        self.assertIn("성명에 사용할 수 없는 문자가 포함되어 있습니다", readme)
-        self.assertIn("성명 합계 6자 제한", readme)
-        self.assertIn("가가와 미초카게", readme)
-        self.assertIn("1920×1080 창 모드", readme)
-        self.assertIn("완전히 종료·재실행", readme)
-        self.assertIn("한글 IME 입력이나 새 한글 이름 작성 기능을 추가하지 않습니다", readme)
-        self.assertIn("성명·읽기 필드를 바꾸지 말고", readme)
-        self.assertIn("매 게임 세션마다 별도 실행 파일을 실행할 필요가 없습니다", readme)
 
-    def test_readme_documents_the_v0111_installer_hotfix(self) -> None:
+    def test_current_release_link_and_section_agree(self) -> None:
         readme = README.read_text(encoding="utf-8")
-        self.assertIn("## v0.11.1 — 설치기 경로·한글 오류 출력 수정", readme)
-        self.assertIn("`%~dp0`", readme)
-        self.assertIn("경로에 잘못된 문자가 있습니다", readme)
-        self.assertIn("UTF-8 BOM", readme)
-        self.assertIn("게임 리소스 15개와 정적 EXE의 다섯 패치 지점", readme)
+        match = CURRENT_RELEASE_RE.search(readme)
+        self.assertIsNotNone(match, "current stable release link is missing or inconsistent")
+        current_release = match.group(1)
+        self.assertIn(f"## {current_release} —", readme)
 
-    def test_readme_documents_the_v0113_text_and_npc_repairs(self) -> None:
+    def test_readme_keeps_current_installation_and_rights_contract(self) -> None:
         readme = README.read_text(encoding="utf-8")
-        self.assertIn("## v0.11.3 — NPC 표기·인물 대사·이벤트 줄바꿈 보정", readme)
-        self.assertIn("`덴령` → `전령`", readme)
-        self.assertIn("`상사람` → `상인`", readme)
-        self.assertIn("`선교모로` → `선교사`", readme)
-        self.assertIn("`소성씨` → `시동`", readme)
-        self.assertIn("`가인` → `가신`", readme)
-        self.assertIn("1F5C3971CE9A81A4EBAF2BFF9792EED39033299A911E384F21F1DA7C2B018B74", readme)
+        normalized = " ".join(readme.split())
+        for text in (
+            "**Japanese**",
+            "게임 파일 무결성 확인",
+            "비공식 팬메이드",
+            "KOEI TECMO GAMES",
+            "완전한 게임 리소스",
+            "`NOBU16PK.exe`",
+        ):
+            self.assertIn(text, normalized)
+        self.assertNotIn("<!-- active-text-audit:start -->", readme)
 
 
 if __name__ == "__main__":
