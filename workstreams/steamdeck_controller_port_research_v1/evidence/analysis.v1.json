@@ -1,0 +1,264 @@
+{
+  "schema": "nobu16.steamdeck_controller_port_research.v1",
+  "status": "selectable-experimental-controller-solution-built-e2e-validated-runtime-steam-input-revalidation-pending",
+  "steam": {
+    "app_id": 1336980,
+    "build_id": 18823764,
+    "installation_modified": true
+  },
+  "baseline": {
+    "pc_packed": {
+      "name": "NOBU16PK.exe",
+      "size": 31978264,
+      "sha256": "29BC1ED66D27B9AEF5EB6CE3D126BA2BDBF86099E12B09615FE9F988F41E2246"
+    },
+    "steamdeck_packed": {
+      "name": "NOBU16PK_SD.exe",
+      "size": 31969048,
+      "sha256": "6218F8987404BB20E1771D4E7BA032405DB9788C212F5E89F96B9AEFADA21FCD"
+    },
+    "pc_unpacked": {
+      "size": 31747848,
+      "sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+    },
+    "steamdeck_unpacked": {
+      "size": 31738632,
+      "sha256": "2411BF032F382FCD200D522E87A6D3551322CA28408518439003EB443CDF4A5B"
+    }
+  },
+  "pe_comparison": {
+    "architecture": "x86-64",
+    "image_base": "0x140000000",
+    "pc_text_raw_size": "0x1364600",
+    "steamdeck_text_raw_size": "0x1362600",
+    "text_raw_size_delta": "0x2000",
+    "shared_xinput_imports": [
+      {
+        "dll": "XINPUT1_3.DLL",
+        "symbol": "XInputGetState",
+        "ordinal": 2
+      },
+      {
+        "dll": "XINPUT1_3.DLL",
+        "symbol": "XInputSetState",
+        "ordinal": 3
+      },
+      {
+        "dll": "XINPUT1_3.DLL",
+        "symbol": "XInputEnable",
+        "ordinal": 5
+      }
+    ]
+  },
+  "matched_functions": [
+    {
+      "role": "xinput-device-enumeration-and-construction",
+      "pc_va": "0x140FDFA80",
+      "steamdeck_va": "0x140FE0000",
+      "result": "same behavior after address rebasing"
+    },
+    {
+      "role": "xinput-state-poll-and-translation",
+      "pc_va": "0x140FE0720",
+      "steamdeck_va": "0x140FE0CA0",
+      "result": "same behavior after address rebasing"
+    },
+    {
+      "role": "steamdeck-runtime-predicate",
+      "pc_va": "0x1409C07A0",
+      "steamdeck_va": "0x1409C02E0",
+      "result": "same Steamworks vtable call at offset 0x110"
+    },
+    {
+      "role": "graphics-config-load",
+      "pc_va": "0x1408B0000",
+      "steamdeck_va": "0x1408AFC80",
+      "result": "same 1280x720 and window-mode-2 Deck branch"
+    },
+    {
+      "role": "input-device-postprocessing",
+      "pc_va": "0x140C5DE90",
+      "steamdeck_va": "0x140C5E0B0",
+      "result": "same Deck-gated input flag adjustment"
+    }
+  ],
+  "resolution_branch": {
+    "predicate": "ISteamUtils::IsSteamRunningOnSteamDeck",
+    "deck_true": {
+      "width": 1280,
+      "height": 720,
+      "window_mode": 2
+    },
+    "deck_false": {
+      "width_source": "Configs/WIDTH",
+      "height_source": "Configs/HEIGHT",
+      "window_mode_source": "Configs/WINDOW_MODE"
+    }
+  },
+  "candidate_input_patches": [
+    {
+      "virtual_address": "0x140C5E256",
+      "unpacked_file_offset": "0x00C5D656",
+      "expected_hex": "E84525D6FF",
+      "replacement_hex": "B801000000",
+      "purpose": "force Deck input postprocessing for internal key code 0x27 only"
+    },
+    {
+      "virtual_address": "0x140C5E292",
+      "unpacked_file_offset": "0x00C5D692",
+      "expected_hex": "E80925D6FF",
+      "replacement_hex": "B801000000",
+      "purpose": "force Deck input postprocessing for internal key code 0 only"
+    }
+  ],
+  "patcher_v0_90_integration": {
+    "source_baseline": {
+      "size": 31978264,
+      "sha256": "29BC1ED66D27B9AEF5EB6CE3D126BA2BDBF86099E12B09615FE9F988F41E2246"
+    },
+    "normalized_base": {
+      "size": 31747848,
+      "sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+    },
+    "existing_recipe_patch_counts": {
+      "horizontal": 12,
+      "vertical": 8
+    },
+    "candidate_site_overlap_with_existing_patches": false,
+    "existing_target_preimages_verified": {
+      "horizontal": true,
+      "vertical": true
+    },
+    "recommended_distribution": "retain standard horizontal and vertical bundles, and add separate experimental controller-enabled horizontal and vertical signed bundles",
+    "shared_resource_bundle_unchanged": true,
+    "switching_policy": "restore verified stock backup before applying another layout/controller variant",
+    "interactive_menu": {
+      "step_1": "name order: vertical or horizontal",
+      "step_2": "controller support: disabled or experimental",
+      "step_3": "review and apply"
+    }
+  },
+  "runtime_deployment": {
+    "timestamp": "2026-07-28T15:03:42+09:00",
+    "installation_path": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\NOBU16PK.exe",
+    "before": {
+      "size": 67024896,
+      "sha256": "7A0DF96C72A93F551F283EF14F06159F50E6A265A3BAC9C14151A1C2895D4DA0"
+    },
+    "after": {
+      "size": 67024896,
+      "sha256": "8D11D5EB70133016ED97E295109406E07BB3FFDA700314EF35E98638EB01A1A7",
+      "pe_checksum": "0x03FEE060",
+      "changed_byte_count": 12
+    },
+    "backup": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\controller-input-experimental-20260728-150300\\NOBU16PK.exe",
+    "launch_check": {
+      "selected_resolution": "3840x2160",
+      "window_mode": 2,
+      "full_process_restart": true,
+      "responding_after_seconds": 45,
+      "controller_input_validated": false,
+      "process_left_running_for_user_test": false,
+      "stopped_after_launch_check": true
+    }
+  },
+  "failed_runtime_candidate": {
+    "result": "controller control was not enabled",
+    "candidate_invalidated": true,
+    "corrected_role": "postprocess state bits on an already selected input device; does not create or register an XInput device",
+    "pc_sd_comparison": {
+      "input_manager_semantically_equivalent": true,
+      "xinput_device_creation_semantically_equivalent": true,
+      "xinput_polling_semantically_equivalent": true,
+      "deck_predicate_call_count_each": 23
+    },
+    "xinput_probe_after_failure": {
+      "xinput1_3_slots_0_through_3": 1167,
+      "xinput1_4_slots_0_through_3": 1167,
+      "meaning": "ERROR_DEVICE_NOT_CONNECTED"
+    },
+    "leading_hypothesis": "Steam Input did not expose a virtual XInput device to the PC executable, or the controller was not connected as an XInput device at probe time"
+  },
+  "rollback": {
+    "completed": true,
+    "restored_install_sha256": "7A0DF96C72A93F551F283EF14F06159F50E6A265A3BAC9C14151A1C2895D4DA0",
+    "failed_candidate_archive": "F:\\SteamLibrary\\steamapps\\common\\NOBU16\\KR_PATCH_BACKUP\\file_only_transaction\\controller-input-experimental-20260728-150300\\NOBU16PK.failed-controller-candidate.exe",
+    "failed_candidate_sha256": "8D11D5EB70133016ED97E295109406E07BB3FFDA700314EF35E98638EB01A1A7"
+  },
+  "final_solution": {
+    "root_cause": {
+      "pc_controller_mode_rva": "0x217D75C",
+      "top_level_frame_function": "0x140571440",
+      "behavior": "controller mode 0 selects the mouse path; controller mode 1 selects the XInput path",
+      "single_executable_regression": "a permanent value of 1 enables controller input but disables mouse input"
+    },
+    "distribution": {
+      "mouse_keyboard_executable": "NOBU16PK.exe",
+      "controller_executable": "NOBU16PK_XINPUT.exe",
+      "controller_support_selectable": true,
+      "disabled_creates_controller_files": false,
+      "experimental_creates": [
+        "NOBU16PK_XINPUT.exe",
+        "steam_appid.txt"
+      ],
+      "external_runtime_required": false,
+      "shared_pc_resolution_configuration": true
+    },
+    "targets": {
+      "horizontal": {
+        "normal_size": 67024896,
+        "normal_sha256": "7A0DF96C72A93F551F283EF14F06159F50E6A265A3BAC9C14151A1C2895D4DA0",
+        "xinput_size": 67024896,
+        "xinput_sha256": "6EDB65ECFBEBC73C4211E86A3E6BD286F075DD4AD8CECB16E58448612877AF6A"
+      },
+      "vertical": {
+        "normal_size": 31748608,
+        "normal_sha256": "9507DBEDDBCA9CE7202C6818A2621C52CA4B6DED8271626B0F5D90AF93825189",
+        "xinput_size": 31748608,
+        "xinput_sha256": "9C0F5FBAEEA02BA47D21C1286664119FE58FADD80CA200DFB7A69AADABF5C276"
+      }
+    },
+    "patcher_v0_2_0": {
+      "source_relative_path": "NOBU16PK.exe",
+      "created_target_path": "NOBU16PK_XINPUT.exe",
+      "literal_material_target": "steam_appid.txt",
+      "steam_appid_sha256": "576DDFE68862DBB769DEC2C85F81EFF8F5FB3A4F94A6F1FA6797EC154256B550",
+      "apply_verified_all_four_variants": true,
+      "already_applied_verified_all_four_variants": true,
+      "restore_verified_stock_sha256": "29BC1ED66D27B9AEF5EB6CE3D126BA2BDBF86099E12B09615FE9F988F41E2246",
+      "restore_removes_xinput_executable": true,
+      "restore_removes_steam_appid": true,
+      "cargo_test": "passed",
+      "cargo_clippy_deny_warnings": "passed"
+    },
+    "steam_deployment": {
+      "root": "F:\\SteamLibrary\\steamapps\\common\\NOBU16",
+      "normal_path": "NOBU16PK.exe",
+      "xinput_path": "NOBU16PK_XINPUT.exe",
+      "temporary_pad_name_removed": true,
+      "selected_resolution": "3840x2160",
+      "full_process_restart": true,
+      "xinput_process_launched": true,
+      "non_steam_shortcut_requirements": [
+        "register NOBU16PK_XINPUT.exe",
+        "enable Steam Input for the shortcut",
+        "connect controller before launch"
+      ],
+      "final_shortcut_controller_revalidation_pending": true
+    },
+    "release_candidate": {
+      "patcher_sha256": "49D4935BFF6CAAD23019789F73F67ADA758D8D7B1B3F70EA69DDD326A8FB7788",
+      "horizontal_bundle_sha256": "B725D0B7E511C2A24CF7F1304E0818CD8F3A4ABAC432C582CB3711FD75D176B2",
+      "vertical_bundle_sha256": "B61E50F1979BF2BD90B6DD4B65BAA8BA4820D84010D443C9F642DD57E49EAA9C",
+      "horizontal_xinput_bundle_sha256": "B710053DE69C8CF00D7D1ED66D02FB9D08671E1C0826F1AEFE3BE6FC6234AD86",
+      "vertical_xinput_bundle_sha256": "E558522E186EFFF7D8AAE4154EB4EBB738E719E14638DA0587075E4F36073B1A",
+      "zip_sha256": "211544AF74F71BC821BE2AFDB36E2B9FC03078E7A4B43511A3250B8929306636"
+    }
+  },
+  "decision": {
+    "feasibility": "validated-with-separate-xinput-executable",
+    "full_controller_code_transplant_required": false,
+    "recommended_approach": "offer normal and experimental controller variants; keep NOBU16PK.exe for mouse and keyboard and generate NOBU16PK_XINPUT.exe plus steam_appid.txt only for experimental controller use",
+    "runtime_validation_required": true
+  }
+}
