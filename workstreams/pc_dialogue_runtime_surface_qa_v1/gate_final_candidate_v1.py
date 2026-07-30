@@ -46,6 +46,12 @@ BASE_CALL_REMEDIATION_PATH = (
     / "pc_dialogue_runtime_surface_remediation_v1"
     / "base_call_assembly_remediation_v1.py"
 )
+DIRECT_STATIC_CLOSURE_PATH = (
+    REPO
+    / "workstreams"
+    / "pc_dialogue_runtime_surface_remediation_v1"
+    / "direct_static_sentence_closure_v1.py"
+)
 BASE_PRE_CALL = WIDTH.DEFAULT_PRE_CALL
 BASE_CALL_CANDIDATE = WIDTH.DEFAULT_CALL
 
@@ -146,6 +152,20 @@ def load_module(name: str, path: Path) -> Any:
 
 
 def build_stage_width_report(base_final: Path) -> dict[str, Any]:
+    direct_static = load_module(
+        "final_gate_direct_static_sentence_closure_v1",
+        DIRECT_STATIC_CLOSURE_PATH,
+    )
+    direct_width_exceptions = (
+        direct_static.relative_width_growth_exceptions("base_msggame")
+    )
+    for key, value in direct_width_exceptions.items():
+        existing = STAGE_WIDTH.APPROVED_LINE_GROWTH_EXCEPTIONS.get(key)
+        require(
+            existing is None or existing == value,
+            f"direct static width exception conflicts at {key}",
+        )
+        STAGE_WIDTH.APPROVED_LINE_GROWTH_EXCEPTIONS[key] = value
     stages = {
         "surface_remediation": STAGE_WIDTH.audit_pair(
             "base_msggame",
@@ -167,6 +187,8 @@ def build_stage_width_report(base_final: Path) -> dict[str, Any]:
         "issue_count": issue_count,
         "stages": stages,
         "call_semantic_rebuild_excluded_from_plus_24_gate": True,
+        "direct_static_exact_growth_exception_count":
+            len(direct_width_exceptions),
         "steam_write_performed": False,
     }
 

@@ -10,15 +10,15 @@
   "candidate": {
     "decoded_record_count": 21751,
     "literal_count": 29498,
-    "private_audit_sha256": "860814D51D8B9E068BF88674EA1B9316A7E906BCB15283CE21D5C5BB95801336",
+    "private_audit_sha256": "4014C52BA17894119AE34A2D5D90D23ED30D8714C11D56FC4F1A5DF70DFCCDEB",
     "record_count": 21751,
-    "sha256": "43C2E6539D547F3D3273D9B683BDF3490EEC38B628D64A80EDF18D9E5BB8B9CE",
-    "size": 1815156,
+    "sha256": "1D7F1FB2086419BD1FC928012F3E0E3D0BA2C600809513188A3FFBA455F63EFF",
+    "size": 1815549,
     "surface_category_counts": {},
     "surface_issue_count": 0
   },
   "control_retargets": {
-    "count": 569,
+    "count": 626,
     "empty_terminal": {
       "coordinate": "0:1247",
       "record_data_hex": "070701070702050505",
@@ -3202,6 +3202,37 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "4C83EBF04AA5309365898D30818FA63ADB1F6F2211150CE0B6E8DDBEA4498FD9",
+        "before_record_sha256": "F29EF50BF034A5E9D0127BDAF991C39C417F65DE506F3CBB2AB638CCD6CF703E",
+        "coordinate": "6:3941",
+        "literal_context_utf16le_sha256": [
+          "0574A8C552308AA93ACA8C85EFD7F4BA329D15A3C1395ECE99B6DA19698DD46D",
+          "0F10A60AFF986CE726952B481468AF3D96B7DB812D79CE118289F2C1897F5110",
+          "E996C06E57777F20AE954BCA4221CD63196C087B618AEB3386CD76B513714E60",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "0143EF000000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:239",
+        "new_terminal_variant_count": 2,
+        "new_terminal_variant_sha256": [
+          "B023F31C31AFF4B8733DB48053B8462DBA33CFF10821549379C497EA9D12CCC0",
+          "0B124170C834BBCABCDE1E5725D804684B4295EFA4C19D85A2529B71EF683973"
+        ],
+        "old_call_hex": "014342040000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:1090",
+        "old_terminal_variant_count": 2,
+        "old_terminal_variant_sha256": [
+          "0B9AFFA7C2628B81361A0C86C7C5DD3A83ECF4BB0D4C6BD25B4545EC9D18F6CE",
+          "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "0043B12EFEABA34D69AE0AF141A3D7C8F232E8DB71377EDFBC57669B693BBAFE",
         "before_record_sha256": "8273C7D556D7B2821662AA9B7244BA7D475406307A54624BDEABCE67760FFF97",
         "coordinate": "6:3942",
@@ -4133,6 +4164,39 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "FBF5BA196657BC75E7CA9D1658C039FE4913DC39DE7B1A99EC9498E6875F584E",
+        "before_record_sha256": "70D28F07DDE52235D938E542E9AF459820AF5E6AF801617AA58F02B84E9B997D",
+        "coordinate": "6:4420",
+        "literal_context_utf16le_sha256": [
+          "6F7D2DADB3B627CA75C8A4590D1790E2AED84A0C19012CAA7DE01AA176A3D9DF",
+          "B5A668AA7C67A5D66790A8ECB376B0546B6E4A3E6A92F35B91D3CFB3D17315E2",
+          "6081FD1D92799E6DF49B92475B5C603CA84B2EB82C21746D5496F24EA1C55E4D",
+          "46618C955FB9209E1DBCB7CC1A53C6CB6B511B04E87D1DC0B3A447D31C955820",
+          "AE30EF23001A983F323ADF026FADB841F6227A649F47812F0B1E0C1374D5220D",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "0143EF000000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:239",
+        "new_terminal_variant_count": 2,
+        "new_terminal_variant_sha256": [
+          "B023F31C31AFF4B8733DB48053B8462DBA33CFF10821549379C497EA9D12CCC0",
+          "0B124170C834BBCABCDE1E5725D804684B4295EFA4C19D85A2529B71EF683973"
+        ],
+        "old_call_hex": "014342040000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:1090",
+        "old_terminal_variant_count": 2,
+        "old_terminal_variant_sha256": [
+          "0B9AFFA7C2628B81361A0C86C7C5DD3A83ECF4BB0D4C6BD25B4545EC9D18F6CE",
+          "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "0B6F66013F2281E4BBC2D97A3553CD4E9361CBA3854721DE72613E0E3698C797",
         "before_record_sha256": "EFFDC1BB7472DF126C134822AA6FF27A31F34F87FAA10B632E3D3AFE47DD5021",
         "coordinate": "6:4421",
@@ -4160,6 +4224,37 @@
         "only_call_operand_changed": true,
         "record_size_preserved": true,
         "semantic_reason": "question_predicate_family_is_complete_without_second_terminal"
+      },
+      {
+        "after_record_sha256": "BCD4D2849DBCD5D805B4C787B5F48ADBE303B3B8E0745C4552D34BA74C33641E",
+        "before_record_sha256": "69098619551F0C0483BB10A4F8E1704661931039F23B7BFC51F8FBBA8C0189C6",
+        "coordinate": "6:4423",
+        "literal_context_utf16le_sha256": [
+          "5B36ACF4A4E39BE207D20841A42D8170FF18E9C356672E56B5F41913305DC6BB",
+          "C774192B35516C33392896E5FD11B9981D4775C714282CD395CE0562F0F42D3C",
+          "85954E495DE1D02CC1E038391DC063C533FEEA2AEDBE503DB402BC505DDB7946",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "0143EF000000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:239",
+        "new_terminal_variant_count": 2,
+        "new_terminal_variant_sha256": [
+          "B023F31C31AFF4B8733DB48053B8462DBA33CFF10821549379C497EA9D12CCC0",
+          "0B124170C834BBCABCDE1E5725D804684B4295EFA4C19D85A2529B71EF683973"
+        ],
+        "old_call_hex": "014342040000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:1090",
+        "old_terminal_variant_count": 2,
+        "old_terminal_variant_sha256": [
+          "0B9AFFA7C2628B81361A0C86C7C5DD3A83ECF4BB0D4C6BD25B4545EC9D18F6CE",
+          "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
         "after_record_sha256": "C9706CA7484ACE462875FC6D897946FAF4CB067300149D9BB19CD31941E7F78B",
@@ -6286,6 +6381,36 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "2F2A4C8A943E43410212E11F7E5125D4375EC731C61C72EB891B6952F59F7F95",
+        "before_record_sha256": "84D8D841F1C435FE560706C8D8264555935CCAA61FAF4720A513E334E2DE7243",
+        "coordinate": "6:4787",
+        "literal_context_utf16le_sha256": [
+          "9C0434C25C2CFBF19B3CF11B26ACF879A4CAF48DE2F069259029305B14D4FD2E"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "424B25AEA12B59A14ABE5B8331FE956101931A38D7345A1C369C3FE61C456901",
         "before_record_sha256": "F7742D4C2D0CC830AD0E7DD8F9875335D1B7448DB95A4F67818B0FE6F52CCA1F",
         "coordinate": "6:4808",
@@ -6594,6 +6719,69 @@
         "only_call_operand_changed": true,
         "record_size_preserved": true,
         "semantic_reason": "screenshot_request_question_replaces_reversed_negative_terminal"
+      },
+      {
+        "after_record_sha256": "E3A84EAB270CBF3ADDD6E24CC22614085D1E10FE41D61C065A6C95C4D69C33E5",
+        "before_record_sha256": "E0461C59D3070A31E0D50910808C1A4514BF8031601BD32B1379B859080360F6",
+        "coordinate": "6:4934",
+        "literal_context_utf16le_sha256": [
+          "F9FFB69AA81FDDBC9E6DF6859650A195D9AFBA4C61B3B0CB870830BB75AFF16C",
+          "A1F0D67D64A28309BDE1B3791B03193417030E8F8BFFB011493164459401472B",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "5E47B8BB9E1FFC2FEA2B174F63055DB5DD70FCB40D935FF5F026649723868E38",
+        "before_record_sha256": "D8AB165F1B40D371A2B98008992C39055D817D1B653D0A9789E138340DD07843",
+        "coordinate": "6:4935",
+        "literal_context_utf16le_sha256": [
+          "D0F8C04F479F1316577F30B51F5F53222F161BAA7A58A70D2AC2832033CECB81",
+          "F11A768D673F7AFF0C89C92CAFDEBA2DA96AD13B9FC4017D09752F404E8AFE3C"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
         "after_record_sha256": "FFE0BB73EF7A065CAC92CFFE708F773AE065FED5192CEAD59F90B51355CE6BD5",
@@ -7346,6 +7534,69 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "21D7CEDB03EB09B5DDCAB9634BC56E52FA7313D9A2B6468B1C4FD8B3094E36E3",
+        "before_record_sha256": "66F48224D007CC3F63144938EC7F9E84013240BA59F7DBA80E3EE4AC8198A755",
+        "coordinate": "7:2474",
+        "literal_context_utf16le_sha256": [
+          "0BF1937BA49FF1CF392229FB5267EE49B3B0CE602B5297B55558D704B9DEE58A",
+          "284066789B3CDEC9C80F8E9CDC528C2B25B68C42EC08F61CB4876909FCA1E567",
+          "9331F3A9848F6AA8F0103BEB95064CD27DAC84A4A982C8EE055D7636C18D723A"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CDB32F08E20C7BD96E4EA71998B29C2E3188A3232ED29A9E2EED4C01161DBD5E",
+        "before_record_sha256": "1E5E48519E8D22297C2A516A86A69A88929BCB13F66A5FEC788427394E6D90C0",
+        "coordinate": "7:2475",
+        "literal_context_utf16le_sha256": [
+          "0BF1937BA49FF1CF392229FB5267EE49B3B0CE602B5297B55558D704B9DEE58A",
+          "284066789B3CDEC9C80F8E9CDC528C2B25B68C42EC08F61CB4876909FCA1E567"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "40E5BA96CE28DD41DA2DBFEB78C05DC39FE42DDE597C2D2F3AB45BCCE4E06666",
         "before_record_sha256": "D274811E96E3D57066248743A3B6CF1C40C64338D7E63D8620B2FC4729385800",
         "coordinate": "7:2488",
@@ -7469,6 +7720,73 @@
           "D83C5F3A8D3ED54F5FA50AE7BF538786DE9D635E055A36B633E2B9356B17C4E7",
           "579E2FE60899A5264E0CFA63769815D9BF762A0841D1472A4D014254142F1D3C",
           "3F8266BDC674A6EAABD2C16FE55D8C21822912FE5F346FBA9D419D0EB33468C4"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "66F50BD837EC2ED7B6710485A47C0F9F3CAAF698DEB3184648593B87C5EBA7DC",
+        "before_record_sha256": "62FCB1F4B76E8198F80DE5536B2A7BBCAA9B3CA31EFBAAA14E528CEF2C15461A",
+        "coordinate": "7:2496",
+        "literal_context_utf16le_sha256": [
+          "13035E4DBA683E69E20709C107309C248049787807DCB934B37327C98E72F781",
+          "1AF37C27330881D63A7035D148886C93E4C8F580AF534B884699EAB29AA4C6C4",
+          "70BD738BF408AFFA9820695DE5C02D7C18F287BBBBD87E1F4DA98366E45433E3",
+          "ACA1378DE9E050FD9FBB60919E83866C06CE8BF7DF5D0DEAAF44CDC1C8601D4E"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "2095EE1C923CCC432BF8320749256B0EFBD194A60D47CECEC9654941090A5A74",
+        "before_record_sha256": "60BF5C9974642F4732468614EA9113196C115EC4C523A09BFB85D9A7AB204FA5",
+        "coordinate": "7:2498",
+        "literal_context_utf16le_sha256": [
+          "8E8B4114725F0915417F95CFE2B21E5ED3B8DE8ACBFD78D6C5E2C53AADB565F4",
+          "5345524430BD364126EAEDBD1EB86EF79C28B479E88D75A6B85B086E444A881B",
+          "B1A0EA25750DFE3BF4DF5D429E83BB95DBA86D79C53D3B13BCE09A187BAEB191",
+          "E78CF46D83A78AB2EA72ECBA80200801D32F6E70F21047789B467565E807A411",
+          "2FA486FA4F9E597FD57AC4BDFC37AC8DC0C7EB9B5D37457E388C12DA7E5518DF"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -8271,23 +8589,23 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
-        "after_record_sha256": "D8B388EE35748C1EFE22E2FB0A22843C6E0142BF6CC3FA11A41D9FCFFA6F8EF2",
-        "before_record_sha256": "54DA9639A658C49B4FB9D7EFA73EE5C2DABE7204C63CDB20E588729071532CBA",
+        "after_record_sha256": "FB71DB1AC8193895825A479A9F354120FA73E10035162D0318C43ACCDA647D3F",
+        "before_record_sha256": "E2B7D4EEF7C5B30AA91E9E13DF496242978420DB642B4D47197E434E8D2C207D",
         "coordinate": "8:294",
         "literal_context_utf16le_sha256": [
           "9FC1A7AEECEB5AF445C954B4E51FF01DD914A4602DFD344574BDC36F3962E224",
           "E350E2F75C0245751F12571820779491A147936A0D72FB3416028CF650CE1519",
-          "CD7D9EBDAD8EF4CBCC2FC2AC07006C3B9DF1FA638332D0F44B441A4DE03E92F8"
+          "C9CB61555D76366C59FF0CB3B0C8533F894EDEAD5DA8CE7C062EA8CD05E8ECB6"
         ],
         "mutated_call_count": 1,
-        "new_call_hex": "01431E010000",
+        "new_call_hex": "014362020000",
         "new_family_all_variants_context_coherent": true,
-        "new_target": "0:286",
+        "new_target": "0:610",
         "new_terminal_variant_count": 3,
         "new_terminal_variant_sha256": [
-          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
-          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
-          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
         ],
         "old_call_hex": "014358000000",
         "old_family_contains_incoherent_variant": true,
@@ -9914,6 +10232,39 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "965449199BB7F23FE61C83059EC94807CC23617A1F45DAD64DF55A4BFAD8E000",
+        "before_record_sha256": "52D179D193B9CAEBCB67EF4EC07988D737417676169F55262D7F3B18E5E726FC",
+        "coordinate": "8:1099",
+        "literal_context_utf16le_sha256": [
+          "01780CAC153F03579FFD8476B280C7FEDDFEB7C9B0EF8751D08D329CFED7A281",
+          "1250FD9BC6D855D478513ABD2929251405B1FD54FEEC34CB734EAF01F4E5EC2C",
+          "C33D7E9EE1A42504E4A4B360809AFFC9E6565714B55F7D94AAE9C5562C63F32E",
+          "5885A58071F8246E93CF4D27E90F271EFF6A2586DC17091A4B904292C687A837"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "B369C9EA3A8FEAEF5472D393D53EDBD85946BE9EAB7C7312C32CD91F1E306EC6",
         "before_record_sha256": "7C0BB4AF51A3BFF93FE114D3E8AAB7B76E33E4CADD6700A1C6A63287BD58B9ED",
         "coordinate": "8:1103",
@@ -9977,6 +10328,70 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "E20357D5AC6D6B28B628CE3DC73FB411A6C2DF3C7BFAC4172FFF23383B22A941",
+        "before_record_sha256": "CFBA2D6E29A76FD4F43A1C486BE1FCCEAB4A94945AFC0BC712BB4E2AF22E2981",
+        "coordinate": "8:1111",
+        "literal_context_utf16le_sha256": [
+          "9BA033CEC5938BD794129EC14346EC3DC4A395769379C37C0362CB4B08F7E759",
+          "8D9F0EEAE8302D95A7B516F11FBF4B1273F6BB9AE56E2BF45C51DBE441BA87F4",
+          "06D2B14C7DDAEBA817BF85A62ABC76B9B5121FB91A0C24D3241E5871132C795B"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "A71C63E80D9B91C23E6B600171EC7BE2CE8EBEC0A30893AC6AA5B335BC179A40",
+        "before_record_sha256": "54F9EEAE39511A77CE4C2E7E31BB95F8A2900A26399ECE658B15D7C1C39B00BC",
+        "coordinate": "8:1112",
+        "literal_context_utf16le_sha256": [
+          "CBE90980BFC7069ABF6D40ECFBE78A4D2478A28D10D5FE9A19C2C76055617D0E",
+          "F5A2652B27045196257F735957C40B3971B0C4B52EFC08175EE5307EC07C7CED",
+          "0F025C262B1118DD52A92C632D1AB46A531D019565B3E762177DEF5B48CD757A"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "B07993777905DD571190F0F5CE9E0E473B20B02D9E61A591189CFF212D7D4634",
         "before_record_sha256": "9D2FC9DB442584F5F4FF651EF307917728C5CBDC658A17BBC36DC2AFC111CEAC",
         "coordinate": "8:1113",
@@ -10003,6 +10418,71 @@
           "51C05262570F45E2C5ABE073CE14BC104D52D1D677D87F938ED40954CB3C2774",
           "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
           "3082D0E0445AF72F812D13A935C2BE0E091388831B94D6ACBD4650B67D314A8C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "8A26322661A4C35AAFC207EAEEA780CE0F4DE8B76022D348DC37477407437913",
+        "before_record_sha256": "E4C10E05B86AE836930CE26CD8712A8B0F4D95DA30262CEBF6816988DD11B628",
+        "coordinate": "8:1116",
+        "literal_context_utf16le_sha256": [
+          "D80D656CB67664C09141DD0D8C97CC88AB03BFD179E99D5A96F290B19DA56760",
+          "A2BFAF176E3456844A2D88DD557BE2C365E06EBB3C448BD46E8FDF518999EADC",
+          "BB823BEAF850A56726946BED201500E24C418052BDD1EE5A08AA80D1A6FA5129"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "7B3AD56C2FA04683FE36E4E97DCC57E672AA120DA3716C44A8A48D0122788611",
+        "before_record_sha256": "70231626F7B74412FA46D28E780CE2AB36AF220559528775D87402B4F94EDE41",
+        "coordinate": "8:1118",
+        "literal_context_utf16le_sha256": [
+          "A3666D9E134A7BA4FCA21947BFEC053D9CFBED138B80B57C61867F9C084C25AB",
+          "869F1DFB999A452F497A4CF7F44DB2D6EE661F74A9E7E05251BC1420E50672D4",
+          "541AADDAAA6D37378427A9D03B78521AAA9612E15B2A09B19ECA7395DAF9F0FF",
+          "21879B3D905DF82A7DC70CDEA6015B50D67D07C0ACAADEA9461EAB2AC38D19ED"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -10121,6 +10601,750 @@
           "272A7D9E5EB07989867EA88060D8D9344F7BDE3660716CC4BCE49AB18BA56971",
           "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C",
           "AD71EDDCFC9E3CCACDE65BB236E5C9AE3EBFD0273871A5C651AA8F6F6BBF5B97"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "D2CF1694B6FFF610AA484C0A0FE28AC436102125182D3D8F129AC2D8E0E9F2FF",
+        "before_record_sha256": "26AD1344E690AF00004631643DF7C2C6B420BA46E3FAC6A854F17F42E6E8391E",
+        "coordinate": "8:1207",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "9CEFF8087CC8CC7D405DCBAF6C6B93F2CDB8E5D85AF9460359EF949B779A5A17"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "D2CF1694B6FFF610AA484C0A0FE28AC436102125182D3D8F129AC2D8E0E9F2FF",
+        "before_record_sha256": "26AD1344E690AF00004631643DF7C2C6B420BA46E3FAC6A854F17F42E6E8391E",
+        "coordinate": "8:1208",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "9CEFF8087CC8CC7D405DCBAF6C6B93F2CDB8E5D85AF9460359EF949B779A5A17"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "D2CF1694B6FFF610AA484C0A0FE28AC436102125182D3D8F129AC2D8E0E9F2FF",
+        "before_record_sha256": "26AD1344E690AF00004631643DF7C2C6B420BA46E3FAC6A854F17F42E6E8391E",
+        "coordinate": "8:1209",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "9CEFF8087CC8CC7D405DCBAF6C6B93F2CDB8E5D85AF9460359EF949B779A5A17"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "D2CF1694B6FFF610AA484C0A0FE28AC436102125182D3D8F129AC2D8E0E9F2FF",
+        "before_record_sha256": "26AD1344E690AF00004631643DF7C2C6B420BA46E3FAC6A854F17F42E6E8391E",
+        "coordinate": "8:1210",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "9CEFF8087CC8CC7D405DCBAF6C6B93F2CDB8E5D85AF9460359EF949B779A5A17"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "D2CF1694B6FFF610AA484C0A0FE28AC436102125182D3D8F129AC2D8E0E9F2FF",
+        "before_record_sha256": "26AD1344E690AF00004631643DF7C2C6B420BA46E3FAC6A854F17F42E6E8391E",
+        "coordinate": "8:1211",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "9CEFF8087CC8CC7D405DCBAF6C6B93F2CDB8E5D85AF9460359EF949B779A5A17"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1212",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1213",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1214",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1215",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1216",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1217",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1218",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1219",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1220",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1221",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1222",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1223",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1224",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1225",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1226",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1227",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1228",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1229",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "CE18DD3703609DB6E14881178DDBE17F0A8EEA8721D1F788E91C8F0D747CCE6E",
+        "before_record_sha256": "E9B1CD8F4B0DCE41EBC07C798D8CFDD580E4F062D20550019D517D3593949F06",
+        "coordinate": "8:1230",
+        "literal_context_utf16le_sha256": [
+          "08433DDF7C65BF4449C2C35BE2162B1B7CC80E73BEA1BEA4755D00492044E842",
+          "56D1373C41D161446FA7675E538E49D76C9C44A1844E40648BCA9FF5EE79A25F"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -10360,6 +11584,36 @@
         "old_terminal_variant_sha256": [
           "E3F6D0D14903AF9EC1398EEF3591F928CE4A2043CF453BEF8DE76D64A3EBDB72",
           "F24FD7273D612A108C8AB1450EE571957B46FC5A7DD5781A4D7C4965B8D374E2"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "68CD6EFA634591E041B7E1374947FB18FF78F1C3C0E5EFA6C34938369EAA31F4",
+        "before_record_sha256": "EC1413AA7258ADBB0FADF574831AF2B3D60DFC3481D16A8153C42CF7CD92DEC3",
+        "coordinate": "9:3947",
+        "literal_context_utf16le_sha256": [
+          "A447745D60B89C77E382DF3CC889A2E28C060DA45DBE528A57462B389D1AA81B"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -11024,8 +12278,68 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
-        "after_record_sha256": "39F0F6E9EE617EB68821253B88782B5F79B9A9FC35FB11061F713538B9B47283",
+        "after_record_sha256": "98FF157F3321AC4AFBBA0F4F411622AA9E60A8C427DEE6120B84EBF6114BC3ED",
+        "before_record_sha256": "B4CF92B12F46E3B49F0350F619C2540DB9719CCBB98AEC4B96C303F4252FE2F2",
+        "coordinate": "15:221",
+        "literal_context_utf16le_sha256": [
+          "B1B33C006C837AFC6DA3E7F801E27DCA6E194EB3DD9CB6883B4F9005F967A0CC",
+          "69FF6E903A730D348818C73919960B48A0814CA3CFBCE35007D8E2EF11CEB862"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "76247C7EA0B2FCE9B5B76814FA892DB41FE1DB510B3252D80E11723222E82BF5",
         "before_record_sha256": "7101B0A5D111EA8313FBB42D3B5D8164D0EFE817160F7963021A0C9D13143CF5",
+        "coordinate": "15:228",
+        "literal_context_utf16le_sha256": [
+          "0549B91C2D801A1D5F5FE0384DEBF1CF36C4402E89814FBE6ED4F9AFCBE8CA4D",
+          "33D2C6B0592CEDF00C0470F6FCB37F7A59EB2F8EF28BCE378CD12AA5AF506445"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "0143DF040000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:1247",
+        "new_terminal_variant_count": 1,
+        "new_terminal_variant_sha256": [
+          "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "D659665AC11F5B6FB2E5F428DEEC93C4282EA07F2C11CD42BDA31637E3759521",
+        "before_record_sha256": "76247C7EA0B2FCE9B5B76814FA892DB41FE1DB510B3252D80E11723222E82BF5",
         "coordinate": "15:228",
         "literal_context_utf16le_sha256": [
           "0549B91C2D801A1D5F5FE0384DEBF1CF36C4402E89814FBE6ED4F9AFCBE8CA4D",
@@ -11085,6 +12399,37 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "467BAB66547D660181F3B001C6D8187619587ACD3CE6CF5526B35C17D5EC0674",
+        "before_record_sha256": "2B0E04137A81990FAB463EC613101D1C9A6D9581F2DBCB49F037B8362710C19A",
+        "coordinate": "15:233",
+        "literal_context_utf16le_sha256": [
+          "12D2637EBDEE925BF3F5F9D6F17487449A5E1B46E2C33ACED37FDB031FB8BB18",
+          "2FA486FA4F9E597FD57AC4BDFC37AC8DC0C7EB9B5D37457E388C12DA7E5518DF"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "F28DA1AF2B6B755E66247D54CEF23C12CB676323D98879D0CF010AF67EEE5141",
         "before_record_sha256": "1308349A1E8A1A64D918425A08C0CEF04E66261CDC8CC12D9898102868FAC7AD",
         "coordinate": "15:234",
@@ -11107,6 +12452,37 @@
           "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
           "A52AE2FCC22140F134EA17F8BBEB40694B8A89FDA182B8B75E198B6D1246C2F7",
           "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "467BAB66547D660181F3B001C6D8187619587ACD3CE6CF5526B35C17D5EC0674",
+        "before_record_sha256": "2B0E04137A81990FAB463EC613101D1C9A6D9581F2DBCB49F037B8362710C19A",
+        "coordinate": "15:237",
+        "literal_context_utf16le_sha256": [
+          "12D2637EBDEE925BF3F5F9D6F17487449A5E1B46E2C33ACED37FDB031FB8BB18",
+          "2FA486FA4F9E597FD57AC4BDFC37AC8DC0C7EB9B5D37457E388C12DA7E5518DF"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -11141,6 +12517,37 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "467BAB66547D660181F3B001C6D8187619587ACD3CE6CF5526B35C17D5EC0674",
+        "before_record_sha256": "2B0E04137A81990FAB463EC613101D1C9A6D9581F2DBCB49F037B8362710C19A",
+        "coordinate": "15:241",
+        "literal_context_utf16le_sha256": [
+          "12D2637EBDEE925BF3F5F9D6F17487449A5E1B46E2C33ACED37FDB031FB8BB18",
+          "2FA486FA4F9E597FD57AC4BDFC37AC8DC0C7EB9B5D37457E388C12DA7E5518DF"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "F28DA1AF2B6B755E66247D54CEF23C12CB676323D98879D0CF010AF67EEE5141",
         "before_record_sha256": "1308349A1E8A1A64D918425A08C0CEF04E66261CDC8CC12D9898102868FAC7AD",
         "coordinate": "15:242",
@@ -11163,6 +12570,68 @@
           "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
           "A52AE2FCC22140F134EA17F8BBEB40694B8A89FDA182B8B75E198B6D1246C2F7",
           "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "467BAB66547D660181F3B001C6D8187619587ACD3CE6CF5526B35C17D5EC0674",
+        "before_record_sha256": "2B0E04137A81990FAB463EC613101D1C9A6D9581F2DBCB49F037B8362710C19A",
+        "coordinate": "15:245",
+        "literal_context_utf16le_sha256": [
+          "12D2637EBDEE925BF3F5F9D6F17487449A5E1B46E2C33ACED37FDB031FB8BB18",
+          "2FA486FA4F9E597FD57AC4BDFC37AC8DC0C7EB9B5D37457E388C12DA7E5518DF"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "8C8EB29EED3A26AE002D51030CF5C34023234E1536B01D42F318D0FE2902CA1D",
+        "before_record_sha256": "EF065208C715C3CA29B9C14A6AC97B5D443A36FBCDA89C5F8198266FF29219AD",
+        "coordinate": "15:247",
+        "literal_context_utf16le_sha256": [
+          "B45D3295D6E54C0A0F871CB4CE8AA570824CF976E64FC4EA414F57B0FF3FD0C3",
+          "3E3A83C81599488412A85921DB864C69771F5453194E315EF0A765A21221CF34"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -11362,6 +12831,36 @@
         "only_call_operand_changed": true,
         "record_size_preserved": true,
         "semantic_reason": "past_strategy_acquisition_requires_generic_past_terminal_family"
+      },
+      {
+        "after_record_sha256": "ABCFBF3C9F65CC9547213AE407FC7B129FD94BF99CD602A1ED7DDDD51F08D74F",
+        "before_record_sha256": "CD04D7C4265109051EFE29CAEB2F8D7326297EC4CDB4EAA77DA5DD6264F72F54",
+        "coordinate": "15:271",
+        "literal_context_utf16le_sha256": [
+          "438142E9DF838B753C7708A3921CF1685817C4FC81C1A77108DCF4A5142B10BC"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
         "after_record_sha256": "A2B6F932FE4CF306B06C889A5FB5FF2C9EEED7448568A3B92BBDF966CC639F6A",
@@ -12375,6 +13874,39 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "1F85CA7935CBF5372D483EAE523469B9321CCD7E152767E42B1D068C8E6F393B",
+        "before_record_sha256": "A855F5FC8889AC2614D35361FE6F25836C76EA69A4233A9D1A411DCA26826926",
+        "coordinate": "15:928",
+        "literal_context_utf16le_sha256": [
+          "5D3E9441B03FEAF2CD9D9C6A6CCC49A69B87CD3CDF57EC27F4E944ABC9743232",
+          "F50DE501F60B76008D01414E9FEFBDDBC32BB229515DABFB4DF7704DFC760971"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014326020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:550",
+        "new_terminal_variant_count": 5,
+        "new_terminal_variant_sha256": [
+          "272A7D9E5EB07989867EA88060D8D9344F7BDE3660716CC4BCE49AB18BA56971",
+          "EA588F9182AC764FFDCD41CF344AEAAA938BC1D3D8F49D39E9D52F76A1A18556",
+          "AD71EDDCFC9E3CCACDE65BB236E5C9AE3EBFD0273871A5C651AA8F6F6BBF5B97",
+          "56F21939CC77E8B8FE4DD78015EF5FF8B97B3BDD1EBA3E834F5DFDD40B5CCE2A",
+          "A25FF4F56F98806C70F450CBFE2C91DC130F32FD501CF9684E8E8EF5A668F7DE"
+        ],
+        "old_call_hex": "014338020000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:568",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "272A7D9E5EB07989867EA88060D8D9344F7BDE3660716CC4BCE49AB18BA56971",
+          "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C",
+          "AD71EDDCFC9E3CCACDE65BB236E5C9AE3EBFD0273871A5C651AA8F6F6BBF5B97"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "966F6527E471A5F70193A6DF1D52B70B3E2494E748D270E0C5B67A69FFC74DED",
         "before_record_sha256": "11DB9AE7D26D0A3A20107C159F94CC62DE6E7C39A9AF4C03A0937249A0181269",
         "coordinate": "15:1066",
@@ -12851,6 +14383,37 @@
         "old_terminal_variant_sha256": [
           "E3F6D0D14903AF9EC1398EEF3591F928CE4A2043CF453BEF8DE76D64A3EBDB72",
           "F24FD7273D612A108C8AB1450EE571957B46FC5A7DD5781A4D7C4965B8D374E2"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "8F2AAED1FEEBF7C1ABF372287D9DF9B7CD861A832D76656D58443F5A533AE0FA",
+        "before_record_sha256": "2E97EA7595ADF7C42C880D56BA6DE07CD03C3F33F414A286003FE871B04BD840",
+        "coordinate": "15:1473",
+        "literal_context_utf16le_sha256": [
+          "677C2128EE94685C7B20791B51952ED2735C4444C6F4324C627C8CE25649F755",
+          "4813D9911EC83B9D87E2E3B3B480B10E8EB150100BD4825BEC3A919F211607A0"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -13386,6 +14949,39 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
+        "after_record_sha256": "F87A7D6983CD4B564EBCE3DCB7F64C59F5CF7EB97B3848E61775A620029A9DBA",
+        "before_record_sha256": "2DF9E2E07595A76502D49F22FFAAE1EFD3C69DFBDE5804AD938EDA5FD22A62C2",
+        "coordinate": "15:1555",
+        "literal_context_utf16le_sha256": [
+          "670FE3C4E289751DAFF5FF57DF84267C808624200AF9DC31D8CE31E44106CA82",
+          "38AF61238E4F458D9F9640FAC762EFD63FA61A2A91C0AFBB3FCB6453046B032F",
+          "131160FAAC15C54A5787D1D76598F8254D4EA6E375479FA2CD2654273FAC248C",
+          "ACA1378DE9E050FD9FBB60919E83866C06CE8BF7DF5D0DEAAF44CDC1C8601D4E"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
         "after_record_sha256": "3BC4903109FC442CF9CF28D8A2FECA5849ED24C0A71A8A7902E6522944E5C4BB",
         "before_record_sha256": "CD33E91504611CDFF291940E27E1A777F4DF8FFB81397C9D8E04202499B8E625",
         "coordinate": "15:1557",
@@ -13767,6 +15363,39 @@
         "old_terminal_variant_sha256": [
           "8623EFB349695169DCB4D7029BFB6C57FE283B7BDC0387CBEA1994406411C8C8",
           "D18FAEEBEE0AEE72A8BCC3178FD0793CA5B0B4AE102F6CC19E69325E84C80EBB"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "D533265E1DD5EDE8FE92A24D9D9FC336F7DD7824A5F9A1BCE7D8C566E17F0768",
+        "before_record_sha256": "63B4CB46C0A27D5F829D4051A83C5B67553EFF70FAE00D7A2C249F62BAA16F75",
+        "coordinate": "15:1611",
+        "literal_context_utf16le_sha256": [
+          "82FF4873561ACFCB189BD0845860A0DAE525D55D70177B8DE0A2562AC27E2FAE",
+          "7A9D0F7FA7A4CE4048079AD376DA560315BBCA8415BD5997C92FA6781BEABE07",
+          "6D699AF52113B1BAD0BEF00520D397AB8950053B39A5541D3949F6A77122929A",
+          "2FA486FA4F9E597FD57AC4BDFC37AC8DC0C7EB9B5D37457E388C12DA7E5518DF"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
         ],
         "only_call_operand_changed": true,
         "record_size_preserved": true,
@@ -15125,12 +16754,137 @@
         "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
-        "after_record_sha256": "87556CD01A9143D3D9D1D1A60B0106F7CAD517DF684D06A030B5053406762773",
-        "before_record_sha256": "032F533FFD40BC7D408446FDA1976DABFC49E7F9E031D313C43D87959325CFAB",
+        "after_record_sha256": "C2342DE7D1E6EE4D54569D3A66EA6B637F1A6228C60E65720AE3968622B28641",
+        "before_record_sha256": "8A9383CF170415457AC31545CA5AD503B513E80D3838CD42F4AED9162A25AD82",
+        "coordinate": "15:2175",
+        "literal_context_utf16le_sha256": [
+          "5224003949570AC917881D3FBA7F77C3DC470FC8F2EF54FF7AC890B9C04184DC",
+          "1641E27D2681DE7ACDBA0FDC1C1940088F9A2010A2ECB0D5968C600F5923DE86",
+          "AD22A79A09A68E57BD0E189038A5C479E786E7E795F697AE92427F2CB9512D80",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "01430C010000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:268",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "B023F31C31AFF4B8733DB48053B8462DBA33CFF10821549379C497EA9D12CCC0",
+          "0B124170C834BBCABCDE1E5725D804684B4295EFA4C19D85A2529B71EF683973",
+          "AD71EDDCFC9E3CCACDE65BB236E5C9AE3EBFD0273871A5C651AA8F6F6BBF5B97"
+        ],
+        "old_call_hex": "014394000000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:148",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "1140082D097E0213B8AEE4EA6C86461F8E64D6C2CD51F08AC441B3447FD48929",
+          "E0FE09AB9E863F0E7685361CC14FC01002D4D4033F7403835771DC46BDD4FA6E",
+          "D18FAEEBEE0AEE72A8BCC3178FD0793CA5B0B4AE102F6CC19E69325E84C80EBB"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "825F16CCE8762B88D413FE030D9C9777935BF790E8D36B6F744AE62C990DBFCA",
+        "before_record_sha256": "CA05EB086AAB56858C577CCE9624F52CA7832818EF3B3DA9D7F80EAA3581970C",
+        "coordinate": "15:2176",
+        "literal_context_utf16le_sha256": [
+          "140E0084C7825E73136BE577D2A0E31377C6D68A1AFE9EC20A2BC33ACC49342E",
+          "9CC7936075457F7F2574720A2B47A47683BA0B9D56877FC08FB9D25CB619E70F",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "0143EF000000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:239",
+        "new_terminal_variant_count": 2,
+        "new_terminal_variant_sha256": [
+          "B023F31C31AFF4B8733DB48053B8462DBA33CFF10821549379C497EA9D12CCC0",
+          "0B124170C834BBCABCDE1E5725D804684B4295EFA4C19D85A2529B71EF683973"
+        ],
+        "old_call_hex": "014342040000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:1090",
+        "old_terminal_variant_count": 2,
+        "old_terminal_variant_sha256": [
+          "0B9AFFA7C2628B81361A0C86C7C5DD3A83ECF4BB0D4C6BD25B4545EC9D18F6CE",
+          "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "BEE0351267DD2B0EA8F066EACCEFBB6C417F473FF8863F946C6687C2A60E58D0",
+        "before_record_sha256": "3CAF60B59BE92036F794C1723EECA3009098DC8B5084769A38B2EA48F3AE78FC",
+        "coordinate": "15:2180",
+        "literal_context_utf16le_sha256": [
+          "5EEAC99C02E002E9C0455AA894B9DC7B4E421EC9890BAC30CB31BF389D3A2BFE",
+          "CB63D03A31DFC425013234C9106250E581633885B5776E792008FD2BB34F6CCD",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "0143EF000000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:239",
+        "new_terminal_variant_count": 2,
+        "new_terminal_variant_sha256": [
+          "B023F31C31AFF4B8733DB48053B8462DBA33CFF10821549379C497EA9D12CCC0",
+          "0B124170C834BBCABCDE1E5725D804684B4295EFA4C19D85A2529B71EF683973"
+        ],
+        "old_call_hex": "014342040000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:1090",
+        "old_terminal_variant_count": 2,
+        "old_terminal_variant_sha256": [
+          "0B9AFFA7C2628B81361A0C86C7C5DD3A83ECF4BB0D4C6BD25B4545EC9D18F6CE",
+          "D30B1B1086F2A009F393DE60C505F78D5401AAEBCF8A3B1101218964A6D59B2C"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "F8734EF37576F2B9B3CBC696570C757BA4CDA9413C5CB7CA0EA604DBCD97D48D",
+        "before_record_sha256": "440090481AB3D5465D96B14E3B161F88DC676BE7E8F2BB73881E22354DED1787",
         "coordinate": "15:2184",
         "literal_context_utf16le_sha256": [
-          "4B60541674A3DBD65365E3E29E7B6E8D6E9F7DFE8B9235BB96ED28B5F7826F48",
-          "BD95AEF1DFAC1610E6F5CDF4456EDC7C689D4FA20C6238085C829B4B1ECF3862",
+          "FBF349839F8142DFD971207264ADB04A24503CAD72261A66CE5EC2265B25240B",
+          "54DB8BE3AF763F53A754AEFD71FB89C36FAE00D340419CF9305855714D761FFC",
+          "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "01430C010000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:268",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "B023F31C31AFF4B8733DB48053B8462DBA33CFF10821549379C497EA9D12CCC0",
+          "0B124170C834BBCABCDE1E5725D804684B4295EFA4C19D85A2529B71EF683973",
+          "AD71EDDCFC9E3CCACDE65BB236E5C9AE3EBFD0273871A5C651AA8F6F6BBF5B97"
+        ],
+        "old_call_hex": "014394000000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:148",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "1140082D097E0213B8AEE4EA6C86461F8E64D6C2CD51F08AC441B3447FD48929",
+          "E0FE09AB9E863F0E7685361CC14FC01002D4D4033F7403835771DC46BDD4FA6E",
+          "D18FAEEBEE0AEE72A8BCC3178FD0793CA5B0B4AE102F6CC19E69325E84C80EBB"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
+      },
+      {
+        "after_record_sha256": "E57F796A6DFDD8BE5EE7E8021AC77B8D8E218C6C91461479DBEF1E4CDB47C1B9",
+        "before_record_sha256": "F8734EF37576F2B9B3CBC696570C757BA4CDA9413C5CB7CA0EA604DBCD97D48D",
+        "coordinate": "15:2184",
+        "literal_context_utf16le_sha256": [
+          "FBF349839F8142DFD971207264ADB04A24503CAD72261A66CE5EC2265B25240B",
+          "54DB8BE3AF763F53A754AEFD71FB89C36FAE00D340419CF9305855714D761FFC",
           "B813D21BDB2AE744A65AD78D0695CBF15A7750CA8A4828B4518913A26849BD05"
         ],
         "mutated_call_count": 1,
@@ -15523,6 +17277,36 @@
         "only_call_operand_changed": true,
         "record_size_preserved": true,
         "semantic_reason": "question_predicate_family_is_complete_without_second_terminal"
+      },
+      {
+        "after_record_sha256": "EAFB0540DEA6ADA8CC616A8CE890223A6CC0A3E32303D89D5DBA06C55F1AF045",
+        "before_record_sha256": "3B08380CF33C74242F820DAA23C2528FB3644BD79D9B605E3FC08A1502D217EE",
+        "coordinate": "15:2284",
+        "literal_context_utf16le_sha256": [
+          "E3EAE939D00272E5244FACB2957913E4EAEE7BC0CB7E0C112A2958744E49EB32"
+        ],
+        "mutated_call_count": 1,
+        "new_call_hex": "014362020000",
+        "new_family_all_variants_context_coherent": true,
+        "new_target": "0:610",
+        "new_terminal_variant_count": 3,
+        "new_terminal_variant_sha256": [
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8",
+          "5EF4B0024610AA5894E276A8BA2548FE45A09174844D0DBCC71F9182ADA25D3D",
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F"
+        ],
+        "old_call_hex": "01431E010000",
+        "old_family_contains_incoherent_variant": true,
+        "old_target": "0:286",
+        "old_terminal_variant_count": 3,
+        "old_terminal_variant_sha256": [
+          "8D1021B6CC9AF2D4F39952F3DEDB0F26C62979D136D4ACFCB9677F0AEE618B9F",
+          "E411B6DD7CBB5CAE9D358E6875172CCDE2F9DACA331F90E587F5E48314BC328B",
+          "8D283FC34EE182B8D68ECD7A9C37F2B18097DAC2F57E1DC3A06B260D6D7035C8"
+        ],
+        "only_call_operand_changed": true,
+        "record_size_preserved": true,
+        "semantic_reason": "full_cartesian_morphology_owner_repair"
       },
       {
         "after_record_sha256": "341B0B6E583F1AC4093B0ADC5C53E4F903E3DC1120EB2EAE20A6E2D06DCC3362",
@@ -17741,6 +19525,22 @@
       }
     ]
   },
+  "direct_static_sentence_closure": {
+    "candidate_sha256": "1D7F1FB2086419BD1FC928012F3E0E3D0BA2C600809513188A3FFBA455F63EFF",
+    "candidate_size": 1815549,
+    "changed_record_count": 48,
+    "coordinate_sha256": "F826D4ED46C98EAEB18269CDC18FB7C5CA21008DC5762C89F654C9535B25BF6A",
+    "literal_line_counts_preserved": true,
+    "nonliteral_bytes_preserved": true,
+    "post_gate_issue_count": 0,
+    "pre_gate_issue_count": 54,
+    "relative_width_growth_exception_count": 73,
+    "replacement_count": 76,
+    "resource": "pk_msggame",
+    "schema": "nobu16.kr.direct-static-sentence-closure.v1",
+    "status": "PASS",
+    "steam_write_performed": false
+  },
   "ghidra_contract": {
     "automatic_korean_particle_selection_observed": false,
     "literal_opcode_0x02": "0x140A013B0 copies UTF-16 code units verbatim",
@@ -17749,23 +19549,23 @@
   },
   "independent_candidate_guardrails": {
     "relative_width": {
-      "approved_growth_exception_count": 311,
-      "audit_sha256": "4FF9B5D84587E0DEB9734EE9E4154A4873685A2B5C506B9D95899CE37217F1AD",
+      "approved_growth_exception_count": 388,
+      "audit_sha256": "2A24313BAA688812FFA50745F1EF75D11275B4A938767D9CFCB4BFE94060860D",
       "category_counts": {},
-      "changed_literal_count": 7711,
+      "changed_literal_count": 7794,
       "issue_count": 0,
       "line_count_reduced_count": 0,
       "maximum_positive_delta_px": 576,
-      "positive_line_delta_count": 4678,
+      "positive_line_delta_count": 4759,
       "status": "PASS"
     },
     "structure": {
-      "allowed_mutation_count": 575,
-      "audit_sha256": "45136B85B471215F84A9332502828D989A606FA7420F07F05BD20BA64FB7CCC9",
+      "allowed_mutation_count": 632,
+      "audit_sha256": "BA20F3511B3154DDCA42231EDB48C944C0836D71768C42CDE65022132386A9F8",
       "category_counts": {},
-      "component_changed_record_count": 467,
+      "component_changed_record_count": 522,
       "issue_count": 0,
-      "literal_changed_count": 7711,
+      "literal_changed_count": 7794,
       "status": "PASS"
     }
   },
@@ -17885,6 +19685,7 @@
     "base_resource_untouched": true,
     "call_semantic_carrier_artifact_count": 0,
     "calls_and_jumps_preserved_except_listed_retargets": true,
+    "direct_static_bare_stem_issue_count": 0,
     "dynamic_selector_bytes_preserved": true,
     "legal_predecessor_target_ui_preserved": true,
     "listed_retargets_change_only_call_operands": true,
@@ -17898,7 +19699,7 @@
   "overlay": {
     "category_coordinate_counts": {
       "boundary_closure_review": 59,
-      "call_assembly_cartesian_review": 999,
+      "call_assembly_cartesian_review": 1010,
       "call_assembly_prefix_prepend": 107,
       "call_assembly_prefix_trim": 32,
       "call_assembly_suffix_append": 115,
@@ -17923,7 +19724,7 @@
       "selector_left_boundary_spacing": 2493,
       "unresolved_dual_particle": 2855
     },
-    "coordinate_sha256": "2B0849988B8FE00692C54E00A8BDE533D4EDD119280C2585B796492689F46F49",
+    "coordinate_sha256": "8D85A02ED448A8625CAFC91C43BD37BE74E4BC3908819E7C21E5C29039444C91",
     "method_counts": {
       "boundary_closure_exact_rewrite": 59,
       "call_address_compact_object_nominal:17": 3,
@@ -17938,7 +19739,7 @@
       "call_address_compact_relation:37:topic": 1,
       "call_address_compact_relation:50:topic": 1,
       "call_address_compact_relation:8:comitative": 1,
-      "call_assembly_cartesian_exact_rewrite": 999,
+      "call_assembly_cartesian_exact_rewrite": 1010,
       "call_assembly_exact_prefix_prepend": 107,
       "call_assembly_exact_prefix_trim": 32,
       "call_assembly_exact_suffix_append": 115,
@@ -18105,11 +19906,11 @@
       "terminal_call_stem_reconstruction": 38,
       "textual_castle_name_fixed_batchim:comitative": 1
     },
-    "owned_issue_coordinate_count": 7706,
-    "owned_replacement_count": 7706,
+    "owned_issue_coordinate_count": 7713,
+    "owned_replacement_count": 7713,
     "priority_replacement_count": 5,
-    "private_overlay_sha256": "54E377D18A722C73385203D29060EC571CCF2FAEF0E0E2D85193B6F802DD508A",
-    "total_literal_replacement_count": 7711
+    "private_overlay_sha256": "F357221822B23A0A494CE1580BC2F1DBA81AC35F358474C9A8256579D68BC776",
+    "total_literal_replacement_count": 7794
   },
   "quality_gates": {
     "legal_target_ui": {
@@ -18127,7 +19928,7 @@
       "장수"
     ],
     "raw_g1n_relative_layout": {
-      "approved_exact_exception_count": 304,
+      "approved_exact_exception_count": 308,
       "approved_exact_exceptions": [
         {
           "candidate_utf16le_sha256": "D34B7A6D8D228B88C219FD90D68D3F729468ED6061483F5F76222058587D95C3",
@@ -20526,13 +22327,53 @@
           "source_width_px": 144
         },
         {
-          "candidate_utf16le_sha256": "4B60541674A3DBD65365E3E29E7B6E8D6E9F7DFE8B9235BB96ED28B5F7826F48",
+          "candidate_utf16le_sha256": "AD22A79A09A68E57BD0E189038A5C479E786E7E795F697AE92427F2CB9512D80",
+          "candidate_width_px": 432,
+          "coordinate": "15:2175:2",
+          "delta_px": 168,
+          "line_index": 1,
+          "reason": "runtime_report_question_requires_complete_nominal_predicate",
+          "source_utf16le_sha256": "59193AD19621FD5B92F3CA1435A14C175A20ADF2B8F6FC85F0831C0245FC25E8",
+          "source_width_px": 264
+        },
+        {
+          "candidate_utf16le_sha256": "9CC7936075457F7F2574720A2B47A47683BA0B9D56877FC08FB9D25CB619E70F",
+          "candidate_width_px": 456,
+          "coordinate": "15:2176:1",
+          "delta_px": 144,
+          "line_index": 0,
+          "reason": "dynamic_address_question_requires_complete_finite_clause",
+          "source_utf16le_sha256": "0DCD0F3307F7B3FF3551395A3F9F7DBAF64B7970C1089BF772E7078093FBAB9D",
+          "source_width_px": 312
+        },
+        {
+          "candidate_utf16le_sha256": "CB63D03A31DFC425013234C9106250E581633885B5776E792008FD2BB34F6CCD",
+          "candidate_width_px": 600,
+          "coordinate": "15:2180:1",
+          "delta_px": 456,
+          "line_index": 1,
+          "reason": "runtime_rumor_question_requires_complete_nominal_predicate",
+          "source_utf16le_sha256": "2C1C04AA48C9A9BE2356EACD4B61A0E677828FD3C6B72BE8F154F0CF73137FDA",
+          "source_width_px": 144
+        },
+        {
+          "candidate_utf16le_sha256": "FBF349839F8142DFD971207264ADB04A24503CAD72261A66CE5EC2265B25240B",
           "candidate_width_px": 216,
           "coordinate": "15:2184:0",
           "delta_px": 120,
           "line_index": 1,
           "reason": "reviewed_dynamic_predicate_reconstruction",
           "source_utf16le_sha256": "B3D862CA8153942DDA97283F9A68DC1D6ADB33DA2FBEDDD897AFF034F2811F34",
+          "source_width_px": 96
+        },
+        {
+          "candidate_utf16le_sha256": "54DB8BE3AF763F53A754AEFD71FB89C36FAE00D340419CF9305855714D761FFC",
+          "candidate_width_px": 480,
+          "coordinate": "15:2184:1",
+          "delta_px": 384,
+          "line_index": 1,
+          "reason": "runtime_rumor_question_requires_complete_nominal_predicate",
+          "source_utf16le_sha256": "BD95AEF1DFAC1610E6F5CDF4456EDC7C689D4FA20C6238085C829B4B1ECF3862",
           "source_width_px": 96
         },
         {
@@ -21226,7 +23067,7 @@
           "source_width_px": 144
         }
       ],
-      "changed_coordinate_count": 7711,
+      "changed_coordinate_count": 7718,
       "line_count_increase_count": 0,
       "maximum_ordinary_delta_px": 24,
       "method": "48px_fullwidth_24px_halfwidth_per_literal_line",
@@ -21429,9 +23270,9 @@
   "terminal_boundary_detector": {
     "call_site_count": 5771,
     "issue_count": 0,
-    "private_audit_sha256": "86C0EC50E05100AF6DA85B88E0BB9D8CD69C7941A5CA3AFAAB2664CB5116668A",
+    "private_audit_sha256": "CDAF011A47C285E31AE6113A1B5E2D612CB193B352D0EABAEBFDBE9FC46F13CD",
     "schema": "nobu16.kr.pc-dialogue-terminal-boundary-detector.v1",
     "status": "PASS",
-    "terminal_suffix_variant_count": 6764
+    "terminal_suffix_variant_count": 6812
   }
 }

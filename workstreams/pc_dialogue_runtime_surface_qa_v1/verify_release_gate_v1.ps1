@@ -66,7 +66,7 @@ function Assert-BoundResource(
     ) "Runtime-surface resource has empirical width coordinates: $RelativePath"
     $expectedStructureMutationCount = if (
         $RelativePath -eq 'MSG_PK/JP/msggame.bin'
-    ) { 575 } else { 1659 }
+    ) { 632 } else { 1672 }
     Require (
         [long]$resource.allowed_structure_mutation_count -eq (
             $expectedStructureMutationCount
@@ -210,26 +210,26 @@ Require (
 ) 'Candidate-structure audit weakens the reviewed-retarget contract'
 Require (
     [long]$gate.audit_contract.candidate_structure.
-        base_reviewed_component_mutation_count -eq 1659
+        base_reviewed_component_mutation_count -eq 1672
 ) 'Base reviewed structure mutation count drifted'
 Require (
     [long]$gate.audit_contract.candidate_structure.
-        pk_reviewed_operation_count -eq 569
+        pk_reviewed_operation_count -eq 626
 ) 'PK reviewed control-retarget operation count drifted'
 Require (
     [string]$gate.audit_contract.candidate_structure.
         pk_reviewed_operation_sha256 -eq (
-            'FEBBBBFF456009C2B09C1D8294B4D18F5724A0D710BD718A6162D1A89245B9C7'
+            '3F09DA592C751BD674BBC375DA73F9FA8FA5EC01342AEF7CF37231595086A563'
         )
 ) 'PK reviewed control-retarget operation digest drifted'
 Require (
     [long]$gate.audit_contract.candidate_structure.
-        pk_reviewed_component_mutation_count -eq 575
+        pk_reviewed_component_mutation_count -eq 632
 ) 'PK reviewed control-retarget component count drifted'
 Require (
     [string]$gate.audit_contract.candidate_structure.
         pk_reviewed_component_contract_sha256 -eq (
-            'EBF693AA53CBFA7CA3EA39FD53965706E3B9D384582C6DFC76B53794AF7CC2DE'
+            'B01757C09FCC5918FBB17A868CAC72219ECF50472E6FFA5C5B41714410BCD922'
         )
 ) 'PK reviewed control-retarget component digest drifted'
 Require (

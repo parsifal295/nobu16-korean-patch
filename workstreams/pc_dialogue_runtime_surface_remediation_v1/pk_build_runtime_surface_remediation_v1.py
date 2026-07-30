@@ -67,6 +67,9 @@ RELATIVE_WIDTH_AUDIT_PATH = (
     / "pc_dialogue_runtime_surface_qa_v1"
     / "audit_candidate_relative_width_v1.py"
 )
+DIRECT_STATIC_CLOSURE_PATH = (
+    WORKSTREAM / "direct_static_sentence_closure_v1.py"
+)
 BASELINE_PATH = (
     REPO
     / "tmp"
@@ -528,7 +531,7 @@ APPROVED_LAYOUT_EXCEPTIONS = {
             ),
             (
                 (15, 2184, 0), 1, 96, 216,
-                "4B60541674A3DBD65365E3E29E7B6E8D6E9F7DFE8B9235BB96ED28B5F7826F48",
+                "FBF349839F8142DFD971207264ADB04A24503CAD72261A66CE5EC2265B25240B",
             ),
             (
                 (15, 2462, 1), 1, 384, 504,
@@ -1555,6 +1558,50 @@ APPROVED_LAYOUT_EXCEPTIONS = {
         for coordinate in coordinates
     },
 }
+APPROVED_LAYOUT_EXCEPTIONS.update(
+    {
+        (15, 2175, 2): {
+            "line_index": 1,
+            "source_width_px": 264,
+            "candidate_width_px": 432,
+            "delta_px": 168,
+            "candidate_utf16le_sha256":
+                "AD22A79A09A68E57BD0E189038A5C479E786E7E795F697AE92427F2CB9512D80",
+            "reason":
+                "runtime_report_question_requires_complete_nominal_predicate",
+        },
+        (15, 2176, 1): {
+            "line_index": 0,
+            "source_width_px": 312,
+            "candidate_width_px": 456,
+            "delta_px": 144,
+            "candidate_utf16le_sha256":
+                "9CC7936075457F7F2574720A2B47A47683BA0B9D56877FC08FB9D25CB619E70F",
+            "reason":
+                "dynamic_address_question_requires_complete_finite_clause",
+        },
+        (15, 2180, 1): {
+            "line_index": 1,
+            "source_width_px": 144,
+            "candidate_width_px": 600,
+            "delta_px": 456,
+            "candidate_utf16le_sha256":
+                "CB63D03A31DFC425013234C9106250E581633885B5776E792008FD2BB34F6CCD",
+            "reason":
+                "runtime_rumor_question_requires_complete_nominal_predicate",
+        },
+        (15, 2184, 1): {
+            "line_index": 1,
+            "source_width_px": 96,
+            "candidate_width_px": 480,
+            "delta_px": 384,
+            "candidate_utf16le_sha256":
+                "54DB8BE3AF763F53A754AEFD71FB89C36FAE00D340419CF9305855714D761FFC",
+            "reason":
+                "runtime_rumor_question_requires_complete_nominal_predicate",
+        },
+    }
+)
 EXPECTED_EMPTY_TERMINAL_DATA_HEX = "070701070702050505"
 SCHEMA = "nobu16.kr.pk-runtime-surface-remediation.v1"
 OVERLAY_SCHEMA = "nobu16.kr.pk-runtime-surface-remediation-row.private.v1"
@@ -1601,6 +1648,10 @@ os.environ.pop("NOBU16_PK_ONLY_STRUCTURE_AUDIT", None)
 RELATIVE_WIDTH = load_module(
     "pc_dialogue_candidate_width_for_pk_remediation",
     RELATIVE_WIDTH_AUDIT_PATH,
+)
+DIRECT_STATIC_CLOSURE = load_module(
+    "direct_static_sentence_closure_for_pk_builder_v1",
+    DIRECT_STATIC_CLOSURE_PATH,
 )
 
 DUAL_TOKENS = tuple(sorted(QA.DUAL_PARTICLES, key=len, reverse=True))
@@ -2996,7 +3047,7 @@ CALL_ASSEMBLY_EXACT_REWRITES = {
     (15, 1877, 0): "준비는 이미 모두 갖추어졌",
     (15, 1877, 1): ".\n당장 공격하고 싶은 참",
     (15, 1911, 1): ".\n그에 걸맞은 대가는 얻",
-    (15, 2180, 1): ".\n들으시",
+    (15, 2180, 1): ".\n상세한 이야기를 들으실 것",
     (15, 2211, 0): "의 병량을 걱정",
     (15, 2211, 2): ".\n병량 징수는 어떻소",
     (15, 2406, 0): "양측의 전력은 팽팽히 맞섰",
@@ -4173,7 +4224,7 @@ CALL_ASSEMBLY_EXACT_REWRITES.update(
         (15, 1673, 0):
             "우리 가문의 조두들은 모두 걸물이지만\n"
             "공을 세울 기회를 얻지 못한 듯하니\n「",
-        (15, 2184, 0): "에서 사건이 났다 하오…\n풍문이 있",
+        (15, 2184, 0): "에서 사건이 났다는\n풍문이 있",
         (15, 2377, 1): ".\n어쩔 수 ",
         (15, 2462, 1): "\n방위 임무를 해제하지 ",
         (15, 1928, 0): "조금만 더 ",
@@ -4756,6 +4807,37 @@ ADDITIONAL_CONTROL_RETARGETS = {
     (15, 1674): ((628, 70),),
 }
 
+# Screenshot-backed Cartesian sentence closure.  Ghidra proved that these
+# literal and terminal fragments are concatenated verbatim.  The previous
+# boundary-only audit therefore missed valid-looking fragments that produced
+# malformed complete strings such as ``쉽다이오``, ``보고하겠습니다?``, and
+# ``질문하오?`` after the runtime speech-style branch was selected.
+CALL_ASSEMBLY_EXACT_REWRITES.update(
+    {
+        (6, 3941, 2): "\n교섭을 개시할 것",
+        (6, 4420, 4): "님께 줄 것",
+        (6, 4423, 2): "개입니다\n새 영지를 내릴 것",
+        (8, 294, 2): "\n선견지명이란 바로 이런 것",
+        (9, 3947, 0):
+            "아군의 우세는 흔들림이 없다\n"
+            "단숨에 몰아쳐\n"
+            "반격할 틈을 주지 말아야 할 것",
+        (15, 807, 1):
+            "이\n"
+            "언젠가 우리 가문을 위협할 것이 분명하니\n"
+            "잇키로 움직임을 막겠사옵니다",
+        (15, 928, 0):
+            "은 해이한 보초뿐\n"
+            "수하를 잠입시키기 쉬운 일",
+        (15, 2175, 1):
+            "사건에 대해\n"
+            "상세한 이야기를 알아 ",
+        (15, 2175, 2): "\n전말을 들으실 생각",
+        (15, 2176, 1): ", 이 사건을 들은 것",
+        (15, 2184, 1): ".\n이야기를 들으실 생각",
+    }
+)
+
 QUESTION_DOUBLE_TERMINAL_RETARGETS = {
     (15, 379): (616, 1247),
     (15, 1235): (616, 1247),
@@ -4871,7 +4953,7 @@ MORPHOLOGY_CONTROL_RETARGETS = {
     (7, 2875): ((412, 1247),),
     (8, 271): ((70, 550), (508, 1247)),
     (8, 272): ((70, 550), (508, 1247)),
-    (8, 294): ((88, 286),),
+    (8, 294): ((88, 610),),
     (8, 1108): ((712, 1247),),
     (15, 434): ((508, 1247),),
     (15, 926): ((148, 1247),),
@@ -5066,6 +5148,61 @@ FINAL_CALL_ASSEMBLY_CONTROL_RETARGETS = {
         (730, 1247),
     ),
 }
+
+SCREENSHOT_RUNTIME_CONTROL_RETARGETS = {
+    (6, 3941): ((1090, 239),),
+    (6, 4420): ((1090, 239),),
+    (6, 4423): ((1090, 239),),
+    (15, 928): ((568, 550),),
+    (15, 2175): ((148, 268),),
+    (15, 2176): ((1090, 239),),
+    (15, 2180): ((1090, 239),),
+    (15, 2184): ((148, 268),),
+    (15, 228): ((286, 1247),),
+}
+for _coordinate, _retargets in SCREENSHOT_RUNTIME_CONTROL_RETARGETS.items():
+    FINAL_CALL_ASSEMBLY_CONTROL_RETARGETS[_coordinate] = (
+        FINAL_CALL_ASSEMBLY_CONTROL_RETARGETS.get(_coordinate, ())
+        + _retargets
+    )
+
+# Family 0:286 contains the Japanese ellipsis ``かと``.  Its old Korean leaf
+# ``인가 하고`` is not a finite sentence, and every surviving caller below
+# uses the family as a complete nominal-predicate terminal.  Family 0:610 is
+# the proved three-register finite copular donor.
+EXPECTATION_COPULAR_RETARGET_COORDINATES = (
+    (6, 4787),
+    (6, 4934),
+    (6, 4935),
+    (7, 2474),
+    (7, 2475),
+    (7, 2496),
+    (7, 2498),
+    (8, 1099),
+    (8, 1111),
+    (8, 1112),
+    (8, 1116),
+    (8, 1118),
+    *((8, record_id) for record_id in range(1207, 1231)),
+    (9, 3947),
+    (15, 221),
+    (15, 233),
+    (15, 237),
+    (15, 241),
+    (15, 245),
+    (15, 247),
+    (15, 271),
+    (15, 1473),
+    (15, 1555),
+    (15, 1611),
+    (15, 2284),
+)
+for _coordinate in EXPECTATION_COPULAR_RETARGET_COORDINATES:
+    FINAL_CALL_ASSEMBLY_CONTROL_RETARGETS[_coordinate] = (
+        FINAL_CALL_ASSEMBLY_CONTROL_RETARGETS.get(_coordinate, ())
+        + ((286, 610),)
+    )
+
 for _coordinate, _retargets in FINAL_CALL_ASSEMBLY_CONTROL_RETARGETS.items():
     MORPHOLOGY_CONTROL_RETARGETS[_coordinate] = (
         MORPHOLOGY_CONTROL_RETARGETS.get(_coordinate, ())
@@ -6554,6 +6691,18 @@ def detect_terminal_blob(
 def audit_candidate_guardrails(candidate_blob: bytes) -> dict[str, Any]:
     candidate_path = DEFAULT_OUTPUT_ROOT / ".candidate.guardrail-input.bin"
     atomic_write(candidate_path, candidate_blob)
+    direct_width_exceptions = (
+        DIRECT_STATIC_CLOSURE.relative_width_growth_exceptions(
+            "pk_msggame"
+        )
+    )
+    for key, value in direct_width_exceptions.items():
+        existing = RELATIVE_WIDTH.APPROVED_LINE_GROWTH_EXCEPTIONS.get(key)
+        require(
+            existing is None or existing == value,
+            f"direct static width exception conflicts at {key}",
+        )
+        RELATIVE_WIDTH.APPROVED_LINE_GROWTH_EXCEPTIONS[key] = value
     STRUCTURE.register_pk_call_retargets(
         SOURCE_PK,
         MORPHOLOGY_CONTROL_RETARGETS,
@@ -6587,9 +6736,12 @@ def audit_candidate_guardrails(candidate_blob: bytes) -> dict[str, Any]:
     )
     require(
         relative_width["approved_growth_exception_count"]
-        == sum(
-            len(exception.get("lines", {0: None}))
-            for exception in APPROVED_LAYOUT_EXCEPTIONS.values()
+        == (
+            sum(
+                len(exception.get("lines", {0: None}))
+                for exception in APPROVED_LAYOUT_EXCEPTIONS.values()
+            )
+            + len(direct_width_exceptions)
         ),
         "independent width guardrail exception count drifted",
     )
@@ -7908,7 +8060,24 @@ def build() -> tuple[bytes, str, str, str, dict[str, Any]]:
     literal_candidate = rebuild_packed_with_literals(priority_blob, replacements)
     candidate_blob, control_evidence = apply_control_retargets(literal_candidate)
 
-    changed_literals = frozenset(set(priority_entries) | set(replacements))
+    surface_changed_literals = frozenset(
+        set(priority_entries) | set(replacements)
+    )
+    candidate_blob, direct_static_sentence_closure = (
+        DIRECT_STATIC_CLOSURE.apply(
+            candidate_blob,
+            "pk_msggame",
+            QA,
+        )
+    )
+    direct_static_replacements = {
+        coordinate: rewrite[1]
+        for coordinate, rewrite
+        in DIRECT_STATIC_CLOSURE.PK_REWRITES.items()
+    }
+    changed_literals = frozenset(
+        set(surface_changed_literals) | set(direct_static_replacements)
+    )
     verify_preservation(source_blob, candidate_blob, changed_literals)
     final_literals = literal_map(candidate_blob)
     for coordinate, row in priority_entries.items():
@@ -7920,6 +8089,11 @@ def build() -> tuple[bytes, str, str, str, dict[str, Any]]:
         require(
             final_literals[coordinate] == replacement,
             f"owned literal did not round-trip: {coordinate}",
+        )
+    for coordinate, replacement in direct_static_replacements.items():
+        require(
+            final_literals[coordinate] == replacement,
+            f"direct static literal did not round-trip: {coordinate}",
         )
 
     candidate_audit, candidate_report, private_audit_content = audit_blob(
@@ -7949,7 +8123,7 @@ def build() -> tuple[bytes, str, str, str, dict[str, Any]]:
     quality_evidence = verify_quality_gates(
         source_blob,
         candidate_blob,
-        changed_literals,
+        surface_changed_literals,
         overlay_rows,
     )
     guardrail_evidence = audit_candidate_guardrails(candidate_blob)
@@ -8010,6 +8184,7 @@ def build() -> tuple[bytes, str, str, str, dict[str, Any]]:
             if (
                 candidate_report["issue_count"] == 0
                 and terminal_report["issue_count"] == 0
+                and direct_static_sentence_closure["status"] == "PASS"
             )
             else "INCOMPLETE"
         ),
@@ -8078,6 +8253,8 @@ def build() -> tuple[bytes, str, str, str, dict[str, Any]]:
         },
         "regressions": regression_evidence,
         "independent_language_review": independent_review_evidence,
+        "direct_static_sentence_closure":
+            direct_static_sentence_closure,
         "quality_gates": quality_evidence,
         "independent_candidate_guardrails": guardrail_evidence,
         "call_carrier_rejection": {
@@ -8128,6 +8305,7 @@ def build() -> tuple[bytes, str, str, str, dict[str, Any]]:
             "call_semantic_carrier_artifact_count": 0,
             "selector_semantic_carrier_artifact_count": 0,
             "raw_g1n_relative_layout_over_budget_count": 0,
+            "direct_static_bare_stem_issue_count": 0,
             "steam_write_performed": False,
         },
     }

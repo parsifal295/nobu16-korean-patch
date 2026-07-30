@@ -32,11 +32,11 @@ class BaseCallAssemblyRemediationTests(unittest.TestCase):
         self.assertEqual(self.report["status"], "PASS")
         self.assertEqual(self.report["source_issue_count"], 3000)
         self.assertEqual(self.report["final_issue_count"], 0)
-        self.assertEqual(self.report["literal_replacement_count"], 2585)
-        self.assertEqual(self.report["retarget_count"], 1659)
+        self.assertEqual(self.report["literal_replacement_count"], 2588)
+        self.assertEqual(self.report["retarget_count"], 1672)
         self.assertEqual(
             self.report["candidate_sha256"],
-            "D5E53215D9B5CB15573A63DB79A3E97E1F23354EE446C3E397922CB62F8081FC",
+            "B49E084309CA0845AAA29C6794ECA2C55DF2BAB122CF3CD5409604499AA6617B",
         )
         second, second_report = BUILD.build(self.source)
         self.assertEqual(second, self.candidate)

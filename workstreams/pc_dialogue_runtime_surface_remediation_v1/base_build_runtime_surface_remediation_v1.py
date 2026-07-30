@@ -43,6 +43,9 @@ STRUCTURE_QA_PATH = QA_WORKSTREAM / "audit_candidate_structure_v1.py"
 CALL_REMEDIATION_PATH = (
     WORKSTREAM / "base_call_assembly_remediation_v1.py"
 )
+DIRECT_STATIC_CLOSURE_PATH = (
+    WORKSTREAM / "direct_static_sentence_closure_v1.py"
+)
 BASELINE_PATH = (
     REPO
     / "tmp"
@@ -312,6 +315,10 @@ STRUCTURE_QA = load_module(
 CALL_REMEDIATION = load_module(
     "base_call_assembly_remediation_for_base_builder_v1",
     CALL_REMEDIATION_PATH,
+)
+DIRECT_STATIC_CLOSURE = load_module(
+    "direct_static_sentence_closure_for_base_builder_v1",
+    DIRECT_STATIC_CLOSURE_PATH,
 )
 
 
@@ -4085,6 +4092,30 @@ def build() -> tuple[bytes, str, str, str, str, dict[str, Any]]:
             },
         }
     )
+    pre_direct_static_records = records_from_blob(candidate_blob)
+    candidate_blob, direct_static_sentence_closure = (
+        DIRECT_STATIC_CLOSURE.apply(
+            candidate_blob,
+            "base_msggame",
+            QA,
+        )
+    )
+    direct_static_replacements = {
+        coordinate: rewrite[1]
+        for coordinate, rewrite
+        in DIRECT_STATIC_CLOSURE.BASE_REWRITES.items()
+    }
+    final_records = records_from_blob(candidate_blob)
+    verify_nonliteral_preservation(
+        pre_direct_static_records,
+        final_records,
+        direct_static_replacements,
+    )
+    require(
+        direct_static_sentence_closure["status"] == "PASS"
+        and direct_static_sentence_closure["post_gate_issue_count"] == 0,
+        "Base direct static sentence-closure gate failed",
+    )
     candidate_audit = QA.audit_resource(
         "base_msggame",
         path_from_blob(candidate_blob),
@@ -4143,6 +4174,7 @@ def build() -> tuple[bytes, str, str, str, str, dict[str, Any]]:
                 and semantic_layout_report["status"] == "PASS"
                 and spacing_layout_report["status"] == "PASS"
                 and person_suffix_layout_report["status"] == "PASS"
+                and direct_static_sentence_closure["status"] == "PASS"
                 and generic_noun_audit["unapproved_count"] == 0
                 and semantic_boundary_audit[
                     "introduced_marker_count"
@@ -4267,6 +4299,8 @@ def build() -> tuple[bytes, str, str, str, str, dict[str, Any]]:
                 reported_diplomacy_assembly,
             "honorific_call_assembly": honorific_assembly,
             "person_suffix_spacing": person_suffix_remediation,
+            "direct_static_sentence_closure":
+                direct_static_sentence_closure,
             "call_assembly_remediation": {
                 "schema": call_assembly_remediation["schema"],
                 "status": call_assembly_remediation["status"],
@@ -4308,6 +4342,7 @@ def build() -> tuple[bytes, str, str, str, str, dict[str, Any]]:
                 call_assembly_remediation["retarget_count"],
             "control_bytes_preserved_except_exact_call_operands": True,
             "line_counts_preserved": True,
+            "direct_static_bare_stem_issue_count": 0,
             "pk_resource_untouched": True,
             "steam_write_performed": False,
         },

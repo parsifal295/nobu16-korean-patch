@@ -18,10 +18,10 @@
     "base_8_1188_rendered_branch_sha256": "F60477B68A30CAA801E9CF8D6AC174EE0137AC00DD9A8B051DAFE31BAD35F272",
     "call_assembly_remediation": {
       "final_issue_count": 0,
-      "literal_coordinate_sha256": "D163F731762DE88E711371F19760451E3DE6760FAFCE369B4DFD4DCD89B88558",
-      "literal_replacement_count": 2585,
-      "retarget_coordinate_sha256": "953928CA00C068B19E46EF377C3BA3661F3DC6FF06AA8C2923F418E1719EF0C5",
-      "retarget_count": 1659,
+      "literal_coordinate_sha256": "31CAFBD515DE1DFE65E3E363452D9A1D3E49F9867AF83CD5D6ED418EED9AED36",
+      "literal_replacement_count": 2588,
+      "retarget_coordinate_sha256": "6032BF32B73B8447145E5D2E4AF77397EAA0CC6C4570CD2EA8917F6C49901511",
+      "retarget_count": 1672,
       "schema": "nobu16.kr.base-call-assembly-remediation.v1",
       "source_coordinate_count": 1371,
       "source_coordinate_sha256": "6D64B6842EB0CDBF1BBDA3C0715ED15D989AD3386CE80B27D7D7224A3D0E4D7B",
@@ -30,6 +30,22 @@
     },
     "call_semantic_carrier_artifact_issue_count": 0,
     "decoded_record_count": 19152,
+    "direct_static_sentence_closure": {
+      "candidate_sha256": "ADB73561AAA10A66364B3C09B2184BB29698186C808E0FE264C64B1DD2A5A4FE",
+      "candidate_size": 1557915,
+      "changed_record_count": 48,
+      "coordinate_sha256": "D117AB3DBD33607A7F642CFE2BED9DE84641BA3617DAC32A873D4BBB2F44DD00",
+      "literal_line_counts_preserved": true,
+      "nonliteral_bytes_preserved": true,
+      "post_gate_issue_count": 0,
+      "pre_gate_issue_count": 54,
+      "relative_width_growth_exception_count": 74,
+      "replacement_count": 77,
+      "resource": "base_msggame",
+      "schema": "nobu16.kr.direct-static-sentence-closure.v1",
+      "status": "PASS",
+      "steam_write_performed": false
+    },
     "honorific_call_assembly": {
       "all_nonempty_branches_exact_assembled": true,
       "coordinate_count": 250,
@@ -51,7 +67,7 @@
         "direct_boundary_issue_count": 0,
         "lexical_boundary_issue_coordinate_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
         "lexical_boundary_issue_count": 0,
-        "rendered_branch_count": 85669,
+        "rendered_branch_count": 85685,
         "rendered_issue_root_count": 0,
         "rendered_issue_root_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
         "rendered_record_count": 19152,
@@ -141,8 +157,8 @@
       "terminal_leaf_coordinate_sha256": "F5ACB241DFE20CBD25E338CC4F283E3DAF07531636FFCC2E3501AEEE5D61CD7C",
       "terminal_leaf_repair_count": 5
     },
-    "private_audit_sha256": "61CDAC6E29CED5C7B14E92C035C8B18D1FA6B7569A9A26FC348A802D89E54131",
-    "private_terminal_boundary_audit_sha256": "73D69414835DECFF79181CB5F69A8B4D5AC651A2E4198E13327AA2303B015B22",
+    "private_audit_sha256": "4715A6DF2E797A62EEE3E0C3A6FFF852447FE451054EE926D3E1993AD367C7F8",
+    "private_terminal_boundary_audit_sha256": "C9C22FBB126B18BBB7D93CFE207CADDFCAE3204A7ECE8844325EFB97572E0A3C",
     "record_count": 19152,
     "relative_layout": {
       "changed_coordinate_count": 4296,
@@ -167,8 +183,8 @@
       "status": "PASS"
     },
     "selector_semantic_carrier_artifact_issue_count": 0,
-    "sha256": "51D5B250F03F084A49B165D1C23DB6771363DBB2A22CB298A23E4A3CF313B5DC",
-    "size": 1557558,
+    "sha256": "ADB73561AAA10A66364B3C09B2184BB29698186C808E0FE264C64B1DD2A5A4FE",
+    "size": 1557915,
     "surface_category_counts": {},
     "surface_issue_count": 0,
     "terminal_boundary_issue_count": 0
@@ -196,8 +212,9 @@
     "base_only": true,
     "calls_and_jumps_preserved_except_exact_retargets": true,
     "control_bytes_preserved_except_exact_call_operands": true,
+    "direct_static_bare_stem_issue_count": 0,
     "dynamic_selectors_preserved": true,
-    "exact_call_retarget_count": 1659,
+    "exact_call_retarget_count": 1672,
     "line_counts_preserved": true,
     "pk_resource_untouched": true,
     "steam_write_performed": false
@@ -244,7 +261,7 @@
     "introduced_generic_target_count": 0,
     "introduced_semantic_boundary_audit": {
       "candidate_marker_count": 84,
-      "gate_engine_sha256": "45136B85B471215F84A9332502828D989A606FA7420F07F05BD20BA64FB7CCC9",
+      "gate_engine_sha256": "BA20F3511B3154DDCA42231EDB48C944C0836D71768C42CDE65022132386A9F8",
       "introduced_coordinate_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "introduced_marker_count": 0,
       "source_marker_count": 84

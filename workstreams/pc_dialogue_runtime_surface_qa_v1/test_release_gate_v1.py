@@ -209,7 +209,7 @@ class FinalCandidateGateTests(unittest.TestCase):
         self.assertEqual(payload["issue_count"], 0)
         self.assertEqual(
             payload["resources"]["MSG/JP/msggame.bin"]["sha256"],
-            "51D5B250F03F084A49B165D1C23DB6771363DBB2A22CB298A23E4A3CF313B5DC",
+            "ADB73561AAA10A66364B3C09B2184BB29698186C808E0FE264C64B1DD2A5A4FE",
         )
         self.assertEqual(
             payload["resources"]["MSG_PK/JP/msggame.bin"]["sha256"],

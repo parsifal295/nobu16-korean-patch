@@ -4504,21 +4504,88 @@ def build_plan(
         (15, 2376), 2, "판단해", "판단해 ",
         "reviewed_noun_phrase_boundary",
     )
-    replace_current_literal_text(
-        (15, 2154), 0, "\n풍문", "\n그런 풍문이 있",
-        "reviewed_noun_phrase_sentence",
+    # Screenshot-backed full runtime sentence closure.  The assembler copies
+    # every literal and call result verbatim, so question and copular families
+    # must be selected from the complete rendered sentence rather than from
+    # either fragment in isolation.
+    set_literal(
+        (15, 800), 1,
+        "이\n"
+        "언젠가 우리 가문을 위협할 것이 분명하니\n"
+        "잇키로 움직임을 막겠사옵니다",
+        "reviewed_cartesian_sentence_closure",
+    )
+    set_literal(
+        (9, 3675), 0,
+        "아군의 우세는 흔들림이 없다\n"
+        "단숨에 몰아쳐\n"
+        "반격할 틈을 주지 말아야 할 것",
+        "reviewed_cartesian_sentence_closure",
+    )
+    for coordinate, call_ordinal in (
+        ((7, 2428), 0),
+        ((7, 2429), 0),
+        ((9, 3675), 0),
+        ((15, 230), 0),
+        ((15, 234), 0),
+        ((15, 238), 0),
+        ((15, 242), 0),
+        ((15, 268), 0),
+        ((15, 1458), 0),
+        ((15, 1825), 1),
+    ):
+        ensure_call_target(
+            coordinate, call_ordinal, 286, 598,
+            "reviewed_cartesian_finite_copular_terminal",
+        )
+
+    set_literal(
+        (15, 2145), 2,
+        "\n전말을 들으실 생각",
+        "reviewed_cartesian_question_sentence",
+    )
+    ensure_call_target(
+        (15, 2145), 1, 148, 268,
+        "reviewed_cartesian_question_sentence",
+    )
+    set_literal(
+        (15, 2146), 1,
+        ", 이 사건을 들은 것",
+        "reviewed_cartesian_question_sentence",
+    )
+    ensure_call_target(
+        (15, 2146), 1, 1078, 239,
+        "reviewed_cartesian_question_sentence",
+    )
+    set_literal(
+        (15, 2150), 1,
+        ".\n상세한 이야기를 들으실 것",
+        "reviewed_cartesian_question_sentence",
+    )
+    ensure_call_target(
+        (15, 2150), 1, 1078, 239,
+        "reviewed_cartesian_question_sentence",
+    )
+    set_literal(
+        (15, 2154), 0,
+        "에서 사건이 일어났다는\n풍문이 있",
+        "reviewed_cartesian_question_sentence",
     )
     ensure_call_target(
         (15, 2154), 0, 376, 70,
-        "reviewed_noun_phrase_sentence",
+        "reviewed_cartesian_question_sentence",
     )
-    replace_current_literal_text(
-        (15, 2154), 1, "보고", "보고드리겠습니다",
-        "reviewed_noun_phrase_whole_sentence",
-    )
-    ensure_call_empty((15, 2154), 1, 148)
     set_literal(
-        (15, 2154), 2, ".", "reviewed_noun_phrase_whole_sentence",
+        (15, 2154), 1,
+        ".\n이야기를 들으실 생각",
+        "reviewed_cartesian_question_sentence",
+    )
+    ensure_call_target(
+        (15, 2154), 1, 148, 268,
+        "reviewed_cartesian_question_sentence",
+    )
+    set_literal(
+        (15, 2154), 2, "?", "reviewed_cartesian_question_sentence",
     )
     replace_current_literal_text(
         (6, 3537), 2, "것일 뿐", "것일 뿐입니다",

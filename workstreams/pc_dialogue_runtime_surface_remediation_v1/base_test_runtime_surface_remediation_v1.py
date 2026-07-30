@@ -50,8 +50,94 @@ class BaseRuntimeSurfaceRemediationTests(unittest.TestCase):
         )
         self.assertEqual(
             candidate["sha256"],
-            "51D5B250F03F084A49B165D1C23DB6771363DBB2A22CB298A23E4A3CF313B5DC",
+            "ADB73561AAA10A66364B3C09B2184BB29698186C808E0FE264C64B1DD2A5A4FE",
         )
+
+    def test_reported_cartesian_sentences_are_finite_in_every_branch(
+        self,
+    ) -> None:
+        renderer = BUILD.QA.TerminalRenderer(self.records)
+        coordinates = (
+            (15, 268),
+            (15, 921),
+            (15, 2145),
+            (15, 2146),
+            (15, 2150),
+            (15, 2154),
+        )
+        forbidden = (
+            "인가 하고",
+            "쉽다입니다",
+            "쉽다다",
+            "쉽다이오",
+            "질문하오?",
+            "질문하다?",
+            "들으시오?",
+            "들으시다?",
+            "보고하겠습니다?",
+            "보고하겠다?",
+            "보고하자?",
+        )
+        for coordinate in coordinates:
+            rendered = renderer.render(coordinate)
+            self.assertTrue(rendered, coordinate)
+            for value in rendered:
+                for fragment in forbidden:
+                    self.assertNotIn(fragment, value, (coordinate, value))
+        self.assertEqual(
+            renderer.render((15, 268)),
+            (
+                "아마 잘될 것이겠지요",
+                "아마 잘될 것이리라",
+                "아마 잘될 것이겠지",
+            ),
+        )
+
+    def test_incomplete_kato_terminal_has_no_body_callers(self) -> None:
+        callers = []
+        for coordinate, record in self.records.items():
+            if coordinate[0] == 0:
+                continue
+            for component in BUILD.QA.tolerant_decode_record(record):
+                if (
+                    component["kind"] == "call"
+                    and tuple(component["target"]) == (0, 286)
+                ):
+                    callers.append(coordinate)
+        self.assertEqual(callers, [])
+
+    def test_reported_direct_static_sentences_are_closed(self) -> None:
+        renderer = BUILD.QA.TerminalRenderer(self.records)
+        expected = {
+            (6, 4150):
+                "주변에 공략할 수 있는 성이 없어\n"
+                "영지 발전에 힘쓰고 있습니다",
+            (8, 1036):
+                "마목장을 건설하여\n"
+                "이로써 많은 준마가 자라나\n"
+                "기병도 한층 정예해질 것입니다",
+            (8, 1038):
+                "절을 건설하여\n"
+                "백성들이 마음을 기댈 곳이 되어\n"
+                "승려들도 기쁨을 감추지 못하는 듯합니다",
+            (8, 1040):
+                "온천향을 건설하여\n"
+                "아무래도 부상 치료에 효험이 있어\n"
+                "병사들의 요양에도 도움이 될 것입니다",
+            (8, 1041):
+                "대농촌을 건설하여\n"
+                "광활한 농지를 본 백성들도 의욕이 넘치니\n"
+                "수확량은 물론 병사 수도 기대할 수 있습니다",
+        }
+        for coordinate, text in expected.items():
+            self.assertEqual(renderer.render(coordinate), (text,))
+        closure = self.report["candidate"][
+            "direct_static_sentence_closure"
+        ]
+        self.assertEqual(closure["changed_record_count"], 48)
+        self.assertEqual(closure["replacement_count"], 77)
+        self.assertEqual(closure["pre_gate_issue_count"], 54)
+        self.assertEqual(closure["post_gate_issue_count"], 0)
 
     def test_build_is_byte_for_byte_deterministic(self) -> None:
         second = BUILD.build()

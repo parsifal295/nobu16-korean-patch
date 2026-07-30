@@ -1,6 +1,6 @@
 {
-  "allowed_mutation_count": 1659,
-  "allowed_mutation_sha256": "A890E056F368BD21AC5C94121BDD0911F8F6D4D95A679ABEEE21B8D01A2C2461",
+  "allowed_mutation_count": 1672,
+  "allowed_mutation_sha256": "31E851D15751F645187F56C7DD9198D4A8125455968DA0484755C662BA2D73BB",
   "entries": [
     {
       "component_index": 0,
@@ -4721,11 +4721,25 @@
       "rule": "reviewed_morph_pair_canonical_form"
     },
     {
+      "component_index": 3,
+      "coordinate": "7:2428",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
+    },
+    {
       "component_index": 5,
       "coordinate": "7:2428",
       "new_target": "0:730",
       "old_target": "0:736",
       "rule": "negative_ha_to_absent_after_absent_stem"
+    },
+    {
+      "component_index": 3,
+      "coordinate": "7:2429",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
     },
     {
       "component_index": 3,
@@ -7207,6 +7221,13 @@
     },
     {
       "component_index": 1,
+      "coordinate": "9:3675",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
+    },
+    {
+      "component_index": 1,
       "coordinate": "9:3676",
       "new_target": "0:1193",
       "old_target": "0:556",
@@ -7465,6 +7486,13 @@
       "rule": "full_ha_to_bare_after_exist"
     },
     {
+      "component_index": 1,
+      "coordinate": "15:230",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
+    },
+    {
       "component_index": 2,
       "coordinate": "15:231",
       "new_target": "0:178",
@@ -7491,6 +7519,13 @@
       "new_target": "0:1114",
       "old_target": "0:1054",
       "rule": "full_ha_to_bare_after_exist"
+    },
+    {
+      "component_index": 1,
+      "coordinate": "15:234",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
     },
     {
       "component_index": 2,
@@ -7521,6 +7556,13 @@
       "rule": "full_ha_to_bare_after_exist"
     },
     {
+      "component_index": 1,
+      "coordinate": "15:238",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
+    },
+    {
       "component_index": 2,
       "coordinate": "15:239",
       "new_target": "0:178",
@@ -7547,6 +7589,13 @@
       "new_target": "0:1114",
       "old_target": "0:1054",
       "rule": "full_ha_to_bare_after_exist"
+    },
+    {
+      "component_index": 1,
+      "coordinate": "15:242",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
     },
     {
       "component_index": 1,
@@ -7729,6 +7778,13 @@
       "new_target": "0:1193",
       "old_target": "0:82",
       "rule": "reviewed_morph_pair_canonical_form"
+    },
+    {
+      "component_index": 1,
+      "coordinate": "15:268",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
     },
     {
       "component_index": 1,
@@ -9027,6 +9083,13 @@
     },
     {
       "component_index": 4,
+      "coordinate": "15:1458",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
+    },
+    {
+      "component_index": 4,
       "coordinate": "15:1459",
       "new_target": "0:1193",
       "old_target": "0:1084",
@@ -10216,6 +10279,13 @@
       "rule": "reviewed_morph_pair_canonical_form"
     },
     {
+      "component_index": 5,
+      "coordinate": "15:1825",
+      "new_target": "0:598",
+      "old_target": "0:286",
+      "rule": "reviewed_cartesian_finite_copular_terminal"
+    },
+    {
       "component_index": 1,
       "coordinate": "15:1831",
       "new_target": "0:1193",
@@ -10580,18 +10650,39 @@
       "rule": "reviewed_morph_pair_canonical_form"
     },
     {
+      "component_index": 5,
+      "coordinate": "15:2145",
+      "new_target": "0:268",
+      "old_target": "0:148",
+      "rule": "reviewed_cartesian_question_sentence"
+    },
+    {
+      "component_index": 4,
+      "coordinate": "15:2146",
+      "new_target": "0:239",
+      "old_target": "0:1078",
+      "rule": "reviewed_cartesian_question_sentence"
+    },
+    {
+      "component_index": 4,
+      "coordinate": "15:2150",
+      "new_target": "0:239",
+      "old_target": "0:1078",
+      "rule": "reviewed_cartesian_question_sentence"
+    },
+    {
       "component_index": 2,
       "coordinate": "15:2154",
       "new_target": "0:70",
       "old_target": "0:376",
-      "rule": "reviewed_noun_phrase_sentence"
+      "rule": "reviewed_cartesian_question_sentence"
     },
     {
       "component_index": 4,
       "coordinate": "15:2154",
-      "new_target": "0:1193",
+      "new_target": "0:268",
       "old_target": "0:148",
-      "rule": "reviewed_morph_pair_canonical_form"
+      "rule": "reviewed_cartesian_question_sentence"
     },
     {
       "component_index": 3,
