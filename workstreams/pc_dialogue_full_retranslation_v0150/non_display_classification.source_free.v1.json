@@ -1,0 +1,101 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-full-retranslation-non-display.v1",
+  "release_target": "0.15.0",
+  "classifications": [
+    {
+      "resource": "base_msggame",
+      "first_record_coordinate": "1:7",
+      "last_record_coordinate": "1:30",
+      "visible_literal_count": 71,
+      "classification": "confirmed_non_display",
+      "evidence": [
+        "structurally isolated record run bounded by non-visible records",
+        "the same run contains dummy-placeholder patterns and glyph-coverage grids",
+        "the same run contains arbitrary test values and fragmented inflection exercises",
+        "PC localized context is absent across the run",
+        "the run does not form a coherent dialogue or UI sequence"
+      ],
+      "candidate_policy": "preserve_current_literal",
+      "commercial_source_text_embedded": false,
+      "steam_write_performed": false
+    },
+    {
+      "resource": "base_msggame",
+      "record_coordinates": [
+        "2:293",
+        "2:295",
+        "2:296",
+        "2:298",
+        "2:299",
+        "2:301",
+        "2:303",
+        "2:305",
+        "2:307",
+        "2:310",
+        "2:311",
+        "2:312",
+        "2:317",
+        "2:328",
+        "2:329",
+        "2:333",
+        "2:336",
+        "2:337"
+      ],
+      "visible_literal_count": 18,
+      "classification": "confirmed_non_display",
+      "evidence": [
+        "each record carries an explicit placeholder label identifying an unused additional-trait slot",
+        "implemented trait dialogue occupies neighboring slots while these records contain no dialogue structure",
+        "PC localized context is absent for every listed placeholder record"
+      ],
+      "candidate_policy": "preserve_current_literal",
+      "commercial_source_text_embedded": false,
+      "steam_write_performed": false
+    },
+    {
+      "resource": "base_msggame",
+      "first_record_coordinate": "2:344",
+      "last_record_coordinate": "2:400",
+      "visible_literal_count": 57,
+      "classification": "confirmed_non_display",
+      "evidence": [
+        "the full contiguous run carries the same explicit unused additional-trait placeholder label",
+        "the run begins immediately after the final implemented trait dialogue in its slot table",
+        "PC localized context is absent across the run"
+      ],
+      "candidate_policy": "preserve_current_literal",
+      "commercial_source_text_embedded": false,
+      "steam_write_performed": false
+    },
+    {
+      "resource": "base_msggame",
+      "first_record_coordinate": "2:413",
+      "last_record_coordinate": "2:423",
+      "visible_literal_count": 11,
+      "classification": "confirmed_non_display",
+      "evidence": [
+        "the full contiguous run carries the same explicit unused additional-trait placeholder label",
+        "the run follows the final implemented special-trait dialogue group",
+        "PC localized context is absent across the run"
+      ],
+      "candidate_policy": "preserve_current_literal",
+      "commercial_source_text_embedded": false,
+      "steam_write_performed": false
+    },
+    {
+      "resource": "base_msggame",
+      "first_record_coordinate": "2:424",
+      "last_record_coordinate": "2:482",
+      "visible_literal_count": 59,
+      "classification": "confirmed_non_display",
+      "evidence": [
+        "the full contiguous run carries the same explicit unused additional-trait placeholder label",
+        "the run directly continues the unused slot table from the preceding generated review batch",
+        "PC localized context is absent across the run"
+      ],
+      "candidate_policy": "preserve_current_literal",
+      "commercial_source_text_embedded": false,
+      "steam_write_performed": false
+    }
+  ]
+}

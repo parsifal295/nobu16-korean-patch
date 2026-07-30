@@ -1,0 +1,2350 @@
+{
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_only_coordinates_hashes_counts_and_predicates": true,
+    "contains_translated_dialogue_text": false
+  },
+  "donor_exclusive": {
+    "base_and_pk": {
+      "roots": 3,
+      "rows": 4
+    },
+    "base_only": {
+      "roots": 0,
+      "rows": 0
+    },
+    "pk_only": {
+      "roots": 43,
+      "rows": 46
+    }
+  },
+  "ghidra_vm_contract": {
+    "dispatch_opcode": "0x140A013B0",
+    "execute_record_vm": "0x1409F7610",
+    "file_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461",
+    "program_sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39",
+    "schema": "nobu16.kr.pk-msggame-runtime-vm-ghidra-contract.v1"
+  },
+  "guards": {
+    "checkpoint_builder_sha256": "8212C9339446544755A7337DAE8F58041E3C22B8968B7635620413980F6E5E99",
+    "checkpoint_private_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
+    "checkpoint_report_file_sha256": "2BE09EF37952A246B1A6ED8C139EC55DCCE5557C6D7EAD4A457762936AEBFA01",
+    "checkpoint_report_payload_sha256": "11F6D219B047AD99A6DF07A7EF05C85C8888CFFE638C11CF8B7C4B17845A5EF3",
+    "eligible_coordinate_universe_sha256": "D8B39779B08B72F5E4C563ADBB3965180097F34BD83AC534E3FB71EC4D8B2AC2",
+    "eligible_record_universe_sha256": "61BC9E2F7610AC4C4433177C1266A4F4B559E0EBD8ED2F04BEF12E81BC6A4D81",
+    "full_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+    "ghidra_contract_file_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461",
+    "independent_analysis_manifest_sha256": "8806BA38A2991CE7E8BC34BCD7965400E87C629B76A051B068D0544AAFBFBBFE",
+    "pk_only_audit_file_sha256": "47F72E6A77DFF0B8F2BDA60373298B5D05E3440D510A9A272CB036D1F4DC5248",
+    "proof_manifest_sha256": "CD0E05400607DB0439A4EDCED0BB17F0B192889F9891A1A1ED3047AA6662B2EE",
+    "report_payload_sha256": "A24EF2ACA545A0B96D4DA957EBE10BC4972CC58C10464FBB7A66FC815A3594F0",
+    "root_proof_universe_sha256": "441F5A81155B942AFE7402E43FFA32CC758420342B1485FFC859B64BFFC7A782",
+    "source_decision_segment_universe_sha256": "4B6E97EA19179F8C8A77BDB3193D73EC17A85283EFBE7EBCEFA58D300F4FEC46"
+  },
+  "promotion": {
+    "runtime_promotion_performed": false,
+    "steam_write_performed": false
+  },
+  "proof_policy": {
+    "absolute_msggame_width_gate_used": false,
+    "actual_0143_014a_closure_pair_must_be_taint_free": true,
+    "base_runtime_state_inherited": false,
+    "donor_and_target_local_final_literal_tuple_equal": true,
+    "donor_and_target_local_nonoperand_vm_sequence_equal": true,
+    "donor_and_target_local_source_literal_tuple_equal": true,
+    "donor_must_be_predecessor_runtime_verified": true,
+    "pk_msgev_912px_rule_used": false,
+    "raw_g1n_control_px": 0,
+    "raw_g1n_fullwidth_or_ambiguous_px": 48,
+    "raw_g1n_other_visible_px": 24,
+    "target_hard_grammar_risk_absent": true,
+    "target_line_count_not_above_current": true,
+    "target_raw_g1n_relative_full_closure_width_nonexpanding": true,
+    "target_root_pending_members_promoted_atomically": true,
+    "target_source_current_final_control_closure_equal": true
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "root_proofs": {
+    "12:20": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "F983CC40322AB840EEE50D42CC637789A8E05D83C3593AB0D9C60AD2956CC81D",
+          "donor_runtime_vm_verification_sha256": "C722E9A1C13D4548EB6CC0C485E13EBE96801FFD8D6F1EBBED5AB70C0CD2B4AB",
+          "donor_witness_coordinate": "12:20:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "3C6C7CB726E732BFE9969B8464D420D160AB0CAEE06C8659C2FF242F1F0DD325",
+          "record": [
+            12,
+            20
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "12:20:0"
+      ],
+      "pk_closure_proof_sha256": "0418EE484F2FE11A960E7D9E5EEBA566B6B6AF138DB2744318970CF59D4DF761",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "A67FEBDE720F9A4F32837908F391458373AF9AF87B392BA384A18D22BB45D8F4",
+        "profile_manifest_sha256": "70A9F87F98B91C9BE568CC07062DAB029FF6F01B261CC0B2D8D9B980DBDC4005",
+        "proof_sha256": "0D9ABEE0C8388EBD51EF6821BE3D0C0D5912F1A4998FC94026ADF065343DA827",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        12,
+        20
+      ],
+      "root_member_pending_coordinate_sha256": "F9E5D0316EF6E1FAA68A274B5F0802A99201FD1726C3CA51A0C7BF53137758DB"
+    },
+    "15:1468": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "934F3FE7F13205A848A03F0BFF9431C8635517C9897B7FD5D0E32FE46D2C4638",
+          "donor_runtime_vm_verification_sha256": "DBD419804936FBF401507D4A2FC5834168FA2E41B0F7C7B2EB07FBEDC03DE6F1",
+          "donor_witness_coordinate": "15:1453:0",
+          "method": "reversed_vm_static_analysis",
+          "pair_proof_sha256": "32BC0E00DD0D4092138156E4C9416B133D59B9626E3890F004EF197861E4AC58",
+          "record": [
+            15,
+            1453
+          ],
+          "resource": "base_msggame",
+          "visited_pair_count": 1
+        },
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "C6ECAC7B617C591A905BE3D9E2A46EE21390B0277753BD3ECD32917AC6B6770D",
+          "donor_runtime_vm_verification_sha256": "797FC323D7F364CA997A9F54DC4CF3B205F5DEA977FCD046D77F44A231D93E05",
+          "donor_witness_coordinate": "15:1468:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "3ABA055DD7F59E4B698E1E2ACB3E05647D0A5BD2426D502990F3BFEAAD66A4AD",
+          "record": [
+            15,
+            1468
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "15:1468:1",
+        "15:1468:2"
+      ],
+      "pk_closure_proof_sha256": "DFE32B6461BD56965736D71BD427A78AEF3D861AC0CD460F1D5260C22C17479D",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "3DC353BFDB4E9E215214B8F1A6905819A2BAFC1F54B1E356E3F8782B098E3C34",
+        "proof_sha256": "850354113852768EF852CB4B39F307DAA8083165D78423451012E1AB76210307",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        15,
+        1468
+      ],
+      "root_member_pending_coordinate_sha256": "0DBA2C1542D8353AAAAA6613B98C9B523FEBFFC27A0D3528693EE3550B625778"
+    },
+    "15:1512": {
+      "donors": [
+        {
+          "0143_occurrences": 2,
+          "014a_occurrences": 35,
+          "donor_integrated_row_sha256": "71BEA827AAE831680758D2CC0D0B16ACB3A0A7FDEBB85099BBC8463B9C3DF4F4",
+          "donor_runtime_vm_verification_sha256": "C30295076E2DC52D6FE10099EABC9B9A6FBEFB44BBC7AC8C1783F71DCBE71786",
+          "donor_witness_coordinate": "15:1512:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "FD12BFEA7F6F87E021877E9CB55CEE6DDD7F6DC99B1D7C65F85CDED0EB0E966F",
+          "record": [
+            15,
+            1512
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 26
+        }
+      ],
+      "member_coordinates": [
+        "15:1512:3"
+      ],
+      "pk_closure_proof_sha256": "4DDA8C225BBEF72AFB367D64E8A9FA02F4B68314DA1101D47A516FE2731714E9",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "F8A38F7DEC90BFF9360600A10EB38198F01CE6BB39D49F4BEC131DED80DF6838",
+        "profile_manifest_sha256": "81DF6640283187C8346DFCA5A592F8E26DA5D675B4CEAF1F25C59A63DACAFCB5",
+        "proof_sha256": "73F4D4E687399061748D9BEEE82B99C668A1DBEFF71E28A4ABC0BBE0DA851D30",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 26
+      },
+      "root": [
+        15,
+        1512
+      ],
+      "root_member_pending_coordinate_sha256": "E30D0302365A196B8EFEB96AB9C3015B394CC2174AEF391CBC696221E927FE1F"
+    },
+    "15:2280": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "D9D5EBC65AAE9E68235C9DBB2E738382F39E29E217EF826BA539650D1CD2A08C",
+          "donor_runtime_vm_verification_sha256": "24E6017CBDDD8E9DCDC6487ED95F5AF42EBCFAF36E9B2A3C700FAD49128DF766",
+          "donor_witness_coordinate": "15:2280:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "A7B93AC6E3A1397F8DE06CC16FF2853D694003D1AA9E6E9CA7984960B135630D",
+          "record": [
+            15,
+            2280
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "15:2280:1"
+      ],
+      "pk_closure_proof_sha256": "85DA8258B2CA56626571BBB29683A9DABB39A5EAFD783002147018121A394A5D",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "5E5AEBC925EB1B0F2C399B4E76937F0592A38D9117CA549A96275E2F0E39785F",
+        "proof_sha256": "B032FACC3641D2C6A53525D1D9611ADFA7AD49C31BF3E085FA7722552D2B44D3",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        15,
+        2280
+      ],
+      "root_member_pending_coordinate_sha256": "339F9F75A2E96ED625F7AC5F34DC779F0C68C435200315BC2336C10CC3F04236"
+    },
+    "15:438": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 36,
+          "donor_integrated_row_sha256": "F96306CA808ED0951BC2E35C91D32935C6778370D9978E495B4CFDC891416B45",
+          "donor_runtime_vm_verification_sha256": "73BB87138AA7E94BCD7DF967EDB4CD7D531ECCE686C220B9F53D660EFAC65AD1",
+          "donor_witness_coordinate": "15:438:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "CE526E66CD7E27F04AE316B5017AD0C79EAE5608C2963C3BFFA6A091CF0102BF",
+          "record": [
+            15,
+            438
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 26
+        }
+      ],
+      "member_coordinates": [
+        "15:438:0"
+      ],
+      "pk_closure_proof_sha256": "CAB74FEB0C8F012521AB985E78706ABA76CB0DB34C56F1A36EDC94FCD8758FA2",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "5460A6BB849EFF92F862395A5C45808732E17F7632FAC4A843117AD1D7C1FC57",
+        "profile_manifest_sha256": "A92471992B030626E2D2134F18CAD6337D6C4D340885766AB05B97CB0E3A0958",
+        "proof_sha256": "CE9F2B0FB36A2EC42ADEE231441075105C6DA8BC50E891A7467E440FE90DB6B1",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 26
+      },
+      "root": [
+        15,
+        438
+      ],
+      "root_member_pending_coordinate_sha256": "CF7A5624D624E1F8A90D8B446B6221C0A76B96204D3144994E117FCA59DFB6EC"
+    },
+    "15:701": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 4,
+          "donor_integrated_row_sha256": "72F4CC6C8D21C25175DECE638FC5660FB2CE697A3A478880F9BB58C56DED414E",
+          "donor_runtime_vm_verification_sha256": "1A6B1E7C69B1BA4F1E2F4D7A4BE0C3B12272A759D86C471CB9EB470DC13C239D",
+          "donor_witness_coordinate": "15:701:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "C12124DBAAF6DC675118F77E49BD6BBB5E6BD849D40B5673A3824BBB1F6FC67B",
+          "record": [
+            15,
+            701
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 6
+        }
+      ],
+      "member_coordinates": [
+        "15:701:1"
+      ],
+      "pk_closure_proof_sha256": "196D7532E2D97AAB70E98DDC562F9B1027E8E4F038895495CDB55909EFB0B74C",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "58B118F51FC93EF43C4811D4E48072F40DFF5610EA3B99B9803A5755C64AF213",
+        "profile_manifest_sha256": "E46270F148CF24A140F43381C81C4C7EECAC7F321A6F9D97B9C89E0260DCED2B",
+        "proof_sha256": "333C08D111920BDE2AB58F5A6C41AF5414A156AA2C746E39AA67E90FC0BBCA82",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 6
+      },
+      "root": [
+        15,
+        701
+      ],
+      "root_member_pending_coordinate_sha256": "CB6B6699F501BBD5617F077F793EC3DF653295679FE7D3E870C3A52E600A5BA3"
+    },
+    "17:510": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "A5EEA1EC7AE1EA2C61B891C4EF5387915977955AE2EA2AFEAEE12ADA9A610791",
+          "donor_runtime_vm_verification_sha256": "5ED242B0986A884094AAF20E602F912794BB591370988FB0D623E2933EA6A366",
+          "donor_witness_coordinate": "17:510:2",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "26A17DC177A5F10564C735B38C80C2974FEBCE19526EDC2002FA2A11F478FA04",
+          "record": [
+            17,
+            510
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "17:510:1"
+      ],
+      "pk_closure_proof_sha256": "6D54905F23087F56DDB9ACCBC0380B075F28EEB894D372CB9814BA94FD52BA3C",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "665B95DC8EE9AEA2128BB131C273F1025C12FB396E70EC57FA3E3EA39E84BE19",
+        "proof_sha256": "B38EDBA050FB780B990D91997C8768ED3FD15DCB17C62D7D758295572971275D",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        17,
+        510
+      ],
+      "root_member_pending_coordinate_sha256": "AAA0F1E2110DB53517CD6ADC75A5941126F496060C6A2D25913B98C0C73220F1"
+    },
+    "6:1131": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "CBA164C20263689F597030CAA2858E0088B75531AE128FD6A0BB2779F8BA95B2",
+          "donor_runtime_vm_verification_sha256": "9594595AA829117C95326D53808BF211EA1A7F0F5E7363F3D038DF5A036805BF",
+          "donor_witness_coordinate": "6:1131:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "301997615DEBBC5E7A7204C412BDB9218CB03F84695555023D8577C9ECE16FD2",
+          "record": [
+            6,
+            1131
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:1131:1"
+      ],
+      "pk_closure_proof_sha256": "3B95DC28C6F0F93213A1037A2AD4C81CF0555CA515318FF37721AAEAE23ACB5C",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "C86028175F076BB4980A70B07638A4E08A6AE49BD4D5DB56077DBC8DBAAEB258",
+        "profile_manifest_sha256": "2D81CB8D140B357B7D35B7764011BB2C226409F4F41E080AAC81A6AB429B6756",
+        "proof_sha256": "271DC015A3F4568DB3A00AC68BB20BDD7739620E6D55852541BAB513428C9964",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        1131
+      ],
+      "root_member_pending_coordinate_sha256": "4EF871087807916E8E6091E211D3DB0A7F77FDCD6B6FD919A8D46694677B267B"
+    },
+    "6:1616": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "6015247AB2A568FE3FCC7A622820F7EBE14A1FE60AB3126306658A8AB44BF9FA",
+          "donor_runtime_vm_verification_sha256": "0861E94567BC9A305290CB4309A8EE123168CB300870CB6600E04CE030597A39",
+          "donor_witness_coordinate": "6:1616:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "B8DBA73088A46CA34339B73A3277B55D858BAA120DD7867DF3250F6BA39E504D",
+          "record": [
+            6,
+            1616
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:1616:1"
+      ],
+      "pk_closure_proof_sha256": "2DE1D57C2AEF2D1F537D5F2DE3A429E65A24234726D3E3C6ACD09C01E119DFC3",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "728F8F426F4F1854DDEBA18487FB1EE3724FE099027751ED452579DAA1EBAF56",
+        "proof_sha256": "9BDC78101BFAEB85CA8AD09D1790D4FCCE3725409413CBCEAC3A6F1D10AA5D8F",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        1616
+      ],
+      "root_member_pending_coordinate_sha256": "A81348FC8961CAE6C4C7D790A418DD3B11326CAA64408593CC8A312EC4D4D7A4"
+    },
+    "6:2213": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 84,
+          "donor_integrated_row_sha256": "CA0302FB3478E601F99FDBDC2ED0FCCE168C9D09FC01C85D6B3F6CAABEF61267",
+          "donor_runtime_vm_verification_sha256": "4E827F96943BA16ABD2CB585C0286BAD7977A3E165E39654E0888F29515A39F7",
+          "donor_witness_coordinate": "6:2213:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "60CB80272725FB2B028330BBA0185977805AE65F4A36569A64CE0294DBFD8250",
+          "record": [
+            6,
+            2213
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 42
+        }
+      ],
+      "member_coordinates": [
+        "6:2213:0"
+      ],
+      "pk_closure_proof_sha256": "C135EC3DAD6123875A4F7FEBC807CEA3CC43425F88252781F2C8B36D18E6CDCE",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "5E889D04C997964337498BDDE500A0D4568F1CB7B702D7B65BE12FC6A3A51FC1",
+        "profile_manifest_sha256": "4AE3446FA8421A7CEB66CFA558E33E0EE00E6A50F79240ED305C46505DD6CB0F",
+        "proof_sha256": "36A9617FC1D708CAA1EDB073F9EA438E37D2DD96F721812F60997B1772E441B9",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 42
+      },
+      "root": [
+        6,
+        2213
+      ],
+      "root_member_pending_coordinate_sha256": "278B2C6298A473565A7BDB1FD84729BCE2216F483038ADA9D357EEE7565AF0D9"
+    },
+    "6:2245": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "B551D3EA4AA4DBB5B6CAA19668F73C5E9A82D184A5BC5BEF9E05D9716FEA5240",
+          "donor_runtime_vm_verification_sha256": "BBCEC049808D76DD04413540A69B1837C5E450DDD03DE2C5A6427CDFFD210B6F",
+          "donor_witness_coordinate": "6:2245:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "9D48331D8BD06E5FCC7F0822306A67119763B56B4ABA4AAE6CE717B1E4C08F97",
+          "record": [
+            6,
+            2245
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:2245:0"
+      ],
+      "pk_closure_proof_sha256": "5338112BC4B1C3D514443122A1D6155F5E6C57B6247EB15F519C97B6F7C4A12F",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "CD7F254C2ECE4CDE4666E96A9484F3897359FE444BDC7787914CCA2F47A82D79",
+        "proof_sha256": "94E061B5BF27147402C0850CD379DEA9D07AA4D87B3A62082F46A835EEF1EE5B",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        2245
+      ],
+      "root_member_pending_coordinate_sha256": "33C7F76C0AD1DC82DF5DE60FFB80B6D1A80DBB23B97A70CD03007A8DE57F4A30"
+    },
+    "6:2291": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 84,
+          "donor_integrated_row_sha256": "7C6C3D3AA0926D541C7EB3537A64FE4D12368584237A0B5E5ED0528F3D1EC338",
+          "donor_runtime_vm_verification_sha256": "612B95149CA8B08A92A81CCB630D08801AC02CBCBFFA2EC4E018A37952E52414",
+          "donor_witness_coordinate": "6:2291:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "3A25D1121F5B2841AAB95FDB5F4714537D9965647CBE8F04E3F3090258DC18B4",
+          "record": [
+            6,
+            2291
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 42
+        }
+      ],
+      "member_coordinates": [
+        "6:2291:0"
+      ],
+      "pk_closure_proof_sha256": "7E8EEE623370EA1B501305B3067167E229561EB90426C9E960BBE64F0114E04E",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "F45FF59654FE91129BD8347EE6AF6CB50470AFEABD7AFD08E948FBC4C5401ECF",
+        "profile_manifest_sha256": "73D2EFF699DC935E1FBC2B8B349FA0C56B9944A69364AB73724EE2591F67A081",
+        "proof_sha256": "E4A11D8ECAE3FD0FD57C5481205DE7FECACAF72B1D15DF898DCA33A678BF50CE",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 42
+      },
+      "root": [
+        6,
+        2291
+      ],
+      "root_member_pending_coordinate_sha256": "3954793124A910C2680E3C8F17B8BCB00DBC6DEBBAC963290D418970B7F2271F"
+    },
+    "6:2330": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "F6ED8CEE4C6928ACFE1BA11423F5B200FCB26AB15855FD802DB016FFA3257668",
+          "donor_runtime_vm_verification_sha256": "91880E4E4F60051D45F84572805C04403FAEEE42D533DECBEE27ECC7CF59C615",
+          "donor_witness_coordinate": "6:2330:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "262409BCDFD985872680EA851EC45AF69A7C86C8D829CAB2B4EC6B7C40C3072E",
+          "record": [
+            6,
+            2330
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:2330:0"
+      ],
+      "pk_closure_proof_sha256": "09635849C9D8DCDD89D1B1CA00A856B5D40B469EBC3E339B9591AC0BB77A1CEC",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "FEC3A8997824536BB23E1A67586B47894E74AD34D994294FA22C7E37B4ABEFA0",
+        "proof_sha256": "BCF6EAE40A5F2C8B52E44E046A9B5B043B9A1971D7F2633BF32AAD23CC1CC663",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        2330
+      ],
+      "root_member_pending_coordinate_sha256": "77B3C27F1AA252AE015C465D262D2FB9B8556E543D45E97AD1CD44092E054681"
+    },
+    "6:2438": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "42485B65BF807EB3C40004C2EFEA2728E14BC082F9CEEC257585366049F9261B",
+          "donor_runtime_vm_verification_sha256": "263FF5BC8574961EF10D0A023000F0A0E0EF55D1D684670DF21964165076B978",
+          "donor_witness_coordinate": "6:2438:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "5182CDA91AC9718F80F1CAC52C64F6AE4AAB41955099C5F44EC582DEC3BFEF54",
+          "record": [
+            6,
+            2438
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:2438:0"
+      ],
+      "pk_closure_proof_sha256": "D444E15EB0C900EDFE6109E983F5FA612A8EA0BE8848D090D448A724A7362F74",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "535A78CBE40AEA66B4D51C8BD1AA427D4D8AE857DD9D782B6ED3A0AB9342AF0C",
+        "proof_sha256": "46122708B8DCC0DF0143CAAD9D8F6A3B3B9FC97996C214B224F7E4F6013D4036",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        2438
+      ],
+      "root_member_pending_coordinate_sha256": "038994055BED516D7E0CFAF36D4EFA4AC203CA11598FB5E825DE178D2F925D00"
+    },
+    "6:2449": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "AD7DC15EFBB6C655E0648C1D7652979764071736AD24246E217A745CA564889B",
+          "donor_runtime_vm_verification_sha256": "3BB16C292BE637C3487AC95D4E89C47F02A64E70254851BCB38B13A85F590651",
+          "donor_witness_coordinate": "6:2449:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "870AB07F8A8C2828B1F18C9FD9144A0499B80EBF161E2BC75899504BE99D2A5C",
+          "record": [
+            6,
+            2449
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:2449:0"
+      ],
+      "pk_closure_proof_sha256": "35073DAA71D08439E38559A752E9A3D292A3CCB524710C192EAEF367A9F09B7D",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "0A2A4929EBF0B154069B4AB9C37190CB0018F993AF43FBF18BB21EF31E878519",
+        "profile_manifest_sha256": "F1A6DAA712A247E64DB7455B40FF1E8E77BAA8EFF7807EA516852B4E03F46804",
+        "proof_sha256": "CB5739C369AE92DA135440CD273448D08A06FC2D4FCDD65B15FB204D57D6C9B2",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        2449
+      ],
+      "root_member_pending_coordinate_sha256": "80A14958F5FDDBA477FAF2269D6BA1B61CE2E5C2789B32FC6BD863F7AEA081F7"
+    },
+    "6:2793": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "BA001E52DAA3828C2BCC4E6873A4FF7BB8768F2312C2D5B30ADB96A24F5C9816",
+          "donor_runtime_vm_verification_sha256": "8E75A234196780F66FBD54914E4973F0BEE5417636B594CB9882793B78126B55",
+          "donor_witness_coordinate": "6:2793:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "A55EDDF94C16003FC7CCB9E1BB47604BF8B80716C2654BCF0C0BAF6ED8253B29",
+          "record": [
+            6,
+            2793
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:2793:0"
+      ],
+      "pk_closure_proof_sha256": "5B9832FB49D30B034AE6FD6C6D36B87857EDE721F788C884817F9193C61DB758",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "492B04F67E3233EBAA65E9A098625AEC875E01A8282CFBF37ABB11878DF38810",
+        "proof_sha256": "2973829A145DA9297840A31A9D96EB9B8DBC716CA7422F2957E9573221A47F63",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        2793
+      ],
+      "root_member_pending_coordinate_sha256": "4BFE4EB6A2CC32D6A774A6571F9F2D6D43638195EF6759E778EC9275FF3C005C"
+    },
+    "6:2857": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "F81DB4D3FD176CC5BB13D77EBF931AAFF9CABC0E7D326233F1BE76A718FDFC40",
+          "donor_runtime_vm_verification_sha256": "F50D90E30091FD93E83C89E008D5EEBE9CFB7E0C67B812A82C8BE95E824E5B07",
+          "donor_witness_coordinate": "6:2857:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "38752675F0022BD81E36A0146B7724C7544BC61AFD70DA592FCB25964A9AB385",
+          "record": [
+            6,
+            2857
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:2857:1"
+      ],
+      "pk_closure_proof_sha256": "037067A9B404E4404CEEC1F946187C76BD8E2B2347C2608A80B0FC9A16E6DA29",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "3A2D9E4AC324C7233D307E2C06672B91D1EDECF91DFFB5E660DC8D834E169B26",
+        "proof_sha256": "FC3D14008C9BAFF53F3539D6AC600421FB6350E07B4643E44F6C47C6243C981E",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        2857
+      ],
+      "root_member_pending_coordinate_sha256": "F4F4B315D524DE288E82884AED75C7C39400B4E39D07785ADC6EA51540F7455F"
+    },
+    "6:2906": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "4164DBCC74ABFEC7F07680CCFD3DB62C7C7873D60951D0AB42599B96090AAF11",
+          "donor_runtime_vm_verification_sha256": "68B1AD61F9972C3F3BDF3DBB474FE455616C9ADE9B35C8A408E8332C441EAC26",
+          "donor_witness_coordinate": "6:2906:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "2D6304C0032C4EB13CC79476720B29F7323A8C7EE846AC8A242636F8FF47071A",
+          "record": [
+            6,
+            2906
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:2906:0"
+      ],
+      "pk_closure_proof_sha256": "7C4160BD10ADE2ABCB86D1BC3A7154D946B5445FE98058A96A04AD9651E90004",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "7951BAF007C6460E3C7CB1871EC4F6E113C81C65700292F2E4033111FF78FB6C",
+        "proof_sha256": "298406A4C65D36B56FA363B2006ACBCA3782092689A23915452BE4B769E634DC",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        2906
+      ],
+      "root_member_pending_coordinate_sha256": "73E4562DC29CDD148FBF7144343C15DF009B062586E12DBA50A044AB62D968C9"
+    },
+    "6:3268": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "034978449B78D428EEC8FBBE089C323CB61F8A02B9C6477D769AAA42A8463D29",
+          "donor_runtime_vm_verification_sha256": "64175278A080550F9E2D003DD12FD129EEBCCDE9232C58641AA5D03F4403EA98",
+          "donor_witness_coordinate": "6:3268:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "572B3334EADF58C1FE4FF42FF5D2397DEAC09E7CBD9E1EFD0F762052EEAC96AE",
+          "record": [
+            6,
+            3268
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:3268:1"
+      ],
+      "pk_closure_proof_sha256": "DD731E9D9CA8EC0B35ACAE273537129C6C0DC6230A7D20038F8A76737D194C82",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "1DCB08AAD75ABF0AFF1CBFA44533AD1429AD54E8610A13C62ED8A83E77CDA438",
+        "proof_sha256": "7819B5C8C3959C7F3FAA41694CA28D08DDB39042635D85C46DECF6489CCEF5B0",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        3268
+      ],
+      "root_member_pending_coordinate_sha256": "DA590F95C6D017BB6C12D3992D7852B13DF3CA7FD509BA67B87DDBB762CB1CF8"
+    },
+    "6:3436": {
+      "donors": [
+        {
+          "0143_occurrences": 2,
+          "014a_occurrences": 58,
+          "donor_integrated_row_sha256": "343FE563166DC51B0D1A26EE4E617B570143388AD5EFDEB6350C74CEE21C778F",
+          "donor_runtime_vm_verification_sha256": "2F4E6E11B66892C4E87DE38EFC58068C02E2169015B1FFD475516E24B9E47FDC",
+          "donor_witness_coordinate": "6:3436:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "E1FEE069FC889494B0694E6F54D9E7DC2462B823CC38061A0B85352C3D700F4B",
+          "record": [
+            6,
+            3436
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 38
+        }
+      ],
+      "member_coordinates": [
+        "6:3436:1"
+      ],
+      "pk_closure_proof_sha256": "02294ECC4ACB2A95C50C3E649AEDB8461B5ABEBF9409C0F8C21EF34073BED270",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "75FFC8B551C6A1785EF185C7421A2EBE37013B10DAE46F54872613D6F477B175",
+        "profile_manifest_sha256": "61F07EBDE6D1C376812F06361FFB9A63C41B181ABF4F1A746576C9708F0FD80B",
+        "proof_sha256": "12AFA0D6CE9E45DA64F9329CD980CE48AF9851C7909EFA904EB82C46B54E9625",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 38
+      },
+      "root": [
+        6,
+        3436
+      ],
+      "root_member_pending_coordinate_sha256": "9AF3E5AD7700C29E5BD360C4C041F68116C0F83E14BAE26237D8F1E47EE334C3"
+    },
+    "6:3440": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "03DF8D826C8377353E1F01AFA304AEE9F6DD4039B38EC20E083E3CF0E1CB934F",
+          "donor_runtime_vm_verification_sha256": "24352B0F7EF193EFBA16742C3F888DFD152B93442CA8AC0CD6E213FB5C3F06CE",
+          "donor_witness_coordinate": "6:3440:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "FC6B3188825CD1ED428BC185F91679095CA0EAF07C69E8D03E15B2C881D5577F",
+          "record": [
+            6,
+            3440
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:3440:0"
+      ],
+      "pk_closure_proof_sha256": "27A6A9AA31434B441E7A709EFC5709FEB30269181BCCAF709ADB2F19AB7D05AF",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4BB12832834D899755DA326112CD4C8C7639CA6CAB469E47BC6E00ECD09E5F03",
+        "profile_manifest_sha256": "03F88CA829E66155FBC408B0A7EDE763EB78CF9E944A49F8A8D7DCA2F19C375C",
+        "proof_sha256": "F0D2A4F4A4464829937403AD8CE7BFF387D85980BCCCB929A2DCBC027412EFCC",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        3440
+      ],
+      "root_member_pending_coordinate_sha256": "8FD8063FBC98DEF37D0215C717BF0BF1DD82823FD60E6A09A2A27B68CF7128AA"
+    },
+    "6:3672": {
+      "donors": [
+        {
+          "0143_occurrences": 2,
+          "014a_occurrences": 35,
+          "donor_integrated_row_sha256": "8842CD2C626A3629C865588616D6460AA392C6AF0F6860D2A6FEF5448681DE32",
+          "donor_runtime_vm_verification_sha256": "A2C4B2ECBBCFC717F1D8BA11D67176F15E33F20312C1B41E4C82E75D72630B6A",
+          "donor_witness_coordinate": "6:3672:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "FC97276FCCA9DE08C3E31AFDE5CEBD0896990B074119D307BFD97D0A03C12FEE",
+          "record": [
+            6,
+            3672
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 26
+        }
+      ],
+      "member_coordinates": [
+        "6:3672:0"
+      ],
+      "pk_closure_proof_sha256": "3F661AB41F8E2BC99221B6B691B4A84A0057D6E2E22D44BE9FEC15DD00A4A838",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "8E6DA907F44665E95FF19A8B7EFEB9FC1FB5AE7456F4368674C7EF4BD26FC86B",
+        "profile_manifest_sha256": "3A9663D334ED1456B99BC7A465145AB581FC41B4655D7466A206D973EDF155B1",
+        "proof_sha256": "86A66970FD88A342FB43279FB1E70609F63289B3758640E464370FCBBE74B267",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 26
+      },
+      "root": [
+        6,
+        3672
+      ],
+      "root_member_pending_coordinate_sha256": "E8027E63937BF3137BB4757E337357AC43C1B37E1DD8C195B824FB73355C22B6"
+    },
+    "6:3674": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "CC2E37D17C6E3D9F6EAA3297BBE756F688A4D592DF0D8395E7585AFF8D4BC080",
+          "donor_runtime_vm_verification_sha256": "F116BA5B1A2C30BC3BE94A40C8A1F1E5D7E59C597E6E328BD4202443B25F2413",
+          "donor_witness_coordinate": "6:3674:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "6A0AC498D89B46123094C44285D16D98DFA7D937D58EDAD275F4118A5F38F614",
+          "record": [
+            6,
+            3674
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:3674:0"
+      ],
+      "pk_closure_proof_sha256": "C05E9D4E6C054A31B39FF41DDAB4FE7E5150BCB092D0FCCE1A6A16E36C9FC26D",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "2D29980C9E3B37D51CD0407FF752A4D10C7AED3BB8295CA705381D396129FE3C",
+        "profile_manifest_sha256": "160416C43F4F85028B994F08CA2F42CD7C58D95AEF39708DD4B92CEB5F2BE4E5",
+        "proof_sha256": "D61A542499FE600D3DEA9B9EBF74261272D60D71162BA2778648FE0D05E46DB5",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        3674
+      ],
+      "root_member_pending_coordinate_sha256": "33553C2444770A13FB4EF7D41FC6D9138B6F667B08D7797CD4E41A2C0A930D66"
+    },
+    "6:374": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "BE87EF149D442FB9CA347F9ED5F4A2F0AF26567C1514126F5E96D3B8098CF02E",
+          "donor_runtime_vm_verification_sha256": "41A6D67804D73B62660D9BBD7723B90BE00A7185C3BD194E8E8D3805B4A2B8D3",
+          "donor_witness_coordinate": "6:374:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "A15029EF2CE8D21CF21A80C84D13266B6525266690842821FE6EE35510624E95",
+          "record": [
+            6,
+            374
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:374:1"
+      ],
+      "pk_closure_proof_sha256": "AF4447A79FFDA5D2401DC21D0826E3E37F977DC8977453584105AC47308A07D7",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "B847E72159638243808F3487139495FA01BBEB2C2162D58516058F06B59F8A1F",
+        "profile_manifest_sha256": "ACFA907AA2C5F558C04402E971F98CABD03B908BC4438CBB3F78FCE94789373B",
+        "proof_sha256": "8C1C7658CA41248A1362BDA2B4FF4564A8BF18C3DB9D71CED9E844E0190E3B8A",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        374
+      ],
+      "root_member_pending_coordinate_sha256": "C128C89D2C74970992D06B4D863B6613506251A1E2102FEB7B8072DE1C8A6DB8"
+    },
+    "6:556": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "8FEBC3FD155136B82010336F2D4DB3669C6F4693E0EC054B1B55607D88F94C1C",
+          "donor_runtime_vm_verification_sha256": "754D19E05EE86663A37E4A97E8E6A994B0FCA3423E1A6A0021E883CAF09DC991",
+          "donor_witness_coordinate": "6:556:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "443D47752F1842EBC75254CC31089E9539E7C590E0BAC5A5AC0C981057B11771",
+          "record": [
+            6,
+            556
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:556:0"
+      ],
+      "pk_closure_proof_sha256": "81992005DC3B4FED77BA6709603493957A6D933A2AED6F1B63C82DD335CCC91F",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "FBFDAE14D24A2E4EAC71EAE7EB49168D592402DC8734792829DCDD09EFF6BCB2",
+        "profile_manifest_sha256": "8900F767B4558CED7BA078AEE147BC7D2E6CC4602BE21D869A004E9C8FEF474C",
+        "proof_sha256": "8FDB9E786BFE313281C09D88D2CF397374215BDF27262A5AE5FC85DCD7C3EBE8",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        556
+      ],
+      "root_member_pending_coordinate_sha256": "0AA81BECCCB4B9EF8ACAB346B60254A5DA6A68A367AF79C2D04441DDE865B083"
+    },
+    "6:562": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "E97C7D33347CB1ACDD4D135E33EBC59DDDE68927229B503D6931BF2871591412",
+          "donor_runtime_vm_verification_sha256": "D80293EFA090DABD5777882F59DBA2AFE4AC0BEAC81AA3BF9D3CD7040C5CEF14",
+          "donor_witness_coordinate": "6:562:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "ECBDAB4BA59DEE29C78D6905AAF8CCD891DF5BD2CFEF04A1AF78D6CE7E692205",
+          "record": [
+            6,
+            562
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:562:0"
+      ],
+      "pk_closure_proof_sha256": "9C811404037865796C9D64D58458C905E20F1551AA063CC9B205B618196982A0",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "D5933AEF8A5D2FA03716303546C4B87AD4AA387DDA924D6754A9509D5955D7E1",
+        "profile_manifest_sha256": "809C2FEC1518323CCBA99F4F7EC9FD5ADC742C3FF21F70A78EB390C062B60BE6",
+        "proof_sha256": "F59504559D7A78A7240CF635CFFBC38DAFE0965597464176B114DB52C7CD07A1",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        562
+      ],
+      "root_member_pending_coordinate_sha256": "3571CE01BB7AD8460BECDAD5E0C0A9DCED16690BA15F71C3886950CE2DC2FDF3"
+    },
+    "6:589": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "DD3196A23AED81D61F52DBE7FCF82F8A70F08981AEC3343A9B260FB7E0024FAB",
+          "donor_runtime_vm_verification_sha256": "CA6F20639CF9CAA4593F2F8B9AA2C6755CA918EF2188ED130E86472588BA4FF8",
+          "donor_witness_coordinate": "6:587:0",
+          "method": "reversed_vm_static_analysis",
+          "pair_proof_sha256": "70E3640F11396645FACBB8C1801191AA3A0041E152D4EC2A2F3A77416ED1F966",
+          "record": [
+            6,
+            587
+          ],
+          "resource": "base_msggame",
+          "visited_pair_count": 1
+        },
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "3AEBC27E59165AF8CD1F7E4DCEE4C7A962C55E7B639D0A67B2D9ED18440BA2E6",
+          "donor_runtime_vm_verification_sha256": "6B13A1022045BB5203103F8C431F34CB4F8CF347587ABF4E005C4D758B679E8A",
+          "donor_witness_coordinate": "6:589:1",
+          "method": "reversed_vm_full_candidate_static_analysis",
+          "pair_proof_sha256": "238DABFFB0372C315A704FA4CB092AAFD3D079B2229BD6E2EB6FD7FC26D488B5",
+          "record": [
+            6,
+            589
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "6:589:0"
+      ],
+      "pk_closure_proof_sha256": "EA8D91D7B6F0C7C835E00776AAC2136FD1C7E025C06EACD5E3D903E317F8E911",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "3653664F5E711A865CD8CD6A42FE4D5C62CC53C43353FB18AA852F387C740B0D",
+        "proof_sha256": "EBDBF3483BA8E8BC10ADD365BDCFD74147CB07E5D36DDEED9C7DDE9DB8300FCE",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        6,
+        589
+      ],
+      "root_member_pending_coordinate_sha256": "69EEA9481C7E5775567A48C6D23FE87439E3910E474341E322A7AC8EF0CFC3C6"
+    },
+    "6:597": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "AEFE891576F08B5F1BB35FEEE25506B31A17B5622A662DDD2BA250696396532A",
+          "donor_runtime_vm_verification_sha256": "411C81DDDCB6750E9769DC1D12808B6BF1C7742B96A2C9D9B3D77336540B1210",
+          "donor_witness_coordinate": "6:597:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "AA0226391ABCC981EF206031F042254F52A4C6AFDCB725DD4E0348AABD00C0E7",
+          "record": [
+            6,
+            597
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:597:1"
+      ],
+      "pk_closure_proof_sha256": "2E0869AF69346F3B06D838D946557C9368CAE77966549C36CEE15F502F9650A9",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "023E5A180B51E4AF34BBE6BE8FCB0BDF765F6798EA92AB7A53A5CD837385983C",
+        "profile_manifest_sha256": "1EDECE6C705B7CAE655BBC22D14CDB89DC6E5F79CA196CE2C52B5DC154C581E7",
+        "proof_sha256": "BFED89AB3FE554A245D694DEC2C2585272DB9A7743F01F8D445BC48D5F7061AA",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        597
+      ],
+      "root_member_pending_coordinate_sha256": "9D2EC6A459E3AB2F1B6C846639D05B1EBCED070B9FB49036B9275A3EAF6F19C7"
+    },
+    "6:844": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "4AE6E97AA5111694FC85C2469D044CFD0E6BB43B9EBD08C2BB116A5F3F3889A4",
+          "donor_runtime_vm_verification_sha256": "4C700B598444FC5626BF0274E20CB3B7519F3FF03A153009044FDC4B1E411D8B",
+          "donor_witness_coordinate": "6:844:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "F308FDE66D9E13962F43DDB56554657D472CFF8D1F30C8BBE15E87A8E05E1125",
+          "record": [
+            6,
+            844
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "6:844:0"
+      ],
+      "pk_closure_proof_sha256": "0640B97E893054FEE408BAAE55C362F182D35CCF712FD52792E64896AB018173",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "551CD8BE9B167478333C0DD99AC48362254A6EB940A447E1A8BEEA5CE35AD6B2",
+        "profile_manifest_sha256": "9C06103F70B44A0A347FE745D13C897E9733670B68CB372F4146F12AF1D6F54E",
+        "proof_sha256": "8D83EE13D9D0F73BF2BFBEAF92256EC0591964F0CE76DD02092FA564781B114E",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        6,
+        844
+      ],
+      "root_member_pending_coordinate_sha256": "6E60E1F1562E45DEC679479575DB9F4F76AACC7A13813D4A63C5B3265BD7DCBA"
+    },
+    "7:1901": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "7928D3C64E04C41DF5DA02FC37246C13475729494CEAC90ABAF7FA13DE21B7E5",
+          "donor_runtime_vm_verification_sha256": "29FC63560208E6E8E7A25D80F843E45E069EEB0A1FF24503CA83CA799C8409FB",
+          "donor_witness_coordinate": "7:1901:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "51798476E79AD63E3A2AC5EFB5F40BEE43EBD542B4C355299C5ED569E37D4298",
+          "record": [
+            7,
+            1901
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "7:1901:0"
+      ],
+      "pk_closure_proof_sha256": "8A1FD61E6A2B672013DF31B1FD47C51D9B843A338D9ECE7A531D033A23AC00C2",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "9853EF3F70954655EDE992162D97E42B2E803B5B38DB6E71364D99BE64B0BC2B",
+        "profile_manifest_sha256": "DA85A23F05E547DDB597381504EBC7DD7113FA98306A703EBD3FF26D9A6D8557",
+        "proof_sha256": "8738F9E9E84A94D4C122A05BA806B5676FC00832C96D4E501FF674EB15D09519",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        7,
+        1901
+      ],
+      "root_member_pending_coordinate_sha256": "124C01C00CA02700351CBAEAF6B000177418B616060A2142CBB5E28304B3FF5D"
+    },
+    "7:2603": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "443582254C02DDC64F6BC93EF683788E5164C2765A41EDFB2DAC63FDC1D8C2BB",
+          "donor_runtime_vm_verification_sha256": "DE558CAC3CA797222F5E483AA435BB1BCC8E53FDB8B0BCBC8041DA3221D73191",
+          "donor_witness_coordinate": "7:2603:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "021CEFC62BCDDB7C8D63D6557BF2EAFD1D3D4E3DFC0EFEC5F67C1E257445D468",
+          "record": [
+            7,
+            2603
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "7:2603:0"
+      ],
+      "pk_closure_proof_sha256": "7C7318E43CB47190F0B24549E619EF112894FFE821F18D4DCFEC9E822DEB04DB",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "51A0923E71C7BDC47F41A11E7636E357C478E79F9B17E7102461AD8260319BE5",
+        "profile_manifest_sha256": "1086F9F0FF6D5C16FFFE6A9369BA6292BE1E0881DAF6A769430B99CDF4C39FEA",
+        "proof_sha256": "5E4BE8904DE1088CAB51356F8E0B2FCEB2B451545814F2245535210A6BE7AD0D",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        7,
+        2603
+      ],
+      "root_member_pending_coordinate_sha256": "4FE699EA2746C5DC30A4CD0EA8E28C8D64514D5E770BE0A5135F3A4290226EED"
+    },
+    "7:2607": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "93076D295B807BA57AC2191EF2302F629C94F1CF312F7A23DF4F2FD1E98D4CE7",
+          "donor_runtime_vm_verification_sha256": "373EC90018938E09F551433158F7495B5618F96BBFBC71D9030D4AA4BDF6B448",
+          "donor_witness_coordinate": "7:2607:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "A35FB1D7F62F67853C758066BBD4B50966636E860DA89279F589ADFA6FB6E27F",
+          "record": [
+            7,
+            2607
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "7:2607:0"
+      ],
+      "pk_closure_proof_sha256": "D6003F9C3F6AF65AB35A3B0A356A4A8E27BEE76788753C542CC5EC806E51E3A9",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "DAA52E97FD53615A002DFE00DBFC87A56B7B6FFE911EBD1CE05EDA62DB1FEC3D",
+        "profile_manifest_sha256": "16273BE04BF33470F8991D25039B41110707BA8AA9C565BCCCC715ADD07202A0",
+        "proof_sha256": "F5BB32B1CB9CFDCC9CAF1D640109CEE37EEB2F3672790DBB577A8DA4968E4786",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        7,
+        2607
+      ],
+      "root_member_pending_coordinate_sha256": "8341DDBB888ED9EF2CC26B0D12225D0E71687F9B0323A6914E51E3B7731C862C"
+    },
+    "8:296": {
+      "donors": [
+        {
+          "0143_occurrences": 4,
+          "014a_occurrences": 52,
+          "donor_integrated_row_sha256": "80552B7DC4F6552F6E15985025E4F7A96279DC32D8BA0EEB83502A2384CBAD0A",
+          "donor_runtime_vm_verification_sha256": "B62E1D17CC903F585B382555804E42FC18535F984156DBB0647397F8A7344B4D",
+          "donor_witness_coordinate": "8:296:2",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "FC4397C0077AE8D9C07C0A4701AEFB452543E8FF078808FA16573A10B9F1F69D",
+          "record": [
+            8,
+            296
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 53
+        }
+      ],
+      "member_coordinates": [
+        "8:296:0",
+        "8:296:1"
+      ],
+      "pk_closure_proof_sha256": "131182798EA3BF9C9CBA19CB406289939974B86BAAEA40862B2880442CF15E3B",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "57D2E39C460661C4BDB27175E9F6DE88337AF778F46E7D09C38CF372E466BB2A",
+        "profile_manifest_sha256": "E6A9735D48E42228FC76E96A7EBDEBAE1DC996AB92E0C1B8C155FC5CFDDF3C62",
+        "proof_sha256": "8099ABEB19E0903F6389F68495CDC00B5402CAEF27D61EBB4526BBA518EA1943",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 53
+      },
+      "root": [
+        8,
+        296
+      ],
+      "root_member_pending_coordinate_sha256": "1A52D99A051D9AA2A6FC44C2763F2E9CDC24B320F6511D61D730C3D5332DDF52"
+    },
+    "8:327": {
+      "donors": [
+        {
+          "0143_occurrences": 3,
+          "014a_occurrences": 110,
+          "donor_integrated_row_sha256": "766AB210287BA9D097199C8ECF88B080B96C1F70E71CB6144A9510064F029222",
+          "donor_runtime_vm_verification_sha256": "FE3229E0B516EA68F7FDE4D292BCBD7CAD64D21A23382B0F3CD5F71131510474",
+          "donor_witness_coordinate": "8:327:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "9B5FADCE9C1D1852C94BD29B73D05703673BDEEF520831F2B5AD4A56397DB4D1",
+          "record": [
+            8,
+            327
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 68
+        }
+      ],
+      "member_coordinates": [
+        "8:327:0"
+      ],
+      "pk_closure_proof_sha256": "2CCA1734B18AC7B13AE3CDE48630BAE241F621F4990C8BA02281DF5C7DD38593",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "B806C0864926E55F7FDF17C0D22E7476985B518D0AE0916F2B04D979EF00AD17",
+        "profile_manifest_sha256": "3D5A59FAF58D3E0A27CDA43F70283FE7C32DDA4FF89475B1D405E5C5C4263449",
+        "proof_sha256": "8C29B67BCB9093C383158158F755F6447FD817ABE9B240BB6403C52764FA8145",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 68
+      },
+      "root": [
+        8,
+        327
+      ],
+      "root_member_pending_coordinate_sha256": "FFAE31E52B4E50EDD06F567B18AC6EC5533D3E833747D2E73D8EB435E9E3DEF1"
+    },
+    "8:523": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "3F884047CB7A0BBEF8A79F82AEA05DDFB7CE3CCB46F8A6CD848C040DA5BC1540",
+          "donor_runtime_vm_verification_sha256": "6C358F1C93FC7DBC3F22D56C8816E72B08A32CE91506EB8FC40B6F821EFD8D0A",
+          "donor_witness_coordinate": "8:511:0",
+          "method": "reversed_vm_static_analysis",
+          "pair_proof_sha256": "07B6EF8839D82E3DD9D0E3525E5727EA9317EC35B98024B38A41C37B4F065B26",
+          "record": [
+            8,
+            511
+          ],
+          "resource": "base_msggame",
+          "visited_pair_count": 1
+        },
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "2A73C1301543447B8AF9656D488F92C53E972EC6A8FDAA7EAAC4217650BB68B0",
+          "donor_runtime_vm_verification_sha256": "19253F241B2D54794DDCABA6B93FD041844739EA8C4D66CAA21D2A4A0BAAB6A7",
+          "donor_witness_coordinate": "8:523:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "209C0C9E2F698D2321543E23E153E2A286EC1C4074A7D13B57AE252501E1C6D0",
+          "record": [
+            8,
+            523
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "8:523:1"
+      ],
+      "pk_closure_proof_sha256": "726CFD80503DE4EDCB6EF3046E8F51A446A665B960CC513D1148DBD85EFB4AD6",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "E0C578C63437EEFED629BA5615D3A28C3EAB956277EDCF87BAE30D2955911820",
+        "proof_sha256": "3C525FEDF9673F6D3ACD931B60BE7F770FC194769329AAB01732219ED5A9580C",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        8,
+        523
+      ],
+      "root_member_pending_coordinate_sha256": "BB6648E26236ECEB55C3237C7E4834A94B62F3F7EB7014346A37E73230AA6CC7"
+    },
+    "8:874": {
+      "donors": [
+        {
+          "0143_occurrences": 0,
+          "014a_occurrences": 0,
+          "donor_integrated_row_sha256": "50AF5C91C376F4E9CC9E2B07FBD0C1CE753C9B9A96B61583E614984C718BF794",
+          "donor_runtime_vm_verification_sha256": "2F500447227FFCE81AA3F335B2D34465DCAB6A2E2ABB05AECC6A86BCAAF6FFEF",
+          "donor_witness_coordinate": "8:874:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "3AECC4219C2E09F7D85C430123B472E9077E89D0D5EA8BD0FF0EA1E39D8E885E",
+          "record": [
+            8,
+            874
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 1
+        }
+      ],
+      "member_coordinates": [
+        "8:874:1"
+      ],
+      "pk_closure_proof_sha256": "7089C43B2D0A7BC963A7DCFECC2EEEDBD85194483489C9A9D74062E8B953AE13",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+        "profile_manifest_sha256": "E98163B396F6D404BCD22FCCA292CA1A934D69B1C0239F8E550D041E4A65E7C1",
+        "proof_sha256": "C5651CB424328F84F82465778F909F90535C21719BDB688547151813501AFB64",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 1
+      },
+      "root": [
+        8,
+        874
+      ],
+      "root_member_pending_coordinate_sha256": "1969154900FE6B0278F506BEEC3CFF2195BB5023BD490FFAF040F2A9744D6B7E"
+    },
+    "9:1133": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 4,
+          "donor_integrated_row_sha256": "7F79CDF90F46BEBA7196D939B974E1BD1C42BCD9689D5E9D2E993F27A34DD0D1",
+          "donor_runtime_vm_verification_sha256": "E74298AB02AFDADEBCA158492DC94EBC3F2FD35600F07C398F87DBBE8801C7E0",
+          "donor_witness_coordinate": "9:1133:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "87A5F16C6149745611BA16C0C7C4E0553B9C52054C122271D5EDE020983A63C1",
+          "record": [
+            9,
+            1133
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 6
+        }
+      ],
+      "member_coordinates": [
+        "9:1133:0"
+      ],
+      "pk_closure_proof_sha256": "268444B448257E2306BE4ADEC8E86F3D15D9B925244CACCAEA59698CE3D0399D",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "C0A3807145D859A40232269B6EBBE2C67B475881B7C86653BE9583E7A77B212B",
+        "profile_manifest_sha256": "C3AC3A860CC1C2B75A975C4731F4AA9EA294D58EA50E6E079A59C51009CE06A4",
+        "proof_sha256": "A4965C5AF486DE9FD56A6AD05014B938E626F6EA94DE73C713B9FE6528C32940",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 6
+      },
+      "root": [
+        9,
+        1133
+      ],
+      "root_member_pending_coordinate_sha256": "C849AF2C62DA79F4DDC58C095E0B39B566FAC50A24330916ED30AA537D593AC0"
+    },
+    "9:1626": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 36,
+          "donor_integrated_row_sha256": "C46C45F5842046E448E0C3BD60762CF11656CFDD788A9BE923BF2593BE41E6BE",
+          "donor_runtime_vm_verification_sha256": "8F97AADA0EA1BFDF615F52E853D912FA59ED80A7E02469D37C95C2BCD309BC6F",
+          "donor_witness_coordinate": "9:1626:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "38D4E320919D13A6FE896F231DCDA7E0C9BF02C59B8787F71D2434DC08E349C3",
+          "record": [
+            9,
+            1626
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 26
+        }
+      ],
+      "member_coordinates": [
+        "9:1626:1"
+      ],
+      "pk_closure_proof_sha256": "8423A57DBC2C3104E40F5700836A6A4A60797CB22760BD210D12D401423EB458",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "4F860EA04C06C52E0A898B4BF1162A5AFE385A7F3A62B09C68D001F3010B5051",
+        "profile_manifest_sha256": "FFCF2607F80C0ACD8FD240188BF8987C438FD3751FDF9E01A2A2233BF0398E5C",
+        "proof_sha256": "842AA3F637A284CB1B6AF543C0725EB52B2D521077BE7DB36444FA3C6506A7C0",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 26
+      },
+      "root": [
+        9,
+        1626
+      ],
+      "root_member_pending_coordinate_sha256": "566959B9AD5E7D5350A22C628CBB1C16A8BEA6E93CCB297F73F2430972E4270E"
+    },
+    "9:1706": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 36,
+          "donor_integrated_row_sha256": "B12317E2631FD652F11F8D9DB0321E2D9C86AA67A6D05B6A233096A4694CE249",
+          "donor_runtime_vm_verification_sha256": "402AEA2115D4A77291C710D2ADCE8B11BE49B589E516465D569BAAB84C9DB00C",
+          "donor_witness_coordinate": "9:1706:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "E392CC1F4CDEE53862D8962973E46390BC0C799465A68213D84437FC85E4D124",
+          "record": [
+            9,
+            1706
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 26
+        }
+      ],
+      "member_coordinates": [
+        "9:1706:1"
+      ],
+      "pk_closure_proof_sha256": "5B9FC9131CF2144B0A546893D5A61C1C5B5C1A9A4336D1CC0FA5625CCF4B08F1",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "2AAC3F1941284F31A5092CD369348B626876DAC7E178945C7CEC33C376D3B75C",
+        "profile_manifest_sha256": "A7329A3335F2CDE8D2B45566C6A0788AACA288F9CE0367758C108EB30E506331",
+        "proof_sha256": "46EE45CB9C124DFA715E1BCB9BC28A4761BE4D0549A6E811481CE2DFCDDAC6FE",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 26
+      },
+      "root": [
+        9,
+        1706
+      ],
+      "root_member_pending_coordinate_sha256": "C80DE2A398F9CB75CCE5E12F8620FD2524261A9A21B93060C7D44801B41CA0F6"
+    },
+    "9:2085": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 4,
+          "donor_integrated_row_sha256": "5081FC4FDC83F14AE43AE6AD1646CBC5AC0B66D0B8AD6A985E01BCAB6D2E5977",
+          "donor_runtime_vm_verification_sha256": "8A3350002B82E6FC24C4726AB544B969B6417365881B01B900E116D3F84C041F",
+          "donor_witness_coordinate": "9:2085:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "3ECC1304DCB518ED8FED383E08D4186742DBC4CAB1EC6D74E7A8144FF4BA2D72",
+          "record": [
+            9,
+            2085
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 6
+        }
+      ],
+      "member_coordinates": [
+        "9:2085:0"
+      ],
+      "pk_closure_proof_sha256": "0D99A3B8DABC15EE5173EFDB2869644FC574EB9922DFB16E205BA55F9414BFEC",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "09B9BA7158103F507A391AD62A246ED08ABA6080B0B387ACD0D78654F169FD25",
+        "profile_manifest_sha256": "2DF05F8791EE99B5CC9F61EDF9015EF2B705D2A7F2FD5109AA7AD4D0D1DDF3C2",
+        "proof_sha256": "1CF2695759EF311684377BF3F3F9AAB88B924093D1BE0598586B2519CABDEE31",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 6
+      },
+      "root": [
+        9,
+        2085
+      ],
+      "root_member_pending_coordinate_sha256": "5B13A10547B96385858F847374E76C87B4C3B7326920696C90F2FF226B45C0A6"
+    },
+    "9:2102": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "CC8118A7967E0ABC93360CAF39C32E40A220E68DA4ED9599118332892E4A082A",
+          "donor_runtime_vm_verification_sha256": "EFDFC2606453268550805A141522B3D7389D11D38C1DC2A8A1AA411737C53685",
+          "donor_witness_coordinate": "9:2102:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "8AC91B84EFFC2195B8E754E4FA6697A96BD815EFC2574A02722C8FF3BEC4D4D8",
+          "record": [
+            9,
+            2102
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "9:2102:0"
+      ],
+      "pk_closure_proof_sha256": "6E3B8A0E873D1722BE0A2BDC663363C92781070ED4567FE0F3DD7D28EDAA4B21",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "647562FB161851178BFE42262BF7852BCF874ACF8754EB3C1038F5385E7EF53E",
+        "profile_manifest_sha256": "E0C7CF88E11E49334721225CCD770C8FD12F1EA7A1AD94426D16D9508E89A47F",
+        "proof_sha256": "97E8F029EB2D5E4D7BF6429EF989CD164BBE2D0D692D45FBAD36319BC25D3828",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        9,
+        2102
+      ],
+      "root_member_pending_coordinate_sha256": "72D4523CD897EE735A46B5E2941A9CB6AB120FE7E7AB6E52A196260D2E3BBDD1"
+    },
+    "9:2751": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "2DBE6606DC84963B2B37942372303F72D9FC4B62A68B23195ECE52198D09CD68",
+          "donor_runtime_vm_verification_sha256": "66E3891E241D23D62251C3873E5DD48CBC98F7C0DC124D32C98F97BA0048505E",
+          "donor_witness_coordinate": "9:2751:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "E1FAE683F1DB03C1CD387D292BE79970088BF79ACB78959D5EFBA9D4091F154C",
+          "record": [
+            9,
+            2751
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "9:2751:1"
+      ],
+      "pk_closure_proof_sha256": "5CBE2293C59E994A895904C12F6177C29139281A560FEC66A791E7D51407FFDC",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "C30E9A060C5327CD25DE3A23E8EE2576CD3970C488A878CA973C84228B619AC6",
+        "profile_manifest_sha256": "FF5281939D11A8F3BC0A5CBB404E75BA099F85F607307E246B56EF33877B2F8F",
+        "proof_sha256": "2C5911924BD2A34D6FDC819C4949FE153C8C9E878BAAEAE5A01F351AE15753B2",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        9,
+        2751
+      ],
+      "root_member_pending_coordinate_sha256": "7E2FD28015A54DBBFEA51CD4626BAECB8ACAFA62CD5D3D2A1E25C8779565EEFC"
+    },
+    "9:3508": {
+      "donors": [
+        {
+          "0143_occurrences": 3,
+          "014a_occurrences": 30,
+          "donor_integrated_row_sha256": "A18B0F16839E92B1CCE1BF106A1FEFF50B00CC11F47199AB741B4CA390648784",
+          "donor_runtime_vm_verification_sha256": "8FEB24A46D753D3F552263B6A2C656809ADE2AE739327FC150A06DD4AD09B2AC",
+          "donor_witness_coordinate": "9:3508:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "CB689535828B7AC87DA2A46F236C958429F25B138AFA816F0C6CA3CC356F459B",
+          "record": [
+            9,
+            3508
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 32
+        }
+      ],
+      "member_coordinates": [
+        "9:3508:1",
+        "9:3508:2",
+        "9:3508:3"
+      ],
+      "pk_closure_proof_sha256": "3B597CF04E8A70C98FABD141E20E0BDBC203B30F8349C235EC3C033A722C8081",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "FB29AE14B7AB6F63138816ABF62E0FC2B75DD222DBF191425A2EBC58C47D8133",
+        "profile_manifest_sha256": "BBB61FA7D7CEF879C65DA93BA5F6717D3F18720EA6CA6D31B5108DA514957D68",
+        "proof_sha256": "96DED350FCA03AC6DEB314835D86EB1C3C099B8283756888641CC57BB5973E39",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 32
+      },
+      "root": [
+        9,
+        3508
+      ],
+      "root_member_pending_coordinate_sha256": "C0137FEEA6B0AB4DD33EB5807A659EDF1599334C3823748043FF5A6DE2F28FA7"
+    },
+    "9:540": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 36,
+          "donor_integrated_row_sha256": "403958FB4D8D347607D86C9D7139958EC5FF2A780FF0004A0C9498BA6A7B8FA5",
+          "donor_runtime_vm_verification_sha256": "41C1E4D7B953BC6ED3B95BDB2F55A9FA57D5AE7F76873D7F7EA480ECB51FED7D",
+          "donor_witness_coordinate": "9:540:0",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "D430B8A71775E0E5F99D4D5C5526333DA54CB54B728E59EC76251C07476521BC",
+          "record": [
+            9,
+            540
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 26
+        }
+      ],
+      "member_coordinates": [
+        "9:540:1"
+      ],
+      "pk_closure_proof_sha256": "F35AE82C800023F472E4BEC03A43E25AB32FFA6B9BF34CA091B528DB98AC692E",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "CDBAF39C27A58E73CE294F3357B5758660075368B92C947F249B83D53D340627",
+        "profile_manifest_sha256": "CB2D6C1B6ABCCF9069EC6C620415D4B24B4CE3E31B36344B8865AF5E9661FE9D",
+        "proof_sha256": "3EBEE1DA3A803E33499F0C66E73CE523CB4BB246897CF017CE46AD04BEAE8A62",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 26
+      },
+      "root": [
+        9,
+        540
+      ],
+      "root_member_pending_coordinate_sha256": "9E59B694C8CEB07B7095C8F0E92D14CCA7B02D3BE4B8C7DADF02768349F33BB8"
+    },
+    "9:787": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 4,
+          "donor_integrated_row_sha256": "8DF9969F42D7F8DADB35DD472115D415CD245728C25E1306F839C0F33EBC7C9C",
+          "donor_runtime_vm_verification_sha256": "2D8D9C56D607EA53A58FC475B7752272E0D6683CE0E8081E1EDD11F1CF0A7349",
+          "donor_witness_coordinate": "9:787:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "DCAB6A70ED7B7177DB9CA30B935F5D7F0A16DA0BB180906B08D54089933453FE",
+          "record": [
+            9,
+            787
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 6
+        }
+      ],
+      "member_coordinates": [
+        "9:787:0"
+      ],
+      "pk_closure_proof_sha256": "89533861F0A88C2DD61C54C4F8B0AA4FAA80B640729B2B22120A535DEF0B29AF",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "0F84FAC66BB98695418E79922E1F5A28ADFD79419B1F143F83C0BF3B4FE423B8",
+        "profile_manifest_sha256": "F807BCF90A98176F3C396165534468EAD0DF8A58B2BFE98E38E45467D4775F87",
+        "proof_sha256": "18C2D6C9A40033153E1AD0EF40DA374CBEC135DC00C62410DA2205A6BF2A8F23",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 6
+      },
+      "root": [
+        9,
+        787
+      ],
+      "root_member_pending_coordinate_sha256": "5D486AF749FF59DAE853EC7E3B595B0FE1A0A55828FF81F91F41DE14B495D98A"
+    },
+    "9:906": {
+      "donors": [
+        {
+          "0143_occurrences": 1,
+          "014a_occurrences": 22,
+          "donor_integrated_row_sha256": "6A5E6D5D2B4952D1CF7A2FE2BB65BDF95C1E5B25880C6016063A18166E03508E",
+          "donor_runtime_vm_verification_sha256": "F14422B10C16810BE6D864660E04921AFF5A7C9BC638C9AA832E019FC391A530",
+          "donor_witness_coordinate": "9:906:1",
+          "method": "reversed_vm_pk_only_exact_blocked_closure_nonexpansion_analysis",
+          "pair_proof_sha256": "8765055F29524868EFA597025924AED5B851A98625BB50802D0A9772F006EAC9",
+          "record": [
+            9,
+            906
+          ],
+          "resource": "pk_msggame",
+          "visited_pair_count": 13
+        }
+      ],
+      "member_coordinates": [
+        "9:906:0"
+      ],
+      "pk_closure_proof_sha256": "5AE2A756DAC85B286EA6E583980ADD9BD8DE87056AB08ACD7A3AB6D2A1ED51D3",
+      "pk_target_guard": {
+        "current_final_control_equal": true,
+        "failure_codes": [],
+        "hard_grammar_risk_absent": true,
+        "line_count_not_above_current": true,
+        "source_current_control_equal": true,
+        "source_final_control_equal": true
+      },
+      "relative_layout_guard": {
+        "descendant_only_relative_line_width_expansion": false,
+        "direct_relative_line_width_expansion": false,
+        "edge_manifest_sha256": "74F25E41A7662BBC68456A26D451CFDBD06EDD668AEF02964114A7A75BB1B0B9",
+        "profile_manifest_sha256": "85C1F657A8AD8C252901CD9DDB8CA0BD8FF232129330C28EF9951ABCE99E0831",
+        "proof_sha256": "9D5989138637FAACBB08F0EDBD2443CC762F18809E8E857D0F45E0C6B82E0EE1",
+        "reason_codes": [],
+        "relative_full_closure_line_envelope_nonexpanding": true,
+        "root_reason_codes": [],
+        "status": "verified",
+        "visited_record_count": 13
+      },
+      "root": [
+        9,
+        906
+      ],
+      "root_member_pending_coordinate_sha256": "3DBA92EB58402B1CFF03B61A52969485EE89D93E25BDB49E22B38006CBA6810D"
+    }
+  },
+  "schema": "nobu16.kr.pk-msggame-pending-cross-resource-exact-closure-coverage.v1",
+  "scope": {
+    "descendant_only_relative_layout_failed_roots": 15,
+    "descendant_only_relative_layout_failed_rows": 20,
+    "direct_relative_layout_failed_roots": 1834,
+    "direct_relative_layout_failed_rows": 2482,
+    "full_closure_relative_layout_failed_roots": 1849,
+    "full_closure_relative_layout_failed_rows": 2502,
+    "local_exact_closure_match_roots": 2990,
+    "local_exact_closure_match_rows": 3841,
+    "manual_review_remaining_rows": 8702,
+    "per_row_game_playback_required": 0,
+    "pre_layout_eligible_roots": 1895,
+    "pre_layout_eligible_rows": 2552,
+    "predecessor_pending_roots": 5237,
+    "predecessor_pending_rows": 8752,
+    "promotion_eligible_roots": 46,
+    "promotion_eligible_rows": 50,
+    "target_pk_guard_failed_roots": 1095,
+    "target_pk_guard_failed_rows": 1289
+  },
+  "status": "PASS"
+}

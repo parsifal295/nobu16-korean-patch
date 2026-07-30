@@ -1,0 +1,32 @@
+{
+  "distribution_policy": {
+    "private_overlay_contains_translation_bodies": false,
+    "private_overlay_stays_below_tmp": true,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "evidence": {
+    "audit_report_file_sha256": "9244283925590D00C4070F140AEE10060EF36466ACD4BEB202715633670CFADC",
+    "audit_report_payload_sha256": "1C143486A73977168E1B6A1FF5994269068A7D32CB19DA33F4F05624BEA29C37",
+    "checkpoint_private_sha256": "3FF6AF87B638C9F98DF4F956E5A7985B70E5F4A899A48E77ED67629212B247CC",
+    "promotion_rows": 0
+  },
+  "guards": {
+    "report_payload_sha256": "137D7B99E121F34025E87B9F06E127A9FA9CAC7D8D2E2DEA2A0D442458A5A09C"
+  },
+  "method": "reversed_vm_dynamic_honorific_spacing_delta_analysis",
+  "release_target": "0.15.0",
+  "resource": "base_msggame",
+  "result": {
+    "pending_rows_after": 8645,
+    "private_overlay_rows": 420,
+    "private_overlay_sha256": "DAB2E074D8C4213196EF1104C0D51F0C7A2F66F6C50ADAEE31E3C26804C138F0",
+    "runtime_promotion_rows": 0,
+    "translation_body_copied_to_overlay": false,
+    "translation_override_rows": 2,
+    "verification_renewal_rows": 418
+  },
+  "schema": "nobu16.kr.base-msggame-dynamic-honorific-spacing-delta.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

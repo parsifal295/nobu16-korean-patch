@@ -1,0 +1,79 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-ghidra-selector-domain-contract.v1",
+  "program": "NOBU16PK.exe.unpacked.exe",
+  "observed_session_date": "2026-07-30",
+  "live_session": {
+    "transport": "GhidraMCP HTTP bridge",
+    "endpoint": "http://127.0.0.1:8090",
+    "open_program_verified": true,
+    "program_is_current": true,
+    "forced_decompile_refreshed": true
+  },
+  "functions": {
+    "selector_dispatch": "0x1409FFBA0",
+    "castle_slot_handler": "0x1409FDA70",
+    "clan_slot_handler": "0x1409FDD80",
+    "runtime_assembler": "0x140A013B0"
+  },
+  "display_name_property": {
+    "selector_property_hex": "32",
+    "castle_slot_name_accessor": "0x1405F3C20",
+    "clan_slot_name_accessor": "0x1405F4440"
+  },
+  "korean_resource_contract": {
+    "castle_slot_display_suffix": "성",
+    "clan_slot_display_suffix": "가문",
+    "suffix_has_batchim": true,
+    "allowed_fixed_particles": [
+      "과",
+      "은",
+      "을",
+      "이",
+      "으로"
+    ]
+  },
+  "adjudication": {
+    "fixed_particle_is_allowed_only_for_property_32": true,
+    "all_other_selector_particle_boundaries_remain_blocked": true,
+    "automatic_particle_resolution_is_absent": true,
+    "automatic_space_insertion_is_absent": true,
+    "literal_and_selector_utf16_units_are_copied_verbatim": true,
+    "opcode_0143_calls_another_record": true
+  },
+  "fresh_decompile_checks": {
+    "runtime_assembler_0x140A013B0": {
+      "opcode_0x02_copies_resolved_utf16_units": true,
+      "opcode_0x1B_copies_selector_utf16_units": true,
+      "injected_separator_or_particle_branch_observed": false,
+      "selector_only_terminal_leaf_assumed_zero_output": false
+    },
+    "castle_slot_handler_0x1409FDA70": {
+      "property_0x32_calls_0x1405F3C20": true
+    }
+  },
+  "selector_leaf_model": {
+    "observed_output_selector_keys": [
+      {
+        "group": 2,
+        "property_hex": "35",
+        "slots": [
+          1,
+          2
+        ]
+      },
+      {
+        "group": 2,
+        "property_hex": "33",
+        "slots": [
+          2,
+          3
+        ]
+      }
+    ],
+    "jump_condition_selectors_emit_text": false,
+    "output_selectors_are_rendered_as_nonempty_sentinels": true,
+    "literal_or_decompiled_function_body_included": false
+  },
+  "contains_decompiled_function_body": false,
+  "steam_write_performed": false
+}

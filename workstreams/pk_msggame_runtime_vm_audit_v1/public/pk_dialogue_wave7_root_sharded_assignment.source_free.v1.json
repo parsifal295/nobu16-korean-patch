@@ -1,0 +1,1010 @@
+{
+  "agent_bundle_manifest": {
+    "balance_dimensions": [
+      "pending_coordinate_count",
+      "candidate_site_count"
+    ],
+    "bundle_count": 3,
+    "bundles": [
+      {
+        "bundle_id": 0,
+        "candidate_site_count": 347,
+        "packet_count": 14,
+        "packet_ids": [
+          1,
+          3,
+          6,
+          9,
+          11,
+          13,
+          15,
+          21,
+          25,
+          26,
+          31,
+          34,
+          36,
+          47
+        ],
+        "pending_coordinate_count": 72,
+        "selectors": [
+          184,
+          1066,
+          490,
+          340,
+          586,
+          910,
+          1138,
+          1102,
+          892,
+          1210,
+          820,
+          1234,
+          328,
+          1240
+        ],
+        "selection_ranks": [
+          2,
+          4,
+          7,
+          10,
+          12,
+          15,
+          17,
+          23,
+          28,
+          29,
+          35,
+          38,
+          40,
+          55
+        ],
+        "reachable_pending_root_count": 29,
+        "source_only_site_count": 55,
+        "terminal_row_count": 98
+      },
+      {
+        "bundle_id": 1,
+        "candidate_site_count": 195,
+        "packet_count": 17,
+        "packet_ids": [
+          0,
+          5,
+          7,
+          10,
+          17,
+          18,
+          20,
+          23,
+          24,
+          29,
+          33,
+          35,
+          38,
+          39,
+          42,
+          43,
+          45
+        ],
+        "pending_coordinate_count": 72,
+        "selectors": [
+          700,
+          424,
+          544,
+          442,
+          556,
+          808,
+          988,
+          244,
+          574,
+          502,
+          886,
+          250,
+          856,
+          958,
+          124,
+          220,
+          496
+        ],
+        "selection_ranks": [
+          1,
+          6,
+          8,
+          11,
+          19,
+          20,
+          22,
+          25,
+          26,
+          33,
+          37,
+          39,
+          43,
+          44,
+          48,
+          50,
+          53
+        ],
+        "reachable_pending_root_count": 42,
+        "source_only_site_count": 27,
+        "terminal_row_count": 119
+      },
+      {
+        "bundle_id": 2,
+        "candidate_site_count": 196,
+        "packet_count": 17,
+        "packet_ids": [
+          2,
+          4,
+          8,
+          12,
+          14,
+          16,
+          19,
+          22,
+          27,
+          28,
+          30,
+          32,
+          37,
+          40,
+          41,
+          44,
+          46
+        ],
+        "pending_coordinate_count": 72,
+        "selectors": [
+          604,
+          598,
+          784,
+          712,
+          1114,
+          520,
+          976,
+          1144,
+          88,
+          406,
+          526,
+          838,
+          412,
+          1120,
+          94,
+          304,
+          982
+        ],
+        "selection_ranks": [
+          3,
+          5,
+          9,
+          13,
+          16,
+          18,
+          21,
+          24,
+          30,
+          32,
+          34,
+          36,
+          42,
+          46,
+          47,
+          51,
+          54
+        ],
+        "reachable_pending_root_count": 42,
+        "source_only_site_count": 21,
+        "terminal_row_count": 119
+      }
+    ],
+    "exact_disjoint_packet_assignment": true
+  },
+  "constraints": {
+    "changed_branches_only": true,
+    "full_integration_rebuild_authorized": false,
+    "jp_authoritative": true,
+    "nonpending_root_actions_authorized": false,
+    "source_only_action_count": 0,
+    "steam_write_authorized": false,
+    "terminal_rows_read_only": true
+  },
+  "global_disjointness": {
+    "candidate_site_count": 738,
+    "candidate_site_sha256": "8222CD0C2ADEB6D004EBEF84A256D381FF85AE8D9AA9F4F6E029C369A2FC149E",
+    "owned_pending_coordinate_count": 216,
+    "owned_pending_coordinate_sha256": "DE88CDB124C9B9A9C7CCA4EAE43F56F1335964DE353F555F14C8856CA43795AF",
+    "owned_root_count": 113,
+    "owned_root_sha256": "CA921EE4361D6DCF7C341C12951347D2FAC05CC834069CCE196D9B83F4417174",
+    "pair_count": 1128,
+    "source_site_count": 841,
+    "source_site_sha256": "FE54ECA775FEDD800583AE2A3B378D474AEAD3A40207F9EADEE44D798595AFE2"
+  },
+  "guards": {
+    "base_builder_sha256": "8373B34147AC889C17A4574C5B5CC328EC7C87BDB18CE1DEE7DA3A61E38F54D0",
+    "candidate_sha256": "DC8F4F47EA9DDD81BA6DD788ECE55FD303FA5C228925E6E947E4E7F5C1007804",
+    "ranking_builder_sha256": "B4FE4B994729E97F515C8F2DE71D0AEA19369339CCCD0334FDBA918EF3A4B356",
+    "ranking_private_sha256": "FED6181AE978C3A476F6DEDEDC80BF995B3B79A740662BFCFBAA6D96E962169A",
+    "private_assignment_sha256": "95806AE1BD79742473E8C503E1F8DA48C13EC3408CDCFF705E4AB418734E7D3B"
+  },
+  "method": "post292_wave6_rank_order_highest_rank_per_pending_root_global_disjoint_owner_shards_three_bundle_balance_v1",
+  "owner_assignment": [
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 78,
+      "owner_rank": 1,
+      "packet_id": 0,
+      "pending_coordinate_count": 12,
+      "reachable_pending_root_count": 7,
+      "selector": 700,
+      "source_only_site_count": 4
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 7,
+      "owner_rank": 2,
+      "packet_id": 1,
+      "pending_coordinate_count": 11,
+      "reachable_pending_root_count": 3,
+      "selector": 184,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 21,
+      "owner_rank": 3,
+      "packet_id": 2,
+      "pending_coordinate_count": 10,
+      "reachable_pending_root_count": 5,
+      "selector": 604,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 304,
+      "owner_rank": 4,
+      "packet_id": 3,
+      "pending_coordinate_count": 7,
+      "reachable_pending_root_count": 4,
+      "selector": 1066,
+      "source_only_site_count": 43
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 40,
+      "owner_rank": 5,
+      "packet_id": 4,
+      "pending_coordinate_count": 9,
+      "reachable_pending_root_count": 7,
+      "selector": 598,
+      "source_only_site_count": 3
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 15,
+      "owner_rank": 6,
+      "packet_id": 5,
+      "pending_coordinate_count": 8,
+      "reachable_pending_root_count": 5,
+      "selector": 424,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 4,
+      "owner_rank": 7,
+      "packet_id": 6,
+      "pending_coordinate_count": 8,
+      "reachable_pending_root_count": 4,
+      "selector": 490,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 4,
+      "owner_rank": 8,
+      "packet_id": 7,
+      "pending_coordinate_count": 8,
+      "reachable_pending_root_count": 2,
+      "selector": 544,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 7,
+      "owner_rank": 9,
+      "packet_id": 8,
+      "pending_coordinate_count": 8,
+      "reachable_pending_root_count": 5,
+      "selector": 784,
+      "source_only_site_count": 2
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 2,
+      "owner_rank": 10,
+      "packet_id": 9,
+      "pending_coordinate_count": 6,
+      "reachable_pending_root_count": 1,
+      "selector": 340,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 14,
+      "owner_rank": 11,
+      "packet_id": 10,
+      "pending_coordinate_count": 6,
+      "reachable_pending_root_count": 3,
+      "selector": 442,
+      "source_only_site_count": 3
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 6,
+      "owner_rank": 12,
+      "packet_id": 11,
+      "pending_coordinate_count": 6,
+      "reachable_pending_root_count": 2,
+      "selector": 586,
+      "source_only_site_count": 9
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 17,
+      "owner_rank": 13,
+      "packet_id": 12,
+      "pending_coordinate_count": 6,
+      "reachable_pending_root_count": 3,
+      "selector": 712,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 6,
+      "owner_rank": 15,
+      "packet_id": 13,
+      "pending_coordinate_count": 6,
+      "reachable_pending_root_count": 3,
+      "selector": 910,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 14,
+      "owner_rank": 16,
+      "packet_id": 14,
+      "pending_coordinate_count": 6,
+      "reachable_pending_root_count": 3,
+      "selector": 1114,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 6,
+      "owner_rank": 17,
+      "packet_id": 15,
+      "pending_coordinate_count": 6,
+      "reachable_pending_root_count": 3,
+      "selector": 1138,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 10,
+      "owner_rank": 18,
+      "packet_id": 16,
+      "pending_coordinate_count": 4,
+      "reachable_pending_root_count": 2,
+      "selector": 520,
+      "source_only_site_count": 6
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 7,
+      "owner_rank": 19,
+      "packet_id": 17,
+      "pending_coordinate_count": 5,
+      "reachable_pending_root_count": 3,
+      "selector": 556,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 12,
+      "owner_rank": 20,
+      "packet_id": 18,
+      "pending_coordinate_count": 5,
+      "reachable_pending_root_count": 4,
+      "selector": 808,
+      "source_only_site_count": 2
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 14,
+      "owner_rank": 21,
+      "packet_id": 19,
+      "pending_coordinate_count": 5,
+      "reachable_pending_root_count": 3,
+      "selector": 976,
+      "source_only_site_count": 2
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 6,
+      "owner_rank": 22,
+      "packet_id": 20,
+      "pending_coordinate_count": 5,
+      "reachable_pending_root_count": 4,
+      "selector": 988,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 3,
+      "owner_rank": 23,
+      "packet_id": 21,
+      "pending_coordinate_count": 5,
+      "reachable_pending_root_count": 2,
+      "selector": 1102,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 4,
+      "owner_rank": 24,
+      "packet_id": 22,
+      "pending_coordinate_count": 5,
+      "reachable_pending_root_count": 2,
+      "selector": 1144,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 2,
+      "owner_rank": 25,
+      "packet_id": 23,
+      "pending_coordinate_count": 4,
+      "reachable_pending_root_count": 1,
+      "selector": 244,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 7,
+      "owner_rank": 26,
+      "packet_id": 24,
+      "pending_coordinate_count": 4,
+      "reachable_pending_root_count": 1,
+      "selector": 574,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 2,
+      "owner_rank": 28,
+      "packet_id": 25,
+      "pending_coordinate_count": 4,
+      "reachable_pending_root_count": 1,
+      "selector": 892,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 1,
+      "owner_rank": 29,
+      "packet_id": 26,
+      "pending_coordinate_count": 4,
+      "reachable_pending_root_count": 1,
+      "selector": 1210,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 4,
+      "owner_rank": 30,
+      "packet_id": 27,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 2,
+      "selector": 88,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 6,
+      "owner_rank": 32,
+      "packet_id": 28,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 1,
+      "selector": 406,
+      "source_only_site_count": 2
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 5,
+      "owner_rank": 33,
+      "packet_id": 29,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 3,
+      "selector": 502,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 6,
+      "owner_rank": 34,
+      "packet_id": 30,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 2,
+      "selector": 526,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 2,
+      "owner_rank": 35,
+      "packet_id": 31,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 1,
+      "selector": 820,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 5,
+      "owner_rank": 36,
+      "packet_id": 32,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 1,
+      "selector": 838,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 7,
+      "owner_rank": 37,
+      "packet_id": 33,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 2,
+      "selector": 886,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 2,
+      "owner_rank": 38,
+      "packet_id": 34,
+      "pending_coordinate_count": 3,
+      "reachable_pending_root_count": 2,
+      "selector": 1234,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 5,
+      "owner_rank": 39,
+      "packet_id": 35,
+      "pending_coordinate_count": 2,
+      "reachable_pending_root_count": 1,
+      "selector": 250,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 1,
+      "owner_rank": 40,
+      "packet_id": 36,
+      "pending_coordinate_count": 2,
+      "reachable_pending_root_count": 1,
+      "selector": 328,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 17,
+      "owner_rank": 42,
+      "packet_id": 37,
+      "pending_coordinate_count": 2,
+      "reachable_pending_root_count": 2,
+      "selector": 412,
+      "source_only_site_count": 4
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 2,
+      "owner_rank": 43,
+      "packet_id": 38,
+      "pending_coordinate_count": 2,
+      "reachable_pending_root_count": 1,
+      "selector": 856,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 9,
+      "owner_rank": 44,
+      "packet_id": 39,
+      "pending_coordinate_count": 2,
+      "reachable_pending_root_count": 2,
+      "selector": 958,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 2,
+      "owner_rank": 46,
+      "packet_id": 40,
+      "pending_coordinate_count": 2,
+      "reachable_pending_root_count": 1,
+      "selector": 1120,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 7,
+      "owner_rank": 47,
+      "packet_id": 41,
+      "pending_coordinate_count": 1,
+      "reachable_pending_root_count": 1,
+      "selector": 94,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 2,
+      "owner_rank": 48,
+      "packet_id": 42,
+      "pending_coordinate_count": 1,
+      "reachable_pending_root_count": 1,
+      "selector": 124,
+      "source_only_site_count": 1
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 2,
+      "owner_rank": 50,
+      "packet_id": 43,
+      "pending_coordinate_count": 1,
+      "reachable_pending_root_count": 1,
+      "selector": 220,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 4,
+      "owner_rank": 51,
+      "packet_id": 44,
+      "pending_coordinate_count": 1,
+      "reachable_pending_root_count": 1,
+      "selector": 304,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 1,
+      "candidate_site_count": 18,
+      "owner_rank": 53,
+      "packet_id": 45,
+      "pending_coordinate_count": 1,
+      "reachable_pending_root_count": 1,
+      "selector": 496,
+      "source_only_site_count": 14
+    },
+    {
+      "bundle_id": 2,
+      "candidate_site_count": 18,
+      "owner_rank": 54,
+      "packet_id": 46,
+      "pending_coordinate_count": 1,
+      "reachable_pending_root_count": 1,
+      "selector": 982,
+      "source_only_site_count": 0
+    },
+    {
+      "bundle_id": 0,
+      "candidate_site_count": 1,
+      "owner_rank": 55,
+      "packet_id": 47,
+      "pending_coordinate_count": 1,
+      "reachable_pending_root_count": 1,
+      "selector": 1240,
+      "source_only_site_count": 0
+    }
+  ],
+  "packet_artifacts": [
+    {
+      "basename": "selector700.private.v1.json",
+      "packet_id": 0,
+      "sha256": "BD04C3C10737CEF4E82284CC414E992E5AB723B37231BB1C4607D6C2DF7CAD8F"
+    },
+    {
+      "basename": "selector184.private.v1.json",
+      "packet_id": 1,
+      "sha256": "F64119C266AC20DC8C66B8B525D00D1DB7E3F8497758625954616CC085D515A0"
+    },
+    {
+      "basename": "selector604.private.v1.json",
+      "packet_id": 2,
+      "sha256": "D3AA1A4D96FB44FE55ACB984EA892E60AC87113154F21CA63D7FEF7E8A632178"
+    },
+    {
+      "basename": "selector1066.private.v1.json",
+      "packet_id": 3,
+      "sha256": "13D84CCC0C828AE939EC6FE06C5852C2EF89B402FBE2537D80DD04D502FFCB5D"
+    },
+    {
+      "basename": "selector598.private.v1.json",
+      "packet_id": 4,
+      "sha256": "7C9294A051EC0D4FB44DADE4A87FA52AED8A277E19EA24D0312C9A8295CB201F"
+    },
+    {
+      "basename": "selector424.private.v1.json",
+      "packet_id": 5,
+      "sha256": "E8A56A59B4AA93D2CED49A0ACACD0A7453F93E18822C9684BB2ABC5B48BD146D"
+    },
+    {
+      "basename": "selector490.private.v1.json",
+      "packet_id": 6,
+      "sha256": "1AF433DD1BA2031A0B3B3E0562E2C6E356B3B02D612211B019018A312DA490CE"
+    },
+    {
+      "basename": "selector544.private.v1.json",
+      "packet_id": 7,
+      "sha256": "1B8DCFFE1C1B9F9BF03C6168F0CA8A1D37326FA6215B03F8862E11A501BFCFD6"
+    },
+    {
+      "basename": "selector784.private.v1.json",
+      "packet_id": 8,
+      "sha256": "F1DE8EBB0A3EEC6F454AC11095442FBD55A97B7FDF86E6470E8565640925093A"
+    },
+    {
+      "basename": "selector340.private.v1.json",
+      "packet_id": 9,
+      "sha256": "5244350C44F82CB8A5B2C08379D049F37743DC425EA3B8A5848EF31B9CB17360"
+    },
+    {
+      "basename": "selector442.private.v1.json",
+      "packet_id": 10,
+      "sha256": "C56797A6F416428E0270F35A2A4A6B6378389FBEA46AB3F2EE8517644E1D85A6"
+    },
+    {
+      "basename": "selector586.private.v1.json",
+      "packet_id": 11,
+      "sha256": "E75A2C3DD839DE4AAC2D20E5F105AB575117F986FFCEDA1A4E239C0B8970729E"
+    },
+    {
+      "basename": "selector712.private.v1.json",
+      "packet_id": 12,
+      "sha256": "4BB3043CF9A4DD056B4F1A5F1567B19D4B0F740EF5745C8EEE560EA2DD29AED3"
+    },
+    {
+      "basename": "selector910.private.v1.json",
+      "packet_id": 13,
+      "sha256": "31B90D215910346E466C459EB8A375BF1E7337D1AAE41ADF1D53E2550DE62E98"
+    },
+    {
+      "basename": "selector1114.private.v1.json",
+      "packet_id": 14,
+      "sha256": "38C0DED3F147957D0B9A6259A217B89AE50DE5E6FFC43103145D9EF4AD57E8BD"
+    },
+    {
+      "basename": "selector1138.private.v1.json",
+      "packet_id": 15,
+      "sha256": "A91AD494B3E993E7CD4B17A9BD332001088C114FB86593860F11C0ABBEEC1CEC"
+    },
+    {
+      "basename": "selector520.private.v1.json",
+      "packet_id": 16,
+      "sha256": "FF63E00FC4C6A5DF0E22F303114AF9E14C070C79EBBD6A1200D27EE4FF012115"
+    },
+    {
+      "basename": "selector556.private.v1.json",
+      "packet_id": 17,
+      "sha256": "CCB32ADE3B33BD99F3255E89B74867267EC6187334AF80CCF3D3E399B3D60E4B"
+    },
+    {
+      "basename": "selector808.private.v1.json",
+      "packet_id": 18,
+      "sha256": "C454774CE13EBD042D02A5E1186BA3B29A4F8B0EEF1C948ADFC893CA53A78899"
+    },
+    {
+      "basename": "selector976.private.v1.json",
+      "packet_id": 19,
+      "sha256": "E583A002DBBFB0857DB231D863C10E1C9D2DAC21D650C737C40392D8D5EA44C5"
+    },
+    {
+      "basename": "selector988.private.v1.json",
+      "packet_id": 20,
+      "sha256": "4540D335A93916253D64D601AF0E0A5B7F4B13EC49D69FCB00A0123570CECBAB"
+    },
+    {
+      "basename": "selector1102.private.v1.json",
+      "packet_id": 21,
+      "sha256": "F0B3F37C41AF7BD837FF26FA28C559DA8A8AC22892F953AA0CA70C90DA2C3A34"
+    },
+    {
+      "basename": "selector1144.private.v1.json",
+      "packet_id": 22,
+      "sha256": "F34421937973E6200EEE9A6D73E0DFF25E2204089039B5A9004B009BA05D2814"
+    },
+    {
+      "basename": "selector244.private.v1.json",
+      "packet_id": 23,
+      "sha256": "4C3C772F80302827E4A9EB956787A86404D54AD24B28B6518CDD958E5E45A572"
+    },
+    {
+      "basename": "selector574.private.v1.json",
+      "packet_id": 24,
+      "sha256": "52D35A2E5EE6D91163FE6BADE2F620AEBCADBAEFC7C02E16A45B9400B9BF8F2B"
+    },
+    {
+      "basename": "selector892.private.v1.json",
+      "packet_id": 25,
+      "sha256": "C1D169E9A3FD0D3EF489172A8A7325474EA9EB7CC007DA2BD7E1B7968D7DB0E8"
+    },
+    {
+      "basename": "selector1210.private.v1.json",
+      "packet_id": 26,
+      "sha256": "1C2293BEEDF091F672CF6882B5E0764D0E61C1814602645A5D7342CC1981B68D"
+    },
+    {
+      "basename": "selector88.private.v1.json",
+      "packet_id": 27,
+      "sha256": "0D630D542612A8FDFFF2D73431A62023B3C40C183939963100B8686B9C7AE63C"
+    },
+    {
+      "basename": "selector406.private.v1.json",
+      "packet_id": 28,
+      "sha256": "6D91C23DCF6EFA6E186368E96D4B8B73EC77EE5AADFB58ED6374241B0F015D5F"
+    },
+    {
+      "basename": "selector502.private.v1.json",
+      "packet_id": 29,
+      "sha256": "598789018D9D4820EF97D484509821B4F9CDE18C91BE0BBE3A2575D7ADA4C167"
+    },
+    {
+      "basename": "selector526.private.v1.json",
+      "packet_id": 30,
+      "sha256": "0C766F0608EDDBEB16B91D1709C317F6BACAFF225800F970F3A3A202BD2E7EE1"
+    },
+    {
+      "basename": "selector820.private.v1.json",
+      "packet_id": 31,
+      "sha256": "2A6E0DD4627294040B95F9A025FB2C5DDAF597686AA28A90D5F5FA0BC3EC80FD"
+    },
+    {
+      "basename": "selector838.private.v1.json",
+      "packet_id": 32,
+      "sha256": "02E974A2C3F9CB6359C683FF53C1DE53857493F87056D5CC69658C19AFFFDFEA"
+    },
+    {
+      "basename": "selector886.private.v1.json",
+      "packet_id": 33,
+      "sha256": "C891414EF3FE0EC62221592FB0EF1CBA2D432BA367AF197F400184E0881C6E13"
+    },
+    {
+      "basename": "selector1234.private.v1.json",
+      "packet_id": 34,
+      "sha256": "6F07201B6F7BF7873A0F374CC39A8DC27CA417812527BD6047B31FC67998649E"
+    },
+    {
+      "basename": "selector250.private.v1.json",
+      "packet_id": 35,
+      "sha256": "0EE3BB930EE99DC874189E51AC2110ADA82AE9046CD4C16715EAD85C70E5754B"
+    },
+    {
+      "basename": "selector328.private.v1.json",
+      "packet_id": 36,
+      "sha256": "73B276F3EE1A83842AA036EF3D67687D0AAB1F5E8B571397E41C1E911126274F"
+    },
+    {
+      "basename": "selector412.private.v1.json",
+      "packet_id": 37,
+      "sha256": "A8A3178326C38F92C0B2C64602C2C4CD7452FFB8FFFF81116B70F0CBBEC609FE"
+    },
+    {
+      "basename": "selector856.private.v1.json",
+      "packet_id": 38,
+      "sha256": "63B891343BF39BE78732FD55D9589A168ADCE1F509B5D199807099057FF1877F"
+    },
+    {
+      "basename": "selector958.private.v1.json",
+      "packet_id": 39,
+      "sha256": "A26EFE50C9639A468AD08C0B0DB98867F0A1BE03B21ADA802F4C5009E723CEDD"
+    },
+    {
+      "basename": "selector1120.private.v1.json",
+      "packet_id": 40,
+      "sha256": "4078793A7FB956898D2309E301EBC441EC853C821F940AEEA26DABCF44DD68F4"
+    },
+    {
+      "basename": "selector94.private.v1.json",
+      "packet_id": 41,
+      "sha256": "56CB1FDCFA6B34DD7D23CD4F6B7156CC82072D00B908D7DD8C114FF05CD7DC7B"
+    },
+    {
+      "basename": "selector124.private.v1.json",
+      "packet_id": 42,
+      "sha256": "3FB701047C284642A7EDF05E161522D5EAB8F180DDE2CDFF8D0BE84E2140D7F3"
+    },
+    {
+      "basename": "selector220.private.v1.json",
+      "packet_id": 43,
+      "sha256": "9751AECC26D87430841F34C84E413C32A1B85E2E9704048891C51C1DECF6335A"
+    },
+    {
+      "basename": "selector304.private.v1.json",
+      "packet_id": 44,
+      "sha256": "CBA03472EC2E0794B9FC20E2A1DA605B34B784C1F1C5FACD841B0998EB8306F0"
+    },
+    {
+      "basename": "selector496.private.v1.json",
+      "packet_id": 45,
+      "sha256": "C68EC8CB89C71665F7411FDB5D30FC15F5523B7ACACF47C00794DD1040A3A868"
+    },
+    {
+      "basename": "selector982.private.v1.json",
+      "packet_id": 46,
+      "sha256": "DBD7905CFE872C6DBB2036CBBD1364A7BB358E85D1A62602133E4C0A729E38B2"
+    },
+    {
+      "basename": "selector1240.private.v1.json",
+      "packet_id": 47,
+      "sha256": "BF4AF7CE4CE4E0294E99744ACDC99614FDDC9BAE40078FA9C6E7C12265E14BF1"
+    }
+  ],
+  "privacy": {
+    "contains_candidate_text": false,
+    "contains_context_text": false,
+    "contains_source_text": false,
+    "contains_terminal_text": false,
+    "source_private_packet_count": 48
+  },
+  "result": {
+    "eligible_family_count": 55,
+    "owner_packet_count": 48,
+    "owned_pending_coordinate_count": 216,
+    "owned_pending_root_count": 113,
+    "skipped_fully_shadowed_selector_count": 7,
+    "total_candidate_sites": 738,
+    "total_source_only_sites": 103
+  },
+  "schema": "nobu16.kr.pk-dialogue-wave7-root-sharded-assignment.source-free.v1",
+  "skipped_fully_shadowed_selectors": [
+    {
+      "rank": 14,
+      "selector": 718,
+      "reason": "all_reachable_pending_roots_owned_by_higher_rank"
+    },
+    {
+      "rank": 27,
+      "selector": 652,
+      "reason": "all_reachable_pending_roots_owned_by_higher_rank"
+    },
+    {
+      "rank": 31,
+      "selector": 100,
+      "reason": "all_reachable_pending_roots_owned_by_higher_rank"
+    },
+    {
+      "rank": 41,
+      "selector": 388,
+      "reason": "all_reachable_pending_roots_owned_by_higher_rank"
+    },
+    {
+      "rank": 45,
+      "selector": 994,
+      "reason": "all_reachable_pending_roots_owned_by_higher_rank"
+    },
+    {
+      "rank": 49,
+      "selector": 136,
+      "reason": "all_reachable_pending_roots_owned_by_higher_rank"
+    },
+    {
+      "rank": 52,
+      "selector": 472,
+      "reason": "all_reachable_pending_roots_owned_by_higher_rank"
+    }
+  ],
+  "status": "READY",
+  "steam_write_performed": false,
+  "wave_id": "post_selector292_wave7_root_sharded"
+}

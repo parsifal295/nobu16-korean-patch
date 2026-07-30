@@ -1,0 +1,206 @@
+{
+  "adjudication": {
+    "automatic_space_inserted": false,
+    "base_resource_changed": false,
+    "caller_predicate_stem_required": true,
+    "control_bytes_preserved": true,
+    "current_relative_raw_g1n_full_closure_gate": true,
+    "lexical_predicate_removed_from_terminal_family": true,
+    "manual_full_assembly_review_after_machine_gate": true,
+    "preexisting_verified_state_renewed_not_repromoted": true,
+    "register_branch_matrix_preserved": true,
+    "terminal_literals_are_bound_endings": true,
+    "uncertain_roots_remain_rejected": true
+  },
+  "distribution_policy": {
+    "private_decision_bodies_stay_below_tmp": true,
+    "private_evidence_overlay_contains_translation_bodies": false,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "eligible_coordinates": [
+    "0:1917:0",
+    "0:1922:0",
+    "0:2551:0",
+    "8:1241:0"
+  ],
+  "eligible_manifest_sha256": "CE5920BC6FB0D1D910B6CA004D4D94979702A6CBB39A62D86691FB45A3A7AC5C",
+  "families": {
+    "intent_2546_2552": {
+      "affected": {
+        "coordinate_sha256": "4F8BD829C5ACED20F7422BE8EA9F27BD42762EA72453012ED89DFBCB405C0506",
+        "record_sha256": "30D02B310A5279A7AE48296FC15D70FD31C83D0B7B6318086254051A1ECE943B",
+        "roots": 218,
+        "rows": 439
+      },
+      "eligible": {
+        "coordinate_sha256": "03D161BE059D56FC8798B86E224CEE1371613993C3D4AF237473A97F9754AFE4",
+        "record_sha256": "78368625A650E175CC70E361621361C6A60D49A0E11919E8F47D8C915206D6BC",
+        "roots": 1,
+        "rows": 1
+      },
+      "rejected": {
+        "coordinate_sha256": "3E824493AC7575820E643B3A7985BC8CB6BAF25DCE6BE6A3AA18622991AAC354",
+        "record_sha256": "D5F90E8BF5DB4076B762A61744DE5BBEB8A9E796ADCF915FD5010DC4BA398EAD",
+        "roots": 217,
+        "rows": 438
+      }
+    },
+    "past_1916_1922": {
+      "affected": {
+        "coordinate_sha256": "1407424F782897300C3AA2C2B7D02121B2D6607EF71AFBEE2A1A135D64109A03",
+        "record_sha256": "796038EF220ADD58507C58DB431F97E2BFBF90412C13CAD007E9BA32220C8991",
+        "roots": 220,
+        "rows": 499
+      },
+      "eligible": {
+        "coordinate_sha256": "ABE91D7F452BEFA12A51B9D6B27B9488C725299422827463B75645F866209756",
+        "record_sha256": "464F93F8E39B23FF1AD90EF4DAB775DA838CC75E998DC8EF3E9CD67B4BE016B3",
+        "roots": 3,
+        "rows": 3
+      },
+      "rejected": {
+        "coordinate_sha256": "6ECE7EABCB94EA1686E37CC48B7BA1F2D03F76FDC2BB3F12AB464AF25F0457FB",
+        "record_sha256": "E48105FCF79BA651C77148427AAB13038619605409C887B8E1393BBF9A40A261",
+        "roots": 217,
+        "rows": 496
+      }
+    }
+  },
+  "guards": {
+    "actual_eligible_coordinate_sha256": "4DF163871B35C27A3A241492B9131F496C5A0EDC8EC4AA6055F17C358EA507F9",
+    "actual_eligible_root_sha256": "47E9F29977B5F25A8717A1FDF1A51D22CB0F61A7EDD692CBEE71A9ACD7A693EC",
+    "actual_rejected_coordinate_sha256": "ECE23521BA93F5822F07CC3A8C969E30924947DDE46F7E72032F9F5A335B874C",
+    "actual_rejected_root_sha256": "C11B5D1208D21973E3961980F29E540C3584E2C43C2F2CEA0336FA307B026565",
+    "affected_pending_coordinate_sha256": "C39E49A41CA826BE3E72965979462B5766FF585D3F5ABA98929A37CA6631496B",
+    "affected_pending_root_sha256": "61FD27A732C750E415A0F1FB188A49C7EB5147A500BC6FDCF9E43E598CF1480C",
+    "affected_record_sha256": "383AF83EBD0DC3B10DB1480FB431E569061800AF17084511547C2269FA75DC89",
+    "base_current_sha256": "3886D081E26AC2DEE75D8799CF839FEF2EFC6D27433FCD04C5FD43B4D23FD23A",
+    "base_predecessor_candidate_packed_sha256": "44828B27368FB74EF906DC167DCAF1BA54129A4313F7EDA3C0668777BB86E276",
+    "base_pristine_sha256": "EDEC6E21FE663A815422A16C219C3429262606ECADA8E814F2E9864250A463C4",
+    "checkpoint_builder_sha256": "23DDA0392ED1DE56B9438FDE010074BA5F5AF6AB30AB416852C527BC4A827DF0",
+    "checkpoint_git_commit": "bde654aaea2fae23da486232f44a5c3132a667de",
+    "checkpoint_private_sha256": "D8BF282386F081F5B4B26674653DD3A085A8FF490E3043B6B4AF1BAB3F3A1CC2",
+    "checkpoint_report_file_sha256": "1F38F0B45DA6D7FBFDCC47F2F2C1E5353F89DBA862A86799D1F20C6C69B09F5D",
+    "ghidra_layout_contract_file_sha256": "EE28501EE41586025518325DE5CEE9722B99E1063FBE7B8E9049DFA6E310F9AC",
+    "ghidra_program_sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39",
+    "ghidra_vm_contract_file_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461",
+    "honorific_builder_sha256": "0B48E3A5B418637240E0A2BDC472FB8144E7981B926DEE902351790906D65C4A",
+    "machine_eligible_coordinate_sha256": "A06442F6F5886DBE58EDF4F361F2B8621399F40F719DDDB278D1A6F4FB6E7A41",
+    "machine_eligible_root_sha256": "38F1BAF2D3AF7F78487F50EEC040D61DA6747F3101EDA062667C167964863EA1",
+    "override_coordinate_sha256": "FEBEB0D830C5820B55B4E9C8CF6B99D8734FA09A5CF3BEF2504D968E45C5AF15",
+    "override_manifest_sha256": "8D8FA45A379098A0E6FDF311DB5879E632B3C5AC9DD51DF03EA1A911B27031A0",
+    "pk_candidate_packed_sha256": "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628",
+    "pk_current_sha256": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766",
+    "pk_predecessor_candidate_packed_sha256": "18F9E09F7D0FE71317733208B25B22EE47A45B5D927C2B583F6AA44B8019D41E",
+    "pk_pristine_sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "report_payload_sha256": "4955A1F11075E895BBCC9A915AF62787121B601DDDBF026D65E2B315F9FBBCA6",
+    "root_delta_proof_manifest_sha256": "3D61DF1B87F28AAD703B28D6FFE9D1A4BF53993F7B58F6AAE89C9D6766F238DD",
+    "target_delta_manifest_sha256": "88500664C52652650D388A7C51EC60C3FC83BB9EFF2AF501021E40AA2B33CF47",
+    "verified_renewal_coordinate_sha256": "5EE0736B1EF15AC4C6FD52BB87EB99CE80719A8F725597A1D009B2027C2A49BF",
+    "verified_renewal_root_sha256": "6D5A4769255C6A0B311DBFFF5F8ADA1138D4452DED09912761819FD19F387F22"
+  },
+  "manual_rejected_roots": [
+    {
+      "reason_code": "source_tense_semantics_not_preserved",
+      "root": [
+        6,
+        3856
+      ]
+    },
+    {
+      "reason_code": "nominal_caller_requires_predicate_stem",
+      "root": [
+        6,
+        4350
+      ]
+    },
+    {
+      "reason_code": "nominal_caller_requires_predicate_stem",
+      "root": [
+        6,
+        4921
+      ]
+    },
+    {
+      "reason_code": "conjugation_boundary_incompatible",
+      "root": [
+        9,
+        3509
+      ]
+    },
+    {
+      "reason_code": "nominal_caller_requires_predicate_stem",
+      "root": [
+        9,
+        3513
+      ]
+    },
+    {
+      "reason_code": "nominal_caller_requires_predicate_stem",
+      "root": [
+        9,
+        3514
+      ]
+    },
+    {
+      "reason_code": "nominal_caller_requires_predicate_stem",
+      "root": [
+        9,
+        3515
+      ]
+    },
+    {
+      "reason_code": "conjugation_boundary_incompatible",
+      "root": [
+        15,
+        1237
+      ]
+    }
+  ],
+  "rejected_manifest_sha256": "0BA2AD00071094C327C28539C9ADA822F33A84D68894E74F00027A62137333AA",
+  "rejection_reason_roots": {
+    "conjugation_boundary_incompatible": 2,
+    "grammar_risk": 150,
+    "nominal_caller_requires_predicate_stem": 5,
+    "protected_signature_mismatch": 14,
+    "relative_line_width_expansion": 410,
+    "source_current_control_mismatch": 1,
+    "source_final_control_mismatch": 1,
+    "source_tense_semantics_not_preserved": 1
+  },
+  "rejection_reason_rows": {
+    "conjugation_boundary_incompatible": 5,
+    "grammar_risk": 406,
+    "nominal_caller_requires_predicate_stem": 12,
+    "protected_signature_mismatch": 38,
+    "relative_line_width_expansion": 881,
+    "source_current_control_mismatch": 2,
+    "source_final_control_mismatch": 2,
+    "source_tense_semantics_not_preserved": 1
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "schema": "nobu16.kr.pk-bound-terminal-family-exact-closure-coverage.v1",
+  "scope": {
+    "actual_eligible_roots": 4,
+    "actual_eligible_rows": 4,
+    "actual_rejected_roots": 426,
+    "actual_rejected_rows": 916,
+    "affected_existing_verified_base_rows": 0,
+    "affected_existing_verified_pk_roots": 382,
+    "affected_existing_verified_pk_rows": 685,
+    "affected_pending_pk_roots": 430,
+    "affected_pending_pk_rows": 920,
+    "affected_pk_records": 731,
+    "changed_pk_records": 14,
+    "machine_eligible_roots": 12,
+    "machine_eligible_rows": 22,
+    "post_layer_pending_rows": 8641,
+    "predecessor_pending_rows": 8645,
+    "predecessor_rows": 52803,
+    "translation_override_rows": 14
+  },
+  "status": "PASS",
+  "steam_write_performed": false
+}

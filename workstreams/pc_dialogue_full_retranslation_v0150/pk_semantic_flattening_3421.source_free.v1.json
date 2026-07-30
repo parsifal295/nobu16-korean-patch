@@ -1,0 +1,60 @@
+{
+  "adjudication": {
+    "localization_strategy": "standalone_literal_flattening",
+    "private_override_sha256": "226BAFFD8B783264609B24B5DD9B6991F5FD6DEEDD8CF1A5F9325FE5D922E92D",
+    "repair_candidate_application_forbidden": true,
+    "repair_status": "repair_not_required",
+    "semantic_override_rows": 1
+  },
+  "coordinate": "6:3421:0",
+  "distribution_policy": {
+    "private_override_stays_below_tmp": true,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "input_binding": {
+    "choice_file_sha256": "2052679105547810645EE679270A0EAD304DF311EEA60B91A9E808F974C44829",
+    "choice_translation_utf16le_sha256": "66F99F0C1332F5EC207F9563D78B0B843FBE6827FD1352565C1B68E6194D5B36",
+    "ghidra_contract_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461",
+    "pk_current_packed_sha256": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766",
+    "pk_pristine_packed_sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "source_decision_file_sha256": "4E1F7B18F96C9E2B1F85A2E69176A4A67B9BF53B404281A55AAD39A83FE598FD",
+    "source_decision_row_sha256": "487B06C7B2F2A04594545382241D3598B3E3B667CBA3A70B97FD8AC428594DBC"
+  },
+  "layout_evidence": {
+    "absolute_msggame_widget_width_assumed": false,
+    "current_line_widths_raw_g1n_px": [
+      840,
+      696
+    ],
+    "line_count_preserved": true,
+    "relative_line_envelope_nonexpanding": true,
+    "target_line_widths_raw_g1n_px": [
+      792,
+      696
+    ]
+  },
+  "localization_evidence": {
+    "automatic_punctuation_inserted": false,
+    "automatic_space_inserted": false,
+    "current_direct_call_count": 0,
+    "current_gap_manifest_sha256": "28F359CCAAF89D1AF0535872E6F13D2D9821A11992C848F61C785A45F810163A",
+    "jp_direct_call_target": [
+      0,
+      1066
+    ],
+    "official_pc_context_manifest_sha256": "41112F4DF8D624CB40111A72ACD7FBCDD3F095162EA249C3AF158FC4B41B9B54",
+    "official_pc_localization_direct_call_counts": {
+      "EN": 0,
+      "SC": 0,
+      "TC": 0
+    },
+    "source_gap_manifest_sha256": "A325300340E1AA66BF7367A75A0FB2F10D78EC03870DA3EE89FFBEA70F22E4E1"
+  },
+  "release_target": "0.15.0",
+  "report_payload_sha256": "0AB600F8FA8E2E65C37D6C3BF3724F1AFE8D9D5FF622A5111C485D2A7E5015F2",
+  "resource": "pk_msggame",
+  "schema": "nobu16.kr.pk-msggame-semantic-flattening-3421.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

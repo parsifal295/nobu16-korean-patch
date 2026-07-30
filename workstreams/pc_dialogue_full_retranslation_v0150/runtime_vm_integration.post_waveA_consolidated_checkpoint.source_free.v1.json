@@ -1,0 +1,56 @@
+{
+  "candidate": {
+    "after_sha256": "A2811CA8B9A53C84678727737FDA1729520FB4AB16F19AAB537C51292D1EEE78",
+    "before_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0"
+  },
+  "guards": {
+    "after_state_counts": {
+      "not_required/confirmed_non_display": 345,
+      "not_required/retranslated": 16124,
+      "pending/runtime_fragment_pending": 3293,
+      "verified/retranslated": 33041
+    },
+    "all_decisions_applied_once": true,
+    "before_state_counts": {
+      "not_required/confirmed_non_display": 345,
+      "not_required/retranslated": 16124,
+      "pending/runtime_fragment_pending": 4647,
+      "verified/retranslated": 31687
+    },
+    "candidate_rebuilt_from_checkpoint_translation_map": true,
+    "full_dialogue_rebuild_performed": false,
+    "steam_archives_read_only": true,
+    "unaffected_rows_byte_copied": 51431
+  },
+  "inputs": {
+    "engine_builder_sha256": "CF32112EB7B0BA578DF9EF2E9D2A5C92818E25AC2217FE867BE7968F92D8372E",
+    "predecessor_sha256": "502C274DB571359D6C028381F1E77CE70A0AA191CAEC39FD41499044537964ED",
+    "union_builder_sha256": "FD0E8C2C1EC51448219704F94565688D23DF7D3492BCD4914CB9F74554FF7458",
+    "union_candidate_sha256": "A2811CA8B9A53C84678727737FDA1729520FB4AB16F19AAB537C51292D1EEE78",
+    "union_decisions_sha256": "C11954FF36D41141915749A90A8B2DE43A2D0A4ACB747298167114BBF40D3647",
+    "union_evidence_sha256": "588F618722F4B19E8AB0D6DB833CB15EE1BC0430D0102E55ECFD569E25292C95",
+    "union_public_sha256": "F1FFA1FA8F0764D1ACE1BC0D71BE3676B36C0A36AECE76B4A01CF14B3F5B31C2"
+  },
+  "method": "post_waveA_targeted_promotion_and_verified_dependency_renewal",
+  "privacy": {
+    "contains_dialogue_bodies": false,
+    "contains_translations": false,
+    "private_checkpoint_stays_below_tmp": true,
+    "source_free": true
+  },
+  "release_target": "0.15.0",
+  "result": {
+    "affected_root_count": 864,
+    "affected_row_count": 1372,
+    "fully_candidate_eligible": 49510,
+    "pending_after": 3293,
+    "pending_before": 4647,
+    "private_checkpoint_sha256": "F7B2AA9642E6FDC80920B091991C41F7EC08590E5DE778326EB72E3C8BA67E1A",
+    "promotion_count": 1354,
+    "row_count": 52803,
+    "verification_renewal_count": 18
+  },
+  "schema": "nobu16.kr.pc-dialogue-runtime-vm-post-waveA-checkpoint.source-free.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

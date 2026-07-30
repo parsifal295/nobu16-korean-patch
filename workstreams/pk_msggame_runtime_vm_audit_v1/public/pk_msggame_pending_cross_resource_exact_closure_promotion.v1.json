@@ -1,0 +1,47 @@
+{
+  "distribution_policy": {
+    "private_overlay_contains_commercial_source_text": false,
+    "private_overlay_contains_translated_dialogue_text": false,
+    "private_overlay_stays_below_tmp": true,
+    "tracked_reports_contain_commercial_source_text": false,
+    "tracked_reports_contain_translated_dialogue_text": false
+  },
+  "evidence": {
+    "audit_report_file_sha256": "B9BC31F4DD68C5E812395895DB209A3652E08D0BF5C0959F1EAAE2A87F3E3C09",
+    "audit_report_payload_sha256": "A24EF2ACA545A0B96D4DA957EBE10BC4972CC58C10464FBB7A66FC815A3594F0",
+    "checkpoint_private_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
+    "ghidra_contract_file_sha256": "21DAF83330F278484BFB2462188804947A6C457F4B072DA80D7ADFBD3D13F461",
+    "proof_manifest_sha256": "CD0E05400607DB0439A4EDCED0BB17F0B192889F9891A1A1ED3047AA6662B2EE"
+  },
+  "exclusion_policy": {
+    "base_runtime_proof_inherited": false,
+    "exact_manual_review_rows_included": 0,
+    "normalized_or_partial_match_rows_included": 0,
+    "relative_full_closure_width_expanding_rows_excluded": 2502,
+    "relative_full_closure_width_expanding_rows_included": 0,
+    "target_pk_guard_failed_rows_included": 0,
+    "unsafe_rows_included": 0
+  },
+  "guards": {
+    "report_payload_sha256": "3D7EDFA11F9C775B6CD5B32743FE06CAC6BCC28A24BC25F71589345736B9B307"
+  },
+  "input": {
+    "full_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+    "predecessor_pending_rows": 8752,
+    "promotion_eligible_roots": 46,
+    "promotion_eligible_rows": 50
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "eligible_coordinate_universe_sha256": "D8B39779B08B72F5E4C563ADBB3965180097F34BD83AC534E3FB71EC4D8B2AC2",
+    "eligible_record_universe_sha256": "61BC9E2F7610AC4C4433177C1266A4F4B559E0EBD8ED2F04BEF12E81BC6A4D81",
+    "private_overlay_rows": 50,
+    "private_overlay_sha256": "0DC4642EDFB233A9E05C3411765F3CEDF69AAC7358B2B7FF55942100DF0278DE",
+    "remaining_rows": 8702,
+    "translation_body_copied": false
+  },
+  "schema": "nobu16.kr.pk-msggame-pending-cross-resource-exact-closure-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

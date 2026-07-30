@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""Focused regressions for the selector-562 chunk-0 checkpoint."""
+
+from __future__ import annotations
+
+import importlib.util
+import json
+import re
+import subprocess
+import sys
+import tempfile
+import unittest
+from collections import Counter
+from pathlib import Path
+
+
+sys.dont_write_bytecode = True
+SCRIPT = Path(__file__).resolve()
+WORKSTREAM = SCRIPT.parent
+BUILDER_PATH = WORKSTREAM / "build_pk_selector562_chunk0_review_v1.py"
+
+
+def load_builder():
+    spec = importlib.util.spec_from_file_location(
+        "selector562_chunk0_review_under_test", BUILDER_PATH
+    )
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+B = load_builder()
+
+
+class Selector562Chunk0ReviewTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.report = B.build_report()
+        cls.evidence = json.loads(
+            B.BASE.PRIVATE_EVIDENCE_PATH.read_text(encoding="utf-8")
+        )
+
+    def test_builder_check_is_reproducible(self) -> None:
+        completed = subprocess.run(
+            [sys.executable, str(BUILDER_PATH), "--check"],
+            cwd=B.REPO,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            check=False,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        payload = json.loads(completed.stdout)
+        self.assertEqual(
+            (payload["accepted_pending"], payload["blocked_pending"]),
+            (5, 8),
+        )
+        self.assertFalse(payload["steam_write_performed"])
+
+    def test_exact_single_pass_partition(self) -> None:
+        result = self.report["result"]
+        self.assertEqual(
+            (
+                result["sites"],
+                result["roots"],
+                result["assembly_branches"],
+                result["atomic_neighbor_assembly_branches"],
+                result["accepted_pending_roots"],
+                result["accepted_sites"],
+                result["blocked_pending_roots"],
+                result["blocked_sites"],
+                result["promoted_pending_rows"],
+                result["blocked_pending_rows"],
+                result["translation_overrides"],
+                result["verification_renewals"],
+            ),
+            (28, 28, 196, 84, 2, 2, 7, 26, 5, 8, 4, 0),
+        )
+        self.assertEqual(
+            (
+                result["prior_assembly_pending_roots"],
+                result["prior_assembly_pending_rows"],
+                result["rewrite_attempt_roots"],
+                result["same_gap_branches"],
+                result["atomic_non_seven_way_gap_count"],
+                result["non_display_candidate_sites"],
+                result["source_only_action_count"],
+                result["terminal_decision_rows"],
+            ),
+            (9, 13, 9, 0, 4, 0, 0, 0),
+        )
+
+    def test_decisions_are_exact_and_never_automatic(self) -> None:
+        rows = B.load_decisions()
+        self.assertEqual(
+            Counter(row["action"] for row in rows),
+            Counter(B.EXPECTED_ACTION_COUNTS),
+        )
+        self.assertTrue(all("auto" not in row["action"] for row in rows))
+        self.assertEqual(
+            B.coordinate_digest(row["coordinate"] for row in rows),
+            B.EXPECTED_DIGESTS["decision"],
+        )
+        self.assertEqual(
+            self.report["guards"]["reviewed_candidate_sha256"],
+            B.BASE.EXPECTED_REVIEWED_CANDIDATE_SHA256,
+        )
+
+    def test_atomic_multilingual_nominal_review_is_complete(self) -> None:
+        rows = self.evidence["pending_semantic_rows"]
+        self.assertEqual(len(rows), 13)
+        self.assertTrue(all(
+            row["fresh_semantic_review"] == "approved"
+            and row["historical_factuality_review"] == "approved"
+            and row["speaker_tone_review"] == "approved"
+            and row["rewrite_attempt_count"] == 1
+            and not row["prior_assembly_evidence_used_for_semantics"]
+            and set(row["context_utf8_sha256"]) == {"jp", "en", "sc", "tc"}
+            for row in rows
+        ))
+        neighbors = self.evidence["atomic_neighbor_assembly_manifest"]
+        self.assertEqual(len(neighbors), 84)
+        self.assertTrue(all(
+            row["current_relative_raw_g1n_nonexpanding"]
+            for row in neighbors
+            if row["review_disposition"] == "approved_atomic_root"
+        ))
+        nominal = self.evidence["nominal_stem_review"]
+        self.assertTrue(nominal["all_seven_registers_grammatical"])
+        self.assertEqual(nominal["accepted_selector562_branch_count"], 14)
+        self.assertEqual(
+            self.evidence["width_block"][
+                "current_relative_raw_g1n_expansion_px"
+            ],
+            72,
+        )
+
+    def test_terminal_template_owned_and_exclusion_proofs(self) -> None:
+        B.validate_selector562_guards()
+        template = self.evidence["template_atomic_review"]
+        self.assertEqual(template["atom_sizes"], [2, 2, 3, 4, 8])
+        self.assertEqual(template["partial_rewrite_count"], 0)
+        self.assertEqual(
+            (
+                template["root_count"],
+                template["pending_root_count"],
+                template["pending_row_count"],
+            ),
+            (19, 4, 4),
+        )
+        owned = self.evidence["owned_overlap_review"]
+        self.assertEqual(owned["automatic_promotion_count"], 0)
+        self.assertEqual(
+            (
+                owned["freshly_accepted_root_count"],
+                owned["freshly_accepted_pending_rows"],
+                owned["freshly_blocked_root_count"],
+                owned["freshly_blocked_pending_rows"],
+            ),
+            (2, 5, 1, 1),
+        )
+        for key in (
+            "all_atomic_neighbor_alternatives_reviewed",
+            "completed_selector_overlap_freshly_reviewed",
+            "historical_register_exact_reviewed",
+            "nominal_stem_all_seven_registers_reviewed",
+            "one_rewrite_attempt_per_pending_root",
+            "pending_assembly_evidence_did_not_auto_promote",
+            "repeated_template_atom_partial_rewrite_count_zero",
+            "source_only_action_count_zero",
+            "terminal_context_languages_non_authoritative",
+            "terminal_rows_verified_read_only",
+        ):
+            self.assertTrue(self.report["proof"][key])
+
+    def test_private_tamper_and_public_privacy_contracts(self) -> None:
+        original_path = B.BASE.PRIVATE_DECISIONS_PATH
+        raw = original_path.read_bytes()
+        with tempfile.TemporaryDirectory() as directory:
+            tampered = Path(directory) / "tampered.jsonl"
+            tampered.write_bytes(raw[:-1] + b" \n")
+            B.BASE.PRIVATE_DECISIONS_PATH = tampered
+            try:
+                with self.assertRaises(B.ReviewError):
+                    B.build_report()
+            finally:
+                B.BASE.PRIVATE_DECISIONS_PATH = original_path
+        self.assertEqual(
+            B.sha256_file(B.DEFAULT_PUBLIC_OUTPUT),
+            B.EXPECTED_PUBLIC_FILE_SHA256,
+        )
+        self.assertEqual(
+            B.DEFAULT_PUBLIC_OUTPUT.read_bytes(),
+            B.serialized(self.report),
+        )
+        cjk = re.compile(
+            r"[\u1100-\u11ff\u3040-\u30ff\u3130-\u318f"
+            r"\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uf900-\ufaff]"
+        )
+        self.assertIsNone(
+            cjk.search(B.DEFAULT_PUBLIC_OUTPUT.read_text(encoding="utf-8"))
+        )
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

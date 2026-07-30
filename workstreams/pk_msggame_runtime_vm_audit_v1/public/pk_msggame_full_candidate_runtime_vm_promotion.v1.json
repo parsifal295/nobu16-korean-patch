@@ -1,0 +1,45 @@
+{
+  "distribution_policy": {
+    "private_overlay_contains_commercial_source_text": false,
+    "private_overlay_contains_translated_dialogue_text": false,
+    "private_overlay_stays_below_tmp": true,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "evidence": {
+    "all_rows_recomputed_from_full_candidate": true,
+    "coverage_report": "workstreams/pk_msggame_runtime_vm_audit_v1/public/pk_msggame_full_candidate_runtime_vm_coverage.v1.json",
+    "coverage_report_file_sha256": "DB596688BF87AE07F04E80FE83CB194541A74B1DACE56423A2A39DDF715089A0",
+    "coverage_report_payload_sha256": "9A524E15B20B3B96E764BD09607F14C663B5F9A61B65A42FB3A6FE2A8C6B5E73",
+    "pair_guard_universe_sha256": "2AC038F7833AB871906E7CF2096E281F75681B3ED6BDE380B6A57BBB5B10F305",
+    "replacement_manifest_sha256": "D50117EECC53C34097D257D9304454B150675B46EABA1E5E6D9B2588EB6C06A8",
+    "row_guard_universe_sha256": "206E07B85ABE27E21AE2E79138F377031F65D8927160F602B75E23CDB32B43E0"
+  },
+  "exclusion_policy": {
+    "blocked_rows_included": 0,
+    "full_completeness_required": 7450,
+    "layout_taint_rows_included": 0
+  },
+  "input": {
+    "blocked_rows_excluded": 2320,
+    "full_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+    "promotion_eligible_rows": 7450,
+    "runtime_pending_exact_reuse_rows": 9770
+  },
+  "integration_boundary": {
+    "full_candidate_bound": true,
+    "overlay_is_not_a_full_dialogue_decision_file": true,
+    "shared_engine_integration_required": true
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "eligible_coordinate_universe_sha256": "DAC4B405D79BDD860BDD80E5B85F4DEA471BE388493BCFE6E39689A241F353CC",
+    "private_overlay_rows": 7450,
+    "private_overlay_sha256": "2671809B99ED88F56A6D2386F36EACC7D618EECA8336D8119E4F1BF4001C6BD5",
+    "translation_body_copied": false
+  },
+  "schema": "nobu16.kr.pk-msggame-full-candidate-runtime-vm-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

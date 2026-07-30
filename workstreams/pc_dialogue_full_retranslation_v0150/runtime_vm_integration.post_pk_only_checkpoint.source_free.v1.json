@@ -1,0 +1,101 @@
+{
+  "distribution_policy": {
+    "private_integrated_decision_stays_below_tmp": true,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "input": {
+    "base_rows": 23765,
+    "effective_runtime_pending_after_control_repairs": 36334,
+    "pk_rows": 29038,
+    "raw_runtime_pending": 36334,
+    "runtime_control_repairs": {
+      "entry_count": 2,
+      "sha256": "CF725E2989D4225752709A9A07F7D1B663CDD1BBFDA4DEDD605F66CBF71FD74B"
+    },
+    "source_segment_universe_sha256": "20C1541171E6D8F69CB393E416590F80F3AD27551E02E1981BAC2E8E0C7330C5",
+    "visible_decision_rows": 52803
+  },
+  "promotions": {
+    "base_msggame": {
+      "private_sha256": "D4A16DE987E182CF616DE175E4771DA828FA4794509454263170E82ABA3600CF",
+      "promotion_count": 15651,
+      "promotion_report_sha256": "940ABA9223E53D467B3D63CB3ADF08D5A24E86FEAC7B391D7055CC96F3A17580"
+    },
+    "pk_msggame": {
+      "exact": {
+        "coverage_file_sha256": "DB596688BF87AE07F04E80FE83CB194541A74B1DACE56423A2A39DDF715089A0",
+        "private_sha256": "2671809B99ED88F56A6D2386F36EACC7D618EECA8336D8119E4F1BF4001C6BD5",
+        "promotion_count": 7450,
+        "promotion_report_sha256": "6D5000A6F3D42E0084429A1E67510208B9A6FEF7EE13861C3969010E5126820B"
+      },
+      "full_candidate_bound": true,
+      "pk_only_exact_blocked": {
+        "base_runtime_proof_inherited": false,
+        "coverage_file_sha256": "47F72E6A77DFF0B8F2BDA60373298B5D05E3440D510A9A272CB036D1F4DC5248",
+        "predecessor_integrated_private_sha256": "29ECB2446AD89D0F9F122B280D2E66DAB2A36F2F0050174239EB4D1F0D27E757",
+        "private_sha256": "F8B4398AA111FE61AA52631AC2E368B0B80C9F078763E449582F2782F408623B",
+        "promotion_count": 1536,
+        "promotion_report_sha256": "4EEFF8E92D4B0275FB7B44DC62BC12CAA6A1025B4591CEBF77C3467F96B96EFF"
+      },
+      "pk_only_layer_included": true,
+      "pk_only_predecessor_checkpoint_match": true,
+      "promotion_count": 11931,
+      "rebuilt_predecessor_integrated_private_sha256": "29ECB2446AD89D0F9F122B280D2E66DAB2A36F2F0050174239EB4D1F0D27E757",
+      "residual": {
+        "coverage_file_sha256": "58DEFAFDC69A2BCC6390CF429B8BE118AEE28C94846ED857E210E2386FC7EE38",
+        "layout_transition_bound": true,
+        "private_sha256": "B1E5D89D13158AE4597F3B91A3D350F1271570F4625A39F8C83426CA6BF5E96B",
+        "promotion_count": 2945,
+        "promotion_report_sha256": "F5F726453552D13B29F6C5A7D85CFB945D0DD8C1211452F80E61DB957C261E02"
+      }
+    },
+    "promoted_total": 27582,
+    "relative_reflow_override": {
+      "after_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+      "before_candidate_packed_sha256": "2A7A5CE6235B8D2BC1EC725F879AFB52CE264F7AB0678E9B6637AED0C98BE707",
+      "layout_review_transition_performed": false,
+      "override_coordinate_sha256": "E0FC03945EA080A33BD7ACC71F8114279DB385D085F6A63A31974E77B9E0B0EE",
+      "override_count": 26,
+      "override_manifest_sha256": "1C809ACF49B5DEF55F54FC781513C8C190BC91A766C3EBF4D86138B3C5296368",
+      "private_file_sha256": "2E195A308AC1CEE5859D28C58F1F3E3DEEA7B8A2E5F692CE2B24C2DBCDBBBE76",
+      "public_file_sha256": "35E450099DF5964348F0306722F6D72919972E34ED96749067B558E48A4193C2",
+      "report_payload_sha256": "1B70F3F8ECDEC3C8FB053FA8C65A9F904C2D868B74F5F80B512605263FDD78BF",
+      "runtime_review_transition_performed": false,
+      "steam_write_performed": false
+    },
+    "semantic_override": {
+      "coordinate": "6:3421:0",
+      "override_count": 1,
+      "private_sha256": "226BAFFD8B783264609B24B5DD9B6991F5FD6DEEDD8CF1A5F9325FE5D922E92D",
+      "public_report_sha256": "7D2DECA73B1D37AD741BC0D101028FE3E2CC0383526973B15325AD5F0E77E9F1",
+      "report_payload_sha256": "0AB600F8FA8E2E65C37D6C3BF3724F1AFE8D9D5FF622A5111C485D2A7E5015F2"
+    }
+  },
+  "release_target": "0.15.0",
+  "result": {
+    "candidate_ready": false,
+    "coordinate_universe_sha256": "BA0FF142376D857A99B986827CD094918A3E9BAA078AAF3E9D6A10FF410D3940",
+    "fully_candidate_eligible": 44051,
+    "private_integrated_decision_sha256": "2E1B649D0BF6AD0852A750A7C00FAEBCCCB86C7EC5CF076FFE08E5463785B4DE",
+    "runtime_review_pending": 8752,
+    "semantic_review_approved": 52803
+  },
+  "schema": "nobu16.kr.pc-dialogue-runtime-vm-integration.v1",
+  "status": "PASS",
+  "steam_write_performed": false,
+  "validation": {
+    "base_candidate_record_guards_rechecked": true,
+    "control_repair_bindings_rechecked": true,
+    "normal_v0150_decision_validator_rechecked": true,
+    "per_row_game_playback_required_for_promotions": false,
+    "pk_full_candidate_records_and_closures_rechecked": true,
+    "pk_only_layer_included": true,
+    "pk_only_predecessor_checkpoint_rebuilt_and_matched": true,
+    "pk_overlay_rebuilt_and_rechecked": true,
+    "relative_reflow_override_rebuilt_and_rechecked": true,
+    "representative_game_smoke_test_required_before_release": true,
+    "runtime_only_transitions_enforced": true,
+    "semantic_override_rebuilt_and_rechecked": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "candidate": {
+    "base_sha256": "44828B27368FB74EF906DC167DCAF1BA54129A4313F7EDA3C0668777BB86E276",
+    "base_visible_literal_count": 23765,
+    "pk_sha256": "0330917524A47974618317A8EC56C4B471672DA5AD07000A8C5D8A7CCFB8A05F",
+    "pk_visible_literal_count": 29038
+  },
+  "counts": {
+    "decision_rows": 52803,
+    "resource_rows": {
+      "base_msggame": 23765,
+      "pk_msggame": 29038
+    },
+    "runtime_review": {
+      "not_required": 16421,
+      "verified": 36382
+    },
+    "runtime_vm_methods": 133,
+    "runtime_vm_schemas": 45,
+    "scope_classification": {
+      "confirmed_non_display": 325,
+      "retranslated": 52478
+    }
+  },
+  "inputs": {
+    "checkpoint_report_sha256": "93F2EE94D92FAB41C8DC255CEFF73BB2437955F5E29E25C636CE8EDEF4384BD8",
+    "checkpoint_sha256": "19F6858E6A29DE84910B56D745F4585584B2925B056DCC2963BB7B092CB5D406",
+    "engine_sha256": "CF32112EB7B0BA578DF9EF2E9D2A5C92818E25AC2217FE867BE7968F92D8372E",
+    "frozen_current_sha256": {
+      "base_msggame": "3886D081E26AC2DEE75D8799CF839FEF2EFC6D27433FCD04C5FD43B4D23FD23A",
+      "pk_msggame": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766"
+    },
+    "staging_builder_sha256": "A1ED6B8084D0B6C7FD001164BB8E5CB937BA9D89C250625285FD8DD839DB01A7"
+  },
+  "release_target": "0.15.0",
+  "schema": "nobu16.kr.pc-dialogue-52803-final-audit.source-free.v1",
+  "status": "PASS",
+  "steam_write_performed": false,
+  "validation": {
+    "base_candidate_rebuilt_and_round_tripped": true,
+    "exact_visible_coordinate_universe": true,
+    "pk_control_patched_candidate_round_tripped": true,
+    "runtime_pending_zero": true,
+    "semantic_approval_complete": true,
+    "source_and_current_guards_rechecked": true,
+    "source_or_translation_bodies_omitted": true,
+    "staging_builder_replayed_byte_exact": true
+  }
+}

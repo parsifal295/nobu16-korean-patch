@@ -1,0 +1,65 @@
+{
+  "schema": "nobu16.kr.movie-subtitle-msgdata-fix.v1",
+  "resource": "MSG_PK/JP/msgdata.bin",
+  "source": {
+    "packed_size": 481956,
+    "packed_sha256": "E671FD84377E269E8B9BC27535493BD0467C6586A032C8FBA37CEC3C63E2E74B",
+    "raw_size": 480048,
+    "raw_sha256": "96331FFF15EB84A19DA7F5A45B8B1F6737593158BFB6C2AB1C11769DE4AB1BBC",
+    "string_count": 29218
+  },
+  "movie_subtitle_range": {
+    "first_id": 17989,
+    "last_id": 18240
+  },
+  "entries": [
+    {
+      "id": 18017,
+      "issue": "missing_honnoji_caption",
+      "preimage_utf16le_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "ko": "천하포무의 실현을 눈앞에 둔\n전국의 패자, 오다 노부나가."
+    },
+    {
+      "id": 18119,
+      "issue": "taiko_term_inconsistency",
+      "preimage_utf16le_sha256": "5449B758A4D6F9BF6B937475C44A1FE661AD2C2E0166026A65CADE0C8BF87F4E",
+      "ko": "다이코 히데요시 사후,\n천하를 계승할 이는 히데요리여야 했다."
+    },
+    {
+      "id": 18129,
+      "issue": "opaque_ongo_wording",
+      "preimage_utf16le_sha256": "E61ED536572120A3F2F2FCBB6759CED0D445F53ECF21E1F5C47277626551436E",
+      "ko": "후쿠시마·구로다·호소카와 등의 제후도\n미쓰나리와 고락을 함께한 도요토미의 은혜를 입은 가신들이었다."
+    },
+    {
+      "id": 18153,
+      "issue": "unexplained_chidorigake_transliteration",
+      "preimage_utf16le_sha256": "B137CD99DFF91F8888BA0CC97741D4EBEE73585B594E6CBF3712BF861D0B5FE8",
+      "ko": "엇갈려 세운 울타리에 퇴로가 막혀,\n도쿠가와 부대는 완전히 무너졌다."
+    },
+    {
+      "id": 18160,
+      "issue": "opaque_six_mon_afterlife_allusion",
+      "preimage_utf16le_sha256": "6B714B11744035414D148103825A201760B2D6362D1F05D28944117CBC304E84",
+      "ko": "강을 건넌 대가는\n저승길 노잣돈 여섯 닢으로는 치를 수 없었다."
+    },
+    {
+      "id": 18162,
+      "issue": "lost_hostile_relationship_nuance",
+      "preimage_utf16le_sha256": "8D03BBAE3418AC58AD0E3FE0C2E3E559230C99A8F79ADF02CE475D2BE9C91034",
+      "ko": "사나다와 도쿠가와.\n두 가문의 오랜 악연은 여기서 시작되었다."
+    },
+    {
+      "id": 18186,
+      "issue": "unnatural_ui_jangsu_wording",
+      "preimage_utf16le_sha256": "C16ADD56A1FCDC764BBFF3EA92A45BF5066FDA1A0D38645718AE248019AC4378",
+      "ko": "의로운 장수라 불리기에 손색없는\n젊은 무사의 최후였다."
+    },
+    {
+      "id": 18220,
+      "issue": "incorrect_konda_place_reading",
+      "preimage_utf16le_sha256": "1EE139D68A355C7A0CAADC2420E7BE821E7820B438DB1BB8CF3A1AC5EA58A7C9",
+      "ko": "아군이 도묘지에서 패했다는 소식을 듣자\n곤다무라로 달려간 유키무라는,"
+    }
+  ]
+}

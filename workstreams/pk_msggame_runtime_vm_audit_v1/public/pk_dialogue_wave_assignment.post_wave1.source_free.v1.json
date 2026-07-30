@@ -1,0 +1,83 @@
+{
+  "distribution_policy": {
+    "private_assignment_stays_below_tmp": true,
+    "private_decisions_and_evidence_stay_below_tmp": true,
+    "tracked_wave_artifact_counts": {
+      "assignment_summary": 1,
+      "checkpoint": 1,
+      "closure": 1,
+      "progress": 1
+    },
+    "tracked_wave_intermediate_reviews": 0
+  },
+  "guards": {
+    "candidate_sha256": "C47390C28DE697CAD3F57A72A079F4D8CEA897F6E343CFCE704851BCC3507060",
+    "private_assignment_sha256": "89DD58DB0036DC5A6EFDC380647B27AEDB52723FF19B9A432ADE412035E2B468",
+    "ranking_builder_sha256": "5DEADB11F81897B0F6F52AD3E032CE49045FDA8557B86BA7C5E571AD9AA6AC42",
+    "ranking_private_sha256": "F9B4FA36CE51443CD7BC034572DF63C701C10483B31E1A6CA6D1427A6D4B363B",
+    "ranking_public_sha256": "EB1DAE24ACE692F17B69A94701B5B8093A05D6D0AB3F4C0DD4D5BCFC5873480B",
+    "selection_profile_sha256": "01077D611A5C05FCC71491AC60200AEC2B8CAFCD27F12B8EE032FB7159ED816D"
+  },
+  "independence": {
+    "atomic_template_signature_overlap": 0,
+    "closure_node_overlap": 0,
+    "pair_count": 3,
+    "reachable_pending_root_overlap": 0,
+    "site_root_overlap": 0,
+    "terminal_root_overlap": 0
+  },
+  "method": "post_selector292_wave1_rank_order_greedy_three_way_root_terminal_and_atomic_independent_assignment",
+  "packets": [
+    {
+      "candidate_site_count": 21,
+      "chunk_count": 2,
+      "packet_id": 0,
+      "packet_sha256": "DFF4EDC89C53D12A6F9FFFD641825D101D26BB48A3BC40D8D2A3D57D612E624C",
+      "pending_coordinate_count": 31,
+      "rank": 1,
+      "reachable_pending_root_count": 13,
+      "selector": 1048,
+      "source_only_site_count": 1,
+      "terminal_count": 7
+    },
+    {
+      "candidate_site_count": 58,
+      "chunk_count": 2,
+      "packet_id": 1,
+      "packet_sha256": "CA3C7C6F617631586E4BC3DA2B65F0FA8301746532FD5D76D1122650EB71FC3C",
+      "pending_coordinate_count": 28,
+      "rank": 2,
+      "reachable_pending_root_count": 17,
+      "selector": 82,
+      "source_only_site_count": 8,
+      "terminal_count": 7
+    },
+    {
+      "candidate_site_count": 21,
+      "chunk_count": 1,
+      "packet_id": 2,
+      "packet_sha256": "E75D5A10BD7230D763AC1C80BAC1D86DD85D49AD54F54FE92489599F4CFC14CE",
+      "pending_coordinate_count": 25,
+      "rank": 3,
+      "reachable_pending_root_count": 9,
+      "selector": 214,
+      "source_only_site_count": 0,
+      "terminal_count": 7
+    }
+  ],
+  "release_target": "0.15.0",
+  "result": {
+    "packet_count": 3,
+    "selected_selector_count": 3,
+    "total_candidate_sites": 100,
+    "total_chunks": 5,
+    "total_pending_coordinates": 84,
+    "total_reachable_pending_roots": 39,
+    "total_source_only_sites": 9,
+    "total_terminal_rows": 21
+  },
+  "schema": "nobu16.kr.pk-dialogue-wave-assignment.source-free.v1",
+  "status": "READY",
+  "steam_write_performed": false,
+  "wave_id": "post_selector292_wave2"
+}

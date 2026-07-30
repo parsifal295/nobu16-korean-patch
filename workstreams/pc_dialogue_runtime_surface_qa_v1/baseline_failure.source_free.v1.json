@@ -1,0 +1,65 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-runtime-surface-baseline-failure.source-free.v1",
+  "status": "FAIL",
+  "release_target": "0.15.0",
+  "audited_at_local_date": "2026-07-30",
+  "candidate": {
+    "base_msggame_sha256": "44828B27368FB74EF906DC167DCAF1BA54129A4313F7EDA3C0668777BB86E276",
+    "pk_msggame_sha256": "0330917524A47974618317A8EC56C4B471672DA5AD07000A8C5D8A7CCFB8A05F"
+  },
+  "counts": {
+    "issue_count": 12530,
+    "expanded_terminal_boundary_finding_count": 455,
+    "combined_gate_finding_count": 12985,
+    "expanded_terminal_boundary_resources": {
+      "base_msggame": 254,
+      "pk_msggame": 201
+    },
+    "categories": {
+      "call_fixed_particle": 126,
+      "call_semantic_carrier_artifact": 75,
+      "duplicated_terminal_boundary": 79,
+      "literal_orthography_artifact": 8,
+      "selector_fixed_particle": 734,
+      "selector_left_boundary_spacing": 4577,
+      "unresolved_dual_particle": 6931
+    },
+    "resources": {
+      "base_msggame": {
+        "issue_count": 6327,
+        "call_fixed_particle": 20,
+        "call_semantic_carrier_artifact": 28,
+        "duplicated_terminal_boundary": 14,
+        "literal_orthography_artifact": 4,
+        "selector_fixed_particle": 103,
+        "selector_left_boundary_spacing": 2084,
+        "unresolved_dual_particle": 4074
+      },
+      "pk_msggame": {
+        "issue_count": 6203,
+        "call_fixed_particle": 106,
+        "call_semantic_carrier_artifact": 47,
+        "duplicated_terminal_boundary": 65,
+        "literal_orthography_artifact": 4,
+        "selector_fixed_particle": 631,
+        "selector_left_boundary_spacing": 2493,
+        "unresolved_dual_particle": 2857
+      }
+    }
+  },
+  "ghidra_contract": {
+    "literal_and_dynamic_utf16_code_units_are_copied_verbatim": true,
+    "automatic_space_inserted": false,
+    "automatic_particle_resolution_performed": false,
+    "opcode_0143_calls_target_record": true
+  },
+  "left_boundary_contract": {
+    "compact_arrow_name_transition_is_an_intentional_joiner": true,
+    "compact_arrow_false_positive_count_excluded": {
+      "base_msggame": 19,
+      "pk_msggame": 20
+    }
+  },
+  "completion_claim_revoked": true,
+  "steam_write_performed": false
+}

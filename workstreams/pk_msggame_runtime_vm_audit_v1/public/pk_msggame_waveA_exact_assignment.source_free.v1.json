@@ -1,0 +1,79 @@
+{
+  "bundles": [
+    {
+      "coordinate_count": 1144,
+      "coordinate_sha256": "F539DDBD7DDF1A3314E2CD5FA6A9175209BD392D09CDE4387E9150BB719AE0A3",
+      "packet_id": 0,
+      "packet_sha256": "E45B355C4606E8BA56E34CFD89D48668E5ACF25889C4562B44388F7FA69AB4A2",
+      "root_count": 852,
+      "root_sha256": "B7CC5F469D9DAE5195AED291C07CF42C3E7C08936443B0E9E695BA55A38EA516",
+      "unit_count": 430
+    },
+    {
+      "coordinate_count": 1144,
+      "coordinate_sha256": "534BA28B784C5283439DD247F0D84DC7E4BAF52978AB159EED704FAB39968862",
+      "packet_id": 1,
+      "packet_sha256": "EE59AF760C9940C259A27B0813A7777B2B63A7E9DDE3C18F2DDF53EA6DAB41B7",
+      "root_count": 853,
+      "root_sha256": "A12E2BB93DD5DA25A465DAD31ECAC4B09D66DB2A0A3BB2C2E9F74F94E9CB5961",
+      "unit_count": 431
+    },
+    {
+      "coordinate_count": 1145,
+      "coordinate_sha256": "E69D029348B78E6A6A64992C447BFA75CB443507B9BA63320771DBE19EB50E98",
+      "packet_id": 2,
+      "packet_sha256": "EB87B46196D03354E7E6B22658F929D9CF7CD961FDC5A76ACAD29A1C09924823",
+      "root_count": 837,
+      "root_sha256": "CED2A1511B00542EE959C963CFBCA626F43E74D8D21781227964DF26298B81CE",
+      "unit_count": 431
+    }
+  ],
+  "classification": {
+    "incoming_j_terminal": {
+      "coordinate_count": 1754,
+      "root_count": 1617,
+      "top_root_group_count": 367
+    },
+    "inline_selector": {
+      "coordinate_count": 1679,
+      "root_count": 925,
+      "selector_count_range": [
+        1,
+        7
+      ]
+    },
+    "local_static_excluded": {
+      "coordinate_count": 1254,
+      "root_count": 674
+    }
+  },
+  "inputs": {
+    "candidate_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0",
+    "checkpoint_sha256": "B1CF7F4523DE9411BA5172E7C9DEA946C7646085C83A1480C51807E2DD0C90E7",
+    "engine_builder_sha256": "CF32112EB7B0BA578DF9EF2E9D2A5C92818E25AC2217FE867BE7968F92D8372E",
+    "jp_source_sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "runtime_vm_builder_sha256": "B9769DED8D55AB8B73ECF54AB44A1F5C41E693E4681A647910067941DC81DFF0"
+  },
+  "method": "wave7_exact_reversed_vm_inline_selector_and_reverse_incoming_jump_top_root_grouped_root_atomic_three_way_lpt",
+  "proof": {
+    "exact_coordinate_coverage": true,
+    "exact_root_coverage": true,
+    "full_integration_rebuild_performed": false,
+    "owned_coordinates_pairwise_disjoint": true,
+    "owned_roots_pairwise_disjoint": true,
+    "source_only_action_count": 0,
+    "steam_write_performed": false
+  },
+  "result": {
+    "bundle_count": 3,
+    "exact_coordinate_coverage": true,
+    "exact_root_coverage": true,
+    "pairwise_coordinate_overlap_count": 0,
+    "pairwise_root_overlap_count": 0,
+    "waveA_coordinate_count": 3433,
+    "waveA_root_count": 2542,
+    "waveA_unit_count": 1292
+  },
+  "schema": "nobu16.kr.pk-msggame-waveA-exact-assignment.source-free.v1",
+  "status": "ASSIGNED_REVIEW_IN_PROGRESS"
+}

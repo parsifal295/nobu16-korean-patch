@@ -1,0 +1,53 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-full-retranslation-runtime-control-repairs.v1",
+  "release_target": "0.15.0",
+  "source_text_present": false,
+  "semantic_decision_count_delta": 0,
+  "entries": [
+    {
+      "resource": "pk_msggame",
+      "coordinate": "6:3421:0",
+      "record_coordinate": "6:3421",
+      "source_decision_segment_id": "pk_msggame_base_exact_reuse_prefill",
+      "source_decision_file_sha256": "4E1F7B18F96C9E2B1F85A2E69176A4A67B9BF53B404281A55AAD39A83FE598FD",
+      "source_decision_row_canonical_sha256": "487B06C7B2F2A04594545382241D3598B3E3B667CBA3A70B97FD8AC428594DBC",
+      "original_scope_classification": "retranslated",
+      "original_runtime_review": "not_required",
+      "effective_scope_classification": "retranslated",
+      "effective_runtime_review": "not_required",
+      "override_reason": "intentional_locale_flattening_semantic_override_applied",
+      "repair_builder": "build_pk_runtime_gap_repair_3421.py",
+      "repair_evidence_schema": "nobu16.kr.pk-msggame-runtime-gap-repair.v1.private-evidence",
+      "repair_candidate_sha256": "E1D6E1C4133473382CD629BEF3705787B146B39D984AE6EF8106243D191B933F",
+      "repair_candidate_required_for_release": false,
+      "repair_candidate_application_forbidden": true,
+      "repair_status": "rejected_not_required",
+      "adjudication": "repair_not_required",
+      "semantic_override_report": "pk_semantic_flattening_3421.source_free.v1.json",
+      "semantic_decision_duplicate_added": false,
+      "steam_write_performed": false
+    },
+    {
+      "resource": "pk_msggame",
+      "coordinate": "6:3887:0",
+      "record_coordinate": "6:3887",
+      "source_decision_segment_id": "pk_msggame_B040_S1131",
+      "source_decision_file_sha256": "4423DE02F2CDB4499F9C88557DDBF1CB1BB83198DE70702C227E39CC0D0E6C30",
+      "source_decision_row_canonical_sha256": "9657D420BBA47D0DECCEAC22F3F0F7B89A642F9C2B972EC5325249A027729D14",
+      "original_scope_classification": "runtime_fragment_pending",
+      "original_runtime_review": "pending",
+      "effective_scope_classification": "runtime_fragment_pending",
+      "effective_runtime_review": "pending",
+      "override_reason": "intentional_locale_flattening_requires_residual_runtime_review",
+      "repair_builder": "build_pk_runtime_gap_repair_3887.py",
+      "repair_evidence_schema": "nobu16.kr.pk-msggame-runtime-gap-repair.v1.private-evidence",
+      "repair_candidate_sha256": "5438FA8699FCCDA9279AE06113E1130324E212C592D4C309FD6EE0F243CD9A55",
+      "repair_candidate_required_for_release": false,
+      "repair_candidate_application_forbidden": true,
+      "repair_status": "rejected_not_required",
+      "adjudication": "repair_not_required",
+      "semantic_decision_duplicate_added": false,
+      "steam_write_performed": false
+    }
+  ]
+}

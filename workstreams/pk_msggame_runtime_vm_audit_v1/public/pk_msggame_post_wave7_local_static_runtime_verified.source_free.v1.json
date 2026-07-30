@@ -1,0 +1,47 @@
+{
+  "digests": {
+    "decision_payload_sha256": "1F026C793D9B8E0A8D5139B5B1B1EFFC7B23899244AE6C38F7C37911E7D423FE",
+    "decoded_component_kind_counts_sha256": "C1CE482C42941DCC512F3DDFBD47F339085F7C7D1BEDC07CCF61631A867A3DCE",
+    "local_static_coordinate_sha256": "7AD1E0AE524392364726462241867FBFA16A937826B016EA3C719AAB7DA3F7C5",
+    "local_static_root_sha256": "956C1695A6FDBD2F355F3BACC2E76DD28B15C7DE51E40DC8C8963D2BF58CEE73"
+  },
+  "inputs": {
+    "checkpoint_sha256": "B1CF7F4523DE9411BA5172E7C9DEA946C7646085C83A1480C51807E2DD0C90E7",
+    "engine_builder_sha256": "CF32112EB7B0BA578DF9EF2E9D2A5C92818E25AC2217FE867BE7968F92D8372E",
+    "ranking_builder_sha256": "19D8F10FC3995AD05A39AD12CD554292A47BF4A1AB572D28359130326FA69391",
+    "shadow_current_sha256": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766",
+    "vm_builder_sha256": "B9769DED8D55AB8B73ECF54AB44A1F5C41E693E4681A647910067941DC81DFF0"
+  },
+  "method": "wave7_checkpoint_exact_reversed_vm_decoder_no_data_dependent_components_no_incoming_call_or_jump",
+  "proof": {
+    "allowed_local_component_kinds": [
+      "block_token",
+      "control_tag",
+      "literal_boundary",
+      "output_control"
+    ],
+    "candidate_after_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0",
+    "candidate_before_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0",
+    "candidate_byte_changes": 0,
+    "control_or_token_changes": 0,
+    "data_dependent_components": 0,
+    "exact_reversed_vm_decoder_used": true,
+    "full_rebuild_performed": false,
+    "incoming_calls": 0,
+    "incoming_jumps": 0,
+    "layout_changes": 0,
+    "outgoing_calls": 0,
+    "outgoing_jumps": 0,
+    "steam_write_performed": false,
+    "translation_changes": 0
+  },
+  "schema": "nobu16.kr.pk-msggame-post-wave7-local-static-closure-source-free.v1",
+  "scope": {
+    "local_static_roots": 674,
+    "local_static_rows": 1254,
+    "pending_after": 4647,
+    "resource": "MSG_PK/JP/msggame.bin",
+    "wave7_pending_rows": 5901
+  },
+  "status": "PASS"
+}

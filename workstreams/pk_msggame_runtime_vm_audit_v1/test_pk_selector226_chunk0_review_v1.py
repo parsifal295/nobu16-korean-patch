@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+"""Focused regressions for the selector-226 chunk-0 checkpoint."""
+
+from __future__ import annotations
+
+import importlib.util
+import json
+import re
+import subprocess
+import sys
+import tempfile
+import unittest
+from collections import Counter
+from pathlib import Path
+
+
+sys.dont_write_bytecode = True
+SCRIPT = Path(__file__).resolve()
+WORKSTREAM = SCRIPT.parent
+BUILDER_PATH = WORKSTREAM / "build_pk_selector226_chunk0_review_v1.py"
+
+
+def load_builder():
+    spec = importlib.util.spec_from_file_location(
+        "selector226_chunk0_review_under_test", BUILDER_PATH
+    )
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+B = load_builder()
+
+
+class Selector226Chunk0ReviewTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.report = B.build_report()
+        cls.evidence = json.loads(
+            B.BASE.PRIVATE_EVIDENCE_PATH.read_text(encoding="utf-8")
+        )
+
+    def test_builder_check_is_reproducible(self) -> None:
+        completed = subprocess.run(
+            [sys.executable, str(BUILDER_PATH), "--check"],
+            cwd=B.REPO,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            check=False,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        payload = json.loads(completed.stdout)
+        self.assertEqual(payload["accepted_pending"], 20)
+        self.assertEqual(payload["blocked_pending"], 0)
+        self.assertFalse(payload["steam_write_performed"])
+
+    def test_current_chunk_counts_are_recomputed(self) -> None:
+        result = self.report["result"]
+        self.assertEqual(result["sites"], 35)
+        self.assertEqual(result["roots"], 35)
+        self.assertEqual(result["assembly_branches"], 245)
+        self.assertEqual(result["accepted_sites"], 32)
+        self.assertEqual(result["blocked_sites"], 3)
+        self.assertEqual(result["non_display_candidate_sites"], 1)
+        self.assertEqual(result["prior_caller_evidence_roots"], 34)
+        self.assertEqual(result["prior_pending_caller_evidence_roots"], 15)
+        self.assertEqual(result["rewrite_attempt_roots"], 35)
+        self.assertFalse(
+            self.evidence["prior_evidence"]["stale_aggregate_counts_reused"]
+        )
+
+    def test_pending_semantics_are_fresh_and_not_inherited(self) -> None:
+        rows = self.evidence["pending_semantic_rows"]
+        self.assertEqual(len(rows), 20)
+        self.assertTrue(
+            all(
+                row["fresh_semantic_review"] == "approved"
+                and row["historical_factuality_review"] == "approved"
+                and row["speaker_tone_review"] == "approved"
+                and row["rewrite_attempt_count"] == 1
+                and not row["thought_caller_evidence_reused_for_semantics"]
+                and set(row["context_utf8_sha256"])
+                == {"jp", "en", "sc", "tc"}
+                for row in rows
+            )
+        )
+
+    def test_actions_owned_overlap_and_candidate_are_exact(self) -> None:
+        rows = B.load_decisions()
+        self.assertEqual(len(rows), 20)
+        self.assertEqual(
+            Counter(row["action"] for row in rows),
+            Counter(B.EXPECTED_ACTION_COUNTS),
+        )
+        self.assertTrue(all("auto" not in row["action"] for row in rows))
+        self.assertEqual(
+            B.coordinate_digest(row["coordinate"] for row in rows),
+            B.EXPECTED_DIGESTS["decision"],
+        )
+        self.assertEqual(
+            self.report["guards"]["reviewed_candidate_sha256"],
+            self.report["guards"]["official_candidate_sha256"],
+        )
+
+    def test_terminals_templates_and_connectives_are_read_only(self) -> None:
+        B.validate_selector226_guards()
+        proof = self.report["proof"]
+        self.assertTrue(proof["terminal_register_multiplicity_preserved"])
+        self.assertTrue(proof["connective_and_space_preserved"])
+        self.assertTrue(proof["template_atoms_atomic"])
+        self.assertTrue(proof["source_only_action_count_zero"])
+        self.assertTrue(proof["non_display_candidate_action_count_zero"])
+
+    def test_runtime_layout_and_prior_assembly_proofs_are_complete(self) -> None:
+        proof = self.report["proof"]
+        self.assertEqual(self.report["result"]["same_gap_branches"], 0)
+        self.assertTrue(
+            proof["accepted_assemblies_current_relative_raw_g1n_nonexpanding"]
+        )
+        self.assertTrue(proof["all_assigned_sites_reviewed"])
+        self.assertTrue(proof["prior_thought_evidence_used_for_assembly_only"])
+        self.assertTrue(proof["pending_multilingual_semantics_fresh"])
+        self.assertTrue(proof["reverse_overlay_recovers_official_candidate"])
+
+    def test_private_decision_tamper_is_rejected(self) -> None:
+        original_path = B.BASE.PRIVATE_DECISIONS_PATH
+        raw = original_path.read_bytes()
+        with tempfile.TemporaryDirectory() as directory:
+            tampered = Path(directory) / "tampered.jsonl"
+            tampered.write_bytes(raw[:-1] + b" \n")
+            B.BASE.PRIVATE_DECISIONS_PATH = tampered
+            try:
+                with self.assertRaises(B.ReviewError):
+                    B.build_report()
+            finally:
+                B.BASE.PRIVATE_DECISIONS_PATH = original_path
+
+    def test_public_artifacts_are_frozen_and_source_free(self) -> None:
+        self.assertEqual(
+            B.sha256_file(B.DEFAULT_PUBLIC_OUTPUT),
+            B.EXPECTED_PUBLIC_FILE_SHA256,
+        )
+        self.assertEqual(
+            B.DEFAULT_PUBLIC_OUTPUT.read_bytes(),
+            B.serialized(self.report),
+        )
+        cjk = re.compile(
+            r"[\u1100-\u11ff\u3040-\u30ff\u3130-\u318f"
+            r"\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uf900-\ufaff]"
+        )
+        coordinate = re.compile(r'["\']\d+:\d+(?::\d+){0,2}["\']')
+        for path in (BUILDER_PATH, SCRIPT, B.DEFAULT_PUBLIC_OUTPUT):
+            content = path.read_text(encoding="utf-8")
+            self.assertIsNone(cjk.search(content), path)
+            self.assertIsNone(coordinate.search(content), path)
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

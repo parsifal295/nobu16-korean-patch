@@ -1,0 +1,51 @@
+{
+  "action_counts": {
+    "runtime_promotion": 10,
+    "translation_override_and_runtime_promotion": 31,
+    "translation_override_and_verification_renewal": 74,
+    "translation_override_pending": 152,
+    "verification_renewal": 46
+  },
+  "distribution_policy": {
+    "private_decision_bodies_stay_below_tmp": true,
+    "private_evidence_overlay_contains_translation_bodies": false,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "evidence": {
+    "actual_eligible_coordinate_sha256": "FD8D45E6B7193A2C6832D57A024FA693CEAA7F2A95825B7000CCA5B623A028C7",
+    "actual_eligible_root_sha256": "53149C3F973A4F19A20401C0D236A0A31508212A12C29F073FEF7A7A47B8DDD1",
+    "audit_report_file_sha256": "E666495EC34DE65AD40C3846D73A37784EC734514B6ECEBBE4B96BCE43D9F3C6",
+    "audit_report_payload_sha256": "7F24D71A74083105F0EEF677404751C1D40AA8C683FC27B5265B79F36181553F",
+    "override_map_compact_json_sha256": "BAA8980704D1B1F090F81D43722BB10FBF077445FF97F9258878315ADBA671B8",
+    "pk_candidate_packed_sha256": "306A95F90E98A1DDF4BF5BE010CB213B169E8F72B05A8D7828F3512C1143908B",
+    "predecessor_builder_sha256": "FF7ADFDF6A6A1566A76286977042738E564C0B86CC8F3ADC1F86C33876E583E7",
+    "predecessor_pk_candidate_packed_sha256": "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628",
+    "verified_renewal_coordinate_sha256": "37B23A707D5049924CF7585A9144C18FDB61B172ABE858ABB5224076F44BB45E"
+  },
+  "guards": {
+    "report_payload_sha256": "A98C4C7607B213654D5FD4675CF15D10282CFA6AF7F847DE5D3CE9085AB17887"
+  },
+  "method": "reversed_vm_pk_bound_terminal_caller_full_closure_analysis",
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "result": {
+    "decision_delta_rows": 313,
+    "existing_verified_base_evidence_renewal_rows": 0,
+    "existing_verified_pk_evidence_renewal_rows": 120,
+    "ledger_backed_override_coordinates": 257,
+    "literal_only_override_coordinates": 4,
+    "pending_rows_after": 8600,
+    "private_decision_delta_sha256": "5AD71717E0C92EA895C8589678D72ED665096B9D9A655CE9739301C11E230CBB",
+    "private_evidence_rows": 313,
+    "private_evidence_sha256": "7B26CF5464079A3AE6CCC8B2321DBFBE1F74F97A4293E6A45B887BB0CD66A089",
+    "rejected_pending_rows": 280,
+    "runtime_promotion_roots": 23,
+    "runtime_promotion_rows": 41,
+    "translation_body_copied_to_evidence_overlay": false,
+    "translation_override_coordinates": 261
+  },
+  "schema": "nobu16.kr.pk-bound-terminal-caller-full-closure-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

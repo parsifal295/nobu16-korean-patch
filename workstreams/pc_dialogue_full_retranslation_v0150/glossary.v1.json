@@ -1,0 +1,2858 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-full-retranslation-glossary.v1",
+  "release_target": "0.15.0",
+  "status": "active_grows_during_review",
+  "entries": [
+    {
+      "source_term": "姫",
+      "default_ko": "공주",
+      "context_rules": [
+        "system_role_or_status_label: 공주",
+        "retainer_addressing_a_young_noblewoman: 아씨 may be used when the scene supports it"
+      ]
+    },
+    {
+      "source_term": "縁組",
+      "default_ko": "결연",
+      "context_rules": [
+        "use 결연 in system prose for arranging a kinship or marriage bond",
+        "do not use the opaque literal reading 연조"
+      ]
+    },
+    {
+      "source_term": "奥方",
+      "default_ko": "부인",
+      "context_rules": [
+        "use 정실 only when legal wife status is the point"
+      ]
+    },
+    {
+      "source_term": "息女",
+      "default_ko": "따님",
+      "context_rules": [
+        "use 딸 in neutral narration when honorific distance is absent"
+      ]
+    },
+    {
+      "source_term": "元服",
+      "default_ko": "원복",
+      "context_rules": [
+        "do not flatten a deliberate 元服/髪結い contrast when both occur"
+      ]
+    },
+    {
+      "source_term": "髪結いの儀",
+      "default_ko": "성인식",
+      "context_rules": [
+        "use descriptive 머리 올리는 의식 only when the ritual itself is being explained"
+      ]
+    },
+    {
+      "source_term": "殿",
+      "default_ko": "주군",
+      "context_rules": [
+        "direct name suffix: 님",
+        "do not use 전하 unless the actual title and addressee justify it"
+      ]
+    },
+    {
+      "source_term": "国衆",
+      "default_ko": "국인중",
+      "context_rules": [
+        "keep project-wide established terminology",
+        "use for the game faction category based on medieval local landholding warrior lords",
+        "do not flatten it to generic 호족"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9B%BD%E8%A1%86-55714"
+    },
+    {
+      "source_term": "城代",
+      "default_ko": "성대",
+      "context_rules": [
+        "keep project-wide established terminology",
+        "use it for the retainer who administers or guards a castle on the castle lord's behalf; keep it distinct from 城主=성주"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9F%8E%E4%BB%A3-79488"
+    },
+    {
+      "source_term": "幕府",
+      "default_ko": "막부",
+      "context_rules": [
+        "do not expand to 막부 정권 unless the political system itself is being explained"
+      ]
+    },
+    {
+      "source_term": "朝廷",
+      "default_ko": "조정",
+      "context_rules": [
+        "use 조정 consistently for the imperial court as an institution"
+      ]
+    },
+    {
+      "source_term": "手切れ",
+      "default_ko": "단교",
+      "context_rules": [
+        "use 단교 for the diplomatic act or status",
+        "a speaker may say 관계를 끊다 only when colloquial voice is more important than the status label",
+        "do not use 절연 for routine inter-faction diplomacy"
+      ]
+    },
+    {
+      "source_term": "従属",
+      "default_ko": "종속",
+      "context_rules": [
+        "use 종속 for the diplomatic relation and system status",
+        "use 굴복하다 or 복종하다 only when the sentence foregrounds submission rather than the relation label"
+      ]
+    },
+    {
+      "source_term": "取次",
+      "default_ko": "중개자",
+      "context_rules": [
+        "use 중개자 for the officer maintaining a diplomatic or court connection",
+        "do not transliterate the Japanese administrative term as 취차"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%8F%96%E6%AC%A1-183015"
+    },
+    {
+      "source_term": "普請",
+      "default_ko": "토목",
+      "context_rules": [
+        "use 토목 for the policy-department label alongside 권농, 상공, 문화, 치안",
+        "use 건설, 축조, or 보수 공사 according to the object when the sentence describes an actual project",
+        "do not use 부역 unless the source specifically foregrounds compulsory labor rather than the works"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%99%AE%E8%AB%8B-124735"
+    },
+    {
+      "source_term": "役職",
+      "default_ko": "역직",
+      "context_rules": [
+        "use 역직 for diplomatic or institutional positions granted by a house or the shogunate",
+        "keep it distinct from 官職"
+      ]
+    },
+    {
+      "source_term": "官職",
+      "default_ko": "관직",
+      "context_rules": [
+        "use 관직 for court office and rank appointment context",
+        "keep it distinct from 役職"
+      ]
+    },
+    {
+      "source_term": "征夷大将軍",
+      "default_ko": "정이대장군",
+      "context_rules": [
+        "retain the historical office title; do not shorten to 장군 when the office is the condition"
+      ]
+    },
+    {
+      "source_term": "公方",
+      "default_ko": "쇼군",
+      "context_rules": [
+        "use 쇼군 when Sengoku dialogue clearly denotes the Ashikaga military ruler",
+        "re-evaluate regional compounds such as 鎌倉公方 instead of applying this default mechanically"
+      ],
+      "evidence_url": "https://www.rekihaku.ac.jp/education_research/gallery/webgallery/rakutyuu/theme/house09.html"
+    },
+    {
+      "source_term": "一向宗",
+      "default_ko": "일향종",
+      "context_rules": [
+        "keep the established msggame system-term reading",
+        "use 잇코슈 only when a separately reviewed scene deliberately requires the Japanese phonetic form"
+      ]
+    },
+    {
+      "source_term": "一揆",
+      "default_ko": "잇키",
+      "context_rules": [
+        "use 잇키 for the historical collective and uprising category in Sengoku-period system events",
+        "do not flatten it to 농민 반란 when the actor type is not specified because the category also covered warrior and religious leagues"
+      ],
+      "evidence_url": "https://contents.history.go.kr/mobile/nh/view.do?levelId=nh_029_0020_0010_0020"
+    },
+    {
+      "source_term": "宗主",
+      "default_ko": "종주",
+      "context_rules": [
+        "preserve the religious or organizational headship meaning"
+      ]
+    },
+    {
+      "source_term": "当家",
+      "default_ko": "우리 가문",
+      "context_rules": [
+        "use 우리 가문 in dialogue and system prose unless a compact fixed label requires 가문",
+        "avoid the literal 당가 in ordinary Korean prose"
+      ]
+    },
+    {
+      "source_term": "方針",
+      "default_ko": "방침",
+      "context_rules": [
+        "use 방침 for a newly announced operational or house policy",
+        "do not collapse it into 지침 when the same scene distinguishes 方針 from 指針"
+      ]
+    },
+    {
+      "source_term": "指針",
+      "default_ko": "지침",
+      "context_rules": [
+        "use 지침 for the guiding direction established by a policy decision",
+        "preserve the 方針=방침 and 指針=지침 distinction within the same scene"
+      ]
+    },
+    {
+      "source_term": "代替わり",
+      "default_ko": "당주 교체",
+      "context_rules": [
+        "use 당주가 바뀌다 in retainer dialogue about succession",
+        "use 대물림 only when the hereditary process rather than the new ruler is foregrounded"
+      ]
+    },
+    {
+      "source_term": "家督",
+      "default_ko": "가독",
+      "context_rules": [
+        "retain 가독 when Japanese family headship or its succession is foregrounded",
+        "use 가독을 잇다 or 가독을 물려주다 instead of treating it as a physical possession"
+      ]
+    },
+    {
+      "source_term": "隠居",
+      "default_ko": "은거",
+      "context_rules": [
+        "retain 은거 for formal retirement from family or domain headship",
+        "do not flatten it to ordinary seclusion when succession is the gameplay context"
+      ]
+    },
+    {
+      "source_term": "信賞必罰",
+      "default_ko": "신상필벌",
+      "context_rules": [
+        "retain the established four-character governance principle in reward and punishment dialogue"
+      ]
+    },
+    {
+      "source_term": "獅子身中の虫",
+      "default_ko": "사자신중충",
+      "context_rules": [
+        "retain the attested Buddhist-derived expression when a learned speaker deliberately uses the metaphor",
+        "use 내부의 적 only when surrounding prose requires an immediate semantic explanation"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%8D%85%E5%AD%90%E8%BA%AB%E4%B8%AD%E3%81%AE%E8%99%AB-518980"
+    },
+    {
+      "source_term": "金子",
+      "default_ko": "돈",
+      "context_rules": [
+        "use 돈 or 금전 according to the speaker and UI register",
+        "do not use the opaque literal reading 금자"
+      ]
+    },
+    {
+      "source_term": "兵糧",
+      "default_ko": "병량",
+      "context_rules": [
+        "retain 병량 as the established military-provisions system term",
+        "use 쌀 or 식량 only when the speaker deliberately uses a non-system everyday expression"
+      ]
+    },
+    {
+      "source_term": "異動",
+      "default_ko": "이동",
+      "context_rules": [
+        "use 인사이동 when officer reassignment as a personnel action is foregrounded",
+        "use 이동 in dialogue focused on the destination or the act of moving"
+      ]
+    },
+    {
+      "source_term": "番衆",
+      "default_ko": "수비 병력",
+      "context_rules": [
+        "use 성을 지키는 병력 when the castle-garrison role needs to be explicit"
+      ]
+    },
+    {
+      "source_term": "知行",
+      "default_ko": "영지",
+      "context_rules": [
+        "use 영지 in ordinary retainer dialogue about governing assigned land and people",
+        "use 지행 or 지행권 only when the historical grant system itself is foregrounded"
+      ]
+    },
+    {
+      "source_term": "具申",
+      "default_ko": "건의",
+      "context_rules": [
+        "use 건의 for a retainer proposal formally submitted upward"
+      ]
+    },
+    {
+      "source_term": "進言",
+      "default_ko": "진언",
+      "context_rules": [
+        "retain 진언 when advice is being offered directly to a superior"
+      ]
+    },
+    {
+      "source_term": "献言",
+      "default_ko": "헌언",
+      "context_rules": [
+        "retain 헌언 in period-flavored dialogue where the offered counsel is foregrounded"
+      ]
+    },
+    {
+      "source_term": "献策",
+      "default_ko": "헌책",
+      "context_rules": [
+        "retain 헌책 when the speaker explicitly offers a plan or stratagem"
+      ]
+    },
+    {
+      "source_term": "祝言",
+      "default_ko": "혼례",
+      "context_rules": [
+        "use 혼례를 올리다 for the marriage ceremony in congratulatory dialogue"
+      ]
+    },
+    {
+      "source_term": "評定衆",
+      "default_ko": "평정중",
+      "context_rules": [
+        "retain 평정중 as the council-member group label",
+        "do not expand it to a modern committee unless explanatory prose requires clarification"
+      ]
+    },
+    {
+      "source_term": "連歌",
+      "default_ko": "렌가",
+      "context_rules": [
+        "retain the linked-verse form as a phonetic historical proper term"
+      ]
+    },
+    {
+      "source_term": "将棋",
+      "default_ko": "쇼기",
+      "context_rules": [
+        "use 쇼기 for the Japanese board game",
+        "do not substitute Korean 장기 in historical character dialogue"
+      ]
+    },
+    {
+      "source_term": "犬馬の労",
+      "default_ko": "견마지로",
+      "context_rules": [
+        "retain the established humble service idiom in period-flavored retainer dialogue"
+      ]
+    },
+    {
+      "source_term": "魚心あれば水心",
+      "default_ko": "가는 정이 있어야 오는 정이 있다",
+      "context_rules": [
+        "use the natural Korean reciprocal-goodwill proverb instead of translating fish and water literally",
+        "preserve the outgoing-then-returning order of goodwill"
+      ]
+    },
+    {
+      "source_term": "史実",
+      "default_ko": "사실",
+      "context_rules": [
+        "use 사실 for compact game-setting labels and 사실에 따르다 in their explanations",
+        "use 역사적 사실 in prose when 사실 alone could be misunderstood"
+      ]
+    },
+    {
+      "source_term": "調略",
+      "default_ko": "조략",
+      "context_rules": [
+        "retain 조략 as the established menu-category label",
+        "use 공작 in explanatory prose describing operations against another force"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%AA%BF%E7%95%A5-569172"
+    },
+    {
+      "source_term": "天下布武",
+      "default_ko": "천하포무",
+      "context_rules": [
+        "retain the established historical slogan as one lexical item",
+        "a verb such as 내걸다 or 펼치다 may follow when the Japanese sentence predicates 布く"
+      ],
+      "evidence_url": "https://www.city.gifu.lg.jp/kankoubunka/bunkazai/1019997/1020076.html"
+    },
+    {
+      "source_term": "禄寿応穏",
+      "default_ko": "녹수응온",
+      "context_rules": [
+        "retain the four-character Hojo tiger-seal motto",
+        "do not paraphrase away the motto when the seal or house tradition is foregrounded"
+      ],
+      "evidence_url": "https://www.city.odawara.kanagawa.jp/kanko/hojo/p09347.html"
+    },
+    {
+      "source_term": "鉄砲",
+      "default_ko": "철포",
+      "context_rules": [
+        "use 조총 only in explanatory prose where the weapon type must be clarified",
+        "keep 기마 철포대 for 騎馬鉄砲隊"
+      ]
+    },
+    {
+      "source_term": "切支丹",
+      "default_ko": "기리시탄",
+      "context_rules": [
+        "retain the period-specific term in historical dialogue",
+        "use 그리스도교 신자 only in modern explanatory prose"
+      ]
+    },
+    {
+      "source_term": "夜叉美濃",
+      "default_ko": "야샤미노",
+      "context_rules": [
+        "retain the attested sobriquet of Hara Toratane as a phonetic proper name",
+        "do not silently substitute the separate sobriquet 鬼美濃"
+      ],
+      "evidence_url": "https://rekishikaido.php.co.jp/detail/4716"
+    },
+    {
+      "source_term": "鬼美濃",
+      "default_ko": "오니미노",
+      "context_rules": [
+        "retain the attested sobriquet as a phonetic proper name",
+        "do not translate it generically as 귀신 미노 or conflate it with 夜叉美濃"
+      ],
+      "evidence_url": "https://www.city.kofu.yamanashi.jp/mobile/kanko/kanko/takeda24/hara-m.html"
+    },
+    {
+      "source_term": "瓶割り",
+      "default_ko": "가메와리",
+      "context_rules": [
+        "retain the kamewari reading when the term is used as Shibata Katsuie's sobriquet",
+        "reserve a literal explanation such as 병을 깨다 for explanatory prose"
+      ],
+      "evidence_url": "https://www.arc.ritsumei.ac.jp/lib/vm/2018taikouki/2018/06/b2-03.html"
+    },
+    {
+      "source_term": "西国無双",
+      "default_ko": "서국무쌍",
+      "context_rules": [
+        "retain the Sino-Korean historical epithet",
+        "do not expand the dialogue with an unverified speaker name"
+      ],
+      "evidence_url": "https://www.city.yanagawa.fukuoka.jp/library/download/02kanko/chiikiokositai/yanagawachiikiokoshi_yururitabi01.pdf"
+    },
+    {
+      "source_term": "七難八苦",
+      "default_ko": "칠난팔고",
+      "context_rules": [
+        "retain the four-character Buddhist expression in the famous prayer line",
+        "describe its association with Yamanaka Shikanosuke as a tradition rather than a proven verbatim contemporary record"
+      ],
+      "evidence_url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000011880&page=ref_view"
+    },
+    {
+      "source_term": "捨て奸",
+      "default_ko": "스테가마리",
+      "context_rules": [
+        "retain the Shimazu rearguard tactic as a phonetic historical term",
+        "put the sacrificial-rearguard explanation in review prose rather than inserting it into the dialogue"
+      ],
+      "evidence_url": "https://www.kagoshima-kankou.com/feature/shimadu2019/introduction3"
+    },
+    {
+      "source_term": "一番槍",
+      "default_ko": "일번창",
+      "context_rules": [
+        "retain the established project term for the first spear or first combat distinction",
+        "use 선봉 only when the surrounding source independently denotes the vanguard rather than this distinction"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%80%E7%95%AA%E6%A7%8D-433621"
+    },
+    {
+      "source_term": "釣り野伏",
+      "default_ko": "쓰리노부세",
+      "context_rules": [
+        "retain the Shimazu tactic as a phonetic historical proper term",
+        "put the lure-and-ambush explanation in review prose rather than expanding the dialogue"
+      ],
+      "evidence_url": "https://www.kagoshima-kankou.com/feature/shimadu2019/introduction2"
+    },
+    {
+      "source_term": "鬼島津",
+      "default_ko": "오니시마즈",
+      "context_rules": [
+        "retain Shimazu Yoshihiro's sobriquet as a phonetic historical proper term",
+        "keep it consistent with the project's 오니미노, 오니소고, and other 鬼 sobriquets"
+      ],
+      "evidence_url": "https://www.city.hioki.kagoshima.jp/documents/776/5989.pdf"
+    },
+    {
+      "source_term": "九州探題",
+      "default_ko": "규슈 단다이",
+      "context_rules": [
+        "retain the Japanese Muromachi-period office as a phonetic institutional term",
+        "do not flatten it to a generic regional commander when the office title is foregrounded"
+      ],
+      "evidence_url": "https://www.city.kikuchi.lg.jp/article/view/800/12012.html"
+    },
+    {
+      "source_term": "三職",
+      "default_ko": "삼직",
+      "context_rules": [
+        "use 삼직 for the game's collective label covering 관백, 태정대신, and 정이대장군",
+        "keep the three individual office names unchanged in choices and confirmation text"
+      ]
+    },
+    {
+      "source_term": "関白",
+      "default_ko": "관백",
+      "context_rules": [
+        "retain the historical court office title in dialogue, choices, and ending text",
+        "do not replace it with a generic regent when the office itself is selected"
+      ]
+    },
+    {
+      "source_term": "太政大臣",
+      "default_ko": "태정대신",
+      "context_rules": [
+        "retain the historical court office title in dialogue, choices, and ending text",
+        "keep it distinct from other ministerial and military offices"
+      ]
+    },
+    {
+      "source_term": "高城川",
+      "default_ko": "다카조가와",
+      "context_rules": [
+        "retain the historical river name as a Japanese proper name",
+        "do not mix it with the modern river name 오마루가와 or translate 川 as a separate 강 suffix"
+      ],
+      "evidence_url": "https://www.qsr.mlit.go.jp/miyazaki/site_files/file/omaru_keikaku/pdf/03/03_4.pdf"
+    },
+    {
+      "source_term": "奥羽",
+      "default_ko": "오우",
+      "context_rules": [
+        "retain the historical regional name formed from Mutsu and Dewa",
+        "do not silently replace it with the modern broader label 도호쿠"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%A5%A5%E7%BE%BD-448727"
+    },
+    {
+      "source_term": "坂東",
+      "default_ko": "반도",
+      "context_rules": [
+        "retain the historical regional name by its Japanese reading",
+        "keep it distinct from the common Korean noun 반도 and from the separate game label 간토"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9D%82%E6%9D%B1-118455"
+    },
+    {
+      "source_term": "関東",
+      "default_ko": "간토",
+      "context_rules": [
+        "use the established Japanese regional name",
+        "keep it distinct from the historical label 반도 when both occur"
+      ],
+      "evidence_url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/tiikimei.html"
+    },
+    {
+      "source_term": "北陸",
+      "default_ko": "호쿠리쿠",
+      "context_rules": [
+        "use the established Japanese regional name in ending and system text"
+      ],
+      "evidence_url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/tiikimei.html"
+    },
+    {
+      "source_term": "甲信",
+      "default_ko": "고신",
+      "context_rules": [
+        "retain the regional compound for Kai and Shinano",
+        "do not expand it to the larger modern meteorological region when the source says only 甲信"
+      ],
+      "evidence_url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/tiikimei.html"
+    },
+    {
+      "source_term": "大一大万大吉",
+      "default_ko": "대일대만대길",
+      "context_rules": [
+        "retain the emblematic phrase without adding a disputed interpretation",
+        "use 기치 or 깃발 only for surrounding 旗印 context"
+      ]
+    },
+    {
+      "source_term": "天然理心流",
+      "default_ko": "덴넨리신류",
+      "context_rules": [
+        "retain the sword-school name as a proper noun",
+        "describe it as 검술 only in surrounding explanatory prose"
+      ],
+      "evidence_url": "https://www.city.hino.lg.jp/shisei/keywords/1014655/1014762.html"
+    },
+    {
+      "source_term": "蜻蛉切",
+      "default_ko": "돈보키리",
+      "context_rules": [
+        "retain Honda Tadakatsu's named spear as a phonetic proper name",
+        "do not flatten the named weapon to a generic spear"
+      ],
+      "evidence_url": "https://www.city.okazaki.lg.jp/shiseidayori/shiseiback30_d/fil/20180601.pdf"
+    },
+    {
+      "source_term": "独眼竜",
+      "default_ko": "독안룡",
+      "context_rules": [
+        "retain Date Masamune's sobriquet",
+        "do not expand it into a factual statement about portraiture or appearance"
+      ],
+      "evidence_url": "https://www.city.sendai.jp/shiminkoho/shise/koho/koho/shisedayori/2017-04/date.html"
+    },
+    {
+      "source_term": "武者震い",
+      "default_ko": "무사로서의 흥분으로 떨리다",
+      "context_rules": [
+        "in battle dialogue treat it as excited anticipation rather than fear",
+        "rewrite naturally for the speaker instead of forcing a fixed noun phrase"
+      ]
+    },
+    {
+      "source_term": "赤備え",
+      "default_ko": "붉은 갑옷 군단",
+      "context_rules": [
+        "use the descriptive Korean form in ordinary dialogue",
+        "use 아카조나에 only when the Japanese formation name itself is foregrounded"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%B5%A4%E5%82%99-1260683"
+    },
+    {
+      "source_term": "鬼若子",
+      "default_ko": "오니와코",
+      "context_rules": [
+        "retain the Chosokabe-associated sobriquet as a phonetic proper name",
+        "do not confuse it with the separate childhood epithet 姫若子"
+      ]
+    },
+    {
+      "source_term": "槍の又左",
+      "default_ko": "창의 마타자",
+      "context_rules": [
+        "retain the sobriquet as a proper name in Maeda Toshiie dialogue"
+      ]
+    },
+    {
+      "source_term": "近攻遠交",
+      "default_ko": "원교근공",
+      "context_rules": [
+        "when the dialogue identifies the twenty-third of the Thirty-Six Stratagems, use the canonical stratagem name 遠交近攻 in its established Korean order",
+        "do not mechanically preserve the reversed source word order as 근공원교"
+      ],
+      "evidence_url": "https://www.81.cn/gfbmap/content/2018-06/28/content_209576.htm"
+    },
+    {
+      "source_term": "鎮西",
+      "default_ko": "진제이",
+      "context_rules": [
+        "use the Japanese historical regional reading for Kyushu in regional and institutional prose",
+        "keep context-specific established compounds under separate review instead of mechanically replacing every 鎮西 occurrence"
+      ],
+      "evidence_url": "https://ndlsearch.ndl.go.jp/books/R000000004-I1866668"
+    },
+    {
+      "source_term": "千秋万歳",
+      "default_ko": "천추만세",
+      "context_rules": [
+        "retain the historical auspicious formula when it appears as an independent blessing",
+        "do not add an unstated subject such as 영광 when the source gives only the formula"
+      ],
+      "evidence_url": "https://www.museum.go.kr/MUSEUM/contents/M0502000000.do?relicId=1875&schM=view&searchId=search"
+    },
+    {
+      "source_term": "空前絶後",
+      "default_ko": "전무후무",
+      "context_rules": [
+        "use the natural Korean four-character equivalent in achievement and ending prose"
+      ]
+    },
+    {
+      "source_term": "年貢",
+      "default_ko": "연공",
+      "context_rules": [
+        "retain the historical levy term in Sengoku fiscal explanations",
+        "do not flatten it to a generic 세금 when it is contrasted with other levies"
+      ],
+      "evidence_url": "https://www.nta.go.jp/about/organization/ntc/sozei/shiryou/library/01.htm"
+    },
+    {
+      "source_term": "知行地",
+      "default_ko": "지행지",
+      "context_rules": [
+        "retain the historical landholding term in vassalage and domain administration prose"
+      ],
+      "evidence_url": "https://online.bunka.go.jp/heritages/detail/551915"
+    },
+    {
+      "source_term": "段銭",
+      "default_ko": "단전",
+      "context_rules": [
+        "retain the historical land-assessment levy term",
+        "keep it distinct from 棟別銭 and 関銭 when the source enumerates them"
+      ],
+      "evidence_url": "https://www.ioc.u-tokyo.ac.jp/~5jimu/reports/PDF/Pf_sakurai2.pdf"
+    },
+    {
+      "source_term": "棟別銭",
+      "default_ko": "동별전",
+      "context_rules": [
+        "retain the historical house-based levy term",
+        "keep it distinct from 段銭 and 関銭 when the source enumerates them"
+      ],
+      "evidence_url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000305874&page=ref_view"
+    },
+    {
+      "source_term": "関銭",
+      "default_ko": "관전",
+      "context_rules": [
+        "retain the historical checkpoint or passage levy term",
+        "keep it distinct from 段銭 and 棟別銭 when the source enumerates them"
+      ],
+      "evidence_url": "https://jpsearch.go.jp/gallery/ndl-ZNnp6ogBEkuopZ"
+    },
+    {
+      "source_term": "所領安堵",
+      "default_ko": "소령 안도",
+      "context_rules": [
+        "retain the historical confirmation of a vassal's holdings",
+        "do not reduce it to a generic promise of safety"
+      ],
+      "evidence_url": "https://online.bunka.go.jp/heritages/detail/551915"
+    },
+    {
+      "source_term": "軍役",
+      "default_ko": "군역",
+      "context_rules": [
+        "use the historical military-service obligation term when retainers must furnish troops, weapons, or provisions"
+      ],
+      "evidence_url": "https://khirin.rekihaku.ac.jp/pid/nmjh_collection/H-1506.html"
+    },
+    {
+      "source_term": "戦国大名",
+      "default_ko": "전국 다이묘",
+      "context_rules": [
+        "retain the established Japanese historical category",
+        "do not translate it as a generic 전국시대 영주 when the category itself is being explained"
+      ]
+    },
+    {
+      "source_term": "国人",
+      "default_ko": "국인",
+      "context_rules": [
+        "use 국인 for the historical local warrior-landholder category",
+        "keep it distinct from the game faction category 国衆=국인중",
+        "do not flatten either term to 호족"
+      ],
+      "evidence_url": "https://ndlsearch.ndl.go.jp/books/R100000002-I029339630"
+    },
+    {
+      "source_term": "組頭",
+      "default_ko": "조두",
+      "context_rules": [
+        "use the established game rank label",
+        "keep the six-rank sequence 조두, 아시가루 대장, 사무라이 대장, 부장, 가로, 숙로"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%B5%84%E9%A0%AD-56027"
+    },
+    {
+      "source_term": "足軽大将",
+      "default_ko": "아시가루 대장",
+      "context_rules": [
+        "use the established game rank label",
+        "do not join the words as 아시가루대장 in prose"
+      ]
+    },
+    {
+      "source_term": "侍大将",
+      "default_ko": "사무라이 대장",
+      "context_rules": [
+        "use the established game rank label"
+      ]
+    },
+    {
+      "source_term": "部将",
+      "default_ko": "부장",
+      "context_rules": [
+        "use the established game rank label"
+      ]
+    },
+    {
+      "source_term": "家老",
+      "default_ko": "가로",
+      "context_rules": [
+        "use the established game rank label",
+        "do not replace it with the modern household noun 가신"
+      ]
+    },
+    {
+      "source_term": "宿老",
+      "default_ko": "숙로",
+      "context_rules": [
+        "use the established game rank label"
+      ]
+    },
+    {
+      "source_term": "勲功",
+      "default_ko": "훈공",
+      "context_rules": [
+        "use the established merit term in rank and promotion explanations"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%8B%B2%E5%8A%9F-487655"
+    },
+    {
+      "source_term": "代官",
+      "default_ko": "대관",
+      "context_rules": [
+        "use the historical or game office label",
+        "keep it distinct from 郡=군 and 知行地=지행지 in domain-administration prose"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%BB%A3%E5%AE%98-90927"
+    },
+    {
+      "source_term": "特性",
+      "default_ko": "특성",
+      "context_rules": [
+        "use the established game system term in ability explanations",
+        "preserve surrounding runtime officer-name and trait-name token boundaries"
+      ]
+    },
+    {
+      "source_term": "小姓",
+      "default_ko": "고쇼",
+      "context_rules": [
+        "use the project-established historical attendant label",
+        "do not alternate with 시동 inside the same tutorial or role-label sequence"
+      ]
+    },
+    {
+      "source_term": "本拠",
+      "default_ko": "본거지",
+      "context_rules": [
+        "use the established game UI term",
+        "avoid the clipped form 본거 in player-facing prose"
+      ]
+    },
+    {
+      "source_term": "城下施設",
+      "default_ko": "성하 시설",
+      "context_rules": [
+        "use the established game UI term for facilities attached to a castle"
+      ]
+    },
+    {
+      "source_term": "攻城戦",
+      "default_ko": "공성전",
+      "context_rules": [
+        "retain the explicit siege-battle term",
+        "do not flatten it to a generic 성 공략 when the source distinguishes 攻城戦 from 城攻め"
+      ]
+    },
+    {
+      "source_term": "労力",
+      "default_ko": "노동력",
+      "context_rules": [
+        "use 노동력 when the text refers to the named game resource",
+        "use 노력 only for ordinary human effort outside the resource system"
+      ]
+    },
+    {
+      "source_term": "領土",
+      "default_ko": "영토",
+      "context_rules": [
+        "use 영토 for the territorial extent of a house or polity",
+        "keep it distinct from 領地=영지 and 土地=토지"
+      ]
+    },
+    {
+      "source_term": "領地",
+      "default_ko": "영지",
+      "context_rules": [
+        "use 영지 for land held or administered by a lord or retainer",
+        "keep it distinct from 領土=영토 and the historical grant term 知行地=지행지"
+      ]
+    },
+    {
+      "source_term": "土地",
+      "default_ko": "토지",
+      "context_rules": [
+        "use 토지 for land as a physical or taxable area",
+        "do not replace it with 영토 unless political territory is foregrounded"
+      ]
+    },
+    {
+      "source_term": "郡",
+      "default_ko": "군",
+      "context_rules": [
+        "use the established game administrative-unit term",
+        "do not confuse it with 군대 or a generic 영지 when the unit itself is named"
+      ]
+    },
+    {
+      "source_term": "自勢力",
+      "default_ko": "자세력",
+      "context_rules": [
+        "use the established compact game UI term",
+        "expand to 자신의 세력 only when ordinary prose requires it"
+      ]
+    },
+    {
+      "source_term": "論功行賞",
+      "default_ko": "논공행상",
+      "context_rules": [
+        "use the established game UI and historical merit-review term",
+        "preserve the process of assessing merit and granting rewards rather than reducing it to a generic meeting"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%AB%96%E5%8A%9F%E8%A1%8C%E8%B3%9E-664062"
+    },
+    {
+      "source_term": "時間進行",
+      "default_ko": "시간 진행",
+      "context_rules": [
+        "use the established game button and tutorial term",
+        "preserve runtime button-glyph token boundaries in menu guidance"
+      ]
+    },
+    {
+      "source_term": "制度改新",
+      "default_ko": "제도 개신",
+      "context_rules": [
+        "use the established policy and tutorial label",
+        "do not normalize the named game term to 제도 개혁"
+      ]
+    },
+    {
+      "source_term": "小競り合い",
+      "default_ko": "소규모 접전",
+      "context_rules": [
+        "use the established battle-system label",
+        "keep it distinct from a full 合戦=합전"
+      ]
+    },
+    {
+      "source_term": "要所",
+      "default_ko": "요충지",
+      "context_rules": [
+        "use the established tactical-object label",
+        "keep it distinct from 要地=요지 and 急所=급소"
+      ]
+    },
+    {
+      "source_term": "特殊要所",
+      "default_ko": "특수 요충지",
+      "context_rules": [
+        "use the established tactical-object label",
+        "preserve the distinction from ordinary 要所=요충지"
+      ]
+    },
+    {
+      "source_term": "総士気",
+      "default_ko": "총사기",
+      "context_rules": [
+        "use the compact established battle UI term",
+        "do not expand it to 전체 사기 in named win-condition prose"
+      ]
+    },
+    {
+      "source_term": "郡代",
+      "default_ko": "군다이",
+      "context_rules": [
+        "use the project-established historical office label",
+        "keep it distinct from 城代=성대 and 代官=대관"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%83%A1%E4%BB%A3-58399"
+    },
+    {
+      "source_term": "腰兵糧",
+      "default_ko": "휴대 군량",
+      "context_rules": [
+        "use the established unit-provisions UI label",
+        "keep it distinct from ordinary 兵糧=병량 prose"
+      ]
+    },
+    {
+      "source_term": "退き口",
+      "default_ko": "퇴각로",
+      "context_rules": [
+        "use the established battle-system exit and objective label",
+        "keep it distinct from ordinary 退路=퇴로"
+      ]
+    },
+    {
+      "source_term": "中継点",
+      "default_ko": "중계점",
+      "context_rules": [
+        "use the established route and movement UI term"
+      ]
+    },
+    {
+      "source_term": "裁量権委譲",
+      "default_ko": "재량권 위양",
+      "context_rules": [
+        "use the established policy and tutorial label",
+        "preserve the institutional delegation sense of 委譲; do not drift to 재량권 이양"
+      ]
+    },
+    {
+      "source_term": "評定",
+      "default_ko": "평정",
+      "context_rules": [
+        "use the established council and command-screen label",
+        "keep it distinct from 評定衆=평정중"
+      ]
+    },
+    {
+      "source_term": "地方統一",
+      "default_ko": "지방 통일",
+      "context_rules": [
+        "use the established campaign-goal label"
+      ]
+    },
+    {
+      "source_term": "外交姿勢",
+      "default_ko": "외교 자세",
+      "context_rules": [
+        "use the established diplomacy-system label"
+      ]
+    },
+    {
+      "source_term": "上位集落",
+      "default_ko": "상위 취락",
+      "context_rules": [
+        "use the established settlement-tier label",
+        "do not flatten it to an ordinary 취락"
+      ]
+    },
+    {
+      "source_term": "楽市楽座",
+      "default_ko": "라쿠이치라쿠자",
+      "context_rules": [
+        "use the canonical public policy and historical-system label",
+        "do not alternate with 낙시낙좌 inside game UI or tutorial prose"
+      ]
+    },
+    {
+      "source_term": "家中役職",
+      "default_ko": "가문 내 역직",
+      "context_rules": [
+        "use the established household-office label",
+        "keep it distinct from 身分=신분 and 職名=직명"
+      ]
+    },
+    {
+      "source_term": "切取許可",
+      "default_ko": "절취 허가",
+      "context_rules": [
+        "use the canonical corps-policy UI label",
+        "do not replace the named command with the descriptive 점유 허가"
+      ]
+    },
+    {
+      "source_term": "位階",
+      "default_ko": "위계",
+      "context_rules": [
+        "use 위계 when the source denotes rank order or grade",
+        "keep it distinct from 官位=관위 and 官職=관직"
+      ]
+    },
+    {
+      "source_term": "官位",
+      "default_ko": "관위",
+      "context_rules": [
+        "use 관위 for the court-rank asset or status",
+        "keep it distinct from 位階=위계 and 官職=관직"
+      ]
+    },
+    {
+      "source_term": "一門武将",
+      "default_ko": "일문 무장",
+      "context_rules": [
+        "use the established kinship-system label",
+        "preserve the historical household-group sense rather than expanding it to a generic 친족 무장"
+      ]
+    },
+    {
+      "source_term": "正室",
+      "default_ko": "정실",
+      "context_rules": [
+        "use 정실 when the legal principal-wife status is explicit",
+        "keep it distinct from 側室=측실 and general 奥方=부인"
+      ]
+    },
+    {
+      "source_term": "側室",
+      "default_ko": "측실",
+      "context_rules": [
+        "use 측실 for the explicitly named historical spouse status",
+        "keep it distinct from 正室=정실"
+      ]
+    },
+    {
+      "source_term": "対包囲力",
+      "default_ko": "대포위",
+      "context_rules": [
+        "use the established castle-stat UI label",
+        "keep it distinct from a generic 包囲耐性=포위 내성 label and ordinary 방어력"
+      ]
+    },
+    {
+      "source_term": "石高",
+      "default_ko": "석고",
+      "context_rules": [
+        "use the established land-yield and castle-stat label",
+        "keep the historical koku-assessment sense distinct from generic 생산력"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%9F%B3%E9%AB%98-64107"
+    },
+    {
+      "source_term": "城下方針",
+      "default_ko": "성하 방침",
+      "context_rules": [
+        "use the established castle-town policy label"
+      ]
+    },
+    {
+      "source_term": "領内諸策",
+      "default_ko": "영내 제책",
+      "context_rules": [
+        "use the established domain-development command label",
+        "do not flatten the named system to generic 영내 정책"
+      ]
+    },
+    {
+      "source_term": "国衆懐柔",
+      "default_ko": "국인중 회유",
+      "context_rules": [
+        "use the established command label",
+        "preserve 国衆=국인중 rather than flattening it to 호족"
+      ]
+    },
+    {
+      "source_term": "国衆取込",
+      "default_ko": "국인중 편입",
+      "context_rules": [
+        "use the established incorporation command label",
+        "preserve 国衆=국인중 rather than flattening it to 호족"
+      ]
+    },
+    {
+      "source_term": "修復",
+      "default_ko": "수복",
+      "context_rules": [
+        "use 수복 for the named castle-repair command",
+        "use ordinary 수리 only when the source is not the command label"
+      ]
+    },
+    {
+      "source_term": "攻略目標",
+      "default_ko": "공략 목표",
+      "context_rules": [
+        "use the established corps and strategy target label"
+      ]
+    },
+    {
+      "source_term": "対包囲",
+      "default_ko": "대포위",
+      "context_rules": [
+        "use the established compact castle ability label",
+        "keep it aligned with 対包囲力 while preserving the shorter source label"
+      ]
+    },
+    {
+      "source_term": "城乗",
+      "default_ko": "성타기",
+      "context_rules": [
+        "use the established named castle-assault trait label",
+        "do not expand the compact UI name into descriptive prose"
+      ]
+    },
+    {
+      "source_term": "髪結い",
+      "default_ko": "머리 올리기",
+      "context_rules": [
+        "use for the explicitly named female coming-of-age ritual",
+        "keep it distinct from 元服=원복"
+      ]
+    },
+    {
+      "source_term": "姫武将",
+      "default_ko": "공주 무장",
+      "context_rules": [
+        "use the established female-officer system label",
+        "keep it distinct from ordinary 姫=공주"
+      ]
+    },
+    {
+      "source_term": "軍評定",
+      "default_ko": "군평정",
+      "context_rules": [
+        "use the established council-event label",
+        "do not append an unverified Japanese-reading parenthetical"
+      ]
+    },
+    {
+      "source_term": "史実武将",
+      "default_ko": "실존 무장",
+      "context_rules": [
+        "use the repeated current PC UI and data label",
+        "keep it distinct from the glossary default 史実=사실 in compact standalone contexts"
+      ]
+    },
+    {
+      "source_term": "相性",
+      "default_ko": "상성",
+      "context_rules": [
+        "use the established officer-affinity system label",
+        "do not alternate with 궁합 in system prose"
+      ]
+    },
+    {
+      "source_term": "体調",
+      "default_ko": "몸 상태",
+      "context_rules": [
+        "use the current PC UI label for an officer's health condition",
+        "do not retain the erroneous 체조 transfer"
+      ]
+    },
+    {
+      "source_term": "威信",
+      "default_ko": "위신",
+      "context_rules": [
+        "use the established faction-prestige system label"
+      ]
+    },
+    {
+      "source_term": "流言",
+      "default_ko": "유언비어",
+      "context_rules": [
+        "use the current PC scheme-command label",
+        "ordinary narrative rumor context may use 소문; do not shorten the named command to 유언"
+      ]
+    },
+    {
+      "source_term": "引抜",
+      "default_ko": "빼내기",
+      "context_rules": [
+        "use the current PC officer-poaching command label",
+        "do not use the literal Sino-Korean 인발"
+      ]
+    },
+    {
+      "source_term": "煽動",
+      "default_ko": "선동",
+      "context_rules": [
+        "use the current PC scheme-command label"
+      ]
+    },
+    {
+      "source_term": "焼討",
+      "default_ko": "방화",
+      "context_rules": [
+        "use the current PC scheme-command label",
+        "keep it distinct from an ordinary battlefield 火攻=화공 context"
+      ]
+    },
+    {
+      "source_term": "貢物",
+      "default_ko": "공물",
+      "context_rules": [
+        "use the established diplomacy and scheme-command label"
+      ]
+    },
+    {
+      "source_term": "転封",
+      "default_ko": "전봉",
+      "context_rules": [
+        "use the established historical relocation and mass-fief-transfer label"
+      ]
+    },
+    {
+      "source_term": "呼寄",
+      "default_ko": "소환",
+      "context_rules": [
+        "use the current PC subcommand label under 転封=전봉",
+        "do not alternate with generic 호출"
+      ]
+    },
+    {
+      "source_term": "荷駄詰所",
+      "default_ko": "치중 집결소",
+      "context_rules": [
+        "use the current PC castle-facility label"
+      ]
+    },
+    {
+      "source_term": "小荷駄隊配備",
+      "default_ko": "치중대 배치",
+      "context_rules": [
+        "use the current PC policy label"
+      ]
+    },
+    {
+      "source_term": "馬牧場",
+      "default_ko": "목마장",
+      "context_rules": [
+        "use the current PC settlement label",
+        "do not alternate with the descriptive 말 목장"
+      ]
+    },
+    {
+      "source_term": "三職推任",
+      "default_ko": "삼직 추임",
+      "context_rules": [
+        "use the established historical ending-condition label",
+        "preserve the nomination-to-one-of-three-offices sense rather than flattening it to generic 관직 추천"
+      ]
+    },
+    {
+      "source_term": "大大名",
+      "default_ko": "대다이묘",
+      "context_rules": [
+        "use the established historical great-daimyo label"
+      ]
+    },
+    {
+      "source_term": "伊忍道",
+      "default_ko": "이닌도",
+      "context_rules": [
+        "use the established named trait reading"
+      ]
+    },
+    {
+      "source_term": "職名",
+      "default_ko": "직명",
+      "context_rules": [
+        "use for the officer's assigned role or position name",
+        "keep it distinct from 身分=신분, 役職=역직, and 官職=관직"
+      ]
+    },
+    {
+      "source_term": "身分",
+      "default_ko": "신분",
+      "context_rules": [
+        "use for the officer's household rank tier",
+        "keep it distinct from 職名=직명 and 勲功=훈공"
+      ]
+    },
+    {
+      "source_term": "母衣衆結成",
+      "default_ko": "호로슈 결성",
+      "context_rules": [
+        "use the established named policy label",
+        "preserve the historical 母衣衆 reading"
+      ]
+    },
+    {
+      "source_term": "敵視",
+      "default_ko": "적대",
+      "context_rules": [
+        "use the current PC diplomacy-attitude label",
+        "do not use the literal 적시"
+      ]
+    },
+    {
+      "source_term": "合戦",
+      "default_ko": "합전",
+      "context_rules": [
+        "use the established current PC tactical-battle label",
+        "keep it distinct from ordinary 戦=전투 and 戦争=전쟁"
+      ]
+    },
+    {
+      "source_term": "威風",
+      "default_ko": "위풍",
+      "context_rules": [
+        "use the established named post-battle influence system label"
+      ]
+    },
+    {
+      "source_term": "出奔",
+      "default_ko": "출분",
+      "context_rules": [
+        "use the established historical and current PC officer-departure label",
+        "do not flatten the named action to generic 도주 or 이탈"
+      ]
+    },
+    {
+      "source_term": "国衆親善",
+      "default_ko": "국인중 친선",
+      "context_rules": [
+        "use the autonomous-domain action label",
+        "preserve 国衆=국인중 rather than 호족"
+      ]
+    },
+    {
+      "source_term": "領地巡察",
+      "default_ko": "영지 순찰",
+      "context_rules": [
+        "use the autonomous-domain action label"
+      ]
+    },
+    {
+      "source_term": "砦",
+      "default_ko": "요새",
+      "context_rules": [
+        "use the current PC settlement and battlefield-object label",
+        "do not alternate with 성채 in this UI context"
+      ]
+    },
+    {
+      "source_term": "一門",
+      "default_ko": "일문",
+      "context_rules": [
+        "use for the daimyo's blood, spouse-line, and adoptive-father kin group",
+        "keep the established current PC historical label rather than flattening it to generic 친족"
+      ]
+    },
+    {
+      "source_term": "カノン砲",
+      "default_ko": "카논포",
+      "context_rules": [
+        "use the established early-modern cannon transliteration in historical retainer dialogue"
+      ]
+    },
+    {
+      "source_term": "伴天連",
+      "default_ko": "바테렌",
+      "context_rules": [
+        "preserve the period Japanese name for a Christian missionary in historical retainer dialogue",
+        "use generic 선교사 only when the period term itself is not foregrounded"
+      ],
+      "evidence_url": "https://online.bunka.go.jp/db/heritages/detail/450940"
+    },
+    {
+      "source_term": "貴種",
+      "default_ko": "고귀한 혈통",
+      "context_rules": [
+        "use a natural descriptive phrase before a dynamic personal name",
+        "avoid the opaque Sino-Korean 귀종 in player-facing dialogue"
+      ]
+    },
+    {
+      "source_term": "牢人",
+      "default_ko": "낭인",
+      "context_rules": [
+        "use the established historical label for an unattached warrior",
+        "do not alternate with 재야 무장 when the source explicitly says 牢人"
+      ]
+    },
+    {
+      "source_term": "仕官",
+      "default_ko": "사관",
+      "context_rules": [
+        "use for entering a lord's service",
+        "keep it distinct from 登用=등용, which is the lord's act of recruiting"
+      ]
+    },
+    {
+      "source_term": "登用",
+      "default_ko": "등용",
+      "context_rules": [
+        "use for a lord recruiting an officer into service",
+        "keep it distinct from the officer-side 仕官=사관"
+      ]
+    },
+    {
+      "source_term": "城下",
+      "default_ko": "성하",
+      "context_rules": [
+        "use the established current PC label for the castle town and its immediate district",
+        "do not expand it to 성 아래 in historical dialogue"
+      ]
+    },
+    {
+      "source_term": "引見",
+      "default_ko": "인견",
+      "context_rules": [
+        "use the historical audience term when a lord receives a prospective retainer",
+        "do not flatten it to generic 접견 in this recruitment context"
+      ]
+    },
+    {
+      "source_term": "帰順",
+      "default_ko": "귀순",
+      "context_rules": [
+        "use when a person or force submits and comes over to the speaker's side",
+        "preserve the destination or recipient when a dynamic house name follows"
+      ]
+    },
+    {
+      "source_term": "覇業",
+      "default_ko": "패업",
+      "context_rules": [
+        "use in formal retainer pledges for the lord's work of attaining hegemony"
+      ]
+    },
+    {
+      "source_term": "末席を汚す",
+      "default_ko": "말석에 들다",
+      "context_rules": [
+        "translate the self-effacing idiom naturally in retainer self-introductions",
+        "do not render 汚す literally as 더럽히다"
+      ]
+    },
+    {
+      "source_term": "勧誘",
+      "default_ko": "권유",
+      "context_rules": [
+        "use for asking an officer to enter another house's service",
+        "keep it distinct from 登用=등용 and the command label 引抜=빼내기"
+      ]
+    },
+    {
+      "source_term": "寝返る",
+      "default_ko": "귀순하다",
+      "context_rules": [
+        "use 귀순하다 when the destination is the speaker's or another explicitly named house",
+        "from the abandoned house's viewpoint, preserve the betrayal with 우리 가문을 저버리고 before the destination"
+      ]
+    },
+    {
+      "source_term": "幕下",
+      "default_ko": "막하",
+      "context_rules": [
+        "use the historical term for being brought under a lord's command",
+        "do not flatten it to generic 부하 in formal retainer dialogue"
+      ]
+    },
+    {
+      "source_term": "英邁",
+      "default_ko": "영명한",
+      "context_rules": [
+        "use a natural historical compliment for an able and discerning lord",
+        "avoid the opaque literal 영매한"
+      ]
+    },
+    {
+      "source_term": "粉骨砕身",
+      "default_ko": "분골쇄신",
+      "context_rules": [
+        "retain the established Sino-Korean idiom in formal retainer pledges",
+        "translate the plainer 身を粉にして naturally as 몸이 부서져라 when the speaker's register differs"
+      ]
+    },
+    {
+      "source_term": "目通り",
+      "default_ko": "알현",
+      "context_rules": [
+        "use for appearing before or being presented to a lord",
+        "render 目通りさせる as 알현시키다 when the dynamic officer is the object"
+      ]
+    },
+    {
+      "source_term": "懐柔",
+      "default_ko": "회유",
+      "context_rules": [
+        "use for improving an autonomous group's disposition with gifts or persuasion",
+        "preserve the staged distinction between 회유, 원군 참여 확대, and final 편입"
+      ]
+    },
+    {
+      "source_term": "心服",
+      "default_ko": "진심으로 따르다",
+      "context_rules": [
+        "use for wholehearted submission or obedience",
+        "do not confuse the verb with the Korean noun 심복"
+      ]
+    },
+    {
+      "source_term": "参陣",
+      "default_ko": "참전하다",
+      "context_rules": [
+        "use 참전하다 in compact system dialogue",
+        "use 전장에 나서다 when a more natural verbal phrase fits the speaker"
+      ]
+    },
+    {
+      "source_term": "援軍",
+      "default_ko": "원군",
+      "context_rules": [
+        "use the established force sent to aid an ally in battle",
+        "keep it distinct from generic 지원 and 増援=증원군"
+      ]
+    },
+    {
+      "source_term": "家中",
+      "default_ko": "가신단",
+      "context_rules": [
+        "use for the collective body of a house's retainers",
+        "do not translate it as household family"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%AE%B6%E4%B8%AD-45092"
+    },
+    {
+      "source_term": "恩を売る",
+      "default_ko": "선심을 써 빚지게 하다",
+      "context_rules": [
+        "preserve the calculated attempt to oblige the recipient",
+        "do not flatten it to a purely benevolent 은혜를 베풀다"
+      ]
+    },
+    {
+      "source_term": "手駒",
+      "default_ko": "패",
+      "context_rules": [
+        "use for an independently acting group treated as a strategic piece",
+        "do not call autonomous 国衆 a 수하 solely because the source says 手駒"
+      ]
+    },
+    {
+      "source_term": "傘下",
+      "default_ko": "휘하",
+      "context_rules": [
+        "use for coming under a house's control or umbrella",
+        "keep it distinct from the completed 国衆取込=국인중 편입 command"
+      ]
+    },
+    {
+      "source_term": "従属度",
+      "default_ko": "종속도",
+      "context_rules": [
+        "use for the numeric or system-level degree of a 国衆 faction's subordination",
+        "keep it distinct from 従属段階=종속 단계 and the diplomatic relation 従属=종속"
+      ]
+    },
+    {
+      "source_term": "従属段階",
+      "default_ko": "종속 단계",
+      "context_rules": [
+        "use the system label with the fixed progression 낮음 → 보통 → 높음 → 최고",
+        "do not alternate 中 between 중간 and 보통 inside the same progression"
+      ]
+    },
+    {
+      "source_term": "出陣",
+      "default_ko": "출진",
+      "context_rules": [
+        "use for becoming available to march or taking the field",
+        "keep it distinct from 参陣=참전하다 when a 国衆 force joins another house's battle"
+      ]
+    },
+    {
+      "source_term": "取り込み／取込",
+      "default_ko": "편입",
+      "context_rules": [
+        "use for the completed incorporation of a 国衆 faction into a house",
+        "preserve the staged distinction from 懐柔=회유 and earlier reinforcement participation"
+      ]
+    },
+    {
+      "source_term": "家臣",
+      "default_ko": "가신",
+      "context_rules": [
+        "use for an individual retainer serving a house",
+        "keep it distinct from the collective 家中 or 家臣団=가신단"
+      ]
+    },
+    {
+      "source_term": "家臣団",
+      "default_ko": "가신단",
+      "context_rules": [
+        "use for the collective body of retainers",
+        "keep individual 家臣 references as 가신"
+      ]
+    },
+    {
+      "source_term": "直参",
+      "default_ko": "직속 가신",
+      "context_rules": [
+        "use for a retainer serving the lord directly",
+        "do not leave it as opaque 직참 in ordinary character dialogue"
+      ]
+    },
+    {
+      "source_term": "配下",
+      "default_ko": "휘하",
+      "context_rules": [
+        "use for being under a house or lord's direct command",
+        "do not imply that the separate 国衆取込 command is already complete unless the context says so"
+      ]
+    },
+    {
+      "source_term": "一蓮托生",
+      "default_ko": "한배를 탄 사이",
+      "context_rules": [
+        "translate the shared-fate idiom naturally in dialogue",
+        "avoid the stilted literal 한배에 운명을 맡긴 사이"
+      ]
+    },
+    {
+      "source_term": "徴兵／徴集",
+      "default_ko": "징병",
+      "context_rules": [
+        "use 징병 for the emergency or large-scale levy action and its system result",
+        "in character dialogue, use the natural 병사를 모으다 when the source describes the act rather than naming the command"
+      ]
+    },
+    {
+      "source_term": "民心",
+      "default_ko": "민심",
+      "context_rules": [
+        "use for popular sentiment lost through an emergency levy",
+        "keep it distinct from the numeric game stat 民忠=민충"
+      ]
+    },
+    {
+      "source_term": "民忠",
+      "default_ko": "민충",
+      "context_rules": [
+        "use the established compact game-stat label",
+        "do not expand it to 백성의 충성도 inside effect UI"
+      ]
+    },
+    {
+      "source_term": "掌握",
+      "default_ko": "장악",
+      "context_rules": [
+        "use for the settlement-control state and its release",
+        "keep it distinct from a house's wider 領土=영토 or 領地=영지"
+      ]
+    },
+    {
+      "source_term": "間者",
+      "default_ko": "간자",
+      "context_rules": [
+        "use the established historical espionage term",
+        "do not alternate with 현대적인 스파이 in Sengoku-period reports"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%96%93%E8%80%85-172144"
+    },
+    {
+      "source_term": "門徒",
+      "default_ko": "문도",
+      "context_rules": [
+        "use for religious adherents rising in an 一揆 context",
+        "do not flatten the actor to generic 백성 when the source identifies 門徒"
+      ]
+    },
+    {
+      "source_term": "苛政",
+      "default_ko": "학정",
+      "context_rules": [
+        "use the concise historical term in dialogue about people suffering under harsh rule",
+        "avoid the explanatory but flatter 가혹한 정치 when the register supports 학정"
+      ]
+    },
+    {
+      "source_term": "決起",
+      "default_ko": "궐기",
+      "context_rules": [
+        "use for adherents or neighboring castles rising in response to an 一揆",
+        "keep the action distinct from the category label 一揆=잇키"
+      ]
+    },
+    {
+      "source_term": "支配率",
+      "default_ko": "지배율",
+      "context_rules": [
+        "use for the numeric territorial-control percentage and its increase UI",
+        "keep it distinct from prose 支配=지배 and 支配力=지배력"
+      ]
+    },
+    {
+      "source_term": "工作",
+      "default_ko": "공작",
+      "context_rules": [
+        "use for covert weakening or sabotage performed before a siege and for its result UI",
+        "do not flatten the command sense to generic 작업 or 세공"
+      ]
+    },
+    {
+      "source_term": "城攻め",
+      "default_ko": "공성",
+      "context_rules": [
+        "use the established compact term for attacking a castle",
+        "keep explicit 攻城戦 as 공성전 and generic 攻略 as 공략"
+      ]
+    },
+    {
+      "source_term": "先鋒",
+      "default_ko": "선봉",
+      "context_rules": [
+        "use for the vanguard person or force",
+        "keep it distinct from 先陣=선봉대 and the first-spear distinction 一番槍"
+      ]
+    },
+    {
+      "source_term": "城壁",
+      "default_ko": "성벽",
+      "context_rules": [
+        "use for the walls of a castle",
+        "keep it distinct from the more general defensive wall 防壁=방벽"
+      ]
+    },
+    {
+      "source_term": "防壁",
+      "default_ko": "방벽",
+      "context_rules": [
+        "use when the source names a defensive wall rather than the castle-wall term 城壁",
+        "do not normalize both terms to 성벽 when the source distinguishes them"
+      ]
+    },
+    {
+      "source_term": "防備",
+      "default_ko": "방비",
+      "context_rules": [
+        "use for a castle or territory's prepared defensive state",
+        "keep it distinct from 防衛=방어 and 守備=수비"
+      ]
+    },
+    {
+      "source_term": "忍び",
+      "default_ko": "시노비",
+      "context_rules": [
+        "use the established project term when the source names covert operatives or their arts",
+        "translate verbal 忍ばせる by context as 잠입시키다 rather than forcing the noun 시노비"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BF%8D%E3%81%AE%E8%80%85-2047130"
+    },
+    {
+      "source_term": "搦手",
+      "default_ko": "성의 뒤편",
+      "context_rules": [
+        "retain the castle-assault sense of a rear or secondary approach",
+        "when the surrounding sabotage context also stresses a weak point, use 뒤쪽의 허점 rather than the overly specific 뒷문"
+      ],
+      "evidence_url": "https://www.kanjipedia.jp/kotoba/0003025900"
+    },
+    {
+      "source_term": "耐久",
+      "default_ko": "내구",
+      "context_rules": [
+        "use the established game-stat label for castle or object durability",
+        "keep it distinct from descriptive 견고함 and from troops 兵力=병력"
+      ]
+    },
+    {
+      "source_term": "吸収",
+      "default_ko": "편입",
+      "context_rules": [
+        "use 편입 when an independent 国衆 is finally incorporated into a house",
+        "natural dialogue may use 우리 가문으로 받아들이다 or 우리의 일부로 삼다; avoid corporate-sounding 흡수"
+      ]
+    },
+    {
+      "source_term": "主筋",
+      "default_ko": "주군 가문",
+      "context_rules": [
+        "use for the lord or the lord's lineage to which the other party has a longstanding subordinate relationship",
+        "do not infer 동맹 가문 or 우호 세력 merely from contextual localization"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%BB%E7%AD%8B-527027"
+    },
+    {
+      "source_term": "軍門に降る",
+      "default_ko": "군문에 항복하다",
+      "context_rules": [
+        "use for surrendering after defeat or submitting to the opposing house",
+        "preserve the historical military register when the line allows it; do not interpret it as ordinary enlistment"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%BB%8D%E9%96%80%E3%81%AB%E9%99%8D%E3%82%8B-487925"
+    },
+    {
+      "source_term": "接収",
+      "default_ko": "접수",
+      "context_rules": [
+        "use for taking control of castles, troops, retainers, money, provisions, or treasures after incorporation",
+        "keep it distinct from 登用=등용 for employing officers"
+      ]
+    },
+    {
+      "source_term": "飼い殺し",
+      "default_ko": "능력을 쓰지 못한 채 붙들어 두다",
+      "context_rules": [
+        "translate the figurative sense of retaining someone without allowing a meaningful role or use of their ability",
+        "do not render the livestock image literally in this vassal-incorporation context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A3%BC%E6%AE%BA%E3%81%97-457347"
+    },
+    {
+      "source_term": "離間工作",
+      "default_ko": "이간 공작",
+      "context_rules": [
+        "use for covertly creating discord between allied houses",
+        "keep 仲違い as contextual 반목 or 사이를 틀어놓다 rather than repeating the command label"
+      ]
+    },
+    {
+      "source_term": "心証",
+      "default_ko": "인상",
+      "context_rules": [
+        "use 인상 for a house's opinion or impression of another house in diplomatic reputation text",
+        "do not use Korean legal 심증 in this relationship context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BF%83%E8%A8%BC-81951"
+    },
+    {
+      "source_term": "手を切る",
+      "default_ko": "단교하다",
+      "context_rules": [
+        "use 단교하다 when allied houses sever diplomatic relations",
+        "do not translate the idiom literally as 손을 끊다"
+      ]
+    },
+    {
+      "source_term": "離間計",
+      "default_ko": "이간 공작",
+      "context_rules": [
+        "use the same command-family term as 離間工作 when the scheme creates discord between two houses",
+        "avoid alternating with 이간계 inside the same diplomacy UI flow"
+      ]
+    },
+    {
+      "source_term": "勝手口",
+      "default_ko": "뒷문",
+      "context_rules": [
+        "use the rear or side entrance sense in castle-assault dialogue",
+        "keep the source's contrast between limited 攻め口 and creating a new 뒷문; do not flatten it to a generic 길"
+      ]
+    },
+    {
+      "source_term": "街道",
+      "default_ko": "가도",
+      "context_rules": [
+        "use for the constructed road linking counties or opening a strategic route",
+        "use ordinary 길 only when the speaker deliberately refers to the road generically"
+      ]
+    },
+    {
+      "source_term": "軍道",
+      "default_ko": "군도",
+      "context_rules": [
+        "use for a deliberately constructed military road",
+        "an explanatory 군용로 may be used only when 군도 would obscure the sentence outside the command context"
+      ]
+    },
+    {
+      "source_term": "交通の要所",
+      "default_ko": "교통의 요지",
+      "context_rules": [
+        "use for a county or location that serves as a strategic transportation hub"
+      ]
+    },
+    {
+      "source_term": "用兵",
+      "default_ko": "병력 운용",
+      "context_rules": [
+        "use 병력 운용 or 용병술 for deploying and maneuvering troops",
+        "avoid bare 용병 where Korean readers could misread it as mercenary troops"
+      ]
+    },
+    {
+      "source_term": "侵攻路",
+      "default_ko": "침공로",
+      "context_rules": [
+        "use for a route by which a target is invaded",
+        "keep it distinct from 進軍路=진군로"
+      ]
+    },
+    {
+      "source_term": "進軍路",
+      "default_ko": "진군로",
+      "context_rules": [
+        "use for a route along which forces advance or march",
+        "keep it distinct from 侵攻路=침공로"
+      ]
+    },
+    {
+      "source_term": "友好度",
+      "default_ko": "우호도",
+      "context_rules": [
+        "use for the numeric diplomacy relationship stat",
+        "keep it distinct from prose 관계 and from 信用=신용"
+      ]
+    },
+    {
+      "source_term": "甘味",
+      "default_ko": "단것",
+      "context_rules": [
+        "use 단것 when characters discuss sweets as gifts",
+        "use 이국 과자 when the line emphasizes the appearance and foreign origin of the confection; do not reduce the object to abstract 단맛"
+      ]
+    },
+    {
+      "source_term": "こんぺいとう",
+      "default_ko": "콘페이토",
+      "context_rules": [
+        "preserve the unfamiliar Nanban confection name and the speaker's hesitation rather than replacing it with modern 별사탕",
+        "the standard written form is 金平糖 and the name derives from Portuguese confeito"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%87%91%E5%B9%B3%E7%B3%96-67583"
+    },
+    {
+      "source_term": "信用",
+      "default_ko": "신용",
+      "context_rules": [
+        "use 신용 for the numeric diplomacy stat",
+        "translate prose 信用できない naturally as 믿을 수 없다"
+      ]
+    },
+    {
+      "source_term": "土竜攻め",
+      "default_ko": "땅굴 공략",
+      "context_rules": [
+        "use for the siege-mining tactic in which specialists tunnel into or beneath a castle's defenses",
+        "do not use the literal 두더지 공격 or alternate with 땅굴 공격 or 갱도 공격 inside this command family"
+      ],
+      "evidence_url": "https://shirobito.jp/article/1272"
+    },
+    {
+      "source_term": "金堀衆",
+      "default_ko": "광부대",
+      "context_rules": [
+        "write 광부대 as one specialist-group name in 土竜攻め dialogue",
+        "preserve the group's mining and civil-engineering expertise rather than reducing it to generic soldiers"
+      ],
+      "evidence_url": "https://shirobito.jp/article/1272"
+    },
+    {
+      "source_term": "兵の補充",
+      "default_ko": "병력 보충",
+      "context_rules": [
+        "use 병력 보충 for the command, proposal, acceptance, and completion-report concept",
+        "use natural action prose such as 병사를 이끌다 or 병사를 합류시키다 when the source describes the physical movement of troops"
+      ]
+    },
+    {
+      "source_term": "力攻め",
+      "default_ko": "강공",
+      "context_rules": [
+        "use 강공 for taking a castle by a direct forceful assault after a scheme fails",
+        "use 힘으로 밀어붙이다 only when the line is ordinary explanatory prose rather than the siege-method label"
+      ]
+    },
+    {
+      "source_term": "合流",
+      "default_ko": "합류",
+      "context_rules": [
+        "use 합류 for joining reinforcing soldiers or a unit to forces already in the field",
+        "preserve causative source forms such as 合流させる as 병사를 합류시키다 rather than making the named actor join personally"
+      ]
+    },
+    {
+      "source_term": "刺客",
+      "default_ko": "자객",
+      "context_rules": [
+        "use 자객 for a person sent to assassinate or incapacitate an enemy commander in historical dialogue",
+        "avoid the more modern functional label 암살자 when the source uses this period-flavored term"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%88%BA%E5%AE%A2-517174"
+    },
+    {
+      "source_term": "秘湯",
+      "default_ko": "숨은 온천",
+      "context_rules": [
+        "use 숨은 온천 for a remote little-known hot spring",
+        "숨은 명탕 may be used when a recovery report praises the spring's reputed efficacy; avoid the opaque Sino-Korean calque 비탕"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%A7%98%E6%B9%AF-611255"
+    },
+    {
+      "source_term": "守城",
+      "default_ko": "수성",
+      "context_rules": [
+        "use 수성 for defending a castle and 수성의 명인 for a master of castle defense",
+        "do not confuse it with attacking or capturing a castle"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%AE%88%E5%9F%8E-2049176"
+    },
+    {
+      "source_term": "民心",
+      "default_ko": "민심",
+      "context_rules": [
+        "use 민심 for the people's feelings and political support",
+        "keep it distinct from a specific village population's trust when the source says 農村の信"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%B0%91%E5%BF%83-640624"
+    },
+    {
+      "source_term": "人望",
+      "default_ko": "인망",
+      "context_rules": [
+        "use 인망 for the respect, trust, and following a ruler has earned among the people",
+        "do not flatten it to generic popularity when local rule and public cooperation are the point"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%BA%BA%E6%9C%9B-538968"
+    },
+    {
+      "source_term": "兵糧",
+      "default_ko": "병량",
+      "context_rules": [
+        "use the established game term 병량 for military provisions and supply production",
+        "do not alternate with 군량 inside the same command and tutorial family"
+      ]
+    },
+    {
+      "source_term": "油断大敵",
+      "default_ko": "방심하면 패한다",
+      "context_rules": [
+        "render the warning idiom naturally in context as 방심하면 패한다 or 방심은 금물이다",
+        "preserve the source's threat to teach an underguarded target a lesson rather than translating it as a detached maxim"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%B2%B9%E6%96%AD%E5%A4%A7%E6%95%B5-651960"
+    },
+    {
+      "source_term": "流言飛語",
+      "default_ko": "유언비어",
+      "context_rules": [
+        "use 유언비어 for deliberately spread, ungrounded rumor in stratagem dialogue",
+        "keep it distinct from neutral 풍문 or 소문 when the source describes hostile disinformation"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%B5%81%E8%A8%80%E9%A3%9B%E8%AA%9E-149596"
+    },
+    {
+      "source_term": "忠義",
+      "default_ko": "충의",
+      "context_rules": [
+        "use 충의 for sincere service and loyalty directed toward one's lord in historical dialogue",
+        "preserve the explicit lord-retainer relationship rather than flattening it to generic 신뢰"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BF%A0%E7%BE%A9-567299"
+    },
+    {
+      "source_term": "離反",
+      "default_ko": "이반",
+      "context_rules": [
+        "use 이반 when a retainer is induced to turn away from and betray the lord they followed",
+        "do not weaken it to ordinary 불화 when the proposed outcome is defection"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%9B%A2%E5%8F%8D-658247"
+    },
+    {
+      "source_term": "主家",
+      "default_ko": "주군 가문",
+      "context_rules": [
+        "use 주군 가문 for the house of the lord or master whom a retainer serves",
+        "do not use 주가, which is opaque and easily misread as a stock price in Korean"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%BB%E5%AE%B6-527961"
+    },
+    {
+      "source_term": "慰撫",
+      "default_ko": "위무",
+      "context_rules": [
+        "use 위무 for a policy or proposal to soothe unrest among the people",
+        "natural dialogue may say 백성을 달래다 when the command-like historical term is not foregrounded"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%85%B0%E6%92%AB-435592"
+    },
+    {
+      "source_term": "面構え",
+      "default_ko": "당당한 인상",
+      "context_rules": [
+        "render the strong-looking face or bearing naturally as 당당한 인상 or 기개가 엿보이는 얼굴",
+        "do not translate it as 관상, which suggests physiognomic fortune-telling rather than visible bearing"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%9D%A2%E6%A7%8B%E3%81%88-572749"
+    },
+    {
+      "source_term": "根回し",
+      "default_ko": "사전 공작",
+      "context_rules": [
+        "use 사전 공작 for discreet groundwork performed before an officer-poaching approach",
+        "use 사전 조율 in ordinary negotiation where covert maneuvering is not implied"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%A0%B9%E5%9B%9E%E3%81%97-178519"
+    },
+    {
+      "source_term": "助太刀",
+      "default_ko": "조력",
+      "context_rules": [
+        "use 조력 or 힘을 보태다 for military assistance requested from another force",
+        "preserve the sense of joining or aiding a fight rather than generic moral support"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%8A%A9%E5%A4%AA%E5%88%80-541446"
+    },
+    {
+      "source_term": "愛想を尽かす",
+      "default_ko": "정을 떼고 떠나다",
+      "context_rules": [
+        "translate the loss of affection or trust rather than the unrelated customer-service sense of 愛想",
+        "when the object is 主家, natural hostile-scheme dialogue may say 주군 가문을 등지다"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%84%9B%E6%83%B3%E3%82%92%E5%B0%BD%E3%81%8B%E3%81%99-421461"
+    },
+    {
+      "source_term": "独力",
+      "default_ko": "자력",
+      "context_rules": [
+        "use 자력 or 혼자 힘으로 for acting through one's own strength without outside aid",
+        "do not use the nonstandard Korean form 독력"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%8B%AC%E5%8A%9B-583034"
+    },
+    {
+      "source_term": "天下平定",
+      "default_ko": "천하 평정",
+      "context_rules": [
+        "use 천하 평정 for the campaign objective of bringing the realm under stable rule",
+        "keep it distinct from 全国統一=전국 통일 when the source contrasts the two objectives"
+      ]
+    },
+    {
+      "source_term": "畿内",
+      "default_ko": "기나이",
+      "context_rules": [
+        "use the established historical region name 기나이 for the provinces surrounding the imperial capital",
+        "do not use 기내, which is normally read in Korean as the inside of an aircraft or vessel"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%95%BF%E5%86%85-51203"
+    },
+    {
+      "source_term": "天下人",
+      "default_ko": "천하인",
+      "context_rules": [
+        "use 천하인 for a ruler recognized as holding authority over the realm",
+        "preserve it as a historical-political title rather than flattening it to a generic 위인"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%A4%A9%E4%B8%8B%E4%BA%BA-162070"
+    },
+    {
+      "source_term": "陣触れ",
+      "default_ko": "출진령",
+      "context_rules": [
+        "use 출진령 for an order or notice calling warriors to mobilize for battle",
+        "do not reduce it to a generic 명령 when the dialogue explicitly calls the force to arms"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%99%A3%E8%A7%A6%E3%82%8C-538897"
+    },
+    {
+      "source_term": "下知",
+      "default_ko": "하명",
+      "context_rules": [
+        "use 하명 for a superior's military order in formal retainer dialogue",
+        "natural imperative wording may be used where the runtime fragment cannot carry the noun form"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%8B%E7%9F%A5-489906"
+    },
+    {
+      "source_term": "潮時",
+      "default_ko": "때",
+      "context_rules": [
+        "translate the opportune moment according to the action in context",
+        "in a failed siege or withdrawal proposal use 철수할 때 rather than the literal tide"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%BD%AE%E6%99%82-516897"
+    },
+    {
+      "source_term": "鎌倉殿",
+      "default_ko": "가마쿠라 공",
+      "context_rules": [
+        "use 가마쿠라 공 when the source directly denotes the Kamakura lord or shogun",
+        "in the period phrase 鎌倉殿の御時より, naturalize the institutional era as 가마쿠라 막부 이래"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%8E%8C%E5%80%89%E6%AE%BF-466196"
+    },
+    {
+      "source_term": "王城",
+      "default_ko": "천황의 도읍",
+      "context_rules": [
+        "in Yamashiro and Kyoto geography use 천황의 도읍 for the imperial seat",
+        "do not translate it as 왕의 성, which incorrectly suggests a fortified castle"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%8E%8B%E5%9F%8E-449055"
+    },
+    {
+      "source_term": "南都",
+      "default_ko": "나라",
+      "context_rules": [
+        "use the place name 나라 when 南都 denotes the former capital in Yamato",
+        "do not leave the opaque literal reading 남도 in ordinary Korean dialogue"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%8D%97%E9%83%BD-590632"
+    },
+    {
+      "source_term": "国司",
+      "default_ko": "지방관",
+      "context_rules": [
+        "use 지방관 when explaining the office naturally to Korean readers",
+        "retain established title readings such as 하리마노카미 and 이요노카미 when the specific 受領名 is named"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9B%BD%E5%8F%B8-55734"
+    },
+    {
+      "source_term": "国持ち大名",
+      "default_ko": "일국을 다스리는 다이묘",
+      "context_rules": [
+        "render the status descriptively as 일국을 다스리는 다이묘 in dialogue",
+        "do not transliterate it as an unexplained technical label"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9B%BD%E6%8C%81%E5%A4%A7%E5%90%8D-484620"
+    },
+    {
+      "source_term": "闕所地",
+      "default_ko": "몰수되어 주인 없는 땅",
+      "context_rules": [
+        "use 몰수되어 주인 없는 땅 when the dialogue must make confiscated or forfeited land immediately clear",
+        "retain 몰수지 only where a compact administrative label is required"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%97%95%E6%89%80%E5%9C%B0-1310134"
+    },
+    {
+      "source_term": "軍団",
+      "default_ko": "군단",
+      "context_rules": [
+        "use the established organization and command label 군단",
+        "use 편성 for forming a new corps and 신설 only when the source foregrounds establishment"
+      ]
+    },
+    {
+      "source_term": "政策",
+      "default_ko": "정책",
+      "context_rules": [
+        "use 정책 consistently for named policy research and issuance",
+        "preserve runtime policy-name token and ASCII quote boundaries"
+      ]
+    },
+    {
+      "source_term": "施設",
+      "default_ko": "시설",
+      "context_rules": [
+        "use 시설 for buildings and installations when no more specific established UI label applies",
+        "retain 城下施設=성하 시설 as the compound game term"
+      ]
+    },
+    {
+      "source_term": "領主",
+      "default_ko": "영주",
+      "context_rules": [
+        "use 영주 for the person who owns or governs a domain or granted land",
+        "keep the person distinct from 領地=영지 and 領国=the governed domain"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A0%98%E4%B8%BB-659300"
+    },
+    {
+      "source_term": "城主",
+      "default_ko": "성주",
+      "context_rules": [
+        "use 성주 for the lord appointed to hold a castle",
+        "keep it distinct from 城代=성대, who administers or guards a castle on another lord's behalf"
+      ]
+    },
+    {
+      "source_term": "権威",
+      "default_ko": "권위",
+      "context_rules": [
+        "use 권위 for political and institutional prestige",
+        "do not substitute 위신 when the source explicitly contrasts authority conferred by the shogunate"
+      ]
+    },
+    {
+      "source_term": "同盟",
+      "default_ko": "동맹",
+      "context_rules": [
+        "use 동맹 for the diplomatic relation and its extension",
+        "keep it distinct from 婚姻同盟 and ordinary 친선"
+      ]
+    },
+    {
+      "source_term": "婚姻同盟",
+      "default_ko": "혼인 동맹",
+      "context_rules": [
+        "use the established spaced form 혼인 동맹",
+        "do not collapse it to 혼인동맹 or generic 동맹 when marriage is explicit"
+      ]
+    },
+    {
+      "source_term": "停戦",
+      "default_ko": "정전",
+      "context_rules": [
+        "use 정전 for a negotiated halt to hostilities",
+        "preserve the target force and intermediary as separate runtime actors"
+      ]
+    },
+    {
+      "source_term": "仲介",
+      "default_ko": "중개",
+      "context_rules": [
+        "use 중개 for the act of mediation and 중개자 for the mediator",
+        "keep the mediator distinct from the two forces negotiating a truce"
+      ]
+    },
+    {
+      "source_term": "昇進",
+      "default_ko": "승진",
+      "context_rules": [
+        "use 승진 for advancement recorded by the merit-award results",
+        "keep it distinct from granting additional 知行=영지"
+      ]
+    },
+    {
+      "source_term": "指揮",
+      "default_ko": "지휘",
+      "context_rules": [
+        "use 지휘 for personally commanding a battle or troops",
+        "preserve the runtime commander token and honorific when Korean grammar requires it"
+      ]
+    },
+    {
+      "source_term": "親睦",
+      "default_ko": "친선",
+      "context_rules": [
+        "use 친선 for cultivating relations with another force in diplomacy dialogue",
+        "do not use 친목 where it would sound like a private social club rather than inter-house relations"
+      ]
+    },
+    {
+      "source_term": "戦上手",
+      "default_ko": "싸움에 능하다",
+      "context_rules": [
+        "render practical skill in battle as 싸움에 능하다 rather than narrowing it to theoretical 전술가",
+        "in 戦上手を返上する, naturalize the self-deprecation as 싸움에 능하다는 이름을 내려놓다"
+      ]
+    },
+    {
+      "source_term": "軍議",
+      "default_ko": "군의",
+      "context_rules": [
+        "use 군의 for a military council or deliberation",
+        "keep it distinct from ordinary meeting language and the broader 評定=평정 interface"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%BB%8D%E8%AD%B0-487629"
+    },
+    {
+      "source_term": "戦機",
+      "default_ko": "싸울 때",
+      "context_rules": [
+        "render the favorable time or opportunity to fight according to sentence context",
+        "prefer 싸울 때, 출병할 때, or 싸움에 나설 때 over the opaque Sino-Korean calque 전기"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%88%A6%E6%A9%9F-549536"
+    },
+    {
+      "source_term": "版図",
+      "default_ko": "판도",
+      "context_rules": [
+        "use 판도 for a house's territorial or political sphere",
+        "keep it distinct from a single 領地=영지 and the governed domain 領国=영내"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%89%88%E5%9B%B3-606968"
+    },
+    {
+      "source_term": "砲術",
+      "default_ko": "포술",
+      "context_rules": [
+        "use 포술 for training in the operation of firearms or artillery",
+        "keep the military skill distinct from generic 사격 and weapon-item labels"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%A0%B2%E8%A1%93-132108"
+    },
+    {
+      "source_term": "馬術",
+      "default_ko": "기마술",
+      "context_rules": [
+        "use 기마술 in military training and troop-strength contexts",
+        "never shorten it to 마술, which means magic in modern Korean"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A6%AC%E8%A1%93-169116"
+    },
+    {
+      "source_term": "当主",
+      "default_ko": "당주",
+      "context_rules": [
+        "use 당주 for the current head of a house",
+        "keep it distinct from 主君=주군 and an office title"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BD%93%E4%B8%BB-580477"
+    },
+    {
+      "source_term": "戦巧者",
+      "default_ko": "싸움에 능하다",
+      "context_rules": [
+        "render the person's established practical skill in battle",
+        "align with 戦上手=싸움에 능하다 and do not invent a formal title"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%B7%A7%E8%80%85-495515"
+    },
+    {
+      "source_term": "政策発令水準",
+      "default_ko": "정책 발령 수준",
+      "context_rules": [
+        "use the exact spaced UI label in policy-level objectives",
+        "preserve the numeric target, current value, and ASCII (LV) unit order from the JP runtime skeleton"
+      ]
+    },
+    {
+      "source_term": "風聞",
+      "default_ko": "풍문",
+      "context_rules": [
+        "use 풍문 for hearsay or news circulating by rumor",
+        "keep it distinct from the speaker's neutral 噂=소문 when both appear in the same report family"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A2%A8%E8%81%9E-616033"
+    },
+    {
+      "source_term": "顛末",
+      "default_ko": "전말",
+      "context_rules": [
+        "use 전말 for the whole course of an incident from beginning to end",
+        "keep it distinct from いきさつ=경위 and 子細=상세한 사정"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A1%9B%E6%9C%AB-578979"
+    },
+    {
+      "source_term": "いきさつ",
+      "default_ko": "경위",
+      "context_rules": [
+        "use 경위 for the course or circumstances by which an incident developed",
+        "do not flatten it to 전말 when the source separately uses 顛末"
+      ]
+    },
+    {
+      "source_term": "子細",
+      "default_ko": "상세한 사정",
+      "context_rules": [
+        "use 상세한 사정 or 자세한 내막 when the report concerns incident details",
+        "reserve 자초지종 for a context explicitly asking for the whole story"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%AD%90%E7%B4%B0-518842"
+    },
+    {
+      "source_term": "下賜",
+      "default_ko": "하사",
+      "context_rules": [
+        "use 하사 when a superior grants an item to a lower-ranking person",
+        "keep the status direction distinct from neutral 증여 or 지급"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%8B%E8%B3%9C-461909"
+    },
+    {
+      "source_term": "忠勤",
+      "default_ko": "충근",
+      "context_rules": [
+        "retain 충근 for a retainer's loyal service in formal reward dialogue",
+        "translate 賞する as 포상하다; 충근 itself is the service being rewarded"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%BF%A0%E5%8B%A4-567324"
+    },
+    {
+      "source_term": "集落",
+      "default_ko": "취락",
+      "context_rules": [
+        "use 취락 for the game's governed settlement unit",
+        "do not replace the established system category with generic 마을 inside facility-unlock reports"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%9B%86%E8%90%BD-77470"
+    },
+    {
+      "source_term": "郡施設",
+      "default_ko": "군 시설",
+      "context_rules": [
+        "use the spaced game-system label 군 시설",
+        "keep it distinct from 城下施設=성하 시설 and generic facility prose"
+      ],
+      "evidence_url": "https://gw.gamecity.ne.jp/manual/shinsei/jp/4200.html"
+    },
+    {
+      "source_term": "城下町",
+      "default_ko": "성하 마을",
+      "context_rules": [
+        "use the established spaced game-system label 성하 마을 in commands and unlock reports",
+        "when discussing the historical urban form rather than the UI category, translate by context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%9F%8E%E4%B8%8B%E7%94%BA-78941"
+    },
+    {
+      "source_term": "賦課",
+      "default_ko": "부과",
+      "context_rules": [
+        "use 부과 for assigning provisions, taxes, or another burden",
+        "preserve the burden imposed on the people when the sentence mentions backlash"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E8%B3%A6%E8%AA%B2-616650"
+    },
+    {
+      "source_term": "実行",
+      "default_ko": "실행",
+      "context_rules": [
+        "use 실행 when the source explicitly names 実行",
+        "when Korean only supplies a verb after a dynamic action-title token, use the project complement 시행 instead"
+      ]
+    },
+    {
+      "source_term": "進める",
+      "default_ko": "추진하다",
+      "context_rules": [
+        "use 추진하다 for carrying forward a dynamic action, policy, or proposal",
+        "use 진행하다 only for time, procedure, or work progress where the source context requires it"
+      ]
+    },
+    {
+      "source_term": "米五郎左",
+      "default_ko": "고메 고로자",
+      "context_rules": [
+        "retain the sobriquet as a phonetic proper name",
+        "the historical referent is Niwa Nagahide; never attribute it to Mori Yoshinari",
+        "do not insert the personal name when the source dialogue uses only the sobriquet"
+      ],
+      "evidence_url": "https://www.pref.fukui.lg.jp/doc/brandeigyou/brand/senngokuhiwa_d/fil/fukui_sengoku_37.pdf"
+    },
+    {
+      "source_term": "愛宕権現",
+      "default_ko": "아타고 권현",
+      "context_rules": [
+        "retain the pre-Meiji syncretic religious title in period dialogue",
+        "do not modernize it to 아타고 신사 when the source explicitly says 権現"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%84%9B%E5%AE%95%E7%A5%9E%E7%A4%BE-25762"
+    },
+    {
+      "source_term": "梟雄",
+      "default_ko": "효웅",
+      "context_rules": [
+        "retain the period-flavored label for a fierce and often ruthless strongman",
+        "do not flatten it to neutral 영웅"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%A2%9F%E9%9B%84-479072"
+    },
+    {
+      "source_term": "黒衣",
+      "default_ko": "검은 승복",
+      "context_rules": [
+        "in Buddhist speaker dialogue, preserve the monk's black robe and clerical identity",
+        "when the robe metonymically denotes the speaker, a natural phrase such as 이 승려 may be used",
+        "do not confuse it with the stagehand reading くろご"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%BB%92%E8%A1%A3-57854"
+    },
+    {
+      "source_term": "方便",
+      "default_ko": "방편",
+      "context_rules": [
+        "preserve the Buddhist sense of a skillful provisional means when the speaker and nearby 黒衣 establish that context",
+        "use 수단 or 방책 only when the surrounding prose is clearly secular"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%96%B9%E4%BE%BF-132435"
+    },
+    {
+      "source_term": "雄武英略",
+      "default_ko": "웅무영략",
+      "context_rules": [
+        "retain the compact Sino-Korean praise formula in period-flavored character dialogue",
+        "do not split it into unrelated modern ability labels"
+      ]
+    },
+    {
+      "source_term": "上申",
+      "default_ko": "상신",
+      "context_rules": [
+        "use 상신 when a subordinate formally submits an opinion or circumstances upward",
+        "keep it distinct from 具申=건의, 進言=진언, and 献言=헌언 in the source"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%8A%E7%94%B3-532126"
+    },
+    {
+      "source_term": "挟撃",
+      "default_ko": "협격",
+      "context_rules": [
+        "use 협격 for attacking from two sides",
+        "preserve whether the speaker's force receives or carries out the flanking attack"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%8C%9F%E6%92%83-478039"
+    },
+    {
+      "source_term": "撤兵",
+      "default_ko": "철병",
+      "context_rules": [
+        "retain 철병 in formal military recommendations to withdraw troops",
+        "use 철수 for ordinary 撤退 wording and do not collapse the two source terms in the same dialogue family"
+      ]
+    },
+    {
+      "source_term": "帰城",
+      "default_ko": "성으로 돌아오다",
+      "context_rules": [
+        "render the military action as returning to a castle",
+        "never use 귀성, whose modern Korean sense is returning to one's hometown"
+      ]
+    },
+    {
+      "source_term": "郡開発",
+      "default_ko": "군 개발",
+      "context_rules": [
+        "use the spaced game-system label 군 개발",
+        "keep it distinct from 城下 development and generic regional development"
+      ]
+    },
+    {
+      "source_term": "狼藉",
+      "default_ko": "행패",
+      "context_rules": [
+        "use 행패 for repeated violent disorder or depredation against the speaker's domain",
+        "do not reduce it to a neutral 실수 or 소동"
+      ]
+    },
+    {
+      "source_term": "撤去",
+      "default_ko": "철거",
+      "context_rules": [
+        "use 철거 for removing a castle-town facility",
+        "keep it distinct from military withdrawal terms such as 撤退 and 撤兵"
+      ]
+    },
+    {
+      "source_term": "領国",
+      "default_ko": "영내",
+      "context_rules": [
+        "use 영내 for the lands collectively governed by the speaker's house",
+        "keep it distinct from a single 領地=영지 and 版図=territorial sphere"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%A0%98%E5%9B%BD-659230"
+    },
+    {
+      "source_term": "糧秣",
+      "default_ko": "군량",
+      "context_rules": [
+        "use 군량 when the source collectively means provisions for soldiers and fodder for military horses",
+        "keep the source distinction from ordinary 兵糧=병량 even when both support a similar Korean military-provisions context"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%B3%A7%E7%A7%A3-659566"
+    },
+    {
+      "source_term": "鍛治町",
+      "default_ko": "대장간 마을",
+      "context_rules": [
+        "retain the game's source spelling 鍛治町 in the glossary key",
+        "render the castle-town resource settlement as 대장간 마을"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E9%8D%9B%E5%86%B6%E7%94%BA-1040397"
+    },
+    {
+      "source_term": "拮抗",
+      "default_ko": "팽팽히 맞서다",
+      "context_rules": [
+        "use 팽팽히 맞서다 or 대등하다 when opposing forces are balanced",
+        "do not imply an alliance or a stalemate unless the surrounding source says so"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%8B%AE%E6%8A%97-474707"
+    },
+    {
+      "source_term": "将兵",
+      "default_ko": "장병",
+      "context_rules": [
+        "use the collective military term 장병 for officers and soldiers",
+        "do not flatten it to 장수 alone"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%B0%86%E5%85%B5-533207"
+    },
+    {
+      "source_term": "万端",
+      "default_ko": "모두 갖추다",
+      "context_rules": [
+        "in readiness reports, render 準備万端 as 준비를 모두 마치다 or 만반의 준비",
+        "preserve the sense that every necessary part is ready"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%B8%87%E7%AB%AF-606854"
+    },
+    {
+      "source_term": "事を構える",
+      "default_ko": "분쟁을 일으키다",
+      "context_rules": [
+        "use 분쟁을 일으키다 or 맞서 싸우다 according to the diplomatic context",
+        "preserve the warning against deliberately entering conflict"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E4%BA%8B%E3%82%92%E6%A7%8B%E3%81%88%E3%82%8B-502884"
+    },
+    {
+      "source_term": "めぼしい",
+      "default_ko": "눈에 띄는",
+      "context_rules": [
+        "use 눈에 띄는 or 쓸 만한 for a noteworthy candidate",
+        "do not use the dismissive 별 볼 일 없는 when the source only says no notable candidate exists"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E3%82%81%E3%81%BC%E3%81%97%E3%81%84-396520"
+    },
+    {
+      "source_term": "名将",
+      "default_ko": "명장",
+      "context_rules": [
+        "use 명장 for an officer renowned for military ability",
+        "do not weaken the appraisal to a merely famous person"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E5%90%8D%E5%B0%86-643030"
+    },
+    {
+      "source_term": "意趣返し",
+      "default_ko": "보복",
+      "context_rules": [
+        "use 보복 or 앙갚음 according to the speaker's register",
+        "preserve the retaliatory intent rather than translating it as a generic response"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%84%8F%E8%B6%A3%E8%BF%94%E3%81%97-432293"
+    },
+    {
+      "source_term": "手玉に取る",
+      "default_ko": "뜻대로 조종하다",
+      "context_rules": [
+        "use 뜻대로 조종하다 when manipulating a person or force",
+        "do not translate the idiom literally as handling a handball"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E6%89%8B%E7%8E%89%E3%81%AB%E5%8F%96%E3%82%8B-576003"
+    },
+    {
+      "source_term": "知行替",
+      "default_ko": "지행 변경",
+      "context_rules": [
+        "use 지행 변경 when the historical allocation or governed territory is reassigned",
+        "avoid the mechanical 지행 교체 in ordinary dialogue"
+      ],
+      "evidence_url": "https://kotobank.jp/word/%E7%9F%A5%E8%A1%8C%E6%9B%BF-324857"
+    },
+    {
+      "source_term": "一国一城の主",
+      "default_ko": "일국일성의 주인",
+      "context_rules": [
+        "retain the compact aspiration to rule one's own domain from one's own castle",
+        "do not confuse the phrase with the later 一国一城令 policy"
+      ]
+    },
+    {
+      "source_term": "謀聖",
+      "default_ko": "모성",
+      "context_rules": [
+        "retain the Sino-Korean sobriquet 모성 when the strategist title itself is foregrounded",
+        "do not expand it to 모략의 성인 inside character dialogue"
+      ]
+    },
+    {
+      "source_term": "角隈",
+      "default_ko": "쓰노쿠마",
+      "context_rules": [
+        "use 쓰노쿠마 for the surname in 角隈石宗",
+        "do not read the first character as 각 in this personal name"
+      ]
+    },
+    {
+      "source_term": "田北",
+      "default_ko": "다키타",
+      "context_rules": [
+        "use 다키타 for the surname in 田北鎮周",
+        "do not retain the unsupported 기타키타 reading"
+      ],
+      "evidence_url": "https://www.city.taketa.oita.jp/material/files/group/23/1syou2.pdf"
+    },
+    {
+      "source_term": "北郷",
+      "default_ko": "혼고",
+      "context_rules": [
+        "use 혼고 for the historical Miyakonojo Shimazu-family surname",
+        "do not apply the ordinary place-name reading or retain 호고"
+      ],
+      "evidence_url": "https://www.city.miyakonojo.miyazaki.jp/site/shimazu/36615.html"
+    }
+  ],
+  "policy": {
+    "unknown_historical_term": "historical_review_required",
+    "conflicting_reading": "hold_until_evidence",
+    "switch_korean_is_authority": false,
+    "historic_korean_is_authority": false
+  }
+}

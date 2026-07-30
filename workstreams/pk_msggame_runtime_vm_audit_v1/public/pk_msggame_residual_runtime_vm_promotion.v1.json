@@ -1,0 +1,34 @@
+{
+  "distribution_policy": {
+    "private_overlay_contains_commercial_source_text": false,
+    "private_overlay_contains_translated_dialogue_text": false,
+    "private_overlay_stays_below_tmp": true
+  },
+  "input": {
+    "coverage_report_file_sha256": "58DEFAFDC69A2BCC6390CF429B8BE118AEE28C94846ED857E210E2386FC7EE38",
+    "coverage_report_payload_sha256": "E2898477C9A022D18DD393B512D9330CE6080A51D3D7EC89C26BBC380094B0DE",
+    "pk_full_candidate_packed_sha256": "C18AED979C9F81B99E898FD18C7CD4F2415737223F6FF7D329A69983ECF5BB1F",
+    "source_decision_segment_universe_sha256": "4B6E97EA19179F8C8A77BDB3193D73EC17A85283EFBE7EBCEFA58D300F4FEC46"
+  },
+  "method": "reversed_vm_residual_full_closure_nonexpansion_analysis",
+  "release_target": "0.15.0",
+  "report_payload_sha256": "1853369BD66EBEF12177473CD390E8E97D5C9743C2432F7456170BAF3EB2EF8C",
+  "resource": "pk_msggame",
+  "result": {
+    "eligible_coordinate_sha256": "BB4493A6727655F963BECF89FE4B26020CA03EC98479651AFA4A08D1E7107B58",
+    "eligible_record_sha256": "7950E61F6A6DD07C3B22BA3A589C0F1C730682F130DC76ED335DFC8E3D2C6F6E",
+    "layout_review_transition": "runtime_pending_to_runtime_verified",
+    "private_overlay_rows": 2945,
+    "private_overlay_sha256": "B1E5D89D13158AE4597F3B91A3D350F1271570F4625A39F8C83426CA6BF5E96B"
+  },
+  "schema": "nobu16.kr.pk-msggame-residual-runtime-vm-promotion.v1",
+  "status": "PASS",
+  "steam_write_performed": false,
+  "validation": {
+    "complete_closure_nonexpansion_rechecked": true,
+    "coverage_rebuilt_and_rechecked": true,
+    "full_candidate_binding_rechecked": true,
+    "runtime_and_layout_transition_bound": true,
+    "two_run_deterministic": true
+  }
+}

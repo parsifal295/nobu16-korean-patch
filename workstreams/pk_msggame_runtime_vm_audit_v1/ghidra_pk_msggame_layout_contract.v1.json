@@ -1,0 +1,122 @@
+{
+  "schema": "nobu16.kr.pk-msggame-ghidra-layout-contract.v1",
+  "program": {
+    "ghidra_program_path": "/NOBU16PK.exe.unpacked.exe",
+    "steam_version": "1.1.7",
+    "unpacked_exe_sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39"
+  },
+  "message_evaluation": {
+    "wrapper": "0x1409FABD0",
+    "evaluator_vtable_slot": "+0x18",
+    "evaluator": "0x1409F7490",
+    "record_vm": "0x1409F7610",
+    "result": "NUL-terminated UTF-16 buffer"
+  },
+  "consumer_routes": [
+    {
+      "consumer": "0x1405CC170",
+      "message_ids": [
+        "0xFC0F",
+        "0xFC10"
+      ],
+      "queue_entry": "0x140E93970",
+      "widget_type": "0x05",
+      "renderer_chain": [
+        "0x140F0F6B0",
+        "0x140F0E0B0",
+        "0x140F09470",
+        "0x140F0E750",
+        "0x140F119C0",
+        "0x140F19F30",
+        "0x140F14A60",
+        "0x140316340",
+        "0x1409AE280",
+        "0x140976090",
+        "0x140976170"
+      ],
+      "jp_utf16_storage_capacity": 1024
+    },
+    {
+      "consumer": "0x140E7C2F0",
+      "message_id": "0x112C2",
+      "queue_entry": "0x140E930A0",
+      "widget_type": "0x15",
+      "renderer_chain_joins": "0x140F0F6B0",
+      "layout_resource": "0x012B"
+    },
+    {
+      "consumer": "0x140D98590",
+      "message_id": "0x50B5",
+      "existing_widget_update": "0x140F1A030",
+      "alternate_specialized_panel_vmethod_offset": "+0x2B8",
+      "renderer_chain_joins": "0x140F19F30"
+    },
+    {
+      "consumer": "0x14063C280",
+      "notification_entry": "0x140FA0AD0",
+      "notification_ring": "0x140F10910",
+      "utf16_storage_capacity": 512
+    }
+  ],
+  "dialogue_queue_storage": {
+    "enqueue": "0x14065D8F0",
+    "record_builder": "0x140659170",
+    "speaker_capacity_utf16": 150,
+    "body_capacity_utf16": 280,
+    "descriptor_table": "0x1413CC4D0",
+    "descriptor_rows": 585,
+    "style_word_distribution": {
+      "0": 169,
+      "1": 46,
+      "2": 101,
+      "3": 73,
+      "4": 60,
+      "6": 16,
+      "FFFF": 120
+    }
+  },
+  "line_wrap_contract": {
+    "widget_text_update": "0x140F14A60",
+    "text_child_index": 4,
+    "widget_width_field": "text_child+0x10",
+    "packed_font_reader": "0x14099B940",
+    "font_size_reader": "0x1409C5030",
+    "default_font_size": 28,
+    "normalized_wrap_entry": "0x1409F92E0",
+    "normalized_gate_formula": "floor(widget_width * 18 / font_size)",
+    "wrap_engine": "0x1409F8B00",
+    "tag_width": "0x140C91CA0",
+    "glyph_advance": "0x140C8F4E0",
+    "normalized_measurement_size": 18,
+    "fullwidth_advance_normalized_px": 18,
+    "halfwidth_advance_table": "0x1415959A0",
+    "halfwidth_advance_formula": "table[codepoint] * 18 / 32",
+    "gate_comparison_rounding": "ceil measured advance versus integer normalized gate",
+    "halfwidth_table_examples": {
+      "space": 4.5,
+      "comma_or_period": 5.0625,
+      "digit": 9.0,
+      "uppercase_A": 10.6875,
+      "lowercase_a": 7.3125
+    },
+    "line_feed_inserter": "0x140203410",
+    "local_maximum_line_count_observed": false,
+    "height_or_clip_limit": "widget layout resource dependent"
+  },
+  "adjudication": {
+    "msggame_uses_one_widget": false,
+    "one_absolute_pixel_gate_applies_to_all_msggame_rows": false,
+    "pk_msgev_912px_rule_applies": false,
+    "safe_visual_gate": "resolve each consumer widget width, font size, and height; then execute the normalized wrap contract",
+    "current_relative_nonexpansion_remains_widget_independent": true,
+    "original_japanese_relative_nonexpansion_requires_same_consumer_and_style": true
+  },
+  "distribution_policy": {
+    "contains_commercial_dialogue_text": false,
+    "contains_translated_dialogue_text": false,
+    "contains_complete_game_resource": false,
+    "contains_decompiled_function_body": false,
+    "contains_only_addresses_counts_capacities_and_behavioral_conclusions": true
+  },
+  "steam_write_performed": false
+}

@@ -1,0 +1,67 @@
+{
+  "bundles": [
+    {
+      "actions_authorized": false,
+      "branch_count": 202301,
+      "bundle_id": 0,
+      "packet_sha256": "20E6B287428B5985D96147CB1EC23CBA2BC9ACE76BC1F178433A395145AB5819",
+      "pending_coordinate_count": 396,
+      "pre_waveA_terminal_snapshot_sha256": "57B723F5317BD9EC2638EFA143732BC836735E9F8D858B6A018A25AD478D7B2D",
+      "root_count": 238,
+      "root_sha256": "A43E89308BE98B59AFA8BB933D452F6A2F6F0F430BCD2A59877E679CB62409AE",
+      "unique_terminal_root_count": 592
+    },
+    {
+      "actions_authorized": false,
+      "branch_count": 202300,
+      "bundle_id": 1,
+      "packet_sha256": "78739654A8F1C6285A7ACA889349FDDE4368A515E38632D74E4804378C5B9492",
+      "pending_coordinate_count": 411,
+      "pre_waveA_terminal_snapshot_sha256": "FEB74C3F0DAF60E72064A3186B73CEE452C50E0376C8082B48D0D72B7FDE123D",
+      "root_count": 240,
+      "root_sha256": "1D021F3C7E080DF8E59C6E008F64E24FA15F68CFBFA56BA29AD1617DDF4C3FD6",
+      "unique_terminal_root_count": 653
+    },
+    {
+      "actions_authorized": false,
+      "branch_count": 202301,
+      "bundle_id": 2,
+      "packet_sha256": "722FF0417657330EF77C4834C3FF4FFEB891B4A855A131857C910C3AA245C292",
+      "pending_coordinate_count": 407,
+      "pre_waveA_terminal_snapshot_sha256": "0AD7946418EF341F8552E0E5921598DC20F1D5AD779B56E82355B0D782D91246",
+      "root_count": 239,
+      "root_sha256": "1EA4E7521B7468D82C0ECC543B5469A5F9088FCC6794EF891928B6C1BD455CF9",
+      "unique_terminal_root_count": 661
+    }
+  ],
+  "inputs": {
+    "checkpoint_sha256": "B1CF7F4523DE9411BA5172E7C9DEA946C7646085C83A1480C51807E2DD0C90E7",
+    "engine_builder_sha256": "CF32112EB7B0BA578DF9EF2E9D2A5C92818E25AC2217FE867BE7968F92D8372E",
+    "pre_waveA_candidate_sha256": "DAB40F2AA8095E67550B69213A53CC777B96B17071FFF5B860CFAEE1A868D7E0",
+    "pristine_sha256": "31D52FB797EA31CBD75646A2E1607829635AC51C288606FB2ADFBDCA940F4210",
+    "ranking_builder_sha256": "19D8F10FC3995AD05A39AD12CD554292A47BF4A1AB572D28359130326FA69391",
+    "shadow_current_sha256": "DA5048695253D12373DBD1418A7B017CCEDE9E5E0E4DFC77C5293815876A0766"
+  },
+  "method": "post_wave7_all_pending_direct_0143_caller_roots_actual_jump_leaf_cross_product_lpt_three_way_provisional_pre_waveA",
+  "proof": {
+    "actions_authorized": false,
+    "actual_dispatch_cross_product_used": true,
+    "all_pending_direct_call_roots_owned": true,
+    "full_rebuild_performed": false,
+    "owned_coordinates_pairwise_disjoint": true,
+    "owned_roots_pairwise_disjoint": true,
+    "review_start_authorized": false,
+    "steam_write_performed": false,
+    "waveA_final_terminal_recalculation_required": true
+  },
+  "result": {
+    "actual_branch_count": 606902,
+    "bundle_count": 3,
+    "caller_pending_coordinate_count": 1214,
+    "caller_pending_coordinate_sha256": "E72E4ADF21D1C1E11AA4600C6EDE37335D226D5A74E56284485890932FE5E62E",
+    "caller_root_count": 717,
+    "caller_root_sha256": "5F3CA7E82DF2F69CE027E805988C19A39331CE583552552EC9A85E1378B4AE98"
+  },
+  "schema": "nobu16.kr.pk-msggame-post-wave7-waveB-caller-assignment.source-free.v1",
+  "status": "BLOCKED_PENDING_WAVE_A_FINAL_TERMINAL_SNAPSHOT"
+}

@@ -1,0 +1,81 @@
+{
+  "adjudication": {
+    "all_483_assemblies_actual_current_relative_nonexpanding": true,
+    "all_483_assemblies_grammar_complete": true,
+    "automatic_space_inserted": false,
+    "caller_owns_predicative_precursor": true,
+    "control_components_preserved": true,
+    "descriptor_row71_body_message_id_hex": "0000EAB5",
+    "descriptor_row71_body_root": "6:85",
+    "descriptor_row71_body_route_reconfirmed": true,
+    "line_breaks_preserved": true,
+    "one_absolute_widget_gate_assumed": false,
+    "per_row_game_playback_required": false,
+    "pk_msgev_912px_rule_applied": false,
+    "protected_signatures_preserved": true,
+    "raw_g1n_full_width_px": 48,
+    "raw_g1n_half_width_px": 24,
+    "selector_route": [
+      "6:85",
+      "6:1559",
+      "0:226",
+      "0:227",
+      "0:1538"
+    ],
+    "terminal_owns_connective_and_register": true
+  },
+  "distribution_policy": {
+    "private_decision_bodies_stay_below_tmp": true,
+    "private_evidence_contains_translation_bodies": false,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false
+  },
+  "guards": {
+    "assembly_manifest_sha256": "93F1F8B14FE43A05943BE9828D3A6ECC19BA570140ABBB5BB2DA930CA99C440A",
+    "bound_audit_file_sha256": "132B857E1108BA42F1FBB9F410B1096576E52598D121111DFD4B67585F22CD3A",
+    "bound_audit_payload_sha256": "4955A1F11075E895BBCC9A915AF62787121B601DDDBF026D65E2B315F9FBBCA6",
+    "bound_builder_sha256": "FF7ADFDF6A6A1566A76286977042738E564C0B86CC8F3ADC1F86C33876E583E7",
+    "bound_decision_file_sha256": "74235120686C819652A4ADE6F0892C7F46D5155D6DB3837C0B9364858185EC1C",
+    "bound_evidence_file_sha256": "91C1E97FCC6FB65DFB769C8CD58B262CABC1A1827E58F0CAC6D34F31830F6DE7",
+    "bound_promotion_file_sha256": "50A60FD3B2F7E16DAFED4B1B67F5C925E6E09A57FEFEBD3125AD56433735A37D",
+    "display_coordinate_sha256": "C6F2E2F7586CCD5863A832D05EBEDB479C183C8103A2C4C6FD34DA8D7B342738",
+    "display_record_sha256": "A3A1248C209E1D84F389D1C656176AAC68BFE38EBF36FA67EE53945AD61361ED",
+    "override_coordinate_sha256": "44910093D3966EA9D1B60B55AE0211BD14B1AFAE624DF23523D8C6FDD4A12630",
+    "override_manifest_sha256": "3E7A5694DE3EC10BF7969FF0A3DDF6AAA3F0EC47937996EDBE7E6669E034D144",
+    "override_record_sha256": "22B4105C06B8FA3B0D950B00298BA21E11E869CE86B02D0D42CB48800AFF754D",
+    "pending_eligible_coordinate_sha256": "7AC0764A958A0D994099C74F1786B29462E3D59FEE00907D25220808B45D462F",
+    "pending_eligible_record_sha256": "87AA79659AA44C0D1AC82817869B3EFF14B259415B62B000D22E5E0A445B1D26",
+    "pk_candidate_packed_sha256": "174E3BDBA63E38782531ADBF864FA95FFB75823A679DAC029594FFF1D66F23F4",
+    "pk_predecessor_candidate_packed_sha256": "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628",
+    "rejected_coordinate_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "rejected_record_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "report_payload_sha256": "BF7EC8A09E119A1B710122573F3583FBCB312B7D79DBB6AFF4D015B9E1F75E91",
+    "verified_renewal_coordinate_sha256": "FD51975BCCC485F80DB24F996E09182D3656D4F012D835B791E3C69B36FA2C0B",
+    "verified_renewal_record_sha256": "BD8D3EF9B86EE5C8946E7733BD6CF475C552C9DE5539F26AE26D026A0CEA543D"
+  },
+  "method": "reversed_vm_pk_thought_predicate_family_exact_closure_analysis",
+  "predecessor": {
+    "git_commit": "7777aa7",
+    "merged_private_sha256": "AA220819FE9B2F8FBF53FBB3728A73A0A30E9422F82A70F721B54F173B57A34E",
+    "pending_rows": 8641,
+    "pk_candidate_packed_sha256": "902CD3A1372BC19ABCA846C6A9F43195085C0782994ECFCE8A8353B2F9E0A628",
+    "rows": 52803
+  },
+  "release_target": "0.15.0",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "schema": "nobu16.kr.pk-thought-predicate-family-exact-closure-coverage.v1",
+  "scope": {
+    "base_resource_renewal_rows": 0,
+    "displayed_assembly_combinations": 483,
+    "displayed_caller_rows": 69,
+    "displayed_closure_rows": 76,
+    "displayed_terminal_rows": 7,
+    "existing_verified_evidence_renewal_rows": 53,
+    "pending_eligible_rows": 23,
+    "post_layer_pending_rows": 8618,
+    "rejected_rows": 0,
+    "translation_override_rows": 75
+  },
+  "status": "PASS",
+  "steam_write_performed": false
+}

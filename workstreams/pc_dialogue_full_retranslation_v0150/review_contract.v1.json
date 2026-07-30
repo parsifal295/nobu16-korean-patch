@@ -1,0 +1,43 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-full-retranslation-contract.v1",
+  "release_target": "0.15.0",
+  "resources": [
+    "MSG/JP/msggame.bin",
+    "MSG_PK/JP/msggame.bin"
+  ],
+  "translation_basis": {
+    "pristine_pc_japanese": true,
+    "current_steam_pc_korean": true,
+    "pc_en_sc_tc_context": true,
+    "switch_korean_used": false,
+    "historic_korean_used": false
+  },
+  "scope": {
+    "review_every_current_literal": true,
+    "classify_every_visible_current_literal": true,
+    "retranslate_every_in_scope_display_literal": true,
+    "confirmed_non_display_preserves_current_literal": true,
+    "classification_categories": [
+      "retranslated",
+      "runtime_fragment_pending",
+      "confirmed_non_display"
+    ],
+    "semantic_completion_initial": false,
+    "previous_translation_status_is_not_a_semantic_verdict": true
+  },
+  "safety": {
+    "steam_is_read_only": true,
+    "intermediate_output_root": "tmp/pc_dialogue_full_retranslation_v0150",
+    "candidate_is_not_a_steam_deployment": true,
+    "commercial_source_text_committed": false
+  },
+  "candidate_requirements": {
+    "one_approved_decision_per_visible_current_literal": true,
+    "guard_pristine_source_record_hash": true,
+    "guard_current_korean_literal_hash": true,
+    "preserve_runtime_tokens": true,
+    "preserve_outer_whitespace": true,
+    "newline_change_requires_runtime_verified_layout": true,
+    "msgev_912px_rule_applies": false
+  }
+}

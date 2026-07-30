@@ -1,0 +1,71 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-runtime-vm-selector610-delta-checkpoint.source-free.v1",
+  "method": "fc157a_selector610_consolidated_union_once_targeted_ledger_delta",
+  "release_target": "0.15.0",
+  "inputs": {
+    "predecessor_private_sha256": "FC157A9907686D0EA6DC6C61C7785E81AC7F750100F2E1CDDE02DBF4F09F2DCA",
+    "predecessor_public_sha256": "1FCF033F1F75FC43473152CFB7115D170657519952C19D563C36C3F9BAB4CBD1",
+    "predecessor_candidate_sha256": "07E65E6338D32C1FD13F17408F82A4133E55541C722874632948C7B36C909805",
+    "closure_builder_sha256": "3AD24E14E63526AA550B4CCCF3E35F0F8D1C3DFF6388D042A4AB258A54DF1588",
+    "closure_decisions_sha256": "CFEF7B6B8410397DED1FA10AF9C5AAF94D0C1B9C0D0CF1B593527A3A06D15357",
+    "closure_evidence_sha256": "74FF921D2D6AC801E695F1A3162E65C3F159BC801BD5C394ED34ED9F3815F802",
+    "closure_coverage_sha256": "0BCD9B8B510381906E555366CB4017F1DC1F70DF749B73029445A026B936E040",
+    "closure_promotion_sha256": "9ECF66A8FDAF68EC4D04F4EC551A2FF97A62074036644DF330D2063D6E309C95"
+  },
+  "selector610_consolidated": {
+    "updated_row_count": 314,
+    "promotion_count": 167,
+    "verification_renewal_count": 147,
+    "semantic_override_count": 193,
+    "action_counts": {
+      "runtime_promotion": 120,
+      "translation_override_and_runtime_promotion": 47,
+      "translation_override_and_verification_renewal": 146,
+      "verification_renewal": 1
+    },
+    "decision_coordinate_sha256": "C619DD5D1A3D5CE5EF7DCBD536A5C6D676502A5500E097C7E4877A1D5954C7BE",
+    "promotion_coordinate_sha256": "EC800F8EB648829EFE463CDC811D406643DEEDBBA7FDD73B2543C2DCDA831D3F",
+    "renewal_coordinate_sha256": "DA0757A25AD524067EC4E76CF66E6DCF567712340ACB98A74EAB0C868FB0F975",
+    "override_coordinate_sha256": "6CF738A06857042698AE771F81CCDEF998C4CC54828E5900C22A717724542BA8",
+    "reviewed_site_count": 230,
+    "reviewed_site_sha256": "FF7F860EDD682815AEEEC30D61CA6B787BE4038F4FF0BEA0DC8399AAC667F150",
+    "source_only_repair_site_count": 13,
+    "source_only_site_sha256": "13849017022482E0E115529572418A27B56D83A2923237A604F09733649EDFCF",
+    "source_only_action_count": 0,
+    "predecessor_candidate_sha256": "07E65E6338D32C1FD13F17408F82A4133E55541C722874632948C7B36C909805",
+    "final_candidate_sha256": "F80EA5958757F097885279BAB53A8456758BB99B1CE47E214FE0F54AB7152807",
+    "reverse_overlay_sha256": "07E65E6338D32C1FD13F17408F82A4133E55541C722874632948C7B36C909805",
+    "single_coordinate_union_used": true,
+    "sequential_chunk_overlays_used": false,
+    "steam_write_performed": false
+  },
+  "result": {
+    "semantic_review_approved": 52803,
+    "runtime_review_pending": 7101,
+    "fully_candidate_eligible": 45702,
+    "promoted_total": 29233,
+    "pk_msggame_promotion_count": 13582,
+    "private_integrated_decision_sha256": "0218C3D198C9930C8920ED8DAEB2DDD85987878035AC59DD5ECC8179D38DE12B",
+    "row_count": 52803,
+    "affected_row_count": 314,
+    "unaffected_raw_line_copy_count": 52489
+  },
+  "validation": {
+    "full_integration_engine_invoked": false,
+    "targeted_affected_rows_rechecked": 314,
+    "unaffected_rows_byte_copied": 52489,
+    "candidate_call_sites_rechecked": 230,
+    "source_only_sites_rechecked": 13,
+    "event_dialogue_912px_rule_applied": false,
+    "current_relative_raw_g1n_nonexpansion_used": true,
+    "steam_archives_read_only": true
+  },
+  "distribution_policy": {
+    "private_integrated_decision_stays_below_tmp": true,
+    "tracked_report_contains_commercial_source_text": false,
+    "tracked_report_contains_translated_dialogue_text": false,
+    "tracked_report_contains_exact_coordinates": false
+  },
+  "status": "PASS",
+  "steam_write_performed": false
+}
