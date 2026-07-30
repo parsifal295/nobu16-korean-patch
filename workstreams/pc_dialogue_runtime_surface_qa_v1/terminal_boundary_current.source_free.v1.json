@@ -1,0 +1,71 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-terminal-boundary-current.source-free.v1",
+  "status": "FAIL",
+  "release_target": "0.15.0",
+  "audited_at_local_date": "2026-07-30",
+  "candidate": {
+    "base_msggame_sha256": "44828B27368FB74EF906DC167DCAF1BA54129A4313F7EDA3C0668777BB86E276",
+    "pk_msggame_sha256": "0330917524A47974618317A8EC56C4B471672DA5AD07000A8C5D8A7CCFB8A05F"
+  },
+  "coverage": {
+    "base_record_count": 19152,
+    "base_call_site_count": 4406,
+    "pk_record_count": 21751,
+    "pk_call_site_count": 5771,
+    "legacy_duplicated_terminal_boundary_total": 79,
+    "legacy_findings_covered": 79
+  },
+  "counts": {
+    "issue_variant_count": 455,
+    "unique_boundary_count": 167,
+    "resources": {
+      "base_msggame": {
+        "issue_variant_count": 254,
+        "unique_boundary_count": 88
+      },
+      "pk_msggame": {
+        "issue_variant_count": 201,
+        "unique_boundary_count": 79
+      }
+    },
+    "prefix_families": {
+      "formal_declarative": 297,
+      "formal_interrogative": 4,
+      "imperative": 3,
+      "plain_declarative": 97,
+      "polite_or_archaic": 54
+    },
+    "suffix_families": {
+      "absent": 3,
+      "bare_terminal": 66,
+      "copula": 183,
+      "exist": 22,
+      "ha": 181
+    }
+  },
+  "representative_regressions": [
+    {
+      "resource": "pk_msggame",
+      "block_id": 15,
+      "record_id": 1545,
+      "literal_id": 0,
+      "call_target": "0:376"
+    },
+    {
+      "resource": "pk_msggame",
+      "block_id": 9,
+      "record_id": 3967,
+      "literal_id": 0,
+      "call_target": "0:1096"
+    },
+    {
+      "resource": "pk_msggame",
+      "block_id": 7,
+      "record_id": 2834,
+      "literal_id": 1,
+      "call_target": "0:466"
+    }
+  ],
+  "source_or_translation_bodies_omitted": true,
+  "steam_write_performed": false
+}

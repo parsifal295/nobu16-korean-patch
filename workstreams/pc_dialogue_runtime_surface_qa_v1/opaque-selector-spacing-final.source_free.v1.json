@@ -1,0 +1,87 @@
+{
+  "audit_contract": {
+    "all_records_symbolically_rendered": true,
+    "branch_products_summarized_exactly": true,
+    "calls_and_jumps_closed": true,
+    "cartesian_variant_cap_used": false,
+    "castle_clan_unit_families_rejected": false,
+    "dependent_noun_selector_groups": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "evidence": {
+      "automatic_space_inserted": false,
+      "base_honorific_policy_sha256": "4D5691C350EF14D5B1E5DF25BF9F76C7FD35DA23BB61DBC6024F7913C3DA5F6E",
+      "base_person_selector_policy_sha256": "37CFD127B8D9F4A6BD55D07AAA06FADAC33496FA74D6F2A6783AB55632C01385",
+      "copy_verbatim": true,
+      "ghidra_selector_contract_sha256": "8B7C505D0B57DE7FA0D8A3111ECB53DF7EE13B8BFDBCEE1B670391AB154A4629",
+      "honorific_suffix_policy_validated": true,
+      "lexical_selector_policy_validated": true,
+      "person_like_selector_policy_validated": true,
+      "pk_honorific_policy_sha256": "FDADBE96D0038DDF6544EF60D9827C636938DE2DBC6313AB3E45E345F6D90C33",
+      "pk_person_selector_policy_sha256": "277AFFDCD1E19255CF96087D78D524D0F3A6C37E38583791B779DB3FF84B302A",
+      "runtime_lexical_selector_policy_sha256": "D5F6F7336E5E6159C73A8D28E10C5DF04305BBF0E40036973F916CE432A430D2",
+      "tono_spacing_policy_validated": true
+    },
+    "integer_ordinal_families_rejected": false,
+    "only_no_space_exact_noun_boundaries_rejected": true,
+    "opaque_non_person_selectors_rendered": true,
+    "ordinary_particles_rejected": false,
+    "person_like_selector_groups": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "source_or_translation_bodies_omitted": true
+  },
+  "category_counts": {},
+  "issue_count": 0,
+  "issues": [],
+  "resources": {
+    "base_msggame": {
+      "decoded_record_count": 19152,
+      "issue_count": 0,
+      "lexical_selector_component_count": 21689,
+      "lexical_selector_record_count": 7906,
+      "path": "I:\\Workspaces\\NOBU16-Korean\\worktrees\\KR_PATCH_V0150\\tmp\\pc_dialogue_runtime_surface_remediation_v1\\base\\candidate\\MSG\\JP\\msggame.bin",
+      "person_selector_component_count": 16988,
+      "person_selector_record_count": 4474,
+      "record_count": 19152,
+      "selector_component_count": 24895,
+      "sha256": "55BBD84D0E1F4C7BFD72043BB37E72CD9F996D7E2CE6B39AEE2B494127827BCA",
+      "size": 1557457,
+      "symbolic_prefix_state_count": 43492,
+      "symbolic_selector_tail_state_count": 15436
+    },
+    "pk_msggame": {
+      "decoded_record_count": 21751,
+      "issue_count": 0,
+      "lexical_selector_component_count": 23475,
+      "lexical_selector_record_count": 8892,
+      "path": "I:\\Workspaces\\NOBU16-Korean\\worktrees\\KR_PATCH_V0150\\tmp\\pc_dialogue_runtime_surface_remediation_v1\\pk\\candidate\\MSG_PK\\JP\\msggame.bin",
+      "person_selector_component_count": 18489,
+      "person_selector_record_count": 5309,
+      "record_count": 21751,
+      "selector_component_count": 26884,
+      "sha256": "39E51591CBCBE46E994C02B8E1B1CEE7DF81DEB8095DFF5718C57D3152DF7BF8",
+      "size": 1814437,
+      "symbolic_prefix_state_count": 51148,
+      "symbolic_selector_tail_state_count": 18920
+    }
+  },
+  "schema": "nobu16.kr.opaque-person-selector-spacing-audit.v1",
+  "status": "PASS",
+  "steam_write_performed": false
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "nobu16.kr.pc-dialogue-runtime-surface-overlay.v1",
+  "overlay_id": "priority-regressions-20260730",
+  "entries": [
+    {
+      "resource": "base_msggame",
+      "block_id": 2,
+      "record_id": 142,
+      "literal_id": 0,
+      "source_text_utf16le_sha256": "3977CC0E3BF97241A6F880BAE4CF195704D414579D71149CAC13E13004568B0A",
+      "ko": "에게 병환이 생겼습니다",
+      "rationale": "동적 인물명 뒤의 고정 주격 조사를 여격 구문으로 바꿔 받침과 무관하게 조립한다."
+    },
+    {
+      "resource": "base_msggame",
+      "block_id": 6,
+      "record_id": 3957,
+      "literal_id": 0,
+      "source_text_utf16le_sha256": "44D31E4D3CC2BFEB69C039BCDA661A801067E6D6A4A0F7B58440C69DB2AF4E82",
+      "ko": "이 제안한 ",
+      "rationale": "동적 값이 '가문'으로 끝나는 selector 계약에 따라 주격 조사를 확정하고, 동적 기간값 앞 띄어쓰기를 고정한다."
+    },
+    {
+      "resource": "base_msggame",
+      "block_id": 6,
+      "record_id": 3957,
+      "literal_id": 1,
+      "source_text_utf16le_sha256": "DAF96DE497E39346044CE7721B872E17D3678BD5E1E916B8F0E27235A7A256CC",
+      "ko": "개월 친선 협정을 수락",
+      "rationale": "기간 뒤 경계를 보존하면서 외교 알림을 자연스러운 명사구로 교정한다."
+    },
+    {
+      "resource": "base_msggame",
+      "block_id": 6,
+      "record_id": 3958,
+      "literal_id": 0,
+      "source_text_utf16le_sha256": "B4079DBF1BD1693560533E8C2CF0F5D5BC064D89DD3FC34ACDDBF9E61DE63F3D",
+      "ko": "이 제안한 친선 협정을 거부",
+      "rationale": "동적 값이 '가문'으로 끝나는 selector 계약에 따라 주격 조사를 확정하고 외교 용어를 일관되게 맞춘다."
+    },
+    {
+      "resource": "base_msggame",
+      "block_id": 8,
+      "record_id": 1020,
+      "literal_id": 1,
+      "source_text_utf16le_sha256": "2289ED0B338119D0A2B0D4C0E75B9EE19784E6636494413D2058E5F26DF38636",
+      "ko": "에게도 병환이 들다니…\n…당분간은 힘을 발휘",
+      "rationale": "화자 대명사 다섯 변형에 공통으로 결합되는 여격 구문을 사용하고, 뒤의 VM 어미 '하지 않습니다/하지 않는다/하지 않사옵니다'와 자연스럽게 조립한다."
+    },
+    {
+      "resource": "base_msggame",
+      "block_id": 8,
+      "record_id": 1020,
+      "literal_id": 3,
+      "source_text_utf16le_sha256": "79A93CBCF067E2A614BA9DC56F40F28223DACD39B690A38B808862CFC7567291",
+      "ko": "폐를 끼쳐 ",
+      "rationale": "사과 VM 어미 앞의 불필요한 쉼표를 없애고 필요한 띄어쓰기를 리터럴에 명시한다."
+    },
+    {
+      "resource": "pk_msggame",
+      "block_id": 2,
+      "record_id": 148,
+      "literal_id": 0,
+      "source_text_utf16le_sha256": "3977CC0E3BF97241A6F880BAE4CF195704D414579D71149CAC13E13004568B0A",
+      "ko": "에게 병환이 생겼습니다",
+      "rationale": "동적 인물명 뒤의 고정 주격 조사를 여격 구문으로 바꿔 받침과 무관하게 조립한다."
+    },
+    {
+      "resource": "pk_msggame",
+      "block_id": 8,
+      "record_id": 1032,
+      "literal_id": 1,
+      "source_text_utf16le_sha256": "41A53DC37C6D7BA9FE67CBB60CC5343A871CC1D1B0D9BBC547B5DB3F8AD8A851",
+      "ko": "에게도 병환이 들다니…\n…당분간 제 힘을 발휘하지 ",
+      "rationale": "화자 대명사 다섯 변형에 공통으로 결합되는 여격 구문을 사용하고, 뒤의 VM 어미 '않습니다/않는다/않사옵니다' 앞에 '하지 '를 복원한다."
+    },
+    {
+      "resource": "pk_msggame",
+      "block_id": 8,
+      "record_id": 1032,
+      "literal_id": 3,
+      "source_text_utf16le_sha256": "79A93CBCF067E2A614BA9DC56F40F28223DACD39B690A38B808862CFC7567291",
+      "ko": "폐를 끼쳐 ",
+      "rationale": "사과 VM 어미 앞의 불필요한 쉼표를 없애고 필요한 띄어쓰기를 리터럴에 명시한다."
+    },
+    {
+      "resource": "pk_msggame",
+      "block_id": 15,
+      "record_id": 1545,
+      "literal_id": 0,
+      "source_text_utf16le_sha256": "31EE81EC1BF0F91EF9E6BB8C190C41097D379B0906178957280E99BE29909588",
+      "ko": "을 공략할 계책이 있사옵니다",
+      "rationale": "동적 값이 '가문'으로 끝나는 selector 계약에 따라 목적격 조사를 확정한다. 종결어미 call 중복은 별도의 control-flow 교정에서 처리한다."
+    },
+    {
+      "resource": "pk_msggame",
+      "block_id": 15,
+      "record_id": 1545,
+      "literal_id": 2,
+      "source_text_utf16le_sha256": "10C88EF4ED62BF5E708D2970CED430B9C9BE9C338DE4F1D1F80CABAF0ADC5490",
+      "ko": "으로 적병을 유인하면\n허술해진 성을 공략할 수 있을 것",
+      "rationale": "동적 값이 '성'으로 끝나는 selector 계약에 따라 방향격 조사를 확정한다."
+    }
+  ]
+}
