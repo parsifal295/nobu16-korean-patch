@@ -1,0 +1,67 @@
+{
+  "schema": "nobu16.kr.runtime-combination-particle-spacing-overlay.v1",
+  "overlay_id": "runtime_combination_particle_spacing_fix_v1",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_decompiled_function_body": false
+  },
+  "entries": [
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17343,
+      "source_utf16le_sha256": "2651EE1559AEF51DEEC0DB10804958ACBA2A87EA1C092927C873BCC4CB674BBC",
+      "ko": "%s 사망",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17377,
+      "source_utf16le_sha256": "BC90FA990C14F8AED3B219A716573D7F8737ABFB888A3B7EAEC3EF0126A69AE7",
+      "ko": "%s에 의한 %s 제압",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17701,
+      "source_utf16le_sha256": "BC90FA990C14F8AED3B219A716573D7F8737ABFB888A3B7EAEC3EF0126A69AE7",
+      "ko": "%s에 의한 %s 제압",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17385,
+      "source_utf16le_sha256": "2651EE1559AEF51DEEC0DB10804958ACBA2A87EA1C092927C873BCC4CB674BBC",
+      "ko": "%s 사망",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17419,
+      "source_utf16le_sha256": "BC90FA990C14F8AED3B219A716573D7F8737ABFB888A3B7EAEC3EF0126A69AE7",
+      "ko": "%s에 의한 %s 제압",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17747,
+      "source_utf16le_sha256": "BC90FA990C14F8AED3B219A716573D7F8737ABFB888A3B7EAEC3EF0126A69AE7",
+      "ko": "%s에 의한 %s 제압",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "id": 3319,
+      "source_utf16le_sha256": "369D54E172A086F5A8AEF92791F758FB5DC5A95BE102EBFDCB2CDBA17AD46F59",
+      "ko": "나쓰메 ",
+      "allow_edge_whitespace_change": true
+    },
+    {
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "id": 3323,
+      "source_utf16le_sha256": "18B86E29E91B362EDFFE2F91391CC13BB3D07936C69CD64A6220E017AFAF9381",
+      "ko": "쓰카하라 ",
+      "allow_edge_whitespace_change": true
+    }
+  ]
+}
