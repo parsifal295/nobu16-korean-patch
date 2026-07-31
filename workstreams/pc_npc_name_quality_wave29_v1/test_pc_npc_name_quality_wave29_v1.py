@@ -36,7 +36,7 @@ EXPECTED_COMPONENTS = (
     (327, "마을", "마을", "성읍 "),
     (349, "무라", "무라", "마을 "),
     (445, "가문", "가문", "가"),
-    (757, "나가", "초 ", "부족"),
+    (757, "나가", "초 ", "초 "),
     (774, "철포", "철포", "철포 "),
     (2164, "가시라", "가시라", "장"),
     (2168, "노", "노", "로"),
@@ -68,7 +68,7 @@ class Wave29NpcNameQualityTests(unittest.TestCase):
         }
         cls.output, cls.audit = WAVE29.prepare_candidate()
 
-    def test_exact_58_slot_spec_with_directional_spaces(self) -> None:
+    def test_exact_57_slot_spec_with_directional_spaces(self) -> None:
         self.assertEqual(
             tuple(
                 (fix.entry_id, fix.base_before, fix.pk_before, fix.after)
@@ -82,9 +82,23 @@ class Wave29NpcNameQualityTests(unittest.TestCase):
         )
         self.assertEqual(len(WAVE29.COMPONENT_FIXES), 23)
         self.assertEqual(len(WAVE29.STATIC_FIXES), 6)
-        self.assertEqual(len(WAVE29.COMPONENT_FIXES) * 2 + len(WAVE29.STATIC_FIXES) * 2, 58)
+        self.assertEqual(
+            len(WAVE29.changed_slot_ids(WAVE29.BASE_STRDATA))
+            + len(WAVE29.changed_slot_ids(WAVE29.PK_MSGDATA))
+            + len(WAVE29.STATIC_FIXES) * 2,
+            57,
+        )
         self.assertEqual(WAVE29.COMPONENT_FIXES[2].after, "가공 ")
         self.assertEqual(WAVE29.COMPONENT_FIXES[9].after, "다이간 ")
+        surname_fix = next(
+            fix for fix in WAVE29.COMPONENT_FIXES if fix.entry_id == 757
+        )
+        self.assertEqual(
+            (surname_fix.base_before, surname_fix.pk_before, surname_fix.after),
+            ("나가", "초 ", "초 "),
+        )
+        self.assertTrue(surname_fix.after.endswith(" "))
+        self.assertNotEqual(surname_fix.after, "부족")
         self.assertEqual(WAVE29.COMPONENT_FIXES[21].after, " 대표")
 
     def test_exact_wave27_eleven_file_predecessor_and_target_profile(self) -> None:
@@ -119,20 +133,31 @@ class Wave29NpcNameQualityTests(unittest.TestCase):
         )
         assert source_base_table and candidate_base_table and source_base_archive and candidate_base_archive
         assert source_pk_table and candidate_pk_table
-        expected_components = {fix.entry_id for fix in WAVE29.COMPONENT_FIXES}
+        expected_base_components = WAVE29.changed_slot_ids(WAVE29.BASE_STRDATA)
+        expected_pk_components = WAVE29.changed_slot_ids(WAVE29.PK_MSGDATA)
         self.assertEqual(
             {i for i, (before, after) in enumerate(zip(source_base_texts, candidate_base_texts, strict=True)) if before != after},
-            expected_components,
+            expected_base_components,
         )
         self.assertEqual(
             {i for i, (before, after) in enumerate(zip(source_pk_texts, candidate_pk_texts, strict=True)) if before != after},
-            expected_components,
+            expected_pk_components,
         )
         for before_block, after_block in zip(source_base_archive.blocks[1:], candidate_base_archive.blocks[1:], strict=True):
             self.assertEqual(before_block.table.blob, after_block.table.blob)
-        for before_table, after_table, label in (
-            (source_base_table, candidate_base_table, "Base strdata"),
-            (source_pk_table, candidate_pk_table, "PK msgdata"),
+        for before_table, after_table, expected_components, label in (
+            (
+                source_base_table,
+                candidate_base_table,
+                expected_base_components,
+                "Base strdata",
+            ),
+            (
+                source_pk_table,
+                candidate_pk_table,
+                expected_pk_components,
+                "PK msgdata",
+            ),
         ):
             for entry_id in range(before_table.string_count):
                 if entry_id not in expected_components:
@@ -195,7 +220,7 @@ class Wave29NpcNameQualityTests(unittest.TestCase):
                 WAVE29.PREDECESSOR_ROOT, output_root, audit_path, manifest_path
             )
             self.assertTrue(manifest["candidate_only"])
-            self.assertEqual(manifest["changed_slot_count"], 58)
+            self.assertEqual(manifest["changed_slot_count"], 57)
             self.assertTrue(manifest["non_target_record_bytes_identical"])
             self.assertTrue(manifest["issue61_percent_policy_unchanged"])
             self.assertEqual(
@@ -204,7 +229,7 @@ class Wave29NpcNameQualityTests(unittest.TestCase):
             )
             report = WAVE29.verify_private_candidate(output_root)
             self.assertEqual(report["status"], "PASS")
-            self.assertEqual(report["changed_slot_count"], 58)
+            self.assertEqual(report["changed_slot_count"], 57)
             self.assertTrue(report["non_target_record_bytes_identical"])
             self.assertTrue(report["issue61_percent_policy"]["literal_tokens_byte_identical"])
         with self.assertRaises(WAVE29.Wave29Error):

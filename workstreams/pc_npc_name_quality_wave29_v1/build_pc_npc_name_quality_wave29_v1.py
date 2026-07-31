@@ -2,8 +2,10 @@
 """Build the PC-only private Wave 29 NPC-name quality candidate.
 
 The sole Korean preimage is the complete eleven-file PC Wave 27 candidate.
-This workstream changes the 23 approved dynamic NPC components in both
-presentation tables and six complete event-name labels in both event tables.
+This workstream applies 23 approved dynamic NPC component targets to both
+presentation tables and six complete event-name labels to both event tables.
+One PK component is already equal to its corrected target, so the corrected
+profile has 57 physical slot changes rather than the former erroneous 58.
 It writes only a private candidate below this release worktree's ``tmp``
 directory; it has no Steam-apply, Git, or release-publishing capability.
 """
@@ -28,9 +30,23 @@ sys.dont_write_bytecode = True
 SCRIPT = Path(__file__).resolve()
 WORKSTREAM = SCRIPT.parent
 REPO = WORKSTREAM.parents[1]
+WORKSPACE = REPO.parents[1]
 TMP_ROOT = REPO / "tmp" / WORKSTREAM.name
-PREDECESSOR_ROOT = Path(
+LEGACY_PREDECESSOR_ROOT = Path(
     r"F:\Games\NOBU16\KR_PATCH_WORK\tmp\pc_dialogue_quality_wave27_static_quality_v1\candidate"
+)
+WORKSPACE_PREDECESSOR_ROOT = (
+    WORKSPACE
+    / "repository"
+    / "KR_PATCH_WORK"
+    / "tmp"
+    / "pc_dialogue_quality_wave27_static_quality_v1"
+    / "candidate"
+)
+PREDECESSOR_ROOT = (
+    LEGACY_PREDECESSOR_ROOT
+    if LEGACY_PREDECESSOR_ROOT.is_dir()
+    else WORKSPACE_PREDECESSOR_ROOT
 )
 PC_REFERENCE_ROOT = Path(r"F:\SteamLibrary\steamapps\common\NOBU16")
 
@@ -101,8 +117,8 @@ INPUT_SIZES = {
 # retain-only resources must remain byte-identical to INPUT_*.
 TARGET_SHA256 = {
     **INPUT_SHA256,
-    BASE_STRDATA: "37A1F6280B2663A7FF055C6A2105B5658CA62065582A66213C6D4D4AE2A79E0A",
-    PK_MSGDATA: "8282F12A667E11F54054856035415C7297385ADD16EC261BD952BEBB8658952A",
+    BASE_STRDATA: "7EA8CE9512C5504CD78674343E01DCDA25B90DA02AFCEDA3358378E32D90E371",
+    PK_MSGDATA: "A3EE102238AE5ED8EB07132A11A217F16642F9C049543EA09E12643D011E1CB4",
     BASE_EV: "02AC90B818E8F75683CD5BACF277E91048D4510E448A8699242D3B19299FE067",
     PK_MSEV: "AEE0D9992B963E17B3C118AA54DACC60390936FF48876674CA7675A2A11A3668",
 }
@@ -150,7 +166,7 @@ COMPONENT_FIXES = (
     ComponentFix(327, "마을", "마을", "성읍 "),
     ComponentFix(349, "무라", "무라", "마을 "),
     ComponentFix(445, "가문", "가문", "가"),
-    ComponentFix(757, "나가", "초 ", "부족"),
+    ComponentFix(757, "나가", "초 ", "초 "),
     ComponentFix(774, "철포", "철포", "철포 "),
     ComponentFix(2164, "가시라", "가시라", "장"),
     ComponentFix(2168, "노", "노", "로"),
@@ -307,8 +323,12 @@ def assert_spec() -> None:
         raise Wave29Error("dynamic and static ID sets unexpectedly overlap")
     if len(ISSUE61_PK_PERCENT_IDS) != 49 or len(ISSUE61_SHARED_PERCENT_SLOTS) != 39:
         raise Wave29Error("Issue #61 percent-policy scope differs")
-    if len(COMPONENT_FIXES) * 2 + len(STATIC_FIXES) * 2 != 58:
-        raise Wave29Error("Wave 29 must change exactly 58 logical slots")
+    dynamic_slot_count = sum(
+        fix.base_before != fix.after for fix in COMPONENT_FIXES
+    ) + sum(fix.pk_before != fix.after for fix in COMPONENT_FIXES)
+    changed_slot_count = dynamic_slot_count + len(STATIC_FIXES) * 2
+    if dynamic_slot_count != 45 or changed_slot_count != 57:
+        raise Wave29Error("corrected Wave 29 must change exactly 57 slots")
     if tuple(INPUT_SHA256) != PROFILE_PATHS or tuple(INPUT_SIZES) != PROFILE_PATHS:
         raise Wave29Error("predecessor profile order differs")
     if tuple(TARGET_SHA256) != PROFILE_PATHS or tuple(TARGET_SIZES) != PROFILE_PATHS:
@@ -419,8 +439,18 @@ def patch_resource(resource: str, source: bytes) -> bytes:
 
 
 def changed_slot_ids(resource: str) -> frozenset[int]:
-    if resource in {BASE_STRDATA, PK_MSGDATA}:
-        return frozenset(fix.entry_id for fix in COMPONENT_FIXES)
+    if resource == BASE_STRDATA:
+        return frozenset(
+            fix.entry_id
+            for fix in COMPONENT_FIXES
+            if fix.base_before != fix.after
+        )
+    if resource == PK_MSGDATA:
+        return frozenset(
+            fix.entry_id
+            for fix in COMPONENT_FIXES
+            if fix.pk_before != fix.after
+        )
     if resource in {BASE_EV, PK_MSEV}:
         return frozenset(fix.entry_id for fix in STATIC_FIXES)
     raise Wave29Error(f"unsupported changed resource: {resource}")
@@ -537,7 +567,7 @@ def validate_pc_anchors() -> dict[str, Any]:
 
 
 def validate_changed_records(source: Mapping[str, bytes], candidate: Mapping[str, bytes]) -> dict[str, Any]:
-    """Validate the exact 58 semantic slots plus all non-target record bytes."""
+    """Validate the exact 57 physical slots plus all non-target record bytes."""
 
     source_base_texts, source_base_table, source_base_archive = parse_component_texts(BASE_STRDATA, source[BASE_STRDATA])
     candidate_base_texts, candidate_base_table, candidate_base_archive = parse_component_texts(BASE_STRDATA, candidate[BASE_STRDATA])
@@ -547,9 +577,20 @@ def validate_changed_records(source: Mapping[str, bytes], candidate: Mapping[str
     assert source_base_archive is not None and candidate_base_archive is not None
     assert source_pk_table is not None and candidate_pk_table is not None
 
-    component_ids = changed_slot_ids(BASE_STRDATA)
-    assert_non_target_slot_bytes_unchanged(source_base_table, candidate_base_table, component_ids, "Base strdata block 0")
-    assert_non_target_slot_bytes_unchanged(source_pk_table, candidate_pk_table, component_ids, "PK msgdata")
+    base_component_ids = changed_slot_ids(BASE_STRDATA)
+    pk_component_ids = changed_slot_ids(PK_MSGDATA)
+    assert_non_target_slot_bytes_unchanged(
+        source_base_table,
+        candidate_base_table,
+        base_component_ids,
+        "Base strdata block 0",
+    )
+    assert_non_target_slot_bytes_unchanged(
+        source_pk_table,
+        candidate_pk_table,
+        pk_component_ids,
+        "PK msgdata",
+    )
     for source_block, candidate_block in zip(source_base_archive.blocks[1:], candidate_base_archive.blocks[1:], strict=True):
         if source_block.table.blob != candidate_block.table.blob:
             raise Wave29Error(f"Base strdata changed retain-only block {source_block.block_id}")
@@ -595,9 +636,15 @@ def validate_changed_records(source: Mapping[str, bytes], candidate: Mapping[str
         candidate_pk_table,
     )
     return {
-        "dynamic_component_slot_count": len(COMPONENT_FIXES) * 2,
+        "dynamic_component_slot_count": (
+            len(base_component_ids) + len(pk_component_ids)
+        ),
         "static_label_slot_count": len(STATIC_FIXES) * 2,
-        "changed_slot_count": len(COMPONENT_FIXES) * 2 + len(STATIC_FIXES) * 2,
+        "changed_slot_count": (
+            len(base_component_ids)
+            + len(pk_component_ids)
+            + len(STATIC_FIXES) * 2
+        ),
         "non_target_record_bytes_identical": True,
         "component_rows": component_rows,
         "static_rows": static_rows,
