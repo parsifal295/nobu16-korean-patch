@@ -1,0 +1,36 @@
+{
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_binary": false,
+    "steam_write_supported": false
+  },
+  "entries": [
+    {
+      "allow_trailing_space": true,
+      "baseline_utf16le_sha256": "48F7545F7AA06762BDB238DDE8E00E32CCF415102C349236995F663C97696C4D",
+      "block_id": 0,
+      "id": 757,
+      "ko": "초 ",
+      "resource": "MSG/JP/strdata.bin"
+    },
+    {
+      "allow_trailing_space": true,
+      "baseline_utf16le_sha256": "48F7545F7AA06762BDB238DDE8E00E32CCF415102C349236995F663C97696C4D",
+      "id": 757,
+      "ko": "초 ",
+      "resource": "MSG_PK/JP/msgdata.bin"
+    }
+  ],
+  "march_regression": {
+    "coordinate": "6:4137",
+    "formal_render_utf16le_sha256": "70316353500A10CA2BE42D1025FB636839A1933588AFFBD2DE7C500B993CC0B9",
+    "literal_utf16le_sha256": [
+      "E33F1A87E76502B04C854B12AF0AC503456E73A8185FD186ED003AA1BA33192D",
+      "977B44C5B25A75CCFAF12713270CDEB91B6F9E21D43FF92FC2CB464081BC3C18",
+      "EB74759B7BC94B311AB07BE045D2242CA4D79D434D2B04872554CF5E30D133F9"
+    ],
+    "resource": "MSG/JP/msggame.bin",
+    "resource_changed": false
+  },
+  "schema": "nobu16.kr.pc-reported-name-march-hotfix-overlay.v1"
+}

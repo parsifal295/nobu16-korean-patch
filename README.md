@@ -5,13 +5,20 @@ Windows Steam판 `NOBU16PK.exe` 일본어(JP) 리소스 경로를 사용하는 �
 build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**로
 선택해야 합니다.
 
-현재 공개 안정판은 [v0.90.1](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.90.1)입니다.
-[v0.90.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.1.zip)을
+현재 공개 안정판은 [v0.90.2](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.90.2)입니다.
+[v0.90.2 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.2/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.2.zip)을
 게임 폴더에 풀어 설치합니다. 완전한 게임 리소스와 원본 `NOBU16PK.exe`는
 ZIP에 포함하지 않습니다.
 
 배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
 ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+
+## v0.90.2 — 패처·무장 성씨 표시 수정
+
+- 라이센스 검사 로직 수정
+- 일부 무장 성씨가 일반 단어로 표시되던 문제 수정
+- 성씨와 이름의 런타임 조합 공백 보정
+- 무장 정보와 진군 알림 문구의 회귀 검증 보강
 
 ## v0.90.1 — 이벤트 결과문·성명 조합·가로쓰기 아이콘 수정
 
@@ -47,7 +54,7 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 
 ### 설치 전 필수 사항
 
-> v0.90.1의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
+> v0.90.2의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
 > 이전 한글 패치·모드·수동 수정 이력이 있거나 상태가 확실하지 않으면
 > Steam 라이브러리에서 **NOBU16 → 속성 → 설치된 파일 → 게임 파일 무결성 확인**을
 > 실행해 원본 상태를 준비하십시오.
@@ -56,7 +63,7 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 2. 게임 파일 무결성 확인을 완료한 뒤 `NOBU16PK.exe`와 게임 런처를 완전히
    종료합니다. Steam 클라이언트는 정품 라이선스를 확인할 수 있도록 로그인
    상태로 실행해 둡니다.
-3. [v0.90.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.1.zip)을
+3. [v0.90.2 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.2/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.2.zip)을
    내려받습니다.
 4. ZIP의 **모든 파일**을 `NOBU16PK.exe`가 있는
    `...\SteamLibrary\steamapps\common\NOBU16` 최상위에 바로 풉니다.
