@@ -1,0 +1,43 @@
+{
+  "changed_resources": {
+    "MSG/JP/msggame.bin": {
+      "after_record_sha256": "2F5FFA3F8B657B9809ECE7C9A90DD6366EF060F5519ABC70DBB5ED2528CB4F87",
+      "after_record_size": 135,
+      "before_record_sha256": "50EC001C180EB8905983A22A4CADCC221115726E6B4E0CE80F9EF0865C0EBA54",
+      "before_record_size": 135,
+      "coordinate": "15:2255",
+      "current_profile_render": "조금이나마 참고가 된다면 다행이오\n잊지 않도록 건의하여 두었으니\n필요할 때 참조해 보시오.",
+      "input_sha256": "ADB73561AAA10A66364B3C09B2184BB29698186C808E0FE264C64B1DD2A5A4FE",
+      "input_size": 1557915,
+      "removed_selector_count": 2,
+      "retained_selector_count": 1,
+      "target_sha256": "A18DEBDDEF9A4262C59A5B57A08D1AC0F13B0AEFB56C7D6763EB1302FA5D363F",
+      "target_size": 1557915
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "after_record_sha256": "79145050882E8269F72764148BE31EAA99ABF91B9E17E86A9AAAC9ADC16098DA",
+      "after_record_size": 133,
+      "before_record_sha256": "5D621CD6812E7F96767D907FCD328638CDDA9E32C1A890571F1A210345BE0424",
+      "before_record_size": 133,
+      "coordinate": "15:2286",
+      "current_profile_render": "조금이나마 참고가 된다면 다행이오\n잊지 않도록 건의해 두었으니\n필요할 때 참조해 보시오.",
+      "input_sha256": "1D7F1FB2086419BD1FC928012F3E0E3D0BA2C600809513188A3FFBA455F63EFF",
+      "input_size": 1815549,
+      "removed_selector_count": 2,
+      "retained_selector_count": 1,
+      "target_sha256": "EC0353AD7823010722954D87EC751570EC3453AF30B536B2DF11E1C0F27DE799",
+      "target_size": 1815549
+    }
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_binary": false,
+    "steam_write_supported": false
+  },
+  "schema": "nobu16.kr.pc-dialogue-proposal-reference-hotfix-overlay.v1",
+  "status": "PASS",
+  "visible_regression": {
+    "after": "필요할 때 참조해 보시오.",
+    "before": "필요 시 참조해저것"
+  }
+}

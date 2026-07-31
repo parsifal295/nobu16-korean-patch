@@ -5,13 +5,25 @@ Windows Steam판 `NOBU16PK.exe` 일본어(JP) 리소스 경로를 사용하는 �
 build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**로
 선택해야 합니다.
 
-현재 공개 안정판은 [v0.90.2](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.90.2)입니다.
-[v0.90.2 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.2/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.2.zip)을
+현재 공개 안정판은 [v0.90.3](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.90.3)입니다.
+[v0.90.3 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.3/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.3.zip)을
 게임 폴더에 풀어 설치합니다. 완전한 게임 리소스와 원본 `NOBU16PK.exe`는
 ZIP에 포함하지 않습니다.
 
 배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
 ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+
+## v0.90.3 — XINPUT 컨트롤러 입력·건의 대사 수정
+
+- v0.90.2의 한글 리소스와 일반 PC 실행 파일 변경 사항은 그대로 유지
+- `NOBU16PK_XINPUT.exe`에서 방향 입력이 동작하지 않던 문제 수정
+- A/B/X/Y 버튼 배열이 뒤바뀌던 문제 수정
+- 패드 방향 입력에 마우스 커서가 따라 움직이던 문제 수정
+- 일반 `NOBU16PK.exe`의 마우스 입력 경로는 변경하지 않음
+- 건의 안내 대사의 `필요 시 참조해저것` 오조립을
+  `필요할 때 참조해 보시오.`로 수정
+- v0.90.3 배포 패처에 한해 Steam AppManifest·관리 설치 경로 검사를
+  일시적으로 생략함. 순정 파일 SHA-256, 패치 번들 서명, 결과 해시 검증은 유지
 
 ## v0.90.2 — 패처·무장 성씨 표시 수정
 
@@ -54,7 +66,7 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 
 ### 설치 전 필수 사항
 
-> v0.90.2의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
+> v0.90.3의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
 > 이전 한글 패치·모드·수동 수정 이력이 있거나 상태가 확실하지 않으면
 > Steam 라이브러리에서 **NOBU16 → 속성 → 설치된 파일 → 게임 파일 무결성 확인**을
 > 실행해 원본 상태를 준비하십시오.
@@ -63,7 +75,7 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 2. 게임 파일 무결성 확인을 완료한 뒤 `NOBU16PK.exe`와 게임 런처를 완전히
    종료합니다. Steam 클라이언트는 정품 라이선스를 확인할 수 있도록 로그인
    상태로 실행해 둡니다.
-3. [v0.90.2 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.2/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.2.zip)을
+3. [v0.90.3 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.3/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.3.zip)을
    내려받습니다.
 4. ZIP의 **모든 파일**을 `NOBU16PK.exe`가 있는
    `...\SteamLibrary\steamapps\common\NOBU16` 최상위에 바로 풉니다.
@@ -98,6 +110,9 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 - Steam Deck에서는 `NOBU16PK_XINPUT.exe`를 실행합니다.
 - PC에서는 `NOBU16PK_XINPUT.exe`를 Steam 라이브러리에 추가하고
   Steam Input을 활성화합니다.
+- 컨트롤러는 게임을 실행하기 전에 연결합니다.
+- XINPUT판의 마우스 커서는 숨겨지며 방향 입력과 A/B/X/Y는 원래 배열로
+  동작합니다.
 
 ### 이미지 확인
 
