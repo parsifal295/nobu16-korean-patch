@@ -1,0 +1,94 @@
+{
+  "schema": "nobu16.kr.runtime-event-result-screenshot-mapping.v2",
+  "cause": "Runtime substitutes dynamic values literally and does not select Korean particles from the final syllable.",
+  "screenshots": [
+    {
+      "index": 1,
+      "covered_templates": [
+        "succession",
+        "death",
+        "vassalage"
+      ]
+    },
+    {
+      "index": 2,
+      "covered_templates": [
+        "dismissal",
+        "force_destruction",
+        "affiliation",
+        "death"
+      ]
+    },
+    {
+      "index": 3,
+      "covered_templates": [
+        "succession",
+        "affiliation"
+      ]
+    },
+    {
+      "index": 4,
+      "covered_templates": [
+        "force_birth",
+        "alliance",
+        "vassalage"
+      ]
+    },
+    {
+      "index": 5,
+      "covered_templates": [
+        "succession",
+        "force_birth",
+        "relationship_release",
+        "alliance"
+      ]
+    },
+    {
+      "index": 6,
+      "covered_templates": [
+        "base_relocation"
+      ]
+    },
+    {
+      "index": 7,
+      "covered_templates": [
+        "force_destruction",
+        "death"
+      ]
+    },
+    {
+      "index": 8,
+      "covered_templates": [
+        "force_destruction",
+        "conditional_death"
+      ]
+    },
+    {
+      "index": 9,
+      "covered_templates": [
+        "relationship_release",
+        "alliance"
+      ]
+    },
+    {
+      "index": 10,
+      "covered_templates": [
+        "rename"
+      ]
+    }
+  ],
+  "expected_runtime_examples": [
+    "당주 승계(전임: 마쓰다이라 기요야스 / 후임: 마쓰다이라 히로타다)",
+    "마쓰다이라 가문, 이마가와 가문에 종속",
+    "아시카가 하루나오 해임",
+    "오우치 가문 멸망, 소속 무장들이 모리 가문에 합류",
+    "다자카 젠케이 사망(모리 가문 소속 시)",
+    "오다 가문 본거 이전: 기요스성",
+    "개명 전: 다케다 하루노부 / 개명 후: 다케다 신겐"
+  ],
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_decompiled_function_body": false
+  }
+}

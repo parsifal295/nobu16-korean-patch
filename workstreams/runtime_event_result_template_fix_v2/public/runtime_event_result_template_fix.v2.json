@@ -1,0 +1,403 @@
+{
+  "schema": "nobu16.kr.runtime-event-result-template-overlay.v2",
+  "overlay_id": "runtime_event_result_template_fix_v2",
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_decompiled_function_body": false
+  },
+  "entries": [
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17302,
+      "source_utf16le_sha256": "C234524D111F4C1CB75FEEA0B15C3E47D85BB3778AA5393738DA44A3156DA498",
+      "ko": "%s 탄생(당주: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17303,
+      "source_utf16le_sha256": "4F5660FD0B84E61C9EEFB535EE76D051439E666615A5C17D56849281A0DCB27B",
+      "ko": "%s 멸망, 소속 무장들이 %s에 합류",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17308,
+      "source_utf16le_sha256": "C580DE81DD2AA6C24BC044AE922B41C2C7462D52EAEF09866F4B549AAC42E266",
+      "ko": "%s 본거 이전: %s",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17316,
+      "source_utf16le_sha256": "2E425D834B5D0AC5BF653FEA6F97B7C125B6FB811D57185396C424831E6F47F1",
+      "ko": "동맹 체결: %s - %s(%s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17319,
+      "source_utf16le_sha256": "78B9F82CFD9C4392EAA8A28DC39C6D001D64302A9AEC0A828119258B5C084A66",
+      "ko": "정전: %s - %s(%d개월)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17321,
+      "source_utf16le_sha256": "02DCE244C61830B3AC57A6B5B87A530CF635A99363034F695CC555F0C83389C5",
+      "ko": "%s, %s에 종속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17339,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17340,
+      "source_utf16le_sha256": "C8EE1C9D155652844E28C036EA5C2B5AAC2B0AD249C53AF0E2B38B62B4086941",
+      "ko": "소속 변경: %s(기존: %s / 변경: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17344,
+      "source_utf16le_sha256": "7795B2E36383CE04C85ECE43CEAA96D1001E78AE4EE22BCC85BA667EE1D5DD64",
+      "ko": "%s 사망(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17345,
+      "source_utf16le_sha256": "F966AAFD4CF0FCBD200527D5D11F0AD030C2E95C26E471BE55ACCA94BECCBEA0",
+      "ko": "%s 행방불명",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17346,
+      "source_utf16le_sha256": "64A14D2E42B90344DB3B538861F0655959A10BA612CFBBFF241776142CFC3195",
+      "ko": "%s 행방불명(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17347,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17350,
+      "source_utf16le_sha256": "A932E82304AA84D772B787399BB24F000DF2B856AD05265ABB8BEC76C21E27CA",
+      "ko": "당주 승계(전임: %s / 후임: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17351,
+      "source_utf16le_sha256": "1950982EFE9B830968D666FDF4A7FE27E5E74129D879D1322E92D058086D2A08",
+      "ko": "%s 해임",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17378,
+      "source_utf16le_sha256": "6909F90EA05D88936B3783C00CA162A6415E2A5C42E9E441754E2B66FC52ABDC",
+      "ko": "조건부 제압: %s(%s 소속), %s - %s",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17410,
+      "source_utf16le_sha256": "BF15724DB3DB8207892C41BA9BB955BE1ABBC13E249EC44D7861DF30F29F2D87",
+      "ko": "개명 전: %s / 개명 후: %s",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17464,
+      "source_utf16le_sha256": "FD9767EF8BF5BB3D1C6A9AD06E9EAE7D7A74F23771B646802453F532E0A5DD4E",
+      "ko": "다음 세력 탄생",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17478,
+      "source_utf16le_sha256": "97D8548D30381C7C465FCE2D8554058AB448FC41B13B9FB97528655B4808D0B8",
+      "ko": "다음 세력 간 동맹 체결",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17482,
+      "source_utf16le_sha256": "2F0716D38624ED9D0BFB58D5700C488DD81CEA7836079CAFB59B6B0C4D8AE5A0",
+      "ko": "다음 세력 간 동맹·혼인 동맹·종속 관계 해소",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17626,
+      "source_utf16le_sha256": "5FBA6BC234B18870FFCE42232A8122A13D096D5460A7EF64D0E7B18EF0C934BD",
+      "ko": "%s(당주: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17627,
+      "source_utf16le_sha256": "4F5660FD0B84E61C9EEFB535EE76D051439E666615A5C17D56849281A0DCB27B",
+      "ko": "%s 멸망, 소속 무장들이 %s에 합류",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17645,
+      "source_utf16le_sha256": "02DCE244C61830B3AC57A6B5B87A530CF635A99363034F695CC555F0C83389C5",
+      "ko": "%s, %s에 종속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17663,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17664,
+      "source_utf16le_sha256": "C8EE1C9D155652844E28C036EA5C2B5AAC2B0AD249C53AF0E2B38B62B4086941",
+      "ko": "소속 변경: %s(기존: %s / 변경: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17668,
+      "source_utf16le_sha256": "7795B2E36383CE04C85ECE43CEAA96D1001E78AE4EE22BCC85BA667EE1D5DD64",
+      "ko": "%s 사망(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17670,
+      "source_utf16le_sha256": "64A14D2E42B90344DB3B538861F0655959A10BA612CFBBFF241776142CFC3195",
+      "ko": "%s 행방불명(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17671,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG/JP/ev_strdata.bin",
+      "id": 17674,
+      "source_utf16le_sha256": "A932E82304AA84D772B787399BB24F000DF2B856AD05265ABB8BEC76C21E27CA",
+      "ko": "당주 승계(전임: %s / 후임: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17344,
+      "source_utf16le_sha256": "C234524D111F4C1CB75FEEA0B15C3E47D85BB3778AA5393738DA44A3156DA498",
+      "ko": "%s 탄생(당주: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17345,
+      "source_utf16le_sha256": "4F5660FD0B84E61C9EEFB535EE76D051439E666615A5C17D56849281A0DCB27B",
+      "ko": "%s 멸망, 소속 무장들이 %s에 합류",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17350,
+      "source_utf16le_sha256": "C580DE81DD2AA6C24BC044AE922B41C2C7462D52EAEF09866F4B549AAC42E266",
+      "ko": "%s 본거 이전: %s",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17358,
+      "source_utf16le_sha256": "2E425D834B5D0AC5BF653FEA6F97B7C125B6FB811D57185396C424831E6F47F1",
+      "ko": "동맹 체결: %s - %s(%s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17361,
+      "source_utf16le_sha256": "78B9F82CFD9C4392EAA8A28DC39C6D001D64302A9AEC0A828119258B5C084A66",
+      "ko": "정전: %s - %s(%d개월)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17363,
+      "source_utf16le_sha256": "02DCE244C61830B3AC57A6B5B87A530CF635A99363034F695CC555F0C83389C5",
+      "ko": "%s, %s에 종속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17381,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17382,
+      "source_utf16le_sha256": "C8EE1C9D155652844E28C036EA5C2B5AAC2B0AD249C53AF0E2B38B62B4086941",
+      "ko": "소속 변경: %s(기존: %s / 변경: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17386,
+      "source_utf16le_sha256": "7795B2E36383CE04C85ECE43CEAA96D1001E78AE4EE22BCC85BA667EE1D5DD64",
+      "ko": "%s 사망(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17387,
+      "source_utf16le_sha256": "F966AAFD4CF0FCBD200527D5D11F0AD030C2E95C26E471BE55ACCA94BECCBEA0",
+      "ko": "%s 행방불명",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17388,
+      "source_utf16le_sha256": "64A14D2E42B90344DB3B538861F0655959A10BA612CFBBFF241776142CFC3195",
+      "ko": "%s 행방불명(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17389,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17392,
+      "source_utf16le_sha256": "A932E82304AA84D772B787399BB24F000DF2B856AD05265ABB8BEC76C21E27CA",
+      "ko": "당주 승계(전임: %s / 후임: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17393,
+      "source_utf16le_sha256": "1950982EFE9B830968D666FDF4A7FE27E5E74129D879D1322E92D058086D2A08",
+      "ko": "%s 해임",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17420,
+      "source_utf16le_sha256": "6909F90EA05D88936B3783C00CA162A6415E2A5C42E9E441754E2B66FC52ABDC",
+      "ko": "조건부 제압: %s(%s 소속), %s - %s",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17452,
+      "source_utf16le_sha256": "BF15724DB3DB8207892C41BA9BB955BE1ABBC13E249EC44D7861DF30F29F2D87",
+      "ko": "개명 전: %s / 개명 후: %s",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17508,
+      "source_utf16le_sha256": "FD9767EF8BF5BB3D1C6A9AD06E9EAE7D7A74F23771B646802453F532E0A5DD4E",
+      "ko": "다음 세력 탄생",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17522,
+      "source_utf16le_sha256": "97D8548D30381C7C465FCE2D8554058AB448FC41B13B9FB97528655B4808D0B8",
+      "ko": "다음 세력 간 동맹 체결",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17526,
+      "source_utf16le_sha256": "2F0716D38624ED9D0BFB58D5700C488DD81CEA7836079CAFB59B6B0C4D8AE5A0",
+      "ko": "다음 세력 간 동맹·혼인 동맹·종속 관계 해소",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17672,
+      "source_utf16le_sha256": "5FBA6BC234B18870FFCE42232A8122A13D096D5460A7EF64D0E7B18EF0C934BD",
+      "ko": "%s(당주: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17673,
+      "source_utf16le_sha256": "4F5660FD0B84E61C9EEFB535EE76D051439E666615A5C17D56849281A0DCB27B",
+      "ko": "%s 멸망, 소속 무장들이 %s에 합류",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17691,
+      "source_utf16le_sha256": "02DCE244C61830B3AC57A6B5B87A530CF635A99363034F695CC555F0C83389C5",
+      "ko": "%s, %s에 종속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17709,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17710,
+      "source_utf16le_sha256": "C8EE1C9D155652844E28C036EA5C2B5AAC2B0AD249C53AF0E2B38B62B4086941",
+      "ko": "소속 변경: %s(기존: %s / 변경: %s)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17714,
+      "source_utf16le_sha256": "7795B2E36383CE04C85ECE43CEAA96D1001E78AE4EE22BCC85BA667EE1D5DD64",
+      "ko": "%s 사망(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17716,
+      "source_utf16le_sha256": "64A14D2E42B90344DB3B538861F0655959A10BA612CFBBFF241776142CFC3195",
+      "ko": "%s 행방불명(%s 소속 시)",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17717,
+      "source_utf16le_sha256": "14E636BAAB8A4FB747DF0789B89C6D150BD6189D6B427BE9045B9519F23CA543",
+      "ko": "%s, %s에 소속",
+      "allow_edge_whitespace_change": false
+    },
+    {
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 17720,
+      "source_utf16le_sha256": "A932E82304AA84D772B787399BB24F000DF2B856AD05265ABB8BEC76C21E27CA",
+      "ko": "당주 승계(전임: %s / 후임: %s)",
+      "allow_edge_whitespace_change": false
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "nobu16.kr.runtime-combination-static-analysis.v1",
+  "program": {
+    "ghidra_program_path": "/horizontal-v090/NOBU16PK.exe",
+    "reference_unpacked_exe_sha256": "BC885875A5E4288E5A1A424D99974F6F215777C03569C7EA707FDE63BDBC2B39",
+    "image_base": "0x140000000",
+    "steam_version": "1.1.7"
+  },
+  "message_runtime": {
+    "global_message_manager": "0x141C01D20",
+    "message_object_vtable": "0x14154C538",
+    "evaluator_vtable_slot": "+0x18",
+    "evaluate_message_id": "0x1409F7490",
+    "select_record": "0x140A00FC0",
+    "decode_to_utf16": "0x1409F7610",
+    "dispatch_substitution_token": "0x140A013B0",
+    "reset_substitution_context": "0x1409F8320",
+    "register_person_or_entity_ids": "0x1409FCCC0",
+    "register_numeric_placeholder": [
+      "0x1409FD1C0",
+      "0x1409FD1E0"
+    ],
+    "register_other_named_entity": [
+      "0x1409FC550",
+      "0x1409FC420"
+    ],
+    "resource_loader": "0x1409F8710",
+    "resource_basename_table": "0x14154C500"
+  },
+  "behavioral_conclusions": [
+    "The caller resets and populates a substitution context before dispatching a message ID through vtable slot +0x18.",
+    "The evaluator selects a data record and decodes it into a NUL-terminated UTF-16 result buffer.",
+    "Dynamic name values are copied in template order.",
+    "The runtime does not insert a separator, Korean particle, or punctuation between a name component and the following component.",
+    "The faulty output is therefore data-driven: result templates and component-boundary spacing are the correct patch surface."
+  ],
+  "canonical_component_evidence": {
+    "MSG_PK/JP/msgev.bin": [
+      {
+        "id": 5033,
+        "row_utf16le_sha256": "67D2553FB55EE6E6DF0A3E2F7B41C2E396F7FC9E8D5879E0550A2BDD3818C4BC",
+        "proves": "나쓰메 히로쓰구"
+      },
+      {
+        "id": 3736,
+        "row_utf16le_sha256": "1563FFAE477E8CB96A683FDBEF8A926D00ADB281101A85851C421CFD7937FCCE",
+        "proves": "쓰카하라 보쿠덴"
+      },
+      {
+        "id": 5273,
+        "row_utf16le_sha256": "CC098B8CC511EE54F0934055F1A376E2140A75205C7D92918901AC86C8A5F4EA",
+        "proves": "쓰카하라 보쿠덴"
+      },
+      {
+        "id": 5319,
+        "row_utf16le_sha256": "B574AADBA22FE01DE488389FF8482A52CB89A0631BDF938A9EBE845FE1AB7F6D",
+        "proves": "쓰카하라 보쿠덴"
+      },
+      {
+        "id": 9091,
+        "row_utf16le_sha256": "8376909A4C44EBC8CCAC89F3B3113D05A63701C852D24ECD60903A15B5431AD1",
+        "proves": "쓰카하라 보쿠덴"
+      }
+    ]
+  },
+  "expected_runtime_examples": [
+    "다케다 가문에 의한 후타마타성 제압",
+    "나쓰메 히로쓰구 사망"
+  ],
+  "scope_adjudication": {
+    "simple_result_templates_changed": true,
+    "conditional_result_templates_changed": false,
+    "reason": "The reported screen uses the simple two-placeholder and one-placeholder result rows. Conditional four-placeholder rows are structurally different and are left unchanged."
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_decompiled_function_body": false,
+    "contains_only_addresses_hashes_behavioral_conclusions_and_korean_patch_text": true
+  }
+}
