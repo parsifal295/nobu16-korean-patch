@@ -5,13 +5,48 @@ Windows Steam판 `NOBU16PK.exe` 일본어(JP) 리소스 경로를 사용하는 �
 build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**로
 선택해야 합니다.
 
-현재 공개 안정판은 [v0.90.4](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.90.4)입니다.
-[v0.90.4 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.4/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.4.zip)을
+현재 공개 안정판은 [v0.91.0](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.91.0)입니다.
+[v0.91.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.91.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.91.0.zip)을
 게임 폴더에 풀어 설치합니다. 완전한 게임 리소스와 원본 `NOBU16PK.exe`는
 ZIP에 포함하지 않습니다.
 
 배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
 ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+
+## v0.91.0 — 인물 이름 레이아웃·컨트롤러·표기 안정화
+
+- 인물 목록의 이름 열과 내부 텍스트 컨테이너를 함께 확장했습니다.
+  - 지행, 군·성 영주 임명, 대관 임명, 시설 실행, 평정중, 가재 임명,
+    포상, 은거, 해고, 세력 선택, 상벌, 관직 수여 화면의 기본·보조 탭 보정
+  - 화면별 총폭을 유지하면서 이름 열을 272px 또는 300px로 확장
+- `격투·아네가와 전투`의 가운데 이벤트 화자 명판을 이름 길이에 맞춰
+  자동 확장하고, 긴 이름만 90% 배율로 표시하도록 수정했습니다.
+- 최종 144개 리소스의 한글 수요를 다시 계산해 누락 글리프 67자를
+  네 글꼴 경로에 보충했습니다. ([#91](https://github.com/parsifal295/nobu16-korean-patch/issues/91),
+  [#92](https://github.com/parsifal295/nobu16-korean-patch/issues/92),
+  [#95](https://github.com/parsifal295/nobu16-korean-patch/issues/95),
+  [#96](https://github.com/parsifal295/nobu16-korean-patch/issues/96))
+- 정전 요구 대사의 일본어 어미 오조립을 제거하고 완전한 한국어 문장으로
+  교체했습니다. ([#97](https://github.com/parsifal295/nobu16-korean-patch/issues/97))
+- `마가라 나오타카`가 이벤트 명판에서 두 줄로 갈라지던 문제를
+  수정했습니다. ([#98](https://github.com/parsifal295/nobu16-korean-patch/issues/98))
+- 나미오카성 주변 지명 `시골`을 고유명 `이나카`로 수정했습니다.
+  ([#99](https://github.com/parsifal295/nobu16-korean-patch/issues/99))
+- 전투 알림의 `부대 부대가` 중복 표기와 오무라 스미타다 대사의
+  `?껏 쓰시오` 표기를 각각 `부대가`, `한껏 쓰시오`로 수정했습니다.
+  ([#100](https://github.com/parsifal295/nobu16-korean-patch/issues/100),
+  [#101](https://github.com/parsifal295/nobu16-korean-patch/issues/101))
+- Moonlight 종료나 컨트롤러 연결 해제 뒤 재연결해도 XInput 매핑이
+  유지되도록 수정했습니다.
+- 부대 편집 등의 숫자 입력창을 패드 방향키·A·B·X·Y로 조작하고,
+  게임 내부 리소스로 현재 선택 위치를 표시하도록 개선했습니다.
+- 로드·저장 화면의 LB/RB 탭 전환과 지행·시나리오 선택 화면의
+  Select(Back) 메뉴 토글을 정상화했습니다.
+- 패처를 0.2.2로 갱신하고 144개 리소스의 적용·검증·복원 계약을
+  새로 고정했습니다.
+
+자세한 변경·검증 내역은
+[v0.91.0 릴리스 노트](RELEASE_NOTES_v0.91.0_KO.md)를 참고하십시오.
 
 ## v0.90.4 — XINPUT 입력 초기화·A/B 안내 일치
 
@@ -82,7 +117,7 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 
 ### 설치 전 필수 사항
 
-> v0.90.4의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
+> v0.91.0의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
 > 이전 한글 패치·모드·수동 수정 이력이 있거나 상태가 확실하지 않으면
 > Steam 라이브러리에서 **NOBU16 → 속성 → 설치된 파일 → 게임 파일 무결성 확인**을
 > 실행해 원본 상태를 준비하십시오.
@@ -91,7 +126,7 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 2. 게임 파일 무결성 확인을 완료한 뒤 `NOBU16PK.exe`와 게임 런처를 완전히
    종료합니다. Steam 클라이언트는 정품 라이선스를 확인할 수 있도록 로그인
    상태로 실행해 둡니다.
-3. [v0.90.4 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.90.4/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.90.4.zip)을
+3. [v0.91.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.91.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.91.0.zip)을
    내려받습니다.
 4. ZIP의 **모든 파일**을 `NOBU16PK.exe`가 있는
    `...\SteamLibrary\steamapps\common\NOBU16` 최상위에 바로 풉니다.
@@ -111,7 +146,7 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
 
 ### DLC 선택 설치
 
-- 번역 프로필은 Base·PK DLC 리소스 **106개**를 지원합니다.
+- 번역 프로필은 Base 8개·PK 97개, 총 **105개**의 선택 DLC 리소스를 지원합니다.
 - 사용자가 실제로 보유하고 설치한 DLC 파일만 순정 해시를 확인한 뒤
   번역합니다. 없는 파일은 정상적으로 건너뜁니다.
 - 패치 설치 후 DLC를 새로 추가했다면 메뉴 `2`로 복구한 뒤 원하는 설정을
@@ -128,7 +163,8 @@ ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니�
   Steam Input을 활성화합니다.
 - Steam Input 레이아웃은 기본 **게임패드** 템플릿을 사용합니다. A/B를 수동으로
   교환한 기존 레이아웃이 있다면 기본 레이아웃으로 복구합니다.
-- 컨트롤러는 게임을 실행하기 전에 연결합니다.
+- 게임 실행 전 연결을 권장하며, 플레이 중 연결이 끊겨도 다시 연결하면
+  같은 XInput 매핑을 복구합니다.
 - XINPUT판의 마우스 커서는 숨겨지며 물리 `A`는 승인, 물리 `B`는
   뒤로가기로 동작합니다.
 
