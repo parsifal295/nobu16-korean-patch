@@ -1,0 +1,164 @@
+{
+  "schema": "nobu16.kr.issue108-native-autofit-audit.v1",
+  "issue": 108,
+  "recorded_date": "2026-08-10",
+  "scope": "internal_validation_only",
+  "decision": {
+    "result": "NO_NEW_BINARY_PATCH",
+    "candidate_status": "REJECTED_SUPERSEDED_BY_NATIVE_AUTOFIT",
+    "patch020_required": false,
+    "reason": "The live x=121 castle-summary name object already enters the engine-native text measurement/autofit route. Its fixed object width is 168px while the engine returns XMM0=0.7058823704719543 for the 9-code-unit target. A second name-length or width-derived scale would multiply the native result and risk over-compression.",
+    "supersedes_workstream": "issue_108_castle_lord_name_fit_v1"
+  },
+  "runtime": {
+    "process": {
+      "pid": 29328,
+      "image": "NOBU16PK_XINPUT.exe",
+      "module_base": "0x7FF7C63D0000",
+      "selected_resolution": "2560x1600",
+      "resolution_changed_during_qa": false,
+      "fresh_isolated_process_launch_before_clean_capture": true,
+      "resolution_cache_note": "No resolution change was made; the clean capture came from the freshly launched isolated QA process."
+    },
+    "target": {
+      "object": "0x27D42705DB0",
+      "screen": "fief/castle summary",
+      "text": "호소카와 다다오키",
+      "utf16_code_units": 9,
+      "wstring_capacity": 39,
+      "x": 121.0,
+      "y": 437.0,
+      "scale_x_at_hook_entry": 1.0,
+      "scale_y_at_hook_entry": 1.0,
+      "width_field_0x5c": 168.0,
+      "height": 28.0,
+      "style": 1,
+      "flags_at_hook_entry": 0,
+      "autofit_disable_field_0x8c": 0,
+      "clip": [0, 0, 2560, 1600]
+    },
+    "telemetry": {
+      "engine_autofit_return": {
+        "hook_rva": "0x973ED5",
+        "live_address": "0x7FF7C6D43ED5",
+        "original_bytes": "44 0F 28 D8 48 8D 4F 38 48 83 7F 50 08",
+        "target_hits": 16,
+        "xmm0": 0.7058823704719543,
+        "hook_restored": true
+      },
+      "post_measure_register": {
+        "hook_rva": "0x973F1D",
+        "live_address": "0x7FF7C6D43F1D",
+        "original_bytes": "66 0F 6E 7D 20 0F 5B FF 66 44 0F 6E 45 24",
+        "target_hits": 16,
+        "xmm11": 0.7058823704719543,
+        "hook_restored": true
+      },
+      "post_cleanup_readback": {
+        "autofit_return_probe_site_matches_original": true,
+        "post_measure_probe_site_matches_original": true,
+        "patch012_common_hook_matches_original": true
+      },
+      "remote_cave_cleanup": {
+        "virtual_free_ex_mem_release_invoked_after_drain": true,
+        "post_cleanup_probe_signature": "48 B8 B0 5D 70 42 7D 02 00 00 48 39 C7 75",
+        "committed_rwx_signature_matches": 0,
+        "status": "NO_REMAINING_PROBE_CAVE_SIGNATURE"
+      },
+      "steam_file_write": false
+    }
+  },
+  "static_contract": {
+    "native_autofit_function": {
+      "va": "0x1409629B0",
+      "raw_offset": "0x961DB0",
+      "audited_size": 338,
+      "sha256": "B8B1A9634BE6302C97629B7C6FB695929E6679E53FCC1450B63CE60C4AE76830",
+      "behavior": "When object +0x8C is zero, measures the UTF-16 text through 0x1409D1000 and returns the native horizontal fit scalar in XMM0.",
+      "hash_identical_in": [
+        "current Steam NOBU16PK.exe",
+        "current Steam NOBU16PK_XINPUT.exe",
+        "v0.90.2-static-horizontal fixture NOBU16PK.exe"
+      ]
+    },
+    "caller": {
+      "call_va": "0x140973ED0",
+      "xmm0_to_xmm11_va": "0x140973ED5",
+      "native_scalar_is_used_downstream": true
+    },
+    "patch012_chain": {
+      "hook_va": "0x140973E16",
+      "hook_raw_offset": "0x973216",
+      "hook_bytes": "E9 E5 B5 E4 03 90 90 90 90 90 90 90 90",
+      "hook_sha256": "BA96D70E154FD11F901EDEFE53B2B4028A1A842965A3222428FFBA9C285A18CD",
+      "wrapper_va": "0x1447BF400",
+      "current_wrapper_tail_va": "0x1447BF5D3",
+      "current_wrapper_tail_bytes": "48 8B 0D DE B6 9C FD 48 8B 01 E9 41 48 1B FC",
+      "current_wrapper_tail_sha256": "B760D1DBC75A33CA5045DB8D9D912633C7BD42CDF33A67243823F8B0293852B6",
+      "x121_target_mutated_by_patch012_profiles": false,
+      "returns_to_original_native_route": true
+    },
+    "patch019": {
+      "right_cap_hook_raw_offset": "0x965594",
+      "relationship": "separate hook; does not replace the x=121 native autofit route"
+    }
+  },
+  "pixel_audit": {
+    "clean_current": {
+      "path": "scratch/issue108-runtime-qa/64-shoryuji-unpatched-clean.png",
+      "dimensions": [2560, 1600],
+      "sha256": "CC7201EB54C8BFFDA80E11606BEB957C2C88912FEDED881D855CCC277487EE8B",
+      "name_ink_x_inclusive": [163, 379],
+      "castle_icon_x_inclusive": [397, 426],
+      "count_start_x": 435,
+      "name_icon_overlap_px": 0,
+      "name_icon_empty_gap_px": 17,
+      "icon_count_empty_gap_px": 8
+    },
+    "github_issue_source": {
+      "path": "scratch/issue108-runtime-qa/github-issue108-source.png",
+      "dimensions": [850, 462],
+      "sha256": "C594936CBB476C84C428612391B58D4E9CCA33461BDC057AE5010E9722F1A19E",
+      "name_icon_overlap_px": 0,
+      "name_icon_empty_gap_px": 23
+    }
+  },
+  "runtime_1080_followup": {
+    "result": "PASS",
+    "selected_resolution": "1920x1080",
+    "full_process_restart_completed": true,
+    "natural_width_px": 238,
+    "fitted_width_px": 168,
+    "engine_autofit_scalar": 0.7058823704719543,
+    "name_icon_overlap_px": 0,
+    "name_icon_empty_gap_px": 13,
+    "icon_count_empty_gap_px": 7,
+    "short_name_control_unscaled": true
+  },
+  "steam_files_after_telemetry": {
+    "NOBU16PK.exe": {
+      "size": 67026432,
+      "sha256": "8453B235CD79F9D8621A287E40CB6DACDA86C00FBA4F860D0989E83E4689B43E",
+      "matches_pre_telemetry_hash": true
+    },
+    "NOBU16PK_XINPUT.exe": {
+      "size": 67026432,
+      "sha256": "F4882AC42011EB6AF9139B3327E88C7CF2F0F1A8CDCFCB1823B9465829F2C034",
+      "matches_pre_telemetry_hash": true
+    },
+    "changed_by_this_audit": false
+  },
+  "artifacts": {
+    "capture_object_dump": {
+      "path": "scratch/issue108-runtime-qa/63-shoryuji-rendered-full.json",
+      "sha256": "03B4D030886A6713A323480703E5CCB31B5D780C4242A30CA3A2EB25AD105AC7"
+    },
+    "telemetry_scripts": [
+      "scratch/issue108-runtime-qa/probe_autofit_scalar.py",
+      "scratch/issue108-runtime-qa/probe_measured_width.py"
+    ]
+  },
+  "limitations": [
+    "No discarded candidate was deployed to Steam, and no release document or patcher engine was changed by this audit."
+  ]
+}
