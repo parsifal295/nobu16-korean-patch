@@ -5,13 +5,22 @@ Windows Steam판 `NOBU16PK.exe` 일본어(JP) 리소스 경로를 사용하는 �
 build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**로
 선택해야 합니다.
 
-현재 공개 안정판은 [v0.92.0](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.92.0)입니다.
-[v0.92.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.92.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.92.0.zip)을
+현재 공개 안정판은 [v0.92.1](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.92.1)입니다.
+[v0.92.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.92.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.92.1.zip)을
 게임 폴더에 풀어 설치합니다. 완전한 게임 리소스와 원본 `NOBU16PK.exe`는
 ZIP에 포함하지 않습니다.
 
 배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
 ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+
+## v0.92.1 — 지행 지정 화면 간격 보정
+
+- 지행 지정 화면에서 성주 영지 설정 가능 개수와 `성하 방침`이 겹치던 문제를
+  수정했습니다. 처음 표시되는 지행 화면과 성주명 자동 맞춤은 유지합니다.
+- v0.92.0의 번역·독음·출진 명패 수정과 가로형·세로형 일반/XInput 구성을
+  모두 포함합니다.
+
+자세한 내용은 [v0.92.1 릴리스 노트](RELEASE_NOTES_v0.92.1_KO.md)를 참고하십시오.
 
 ## v0.92.0 — 번역·독음·화면 표시 보정
 
@@ -163,7 +172,7 @@ v0.91.0 사용자는 게임을 종료하고 v0.91.1 ZIP 전체를 덮어쓴 뒤,
 
 ### 설치 전 필수 사항
 
-> v0.92.0의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
+> v0.92.1의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
 > 이전 한글 패치·모드·수동 수정 이력이 있거나 상태가 확실하지 않으면
 > Steam 라이브러리에서 **NOBU16 → 속성 → 설치된 파일 → 게임 파일 무결성 확인**을
 > 실행해 원본 상태를 준비하십시오.
@@ -172,7 +181,7 @@ v0.91.0 사용자는 게임을 종료하고 v0.91.1 ZIP 전체를 덮어쓴 뒤,
 2. 게임 파일 무결성 확인을 완료한 뒤 `NOBU16PK.exe`와 게임 런처를 완전히
    종료합니다. Steam 클라이언트는 정품 라이선스를 확인할 수 있도록 로그인
    상태로 실행해 둡니다.
-3. [v0.92.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.92.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.92.0.zip)을
+3. [v0.92.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.92.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.92.1.zip)을
    내려받습니다.
 4. ZIP의 **모든 파일**을 `NOBU16PK.exe`가 있는
    `...\SteamLibrary\steamapps\common\NOBU16` 최상위에 바로 풉니다.
