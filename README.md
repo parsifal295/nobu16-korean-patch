@@ -5,13 +5,31 @@ Windows Steam판 `NOBU16PK.exe` 일본어(JP) 리소스 경로를 사용하는 �
 build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**로
 선택해야 합니다.
 
-현재 공개 안정판은 [v0.92.1](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.92.1)입니다.
-[v0.92.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.92.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.92.1.zip)을
+현재 공개 안정판은 [v0.93.0](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.93.0)입니다.
+[v0.93.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.93.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.93.0.zip)을
 게임 폴더에 풀어 설치합니다. 완전한 게임 리소스와 원본 `NOBU16PK.exe`는
 ZIP에 포함하지 않습니다.
 
 배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
 ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+
+## v0.93.0 — Steam Deck 자동 패치·전투 부대명·지도 아이콘 보정
+
+- `NOBU16PK_SD.exe`를 별도 선택 없이 자동 패치합니다. 공통 한국어 표시
+  보정만 적용하며, 가로 성이름 관련 지도 패치와 PC 전용 XInput 패치는
+  Steam Deck 실행 파일에서 제외합니다.
+- Steam Deck 게임 폴더에서 Proton/Wine으로 패처를 직접 실행할 수 있도록
+  내부·외장 저장소 경로를 인식합니다. Windows 전용 설치 기록 검사는
+  생략하지만 공식 번들 서명과 지원 원본 파일 검증은 유지합니다.
+- 전투 메시지에서 완성된 부대명 뒤에 `부대` 또는 `군`이 중복되던 기본판
+  323곳과 PK 273곳, 합계 596곳을 교정했습니다.
+- 가로형 지도에서 성하 시설 건설 망치 아이콘이 주변 아이콘 수에 따라
+  세로형 위치로 돌아가던 문제를 모든 활성 배치에서 수정했습니다.
+- 지행 지정 화면 간격, 출진 부대 지도 명패, 긴 성주명 자동 맞춤, 가문 정책
+  독음과 혼인 보좌 대사 등 v0.92.1까지의 수정 사항을 모두 포함합니다.
+
+자세한 설치 방법과 검증 결과는
+[v0.93.0 릴리스 노트](RELEASE_NOTES_v0.93.0_KO.md)를 참고하십시오.
 
 ## v0.92.1 — 지행 지정 화면 간격 보정
 
