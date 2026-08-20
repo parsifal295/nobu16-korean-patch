@@ -5,14 +5,34 @@ Windows Steam판 `NOBU16PK.exe` 일본어(JP) 리소스 경로를 사용하는 �
 build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**로
 선택해야 합니다.
 
-현재 공개 안정판은 [v0.94.0](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.94.0)입니다.
-[v0.94.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.94.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.94.0.zip)을
+현재 공개 안정판은 [v0.94.1](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.94.1)입니다.
+[v0.94.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.94.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.94.1.zip)을
 게임 폴더에 풀어 설치합니다. 공개 ZIP은 완전한 게임 리소스와 원본
 `NOBU16PK.exe`를 포함하지 않으며, ZIP 전체를 게임 폴더에 풀어
 `N16KoreanPatcher.exe`로 설치하는 방식입니다.
 
-배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
-ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+v0.94.1 ZIP은 929,827,570바이트이며 SHA-256은
+`2616FDC84EC2E5E88D08FA6E434385E5955B6B110383B5D9F304A383DC093C6F`입니다.
+GitHub 릴리스 자산의 digest와 ZIP 안 `SHA256SUMS.txt`의 구성 파일별
+SHA-256도 함께 확인할 수 있습니다.
+
+## v0.94.1 — 패처 더블클릭·동적 가문명 핫픽스
+
+- 공개 v0.94.0 ZIP의 패처가 인자 없는 더블클릭 실행에서 개발 빌드 오류로
+  종료되는 문제를 수정했습니다. 일반 release 빌드는 통합 메뉴를 기본으로
+  포함하고, ZIP 생성 전에 실제 EXE의 무인 실행 경로를 검사합니다.
+- 동적 신세력 이름에만 `세력`이 붙던 PK MSGUI ID 1139를 `%s 가문`으로
+  교정했습니다. 성씨 원본 공백은 보존하고, 이 서식 경로에서만 인자 끝의
+  ASCII 공백을 제거해 `마츠다이라 가문`처럼 한 칸으로 표시합니다.
+- PC 가로·세로 일반/XInput과 Steam Deck 정적 패치, 두 글꼴 리소스 번들의
+  격리 적용·검증·복구가 완료됐습니다. 2026-08-20 실제 Steam 설치본에도
+  가로형 XInput·B `그리운 경찰감성체` 구성으로 적용해 세 번들의 서명 상태와
+  EXE·MSGUI 최종 SHA-256을 확인했습니다. 패처의 파일 탐색기 더블클릭 실행과
+  2560×1600 게임 새 프로세스의 타이틀·한국어 메인 메뉴 진입도 통과했습니다.
+  독립 신세력 저장 데이터에서의 실제 가문명 표기는 후속 런타임 확인 항목입니다.
+
+분석 근거와 검증 결과는
+[v0.94.1 릴리스 노트](RELEASE_NOTES_v0.94.1_KO.md)를 참고하십시오.
 
 ## v0.94.0 — UI 아틀라스·문구·글꼴 선택·가상 히메 이름 용량
 
@@ -229,7 +249,7 @@ v0.91.0 사용자는 게임을 종료하고 v0.91.1 ZIP 전체를 덮어쓴 뒤,
 
 ### 설치 전 필수 사항
 
-> v0.94.0의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
+> v0.94.1의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
 > 이전 한글 패치·모드·수동 수정 이력이 있거나 상태가 확실하지 않으면
 > Steam 라이브러리에서 **NOBU16 → 속성 → 설치된 파일 → 게임 파일 무결성 확인**을
 > 실행해 원본 상태를 준비하십시오.
@@ -238,7 +258,7 @@ v0.91.0 사용자는 게임을 종료하고 v0.91.1 ZIP 전체를 덮어쓴 뒤,
 2. 게임 파일 무결성 확인을 완료한 뒤 `NOBU16PK.exe`와 게임 런처를 완전히
    종료합니다. Steam 클라이언트는 정품 라이선스를 확인할 수 있도록 로그인
    상태로 실행해 둡니다.
-3. [v0.94.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.94.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.94.0.zip)을
+3. [v0.94.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.94.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.94.1.zip)을
    내려받습니다.
 4. ZIP의 **모든 파일**을 `NOBU16PK.exe`가 있는
    `...\SteamLibrary\steamapps\common\NOBU16` 최상위에 바로 풉니다.

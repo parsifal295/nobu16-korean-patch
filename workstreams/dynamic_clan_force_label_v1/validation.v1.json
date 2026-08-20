@@ -1,0 +1,146 @@
+{
+  "schema": "nobu16.kr.dynamic-clan-force-label-static-validation.v1",
+  "release": "0.94.1",
+  "analysis": {
+    "tool": "Ghidra 12.1.2",
+    "msgui_local_id": 1139,
+    "msgui_global_id_hex": "0x7696",
+    "message_getter": "FUN_1409fc120",
+    "central_force_label_builder": "FUN_1405f4440",
+    "utf16_format_entry": "FUN_140c93cd0",
+    "direct_global_id_callsite": "0x1405f4488"
+  },
+  "resource": {
+    "relative_path": "MSG_PK/JP/msgui.bin",
+    "changed_ids": [
+      1139
+    ],
+    "input_packed_sha256": "C737796FE317FCEB5F0D315548DE6F2BAA683FE17B85CCAE1818FC5BD43BBC50",
+    "target_packed_size": 122733,
+    "target_packed_sha256": "61D1C6691B97058D02753C088F95FB044DA09E015520A9FA74CC2050C7113EC9",
+    "all_other_strings_unchanged": true
+  },
+  "wrapper": {
+    "size": 155,
+    "template_sha256": "44C4F3027258E373700A4EB195F84A4D3C283F9045324550ABF81A80D1413070",
+    "format_marker": "%s 가문",
+    "normalization": "trim_trailing_u0020_only",
+    "executable_harness": {
+      "trailing_space": "pass",
+      "no_space": "pass",
+      "many_spaces": "pass",
+      "capacity_boundary": "pass"
+    }
+  },
+  "static_targets": [
+    {
+      "variant": "pc-horizontal",
+      "size": 67026432,
+      "sha256": "A69498D250130484FF4B632CC51E6D47F604F2CFB40F30EB3084628140BAC3A0"
+    },
+    {
+      "variant": "pc-horizontal-xinput",
+      "size": 67026432,
+      "sha256": "EB43E5E8A797445F17E12AC12F910827EF200D3054A61AE84B33F6AC8D8E8F8D"
+    },
+    {
+      "variant": "pc-vertical",
+      "size": 31749632,
+      "sha256": "6F06198F3B67E84EDAD2693B5F1E9418E2DAC16D4F446E6FB54E4BBFB83E6E96"
+    },
+    {
+      "variant": "pc-vertical-xinput",
+      "size": 31752704,
+      "sha256": "2A8AE52353D4FA4CBAFB010F17D11C9F9EE0CC146283906C0857EB4AD1B598E3"
+    },
+    {
+      "variant": "steamdeck",
+      "size": 31742976,
+      "sha256": "FDB003ED95C0462275BF97872FA18254CBFC2C855EA21C1F3DBC8EEEE44895C3"
+    }
+  ],
+  "test_results": {
+    "rust_cli_unit_tests": 18,
+    "rust_core_unit_tests": 21,
+    "real_pc_fixture_variants": 6,
+    "real_steamdeck_fixture_variants": 1,
+    "signed_pc_horizontal_xinput_apply_verify_restore": "pass",
+    "signed_steamdeck_apply_verify_restore": "pass",
+    "font_a_resource_apply_verify_restore": "pass",
+    "font_b_resource_apply_verify_restore": "pass",
+    "published_v0940_exe_rejected_by_package_smoke": true,
+    "v0941_product_exe_accepted_by_package_smoke": true,
+    "live_steam_explorer_double_click_product_flow": "pass",
+    "live_steam_interactive_menu_clean_exit": "pass",
+    "live_game_startup_main_menu_no_crash": "pass"
+  },
+  "release_artifact": {
+    "filename": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.94.1.zip",
+    "size": 929827570,
+    "sha256": "2616FDC84EC2E5E88D08FA6E434385E5955B6B110383B5D9F304A383DC093C6F",
+    "top_level_entry_count": 13,
+    "checksummed_file_count": 12,
+    "fresh_extract_sha256s_match": true,
+    "signed_bundle_inspect_count": 7,
+    "all_bundle_release_versions": "0.94.1",
+    "packaged_patcher_version": "0.2.9",
+    "product_no_args_package_gate": "pass"
+  },
+  "steam_deployment": {
+    "performed": true,
+    "date": "2026-08-20",
+    "game_root": "F:/SteamLibrary/steamapps/common/NOBU16",
+    "game_process_running_before_apply": false,
+    "upgrade_method": "restore_managed_v0940_then_apply_v0941",
+    "configuration": {
+      "person_name_layout": "horizontal",
+      "controller": "xinput",
+      "font": "B-griun-police-sensibility",
+      "steamdeck_static": true
+    },
+    "installed_artifacts": {
+      "patcher": {
+        "version": "0.2.9",
+        "size": 1801216,
+        "sha256": "D50DE426D5330B31E6658176A5F56388CEED6D6CD1392A150219F810887C904C"
+      },
+      "resource_bundle_a_sha256": "6F14BFA7382CFA36591E2368209E40027E8109DE04D3A733C5E3A6789DE58C29",
+      "resource_bundle_b_sha256": "2E10F2E55B4873B8A641B32081FE3150B89B5FA8C59761431E46A531DFFC3F26"
+    },
+    "verified_bundles": [
+      "v0.94.1-resources",
+      "v0.90.2-static-horizontal-xinput",
+      "v0.93.0-static-steamdeck"
+    ],
+    "all_bundle_reports_already_applied": true,
+    "all_reported_release_versions": "0.94.1",
+    "live_target_sha256": {
+      "NOBU16PK.exe": "A69498D250130484FF4B632CC51E6D47F604F2CFB40F30EB3084628140BAC3A0",
+      "NOBU16PK_XINPUT.exe": "EB43E5E8A797445F17E12AC12F910827EF200D3054A61AE84B33F6AC8D8E8F8D",
+      "NOBU16PK_SD.exe": "FDB003ED95C0462275BF97872FA18254CBFC2C855EA21C1F3DBC8EEEE44895C3",
+      "MSG_PK/JP/msgui.bin": "61D1C6691B97058D02753C088F95FB044DA09E015520A9FA74CC2050C7113EC9"
+    },
+    "runtime_game_qa": {
+      "performed": true,
+      "process": "NOBU16PK.exe",
+      "launch_path": "steam_launcher",
+      "selected_resolution": "2560x1600",
+      "view_resolution": "2560x1440",
+      "resolution_changed": false,
+      "full_process_restart_completed": true,
+      "reached": [
+        "opening_movie",
+        "title_screen",
+        "korean_main_menu",
+        "idle_attract_sequence",
+        "title_return"
+      ],
+      "minimum_observed_runtime_seconds": 214,
+      "process_responding": true,
+      "windows_application_error_or_wer_events": 0,
+      "crash_observed": false,
+      "dynamic_clan_label_savegame_qa": "not_performed",
+      "game_left_running_at_main_menu": true
+    }
+  }
+}
