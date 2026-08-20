@@ -1,0 +1,101 @@
+{
+  "schema": "nobu16.kr.historical-title-card-layered-pilot.validation.v1",
+  "status": "PASS_STEAM_QA_DEPLOYED_AWAITING_RUNTIME_VISUAL_APPROVAL",
+  "prototype": {
+    "jp": "独眼竜",
+    "ko": "독안룡",
+    "base_groups": 1,
+    "routes": 2,
+    "states_per_route": 3,
+    "text_bearing_pngs": 6
+  },
+  "policy": {
+    "image_generation_used": false,
+    "source_layer_separation": true,
+    "archive_output_written": true,
+    "patcher_written": false,
+    "steam_written": true,
+    "steam_write_authority": "user-approved release-candidate in-game QA"
+  },
+  "geometry": {
+    "base_low": {
+      "dimensions": [1024, 256],
+      "normal_core_bbox": [273, 49, 662, 178],
+      "highlight_core_bbox": [273, 49, 662, 178],
+      "candidate_state_bboxes": [
+        [251, 26, 684, 201],
+        [259, 32, 677, 196],
+        [201, 16, 727, 213]
+      ]
+    },
+    "port3_high": {
+      "dimensions": [2048, 512],
+      "normal_core_bbox": [567, 99, 1346, 357],
+      "highlight_core_bbox": [566, 99, 1345, 357],
+      "candidate_state_bboxes": [
+        [522, 53, 1390, 404],
+        [538, 65, 1374, 393],
+        [436, 30, 1489, 424]
+      ]
+    }
+  },
+  "determinism": {
+    "runs": ["pilot_006", "pilot_007"],
+    "output_manifest_sha256": "B71061FD7229410E1BC1C9785CDA484DD3DC1775A18066A9E1825B50A2D53994",
+    "manifests_equal": true
+  },
+  "contact_sheet_sha256": "15EB81931C33F4400D5E53F86842B9EBC8152D68FEE6512DC7BC5D929BF3C6E6",
+  "binary_integration": {
+    "status": "PASS",
+    "runs": ["binary_003", "binary_004"],
+    "candidate_set_sha256": "65C8CB88DB3DD082A3EF0784F1619CBEE5AE0F21BE1CE246401A47ED7A0AE645",
+    "changed_outer_entries": 2,
+    "changed_inner_slots": 6,
+    "base_low_unchanged_outer_entries": 41,
+    "base_low_unchanged_inner_slots": 102,
+    "port3_high_unchanged_outer_entries": 9,
+    "port3_high_unchanged_inner_slots": 102,
+    "archives": {
+      "RES_JP/res_lang.bin": {
+        "size": 154108372,
+        "sha256": "9DE71D530D71181643B1F48DBB08E06CC2AFDC59B4BBB196D85B1FEBCF1EB046"
+      },
+      "RES_JP_PK_PORT/res_lang_pk_port3.bin": {
+        "size": 45497645,
+        "sha256": "6E8981691FA07C392DF1AF5CA00D1C5CAB1DD8B014C28CBA7B340729B2AC3618"
+      }
+    }
+  },
+  "steam_deployment": {
+    "status": "PASS",
+    "purpose": "release-candidate in-game QA",
+    "applied_local_date": "2026-08-20",
+    "game_process_running_during_apply": false,
+    "backup_root": "tmp/historical_title_card_layered_pilot_v1/steam_backup_20260820_qa_001",
+    "apply_report": "tmp/historical_title_card_layered_pilot_v1/steam_backup_20260820_qa_001/steam_apply_report.json",
+    "backup_hashes_match_pre_apply_baseline": true,
+    "installed_hashes_match_candidate": true
+  },
+  "real_game_qa": {
+    "status": "PENDING_USER_IN_GAME_TEST",
+    "selected_resolution": null,
+    "full_process_restart_completed": false,
+    "result_recorded": false,
+    "required_matrix": [
+      {"route": "base_low", "resolution": "1280x720", "full_process_restart_required": true},
+      {"route": "port3_high", "resolution": "3840x2160", "full_process_restart_required": true}
+    ]
+  },
+  "tests": {
+    "command": "python -B -m unittest workstreams\\historical_title_card_layered_pilot_v1\\test_historical_title_card_layered_pilot_v1.py -v",
+    "count": 4,
+    "result": "PASS"
+  },
+  "pending": [
+    "user real-game visual approval of font, scale, width, gold, halo and burst",
+    "full 35-label terminology catalog",
+    "full 35-label and PK 11-label archive integration",
+    "real-game QA with resolution and full process restart recorded",
+    "v0.94 patcher integration and final release approval"
+  ]
+}

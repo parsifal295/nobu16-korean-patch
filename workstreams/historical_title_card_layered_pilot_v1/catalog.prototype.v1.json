@@ -1,0 +1,19 @@
+{
+  "schema": "nobu16.kr.historical-title-card-layered-pilot.catalog.v1",
+  "scope": "one-label prototype; the remaining 34 base labels require terminology review before full rendering",
+  "state_order": ["normal_gold", "highlight_white_gold", "burst_zoom"],
+  "entries": [
+    {
+      "group_index": 0,
+      "slots": [0, 1, 2],
+      "msgdata_id": 15236,
+      "jp": "独眼竜",
+      "ko": "독안룡",
+      "term_status": "verified_existing_project_term",
+      "term_evidence": [
+        "workstreams/switch_msgdata_v11/public/msgdata_ko_switch_v11_strict_transfer.v0.1.json",
+        "workstreams/steam_jp_common_messages_v1/public/msgdata_ko_steam_jp_native.v1.json"
+      ]
+    }
+  ]
+}

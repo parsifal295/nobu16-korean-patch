@@ -6,12 +6,55 @@ build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**
 선택해야 합니다.
 
 현재 공개 안정판은 [v0.93.0](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.93.0)입니다.
-[v0.93.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.93.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.93.0.zip)을
-게임 폴더에 풀어 설치합니다. 완전한 게임 리소스와 원본 `NOBU16PK.exe`는
-ZIP에 포함하지 않습니다.
+다음 배포 후보는 **v0.94.0**입니다. v0.94.0은 실제 Steam JP PK 1.1.7
+설치본에 적용해 온디스크 해시 검증까지 마쳤으며, 제보 저장을 이용한 가상 히메
+이름 입력·결정·재로드 확인을 마지막 런타임 항목으로 남겨 두고 있습니다.
+
+공개 릴리스가 올라오기 전에는 이 저장소의 빌드·조사 파일만 골라 게임 폴더에
+복사하지 마십시오. 공개 ZIP은 완전한 게임 리소스와 원본 `NOBU16PK.exe`를
+포함하지 않으며, ZIP 전체를 게임 폴더에 풀어 `N16KoreanPatcher.exe`로
+설치하는 방식입니다.
 
 배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
 ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+
+## v0.94.0 후보 — UI 아틀라스·문구·글꼴 선택·가상 히메 이름 용량
+
+- 전법 설명의 조각 사이 공백, 가와고에성 주변 `高麗(こま)` 지명과 외교
+  제안 문구를 지정 레코드만 바꾸는 방식으로 교정했습니다.
+  ([#113](https://github.com/parsifal295/nobu16-korean-patch/issues/113),
+  [#116](https://github.com/parsifal295/nobu16-korean-patch/issues/116),
+  [#118](https://github.com/parsifal295/nobu16-korean-patch/issues/118))
+- 지행 호출 화면의 좌·우 인물 목록에서 긴 이름이 전법·특성 열을 침범하지
+  않도록, 각 800px 패널의 남는 폭 안에서 이름 열만 272px 또는 300px로
+  확장했습니다.
+  ([#115](https://github.com/parsifal295/nobu16-korean-patch/issues/115))
+- 등용 화면의 저·고해상도 `全承認`을 공백 없는 `전체승인`으로 바꾸고,
+  고해상도 전투 시작 버튼에 남은 `開戦`도 `개전`으로 교정했습니다.
+  ([#117](https://github.com/parsifal295/nobu16-korean-patch/issues/117))
+- 기본판·PK의 저·고해상도 네비게이션 휠 900개와 공용 일반 버튼 240개를
+  공식 원본의 몸체·아이콘·상태 레이어를 보존하는 파이프라인으로 다시
+  만들었습니다. 일반 버튼은 Medium 규격이며 `全解放`은 `전부해방`입니다.
+- 설치할 때 G1N `table 1` 글꼴을 기존 `SeoulHangang ExtraBold` 또는
+  `그리운 경찰감성체` 중에서 고를 수 있습니다. 다른 G1N 테이블과 글리프
+  메트릭은 유지합니다.
+- `고바야카와`처럼 번역 후 길어진 성을 상속한 가상 히메가 이름을 입력하지
+  못하던 성명 합계 6자 제한을 14자로 맞췄습니다. 기존 한글 문자 허용 보정은
+  그대로 유지하며 PC 가로·세로 일반/XInput과 Steam Deck 실행 파일에 함께
+  적용됩니다. 이 변경은 기존 [#62](https://github.com/parsifal295/nobu16-korean-patch/issues/62)의
+  후속 용량 보정입니다.
+- [#119](https://github.com/parsifal295/nobu16-korean-patch/issues/119)의
+  `부대이` 제보 경로는 v0.93.0에서 이미 교정된 리소스와 일치해 v0.94.0에서
+  추가 변경 없이 유지했습니다.
+
+전체 변경, 설치 방법, 검증 결과와 남은 런타임 확인 항목은
+[v0.94.0 릴리스 후보 노트](RELEASE_NOTES_v0.94.0_KO.md)를 참고하십시오.
+
+네비게이션 휠과 일반 버튼의 전체 위치·재작업 계약은 각각
+[휠 위치 문서](workstreams/navigation_wheel_atlas_catalog_v1/NAVIGATION_WHEEL_POSITIONS_KO.md)와
+[일반 버튼 위치 문서](workstreams/ordinary_button_atlas_catalog_v1/ORDINARY_BUTTON_POSITIONS_KO.md)에
+기록했습니다. 일본어 아틀라스 잔여 감사에서는 도움말의 게임 화면 캡처 묶음을
+영구 작업 제외 대상으로 고정했습니다.
 
 ## v0.93.0 — Steam Deck 자동 패치·전투 부대명·지도 아이콘 보정
 

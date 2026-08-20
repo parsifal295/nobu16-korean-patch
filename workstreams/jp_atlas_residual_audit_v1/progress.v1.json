@@ -1,0 +1,27 @@
+{
+  "schema": "nobu16.kr.jp-atlas-residual-audit.progress.v1",
+  "branch": "agent/v0.94.0-release",
+  "baseline": "v0.94 prepared target",
+  "updated_local_date": "2026-08-20",
+  "inventory": {
+    "archives": 7,
+    "g1t_containers": 1812,
+    "texture_records": 2162,
+    "actionable_families": 9,
+    "actionable_text_texture_placements": 304,
+    "help_gameplay_capture_bundles": "permanently_excluded_not_counted"
+  },
+  "stages": [
+    {"id": "inventory", "status": "complete"},
+    {"id": "cross_locale_and_visual_audit", "status": "complete"},
+    {"id": "false_positive_resolution", "status": "complete"},
+    {"id": "audit_documentation", "status": "complete"},
+    {"id": "base_historical_title_layered_pilot", "status": "steam_qa_deployed_awaiting_runtime_visual_approval"},
+    {"id": "base_historical_title_full_35", "status": "pending"},
+    {"id": "pk_historical_title_full_11", "status": "pending"},
+    {"id": "binary_integration", "status": "complete_for_dokganryong_prototype_scope"},
+    {"id": "steam_qa_prototype_apply", "status": "complete_user_approved_release_candidate_qa"},
+    {"id": "real_game_qa", "status": "awaiting_user_test_low_and_high_after_full_restart"},
+    {"id": "v094_patcher_and_steam_release", "status": "release_candidate_applied_title_prototype_not_integrated"}
+  ]
+}
