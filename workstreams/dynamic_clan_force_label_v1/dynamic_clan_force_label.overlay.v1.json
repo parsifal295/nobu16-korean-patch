@@ -1,0 +1,40 @@
+{
+  "schema": "nobu16.kr.dynamic-clan-force-label-overlay.v1",
+  "overlay_id": "dynamic-clan-force-label-v1",
+  "source_profile": {
+    "release_id": "v0.94.0-resources",
+    "resource_count": 1
+  },
+  "entry_count": 1,
+  "entries": [
+    {
+      "resource": "MSG_PK/JP/msgui.bin",
+      "id": 1139,
+      "source_ko": "%s 세력",
+      "source_ko_utf16le_sha256": "3D76BCD63C3E1793711FAF38675D8172B671CB46E5026C9F4C86170DD19A5FBD",
+      "ko": "%s 가문",
+      "ko_utf16le_sha256": "E8C2708B3D302289AB703B6B73780336CD927FD8ED56297A9085027F139DD293",
+      "reason": "use_the_same_clan_suffix_for_runtime_created_forces"
+    }
+  ],
+  "runtime_contract": {
+    "format_marker": "%s 가문",
+    "argument_normalization": "trim_trailing_u0020_only",
+    "preserve_source_surname_spacing": true,
+    "examples": [
+      {
+        "argument": "마츠다이라 ",
+        "display": "마츠다이라 가문"
+      },
+      {
+        "argument": "사용자입력명",
+        "display": "사용자입력명 가문"
+      }
+    ]
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_switch_binary": false
+  }
+}
