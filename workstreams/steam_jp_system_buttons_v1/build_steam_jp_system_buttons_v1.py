@@ -156,7 +156,7 @@ MAPPINGS: tuple[dict[str, Any], ...] = (
 # from these rows are currently emitted.
 NEXT_BATCH_MAPPINGS: tuple[dict[str, Any], ...] = (
     {
-        "label_ko": "전부개방",
+        "label_ko": "전부해방",
         "state": "cyan",
         "source_cell": (132, 240, 264, 304),
         "target_cell": (192, 176, 384, 264),
@@ -604,7 +604,7 @@ def next_batch_mapping_contract(
         labels.add(label)
         source_cells.add(source_cell)
         target_cells.add(target_cell)
-    require(len(NEXT_BATCH_MAPPINGS) == 11 and labels == {"전부개방", "희", "지휘", "재교섭", "승낙", "처단", "등용", "무장", "다음", "승인", "부인"}, "next-batch catalog coverage drifted")
+    require(len(NEXT_BATCH_MAPPINGS) == 11 and labels == {"전부해방", "희", "지휘", "재교섭", "승낙", "처단", "등용", "무장", "다음", "승인", "부인"}, "next-batch catalog coverage drifted")
     require(not labels.intersection(DEFERRED_LABELS_KO), "next-batch catalog overlaps deferred labels")
     # The catalog stores whole cells only, so it must not silently promise a
     # particular label-band/donor plan before the immutable-donor review.

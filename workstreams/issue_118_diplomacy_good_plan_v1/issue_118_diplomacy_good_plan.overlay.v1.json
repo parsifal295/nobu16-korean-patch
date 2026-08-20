@@ -1,0 +1,27 @@
+{
+  "schema": "nobu16.kr.issue118-diplomacy-good-plan-overlay.v1",
+  "overlay_id": "issue-118-diplomacy-good-plan-v1",
+  "resource": "MSG_PK/JP/msggame.bin",
+  "source_profile": {
+    "release_id": "v0.93.0-resources",
+    "packed_size": 1813935,
+    "packed_sha256": "F974B5B3E33EB91A8849823A3BF7B5B48699062E7199F6D8F981FB11AFA4EA08"
+  },
+  "entry_count": 1,
+  "entries": [
+    {
+      "block_id": 6,
+      "record_id": 3778,
+      "literal_id": 1,
+      "source_ko_utf16le_sha256": "99ED549153C807F40832AC76895E9D17BFB659EFB80E88A959CDCC7BA5270DF4",
+      "ko": "\n좋은 방안",
+      "ko_utf16le_sha256": "CB007814FE2EF035149088B3EDD27D536E0CCAAB54DF676F5D592FD77027CCDD",
+      "reason": "issue_118_dynamic_statement_suffix_requires_a_complete_noun_phrase"
+    }
+  ],
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_switch_binary": false
+  }
+}

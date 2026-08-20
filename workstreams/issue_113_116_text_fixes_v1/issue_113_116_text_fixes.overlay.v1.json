@@ -1,0 +1,47 @@
+{
+  "schema": "nobu16.kr.issue113-116-text-fixes-overlay.v1",
+  "overlay_id": "issue-113-116-text-fixes-v1",
+  "source_profile": {
+    "release_id": "v0.94.0-resources-issue118",
+    "resource_count": 3
+  },
+  "entry_count": 3,
+  "entries": [
+    {
+      "issue": 113,
+      "resource": "MSG_PK/JP/msgui.bin",
+      "id": 2690,
+      "source_ko": "%s%s",
+      "source_ko_utf16le_sha256": "2BC40F3FCD35EB37CAD4A1F9189C0D5C0D85022C683AFC6F1881269ECEC99B2B",
+      "ko": "%s %s",
+      "ko_utf16le_sha256": "F027EE111DEA799B949CC7C238935F7746ABABD0C85CA9E8E3F2A63A20C7AA58",
+      "reason": "insert_the_missing_separator_between_the_unit_scope_and_effect_fragments"
+    },
+    {
+      "issue": 116,
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "id": 10220,
+      "source_ko": "고려",
+      "source_ko_utf16le_sha256": "33C97D9E25A3E53C6D3B556224B94F4A41FFDD3EAC1A374660CD206EA84144C9",
+      "ko": "고마",
+      "ko_utf16le_sha256": "4971CB05F4A3398B0318517E755164381D7202D44F6245B4750A5C387B6BA6B2",
+      "reason": "render_the_japanese_place_name_koma_instead_of_the_historical_country_name"
+    },
+    {
+      "issue": 116,
+      "resource": "MSG/JP/strdata.bin",
+      "block_id": 0,
+      "slot_id": 10136,
+      "source_ko": "고려",
+      "source_ko_utf16le_sha256": "33C97D9E25A3E53C6D3B556224B94F4A41FFDD3EAC1A374660CD206EA84144C9",
+      "ko": "고마",
+      "ko_utf16le_sha256": "4971CB05F4A3398B0318517E755164381D7202D44F6245B4750A5C387B6BA6B2",
+      "reason": "keep_the_shared_place_name_table_paired_with_msgdata"
+    }
+  ],
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_switch_binary": false
+  }
+}

@@ -5,13 +5,52 @@ Windows Steam판 `NOBU16PK.exe` 일본어(JP) 리소스 경로를 사용하는 �
 build `18823764`)이며, Steam/런처의 게임 언어도 반드시 **Japanese**로
 선택해야 합니다.
 
-현재 공개 안정판은 [v0.93.0](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.93.0)입니다.
-[v0.93.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.93.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.93.0.zip)을
-게임 폴더에 풀어 설치합니다. 완전한 게임 리소스와 원본 `NOBU16PK.exe`는
-ZIP에 포함하지 않습니다.
+현재 공개 안정판은 [v0.94.0](https://github.com/parsifal295/nobu16-korean-patch/releases/tag/v0.94.0)입니다.
+[v0.94.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.94.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.94.0.zip)을
+게임 폴더에 풀어 설치합니다. 공개 ZIP은 완전한 게임 리소스와 원본
+`NOBU16PK.exe`를 포함하지 않으며, ZIP 전체를 게임 폴더에 풀어
+`N16KoreanPatcher.exe`로 설치하는 방식입니다.
 
 배포 ZIP의 SHA-256은 GitHub 릴리스 자산의 digest로 확인할 수 있습니다.
 ZIP 안의 `SHA256SUMS.txt`에는 구성 파일별 SHA-256이 들어 있습니다.
+
+## v0.94.0 — UI 아틀라스·문구·글꼴 선택·가상 히메 이름 용량
+
+- 전법 설명의 조각 사이 공백, 가와고에성 주변 `高麗(こま)` 지명과 외교
+  제안 문구를 지정 레코드만 바꾸는 방식으로 교정했습니다.
+  ([#113](https://github.com/parsifal295/nobu16-korean-patch/issues/113),
+  [#116](https://github.com/parsifal295/nobu16-korean-patch/issues/116),
+  [#118](https://github.com/parsifal295/nobu16-korean-patch/issues/118))
+- 지행 호출 화면의 좌·우 인물 목록에서 긴 이름이 전법·특성 열을 침범하지
+  않도록, 각 800px 패널의 남는 폭 안에서 이름 열만 272px 또는 300px로
+  확장했습니다.
+  ([#115](https://github.com/parsifal295/nobu16-korean-patch/issues/115))
+- 등용 화면의 저·고해상도 `全承認`을 공백 없는 `전체승인`으로 바꾸고,
+  고해상도 전투 시작 버튼에 남은 `開戦`도 `개전`으로 교정했습니다.
+  ([#117](https://github.com/parsifal295/nobu16-korean-patch/issues/117))
+- 기본판·PK의 저·고해상도 네비게이션 휠 900개와 공용 일반 버튼 240개를
+  공식 원본의 몸체·아이콘·상태 레이어를 보존하는 파이프라인으로 다시
+  만들었습니다. 일반 버튼은 Medium 규격이며 `全解放`은 `전부해방`입니다.
+- 설치할 때 G1N `table 1` 글꼴을 기존 `SeoulHangang ExtraBold` 또는
+  `그리운 경찰감성체` 중에서 고를 수 있습니다. 다른 G1N 테이블과 글리프
+  메트릭은 유지합니다.
+- `고바야카와`처럼 번역 후 길어진 성을 상속한 가상 히메가 이름을 입력하지
+  못하던 성명 합계 6자 제한을 14자로 맞췄습니다. 기존 한글 문자 허용 보정은
+  그대로 유지하며 PC 가로·세로 일반/XInput과 Steam Deck 실행 파일에 함께
+  적용됩니다. 이 변경은 기존 [#62](https://github.com/parsifal295/nobu16-korean-patch/issues/62)의
+  후속 용량 보정입니다.
+- [#119](https://github.com/parsifal295/nobu16-korean-patch/issues/119)의
+  `부대이` 제보 경로는 v0.93.0에서 이미 교정된 리소스와 일치해 v0.94.0에서
+  추가 변경 없이 유지했습니다.
+
+전체 변경, 설치 방법, 검증 결과와 알려진 후속 런타임 확인 항목은
+[v0.94.0 릴리스 노트](RELEASE_NOTES_v0.94.0_KO.md)를 참고하십시오.
+
+네비게이션 휠과 일반 버튼의 전체 위치·재작업 계약은 각각
+[휠 위치 문서](workstreams/navigation_wheel_atlas_catalog_v1/NAVIGATION_WHEEL_POSITIONS_KO.md)와
+[일반 버튼 위치 문서](workstreams/ordinary_button_atlas_catalog_v1/ORDINARY_BUTTON_POSITIONS_KO.md)에
+기록했습니다. 일본어 아틀라스 잔여 감사에서는 도움말의 게임 화면 캡처 묶음을
+영구 작업 제외 대상으로 고정했습니다.
 
 ## v0.93.0 — Steam Deck 자동 패치·전투 부대명·지도 아이콘 보정
 
@@ -190,7 +229,7 @@ v0.91.0 사용자는 게임을 종료하고 v0.91.1 ZIP 전체를 덮어쓴 뒤,
 
 ### 설치 전 필수 사항
 
-> v0.92.1의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
+> v0.94.0의 첫 설치는 **Steam JP 1.1.7 순정 파일**에서 시작합니다.
 > 이전 한글 패치·모드·수동 수정 이력이 있거나 상태가 확실하지 않으면
 > Steam 라이브러리에서 **NOBU16 → 속성 → 설치된 파일 → 게임 파일 무결성 확인**을
 > 실행해 원본 상태를 준비하십시오.
@@ -199,14 +238,14 @@ v0.91.0 사용자는 게임을 종료하고 v0.91.1 ZIP 전체를 덮어쓴 뒤,
 2. 게임 파일 무결성 확인을 완료한 뒤 `NOBU16PK.exe`와 게임 런처를 완전히
    종료합니다. Steam 클라이언트는 정품 라이선스를 확인할 수 있도록 로그인
    상태로 실행해 둡니다.
-3. [v0.92.1 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.92.1/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.92.1.zip)을
+3. [v0.94.0 ZIP](https://github.com/parsifal295/nobu16-korean-patch/releases/download/v0.94.0/NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.94.0.zip)을
    내려받습니다.
 4. ZIP의 **모든 파일**을 `NOBU16PK.exe`가 있는
    `...\SteamLibrary\steamapps\common\NOBU16` 최상위에 바로 풉니다.
    하위 폴더를 따로 만들거나 ZIP 안에서 직접 실행하지 마십시오.
 5. 게임 폴더의 `N16KoreanPatcher.exe`를 실행합니다.
-6. 시작 메뉴에서 `1`을 선택하고 성 이름 쓰기 방향과 컨트롤러 지원 여부를
-   정한 뒤 적용합니다.
+6. 시작 메뉴에서 `1`을 선택하고 성 이름 쓰기 방향, 컨트롤러 지원 여부와
+   G1N `table 1` 글꼴 A/B를 정한 뒤 적용합니다.
    - `1`: 패치 설정 후 적용
    - `2`: 원본으로 복구
    - `3`: 현재 설치 상태 확인
@@ -231,7 +270,8 @@ v0.91.0 사용자는 게임을 종료하고 v0.91.1 ZIP 전체를 덮어쓴 뒤,
 - 컨트롤러로 플레이할 때는 `NOBU16PK.exe` 대신
   `NOBU16PK_XINPUT.exe`를 실행합니다.
 - XINPUT판에서는 마우스를 사용할 수 없습니다.
-- Steam Deck에서는 `NOBU16PK_XINPUT.exe`를 실행합니다.
+- Steam Deck용 `NOBU16PK_SD.exe`는 PC 구성과 별도로 자동 패치됩니다.
+  Steam Deck에서는 PC용 `NOBU16PK_XINPUT.exe`를 따로 실행하지 마십시오.
 - PC에서는 `NOBU16PK_XINPUT.exe`를 Steam 라이브러리에 추가하고
   Steam Input을 활성화합니다.
 - Steam Input 레이아웃은 기본 **게임패드** 템플릿을 사용합니다. A/B를 수동으로

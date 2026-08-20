@@ -1,0 +1,66 @@
+{
+  "schema": "nobu16.kr.fictional-princess-name-capacity-validation.v1",
+  "date": "2026-08-20",
+  "target_release": "0.94.0",
+  "game": "Steam JP PK 1.1.7 build 18823764",
+  "cause": {
+    "translated_surname_record": "고바야카와 ",
+    "visible_hangul_characters": 5,
+    "utf16_code_units_with_trailing_space": 6,
+    "original_combined_name_limit": 6,
+    "resulting_input_capacity": 0,
+    "exact_crash_instruction_confirmed": false
+  },
+  "fix": {
+    "combined_name_limit": 14,
+    "pc_sites": [
+      { "file_offset": "0x00E54585", "before": "BB06000000", "after": "BB0E000000" },
+      { "file_offset": "0x00EB3C00", "before": "41BF06000000", "after": "41BF0E000000" },
+      { "file_offset": "0x00ED5E04", "before": "BB06000000", "after": "BB0E000000" }
+    ],
+    "steamdeck_sites": [
+      { "file_offset": "0x00E547D5", "before": "BB06000000", "after": "BB0E000000" },
+      { "file_offset": "0x00EB4070", "before": "41BF06000000", "after": "41BF0E000000" },
+      { "file_offset": "0x00ED6374", "before": "BB06000000", "after": "BB0E000000" }
+    ],
+    "issue62_character_validation_sites_preserved": true,
+    "pe_checksum_recomputed": true,
+    "idempotent": true,
+    "wrong_preimage_rejected": true
+  },
+  "targets": {
+    "pc_horizontal_base_sha256": "E53118961F95806B69A3122E091CDABF64D3904B991D427AE938C67CFF9AB4AF",
+    "pc_horizontal_xinput_sha256": "E78D8C19D51AD3955519E8205032B98E42CA38F27C15713E3549E71641FC9A62",
+    "pc_vertical_base_sha256": "27CDBE7679C9D47BAEE149A9AFDC5B713604FE81832F5C7A58C97618DF4EFA7D",
+    "pc_vertical_xinput_sha256": "4EAF6D58B47D448876495D9602F7F91AF40D70A74CDF6AA89D4F581FD5F8794D",
+    "steamdeck_sha256": "9F90798F23FD3B1FDCEA4D3E075E953A78F42E49003AE218CC45CE0EFD347A8B"
+  },
+  "verification": {
+    "pc_six_fixture_build_and_upgrade": "PASS",
+    "pc_signed_horizontal_xinput_apply_verify_restore": "PASS",
+    "steamdeck_signed_bundle_apply_verify_restore": "PASS",
+    "cargo_workspace_tests": "PASS",
+    "cargo_fmt_check": "PASS",
+    "cargo_clippy_warnings_denied": "PASS",
+    "release_patcher": {
+      "version": "0.2.8",
+      "size": 1793024,
+      "sha256": "BD3C634E428C1AE18304911C030A45FB23B1C722E0BB99EEF42D7CD7085179A7"
+    },
+    "runtime_reporter_save_flow": "PENDING",
+    "steam_install_modified": true,
+    "steam_deployment": {
+      "status": "PASS",
+      "date": "2026-08-20",
+      "game_process_running_during_apply": false,
+      "resolution_changed": false,
+      "game_relaunched_after_apply": false,
+      "profile": "horizontal_xinput_font_b_griun",
+      "pc_base_sha256": "E53118961F95806B69A3122E091CDABF64D3904B991D427AE938C67CFF9AB4AF",
+      "pc_xinput_sha256": "E78D8C19D51AD3955519E8205032B98E42CA38F27C15713E3549E71641FC9A62",
+      "steamdeck_sha256": "9F90798F23FD3B1FDCEA4D3E075E953A78F42E49003AE218CC45CE0EFD347A8B",
+      "patcher_sha256": "BD3C634E428C1AE18304911C030A45FB23B1C722E0BB99EEF42D7CD7085179A7",
+      "install_state_release_versions": ["0.94.0", "0.94.0", "0.94.0"]
+    }
+  }
+}

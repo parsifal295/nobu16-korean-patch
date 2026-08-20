@@ -1,0 +1,26 @@
+{
+  "schema": "nobu16.kr.historical-title-card-layered-pilot.inputs.v1",
+  "baseline": "v0.94 prepared target generator-output-03",
+  "files": {
+    "jp_low": {
+      "relative_path": "RES_JP/res_lang.bin",
+      "outer_entry": 4,
+      "dimensions": [1024, 256],
+      "size": 153501108,
+      "sha256": "B10EF608C4B1A4981C096A29D8B413087EF395696CB8A219B715BDF4C712D07C"
+    },
+    "jp_high": {
+      "relative_path": "RES_JP_PK_PORT/res_lang_pk_port3.bin",
+      "outer_entry": 2,
+      "dimensions": [2048, 512],
+      "size": 43031501,
+      "sha256": "C998755424E761E0780FC37FDCE964FE79343BD96E62082588957F32A5C92F6A"
+    }
+  },
+  "font": {
+    "name": "Yydimibang Bold",
+    "source": "Yeongyang-gun Eumsikdimibang",
+    "size": 2986656,
+    "sha256": "647D7710ED205C005892D96A468996C1F8FCBA135F41BF975A5EBA2C86DE7326"
+  }
+}

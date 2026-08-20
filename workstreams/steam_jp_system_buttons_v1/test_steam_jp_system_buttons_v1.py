@@ -33,7 +33,7 @@ class MappingContractTests(unittest.TestCase):
         self.assertEqual(len(MODULE.MAPPINGS), 8)
         self.assertEqual(
             {row["label_ko"] for row in MODULE.NEXT_BATCH_MAPPINGS},
-            {"전부개방", "희", "지휘", "재교섭", "승낙", "처단", "등용", "무장", "다음", "승인", "부인"},
+            {"전부해방", "희", "지휘", "재교섭", "승낙", "처단", "등용", "무장", "다음", "승인", "부인"},
         )
         self.assertEqual(len(MODULE.NEXT_BATCH_MAPPINGS), 11)
         self.assertNotIn("다음", {row["label_ko"] for row in MODULE.MAPPINGS})

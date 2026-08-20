@@ -1,0 +1,56 @@
+{
+  "schema": "nobu16.kr.historical-title-card-prototype.steam-qa-deployment.v1",
+  "status": "PASS_APPLIED_AWAITING_RUNTIME_QA",
+  "entry": {
+    "jp": "独眼竜",
+    "ko": "독안룡"
+  },
+  "authority": "user-approved release-candidate in-game QA",
+  "applied_local_datetime": "2026-08-20T11:49:39+09:00",
+  "steam_root": "F:/SteamLibrary/steamapps/common/NOBU16",
+  "candidate_root": "tmp/historical_title_card_layered_pilot_v1/binary_003/candidate",
+  "candidate_set_sha256": "65C8CB88DB3DD082A3EF0784F1619CBEE5AE0F21BE1CE246401A47ED7A0AE645",
+  "backup_root": "tmp/historical_title_card_layered_pilot_v1/steam_backup_20260820_qa_001",
+  "apply_report": "tmp/historical_title_card_layered_pilot_v1/steam_backup_20260820_qa_001/steam_apply_report.json",
+  "game_process_running_during_apply": false,
+  "files": [
+    {
+      "relative_path": "RES_JP/res_lang.bin",
+      "before_size": 153501108,
+      "before_sha256": "B10EF608C4B1A4981C096A29D8B413087EF395696CB8A219B715BDF4C712D07C",
+      "after_size": 154108372,
+      "after_sha256": "9DE71D530D71181643B1F48DBB08E06CC2AFDC59B4BBB196D85B1FEBCF1EB046",
+      "backup_verified": true,
+      "installed_verified": true
+    },
+    {
+      "relative_path": "RES_JP_PK_PORT/res_lang_pk_port3.bin",
+      "before_size": 43031501,
+      "before_sha256": "C998755424E761E0780FC37FDCE964FE79343BD96E62082588957F32A5C92F6A",
+      "after_size": 45497645,
+      "after_sha256": "6E8981691FA07C392DF1AF5CA00D1C5CAB1DD8B014C28CBA7B340729B2AC3618",
+      "backup_verified": true,
+      "installed_verified": true
+    }
+  ],
+  "runtime_qa": {
+    "status": "PENDING",
+    "result_recorded": false,
+    "selected_resolution": null,
+    "full_process_restart_completed": false,
+    "required_matrix": [
+      {
+        "route": "base_low",
+        "resolution": "1280x720",
+        "full_process_restart_required": true
+      },
+      {
+        "route": "port3_high",
+        "resolution": "3840x2160",
+        "full_process_restart_required": true
+      }
+    ]
+  },
+  "patcher_written": false,
+  "final_release_approved": false
+}
