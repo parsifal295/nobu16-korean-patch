@@ -1,0 +1,75 @@
+{
+  "schema": "nobu16.kr.issue122-123-name-reading-overlay.v1",
+  "source_profile": {
+    "release_id": "v0.95.0-resources",
+    "resource_count": 2
+  },
+  "entry_count": 4,
+  "entries": [
+    {
+      "issue": 122,
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "id": 2502,
+      "source_ko": "모토지",
+      "ko": "모토우지",
+      "source_ko_utf16le_sha256": "256978A266784D23CB208852EDF9A3C90FB53665C4EBCF7A13C98570DCBAFAA1",
+      "ko_utf16le_sha256": "58E264C98CABD764A7218BE8E1FE7A15E3EA32E80C63E73BE5A9906262CC78D9",
+      "source_jp_utf16le_sha256": "361BFD542508E0D2D2C29568CF63CDA58BA18E94278C36E898A0AA8B1C1D78F9",
+      "role": "shared_given_name"
+    },
+    {
+      "issue": 122,
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 1625,
+      "source_ko": "하타야마 모토지",
+      "ko": "하타야마 모토우지",
+      "source_ko_utf16le_sha256": "2BE30E51A97F12C9DAC984645C76537B76F3989A79021287C7E07F2ADC8FE2A8",
+      "ko_utf16le_sha256": "E262B7A9A124D6C2DDE8ECF68C867051BF4CDFB29A9F03141FFC6A82FE5C6B59",
+      "source_jp_utf16le_sha256": "0FB95FB6E63DEDC3226EC85C22EC1DE19DF89B2C7EC9E329D340CF149D6CEC0A",
+      "role": "complete_officer_name"
+    },
+    {
+      "issue": 122,
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 2012,
+      "source_ko": "모리 모토지",
+      "ko": "모리 모토우지",
+      "source_ko_utf16le_sha256": "EA3B02D532D50E9EFFC3EBF7888BCBD48FF00A884C8410D74BEE5F3992BC6666",
+      "ko_utf16le_sha256": "82B6EDB8E35FEFB82C720FC3F5451FEBF97AC522BC209BC5CAA1B65844CAA730",
+      "source_jp_utf16le_sha256": "3CA8013597F5C14A9061B224CA020A7EA4188E319DB50D0599161920C6A77DBD",
+      "role": "complete_officer_name"
+    },
+    {
+      "issue": 123,
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "id": 24765,
+      "source_ko": "야차미농",
+      "ko": "야샤미노",
+      "source_ko_utf16le_sha256": "CFC89EBA5E8548C944DE8110D6564F83F353C1D5343421094C89FBF6A23917F8",
+      "ko_utf16le_sha256": "D87DA20B4DDFA00670120958A3682366A5BEAD16BA9B899FC0B490909679E9F9",
+      "source_jp_utf16le_sha256": "E61E2737A42EE804561079C67374B67B9D0E1ADB6B985DA671EAEC0160829534",
+      "role": "trait_reading"
+    }
+  ],
+  "verified_anchors": [
+    {
+      "issue": 122,
+      "resource": "MSG_PK/JP/msgev.bin",
+      "id": 3085,
+      "ko": "깃카와 모토우지",
+      "source_jp_utf16le_sha256": "9E4BF2498952CE540F2994DA208019E098327AE624ABCA73A44594675C75B946"
+    },
+    {
+      "issue": 123,
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "id": 24510,
+      "ko": "야샤미노",
+      "source_jp_utf16le_sha256": "DE361C5929718518D62183C01908E158475A3F525C9B40B58DDDEA0E28C5E330"
+    }
+  ],
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_switch_binary": false
+  }
+}

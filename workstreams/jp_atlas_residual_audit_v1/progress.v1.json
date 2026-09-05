@@ -1,8 +1,8 @@
 {
   "schema": "nobu16.kr.jp-atlas-residual-audit.progress.v1",
-  "branch": "agent/v0.94.0-release",
+  "branch": "agent/v0.95.0-public-integration",
   "baseline": "v0.94 prepared target",
-  "updated_local_date": "2026-08-20",
+  "updated_local_date": "2026-09-05",
   "inventory": {
     "archives": 7,
     "g1t_containers": 1812,
@@ -11,17 +11,30 @@
     "actionable_text_texture_placements": 304,
     "help_gameplay_capture_bundles": "permanently_excluded_not_counted"
   },
+  "completion": {
+    "completed_families": 8,
+    "completed_text_texture_placements": 300,
+    "remaining_families": 1,
+    "remaining_text_texture_placements": 4,
+    "remaining": "BC7 開戦 flame cue; not the translated button",
+    "public_receipt": "workstreams/v095_image_completion_v1/validation.v1.json"
+  },
   "stages": [
     {"id": "inventory", "status": "complete"},
     {"id": "cross_locale_and_visual_audit", "status": "complete"},
     {"id": "false_positive_resolution", "status": "complete"},
     {"id": "audit_documentation", "status": "complete"},
-    {"id": "base_historical_title_layered_pilot", "status": "steam_qa_deployed_awaiting_runtime_visual_approval"},
-    {"id": "base_historical_title_full_35", "status": "pending"},
-    {"id": "pk_historical_title_full_11", "status": "pending"},
-    {"id": "binary_integration", "status": "complete_for_dokganryong_prototype_scope"},
-    {"id": "steam_qa_prototype_apply", "status": "complete_user_approved_release_candidate_qa"},
-    {"id": "real_game_qa", "status": "awaiting_user_test_low_and_high_after_full_restart"},
-    {"id": "v094_patcher_and_steam_release", "status": "release_candidate_applied_title_prototype_not_integrated"}
+    {"id": "base_historical_title_full_35", "status": "complete"},
+    {"id": "pk_historical_title_full_11", "status": "complete"},
+    {"id": "battle_result_and_effects", "status": "complete"},
+    {"id": "ordinary_ui_disposal_achievement_badges", "status": "complete"},
+    {"id": "historical_battle_selection", "status": "complete"},
+    {"id": "boot_warning", "status": "complete"},
+    {"id": "bc7_kaisen_flame_cue", "status": "pending"},
+    {"id": "binary_integration", "status": "complete"},
+    {"id": "v095_font_a_b_integration", "status": "complete_apply_verify_restore_passed"},
+    {"id": "steam_approved_final_apply", "status": "complete_file_hashes_verified"},
+    {"id": "real_game_qa", "status": "not_performed_after_final_apply"},
+    {"id": "v095_github_release_publication", "status": "not_performed"}
   ]
 }

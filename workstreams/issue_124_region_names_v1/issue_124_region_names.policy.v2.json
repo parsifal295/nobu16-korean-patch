@@ -1,0 +1,54 @@
+{
+  "schema": "nobu16.kr.issue124-region-name-policy.v2",
+  "policy_id": "issue-124-all-place-names-v2",
+  "source_profile": {
+    "release_id": "v0.95.0-event-dynamic-particle-candidate",
+    "display_id_start": 9947,
+    "display_id_end": 11960,
+    "reading_offset": 2014,
+    "strdata_offset": 84
+  },
+  "classifier": {
+    "total_pair_count": 2014,
+    "shared_label_count": 720,
+    "place_name_count": 1294,
+    "place_name_id_sha256": "5FCC389EA627DF17D28A085D459006CCAA3C177FE7B9706434CAC8171698CF0B",
+    "jp_en_mora_match_count": 1293,
+    "mora_match_exceptions": [
+      {
+        "id": 10388,
+        "ko": "오지야",
+        "source_utf16le_sha256": {
+          "jp_display": "2FEE34369ACE99085CD6C2845A5C34072BED9C37E570F838F439B4F9CDFC1D18",
+          "jp_reading": "895B5AD424DC226B0DC2E09A1B3C61B04949F0CE755AAE0EA2ECAD4C408884AB",
+          "en_display": "4987060A2A6A3826F06AFF7E07D5273F94A6DFD7DA27226CD75F85A02E81CB0B",
+          "en_reading": "4987060A2A6A3826F06AFF7E07D5273F94A6DFD7DA27226CD75F85A02E81CB0B"
+        }
+      }
+    ],
+    "multiword_place_count": 88
+  },
+  "transcription": {
+    "english_role": "place_classifier_and_word_boundaries",
+    "japanese_kana_role": "authoritative_reading",
+    "tsu_hangul": "쓰",
+    "write_same_value_to_display_and_reading": true,
+    "target_record_sha256": "2A41B32A8109CFC18BDD724BF786F011C0C73E913CFD010228060762A50ADF85"
+  },
+  "expected_output": {
+    "changed_pair_count": 306,
+    "already_correct_place_pair_count": 988,
+    "display_changed_count": 240,
+    "reading_changed_count": 108,
+    "changed_text_count": 348,
+    "changed_pair_id_sha256": "FBF8BC4EBABBADD83BF9C353313F2A0C76F51B81893CE9D39CC48B18D156739C",
+    "display_changed_id_sha256": "5D0C7E027388387B4B87AADC83835497F071BFFE7C69A715060EC9AC66DA8BF4",
+    "reading_changed_id_sha256": "4F1E7F88A5FAF453DAE53000C0EEE517BE12476B6AF9D58B648D3F2E54842215",
+    "changed_text_id_sha256": "B11671C80C6D700091E9C4F839F838FBE8EFDA7EDB0775EE7082899E291602D1"
+  },
+  "distribution_policy": {
+    "contains_commercial_source_text": false,
+    "contains_complete_game_resource": false,
+    "contains_switch_binary": false
+  }
+}

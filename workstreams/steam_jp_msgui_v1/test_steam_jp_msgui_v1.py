@@ -6,6 +6,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -23,7 +24,9 @@ import build_steam_jp_msgui_v1 as build  # noqa: E402
 class SteamJpMsguiV1Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.stock_path = build.DEFAULT_GAME_ROOT / Path(build.RESOURCE)
+        stock_root_override = os.environ.get("NOBU16_STOCK_GAME_ROOT")
+        cls.game_root = Path(stock_root_override) if stock_root_override else build.DEFAULT_GAME_ROOT
+        cls.stock_path = cls.game_root / Path(build.RESOURCE)
         if not cls.stock_path.is_file():
             raise unittest.SkipTest(f"pinned Steam JP stock is unavailable: {cls.stock_path}")
 
@@ -46,7 +49,7 @@ class SteamJpMsguiV1Tests(unittest.TestCase):
         self.assertFalse(contract["runtime_route"]["legacy_candidate_binary_used"])
 
     def test_02_remap_is_byte_reproducible(self) -> None:
-        _path, _packed, _raw, table = build.load_stock(build.DEFAULT_GAME_ROOT)
+        _path, _packed, _raw, table = build.load_stock(self.game_root)
         source_entries, source_blob = build.load_source_overlay(build.DEFAULT_SOURCE_OVERLAY)
         accepted, rejected = build.remap_entries(source_entries, table)
         overlay = build.make_public_overlay(accepted, len(rejected), source_blob, table)
@@ -64,17 +67,17 @@ class SteamJpMsguiV1Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory(prefix="steam_jp_msgui_test_a_", dir=tmp_root) as a_name:
             with tempfile.TemporaryDirectory(prefix="steam_jp_msgui_test_b_", dir=tmp_root) as b_name:
                 first = build.build_candidate(
-                    build.DEFAULT_GAME_ROOT, build.DEFAULT_CONTRACT, Path(a_name)
+                    self.game_root, build.DEFAULT_CONTRACT, Path(a_name)
                 )
                 second = build.build_candidate(
-                    build.DEFAULT_GAME_ROOT, build.DEFAULT_CONTRACT, Path(b_name)
+                    self.game_root, build.DEFAULT_CONTRACT, Path(b_name)
                 )
                 first_blob = Path(first["candidate_path"]).read_bytes()
                 second_blob = Path(second["candidate_path"]).read_bytes()
                 self.assertEqual(first_blob, second_blob)
                 self.assertEqual(
                     hashlib.sha256(first_blob).hexdigest().upper(),
-                    "3D790A1F28199265260B6C1529956D686480C7181A1EA65097E0C6F624005DFF",
+                    "A20D2C2C2428F052834FBD04D8630B35716AA04DF0BD7031DC34BD2BEA3C4BC6",
                 )
                 self.assertEqual(first["mapped_entry_count"], 3693)
                 self.assertEqual(first["effective_change_count"], 3614)
@@ -88,7 +91,7 @@ class SteamJpMsguiV1Tests(unittest.TestCase):
 
     def test_05_per_entry_jp_hash_tamper_is_rejected(self) -> None:
         _contract, entries, _blob = build.load_frozen_inputs(build.DEFAULT_CONTRACT)
-        _path, packed, raw, table = build.load_stock(build.DEFAULT_GAME_ROOT)
+        _path, packed, raw, table = build.load_stock(self.game_root)
         tampered = copy.deepcopy(entries)
         tampered[0]["source_jp_utf16le_sha256"] = "0" * 64
         with self.assertRaisesRegex(build.SteamJpMsguiError, "JP source hash mismatch"):
@@ -96,7 +99,7 @@ class SteamJpMsguiV1Tests(unittest.TestCase):
 
     def test_06_format_profile_tamper_is_rejected(self) -> None:
         _contract, entries, _blob = build.load_frozen_inputs(build.DEFAULT_CONTRACT)
-        _path, packed, raw, table = build.load_stock(build.DEFAULT_GAME_ROOT)
+        _path, packed, raw, table = build.load_stock(self.game_root)
         tampered = copy.deepcopy(entries)
         tampered[0]["ko"] += "\n"
         with self.assertRaisesRegex(build.SteamJpMsguiError, "format profile mismatch"):

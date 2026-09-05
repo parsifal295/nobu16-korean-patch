@@ -1,0 +1,78 @@
+{
+  "schema": "nobu16.kr.issue-125-kumigashira.v1",
+  "issue": 125,
+  "scope": "gameplay rank dialogue and UI",
+  "japanese_term": "組頭",
+  "before": "조두",
+  "after": "조장",
+  "changed_count": 35,
+  "resources": [
+    {
+      "relative_path": "MSG/JP/msggame.bin",
+      "kind": "msggame",
+      "changed_count": 13,
+      "coordinates": [
+        [6, 4084, 0],
+        [13, 83, 0],
+        [13, 174, 0],
+        [13, 383, 0],
+        [14, 32, 3],
+        [14, 33, 1],
+        [14, 113, 1],
+        [14, 117, 3],
+        [14, 148, 1],
+        [15, 1505, 2],
+        [15, 1506, 0],
+        [15, 1507, 0],
+        [15, 1643, 0]
+      ],
+      "input_size": 1556016,
+      "input_sha256": "3FAE2B624ED1D0C164CCDACF757360C9EAE1DC56EC54D61A6CEBAD06B231BFC7",
+      "output_size": 1556016,
+      "output_sha256": "AC3365D83C3A083A2C20F5C518B74C1C5E5D860347CBC7FB5156B3D8A3E363B8"
+    },
+    {
+      "relative_path": "MSG_PK/JP/msggame.bin",
+      "kind": "msggame",
+      "changed_count": 19,
+      "coordinates": [
+        [6, 4094, 0],
+        [13, 83, 0],
+        [13, 174, 0],
+        [13, 416, 0],
+        [13, 417, 0],
+        [14, 48, 3],
+        [14, 49, 3],
+        [14, 50, 1],
+        [14, 51, 1],
+        [14, 156, 1],
+        [14, 157, 1],
+        [14, 164, 3],
+        [14, 165, 3],
+        [14, 206, 1],
+        [14, 207, 1],
+        [15, 1520, 2],
+        [15, 1521, 0],
+        [15, 1522, 0],
+        [15, 1673, 0]
+      ],
+      "input_size": 1813943,
+      "input_sha256": "F09D9CCE819E26E3B14E368DD4AA7A7254D7CB81CBB5EB3860D0D1A099C4CFC1",
+      "output_size": 1813943,
+      "output_sha256": "2DACF44094FD3D309BEC415AE4F1DFC5303410435FDD997CC34B95F49AC17C1C"
+    },
+    {
+      "relative_path": "MSG_PK/JP/msgui.bin",
+      "kind": "message_table",
+      "changed_count": 3,
+      "ids": [160, 839, 3436],
+      "input_size": 122733,
+      "input_sha256": "61D1C6691B97058D02753C088F95FB044DA09E015520A9FA74CC2050C7113EC9",
+      "output_size": 122733,
+      "output_sha256": "9AE0AC44491488383FBBC73BE0F7F188643E3AE17E5E4E984BE9D0FE0AD1AC65"
+    }
+  ],
+  "excluded_contexts": [
+    "historical biography uses such as 근습조두 and 칠수조 조두"
+  ]
+}
