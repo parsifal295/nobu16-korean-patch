@@ -1,0 +1,47 @@
+{
+  "schema": "nobu16.kr.scenario-title-mugen.v1",
+  "scope": "Base and PK 1582 scenario title",
+  "official_title_matrix": {
+    "JP": "夢幻の如く",
+    "EN": "Like A Dream",
+    "SC": "宛如梦幻",
+    "TC": "如夢似幻",
+    "KO_before": "덧없는 꿈처럼",
+    "KO_after": "몽환과 같이"
+  },
+  "translation_policy": "preserve the Kowakamai Atsumori phrase instead of paraphrasing it",
+  "resources": [
+    {
+      "relative_path": "MSG/JP/strdata.bin",
+      "input_size": 940981,
+      "input_sha256": "70FCB097EE999BA8E50723E262C232F782D7DE564DDAB84C9D28180A7AA7FF55",
+      "output_size": 940981,
+      "output_sha256": "44A3621C5E4E6833260C2A8C0207D5FD74EB1F4A455E7AF81E7B93C571FB7029",
+      "coordinate": [
+        0,
+        15026
+      ],
+      "before": "덧없는 꿈처럼",
+      "after": "몽환과 같이",
+      "changed_coordinates": [
+        [
+          0,
+          15026
+        ]
+      ]
+    },
+    {
+      "relative_path": "MSG_PK/JP/msgdata.bin",
+      "input_size": 476948,
+      "input_sha256": "5CDB755D88933218BEF8B97193F572CFDC9BAAA84D92A9E6E5508698106156F2",
+      "output_size": 476948,
+      "output_sha256": "6B5F6852DB0CB0D6F3791C43E56B54A15CC6439B0D4CC8A8A32985E1D1A0207E",
+      "id": 15118,
+      "before": "덧없는 꿈처럼",
+      "after": "몽환과 같이",
+      "changed_ids": [
+        15118
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "nobu16.kr.v095-completion.public.v1",
+  "status": "PASS",
+  "date": "2026-09-05",
+  "version": "0.95.0",
+  "issues": {
+    "122": {
+      "status": "implemented_and_deployed",
+      "changed_runtime_coordinates": 3,
+      "final_live_name_checks": 4
+    },
+    "123": {
+      "status": "implemented_and_deployed",
+      "changed_runtime_coordinates": 1,
+      "trait_label_and_reading": "야샤미노"
+    },
+    "124": {
+      "status": "implemented_and_deployed",
+      "audited_pairs": 2014,
+      "actual_place_pairs": 1294,
+      "preserved_shared_label_pairs": 720,
+      "changed_pairs": 306,
+      "changed_strings": 348,
+      "final_live_pair_checks": 2014,
+      "shared_strdata_changes_for_this_issue": 0
+    },
+    "125": {
+      "status": "implemented_and_deployed",
+      "final_live_rank_checks": 35,
+      "rank_text": "조장",
+      "biography_terms_preserved": true
+    }
+  },
+  "text_resources": {
+    "MSG_PK/JP/msgdata.bin": {
+      "size": 476948,
+      "sha256": "7630EA5C4B6809C91F1F9DE3721C54769FC52EDD16FB89B3D111F7A58CC8238C"
+    },
+    "MSG_PK/JP/msgev.bin": {
+      "size": 582303,
+      "sha256": "1CE958C8036BA014A4142E0CCB10E12EA0E7FF7A8552CD01CEEE502A98C12E55"
+    },
+    "MSG_PK/JP/msggame.bin": {
+      "size": 1813943,
+      "sha256": "2DACF44094FD3D309BEC415AE4F1DFC5303410435FDD997CC34B95F49AC17C1C"
+    },
+    "MSG_PK/JP/msgui.bin": {
+      "size": 122733,
+      "sha256": "9AE0AC44491488383FBBC73BE0F7F188643E3AE17E5E4E984BE9D0FE0AD1AC65"
+    },
+    "MSG/JP/ev_strdata.bin": {
+      "size": 519394,
+      "sha256": "C0FB5CAF1726E2E2D05D48BA3ED24CC365B7738DE36F93A23F03BECC6A1EE0E6"
+    },
+    "MSG/JP/msggame.bin": {
+      "size": 1556016,
+      "sha256": "AC3365D83C3A083A2C20F5C518B74C1C5E5D860347CBC7FB5156B3D8A3E363B8"
+    },
+    "MSG/JP/strdata.bin": {
+      "size": 940981,
+      "sha256": "44A3621C5E4E6833260C2A8C0207D5FD74EB1F4A455E7AF81E7B93C571FB7029"
+    }
+  },
+  "tactic_images": {
+    "titles": 46,
+    "route_groups": 92,
+    "state_placements": 276,
+    "output_manifest_sha256": "A0C0C198B88CD0CA3C352503A046DB4DEDBD6CF6D0A2AAD1C650041EE5E92306",
+    "independent_rebuild_match": true
+  },
+  "title_binary": {
+    "archives": 3,
+    "title_outer_entries": 4,
+    "state_slots": 276,
+    "candidate_set_sha256": "B28C9AAF83F55EC253979F49D0CE4597CB5B4AAAD823163254A02B79DE7EA8A6",
+    "independent_rebuild_match": true,
+    "non_title_entries_preserved": true
+  },
+  "terminology": {
+    "literal_title_matches": 45,
+    "approved_title_exceptions": 1,
+    "runtime_text": "돈보키리",
+    "image_text": "톤보키리"
+  },
+  "initial_image_audit": {
+    "actionable_families": 9,
+    "actionable_text_texture_placements": 304,
+    "completed_families": 8,
+    "completed_text_texture_placements": 300,
+    "remaining_families": 1,
+    "remaining_text_texture_placements": 4,
+    "remaining": "BC7 開戦 flame cue; distinct from the translated button",
+    "help_gameplay_capture_bundles": "permanently_excluded"
+  },
+  "bundles": {
+    "a": {
+      "filename": "NOBU16_v0.95.0_RESOURCES_FONT_A_SEOULHANGANG.n16p",
+      "size": 433272802,
+      "sha256": "CD75A8F4D4F832DFD12404E1AD45B93A185D9F1D2C4F8DFACA1B3ADBDDAE96B3",
+      "apply_verify_restore": "PASS"
+    },
+    "b": {
+      "filename": "NOBU16_v0.95.0_RESOURCES_FONT_B_GRIUN.n16p",
+      "size": 456853751,
+      "sha256": "0638ADACE58CEED7924B211D81E3F4BDA289DC68D3A11753718A0FF3E03E6407",
+      "apply_verify_restore": "PASS"
+    }
+  },
+  "package": {
+    "filename": "NOBU16_PK_Korean_Patch_Steam_1.1.7_v0.95.0.zip",
+    "size": 1031986522,
+    "sha256": "CDF89702DD9EFC87DB3D2CF512B6A0A1125FF71CC7398440B2A08C30E2CAE40B",
+    "entry_count": 13,
+    "fresh_extract_checksums_passed": 12
+  },
+  "steam": {
+    "status": "PASS",
+    "deployed_at": "2026-09-05T00:21:54.646420+00:00",
+    "verified_resource_files": 147,
+    "verified_install_state_files": 151,
+    "package_checksums_passed": 12,
+    "preserved_settings": [
+      "font_b",
+      "horizontal_xinput",
+      "steamdeck"
+    ],
+    "all_original_backups_verified": true,
+    "runtime_image_qa_status": "NOT_PERFORMED",
+    "selected_resolution": null,
+    "full_process_restart_completed_after_apply": false
+  },
+  "source_policy": {
+    "product_patcher_sources_included": false,
+    "signing_packaging_deployment_sources_included": false,
+    "commercial_originals_included": false,
+    "intermediate_images_included": false,
+    "private_keys_included": false
+  },
+  "github_release_published": false
+}

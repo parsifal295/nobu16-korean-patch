@@ -1,0 +1,27 @@
+name: v0.95 public contracts
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify public data without private game inputs or patcher sources
+        run: >-
+          python -B -m unittest -v
+          tests.test_issue_122_123_name_reading_fixes_v1
+          tests.test_issue_124_region_names_v1
+          tests.test_v095_public_completion
+          workstreams.issue_125_kumigashira_v1.test_issue_125_kumigashira_v1
+          workstreams.event_static_particles_v1.test_event_static_particles_v1
+          workstreams.scenario_title_mugen_v1.test_scenario_title_mugen_v1

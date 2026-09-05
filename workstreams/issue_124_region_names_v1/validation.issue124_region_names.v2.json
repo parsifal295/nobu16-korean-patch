@@ -1,0 +1,75 @@
+{
+  "audit_file": "audit.issue124_region_names.v2.json",
+  "audit_sha256": "414820C59F889D79E34573F3FD53550DEB6BDB124B893E4E0D1C555B309016A4",
+  "changed_resource_count": 1,
+  "changed_text_count": 348,
+  "commercial_source_text_embedded": false,
+  "coverage": {
+    "actual_place_name_count": 1294,
+    "already_correct_place_pair_count": 988,
+    "changed_pair_count": 306,
+    "display_changed_count": 240,
+    "jp_en_mora_exception_count": 1,
+    "jp_en_mora_match_count": 1293,
+    "multiword_place_count": 88,
+    "reading_changed_count": 108,
+    "source_mapping_exception_ids": [
+      11310,
+      11311
+    ],
+    "source_pair_match_count": 2012,
+    "special_shared_label_count": 720,
+    "target_pair_count": 1294,
+    "total_pair_count": 2014
+  },
+  "issue": 124,
+  "output_resource_count": 1,
+  "policy_file": "issue_124_region_names.policy.v2.json",
+  "policy_sha256": "E671DB2B3DFE5FFE48C679A484E8769FB52B139AE340F0162848ED0C1EEB6478",
+  "resources": [
+    {
+      "all_other_texts_unchanged": true,
+      "changed_id_sha256": "B11671C80C6D700091E9C4F839F838FBE8EFDA7EDB0775EE7082899E291602D1",
+      "changed_text_count": 348,
+      "input": {
+        "packed_sha256": "2528F53F6F4666DEFD36EA8D5BD577DD60C78630D8E3F63CA0E5A1FE75B60B62",
+        "packed_size": 476860,
+        "raw_sha256": "8E70FB63AD145795421BBD6B129073C06D7DA3ECAE5EB430572E10B538111B28",
+        "raw_size": 474972,
+        "string_count": 29218
+      },
+      "resource": "MSG_PK/JP/msgdata.bin",
+      "target": {
+        "packed_sha256": "5CDB755D88933218BEF8B97193F572CFDC9BAAA84D92A9E6E5508698106156F2",
+        "packed_size": 476948,
+        "raw_sha256": "4EA834A1B91DBBDFDD4B650FC11A89BDD05FC29EC741F9E6411D16A26994D37D",
+        "raw_size": 475060
+      }
+    },
+    {
+      "changed_text_count": 0,
+      "input": {
+        "packed_sha256": "70FCB097EE999BA8E50723E262C232F782D7DE564DDAB84C9D28180A7AA7FF55",
+        "packed_size": 940981,
+        "raw_sha256": "21DAFE66284D6B919B2A0B0E47C45A2058F0BE55A2EC9751F2816B9AC18E8947",
+        "raw_size": 937280
+      },
+      "output_emitted": false,
+      "resource": "MSG/JP/strdata.bin",
+      "role": "read_only_dependency",
+      "shared_translation_surface_preserved": true,
+      "target": {
+        "packed_sha256": "70FCB097EE999BA8E50723E262C232F782D7DE564DDAB84C9D28180A7AA7FF55",
+        "packed_size": 940981,
+        "raw_sha256": "21DAFE66284D6B919B2A0B0E47C45A2058F0BE55A2EC9751F2816B9AC18E8947",
+        "raw_size": 937280
+      }
+    }
+  ],
+  "schema": "nobu16.kr.issue124-region-name-validation.v2",
+  "status": "PASS",
+  "steam_written": false,
+  "target_reason_counts": {
+    "full_place_transcription": 1294
+  }
+}

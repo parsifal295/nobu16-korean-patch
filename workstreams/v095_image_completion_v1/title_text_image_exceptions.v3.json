@@ -1,0 +1,13 @@
+{
+  "schema": "nobu16.kr.tactic-title-text-image-exceptions.v3",
+  "approval": "Explicit user instruction: preserve the existing runtime name; use 톤보키리 only in images.",
+  "exceptions": {
+    "base_030": {
+      "runtime_text": "돈보키리",
+      "image_text": "톤보키리",
+      "canonical_message_id": 15274,
+      "preserved_message_coordinates": [14164, 15274],
+      "reason": "Intentional user-approved difference between running text and title artwork. Do not synchronize either spelling automatically."
+    }
+  }
+}
